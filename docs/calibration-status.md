@@ -30,12 +30,12 @@ Each district needs both school years (2025-2026 and 2026-2027) verified against
 | Long Beach Unified School District | CA | ✅ 2026-07-02 (2027-2028 added) | https://www.lbschools.net/about/calendar |
 | Fresno Unified School District | CA | ✅ 2026-07-02 (2027-2028 added) | https://www.fresnounified.org/about/calendar |
 | Sacramento City Unified School District | CA | ✅ 2026-07-02 | https://www.scusd.edu/district-calendar |
-| Wake County Public School System | NC | ⏳ pending | https://www.wcpss.net/calendars |
-| Charlotte-Mecklenburg Schools | NC | ⏳ pending | https://www.cms.k12.nc.us/communications/calendars/Pages/Calendars.aspx |
-| Guilford County Schools | NC | ⏳ pending | https://www.gcsnc.com/calendar |
-| Cumberland County Schools | NC | ⏳ pending | https://www.ccs.k12.nc.us/calendar |
-| Winston-Salem/Forsyth County Schools | NC | ⏳ pending | https://www.wsfcs.k12.nc.us/calendars |
-| Fairfax County Public Schools | VA | ⏳ pending | https://www.fcps.edu/calendars |
+| Wake County Public School System | NC | ✅ 2026-07-05 (2025-26 + 2026-27 + 2027-28 TRAD verified from PDF) | https://www.wcpss.net/calendars |
+| Charlotte-Mecklenburg Schools | NC | ✅ 2026-07-05 (2025-26 + 2026-27 + 2027-28 verified from PDF) | https://www.cms.k12.nc.us/communications/calendars/Pages/Calendars.aspx |
+| Guilford County Schools | NC | ✅ 2026-07-05 (2025-26 + 2026-27 + 2027-28 verified from PDF) | https://www.gcsnc.com/calendar |
+| Cumberland County Schools | NC | ✅ 2026-07-05 (2025-26 + 2026-27 verified from PDF; no 2027-28 PDF provided) | https://www.ccs.k12.nc.us/page/districts-board-approved-calendars |
+| Winston-Salem/Forsyth County Schools | NC | ✅ 2026-07-05 (2025-26 + 2026-27 verified from PDF) | https://www.wsfcs.k12.nc.us/calendars |
+| Fairfax County Public Schools | VA | ✅ 2026-07-05 (2025-26 + 2026-27 + 2027-28 verified from PDF) | https://www.fcps.edu/calendars |
 | Loudoun County Public Schools | VA | ⏳ pending | https://www.lcps.org/calendar |
 | Prince William County Public Schools | VA | ⏳ pending | https://www.pwcs.edu/calendars |
 | Chesterfield County Public Schools | VA | ⏳ pending | https://www.ccpsnet.net/calendar |

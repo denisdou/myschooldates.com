@@ -1,28 +1,28 @@
 {
   "institutionId": "wake-county",
   "schoolYear": "2026-2027",
-  "firstDay": "2026-08-24",
-  "lastDay": "2027-06-11",
+  "firstDay": "2026-08-06",
+  "lastDay": "2027-05-24",
   "totalSchoolDays": 185,
   "teacherWorkDays": 200,
   "semesters": 2,
   "sourceUrl": "https://www.wcpss.net/calendars",
   "sourcePdfUrl": "",
-  "lastVerifiedAt": "",
+  "lastVerifiedAt": "2026-07-05",
   "events": [
-    { "date": "2026-08-24", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-08-06", "name": "First Day of School", "type": "school_start" },
     { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
-    { "date": "2026-10-12", "name": "Fall Break", "type": "break_start" },
-    { "date": "2026-10-16", "name": "Fall Break End", "type": "break_end" },
     { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday" },
-    { "date": "2026-11-23", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2026-11-24", "name": "Thanksgiving Break", "type": "break_start" },
     { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
     { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
-    { "date": "2027-01-04", "name": "Winter Break End", "type": "break_end" },
+    { "date": "2027-01-06", "name": "Winter Break End", "type": "break_end" },
     { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-02-15", "name": "Presidents' Break", "type": "break_start" },
+    { "date": "2027-02-19", "name": "Presidents' Break End", "type": "break_end" },
     { "date": "2027-03-15", "name": "Spring Break", "type": "break_start" },
     { "date": "2027-03-19", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2027-06-11", "name": "Last Day of School", "type": "school_end" }
+    { "date": "2027-03-26", "name": "Good Friday", "type": "holiday" },
+    { "date": "2027-05-24", "name": "Last Day of School", "type": "school_end" }
   ]
 }

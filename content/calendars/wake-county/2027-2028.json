@@ -1,0 +1,27 @@
+{
+  "institutionId": "wake-county",
+  "schoolYear": "2027-2028",
+  "firstDay": "2027-08-23",
+  "lastDay": "2028-06-08",
+  "totalSchoolDays": 185,
+  "teacherWorkDays": 200,
+  "semesters": 2,
+  "sourceUrl": "https://www.wcpss.net/calendars",
+  "sourcePdfUrl": "",
+  "lastVerifiedAt": "2026-07-05",
+  "events": [
+    { "date": "2027-08-23", "name": "First Day of School", "type": "school_start" },
+    { "date": "2027-09-06", "name": "Labor Day", "type": "holiday" },
+    { "date": "2027-11-11", "name": "Veterans Day", "type": "holiday" },
+    { "date": "2027-11-24", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2027-11-26", "name": "Thanksgiving Break End", "type": "break_end" },
+    { "date": "2027-12-20", "name": "Winter Break", "type": "break_start" },
+    { "date": "2028-01-03", "name": "Winter Break End", "type": "break_end" },
+    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2028-03-27", "name": "Spring Break", "type": "break_start" },
+    { "date": "2028-04-03", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2028-04-14", "name": "Good Friday", "type": "holiday" },
+    { "date": "2028-05-29", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2028-06-08", "name": "Last Day of School", "type": "school_end" }
+  ]
+}
