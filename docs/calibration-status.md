@@ -36,10 +36,33 @@ Each district needs both school years (2025-2026 and 2026-2027) verified against
 | Cumberland County Schools | NC | ✅ 2026-07-05 (2025-26 + 2026-27 verified from PDF; no 2027-28 PDF provided) | https://www.ccs.k12.nc.us/page/districts-board-approved-calendars |
 | Winston-Salem/Forsyth County Schools | NC | ✅ 2026-07-05 (2025-26 + 2026-27 verified from PDF) | https://www.wsfcs.k12.nc.us/calendars |
 | Fairfax County Public Schools | VA | ✅ 2026-07-05 (2025-26 + 2026-27 + 2027-28 verified from PDF) | https://www.fcps.edu/calendars |
-| Loudoun County Public Schools | VA | ⏳ pending | https://www.lcps.org/calendar |
-| Prince William County Public Schools | VA | ⏳ pending | https://www.pwcs.edu/calendars |
-| Chesterfield County Public Schools | VA | ⏳ pending | https://www.ccpsnet.net/calendar |
-| Virginia Beach City Public Schools | VA | ⏳ pending | https://www.vbschools.com/calendars |
+| Loudoun County Public Schools | VA | ✅ 2026-07-05 (2025-26 + 2026-27 verified from official site; 2027-28 added) | https://www.lcps.org/calendar |
+| Prince William County Public Schools | VA | ✅ 2026-07-05 (2025-26 + 2026-27 verified from official site) | https://www.pwcs.edu/calendars |
+| Chesterfield County Public Schools | VA | ✅ 2026-07-05 (2025-26 + 2026-27 + 2027-28 verified from official site) | https://www.ccpsnet.net/calendar |
+| Virginia Beach City Public Schools | VA | ✅ 2026-07-05 (2025-26 + 2026-27 verified from PDF) | https://www.vbschools.com/calendars |
+
+---
+
+## 缺少 2027-2028 学年的学区（14个）
+
+以下学区尚未添加 2027-2028 日历文件，需优先补充：
+
+| District | State | Official Calendar URL |
+|---|---|---|
+| Miami-Dade County Public Schools | FL | https://www.dadeschools.net/calendar |
+| Houston ISD | TX | https://www.houstonisd.org/calendar |
+| Orange County Public Schools | FL | https://www.ocps.net/calendar |
+| Palm Beach County School District | FL | https://www.palmbeachschools.org/calendar |
+| Dallas ISD | TX | https://www.dallasisd.org/about/about-dallas-isd/district-calendars |
+| Hillsborough County Public Schools | FL | https://www.hillsboroughschools.org/page/calendars |
+| Austin ISD | TX | https://www.austinisd.org/calendar |
+| Fort Worth ISD | TX | https://www.fwisd.org/calendar |
+| San Diego Unified School District | CA | https://www.sandiegounified.org/academics/academic_calendars |
+| Sacramento City Unified School District | CA | https://www.scusd.edu/district-calendar |
+| Cumberland County Schools | NC | https://www.ccs.k12.nc.us/page/districts-board-approved-calendars |
+| Winston-Salem/Forsyth County Schools | NC | https://www.wsfcs.k12.nc.us/calendars |
+| Prince William County Public Schools | VA | https://www.pwcs.edu/calendars |
+| Virginia Beach City Public Schools | VA | https://www.vbschools.com/calendars |
 
 ---
 
