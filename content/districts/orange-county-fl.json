@@ -1,0 +1,51 @@
+{
+  "institutionId": "orange-county-fl",
+  "name": "Orange County Public Schools",
+  "shortName": "OCPS",
+  "slug": "orange-county-school-calendar",
+  "state": "Florida",
+  "stateCode": "FL",
+  "city": "Orlando",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.ocps.net",
+  "calendarPage": "https://www.ocps.net/calendar",
+  "logo": "",
+  "timezone": "America/New_York",
+  "currentSchoolYear": "2026-2027",
+  "about": "Orange County Public Schools (OCPS) is the fourth-largest school district in Florida, serving approximately 220,000 students across more than 200 schools in Orange County, Florida, home to Orlando.",
+  "calendarNotes": "Orange County Public Schools serves the greater Orlando area, home to Walt Disney World and Universal Studios, but school break dates are not designed to avoid theme park peak seasons. Spring Break in OCPS typically falls in mid-to-late March — a period when Orlando's theme parks are at or near maximum capacity. Families planning local outings during Spring Break should expect long waits and book early. The school year begins in mid-August. Winter Break also coincides with one of the busiest tourism weeks in Central Florida, so local roads and attractions are especially congested. Families who move frequently due to hospitality or theme park industry jobs should note that enrollment boundary lines can shift between years.",
+  "relatedDistricts": [
+    {
+      "name": "Miami-Dade County Public Schools",
+      "slug": "miami-dade-school-calendar",
+      "state": "Florida"
+    },
+    {
+      "name": "Broward County Public Schools",
+      "slug": "broward-county-school-calendar",
+      "state": "Florida"
+    },
+    {
+      "name": "Palm Beach County School District",
+      "slug": "palm-beach-county-school-calendar",
+      "state": "Florida"
+    }
+  ]
+}

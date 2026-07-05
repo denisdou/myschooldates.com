@@ -1,0 +1,32 @@
+{
+  "institutionId": "northside-isd",
+  "schoolYear": "2025-2026",
+  "firstDay": "2025-08-11",
+  "lastDay": "2026-05-21",
+  "totalSchoolDays": 175,
+  "teacherWorkDays": 187,
+  "semesters": 2,
+  "sourceUrl": "https://www.nisd.net/schools/calendars",
+  "sourcePdfUrl": "",
+  "lastVerifiedAt": "2026-07-02",
+  "events": [
+    { "date": "2025-08-11", "name": "First Day of School", "type": "school_start" },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
+    { "date": "2025-10-13", "name": "Student Holiday / Teacher Planning Day", "type": "no_school" },
+    { "date": "2025-11-04", "name": "Student Holiday / Staff Development", "type": "no_school" },
+    { "date": "2025-11-24", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-11-28", "name": "Thanksgiving Break End", "type": "break_end" },
+    { "date": "2025-12-22", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-01-02", "name": "Winter Break End", "type": "break_end" },
+    { "date": "2026-01-05", "name": "Student Holiday / Teacher Planning Day", "type": "no_school" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2026-02-16", "name": "Student Holiday / Staff Development", "type": "no_school" },
+    { "date": "2026-03-09", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-03-13", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2026-03-16", "name": "Student Holiday / Teacher Planning Day", "type": "no_school" },
+    { "date": "2026-04-03", "name": "Good Friday", "type": "holiday" },
+    { "date": "2026-04-06", "name": "Easter Monday", "type": "holiday" },
+    { "date": "2026-04-24", "name": "Holiday (Battle of Flowers / Fiesta)", "type": "holiday" },
+    { "date": "2026-05-21", "name": "Last Day of School", "type": "school_end" }
+  ]
+}

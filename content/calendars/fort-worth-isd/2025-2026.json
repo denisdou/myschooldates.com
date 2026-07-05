@@ -1,0 +1,30 @@
+{
+  "institutionId": "fort-worth-isd",
+  "schoolYear": "2025-2026",
+  "firstDay": "2025-08-12",
+  "lastDay": "2026-05-21",
+  "totalSchoolDays": 173,
+  "teacherWorkDays": 187,
+  "semesters": 2,
+  "sourceUrl": "https://www.fwisd.org/calendar",
+  "sourcePdfUrl": "",
+  "lastVerifiedAt": "2026-07-02",
+  "events": [
+    { "date": "2025-08-12", "name": "First Day of School", "type": "school_start" },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
+    { "date": "2025-10-10", "name": "District Professional Learning Day", "type": "no_school" },
+    { "date": "2025-10-13", "name": "FLEX Day / Indigenous Peoples' Day", "type": "no_school" },
+    { "date": "2025-11-11", "name": "Parent/Teacher Conference Day (Veterans Day)", "type": "no_school" },
+    { "date": "2025-11-24", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-11-28", "name": "Thanksgiving Break End", "type": "break_end" },
+    { "date": "2025-12-22", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-01-05", "name": "Winter Break End", "type": "break_end" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2026-02-16", "name": "Parent/Teacher Conference Day (Presidents' Day)", "type": "no_school" },
+    { "date": "2026-03-16", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-03-20", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2026-03-23", "name": "District Professional Learning / Chavez Huerta Day", "type": "no_school" },
+    { "date": "2026-04-03", "name": "Good Friday", "type": "holiday" },
+    { "date": "2026-05-21", "name": "Last Day of School", "type": "school_end" }
+  ]
+}

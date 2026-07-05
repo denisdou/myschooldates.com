@@ -1,0 +1,29 @@
+{
+  "institutionId": "orange-county-fl",
+  "schoolYear": "2026-2027",
+  "firstDay": "2026-08-11",
+  "lastDay": "2027-05-26",
+  "totalSchoolDays": 180,
+  "teacherWorkDays": 196,
+  "semesters": 2,
+  "sourceUrl": "https://www.ocps.net/calendar",
+  "sourcePdfUrl": "",
+  "lastVerifiedAt": "2026-07-02",
+  "events": [
+    { "date": "2026-08-11", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
+    { "date": "2026-10-12", "name": "No School (Teacher Workday)", "type": "no_school" },
+    { "date": "2026-11-23", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
+    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-01-01", "name": "Winter Break End", "type": "break_end" },
+    { "date": "2027-01-04", "name": "No School (Teacher Workday)", "type": "no_school" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-02-15", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2027-03-12", "name": "No School (Teacher Workday)", "type": "no_school" },
+    { "date": "2027-03-15", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-03-19", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2027-04-23", "name": "No School (Teacher Professional Day)", "type": "no_school" },
+    { "date": "2027-05-26", "name": "Last Day of School", "type": "school_end" }
+  ]
+}

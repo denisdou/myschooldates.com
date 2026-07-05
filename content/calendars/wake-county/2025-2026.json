@@ -1,0 +1,28 @@
+{
+  "institutionId": "wake-county",
+  "schoolYear": "2025-2026",
+  "firstDay": "2025-08-25",
+  "lastDay": "2026-06-12",
+  "totalSchoolDays": 185,
+  "teacherWorkDays": 200,
+  "semesters": 2,
+  "sourceUrl": "https://www.wcpss.net/calendars",
+  "sourcePdfUrl": "",
+  "lastVerifiedAt": "",
+  "events": [
+    { "date": "2025-08-25", "name": "First Day of School", "type": "school_start" },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
+    { "date": "2025-10-13", "name": "Fall Break", "type": "break_start" },
+    { "date": "2025-10-17", "name": "Fall Break End", "type": "break_end" },
+    { "date": "2025-11-11", "name": "Veterans Day", "type": "holiday" },
+    { "date": "2025-11-24", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-11-28", "name": "Thanksgiving Break End", "type": "break_end" },
+    { "date": "2025-12-22", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-01-02", "name": "Winter Break End", "type": "break_end" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2026-03-16", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-03-20", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2026-05-25", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2026-06-12", "name": "Last Day of School", "type": "school_end" }
+  ]
+}

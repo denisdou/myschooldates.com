@@ -1,0 +1,51 @@
+{
+  "institutionId": "broward-county",
+  "name": "Broward County Public Schools",
+  "shortName": "BCPS",
+  "slug": "broward-county-school-calendar",
+  "state": "Florida",
+  "stateCode": "FL",
+  "city": "Fort Lauderdale",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.browardschools.com",
+  "calendarPage": "https://www.browardschools.com/calendars",
+  "logo": "",
+  "timezone": "America/New_York",
+  "currentSchoolYear": "2026-2027",
+  "about": "Broward County Public Schools (BCPS) is the sixth-largest school district in the United States, serving approximately 260,000 students across more than 230 schools in Broward County, Florida.",
+  "calendarNotes": "Broward County Public Schools typically opens in mid-August, roughly in sync with neighboring Miami-Dade but with Spring Break that often falls a week earlier — usually mid-March. If you have children in both Broward and Miami-Dade, confirm break dates separately, as they do not always align. Fort Lauderdale's beaches become extremely crowded during Broward's Spring Break, so families planning local beach days should expect heavy traffic. Winter Break runs about two weeks from late December into early January. Families relocating to Broward should check whether their home is in a magnet school zone, as zone assignments can affect enrollment timelines.",
+  "relatedDistricts": [
+    {
+      "name": "Miami-Dade County Public Schools",
+      "slug": "miami-dade-school-calendar",
+      "state": "Florida"
+    },
+    {
+      "name": "Palm Beach County School District",
+      "slug": "palm-beach-county-school-calendar",
+      "state": "Florida"
+    },
+    {
+      "name": "Orange County Public Schools",
+      "slug": "orange-county-school-calendar",
+      "state": "Florida"
+    }
+  ]
+}

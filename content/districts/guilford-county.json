@@ -1,0 +1,51 @@
+{
+  "institutionId": "guilford-county",
+  "name": "Guilford County Schools",
+  "shortName": "GCS",
+  "slug": "guilford-county-school-calendar",
+  "state": "North Carolina",
+  "stateCode": "NC",
+  "city": "Greensboro",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.gcsnc.com",
+  "calendarPage": "https://www.gcsnc.com/calendar",
+  "logo": "",
+  "timezone": "America/New_York",
+  "currentSchoolYear": "2026-2027",
+  "about": "Guilford County Schools is the third-largest school district in North Carolina, serving approximately 72,000 students across Greensboro, High Point, and surrounding communities in the Piedmont Triad region.",
+  "calendarNotes": "Guilford County Schools serves Greensboro, High Point, and surrounding Piedmont Triad communities and follows the standard North Carolina academic calendar — starting in late August and including a Fall Break in mid-October. Spring Break typically falls in mid-March, roughly aligned with other large NC districts. Families with children split between Guilford County and neighboring Forsyth or Alamance districts should verify Spring Break dates, as they can occasionally differ by a few days. Greensboro's central location on the I-85/I-40 interchange makes it a busy travel corridor — expect heavier-than-usual interstate traffic during Thanksgiving and Spring Break as families travel between Charlotte, Raleigh, and the Triangle.",
+  "relatedDistricts": [
+    {
+      "name": "Wake County Public School System",
+      "slug": "wake-county-school-calendar",
+      "state": "North Carolina"
+    },
+    {
+      "name": "Charlotte-Mecklenburg Schools",
+      "slug": "charlotte-mecklenburg-schools-calendar",
+      "state": "North Carolina"
+    },
+    {
+      "name": "Winston-Salem/Forsyth County Schools",
+      "slug": "winston-salem-forsyth-school-calendar",
+      "state": "North Carolina"
+    }
+  ]
+}

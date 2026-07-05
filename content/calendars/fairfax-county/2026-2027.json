@@ -1,0 +1,27 @@
+{
+  "institutionId": "fairfax-county",
+  "schoolYear": "2026-2027",
+  "firstDay": "2026-09-01",
+  "lastDay": "2027-06-16",
+  "totalSchoolDays": 180,
+  "teacherWorkDays": 194,
+  "semesters": 2,
+  "sourceUrl": "https://www.fcps.edu/calendars",
+  "sourcePdfUrl": "",
+  "lastVerifiedAt": "",
+  "events": [
+    { "date": "2026-09-01", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-10-12", "name": "Columbus Day", "type": "holiday" },
+    { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday" },
+    { "date": "2026-11-25", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
+    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-01-04", "name": "Winter Break End", "type": "break_end" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-02-15", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2027-03-29", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-04-02", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2027-06-16", "name": "Last Day of School", "type": "school_end" }
+  ]
+}

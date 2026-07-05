@@ -1,0 +1,28 @@
+{
+  "institutionId": "charlotte-mecklenburg",
+  "schoolYear": "2026-2027",
+  "firstDay": "2026-08-24",
+  "lastDay": "2027-06-11",
+  "totalSchoolDays": 185,
+  "teacherWorkDays": 200,
+  "semesters": 2,
+  "sourceUrl": "https://www.cms.k12.nc.us/communications/calendars/Pages/Calendars.aspx",
+  "sourcePdfUrl": "",
+  "lastVerifiedAt": "",
+  "events": [
+    { "date": "2026-08-24", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
+    { "date": "2026-10-12", "name": "Fall Break", "type": "break_start" },
+    { "date": "2026-10-16", "name": "Fall Break End", "type": "break_end" },
+    { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday" },
+    { "date": "2026-11-23", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
+    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-01-04", "name": "Winter Break End", "type": "break_end" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-03-15", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-03-19", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2027-06-11", "name": "Last Day of School", "type": "school_end" }
+  ]
+}

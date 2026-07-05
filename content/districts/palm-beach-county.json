@@ -1,0 +1,51 @@
+{
+  "institutionId": "palm-beach-county",
+  "name": "Palm Beach County School District",
+  "shortName": "PBCSD",
+  "slug": "palm-beach-county-school-calendar",
+  "state": "Florida",
+  "stateCode": "FL",
+  "city": "West Palm Beach",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.palmbeachschools.org",
+  "calendarPage": "https://www.palmbeachschools.org/calendar",
+  "logo": "",
+  "timezone": "America/New_York",
+  "currentSchoolYear": "2026-2027",
+  "about": "Palm Beach County School District is the fifth-largest school district in Florida and among the largest in the United States, serving approximately 190,000 students across more than 180 schools in Palm Beach County, Florida.",
+  "calendarNotes": "Palm Beach County School District covers a large geographic area from the Atlantic coast to Lake Okeechobee, serving communities from affluent coastal suburbs to rural agricultural towns — and school schedules reflect that diversity. The school year typically begins in mid-August. Spring Break can differ by a week from neighboring Broward County, so South Florida families coordinating schedules should check both calendars before booking travel. The area's seasonal population — residents who split time between Palm Beach and the Northeast — often affects school event attendance patterns during winter months. Families new to the county should confirm school assignments early, as feeder patterns differ significantly by zip code.",
+  "relatedDistricts": [
+    {
+      "name": "Miami-Dade County Public Schools",
+      "slug": "miami-dade-school-calendar",
+      "state": "Florida"
+    },
+    {
+      "name": "Broward County Public Schools",
+      "slug": "broward-county-school-calendar",
+      "state": "Florida"
+    },
+    {
+      "name": "Orange County Public Schools",
+      "slug": "orange-county-school-calendar",
+      "state": "Florida"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "institutionId": "san-diego-unified",
+  "name": "San Diego Unified School District",
+  "shortName": "SDUSD",
+  "slug": "san-diego-unified-school-district-calendar",
+  "state": "California",
+  "stateCode": "CA",
+  "city": "San Diego",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.sandiegounified.org",
+  "calendarPage": "https://www.sandiegounified.org/academics/academic_calendars",
+  "logo": "",
+  "timezone": "America/Los_Angeles",
+  "currentSchoolYear": "2026-2027",
+  "about": "San Diego Unified School District is the second largest school district in California, serving approximately 95,500 students in San Diego.",
+  "calendarNotes": "San Diego Unified starts the school year in mid-August and generally follows a calendar similar to LAUSD, though specific dates differ each year. Spring Break typically falls in late March or early April. San Diego's mild climate means weather-related school closures are extremely rare — unlike many other parts of the country, the calendar is highly reliable once published. The district observes Cesar Chavez Day as a school holiday. Families considering cross-border trips to Tijuana or Baja California during Spring Break should note that Mexican schools follow a different academic calendar with different break timing. The district's proximity to military installations means a notable share of families are active-duty or veterans — mid-year enrollment transfers are common.",
+  "relatedDistricts": [
+    {
+      "name": "Los Angeles Unified School District",
+      "slug": "los-angeles-unified-school-district-calendar",
+      "state": "California"
+    },
+    {
+      "name": "Long Beach Unified School District",
+      "slug": "long-beach-unified-school-district-calendar",
+      "state": "California"
+    },
+    {
+      "name": "Fresno Unified School District",
+      "slug": "fresno-unified-school-district-calendar",
+      "state": "California"
+    }
+  ]
+}

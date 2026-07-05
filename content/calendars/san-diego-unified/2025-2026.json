@@ -1,0 +1,31 @@
+{
+  "institutionId": "san-diego-unified",
+  "schoolYear": "2025-2026",
+  "firstDay": "2025-08-11",
+  "lastDay": "2026-05-28",
+  "totalSchoolDays": 180,
+  "teacherWorkDays": 187,
+  "semesters": 2,
+  "sourceUrl": "https://www.sandiegounified.org/academics/academic_calendars",
+  "sourcePdfUrl": "",
+  "lastVerifiedAt": "2026-07-02",
+  "events": [
+    { "date": "2025-08-11", "name": "First Day of School", "type": "school_start" },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
+    { "date": "2025-10-13", "name": "Indigenous Peoples' Day (Non-Instructional Day)", "type": "no_school" },
+    { "date": "2025-11-10", "name": "Non-Instructional Day", "type": "no_school" },
+    { "date": "2025-11-11", "name": "Veterans Day", "type": "holiday" },
+    { "date": "2025-11-24", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-11-28", "name": "Thanksgiving Break End", "type": "break_end" },
+    { "date": "2025-12-22", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-01-02", "name": "Winter Break End", "type": "break_end" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2026-02-13", "name": "Holiday", "type": "holiday" },
+    { "date": "2026-02-16", "name": "Presidents' Day", "type": "holiday" },
+    { "date": "2026-03-09", "name": "Non-Instructional Day", "type": "no_school" },
+    { "date": "2026-03-30", "name": "Spring Recess", "type": "break_start" },
+    { "date": "2026-04-03", "name": "Spring Recess End", "type": "break_end" },
+    { "date": "2026-05-25", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2026-05-28", "name": "Last Day of School", "type": "school_end" }
+  ]
+}

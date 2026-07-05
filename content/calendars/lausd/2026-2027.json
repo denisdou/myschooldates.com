@@ -1,0 +1,29 @@
+{
+  "institutionId": "lausd",
+  "schoolYear": "2026-2027",
+  "firstDay": "2026-08-12",
+  "lastDay": "2027-06-04",
+  "totalSchoolDays": 180,
+  "teacherWorkDays": 185,
+  "semesters": 2,
+  "sourceUrl": "https://www.lausd.net/calendar",
+  "sourcePdfUrl": "",
+  "lastVerifiedAt": "2026-07-02",
+  "events": [
+    { "date": "2026-08-12", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-09-04", "name": "Admission Day", "type": "holiday" },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
+    { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday" },
+    { "date": "2026-11-26", "name": "Thanksgiving Holiday", "type": "break_start" },
+    { "date": "2026-11-27", "name": "Thanksgiving Holiday End", "type": "break_end" },
+    { "date": "2026-12-21", "name": "Winter Recess", "type": "break_start" },
+    { "date": "2027-01-08", "name": "Winter Recess End", "type": "break_end" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-02-15", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2027-03-22", "name": "Spring Recess", "type": "break_start" },
+    { "date": "2027-03-26", "name": "Spring Recess End", "type": "break_end" },
+    { "date": "2027-03-31", "name": "Farm Workers Day", "type": "holiday" },
+    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2027-06-04", "name": "Last Day of School", "type": "school_end" }
+  ]
+}

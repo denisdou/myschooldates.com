@@ -1,0 +1,32 @@
+{
+  "institutionId": "hillsborough-county",
+  "schoolYear": "2026-2027",
+  "firstDay": "2026-08-10",
+  "lastDay": "2027-05-28",
+  "totalSchoolDays": 180,
+  "teacherWorkDays": 196,
+  "semesters": 2,
+  "sourceUrl": "https://www.hillsboroughschools.org/page/calendars",
+  "sourcePdfUrl": "",
+  "lastVerifiedAt": "2026-07-02",
+  "events": [
+    { "date": "2026-08-10", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
+    { "date": "2026-10-12", "name": "No School (Non-Student Day)", "type": "no_school" },
+    { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday" },
+    { "date": "2026-11-23", "name": "Fall Break", "type": "break_start" },
+    { "date": "2026-11-27", "name": "Fall Break End", "type": "break_end" },
+    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-01-01", "name": "Winter Break End", "type": "break_end" },
+    { "date": "2027-01-04", "name": "No School (Non-Student Day)", "type": "no_school" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-02-12", "name": "Florida State Fair (Non-Student Day)", "type": "no_school" },
+    { "date": "2027-02-15", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2027-03-08", "name": "Strawberry Festival (Non-Student Day)", "type": "no_school" },
+    { "date": "2027-03-22", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-03-26", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2027-03-29", "name": "No School (Non-Student Day)", "type": "no_school" },
+    { "date": "2027-04-16", "name": "No School (Non-Student Day)", "type": "no_school" },
+    { "date": "2027-05-28", "name": "Last Day of School", "type": "school_end" }
+  ]
+}
