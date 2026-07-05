@@ -18,6 +18,17 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
+      script: [
+        {
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-X3KKMXLR1B',
+          async: true,
+          tagPosition: 'bodyClose',
+        },
+        {
+          innerHTML: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-X3KKMXLR1B');`,
+          tagPosition: 'bodyClose',
+        },
+      ],
       link: [
         // Favicon — SVG first (modern browsers), then PNG fallbacks
         { rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon.svg' },
@@ -30,6 +41,7 @@ export default defineNuxtConfig({
         { rel: 'manifest', href: '/manifest.json' },
       ],
       meta: [
+        { name: 'google-site-verification', content: 'kQNKHnW5SBoo5rpzlwnTxGzfeDdeLgG5c5zGN5IoepU' },
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'theme-color', content: '#ffffff' },
