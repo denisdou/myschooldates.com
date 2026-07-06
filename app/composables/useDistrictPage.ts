@@ -138,28 +138,6 @@ export function useDistrictPage() {
         a: `${district.name} observes the following holidays in ${cal.schoolYear}: ${holidays.map(h => h.name).join(', ')}. Schools are closed on these dates and no instruction takes place.`,
       },
       {
-        q: `How many semesters does ${district.name} have in ${cal.schoolYear}?`,
-        a: `The ${cal.schoolYear} school year is divided into ${semesters} semester${semesters !== 1 ? 's' : ''}. The first semester begins in ${firstMonth} and ends before the winter break in December. The second semester resumes in January and runs through ${lastMonth}.`,
-      },
-      {
-        q: `Are teacher planning days included in the ${cal.schoolYear} calendar?`,
-        a: planningDays
-          ? `Yes. The ${cal.schoolYear} calendar includes ${planningDays} teacher planning and professional development days on top of the ${totalDays} student instructional days. Students do not attend school on these days.`
-          : `Yes. The calendar includes teacher planning days and professional development days when students do not attend. These are separate from the ${totalDays} instructional days and are marked on the official district calendar.`,
-      },
-      {
-        q: `Is there school on Labor Day for ${district.name}?`,
-        a: `No. Labor Day falls on the first Monday of September and is a non-instructional day for all students and staff at ${district.name}. It marks one of the first holidays of the school year, just weeks after the fall semester begins.`,
-      },
-      {
-        q: `Is Memorial Day a school holiday for ${district.name}?`,
-        a: `Yes. Memorial Day, observed on the last Monday of May, is a school holiday at ${district.name}. It typically falls just one to two weeks before the last day of school, giving students and families a long weekend near the end of the year.`,
-      },
-      {
-        q: `Where can I find the official ${district.name} calendar?`,
-        a: `The official ${cal.schoolYear} calendar is published at ${sourceUrl}. You can also download all important dates as an ICS file directly from this page to add them to Google Calendar, Apple Calendar, or Outlook.`,
-      },
-      {
         q: `How many school breaks does ${district.name} have in ${cal.schoolYear}?`,
         a: `${district.name} has ${breaks.length} major school break${breaks.length !== 1 ? 's' : ''} in the ${cal.schoolYear} school year: ${breaks.map(b => b.name).join(', ')}. Together these breaks total ${breaks.reduce((sum, b) => sum + b.days, 0)} days off outside of federal holidays.`,
       },
@@ -170,48 +148,14 @@ export function useDistrictPage() {
           : `${district.name} does not have a scheduled fall break in the ${cal.schoolYear} calendar. The fall semester runs continuously from the first day of school in ${firstMonth} until the Thanksgiving recess in November.`,
       },
       {
-        q: `What is the total number of holidays at ${district.name} in ${cal.schoolYear}?`,
-        a: `${district.name} observes ${holidays.length} official school holidays in the ${cal.schoolYear} school year. These include: ${holidays.map(h => h.name).join(', ')}. Schools are closed and no instruction takes place on these dates.`,
-      },
-      {
         q: `How can I add ${district.name}'s school calendar to Google Calendar?`,
         a: `To add the ${district.name} ${cal.schoolYear} calendar to Google Calendar, download the .ics file from this page, then open Google Calendar, go to Settings → Import & Export → Import, and upload the file. All school holidays, breaks, and key dates will appear on your calendar automatically.`,
-      },
-      {
-        q: `When does summer break start for ${district.name} in ${cal.schoolYear}?`,
-        a: `Summer break for ${district.name} begins the day after the last day of school on ${formatDate(cal.lastDay)}. Students and staff are off for the summer until the first day of the next school year, typically in ${firstMonth} of the following year.`,
-      },
-      {
-        q: `Does the ${district.name} school calendar change every year?`,
-        a: `Yes. The ${district.name} school board sets a new academic calendar each year. Dates for the first and last day of school, holiday breaks, and teacher planning days may shift from year to year. Always verify the current year's schedule at the official district website before making travel or childcare plans.`,
       },
       {
         q: `Can I plan family travel during Spring Break for ${district.name} in ${cal.schoolYear}?`,
         a: springBreak
           ? `Yes. Spring Break for ${district.name} runs from ${formatShortDate(springBreak.start)} to ${formatShortDate(springBreak.end)} — a ${springBreak.days}-day window. Book travel early, as this is one of the busiest vacation periods of the year for families in the district.`
           : `Check the calendar above for the spring break dates for ${district.name} in ${cal.schoolYear}. Spring break is one of the most popular family travel periods, so booking early is recommended.`,
-      },
-      {
-        q: `I just moved to the area — when should I enroll my child at ${district.name}?`,
-        a: `Enrollment at ${district.name} is open year-round, but families who arrive before the school year begins have the most flexibility in school selection. The ${cal.schoolYear} school year starts on ${formatDate(cal.firstDay)}. Visit the official ${district.name} website at ${officialWebsite} for enrollment requirements, required documents, and your assigned school based on home address.`,
-      },
-      {
-        q: `Can I subscribe to the ${district.name} calendar so it updates automatically?`,
-        a: `The .ics file available on this page is a static snapshot of the ${cal.schoolYear} calendar. For live updates, subscribe directly from the official ${district.name} website if they provide a calendar subscription link. You can also download a fresh .ics file from this page whenever the district updates its calendar.`,
-      },
-      {
-        q: `Does school start on Veterans Day at ${district.name}?`,
-        a: `No. Veterans Day, observed on November 11, is a school holiday at ${district.name}. Schools are closed for students and staff. If November 11 falls on a weekend, the district may observe the holiday on the nearest weekday — check the official calendar for the exact date.`,
-      },
-      {
-        q: `Can I use the ${district.name} school calendar for vacation planning?`,
-        a: `Yes — that's exactly what this calendar is for. The most important dates to plan around are Spring Break (${springBreak ? `${formatShortDate(springBreak.start)}–${formatShortDate(springBreak.end)}` : 'check the calendar above'}), Winter Break (${winterBreak ? `${formatShortDate(winterBreak.start)}–${formatShortDate(winterBreak.end)}` : 'late December to early January'}), and the last day of school (${formatShortDate(cal.lastDay)}). You can also download the full calendar as an .ics file to add all dates directly to Google Calendar or Apple Calendar.`,
-      },
-      {
-        q: `Is the Thanksgiving break at ${district.name} a full week off?`,
-        a: thanksgivingBreak
-          ? `No — Thanksgiving break at ${district.name} is ${thanksgivingBreak.days} days (${formatShortDate(thanksgivingBreak.start)} through ${formatShortDate(thanksgivingBreak.end)}), not a full week. Schools reopen the following Monday.`
-          : `Thanksgiving break at ${district.name} typically covers Wednesday through Friday. Schools are not closed for the full week unless a separate district decision is made. Check the official calendar above for exact dates.`,
       },
       {
         q: `Does ${district.name} have early release days in ${cal.schoolYear}?`,
