@@ -28,9 +28,81 @@
   "calendarPage": "https://www.cms.k12.nc.us/communications/calendars/Pages/Calendars.aspx",
   "logo": "",
   "timezone": "America/New_York",
+  "county": "Mecklenburg County",
+  "region": "Piedmont North Carolina",
+  "metro": "Charlotte-Concord-Gastonia",
   "currentSchoolYear": "2026-2027",
-  "about": "Charlotte-Mecklenburg Schools serves approximately 139,000 students in Charlotte and Mecklenburg County, North Carolina, and is the second largest school district in the state.",
-  "calendarNotes": "Charlotte-Mecklenburg Schools follows the standard North Carolina academic calendar, starting in late August and including a Fall Break in October. Spring Break typically falls in mid-to-late March. CMS has a large number of magnet programs — from STEM academies to arts-focused schools — that follow the standard calendar but have separate enrollment deadlines in January for the following school year. Charlotte's rapid growth as a financial center and tech hub means enrollment patterns shift frequently. Families coordinating with relatives in neighboring South Carolina counties should be aware that SC school calendars run on a different schedule with different Spring Break timing, particularly for districts in the greater Charlotte metro.",
+  "studentCount": 147000,
+  "schoolCount": 175,
+  "calendarType": "traditional",
+  "districtFact": "Largest school district in North Carolina by enrollment, serving Charlotte and all of Mecklenburg County.",
+  "about": "Charlotte-Mecklenburg Schools (CMS) is the largest school district in North Carolina, serving approximately 147,000 students across 175 schools in Charlotte and Mecklenburg County.",
+  "calendarNotes": "Charlotte-Mecklenburg Schools begins the 2026-2027 school year on August 25, 2026 — the latest start date among North Carolina's four largest districts. Wake County starts August 6, Cumberland County starts August 7, and Winston-Salem starts August 10. CMS's later August 25 start reflects the district's calendar structure approved by the Mecklenburg County Board of Education. Spring Break runs March 29–April 2, 2027, and the school year ends June 9, 2027. Note that Good Friday (March 26) is observed as a school holiday the Friday before spring break begins, giving families a de facto four-day weekend before the break week.\n\nCharlotte is one of the fastest-growing large cities in the United States, driven by banking, financial services, and technology. Corporate relocations bring a steady stream of new families into CMS year-round — not just in August. Families transferred by Bank of America, Wells Fargo, Truist, Honeywell, and other major Charlotte employers often arrive mid-year and enroll students outside the August window. Families moving from New York, Ohio, or Chicago frequently expect school to start in late August or after Labor Day — CMS's August 25 start is close to that expectation. However, CMS ends on June 9, later than most relocating families expect — summer camp and childcare should cover through the second week of June.\n\nCMS operates one of the largest magnet school systems in North Carolina, with programs spanning STEM, arts, language immersion, and International Baccalaureate. Magnet school applications typically open in November and close in January for the following school year. Charlotte's growth means popular programs fill quickly — families interested in IB, performing arts, or STEM magnets should attend a fall choice information fair and submit applications before the January deadline.\n\nCharlotte's rapid growth has required CMS to redraw school attendance boundaries multiple times over the past decade as new neighborhoods develop and enrollment shifts. Families buying or renting in Mecklenburg County should verify their assigned school directly at cms.k12.nc.us using their address before finalizing a home purchase or lease — a boundary rezoning since last year may mean a different school assignment than neighbors or online sources indicate.\n\nFamilies coordinating with relatives or childcare providers in South Carolina suburbs of Charlotte — including Fort Mill, Rock Hill, and Indian Land in York County — should note that South Carolina public schools follow a different academic calendar. SC districts typically start in early August (often before CMS) and may have spring break dates that differ by one to two weeks. The Charlotte metro is genuinely a two-state school zone — never assume calendars align.",
+  "planningTips": [
+    "Good Friday (Mar 26) is a school holiday in CMS, the Friday before Spring Break starts. This gives students a four-day weekend before the break week — note it on your calendar if you're planning travel.",
+    "CMS ends the school year June 9 — later than most families expect. Plan summer camps and childcare through at least the second week of June.",
+    "Magnet and school choice applications open in November and close in January. Attend fall choice information events early — IB and arts magnet programs are competitive and have limited seats.",
+    "Charlotte-area families with children in South Carolina suburban schools (Fort Mill, Rock Hill) should verify spring break dates separately — SC districts may break one to two weeks earlier than CMS."
+  ],
+  "districtFaqs": [
+    {
+      "q": "Is Charlotte-Mecklenburg Schools the same as UNC Charlotte (UNCC)?",
+      "a": "No. Charlotte-Mecklenburg Schools (CMS) is the K-12 public school system serving Charlotte and Mecklenburg County. The University of North Carolina at Charlotte (UNC Charlotte or UNCC) is a separate public research university with its own semester academic calendar. UNCC's schedule has no connection to CMS school dates."
+    },
+    {
+      "q": "How do Charlotte-Mecklenburg spring break dates compare to South Carolina suburbs like Fort Mill or Rock Hill?",
+      "a": "Charlotte-area suburbs in South Carolina — including Fort Mill, Rock Hill, and Indian Land in York County, SC — are separate school districts in a different state with different academic calendars. South Carolina districts may start earlier than CMS (in early August) and have spring break dates that differ by one to two weeks. Always check the official calendar for each specific school district."
+    },
+    {
+      "q": "When does CMS magnet school enrollment open?",
+      "a": "Charlotte-Mecklenburg Schools opens its magnet and school choice application process in November for the following school year. Applications for most programs close in January. Families interested in IB, performing arts, STEM, or language immersion programs should attend a fall choice information fair and apply before the January deadline — popular programs fill quickly."
+    },
+    {
+      "q": "Why does CMS start school later than Wake County or Cumberland County?",
+      "a": "Each North Carolina school district sets its own academic calendar subject to state requirements. CMS starts August 25 — the latest of NC's four largest districts — while Wake County begins as early as August 6 and Cumberland County around August 7. The later start means CMS also ends later (June 9), which is important for families planning summer camps and childcare. The trade-off is a start date closer to what families relocating from northeastern or midwestern states typically expect."
+    },
+    {
+      "q": "Does CMS serve students in Union County or Cabarrus County?",
+      "a": "No. Charlotte-Mecklenburg Schools serves only Mecklenburg County. Union County Public Schools and Cabarrus County Schools are separate districts with their own academic calendars. Families buying homes in Waxhaw, Marvin, Indian Trail, or other Union County communities — even those that feel like Charlotte suburbs — will be in Union County Public Schools, not CMS. Similarly, Concord and Kannapolis are in Cabarrus County Schools. Verify your specific address before assuming CMS enrollment."
+    },
+    {
+      "q": "Do NASCAR race weekends at Charlotte Motor Speedway affect school schedules?",
+      "a": "NASCAR races at Charlotte Motor Speedway in Concord do not result in CMS school closures or calendar changes. However, major race weekends — including the Coca-Cola 600 in late May (near the end of the school year) and the Bank of America ROVAL in October — bring significant traffic to I-85 north of Charlotte. Families driving to or from schools in northeast Charlotte and Cabarrus County should allow extra time on race-weekend school days and evenings."
+    }
+  ],
+  "livingHere": {
+    "intro": "Charlotte is the largest city in North Carolina and one of the fastest-growing metros in the Southeast, powered by a banking and financial services sector that has drawn major corporate headquarters and tens of thousands of relocating families over the past two decades. The city straddles the NC-SC border, making cross-state commuting and school district coordination a routine consideration for many CMS families.",
+    "highlights": [
+      {
+        "label": "Charlotte Douglas Airport (CLT)",
+        "detail": "Charlotte Douglas International is American Airlines' second-largest hub and one of the ten busiest airports in the US, with nonstop service to over 175 destinations. The week after CMS's June 9 last day is one of the busiest family travel periods at CLT — book summer flights before spring break. Good Friday (March 26) plus spring break week (March 29–April 2) creates a nine-day travel window; airfare and popular beach routes fill quickly once CMS releases its calendar in fall. Families waiting on magnet placement results (typically late February) should book spring break flights immediately after results arrive — waiting until March risks higher fares."
+      },
+      {
+        "label": "Corporate Relocation into CMS",
+        "detail": "Charlotte's banking and finance sector — Bank of America, Wells Fargo, Truist, Honeywell — generates year-round corporate transfers. New hire families often arrive mid-semester, making CMS one of North Carolina's highest mid-year enrollment districts. Families relocating via employer transfer should contact CMS enrollment before the move to start paperwork early."
+      },
+      {
+        "label": "NASCAR Hall of Fame and Motorsports",
+        "detail": "The NASCAR Hall of Fame is in Uptown Charlotte, and over 200 racing teams and suppliers are based in the metro area. Fall race weekends at Charlotte Motor Speedway (Concord) draw large crowds and affect traffic on I-85 north of the city."
+      },
+      {
+        "label": "Carowinds Theme Park",
+        "detail": "Carowinds, straddling the NC-SC state line in south Charlotte, is a perennial CMS family destination with a season that aligns closely to the school calendar. Season passes purchased in winter pay off quickly: Opening Weekend (typically late March) falls just before spring break, giving pass holders their first visits at lighter crowds before the break week rush. Spring Break week (March 29–April 2) and Memorial Day weekend are the two peak days of the season — families with passes who prefer shorter lines should go Opening Weekend or weekday afternoons instead. The park runs through mid-August, giving CMS families a destination right up to the August 25 first day of school."
+      },
+      {
+        "label": "Lake Norman — End-of-Year and Summer",
+        "detail": "Lake Norman, a 32,000-acre reservoir 25 miles north of Charlotte, is the dominant summer destination for CMS families in northern Mecklenburg. Boat launches and lakeside parks get crowded the weekend after CMS's June 9 last day. Summer camps on Lake Norman fill in March — register once magnet placement results arrive in late February."
+      },
+      {
+        "label": "US National Whitewater Center",
+        "detail": "The US National Whitewater Center in west Charlotte is a year-round outdoor hub that CMS families use across the full school calendar. Summer camps there book out quickly after CMS's June 9 last day — register before spring break if you want a spot in July or early August. On teacher workdays and CMS non-school days, the center is a common alternative to childcare; check the district calendar for fall and spring workdays and plan accordingly. Weekend and after-school memberships are popular among CMS families from September through May, making it a practical activity anchor during the school year, not just summer."
+      },
+      {
+        "label": "South Carolina Border Communities",
+        "detail": "Fort Mill, Rock Hill, and Indian Land in York County, SC are effectively Charlotte suburbs but fall under South Carolina school districts with different calendars. Families coordinating between CMS and SC districts should verify spring break dates separately, as they can differ by 1–2 weeks."
+      }
+    ]
+  },
   "relatedDistricts": [
     {
       "name": "Wake County Public School System",

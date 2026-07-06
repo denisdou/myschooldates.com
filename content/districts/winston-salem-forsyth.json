@@ -28,9 +28,57 @@
   "calendarPage": "https://www.wsfcs.k12.nc.us/calendars",
   "logo": "",
   "timezone": "America/New_York",
+  "county": "Forsyth County",
+  "region": "Piedmont North Carolina",
+  "metro": "Winston-Salem",
   "currentSchoolYear": "2026-2027",
-  "about": "Winston-Salem/Forsyth County Schools serves approximately 55,000 students in Winston-Salem and Forsyth County, North Carolina. The district is the fourth-largest in the state and part of the Piedmont Triad metropolitan area.",
-  "calendarNotes": "Winston-Salem/Forsyth County Schools serves the Winston-Salem metropolitan area in North Carolina's Piedmont Triad and follows the state's standard academic calendar — starting in early August and including a Fall Break in mid-October. Spring Break typically falls in late March to early April, broadly aligned with neighboring Guilford County. Families coordinating schedules with Guilford or Alamance County relatives should verify exact dates, as they can differ by a day or two between districts. Winston-Salem has a significant arts and medical community, and the district's calendar reflects a traditional two-semester structure. The city's convenient location between Charlotte and Greensboro on I-40 makes it a common stopping point during holiday travel.",
+  "studentCount": 55000,
+  "schoolCount": 80,
+  "calendarType": "traditional",
+  "districtFact": "Fourth largest school district in North Carolina, serving the Winston-Salem metropolitan area — home to Wake Forest University, major medical research institutions, and a historic manufacturing heritage.",
+  "about": "Winston-Salem/Forsyth County Schools serves approximately 55,000 students across 80 schools in Winston-Salem and Forsyth County, North Carolina, in the Piedmont Triad region.",
+  "calendarNotes": "Winston-Salem/Forsyth County Schools begins the 2026-2027 school year on August 10, 2026 — two weeks earlier than Charlotte-Mecklenburg and Guilford County, which start August 24–25. Spring Break runs March 26–April 2, 2027 — a full two weeks later than Wake County's March 15–19 break. The school year ends May 21, 2027, which is earlier than most North Carolina peers (Guilford County ends June 10, CMS ends June 9). Winston-Salem's earlier last day reflects its early August start combined with a slightly lower total instructional day count.\n\nOne of the most common points of confusion for families new to Winston-Salem is the relationship between WSFCS and Wake Forest University. Despite sharing 'Wake' in the name, Wake Forest University is a private research university physically located in Winston-Salem — not affiliated with Wake County or Wake County Public School System. Winston-Salem/Forsyth County Schools and Wake Forest University are entirely separate institutions. Wake Forest's semester calendar has no effect on WSFCS school dates.\n\nFamilies coordinating Spring Break schedules between WSFCS and neighboring Guilford County Schools (Greensboro) should note the stagger: Guilford County Schools breaks March 22–26, while Winston-Salem doesn't start its break until March 26 (Good Friday) — meaning the two districts overlap for only the Good Friday holiday before both are in full spring break. Guilford County returns to school March 29, while Winston-Salem is still on break through April 2. This stagger matters for families with children in both districts.\n\nWinston-Salem has historically been associated with R.J. Reynolds Tobacco and Krispy Kreme Doughnuts — both headquartered there — as well as a significant arts and healthcare sector driven by Wake Forest Baptist Medical Center. The district serves a diverse city whose population includes long-established African American communities and a growing Latino population. Families moving to Winston-Salem from other parts of NC or the country will find a city with a distinctive local identity separate from both Charlotte and the Research Triangle.",
+  "planningTips": [
+    "WSFCS starts August 10 — two weeks before Charlotte-Mecklenburg (Aug 25). Families coordinating with CMS relatives should note the two-week gap at the start and the one-week gap at spring break.",
+    "WSFCS Spring Break (Mar 26–Apr 2) is one week later than Guilford County's (Mar 22–26). The districts overlap only on Good Friday (Mar 26) — plan multi-district family visits accordingly.",
+    "Wake Forest University is in Winston-Salem but is completely separate from WSFCS. WFU's semester calendar has no connection to K-12 school dates in Forsyth County.",
+    "WSFCS ends May 21 — among the earliest last days in NC. Summer camps and childcare can start earlier than in Wake County (May 24) or Charlotte-Mecklenburg (June 9)."
+  ],
+  "districtFaqs": [
+    {
+      "q": "Is Winston-Salem/Forsyth County Schools the same as Wake Forest University?",
+      "a": "No. Winston-Salem/Forsyth County Schools (WSFCS) is the K-12 public school system serving Winston-Salem and Forsyth County. Wake Forest University is a separate private research university that happens to be located in Winston-Salem. Despite the shared 'Wake' name, the two institutions are completely unrelated. Wake Forest University's semester schedule has no connection to WSFCS school dates. Wake Forest University relocated from the town of Wake Forest (in Wake County) to Winston-Salem in 1956, which is why the name can cause confusion."
+    }
+  ],
+  "livingHere": {
+    "intro": "Winston-Salem is a mid-sized Piedmont city in the midst of a decades-long economic transition — from its roots as the tobacco and textile capital of the South toward a growing identity anchored by one of the largest medical school complexes in the Southeast and a vibrant arts scene. Families relocating here find lower housing costs than Charlotte or Raleigh, a walkable arts district, and a city with a strong sense of its own distinct identity.",
+    "highlights": [
+      {
+        "label": "Atrium Health Wake Forest Baptist",
+        "detail": "Wake Forest Baptist Medical Center (now part of Atrium Health) is Winston-Salem's largest employer, housing a level-one trauma center and one of the Southeast's leading academic medical research programs — a primary draw for healthcare and research professionals relocating to the area."
+      },
+      {
+        "label": "Wake Forest University",
+        "detail": "Wake Forest University, a private research university with roughly 9,000 students, is located in Winston-Salem's northern suburbs. Its campus events, athletics, and employer partnerships are woven into local life, but the university's calendar is entirely separate from WSFCS school dates."
+      },
+      {
+        "label": "Reynolds American / BAT Legacy",
+        "detail": "R.J. Reynolds Tobacco (now British American Tobacco's US headquarters) shaped Winston-Salem's built environment and philanthropic institutions for over a century. Reynolds endowments funded Reynolda House Museum of American Art and remain a visible part of the city's cultural fabric."
+      },
+      {
+        "label": "Arts District and SECCA",
+        "detail": "The Arts District along Trade Street and the Southeastern Center for Contemporary Art (SECCA) make Winston-Salem one of the more arts-active mid-size cities in the South. The North Carolina School of the Arts (NCSA), a nationally ranked conservatory, is also located here."
+      },
+      {
+        "label": "Piedmont Triad Airport (PTI/GSO)",
+        "detail": "Piedmont Triad International Airport is shared between Winston-Salem and Greensboro, located roughly 20 miles east of downtown. Most major destinations require a connection through Charlotte (CLT) or Atlanta (ATL), making CLT the practical choice for many WSFCS families traveling by air."
+      },
+      {
+        "label": "High Point Furniture Market Access",
+        "detail": "The High Point Market, the world's largest furnishings trade show, is 20 miles south of Winston-Salem. The twice-yearly event (April and October) affects lodging availability and traffic throughout the Piedmont Triad during market weeks."
+      }
+    ]
+  },
   "relatedDistricts": [
     {
       "name": "Guilford County Schools",

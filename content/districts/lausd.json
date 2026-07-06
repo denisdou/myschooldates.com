@@ -28,23 +28,69 @@
   "calendarPage": "https://www.lausd.net/calendar",
   "logo": "",
   "timezone": "America/Los_Angeles",
+  "county": "Los Angeles County",
+  "region": "Southern California",
+  "metro": "Greater Los Angeles",
   "currentSchoolYear": "2026-2027",
+  "studentCount": 420000,
+  "schoolCount": 1000,
+  "calendarType": "mixed",
+  "districtFact": "Second largest school district in the United States, operating both traditional and year-round campuses across Los Angeles.",
   "about": "Los Angeles Unified School District (LAUSD) is the second-largest school district in the United States, serving approximately 420,000 students across more than 1,000 schools in the Los Angeles area.",
-  "calendarNotes": "LAUSD operates a traditional semester calendar district-wide, but also has a significant number of year-round schools — if your child attends a year-round campus, their calendar will differ substantially from this page. Spring Break in LAUSD runs in late March. The district observes Cesar Chavez Day on March 31 as a school holiday, which is unique to California and not commonly observed outside the state. Winter Break runs approximately two weeks, from late December through early January. With over 1,000 schools across a vast metro area, always double-check your child's specific school calendar, as site-level schedules can occasionally differ from the district standard.",
+  "calendarNotes": "LAUSD operates two distinct calendar systems: the Traditional Calendar and Year-Round Calendars. Most schools follow the Traditional Calendar, which is what this page reflects. However, a meaningful number of LAUSD campuses operate on year-round schedules with rotating tracks — typically labeled Track A, Track B, and Track C — each with its own start date, break periods, and end date spread differently across the calendar year. If your child's school is year-round, their schedule will differ substantially from the dates shown here. Always confirm which calendar your school follows before making any plans.\n\nFor traditional-track schools, the school year begins in mid-August and ends in mid-June, covering 180 instructional days as required by California state law. Winter Break spans approximately two weeks from late December into early January. Spring Break falls in late March — notably earlier than many parents who have relocated from the South or Midwest expect, and earlier than Florida or Texas districts.\n\nOne date unique to LAUSD and California public schools: Cesar Chavez Day, observed on March 31, is a designated school holiday. Named for the labor organizer and civil rights leader who co-founded the United Farm Workers of America, this holiday is not commonly observed outside California. Families who have moved from other states are frequently caught off guard by schools being closed on March 31, especially when it falls on a weekday in the middle of an otherwise normal school week.\n\nWith more than 1,000 schools across a vast and diverse metropolitan area, LAUSD's district-wide calendar is a baseline, not a guarantee. Individual schools regularly schedule their own minimum days — sometimes called minimum Mondays or early-dismissal days — for staff professional development or other site-specific reasons. These are not always published on the district calendar in advance. Contact your child's school office directly for site-level dismissal schedules throughout the year.\n\nFor travel planning, the two most predictable school-free windows for LAUSD families are Spring Break (late March) and Winter Break (late December through early January). Summer begins immediately after the last day of school in mid-June, which is later than many Southern states but aligns with California's coastal school calendar patterns.",
+  "planningTips": [
+    "If your child's school is year-round (Track A, B, or C), their break dates differ significantly from the Traditional Calendar shown here. Confirm which track your school follows at lausd.net before booking any travel.",
+    "Cesar Chavez Day (March 31) is a California state school holiday. Families from other states often miss it. In years when it falls outside Spring Break, mark it as a no-school day and arrange childcare.",
+    "Individual LAUSD schools schedule their own minimum days (Minimum Mondays, early-release days) throughout the year. Contact your school's office in early September to get a site-level list for the year.",
+    "LAUSD Spring Break falls in late March — earlier than many Southern and Midwestern districts. If coordinating with out-of-state family, confirm that their break aligns before booking travel."
+  ],
+  "districtFaqs": [
+    {
+      "q": "Why do some LAUSD schools have different calendars?",
+      "a": "LAUSD operates two distinct calendar types. Most schools follow the Traditional Calendar, which is what this page reflects. A smaller number of schools — primarily in overcrowded neighborhoods — operate on Year-Round Calendars with rotating tracks (Track A, Track B, Track C), each with different start dates, break periods, and end dates spread across the year. If your child's school is year-round, their schedule will differ substantially from the dates shown here. Check your school's specific track calendar on the LAUSD website."
+    },
+    {
+      "q": "Why is Cesar Chavez Day a holiday in LAUSD?",
+      "a": "Cesar Chavez Day (March 31) is a California state holiday honoring labor organizer and civil rights leader Cesar Chavez, who co-founded the United Farm Workers of America. California became the first state to designate it a state holiday in 2000. LAUSD and other California public schools observe it as a no-school day. Families relocating from other states are often caught off guard — this holiday is not widely observed outside California."
+    },
+    {
+      "q": "What is Track C in LAUSD's year-round calendar?",
+      "a": "LAUSD's year-round schools divide students into rotating tracks — typically Track A, Track B, and Track C — to stagger attendance and reduce overcrowding. Track C students generally start school in the fall, similar to the traditional calendar, but have different break periods throughout the year. Each track's schedule is published separately on the LAUSD website. Students on Track C do not follow the same holiday schedule as traditional-calendar students."
+    },
+    {
+      "q": "What are minimum days at LAUSD?",
+      "a": "Minimum days (sometimes called Minimum Mondays) are days when students are dismissed significantly earlier than usual — often 2 to 3 hours earlier. LAUSD uses minimum days for teacher professional development, parent-teacher conferences, and school-specific planning. These are not always shown on the district-wide calendar; contact your school's main office for site-level minimum day schedules."
+    },
+    {
+      "q": "Are charter schools included in the LAUSD calendar?",
+      "a": "No. Independent charter schools that operate within the LAUSD boundary set their own academic calendars and are not required to follow the LAUSD district calendar. Some affiliated charters may align closely, but many differ significantly in start dates, break schedules, and instructional days. Always verify directly with your charter school."
+    }
+  ],
+  "livingHere": {
+    "intro": "Los Angeles Unified stretches across 710 square miles, covering 32 cities and unincorporated county areas — from the San Fernando Valley to the South Bay, and from Hollywood to East LA. For families relocating to the region, navigating daily life here requires understanding a few local realities that directly intersect with the school calendar.",
+    "highlights": [
+      { "label": "Los Angeles International Airport (LAX)", "detail": "One of the world's busiest airports, handling over 80 million passengers annually. During LAUSD Spring Break (late March) and the week school ends in mid-June, departing flights and parking fill rapidly — book at least 6–8 weeks ahead for popular routes." },
+      { "label": "Traffic and Commute Patterns", "detail": "LA's freeway system is among the most congested in the US. Morning school drop-off aligns with peak commute hours on the 405, 101, and 10. On minimum days — when students dismiss 2–3 hours early — afternoon traffic patterns shift unexpectedly." },
+      { "label": "Wildfire and Air Quality Season", "detail": "Late summer through early fall (August–November) is peak fire season in Southern California. Air quality alerts can close school outdoor activities or trigger campus lockdowns. LAUSD has emergency distance-learning protocols for severe air quality events." },
+      { "label": "Entertainment Industry Calendar", "detail": "A significant portion of LAUSD families work in film, TV, and related industries. Production schedules — including pilot season (January–April) and awards season — can affect parent availability and family routines in ways that do not follow a standard corporate calendar." },
+      { "label": "Metro Rail Expansion", "detail": "LA Metro is mid-expansion, with new lines opening through the late 2020s, including extensions to LAX and the San Fernando Valley. Several lines serve LAUSD school corridors — check Metro's trip planner for school-year bus and rail options before committing to a school." },
+      { "label": "Earthquake Preparedness", "detail": "Los Angeles sits on multiple active fault systems, including the San Andreas. LAUSD schools conduct mandatory earthquake drills in the first weeks of school each fall. Families new to California should register for ShakeAlertLA and review LAUSD's emergency reunification procedures before the school year begins." }
+    ]
+  },
   "relatedDistricts": [
     {
       "name": "Long Beach Unified School District",
-      "slug": "long-beach-school-calendar",
+      "slug": "long-beach-unified-school-district-calendar",
       "state": "California"
     },
     {
       "name": "San Diego Unified School District",
-      "slug": "san-diego-school-calendar",
+      "slug": "san-diego-unified-school-district-calendar",
       "state": "California"
     },
     {
-      "name": "San Francisco Unified School District",
-      "slug": "sfusd-school-calendar",
+      "name": "Sacramento City Unified School District",
+      "slug": "sacramento-city-unified-school-calendar",
       "state": "California"
     }
   ]

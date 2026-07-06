@@ -28,9 +28,43 @@
   "calendarPage": "https://www.palmbeachschools.org/calendar",
   "logo": "",
   "timezone": "America/New_York",
+  "county": "Palm Beach County",
+  "region": "South Florida",
+  "metro": "Miami-Fort Lauderdale-Pompano Beach",
   "currentSchoolYear": "2026-2027",
-  "about": "Palm Beach County School District is the fifth-largest school district in Florida and among the largest in the United States, serving approximately 190,000 students across more than 180 schools in Palm Beach County, Florida.",
-  "calendarNotes": "Palm Beach County School District covers a large geographic area from the Atlantic coast to Lake Okeechobee, serving communities from affluent coastal suburbs to rural agricultural towns — and school schedules reflect that diversity. The school year typically begins in mid-August. Spring Break dates are broadly aligned with neighboring Broward County, though South Florida families coordinating schedules should always verify both calendars before booking travel. The area's seasonal population — residents who split time between Palm Beach and the Northeast — often affects school event attendance patterns during winter months. Families new to the county should confirm school assignments early, as feeder patterns differ significantly by zip code.",
+  "studentCount": 190000,
+  "schoolCount": 185,
+  "calendarType": "traditional",
+  "districtFact": "Fifth largest school district in Florida, stretching from the Atlantic coast to Lake Okeechobee and covering the largest county by area in the state.",
+  "about": "Palm Beach County School District is the fifth-largest school district in Florida, serving approximately 190,000 students across more than 185 schools in Palm Beach County — the largest county by area in Florida.",
+  "calendarNotes": "Palm Beach County School District begins the 2026-2027 school year on August 10, 2026. Spring Break runs March 22–26, 2027, and the school year ends May 27, 2027. In 2026-2027, Palm Beach County shares the same Spring Break window as both Miami-Dade and Broward County, making the entire South Florida tri-county area on break simultaneously. This alignment doesn't happen every year — in some years Palm Beach breaks a few days earlier or later than its southern neighbors. The week of March 22–26 is peak season along the Palm Beach coastline, and hotels from Boca Raton to Jupiter fill quickly once all three counties announce the same break date.\n\nPalm Beach County is geographically diverse in ways that affect school planning. The county stretches from affluent coastal communities like Boca Raton and Palm Beach to rural agricultural towns like Belle Glade and Pahokee near Lake Okeechobee. Schools in the western, inland areas of the county serve a large migrant and agricultural workforce, which can affect attendance patterns during harvest season — typically October through December. Families relocating from other states to either the coastal or inland portions of the county will find substantially different school environments and demographic contexts, often within the same district.\n\nFlorida's hurricane emergency closure rules apply to Palm Beach County as they do to all Florida districts. Palm Beach's location at the upper end of the South Florida coastline makes it slightly less exposed to the most intense hurricane activity than Miami-Dade, but direct hits are not uncommon. The district banks makeup days into its calendar structure. Families planning late-May travel should consider whether any storm closures earlier in the year might require extending the school year past the May 27 planned last day.\n\nPalm Beach County's school choice and magnet program system is less expansive than Miami-Dade's or Broward's, but the district operates a number of specialized STEM, arts, and language programs at select campuses. Families interested in program-specific enrollment should contact the district's school choice office in the fall — applications for the most popular programs typically close by January for the following school year.",
+  "planningTips": [
+    "In 2026-2027, Palm Beach, Broward, and Miami-Dade all share Spring Break March 22–26. Palm Beach coastal hotels (Boca Raton to Jupiter) fill fast once the tri-county overlap is announced — book early.",
+    "Palm Beach County spans from wealthy coastal towns to rural agricultural communities near Lake Okeechobee. Confirm your school assignment by address rather than assuming by city name — the district covers a very wide range of environments.",
+    "Hurricane season risk is lower than Miami-Dade but real. The district banks makeup days, but extended closures could push the last day past May 27. Book late-May travel with flexible cancellation.",
+    "School choice and magnet applications typically close by January. Contact the Palm Beach County school choice office in the fall to understand timelines and available programs."
+  ],
+  "districtFaqs": [
+    {
+      "q": "Is Palm Beach County School District the same as Palm Beach Atlantic University or FAU?",
+      "a": "No. Palm Beach County School District (PBCSD) is the K-12 public school system serving Palm Beach County. Palm Beach Atlantic University is a private Christian university in West Palm Beach, and Florida Atlantic University (FAU) has a major campus in Boca Raton. Both are separate institutions with their own semester academic calendars, completely independent of the K-12 school district."
+    },
+    {
+      "q": "Does Palm Beach County School District serve the whole county including western farm communities?",
+      "a": "Yes. Palm Beach County School District serves all of Palm Beach County, which spans from the Atlantic coastline to Lake Okeechobee — the largest county by land area in Florida. The western portion of the county includes agricultural communities like Belle Glade and Pahokee with a significant migrant farm worker population. The district calendar applies uniformly across the county, but the school environment and demographics vary considerably between coastal and inland communities."
+    }
+  ],
+  "livingHere": {
+    "intro": "Palm Beach County spans the full geographic range of South Florida — from ultra-affluent oceanfront enclaves on the barrier island to agricultural towns on the edge of Lake Okeechobee. Families relocating here will find a county of stark contrasts, with a local calendar shaped by resort seasons, equestrian culture, and a winter-heavy influx of wealthy residents.",
+    "highlights": [
+      { "label": "Palm Beach International Airport (PBI)", "detail": "A mid-size regional airport in West Palm Beach with direct service to major US hubs. It's noticeably less congested than MIA or FLL, making it the preferred choice for many county families. Spring break week sees significant booking surges — reserve flights 6–8 weeks out." },
+      { "label": "Winter Resort Season", "detail": "Palm Beach island and the coastal towns fill with seasonal residents and their staff from November through April. Traffic on US-1 and A1A, restaurant reservations, and private club waitlists all spike during this window, which overlaps almost entirely with the school year." },
+      { "label": "Wellington Equestrian Season", "detail": "The Wellington area hosts the Winter Equestrian Festival from January through April — one of the largest and longest equestrian competitions in the world. Families in western Palm Beach County regularly navigate horse trailer traffic and show-related road congestion during the school semester." },
+      { "label": "Spring Training Baseball", "detail": "Roger Dean Chevrolet Stadium in Jupiter hosts both the Miami Marlins and St. Louis Cardinals for spring training in February and March, coinciding with the end of winter resort season. Day games on school days are common — tickets are in demand but often available with short notice." },
+      { "label": "Boca Raton Tech and Biotech Corridor", "detail": "Boca Raton is home to a significant concentration of tech, biotech, and financial services firms, including FAU's research park. Many professional families relocating to South Palm Beach County cite this employment base — traffic on I-95 and the Turnpike during school-day commutes is the main practical impact." },
+      { "label": "Agricultural Western Communities", "detail": "Belle Glade, Pahokee, and South Bay near Lake Okeechobee are part of the same school district as coastal Boca Raton. These communities serve large migrant farm worker populations, and attendance patterns in western schools can shift during the October–December harvest season." }
+    ]
+  },
   "relatedDistricts": [
     {
       "name": "Miami-Dade County Public Schools",

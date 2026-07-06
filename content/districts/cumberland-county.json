@@ -28,9 +28,85 @@
   "calendarPage": "https://www.ccs.k12.nc.us/calendar",
   "logo": "",
   "timezone": "America/New_York",
+  "county": "Cumberland County",
+  "region": "Sandhills North Carolina",
+  "metro": "Fayetteville",
   "currentSchoolYear": "2026-2027",
-  "about": "Cumberland County Schools serves approximately 51,000 students in Fayetteville and Cumberland County, North Carolina. The district is home to many military families from nearby Fort Liberty (formerly Fort Bragg).",
-  "calendarNotes": "Cumberland County Schools serves Fayetteville and the surrounding area adjacent to Fort Liberty (formerly Fort Bragg), one of the largest U.S. military installations. As a result, the district has one of the highest proportions of military family students in North Carolina, and staff are experienced with mid-year enrollment and records transfers during PCS (Permanent Change of Station) moves. The school year starts in early August and includes a Fall Break in October. Spring Break typically falls in mid-March. Summer PCS season — June through August — tends to bring a surge of new enrollment. Families PCSing to Fort Liberty should contact the district's school liaison office for streamlined enrollment assistance.",
+  "studentCount": 51000,
+  "schoolCount": 58,
+  "calendarType": "traditional",
+  "districtFact": "Serves one of the highest concentrations of military families in North Carolina, directly adjacent to Fort Liberty (formerly Fort Bragg), one of the largest military installations in the world.",
+  "about": "Cumberland County Schools serves approximately 51,000 students across 58 schools in Fayetteville and Cumberland County, North Carolina — a community closely tied to Fort Liberty, one of the largest U.S. military installations.",
+  "calendarNotes": "Cumberland County Schools begins the 2026-2027 school year on August 7, 2026 — the second-earliest start date among North Carolina's large districts, one day after Wake County (August 6). Fall Break runs October 12–16, 2027, and Spring Break runs March 15–19, 2027. The school year ends May 28, 2027 — consistent with the district's early start and standard instructional day count.\n\nCumberland County Schools serves Fayetteville and the surrounding communities adjacent to Fort Liberty (formerly Fort Bragg), one of the largest military installations in the world. The district has one of the highest proportions of military family students of any school district in North Carolina — a significant share of the student population has at least one active-duty parent. The district is experienced with mid-year enrollment, PCS records transfers, and school placement on short notice. Military families arriving at Fort Liberty should contact CCS's enrollment office before or immediately upon arrival — the district can often place students within a few business days.\n\nPCS (Permanent Change of Station) season typically peaks from June through August, meaning Cumberland County Schools regularly absorbs a substantial number of new students at the start of each school year. Families leaving Cumberland County on PCS orders during the school year should request a student transfer record packet from their child's school in advance — this significantly speeds up enrollment at the receiving district. CCS staff are familiar with the records requirements of most major military installations nationwide.\n\nFamilies comparing CCS with Wake County Public School System should note that the two districts have broadly similar spring break dates (both break March 15–19) but differ significantly in calendar structure: Wake County offers a full Presidents' Break (Feb 15–19) while CCS does not. CCS ends May 28, four days after Wake County's May 24 last day.",
+  "planningTips": [
+    "Military families PCSing to Fort Liberty: contact CCS enrollment before your arrival date. Bring immunization records, proof of custody/guardianship, and prior school records — CCS can often complete placement in 1–3 days.",
+    "Families PCSing away from Fort Liberty: request a student transfer record packet from CCS in advance. Pre-assembling school records speeds up enrollment at any receiving district nationwide.",
+    "CCS starts August 7 — one of the earliest starts in NC. Summer camps and back-to-school shopping should be planned to end by the first week of August.",
+    "CCS and Wake County both break March 15–19 for Spring Break. This is a convenient alignment if coordinating family visits between Fayetteville and Raleigh during that week."
+  ],
+  "districtFaqs": [
+    {
+      "q": "How does Cumberland County Schools support military families from Fort Liberty?",
+      "a": "Cumberland County Schools has extensive experience with military family enrollment, PCS transfers, and mid-year student placement due to the district's adjacency to Fort Liberty (formerly Fort Bragg). The district can typically complete new student enrollment and placement within a few business days. Military families should bring immunization records, proof of residence, and prior school records when enrolling. Contact the district enrollment office before your PCS arrival date for the most efficient process."
+    },
+    {
+      "q": "Is Cumberland County Schools the same as Methodist University or Fayetteville State University?",
+      "a": "No. Cumberland County Schools (CCS) is the K-12 public school system serving Cumberland County. Methodist University is a private university in Fayetteville, and Fayetteville State University (FSU) is a separate public HBCU in Fayetteville. Both institutions have their own semester academic calendars completely independent of CCS school dates."
+    },
+    {
+      "q": "Is Fort Liberty the same as Fort Bragg?",
+      "a": "Yes. Fort Liberty is the current official name of the installation formerly known as Fort Bragg — the name was changed in 2023 as part of a congressionally mandated renaming of bases named after Confederate officers. The installation itself, its location, and its mission are unchanged. Fayetteville residents and many military families still use both names interchangeably. Cumberland County Schools served families at Fort Bragg and continues to serve families at Fort Liberty under the same policies."
+    },
+    {
+      "q": "Why does CCS enroll so many students mid-year?",
+      "a": "Cumberland County Schools enrolls students throughout the entire school year because military PCS (Permanent Change of Station) orders do not follow the academic calendar. Soldiers at Fort Liberty receive PCS orders at any time of year, and their families must enroll children promptly upon arrival. CCS has developed streamlined enrollment procedures specifically for mid-year arrivals — new students can typically be placed within 1–3 business days. This high volume of mid-year enrollment is normal and expected; families should not delay contacting the district upon arrival."
+    },
+    {
+      "q": "What documents do military families need to enroll in CCS?",
+      "a": "Military families enrolling in Cumberland County Schools should prepare: proof of residence on or near Fort Liberty (base housing orders, lease, or utility bill), the student's immunization records, prior school records or transcripts, and proof of custody or guardianship if applicable. If the student has an IEP or 504 plan, bring a copy — CCS is required to honor existing accommodations within a few days of enrollment. Requesting a complete transfer record packet from the previous school before your PCS move significantly speeds up the process."
+    },
+    {
+      "q": "How does CCS spring break compare with Wake County Public Schools?",
+      "a": "In 2026-2027, CCS and Wake County share the same spring break window: March 15–19, 2027. This alignment is convenient for families coordinating travel between Fayetteville and the Raleigh area. However, the two districts differ in other calendar details: Wake County offers a Presidents' Break (February 15–19) that CCS does not observe, and their first days of school differ by one day (Wake August 6, CCS August 7). CCS ends May 28, four days after Wake County's May 24 last day."
+    }
+  ],
+  "livingHere": {
+    "intro": "Fayetteville is defined by its relationship with Fort Liberty, one of the largest military installations in the world and home to the 82nd Airborne Division and U.S. Army Special Operations Command. The district is built around a highly mobile military population, with school enrollment and community life shaped by PCS cycles, deployments, and a culture of service that is unlike any other North Carolina school district.",
+    "highlights": [
+      {
+        "label": "Fort Liberty (formerly Fort Bragg)",
+        "detail": "Fort Liberty is one of the largest U.S. military installations by population, housing approximately 50,000 soldiers and their families. Its presence makes Cumberland County's military family proportion among the highest of any school district in the nation."
+      },
+      {
+        "label": "82nd Airborne and USASOC",
+        "detail": "Fort Liberty is home to the 82nd Airborne Division and U.S. Army Special Operations Command. Deployment cycles mean a significant portion of CCS students have one parent frequently absent, which the district actively accommodates in family communication and support programs."
+      },
+      {
+        "label": "PCS Season: June–August",
+        "detail": "Permanent Change of Station orders peak in summer, causing a major wave of student enrollments and departures each August. CCS is practiced at rapid enrollment and records transfer — new families can typically complete placement within 1–3 business days."
+      },
+      {
+        "label": "Pope Army Airfield",
+        "detail": "Pope Army Airfield, co-located with Fayetteville Regional Airport on the Fort Liberty reservation, handles both military air transport and commercial service via FAY. The small commercial terminal serves limited routes primarily through Charlotte and Atlanta."
+      },
+      {
+        "label": "JROTC and Military Culture in Schools",
+        "detail": "JROTC programs are widespread across CCS high schools, and the district maintains strong ties to veteran and military family support services. Military-connected students represent a substantial share of enrollment at most schools near the installation."
+      },
+      {
+        "label": "Mid-Year Enrollment Expertise",
+        "detail": "Because military families transfer throughout the school year — not just in August — CCS maintains enrollment procedures specifically designed for mid-year arrivals. Families PCSing to Fort Liberty outside of summer should contact the district in advance to minimize gaps in schooling."
+      },
+      {
+        "label": "Cape Fear River and Summer Programs",
+        "detail": "The Cape Fear River runs through Fayetteville and anchors a network of greenway trails and outdoor recreation areas used by CCS families throughout the school year. Youth paddling programs and summer day camps along the Cape Fear trail system fill in April and May — register before spring break (March 15–19) to secure summer spots. The Cape Fear River Trail is also a common after-school and weekend destination for CCS families from September through May, with trailheads accessible within 15 minutes of most Fayetteville neighborhoods."
+      },
+      {
+        "label": "Dogwood Festival and Spring School Calendar",
+        "detail": "The Fayetteville Dogwood Festival, one of North Carolina's largest spring festivals, takes place each April in downtown Fayetteville. The festival typically falls in the weeks following CCS's spring break (March 15–19), during the final stretch of the third quarter. Weekend festival events are a common family outing in April, and the Dogwood 5K draws student athletes from CCS schools. Downtown parking and traffic are noticeably heavier on festival weekends — families with school events or after-school activities near downtown Fayetteville should allow extra time."
+      }
+    ]
+  },
   "relatedDistricts": [
     {
       "name": "Wake County Public School System",

@@ -158,6 +158,19 @@ const stateDistrictStats = computed(() => {
   return result
 })
 
+// ── Related district calendars (for comparison table) ──────────────────────
+const { data: relatedCals } = await useAsyncData(`related-cals:${slug}`, async () => {
+  if (isStatePage || !district.value?.relatedDistricts?.length) return []
+  const relatedSlugs = new Set((district.value.relatedDistricts as { slug: string }[]).map(rd => rd.slug))
+  const relatedIds = (allDistricts.value ?? [])
+    .filter(d => relatedSlugs.has(d.slug))
+    .map(d => d.institutionId)
+  if (!relatedIds.length) return []
+  const all = await queryCollection('calendars').all()
+  const year = district.value.currentSchoolYear
+  return (all ?? []).filter(c => relatedIds.includes(c.institutionId) && c.schoolYear === year)
+})
+
 // ── District page logic ────────────────────────────────────────────────────
 const currentYear = district.value?.currentSchoolYear ?? ''
 const cal = allCals.value?.find(y => y.schoolYear === currentYear) ?? null
@@ -172,11 +185,29 @@ const nextEvent = computed(() =>
   cal?.events.find(e => new Date(e.date + 'T00:00:00') >= today) ?? null
 )
 const breaks = computed(() => getBreaks(cal?.events ?? []))
-const faqs = computed(() => cal && district.value ? generateFaqs(district.value, cal, district.value.officialWebsite) : [])
+const faqs = computed(() => {
+  if (!cal || !district.value) return []
+  const specificFaqs = (district.value as any).districtFaqs ?? []
+  const allTemplateFaqs = generateFaqs(district.value, cal, district.value.officialWebsite)
+  // Districts with rich specific FAQs (≥3): only append the 5 utility questions (fall break,
+  // Google Calendar, travel planning, early release, official verification) — positions 0–4.
+  // These are not duplicated elsewhere on the page. Skip the date questions (positions 5–13)
+  // since they are already shown in the hero, breaks section, and all-dates table.
+  if (specificFaqs.length >= 3) {
+    return [...specificFaqs, ...allTemplateFaqs.slice(0, 5)]
+  }
+  // Districts with few or no specific FAQs: use full template list for coverage.
+  return [...specificFaqs, ...allTemplateFaqs.slice(0, 10)]
+})
 const secondSemStart = computed(() => cal ? getSecondSemesterStart(cal.events) : '')
 
 // Today status — answers "is school in session right now?"
-const todayStr = today.toISOString().slice(0, 10)
+const todayStr = (() => {
+  const y = today.getFullYear()
+  const m = String(today.getMonth() + 1).padStart(2, '0')
+  const d = String(today.getDate()).padStart(2, '0')
+  return `${y}-${m}-${d}`
+})()
 
 const todayStatus = computed(() => {
   if (!cal) return null
@@ -299,6 +330,62 @@ const winterBreakDays = computed(() => {
   if (!wb) return 0
   const ms = new Date(wb.end + 'T00:00:00').getTime() - new Date(wb.start + 'T00:00:00').getTime()
   return Math.round(ms / (24 * 60 * 60 * 1000)) + 1
+})
+
+// ── Nearby district comparison stats ───────────────────────────────────────
+type ComparisonEntry = {
+  name: string; slug: string; isCurrent: boolean
+  firstDay: string; lastDay: string
+  springBreak: { start: string; end: string } | null
+  daysOff: number
+}
+const comparisonStats = computed((): ComparisonEntry[] => {
+  const rows: ComparisonEntry[] = []
+
+  const computeDaysOff = (events: any[]) => {
+    let count = 0
+    const ranges: { start: string; end: string }[] = []
+    for (const e of events) {
+      if (e.type === 'break_start') {
+        const end = events.find((x: any) => x.type === 'break_end' && x.date > e.date)
+        if (end) ranges.push({ start: e.date, end: end.date })
+      }
+      if (e.type === 'holiday' || e.type === 'no_school') count++
+    }
+    for (const { start, end } of ranges) {
+      let d = new Date(start + 'T00:00:00')
+      const endD = new Date(end + 'T00:00:00')
+      while (d <= endD) { if (d.getDay() !== 0 && d.getDay() !== 6) count++; d.setDate(d.getDate() + 1) }
+    }
+    return count
+  }
+
+  // Current district
+  if (cal && district.value) {
+    const sp = breaks.value.find(b => b.name.toLowerCase().includes('spring')) ?? null
+    rows.push({
+      name: district.value.name, slug: district.value.slug, isCurrent: true,
+      firstDay: cal.firstDay, lastDay: cal.lastDay,
+      springBreak: sp ? { start: sp.start, end: sp.end } : null,
+      daysOff: daysOffCount.value,
+    })
+  }
+
+  // Related districts
+  for (const c of relatedCals.value ?? []) {
+    const d = (allDistricts.value ?? []).find(x => x.institutionId === c.institutionId)
+    if (!d) continue
+    const calBreaks = getBreaks(c.events ?? [])
+    const sp = calBreaks.find(b => b.name.toLowerCase().includes('spring')) ?? null
+    rows.push({
+      name: d.name, slug: d.slug, isCurrent: false,
+      firstDay: c.firstDay, lastDay: c.lastDay,
+      springBreak: sp ? { start: sp.start, end: sp.end } : null,
+      daysOff: computeDaysOff(c.events ?? []),
+    })
+  }
+
+  return rows
 })
 
 // ── All Dates legend ───────────────────────────────────────────────────────
@@ -731,6 +818,40 @@ if (!isStatePage && district.value) {
           </div>
         </div>
 
+        <!-- District Profile -->
+        <div v-if="(district as any).studentCount || (district as any).schoolCount" class="bg-white rounded-xl border border-gray-200 p-6">
+          <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-4">District Profile</h2>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-4">
+            <div v-if="(district as any).studentCount">
+              <div class="text-2xl font-bold text-gray-900">{{ ((district as any).studentCount as number).toLocaleString('en-US') }}</div>
+              <div class="text-xs text-gray-400 mt-0.5">students enrolled</div>
+            </div>
+            <div v-if="(district as any).schoolCount">
+              <div class="text-2xl font-bold text-gray-900">{{ (district as any).schoolCount }}+</div>
+              <div class="text-xs text-gray-400 mt-0.5">schools &amp; campuses</div>
+            </div>
+            <div v-if="(district as any).calendarType">
+              <div class="text-sm font-semibold text-gray-900 leading-snug mt-1">
+                {{ (district as any).calendarType === 'traditional' ? 'Traditional' : (district as any).calendarType === 'year-round' ? 'Year-Round' : 'Traditional + Year-Round' }}
+              </div>
+              <div class="text-xs text-gray-400 mt-0.5">calendar type</div>
+            </div>
+            <div v-if="district.grades?.length">
+              <div class="text-sm font-semibold text-gray-900 mt-1">{{ district.grades[0] }} – {{ district.grades[district.grades.length - 1] }}</div>
+              <div class="text-xs text-gray-400 mt-0.5">grades served</div>
+            </div>
+            <div v-if="(district as any).county">
+              <div class="text-sm font-semibold text-gray-900 mt-1">{{ (district as any).county }}</div>
+              <div class="text-xs text-gray-400 mt-0.5">county</div>
+            </div>
+            <div v-if="(district as any).metro">
+              <div class="text-sm font-semibold text-gray-900 mt-1">{{ (district as any).metro }}</div>
+              <div class="text-xs text-gray-400 mt-0.5">metro area</div>
+            </div>
+          </div>
+          <p v-if="(district as any).districtFact" class="mt-4 pt-4 border-t border-gray-100 text-sm text-gray-500 leading-relaxed">{{ (district as any).districtFact }}</p>
+        </div>
+
         <!-- Year at a Glance -->
         <div class="bg-white rounded-xl border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-4">The Year, by the Numbers</h2>
@@ -762,7 +883,7 @@ if (!isStatePage && district.value) {
               <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Instructional days</div>
               <div class="text-3xl font-bold text-gray-900 mb-2">{{ cal.totalSchoolDays ?? 180 }} <span class="text-base font-normal text-gray-400">days</span></div>
               <p class="text-sm text-gray-500 leading-relaxed">
-                {{ district.state }} requires {{ cal.totalSchoolDays ?? 180 }} instructional days per school year. Makeup days may be added if school is cancelled.
+                {{ district.shortName || district.name }} schedules the {{ district.state }}-required {{ cal.totalSchoolDays ?? 180 }} instructional days. Makeup days may be added if school is cancelled.
               </p>
             </div>
           </div>
@@ -783,7 +904,9 @@ if (!isStatePage && district.value) {
 
         <!-- About / Calendar Context -->
         <div class="text-gray-600 leading-relaxed space-y-3 text-sm">
-          <p v-if="district.calendarNotes">{{ district.calendarNotes }}</p>
+          <template v-if="district.calendarNotes">
+            <p v-for="(para, i) in district.calendarNotes.split('\n\n')" :key="i">{{ para }}</p>
+          </template>
           <template v-else>
             <p>
               The {{ currentYear }} academic year for {{ district.name }} runs from
@@ -800,7 +923,7 @@ if (!isStatePage && district.value) {
               <span v-if="yearComparison" class="italic text-gray-500"> {{ yearComparison }}</span>
             </p>
           </template>
-          <p v-if="district.about" class="text-gray-500">{{ district.about }}</p>
+          <p v-if="district.about && !district.calendarNotes" class="text-gray-500">{{ district.about }}</p>
         </div>
 
         <!-- Upcoming Events — timeline of next 6 events -->
@@ -1065,6 +1188,49 @@ if (!isStatePage && district.value) {
           </div>
         </div>
 
+        <!-- Compare with Nearby Districts -->
+        <div v-if="comparisonStats.length > 1" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <div class="px-6 py-4 border-b border-gray-100">
+            <h2 class="text-lg font-semibold text-gray-900">Compare with Nearby Districts</h2>
+            <p class="text-sm text-gray-500 mt-1">First day, spring break, and days off for {{ currentYear }} — side by side.</p>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-gray-50 text-xs font-semibold text-gray-400 uppercase tracking-wide">
+                  <th class="text-left px-6 py-3 whitespace-nowrap">District</th>
+                  <th class="text-left px-4 py-3 whitespace-nowrap">First Day</th>
+                  <th class="text-left px-4 py-3 whitespace-nowrap">Spring Break</th>
+                  <th class="text-left px-4 py-3 whitespace-nowrap">Last Day</th>
+                  <th class="text-right px-6 py-3 whitespace-nowrap">Days Off</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr v-for="stat in comparisonStats" :key="stat.slug"
+                  :class="stat.isCurrent ? 'bg-blue-50' : 'hover:bg-gray-50 transition-colors'"
+                >
+                  <td class="px-6 py-3">
+                    <template v-if="stat.isCurrent">
+                      <span class="font-semibold text-blue-800 whitespace-nowrap">{{ stat.name }}</span>
+                      <span class="ml-2 text-xs bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-medium">this district</span>
+                    </template>
+                    <NuxtLink v-else :to="`/${stat.slug}`" class="font-medium text-gray-900 hover:text-blue-600 transition-colors whitespace-nowrap">
+                      {{ stat.name }}
+                    </NuxtLink>
+                  </td>
+                  <td class="px-4 py-3 text-gray-600 whitespace-nowrap">{{ formatMonthDay(stat.firstDay) }}</td>
+                  <td class="px-4 py-3 text-gray-600 whitespace-nowrap">
+                    <span v-if="stat.springBreak">{{ formatMonthDay(stat.springBreak.start) }} – {{ formatMonthDay(stat.springBreak.end) }}</span>
+                    <span v-else class="text-gray-300">—</span>
+                  </td>
+                  <td class="px-4 py-3 text-gray-600 whitespace-nowrap">{{ formatMonthDay(stat.lastDay) }}</td>
+                  <td class="px-6 py-3 text-right font-semibold" :class="stat.isCurrent ? 'text-blue-800' : 'text-gray-900'">{{ stat.daysOff }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         <!-- FAQ -->
         <div class="bg-white rounded-xl border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-5">Frequently Asked Questions</h2>
@@ -1072,6 +1238,34 @@ if (!isStatePage && district.value) {
             <div v-for="faq in faqs" :key="faq.q" class="pt-5 first:pt-0">
               <h3 class="font-medium text-gray-900">{{ faq.q }}</h3>
               <p class="text-gray-600 mt-1.5">{{ faq.a }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Planning Tips -->
+        <div v-if="(district as any).planningTips?.length" class="bg-blue-50 border border-blue-200 rounded-xl p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-3">Planning Tips for {{ district.shortName || district.name }} Families</h2>
+          <ul class="space-y-3">
+            <li v-for="tip in (district as any).planningTips" :key="tip" class="flex items-start gap-2 text-sm text-gray-700">
+              <svg class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              {{ tip }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- Living Here -->
+        <div v-if="(district as any).livingHere" class="bg-white rounded-xl border border-gray-200 p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-1">Living in {{ district.city || district.name }}</h2>
+          <p v-if="(district as any).livingHere.intro" class="text-sm text-gray-500 mb-4 leading-relaxed">{{ (district as any).livingHere.intro }}</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+            <div v-for="h in (district as any).livingHere.highlights" :key="h.label" class="flex items-start gap-2.5">
+              <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></div>
+              <div>
+                <span class="font-medium text-gray-900 text-sm">{{ h.label }}</span>
+                <p class="text-xs text-gray-500 mt-0.5 leading-relaxed">{{ h.detail }}</p>
+              </div>
             </div>
           </div>
         </div>

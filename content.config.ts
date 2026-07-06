@@ -12,6 +12,14 @@ const relatedDistrictSchema = z.object({
   state: z.string(),
 })
 
+const districtFaqSchema = z.object({ q: z.string(), a: z.string() })
+
+const livingHereHighlightSchema = z.object({ label: z.string(), detail: z.string() })
+const livingHereSchema = z.object({
+  intro: z.string().optional(),
+  highlights: z.array(livingHereHighlightSchema),
+})
+
 const stateQuickFactSchema = z.object({ label: z.string(), value: z.string() })
 const stateFaqSchema = z.object({ q: z.string(), a: z.string() })
 const relatedStateSchema = z.object({ name: z.string(), slug: z.string() })
@@ -38,8 +46,18 @@ export default defineContentConfig({
         logo: z.string().optional(),
         timezone: z.string().optional(),
         currentSchoolYear: z.string(),
+        studentCount: z.number().optional(),
+        schoolCount: z.number().optional(),
+        calendarType: z.string().optional(),
+        districtFact: z.string().optional(),
         about: z.string().optional(),
         calendarNotes: z.string().optional(),
+        county: z.string().optional(),
+        region: z.string().optional(),
+        metro: z.string().optional(),
+        districtFaqs: z.array(districtFaqSchema).optional(),
+        planningTips: z.array(z.string()).optional(),
+        livingHere: livingHereSchema.optional(),
         relatedDistricts: z.array(relatedDistrictSchema).optional(),
       }),
     }),

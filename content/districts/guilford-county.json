@@ -28,9 +28,57 @@
   "calendarPage": "https://www.gcsnc.com/calendar",
   "logo": "",
   "timezone": "America/New_York",
+  "county": "Guilford County",
+  "region": "Piedmont North Carolina",
+  "metro": "Greensboro-High Point",
   "currentSchoolYear": "2026-2027",
+  "studentCount": 72000,
+  "schoolCount": 125,
+  "calendarType": "traditional",
+  "districtFact": "Third largest school district in North Carolina, serving Greensboro, High Point, and the Piedmont Triad — a region significant in American civil rights history.",
   "about": "Guilford County Schools is the third-largest school district in North Carolina, serving approximately 72,000 students across Greensboro, High Point, and surrounding communities in the Piedmont Triad region.",
-  "calendarNotes": "Guilford County Schools serves Greensboro, High Point, and surrounding Piedmont Triad communities and follows the standard North Carolina academic calendar — starting in late August. Spring Break typically falls in late March, roughly aligned with other large NC districts. Families with children split between Guilford County and neighboring Forsyth or Alamance districts should verify Spring Break dates, as they can occasionally differ by a few days. Greensboro's central location on the I-85/I-40 interchange makes it a busy travel corridor — expect heavier-than-usual interstate traffic during Thanksgiving and Spring Break as families travel between Charlotte, Raleigh, and the Triangle.",
+  "calendarNotes": "Guilford County Schools begins the 2026-2027 school year on August 24, 2026. Spring Break runs March 22–26, 2027, and the school year ends June 10, 2027. GCS starts on the same day as Charlotte-Mecklenburg Schools (August 24), but their spring breaks differ by one full week: CMS breaks March 29–April 2, while GCS breaks March 22–26. Families coordinating schedules between the two districts — a common situation for families with children in different counties — should plan around the different break windows.\n\nGreensboro holds significant place in American civil rights history: the Woolworth's lunch counter sit-ins of 1960 began in downtown Greensboro, and the International Civil Rights Center & Museum operates at that site today. Several Guilford County Schools observe activities connected to this history around Martin Luther King Jr. Day (January 18). The district has a diverse student population that reflects Greensboro's historical role as a destination for African American families and its more recent growth as a hub for immigrants and refugees from Latin America and Southeast Asia.\n\nGuilford County's central location on the I-85/I-40 interchange in the Piedmont Triad makes it a major travel corridor for families moving between Charlotte, Raleigh, and the coast. During Thanksgiving and Spring Break, interstate traffic through Greensboro can be significantly heavier than average. Families driving between the Research Triangle and Charlotte during these breaks should plan for slower travel through the I-40/I-85 junction.\n\nFamilies in GCS with relatives or friends in neighboring Forsyth County (Winston-Salem/Forsyth County Schools) or Alamance County should verify spring break dates separately. Winston-Salem's spring break (March 26–April 2) begins four days after GCS's break (March 22–26) ends. The stagger matters for coordinating multi-district family travel.",
+  "planningTips": [
+    "GCS Spring Break (Mar 22–26) is one full week earlier than Charlotte-Mecklenburg (Mar 29–Apr 2). Families coordinating between the two districts should pick one break to plan travel around.",
+    "Winston-Salem/Forsyth County Schools spring break (Mar 26–Apr 2) begins four days after GCS's break ends. Families with relatives in Forsyth County should confirm both calendars before booking.",
+    "The I-40/I-85 junction in Greensboro experiences significantly heavier traffic during spring and Thanksgiving breaks as families drive between Charlotte and Raleigh. Plan extra travel time.",
+    "Guilford County Schools starts August 24 — same as Charlotte-Mecklenburg. Unlike many NC districts, GCS ends the year June 10, later than Wake County (May 24) or Winston-Salem (May 21)."
+  ],
+  "districtFaqs": [
+    {
+      "q": "Is Guilford County Schools the same as UNCG (UNC Greensboro)?",
+      "a": "No. Guilford County Schools (GCS) is the K-12 public school system serving Guilford County. The University of North Carolina at Greensboro (UNCG) is a separate public university with its own semester academic calendar. UNCG's schedule has no connection to GCS school dates."
+    }
+  ],
+  "livingHere": {
+    "intro": "Greensboro sits at the crossroads of I-40 and I-85 in the Piedmont Triad — a three-city metro shared with High Point and Winston-Salem — giving families access to two major universities, a nationally significant civil rights heritage, and a regional economy anchored by aviation manufacturing and the world's largest furniture trade market.",
+    "highlights": [
+      {
+        "label": "Piedmont Triad Airport (GSO)",
+        "detail": "Piedmont Triad International Airport, 10 miles west of downtown Greensboro, is shared with the Winston-Salem metro. It offers direct flights to major hubs including Charlotte, Atlanta, and New York, though major connections typically route through CLT."
+      },
+      {
+        "label": "High Point Furniture Market",
+        "detail": "The High Point Market, held each April and October in neighboring High Point, is the world's largest furnishings trade show, drawing 75,000+ buyers. Local traffic, hotel availability, and downtown High Point access are significantly affected during market weeks."
+      },
+      {
+        "label": "Honda Aircraft Company HQ",
+        "detail": "Honda Aircraft Company's global headquarters and manufacturing facility are located at PTI Airport in Greensboro — a significant white-collar engineering employer for families in the aviation and aerospace sectors."
+      },
+      {
+        "label": "Civil Rights History",
+        "detail": "Downtown Greensboro is home to the International Civil Rights Center & Museum, built at the site of the 1960 Woolworth's lunch counter sit-ins — a nationally recognized landmark that shapes local curriculum and community events."
+      },
+      {
+        "label": "NC A&T and UNCG",
+        "detail": "NC A&T State University (the largest HBCU in the US) and UNC Greensboro are both located in Greensboro, making the city a significant college town with student populations that add to local traffic and events during the academic year."
+      },
+      {
+        "label": "I-40/I-85 Interchange Congestion",
+        "detail": "Greensboro's position at the junction of I-40 and I-85 makes it a major travel bottleneck between Charlotte and Raleigh. Expect significantly heavier interstate traffic during Thanksgiving, Spring Break, and summer holiday weekends."
+      }
+    ]
+  },
   "relatedDistricts": [
     {
       "name": "Wake County Public School System",

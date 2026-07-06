@@ -28,9 +28,55 @@
   "calendarPage": "https://www.sandiegounified.org/academics/academic_calendars",
   "logo": "",
   "timezone": "America/Los_Angeles",
+  "county": "San Diego County",
+  "region": "Southern California",
+  "metro": "San Diego-Carlsbad",
   "currentSchoolYear": "2026-2027",
-  "about": "San Diego Unified School District is the second largest school district in California, serving approximately 95,500 students in San Diego.",
-  "calendarNotes": "San Diego Unified starts the school year in mid-August and generally follows a calendar similar to LAUSD, though specific dates differ each year. Spring Break typically falls in late March or early April. San Diego's mild climate means weather-related school closures are extremely rare — unlike many other parts of the country, the calendar is highly reliable once published. The district observes Cesar Chavez Day as a school holiday. Families considering cross-border trips to Tijuana or Baja California during Spring Break should note that Mexican schools follow a different academic calendar with different break timing. The district's proximity to military installations means a notable share of families are active-duty or veterans — mid-year enrollment transfers are common.",
+  "studentCount": 100000,
+  "schoolCount": 225,
+  "calendarType": "traditional",
+  "districtFact": "Second largest school district in California and among the 15 largest in the United States, serving the San Diego metropolitan area.",
+  "about": "San Diego Unified School District is the second largest school district in California, serving approximately 100,000 students across more than 225 schools in the San Diego metropolitan area.",
+  "calendarNotes": "San Diego Unified begins the 2026-2027 school year on August 10, 2026 — the same start date as LAUSD, and about two weeks earlier than Long Beach Unified (August 25). Spring Recess runs March 29–April 2, 2027, returning students to class on April 5. The school year ends May 26, 2027. San Diego's mild, marine climate means weather-related cancellations are exceptionally rare — once the official calendar is published, families can plan around it with high confidence.\n\nSan Diego Unified serves one of the highest concentrations of military families of any large urban school district in the country, with major installations including Camp Pendleton, Naval Air Station North Island, Marine Corps Air Station Miramar, and Naval Base San Diego all within the metro area. Mid-year enrollment transfers are significantly more common in SDUSD than in most California districts — if your family is relocating to or from a military installation, contact the district's Military Family Liaison to expedite paperwork and school placement.\n\nSan Diego's border location creates a unique dynamic for families with ties to Tijuana and northern Baja California. Mexican public schools follow a September-to-June academic calendar with a two-week spring break in mid-April — roughly two weeks later than SDUSD's spring recess. Cross-border families should verify both calendars before booking travel, as the two systems rarely align on break dates.\n\nLike all California public schools, SDUSD observes Cesar Chavez Day (March 31) as a school holiday. In the 2026-2027 school year, March 31 falls during spring recess, so families may not notice the separation. In years when spring break does not cover March 31, this California-specific holiday can catch families from other states off guard.",
+  "planningTips": [
+    "Military families transferring mid-year: Contact SDUSD's Military Family Liaison before your move date. The district is experienced with expedited enrollment and can often place students the week you arrive.",
+    "Cross-border families: SDUSD's Spring Recess (Mar 29–Apr 2) and Mexican schools' spring break (typically mid-April) do not overlap. If coordinating visits to family in Tijuana or Baja, plan separately for each school system.",
+    "San Diego's mild climate makes late-July and early-August back-to-school prep comfortable, but popular uniform and supply retailers near school zones sell out of common sizes by the first week of August. Shop by July 28.",
+    "Families new to California: Cesar Chavez Day (March 31) is a California school holiday not observed in most other states. In years when it falls outside spring recess, students will be off on a day that appears to be a normal school day."
+  ],
+  "districtFaqs": [
+    {
+      "q": "Does San Diego Unified have special support for military families?",
+      "a": "Yes. SDUSD serves one of the largest concentrations of military families of any urban school district in California, given the proximity of Camp Pendleton, NAS North Island, MCAS Miramar, and Naval Base San Diego. The district has a Military Family Liaison to assist with mid-year transfers, expedited enrollment, and school placement. Military families should contact the district before their move date rather than after arrival."
+    },
+    {
+      "q": "How does SDUSD's calendar affect families with ties to Tijuana or Baja California?",
+      "a": "Mexican public schools follow a September-to-June calendar with a spring break typically in mid-April — approximately two weeks later than SDUSD's spring recess (March 29–April 2). Cross-border families should check both calendars separately each year, as the two systems do not share a common spring break window."
+    },
+    {
+      "q": "Is San Diego Unified the same as San Diego State University (SDSU)?",
+      "a": "No. San Diego Unified School District (SDUSD) is the K-12 public school system serving the city of San Diego. San Diego State University (SDSU) is a separate public university with its own semester academic calendar. SDSU's schedule has no effect on SDUSD school dates."
+    },
+    {
+      "q": "Why are school closures due to weather so rare in San Diego Unified?",
+      "a": "San Diego's mild Mediterranean climate means extreme weather events that commonly cancel school elsewhere — heavy snow, ice storms, hurricanes, or severe thunderstorms — rarely affect the city. In most years, SDUSD completes the school year exactly as scheduled with no weather-related cancellations. Families relocating from the East Coast, Midwest, or Texas should note that the concept of a 'snow day' essentially does not exist in San Diego public schools."
+    },
+    {
+      "q": "Do charter schools in San Diego follow the SDUSD calendar?",
+      "a": "Not necessarily. Independent charter schools that operate within San Diego Unified's boundaries set their own academic calendars and are not required to match SDUSD's school year. Some affiliated charters align closely with SDUSD, but many — especially those with national networks — use different start dates, break schedules, and instructional day counts. Always confirm directly with your charter school rather than assuming the SDUSD calendar applies."
+    }
+  ],
+  "livingHere": {
+    "intro": "San Diego is home to more active-duty military personnel than any other city in the United States, and sits 15 miles from the US–Mexico border at Tijuana. These two facts set San Diego apart from every other large California school district and shape the rhythms of daily life for a significant share of SDUSD families.",
+    "highlights": [
+      { "label": "Military Installations", "detail": "Camp Pendleton, Naval Air Station North Island, MCAS Miramar, and Naval Base San Diego collectively employ tens of thousands of military and civilian personnel in the metro area. Mid-year family relocations (PCS orders) make San Diego Unified one of the highest mid-year transfer districts in California — the district's Military Family Liaison is specifically staffed for this." },
+      { "label": "US–Mexico Border Proximity", "detail": "The San Ysidro Port of Entry — 15 miles from downtown San Diego — is the world's busiest land border crossing. Northbound wait times frequently exceed 60–90 minutes during morning school commute hours on Fridays and Mondays. Families who regularly cross should factor border wait times into school arrival planning." },
+      { "label": "Tijuana Cross-Border Families", "detail": "A meaningful number of SDUSD students live in Tijuana and cross daily for school. Mexican school calendars use a different spring break schedule (typically mid-April vs. SDUSD's late March), meaning cross-border families manage two separate academic calendars simultaneously." },
+      { "label": "Biotech and Defense Employment", "detail": "San Diego is one of the top three biotech clusters in the world, alongside Boston and the San Francisco Bay Area. Major employers include Qualcomm, Illumina, and dozens of defense contractors near Miramar and Chula Vista. This sector drives a highly educated parent population and strong STEM program demand in SDUSD schools." },
+      { "label": "Marine Climate and Beach Access", "detail": "San Diego averages 266 sunny days per year, with ocean temperatures staying in the low-to-mid 60s°F. Weather-related school cancellations are exceptionally rare. Beaches from Pacific Beach to Coronado are accessible year-round — late September through October is often the warmest and least crowded beach season." },
+      { "label": "San Diego International Airport (SAN)", "detail": "Located 3 miles from downtown, SAN is one of the few major US airports inside a dense urban core. It serves domestic routes and select international destinations. During Spring Recess (late March) and Memorial Day weekend following the late-May school end, flights and rideshare wait times spike sharply — book and plan accordingly." }
+    ]
+  },
   "relatedDistricts": [
     {
       "name": "Los Angeles Unified School District",
@@ -40,11 +86,6 @@
     {
       "name": "Long Beach Unified School District",
       "slug": "long-beach-unified-school-district-calendar",
-      "state": "California"
-    },
-    {
-      "name": "Fresno Unified School District",
-      "slug": "fresno-unified-school-district-calendar",
       "state": "California"
     }
   ]

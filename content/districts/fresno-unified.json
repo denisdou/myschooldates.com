@@ -28,9 +28,51 @@
   "calendarPage": "https://www.fresnounified.org/about/calendar",
   "logo": "",
   "timezone": "America/Los_Angeles",
+  "county": "Fresno County",
+  "region": "Central California",
+  "metro": "Fresno",
   "currentSchoolYear": "2026-2027",
+  "studentCount": 70000,
+  "schoolCount": 100,
+  "calendarType": "traditional",
+  "districtFact": "Fourth largest school district in California, serving the Central Valley city of Fresno.",
   "about": "Fresno Unified School District is the fourth largest school district in California, serving approximately 70,000 students in the Central Valley.",
   "calendarNotes": "Fresno Unified starts the school year in late July or early August, making it one of the earliest starts among California's major districts. The early calendar is driven in part by the Central Valley's intense summer heat — beginning in late July means school ends before the most brutal heat of June. Spring Break typically falls in late March. Families new to Fresno should be prepared for the significantly earlier school year start compared to coastal California districts. Summer temperatures in Fresno regularly exceed 105°F, and back-to-school shopping and preparations should be scheduled for mid-to-late July. The district serves one of California's most diverse and economically varied communities.",
+  "planningTips": [
+    "Fresno Unified starts in late July — one of the earliest starts in California. Back-to-school shopping should be done by mid-July. Central Valley temperatures exceed 105°F in late July and August.",
+    "Lincoln's Birthday (February 12) is a school holiday in Fresno Unified — a California-specific holiday not observed in most other states. Mark it on your calendar for childcare planning.",
+    "Cesar Chavez Day (March 31) is a California state school holiday. In years when it falls outside Spring Break, it's an additional no-school day — confirm with the district calendar each year.",
+    "Families moving from coastal California: Fresno Unified starts 3–4 weeks earlier than LAUSD or San Francisco Unified. Adjust summer plans well before late July."
+  ],
+  "districtFaqs": [
+    {
+      "q": "Why does Fresno Unified start school so early compared to other California districts?",
+      "a": "Fresno Unified's early start is driven by the Central Valley's extreme summer heat. Beginning in late July allows the school year to end before the most intense heat of June, when temperatures regularly exceed 105°F. This calendar structure also aligns with local agricultural and community rhythms in the San Joaquin Valley."
+    },
+    {
+      "q": "What is a District Buyback Day in Fresno Unified?",
+      "a": "Buyback Days (also called Staff Development Days or Teacher Workdays) are days when teachers and staff report to school for professional development, training, or planning — but students do not attend. These are typically scattered throughout the school year and are listed in the official Fresno Unified calendar."
+    },
+    {
+      "q": "Is Fresno Unified the same as Fresno State?",
+      "a": "No. Fresno Unified School District (FUSD) is the K-12 public school system serving the city of Fresno. California State University, Fresno (Fresno State) is a separate university with its own academic calendar. Fresno State's semester schedule does not affect Fresno Unified school dates."
+    },
+    {
+      "q": "Why is Lincoln's Birthday a holiday in Fresno Unified?",
+      "a": "California state law designates Abraham Lincoln's Birthday (February 12) as a paid holiday for school employees. Not all California districts close schools on this date, but many Central Valley districts, including Fresno Unified, observe it. This holiday is specific to California and is not recognized in most other states."
+    }
+  ],
+  "livingHere": {
+    "intro": "Fresno sits at the geographic center of California's San Joaquin Valley, surrounded by the most productive agricultural land in the United States. For families relocating here, the city's rhythms are shaped less by coastal trends and more by the land, climate, and economy that define Central Valley life.",
+    "highlights": [
+      { "label": "Extreme Summer Heat", "detail": "Fresno regularly records temperatures above 105°F from June through August — among the hottest of any major California city. Air conditioning is essential, and outdoor afternoon activities during back-to-school weeks in late July are genuinely hazardous for young children." },
+      { "label": "Tule Fog Season", "detail": "Dense Tule fog rolls through the San Joaquin Valley from November through February, frequently reducing visibility to near zero. School bus delays and closures are common during fog advisories — fog, not snow, is the weather event Fresno families plan around each winter." },
+      { "label": "Agricultural Employment Cycles", "detail": "The Fresno economy is deeply tied to grape, citrus, almond, and stone fruit harvests. Seasonal agricultural employment peaks in summer and fall, affecting work schedules and family availability in ways that do not apply to urban districts elsewhere in California." },
+      { "label": "Yosemite National Park Access", "detail": "Yosemite's South Entrance (Wawona/Mariposa Grove) is approximately 65 miles from Fresno — roughly a 90-minute drive. Summer reservations for Yosemite Valley day visits sell out within minutes of release, often in January or February. Plan school-year break trips to Yosemite during spring or fall for better access." },
+      { "label": "Fresno Yosemite International Airport (FAT)", "detail": "FAT is a small regional airport with limited direct routes — mostly to West Coast hubs, Phoenix, and Las Vegas. Nonstop options are significantly fewer than at LAX or SFO. Most long-distance travel requires a connecting flight or a 3-hour drive to the Bay Area." },
+      { "label": "Air Quality and Valley Fever", "detail": "Fresno County has among the worst air quality in the United States, driven by agricultural dust, vehicle emissions trapped by surrounding mountains, and wildfire smoke in fall. Valley Fever (a fungal infection from soil dust) is endemic to the region. Families with asthma or respiratory conditions should factor this into school and outdoor activity planning." }
+    ]
+  },
   "relatedDistricts": [
     {
       "name": "Los Angeles Unified School District",

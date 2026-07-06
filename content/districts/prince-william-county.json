@@ -28,9 +28,39 @@
   "calendarPage": "https://www.pwcs.edu/calendars",
   "logo": "",
   "timezone": "America/New_York",
+  "county": "Prince William County",
+  "region": "Northern Virginia",
+  "metro": "Washington-Arlington-Alexandria",
   "currentSchoolYear": "2026-2027",
+  "studentCount": 90000,
+  "schoolCount": 100,
+  "calendarType": "traditional",
+  "districtFact": "Second largest school district in Virginia, serving one of the most rapidly growing and culturally diverse counties in the Washington D.C. suburbs.",
   "about": "Prince William County Public Schools is the second-largest school district in Virginia, serving approximately 90,000 students in one of the fastest-growing counties in the Washington D.C. metropolitan area.",
-  "calendarNotes": "Prince William County Public Schools starts the school year in late August, aligned with the Northern Virginia regional pattern. Spring Break typically falls in late March, consistent with Fairfax and Loudoun counties. Prince William County has been one of the fastest-growing areas in Virginia for the past two decades, particularly in communities like Woodbridge, Manassas, and Gainesville — attendance boundaries are periodically updated. Families moving to the area should confirm their school assignment before the year begins rather than relying on previous years' boundary maps. The county's growth has also brought new school openings, which can affect bus routes and extracurricular scheduling.",
+  "calendarNotes": "Prince William County Public Schools begins the 2026-2027 school year on August 24, 2026 — the same day as Fairfax County — and the school year ends June 17, 2027, the latest end date among Northern Virginia's large districts. Spring Break runs March 22–26, 2027, aligned with Fairfax County and Loudoun County. PWCS's later end date (June 17 vs Fairfax's June 16) reflects the district's slightly different calendar structure but is functionally the same week.\n\nPrince William County Public Schools observes an unusually comprehensive set of religious and cultural holidays. In 2026-2027, PWCS calendars include Yom Kippur (September 21), Eid al-Fitr (March 10), Eid al-Adha (May 17), and Juneteenth (June 18) as school holidays. Loudoun County is the only other Northern Virginia district that similarly recognizes a broad range of religious observances. Families from these traditions benefit from the school's recognition; families from other backgrounds should mark all of these as no-school days when planning childcare and appointments.\n\nPrince William County is one of the fastest-growing counties in Virginia and includes communities that have transformed dramatically over the past two decades — particularly Woodbridge, Manassas, Gainesville, and Haymarket. The district has opened multiple new schools in the past five years and continues to adjust attendance boundaries. Families in recently developed neighborhoods or communities near the Route 1 corridor should verify their school assignment directly at pwcs.edu before the school year begins.\n\nPWCS serves a highly diverse student population with significant proportions of students whose first language is Spanish, Arabic, Tagalog, and other languages. The district offers English Language Learner services at most campuses and has developed multilingual family communication as a core competency. Families who prefer to communicate in a language other than English should proactively ask about available interpretation and translation services at enrollment.",
+  "planningTips": [
+    "PWCS observes Eid al-Fitr (Mar 10), Eid al-Adha (May 17), Yom Kippur (Sep 21), and Juneteenth (Jun 18) as school holidays. Families from other backgrounds should mark these no-school days for childcare planning.",
+    "PWCS Spring Break (Mar 22–26) aligns with Fairfax County and Loudoun County. All three Northern Virginia districts share the same break week in 2026-2027.",
+    "Attendance boundaries in PWCS change frequently due to rapid growth. Verify your school assignment at pwcs.edu before signing a lease or purchasing a home — especially in Gainesville, Haymarket, and new Route 1 developments.",
+    "PWCS ends June 17 — the latest among Northern Virginia's large districts. Plan summer camp start dates and childcare for the third week of June."
+  ],
+  "districtFaqs": [
+    {
+      "q": "Does Prince William County observe Eid al-Fitr and Eid al-Adha as school holidays?",
+      "a": "Yes. Prince William County Public Schools observes Eid al-Fitr (March 10) and Eid al-Adha (May 17) as school holidays, along with Yom Kippur (September 21) and Juneteenth (June 18). This reflects the county's significant Muslim, Jewish, and African American communities. Families from other backgrounds should mark all of these as no-school days on their calendars."
+    }
+  ],
+  "livingHere": {
+    "intro": "Prince William County is the more affordable entry point into the Northern Virginia D.C. suburbs, attracting families priced out of Fairfax and Loudoun while still within commuting range of the Pentagon, Fort Belvoir, and downtown D.C. The county blends I-95 commuter suburbs with a significant military presence at Quantico and genuine Civil War history at Manassas.",
+    "highlights": [
+      { "label": "I-95 Commuter Corridor", "detail": "The I-95 HOV lanes and Virginia Railway Express (VRE) commuter rail connect Woodbridge and Manassas to the Pentagon and D.C. — the VRE is the most practical option for families avoiding the 45–75 minute peak-hour I-95 backup." },
+      { "label": "Marine Corps Base Quantico", "detail": "MCB Quantico (including the FBI Academy) sits at the county's southern tip, generating a steady stream of military family transfers mid-year — PWCS is experienced with PCS enrollment and maintains liaison support for military families." },
+      { "label": "Most Affordable NoVA District", "detail": "Median home prices in Prince William run $150,000–$200,000 lower than Fairfax County, making it the most accessible entry point into Northern Virginia's school system for families on federal or military salaries." },
+      { "label": "Potomac Mills Outlet Mall", "detail": "One of the largest outlet malls on the East Coast sits in Woodbridge on Dale Boulevard — a major local employer and weekend shopping destination for the county's families and regional visitors." },
+      { "label": "Manassas Civil War Battlefields", "detail": "Two First and Second Bull Run battlefield parks adjoin the city of Manassas — a unique historical resource that PWCS schools use for field trips and that distinguishes the area from other NoVA suburbs." },
+      { "label": "Occoquan Reservoir & Water Supply", "detail": "The Occoquan Reservoir forms the county's northern boundary and is the drinking water source for much of Northern Virginia — surrounding parkland provides hiking, boating, and shoreline recreation close to suburban neighborhoods." }
+    ]
+  },
   "relatedDistricts": [
     {
       "name": "Fairfax County Public Schools",

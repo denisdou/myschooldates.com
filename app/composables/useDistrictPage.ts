@@ -59,7 +59,10 @@ export function useDistrictPage() {
     const d = new Date(winterEnd.date + 'T00:00:00')
     d.setDate(d.getDate() + 1)
     while (d.getDay() === 0 || d.getDay() === 6) d.setDate(d.getDate() + 1)
-    return d.toISOString().slice(0, 10)
+    const y = d.getFullYear()
+    const m = String(d.getMonth() + 1).padStart(2, '0')
+    const day = String(d.getDate()).padStart(2, '0')
+    return `${y}-${m}-${day}`
   }
 
   function generateFaqs(
@@ -90,7 +93,33 @@ export function useDistrictPage() {
     const firstMonth = new Date(cal.firstDay + 'T00:00:00').toLocaleString('en-US', { month: 'long' })
     const lastMonth = new Date(cal.lastDay + 'T00:00:00').toLocaleString('en-US', { month: 'long' })
 
+    // Utility questions first — these are NOT duplicated elsewhere on the page.
+    // Date questions come after; they're still useful for districts without districtFaqs.
     return [
+      {
+        q: `Does ${district.name} have a fall break in ${cal.schoolYear}?`,
+        a: fallBreak
+          ? `Yes. ${district.name} has a fall break running from ${formatShortDate(fallBreak.start)} to ${formatShortDate(fallBreak.end)}, a total of ${fallBreak.days} days. This mid-semester break typically falls in October.`
+          : `${district.name} does not have a scheduled fall break in the ${cal.schoolYear} calendar. The fall semester runs continuously from the first day of school in ${firstMonth} until the Thanksgiving recess in November.`,
+      },
+      {
+        q: `How can I add ${district.name}'s school calendar to Google Calendar?`,
+        a: `To add the ${district.name} ${cal.schoolYear} calendar to Google Calendar, download the .ics file from this page, then open Google Calendar, go to Settings → Import & Export → Import, and upload the file. All school holidays, breaks, and key dates will appear on your calendar automatically.`,
+      },
+      {
+        q: `Can I plan family travel during Spring Break for ${district.name} in ${cal.schoolYear}?`,
+        a: springBreak
+          ? `Yes. Spring Break for ${district.name} runs from ${formatShortDate(springBreak.start)} to ${formatShortDate(springBreak.end)} — a ${springBreak.days}-day window. Book travel early, as this is one of the busiest vacation periods of the year for families in the district.`
+          : `Check the calendar above for the spring break dates for ${district.name} in ${cal.schoolYear}. Spring break is one of the most popular family travel periods, so booking early is recommended.`,
+      },
+      {
+        q: `Does ${district.name} have early release days in ${cal.schoolYear}?`,
+        a: `Early release (also called early dismissal) days are not always listed in the main district calendar — they are often communicated by individual schools. If your child's school has scheduled early release days, you will typically receive notice from the school directly. The key dates listed on this page reflect the official district-wide calendar published at ${sourceUrl}.`,
+      },
+      {
+        q: `Is this school calendar official and accurate?`,
+        a: `The calendar on this page is based on data sourced from the official ${district.name} website at ${sourceUrl}. ${cal.lastVerifiedAt ? `It was last verified on ${new Date(cal.lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.` : `It has not yet been verified against the current official calendar.`} School districts occasionally adjust dates after publication — always confirm critical dates directly with ${district.name} before making travel or childcare commitments.`,
+      },
       {
         q: `When does school start for ${district.name} in ${cal.schoolYear}?`,
         a: `The first day of school for ${district.name} is ${formatDate(cal.firstDay)}. Students and staff are expected to report on this date to begin the new academic year.`,
@@ -140,30 +169,6 @@ export function useDistrictPage() {
       {
         q: `How many school breaks does ${district.name} have in ${cal.schoolYear}?`,
         a: `${district.name} has ${breaks.length} major school break${breaks.length !== 1 ? 's' : ''} in the ${cal.schoolYear} school year: ${breaks.map(b => b.name).join(', ')}. Together these breaks total ${breaks.reduce((sum, b) => sum + b.days, 0)} days off outside of federal holidays.`,
-      },
-      {
-        q: `Does ${district.name} have a fall break in ${cal.schoolYear}?`,
-        a: fallBreak
-          ? `Yes. ${district.name} has a fall break running from ${formatShortDate(fallBreak.start)} to ${formatShortDate(fallBreak.end)}, a total of ${fallBreak.days} days. This mid-semester break typically falls in October.`
-          : `${district.name} does not have a scheduled fall break in the ${cal.schoolYear} calendar. The fall semester runs continuously from the first day of school in ${firstMonth} until the Thanksgiving recess in November.`,
-      },
-      {
-        q: `How can I add ${district.name}'s school calendar to Google Calendar?`,
-        a: `To add the ${district.name} ${cal.schoolYear} calendar to Google Calendar, download the .ics file from this page, then open Google Calendar, go to Settings → Import & Export → Import, and upload the file. All school holidays, breaks, and key dates will appear on your calendar automatically.`,
-      },
-      {
-        q: `Can I plan family travel during Spring Break for ${district.name} in ${cal.schoolYear}?`,
-        a: springBreak
-          ? `Yes. Spring Break for ${district.name} runs from ${formatShortDate(springBreak.start)} to ${formatShortDate(springBreak.end)} — a ${springBreak.days}-day window. Book travel early, as this is one of the busiest vacation periods of the year for families in the district.`
-          : `Check the calendar above for the spring break dates for ${district.name} in ${cal.schoolYear}. Spring break is one of the most popular family travel periods, so booking early is recommended.`,
-      },
-      {
-        q: `Does ${district.name} have early release days in ${cal.schoolYear}?`,
-        a: `Early release (also called early dismissal) days are not always listed in the main district calendar — they are often communicated by individual schools. If your child's school has scheduled early release days, you will typically receive notice from the school directly. The key dates listed on this page reflect the official district-wide calendar published at ${sourceUrl}.`,
-      },
-      {
-        q: `Is this school calendar official and accurate?`,
-        a: `The calendar on this page is based on data sourced from the official ${district.name} website at ${sourceUrl}. ${cal.lastVerifiedAt ? `It was last verified on ${new Date(cal.lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.` : `It has not yet been verified against the current official calendar.`} School districts occasionally adjust dates after publication — always confirm critical dates directly with ${district.name} before making travel or childcare commitments.`,
       },
     ]
   }

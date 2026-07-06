@@ -28,9 +28,43 @@
   "calendarPage": "https://www.ocps.net/calendar",
   "logo": "",
   "timezone": "America/New_York",
+  "county": "Orange County",
+  "region": "Central Florida",
+  "metro": "Orlando-Kissimmee-Sanford",
   "currentSchoolYear": "2026-2027",
-  "about": "Orange County Public Schools (OCPS) is the fourth-largest school district in Florida, serving approximately 220,000 students across more than 200 schools in Orange County, Florida, home to Orlando.",
-  "calendarNotes": "Orange County Public Schools serves the greater Orlando area, home to Walt Disney World and Universal Studios, but school break dates are not designed to avoid theme park peak seasons. Spring Break in OCPS typically falls in mid-to-late March — a period when Orlando's theme parks are at or near maximum capacity. Families planning local outings during Spring Break should expect long waits and book early. The school year begins in mid-August. Winter Break also coincides with one of the busiest tourism weeks in Central Florida, so local roads and attractions are especially congested. Families who move frequently due to hospitality or theme park industry jobs should note that enrollment boundary lines can shift between years.",
+  "studentCount": 208000,
+  "schoolCount": 200,
+  "calendarType": "traditional",
+  "districtFact": "Ninth largest school district in the United States, serving Orlando and all of Orange County, Florida.",
+  "about": "Orange County Public Schools (OCPS) is the ninth-largest school district in the United States, serving approximately 208,000 students across more than 200 schools in Orange County, Florida — the home of Orlando.",
+  "calendarNotes": "Orange County Public Schools begins the 2026-2027 school year on August 11, 2026. Spring Break runs March 15–19, 2027 — one week earlier than the three South Florida counties (Miami-Dade, Broward, Palm Beach), which all break March 22–26. The school year ends May 26, 2027. This one-week difference from South Florida is important for families planning intra-Florida travel: the week that Orlando families are on Spring Break, South Florida families are still in school, which means Orlando theme parks are somewhat less crowded than they will be the following week.\n\nOrange County Public Schools serves the greater Orlando area, home to Walt Disney World, Universal Studios, SeaWorld, and ICON Park. However, the school calendar is not designed to avoid peak tourism seasons. OCPS Spring Break (March 15–19) falls during one of the highest-attendance weeks at Orlando's major theme parks, as Spring Break travelers from across the eastern United States arrive throughout March. Families planning a local theme park trip during Spring Break should expect wait times of 60–120+ minutes for major attractions. If local outings are the plan, scheduling them during the first week after Spring Break (March 22–29) — when South Florida schools are on break and Orlando schools are back — offers shorter park lines.\n\nOrange County's tourism and hospitality workforce is one of the largest in the country, and a significant portion of OCPS families work in the theme park, hotel, and convention industries. School scheduling affects childcare and staffing across the local economy in ways that are not typical of non-tourism districts. Families whose work schedules change based on theme park operating hours or convention center bookings should plan school-year childcare arrangements early, as demand around school holidays is high.\n\nFlorida law permits districts to bank up to three emergency makeup days into the calendar for weather-related closures. Unlike South Florida, Central Florida's hurricane risk is moderate rather than severe — storms typically weaken as they cross the Florida peninsula before reaching Orlando. That said, OCPS has experienced closures from tropical storm effects, particularly flooding. Families booking late-May travel should consider whether any closures earlier in the year might have consumed the district's makeup day buffer.",
+  "planningTips": [
+    "OCPS Spring Break (Mar 15–19) is one week BEFORE South Florida schools. Central Florida theme parks are busy this week but slightly less so than the following week (Mar 22–26) when Broward, Miami-Dade, and Palm Beach all release.",
+    "Local theme park visits during OCPS Spring Break still mean 60–120+ minute wait times. For shorter lines, visit after Spring Break week when Orlando is back in school but South Florida is still out.",
+    "Hospitality and theme park industry families: school holiday childcare demand is exceptionally high in the Orlando area. Book camps and arrangements well in advance of each school break.",
+    "Hurricane impact in Central Florida is generally lower than South Florida, but tropical storm flooding can close schools. OCPS banks makeup days — any unused buffer may allow an earlier-than-planned last day."
+  ],
+  "districtFaqs": [
+    {
+      "q": "Is Orange County Public Schools the same as the University of Central Florida (UCF)?",
+      "a": "No. Orange County Public Schools (OCPS) is the K-12 public school system serving Orange County and the greater Orlando area. The University of Central Florida (UCF) is a separate public research university with its own semester academic calendar. UCF's schedule has no connection to OCPS school dates."
+    },
+    {
+      "q": "Are Walt Disney World or Universal Studios busier during OCPS spring break?",
+      "a": "Yes. OCPS Spring Break (March 15–19) is one of the highest-attendance periods at Orlando theme parks, as schools across the eastern United States break in March and families travel to Central Florida. Wait times at major attractions can reach 60–120+ minutes. The following week (March 22–26), when South Florida schools are on break, is also very busy. If you prefer shorter lines, visit during a non-peak school day rather than a Spring Break week."
+    }
+  ],
+  "livingHere": {
+    "intro": "Orange County is the core of Florida's tourism economy — Orlando is home to four of the most attended theme parks on earth, and much of the county's workforce is tied to hospitality, conventions, and entertainment. For OCPS families, this creates a school-year environment unlike any other large district in the country.",
+    "highlights": [
+      { "label": "Orlando International Airport (MCO)", "detail": "One of the busiest airports in the US, serving both leisure and business travel. Spring break and the week after Memorial Day see MCO at near-capacity — families should book flights 6–8 weeks in advance and arrive at the airport earlier than the standard one-hour domestic recommendation." },
+      { "label": "Theme Park Employment", "detail": "Walt Disney World, Universal Studios, and SeaWorld collectively employ over 75,000 people, many of them OCPS parents. Shift-based and variable schedules mean school holiday childcare demand peaks sharply — after-school and holiday programs book up faster in Orange County than in most comparable districts." },
+      { "label": "Spring Break Theme Park Crowds", "detail": "OCPS Spring Break (mid-March) coincides with heavy out-of-state spring break travel to Orlando. Local families visiting Disney, Universal, or SeaWorld during their own break should expect 60–120+ minute wait times. The week after break — when OCPS is back in school — often has noticeably shorter lines." },
+      { "label": "Convention Center Economy", "detail": "The Orange County Convention Center is one of the largest in the US and drives year-round business travel. Major conventions (like InfoComm or MegaCon) spike hotel prices and I-Drive traffic during the school year — relevant for families whose work is tied to the hospitality or events industry." },
+      { "label": "Lake Nona Medical City", "detail": "A purpose-built medical and research hub in southeast Orange County, housing UCF College of Medicine, Nemours Children's Hospital, and VA facilities. Families relocating for healthcare or research employment increasingly settle in this corridor — it has its own growing OCPS school cluster." },
+      { "label": "Inland Location — No Beach Access", "detail": "Orlando is entirely inland; the nearest Atlantic beaches (Cocoa Beach, New Smyrna) are about an hour east, and Gulf Coast beaches (Clearwater, St. Pete) are 90 minutes west. Post-school beach trips require planning — Friday afternoon traffic on SR-528 and I-4 can extend the drive significantly." }
+    ]
+  },
   "relatedDistricts": [
     {
       "name": "Miami-Dade County Public Schools",

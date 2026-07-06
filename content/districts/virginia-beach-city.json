@@ -28,9 +28,47 @@
   "calendarPage": "https://www.vbschools.com/calendars",
   "logo": "",
   "timezone": "America/New_York",
+  "county": "Virginia Beach",
+  "region": "Hampton Roads",
+  "metro": "Virginia Beach-Norfolk-Newport News",
   "currentSchoolYear": "2026-2027",
-  "about": "Virginia Beach City Public Schools serves approximately 66,000 students in Virginia Beach, the most populous city in Virginia. The district serves a diverse community that includes many military families stationed at nearby naval installations.",
-  "calendarNotes": "Virginia Beach City Public Schools serves the most populous city in Virginia, with a significant number of military families connected to Naval Station Norfolk and NAS Oceana. The school year starts after Labor Day in early September. Spring Break falls in late March to early April. Virginia Beach's oceanfront is a major Spring Break destination nationally, so local beaches and the boardwalk area are extremely crowded during the district's break — families who prefer quieter outings may want to travel inland or schedule beach visits before or after the break period. Military families should note that VA school calendars do not always align with on-base recreational facility and childcare schedules during holiday periods, so verify availability separately.",
+  "studentCount": 68000,
+  "schoolCount": 86,
+  "calendarType": "traditional",
+  "districtFact": "Largest school district in Hampton Roads, serving the most populous city in Virginia, with a significant military family population.",
+  "about": "Virginia Beach City Public Schools serves approximately 68,000 students in Virginia Beach, the most populous city in Virginia. The district is organized into four quarters and serves a community with strong ties to the military, tourism, and maritime industries.",
+  "calendarNotes": "Virginia Beach City Public Schools begins the 2026-2027 school year on August 24, 2026. Spring Break runs March 29–April 2, 2027, and the school year ends June 11, 2027. The district operates on a four-quarter academic structure rather than traditional semesters, with official quarter-end dates in October, January, April, and June. Quarter-end periods often include early-release days and parent conference windows — check the quarterly schedule when planning pickups and appointments.\n\nVirginia Beach is home to three major military installations: Naval Station Norfolk (the world's largest naval base, located adjacent to Virginia Beach), Naval Air Station Oceana, and Joint Expeditionary Base Little Creek-Fort Story. Combined, these installations mean Virginia Beach City Public Schools serves one of the highest concentrations of military families in the country. The district is experienced with mid-year PCS (Permanent Change of Station) transfers — staff can often complete enrollment within a few business days of a family's arrival. Military families should contact the district's Military Family Liaison before their PCS move date rather than after arrival to expedite paperwork and school placement.\n\nVirginia Beach's oceanfront makes it a nationally known Spring Break destination, and the district's Spring Break (March 29–April 2) coincides with peak Spring Break tourism season at the resort strip. Families who live near the oceanfront or Atlantic Avenue should expect significantly increased traffic, parking costs, and pedestrian crowding in the beach resort area during this period. For those wanting a beach experience without the Spring Break crowds, the less commercial areas of Virginia Beach (Sandbridge, Chic's Beach, First Landing State Park) tend to be less affected by tourist volume.\n\nFamilies coordinating VBCPS schedules with neighboring Hampton Roads school districts should note that individual school divisions set their own calendars. Norfolk City Public Schools, Chesapeake City Public Schools, and Newport News City Public Schools are separate school divisions that may have Spring Break dates differing by one to two days from VBCPS. The stagger can affect planning when children attend school in multiple Hampton Roads cities.",
+  "planningTips": [
+    "Military families at NAS Oceana, Naval Station Norfolk, or JEB Little Creek: contact VBCPS Military Family Liaison before your PCS arrival date for expedited enrollment. The district can typically place students within a few business days.",
+    "VBCPS Spring Break (Mar 29–Apr 2) coincides with peak resort season on the Virginia Beach oceanfront. Expect heavy traffic and elevated prices near the resort strip. Sandbridge and Chic's Beach are less crowded alternatives.",
+    "VBCPS operates on a four-quarter system. Quarter-end days often include early-release dismissal and parent conference scheduling — check the quarterly schedule when planning after-school pickups.",
+    "Neighboring Hampton Roads divisions (Norfolk, Chesapeake, Newport News) have independent calendars that may differ from VBCPS's by one to two days. Verify each city's calendar separately if coordinating across divisions."
+  ],
+  "districtFaqs": [
+    {
+      "q": "Does Virginia Beach City Public Schools support military families?",
+      "a": "Yes. Virginia Beach is home to Naval Station Norfolk, NAS Oceana, and Joint Expeditionary Base Little Creek-Fort Story — among the largest military concentrations of any U.S. city. VBCPS is highly experienced with mid-year PCS transfers and maintains a Military Family Liaison to assist with expedited enrollment, records transfers, and school placement. Military families should contact the district before their move date for the fastest placement process."
+    },
+    {
+      "q": "Is Virginia Beach City Public Schools the same as Norfolk schools?",
+      "a": "No. Virginia Beach City Public Schools and Norfolk City Public Schools are separate, independent school divisions serving two different cities in the Hampton Roads metro area. They have their own school boards, calendars, and school boundaries. Despite sharing a metropolitan area, their Spring Break dates may differ by a day or two. Always check each division's official calendar."
+    },
+    {
+      "q": "What is the four-quarter system used by VBCPS?",
+      "a": "Virginia Beach City Public Schools organizes its academic year into four quarters rather than two traditional semesters. Quarter-end dates in 2026-2027 fall around October 30, January 22, April 8, and June 11. Each quarter end typically includes an early-release day for parent conferences or professional development. Parents should note these dates when planning early pickups or after-school care for those days."
+    }
+  ],
+  "livingHere": {
+    "intro": "Virginia Beach is the most populous city in Virginia and one of the largest cities by land area on the East Coast, combining an Atlantic Ocean resort strip with sprawling inland suburban neighborhoods and three major military installations. Military families make up an unusually high share of the school population, creating a community accustomed to frequent moves and mid-year transfers.",
+    "highlights": [
+      { "label": "NAS Oceana Master Jet Base", "detail": "Naval Air Station Oceana, the East Coast's only master jet base for F/A-18 Super Hornets, sits within the city limits — jet noise is a daily reality in the Oceana and Birdneck Road corridors near the base." },
+      { "label": "Military PCS Transfer Culture", "detail": "With three major installations (NAS Oceana, JEB Little Creek-Fort Story, and adjacent Naval Station Norfolk), VBCPS enrolls hundreds of mid-year military transfer students annually and maintains a dedicated Military Family Liaison for expedited placement." },
+      { "label": "Summer Tourist Season", "detail": "The Atlantic Avenue resort strip draws millions of visitors from Memorial Day through Labor Day — traffic on Shore Drive, Pacific Avenue, and Atlantic Avenue becomes significantly heavier, affecting school-year morning commutes near the oceanfront." },
+      { "label": "Atlantic Hurricane Season", "detail": "Virginia Beach's oceanfront location puts it on the direct path of Atlantic hurricanes from August through October. School closures for storm preparation are more common here than in inland Virginia districts — families should review the district's emergency closure protocol." },
+      { "label": "Chesapeake Bay & Oceanfront Access", "detail": "The city borders both the Atlantic Ocean and Chesapeake Bay, with First Landing State Park, Sandbridge Beach, and Back Bay National Wildlife Refuge offering quieter natural areas distinct from the resort boardwalk corridor." },
+      { "label": "NASA Wallops Nearby", "detail": "NASA's Wallops Flight Facility on Virginia's Eastern Shore is visible from Virginia Beach on clear rocket launch nights — a distinctive regional feature that VBCPS science teachers regularly incorporate into curriculum and launch-watching field experiences." }
+    ]
+  },
   "relatedDistricts": [
     {
       "name": "Chesterfield County Public Schools",

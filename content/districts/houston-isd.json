@@ -28,23 +28,61 @@
   "calendarPage": "https://www.houstonisd.org/calendar",
   "logo": "",
   "timezone": "America/Chicago",
+  "county": "Harris County",
+  "region": "Southeast Texas",
+  "metro": "Greater Houston",
   "currentSchoolYear": "2026-2027",
-  "about": "Houston Independent School District (HISD) is the largest school district in Texas and among the largest in the United States, serving approximately 194,000 students across more than 280 schools in Houston, Texas.",
-  "calendarNotes": "Houston ISD typically starts in early August — among the first major urban districts in the country to open — reflecting Texas rules that allow school to begin before the fourth Monday in August. Families relocating from the Northeast or West Coast should plan end-of-summer activities accordingly. Spring Break falls in mid-March, which makes Houston one of the earlier Spring Break markets nationally. South Padre Island and Cancún are popular destinations for Houston families during this window, so travel prices spike quickly. Summer break correspondingly runs longer than in most other states. Families with children switching between HISD and suburban Harris County districts like Katy ISD or Cypress-Fairbanks ISD should verify start dates, as they may differ by a few days.",
+  "studentCount": 194000,
+  "schoolCount": 275,
+  "calendarType": "traditional",
+  "districtFact": "Largest school district in Texas and one of the most diverse in the United States, serving the Houston metropolitan area.",
+  "about": "Houston Independent School District (HISD) is the largest school district in Texas and among the largest in the United States, serving approximately 194,000 students across more than 275 schools in Houston, Texas.",
+  "calendarNotes": "Houston ISD begins the 2026-2027 school year on August 10, 2026 — among the earliest start dates of any major urban district in the country. Spring Break runs March 8–12, 2027, one of the earliest Spring Break windows in Texas, and the school year ends May 28, 2027. Families relocating from the Northeast, Midwest, or West Coast should plan end-of-summer activities well before mid-August. The early start is consistent across Texas but stands out sharply from states like California or New York, where many districts begin in late August or after Labor Day.\n\nHouston sits within the Atlantic hurricane belt, and the district builds emergency makeup days into its calendar to account for potential weather-related closures between August and November. Texas law requires districts to make up lost days if closures exceed a threshold, and HISD may extend the school year into early June in severe cases. Families planning travel in late May should book refundable options or wait until final schedules are confirmed. Houston's August and September heat (frequently above 100°F) also means the earliest school weeks of the year are among the hottest — after-school outdoor activities should be scheduled carefully.\n\nHISD shares Harris County with several large suburban districts including Katy ISD, Cypress-Fairbanks ISD, Spring ISD, and Conroe ISD. These districts are not part of HISD and set their own academic calendars. In some years their Spring Break dates differ from HISD's by a few days to a full week. Families with children in both HISD and a suburban Harris County district should confirm each district's schedule independently. The boundary between HISD and suburban districts can run through the middle of neighborhoods — verify your assigned district using the HISD school finder rather than assuming by city or zip code.\n\nHISD operates one of the largest magnet school systems in Texas, spanning STEM, arts, dual-language, and International Baccalaureate programs across elementary, middle, and high school levels. Applications for magnet programs typically open in the fall for the following school year. Families new to the district who are interested in magnet enrollment should contact the district's School Choice office no later than October to understand timelines — applications for the most competitive programs often close by December.",
+  "planningTips": [
+    "Houston ISD Spring Break (Mar 8–12) is among the earliest in Texas. South Padre Island and Cancún pricing spikes quickly once Houston schools release — book at least 6–8 weeks out for coastal travel.",
+    "Harris County suburban districts (Katy ISD, Cy-Fair, Spring ISD) may have different Spring Break dates. Verify each district's calendar separately if children are enrolled in multiple districts.",
+    "Hurricane season runs June–November. HISD builds makeup days into the calendar but may extend the school year if closures exceed state thresholds. Book late-May travel with flexibility.",
+    "Magnet school applications open in fall — contact the HISD School Choice office by October. The most popular STEM and IB programs fill quickly, and missing the application window means waiting a full year."
+  ],
+  "districtFaqs": [
+    {
+      "q": "Is Houston ISD the same as the University of Houston (UH)?",
+      "a": "No. Houston Independent School District (HISD) is the K-12 public school system serving the city of Houston. The University of Houston (UH) is a separate public research university with its own semester academic calendar. UH's schedule has no connection to HISD school dates. The two institutions are entirely independent of each other."
+    },
+    {
+      "q": "Does Houston ISD have makeup days for hurricanes or tropical storms?",
+      "a": "Yes. Texas law requires school districts to make up instructional days lost to weather closures if closures exceed a certain threshold. HISD typically builds buffer days into the calendar to absorb minor disruptions, but a significant hurricane impact could require extending the school year beyond the planned last day. Families booking late-May or early-June travel should check with HISD if a storm has caused extended closures during the year."
+    },
+    {
+      "q": "Does Houston ISD offer magnet schools?",
+      "a": "Yes. Houston ISD operates one of the largest magnet school networks in Texas, including STEM academies, arts schools, dual-language programs, and International Baccalaureate programs at the elementary, middle, and high school levels. Applications for magnet programs typically open in the fall for the following school year. Contact the HISD School Choice office by October to learn about specific program requirements and deadlines."
+    }
+  ],
+  "livingHere": {
+    "intro": "Houston is the energy capital of the world and the most ethnically diverse large city in the United States, anchored by the Texas Medical Center, NASA's Johnson Space Center, and the Port of Houston. For families relocating to the area, a few geographic and climate realities shape how the school calendar intersects with everyday life.",
+    "highlights": [
+      { "label": "Two Major Airports", "detail": "George Bush Intercontinental (IAH) handles most international and long-haul flights; William P. Hobby (HOU) serves Southwest and regional routes. Spring Break flights out of both airports fill within hours of school-year calendars being published." },
+      { "label": "Hurricane Season", "detail": "Runs June–November, with peak risk August–October — overlapping the first weeks of school. Harris County flooding is a known compounding risk; families in low-lying areas should have emergency plans and contact info for HISD's weather closure hotline." },
+      { "label": "Extreme Summer Heat", "detail": "Houston averages over 100°F on multiple days in July and August — the same weeks as back-to-school. After-school outdoor sports practices are limited by UIL heat protocols; hydration and shaded waiting areas at dismissal are practical daily concerns." },
+      { "label": "Texas Medical Center", "detail": "The world's largest medical complex, employing over 100,000 people within Houston. Many HISD families work rotating hospital shifts — the district's early August start date is often out of step with academic medical calendar cycles." },
+      { "label": "Port of Houston", "detail": "One of the busiest cargo ports in the US, driving the region's logistics and petrochemical industries. Spring Break cargo disruptions are uncommon, but the port's workforce makes Houston's economy less seasonal than most Sun Belt metros." },
+      { "label": "No State Income Tax", "detail": "Texas has no personal income tax, which drives significant relocation from California, Illinois, and New York. HISD sees a steady stream of mid-year transfers — families arriving from these states should verify enrollment requirements, as grading systems and graduation requirements differ from their home states." }
+    ]
+  },
   "relatedDistricts": [
     {
       "name": "Dallas Independent School District",
-      "slug": "dallas-isd-school-calendar",
+      "slug": "dallas-independent-school-district-calendar",
       "state": "Texas"
     },
     {
       "name": "Austin Independent School District",
-      "slug": "austin-isd-school-calendar",
+      "slug": "austin-independent-school-district-calendar",
       "state": "Texas"
     },
     {
       "name": "Fort Worth Independent School District",
-      "slug": "fort-worth-isd-school-calendar",
+      "slug": "fort-worth-independent-school-district-calendar",
       "state": "Texas"
     }
   ]

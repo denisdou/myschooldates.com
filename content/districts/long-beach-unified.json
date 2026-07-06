@@ -28,9 +28,47 @@
   "calendarPage": "https://www.lbschools.net/about/calendar",
   "logo": "",
   "timezone": "America/Los_Angeles",
+  "county": "Los Angeles County",
+  "region": "Southern California",
+  "metro": "Greater Los Angeles",
   "currentSchoolYear": "2026-2027",
+  "studentCount": 65000,
+  "schoolCount": 85,
+  "calendarType": "traditional",
+  "districtFact": "Third largest school district in California, serving the port city of Long Beach and surrounding communities.",
   "about": "Long Beach Unified School District serves approximately 62,000 students in Long Beach and adjacent communities in Los Angeles County, California.",
-  "calendarNotes": "Long Beach Unified School District serves California's second-largest city in Los Angeles County and follows a calendar closely aligned with LAUSD, though exact start and end dates can differ by several days each year. Spring Break typically falls in early-to-mid April, consistent with the broader Los Angeles region. The district has a strong magnet and choice school system with separate application timelines. Families living near the LAUSD-LBUSD boundary — which runs through parts of South Los Angeles, Compton, and Carson — should verify their assigned district, as school calendars may differ even for households on the same street.",
+  "calendarNotes": "Long Beach Unified School District serves California's second-largest city and follows a calendar broadly aligned with the Los Angeles region, though exact dates consistently differ from neighboring LAUSD by one to two weeks. In 2026-2027, the first day of school is August 25, 2026 — approximately ten days after LAUSD begins. Spring Break runs April 5–9, 2027, compared to LAUSD's late-March break. Families coordinating schedules with relatives or childcare providers in LAUSD should note these differences each year, as the gap can shift.\n\nLong Beach's coastal location gives it a noticeably different climate than the inland San Gabriel and San Fernando Valleys — marine layer keeps summers cooler and more overcast, and the area rarely experiences the extreme heat events that affect Fresno or even parts of eastern Los Angeles County. This means back-to-school preparation in late August is more manageable than in interior California.\n\nLBUSD operates one of the stronger magnet and choice school systems in California, with International Baccalaureate programs, performing arts magnets, and STEM academies spread across elementary, middle, and high school levels. Choice school applications typically open in October or November for the following year — well before spring break and before many families start thinking about enrollment. Families new to the district should check LBUSD's school choice portal in the fall, not the spring.\n\nFamilies living near the LAUSD-LBUSD boundary — which runs through parts of South Los Angeles, Compton, and Carson — should verify their assigned district using their home address. School calendars, start times, and holiday schedules may differ even for households on the same street.",
+  "planningTips": [
+    "If children in your family attend both LBUSD and LAUSD schools, note that their spring breaks differ — LBUSD is early April while LAUSD is late March. Plan trips around the later break (LBUSD) to avoid pulling kids from school.",
+    "Choice and magnet school applications for LBUSD typically open in October or November for the following school year. Do not wait until spring — most popular programs close enrollment by January.",
+    "Teacher Professional Development Days (Buyback Days) are student holidays scattered throughout the year and are not always visible on the main district calendar. Contact your school's office in August to get a complete list for the year.",
+    "Long Beach's mild coastal climate makes late-August back-to-school shopping comfortable, but popular uniform and supply stores near LBUSD schools get crowded the week before school starts. Shop by August 18 to avoid the rush."
+  ],
+  "districtFaqs": [
+    {
+      "q": "How does Long Beach Unified's calendar differ from LAUSD's?",
+      "a": "While both districts are in Los Angeles County, their calendars differ each year. LBUSD typically starts in late August, while LAUSD begins in mid-August. Spring break dates also diverge: LBUSD's spring break usually falls in early-to-mid April, while LAUSD's tends to be in late March. Families coordinating schedules across both districts should verify dates each year, as the gap between the two can shift."
+    },
+    {
+      "q": "Does Long Beach Unified have year-round schools?",
+      "a": "No. Unlike LAUSD, which operates both traditional and year-round campuses, Long Beach Unified School District follows a single traditional school year calendar. All LBUSD schools start and end at the same time and observe the same break schedule."
+    },
+    {
+      "q": "How do I know if my child attends LBUSD or LAUSD?",
+      "a": "The boundary between Long Beach Unified and LAUSD runs through parts of South Los Angeles, Compton, and Carson. Students on adjacent streets can fall into different districts. The easiest way to confirm is to use your home address on each district's official school finder tool, or contact your city's local school board office. Do not assume based on city name alone — Long Beach city limits and LBUSD boundaries do not always match."
+    }
+  ],
+  "livingHere": {
+    "intro": "Long Beach is California's second-largest city by population and home to one of the world's busiest cargo ports — a fact that shapes the local economy, traffic, and community in ways that are immediately visible to arriving families. Sitting between Los Angeles and Orange County, the city blends a working waterfront with a distinct beach-city identity.",
+    "highlights": [
+      { "label": "Port of Long Beach", "detail": "One of the two busiest container ports in the Western Hemisphere (alongside the adjacent Port of LA). Tens of thousands of local jobs are tied to port operations, logistics, and shipping. Truck traffic on I-710 (the 710 Freeway) is heaviest on school-day mornings — a direct factor for families commuting through the corridor." },
+      { "label": "Long Beach Airport (LGB)", "detail": "A mid-sized airport with Southwest, Delta, and American service to major US cities. Quieter and faster than LAX — parking is walkable, security lines are short. During school breaks, LGB flights sell out quickly; book 4–6 weeks ahead for Spring Break travel." },
+      { "label": "Marine Layer and Coastal Climate", "detail": "Long Beach's proximity to the ocean keeps summer temperatures 10–20°F cooler than the inland LA basin. A morning marine layer (low clouds and fog) is common through late morning from May to September — 'June Gloom' is a local term for this pattern, and it extends well into July most years." },
+      { "label": "Oil Industry Presence", "detail": "Long Beach sits above one of California's largest oil fields. Offshore oil islands disguised as tropical resort islands (Astronaut Island, etc.) are visible from the shoreline, and oil-related employment has shaped local industry for generations. Several LBUSD schools sit near legacy industrial zones." },
+      { "label": "Beach Access and Summer Programs", "detail": "Long Beach's waterfront stretches several miles along the Pacific. City beaches, the Aquarium of the Pacific, and Rainbow Harbor draw families year-round. Summer LBUSD camps and city recreation programs fill quickly after the school year ends — register in April or May for summer programming." },
+      { "label": "LA Metro and Bus Access", "detail": "The Blue Line (A Line) connects Long Beach to downtown Los Angeles in about 50 minutes. Several LBUSD high school students commute via Metro. The schedule aligns poorly with early school dismissal times — families relying on transit for older students should verify last-mile connections from each station." }
+    ]
+  },
   "relatedDistricts": [
     {
       "name": "Los Angeles Unified School District",
