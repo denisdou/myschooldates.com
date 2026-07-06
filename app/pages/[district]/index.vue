@@ -56,6 +56,30 @@ if (isStatePage) {
             { '@type': 'ListItem', position: 2, name: `${matchedStateName} School Calendars`, item: `https://myschooldates.com/${slug}` },
           ],
         },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'ItemList',
+          name: `${matchedStateName} Public School Districts — ${stateCurrentYear} Calendars`,
+          description: `Official ${stateCurrentYear} school calendars for ${stateDistricts.length} public school districts in ${matchedStateName}.`,
+          numberOfItems: stateDistricts.length,
+          itemListElement: stateDistricts.map((d, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            name: d.name,
+            url: `https://myschooldates.com/${d.slug}`,
+            item: {
+              '@type': 'EducationalOrganization',
+              name: d.name,
+              url: `https://myschooldates.com/${d.slug}`,
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: d.city ?? '',
+                addressRegion: (d as any).stateCode ?? d.state,
+                addressCountry: 'US',
+              },
+            },
+          })),
+        },
         ...(statePageData.value?.faqs?.length ? [{
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
@@ -198,6 +222,42 @@ if (!isStatePage && district.value) {
     ogDescription: `Complete ${currentYear} school calendar for ${meta.value!.name}. All holidays, breaks, and key dates.`,
     ogUrl: canonicalUrl,
   })
+
+  const orgAddress = {
+    '@type': 'PostalAddress',
+    addressLocality: meta.value!.city ?? '',
+    addressRegion: (meta.value! as any).stateCode ?? meta.value!.state,
+    addressCountry: 'US',
+  }
+  const orgRef = { '@type': 'EducationalOrganization', name: meta.value!.name, url: meta.value!.officialWebsite || canonicalUrl }
+
+  const keyEvents = cal ? [
+    ...(cal.firstDay ? [{
+      '@context': 'https://schema.org', '@type': 'Event',
+      name: `First Day of School — ${meta.value!.name} ${currentYear}`,
+      startDate: cal.firstDay, endDate: cal.firstDay,
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      organizer: orgRef, location: { '@type': 'Place', name: meta.value!.name, address: orgAddress },
+    }] : []),
+    ...(cal.lastDay ? [{
+      '@context': 'https://schema.org', '@type': 'Event',
+      name: `Last Day of School — ${meta.value!.name} ${currentYear}`,
+      startDate: cal.lastDay, endDate: cal.lastDay,
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      organizer: orgRef, location: { '@type': 'Place', name: meta.value!.name, address: orgAddress },
+    }] : []),
+    ...breaks.value.map(b => ({
+      '@context': 'https://schema.org', '@type': 'Event',
+      name: `${b.name} — ${meta.value!.name} ${currentYear}`,
+      startDate: b.start, endDate: b.end,
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      organizer: orgRef, location: { '@type': 'Place', name: meta.value!.name, address: orgAddress },
+    })),
+  ] : []
+
   useHead({
     link: [{ rel: 'canonical', href: canonicalUrl }],
     script: [{
@@ -212,6 +272,16 @@ if (!isStatePage && district.value) {
             { '@type': 'ListItem', position: 3, name: `${meta.value!.name} Calendar`, item: canonicalUrl },
           ],
         },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'EducationalOrganization',
+          name: meta.value!.name,
+          url: meta.value!.officialWebsite || canonicalUrl,
+          sameAs: [canonicalUrl, meta.value!.officialWebsite].filter(Boolean),
+          description: meta.value!.about ?? '',
+          address: orgAddress,
+        },
+        ...keyEvents,
         ...(faqs.value.length ? [{
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
