@@ -110,6 +110,54 @@ const stateCalsMap = computed(() => {
   return map
 })
 
+// Format "2026-08-10" → "Aug 10" (compact, no year)
+const formatMonthDay = (d: string) =>
+  new Date(d + 'T00:00:00').toLocaleString('en-US', { month: 'short', day: 'numeric' })
+
+// Per-district stats for the state comparison table
+const stateDistrictStats = computed(() => {
+  type DistrictStat = {
+    firstDay: string; lastDay: string
+    winterBreak: { start: string; end: string } | null
+    springBreak: { start: string; end: string } | null
+    daysOff: number; eventCount: number
+  }
+  const result: Record<string, DistrictStat> = {}
+  for (const c of stateCals.value ?? []) {
+    const calBreaks = getBreaks(c.events ?? [])
+    const winterBreak = calBreaks.find(b =>
+      b.name.toLowerCase().includes('winter') ||
+      b.name.toLowerCase().includes('christmas') ||
+      b.name.toLowerCase().includes('december')
+    ) ?? null
+    const springBreak = calBreaks.find(b => b.name.toLowerCase().includes('spring')) ?? null
+    let daysOff = 0
+    const breakRanges: { start: string; end: string }[] = []
+    for (const e of (c.events ?? [])) {
+      if (e.type === 'break_start') {
+        const endEvt = (c.events ?? []).find((x: any) => x.type === 'break_end' && x.date > e.date)
+        if (endEvt) breakRanges.push({ start: e.date, end: endEvt.date })
+      }
+      if (e.type === 'holiday' || e.type === 'no_school') daysOff++
+    }
+    for (const { start, end } of breakRanges) {
+      let d = new Date(start + 'T00:00:00')
+      const endD = new Date(end + 'T00:00:00')
+      while (d <= endD) {
+        if (d.getDay() !== 0 && d.getDay() !== 6) daysOff++
+        d.setDate(d.getDate() + 1)
+      }
+    }
+    result[c.institutionId] = {
+      firstDay: c.firstDay, lastDay: c.lastDay,
+      winterBreak: winterBreak ? { start: winterBreak.start, end: winterBreak.end } : null,
+      springBreak: springBreak ? { start: springBreak.start, end: springBreak.end } : null,
+      daysOff, eventCount: (c.events ?? []).length,
+    }
+  }
+  return result
+})
+
 // ── District page logic ────────────────────────────────────────────────────
 const currentYear = district.value?.currentSchoolYear ?? ''
 const cal = allCals.value?.find(y => y.schoolYear === currentYear) ?? null
@@ -212,6 +260,54 @@ const yearComparison = computed(() => {
   if (diff > 0) return `Compared to ${prevYear.value}, spring break starts ${diff} day${diff !== 1 ? 's' : ''} later this year.`
   return `Compared to ${prevYear.value}, spring break starts ${Math.abs(diff)} day${Math.abs(diff) !== 1 ? 's' : ''} earlier this year.`
 })
+
+// ── Year-at-a-Glance stats ─────────────────────────────────────────────────
+const schoolWeeks = computed(() => {
+  if (!cal) return 0
+  const ms = new Date(cal.lastDay + 'T00:00:00').getTime() - new Date(cal.firstDay + 'T00:00:00').getTime()
+  return Math.round(ms / (7 * 24 * 60 * 60 * 1000))
+})
+
+const daysOffCount = computed(() => {
+  if (!cal) return 0
+  let count = 0
+  const breakRanges: { start: string; end: string }[] = []
+  for (const e of cal.events) {
+    if (e.type === 'break_start') {
+      const endEvt = cal.events.find(x => x.type === 'break_end' && x.date > e.date)
+      if (endEvt) breakRanges.push({ start: e.date, end: endEvt.date })
+    }
+    if (e.type === 'holiday' || e.type === 'no_school') count++
+  }
+  for (const { start, end } of breakRanges) {
+    let d = new Date(start + 'T00:00:00')
+    const endD = new Date(end + 'T00:00:00')
+    while (d <= endD) {
+      if (d.getDay() !== 0 && d.getDay() !== 6) count++
+      d.setDate(d.getDate() + 1)
+    }
+  }
+  return count
+})
+
+const winterBreakDays = computed(() => {
+  const wb = breaks.value.find(b =>
+    b.name.toLowerCase().includes('winter') ||
+    b.name.toLowerCase().includes('christmas') ||
+    b.name.toLowerCase().includes('december')
+  )
+  if (!wb) return 0
+  const ms = new Date(wb.end + 'T00:00:00').getTime() - new Date(wb.start + 'T00:00:00').getTime()
+  return Math.round(ms / (24 * 60 * 60 * 1000)) + 1
+})
+
+// ── All Dates legend ───────────────────────────────────────────────────────
+const dateLegend = [
+  { label: 'Breaks', dot: 'bg-purple-400' },
+  { label: 'Holidays', dot: 'bg-blue-400' },
+  { label: 'No school', dot: 'bg-amber-400' },
+  { label: 'Early release', dot: 'bg-green-400' },
+]
 
 if (!isStatePage && district.value) {
   const canonicalUrl = `https://myschooldates.com/${slug}`
@@ -350,10 +446,64 @@ if (!isStatePage && district.value) {
           </div>
         </div>
 
+        <!-- District Comparison Table -->
+        <div v-if="Object.keys(stateDistrictStats).length" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <div class="px-6 py-4 border-b border-gray-100">
+            <h2 class="text-lg font-semibold text-gray-900">Compare {{ matchedStateName }} Districts at a Glance</h2>
+            <p class="text-sm text-gray-500 mt-1">First and last days, major breaks, and days off — side by side.</p>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-gray-50 text-xs font-semibold text-gray-400 uppercase tracking-wide">
+                  <th class="text-left px-6 py-3 whitespace-nowrap">District</th>
+                  <th class="text-left px-4 py-3 whitespace-nowrap">First Day</th>
+                  <th class="text-left px-4 py-3 whitespace-nowrap">Winter Break</th>
+                  <th class="text-left px-4 py-3 whitespace-nowrap">Spring Break</th>
+                  <th class="text-left px-4 py-3 whitespace-nowrap">Last Day</th>
+                  <th class="text-right px-6 py-3 whitespace-nowrap">Days Off</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr v-for="d in stateDistricts" :key="d.slug" class="hover:bg-gray-50 transition-colors">
+                  <td class="px-6 py-3">
+                    <NuxtLink :to="`/${d.slug}`" class="font-medium text-gray-900 hover:text-blue-600 transition-colors whitespace-nowrap">
+                      {{ d.shortName || d.name }}
+                    </NuxtLink>
+                  </td>
+                  <template v-if="stateDistrictStats[d.institutionId]">
+                    <td class="px-4 py-3 text-gray-600 whitespace-nowrap">{{ formatMonthDay(stateDistrictStats[d.institutionId].firstDay) }}</td>
+                    <td class="px-4 py-3 text-gray-600 whitespace-nowrap">
+                      <span v-if="stateDistrictStats[d.institutionId].winterBreak">
+                        {{ formatMonthDay(stateDistrictStats[d.institutionId].winterBreak!.start) }} – {{ formatMonthDay(stateDistrictStats[d.institutionId].winterBreak!.end) }}
+                      </span>
+                      <span v-else class="text-gray-300">—</span>
+                    </td>
+                    <td class="px-4 py-3 text-gray-600 whitespace-nowrap">
+                      <span v-if="stateDistrictStats[d.institutionId].springBreak">
+                        {{ formatMonthDay(stateDistrictStats[d.institutionId].springBreak!.start) }} – {{ formatMonthDay(stateDistrictStats[d.institutionId].springBreak!.end) }}
+                      </span>
+                      <span v-else class="text-gray-300">—</span>
+                    </td>
+                    <td class="px-4 py-3 text-gray-600 whitespace-nowrap">{{ formatMonthDay(stateDistrictStats[d.institutionId].lastDay) }}</td>
+                    <td class="px-6 py-3 text-right font-semibold text-gray-900">{{ stateDistrictStats[d.institutionId].daysOff }}</td>
+                  </template>
+                  <template v-else>
+                    <td colspan="5" class="px-4 py-3 text-xs text-gray-300">Calendar not yet available</td>
+                  </template>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="px-6 py-3 border-t border-gray-50 text-xs text-gray-400">
+            Days off = full student weekdays off (breaks, holidays, no-school days). Click any district for the full calendar.
+          </div>
+        </div>
+
         <!-- District Cards -->
         <div>
           <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ matchedStateName }} School Districts — {{ stateCurrentYear }}</h2>
-          <p class="text-sm text-gray-500 mb-4">Click any district to view its full calendar, download an ICS file, or add dates to Google Calendar.</p>
+          <p class="text-sm text-gray-500 mb-4">Click any district to view the full calendar, add dates to Google Calendar, or download an ICS file.</p>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <NuxtLink
               v-for="d in stateDistricts"
@@ -362,14 +512,34 @@ if (!isStatePage && district.value) {
               class="bg-white rounded-xl border border-gray-200 p-5 hover:border-blue-300 hover:shadow-sm transition-all"
             >
               <div class="font-semibold text-gray-900 leading-snug">{{ d.name }}</div>
-              <div class="text-sm text-gray-500 mt-0.5">{{ d.city ? `${d.city}, ` : '' }}{{ d.stateCode }}{{ d.shortName ? ` · ${d.shortName}` : '' }}</div>
-              <div class="mt-3 flex items-center justify-between">
-                <div>
-                  <span v-if="stateCalsMap[d.institutionId]" class="text-xs font-medium text-blue-700">
-                    Starts {{ formatShortDate(stateCalsMap[d.institutionId]) }}
-                  </span>
-                  <span v-else class="text-xs text-gray-400">{{ d.currentSchoolYear }}</span>
+              <div class="text-xs text-gray-400 mt-0.5">{{ d.city ? `${d.city}, ` : '' }}{{ (d as any).stateCode ?? d.state }}</div>
+              <template v-if="stateDistrictStats[d.institutionId]">
+                <div class="mt-3 grid grid-cols-2 gap-x-4 gap-y-1.5">
+                  <div>
+                    <div class="text-xs text-gray-400">First day</div>
+                    <div class="text-sm font-medium text-gray-800">{{ formatMonthDay(stateDistrictStats[d.institutionId].firstDay) }}</div>
+                  </div>
+                  <div>
+                    <div class="text-xs text-gray-400">Last day</div>
+                    <div class="text-sm font-medium text-gray-800">{{ formatMonthDay(stateDistrictStats[d.institutionId].lastDay) }}</div>
+                  </div>
+                  <div v-if="stateDistrictStats[d.institutionId].winterBreak">
+                    <div class="text-xs text-gray-400">Winter break</div>
+                    <div class="text-sm font-medium text-gray-800">
+                      {{ formatMonthDay(stateDistrictStats[d.institutionId].winterBreak!.start) }} – {{ formatMonthDay(stateDistrictStats[d.institutionId].winterBreak!.end) }}
+                    </div>
+                  </div>
+                  <div>
+                    <div class="text-xs text-gray-400">Days off</div>
+                    <div class="text-sm font-medium text-gray-800">{{ stateDistrictStats[d.institutionId].daysOff }} days</div>
+                  </div>
                 </div>
+              </template>
+              <template v-else>
+                <div class="mt-3 text-xs text-gray-400">{{ d.currentSchoolYear }}</div>
+              </template>
+              <div class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
+                <span class="text-xs text-gray-400">{{ d.currentSchoolYear }}</span>
                 <span class="text-xs font-medium text-blue-600">View calendar →</span>
               </div>
             </NuxtLink>
@@ -543,6 +713,43 @@ if (!isStatePage && district.value) {
               <div class="text-sm text-gray-500 mt-1">{{ formatShortDate(nextEvent.date) }}</div>
             </template>
             <div v-else class="text-gray-400">No upcoming events</div>
+          </div>
+        </div>
+
+        <!-- Year at a Glance -->
+        <div class="bg-white rounded-xl border border-gray-200 p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-4">The Year, by the Numbers</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="border border-gray-100 rounded-xl p-5">
+              <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">School year</div>
+              <div class="text-3xl font-bold text-gray-900 mb-2">{{ schoolWeeks }} <span class="text-base font-normal text-gray-400">weeks</span></div>
+              <p class="text-sm text-gray-500 leading-relaxed">
+                The {{ currentYear }} year runs {{ formatDate(cal.firstDay) }} through {{ formatDate(cal.lastDay) }}, about {{ schoolWeeks }} weeks.
+              </p>
+            </div>
+            <div class="border border-gray-100 rounded-xl p-5">
+              <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">For students</div>
+              <div class="text-3xl font-bold text-gray-900 mb-2">{{ daysOffCount }} <span class="text-base font-normal text-gray-400">days off</span></div>
+              <p class="text-sm text-gray-500 leading-relaxed">
+                Students get {{ daysOffCount }} full weekdays off during the year — breaks, holidays, and no-school days combined.
+              </p>
+            </div>
+            <div v-if="winterBreakDays" class="border border-gray-100 rounded-xl p-5">
+              <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Winter break</div>
+              <div class="text-3xl font-bold text-gray-900 mb-2">{{ winterBreakDays }} <span class="text-base font-normal text-gray-400">days</span></div>
+              <p class="text-sm text-gray-500 leading-relaxed">
+                <template v-if="breaks.find(b => b.name.toLowerCase().includes('winter') || b.name.toLowerCase().includes('christmas'))">
+                  {{ (() => { const wb = breaks.find(b => b.name.toLowerCase().includes('winter') || b.name.toLowerCase().includes('christmas')); return wb ? `Winter break runs ${formatShortDate(wb.start)} to ${formatShortDate(wb.end)} — ${winterBreakDays} days.` : '' })() }}
+                </template>
+              </p>
+            </div>
+            <div class="border border-gray-100 rounded-xl p-5">
+              <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Instructional days</div>
+              <div class="text-3xl font-bold text-gray-900 mb-2">{{ cal.totalSchoolDays ?? 180 }} <span class="text-base font-normal text-gray-400">days</span></div>
+              <p class="text-sm text-gray-500 leading-relaxed">
+                {{ district.state }} requires {{ cal.totalSchoolDays ?? 180 }} instructional days per school year. Makeup days may be added if school is cancelled.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -813,10 +1020,25 @@ if (!isStatePage && district.value) {
         <!-- All Dates -->
         <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
           <div class="px-6 py-4 border-b border-gray-100">
-            <h2 class="text-lg font-semibold text-gray-900">All Important Dates</h2>
+            <h2 class="text-lg font-semibold text-gray-900 mb-3">All Important Dates</h2>
+            <!-- Legend -->
+            <div class="flex flex-wrap gap-3">
+              <span
+                v-for="item in dateLegend"
+                :key="item.label"
+                class="inline-flex items-center gap-1.5 text-xs text-gray-500"
+              >
+                <span class="w-2 h-2 rounded-full flex-shrink-0" :class="item.dot" />
+                {{ item.label }}
+              </span>
+            </div>
           </div>
           <div class="divide-y divide-gray-50">
-            <div v-for="event in cal.events" :key="event.date" class="flex items-center justify-between px-6 py-4 hover:bg-gray-50 transition-colors">
+            <div
+              v-for="event in cal.events"
+              :key="event.date + event.type"
+              class="flex items-center justify-between px-6 py-4 hover:bg-gray-50 transition-colors"
+            >
               <div>
                 <div class="font-medium text-gray-900">{{ event.name }}</div>
                 <div class="text-sm text-gray-500">{{ formatDate(event.date) }}</div>
