@@ -633,6 +633,21 @@ if (!isStatePage && district.value) {
             Official {{ currentYear }} school calendar · Sourced from {{ district.name }} ·
             <button @click="downloadICS(district, cal)" class="underline hover:text-blue-600 transition-colors">Add to Google Calendar</button>
           </p>
+          <!-- Verification badge -->
+          <div class="mt-3 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full"
+            :class="isEstimated
+              ? 'bg-amber-50 text-amber-700 border border-amber-200'
+              : 'bg-green-50 text-green-700 border border-green-200'"
+          >
+            <svg v-if="!isEstimated" class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <svg v-else class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+            </svg>
+            <span v-if="!isEstimated">Human-verified against official calendar · {{ verifiedDate }}</span>
+            <span v-else>Based on official district website · Not yet human-verified</span>
+          </div>
         </div>
 
         <!-- Today Status — HERO: first thing users see after the title -->
