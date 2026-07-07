@@ -713,7 +713,7 @@ function scoreYearNumbers(
     score: 75,
   })
 
-  if (pool.springBreakVsPrevYear && pool.springBreakDiffDays !== null) {
+  if (pool.springBreakVsPrevYear && pool.springBreakDiffDays !== null && pool.springBreakDiffDays !== 0) {
     const absDiff = Math.abs(pool.springBreakDiffDays)
     const direction = pool.springBreakDiffDays > 0 ? 'later' : pool.springBreakDiffDays < 0 ? 'earlier' : 'same'
     candidates.push({
