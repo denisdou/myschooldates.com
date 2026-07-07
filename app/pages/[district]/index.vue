@@ -782,6 +782,36 @@ const winterBreakDays = computed(() => {
   return Math.round(ms / (24 * 60 * 60 * 1000)) + 1
 })
 
+// ── Dynamic Metrics: computed refs ─────────────────────────────────────────
+const metricPool = computed((): MetricPool | null => {
+  if (!cal || !district.value) return null
+  return computeMetricPool(
+    cal,
+    breaks.value,
+    relatedCals.value ?? [],
+    allDistricts.value ?? [],
+    todayStr,
+    daysUntil,
+    schoolWeeks.value,
+    daysOffCount.value,
+    winterBreakDays.value,
+    prevCal.value,
+    yearComparison.value,
+  )
+})
+
+const quickFactItems = computed((): FactItem[] => {
+  if (!metricPool.value || !district.value) return []
+  return scoreQuickFacts(metricPool.value, district.value.slug)
+})
+
+const quickFactKeys = computed(() => new Set(quickFactItems.value.map(f => f.key)))
+
+const yearNumberCards = computed((): NumberCard[] => {
+  if (!metricPool.value || !district.value) return []
+  return scoreYearNumbers(metricPool.value, quickFactKeys.value, district.value, currentYear, formatShortDate)
+})
+
 // ── Nearby district comparison stats ───────────────────────────────────────
 type ComparisonEntry = {
   name: string; slug: string; isCurrent: boolean
