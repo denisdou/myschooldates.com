@@ -378,6 +378,202 @@ function shiftDay(dateStr: string, delta: number): string {
   return d.toISOString().slice(0, 10)
 }
 
+// ── Dynamic Metrics: pool computation ─────────────────────────────────────
+function computeMetricPool(
+  cal: any,
+  districtVal: any,
+  breaksVal: { name: string; start: string; end: string; days: number }[],
+  relatedCalsVal: any[],
+  allDistrictsVal: any[],
+  todayStrVal: string,
+  daysUntilFn: (d: string) => number,
+  schoolWeeksVal: number,
+  daysOffCountVal: number,
+  winterBreakDaysVal: number,
+  prevCalVal: any,
+  yearComparisonVal: string,
+): MetricPool {
+  const events: { date: string; type: string; name: string }[] = cal.events ?? []
+
+  // ── nextStudentDayOff ──────────────────────────────────────────────────
+  const nextSdoEvt = events
+    .filter(e => e.date >= todayStrVal && (e.type === 'holiday' || e.type === 'no_school' || e.type === 'break_start'))
+    .sort((a, b) => a.date.localeCompare(b.date))[0] ?? null
+  const nextStudentDayOff = nextSdoEvt
+    ? { name: nextSdoEvt.name, date: nextSdoEvt.date, daysUntil: daysUntilFn(nextSdoEvt.date) }
+    : null
+
+  // ── nextHoliday ────────────────────────────────────────────────────────
+  const nextHolEvt = events
+    .filter(e => e.date >= todayStrVal && e.type === 'holiday')
+    .sort((a, b) => a.date.localeCompare(b.date))[0] ?? null
+  const nextHoliday = nextHolEvt
+    ? { name: nextHolEvt.name, date: nextHolEvt.date, daysUntil: daysUntilFn(nextHolEvt.date) }
+    : null
+
+  // ── nextTeacherWorkday ─────────────────────────────────────────────────
+  const nextTwdEvt = events
+    .filter(e => e.date >= todayStrVal && e.type === 'teacher_workday')
+    .sort((a, b) => a.date.localeCompare(b.date))[0] ?? null
+  const nextTeacherWorkday = nextTwdEvt
+    ? { name: nextTwdEvt.name, date: nextTwdEvt.date, daysUntil: daysUntilFn(nextTwdEvt.date) }
+    : null
+
+  // ── nextBreak ──────────────────────────────────────────────────────────
+  const nextBreakObj = breaksVal.find(b => b.start >= todayStrVal) ?? null
+  const nextBreak = nextBreakObj
+    ? { name: nextBreakObj.name, start: nextBreakObj.start, daysUntil: daysUntilFn(nextBreakObj.start) }
+    : null
+
+  // ── longestBreak ───────────────────────────────────────────────────────
+  const longestBreak = breaksVal.length === 0 ? null
+    : breaksVal.reduce((max, b) => b.days > max.days ? b : max, breaksVal[0]!)
+
+  // ── springBreak ────────────────────────────────────────────────────────
+  const springBreak = breaksVal.find(b => b.name.toLowerCase().includes('spring')) ?? null
+  const springBreakStart = springBreak ? springBreak.start : null
+  const daysUntilSpringBreak = springBreak && springBreak.start >= todayStrVal
+    ? daysUntilFn(springBreak.start)
+    : null
+
+  // ── daysBeforeLaborDay ─────────────────────────────────────────────────
+  const firstDayYear = parseInt(cal.firstDay.slice(0, 4))
+  const laborDay = getLaborDay(firstDayYear)
+  const daysBeforeLaborDay = cal.firstDay < laborDay
+    ? Math.round((new Date(laborDay + 'T00:00:00').getTime() - new Date(cal.firstDay + 'T00:00:00').getTime()) / 86400000)
+    : null
+
+  // ── teacherWorkDays ────────────────────────────────────────────────────
+  const teacherWorkDays = (cal.teacherWorkDays && cal.teacherWorkDays > 0) ? cal.teacherWorkDays : null
+
+  // ── startDiffNearest / lastDayDiffNearest ──────────────────────────────
+  let startDiffNearest: MetricPool['startDiffNearest'] = null
+  let lastDayDiffNearest: MetricPool['lastDayDiffNearest'] = null
+  let bestStartAbsDiff = Infinity
+  let bestLastAbsDiff = Infinity
+  for (const rc of relatedCalsVal) {
+    const relDistrict = allDistrictsVal.find((d: any) => d.institutionId === rc.institutionId)
+    if (!relDistrict) continue
+    const vsName = (relDistrict.shortName || relDistrict.name) as string
+
+    const startDiff = Math.round((new Date(rc.firstDay + 'T00:00:00').getTime() - new Date(cal.firstDay + 'T00:00:00').getTime()) / 86400000)
+    if (Math.abs(startDiff) < bestStartAbsDiff) {
+      bestStartAbsDiff = Math.abs(startDiff)
+      startDiffNearest = {
+        days: Math.abs(startDiff),
+        direction: startDiff > 0 ? 'earlier' : startDiff < 0 ? 'later' : 'same',
+        vsName,
+      }
+    }
+
+    const lastDiff = Math.round((new Date(rc.lastDay + 'T00:00:00').getTime() - new Date(cal.lastDay + 'T00:00:00').getTime()) / 86400000)
+    if (Math.abs(lastDiff) < bestLastAbsDiff) {
+      bestLastAbsDiff = Math.abs(lastDiff)
+      lastDayDiffNearest = {
+        days: Math.abs(lastDiff),
+        direction: lastDiff > 0 ? 'earlier' : lastDiff < 0 ? 'later' : 'same',
+        vsName,
+      }
+    }
+  }
+
+  // ── winterBreak ────────────────────────────────────────────────────────
+  const winterBreakObj = breaksVal.find(b =>
+    b.name.toLowerCase().includes('winter') ||
+    b.name.toLowerCase().includes('christmas') ||
+    b.name.toLowerCase().includes('december')
+  ) ?? null
+
+  // ── longestInstructionalStretch ────────────────────────────────────────
+  type Period = { start: string; end: string }
+  const closed: Period[] = [
+    ...breaksVal.map(b => ({ start: b.start, end: b.end })),
+    ...events
+      .filter(e => e.type === 'holiday' || e.type === 'no_school')
+      .map(e => ({ start: e.date, end: e.date })),
+  ].sort((a, b) => a.start.localeCompare(b.start))
+
+  // Merge overlapping/adjacent periods
+  const merged: Period[] = []
+  for (const p of closed) {
+    const last = merged[merged.length - 1]
+    if (!last || p.start > last.end) {
+      merged.push({ ...p })
+    } else if (p.end > last.end) {
+      last.end = p.end
+    }
+  }
+
+  let longestInstructionalStretch: MetricPool['longestInstructionalStretch'] = null
+  let longestWd = 0
+
+  // Gap: firstDay → first closed period
+  if (merged.length > 0) {
+    const gapEnd = shiftDay(merged[0]!.start, -1)
+    if (cal.firstDay <= gapEnd) {
+      const wd = countWeekdays(cal.firstDay, gapEnd)
+      if (wd > longestWd) { longestWd = wd; longestInstructionalStretch = { weeks: Math.round(wd / 5), start: cal.firstDay, end: gapEnd } }
+    }
+  }
+  // Gaps between consecutive closed periods
+  for (let i = 0; i < merged.length - 1; i++) {
+    const gapStart = shiftDay(merged[i]!.end, 1)
+    const gapEnd = shiftDay(merged[i + 1]!.start, -1)
+    if (gapStart <= gapEnd) {
+      const wd = countWeekdays(gapStart, gapEnd)
+      if (wd > longestWd) { longestWd = wd; longestInstructionalStretch = { weeks: Math.round(wd / 5), start: gapStart, end: gapEnd } }
+    }
+  }
+  // Gap: last closed period → lastDay
+  if (merged.length > 0) {
+    const gapStart = shiftDay(merged[merged.length - 1]!.end, 1)
+    if (gapStart <= cal.lastDay) {
+      const wd = countWeekdays(gapStart, cal.lastDay)
+      if (wd > longestWd) { longestWd = wd; longestInstructionalStretch = { weeks: Math.round(wd / 5), start: gapStart, end: cal.lastDay } }
+    }
+  }
+
+  // ── springBreakVsPrevYear ──────────────────────────────────────────────
+  let springBreakVsPrevYear: string | null = null
+  let springBreakDiffDays: number | null = null
+  if (prevCalVal && yearComparisonVal) {
+    springBreakVsPrevYear = yearComparisonVal
+    const match = yearComparisonVal.match(/(\d+) day/)
+    if (match) {
+      const n = parseInt(match[1]!)
+      springBreakDiffDays = yearComparisonVal.includes('later') ? n : yearComparisonVal.includes('earlier') ? -n : 0
+    } else if (yearComparisonVal.includes('same date')) {
+      springBreakDiffDays = 0
+    }
+  }
+
+  return {
+    nextStudentDayOff,
+    nextHoliday,
+    nextTeacherWorkday,
+    nextBreak,
+    longestBreak: longestBreak ?? null,
+    breakCount: breaksVal.length,
+    daysUntilSpringBreak,
+    springBreakStart,
+    daysBeforeLaborDay,
+    teacherWorkDays,
+    startDiffNearest,
+    lastDayDiffNearest,
+    schoolWeeks: schoolWeeksVal,
+    totalDaysOff: daysOffCountVal,
+    winterBreakLength: winterBreakObj ? winterBreakDaysVal : null,
+    winterBreakStart: winterBreakObj ? winterBreakObj.start : null,
+    winterBreakEnd: winterBreakObj ? winterBreakObj.end : null,
+    longestInstructionalStretch,
+    instructionalDays: cal.totalSchoolDays ?? 180,
+    springBreakVsPrevYear,
+    springBreakDiffDays,
+    firstDay: cal.firstDay,
+    lastDay: cal.lastDay,
+  }
+}
+
 // ── Year-at-a-Glance stats ─────────────────────────────────────────────────
 const schoolWeeks = computed(() => {
   if (!cal) return 0
