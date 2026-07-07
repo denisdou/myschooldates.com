@@ -1356,39 +1356,16 @@ if (!isStatePage && district.value) {
           <p v-if="(district as any).districtFact" class="mt-4 pt-4 border-t border-gray-100 text-sm text-gray-500 leading-relaxed">{{ (district as any).districtFact }}</p>
         </div>
 
-        <!-- Year at a Glance -->
-        <div class="bg-white rounded-xl border border-gray-200 p-6">
+        <!-- Year by the Numbers -->
+        <div v-if="yearNumberCards.length" class="bg-white rounded-xl border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-4">The Year, by the Numbers</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div class="border border-gray-100 rounded-xl p-5">
-              <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">School year</div>
-              <div class="text-3xl font-bold text-gray-900 mb-2">{{ schoolWeeks }} <span class="text-base font-normal text-gray-400">weeks</span></div>
-              <p class="text-sm text-gray-500 leading-relaxed">
-                The {{ currentYear }} year runs {{ formatDate(cal.firstDay) }} through {{ formatDate(cal.lastDay) }}, about {{ schoolWeeks }} weeks.
-              </p>
-            </div>
-            <div class="border border-gray-100 rounded-xl p-5">
-              <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">For students</div>
-              <div class="text-3xl font-bold text-gray-900 mb-2">{{ daysOffCount }} <span class="text-base font-normal text-gray-400">days off</span></div>
-              <p class="text-sm text-gray-500 leading-relaxed">
-                Students get {{ daysOffCount }} full weekdays off during the year — breaks, holidays, and no-school days combined.
-              </p>
-            </div>
-            <div v-if="winterBreakDays" class="border border-gray-100 rounded-xl p-5">
-              <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Winter break</div>
-              <div class="text-3xl font-bold text-gray-900 mb-2">{{ winterBreakDays }} <span class="text-base font-normal text-gray-400">days</span></div>
-              <p class="text-sm text-gray-500 leading-relaxed">
-                <template v-if="breaks.find(b => b.name.toLowerCase().includes('winter') || b.name.toLowerCase().includes('christmas'))">
-                  {{ (() => { const wb = breaks.find(b => b.name.toLowerCase().includes('winter') || b.name.toLowerCase().includes('christmas')); return wb ? `Winter break runs ${formatShortDate(wb.start)} to ${formatShortDate(wb.end)} — ${winterBreakDays} days.` : '' })() }}
-                </template>
-              </p>
-            </div>
-            <div class="border border-gray-100 rounded-xl p-5">
-              <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Instructional days</div>
-              <div class="text-3xl font-bold text-gray-900 mb-2">{{ cal.totalSchoolDays ?? 180 }} <span class="text-base font-normal text-gray-400">days</span></div>
-              <p class="text-sm text-gray-500 leading-relaxed">
-                {{ district.shortName || district.name }} schedules a {{ cal.totalSchoolDays ?? 180 }}-day instructional year, consistent with {{ district.state }} public school requirements. Makeup days may be added if school is cancelled.
-              </p>
+            <div v-for="card in yearNumberCards" :key="card.key" class="border border-gray-100 rounded-xl p-5">
+              <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">{{ card.label }}</div>
+              <div class="text-3xl font-bold text-gray-900 mb-2">
+                {{ card.value }} <span class="text-base font-normal text-gray-400">{{ card.unit }}</span>
+              </div>
+              <p class="text-sm text-gray-500 leading-relaxed">{{ card.description }}</p>
             </div>
           </div>
         </div>
