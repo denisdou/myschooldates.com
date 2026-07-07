@@ -189,6 +189,12 @@ const faqs = computed(() => {
   if (!cal || !district.value) return []
   const specificFaqs = (district.value as any).districtFaqs ?? []
   const allTemplateFaqs = generateFaqs(district.value, cal, district.value.officialWebsite)
+  // Districts with very rich specific FAQs (≥5): skip the template fall break question
+  // (position 0) since it is already covered by the About section in these districts.
+  // Append Google Calendar, travel planning, early release, official verification (positions 1–4).
+  if (specificFaqs.length >= 5) {
+    return [...specificFaqs, ...allTemplateFaqs.slice(1, 5)]
+  }
   // Districts with rich specific FAQs (≥3): only append the 5 utility questions (fall break,
   // Google Calendar, travel planning, early release, official verification) — positions 0–4.
   // These are not duplicated elsewhere on the page. Skip the date questions (positions 5–13)
@@ -292,6 +298,86 @@ const yearComparison = computed(() => {
   return `Compared to ${prevYear.value}, spring break starts ${Math.abs(diff)} day${Math.abs(diff) !== 1 ? 's' : ''} earlier this year.`
 })
 
+// ── Dynamic Metrics: types ─────────────────────────────────────────────────
+type MetricPool = {
+  // Quick Facts candidates
+  nextStudentDayOff:           { name: string; date: string; daysUntil: number } | null
+  nextHoliday:                 { name: string; date: string; daysUntil: number } | null
+  nextTeacherWorkday:          { name: string; date: string; daysUntil: number } | null
+  nextBreak:                   { name: string; start: string; daysUntil: number } | null
+  longestBreak:                { name: string; days: number; start: string; end: string } | null
+  breakCount:                  number
+  daysUntilSpringBreak:        number | null
+  springBreakStart:            string | null
+  daysBeforeLaborDay:          number | null
+  teacherWorkDays:             number | null
+  startDiffNearest:            { days: number; direction: 'earlier' | 'later' | 'same'; vsName: string } | null
+  lastDayDiffNearest:          { days: number; direction: 'earlier' | 'later' | 'same'; vsName: string } | null
+  // Year by Numbers candidates
+  schoolWeeks:                 number
+  totalDaysOff:                number
+  winterBreakLength:           number | null
+  winterBreakStart:            string | null
+  winterBreakEnd:              string | null
+  longestInstructionalStretch: { weeks: number; start: string; end: string } | null
+  instructionalDays:           number
+  springBreakVsPrevYear:       string | null
+  springBreakDiffDays:         number | null
+  firstDay:                    string
+  lastDay:                     string
+}
+
+type FactItem = {
+  key:   string
+  value: string
+  label: string
+}
+
+type NumberCard = {
+  key:         string
+  label:       string
+  value:       number
+  unit:        string
+  description: string
+}
+
+// ── Dynamic Metrics: helpers ───────────────────────────────────────────────
+function getLaborDay(year: number): string {
+  // First Monday of September
+  const sept1 = new Date(year, 8, 1)
+  const dow = sept1.getDay() // 0=Sun, 1=Mon…
+  const offset = dow === 1 ? 0 : dow === 0 ? 1 : 8 - dow
+  const ld = new Date(year, 8, 1 + offset)
+  return ld.toISOString().slice(0, 10)
+}
+
+function simpleHash(s: string): number {
+  let h = 0
+  for (let i = 0; i < s.length; i++) {
+    h = (Math.imul(31, h) + s.charCodeAt(i)) | 0
+  }
+  return Math.abs(h)
+}
+
+function countWeekdays(from: string, to: string): number {
+  if (from > to) return 0
+  let count = 0
+  const d = new Date(from + 'T00:00:00')
+  const end = new Date(to + 'T00:00:00')
+  while (d <= end) {
+    const dow = d.getDay()
+    if (dow !== 0 && dow !== 6) count++
+    d.setDate(d.getDate() + 1)
+  }
+  return count
+}
+
+function shiftDay(dateStr: string, delta: number): string {
+  const d = new Date(dateStr + 'T00:00:00')
+  d.setDate(d.getDate() + delta)
+  return d.toISOString().slice(0, 10)
+}
+
 // ── Year-at-a-Glance stats ─────────────────────────────────────────────────
 const schoolWeeks = computed(() => {
   if (!cal) return 0
@@ -338,6 +424,7 @@ type ComparisonEntry = {
   firstDay: string; lastDay: string
   springBreak: { start: string; end: string } | null
   daysOff: number
+  comparisonNote?: string
 }
 const comparisonStats = computed((): ComparisonEntry[] => {
   const rows: ComparisonEntry[] = []
@@ -377,15 +464,37 @@ const comparisonStats = computed((): ComparisonEntry[] => {
     if (!d) continue
     const calBreaks = getBreaks(c.events ?? [])
     const sp = calBreaks.find(b => b.name.toLowerCase().includes('spring')) ?? null
+    const relatedDef = (district.value?.relatedDistricts as any[] ?? []).find((rd: any) => rd.slug === d.slug)
     rows.push({
       name: d.name, slug: d.slug, isCurrent: false,
       firstDay: c.firstDay, lastDay: c.lastDay,
       springBreak: sp ? { start: sp.start, end: sp.end } : null,
       daysOff: computeDaysOff(c.events ?? []),
+      comparisonNote: relatedDef?.comparisonNote,
     })
   }
 
   return rows
+})
+
+// ── Compare insight ────────────────────────────────────────────────────────
+const comparisonInsight = computed((): string => {
+  const stats = comparisonStats.value
+  if (stats.length < 2) return ''
+  const current = stats.find(s => s.isCurrent)
+  const others = stats.filter(s => !s.isCurrent)
+  if (!current || !others.length) return ''
+  const shortName = (n: string) => n.replace(/ School District$/, '').replace(/ Unified$/, '').replace(/ Independent$/, '') || n
+  const parts = others.map(other => {
+    const diff = Math.round(
+      (new Date(other.firstDay + 'T00:00:00').getTime() - new Date(current.firstDay + 'T00:00:00').getTime())
+      / (1000 * 60 * 60 * 24)
+    )
+    if (diff > 0) return `${diff} day${diff !== 1 ? 's' : ''} earlier than ${shortName(other.name)}`
+    if (diff < 0) return `${Math.abs(diff)} day${Math.abs(diff) !== 1 ? 's' : ''} later than ${shortName(other.name)}`
+    return `on the same first day as ${shortName(other.name)}`
+  })
+  return `${shortName(current.name)} starts ${parts.join(' and ')}.`
 })
 
 // ── All Dates legend ───────────────────────────────────────────────────────
@@ -883,7 +992,7 @@ if (!isStatePage && district.value) {
               <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Instructional days</div>
               <div class="text-3xl font-bold text-gray-900 mb-2">{{ cal.totalSchoolDays ?? 180 }} <span class="text-base font-normal text-gray-400">days</span></div>
               <p class="text-sm text-gray-500 leading-relaxed">
-                {{ district.shortName || district.name }} schedules the {{ district.state }}-required {{ cal.totalSchoolDays ?? 180 }} instructional days. Makeup days may be added if school is cancelled.
+                {{ district.shortName || district.name }} schedules a {{ cal.totalSchoolDays ?? 180 }}-day instructional year, consistent with {{ district.state }} public school requirements. Makeup days may be added if school is cancelled.
               </p>
             </div>
           </div>
@@ -904,8 +1013,8 @@ if (!isStatePage && district.value) {
 
         <!-- About / Calendar Context -->
         <div class="text-gray-600 leading-relaxed space-y-3 text-sm">
-          <template v-if="district.calendarNotes">
-            <p v-for="(para, i) in district.calendarNotes.split('\n\n')" :key="i">{{ para }}</p>
+          <template v-if="cal.calendarNotes">
+            <p v-for="(para, i) in cal.calendarNotes.split('\n\n')" :key="i">{{ para }}</p>
           </template>
           <template v-else>
             <p>
@@ -923,7 +1032,7 @@ if (!isStatePage && district.value) {
               <span v-if="yearComparison" class="italic text-gray-500"> {{ yearComparison }}</span>
             </p>
           </template>
-          <p v-if="district.about && !district.calendarNotes" class="text-gray-500">{{ district.about }}</p>
+          <p v-if="district.about && !cal.calendarNotes" class="text-gray-500">{{ district.about }}</p>
         </div>
 
         <!-- Upcoming Events — timeline of next 6 events -->
@@ -966,7 +1075,7 @@ if (!isStatePage && district.value) {
         <!-- Quick Facts -->
         <div class="bg-white rounded-xl border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-4">Quick Facts — {{ currentYear }}</h2>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             <div class="text-center p-3 bg-gray-50 rounded-lg">
               <div class="text-2xl font-bold text-gray-900">{{ cal.totalSchoolDays ?? 180 }}</div>
               <div class="text-xs text-gray-500 mt-1">Instructional Days</div>
@@ -982,6 +1091,14 @@ if (!isStatePage && district.value) {
             <div class="text-center p-3 bg-gray-50 rounded-lg">
               <div class="text-2xl font-bold text-gray-900">{{ breaks.length }}</div>
               <div class="text-xs text-gray-500 mt-1">Major Breaks</div>
+            </div>
+            <div v-if="(district as any).studentCount" class="text-center p-3 bg-gray-50 rounded-lg">
+              <div class="text-2xl font-bold text-gray-900">{{ ((district as any).studentCount as number).toLocaleString('en-US') }}</div>
+              <div class="text-xs text-gray-500 mt-1">Students</div>
+            </div>
+            <div v-if="(district as any).schoolCount" class="text-center p-3 bg-gray-50 rounded-lg">
+              <div class="text-2xl font-bold text-gray-900">{{ (district as any).schoolCount }}+</div>
+              <div class="text-xs text-gray-500 mt-1">Schools</div>
             </div>
           </div>
           <!-- Data source row -->
@@ -1214,9 +1331,12 @@ if (!isStatePage && district.value) {
                       <span class="font-semibold text-blue-800 whitespace-nowrap">{{ stat.name }}</span>
                       <span class="ml-2 text-xs bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-medium">this district</span>
                     </template>
-                    <NuxtLink v-else :to="`/${stat.slug}`" class="font-medium text-gray-900 hover:text-blue-600 transition-colors whitespace-nowrap">
-                      {{ stat.name }}
-                    </NuxtLink>
+                    <template v-else>
+                      <NuxtLink :to="`/${stat.slug}`" class="font-medium text-gray-900 hover:text-blue-600 transition-colors whitespace-nowrap">
+                        {{ stat.name }}
+                      </NuxtLink>
+                      <p v-if="stat.comparisonNote" class="text-xs text-gray-500 mt-0.5 leading-snug max-w-xs">{{ stat.comparisonNote }}</p>
+                    </template>
                   </td>
                   <td class="px-4 py-3 text-gray-600 whitespace-nowrap">{{ formatMonthDay(stat.firstDay) }}</td>
                   <td class="px-4 py-3 text-gray-600 whitespace-nowrap">
@@ -1229,6 +1349,7 @@ if (!isStatePage && district.value) {
               </tbody>
             </table>
           </div>
+          <p v-if="comparisonInsight" class="px-6 py-3 border-t border-gray-100 text-xs text-gray-500 italic">{{ comparisonInsight }}</p>
         </div>
 
         <!-- FAQ -->
@@ -1311,11 +1432,11 @@ if (!isStatePage && district.value) {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <div class="text-sm text-green-700 space-y-1">
-              <p class="font-medium">Verified from official source</p>
+              <p class="font-medium">Human-verified against official district calendar</p>
               <p>
-                Calendar data sourced from the official
-                <a :href="district.officialWebsite" target="_blank" rel="nofollow noopener" class="underline font-medium">{{ district.name }} website</a>.
-                Dates are subject to board approval and may change.
+                Dates sourced directly from the
+                <a :href="cal.sourceUrl ?? district.calendarPage ?? district.officialWebsite" target="_blank" rel="nofollow noopener" class="underline font-medium">official {{ district.shortName || district.name }} calendar</a>.
+                Dates are subject to board approval and may change — always confirm before making travel or childcare plans.
               </p>
               <p class="text-green-600 text-xs">Last verified: {{ verifiedDate }}</p>
             </div>
