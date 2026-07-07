@@ -1448,29 +1448,9 @@ if (!isStatePage && district.value) {
         <div class="bg-white rounded-xl border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-4">Quick Facts — {{ currentYear }}</h2>
           <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            <div class="text-center p-3 bg-gray-50 rounded-lg">
-              <div class="text-2xl font-bold text-gray-900">{{ cal.totalSchoolDays ?? 180 }}</div>
-              <div class="text-xs text-gray-500 mt-1">Instructional Days</div>
-            </div>
-            <div class="text-center p-3 bg-gray-50 rounded-lg">
-              <div class="text-2xl font-bold text-gray-900">{{ cal.teacherWorkDays ?? '—' }}</div>
-              <div class="text-xs text-gray-500 mt-1">Teacher Work Days</div>
-            </div>
-            <div class="text-center p-3 bg-gray-50 rounded-lg">
-              <div class="text-2xl font-bold text-gray-900">{{ cal.semesters ?? 2 }}</div>
-              <div class="text-xs text-gray-500 mt-1">Semesters</div>
-            </div>
-            <div class="text-center p-3 bg-gray-50 rounded-lg">
-              <div class="text-2xl font-bold text-gray-900">{{ breaks.length }}</div>
-              <div class="text-xs text-gray-500 mt-1">Major Breaks</div>
-            </div>
-            <div v-if="(district as any).studentCount" class="text-center p-3 bg-gray-50 rounded-lg">
-              <div class="text-2xl font-bold text-gray-900">{{ ((district as any).studentCount as number).toLocaleString('en-US') }}</div>
-              <div class="text-xs text-gray-500 mt-1">Students</div>
-            </div>
-            <div v-if="(district as any).schoolCount" class="text-center p-3 bg-gray-50 rounded-lg">
-              <div class="text-2xl font-bold text-gray-900">{{ (district as any).schoolCount }}+</div>
-              <div class="text-xs text-gray-500 mt-1">Schools</div>
+            <div v-for="fact in quickFactItems" :key="fact.key" class="text-center p-3 bg-gray-50 rounded-lg">
+              <div class="text-2xl font-bold text-gray-900 truncate">{{ fact.value }}</div>
+              <div class="text-xs text-gray-500 mt-1 leading-snug">{{ fact.label }}</div>
             </div>
           </div>
           <!-- Data source row -->
