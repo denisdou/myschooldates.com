@@ -10,30 +10,131 @@
   "sourcePdfUrl": "",
   "lastVerifiedAt": "2026-07-05",
   "events": [
-    { "date": "2025-08-18", "name": "First Day of School (Grades 1-5, 6, 9)", "type": "school_start" },
-    { "date": "2025-08-19", "name": "First Day of School (Grades 7-8, 10-12)", "type": "school_start" },
-    { "date": "2025-08-29", "name": "Holiday", "type": "holiday" },
-    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
-    { "date": "2025-09-19", "name": "Three-Hour Early Release", "type": "early_release" },
-    { "date": "2025-10-02", "name": "Yom Kippur", "type": "holiday" },
-    { "date": "2025-10-22", "name": "Three-Hour Early Release / End of Quarter 1", "type": "early_release" },
-    { "date": "2025-11-03", "name": "Student Holiday / Parent-Teacher Conferences", "type": "no_school" },
-    { "date": "2025-11-04", "name": "Student Holiday", "type": "no_school" },
-    { "date": "2025-11-14", "name": "Three-Hour Early Release", "type": "early_release" },
-    { "date": "2025-11-26", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2025-11-28", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2025-12-22", "name": "Winter Break", "type": "break_start" },
-    { "date": "2025-12-24", "name": "Christmas (Winter Break Holiday)", "type": "holiday" },
-    { "date": "2025-12-25", "name": "Christmas (Winter Break Holiday)", "type": "holiday" },
-    { "date": "2026-01-01", "name": "New Year's Day (Winter Break Holiday)", "type": "holiday" },
-    { "date": "2026-01-02", "name": "Winter Break End", "type": "break_end" },
-    { "date": "2026-01-05", "name": "School Reopens", "type": "school_reopen" },
-    { "date": "2026-01-13", "name": "Three-Hour Early Release / End of Quarter 2", "type": "early_release" },
-    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2026-03-20", "name": "Holiday (Eid al-Fitr - subject to review)", "type": "holiday" },
-    { "date": "2026-03-30", "name": "Spring Break", "type": "break_start" },
-    { "date": "2026-04-03", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2026-05-25", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2026-05-29", "name": "Three-Hour Early Release / End of Quarter 4 / Last Day of School", "type": "school_end" }
-  ]
+    {
+      "date": "2025-08-18",
+      "name": "First Day of School (Grades 1-5, 6, 9)",
+      "type": "school_start"
+    },
+    {
+      "date": "2025-08-19",
+      "name": "First Day of School (Grades 7-8, 10-12)",
+      "type": "school_start"
+    },
+    {
+      "date": "2025-08-29",
+      "name": "Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-09-01",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-09-19",
+      "name": "Three-Hour Early Release",
+      "type": "early_release"
+    },
+    {
+      "date": "2025-10-02",
+      "name": "Yom Kippur",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-10-22",
+      "name": "Three-Hour Early Release / End of Quarter 1",
+      "type": "early_release"
+    },
+    {
+      "date": "2025-11-03",
+      "name": "Student Holiday / Parent-Teacher Conferences",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-11-04",
+      "name": "Student Holiday",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-11-14",
+      "name": "Three-Hour Early Release",
+      "type": "early_release"
+    },
+    {
+      "date": "2025-11-26",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2025-11-28",
+      "name": "Thanksgiving Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2025-12-22",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2025-12-24",
+      "name": "Christmas (Winter Break Holiday)",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-12-25",
+      "name": "Christmas (Winter Break Holiday)",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-01-01",
+      "name": "New Year's Day (Winter Break Holiday)",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-01-02",
+      "name": "Winter Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2026-01-05",
+      "name": "School Reopens",
+      "type": "school_reopen"
+    },
+    {
+      "date": "2026-01-13",
+      "name": "Three-Hour Early Release / End of Quarter 2",
+      "type": "early_release"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Holiday (Eid al-Fitr - subject to review)",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-03-30",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Spring Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2026-05-25",
+      "name": "Memorial Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-05-29",
+      "name": "Three-Hour Early Release / End of Quarter 4 / Last Day of School",
+      "type": "school_end"
+    }
+  ],
+  "calendarNotes": "Chesterfield County Public Schools uses a staggered first-day schedule: elementary students, 6th graders, and 9th graders begin August 18, 2025, while 7th–8th graders and 10th–12th graders start August 25. Spring Break runs March 29–April 3, 2025 — the week after Good Friday (March 26), which is observed as a school holiday in Virginia. The school year ends May 29, 2025. The staggered start is designed to allow staff extra preparation time for transitioning students (entering middle school, entering high school) before the full school population arrives.\n\nChesterfield County operates on a four-quarter academic year rather than traditional semesters. Quarter-end dates in 2025-2026 fall around October 30, January 22, March 25, and June 4 — with early-release days and parent conference scheduling clustered around those dates. Families should check the specific early-release days at the start of the year, as three-hour early dismissal days (distinct from scheduled half days) occur several times per quarter.\n\nGood Friday (March 26) is observed as a school holiday in Chesterfield County — a practice common in Virginia and parts of the Southeast but not universal across the country. In 2025-2026, Good Friday immediately precedes Spring Break, resulting in a 10-day break window (March 26–April 4) that is longer than the typical spring recess.\n\nChesterfield County encompasses a large geographic area that includes dense suburban communities near Richmond (Midlothian, Chester, Bon Air) and more rural southern portions of the county. Transportation logistics, extracurricular activity distances, and school characteristics vary significantly by location within the district. The district is separate from Richmond City Public Schools and Henrico County Public Schools — families new to the Richmond metro should confirm which school division serves their specific address."
 }

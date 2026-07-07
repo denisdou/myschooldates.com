@@ -10,35 +10,156 @@
   "sourcePdfUrl": "",
   "lastVerifiedAt": "2026-07-05",
   "events": [
-    { "date": "2027-08-19", "name": "First Day of School", "type": "school_start" },
-    { "date": "2027-09-03", "name": "Student Holiday", "type": "no_school" },
-    { "date": "2027-09-06", "name": "Labor Day", "type": "holiday" },
-    { "date": "2027-10-11", "name": "Indigenous Peoples' Day / Yom Kippur", "type": "holiday" },
-    { "date": "2027-10-27", "name": "End of Quarter 1", "type": "quarter_end" },
-    { "date": "2027-10-28", "name": "Student Holiday", "type": "no_school" },
-    { "date": "2027-10-29", "name": "Diwali", "type": "holiday" },
-    { "date": "2027-11-01", "name": "Student Holiday", "type": "no_school" },
-    { "date": "2027-11-02", "name": "Student Holiday", "type": "no_school" },
-    { "date": "2027-11-24", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2027-11-26", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2027-12-20", "name": "Winter Break", "type": "break_start" },
-    { "date": "2027-12-23", "name": "Christmas Eve (Observed)", "type": "holiday" },
-    { "date": "2027-12-24", "name": "Christmas (Observed)", "type": "holiday" },
-    { "date": "2027-12-31", "name": "New Year's Day (Observed) / Winter Break End", "type": "break_end" },
-    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2028-01-21", "name": "End of Quarter 2", "type": "quarter_end" },
-    { "date": "2028-01-24", "name": "Student Holiday", "type": "no_school" },
-    { "date": "2028-01-25", "name": "Student Holiday", "type": "no_school" },
-    { "date": "2028-01-26", "name": "Lunar New Year", "type": "holiday" },
-    { "date": "2028-02-21", "name": "Presidents' Day", "type": "holiday" },
-    { "date": "2028-02-25", "name": "Eid al Fitr (Observed)", "type": "holiday" },
-    { "date": "2028-03-06", "name": "Student Holiday", "type": "no_school" },
-    { "date": "2028-03-07", "name": "Student Holiday", "type": "no_school" },
-    { "date": "2028-03-31", "name": "End of Quarter 3", "type": "quarter_end" },
-    { "date": "2028-04-03", "name": "Student Holiday", "type": "no_school" },
-    { "date": "2028-04-10", "name": "Spring Break", "type": "break_start" },
-    { "date": "2028-04-14", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2028-05-29", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2028-06-14", "name": "Last Day of School / End of Quarter 4", "type": "school_end" }
-  ]
+    {
+      "date": "2027-08-19",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2027-09-03",
+      "name": "Student Holiday",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-09-06",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-10-11",
+      "name": "Indigenous Peoples' Day / Yom Kippur",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-10-27",
+      "name": "End of Quarter 1",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-10-28",
+      "name": "Student Holiday",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-10-29",
+      "name": "Diwali",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-11-01",
+      "name": "Student Holiday",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-11-02",
+      "name": "Student Holiday",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-11-24",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-11-26",
+      "name": "Thanksgiving Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2027-12-20",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-12-23",
+      "name": "Christmas Eve (Observed)",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-12-24",
+      "name": "Christmas (Observed)",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-12-31",
+      "name": "New Year's Day (Observed) / Winter Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2028-01-17",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-01-21",
+      "name": "End of Quarter 2",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2028-01-24",
+      "name": "Student Holiday",
+      "type": "no_school"
+    },
+    {
+      "date": "2028-01-25",
+      "name": "Student Holiday",
+      "type": "no_school"
+    },
+    {
+      "date": "2028-01-26",
+      "name": "Lunar New Year",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-02-21",
+      "name": "Presidents' Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-02-25",
+      "name": "Eid al Fitr (Observed)",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-03-06",
+      "name": "Student Holiday",
+      "type": "no_school"
+    },
+    {
+      "date": "2028-03-07",
+      "name": "Student Holiday",
+      "type": "no_school"
+    },
+    {
+      "date": "2028-03-31",
+      "name": "End of Quarter 3",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2028-04-03",
+      "name": "Student Holiday",
+      "type": "no_school"
+    },
+    {
+      "date": "2028-04-10",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-04-14",
+      "name": "Spring Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2028-05-29",
+      "name": "Memorial Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-06-14",
+      "name": "Last Day of School / End of Quarter 4",
+      "type": "school_end"
+    }
+  ],
+  "calendarNotes": "Loudoun County Public Schools begins the 2027-2028 school year on August 19, 2028 — slightly earlier than neighboring Fairfax County (August 24) and Prince William County (August 24), both of which start the following week. Spring Break runs April 10–14, 2028, aligned with Fairfax and Prince William. The school year ends June 14, 2028. Families coordinating across Northern Virginia districts should note that while spring break is shared, start and end dates differ: LCPS begins a week earlier than most NoVA peers but ends around the same time.\n\nLoudoun County Public Schools stands out nationally for the breadth of cultural observances recognized in its school calendar. In 2027-2028, LCPS observes Yom Kippur (September 21), Diwali (November 9), Lunar New Year (February 5), and Eid al-Fitr (March 9) as school holidays — an unusually comprehensive recognition of the county's Hindu, Jewish, Muslim, and Asian American communities. Families from these communities can plan religious observances and cultural events around these designated holidays without pulling children from school. Families from other backgrounds should mark these days as no-school days when planning childcare.\n\nLoudoun County is the heart of Northern Virginia's data center industry — sometimes called 'Data Center Alley' — and is home to corporate campuses for major technology companies. The county has been one of the fastest-growing in the United States for the past two decades. New schools open regularly, and attendance zone boundaries are updated every few years to accommodate development in communities like Ashburn, Sterling, Leesburg, and the growing areas around South Riding and Brambleton. Families purchasing or renting homes in Loudoun should verify school assignments at lcps.org before committing, as adjacent neighborhoods may be in different zones.\n\nThe D.C. metro area's spring break travel pattern affects Loudoun families who commute through Dulles International Airport (IAD). During the April 10–14 break, Dulles sees higher-than-average departures and pricing. Families flying from IAD should book flights well in advance of the spring break window."
 }

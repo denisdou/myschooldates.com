@@ -187,23 +187,70 @@ const nextEvent = computed(() =>
 const breaks = computed(() => getBreaks(cal?.events ?? []))
 const faqs = computed(() => {
   if (!cal || !district.value) return []
-  const specificFaqs = (district.value as any).districtFaqs ?? []
+  const specificFaqs: { q: string; a: string }[] = (district.value as any).districtFaqs ?? []
   const allTemplateFaqs = generateFaqs(district.value, cal, district.value.officialWebsite)
-  // Districts with very rich specific FAQs (≥5): skip the template fall break question
-  // (position 0) since it is already covered by the About section in these districts.
-  // Append Google Calendar, travel planning, early release, official verification (positions 1–4).
-  if (specificFaqs.length >= 5) {
-    return [...specificFaqs, ...allTemplateFaqs.slice(1, 5)]
+
+  const TARGET = 8
+  const needed = Math.max(0, TARGET - specificFaqs.length)
+  if (needed === 0) return specificFaqs.slice(0, TARGET)
+
+  // Calendar characteristics drive FAQ scoring
+  const hasFallBreak = breaks.value.some(b => b.name.toLowerCase().includes('fall'))
+  const hasSpringBreak = breaks.value.some(b => b.name.toLowerCase().includes('spring'))
+  const hasWinterBreak = breaks.value.some(b =>
+    b.name.toLowerCase().includes('winter') || b.name.toLowerCase().includes('christmas'))
+  const hasThanksgiving = breaks.value.some(b => b.name.toLowerCase().includes('thanksgiving'))
+  const hasSemStart = !!secondSemStart.value
+  const hasTeacherDays = !!(cal.teacherWorkDays && cal.teacherWorkDays > 0)
+
+  // Topic overlap: skip template FAQ if specific FAQs already address the same topic
+  const specificLower = specificFaqs.map(f => f.q.toLowerCase())
+  const hasOverlap = (keywords: string[]) =>
+    keywords.some(kw => specificLower.some(q => q.includes(kw)))
+
+  // Base scores per template FAQ index (matches generateFaqs output order 0-13)
+  const scored: { idx: number; score: number }[] = [
+    { idx: 0,  score: hasFallBreak ? 95 : 10 },      // fallBreak — only valuable if district has one
+    { idx: 1,  score: 70 },                           // googleCalendar — utility, always useful
+    { idx: 2,  score: hasSpringBreak ? 88 : 52 },     // travelPlanning
+    { idx: 3,  score: 55 },                           // earlyRelease
+    { idx: 4,  score: 50 },                           // officialSource
+    { idx: 5,  score: 82 },                           // schoolStart — high-demand question
+    { idx: 6,  score: 78 },                           // lastDay
+    { idx: 7,  score: hasSemStart ? 75 : 48 },        // secondSemester
+    { idx: 8,  score: hasSpringBreak ? 90 : 38 },     // springBreakDate
+    { idx: 9,  score: hasWinterBreak ? 85 : 52 },     // winterBreakDate
+    { idx: 10, score: hasThanksgiving ? 78 : 48 },    // thanksgiving
+    { idx: 11, score: 62 },                           // instructionalDays
+    { idx: 12, score: hasTeacherDays ? 80 : 42 },     // teacherWorkDays
+    { idx: 13, score: 56 },                           // holidays
+  ]
+
+  // Keywords that indicate overlap with specific FAQs
+  const overlapKeywords: Record<number, string[]> = {
+    0:  ['fall break'],
+    2:  ['spring break', 'travel'],
+    5:  ['school start', 'first day'],
+    6:  ['last day'],
+    7:  ['second semester'],
+    8:  ['spring break'],
+    9:  ['winter break'],
+    10: ['thanksgiving'],
+    11: ['instructional days', 'school days'],
+    12: ['teacher work', 'teacher'],
+    13: ['holiday'],
   }
-  // Districts with rich specific FAQs (≥3): only append the 5 utility questions (fall break,
-  // Google Calendar, travel planning, early release, official verification) — positions 0–4.
-  // These are not duplicated elsewhere on the page. Skip the date questions (positions 5–13)
-  // since they are already shown in the hero, breaks section, and all-dates table.
-  if (specificFaqs.length >= 3) {
-    return [...specificFaqs, ...allTemplateFaqs.slice(0, 5)]
-  }
-  // Districts with few or no specific FAQs: use full template list for coverage.
-  return [...specificFaqs, ...allTemplateFaqs.slice(0, 10)]
+
+  const slug = district.value.slug
+  const selected = scored
+    .filter(s => { const kws = overlapKeywords[s.idx]; return !kws || !hasOverlap(kws) })
+    .sort((a, b) => b.score !== a.score ? b.score - a.score : simpleHash(String(a.idx) + slug) - simpleHash(String(b.idx) + slug))
+    .slice(0, needed)
+    .map(s => s.idx)
+    .sort((a, b) => a - b) // restore original topic order for readability
+
+  const templateSelected = selected.map(i => allTemplateFaqs[i]).filter((f): f is { q: string; a: string } => f !== undefined)
+  return [...specificFaqs, ...templateSelected]
 })
 const secondSemStart = computed(() => cal ? getSecondSemesterStart(cal.events) : '')
 
@@ -245,31 +292,17 @@ const upcomingEvents = computed(() => {
     .slice(0, 6)
 })
 
-// Share / copy link
-const copied = ref(false)
-function copyLink() {
-  navigator.clipboard.writeText(window.location.href)
-  copied.value = true
-  setTimeout(() => { copied.value = false }, 2000)
-}
-function shareWhatsApp() {
-  const text = encodeURIComponent(`${district.value?.name} ${currentYear} school calendar — ${window.location.href}`)
-  window.open(`https://wa.me/?text=${text}`, '_blank')
-}
-function shareSMS() {
-  const text = encodeURIComponent(`${district.value?.name} ${currentYear} school calendar: ${window.location.href}`)
-  window.open(`sms:?body=${text}`)
-}
-function shareTwitter() {
-  const text = encodeURIComponent(`${district.value?.name} ${currentYear} school calendar — holidays, spring break, and all important dates`)
-  const url = encodeURIComponent(window.location.href)
-  window.open(`https://x.com/intent/tweet?text=${text}&url=${url}`, '_blank')
-}
-function shareReddit() {
-  const title = encodeURIComponent(`${district.value?.name} ${currentYear} School Calendar`)
-  const url = encodeURIComponent(window.location.href)
-  window.open(`https://www.reddit.com/submit?title=${title}&url=${url}`, '_blank')
-}
+// B4: Dynamic mid-section order — varies by time context
+type MidSection = 'about' | 'upcoming' | 'quickfacts' | 'breaks'
+const midSectionOrder = computed((): MidSection[] => {
+  // Break starting within 14 days: surface it first so families can plan
+  const breakSoon = breaks.value.some(b => { const d = daysUntil(b.start); return d >= 0 && d <= 14 })
+  if (breakSoon) return ['breaks', 'upcoming', 'about', 'quickfacts']
+  // School hasn't started yet: district context comes first
+  if (todayStatus.value?.type === 'upcoming') return ['about', 'upcoming', 'quickfacts', 'breaks']
+  // Active school year default: upcoming events are most time-sensitive
+  return ['upcoming', 'about', 'quickfacts', 'breaks']
+})
 
 // Data quality: estimated when no lastVerifiedAt is set
 const isEstimated = computed(() => !cal?.lastVerifiedAt)
@@ -1383,246 +1416,126 @@ if (!isStatePage && district.value) {
           </NuxtLink>
         </div>
 
-        <!-- About / Calendar Context -->
-        <div class="text-gray-600 leading-relaxed space-y-3 text-sm">
-          <template v-if="cal.calendarNotes">
-            <p v-for="(para, i) in cal.calendarNotes.split('\n\n')" :key="i">{{ para }}</p>
-          </template>
-          <template v-else>
-            <p>
-              The {{ currentYear }} academic year for {{ district.name }} runs from
-              <strong>{{ formatDate(cal.firstDay) }}</strong> to
-              <strong>{{ formatDate(cal.lastDay) }}</strong>,
-              covering {{ cal.totalSchoolDays ?? 180 }} instructional days across {{ cal.semesters ?? 2 }} semesters.
-              <span v-if="secondSemStart">
-                The second semester begins {{ formatShortDate(secondSemStart) }} following the winter recess.
-              </span>
-            </p>
-            <p v-if="breaks.length">
-              Students have {{ breaks.length }} major school break{{ breaks.length !== 1 ? 's' : '' }} throughout the year —
-              {{ breaks.map(b => b.name).join(', ') }} — plus all federal holidays.
-              <span v-if="yearComparison" class="italic text-gray-500"> {{ yearComparison }}</span>
-            </p>
-          </template>
-          <p v-if="district.about && !cal.calendarNotes" class="text-gray-500">{{ district.about }}</p>
-        </div>
+        <!-- Dynamic mid sections (B4): order varies by time context -->
+        <template v-for="section in midSectionOrder" :key="section">
 
-        <!-- Upcoming Events — timeline of next 6 events -->
-        <div v-if="upcomingEvents.length" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
-          <div class="px-6 py-4 border-b border-gray-100">
-            <h2 class="text-lg font-semibold text-gray-900">Upcoming Dates</h2>
+          <!-- About / Calendar Context -->
+          <div v-if="section === 'about'" class="text-gray-600 leading-relaxed space-y-3 text-sm">
+            <template v-if="cal.calendarNotes">
+              <p v-for="(para, i) in cal.calendarNotes.split('\n\n')" :key="i">{{ para }}</p>
+            </template>
+            <template v-else>
+              <p>
+                The {{ currentYear }} academic year for {{ district.name }} runs from
+                <strong>{{ formatDate(cal.firstDay) }}</strong> to
+                <strong>{{ formatDate(cal.lastDay) }}</strong>,
+                covering {{ cal.totalSchoolDays ?? 180 }} instructional days across {{ cal.semesters ?? 2 }} semesters.
+                <span v-if="secondSemStart">
+                  The second semester begins {{ formatShortDate(secondSemStart) }} following the winter recess.
+                </span>
+              </p>
+              <p v-if="breaks.length">
+                Students have {{ breaks.length }} major school break{{ breaks.length !== 1 ? 's' : '' }} throughout the year —
+                {{ breaks.map(b => b.name).join(', ') }} — plus all federal holidays.
+                <span v-if="yearComparison" class="italic text-gray-500"> {{ yearComparison }}</span>
+              </p>
+            </template>
+            <p v-if="district.about && !cal.calendarNotes" class="text-gray-500">{{ district.about }}</p>
           </div>
-          <div class="divide-y divide-gray-50">
-            <div
-              v-for="event in upcomingEvents"
-              :key="event.date + event.type"
-              class="flex items-center gap-4 px-6 py-3.5"
-            >
-              <!-- Date column -->
-              <div class="w-16 flex-shrink-0 text-center">
-                <div class="text-xs font-semibold text-gray-400 uppercase">
-                  {{ new Date(event.date + 'T00:00:00').toLocaleString('en-US', { month: 'short' }) }}
+
+          <!-- Upcoming Events — timeline of next 6 events -->
+          <div v-else-if="section === 'upcoming' && upcomingEvents.length" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+            <div class="px-6 py-4 border-b border-gray-100">
+              <h2 class="text-lg font-semibold text-gray-900">Upcoming Dates</h2>
+            </div>
+            <div class="divide-y divide-gray-50">
+              <div
+                v-for="event in upcomingEvents"
+                :key="event.date + event.type"
+                class="flex items-center gap-4 px-6 py-3.5"
+              >
+                <!-- Date column -->
+                <div class="w-16 flex-shrink-0 text-center">
+                  <div class="text-xs font-semibold text-gray-400 uppercase">
+                    {{ new Date(event.date + 'T00:00:00').toLocaleString('en-US', { month: 'short' }) }}
+                  </div>
+                  <div class="text-xl font-bold text-gray-900 leading-tight">
+                    {{ new Date(event.date + 'T00:00:00').getDate() }}
+                  </div>
                 </div>
-                <div class="text-xl font-bold text-gray-900 leading-tight">
-                  {{ new Date(event.date + 'T00:00:00').getDate() }}
+                <!-- Divider -->
+                <div class="w-px h-8 bg-gray-200 flex-shrink-0" />
+                <!-- Event info -->
+                <div class="flex-1 min-w-0">
+                  <div class="font-medium text-gray-900 text-sm">{{ event.name }}</div>
+                  <div class="text-xs text-gray-400 mt-0.5">
+                    {{ new Date(event.date + 'T00:00:00').toLocaleString('en-US', { weekday: 'long' }) }}
+                  </div>
                 </div>
+                <!-- Badge -->
+                <span class="text-xs font-medium px-2 py-0.5 rounded-full flex-shrink-0" :class="eventTypeColor[event.type]">
+                  {{ eventTypeLabel[event.type] }}
+                </span>
               </div>
-              <!-- Divider -->
-              <div class="w-px h-8 bg-gray-200 flex-shrink-0" />
-              <!-- Event info -->
-              <div class="flex-1 min-w-0">
-                <div class="font-medium text-gray-900 text-sm">{{ event.name }}</div>
-                <div class="text-xs text-gray-400 mt-0.5">
-                  {{ new Date(event.date + 'T00:00:00').toLocaleString('en-US', { weekday: 'long' }) }}
-                </div>
+            </div>
+          </div>
+
+          <!-- Quick Facts -->
+          <div v-else-if="section === 'quickfacts'" class="bg-white rounded-xl border border-gray-200 p-6">
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Quick Facts — {{ currentYear }}</h2>
+            <div class="grid grid-cols-3 gap-4">
+              <div v-for="fact in quickFactItems" :key="fact.key" class="text-center p-3 bg-gray-50 rounded-lg">
+                <div class="text-2xl font-bold text-gray-900 truncate">{{ fact.value }}</div>
+                <div class="text-xs text-gray-500 mt-1 leading-snug">{{ fact.label }}</div>
               </div>
-              <!-- Badge -->
-              <span class="text-xs font-medium px-2 py-0.5 rounded-full flex-shrink-0" :class="eventTypeColor[event.type]">
-                {{ eventTypeLabel[event.type] }}
-              </span>
             </div>
-          </div>
-        </div>
-
-        <!-- Quick Facts -->
-        <div class="bg-white rounded-xl border border-gray-200 p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-4">Quick Facts — {{ currentYear }}</h2>
-          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            <div v-for="fact in quickFactItems" :key="fact.key" class="text-center p-3 bg-gray-50 rounded-lg">
-              <div class="text-2xl font-bold text-gray-900 truncate">{{ fact.value }}</div>
-              <div class="text-xs text-gray-500 mt-1 leading-snug">{{ fact.label }}</div>
-            </div>
-          </div>
-          <!-- Data source row -->
-          <div class="mt-4 pt-4 border-t border-gray-100 flex items-center gap-1.5 text-xs text-gray-400">
-            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-            </svg>
-            <span>Source:</span>
-            <a
-              :href="cal.sourceUrl ?? district.calendarPage ?? district.officialWebsite"
-              target="_blank"
-              rel="nofollow noopener"
-              class="underline text-gray-500 hover:text-blue-600 transition-colors"
-            >{{ district.name }} official calendar</a>
-            <span v-if="!isEstimated" class="ml-1 text-green-600 font-medium">· Verified {{ verifiedDate }}</span>
-            <span v-else class="ml-1 text-gray-400">· Not yet verified against official source</span>
-          </div>
-        </div>
-
-        <!-- Break Summary -->
-        <div v-if="breaks.length" class="bg-white rounded-xl border border-gray-200 p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-4">Major School Breaks</h2>
-          <div class="space-y-3">
-            <div v-for="b in breaks" :key="b.name" class="flex items-center justify-between py-3 border-b border-gray-50 last:border-0">
-              <div>
-                <div class="font-medium text-gray-900">{{ b.name }}</div>
-                <div class="text-sm text-gray-500">{{ formatShortDate(b.start) }} – {{ formatShortDate(b.end) }}</div>
-                <div v-if="daysUntil(b.start) > 0" class="text-xs text-blue-600 mt-0.5 font-medium">
-                  Starts in {{ daysUntil(b.start) }} day{{ daysUntil(b.start) !== 1 ? 's' : '' }}
-                </div>
-                <div v-else-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-purple-600 mt-0.5 font-medium">
-                  In progress
-                </div>
-              </div>
-              <div class="text-sm font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full">{{ b.days }} days</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Add to Calendar + Share -->
-        <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
-          <!-- Add to Calendar -->
-          <div class="p-6 border-b border-gray-100">
-            <h2 class="text-lg font-semibold text-gray-900 mb-1">Add to Calendar</h2>
-            <p class="text-sm text-gray-500 mb-4">Download the {{ district.name }} {{ currentYear }} calendar and import it into your calendar app.</p>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
-              <!-- Apple Calendar -->
-              <button
-                @click="downloadICS(district, cal)"
-                class="flex flex-col items-center gap-2 px-3 py-4 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all text-center"
-              >
-                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <rect x="3" y="4" width="18" height="18" rx="2" stroke-width="1.5"/>
-                  <path d="M3 9h18" stroke-width="1.5"/>
-                  <path d="M8 2v4M16 2v4" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M8 14h2l1 2 2-5 1 3h2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span class="text-xs font-medium text-gray-700 leading-tight">Apple<br>Calendar</span>
-              </button>
-              <!-- Google Calendar -->
-              <button
-                @click="downloadICS(district, cal)"
-                class="flex flex-col items-center gap-2 px-3 py-4 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all text-center"
-              >
-                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <rect x="3" y="4" width="18" height="18" rx="2" stroke-width="1.5"/>
-                  <path d="M3 9h18" stroke-width="1.5"/>
-                  <path d="M8 2v4M16 2v4" stroke-width="1.5" stroke-linecap="round"/>
-                  <circle cx="12" cy="15" r="2.5" stroke-width="1.5"/>
-                </svg>
-                <span class="text-xs font-medium text-gray-700 leading-tight">Google<br>Calendar</span>
-              </button>
-              <!-- Outlook -->
-              <button
-                @click="downloadICS(district, cal)"
-                class="flex flex-col items-center gap-2 px-3 py-4 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all text-center"
-              >
-                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <rect x="3" y="4" width="18" height="18" rx="2" stroke-width="1.5"/>
-                  <path d="M3 9h18" stroke-width="1.5"/>
-                  <path d="M8 2v4M16 2v4" stroke-width="1.5" stroke-linecap="round"/>
-                  <path d="M8 13h8M8 17h5" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-                <span class="text-xs font-medium text-gray-700 leading-tight">Outlook</span>
-              </button>
-              <!-- Download .ics -->
-              <button
-                @click="downloadICS(district, cal)"
-                class="flex flex-col items-center gap-2 px-3 py-4 rounded-xl border border-blue-200 bg-blue-50 hover:bg-blue-100 transition-all text-center"
-              >
-                <svg class="w-7 h-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-                <span class="text-xs font-medium text-blue-700 leading-tight">Download<br>.ics File</span>
-              </button>
-            </div>
-            <p class="text-xs text-gray-400">All formats use the standard .ics file. After downloading, open the file to import into your calendar app.</p>
-          </div>
-
-          <!-- Share with Parents -->
-          <div class="p-6">
-            <h3 class="text-base font-semibold text-gray-900 mb-3">Share with Parents</h3>
-            <div class="flex flex-wrap gap-3">
-              <!-- Copy Link -->
-              <button
-                @click="copyLink"
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-all"
-              >
-                <svg v-if="!copied" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
-                <svg v-else class="w-4 h-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                {{ copied ? 'Copied!' : 'Copy Link' }}
-              </button>
-              <!-- WhatsApp -->
-              <button
-                @click="shareWhatsApp"
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 text-sm font-medium text-gray-700 transition-all"
-              >
-                <svg class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.029 18.88a7.947 7.947 0 01-3.794-.964l-4.21 1.104 1.126-4.108a7.934 7.934 0 01-1.062-3.965C4.09 7.148 7.666 3.573 12.03 3.573c2.116 0 4.099.823 5.59 2.317a7.862 7.862 0 012.31 5.587c-.002 4.358-3.579 7.403-7.901 7.403z"/>
-                </svg>
-                WhatsApp
-              </button>
-              <!-- Text / SMS -->
-              <button
-                @click="shareSMS"
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-sm font-medium text-gray-700 transition-all"
-              >
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                </svg>
-                Text
-              </button>
-              <!-- Twitter / X -->
-              <button
-                @click="shareTwitter"
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-sm font-medium text-gray-700 transition-all"
-              >
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-                X
-              </button>
-              <!-- Reddit -->
-              <button
-                @click="shareReddit"
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-orange-300 hover:bg-orange-50 text-sm font-medium text-gray-700 transition-all"
-              >
-                <svg class="w-4 h-4 text-orange-500" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
-                </svg>
-                Reddit
-              </button>
-              <!-- Official source -->
+            <!-- Data source row -->
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center gap-1.5 text-xs text-gray-400">
+              <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg>
+              <span>Source:</span>
               <a
-                :href="(cal.sourceUrl ?? district.calendarPage) ?? district.officialWebsite"
+                :href="cal.sourceUrl ?? district.calendarPage ?? district.officialWebsite"
                 target="_blank"
                 rel="nofollow noopener"
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-sm font-medium text-gray-700 transition-all"
-              >
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-                Official Source
-              </a>
+                class="underline text-gray-500 hover:text-blue-600 transition-colors"
+              >{{ district.name }} official calendar</a>
+              <span v-if="!isEstimated" class="ml-1 text-green-600 font-medium">· Verified {{ verifiedDate }}</span>
+              <span v-else class="ml-1 text-gray-400">· Not yet verified against official source</span>
             </div>
           </div>
-        </div>
+
+          <!-- Break Summary -->
+          <div v-else-if="section === 'breaks' && breaks.length" class="bg-white rounded-xl border border-gray-200 p-6">
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">Major School Breaks</h2>
+            <div class="space-y-3">
+              <div v-for="b in breaks" :key="b.name" class="flex items-center justify-between py-3 border-b border-gray-50 last:border-0">
+                <div>
+                  <div class="font-medium text-gray-900">{{ b.name }}</div>
+                  <div class="text-sm text-gray-500">{{ formatShortDate(b.start) }} – {{ formatShortDate(b.end) }}</div>
+                  <div v-if="daysUntil(b.start) > 0" class="text-xs text-blue-600 mt-0.5 font-medium">
+                    Starts in {{ daysUntil(b.start) }} day{{ daysUntil(b.start) !== 1 ? 's' : '' }}
+                  </div>
+                  <div v-else-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-purple-600 mt-0.5 font-medium">
+                    In progress
+                  </div>
+                </div>
+                <div class="text-sm font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full">{{ b.days }} days</div>
+              </div>
+            </div>
+          </div>
+
+        </template>
+
+        <!-- Add to Calendar + Share -->
+        <CalendarExportShare
+          :district-name="district.name"
+          :year="currentYear"
+          :source-url="(cal.sourceUrl ?? district.calendarPage) ?? district.officialWebsite"
+          :district="district"
+          :cal="cal"
+        />
 
         <!-- All Dates -->
         <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
@@ -1658,51 +1571,7 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Compare with Nearby Districts -->
-        <div v-if="comparisonStats.length > 1" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
-          <div class="px-6 py-4 border-b border-gray-100">
-            <h2 class="text-lg font-semibold text-gray-900">Compare with Nearby Districts</h2>
-            <p class="text-sm text-gray-500 mt-1">First day, spring break, and days off for {{ currentYear }} — side by side.</p>
-          </div>
-          <div class="overflow-x-auto">
-            <table class="w-full text-sm">
-              <thead>
-                <tr class="bg-gray-50 text-xs font-semibold text-gray-400 uppercase tracking-wide">
-                  <th class="text-left px-6 py-3 whitespace-nowrap">District</th>
-                  <th class="text-left px-4 py-3 whitespace-nowrap">First Day</th>
-                  <th class="text-left px-4 py-3 whitespace-nowrap">Spring Break</th>
-                  <th class="text-left px-4 py-3 whitespace-nowrap">Last Day</th>
-                  <th class="text-right px-6 py-3 whitespace-nowrap">Days Off</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-gray-200">
-                <tr v-for="stat in comparisonStats" :key="stat.slug"
-                  :class="stat.isCurrent ? 'bg-blue-50' : 'hover:bg-gray-50 transition-colors'"
-                >
-                  <td class="px-6 py-3">
-                    <template v-if="stat.isCurrent">
-                      <span class="font-semibold text-blue-800 whitespace-nowrap">{{ stat.name }}</span>
-                      <span class="ml-2 text-xs bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-medium">this district</span>
-                    </template>
-                    <template v-else>
-                      <NuxtLink :to="`/${stat.slug}`" class="font-medium text-gray-900 hover:text-blue-600 transition-colors whitespace-nowrap">
-                        {{ stat.name }}
-                      </NuxtLink>
-                      <p v-if="stat.comparisonNote" class="text-xs text-gray-500 mt-0.5 leading-snug max-w-xs">{{ stat.comparisonNote }}</p>
-                    </template>
-                  </td>
-                  <td class="px-4 py-3 text-gray-600 whitespace-nowrap">{{ formatMonthDay(stat.firstDay) }}</td>
-                  <td class="px-4 py-3 text-gray-600 whitespace-nowrap">
-                    <span v-if="stat.springBreak">{{ formatMonthDay(stat.springBreak.start) }} – {{ formatMonthDay(stat.springBreak.end) }}</span>
-                    <span v-else class="text-gray-300">—</span>
-                  </td>
-                  <td class="px-4 py-3 text-gray-600 whitespace-nowrap">{{ formatMonthDay(stat.lastDay) }}</td>
-                  <td class="px-6 py-3 text-right font-semibold" :class="stat.isCurrent ? 'text-blue-800' : 'text-gray-900'">{{ stat.daysOff }}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p v-if="comparisonInsight" class="px-6 py-3 border-t border-gray-100 text-xs text-gray-500 italic">{{ comparisonInsight }}</p>
-        </div>
+        <DistrictComparison :rows="comparisonStats" :insight="comparisonInsight" :year="currentYear" />
 
         <!-- FAQ -->
         <div class="bg-white rounded-xl border border-gray-200 p-6">
@@ -1716,32 +1585,19 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Planning Tips -->
-        <div v-if="(district as any).planningTips?.length" class="bg-blue-50 border border-blue-200 rounded-xl p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-3">Planning Tips for {{ district.shortName || district.name }} Families</h2>
-          <ul class="space-y-3">
-            <li v-for="tip in (district as any).planningTips" :key="tip" class="flex items-start gap-2 text-sm text-gray-700">
-              <svg class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              {{ tip }}
-            </li>
-          </ul>
-        </div>
+        <DistrictPlanningTips
+          v-if="(district as any).planningTips?.length"
+          :name="district.shortName || district.name"
+          :tips="(district as any).planningTips"
+        />
 
         <!-- Living Here -->
-        <div v-if="(district as any).livingHere" class="bg-white rounded-xl border border-gray-200 p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-1">Living in {{ district.city || district.name }}</h2>
-          <p v-if="(district as any).livingHere.intro" class="text-sm text-gray-500 mb-4 leading-relaxed">{{ (district as any).livingHere.intro }}</p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
-            <div v-for="h in (district as any).livingHere.highlights" :key="h.label" class="flex items-start gap-2.5">
-              <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></div>
-              <div>
-                <span class="font-medium text-gray-900 text-sm">{{ h.label }}</span>
-                <p class="text-xs text-gray-500 mt-0.5 leading-relaxed">{{ h.detail }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <DistrictLivingHere
+          v-if="(district as any).livingHere?.highlights?.length"
+          :city="district.city || district.name"
+          :intro="(district as any).livingHere.intro"
+          :highlights="(district as any).livingHere.highlights"
+        />
 
         <!-- Related Districts -->
         <div v-if="district.relatedDistricts?.length" class="bg-white rounded-xl border border-gray-200 overflow-hidden">

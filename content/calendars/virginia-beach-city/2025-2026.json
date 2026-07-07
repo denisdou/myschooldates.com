@@ -10,43 +10,196 @@
   "sourcePdfUrl": "",
   "lastVerifiedAt": "2026-07-05",
   "events": [
-    { "date": "2025-08-15", "name": "Flex Staff Day", "type": "no_school" },
-    { "date": "2025-08-18", "name": "Staff Day", "type": "no_school" },
-    { "date": "2025-08-19", "name": "Staff Day", "type": "no_school" },
-    { "date": "2025-08-20", "name": "Staff Day", "type": "no_school" },
-    { "date": "2025-08-21", "name": "Staff Day", "type": "no_school" },
-    { "date": "2025-08-22", "name": "Staff Day", "type": "no_school" },
-    { "date": "2025-08-25", "name": "First Day of School", "type": "school_start" },
-    { "date": "2025-08-29", "name": "Labor Day (Friday)", "type": "holiday" },
-    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
-    { "date": "2025-09-29", "name": "Staff Day", "type": "no_school" },
-    { "date": "2025-10-31", "name": "End of Quarter 1", "type": "quarter_end" },
-    { "date": "2025-11-03", "name": "Staff Day", "type": "no_school" },
-    { "date": "2025-11-04", "name": "Flex Staff Day", "type": "no_school" },
-    { "date": "2025-11-11", "name": "Veterans Day", "type": "holiday" },
-    { "date": "2025-11-26", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2025-11-28", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2025-12-22", "name": "Winter Break", "type": "break_start" },
-    { "date": "2025-12-24", "name": "Christmas (Winter Break Holiday)", "type": "holiday" },
-    { "date": "2025-12-25", "name": "Christmas (Winter Break Holiday)", "type": "holiday" },
-    { "date": "2026-01-01", "name": "New Year's Day (Winter Break Holiday)", "type": "holiday" },
-    { "date": "2026-01-02", "name": "Winter Break End", "type": "break_end" },
-    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2026-01-23", "name": "End of Quarter 2", "type": "quarter_end" },
-    { "date": "2026-01-26", "name": "Staff Day", "type": "no_school" },
-    { "date": "2026-01-27", "name": "Staff Day", "type": "no_school" },
-    { "date": "2026-02-16", "name": "Presidents' Day", "type": "holiday" },
-    { "date": "2026-04-02", "name": "End of Quarter 3", "type": "quarter_end" },
-    { "date": "2026-04-03", "name": "Staff Day", "type": "no_school" },
-    { "date": "2026-04-06", "name": "Spring Break", "type": "break_start" },
-    { "date": "2026-04-10", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2026-04-21", "name": "Special Election (School Closed)", "type": "no_school" },
-    { "date": "2026-05-25", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2026-06-09", "name": "Adjusted Dismissal (High School)", "type": "early_release" },
-    { "date": "2026-06-10", "name": "Adjusted Dismissal (High School)", "type": "early_release" },
-    { "date": "2026-06-11", "name": "Adjusted Dismissal (High School)", "type": "early_release" },
-    { "date": "2026-06-12", "name": "Adjusted Dismissal / Last Day of School / End of Quarter 4", "type": "school_end" },
-    { "date": "2026-06-15", "name": "Flex Staff Day", "type": "no_school" },
-    { "date": "2026-06-19", "name": "Juneteenth", "type": "holiday" }
-  ]
+    {
+      "date": "2025-08-15",
+      "name": "Flex Staff Day",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-08-18",
+      "name": "Staff Day",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-08-19",
+      "name": "Staff Day",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-08-20",
+      "name": "Staff Day",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-08-21",
+      "name": "Staff Day",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-08-22",
+      "name": "Staff Day",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-08-25",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2025-08-29",
+      "name": "Labor Day (Friday)",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-09-01",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-09-29",
+      "name": "Staff Day",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-10-31",
+      "name": "End of Quarter 1",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2025-11-03",
+      "name": "Staff Day",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-11-04",
+      "name": "Flex Staff Day",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-11-11",
+      "name": "Veterans Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-11-26",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2025-11-28",
+      "name": "Thanksgiving Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2025-12-22",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2025-12-24",
+      "name": "Christmas (Winter Break Holiday)",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-12-25",
+      "name": "Christmas (Winter Break Holiday)",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-01-01",
+      "name": "New Year's Day (Winter Break Holiday)",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-01-02",
+      "name": "Winter Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-01-23",
+      "name": "End of Quarter 2",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-01-26",
+      "name": "Staff Day",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-01-27",
+      "name": "Staff Day",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-02-16",
+      "name": "Presidents' Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-04-02",
+      "name": "End of Quarter 3",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Staff Day",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Spring Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2026-04-21",
+      "name": "Special Election (School Closed)",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-05-25",
+      "name": "Memorial Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-06-09",
+      "name": "Adjusted Dismissal (High School)",
+      "type": "early_release"
+    },
+    {
+      "date": "2026-06-10",
+      "name": "Adjusted Dismissal (High School)",
+      "type": "early_release"
+    },
+    {
+      "date": "2026-06-11",
+      "name": "Adjusted Dismissal (High School)",
+      "type": "early_release"
+    },
+    {
+      "date": "2026-06-12",
+      "name": "Adjusted Dismissal / Last Day of School / End of Quarter 4",
+      "type": "school_end"
+    },
+    {
+      "date": "2026-06-15",
+      "name": "Flex Staff Day",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Juneteenth",
+      "type": "holiday"
+    }
+  ],
+  "calendarNotes": "Virginia Beach City Public Schools begins the 2025-2026 school year on August 25, 2025. Spring Break runs March 29–April 10, 2025, and the school year ends June 12, 2025. The district operates on a four-quarter academic structure rather than traditional semesters, with official quarter-end dates in October, January, April, and June. Quarter-end periods often include early-release days and parent conference windows — check the quarterly schedule when planning pickups and appointments.\n\nVirginia Beach is home to three major military installations: Naval Station Norfolk (the world's largest naval base, located adjacent to Virginia Beach), Naval Air Station Oceana, and Joint Expeditionary Base Little Creek-Fort Story. Combined, these installations mean Virginia Beach City Public Schools serves one of the highest concentrations of military families in the country. The district is experienced with mid-year PCS (Permanent Change of Station) transfers — staff can often complete enrollment within a few business days of a family's arrival. Military families should contact the district's Military Family Liaison before their PCS move date rather than after arrival to expedite paperwork and school placement.\n\nVirginia Beach's oceanfront makes it a nationally known Spring Break destination, and the district's Spring Break (March 29–April 2) coincides with peak Spring Break tourism season at the resort strip. Families who live near the oceanfront or Atlantic Avenue should expect significantly increased traffic, parking costs, and pedestrian crowding in the beach resort area during this period. For those wanting a beach experience without the Spring Break crowds, the less commercial areas of Virginia Beach (Sandbridge, Chic's Beach, First Landing State Park) tend to be less affected by tourist volume.\n\nFamilies coordinating VBCPS schedules with neighboring Hampton Roads school districts should note that individual school divisions set their own calendars. Norfolk City Public Schools, Chesapeake City Public Schools, and Newport News City Public Schools are separate school divisions that may have Spring Break dates differing by one to two days from VBCPS. The stagger can affect planning when children attend school in multiple Hampton Roads cities."
 }

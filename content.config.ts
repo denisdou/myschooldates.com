@@ -10,6 +10,7 @@ const relatedDistrictSchema = z.object({
   name: z.string(),
   slug: z.string(),
   state: z.string(),
+  comparisonNote: z.string().optional(),
 })
 
 const districtFaqSchema = z.object({ q: z.string(), a: z.string() })
@@ -94,6 +95,7 @@ export default defineContentConfig({
         sourceUrl: z.string().optional(),      // alias: sourcePageUrl (stable hub, district-level)
         sourcePdfUrl: z.string().optional(),   // direct PDF for this school year (changes annually)
         lastVerifiedAt: z.string().optional(), // ISO date: when data was last verified against official source
+        calendarNotes: z.string().optional(),  // year-specific narrative (moved from districts/)
         events: z.array(eventSchema),
       }),
     }),

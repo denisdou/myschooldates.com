@@ -10,41 +10,186 @@
   "sourcePdfUrl": "",
   "lastVerifiedAt": "2026-07-05",
   "events": [
-    { "date": "2026-08-13", "name": "New Teacher Orientation (Launching, Learning, Leading Conference)", "type": "no_school" },
-    { "date": "2026-08-14", "name": "New Teacher Orientation (Launching, Learning, Leading Conference)", "type": "no_school" },
-    { "date": "2026-08-17", "name": "Teacher Workday / Professional Development", "type": "no_school" },
-    { "date": "2026-08-18", "name": "Teacher Workday / Professional Development", "type": "no_school" },
-    { "date": "2026-08-19", "name": "Teacher Workday / Professional Development", "type": "no_school" },
-    { "date": "2026-08-20", "name": "Teacher Workday / Professional Development", "type": "no_school" },
-    { "date": "2026-08-21", "name": "Teacher Workday / Professional Development", "type": "no_school" },
-    { "date": "2026-08-24", "name": "First Day of School", "type": "school_start" },
-    { "date": "2026-09-04", "name": "Labor Day Weekend Holiday", "type": "holiday" },
-    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
-    { "date": "2026-09-21", "name": "Yom Kippur", "type": "holiday" },
-    { "date": "2026-10-12", "name": "Professional Development Day", "type": "no_school" },
-    { "date": "2026-11-02", "name": "Parent Conferences / Professional Development", "type": "no_school" },
-    { "date": "2026-11-03", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday" },
-    { "date": "2026-11-25", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
-    { "date": "2026-12-24", "name": "Christmas (Winter Break Holiday)", "type": "holiday" },
-    { "date": "2026-12-25", "name": "Christmas (Winter Break Holiday)", "type": "holiday" },
-    { "date": "2027-01-01", "name": "New Year's Day (Winter Break Holiday)", "type": "holiday" },
-    { "date": "2027-01-04", "name": "Winter Break End / School Reopens", "type": "break_end" },
-    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2027-01-28", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2027-01-29", "name": "Parent Conferences / Professional Development", "type": "no_school" },
-    { "date": "2027-02-15", "name": "Presidents' Day", "type": "holiday" },
-    { "date": "2027-03-10", "name": "Eid al-Fitr", "type": "holiday" },
-    { "date": "2027-03-22", "name": "Spring Break", "type": "break_start" },
-    { "date": "2027-03-26", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2027-03-29", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2027-04-16", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2027-05-17", "name": "Eid al-Adha", "type": "holiday" },
-    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2027-06-17", "name": "Last Day of School", "type": "school_end" },
-    { "date": "2027-06-18", "name": "Juneteenth", "type": "holiday" },
-    { "date": "2027-06-21", "name": "Teacher Workday (Optional)", "type": "no_school" }
-  ]
+    {
+      "date": "2026-08-13",
+      "name": "New Teacher Orientation (Launching, Learning, Leading Conference)",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-08-14",
+      "name": "New Teacher Orientation (Launching, Learning, Leading Conference)",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-08-17",
+      "name": "Teacher Workday / Professional Development",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-08-18",
+      "name": "Teacher Workday / Professional Development",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-08-19",
+      "name": "Teacher Workday / Professional Development",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Teacher Workday / Professional Development",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-08-21",
+      "name": "Teacher Workday / Professional Development",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-08-24",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-04",
+      "name": "Labor Day Weekend Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-21",
+      "name": "Yom Kippur",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Professional Development Day",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-11-02",
+      "name": "Parent Conferences / Professional Development",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-25",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-11-27",
+      "name": "Thanksgiving Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2026-12-21",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-24",
+      "name": "Christmas (Winter Break Holiday)",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-12-25",
+      "name": "Christmas (Winter Break Holiday)",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-01",
+      "name": "New Year's Day (Winter Break Holiday)",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Winter Break End / School Reopens",
+      "type": "break_end"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-28",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-01-29",
+      "name": "Parent Conferences / Professional Development",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents' Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-10",
+      "name": "Eid al-Fitr",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-22",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Spring Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2027-03-29",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-04-16",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-05-17",
+      "name": "Eid al-Adha",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-06-17",
+      "name": "Last Day of School",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-06-18",
+      "name": "Juneteenth",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-06-21",
+      "name": "Teacher Workday (Optional)",
+      "type": "no_school"
+    }
+  ],
+  "calendarNotes": "Prince William County Public Schools begins the 2026-2027 school year on August 24, 2026 — the same day as Fairfax County — and the school year ends June 17, 2027, the latest end date among Northern Virginia's large districts. Spring Break runs March 22–26, 2027, aligned with Fairfax County and Loudoun County. PWCS's later end date (June 17 vs Fairfax's June 16) reflects the district's slightly different calendar structure but is functionally the same week.\n\nPrince William County Public Schools observes an unusually comprehensive set of religious and cultural holidays. In 2026-2027, PWCS calendars include Yom Kippur (September 21), Eid al-Fitr (March 10), Eid al-Adha (May 17), and Juneteenth (June 18) as school holidays. Loudoun County is the only other Northern Virginia district that similarly recognizes a broad range of religious observances. Families from these traditions benefit from the school's recognition; families from other backgrounds should mark all of these as no-school days when planning childcare and appointments.\n\nPrince William County is one of the fastest-growing counties in Virginia and includes communities that have transformed dramatically over the past two decades — particularly Woodbridge, Manassas, Gainesville, and Haymarket. The district has opened multiple new schools in the past five years and continues to adjust attendance boundaries. Families in recently developed neighborhoods or communities near the Route 1 corridor should verify their school assignment directly at pwcs.edu before the school year begins.\n\nPWCS serves a highly diverse student population with significant proportions of students whose first language is Spanish, Arabic, Tagalog, and other languages. The district offers English Language Learner services at most campuses and has developed multilingual family communication as a core competency. Families who prefer to communicate in a language other than English should proactively ask about available interpretation and translation services at enrollment."
 }

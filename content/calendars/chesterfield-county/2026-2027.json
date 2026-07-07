@@ -10,34 +10,151 @@
   "sourcePdfUrl": "",
   "lastVerifiedAt": "2026-07-05",
   "events": [
-    { "date": "2026-08-24", "name": "First Day of School (Grades 1-5, 6, 9)", "type": "school_start" },
-    { "date": "2026-08-25", "name": "First Day of School (Grades 7-8, 10-12)", "type": "school_start" },
-    { "date": "2026-09-04", "name": "Labor Day Weekend Holiday", "type": "holiday" },
-    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
-    { "date": "2026-09-21", "name": "Yom Kippur", "type": "holiday" },
-    { "date": "2026-10-30", "name": "End of Quarter 1 / Three-Hour Early Release", "type": "early_release" },
-    { "date": "2026-11-02", "name": "Holiday / Parent-Teacher Conferences", "type": "no_school" },
-    { "date": "2026-11-03", "name": "Holiday", "type": "no_school" },
-    { "date": "2026-11-13", "name": "Three-Hour Early Release", "type": "early_release" },
-    { "date": "2026-11-25", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
-    { "date": "2026-12-24", "name": "Christmas (Winter Break Holiday)", "type": "holiday" },
-    { "date": "2026-12-25", "name": "Christmas (Winter Break Holiday)", "type": "holiday" },
-    { "date": "2027-01-01", "name": "New Year's Day (Winter Break Holiday)", "type": "holiday" },
-    { "date": "2027-01-01", "name": "Winter Break End", "type": "break_end" },
-    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2027-01-22", "name": "End of Quarter 2 / Three-Hour Early Release", "type": "early_release" },
-    { "date": "2027-02-05", "name": "Three-Hour Early Release", "type": "early_release" },
-    { "date": "2027-02-15", "name": "Presidents' Day", "type": "holiday" },
-    { "date": "2027-03-09", "name": "Eid al-Fitr", "type": "holiday" },
-    { "date": "2027-03-25", "name": "End of Quarter 3", "type": "quarter_end" },
-    { "date": "2027-03-26", "name": "Good Friday", "type": "holiday" },
-    { "date": "2027-03-29", "name": "Spring Break", "type": "break_start" },
-    { "date": "2027-04-02", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2027-04-23", "name": "Three-Hour Early Release", "type": "early_release" },
-    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2027-06-03", "name": "Three-Hour Early Release", "type": "early_release" },
-    { "date": "2027-06-04", "name": "End of Quarter 4 / Three-Hour Early Release / Last Day of School", "type": "school_end" }
-  ]
+    {
+      "date": "2026-08-24",
+      "name": "First Day of School (Grades 1-5, 6, 9)",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-08-25",
+      "name": "First Day of School (Grades 7-8, 10-12)",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-04",
+      "name": "Labor Day Weekend Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-21",
+      "name": "Yom Kippur",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-10-30",
+      "name": "End of Quarter 1 / Three-Hour Early Release",
+      "type": "early_release"
+    },
+    {
+      "date": "2026-11-02",
+      "name": "Holiday / Parent-Teacher Conferences",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Holiday",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-11-13",
+      "name": "Three-Hour Early Release",
+      "type": "early_release"
+    },
+    {
+      "date": "2026-11-25",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-11-27",
+      "name": "Thanksgiving Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2026-12-21",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-24",
+      "name": "Christmas (Winter Break Holiday)",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-12-25",
+      "name": "Christmas (Winter Break Holiday)",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-01",
+      "name": "New Year's Day (Winter Break Holiday)",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-01",
+      "name": "Winter Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-22",
+      "name": "End of Quarter 2 / Three-Hour Early Release",
+      "type": "early_release"
+    },
+    {
+      "date": "2027-02-05",
+      "name": "Three-Hour Early Release",
+      "type": "early_release"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents' Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-09",
+      "name": "Eid al-Fitr",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-25",
+      "name": "End of Quarter 3",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Good Friday",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-29",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-04-02",
+      "name": "Spring Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2027-04-23",
+      "name": "Three-Hour Early Release",
+      "type": "early_release"
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-06-03",
+      "name": "Three-Hour Early Release",
+      "type": "early_release"
+    },
+    {
+      "date": "2027-06-04",
+      "name": "End of Quarter 4 / Three-Hour Early Release / Last Day of School",
+      "type": "school_end"
+    }
+  ],
+  "calendarNotes": "Chesterfield County Public Schools uses a staggered first-day schedule: elementary students, 6th graders, and 9th graders begin August 24, 2026, while 7th–8th graders and 10th–12th graders start August 25. Spring Break runs March 29–April 2, 2027 — the week after Good Friday (March 26), which is observed as a school holiday in Virginia. The school year ends June 4, 2027. The staggered start is designed to allow staff extra preparation time for transitioning students (entering middle school, entering high school) before the full school population arrives.\n\nChesterfield County operates on a four-quarter academic year rather than traditional semesters. Quarter-end dates in 2026-2027 fall around October 30, January 22, March 25, and June 4 — with early-release days and parent conference scheduling clustered around those dates. Families should check the specific early-release days at the start of the year, as three-hour early dismissal days (distinct from scheduled half days) occur several times per quarter.\n\nGood Friday (March 26) is observed as a school holiday in Chesterfield County — a practice common in Virginia and parts of the Southeast but not universal across the country. In 2026-2027, Good Friday immediately precedes Spring Break, resulting in a 10-day break window (March 26–April 4) that is longer than the typical spring recess.\n\nChesterfield County encompasses a large geographic area that includes dense suburban communities near Richmond (Midlothian, Chester, Bon Air) and more rural southern portions of the county. Transportation logistics, extracurricular activity distances, and school characteristics vary significantly by location within the district. The district is separate from Richmond City Public Schools and Henrico County Public Schools — families new to the Richmond metro should confirm which school division serves their specific address."
 }
