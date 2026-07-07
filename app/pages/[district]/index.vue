@@ -784,9 +784,10 @@ const winterBreakDays = computed(() => {
 
 // ── Dynamic Metrics: computed refs ─────────────────────────────────────────
 const metricPool = computed((): MetricPool | null => {
-  if (!cal || !district.value) return null
+  const calVal = allCals.value?.find(y => y.schoolYear === district.value?.currentSchoolYear) ?? null
+  if (!calVal || !district.value) return null
   return computeMetricPool(
-    cal,
+    calVal,
     breaks.value,
     relatedCals.value ?? [],
     allDistricts.value ?? [],
@@ -809,7 +810,7 @@ const quickFactKeys = computed(() => new Set(quickFactItems.value.map(f => f.key
 
 const yearNumberCards = computed((): NumberCard[] => {
   if (!metricPool.value || !district.value) return []
-  return scoreYearNumbers(metricPool.value, quickFactKeys.value, district.value, currentYear, formatShortDate)
+  return scoreYearNumbers(metricPool.value, quickFactKeys.value, district.value, district.value.currentSchoolYear ?? '', formatShortDate)
 })
 
 // ── Nearby district comparison stats ───────────────────────────────────────
