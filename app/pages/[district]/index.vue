@@ -347,8 +347,10 @@ function getLaborDay(year: number): string {
   const sept1 = new Date(year, 8, 1)
   const dow = sept1.getDay() // 0=Sun, 1=Mon…
   const offset = dow === 1 ? 0 : dow === 0 ? 1 : 8 - dow
-  const ld = new Date(year, 8, 1 + offset)
-  return ld.toISOString().slice(0, 10)
+  const day = 1 + offset
+  const mm = '09'
+  const dd = String(day).padStart(2, '0')
+  return `${year}-${mm}-${dd}`
 }
 
 function simpleHash(s: string): number {
@@ -381,7 +383,6 @@ function shiftDay(dateStr: string, delta: number): string {
 // ── Dynamic Metrics: pool computation ─────────────────────────────────────
 function computeMetricPool(
   cal: any,
-  districtVal: any,
   breaksVal: { name: string; start: string; end: string; days: number }[],
   relatedCalsVal: any[],
   allDistrictsVal: any[],
@@ -420,7 +421,9 @@ function computeMetricPool(
     : null
 
   // ── nextBreak ──────────────────────────────────────────────────────────
-  const nextBreakObj = breaksVal.find(b => b.start >= todayStrVal) ?? null
+  const nextBreakObj = [...breaksVal]
+    .sort((a, b) => a.start.localeCompare(b.start))
+    .find(b => b.start >= todayStrVal) ?? null
   const nextBreak = nextBreakObj
     ? { name: nextBreakObj.name, start: nextBreakObj.start, daysUntil: daysUntilFn(nextBreakObj.start) }
     : null
@@ -497,7 +500,7 @@ function computeMetricPool(
   const merged: Period[] = []
   for (const p of closed) {
     const last = merged[merged.length - 1]
-    if (!last || p.start > last.end) {
+    if (!last || p.start > shiftDay(last.end, 1)) {
       merged.push({ ...p })
     } else if (p.end > last.end) {
       last.end = p.end
