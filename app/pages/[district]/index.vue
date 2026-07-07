@@ -577,6 +577,171 @@ function computeMetricPool(
   }
 }
 
+// ── Dynamic Metrics: Quick Facts scorer ───────────────────────────────────
+function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
+  const fmt = (d: string) =>
+    new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+
+  const recency = (d: number | undefined) =>
+    d === undefined ? 0 : d < 7 ? 20 : d < 14 ? 15 : d < 30 ? 10 : 0
+
+  type Candidate = FactItem & { score: number }
+  const raw: Candidate[] = []
+
+  if (pool.nextStudentDayOff) {
+    const x = pool.nextStudentDayOff
+    raw.push({ key: 'nextStudentDayOff', value: fmt(x.date), label: x.name, score: 90 + recency(x.daysUntil) })
+  }
+  if (pool.nextTeacherWorkday) {
+    const x = pool.nextTeacherWorkday
+    raw.push({ key: 'nextTeacherWorkday', value: fmt(x.date), label: 'Next Teacher Workday', score: 85 + recency(x.daysUntil) })
+  }
+  if (pool.nextBreak) {
+    const x = pool.nextBreak
+    raw.push({ key: 'nextBreak', value: fmt(x.start), label: x.name, score: 80 + recency(x.daysUntil) })
+  }
+  if (pool.daysUntilSpringBreak !== null) {
+    raw.push({ key: 'daysUntilSpringBreak', value: String(pool.daysUntilSpringBreak), label: 'Days Until Spring Break', score: 75 + recency(pool.daysUntilSpringBreak) })
+  }
+  if (pool.longestBreak) {
+    raw.push({ key: 'longestBreak', value: `${pool.longestBreak.days} days`, label: 'Longest Break', score: 70 })
+  }
+  if (pool.daysBeforeLaborDay !== null) {
+    raw.push({ key: 'daysBeforeLaborDay', value: String(pool.daysBeforeLaborDay), label: 'Days Before Labor Day', score: 65 })
+  }
+  if (pool.nextHoliday) {
+    const x = pool.nextHoliday
+    raw.push({ key: 'nextHoliday', value: fmt(x.date), label: x.name, score: 60 + recency(x.daysUntil) })
+  }
+  if (pool.startDiffNearest) {
+    const x = pool.startDiffNearest
+    raw.push({
+      key: 'startDiffNearest',
+      value: x.direction === 'same' ? 'Same day' : `${x.days}d ${x.direction}`,
+      label: `Start vs. ${x.vsName}`,
+      score: 60,
+    })
+  }
+  if (pool.teacherWorkDays !== null) {
+    raw.push({ key: 'teacherWorkDays', value: String(pool.teacherWorkDays), label: 'Teacher Workdays', score: 55 })
+  }
+  raw.push({ key: 'breakCount', value: String(pool.breakCount), label: 'Major Breaks', score: 50 })
+  if (pool.lastDayDiffNearest) {
+    const x = pool.lastDayDiffNearest
+    raw.push({
+      key: 'lastDayDiffNearest',
+      value: x.direction === 'same' ? 'Same day' : `${x.days}d ${x.direction}`,
+      label: `Last Day vs. ${x.vsName}`,
+      score: 45,
+    })
+  }
+
+  // Redundancy penalties
+  const hasNsdo = raw.some(c => c.key === 'nextStudentDayOff')
+  const hasNextBreak = raw.some(c => c.key === 'nextBreak')
+  const nextBreakIsSpring = pool.nextBreak !== null && pool.nextBreak.start === pool.springBreakStart
+
+  const scored = raw.map(c => {
+    if (hasNsdo && c.key === 'nextHoliday') return { ...c, score: -999 }
+    if (hasNextBreak && nextBreakIsSpring && c.key === 'daysUntilSpringBreak') return { ...c, score: -999 }
+    return c
+  }).filter(c => c.score > -999)
+
+  // Sort: score DESC, then stable hash tiebreaker
+  scored.sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score
+    return simpleHash(a.key + districtSlug) - simpleHash(b.key + districtSlug)
+  })
+
+  return scored.slice(0, 6).map(({ score: _score, ...item }) => item)
+}
+
+// ── Dynamic Metrics: Year by Numbers scorer ────────────────────────────────
+function scoreYearNumbers(
+  pool: MetricPool,
+  selectedQuickFactKeys: Set<string>,
+  districtVal: any,
+  currentYearVal: string,
+  fmtShort: (d: string) => string,
+): NumberCard[] {
+  const shortName: string = districtVal?.shortName || districtVal?.name || ''
+
+  // Mandatory card — always first
+  const mandatory: NumberCard = {
+    key: 'schoolWeeks',
+    label: 'School year',
+    value: pool.schoolWeeks,
+    unit: 'weeks',
+    description: `The ${currentYearVal} year runs ${fmtShort(pool.firstDay)} through ${fmtShort(pool.lastDay)}, spanning ${pool.schoolWeeks} weeks.`,
+  }
+
+  type ScoredCard = NumberCard & { score: number }
+  const candidates: ScoredCard[] = []
+
+  if (pool.longestInstructionalStretch) {
+    const ls = pool.longestInstructionalStretch
+    const bonus = ls.weeks > 8 ? 10 : 0
+    candidates.push({
+      key: 'longestInstructionalStretch',
+      label: 'Longest school stretch',
+      value: ls.weeks,
+      unit: 'weeks',
+      description: `The longest stretch without a student day off runs ${ls.weeks} weeks — ${fmtShort(ls.start)} through ${fmtShort(ls.end)}.`,
+      score: 85 + bonus,
+    })
+  }
+
+  if (pool.winterBreakLength !== null && pool.winterBreakStart && pool.winterBreakEnd) {
+    const bonus = pool.winterBreakLength > 14 ? 10 : 0
+    const penalty = selectedQuickFactKeys.has('longestBreak') ? -30 : 0
+    candidates.push({
+      key: 'winterBreakLength',
+      label: 'Winter break',
+      value: pool.winterBreakLength,
+      unit: 'days',
+      description: `Winter break runs ${fmtShort(pool.winterBreakStart)} to ${fmtShort(pool.winterBreakEnd)} — ${pool.winterBreakLength} calendar days.`,
+      score: 80 + bonus + penalty,
+    })
+  }
+
+  candidates.push({
+    key: 'totalDaysOff',
+    label: 'Student days off',
+    value: pool.totalDaysOff,
+    unit: 'days',
+    description: `Students get ${pool.totalDaysOff} full weekdays off — breaks, holidays, and no-school days combined.`,
+    score: 75,
+  })
+
+  if (pool.springBreakVsPrevYear && pool.springBreakDiffDays !== null) {
+    const absDiff = Math.abs(pool.springBreakDiffDays)
+    const direction = pool.springBreakDiffDays > 0 ? 'later' : pool.springBreakDiffDays < 0 ? 'earlier' : 'same'
+    candidates.push({
+      key: 'springBreakVsPrevYear',
+      label: 'Spring break shift',
+      value: absDiff,
+      unit: `day${absDiff !== 1 ? 's' : ''} ${direction}`,
+      description: pool.springBreakVsPrevYear,
+      score: 70,
+    })
+  }
+
+  // instructionalDays — always available as fallback
+  candidates.push({
+    key: 'instructionalDays',
+    label: 'Instructional days',
+    value: pool.instructionalDays,
+    unit: 'days',
+    description: `${shortName} schedules ${pool.instructionalDays} instructional days for ${currentYearVal}, consistent with state calendar requirements.`,
+    score: 55,
+  })
+
+  candidates.sort((a, b) => b.score - a.score)
+  const top3 = candidates.slice(0, 3).map(({ score: _score, ...c }) => c)
+
+  return [mandatory, ...top3]
+}
+
 // ── Year-at-a-Glance stats ─────────────────────────────────────────────────
 const schoolWeeks = computed(() => {
   if (!cal) return 0
