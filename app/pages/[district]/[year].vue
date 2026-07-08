@@ -61,10 +61,17 @@ const verifiedDate = computed(() => {
 
 const isFutureYear = cal.value!.firstDay > todayStr
 
+const formatWeekdayDate = (d: string) =>
+  new Date(d + 'T00:00:00').toLocaleString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
+
+const springBreak = computed(() =>
+  breaks.value.find(b => b.name.toLowerCase().includes('spring')) ?? null
+)
+
 const todayStatus = computed(() => {
   if (todayStr < cal.value!.firstDay) {
     const d = daysUntilStart.value
-    return { type: 'upcoming' as const, headline: d === 0 ? 'School starts today!' : d === 1 ? 'School starts tomorrow' : `School starts in ${d} days`, detail: `First day: ${formatShortDate(cal.value!.firstDay)}` }
+    return { type: 'upcoming' as const, headline: d === 0 ? 'School starts today!' : d === 1 ? 'School starts tomorrow' : `School starts in ${d} days`, detail: formatWeekdayDate(cal.value!.firstDay) }
   }
   if (todayStr > cal.value!.lastDay) {
     return { type: 'ended' as const, headline: `The ${year} school year has ended`, detail: `Last day was ${formatShortDate(cal.value!.lastDay)}` }
@@ -305,7 +312,7 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
     raw.push({ key: 'longestBreak', value: `${pool.longestBreak.days} days`, label: 'Longest Break', score: 70 })
   }
   raw.push({ key: 'holidayCount', value: String(pool.holidayCount), label: 'Holidays & No-School Days', score: 65 })
-  raw.push({ key: 'instructionWeeks', value: String(pool.instructionWeeks), label: 'Instruction Weeks', score: 62 })
+  // instructionWeeks omitted — low user value; Teacher Workdays slot fills instead
   if (pool.daysUntilWinterBreak !== null) {
     raw.push({ key: 'daysUntilWinterBreak', value: String(pool.daysUntilWinterBreak), label: 'Days Until Winter Break', score: 22 + nearRecency(pool.daysUntilWinterBreak) })
   }
@@ -362,7 +369,7 @@ function scoreYearNumbers(
     const ls = pool.longestInstructionalStretch
     candidates.push({
       key: 'longestInstructionalStretch', label: 'Longest school stretch',
-      value: ls.weeks, unit: 'weeks',
+      value: ls.weeks, unit: 'weeks (approx.)',
       description: `The longest stretch without a student day off runs ${ls.weeks} weeks — ${fmtShort(ls.start)} through ${fmtShort(ls.end)}.`,
       score: 85 + (ls.weeks > 8 ? 10 : 0),
     })
@@ -381,7 +388,7 @@ function scoreYearNumbers(
   candidates.push({
     key: 'totalDaysOff', label: 'Student days off',
     value: pool.totalDaysOff, unit: 'days',
-    description: `Students get ${pool.totalDaysOff} full weekdays off — breaks, holidays, and no-school days combined.`,
+    description: `${pool.totalDaysOff} weekdays off in total: ${pool.holidayCount} individual holidays and no-school days, plus all weekdays within holiday breaks (Thanksgiving, Winter, Spring, etc.).`,
     score: 75,
   })
 
@@ -642,6 +649,16 @@ const keyEvents = [
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     organizer: orgRef, location: { '@type': 'Place', name: district.value!.name, address: orgAddress },
   })),
+  ...cal.value.events
+    .filter(e => e.type === 'holiday' || e.type === 'no_school')
+    .map(e => ({
+      '@context': 'https://schema.org', '@type': 'Event',
+      name: `${e.name} — ${district.value!.name} ${year}`,
+      startDate: e.date, endDate: e.date,
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      organizer: orgRef, location: { '@type': 'Place', name: district.value!.name, address: orgAddress },
+    })),
 ]
 
 useHead({
@@ -702,18 +719,18 @@ useHead({
         </h1>
         <div class="mt-3 text-gray-600 leading-relaxed space-y-2">
           <p>
-            The {{ year }} academic year for {{ district!.name }}
-            {{ isFutureYear || isCurrentYear ? 'runs' : 'ran' }} from
-            <strong>{{ formatDate(cal!.firstDay) }}</strong> to
-            <strong>{{ formatDate(cal!.lastDay) }}</strong>,
-            covering {{ cal!.totalSchoolDays ?? 180 }} instructional days across {{ cal!.semesters ?? 2 }} semesters.
-            <span v-if="secondSemStart">
-              The second semester {{ isFutureYear || isCurrentYear ? 'begins' : 'began' }} {{ formatShortDate(secondSemStart) }} following the winter recess.
+            The first day of school for {{ district!.name }} {{ isFutureYear ? 'is' : 'was' }}
+            <strong>{{ formatWeekdayDate(cal!.firstDay) }}</strong>.
+            The last day {{ isFutureYear || isCurrentYear ? 'is' : 'was' }}
+            <strong>{{ formatWeekdayDate(cal!.lastDay) }}</strong>.
+            <span v-if="springBreak">
+              Spring Break {{ isFutureYear || isCurrentYear ? 'runs' : 'ran' }}
+              {{ formatShortDate(springBreak.start) }}–{{ formatShortDate(springBreak.end) }}.
             </span>
           </p>
-          <p v-if="breaks.length">
-            The year {{ isFutureYear || isCurrentYear ? 'includes' : 'included' }} {{ breaks.length }} major school break{{ breaks.length !== 1 ? 's' : '' }}:
-            {{ breaks.map(b => b.name).join(', ') }}.
+          <p class="text-sm text-gray-500">
+            {{ cal!.totalSchoolDays ?? 180 }} instructional days · {{ cal!.semesters ?? 2 }} semesters
+            <span v-if="secondSemStart"> · Second semester begins {{ formatShortDate(secondSemStart) }}</span>
           </p>
         </div>
       </div>
@@ -804,7 +821,7 @@ useHead({
             rel="nofollow noopener"
             class="underline text-gray-500 hover:text-blue-600 transition-colors"
           >{{ district!.name }} official calendar</a>
-          <span v-if="verifiedDate" class="ml-1 text-green-600 font-medium">· Verified {{ verifiedDate }}</span>
+          <span v-if="verifiedDate" class="ml-1 text-green-600 font-medium">· Last reviewed {{ verifiedDate }}</span>
           <span v-else class="ml-1 text-gray-400">· Not yet verified against official source</span>
         </div>
         <p class="text-xs text-gray-400 mt-1.5">Counts include listed weekday student no-school dates between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instruction weeks are estimated from total school days ÷ 5.</p>

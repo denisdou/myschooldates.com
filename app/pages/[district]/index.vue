@@ -674,7 +674,7 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
     raw.push({ key: 'longestBreak', value: `${pool.longestBreak.days} days`, label: 'Longest Break', score: 70 })
   }
   raw.push({ key: 'holidayCount', value: String(pool.holidayCount), label: 'Holidays & No-School Days', score: 65 })
-  raw.push({ key: 'instructionWeeks', value: String(pool.instructionWeeks), label: 'Instruction Weeks', score: 62 })
+  // instructionWeeks omitted — low user value; Teacher Workdays slot fills instead
   if (pool.daysUntilWinterBreak !== null) {
     raw.push({ key: 'daysUntilWinterBreak', value: String(pool.daysUntilWinterBreak), label: 'Days Until Winter Break', score: 22 + nearRecency(pool.daysUntilWinterBreak) })
   }
@@ -760,7 +760,7 @@ function scoreYearNumbers(
       key: 'longestInstructionalStretch',
       label: 'Longest school stretch',
       value: ls.weeks,
-      unit: 'weeks',
+      unit: 'weeks (approx.)',
       description: `The longest stretch without a student day off runs ${ls.weeks} weeks — ${fmtShort(ls.start)} through ${fmtShort(ls.end)}.`,
       score: 85 + bonus,
     })
@@ -784,7 +784,7 @@ function scoreYearNumbers(
     label: 'Student days off',
     value: pool.totalDaysOff,
     unit: 'days',
-    description: `Students get ${pool.totalDaysOff} full weekdays off — breaks, holidays, and no-school days combined.`,
+    description: `${pool.totalDaysOff} weekdays off in total: ${pool.holidayCount} individual holidays and no-school days, plus all weekdays within holiday breaks (Thanksgiving, Winter, Spring, etc.).`,
     score: 75,
   })
 
@@ -1018,6 +1018,16 @@ if (!isStatePage && district.value) {
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
       organizer: orgRef, location: { '@type': 'Place', name: meta.value!.name, address: orgAddress },
     })),
+    ...((cal?.events ?? [])
+      .filter((e: any) => e.type === 'holiday' || e.type === 'no_school')
+      .map((e: any) => ({
+        '@context': 'https://schema.org', '@type': 'Event',
+        name: `${e.name} — ${meta.value!.name} ${currentYear}`,
+        startDate: e.date, endDate: e.date,
+        eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        organizer: orgRef, location: { '@type': 'Place', name: meta.value!.name, address: orgAddress },
+      }))),
   ] : []
 
   useHead({
@@ -1040,7 +1050,9 @@ if (!isStatePage && district.value) {
           name: meta.value!.name,
           url: meta.value!.officialWebsite || canonicalUrl,
           sameAs: [canonicalUrl, meta.value!.officialWebsite].filter(Boolean),
-          description: meta.value!.about ?? '',
+          description: Array.isArray(meta.value!.about)
+            ? meta.value!.about.map((s: { content: string }) => s.content).join(' ')
+            : (typeof meta.value!.about === 'string' ? meta.value!.about : ''),
           address: orgAddress,
         },
         ...keyEvents,
@@ -1313,7 +1325,7 @@ if (!isStatePage && district.value) {
             <svg v-else class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
             </svg>
-            <span v-if="!isEstimated">Human-verified against official calendar · {{ verifiedDate }}</span>
+            <span v-if="!isEstimated">Manually verified against the official district calendar · Last reviewed {{ verifiedDate }}</span>
             <span v-else>Based on official district website · Not yet human-verified</span>
           </div>
         </div>
@@ -1419,7 +1431,7 @@ if (!isStatePage && district.value) {
               rel="nofollow noopener"
               class="underline text-gray-500 hover:text-blue-600 transition-colors"
             >{{ district.name }} official calendar</a>
-            <span v-if="!isEstimated" class="ml-1 text-green-600 font-medium">· Verified {{ verifiedDate }}</span>
+            <span v-if="!isEstimated" class="ml-1 text-green-600 font-medium">· Last reviewed {{ verifiedDate }}</span>
             <span v-else class="ml-1 text-gray-400">· Not yet verified against official source</span>
           </div>
           <p class="text-xs text-gray-400 mt-1.5">Counts include listed weekday student no-school dates between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instruction weeks are estimated from total school days ÷ 5.</p>
@@ -1682,7 +1694,7 @@ if (!isStatePage && district.value) {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <div class="text-sm text-green-700 space-y-1">
-              <p class="font-medium">Human-verified against official district calendar</p>
+              <p class="font-medium">Manually verified against the official district calendar</p>
               <p>
                 Dates sourced directly from the
                 <a :href="cal.sourceUrl ?? district.calendarPage ?? district.officialWebsite" target="_blank" rel="nofollow noopener" class="underline font-medium">official {{ district.shortName || district.name }} calendar</a>.

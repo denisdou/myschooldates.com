@@ -67,6 +67,6 @@ const fmt = (d: string) =>
       </table>
     </div>
     <p v-if="insight" class="px-6 py-3 border-t border-gray-100 text-xs text-gray-500 italic">{{ insight }}</p>
-    <p class="px-6 py-3 text-xs text-gray-400" :class="insight ? '' : 'border-t border-gray-100'">Comparison districts are selected from calendars currently available on MySchoolDates and may expand as more districts are added.</p>
+    <p class="px-6 py-3 text-xs text-gray-400" :class="insight ? '' : 'border-t border-gray-100'">Comparison dates are based on each district's official published academic calendar and reviewed individually. Comparison districts are selected from calendars currently available on MySchoolDates and may expand as more districts are added.</p>
   </div>
 </template>
