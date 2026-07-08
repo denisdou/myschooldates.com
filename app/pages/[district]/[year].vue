@@ -59,6 +59,35 @@ const verifiedDate = computed(() => {
   return new Date((cal.value as any).lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 })
 
+const isFutureYear = cal.value!.firstDay > todayStr
+
+const todayStatus = computed(() => {
+  if (todayStr < cal.value!.firstDay) {
+    const d = daysUntilStart.value
+    return { type: 'upcoming' as const, headline: d === 0 ? 'School starts today!' : d === 1 ? 'School starts tomorrow' : `School starts in ${d} days`, detail: `First day: ${formatShortDate(cal.value!.firstDay)}` }
+  }
+  if (todayStr > cal.value!.lastDay) {
+    return { type: 'ended' as const, headline: `The ${year} school year has ended`, detail: `Last day was ${formatShortDate(cal.value!.lastDay)}` }
+  }
+  for (const b of breaks.value) {
+    if (todayStr >= b.start && todayStr <= b.end) {
+      const d = daysUntil(b.end)
+      return { type: 'break' as const, headline: b.name, detail: `${d + 1} day${d !== 0 ? 's' : ''} remaining` }
+    }
+  }
+  const holiday = cal.value!.events.find(e => e.date === todayStr && (e.type === 'holiday' || e.type === 'no_school'))
+  if (holiday) {
+    return { type: 'holiday' as const, headline: `No school today — ${holiday.name}`, detail: nextEvent.value ? `Next school event: ${formatShortDate(nextEvent.value.date)}` : '' }
+  }
+  return { type: 'school' as const, headline: 'School is in session', detail: nextEvent.value ? `Next: ${nextEvent.value.name} — ${formatShortDate(nextEvent.value.date)}` : '' }
+})
+
+const upcomingEvents = computed(() =>
+  cal.value!.events
+    .filter(e => e.date >= todayStr && e.type !== 'break_end')
+    .slice(0, 6)
+)
+
 // ── Dynamic Metrics: types ─────────────────────────────────────────────────
 type MetricPool = {
   nextStudentDayOff:           { name: string; date: string; daysUntil: number } | null
@@ -657,11 +686,11 @@ useHead({
         { label: year },
       ]" />
 
-      <!-- Archive notice for non-current year -->
+      <!-- Notice for non-current year (past or future) -->
       <div v-if="!isCurrentYear" class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-start gap-3">
         <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
         <p class="text-sm text-blue-700">
-          You're viewing the archived <strong>{{ year }}</strong> calendar.
+          You're viewing the <strong>{{ isFutureYear ? 'upcoming' : 'archived' }} {{ year }}</strong> calendar.
           <NuxtLink :to="`/${slug}`" class="underline font-medium">View the current {{ district!.currentSchoolYear }} calendar →</NuxtLink>
         </p>
       </div>
@@ -673,16 +702,17 @@ useHead({
         </h1>
         <div class="mt-3 text-gray-600 leading-relaxed space-y-2">
           <p>
-            The {{ year }} academic year for {{ district!.name }} ran from
+            The {{ year }} academic year for {{ district!.name }}
+            {{ isFutureYear || isCurrentYear ? 'runs' : 'ran' }} from
             <strong>{{ formatDate(cal!.firstDay) }}</strong> to
             <strong>{{ formatDate(cal!.lastDay) }}</strong>,
             covering {{ cal!.totalSchoolDays ?? 180 }} instructional days across {{ cal!.semesters ?? 2 }} semesters.
             <span v-if="secondSemStart">
-              The second semester began {{ formatShortDate(secondSemStart) }} following the winter recess.
+              The second semester {{ isFutureYear || isCurrentYear ? 'begins' : 'began' }} {{ formatShortDate(secondSemStart) }} following the winter recess.
             </span>
           </p>
           <p v-if="breaks.length">
-            The year included {{ breaks.length }} major school break{{ breaks.length !== 1 ? 's' : '' }}:
+            The year {{ isFutureYear || isCurrentYear ? 'includes' : 'included' }} {{ breaks.length }} major school break{{ breaks.length !== 1 ? 's' : '' }}:
             {{ breaks.map(b => b.name).join(', ') }}.
           </p>
         </div>
@@ -693,15 +723,15 @@ useHead({
         <div class="bg-white rounded-xl border border-gray-200 p-5">
           <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">First Day of School</div>
           <div class="text-lg font-bold text-gray-900">{{ formatDate(cal!.firstDay) }}</div>
-          <div v-if="isCurrentYear && daysUntilStart > 0" class="mt-2 text-sm text-blue-600">{{ daysUntilStart }} days away</div>
+          <div v-if="daysUntilStart > 0" class="mt-2 text-sm text-blue-600">{{ daysUntilStart }} days away</div>
         </div>
         <div class="bg-white rounded-xl border border-gray-200 p-5">
           <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Last Day of School</div>
           <div class="text-lg font-bold text-gray-900">{{ formatDate(cal!.lastDay) }}</div>
         </div>
         <div class="bg-white rounded-xl border border-gray-200 p-5">
-          <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">{{ isCurrentYear ? 'Next Event' : 'School Breaks' }}</div>
-          <template v-if="isCurrentYear && nextEvent">
+          <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">{{ nextEvent ? 'Next Event' : 'School Breaks' }}</div>
+          <template v-if="nextEvent">
             <div class="text-lg font-bold text-gray-900">{{ nextEvent.name }}</div>
             <div class="text-sm text-gray-500 mt-1">{{ formatShortDate(nextEvent.date) }}</div>
           </template>
@@ -709,19 +739,50 @@ useHead({
         </div>
       </div>
 
-      <!-- Year by the Numbers -->
-      <div v-if="yearNumberCards.length" class="bg-white rounded-xl border border-gray-200 p-6">
-        <h2 class="text-lg font-semibold text-gray-900 mb-4">The Year, by the Numbers</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          <div v-for="card in yearNumberCards" :key="card.key" class="border border-gray-100 rounded-xl p-5">
-            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">{{ card.label }}</div>
-            <div class="text-3xl font-bold text-gray-900 mb-2">
-              {{ card.value }} <span class="text-base font-normal text-gray-400">{{ card.unit }}</span>
-            </div>
-            <p class="text-sm text-gray-500 leading-relaxed">{{ card.description }}</p>
-          </div>
-        </div>
+      <!-- Today / Year Status -->
+      <div
+        v-if="todayStatus"
+        class="rounded-2xl px-6 py-6"
+        :class="{
+          'bg-green-50 border border-green-200': todayStatus.type === 'school',
+          'bg-blue-50 border border-blue-200': todayStatus.type === 'upcoming',
+          'bg-purple-50 border border-purple-200': todayStatus.type === 'break',
+          'bg-amber-50 border border-amber-200': todayStatus.type === 'holiday',
+          'bg-gray-100 border border-gray-200': todayStatus.type === 'ended',
+        }"
+      >
+        <div class="text-xs font-semibold uppercase tracking-wide mb-1"
+          :class="{
+            'text-green-500': todayStatus.type === 'school',
+            'text-blue-500': todayStatus.type === 'upcoming',
+            'text-purple-500': todayStatus.type === 'break',
+            'text-amber-500': todayStatus.type === 'holiday',
+            'text-gray-400': todayStatus.type === 'ended',
+          }"
+        >Today</div>
+        <div
+          class="font-bold text-2xl leading-tight"
+          :class="{
+            'text-green-800': todayStatus.type === 'school',
+            'text-blue-800': todayStatus.type === 'upcoming',
+            'text-purple-800': todayStatus.type === 'break',
+            'text-amber-800': todayStatus.type === 'holiday',
+            'text-gray-600': todayStatus.type === 'ended',
+          }"
+        >{{ todayStatus.headline }}</div>
+        <div v-if="todayStatus.detail" class="text-sm mt-1"
+          :class="{
+            'text-green-600': todayStatus.type === 'school',
+            'text-blue-600': todayStatus.type === 'upcoming',
+            'text-purple-600': todayStatus.type === 'break',
+            'text-amber-600': todayStatus.type === 'holiday',
+            'text-gray-500': todayStatus.type === 'ended',
+          }"
+        >{{ todayStatus.detail }}</div>
       </div>
+
+      <!-- Year by the Numbers -->
+      <DistrictYearNumbers :cards="yearNumberCards" />
 
       <!-- Quick Facts -->
       <div class="bg-white rounded-xl border border-gray-200 p-6">
@@ -746,7 +807,7 @@ useHead({
           <span v-if="verifiedDate" class="ml-1 text-green-600 font-medium">· Verified {{ verifiedDate }}</span>
           <span v-else class="ml-1 text-gray-400">· Not yet verified against official source</span>
         </div>
-        <p class="text-xs text-gray-400 mt-1.5">Counts are calculated from listed weekday student no-school dates in the official district calendar. Weekends are not included. Instruction weeks are estimated from total school days ÷ 5.</p>
+        <p class="text-xs text-gray-400 mt-1.5">Counts include listed weekday student no-school dates between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instruction weeks are estimated from total school days ÷ 5.</p>
       </div>
 
       <!-- Add to Calendar + Share -->
@@ -757,6 +818,39 @@ useHead({
         :district="district!"
         :cal="cal!"
       />
+
+      <!-- Upcoming Dates -->
+      <div v-if="upcomingEvents.length" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-gray-100">
+          <h2 class="text-lg font-semibold text-gray-900">Upcoming Dates</h2>
+        </div>
+        <div class="divide-y divide-gray-50">
+          <div
+            v-for="event in upcomingEvents"
+            :key="event.date + event.type"
+            class="flex items-center gap-4 px-6 py-3.5"
+          >
+            <div class="w-16 flex-shrink-0 text-center">
+              <div class="text-xs font-semibold text-gray-400 uppercase">
+                {{ new Date(event.date + 'T00:00:00').toLocaleString('en-US', { month: 'short' }) }}
+              </div>
+              <div class="text-xl font-bold text-gray-900 leading-tight">
+                {{ new Date(event.date + 'T00:00:00').getDate() }}
+              </div>
+            </div>
+            <div class="w-px h-8 bg-gray-200 flex-shrink-0" />
+            <div class="flex-1 min-w-0">
+              <div class="font-medium text-gray-900 text-sm">{{ event.name }}</div>
+              <div class="text-xs text-gray-400 mt-0.5">
+                {{ new Date(event.date + 'T00:00:00').toLocaleString('en-US', { weekday: 'long' }) }}
+              </div>
+            </div>
+            <span class="text-xs font-medium px-2 py-0.5 rounded-full flex-shrink-0" :class="eventTypeColor[event.type]">
+              {{ eventTypeLabel[event.type] }}
+            </span>
+          </div>
+        </div>
+      </div>
 
       <!-- All Dates -->
       <DistrictAllDates
@@ -810,6 +904,45 @@ useHead({
         :intro="(district as any).livingHere.intro"
         :highlights="(district as any).livingHere.highlights"
       />
+
+      <!-- District Profile -->
+      <div v-if="(district as any).studentCount || (district as any).schoolCount" class="bg-white rounded-xl border border-gray-200 p-6">
+        <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-4">District Profile</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-4">
+          <div v-if="(district as any).studentCount">
+            <div class="text-2xl font-bold text-gray-900">{{ ((district as any).studentCount as number).toLocaleString('en-US') }}</div>
+            <div class="text-xs text-gray-400 mt-0.5">students enrolled</div>
+          </div>
+          <div v-if="(district as any).schoolCount">
+            <div class="text-2xl font-bold text-gray-900">{{ (district as any).schoolCount }}+</div>
+            <div class="text-xs text-gray-400 mt-0.5">schools &amp; campuses</div>
+          </div>
+          <div v-if="(district as any).calendarType">
+            <div class="text-sm font-semibold text-gray-900 leading-snug mt-1">
+              {{ (district as any).calendarType === 'traditional' ? 'Traditional' : (district as any).calendarType === 'year-round' ? 'Year-Round' : 'Traditional + Year-Round' }}
+            </div>
+            <div class="text-xs text-gray-400 mt-0.5">calendar type</div>
+          </div>
+          <div v-if="district!.grades?.length">
+            <div class="text-sm font-semibold text-gray-900 mt-1">{{ district!.grades[0] }} – {{ district!.grades[district!.grades.length - 1] }}</div>
+            <div class="text-xs text-gray-400 mt-0.5">grades served</div>
+          </div>
+          <div v-if="(district as any).founded">
+            <div class="text-2xl font-bold text-gray-900">{{ (district as any).founded }}</div>
+            <div class="text-xs text-gray-400 mt-0.5">year founded</div>
+          </div>
+          <div v-if="(district as any).county">
+            <div class="text-sm font-semibold text-gray-900 mt-1">{{ (district as any).county }}</div>
+            <div class="text-xs text-gray-400 mt-0.5">county</div>
+          </div>
+          <div v-if="(district as any).metro">
+            <div class="text-sm font-semibold text-gray-900 mt-1">{{ (district as any).metro }}</div>
+            <div class="text-xs text-gray-400 mt-0.5">metro area</div>
+          </div>
+        </div>
+        <p v-if="(district as any).districtFact" class="mt-4 pt-4 border-t border-gray-100 text-sm text-gray-500 leading-relaxed">{{ (district as any).districtFact }}</p>
+        <p class="mt-3 text-xs text-gray-400">District profile figures are approximate and sourced from public district information. Enrollment counts, school totals, and program details may change by school year.</p>
+      </div>
 
       <!-- Sources -->
       <div v-if="(district as any).sources?.length" class="bg-gray-50 rounded-xl border border-gray-100 p-5">

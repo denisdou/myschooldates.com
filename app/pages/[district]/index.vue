@@ -1422,22 +1422,11 @@ if (!isStatePage && district.value) {
             <span v-if="!isEstimated" class="ml-1 text-green-600 font-medium">· Verified {{ verifiedDate }}</span>
             <span v-else class="ml-1 text-gray-400">· Not yet verified against official source</span>
           </div>
-          <p class="text-xs text-gray-400 mt-1.5">Counts are calculated from listed weekday student no-school dates in the official district calendar. Weekends are not included. Instruction weeks are estimated from total school days ÷ 5.</p>
+          <p class="text-xs text-gray-400 mt-1.5">Counts include listed weekday student no-school dates between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instruction weeks are estimated from total school days ÷ 5.</p>
         </div>
 
         <!-- Year by the Numbers -->
-        <div v-if="yearNumberCards.length" class="bg-white rounded-xl border border-gray-200 p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-4">The Year, by the Numbers</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div v-for="card in yearNumberCards" :key="card.key" class="border border-gray-100 rounded-xl p-5">
-              <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">{{ card.label }}</div>
-              <div class="text-3xl font-bold text-gray-900 mb-2">
-                {{ card.value }} <span class="text-base font-normal text-gray-400">{{ card.unit }}</span>
-              </div>
-              <p class="text-sm text-gray-500 leading-relaxed">{{ card.description }}</p>
-            </div>
-          </div>
-        </div>
+        <DistrictYearNumbers :cards="yearNumberCards" />
 
         <!-- Year Switcher -->
         <div v-if="archivedYears.length" class="flex items-center gap-2 flex-wrap">
