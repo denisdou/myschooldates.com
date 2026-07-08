@@ -34,9 +34,15 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 73000,
   "schoolCount": 130,
+  "founded": 1839,
   "calendarType": "traditional",
   "districtFact": "Largest school district in the Texas state capital, serving a rapidly growing and increasingly diverse urban population.",
-  "about": "Austin Independent School District serves approximately 73,000 students across 130 schools in Austin, the capital city of Texas.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Austin Independent School District serves approximately 73,000 students across 130 schools in Austin, the capital city of Texas."
+    }
+  ],
   "planningTips": [
     "Spring Break overlaps with SXSW (March 15–19): downtown Austin is extremely crowded. Book out-of-town travel early if you plan to leave the city, as Austin-Bergstrom airport and rental car agencies are at peak demand.",
     "Individual campuses schedule additional PLED Days not shown on the main district calendar. Get your school's complete no-school day list directly from the campus office in the first week of August.",

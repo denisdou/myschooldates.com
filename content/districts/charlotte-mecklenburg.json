@@ -34,9 +34,15 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 147000,
   "schoolCount": 175,
+  "founded": 1960,
   "calendarType": "traditional",
   "districtFact": "Largest school district in North Carolina by enrollment, serving Charlotte and all of Mecklenburg County.",
-  "about": "Charlotte-Mecklenburg Schools (CMS) is the largest school district in North Carolina, serving approximately 147,000 students across 175 schools in Charlotte and Mecklenburg County.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Charlotte-Mecklenburg Schools (CMS) is the largest school district in North Carolina, serving approximately 147,000 students across 175 schools in Charlotte and Mecklenburg County."
+    }
+  ],
   "planningTips": [
     "Good Friday (Mar 26) is a school holiday in CMS, the Friday before Spring Break starts. This gives students a four-day weekend before the break week — note it on your calendar if you're planning travel.",
     "CMS ends the school year June 9 — later than most families expect. Plan summer camps and childcare through at least the second week of June.",

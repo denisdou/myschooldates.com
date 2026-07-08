@@ -23,7 +23,7 @@ const fmt = (d: string) =>
 <template>
   <div v-if="rows.length > 1" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
     <div class="px-6 py-4 border-b border-gray-100">
-      <h2 class="text-lg font-semibold text-gray-900">Compare with Nearby Districts</h2>
+      <h2 class="text-lg font-semibold text-gray-900">Compare with Other School Districts</h2>
       <p class="text-sm text-gray-500 mt-1">First day, spring break, and days off for {{ year }} — side by side.</p>
     </div>
     <div class="overflow-x-auto">
@@ -67,5 +67,6 @@ const fmt = (d: string) =>
       </table>
     </div>
     <p v-if="insight" class="px-6 py-3 border-t border-gray-100 text-xs text-gray-500 italic">{{ insight }}</p>
+    <p class="px-6 py-3 text-xs text-gray-400" :class="insight ? '' : 'border-t border-gray-100'">Comparison districts are selected from calendars currently available on MySchoolDates and may expand as more districts are added.</p>
   </div>
 </template>

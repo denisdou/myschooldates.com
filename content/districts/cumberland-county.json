@@ -34,9 +34,15 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 51000,
   "schoolCount": 58,
+  "founded": 1872,
   "calendarType": "traditional",
   "districtFact": "Serves one of the highest concentrations of military families in North Carolina, directly adjacent to Fort Liberty (formerly Fort Bragg), one of the largest military installations in the world.",
-  "about": "Cumberland County Schools serves approximately 51,000 students across 58 schools in Fayetteville and Cumberland County, North Carolina — a community closely tied to Fort Liberty, one of the largest U.S. military installations.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Cumberland County Schools serves approximately 51,000 students across 58 schools in Fayetteville and Cumberland County, North Carolina — a community closely tied to Fort Liberty, one of the largest U.S. military installations."
+    }
+  ],
   "planningTips": [
     "Military families PCSing to Fort Liberty: contact CCS enrollment before your arrival date. Bring immunization records, proof of custody/guardianship, and prior school records — CCS can often complete placement in 1–3 days.",
     "Families PCSing away from Fort Liberty: request a student transfer record packet from CCS in advance. Pre-assembling school records speeds up enrollment at any receiving district nationwide.",

@@ -41,55 +41,55 @@ function shareReddit() {
     <div class="p-6 border-b border-gray-100">
       <h2 class="text-lg font-semibold text-gray-900 mb-1">Add to Calendar</h2>
       <p class="text-sm text-gray-500 mb-4">Download the {{ districtName }} {{ year }} calendar and import it into your calendar app.</p>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+      <!-- Primary CTA -->
+      <button
+        @click="downloadICS(district, cal)"
+        class="w-full flex items-center justify-center gap-2.5 px-4 py-3 mb-3 rounded-xl bg-blue-600 hover:bg-blue-700 active:scale-95 transition-all text-white font-semibold text-sm shadow-sm"
+      >
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+        Download .ics File
+      </button>
+      <div class="grid grid-cols-3 gap-3 mb-4">
         <!-- Apple Calendar -->
         <button
           @click="downloadICS(district, cal)"
-          class="flex flex-col items-center gap-2 px-3 py-4 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all text-center"
+          class="flex flex-col items-center gap-2 px-3 py-3 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 active:scale-95 transition-all text-center"
         >
-          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <rect x="3" y="4" width="18" height="18" rx="2" stroke-width="1.5"/>
             <path d="M3 9h18" stroke-width="1.5"/>
             <path d="M8 2v4M16 2v4" stroke-width="1.5" stroke-linecap="round"/>
             <path d="M8 14h2l1 2 2-5 1 3h2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <span class="text-xs font-medium text-gray-700 leading-tight">Apple<br>Calendar</span>
+          <span class="text-xs font-medium text-gray-700 leading-tight">Apple Calendar</span>
         </button>
         <!-- Google Calendar -->
         <button
           @click="downloadICS(district, cal)"
-          class="flex flex-col items-center gap-2 px-3 py-4 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all text-center"
+          class="flex flex-col items-center gap-2 px-3 py-3 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 active:scale-95 transition-all text-center"
         >
-          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <rect x="3" y="4" width="18" height="18" rx="2" stroke-width="1.5"/>
             <path d="M3 9h18" stroke-width="1.5"/>
             <path d="M8 2v4M16 2v4" stroke-width="1.5" stroke-linecap="round"/>
             <circle cx="12" cy="15" r="2.5" stroke-width="1.5"/>
           </svg>
-          <span class="text-xs font-medium text-gray-700 leading-tight">Google<br>Calendar</span>
+          <span class="text-xs font-medium text-gray-700 leading-tight">Google Calendar</span>
         </button>
         <!-- Outlook -->
         <button
           @click="downloadICS(district, cal)"
-          class="flex flex-col items-center gap-2 px-3 py-4 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all text-center"
+          class="flex flex-col items-center gap-2 px-3 py-3 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 active:scale-95 transition-all text-center"
         >
-          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <rect x="3" y="4" width="18" height="18" rx="2" stroke-width="1.5"/>
             <path d="M3 9h18" stroke-width="1.5"/>
             <path d="M8 2v4M16 2v4" stroke-width="1.5" stroke-linecap="round"/>
             <path d="M8 13h8M8 17h5" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
           <span class="text-xs font-medium text-gray-700 leading-tight">Outlook</span>
-        </button>
-        <!-- Download .ics -->
-        <button
-          @click="downloadICS(district, cal)"
-          class="flex flex-col items-center gap-2 px-3 py-4 rounded-xl border border-blue-200 bg-blue-50 hover:bg-blue-100 transition-all text-center"
-        >
-          <svg class="w-7 h-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-          </svg>
-          <span class="text-xs font-medium text-blue-700 leading-tight">Download<br>.ics File</span>
         </button>
       </div>
       <p class="text-xs text-gray-400">All formats use the standard .ics file. After downloading, open the file to import into your calendar app.</p>
@@ -102,7 +102,7 @@ function shareReddit() {
         <!-- Copy Link -->
         <button
           @click="copyLink"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-all"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 active:scale-95 transition-all"
         >
           <svg v-if="!copied" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />

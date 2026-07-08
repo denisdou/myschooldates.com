@@ -34,9 +34,15 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 100000,
   "schoolCount": 225,
+  "founded": 1854,
   "calendarType": "traditional",
   "districtFact": "Second largest school district in California and among the 15 largest in the United States, serving the San Diego metropolitan area.",
-  "about": "San Diego Unified School District is the second largest school district in California, serving approximately 100,000 students across more than 225 schools in the San Diego metropolitan area.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "San Diego Unified School District is the second largest school district in California, serving approximately 100,000 students across more than 225 schools in the San Diego metropolitan area."
+    }
+  ],
   "planningTips": [
     "Military families transferring mid-year: Contact SDUSD's Military Family Liaison before your move date. The district is experienced with expedited enrollment and can often place students the week you arrive.",
     "Cross-border families: SDUSD's Spring Recess (Mar 29–Apr 2) and Mexican schools' spring break (typically mid-April) do not overlap. If coordinating visits to family in Tijuana or Baja, plan separately for each school system.",

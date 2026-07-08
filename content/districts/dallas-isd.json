@@ -34,9 +34,15 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 145000,
   "schoolCount": 230,
+  "founded": 1884,
   "calendarType": "traditional",
   "districtFact": "Second largest school district in Texas, serving Dallas and portions of six surrounding counties with one of the most diverse student populations in the South.",
-  "about": "Dallas Independent School District serves approximately 145,000 students across 230 schools and is the second largest school district in Texas.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Dallas Independent School District serves approximately 145,000 students across 230 schools and is the second largest school district in Texas."
+    }
+  ],
   "planningTips": [
     "Suburban DFW districts (Plano, Frisco, Garland) have their own Spring Break dates that may differ from Dallas ISD's by one to two days. If coordinating schedules across districts, verify each one separately.",
     "Dallas ISD magnet and choice school enrollment opens in January. Attend a fall choice expo and apply early — School of Science and Engineering and other top programs have limited seats.",

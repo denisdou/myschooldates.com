@@ -34,9 +34,15 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 80000,
   "schoolCount": 150,
+  "founded": 1882,
   "calendarType": "traditional",
   "districtFact": "Largest school district in Fort Worth and one of the 30 largest school districts in the United States, serving Tarrant County.",
-  "about": "Fort Worth Independent School District serves approximately 80,000 students across 150 schools in Fort Worth and surrounding communities in Tarrant County, Texas.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Fort Worth Independent School District serves approximately 80,000 students across 150 schools in Fort Worth and surrounding communities in Tarrant County, Texas."
+    }
+  ],
   "planningTips": [
     "Fort Worth ISD ends the school year May 21 — about a week earlier than Dallas ISD and two weeks before Miami-Dade. Summer camps and childcare starting June 1 may leave a gap for Fort Worth families.",
     "Fort Worth ISD and Dallas ISD are separate districts. If your family has children in both, confirm Spring Break and start dates on each district's calendar — they are usually close but not always identical.",

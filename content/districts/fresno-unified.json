@@ -34,23 +34,29 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 70000,
   "schoolCount": 100,
+  "founded": 1885,
   "calendarType": "traditional",
   "districtFact": "The largest school district in California's Central Valley and the fourth largest in the state. Founded in 1885, Fresno Unified has grown alongside the San Joaquin Valley's agricultural economy into one of California's most diverse urban school systems.",
-  "about": "Fresno Unified School District is the fourth largest school district in California, serving approximately 70,000 students across 100 schools in the Central Valley. The district offers Dual Language Immersion programs in Spanish and Hmong, Career and Technical Education pathways, and one of California's most established Agricultural Education programs — reflecting the San Joaquin Valley's identity as the most productive farming region in the United States.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Fresno Unified School District is the fourth largest school district in California, serving approximately 70,000 students across 100 schools in the Central Valley."
+    },
+    {
+      "title": "Programs & Curriculum",
+      "content": "The district offers Dual Language Immersion programs in Spanish and Hmong, Career and Technical Education pathways, and one of California's most established Agricultural Education programs — reflecting the San Joaquin Valley's identity as the most productive farming region in the United States."
+    }
+  ],
   "planningTips": [
-    "Fresno Unified begins in mid-August — 3–4 weeks earlier than LAUSD and most coastal California districts. Plan back-to-school preparations for late July to avoid the heat peak and ensure enrollment, supplies, and childcare are arranged before the first day.",
-    "From September through October, wildfire smoke from Sierra Nevada fires can push AQI into unhealthy ranges. Check AirNow on days with outdoor school activities planned. If your child has asthma, ensure their rescue inhaler prescription is current before wildfire season begins.",
-    "Lincoln's Birthday (observed around February 12) is a paid school holiday in Fresno Unified — a California-specific holiday not observed in most other states. Mark it on your calendar for childcare planning well before the school year begins.",
-    "Cesar Chavez Day (March 31) is a California state school holiday. In years when it falls outside Spring Break, it becomes an additional no-school day — confirm each year against the official district calendar.",
-    "Fresno Unified schedules several District Buyback Days throughout the year — days when teachers attend professional development while students stay home. These are published on the official calendar in August. Add them to your childcare calendar before the school year starts.",
-    "Dense Tule fog typically develops from November through February and can cause school bus delays or modified schedules with little warning. Sign up for Fresno Unified's parent notification system before November to receive real-time alerts. Also confirm your school emergency contacts are up to date at the start of the year — fog-related delays may require early morning childcare changes.",
-    "Fresno is 65 miles from Yosemite's South Entrance. Yosemite Valley day-use reservations open on a 28-day rolling window — to visit during Spring Break, set a calendar reminder about 28 days before your target date so you can book the moment reservations open. Weekend reservations can fill quickly; weekday slots are generally easier to secure."
+    "Set back-to-school reminders for mid-July — confirm enrollment paperwork, childcare, transportation, and supplies well before the mid-August first day.",
+    "Sign up for FUSD's parent notification system before the first day of school to receive same-day alerts for AQI changes, outdoor schedule adjustments, and emergency closures. If your child has asthma, ensure their rescue inhaler prescription is current before mid-August.",
+    "Update all school emergency contacts before November — Tule fog bus delays can appear with less than an hour's warning and are communicated through the district notification system.",
+    "Mark Lincoln's Birthday (~February 12) and Cesar Chavez Day (March 31) on your childcare calendar at the start of the school year — both are Fresno Unified no-school days not observed in most other states.",
+    "Add Buyback Days to your personal calendar in August when Fresno Unified publishes the final schedule — these student no-school days are scattered throughout the year and easy to miss.",
+    "Book spring break travel well before March. For Yosemite day visits, set a reminder to book exactly 28 days before your target date when the rolling reservation window opens. Check the Yosemite National Park website for current entry requirements before booking.",
+    "Contact Fresno Unified's school choice office by October if you're interested in Dual Language Immersion, CTE, or Agricultural Education programs — some applications close before December."
   ],
   "districtFaqs": [
-    {
-      "q": "Why does Fresno Unified start school so early compared to other California districts?",
-      "a": "Fresno Unified's early start is driven by the Central Valley's extreme summer heat. Beginning in mid-August allows the school year to end before the most intense heat of June, when temperatures regularly exceed 105°F. Temperatures can exceed 110°F during heat waves in July and August, making the earlier end-of-year a meaningful quality-of-life factor for families. The calendar structure also aligns with local agricultural and community rhythms in the San Joaquin Valley."
-    },
     {
       "q": "What is a District Buyback Day in Fresno Unified?",
       "a": "Buyback Days (also called Staff Development Days or Teacher Workdays) are days when teachers and staff report to school for professional development, training, or planning — but students do not attend. These are typically scattered throughout the school year and are listed in the official Fresno Unified calendar."
@@ -62,14 +68,6 @@
     {
       "q": "Why is Lincoln's Birthday a holiday in Fresno Unified?",
       "a": "California state law designates Abraham Lincoln's Birthday (February 12) as a paid holiday for school employees. Not all California districts close schools on this date, but many Central Valley districts, including Fresno Unified, observe it. This holiday is specific to California and is not recognized in most other states."
-    },
-    {
-      "q": "How do I apply for Fresno Unified's specialty programs?",
-      "a": "Fresno Unified's school choice enrollment window typically opens in the fall for the following school year. Families interested in Dual Language Immersion (offered in Spanish and Hmong), Career and Technical Education pathways, or Agricultural Education programs should contact the district's school choice office by October or November — some programs close applications before December. Enrollment in specialty programs is not automatic; families must apply separately from their neighborhood school assignment. Check the district website in September for the current-year choice enrollment timeline."
-    },
-    {
-      "q": "What should I know about Tule fog and the school year?",
-      "a": "Tule fog is a dense ground fog that forms in the San Joaquin Valley from November through February. It can reduce visibility to near zero overnight and cause school bus delays, staggered arrival times, or school closures. Unlike snow days, there is no accumulation to monitor — Tule fog can appear and lift unpredictably. Fresno Unified communicates fog-related schedule changes through its parent notification system. Families should ensure their contact information is current before November so they receive real-time alerts."
     }
   ],
   "livingHere": {
@@ -101,6 +99,28 @@
       }
     ]
   },
+  "sources": [
+    {
+      "label": "Fresno Unified School District official calendar",
+      "url": "https://www.fresnounified.org/about/calendar"
+    },
+    {
+      "label": "Fresno Unified School District official website",
+      "url": "https://www.fresnounified.org"
+    },
+    {
+      "label": "California Department of Education district data",
+      "url": "https://www.cde.ca.gov"
+    },
+    {
+      "label": "National Weather Service — Hanford/Fresno forecasts",
+      "url": "https://www.weather.gov/hnx/"
+    },
+    {
+      "label": "Yosemite National Park — recreation and reservations",
+      "url": "https://www.nps.gov/yose/"
+    }
+  ],
   "relatedDistricts": [
     {
       "name": "Sacramento City Unified School District",

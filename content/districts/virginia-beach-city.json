@@ -34,9 +34,19 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 68000,
   "schoolCount": 86,
+  "founded": 1963,
   "calendarType": "traditional",
   "districtFact": "Largest school district in Hampton Roads, serving the most populous city in Virginia, with a significant military family population.",
-  "about": "Virginia Beach City Public Schools serves approximately 68,000 students in Virginia Beach, the most populous city in Virginia. The district is organized into four quarters and serves a community with strong ties to the military, tourism, and maritime industries.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Virginia Beach City Public Schools serves approximately 68,000 students in Virginia Beach, the most populous city in Virginia."
+    },
+    {
+      "title": "Community Character",
+      "content": "The district is organized into four quarters and serves a community with strong ties to the military, tourism, and maritime industries."
+    }
+  ],
   "planningTips": [
     "Military families at NAS Oceana, Naval Station Norfolk, or JEB Little Creek: contact VBCPS Military Family Liaison before your PCS arrival date for expedited enrollment. The district can typically place students within a few business days.",
     "VBCPS Spring Break (Mar 29–Apr 2) coincides with peak resort season on the Virginia Beach oceanfront. Expect heavy traffic and elevated prices near the resort strip. Sandbridge and Chic's Beach are less crowded alternatives.",

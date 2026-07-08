@@ -34,9 +34,15 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 190000,
   "schoolCount": 185,
+  "founded": 1909,
   "calendarType": "traditional",
   "districtFact": "Fifth largest school district in Florida, stretching from the Atlantic coast to Lake Okeechobee and covering the largest county by area in the state.",
-  "about": "Palm Beach County School District is the fifth-largest school district in Florida, serving approximately 190,000 students across more than 185 schools in Palm Beach County — the largest county by area in Florida.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Palm Beach County School District is the fifth-largest school district in Florida, serving approximately 190,000 students across more than 185 schools in Palm Beach County — the largest county by area in Florida."
+    }
+  ],
   "planningTips": [
     "In 2026-2027, Palm Beach, Broward, and Miami-Dade all share Spring Break March 22–26. Palm Beach coastal hotels (Boca Raton to Jupiter) fill fast once the tri-county overlap is announced — book early.",
     "Palm Beach County spans from wealthy coastal towns to rural agricultural communities near Lake Okeechobee. Confirm your school assignment by address rather than assuming by city name — the district covers a very wide range of environments.",

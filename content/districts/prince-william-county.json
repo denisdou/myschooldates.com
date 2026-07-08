@@ -34,9 +34,15 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 90000,
   "schoolCount": 100,
+  "founded": 1849,
   "calendarType": "traditional",
   "districtFact": "Second largest school district in Virginia, serving one of the most rapidly growing and culturally diverse counties in the Washington D.C. suburbs.",
-  "about": "Prince William County Public Schools is the second-largest school district in Virginia, serving approximately 90,000 students in one of the fastest-growing counties in the Washington D.C. metropolitan area.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Prince William County Public Schools is the second-largest school district in Virginia, serving approximately 90,000 students in one of the fastest-growing counties in the Washington D.C. metropolitan area."
+    }
+  ],
   "planningTips": [
     "PWCS observes Eid al-Fitr (Mar 10), Eid al-Adha (May 17), Yom Kippur (Sep 21), and Juneteenth (Jun 18) as school holidays. Families from other backgrounds should mark these no-school days for childcare planning.",
     "PWCS Spring Break (Mar 22–26) aligns with Fairfax County and Loudoun County. All three Northern Virginia districts share the same break week in 2026-2027.",

@@ -34,9 +34,15 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 108000,
   "schoolCount": 120,
+  "founded": 1949,
   "calendarType": "traditional",
   "districtFact": "Largest school district in San Antonio and one of the fastest-growing districts in Texas, serving the north and northwest sides of the metro area.",
-  "about": "Northside Independent School District is the largest school district in San Antonio and the fourth largest in Texas, serving approximately 103,000 students across 120 campuses.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Northside Independent School District is the largest school district in San Antonio and the fourth largest in Texas, serving approximately 103,000 students across 120 campuses."
+    }
+  ],
   "planningTips": [
     "Battle of Flowers (April 23) is a no-school day specific to San Antonio and the Fiesta celebration — not observed in most other states. Mark it on your calendar early, especially if you have childcare to arrange.",
     "Northside ISD Spring Break (Mar 8–12) is a week earlier than Dallas ISD and Austin ISD. Families coordinating with out-of-state relatives should confirm which district's break window to plan around.",

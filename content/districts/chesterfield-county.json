@@ -34,9 +34,15 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 64000,
   "schoolCount": 65,
+  "founded": 1869,
   "calendarType": "traditional",
   "districtFact": "Largest school district in the Richmond metropolitan area, serving the suburban communities south and west of Virginia's capital city.",
-  "about": "Chesterfield County Public Schools serves approximately 64,000 students across 65 schools in Chesterfield County, Virginia — the largest school district in the Richmond metropolitan area.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Chesterfield County Public Schools serves approximately 64,000 students across 65 schools in Chesterfield County, Virginia — the largest school district in the Richmond metropolitan area."
+    }
+  ],
   "planningTips": [
     "Staggered first day: elementary students and 9th graders start Aug 24; 7th–8th graders and 10th–12th graders start Aug 25. Plan childcare and transportation separately for different grades in your household.",
     "Good Friday (Mar 26) is a school holiday in CCPS, immediately before Spring Break. Combined with Spring Break (Mar 29–Apr 2), families have a 10-day window — plan travel accordingly.",

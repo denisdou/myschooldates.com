@@ -54,6 +54,10 @@ const nextEvent = computed(() =>
 )
 const breaks = computed(() => getBreaks(cal.value!.events))
 const secondSemStart = computed(() => getSecondSemesterStart(cal.value!.events))
+const verifiedDate = computed(() => {
+  if (!(cal.value as any)?.lastVerifiedAt) return null
+  return new Date((cal.value as any).lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+})
 
 // ── Dynamic Metrics: types ─────────────────────────────────────────────────
 type MetricPool = {
@@ -65,6 +69,7 @@ type MetricPool = {
   breakCount:                  number
   daysUntilSpringBreak:        number | null
   springBreakStart:            string | null
+  daysUntilWinterBreak:        number | null
   daysBeforeLaborDay:          number | null
   teacherWorkDays:             number | null
   startDiffNearest:            { days: number; direction: 'earlier' | 'later' | 'same'; vsName: string } | null
@@ -80,6 +85,8 @@ type MetricPool = {
   springBreakDiffDays:         number | null
   firstDay:                    string
   lastDay:                     string
+  holidayCount:                number
+  instructionWeeks:            number
 }
 
 type FactItem = { key: string; value: string; label: string }
@@ -130,6 +137,8 @@ function computeMetricPool(
   winterBreakDaysVal: number,
 ): MetricPool {
   const events: { date: string; type: string; name: string }[] = calVal.events ?? []
+  const holidayCount = events.filter(e => e.type === 'holiday' || e.type === 'no_school').length
+  const instructionWeeks = Math.round((calVal.totalSchoolDays ?? 180) / 5)
 
   const nextSdoEvt = events
     .filter(e => e.date >= todayStrVal && (e.type === 'holiday' || e.type === 'no_school' || e.type === 'break_start'))
@@ -177,6 +186,10 @@ function computeMetricPool(
     b.name.toLowerCase().includes('december')
   ) ?? null
 
+  const daysUntilWinterBreak = winterBreakObj && winterBreakObj.start > todayStrVal
+    ? daysUntilFn(winterBreakObj.start)
+    : null
+
   type Period = { start: string; end: string }
   const closed: Period[] = [
     ...breaksVal.map(b => ({ start: b.start, end: b.end })),
@@ -218,7 +231,7 @@ function computeMetricPool(
   return {
     nextStudentDayOff, nextHoliday, nextTeacherWorkday, nextBreak,
     longestBreak: longestBreak ?? null, breakCount: breaksVal.length,
-    daysUntilSpringBreak, springBreakStart, daysBeforeLaborDay, teacherWorkDays,
+    daysUntilSpringBreak, springBreakStart, daysUntilWinterBreak, daysBeforeLaborDay, teacherWorkDays,
     startDiffNearest: null, lastDayDiffNearest: null,
     schoolWeeks: schoolWeeksVal, totalDaysOff: daysOffCountVal,
     winterBreakLength: winterBreakObj ? winterBreakDaysVal : null,
@@ -228,6 +241,7 @@ function computeMetricPool(
     instructionalDays: calVal.totalSchoolDays ?? 180,
     springBreakVsPrevYear: null, springBreakDiffDays: null,
     firstDay: calVal.firstDay, lastDay: calVal.lastDay,
+    holidayCount, instructionWeeks,
   }
 }
 
@@ -236,6 +250,9 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
     new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
   const recency = (d: number | undefined) =>
     d === undefined ? 0 : d < 7 ? 20 : d < 14 ? 15 : d < 30 ? 10 : 0
+  // Large boost when a countdown metric is imminent — score of 22 base only wins slots when ≤14 days away
+  const nearRecency = (d: number | undefined) =>
+    d === undefined ? 0 : d < 7 ? 50 : d < 14 ? 35 : d < 21 ? 18 : 0
 
   type Candidate = FactItem & { score: number }
   const raw: Candidate[] = []
@@ -253,13 +270,18 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
     raw.push({ key: 'nextBreak', value: fmt(x.start), label: x.name, score: 80 + recency(x.daysUntil) })
   }
   if (pool.daysUntilSpringBreak !== null) {
-    raw.push({ key: 'daysUntilSpringBreak', value: String(pool.daysUntilSpringBreak), label: 'Days Until Spring Break', score: 75 + recency(pool.daysUntilSpringBreak) })
+    raw.push({ key: 'daysUntilSpringBreak', value: String(pool.daysUntilSpringBreak), label: 'Days Until Spring Break', score: 22 + nearRecency(pool.daysUntilSpringBreak) })
   }
   if (pool.longestBreak) {
     raw.push({ key: 'longestBreak', value: `${pool.longestBreak.days} days`, label: 'Longest Break', score: 70 })
   }
+  raw.push({ key: 'holidayCount', value: String(pool.holidayCount), label: 'Holidays & No-School Days', score: 65 })
+  raw.push({ key: 'instructionWeeks', value: String(pool.instructionWeeks), label: 'Instruction Weeks', score: 62 })
+  if (pool.daysUntilWinterBreak !== null) {
+    raw.push({ key: 'daysUntilWinterBreak', value: String(pool.daysUntilWinterBreak), label: 'Days Until Winter Break', score: 22 + nearRecency(pool.daysUntilWinterBreak) })
+  }
   if (pool.daysBeforeLaborDay !== null) {
-    raw.push({ key: 'daysBeforeLaborDay', value: String(pool.daysBeforeLaborDay), label: 'Days Before Labor Day', score: 65 })
+    raw.push({ key: 'daysBeforeLaborDay', value: String(pool.daysBeforeLaborDay), label: 'Days Before Labor Day', score: 35 })
   }
   if (pool.nextHoliday) {
     const x = pool.nextHoliday
@@ -273,10 +295,12 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
   const hasNsdo = raw.some(c => c.key === 'nextStudentDayOff')
   const hasNextBreak = raw.some(c => c.key === 'nextBreak')
   const nextBreakIsSpring = pool.nextBreak !== null && pool.nextBreak.start === pool.springBreakStart
+  const nextBreakIsWinter = pool.nextBreak !== null && pool.winterBreakStart !== null && pool.nextBreak.start === pool.winterBreakStart
 
   const scored = raw.map(c => {
     if (hasNsdo && c.key === 'nextHoliday') return { ...c, score: -999 }
     if (hasNextBreak && nextBreakIsSpring && c.key === 'daysUntilSpringBreak') return { ...c, score: -999 }
+    if (hasNextBreak && nextBreakIsWinter && c.key === 'daysUntilWinterBreak') return { ...c, score: -999 }
     return c
   }).filter(c => c.score > -999)
 
@@ -336,7 +360,7 @@ function scoreYearNumbers(
     key: 'instructionalDays', label: 'Instructional days',
     value: pool.instructionalDays, unit: 'days',
     description: `${shortName} schedules ${pool.instructionalDays} instructional days for ${currentYearVal}, consistent with state calendar requirements.`,
-    score: 55,
+    score: 65,
   })
 
   candidates.sort((a, b) => b.score - a.score)
@@ -431,13 +455,13 @@ const faqs = computed(() => {
     keywords.some(kw => specificLower.some(q => q.includes(kw)))
 
   const scored: { idx: number; score: number }[] = [
-    { idx: 0,  score: hasFallBreak ? 95 : 10 },
-    { idx: 1,  score: 70 },
-    { idx: 2,  score: hasSpringBreak ? 88 : 52 },
+    { idx: 0,  score: hasFallBreak ? 95 : 65 },      // fallBreak — searched either way
+    { idx: 1,  score: 80 },                           // googleCalendar — conversion-critical
+    { idx: 2,  score: 52 },                           // travelPlanning — capped so idx 8 wins when spring break exists
     { idx: 3,  score: 55 },
     { idx: 4,  score: 50 },
-    { idx: 5,  score: 82 },
-    { idx: 6,  score: 78 },
+    { idx: 5,  score: 88 },                           // schoolStart — highest-demand query
+    { idx: 6,  score: 85 },                           // lastDay — equally high demand
     { idx: 7,  score: hasSemStart ? 75 : 48 },
     { idx: 8,  score: hasSpringBreak ? 90 : 38 },
     { idx: 9,  score: hasWinterBreak ? 85 : 52 },
@@ -551,11 +575,45 @@ const comparisonInsight = computed((): string => {
 })
 
 useSeoMeta({
-  title: `${district.value.name} Calendar ${year} | MySchoolDates`,
+  title: `${district.value.name} Calendar ${year} · Holidays, Breaks & Key Dates | MySchoolDates`,
   description: `${district.value.name} academic calendar ${year}. First day ${formatShortDate(cal.value.firstDay)}, last day ${formatShortDate(cal.value.lastDay)}. All holidays, breaks, and important dates.`,
-  ogTitle: `${district.value.name} Calendar ${year}`,
+  ogTitle: `${district.value.name} Calendar ${year} · Holidays, Breaks & Key Dates`,
   ogUrl: canonicalUrl,
 })
+
+const orgAddress = {
+  '@type': 'PostalAddress',
+  addressLocality: district.value.city ?? '',
+  addressRegion: (district.value as any).stateCode ?? district.value.state,
+  addressCountry: 'US',
+}
+const orgRef = { '@type': 'EducationalOrganization', name: district.value.name, url: district.value.officialWebsite }
+const keyEvents = [
+  {
+    '@context': 'https://schema.org', '@type': 'Event',
+    name: `First Day of School — ${district.value.name} ${year}`,
+    startDate: cal.value.firstDay, endDate: cal.value.firstDay,
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    organizer: orgRef, location: { '@type': 'Place', name: district.value.name, address: orgAddress },
+  },
+  {
+    '@context': 'https://schema.org', '@type': 'Event',
+    name: `Last Day of School — ${district.value.name} ${year}`,
+    startDate: cal.value.lastDay, endDate: cal.value.lastDay,
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    organizer: orgRef, location: { '@type': 'Place', name: district.value.name, address: orgAddress },
+  },
+  ...breaks.value.map(b => ({
+    '@context': 'https://schema.org', '@type': 'Event',
+    name: `${b.name} — ${district.value!.name} ${year}`,
+    startDate: b.start, endDate: b.end,
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    organizer: orgRef, location: { '@type': 'Place', name: district.value!.name, address: orgAddress },
+  })),
+]
 
 useHead({
   link: [{ rel: 'canonical', href: canonicalUrl }],
@@ -572,6 +630,7 @@ useHead({
           { '@type': 'ListItem', position: 4, name: year, item: canonicalUrl },
         ],
       },
+      ...keyEvents,
       ...(faqs.value.length ? [{
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -650,14 +709,6 @@ useHead({
         </div>
       </div>
 
-      <!-- About / Calendar Context -->
-      <div v-if="cal!.calendarNotes || district!.about" class="text-gray-600 leading-relaxed space-y-3 text-sm">
-        <template v-if="cal!.calendarNotes">
-          <p v-for="(para, i) in cal!.calendarNotes.split('\n\n')" :key="i">{{ para }}</p>
-        </template>
-        <p v-if="district!.about && !cal!.calendarNotes" class="text-gray-500">{{ district!.about }}</p>
-      </div>
-
       <!-- Year by the Numbers -->
       <div v-if="yearNumberCards.length" class="bg-white rounded-xl border border-gray-200 p-6">
         <h2 class="text-lg font-semibold text-gray-900 mb-4">The Year, by the Numbers</h2>
@@ -692,25 +743,10 @@ useHead({
             rel="nofollow noopener"
             class="underline text-gray-500 hover:text-blue-600 transition-colors"
           >{{ district!.name }} official calendar</a>
+          <span v-if="verifiedDate" class="ml-1 text-green-600 font-medium">· Verified {{ verifiedDate }}</span>
+          <span v-else class="ml-1 text-gray-400">· Not yet verified against official source</span>
         </div>
-      </div>
-
-      <!-- All Dates -->
-      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
-        <div class="px-6 py-4 border-b border-gray-100">
-          <h2 class="text-lg font-semibold text-gray-900">All Important Dates — {{ year }}</h2>
-        </div>
-        <div class="divide-y divide-gray-50">
-          <div v-for="event in cal!.events" :key="event.date" class="flex items-center justify-between px-6 py-4 hover:bg-gray-50 transition-colors">
-            <div>
-              <div class="font-medium text-gray-900">{{ event.name }}</div>
-              <div class="text-sm text-gray-500">{{ formatDate(event.date) }}</div>
-            </div>
-            <span class="text-xs font-medium px-2.5 py-1 rounded-full" :class="eventTypeColor[event.type]">
-              {{ eventTypeLabel[event.type] }}
-            </span>
-          </div>
-        </div>
+        <p class="text-xs text-gray-400 mt-1.5">Counts are calculated from listed weekday student no-school dates in the official district calendar. Weekends are not included. Instruction weeks are estimated from total school days ÷ 5.</p>
       </div>
 
       <!-- Add to Calendar + Share -->
@@ -721,6 +757,30 @@ useHead({
         :district="district!"
         :cal="cal!"
       />
+
+      <!-- All Dates -->
+      <DistrictAllDates
+        :events="cal!.events"
+        :title="`All Important Dates — ${year}`"
+        :source-url="cal!.sourceUrl ?? district!.officialWebsite"
+        :district-name="district!.name"
+        :verified-date="verifiedDate"
+      />
+
+      <!-- Calendar Context + About -->
+      <div v-if="cal!.calendarNotes || (district as any).about?.length" class="space-y-4">
+        <template v-if="cal!.calendarNotes">
+          <div class="text-gray-600 leading-relaxed space-y-3 text-sm">
+            <p v-for="(para, i) in cal!.calendarNotes.split('\n\n')" :key="i">{{ para }}</p>
+          </div>
+        </template>
+        <template v-if="(district as any).about?.length">
+          <div v-for="card in (district as any).about" :key="card.title" class="bg-white rounded-xl border border-gray-200 p-5">
+            <h3 class="text-sm font-semibold text-gray-900 mb-2">{{ card.title }}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">{{ card.content }}</p>
+          </div>
+        </template>
+      </div>
 
       <!-- FAQ -->
       <div class="bg-white rounded-xl border border-gray-200 p-6">
@@ -750,6 +810,28 @@ useHead({
         :intro="(district as any).livingHere.intro"
         :highlights="(district as any).livingHere.highlights"
       />
+
+      <!-- Sources -->
+      <div v-if="(district as any).sources?.length" class="bg-gray-50 rounded-xl border border-gray-100 p-5">
+        <h2 class="text-sm font-semibold text-gray-700 mb-2">Sources and Verification</h2>
+        <p class="text-sm text-gray-600 mb-3">
+          Calendar dates are based on {{ district!.name }}'s official {{ year }} calendar.
+          <template v-if="verifiedDate"> Last reviewed {{ verifiedDate }}.</template>
+          <template v-else> Not yet independently reviewed against the official source.</template>
+        </p>
+        <ul class="space-y-1.5 mb-3">
+          <li v-for="src in (district as any).sources" :key="src.label" class="flex items-start gap-2 text-xs text-gray-500">
+            <svg class="w-3 h-3 text-gray-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+            <a v-if="src.url" :href="src.url" target="_blank" rel="nofollow noopener" class="underline hover:text-blue-600 transition-colors">{{ src.label }}</a>
+            <span v-else>{{ src.label }}</span>
+          </li>
+        </ul>
+        <p class="text-xs text-gray-500 pt-3 border-t border-gray-200">
+          Supplemental planning notes and district profile information may change by year. Families should confirm program deadlines, transportation notices, and emergency schedule updates directly with {{ district!.shortName || district!.name }}.
+        </p>
+      </div>
 
       <!-- Back to current -->
       <div class="text-center">

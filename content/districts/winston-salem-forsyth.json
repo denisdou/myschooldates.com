@@ -34,9 +34,15 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 55000,
   "schoolCount": 80,
+  "founded": 1963,
   "calendarType": "traditional",
   "districtFact": "Fourth largest school district in North Carolina, serving the Winston-Salem metropolitan area — home to Wake Forest University, major medical research institutions, and a historic manufacturing heritage.",
-  "about": "Winston-Salem/Forsyth County Schools serves approximately 55,000 students across 80 schools in Winston-Salem and Forsyth County, North Carolina, in the Piedmont Triad region.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Winston-Salem/Forsyth County Schools serves approximately 55,000 students across 80 schools in Winston-Salem and Forsyth County, North Carolina, in the Piedmont Triad region."
+    }
+  ],
   "planningTips": [
     "WSFCS starts August 10 — two weeks before Charlotte-Mecklenburg (Aug 25). Families coordinating with CMS relatives should note the two-week gap at the start and the one-week gap at spring break.",
     "WSFCS Spring Break (Mar 26–Apr 2) is one week later than Guilford County's (Mar 22–26). The districts overlap only on Good Friday (Mar 26) — plan multi-district family visits accordingly.",

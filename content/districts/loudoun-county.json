@@ -34,9 +34,15 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 84000,
   "schoolCount": 100,
+  "founded": 1870,
   "calendarType": "traditional",
   "districtFact": "One of the fastest-growing and wealthiest school districts on the East Coast, anchored by the Dulles Technology Corridor and Northern Virginia's data center industry.",
-  "about": "Loudoun County Public Schools serves approximately 84,000 students in Loudoun County, Virginia — one of the wealthiest and fastest-growing counties in the United States, located in the outer Washington D.C. suburbs along the Dulles Technology Corridor.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Loudoun County Public Schools serves approximately 84,000 students in Loudoun County, Virginia — one of the wealthiest and fastest-growing counties in the United States, located in the outer Washington D.C. suburbs along the Dulles Technology Corridor."
+    }
+  ],
   "planningTips": [
     "LCPS observes Diwali (Nov 9), Lunar New Year (Feb 5), Eid al-Fitr (Mar 9), and Yom Kippur (Sep 21) as student holidays. Families from other backgrounds should mark these as no-school days for childcare planning.",
     "LCPS starts August 17 — one week earlier than Fairfax County and Prince William County (Aug 24). If coordinating schedules across NoVA districts, note the different start dates.",

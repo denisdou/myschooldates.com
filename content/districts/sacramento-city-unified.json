@@ -34,9 +34,15 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 42000,
   "schoolCount": 80,
+  "founded": 1854,
   "calendarType": "traditional",
   "districtFact": "Serves the city of Sacramento, the capital of California, with one of the most linguistically diverse student populations in Northern California.",
-  "about": "Sacramento City Unified School District serves approximately 42,000 students across 80 schools in California's state capital. The district is one of the most diverse in Northern California, reflecting the multicultural fabric of Sacramento.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Sacramento City Unified School District serves approximately 42,000 students across 80 schools in California's state capital. The district is one of the most diverse in Northern California, reflecting the multicultural fabric of Sacramento."
+    }
+  ],
   "planningTips": [
     "Families with children in both SCUSD and Elk Grove Unified or Twin Rivers Unified should verify spring break dates separately — they often differ by several days, which matters for childcare and travel planning.",
     "Open enrollment and magnet school applications for SCUSD typically open in November or December. Do not wait until spring — most popular language immersion and arts programs close enrollment by January.",

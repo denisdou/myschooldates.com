@@ -34,9 +34,15 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 65000,
   "schoolCount": 85,
+  "founded": 1884,
   "calendarType": "traditional",
   "districtFact": "Third largest school district in California, serving the port city of Long Beach and surrounding communities.",
-  "about": "Long Beach Unified School District serves approximately 62,000 students in Long Beach and adjacent communities in Los Angeles County, California.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Long Beach Unified School District serves approximately 62,000 students in Long Beach and adjacent communities in Los Angeles County, California."
+    }
+  ],
   "planningTips": [
     "If children in your family attend both LBUSD and LAUSD schools, note that their spring breaks differ — LBUSD is early April while LAUSD is late March. Plan trips around the later break (LBUSD) to avoid pulling kids from school.",
     "Choice and magnet school applications for LBUSD typically open in October or November for the following school year. Do not wait until spring — most popular programs close enrollment by January.",

@@ -34,9 +34,19 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 72000,
   "schoolCount": 125,
+  "founded": 1959,
   "calendarType": "traditional",
   "districtFact": "Third-largest school district in North Carolina and home to one of the state's larger magnet program networks, GCS operates 125-plus schools for approximately 72,000 students in Greensboro, High Point, and Guilford County — including Early College High Schools and career-technical academies that align with the Piedmont Triad's aviation, logistics, and healthcare employment base.",
-  "about": "Guilford County Schools is the third-largest school district in North Carolina, serving approximately 72,000 students across Greensboro, High Point, and surrounding communities in the Piedmont Triad. The district operates magnet schools, Early College programs, and career-technical academies alongside traditional neighborhood schools, and is one of North Carolina's most linguistically diverse systems — reflecting Greensboro's significant immigrant and refugee communities from Latin America and Southeast Asia.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Guilford County Schools is the third-largest school district in North Carolina, serving approximately 72,000 students across Greensboro, High Point, and surrounding communities in the Piedmont Triad."
+    },
+    {
+      "title": "Programs & Community",
+      "content": "The district operates magnet schools, Early College programs, and career-technical academies alongside traditional neighborhood schools, and is one of North Carolina's most linguistically diverse systems — reflecting Greensboro's significant immigrant and refugee communities from Latin America and Southeast Asia."
+    }
+  ],
   "planningTips": [
     "GCS and Charlotte-Mecklenburg Schools share the same August start date, but their spring breaks fall in different weeks in most years. Families coordinating between the two districts — for childcare, travel, or family visits — should check both calendars before booking, as the break windows rarely align.",
     "Winston-Salem/Forsyth County Schools breaks earlier than GCS in spring in most years. The gap between the two districts' spring breaks changes annually — do not assume they overlap. Families with relatives in Forsyth County should check the WSFC calendar each year before booking shared travel.",

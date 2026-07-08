@@ -34,9 +34,15 @@
   "currentSchoolYear": "2026-2027",
   "studentCount": 420000,
   "schoolCount": 1000,
+  "founded": 1853,
   "calendarType": "mixed",
   "districtFact": "Second largest school district in the United States, operating both traditional and year-round campuses across Los Angeles.",
-  "about": "Los Angeles Unified School District (LAUSD) is the second-largest school district in the United States, serving approximately 420,000 students across more than 1,000 schools in the Los Angeles area.",
+  "about": [
+    {
+      "title": "About the District",
+      "content": "Los Angeles Unified School District (LAUSD) is the second-largest school district in the United States, serving approximately 420,000 students across more than 1,000 schools in the Los Angeles area."
+    }
+  ],
   "planningTips": [
     "If your child's school is year-round (Track A, B, or C), their break dates differ significantly from the Traditional Calendar shown here. Confirm which track your school follows at lausd.net before booking any travel.",
     "Cesar Chavez Day (March 31) is a California state school holiday. Families from other states often miss it. In years when it falls outside Spring Break, mark it as a no-school day and arrange childcare.",
