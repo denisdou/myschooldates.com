@@ -1313,6 +1313,10 @@ if (!isStatePage && district.value) {
           </p>
           <!-- Featured snippet: direct answer for search intent -->
           <p v-if="calendarSummary" class="mt-3 text-sm text-gray-700 leading-relaxed">{{ calendarSummary }}</p>
+          <p class="mt-1 text-sm text-gray-500">
+            {{ cal.totalSchoolDays ?? 180 }} instructional days · {{ cal.semesters ?? 2 }} semesters
+            <span v-if="secondSemStart"> · Second semester begins {{ formatShortDate(secondSemStart) }}</span>
+          </p>
           <!-- Verification badge -->
           <div class="mt-3 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full"
             :class="isEstimated
