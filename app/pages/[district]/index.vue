@@ -1393,6 +1393,18 @@ if (!isStatePage && district.value) {
           { label: district.name },
         ]" />
 
+        <!-- Alternate calendars notice -->
+        <div v-if="(cal as any)?.alternateCalendars?.length" class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
+          <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <p class="text-sm text-amber-800">
+            This page shows the <strong>Traditional Calendar</strong>, which applies to most {{ district.name }} schools.
+            If your child attends a year-round school or specialized program, see
+            <a href="#other-calendars" class="underline font-medium">Other Official Calendars</a> below.
+          </p>
+        </div>
+
         <!-- Title -->
         <div>
           <h1 class="text-3xl font-bold text-gray-900">
@@ -1745,6 +1757,28 @@ if (!isStatePage && district.value) {
               <svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
             </NuxtLink>
           </div>
+        </div>
+
+        <!-- Other Official Calendars -->
+        <div v-if="(cal as any)?.alternateCalendars?.length" id="other-calendars" class="bg-white rounded-xl border border-gray-200 p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-1">Other Official Calendars</h2>
+          <p class="text-sm text-gray-500 mb-4">{{ district.name }} also publishes official calendars for specific school types.</p>
+          <ul class="space-y-0">
+            <li v-for="alt in (cal as any).alternateCalendars" :key="alt.type"
+              class="flex items-center justify-between gap-4 py-3 border-b border-gray-100 last:border-0">
+              <div>
+                <div class="text-sm font-medium text-gray-900">{{ alt.label }}</div>
+                <div v-if="alt.firstDay" class="text-xs text-gray-500 mt-0.5">First day: {{ formatShortDate(alt.firstDay) }}</div>
+              </div>
+              <a v-if="alt.pdfUrl" :href="alt.pdfUrl" target="_blank" rel="nofollow noopener"
+                class="flex-shrink-0 inline-flex items-center gap-1.5 text-xs font-medium text-blue-600 hover:text-blue-800 border border-blue-200 rounded-lg px-3 py-1.5 hover:bg-blue-50 transition-colors">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download PDF
+              </a>
+            </li>
+          </ul>
         </div>
 
         <!-- Sources & Verification -->

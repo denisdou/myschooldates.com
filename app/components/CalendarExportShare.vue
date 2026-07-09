@@ -95,6 +95,34 @@ function shareReddit() {
       <p class="text-xs text-gray-400">All formats use the standard .ics file. After downloading, open the file to import into your calendar app.</p>
     </div>
 
+    <!-- Official PDF Download -->
+    <div v-if="cal.sourcePdfUrl" class="p-6 border-b border-gray-100">
+      <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ districtName }} Calendar {{ year }} PDF</h2>
+      <p class="text-sm text-gray-500 mb-4">Official PDF published by {{ districtName }}. Verified by our editorial team.</p>
+      <div class="flex flex-wrap gap-3">
+        <a
+          :href="cal.sourcePdfUrl"
+          target="_blank"
+          rel="nofollow noopener"
+          class="inline-flex items-center gap-2 px-4 py-2.5 bg-red-600 hover:bg-red-700 active:scale-95 transition-all text-white text-sm font-semibold rounded-lg shadow-sm"
+        >
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+          Download Official PDF
+        </a>
+        <button
+          @click="downloadICS(district, cal)"
+          class="inline-flex items-center gap-2 px-4 py-2.5 border border-blue-300 hover:border-blue-400 hover:bg-blue-50 active:scale-95 transition-all text-blue-700 text-sm font-semibold rounded-lg"
+        >
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          Add to Google Calendar
+        </button>
+      </div>
+    </div>
+
     <!-- Share with Parents -->
     <div class="p-6">
       <h3 class="text-base font-semibold text-gray-900 mb-3">Share with Parents</h3>

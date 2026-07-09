@@ -108,6 +108,13 @@ export default defineContentConfig({
         sourcePdfUrl: z.string().optional(),   // direct PDF for this school year (changes annually)
         lastVerifiedAt: z.string().optional(), // ISO date: when data was last verified against official source
         calendarNotes: z.string().optional(),  // year-specific narrative (moved from districts/)
+        calendarType: z.enum(['traditional', 'year-round', 'magnet', 'international', 'early-college', 'alternative']).optional(),
+        alternateCalendars: z.array(z.object({
+          type: z.string(),
+          label: z.string(),
+          pdfUrl: z.string().optional(),
+          firstDay: z.string().optional(),
+        })).optional(),
         events: z.array(eventSchema),
       }),
     }),

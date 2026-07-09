@@ -6,9 +6,30 @@
   "totalSchoolDays": 185,
   "teacherWorkDays": 200,
   "semesters": 2,
-  "sourceUrl": "https://www.gcsnc.com/calendar",
-  "sourcePdfUrl": "",
+  "sourceUrl": "https://www.gcsnc.com/all-events",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1741024395/gcsnccom/dfom9tgnnogz3bciimz1/TRADITIONAL_2025-26_GCS_Academic_Calendar_Revised_20241112.pdf",
   "lastVerifiedAt": "2026-07-05",
+  "calendarType": "traditional",
+  "alternateCalendars": [
+    {
+      "type": "extended-year",
+      "label": "Extended Year Academic Calendar 2025-2026",
+      "pdfUrl": "https://resources.finalsite.net/images/v1741024397/gcsnccom/q9tjp2khj2sc4gahdmps/EY_Calendar_202526_Revised_20241112.pdf",
+      "firstDay": "2025-08-05"
+    },
+    {
+      "type": "early-college",
+      "label": "Early/Middle College and Academies Academic Calendar 2025-2026",
+      "pdfUrl": "https://resources.finalsite.net/images/v1741024399/gcsnccom/oqfvu0hg7lswetutox6t/ECMCA__2025-26_GCS_Academic_Calendar_Revised_20241112.pdf",
+      "firstDay": "2025-08-06"
+    },
+    {
+      "type": "early-college",
+      "label": "ECG, GCMC, UNCG Academic Calendar 2025-26",
+      "pdfUrl": "https://resources.finalsite.net/images/v1741024401/gcsnccom/vyyrcoeuz8vm0uttoewo/UNCG_ECG_GCMC_2025-26_GCS_Academic_Calendar_Revised_20241112.pdf",
+      "firstDay": "2025-08-05"
+    }
+  ],
   "events": [
     {
       "date": "2025-08-25",

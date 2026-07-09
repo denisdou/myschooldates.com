@@ -6,9 +6,30 @@
   "totalSchoolDays": 185,
   "teacherWorkDays": 200,
   "semesters": 2,
-  "sourceUrl": "https://www.gcsnc.com/calendar",
+  "sourceUrl": "https://www.gcsnc.com/all-events",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1770133736/gcsnccom/jpobyljsyt8qbaldvnds/TRADITIONAL_2026-27_GCS_Academic_Calendar.pdf",
   "lastVerifiedAt": "2026-07-05",
+  "calendarType": "traditional",
+  "alternateCalendars": [
+    {
+      "type": "extended-year",
+      "label": "Extended Year Academic Calendar 2026-2027",
+      "pdfUrl": "https://resources.finalsite.net/images/v1782329998/gcsnccom/gcsnccom/acz1lcllu7tlur4cjm8w/EY2026-27GCSAcademicCalendar.pdf",
+      "firstDay": "2026-08-04"
+    },
+    {
+      "type": "early-college",
+      "label": "Early/Middle College and Academies Academic Calendar 2026-2027",
+      "pdfUrl": "https://resources.finalsite.net/images/v1782329976/gcsnccom/gcsnccom/b5swr25debck8ue5qsdi/ECMCA2026-27GCSAcademicCalendar.pdf",
+      "firstDay": "2026-08-06"
+    },
+    {
+      "type": "early-college",
+      "label": "ECG, GCMC, UNCG Academic Calendar 2026-2027",
+      "pdfUrl": "https://resources.finalsite.net/images/v1782329949/gcsnccom/gcsnccom/hknklr78fzddsssep6zl/MCGCMCUNCG2026-27GCSAcademicCalendar.pdf",
+      "firstDay": "2026-08-06"
+    }
+  ],
   "events": [
     {
       "date": "2026-08-24",

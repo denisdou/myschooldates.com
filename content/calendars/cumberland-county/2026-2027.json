@@ -7,8 +7,22 @@
   "teacherWorkDays": 200,
   "semesters": 2,
   "sourceUrl": "https://www.ccs.k12.nc.us/page/districts-board-approved-calendars",
-  "sourcePdfUrl": "",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4929/Ccs/7a7ae4d8-0ae9-4aaf-a762-230cf2eb7f0b/2026-2027-Traditional-Calendar.pdf",
   "lastVerifiedAt": "2026-07-05",
+  "calendarType": "traditional",
+  "alternateCalendars": [
+    {
+      "type": "year-round",
+      "label": "Year-Round Calendar",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4929/Ccs/0d576cac-dc54-401e-8a69-75dde7a29ea5/2025-2026-Year-Round-Calendar.pdf",
+      "firstDay": "2026-07-16"
+    },
+    {
+      "type": "international",
+      "label": "Cross Creek & Cumberland International Calendar",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4929/Ccs/f61cc8a2-45ac-41bd-97cc-d096e6f9a6ce/2026-2027-Early-Colleges-Calendar.pdf"
+    }
+  ],
   "events": [
     {
       "date": "2026-08-07",
