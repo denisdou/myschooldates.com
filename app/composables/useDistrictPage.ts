@@ -99,7 +99,7 @@ export function useDistrictPage() {
       {
         q: `Does ${district.name} have a fall break in ${cal.schoolYear}?`,
         a: fallBreak
-          ? `Yes. ${district.name} has a fall break running from ${formatShortDate(fallBreak.start)} to ${formatShortDate(fallBreak.end)}, a total of ${fallBreak.days} days. This mid-semester break typically falls in October.`
+          ? `Yes. ${district.name} has a fall break running from ${formatShortDate(fallBreak.start)} to ${formatShortDate(fallBreak.end)}, a total of ${fallBreak.days} days.`
           : `${district.name} does not have a scheduled fall break in the ${cal.schoolYear} calendar. The fall semester runs continuously from the first day of school in ${firstMonth} until the Thanksgiving recess in November.`,
       },
       {

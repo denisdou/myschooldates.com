@@ -16,6 +16,6 @@ defineProps<{
         <p class="text-sm text-gray-500 leading-relaxed">{{ card.description }}</p>
       </div>
     </div>
-    <p class="mt-4 text-xs text-gray-400">Counts include listed weekday student no-school dates between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instruction weeks are estimated from total school days ÷ 5.</p>
+    <p class="mt-4 text-xs text-gray-400">Counts include listed weekday student no-school dates between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instructional weeks are approximate.</p>
   </div>
 </template>

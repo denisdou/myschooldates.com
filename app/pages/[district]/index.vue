@@ -372,6 +372,8 @@ type MetricPool = {
   lastDay:                     string
   holidayCount:                number
   instructionWeeks:            number
+  secondSemStart:              string | null
+  breakdownText:               string | null
 }
 
 type FactItem = {
@@ -506,7 +508,14 @@ function computeMetricPool(
   for (const rc of relatedCalsVal) {
     const relDistrict = allDistrictsVal.find((d: any) => d.institutionId === rc.institutionId)
     if (!relDistrict) continue
-    const vsName = (relDistrict.shortName || relDistrict.name) as string
+    const fullName = relDistrict.name as string
+    const vsName = (() => {
+      for (const suffix of [' County', ' Unified', ' Public', ' Independent', ' ISD', ' USD', ' City', ' Municipal']) {
+        const idx = fullName.indexOf(suffix)
+        if (idx > 0) return fullName.slice(0, idx)
+      }
+      return fullName.split(' ').slice(0, 2).join(' ')
+    })()
 
     const startDiff = Math.round((new Date(rc.firstDay + 'T00:00:00').getTime() - new Date(cal.firstDay + 'T00:00:00').getTime()) / 86400000)
     if (Math.abs(startDiff) < bestStartAbsDiff) {
@@ -611,6 +620,26 @@ function computeMetricPool(
     }
   }
 
+  // ── secondSemStart ─────────────────────────────────────────────────────
+  const secondSemStartVal = getSecondSemesterStart(events) || null
+
+  // ── breakdownText (Student Days Off breakdown) ──────────────────────────
+  const brkDefs = [
+    { keywords: ['thanksgiving'], label: 'Thanksgiving' },
+    { keywords: ['winter', 'christmas', 'december'], label: 'Winter' },
+    { keywords: ['spring'], label: 'Spring' },
+  ]
+  const breakParts: string[] = []
+  for (const { keywords, label } of brkDefs) {
+    const brk = breaksVal.find(b => keywords.some(kw => b.name.toLowerCase().includes(kw)))
+    if (brk) {
+      const wdays = countWeekdays(brk.start, brk.end)
+      if (wdays > 0) breakParts.push(`${wdays} ${label}`)
+    }
+  }
+  if (holidayCount > 0) breakParts.push(`${holidayCount} individual holidays`)
+  const breakdownText = breakParts.length > 1 ? breakParts.join(', ') : null
+
   return {
     nextStudentDayOff,
     nextHoliday,
@@ -638,6 +667,8 @@ function computeMetricPool(
     lastDay: cal.lastDay,
     holidayCount,
     instructionWeeks,
+    secondSemStart: secondSemStartVal,
+    breakdownText,
   }
 }
 
@@ -670,8 +701,9 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
   if (pool.daysUntilSpringBreak !== null) {
     raw.push({ key: 'daysUntilSpringBreak', value: String(pool.daysUntilSpringBreak), label: 'Days Until Spring Break', score: 22 + nearRecency(pool.daysUntilSpringBreak) })
   }
-  if (pool.longestBreak) {
-    raw.push({ key: 'longestBreak', value: `${pool.longestBreak.days} days`, label: 'Longest Break', score: 70 })
+  if (pool.secondSemStart) {
+    const fmt = (d: string) => new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+    raw.push({ key: 'secondSemStart', value: fmt(pool.secondSemStart), label: 'Semester 2 Begins', score: 72 })
   }
   raw.push({ key: 'holidayCount', value: String(pool.holidayCount), label: 'Holidays & No-School Days', score: 65 })
   // instructionWeeks omitted — low user value; Teacher Workdays slot fills instead
@@ -689,15 +721,19 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
     const x = pool.startDiffNearest
     raw.push({
       key: 'startDiffNearest',
-      value: x.direction === 'same' ? 'Same day' : `${x.days}d ${x.direction}`,
-      label: `Start vs. ${x.vsName}`,
+      value: x.direction === 'same' ? `Same as ${x.vsName}` : `${x.days}d ${x.direction} than ${x.vsName}`,
+      label: 'School Start',
       score: 60,
     })
   }
   if (pool.teacherWorkDays !== null) {
-    raw.push({ key: 'teacherWorkDays', value: String(pool.teacherWorkDays), label: 'Teacher Workdays', score: 55 })
+    raw.push({ key: 'teacherWorkDays', value: String(pool.teacherWorkDays), label: 'Teacher Workdays', score: 42 })
   }
-  raw.push({ key: 'breakCount', value: String(pool.breakCount), label: 'Major Breaks', score: 50 })
+  if (pool.winterBreakLength !== null) {
+    raw.push({ key: 'winterBreakDays', value: `${pool.winterBreakLength} days`, label: 'Winter Break', score: 58 })
+  } else {
+    raw.push({ key: 'breakCount', value: String(pool.breakCount), label: 'Major Breaks', score: 50 })
+  }
   if (pool.lastDayDiffNearest) {
     const x = pool.lastDayDiffNearest
     raw.push({
@@ -745,30 +781,19 @@ function scoreYearNumbers(
   const mandatory: NumberCard = {
     key: 'schoolWeeks',
     label: 'School year',
-    value: pool.schoolWeeks,
-    unit: 'weeks',
-    description: `The ${currentYearVal} year runs ${fmtShort(pool.firstDay)} through ${fmtShort(pool.lastDay)}, spanning ${pool.schoolWeeks} weeks.`,
+    value: pool.instructionalDays,
+    unit: 'instructional days',
+    description: pool.secondSemStart
+      ? `${fmtShort(pool.firstDay)} – ${fmtShort(pool.lastDay)} · Semester 2 begins ${fmtShort(pool.secondSemStart)}.`
+      : `The ${currentYearVal} year runs ${fmtShort(pool.firstDay)} through ${fmtShort(pool.lastDay)}, spanning ${pool.schoolWeeks} weeks.`,
   }
 
   type ScoredCard = NumberCard & { score: number }
   const candidates: ScoredCard[] = []
 
-  if (pool.longestInstructionalStretch) {
-    const ls = pool.longestInstructionalStretch
-    const bonus = ls.weeks > 8 ? 10 : 0
-    candidates.push({
-      key: 'longestInstructionalStretch',
-      label: 'Longest school stretch',
-      value: ls.weeks,
-      unit: 'weeks (approx.)',
-      description: `The longest stretch without a student day off runs ${ls.weeks} weeks — ${fmtShort(ls.start)} through ${fmtShort(ls.end)}.`,
-      score: 85 + bonus,
-    })
-  }
-
   if (pool.winterBreakLength !== null && pool.winterBreakStart && pool.winterBreakEnd) {
     const bonus = pool.winterBreakLength > 14 ? 10 : 0
-    const penalty = selectedQuickFactKeys.has('longestBreak') ? -30 : 0
+    const penalty = 0
     candidates.push({
       key: 'winterBreakLength',
       label: 'Winter break',
@@ -784,7 +809,9 @@ function scoreYearNumbers(
     label: 'Student days off',
     value: pool.totalDaysOff,
     unit: 'days',
-    description: `${pool.totalDaysOff} weekdays off in total: ${pool.holidayCount} individual holidays and no-school days, plus all weekdays within holiday breaks (Thanksgiving, Winter, Spring, etc.).`,
+    description: pool.breakdownText
+      ? `${pool.totalDaysOff} student weekdays off — ${pool.breakdownText}.`
+      : `${pool.totalDaysOff} weekdays off in total, including all breaks and individual holidays.`,
     score: 75,
   })
 
@@ -887,6 +914,58 @@ const yearNumberCards = computed((): NumberCard[] => {
   if (!metricPool.value || !district.value) return []
   return scoreYearNumbers(metricPool.value, quickFactKeys.value, district.value, district.value.currentSchoolYear ?? '', formatShortDate)
 })
+
+// ── Year-over-year diff ─────────────────────────────────────────────────────
+function computeYearDiff(curCal: any, prevCalData: any, prevYearStr: string): string[] {
+  if (!prevCalData) return []
+  const items: string[] = []
+
+  // Compare MM-DD only — avoids ~364-day error when comparing dates across different school years
+  const mmddDiff = (a: string, b: string) =>
+    Math.round(
+      (new Date(`2000-${a.slice(5)}T00:00:00`).getTime() - new Date(`2000-${b.slice(5)}T00:00:00`).getTime()) / 86400000
+    )
+
+  // First day
+  const sd = mmddDiff(curCal.firstDay, prevCalData.firstDay)
+  if (sd === 0) items.push(`First day of school is unchanged (${formatShortDate(curCal.firstDay)}).`)
+  else if (sd > 0) items.push(`First day of school is ${sd} day${sd !== 1 ? 's' : ''} later than ${prevYearStr} (${formatShortDate(curCal.firstDay)}).`)
+  else items.push(`First day of school is ${Math.abs(sd)} day${Math.abs(sd) !== 1 ? 's' : ''} earlier than ${prevYearStr} (${formatShortDate(curCal.firstDay)}).`)
+
+  // Last day
+  const ed = mmddDiff(curCal.lastDay, prevCalData.lastDay)
+  if (ed === 0) items.push(`Last day of school is unchanged (${formatShortDate(curCal.lastDay)}).`)
+  else if (ed > 0) items.push(`Last day of school is ${ed} day${ed !== 1 ? 's' : ''} later (${formatShortDate(curCal.lastDay)}).`)
+  else items.push(`Last day of school is ${Math.abs(ed)} day${Math.abs(ed) !== 1 ? 's' : ''} earlier (${formatShortDate(curCal.lastDay)}).`)
+
+  // Spring break (MM-DD comparison only)
+  const curSp = getBreaks(curCal.events).find((b: any) => b.name.toLowerCase().includes('spring'))
+  const prevSp = getBreaks(prevCalData.events).find((b: any) => b.name.toLowerCase().includes('spring'))
+  if (curSp && prevSp) {
+    const diff = Math.round(
+      (new Date(`2000-${curSp.start.slice(5)}T00:00:00`).getTime() - new Date(`2000-${prevSp.start.slice(5)}T00:00:00`).getTime()) / 86400000
+    )
+    if (diff === 0) items.push(`Spring Break starts on the same date as ${prevYearStr} (${formatShortDate(curSp.start)}).`)
+    else if (diff > 0) items.push(`Spring Break starts ${diff} day${diff !== 1 ? 's' : ''} later than ${prevYearStr} (${formatShortDate(curSp.start)}).`)
+    else items.push(`Spring Break starts ${Math.abs(diff)} day${Math.abs(diff) !== 1 ? 's' : ''} earlier than ${prevYearStr} (${formatShortDate(curSp.start)}).`)
+  }
+
+  // Thanksgiving break length
+  const curTh = getBreaks(curCal.events).find((b: any) => b.name.toLowerCase().includes('thanksgiving'))
+  const prevTh = getBreaks(prevCalData.events).find((b: any) => b.name.toLowerCase().includes('thanksgiving'))
+  if (curTh && prevTh) {
+    const ld = curTh.days - prevTh.days
+    if (ld === 0) items.push(`Thanksgiving Break is ${curTh.days} days — same as ${prevYearStr}.`)
+    else if (ld > 0) items.push(`Thanksgiving Break is ${ld} day${ld !== 1 ? 's' : ''} longer this year (${curTh.days} days total).`)
+    else items.push(`Thanksgiving Break is ${Math.abs(ld)} day${Math.abs(ld) !== 1 ? 's' : ''} shorter this year (${curTh.days} days total).`)
+  }
+
+  return items
+}
+
+const yearDiffItems = computed(() =>
+  cal && prevCal.value ? computeYearDiff(cal, prevCal.value, prevYear.value) : []
+)
 
 // ── Nearby district comparison stats ───────────────────────────────────────
 type ComparisonEntry = {
@@ -1314,8 +1393,9 @@ if (!isStatePage && district.value) {
           <!-- Featured snippet: direct answer for search intent -->
           <p v-if="calendarSummary" class="mt-3 text-sm text-gray-700 leading-relaxed">{{ calendarSummary }}</p>
           <p class="mt-1 text-sm text-gray-500">
-            {{ cal.totalSchoolDays ?? 180 }} instructional days · {{ cal.semesters ?? 2 }} semesters
+            {{ cal.totalSchoolDays ?? 180 }} instructional days
             <span v-if="secondSemStart"> · Second semester begins {{ formatShortDate(secondSemStart) }}</span>
+            <span v-if="metricPool?.totalDaysOff"> · {{ metricPool.totalDaysOff }} student weekdays off</span>
           </p>
           <!-- Verification badge -->
           <div class="mt-3 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full"
@@ -1329,7 +1409,7 @@ if (!isStatePage && district.value) {
             <svg v-else class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
             </svg>
-            <span v-if="!isEstimated">Manually verified against the official district calendar · Last reviewed {{ verifiedDate }}</span>
+            <span v-if="!isEstimated">Manually verified by our editorial team · Last reviewed {{ verifiedDate }}</span>
             <span v-else>Based on official district website · Not yet human-verified</span>
           </div>
         </div>
@@ -1438,11 +1518,14 @@ if (!isStatePage && district.value) {
             <span v-if="!isEstimated" class="ml-1 text-green-600 font-medium">· Last reviewed {{ verifiedDate }}</span>
             <span v-else class="ml-1 text-gray-400">· Not yet verified against official source</span>
           </div>
-          <p class="text-xs text-gray-400 mt-1.5">Counts include listed weekday student no-school dates between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instruction weeks are estimated from total school days ÷ 5.</p>
+          <p class="text-xs text-gray-400 mt-1.5">Counts include listed weekday student no-school dates between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instructional weeks are approximate.</p>
         </div>
 
         <!-- Year by the Numbers -->
         <DistrictYearNumbers :cards="yearNumberCards" />
+
+        <!-- What's Different This Year -->
+        <DistrictYearDiff :current-year="currentYear" :prev-year="prevYear" :items="yearDiffItems" />
 
         <!-- Year Switcher -->
         <div v-if="archivedYears.length" class="flex items-center gap-2 flex-wrap">
@@ -1657,7 +1740,7 @@ if (!isStatePage && district.value) {
           <h2 class="text-sm font-semibold text-gray-700 mb-2">Sources and Verification</h2>
           <p class="text-sm text-gray-600 mb-3">
             Calendar dates are based on {{ district.name }}'s official {{ currentYear }} calendar.
-            <template v-if="!isEstimated"> Last reviewed {{ verifiedDate }}.</template>
+            <template v-if="!isEstimated"> Reviewed by our editorial team on {{ verifiedDate }}.</template>
             <template v-else> Not yet independently reviewed against the official source.</template>
           </p>
           <ul class="space-y-1.5 mb-3">
@@ -1669,9 +1752,11 @@ if (!isStatePage && district.value) {
               <span v-else>{{ src.label }}</span>
             </li>
           </ul>
-          <p class="text-xs text-gray-500 pt-3 border-t border-gray-200">
-            Supplemental planning notes and district profile information may change by year. Families should confirm program deadlines, transportation notices, and emergency schedule updates directly with {{ (district as any).shortName || district.name }}.
-          </p>
+          <div class="text-xs text-gray-500 pt-3 border-t border-gray-200 space-y-1.5">
+            <p class="font-medium text-gray-600">How we collect and verify this data</p>
+            <p>Each school year, our editorial team downloads the official calendar PDF published on the district's website. We use AI to extract key dates and events from the source document, then manually cross-check every date against the original PDF before publishing. Any discrepancy between the AI output and the official document is corrected by hand.</p>
+            <p>Supplemental planning notes and district profile information may change by year. Families should confirm program deadlines, transportation notices, and emergency schedule updates directly with {{ (district as any).shortName || district.name }}.</p>
+          </div>
         </div>
 
         <!-- Data quality notice -->
@@ -1698,7 +1783,7 @@ if (!isStatePage && district.value) {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <div class="text-sm text-green-700 space-y-1">
-              <p class="font-medium">Manually verified against the official district calendar</p>
+              <p class="font-medium">Manually verified by our editorial team against the official district calendar</p>
               <p>
                 Dates sourced directly from the
                 <a :href="cal.sourceUrl ?? district.calendarPage ?? district.officialWebsite" target="_blank" rel="nofollow noopener" class="underline font-medium">official {{ district.shortName || district.name }} calendar</a>.
