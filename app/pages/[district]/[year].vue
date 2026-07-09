@@ -702,10 +702,28 @@ const comparisonInsight = computed((): string => {
   return `${sn(current.name)} starts ${parts.join(' and ')}.`
 })
 
+const _dn = district.value.name
+const _fd = formatShortDate(cal.value.firstDay)
+const _ld = formatShortDate(cal.value.lastDay)
+const _hasSpring = breaks.value.some(b => b.name.toLowerCase().includes('spring'))
+const _descTemplates = [
+  // A — feature-forward
+  `View the ${_dn} school calendar for ${year} with first day ${_fd}, holidays, winter break${_hasSpring ? ', spring break' : ''} and verified dates. Add to Google Calendar.`,
+  // B — official/verified
+  `Official ${_dn} school calendar ${year}. First day ${_fd}, last day ${_ld}. Verified from the district calendar. Download for Google Calendar or iCal.`,
+  // C — user benefit
+  `Never miss a school holiday. ${_dn} ${year} school calendar with all key dates and breaks. First day ${_fd}. Add to your Google Calendar in one click.`,
+  // D — ICS/sync
+  `${_dn} ${year}: download the school calendar with first day, spring break, and all holidays. Works with Google Calendar, iCal, and Outlook.`,
+  // E — verified dates
+  `Verified ${_dn} ${year} school calendar — first day ${_fd}, last day ${_ld}${_hasSpring ? ', spring break' : ''} and all official school holidays.`,
+]
+const _pageDesc = _descTemplates[simpleHash(district.value.slug + year) % _descTemplates.length]
+
 useSeoMeta({
-  title: `${district.value.name} Calendar ${year} · Holidays, Breaks & Key Dates | MySchoolDates`,
-  description: `${district.value.name} academic calendar ${year}. First day ${formatShortDate(cal.value.firstDay)}, last day ${formatShortDate(cal.value.lastDay)}. All holidays, breaks, and important dates.`,
-  ogTitle: `${district.value.name} Calendar ${year} · Holidays, Breaks & Key Dates`,
+  title: `${_dn} Calendar ${year}`,
+  description: _pageDesc,
+  ogTitle: `${_dn} Calendar ${year}`,
   ogUrl: canonicalUrl,
 })
 
@@ -733,20 +751,12 @@ const keyEvents = [
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     organizer: orgRef, location: { '@type': 'Place', name: district.value.name, address: orgAddress },
   },
-  ...breaks.value.map(b => ({
-    '@context': 'https://schema.org', '@type': 'Event',
-    name: `${b.name} — ${district.value!.name} ${year}`,
-    startDate: b.start, endDate: b.end,
-    eventStatus: 'https://schema.org/EventScheduled',
-    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    organizer: orgRef, location: { '@type': 'Place', name: district.value!.name, address: orgAddress },
-  })),
-  ...cal.value.events
-    .filter(e => e.type === 'holiday' || e.type === 'no_school')
-    .map(e => ({
+  ...breaks.value
+    .filter(b => ['thanksgiving', 'winter', 'christmas', 'spring'].some(kw => b.name.toLowerCase().includes(kw)))
+    .map(b => ({
       '@context': 'https://schema.org', '@type': 'Event',
-      name: `${e.name} — ${district.value!.name} ${year}`,
-      startDate: e.date, endDate: e.date,
+      name: `${b.name} — ${district.value!.name} ${year}`,
+      startDate: b.start, endDate: b.end,
       eventStatus: 'https://schema.org/EventScheduled',
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
       organizer: orgRef, location: { '@type': 'Place', name: district.value!.name, address: orgAddress },

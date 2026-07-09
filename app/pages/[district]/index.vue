@@ -1056,11 +1056,31 @@ const dateLegend = [
 
 if (!isStatePage && district.value) {
   const canonicalUrl = `https://myschooldates.com/${slug}`
+  const _dn = meta.value!.name
+  const _slug = meta.value!.slug
+  const _fd = cal ? formatShortDate(cal.firstDay) : ''
+  const _ld = cal ? formatShortDate(cal.lastDay) : ''
+  const _hasSpring = breaks.value.some((b: any) => b.name.toLowerCase().includes('spring'))
+  const _descTemplates = [
+    // A — feature-forward
+    `View the ${_dn} school calendar for ${currentYear} with first day ${_fd}, holidays, winter break${_hasSpring ? ', spring break' : ''} and verified dates. Add to Google Calendar.`,
+    // B — official/verified
+    `Official ${_dn} school calendar ${currentYear}. First day ${_fd}, last day ${_ld}. Verified from the district calendar. Download for Google Calendar or iCal.`,
+    // C — user benefit
+    `Never miss a school holiday. ${_dn} ${currentYear} school calendar with all key dates and breaks. First day ${_fd}. Add to your Google Calendar in one click.`,
+    // D — ICS/sync
+    `${_dn} ${currentYear}: download the school calendar with first day, spring break, and all holidays. Works with Google Calendar, iCal, and Outlook.`,
+    // E — verified dates
+    `Verified ${_dn} ${currentYear} school calendar — first day ${_fd}, last day ${_ld}${_hasSpring ? ', spring break' : ''} and all official school holidays.`,
+  ]
+  const _idxDesc = cal
+    ? _descTemplates[simpleHash(_slug + currentYear) % _descTemplates.length]
+    : `${_dn} ${currentYear} school calendar with all holidays, breaks, and key dates.`
   useSeoMeta({
-    title: `${meta.value!.name} Calendar ${currentYear} · Holidays, Breaks & Key Dates | MySchoolDates`,
-    description: `${meta.value!.name} academic calendar ${currentYear}. First day of school ${formatShortDate(cal!.firstDay)}, last day ${formatShortDate(cal!.lastDay)}. View all holidays, spring break, and important dates for ${meta.value!.state} public schools.`,
-    ogTitle: `${meta.value!.name} Calendar ${currentYear} · Holidays, Breaks & Key Dates`,
-    ogDescription: `Complete ${currentYear} school calendar for ${meta.value!.name}. All holidays, breaks, and key dates.`,
+    title: `${_dn} Calendar ${currentYear}`,
+    description: _idxDesc,
+    ogTitle: `${_dn} Calendar ${currentYear}`,
+    ogDescription: _idxDesc,
     ogUrl: canonicalUrl,
   })
 
@@ -1089,24 +1109,16 @@ if (!isStatePage && district.value) {
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
       organizer: orgRef, location: { '@type': 'Place', name: meta.value!.name, address: orgAddress },
     }] : []),
-    ...breaks.value.map(b => ({
-      '@context': 'https://schema.org', '@type': 'Event',
-      name: `${b.name} — ${meta.value!.name} ${currentYear}`,
-      startDate: b.start, endDate: b.end,
-      eventStatus: 'https://schema.org/EventScheduled',
-      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-      organizer: orgRef, location: { '@type': 'Place', name: meta.value!.name, address: orgAddress },
-    })),
-    ...((cal?.events ?? [])
-      .filter((e: any) => e.type === 'holiday' || e.type === 'no_school')
-      .map((e: any) => ({
+    ...breaks.value
+      .filter((b: any) => ['thanksgiving', 'winter', 'christmas', 'spring'].some(kw => b.name.toLowerCase().includes(kw)))
+      .map((b: any) => ({
         '@context': 'https://schema.org', '@type': 'Event',
-        name: `${e.name} — ${meta.value!.name} ${currentYear}`,
-        startDate: e.date, endDate: e.date,
+        name: `${b.name} — ${meta.value!.name} ${currentYear}`,
+        startDate: b.start, endDate: b.end,
         eventStatus: 'https://schema.org/EventScheduled',
         eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
         organizer: orgRef, location: { '@type': 'Place', name: meta.value!.name, address: orgAddress },
-      }))),
+      })),
   ] : []
 
   useHead({
