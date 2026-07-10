@@ -710,38 +710,17 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
   if (pool.daysUntilWinterBreak !== null) {
     raw.push({ key: 'daysUntilWinterBreak', value: String(pool.daysUntilWinterBreak), label: 'Days Until Winter Break', score: 22 + nearRecency(pool.daysUntilWinterBreak) })
   }
-  if (pool.daysBeforeLaborDay !== null) {
-    raw.push({ key: 'daysBeforeLaborDay', value: String(pool.daysBeforeLaborDay), label: 'Days Before Labor Day', score: 35 })
-  }
   if (pool.nextHoliday) {
     const x = pool.nextHoliday
     raw.push({ key: 'nextHoliday', value: fmt(x.date), label: x.name, score: 60 + recency(x.daysUntil) })
-  }
-  if (pool.startDiffNearest && pool.startDiffNearest.direction !== 'same') {
-    const x = pool.startDiffNearest
-    raw.push({
-      key: 'startDiffNearest',
-      value: `${x.days}d ${x.direction} than ${x.vsName}`,
-      label: 'School Start',
-      score: 60,
-    })
   }
   if (pool.teacherWorkDays !== null) {
     raw.push({ key: 'teacherWorkDays', value: String(pool.teacherWorkDays), label: 'Teacher Workdays', score: 42 })
   }
   if (pool.winterBreakLength !== null) {
-    raw.push({ key: 'winterBreakDays', value: `${pool.winterBreakLength} days`, label: 'Winter Break', score: 58 })
+    raw.push({ key: 'winterBreakDays', value: `${pool.winterBreakLength} days`, label: 'Winter Break', score: 20 })
   } else {
     raw.push({ key: 'breakCount', value: String(pool.breakCount), label: 'Major Breaks', score: 50 })
-  }
-  if (pool.lastDayDiffNearest) {
-    const x = pool.lastDayDiffNearest
-    raw.push({
-      key: 'lastDayDiffNearest',
-      value: x.direction === 'same' ? 'Same day' : `${x.days}d ${x.direction}`,
-      label: `Last Day vs. ${x.vsName}`,
-      score: 45,
-    })
   }
 
   // Redundancy penalties
@@ -815,28 +794,28 @@ function scoreYearNumbers(
     score: 75,
   })
 
-  if (pool.springBreakVsPrevYear && pool.springBreakDiffDays !== null && pool.springBreakDiffDays !== 0) {
-    const absDiff = Math.abs(pool.springBreakDiffDays)
-    const direction = pool.springBreakDiffDays > 0 ? 'later' : pool.springBreakDiffDays < 0 ? 'earlier' : 'same'
+  if (pool.teacherWorkDays !== null) {
+    const planDays = pool.teacherWorkDays - pool.instructionalDays
     candidates.push({
-      key: 'springBreakVsPrevYear',
-      label: 'Spring break shift',
-      value: absDiff,
-      unit: `day${absDiff !== 1 ? 's' : ''} ${direction}`,
-      description: pool.springBreakVsPrevYear,
+      key: 'teacherWorkDays',
+      label: 'Teacher workdays',
+      value: pool.teacherWorkDays,
+      unit: 'days',
+      description: planDays > 0
+        ? `${pool.instructionalDays} student days plus ${planDays} additional planning and professional development days.`
+        : `${pool.teacherWorkDays} days on campus, matching the student instructional calendar.`,
       score: 70,
     })
+  } else {
+    candidates.push({
+      key: 'instructionalDays',
+      label: 'Instructional days',
+      value: pool.instructionalDays,
+      unit: 'days',
+      description: `${shortName} schedules ${pool.instructionalDays} instructional days for ${currentYearVal}, consistent with state calendar requirements.`,
+      score: 30,
+    })
   }
-
-  // instructionalDays — evergreen fallback, raised above spring break shift when both compete
-  candidates.push({
-    key: 'instructionalDays',
-    label: 'Instructional days',
-    value: pool.instructionalDays,
-    unit: 'days',
-    description: `${shortName} schedules ${pool.instructionalDays} instructional days for ${currentYearVal}, consistent with state calendar requirements.`,
-    score: 65,
-  })
 
   candidates.sort((a, b) => b.score - a.score)
   const top3 = candidates.slice(0, 3).map(({ score: _score, ...c }) => c)
@@ -928,15 +907,15 @@ function computeYearDiff(curCal: any, prevCalData: any, prevYearStr: string): st
 
   // First day
   const sd = mmddDiff(curCal.firstDay, prevCalData.firstDay)
-  if (sd === 0) items.push(`First day of school is unchanged from ${prevYearStr} (${formatShortDate(curCal.firstDay)}).`)
-  else if (sd > 0) items.push(`School starts ${sd} day${sd !== 1 ? 's' : ''} later than ${prevYearStr} (${formatShortDate(curCal.firstDay)}), giving students a slightly shorter fall semester.`)
-  else items.push(`School starts ${Math.abs(sd)} day${Math.abs(sd) !== 1 ? 's' : ''} earlier than ${prevYearStr} (${formatShortDate(curCal.firstDay)}), giving students a slightly longer fall semester before the Thanksgiving break.`)
+  if (sd === 0) items.push(`First day of school is unchanged from ${prevYearStr} — ${formatShortDate(curCal.firstDay)}.`)
+  else if (sd > 0) items.push(`School starts ${sd} day${sd !== 1 ? 's' : ''} later than ${prevYearStr} — ${formatShortDate(curCal.firstDay)}.`)
+  else items.push(`School starts ${Math.abs(sd)} day${Math.abs(sd) !== 1 ? 's' : ''} earlier than ${prevYearStr} — ${formatShortDate(curCal.firstDay)}.`)
 
   // Last day
   const ed = mmddDiff(curCal.lastDay, prevCalData.lastDay)
-  if (ed === 0) items.push(`Last day of school is unchanged from ${prevYearStr} (${formatShortDate(curCal.lastDay)}).`)
-  else if (ed > 0) items.push(`The school year ends ${ed} day${ed !== 1 ? 's' : ''} later than ${prevYearStr} (${formatShortDate(curCal.lastDay)}) — plan early-summer travel accordingly.`)
-  else items.push(`The school year ends ${Math.abs(ed)} day${Math.abs(ed) !== 1 ? 's' : ''} earlier than ${prevYearStr} (${formatShortDate(curCal.lastDay)}) — summer break starts a little sooner.`)
+  if (ed === 0) items.push(`Last day of school is unchanged from ${prevYearStr} — ${formatShortDate(curCal.lastDay)}.`)
+  else if (ed > 0) items.push(`Last day of school is ${ed} day${ed !== 1 ? 's' : ''} later than ${prevYearStr} — ${formatShortDate(curCal.lastDay)}.`)
+  else items.push(`Last day of school is ${Math.abs(ed)} day${Math.abs(ed) !== 1 ? 's' : ''} earlier than ${prevYearStr} — ${formatShortDate(curCal.lastDay)}.`)
 
   // Spring break (MM-DD comparison only)
   const curSp = getBreaks(curCal.events).find((b: any) => b.name.toLowerCase().includes('spring'))
@@ -945,9 +924,10 @@ function computeYearDiff(curCal: any, prevCalData: any, prevYearStr: string): st
     const diff = Math.round(
       (new Date(`2000-${curSp.start.slice(5)}T00:00:00`).getTime() - new Date(`2000-${prevSp.start.slice(5)}T00:00:00`).getTime()) / 86400000
     )
-    if (diff === 0) items.push(`Spring Break dates are unchanged from ${prevYearStr} (${formatShortDate(curSp.start)}–${formatShortDate(curSp.end)}).`)
-    else if (diff > 0) items.push(`Spring Break starts ${diff} day${diff !== 1 ? 's' : ''} later this year (${formatShortDate(curSp.start)}–${formatShortDate(curSp.end)}). Families planning trips with students from neighboring districts should confirm those calendars separately.`)
-    else items.push(`Spring Break starts ${Math.abs(diff)} day${Math.abs(diff) !== 1 ? 's' : ''} earlier this year (${formatShortDate(curSp.start)}–${formatShortDate(curSp.end)}). Families planning trips with students from neighboring districts should confirm those calendars separately.`)
+    if (Math.abs(diff) >= 5) {
+      if (diff > 0) items.push(`Spring Break starts ${diff} days later than ${prevYearStr} — ${formatShortDate(curSp.start)}–${formatShortDate(curSp.end)}.`)
+      else items.push(`Spring Break starts ${Math.abs(diff)} days earlier than ${prevYearStr} — ${formatShortDate(curSp.start)}–${formatShortDate(curSp.end)}.`)
+    }
   }
 
   // Thanksgiving break length
@@ -955,17 +935,19 @@ function computeYearDiff(curCal: any, prevCalData: any, prevYearStr: string): st
   const prevTh = getBreaks(prevCalData.events).find((b: any) => b.name.toLowerCase().includes('thanksgiving'))
   if (curTh && prevTh) {
     const ld = curTh.days - prevTh.days
-    if (ld === 0) items.push(`Thanksgiving Break is ${curTh.days} days — same length as ${prevYearStr}.`)
-    else if (ld > 0) items.push(`Thanksgiving Break is ${ld} day${ld !== 1 ? 's' : ''} longer this year (${curTh.days} days total), offering more time for holiday travel.`)
-    else items.push(`Thanksgiving Break is ${Math.abs(ld)} day${Math.abs(ld) !== 1 ? 's' : ''} shorter this year (${curTh.days} days total) — book holiday flights early if you're traveling.`)
+    if (ld === 0) items.push(`Thanksgiving Break is ${curTh.days} days — unchanged from ${prevYearStr}.`)
+    else if (ld > 0) items.push(`Thanksgiving Break is ${ld} day${ld !== 1 ? 's' : ''} longer than ${prevYearStr} — ${curTh.days} days total.`)
+    else items.push(`Thanksgiving Break is ${Math.abs(ld)} day${Math.abs(ld) !== 1 ? 's' : ''} shorter than ${prevYearStr} — ${curTh.days} days total.`)
   }
 
   return items
 }
 
-const yearDiffItems = computed(() =>
-  cal && prevCal.value ? computeYearDiff(cal, prevCal.value, prevYear.value) : []
-)
+const yearDiffItems = computed(() => {
+  const base = cal && prevCal.value ? computeYearDiff(cal, prevCal.value, prevYear.value) : []
+  const extra: string[] = (cal as any)?.diffNotes ?? []
+  return [...base, ...extra]
+})
 
 // ── Nearby district comparison stats ───────────────────────────────────────
 type ComparisonEntry = {

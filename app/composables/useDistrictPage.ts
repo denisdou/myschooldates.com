@@ -115,10 +115,10 @@ export function useDistrictPage() {
         a: `To add the ${district.name} ${cal.schoolYear} calendar to Google Calendar, download the .ics file from this page, then open Google Calendar, go to Settings → Import & Export → Import, and upload the file. All school holidays, breaks, and key dates will appear on your calendar automatically.`,
       },
       {
-        q: `Can I plan family travel during Spring Break for ${district.name} in ${cal.schoolYear}?`,
+        q: `When is Spring Break for ${district.name} in ${cal.schoolYear}?`,
         a: springBreak
-          ? `Yes. Spring Break for ${district.name} runs from ${formatShortDate(springBreak.start)} to ${formatShortDate(springBreak.end)} — a ${springBreak.days}-day window. Book travel early, as this is one of the busiest vacation periods of the year for families in the district.`
-          : `Check the calendar above for the spring break dates for ${district.name} in ${cal.schoolYear}. Spring break is one of the most popular family travel periods, so booking early is recommended.`,
+          ? `Spring Break for ${district.name} runs ${formatShortDate(springBreak.start)}–${formatShortDate(springBreak.end)}, a ${springBreak.days}-day break.`
+          : `Spring break dates for ${district.name} ${cal.schoolYear} are listed in the calendar above.`,
       },
       {
         q: `Does ${district.name} have early release days in ${cal.schoolYear}?`,
@@ -126,7 +126,7 @@ export function useDistrictPage() {
       },
       {
         q: `Is this school calendar official and accurate?`,
-        a: `The calendar on this page is based on data sourced from the official ${district.name} website at ${sourceUrl}. ${cal.lastVerifiedAt ? `It was last verified on ${new Date(cal.lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.` : `It has not yet been verified against the current official calendar.`} School districts occasionally adjust dates after publication — always confirm critical dates directly with ${district.name} before making travel or childcare commitments.`,
+        a: `The calendar on this page is sourced from the official ${district.name} website at ${sourceUrl}. ${cal.lastVerifiedAt ? `Last verified ${new Date(cal.lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.` : `Not yet independently verified against the current official calendar.`} Districts occasionally revise published calendars — confirm directly with ${district.name} before making plans.`,
       },
       {
         q: `When does school start for ${district.name} in ${cal.schoolYear}?`,
@@ -145,20 +145,20 @@ export function useDistrictPage() {
       {
         q: `When is spring break ${cal.schoolYear} for ${district.name}?`,
         a: springBreak
-          ? `Spring break for ${district.name} runs from ${formatShortDate(springBreak.start)} to ${formatShortDate(springBreak.end)}, a total of ${springBreak.days} days. Schools reopen the Monday following the break.`
-          : `Spring break dates are listed in the calendar above. Check the official ${district.name} website for the most current schedule.`,
+          ? `Spring break for ${district.name} runs ${formatShortDate(springBreak.start)}–${formatShortDate(springBreak.end)}, ${springBreak.days} days.`
+          : `Spring break dates are listed in the calendar above.`,
       },
       {
         q: `When is winter break ${cal.schoolYear} for ${district.name}?`,
         a: winterBreak
-          ? `Winter break for ${district.name} runs from ${formatShortDate(winterBreak.start)} to ${formatShortDate(winterBreak.end)}, totaling ${winterBreak.days} days. ${secondSemStart ? `Schools reopen on ${formatShortDate(secondSemStart)}.` : 'Schools reopen in early January.'}`
-          : `Winter break dates are listed in the calendar above. Schools typically close in late December and reopen in early January.`,
+          ? `Winter break for ${district.name} runs ${formatShortDate(winterBreak.start)}–${formatShortDate(winterBreak.end)}, ${winterBreak.days} days.${secondSemStart ? ` School resumes ${formatShortDate(secondSemStart)}.` : ''}`
+          : `Winter break dates are listed in the calendar above.`,
       },
       {
         q: `How long is Thanksgiving break for ${district.name} in ${cal.schoolYear}?`,
         a: thanksgivingBreak
-          ? `Thanksgiving break for ${district.name} in ${cal.schoolYear} runs from ${formatShortDate(thanksgivingBreak.start)} to ${formatShortDate(thanksgivingBreak.end)}, giving students ${thanksgivingBreak.days} days off. Schools reopen the Monday after Thanksgiving week.`
-          : `Thanksgiving break typically covers the Wednesday through Friday surrounding Thanksgiving. Check the official ${district.name} calendar for exact dates.`,
+          ? `Thanksgiving break for ${district.name} runs ${formatShortDate(thanksgivingBreak.start)}–${formatShortDate(thanksgivingBreak.end)}, ${thanksgivingBreak.days} days.`
+          : `Thanksgiving break dates are listed in the calendar above.`,
       },
       {
         q: `How many school days are in the ${cal.schoolYear} school year for ${district.name}?`,
