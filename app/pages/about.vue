@@ -33,12 +33,13 @@ useHead({
     </section>
 
     <section class="mb-10">
-      <h2 class="text-xl font-semibold text-gray-900 mb-3">How We Collect Data</h2>
+      <h2 class="text-xl font-semibold text-gray-900 mb-3">How We Collect and Verify Data</h2>
       <p class="text-gray-600 leading-relaxed mb-3">
-        Every calendar on MySchoolDates is sourced directly from official public school district websites. We research each district's published academic calendar — whether it's a PDF, an HTML page, or an iCal feed — and extract the key dates manually and with automated tooling.
+        Every calendar on MySchoolDates is sourced directly from official public school district websites — typically the PDF calendar published by the district each year. We use AI to extract key dates from source documents, then manually cross-check every date against the original PDF before publishing. The source URL is linked on every district page.
       </p>
       <p class="text-gray-600 leading-relaxed">
-        We link back to the original district source on every page so you can always verify dates yourself. When districts publish updates mid-year, we update our records accordingly.
+        When districts issue mid-year revisions, we update our records and refresh the "Last reviewed" date shown on each page.
+        See our <NuxtLink to="/editorial-policy" class="text-blue-600 hover:underline">Editorial Policy</NuxtLink> for the full details on our verification process.
       </p>
     </section>
 
@@ -56,12 +57,25 @@ useHead({
       </p>
     </section>
 
-    <section>
+    <section class="mb-10">
       <h2 class="text-xl font-semibold text-gray-900 mb-3">Contact</h2>
       <p class="text-gray-600 leading-relaxed">
-        Have a question, found an error, or want to request a district? Reach us at
+        Have a question or want to request a district? Reach us at
         <a href="mailto:hello@myschooldates.com" class="text-blue-600 hover:underline">hello@myschooldates.com</a>.
       </p>
+    </section>
+
+    <section class="bg-amber-50 border border-amber-200 rounded-xl p-6">
+      <h2 class="text-xl font-semibold text-gray-900 mb-2">Found an Error?</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        Calendar dates can change after initial publication. If you spot an incorrect date or a missing update, please let us know — we review all corrections and aim to respond within 48 hours.
+      </p>
+      <a
+        href="mailto:hello@myschooldates.com?subject=Calendar%20Correction"
+        class="inline-flex items-center gap-2 text-sm font-medium text-amber-800 border border-amber-300 bg-white px-4 py-2 rounded-lg hover:bg-amber-100 transition-colors"
+      >
+        Report a Calendar Error →
+      </a>
     </section>
   </div>
 </template>

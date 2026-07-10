@@ -94,7 +94,6 @@ export default defineNuxtConfig({
 
         '/long-beach-unified-school-district-calendar/2025-2026',
         '/long-beach-unified-school-district-calendar/2026-2027',
-        '/long-beach-unified-school-district-calendar/2027-2028',
 
         '/los-angeles-unified-school-district-calendar/2025-2026',
         '/los-angeles-unified-school-district-calendar/2026-2027',
