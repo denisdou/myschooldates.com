@@ -717,11 +717,11 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
     const x = pool.nextHoliday
     raw.push({ key: 'nextHoliday', value: fmt(x.date), label: x.name, score: 60 + recency(x.daysUntil) })
   }
-  if (pool.startDiffNearest) {
+  if (pool.startDiffNearest && pool.startDiffNearest.direction !== 'same') {
     const x = pool.startDiffNearest
     raw.push({
       key: 'startDiffNearest',
-      value: x.direction === 'same' ? `Same as ${x.vsName}` : `${x.days}d ${x.direction} than ${x.vsName}`,
+      value: `${x.days}d ${x.direction} than ${x.vsName}`,
       label: 'School Start',
       score: 60,
     })
@@ -928,15 +928,15 @@ function computeYearDiff(curCal: any, prevCalData: any, prevYearStr: string): st
 
   // First day
   const sd = mmddDiff(curCal.firstDay, prevCalData.firstDay)
-  if (sd === 0) items.push(`First day of school is unchanged (${formatShortDate(curCal.firstDay)}).`)
-  else if (sd > 0) items.push(`First day of school is ${sd} day${sd !== 1 ? 's' : ''} later than ${prevYearStr} (${formatShortDate(curCal.firstDay)}).`)
-  else items.push(`First day of school is ${Math.abs(sd)} day${Math.abs(sd) !== 1 ? 's' : ''} earlier than ${prevYearStr} (${formatShortDate(curCal.firstDay)}).`)
+  if (sd === 0) items.push(`First day of school is unchanged from ${prevYearStr} (${formatShortDate(curCal.firstDay)}).`)
+  else if (sd > 0) items.push(`School starts ${sd} day${sd !== 1 ? 's' : ''} later than ${prevYearStr} (${formatShortDate(curCal.firstDay)}), giving students a slightly shorter fall semester.`)
+  else items.push(`School starts ${Math.abs(sd)} day${Math.abs(sd) !== 1 ? 's' : ''} earlier than ${prevYearStr} (${formatShortDate(curCal.firstDay)}), giving students a slightly longer fall semester before the Thanksgiving break.`)
 
   // Last day
   const ed = mmddDiff(curCal.lastDay, prevCalData.lastDay)
-  if (ed === 0) items.push(`Last day of school is unchanged (${formatShortDate(curCal.lastDay)}).`)
-  else if (ed > 0) items.push(`Last day of school is ${ed} day${ed !== 1 ? 's' : ''} later (${formatShortDate(curCal.lastDay)}).`)
-  else items.push(`Last day of school is ${Math.abs(ed)} day${Math.abs(ed) !== 1 ? 's' : ''} earlier (${formatShortDate(curCal.lastDay)}).`)
+  if (ed === 0) items.push(`Last day of school is unchanged from ${prevYearStr} (${formatShortDate(curCal.lastDay)}).`)
+  else if (ed > 0) items.push(`The school year ends ${ed} day${ed !== 1 ? 's' : ''} later than ${prevYearStr} (${formatShortDate(curCal.lastDay)}) — plan early-summer travel accordingly.`)
+  else items.push(`The school year ends ${Math.abs(ed)} day${Math.abs(ed) !== 1 ? 's' : ''} earlier than ${prevYearStr} (${formatShortDate(curCal.lastDay)}) — summer break starts a little sooner.`)
 
   // Spring break (MM-DD comparison only)
   const curSp = getBreaks(curCal.events).find((b: any) => b.name.toLowerCase().includes('spring'))
@@ -945,9 +945,9 @@ function computeYearDiff(curCal: any, prevCalData: any, prevYearStr: string): st
     const diff = Math.round(
       (new Date(`2000-${curSp.start.slice(5)}T00:00:00`).getTime() - new Date(`2000-${prevSp.start.slice(5)}T00:00:00`).getTime()) / 86400000
     )
-    if (diff === 0) items.push(`Spring Break starts on the same date as ${prevYearStr} (${formatShortDate(curSp.start)}).`)
-    else if (diff > 0) items.push(`Spring Break starts ${diff} day${diff !== 1 ? 's' : ''} later than ${prevYearStr} (${formatShortDate(curSp.start)}).`)
-    else items.push(`Spring Break starts ${Math.abs(diff)} day${Math.abs(diff) !== 1 ? 's' : ''} earlier than ${prevYearStr} (${formatShortDate(curSp.start)}).`)
+    if (diff === 0) items.push(`Spring Break dates are unchanged from ${prevYearStr} (${formatShortDate(curSp.start)}–${formatShortDate(curSp.end)}).`)
+    else if (diff > 0) items.push(`Spring Break starts ${diff} day${diff !== 1 ? 's' : ''} later this year (${formatShortDate(curSp.start)}–${formatShortDate(curSp.end)}). Families planning trips with students from neighboring districts should confirm those calendars separately.`)
+    else items.push(`Spring Break starts ${Math.abs(diff)} day${Math.abs(diff) !== 1 ? 's' : ''} earlier this year (${formatShortDate(curSp.start)}–${formatShortDate(curSp.end)}). Families planning trips with students from neighboring districts should confirm those calendars separately.`)
   }
 
   // Thanksgiving break length
@@ -955,9 +955,9 @@ function computeYearDiff(curCal: any, prevCalData: any, prevYearStr: string): st
   const prevTh = getBreaks(prevCalData.events).find((b: any) => b.name.toLowerCase().includes('thanksgiving'))
   if (curTh && prevTh) {
     const ld = curTh.days - prevTh.days
-    if (ld === 0) items.push(`Thanksgiving Break is ${curTh.days} days — same as ${prevYearStr}.`)
-    else if (ld > 0) items.push(`Thanksgiving Break is ${ld} day${ld !== 1 ? 's' : ''} longer this year (${curTh.days} days total).`)
-    else items.push(`Thanksgiving Break is ${Math.abs(ld)} day${Math.abs(ld) !== 1 ? 's' : ''} shorter this year (${curTh.days} days total).`)
+    if (ld === 0) items.push(`Thanksgiving Break is ${curTh.days} days — same length as ${prevYearStr}.`)
+    else if (ld > 0) items.push(`Thanksgiving Break is ${ld} day${ld !== 1 ? 's' : ''} longer this year (${curTh.days} days total), offering more time for holiday travel.`)
+    else items.push(`Thanksgiving Break is ${Math.abs(ld)} day${Math.abs(ld) !== 1 ? 's' : ''} shorter this year (${curTh.days} days total) — book holiday flights early if you're traveling.`)
   }
 
   return items
@@ -1057,29 +1057,31 @@ const dateLegend = [
 if (!isStatePage && district.value) {
   const canonicalUrl = `https://myschooldates.com/${slug}`
   const _dn = meta.value!.name
+  const _sn = (meta.value as any).shortName || _dn
+  const _titleSuffix = cal?.sourcePdfUrl ? ': PDF & Holidays' : ': Holidays & Key Dates'
   const _slug = meta.value!.slug
   const _fd = cal ? formatShortDate(cal.firstDay) : ''
   const _ld = cal ? formatShortDate(cal.lastDay) : ''
   const _hasSpring = breaks.value.some((b: any) => b.name.toLowerCase().includes('spring'))
   const _descTemplates = [
-    // A — feature-forward
-    `View the ${_dn} school calendar for ${currentYear} with first day ${_fd}, holidays, winter break${_hasSpring ? ', spring break' : ''} and verified dates. Add to Google Calendar.`,
-    // B — official/verified
-    `Official ${_dn} school calendar ${currentYear}. First day ${_fd}, last day ${_ld}. Verified from the district calendar. Download for Google Calendar or iCal.`,
-    // C — user benefit
-    `Never miss a school holiday. ${_dn} ${currentYear} school calendar with all key dates and breaks. First day ${_fd}. Add to your Google Calendar in one click.`,
-    // D — ICS/sync
-    `${_dn} ${currentYear}: download the school calendar with first day, spring break, and all holidays. Works with Google Calendar, iCal, and Outlook.`,
-    // E — verified dates
-    `Verified ${_dn} ${currentYear} school calendar — first day ${_fd}, last day ${_ld}${_hasSpring ? ', spring break' : ''} and all official school holidays.`,
+    // A — PDF + key dates (~130 chars)
+    `${_sn} Calendar ${currentYear} with holidays${_hasSpring ? ', spring break' : ''} and key dates. Download the official PDF or add to Google Calendar.`,
+    // B — verified + download (~125 chars)
+    `${_sn} Calendar ${currentYear}: first day ${_fd}, last day ${_ld}${_hasSpring ? ', spring break' : ''}. Verified. Download the PDF or sync to Google Calendar.`,
+    // C — user benefit (~135 chars)
+    `${_sn} Calendar ${currentYear} — verified holidays${_hasSpring ? ', spring break' : ''}, key dates, and official PDF download. Works with Google Calendar.`,
+    // D — ICS/sync (~130 chars)
+    `Official ${_sn} ${currentYear} calendar with holidays${_hasSpring ? ', spring break' : ''} and winter break. Download PDF or sync to Google Calendar.`,
+    // E — verified dates (~130 chars)
+    `${_sn} ${currentYear}: first day ${_fd}, last day ${_ld}. Holidays${_hasSpring ? ', spring break' : ''} and official PDF. Syncs with Google Calendar.`,
   ]
   const _idxDesc = cal
     ? _descTemplates[simpleHash(_slug + currentYear) % _descTemplates.length]
     : `${_dn} ${currentYear} school calendar with all holidays, breaks, and key dates.`
   useSeoMeta({
-    title: `${_dn} Calendar ${currentYear}`,
+    title: `${_sn} Calendar ${currentYear}${_titleSuffix}`,
     description: _idxDesc,
-    ogTitle: `${_dn} Calendar ${currentYear}`,
+    ogTitle: `${_sn} Calendar ${currentYear}${_titleSuffix}`,
     ogDescription: _idxDesc,
     ogUrl: canonicalUrl,
   })

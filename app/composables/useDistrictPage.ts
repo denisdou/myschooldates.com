@@ -50,19 +50,27 @@ export function useDistrictPage() {
     return result
   }
 
-  // Returns the first school day after winter break ends
+  // Returns the first student school day after winter break ends (skips weekends and no_school days)
   function getSecondSemesterStart(events: Array<{ date: string; name: string; type: string }>): string {
     const winterEnd = events.find(
       e => e.type === 'break_end' && e.name.toLowerCase().includes('winter')
     )
     if (!winterEnd) return ''
+    const noSchoolDates = new Set(events.filter(e => e.type === 'no_school').map(e => e.date))
     const d = new Date(winterEnd.date + 'T00:00:00')
     d.setDate(d.getDate() + 1)
-    while (d.getDay() === 0 || d.getDay() === 6) d.setDate(d.getDate() + 1)
-    const y = d.getFullYear()
-    const m = String(d.getMonth() + 1).padStart(2, '0')
-    const day = String(d.getDate()).padStart(2, '0')
-    return `${y}-${m}-${day}`
+    const toDateStr = (dt: Date) => {
+      const y = dt.getFullYear()
+      const m = String(dt.getMonth() + 1).padStart(2, '0')
+      const day = String(dt.getDate()).padStart(2, '0')
+      return `${y}-${m}-${day}`
+    }
+    let dateStr = toDateStr(d)
+    while (d.getDay() === 0 || d.getDay() === 6 || noSchoolDates.has(dateStr)) {
+      d.setDate(d.getDate() + 1)
+      dateStr = toDateStr(d)
+    }
+    return dateStr
   }
 
   function generateFaqs(
@@ -159,7 +167,7 @@ export function useDistrictPage() {
       {
         q: `How many teacher work days does ${district.name} have in ${cal.schoolYear}?`,
         a: cal.teacherWorkDays
-          ? `${district.name} has ${cal.teacherWorkDays} teacher work days in ${cal.schoolYear}. This includes all ${totalDays} student instructional days${planningDays ? ` plus ${planningDays} additional days for planning, professional development, and pre- and post-school year activities` : ''}.`
+          ? `${district.name} has ${cal.teacherWorkDays} teacher work days in ${cal.schoolYear}. This includes all ${totalDays} student instructional days${planningDays ? ` plus ${planningDays} additional days for planning, professional development, and pre- and post-school year activities` : ''}. Based on the official ${district.name} teacher work calendar.`
           : `Teacher work days include all student instructional days plus additional planning and professional development days. Visit the official ${district.name} website for the complete teacher calendar.`,
       },
       {

@@ -521,15 +521,15 @@ function computeYearDiff(
 
   // First day
   const sd = mmddDiff(curCal.firstDay, prevCalData.firstDay)
-  if (sd === 0) items.push(`First day of school is unchanged (${formatShortDate(curCal.firstDay)}).`)
-  else if (sd > 0) items.push(`First day of school is ${sd} day${sd !== 1 ? 's' : ''} later than ${prevYearStr} (${formatShortDate(curCal.firstDay)}).`)
-  else items.push(`First day of school is ${Math.abs(sd)} day${Math.abs(sd) !== 1 ? 's' : ''} earlier than ${prevYearStr} (${formatShortDate(curCal.firstDay)}).`)
+  if (sd === 0) items.push(`First day of school is unchanged from ${prevYearStr} (${formatShortDate(curCal.firstDay)}).`)
+  else if (sd > 0) items.push(`School starts ${sd} day${sd !== 1 ? 's' : ''} later than ${prevYearStr} (${formatShortDate(curCal.firstDay)}), giving students a slightly shorter fall semester.`)
+  else items.push(`School starts ${Math.abs(sd)} day${Math.abs(sd) !== 1 ? 's' : ''} earlier than ${prevYearStr} (${formatShortDate(curCal.firstDay)}), giving students a slightly longer fall semester before the Thanksgiving break.`)
 
   // Last day
   const ed = mmddDiff(curCal.lastDay, prevCalData.lastDay)
-  if (ed === 0) items.push(`Last day of school is unchanged (${formatShortDate(curCal.lastDay)}).`)
-  else if (ed > 0) items.push(`Last day of school is ${ed} day${ed !== 1 ? 's' : ''} later (${formatShortDate(curCal.lastDay)}).`)
-  else items.push(`Last day of school is ${Math.abs(ed)} day${Math.abs(ed) !== 1 ? 's' : ''} earlier (${formatShortDate(curCal.lastDay)}).`)
+  if (ed === 0) items.push(`Last day of school is unchanged from ${prevYearStr} (${formatShortDate(curCal.lastDay)}).`)
+  else if (ed > 0) items.push(`The school year ends ${ed} day${ed !== 1 ? 's' : ''} later than ${prevYearStr} (${formatShortDate(curCal.lastDay)}) — plan early-summer travel accordingly.`)
+  else items.push(`The school year ends ${Math.abs(ed)} day${Math.abs(ed) !== 1 ? 's' : ''} earlier than ${prevYearStr} (${formatShortDate(curCal.lastDay)}) — summer break starts a little sooner.`)
 
   // Spring break (MM-DD comparison only)
   const curSp = getBreaks(curCal.events).find((b: any) => b.name.toLowerCase().includes('spring'))
@@ -538,9 +538,9 @@ function computeYearDiff(
     const diff = Math.round(
       (new Date(`2000-${curSp.start.slice(5)}T00:00:00`).getTime() - new Date(`2000-${prevSp.start.slice(5)}T00:00:00`).getTime()) / 86400000
     )
-    if (diff === 0) items.push(`Spring Break starts on the same date as ${prevYearStr} (${formatShortDate(curSp.start)}).`)
-    else if (diff > 0) items.push(`Spring Break starts ${diff} day${diff !== 1 ? 's' : ''} later than ${prevYearStr} (${formatShortDate(curSp.start)}).`)
-    else items.push(`Spring Break starts ${Math.abs(diff)} day${Math.abs(diff) !== 1 ? 's' : ''} earlier than ${prevYearStr} (${formatShortDate(curSp.start)}).`)
+    if (diff === 0) items.push(`Spring Break dates are unchanged from ${prevYearStr} (${formatShortDate(curSp.start)}–${formatShortDate(curSp.end)}).`)
+    else if (diff > 0) items.push(`Spring Break starts ${diff} day${diff !== 1 ? 's' : ''} later this year (${formatShortDate(curSp.start)}–${formatShortDate(curSp.end)}). Families planning trips with students from neighboring districts should confirm those calendars separately.`)
+    else items.push(`Spring Break starts ${Math.abs(diff)} day${Math.abs(diff) !== 1 ? 's' : ''} earlier this year (${formatShortDate(curSp.start)}–${formatShortDate(curSp.end)}). Families planning trips with students from neighboring districts should confirm those calendars separately.`)
   }
 
   // Thanksgiving break length
@@ -548,17 +548,20 @@ function computeYearDiff(
   const prevTh = getBreaks(prevCalData.events).find((b: any) => b.name.toLowerCase().includes('thanksgiving'))
   if (curTh && prevTh) {
     const ld = curTh.days - prevTh.days
-    if (ld === 0) items.push(`Thanksgiving Break is ${curTh.days} days — same as ${prevYearStr}.`)
-    else if (ld > 0) items.push(`Thanksgiving Break is ${ld} day${ld !== 1 ? 's' : ''} longer this year (${curTh.days} days total).`)
-    else items.push(`Thanksgiving Break is ${Math.abs(ld)} day${Math.abs(ld) !== 1 ? 's' : ''} shorter this year (${curTh.days} days total).`)
+    if (ld === 0) items.push(`Thanksgiving Break is ${curTh.days} days — same length as ${prevYearStr}.`)
+    else if (ld > 0) items.push(`Thanksgiving Break is ${ld} day${ld !== 1 ? 's' : ''} longer this year (${curTh.days} days total), offering more time for holiday travel.`)
+    else items.push(`Thanksgiving Break is ${Math.abs(ld)} day${Math.abs(ld) !== 1 ? 's' : ''} shorter this year (${curTh.days} days total) — book holiday flights early if you're traveling.`)
   }
 
   return items
 }
 
-const yearDiffItems = computed(() =>
-  cal.value && prevCal.value ? computeYearDiff(cal.value, prevCal.value, prevYearVal) : []
-)
+const yearDiffItems = computed(() => {
+  if (!cal.value) return []
+  const base = prevCal.value ? computeYearDiff(cal.value, prevCal.value, prevYearVal) : []
+  const extra: string[] = (cal.value as any).diffNotes ?? []
+  return [...base, ...extra]
+})
 
 // ── B3 FAQ scoring ─────────────────────────────────────────────────────────
 const faqs = computed(() => {
@@ -703,27 +706,33 @@ const comparisonInsight = computed((): string => {
 })
 
 const _dn = district.value.name
+const _sn = (district.value as any).shortName || _dn
+const _titleSuffix = (cal.value as any).sourcePdfUrl ? ': PDF & Holidays' : ': Holidays & Key Dates'
 const _fd = formatShortDate(cal.value.firstDay)
 const _ld = formatShortDate(cal.value.lastDay)
 const _hasSpring = breaks.value.some(b => b.name.toLowerCase().includes('spring'))
 const _descTemplates = [
-  // A — feature-forward
-  `View the ${_dn} school calendar for ${year} with first day ${_fd}, holidays, winter break${_hasSpring ? ', spring break' : ''} and verified dates. Add to Google Calendar.`,
-  // B — official/verified
-  `Official ${_dn} school calendar ${year}. First day ${_fd}, last day ${_ld}. Verified from the district calendar. Download for Google Calendar or iCal.`,
-  // C — user benefit
-  `Never miss a school holiday. ${_dn} ${year} school calendar with all key dates and breaks. First day ${_fd}. Add to your Google Calendar in one click.`,
-  // D — ICS/sync
-  `${_dn} ${year}: download the school calendar with first day, spring break, and all holidays. Works with Google Calendar, iCal, and Outlook.`,
-  // E — verified dates
-  `Verified ${_dn} ${year} school calendar — first day ${_fd}, last day ${_ld}${_hasSpring ? ', spring break' : ''} and all official school holidays.`,
+  // A — PDF + key dates (~130 chars)
+  `${_sn} Calendar ${year} with holidays${_hasSpring ? ', spring break' : ''} and key dates. Download the official PDF or add to Google Calendar.`,
+  // B — verified + download (~125 chars)
+  `${_sn} Calendar ${year}: first day ${_fd}, last day ${_ld}${_hasSpring ? ', spring break' : ''}. Verified. Download the PDF or sync to Google Calendar.`,
+  // C — user benefit (~135 chars)
+  `${_sn} Calendar ${year} — verified holidays${_hasSpring ? ', spring break' : ''}, key dates, and official PDF download. Works with Google Calendar.`,
+  // D — ICS/sync (~130 chars)
+  `Official ${_sn} ${year} calendar with holidays${_hasSpring ? ', spring break' : ''} and winter break. Download PDF or sync to Google Calendar.`,
+  // E — verified dates (~130 chars)
+  `${_sn} ${year}: first day ${_fd}, last day ${_ld}. Holidays${_hasSpring ? ', spring break' : ''} and official PDF. Syncs with Google Calendar.`,
 ]
-const _pageDesc = _descTemplates[simpleHash(district.value.slug + year) % _descTemplates.length]
+const _autoDesc = _descTemplates[simpleHash(district.value.slug + year) % _descTemplates.length]
+const _autoTitle = `${_sn} Calendar ${year}${_titleSuffix}`
+
+const _pageTitle = (cal.value as any).seoTitle ?? _autoTitle
+const _pageDesc = (cal.value as any).seoDescription ?? _autoDesc
 
 useSeoMeta({
-  title: `${_dn} Calendar ${year}`,
+  title: _pageTitle,
   description: _pageDesc,
-  ogTitle: `${_dn} Calendar ${year}`,
+  ogTitle: _pageTitle,
   ogUrl: canonicalUrl,
 })
 
@@ -751,16 +760,6 @@ const keyEvents = [
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     organizer: orgRef, location: { '@type': 'Place', name: district.value.name, address: orgAddress },
   },
-  ...breaks.value
-    .filter(b => ['thanksgiving', 'winter', 'christmas', 'spring'].some(kw => b.name.toLowerCase().includes(kw)))
-    .map(b => ({
-      '@context': 'https://schema.org', '@type': 'Event',
-      name: `${b.name} — ${district.value!.name} ${year}`,
-      startDate: b.start, endDate: b.end,
-      eventStatus: 'https://schema.org/EventScheduled',
-      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-      organizer: orgRef, location: { '@type': 'Place', name: district.value!.name, address: orgAddress },
-    })),
 ]
 
 useHead({
@@ -952,39 +951,6 @@ useHead({
         :district="district!"
         :cal="cal!"
       />
-
-      <!-- Upcoming Dates -->
-      <div v-if="upcomingEvents.length" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
-        <div class="px-6 py-4 border-b border-gray-100">
-          <h2 class="text-lg font-semibold text-gray-900">Upcoming Dates</h2>
-        </div>
-        <div class="divide-y divide-gray-50">
-          <div
-            v-for="event in upcomingEvents"
-            :key="event.date + event.type"
-            class="flex items-center gap-4 px-6 py-3.5"
-          >
-            <div class="w-16 flex-shrink-0 text-center">
-              <div class="text-xs font-semibold text-gray-400 uppercase">
-                {{ new Date(event.date + 'T00:00:00').toLocaleString('en-US', { month: 'short' }) }}
-              </div>
-              <div class="text-xl font-bold text-gray-900 leading-tight">
-                {{ new Date(event.date + 'T00:00:00').getDate() }}
-              </div>
-            </div>
-            <div class="w-px h-8 bg-gray-200 flex-shrink-0" />
-            <div class="flex-1 min-w-0">
-              <div class="font-medium text-gray-900 text-sm">{{ event.name }}</div>
-              <div class="text-xs text-gray-400 mt-0.5">
-                {{ new Date(event.date + 'T00:00:00').toLocaleString('en-US', { weekday: 'long' }) }}
-              </div>
-            </div>
-            <span class="text-xs font-medium px-2 py-0.5 rounded-full flex-shrink-0" :class="eventTypeColor[event.type]">
-              {{ eventTypeLabel[event.type] }}
-            </span>
-          </div>
-        </div>
-      </div>
 
       <!-- All Dates -->
       <DistrictAllDates
