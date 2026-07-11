@@ -186,6 +186,12 @@ const nextEvent = computed(() =>
 )
 const breaks = computed(() => getBreaks(cal?.events ?? []))
 
+const keyDateHighlights = computed(() => {
+  if (!cal?.events) return []
+  const HIGHLIGHT_TYPES = new Set(['school_start', 'school_end', 'holiday', 'break_start'])
+  return cal.events.filter(e => HIGHLIGHT_TYPES.has(e.type))
+})
+
 const calendarSummary = computed(() => {
   if (!cal || !district.value) return ''
   const springBreak = breaks.value.find(b => b.name.toLowerCase().includes('spring'))
@@ -1500,6 +1506,28 @@ if (!isStatePage && district.value) {
               <div class="text-sm text-gray-500 mt-1">{{ formatShortDate(nextEvent.date) }}</div>
             </template>
             <div v-else class="text-gray-400">No upcoming events</div>
+          </div>
+        </div>
+
+        <!-- Key Dates & Holidays Summary -->
+        <div v-if="keyDateHighlights.length" class="bg-white rounded-xl border border-gray-200 p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ currentYear }} Key Dates &amp; Holidays</h2>
+          <p class="text-xs text-gray-400 mb-4">First day, last day, school holidays, and break start dates</p>
+          <div class="divide-y divide-gray-100">
+            <div
+              v-for="event in keyDateHighlights"
+              :key="event.date + event.name"
+              class="flex items-center justify-between py-2.5 first:pt-0 last:pb-0"
+            >
+              <div class="flex items-center gap-2.5 min-w-0">
+                <span
+                  class="text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap flex-shrink-0"
+                  :class="eventTypeColor[event.type]"
+                >{{ eventTypeLabel[event.type] }}</span>
+                <span class="text-sm text-gray-900 truncate">{{ event.name }}</span>
+              </div>
+              <span class="text-sm text-gray-500 tabular-nums ml-4 flex-shrink-0">{{ formatShortDate(event.date) }}</span>
+            </div>
           </div>
         </div>
 
