@@ -6,10 +6,24 @@
   "totalSchoolDays": 180,
   "teacherWorkDays": 196,
   "semesters": 2,
-  "sourceUrl": "https://www.dadeschools.net/calendar",
-  "sourcePdfUrl": "",
+  "sourceUrl": "https://www3.dadeschools.net/Calendars/home",
+  "sourcePdfUrl": "https://api.dadeschools.net/WMSFiles/392/calendars/26-25/School-Calendars-2025-2026-Elementary-Secondary.pdf",
   "lastVerifiedAt": "2026-07-02",
   "calendarType": "traditional",
+  "alternateCalendars": [
+    {
+      "type": "technical-colleges",
+      "label": "2025-2026 Technical Colleges & Adult Education",
+      "pdfUrl": "https://api.dadeschools.net/WMSFiles/392/calendars/25-26/School-Calendars-2025-2026-Technical.pdf",
+      "firstDay": "2025-08-14"
+    },
+    {
+      "type": "juvenile-justice",
+      "label": "2025-2026 Juvenile Justice Education Calendar",
+      "pdfUrl": "https://api.dadeschools.net/WMSFiles/392/calendars/25-26/School-Calendars-2025-2026-Juvenile-Justice.pdf",
+      "firstDay": "2025-08-19"
+    }
+  ],
   "events": [
     {
       "date": "2025-08-14",

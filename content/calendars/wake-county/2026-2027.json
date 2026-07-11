@@ -1,18 +1,43 @@
 {
   "institutionId": "wake-county",
   "schoolYear": "2026-2027",
-  "firstDay": "2026-08-06",
-  "lastDay": "2027-05-24",
+  "firstDay": "2026-08-24",
+  "lastDay": "2027-06-09",
   "totalSchoolDays": 185,
   "teacherWorkDays": 200,
   "semesters": 2,
-  "sourceUrl": "https://www.wcpss.net/calendars",
-  "sourcePdfUrl": "",
-  "lastVerifiedAt": "2026-07-05",
+  "sourceUrl": "https://www.wcpss.net/student-life/calendars-and-attendance",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1778096919/wcpssnet/dkqqczo2zmmq4j9gaay1/26-27TRADupdated5-6-26.pdf",
+  "lastVerifiedAt": "2026-07-10",
   "calendarType": "traditional",
   "events": [
     {
-      "date": "2026-08-06",
+      "date": "2026-08-17",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-08-18",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-08-19",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-08-21",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-08-24",
       "name": "First Day of School",
       "type": "school_start"
     },
@@ -22,12 +47,27 @@
       "type": "holiday"
     },
     {
+      "date": "2026-09-21",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
       "date": "2026-11-11",
       "name": "Veterans Day",
       "type": "holiday"
     },
     {
-      "date": "2026-11-24",
+      "date": "2026-11-25",
       "name": "Thanksgiving Break",
       "type": "break_start"
     },
@@ -42,7 +82,12 @@
       "type": "break_start"
     },
     {
-      "date": "2027-01-06",
+      "date": "2027-01-01",
+      "name": "New Year's Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-01",
       "name": "Winter Break End",
       "type": "break_end"
     },
@@ -52,24 +97,19 @@
       "type": "holiday"
     },
     {
+      "date": "2027-01-19",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
       "date": "2027-02-15",
-      "name": "Presidents' Break",
-      "type": "break_start"
+      "name": "Teacher Workday",
+      "type": "no_school"
     },
     {
-      "date": "2027-02-19",
-      "name": "Presidents' Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-03-15",
-      "name": "Spring Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-03-19",
-      "name": "Spring Break End",
-      "type": "break_end"
+      "date": "2027-03-10",
+      "name": "Teacher Workday",
+      "type": "no_school"
     },
     {
       "date": "2027-03-26",
@@ -77,10 +117,45 @@
       "type": "holiday"
     },
     {
-      "date": "2027-05-24",
+      "date": "2027-03-29",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-04-02",
+      "name": "Spring Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2027-04-05",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-06-09",
       "name": "Last Day of School",
       "type": "school_end"
+    },
+    {
+      "date": "2027-06-10",
+      "name": "Teacher Workday",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-06-11",
+      "name": "Teacher Workday",
+      "type": "no_school"
     }
   ],
-  "calendarNotes": "Wake County Public School System begins the 2026–2027 school year on August 6, 2026. Presidents' Break runs February 15–19, 2027 — a full school week off in mid-February that is uncommon outside North Carolina. Spring Break runs March 15–19, 2027. The school year ends May 24, 2027."
+  "calendarNotes": "Wake County Public School System begins the 2026–2027 school year on August 24, 2026, following a teacher workday week August 17–21. Thanksgiving break runs November 25–27. Winter break runs December 21, 2026 through January 1, 2027; school reopens January 4. Good Friday (March 26) is a school holiday. Spring Break runs March 29 – April 2, 2027, followed by a teacher workday on April 5. The school year ends June 9, 2027."
 }
