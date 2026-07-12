@@ -48,6 +48,9 @@ export default defineNuxtConfig({
         '/virginia-beach-school-calendar',
         '/wake-county-school-calendar',
         '/winston-salem-forsyth-school-calendar',
+        '/plano-independent-school-district-calendar',
+        '/henrico-county-school-calendar',
+        '/frisco-independent-school-district-calendar',
 
         // ── District year pages ────────────────────────────────────────────────
         '/austin-independent-school-district-calendar/2025-2026',
@@ -134,6 +137,16 @@ export default defineNuxtConfig({
 
         '/winston-salem-forsyth-school-calendar/2025-2026',
         '/winston-salem-forsyth-school-calendar/2026-2027',
+
+        '/plano-independent-school-district-calendar/2025-2026',
+        '/plano-independent-school-district-calendar/2026-2027',
+        '/plano-independent-school-district-calendar/2027-2028',
+
+        '/henrico-county-school-calendar/2026-2027',
+        '/henrico-county-school-calendar/2027-2028',
+
+        '/frisco-independent-school-district-calendar/2025-2026',
+        '/frisco-independent-school-district-calendar/2026-2027',
       ],
     },
   },
