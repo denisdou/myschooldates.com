@@ -1,0 +1,1072 @@
+- generic [active] [ref=e1]:
+  - link "Skip To Main Content" [ref=e2] [cursor=pointer]:
+    - /url: "#fsPageContent"
+  - generic [ref=e3]:
+    - banner:
+      - generic:
+        - generic [ref=e5]:
+          - generic [ref=e6]:
+            - navigation [ref=e8]:
+              - list [ref=e9]:
+                - listitem [ref=e10]:
+                  - link " Translate":
+                    - /url: /translate
+                - listitem [ref=e11]:
+                  - link "Families" [ref=e12] [cursor=pointer]:
+                    - /url: /families
+                - listitem [ref=e13]:
+                  - link "Students" [ref=e14] [cursor=pointer]:
+                    - /url: /students
+                - listitem [ref=e15]:
+                  - link "Staff" [ref=e16] [cursor=pointer]:
+                    - /url: /staff
+                - listitem [ref=e17]:
+                  - link "Board" [ref=e18] [cursor=pointer]:
+                    - /url: /board
+                - listitem [ref=e19]:
+                  - link "Schools" [ref=e20] [cursor=pointer]:
+                    - /url: /schools
+            - contentinfo:
+              - generic: 
+          - article [ref=e23]:
+            - link [ref=e25] [cursor=pointer]:
+              - /url: https://www.fresnounified.org
+              - img "Fresno Unified School District Logo" [ref=e26]
+            - link [ref=e27] [cursor=pointer]:
+              - /url: https://www.fresnounified.org
+          - article [ref=e30]:
+            - link [ref=e32] [cursor=pointer]:
+              - /url: https://www.fresnounified.org
+              - img "Fresno Unified School District" [ref=e33]
+          - generic [ref=e34]:
+            - navigation "main" [ref=e36]:
+              - menubar [ref=e37]:
+                - listitem [ref=e38]:
+                  - menuitem "About" [ref=e39] [cursor=pointer]
+                  - menu [ref=e40]:
+                    - listitem [ref=e41]:
+                      - menuitem [ref=e42] [cursor=pointer]: About the Superintendent
+                    - listitem [ref=e43]:
+                      - menuitem [ref=e44] [cursor=pointer]: About the Deputy Superintendent
+                    - listitem [ref=e45]:
+                      - menuitem [ref=e46] [cursor=pointer]: Academic Calendar
+                    - listitem [ref=e47]:
+                      - menuitem [ref=e48] [cursor=pointer]:
+                        - text: District Data Dashboard
+                        - generic [ref=e49]: (opens in new window/tab)
+                    - listitem [ref=e50]:
+                      - menuitem [ref=e51] [cursor=pointer]: District Calendar
+                    - listitem [ref=e52]:
+                      - menuitem [ref=e53] [cursor=pointer]: FUSD at a Glance
+                    - listitem [ref=e54]:
+                      - menuitem [ref=e55] [cursor=pointer]: Graduation Schedule 2026
+                    - listitem [ref=e56]:
+                      - menuitem [ref=e57] [cursor=pointer]: LCAP
+                    - listitem [ref=e58]:
+                      - menuitem [ref=e59] [cursor=pointer]: Office of the Superintendent
+                    - listitem [ref=e60]:
+                      - menuitem [ref=e61] [cursor=pointer]: Organizational Chart
+                    - listitem [ref=e62]:
+                      - menuitem [ref=e63] [cursor=pointer]: Schools
+                - listitem [ref=e64]:
+                  - menuitem "Academics" [ref=e65] [cursor=pointer]
+                  - menu [ref=e66]:
+                    - listitem [ref=e67]:
+                      - menuitem [ref=e68] [cursor=pointer]:
+                        - text: Adult Education
+                        - generic [ref=e69]: (opens in new window/tab)
+                    - listitem [ref=e70]:
+                      - menuitem [ref=e71] [cursor=pointer]: After School Programs
+                    - listitem [ref=e72]:
+                      - menuitem [ref=e73] [cursor=pointer]: Career & Technical Education
+                    - listitem [ref=e74]:
+                      - menuitem [ref=e75] [cursor=pointer]: Dual Language Immersion
+                    - listitem [ref=e76]:
+                      - menuitem [ref=e77] [cursor=pointer]: Early Learning
+                    - listitem [ref=e78]:
+                      - menuitem [ref=e79] [cursor=pointer]: Student Records
+                    - listitem [ref=e80]:
+                      - menuitem [ref=e81] [cursor=pointer]:
+                        - text: Tutor.com
+                        - generic [ref=e82]: (opens in new window/tab)
+                - listitem [ref=e83]:
+                  - menuitem "Departments" [ref=e84] [cursor=pointer]
+                  - menu [ref=e85]:
+                    - listitem [ref=e86]:
+                      - menuitem [ref=e87] [cursor=pointer]: Advancing Academic Acceleration & Achievement
+                    - listitem [ref=e88]:
+                      - menuitem [ref=e89] [cursor=pointer]: Alternative Education
+                    - listitem [ref=e90]:
+                      - menuitem [ref=e91] [cursor=pointer]: American Indian Education
+                    - listitem [ref=e92]:
+                      - menuitem [ref=e93] [cursor=pointer]: Analysis, Measurement, and Accountability (AMA)
+                    - listitem [ref=e94]:
+                      - menuitem [ref=e95] [cursor=pointer]: Arts Education
+                    - listitem [ref=e96]:
+                      - menuitem [ref=e97] [cursor=pointer]: Athletics
+                    - listitem [ref=e98]:
+                      - menuitem [ref=e99] [cursor=pointer]: Benefits Department
+                    - listitem [ref=e100]:
+                      - menuitem [ref=e101] [cursor=pointer]: Office of the Board of Education
+                    - listitem [ref=e102]:
+                      - menuitem [ref=e103] [cursor=pointer]: Business and Financial services
+                    - listitem [ref=e104]:
+                      - menuitem [ref=e105] [cursor=pointer]: Campus Culture
+                    - listitem [ref=e106]:
+                      - menuitem [ref=e107] [cursor=pointer]: Charter Office
+                    - listitem [ref=e108]:
+                      - menuitem [ref=e109] [cursor=pointer]: College and Career Readiness
+                    - listitem [ref=e110]:
+                      - menuitem [ref=e111] [cursor=pointer]: Communications
+                    - listitem [ref=e112]:
+                      - menuitem [ref=e113] [cursor=pointer]: Community Schools
+                    - listitem [ref=e114]:
+                      - menuitem [ref=e115] [cursor=pointer]: Curriculum, Instruction, and Professional Learning
+                    - listitem [ref=e116]:
+                      - menuitem [ref=e117] [cursor=pointer]: Culture and Student Inclusion
+                    - listitem [ref=e118]:
+                      - menuitem [ref=e119] [cursor=pointer]: Early Learning
+                    - listitem [ref=e120]:
+                      - menuitem [ref=e121] [cursor=pointer]: English Learner Services
+                    - listitem [ref=e122]:
+                      - menuitem [ref=e123] [cursor=pointer]: Facilities Management & Planning
+                    - listitem [ref=e124]:
+                      - menuitem [ref=e125] [cursor=pointer]: Family Learning and Technology Support (FLATS)
+                    - listitem [ref=e126]:
+                      - menuitem [ref=e127] [cursor=pointer]: Fiscal Services
+                    - listitem [ref=e128]:
+                      - menuitem [ref=e129] [cursor=pointer]: Health Services
+                    - listitem [ref=e130]:
+                      - menuitem [ref=e131] [cursor=pointer]: Human Resources
+                    - listitem [ref=e132]:
+                      - menuitem [ref=e133] [cursor=pointer]: Information Technology
+                    - listitem [ref=e134]:
+                      - menuitem [ref=e135] [cursor=pointer]: Instructional Division
+                    - listitem [ref=e136]:
+                      - menuitem [ref=e137] [cursor=pointer]: Leadership Development
+                    - listitem [ref=e138]:
+                      - menuitem [ref=e139] [cursor=pointer]: Nutrition Services
+                    - listitem [ref=e140]:
+                      - menuitem [ref=e141] [cursor=pointer]: Office of Engagement and External Partnerships
+                    - listitem [ref=e142]:
+                      - menuitem [ref=e143] [cursor=pointer]: Operational Services Division
+                    - listitem [ref=e144]:
+                      - menuitem [ref=e145] [cursor=pointer]: Parent University
+                    - listitem [ref=e146]:
+                      - menuitem [ref=e147] [cursor=pointer]: Payroll
+                    - listitem [ref=e148]:
+                      - menuitem [ref=e149] [cursor=pointer]: Prevention and Intervention
+                    - listitem [ref=e150]:
+                      - menuitem [ref=e151] [cursor=pointer]: Purchasing
+                    - listitem [ref=e152]:
+                      - menuitem [ref=e153] [cursor=pointer]: Relevant Engagement in Arts and Literacy (R.E.A.L)
+                    - listitem [ref=e154]:
+                      - menuitem [ref=e155] [cursor=pointer]: Safety and Security
+                    - listitem [ref=e156]:
+                      - menuitem [ref=e157] [cursor=pointer]: School Leadership
+                    - listitem [ref=e158]:
+                      - menuitem [ref=e159] [cursor=pointer]: Special Education
+                    - listitem [ref=e160]:
+                      - menuitem [ref=e161] [cursor=pointer]: State and Federal Programs
+                    - listitem [ref=e162]:
+                      - menuitem [ref=e163] [cursor=pointer]: Student Engagement
+                    - listitem [ref=e164]:
+                      - menuitem [ref=e165] [cursor=pointer]: Office of the Superintendent
+                    - listitem [ref=e166]:
+                      - menuitem [ref=e167] [cursor=pointer]: Teacher Development
+                    - listitem [ref=e168]:
+                      - menuitem [ref=e169] [cursor=pointer]: Title IX
+                    - listitem [ref=e170]:
+                      - menuitem [ref=e171] [cursor=pointer]: Translation and Interpretation Services Department
+                    - listitem [ref=e172]:
+                      - menuitem [ref=e173] [cursor=pointer]: Transfers
+                    - listitem [ref=e174]:
+                      - menuitem [ref=e175] [cursor=pointer]: Transportation
+                - listitem [ref=e176]:
+                  - menuitem "Employment" [ref=e177] [cursor=pointer]
+                  - menu [ref=e178]:
+                    - listitem [ref=e179]:
+                      - menuitem [ref=e180] [cursor=pointer]: "About the #FUSDFamily"
+                    - listitem [ref=e181]:
+                      - menuitem [ref=e182] [cursor=pointer]: Apply For A Job
+                    - listitem [ref=e183]:
+                      - menuitem [ref=e184] [cursor=pointer]: Become a substitute
+                    - listitem [ref=e185]:
+                      - menuitem [ref=e186] [cursor=pointer]: Job Descriptions
+                    - listitem [ref=e187]:
+                      - menuitem [ref=e188] [cursor=pointer]: Human Resources
+                    - listitem [ref=e189]:
+                      - menuitem [ref=e190] [cursor=pointer]: New Hires, Start Here
+                    - listitem [ref=e191]:
+                      - menuitem [ref=e192] [cursor=pointer]: Salary Schedules
+                    - listitem [ref=e193]:
+                      - menuitem [ref=e194] [cursor=pointer]: Teacher Pipeline Programs
+                - listitem [ref=e195]:
+                  - menuitem "Community" [ref=e196] [cursor=pointer]
+                  - menu [ref=e197]:
+                    - listitem [ref=e198]:
+                      - menuitem [ref=e199] [cursor=pointer]: Back-to-School Resources
+                    - listitem [ref=e200]:
+                      - menuitem [ref=e201] [cursor=pointer]: Budget Updates
+                    - listitem [ref=e202]:
+                      - menuitem [ref=e203] [cursor=pointer]: Covid-19 Guidelines
+                    - listitem [ref=e204]:
+                      - menuitem [ref=e205] [cursor=pointer]: Community Sponsorship
+                    - listitem [ref=e206]:
+                      - menuitem [ref=e207] [cursor=pointer]: Constituent Services
+                    - listitem [ref=e208]:
+                      - menuitem [ref=e209] [cursor=pointer]: Exercise Your Brain
+                    - listitem [ref=e210]:
+                      - menuitem [ref=e211] [cursor=pointer]: Foundation For Fresno Unified Students
+                    - listitem [ref=e212]:
+                      - menuitem [ref=e213] [cursor=pointer]: Gift Proposal Form
+                    - listitem [ref=e214]:
+                      - menuitem [ref=e215] [cursor=pointer]: Measure H
+                    - listitem [ref=e216]:
+                      - menuitem [ref=e217] [cursor=pointer]: Peachjar
+                    - listitem [ref=e218]:
+                      - menuitem [ref=e219] [cursor=pointer]: ParentSquare Kindergarten Showdown
+                    - listitem [ref=e220]:
+                      - menuitem [ref=e221] [cursor=pointer]: Parent University
+                    - listitem [ref=e222]:
+                      - menuitem [ref=e223] [cursor=pointer]: Press Releases
+                    - listitem [ref=e224]:
+                      - menuitem [ref=e225] [cursor=pointer]: Volunteer
+                    - listitem [ref=e226]:
+                      - menuitem [ref=e227] [cursor=pointer]: Outdoor Activities Weather Updates
+                - listitem [ref=e228]:
+                  - menuitem "Connect with us" [ref=e229] [cursor=pointer]
+                  - menu [ref=e230]:
+                    - listitem [ref=e231]:
+                      - menuitem [ref=e232] [cursor=pointer]:
+                        - text: Facebook
+                        - generic [ref=e233]: (opens in new window/tab)
+                    - listitem [ref=e234]:
+                      - menuitem [ref=e235] [cursor=pointer]:
+                        - text: Flickr
+                        - generic [ref=e236]: (opens in new window/tab)
+                    - listitem [ref=e237]:
+                      - menuitem [ref=e238] [cursor=pointer]:
+                        - text: Instagram
+                        - generic [ref=e239]: (opens in new window/tab)
+                    - listitem [ref=e240]:
+                      - menuitem [ref=e241] [cursor=pointer]:
+                        - text: LinkedIn
+                        - generic [ref=e242]: (opens in new window/tab)
+                    - listitem [ref=e243]:
+                      - menuitem [ref=e244] [cursor=pointer]: Peachjar
+                    - listitem [ref=e245]:
+                      - menuitem [ref=e246] [cursor=pointer]: Livestream
+                    - listitem [ref=e247]:
+                      - menuitem [ref=e248] [cursor=pointer]: Let's Talk
+                    - listitem [ref=e249]:
+                      - menuitem [ref=e250] [cursor=pointer]:
+                        - text: Twitter
+                        - generic [ref=e251]: (opens in new window/tab)
+                    - listitem [ref=e252]:
+                      - menuitem [ref=e253] [cursor=pointer]:
+                        - text: Vimeo
+                        - generic [ref=e254]: (opens in new window/tab)
+                    - listitem [ref=e255]:
+                      - menuitem [ref=e256] [cursor=pointer]: Media Requests & Website Feedback
+            - contentinfo [ref=e257]:
+              - button "Find it Fast" [ref=e260] [cursor=pointer]
+        - generic:
+          - generic:
+            - heading "Find It Fast" [level=2]
+            - generic:
+              - generic:
+                - button " Close"
+          - generic:
+            - generic:
+              - generic:
+                - heading "Search" [level=2]
+              - generic:
+                - generic:
+                  - generic: Search
+                  - generic:
+                    - textbox "Search":
+                      - /placeholder: Website search...
+                    - text: 
+                  - button "Search "
+            - generic:
+              - generic:
+                - heading "Staff Directory" [level=2]
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: Keyword
+                    - textbox "Keyword":
+                      - /placeholder: Directory search...
+                  - generic:
+                    - button "Search Directory"
+                    - text: 
+                  - text: 
+            - generic:
+              - generic:
+                - heading "Popular Links" [level=2]
+              - generic:
+                - navigation:
+                  - list:
+                    - listitem:
+                      - link "Academic Calendar":
+                        - /url: /about/calendar
+                    - listitem:
+                      - link "Board Agendas":
+                        - /url: /board/board-agendas-and-minutes
+                    - listitem:
+                      - link "District Data":
+                        - /url: /about/district-data-dashboard
+                    - listitem:
+                      - link "How to Enroll":
+                        - /url: /families/enrollment
+                    - listitem:
+                      - link "Questions or Concerns":
+                        - /url: /contact
+                    - listitem:
+                      - link "School Directory":
+                        - /url: /about/schools
+                    - listitem:
+                      - link "Department Directory":
+                        - /url: /departments
+        - generic:
+          - banner:
+            - generic:
+              - button " Close"
+          - generic:
+            - navigation:
+              - list:
+                - listitem:
+                  - link "Elementary Schools":
+                    - /url: /elementary-schools
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Addams Elementary School (opens in new window/tab)":
+                          - /url: https://addams.fresnounified.org
+                          - text: Addams Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Addicott Elementary School (opens in new window/tab)":
+                          - /url: https://addicott.fresnounified.org
+                          - text: Addicott Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Anthony Elementary School (opens in new window/tab)":
+                          - /url: https://anthony.fresnounified.org
+                          - text: Anthony Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Ayer Elementary School (opens in new window/tab)":
+                          - /url: https://ayer.fresnounified.org
+                          - text: Ayer Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Aynesworth Elementary School (opens in new window/tab)":
+                          - /url: https://aynesworth.fresnounified.org
+                          - text: Aynesworth Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Bakman Elementary School (opens in new window/tab)":
+                          - /url: https://bakman.fresnounified.org
+                          - text: Bakman Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Balderas Elementary School (opens in new window/tab)":
+                          - /url: https://balderas.fresnounified.org
+                          - text: Balderas Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Birney Elementary School (opens in new window/tab)":
+                          - /url: https://birney.fresnounified.org
+                          - text: Birney Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Burroughs Elementary School (opens in new window/tab)":
+                          - /url: https://burroughs.fresnounified.org
+                          - text: Burroughs Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Calwa Elementary School (opens in new window/tab)":
+                          - /url: https://calwa.fresnounified.org
+                          - text: Calwa Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Centennial Elementary School (opens in new window/tab)":
+                          - /url: https://centennial.fresnounified.org
+                          - text: Centennial Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Columbia Elementary School (opens in new window/tab)":
+                          - /url: https://columbia.fresnounified.org
+                          - text: Columbia Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "DelMar Elementary School (opens in new window/tab)":
+                          - /url: https://delmar.fresnounified.org
+                          - text: DelMar Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Easterby Elementary School (opens in new window/tab)":
+                          - /url: https://easterby.fresnounified.org
+                          - text: Easterby Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Eaton Elementary School (opens in new window/tab)":
+                          - /url: https://eaton.fresnounified.org
+                          - text: Eaton Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Ericson Elementary School (opens in new window/tab)":
+                          - /url: https://ericson.fresnounified.org
+                          - text: Ericson Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Ewing Elementary School (opens in new window/tab)":
+                          - /url: https://ewing.fresnounified.org
+                          - text: Ewing Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Figarden Elementary School (opens in new window/tab)":
+                          - /url: https://figarden.fresnounified.org
+                          - text: Figarden Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Fremont Elementary School (opens in new window/tab)":
+                          - /url: https://fremont.fresnounified.org
+                          - text: Fremont Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Gibson Elementary School (opens in new window/tab)":
+                          - /url: https://gibson.fresnounified.org
+                          - text: Gibson Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Greenberg Elementary School (opens in new window/tab)":
+                          - /url: https://greenberg.fresnounified.org
+                          - text: Greenberg Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Heaton Elementary School (opens in new window/tab)":
+                          - /url: https://heaton.fresnounified.org
+                          - text: Heaton Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Herrera Elementary School (opens in new window/tab)":
+                          - /url: https://herrera.fresnounified.org
+                          - text: Herrera Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Hidalgo Elementary School (opens in new window/tab)":
+                          - /url: https://hidalgo.fresnounified.org
+                          - text: Hidalgo Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Holland Elementary School (opens in new window/tab)":
+                          - /url: https://holland.fresnounified.org
+                          - text: Holland Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Homan Elementary School (opens in new window/tab)":
+                          - /url: https://homan.fresnounified.org
+                          - text: Homan Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Jackson Elementary School (opens in new window/tab)":
+                          - /url: https://jackson.fresnounified.org
+                          - text: Jackson Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Jefferson Elementary School (opens in new window/tab)":
+                          - /url: https://jefferson.fresnounified.org
+                          - text: Jefferson Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "King Elementary School (opens in new window/tab)":
+                          - /url: https://king.fresnounified.org
+                          - text: King Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Kirk Elementary School":
+                          - /url: https://kirk.fresnounified.org
+                      - listitem:
+                        - link "Kratt Elementary School (opens in new window/tab)":
+                          - /url: https://kratt.fresnounified.org
+                          - text: Kratt Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Lane Elementary School (opens in new window/tab)":
+                          - /url: https://lane.fresnounified.org
+                          - text: Lane Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Lawless Elementary School (opens in new window/tab)":
+                          - /url: https://lawless.fresnounified.org
+                          - text: Lawless Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Leavenworth Elementary School (opens in new window/tab)":
+                          - /url: https://leavenworth.fresnounified.org
+                          - text: Leavenworth Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Lincoln Elementary School (opens in new window/tab)":
+                          - /url: https://lincoln.fresnounified.org
+                          - text: Lincoln Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Lowell Elementary School (opens in new window/tab)":
+                          - /url: https://lowell.fresnounified.org
+                          - text: Lowell Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Malloch Elementary School":
+                          - /url: https://malloch.fresnounified.org
+                      - listitem:
+                        - link "Manchester-Gate Elementary School (opens in new window/tab)":
+                          - /url: https://manchester.fresnounified.org
+                          - text: Manchester-Gate Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Mayfair Elementary School (opens in new window/tab)":
+                          - /url: https://mayfair.fresnounified.org
+                          - text: Mayfair Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "McCardle Elementary School (opens in new window/tab)":
+                          - /url: https://mccardle.fresnounified.org
+                          - text: McCardle Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Muir Elementary School (opens in new window/tab)":
+                          - /url: https://muir.fresnounified.org
+                          - text: Muir Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Norseman Elementary School (opens in new window/tab)":
+                          - /url: https://norseman.fresnounified.org
+                          - text: Norseman Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Olmos Elementary School (opens in new window/tab)":
+                          - /url: https://olmos.fresnounified.org
+                          - text: Olmos Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Powers-Ginsburg Elementary School (opens in new window/tab)":
+                          - /url: https://powers.fresnounified.org
+                          - text: Powers-Ginsburg Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Pyle Elementary School (opens in new window/tab)":
+                          - /url: https://pyle.fresnounified.org
+                          - text: Pyle Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Robinson Elementary School (opens in new window/tab)":
+                          - /url: https://robinson.fresnounified.org
+                          - text: Robinson Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Roeding Elementary School (opens in new window/tab)":
+                          - /url: https://roeding.fresnounified.org
+                          - text: Roeding Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Rowell Elementary School (opens in new window/tab)":
+                          - /url: https://rowell.fresnounified.org
+                          - text: Rowell Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Slater Elementary School (opens in new window/tab)":
+                          - /url: https://slater.fresnounified.org
+                          - text: Slater Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Starr Elementary School (opens in new window/tab)":
+                          - /url: https://starr.fresnounified.org
+                          - text: Starr Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Storey Elementary School (opens in new window/tab)":
+                          - /url: https://storey.fresnounified.org
+                          - text: Storey Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Sunset Elementary School (opens in new window/tab)":
+                          - /url: https://sunset.fresnounified.org
+                          - text: Sunset Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Tatarian Elementary":
+                          - /url: https://tatarian.fresnounified.org/
+                      - listitem:
+                        - link "Thomas Elementary School (opens in new window/tab)":
+                          - /url: https://thomas.fresnounified.org
+                          - text: Thomas Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Turner Elementary School (opens in new window/tab)":
+                          - /url: https://turner.fresnounified.org
+                          - text: Turner Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Vang Pao Elementary School (opens in new window/tab)":
+                          - /url: https://vangpao.fresnounified.org
+                          - text: Vang Pao Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Viking Elementary School (opens in new window/tab)":
+                          - /url: https://viking.fresnounified.org
+                          - text: Viking Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Vinland Elementary School (opens in new window/tab)":
+                          - /url: https://vinland.fresnounified.org
+                          - text: Vinland Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Webster Elementary School (opens in new window/tab)":
+                          - /url: https://webster.fresnounified.org
+                          - text: Webster Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Williams Elementary School (opens in new window/tab)":
+                          - /url: https://williams.fresnounified.org
+                          - text: Williams Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Wilson Elementary School (opens in new window/tab)":
+                          - /url: https://wilson.fresnounified.org
+                          - text: Wilson Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Winchell Elementary School (opens in new window/tab)":
+                          - /url: https://winchell.fresnounified.org
+                          - text: Winchell Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Wishon Elementary School (opens in new window/tab)":
+                          - /url: https://wishon.fresnounified.org
+                          - text: Wishon Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Wolters Elementary School (opens in new window/tab)":
+                          - /url: https://wolters.fresnounified.org
+                          - text: Wolters Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Yokomi Elementary School (opens in new window/tab)":
+                          - /url: https://yokomi.fresnounified.org
+                          - text: Yokomi Elementary School
+                          - generic: (opens in new window/tab)
+                - listitem:
+                  - link "Middle Schools":
+                    - /url: /middle-schools
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Ahwahnee Middle School (opens in new window/tab)":
+                          - /url: https://ahwahnee.fresnounified.org
+                          - text: Ahwahnee Middle School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Baird Middle School (opens in new window/tab)":
+                          - /url: https://baird.fresnounified.org
+                          - text: Baird Middle School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Computech Middle School (opens in new window/tab)":
+                          - /url: https://computech.fresnounified.org
+                          - text: Computech Middle School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Cooper Academy (opens in new window/tab)":
+                          - /url: https://cooper.fresnounified.org
+                          - text: Cooper Academy
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Fort Miller Middle School":
+                          - /url: https://fortmiller.fresnounified.org
+                      - listitem:
+                        - link "Gaston Middle School":
+                          - /url: https://gaston.fresnounified.org
+                      - listitem:
+                        - link "Kings Canyon Middle School (opens in new window/tab)":
+                          - /url: https://kingscanyon.fresnounified.org
+                          - text: Kings Canyon Middle School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Scandinavian Middle School (opens in new window/tab)":
+                          - /url: https://scandinavian.fresnounified.org
+                          - text: Scandinavian Middle School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Sequoia Middle School (opens in new window/tab)":
+                          - /url: https://sequoia.fresnounified.org
+                          - text: Sequoia Middle School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Tehipite Middle School (opens in new window/tab)":
+                          - /url: https://tehipite.fresnounified.org
+                          - text: Tehipite Middle School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Tenaya Middle School (opens in new window/tab)":
+                          - /url: https://tenaya.fresnounified.org
+                          - text: Tenaya Middle School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Terronez Middle School (opens in new window/tab)":
+                          - /url: https://terronez.fresnounified.org
+                          - text: Terronez Middle School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Tioga Middle School (opens in new window/tab)":
+                          - /url: https://tioga.fresnounified.org
+                          - text: Tioga Middle School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Yosemite Middle School (opens in new window/tab)":
+                          - /url: https://yosemite.fresnounified.org
+                          - text: Yosemite Middle School
+                          - generic: (opens in new window/tab)
+                - listitem:
+                  - link "K-8 Schools":
+                    - /url: /k-8-schools
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Bullard Talent K-8 School (opens in new window/tab)":
+                          - /url: https://bullardtalent.fresnounified.org
+                          - text: Bullard Talent K-8 School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Hamilton K-8 School (opens in new window/tab)":
+                          - /url: https://hamilton.fresnounified.org
+                          - text: Hamilton K-8 School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Wawona K-8 School (opens in new window/tab)":
+                          - /url: https://wawona.fresnounified.org
+                          - text: Wawona K-8 School
+                          - generic: (opens in new window/tab)
+                - listitem:
+                  - link "High Schools":
+                    - /url: /high-schools
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Bullard High School":
+                          - /url: https://bullard.fresnounified.org
+                      - listitem:
+                        - link "Design Science Middle College High School (opens in new window/tab)":
+                          - /url: https://designscience.fresnounified.org
+                          - text: Design Science Middle College High School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Duncan Polytechnical High School (opens in new window/tab)":
+                          - /url: https://duncan.fresnounified.org
+                          - text: Duncan Polytechnical High School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Edison High School (opens in new window/tab)":
+                          - /url: https://edison.fresnounified.org
+                          - text: Edison High School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Fresno High School (opens in new window/tab)":
+                          - /url: https://fresno.fresnounified.org
+                          - text: Fresno High School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Hoover High School (opens in new window/tab)":
+                          - /url: https://hoover.fresnounified.org
+                          - text: Hoover High School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "McLane High School (opens in new window/tab)":
+                          - /url: https://mclane.fresnounified.org
+                          - text: McLane High School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Patiño School of Entrepreneurship (opens in new window/tab)":
+                          - /url: https://patino.fresnounified.org
+                          - text: Patiño School of Entrepreneurship
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Rata High School & Adult Transition Program (opens in new window/tab)":
+                          - /url: https://rata.fresnounified.org
+                          - text: Rata High School & Adult Transition Program
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Roosevelt High School (opens in new window/tab)":
+                          - /url: https://roosevelt.fresnounified.org
+                          - text: Roosevelt High School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Sunnyside High School (opens in new window/tab)":
+                          - /url: https://sunnyside.fresnounified.org
+                          - text: Sunnyside High School
+                          - generic: (opens in new window/tab)
+                - listitem:
+                  - link "Alternative Education":
+                    - /url: /alternative-education
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "Adult Transition Program (opens in new window/tab)":
+                          - /url: https://atp.fresnounified.org
+                          - text: Adult Transition Program
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "DeWolf High School":
+                          - /url: https://dewolf.fresnounified.org
+                      - listitem:
+                        - link "Farber Educational Campus":
+                          - /url: https://farber.fresnounified.org
+                      - listitem:
+                        - link "Fresno Adult School (opens in new window/tab)":
+                          - /url: https://www.fas.edu/
+                          - text: Fresno Adult School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Fulton School":
+                          - /url: https://fulton.fresnounified.org
+                      - listitem:
+                        - link "Phoenix Elementary School (opens in new window/tab)":
+                          - /url: https://phoenix.fresnounified.org
+                          - text: Phoenix Elementary School
+                          - generic: (opens in new window/tab)
+                      - listitem:
+                        - link "Phoenix Secondary":
+                          - /url: https://phoenix2.fresnounified.org
+                - listitem:
+                  - link "Other":
+                    - /url: /other
+                  - generic:
+                    - list:
+                      - listitem:
+                        - link "CART (opens in new window/tab)":
+                          - /url: https://cart.org/
+                          - text: CART
+                          - generic: (opens in new window/tab)
+    - main [ref=e263]:
+      - heading "Home" [level=1] [ref=e264]
+      - generic [ref=e266]:
+        - generic [ref=e269]:
+          - generic [ref=e270]:
+            - img "Wilderness" [ref=e272]
+            - img "Wilderness" [ref=e274]
+            - img "Wilderness" [ref=e276]
+            - img "Wilderness" [ref=e278]
+            - img "Ocean" [ref=e282]
+            - img "Ocean" [ref=e284]
+            - img "Ocean" [ref=e286]
+            - img "Ocean" [ref=e290]
+          - generic:
+            - generic:
+              - heading "Experience Fresno Unified" [level=1]
+              - paragraph: Together with families and the community, we cultivate a safe, inspiring environment where students can discover their strengths and achieve their fullest potential.
+          - button "Previous Slide" [ref=e291] [cursor=pointer]
+          - button "Next Slide" [ref=e294] [cursor=pointer]
+          - generic [ref=e297]:
+            - button "Go to slide 1" [ref=e298] [cursor=pointer]
+            - button "Go to slide 2" [ref=e299] [cursor=pointer]
+            - button "Go to slide 3" [ref=e300] [cursor=pointer]
+            - button "Go to slide 4" [ref=e301] [cursor=pointer]
+            - button "Go to slide 5" [ref=e302] [cursor=pointer]
+            - button "Go to slide 6" [ref=e303] [cursor=pointer]
+            - button "Go to slide 7" [ref=e304] [cursor=pointer]
+            - button "Go to slide 8" [ref=e305] [cursor=pointer]
+            - button "Go to slide 9" [ref=e306] [cursor=pointer]
+            - button "Go to slide 10" [ref=e307] [cursor=pointer]
+        - navigation [ref=e310]:
+          - list [ref=e311]:
+            - listitem [ref=e312] [cursor=pointer]:
+              - link " Academic Calendar" [ref=e313]:
+                - /url: /about/calendar
+            - listitem [ref=e314] [cursor=pointer]:
+              - link " Atlas Parent Portal" [ref=e315]:
+                - /url: https://parents.fresnou.org/Home/SignIn?ReturnUrl=%2f
+            - listitem [ref=e316] [cursor=pointer]:
+              - link " Budget Updates" [ref=e317]:
+                - /url: https://www.fresnounified.org/community/budget-updates
+            - listitem [ref=e318] [cursor=pointer]:
+              - link " Bus Schedules" [ref=e319]:
+                - /url: /departments/transportation/bus-routes
+            - listitem [ref=e320] [cursor=pointer]:
+              - link " Enroll" [ref=e321]:
+                - /url: /enroll
+            - listitem [ref=e322] [cursor=pointer]:
+              - link " Negotiation News" [ref=e323]:
+                - /url: https://www.fresnounified.org/departments/human-resources/negotiation-news
+            - listitem [ref=e324] [cursor=pointer]:
+              - link " Newsroom" [ref=e325]:
+                - /url: /departments/communications/newsroom
+            - listitem [ref=e326] [cursor=pointer]:
+              - link " Questions & Concerns" [ref=e327]:
+                - /url: /departments/board-of-education/constituent-services-office
+            - listitem [ref=e328] [cursor=pointer]:
+              - link " Scholarships (opens in new window/tab)" [ref=e329]:
+                - /url: https://foundation4fusd.org/
+                - text:  Scholarships
+                - generic [ref=e330]: (opens in new window/tab)
+            - listitem [ref=e331] [cursor=pointer]:
+              - link " Staff Portal" [ref=e332]:
+                - /url: https://fusd.sharepoint.com/
+            - listitem [ref=e333] [cursor=pointer]:
+              - link "Social Emotional Wellness" [ref=e334]:
+                - /url: /departments/dpi/student-support-services/sewl
+            - listitem [ref=e335] [cursor=pointer]:
+              - link " Weather Update" [ref=e336]:
+                - /url: /community/outdoor-activities-weather-updates
+        - generic [ref=e339]:
+          - generic "Slideshow" [ref=e345]:
+            - generic "Slideshow" [ref=e347]:
+              - article "Slide 1 of 3" [ref=e348]:
+                - link [ref=e349] [cursor=pointer]:
+                  - /url: https://www.fresnounified.org/departments/human-resources/negotiation-news
+                  - img "negotiation update news" [ref=e350]
+              - article "Slide 2 of 3" [ref=e351]:
+                - link [ref=e352] [cursor=pointer]:
+                  - /url: https://www.fresnounified.org/departments/communications/friday-message/~board/friday-message/post/friday-message-important-updates-for-families-may-29-2026
+                  - 'img "Friday Message: Important Updates for Families May 29, 2026" [ref=e353]'
+              - article "Slide 3 of 3" [ref=e354]:
+                - link [ref=e355] [cursor=pointer]:
+                  - /url: https://www.fresnounified.org/departments/communications/friday-message/~board/friday-message/post/friday-message-important-updates-may-21-2026
+                  - 'img "Friday Message: Important Updates May 21, 2026" [ref=e356]'
+          - article [ref=e360]:
+            - figure [ref=e361]
+        - generic [ref=e365]:
+          - heading "District Calendar" [level=2] [ref=e368]
+          - generic [ref=e369]: There are no events to display
+          - link "Full Calendar" [ref=e374] [cursor=pointer]:
+            - /url: https://www.fresnounified.org/about/district-calendar
+        - generic [ref=e378]:
+          - article [ref=e382]:
+            - figure [ref=e383]
+          - generic [ref=e387]:
+            - paragraph [ref=e388]: OUR MISSION
+            - heading "We nurture and cultivate the interests, intellect, and leadership of our students by providing an excellent, equitable education in a culturally proficient environment." [level=2] [ref=e389]
+        - generic [ref=e394]:
+          - generic [ref=e398] [cursor=pointer]:
+            - img "learning icon" [ref=e399]
+            - paragraph [ref=e400]: GOAL 1
+            - heading "Early Literacy" [level=4] [ref=e401]
+            - list:
+              - listitem [ref=e402]: The percentage of 1st graders who are proficient in literacy based on iReady results will increase from 48% in June 2024 to 80% by June 2030.
+          - generic [ref=e406] [cursor=pointer]:
+            - img "behavior icon" [ref=e407]
+            - paragraph [ref=e408]: GOAL 2
+            - heading "Literacy Intervention" [level=4] [ref=e409]
+            - list:
+              - listitem [ref=e410]: The percentage of 3rd-8th grade students who are more than one year behind as measured by Smarter Balanced (SBAC) English Language Arts (ELA) who make more than one years' growth will increase from 30% in June 2024 to 50% by June 2030.
+          - generic [ref=e414] [cursor=pointer]:
+            - img "people icon" [ref=e415]
+            - paragraph [ref=e416]: GOAL 3
+            - heading "College Career Readiness" [level=4] [ref=e417]
+            - list:
+              - listitem [ref=e418]: The percentage of student graduating from high school who are college and career ready based on CCI will increase from 43% in June 2024 to 64% by June 2030.
+          - generic [ref=e422] [cursor=pointer]:
+            - img "accountability icon" [ref=e423]
+            - paragraph [ref=e424]: GOAL 4
+            - heading "Life skills" [level=4] [ref=e425]
+            - list:
+              - listitem [ref=e426]: The percentage of 6th, 8th, and 12th grade students who demonstrate benchmarked competencies in the skills listed in the Portrait of a Learner using age-appropriate assessments will increase by x% in June 2027 to Y% by June 2030.
+        - generic [ref=e430]:
+          - heading "Follow Us On Instagram" [level=2] [ref=e431]
+          - paragraph [ref=e433]:
+            - link [ref=e434] [cursor=pointer]:
+              - /url: https://www.instagram.com/fresnounified/
+    - contentinfo [ref=e436]:
+      - generic [ref=e437]:
+        - article [ref=e440]:
+          - link "Fresno Unified School District" [ref=e442] [cursor=pointer]:
+            - /url: https://www.fresnounified.org
+          - generic [ref=e443]: 2309 Tulare Street,
+          - generic [ref=e444]: Fresno,
+          - generic [ref=e445]: CA
+          - generic [ref=e446]: "93721"
+          - generic [ref=e447]:
+            - text: "Main Phone:"
+            - link "(559) 457-3000" [ref=e448] [cursor=pointer]:
+              - /url: tel:(559) 457-3000
+        - navigation "social media" [ref=e451]:
+          - list [ref=e452]:
+            - listitem [ref=e453]:
+              - link " Facebook (opens in new window/tab)" [ref=e454] [cursor=pointer]:
+                - /url: https://facebook.com/fresnounifiedpage
+                - text:  Facebook
+                - generic [ref=e455]: (opens in new window/tab)
+            - listitem [ref=e456]:
+              - link " Twitter (opens in new window/tab)" [ref=e457] [cursor=pointer]:
+                - /url: https://twitter.com/fresnounified
+                - text:  Twitter
+                - generic [ref=e458]: (opens in new window/tab)
+            - listitem [ref=e459]:
+              - link " Vimeo (opens in new window/tab)" [ref=e460] [cursor=pointer]:
+                - /url: https://vimeo.com/fresnounified/videos
+                - text:  Vimeo
+                - generic [ref=e461]: (opens in new window/tab)
+            - listitem [ref=e462]:
+              - link " Flickr (opens in new window/tab)" [ref=e463] [cursor=pointer]:
+                - /url: https://flickr.com/fresnounified
+                - text:  Flickr
+                - generic [ref=e464]: (opens in new window/tab)
+            - listitem [ref=e465]:
+              - link " Linkedin (opens in new window/tab)" [ref=e466] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/fresno-unified-school-district
+                - text:  Linkedin
+                - generic [ref=e467]: (opens in new window/tab)
+        - navigation "social media" [ref=e470]:
+          - list [ref=e471]:
+            - listitem [ref=e472]:
+              - link "Bullying/Cyberbullying Information and Procedures" [ref=e473] [cursor=pointer]:
+                - /url: /bullyingcyberbullying-information-and-procedures
+            - listitem [ref=e474]:
+              - link "State Wide/CDE Resources" [ref=e475] [cursor=pointer]:
+                - /url: https://www.cde.ca.gov/ls/ss/se/bullyres.asp
+            - listitem [ref=e476]:
+              - link "Hate-motivated Behavior Policy" [ref=e477] [cursor=pointer]:
+                - /url: /hate-motivated-behavior-policy
+            - listitem [ref=e478]:
+              - link "Non-Discrimination Statement" [ref=e479] [cursor=pointer]:
+                - /url: /non-discrimination-statement
+            - listitem [ref=e480]:
+              - link "Non-Discrimination Harassment and Intimidation Policy" [ref=e481] [cursor=pointer]:
+                - /url: /non-discrimination-harassment-and-intimidation-policy
+            - listitem [ref=e482]:
+              - link "Student Sexual Harassment Policy" [ref=e483] [cursor=pointer]:
+                - /url: /student-sexual-harassment-policy
+            - listitem [ref=e484]:
+              - link "Definition of Sex Discrimination" [ref=e485] [cursor=pointer]:
+                - /url: /definition-of-sex-discrimination
+            - listitem [ref=e486]:
+              - link "Acceptable Use Policy" [ref=e487] [cursor=pointer]:
+                - /url: /departments/it/aup
+            - listitem [ref=e488]:
+              - link "Report Fraud, Waste or Abuse" [ref=e489] [cursor=pointer]:
+                - /url: https://ppc.cpa/fresno-unified-fraud-alert-form/
+            - listitem [ref=e490]:
+              - link "Web Accessibility Notice" [ref=e491] [cursor=pointer]:
+                - /url: /web-accessibility
+            - listitem [ref=e492]:
+              - link "Definition of Sexual Harassment" [ref=e493] [cursor=pointer]:
+                - /url: /definition-of-sexual-harassmentt
+            - listitem [ref=e494]:
+              - link "Suicide Prevention Policy" [ref=e495] [cursor=pointer]:
+                - /url: /suicide-prevention-policy-01
+        - complementary [ref=e496]:
+          - link "Powered by Finalsite" [ref=e498] [cursor=pointer]:
+            - /url: https://www.finalsite.com/districts
+  - button "1 page alert" [ref=e501]:  1 page alert
+  - dialog [ref=e502]:
+    - button "Close" [ref=e503] [cursor=pointer]: 
+    - article [ref=e506]:
+      - 'heading "Upcoming ESS Service Interruption: July 7–15" [level=2] [ref=e507]'
+      - paragraph [ref=e509]:
+        - text: Employee Self Service (ESS) will be temporarily unavailable
+        - strong [ref=e510]: July 7–July 15
+        - text: as we complete a scheduled system conversion.
+    - button "Don't Show Again" [ref=e512] [cursor=pointer]

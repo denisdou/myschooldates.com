@@ -1,0 +1,485 @@
+- generic [ref=f111e1]:
+  - banner "Main Site Header" [ref=f111e4]:
+    - link "Skip to main content" [ref=f111e5] [cursor=pointer]:
+      - /url: "#content_main"
+    - link [ref=f111e7] [cursor=pointer]:
+      - /url: https://lausd.org
+      - img "Los Angeles Unified School District" [ref=f111e9]
+    - region "Mobile Content Holder":
+      - button "Mobile Header Content Toggle" [ref=f111e10] [cursor=pointer]
+      - text: add add add add add add add add add add add
+    - text: expand_more expand_more expand_more expand_more expand_more expand_more
+    - generic: expand_more expand_more expand_more expand_more
+    - region [ref=f111e14]:
+      - heading "Home Page Main Images" [level=2] [ref=f111e15]
+      - region "carousel" [ref=f111e16]:
+        - text: pause play_arrow
+        - generic [ref=f111e18]:
+          - group [ref=f111e19]:
+            - figure [ref=f111e21]:
+              - generic [ref=f111e26]:
+                - heading [level=2] [ref=f111e27]: 2026-27 Choices Late Application Now Open
+                - paragraph [ref=f111e28]:
+                  - text: Apply for Magnet Schools, Dual Language programs, Schools for Advanced Studies (SAS), and more.
+                  - link [ref=f111e30] [cursor=pointer]:
+                    - /url: https://choices.lausd.net/
+                    - text: Submit your application online ➜
+          - group "slide 1" [ref=f111e31]:
+            - figure [ref=f111e33]:
+              - generic [ref=f111e34]:
+                - img "SP" [ref=f111e35]
+                - generic [ref=f111e38]:
+                  - heading "Los Angeles Unified 2026-30 Strategic Plan" [level=2] [ref=f111e39]
+                  - paragraph [ref=f111e40]:
+                    - text: Discover the priorities that will guide our work over the next four years as we strengthen student outcomes, expand opportunities, and ensure every student is Ready for the World.
+                    - link "Read the full plan ➜" [ref=f111e42] [cursor=pointer]:
+                      - /url: https://strategicplan.lausd.org/
+          - group [ref=f111e43]:
+            - figure [ref=f111e45]:
+              - generic [ref=f111e50]:
+                - heading [level=2] [ref=f111e51]: "See You In School: Francisco Bravo Senior High Medical Magnet -Biotechnology Pathway"
+                - paragraph [ref=f111e52]:
+                  - text: At Francisco Bravo Senior High Medical Magnet, Gates Scholar Esteban shares how the Biotechnology Pathway helped prepare him for groundbreaking research opportunities, a future in medicine, and his next chapter at Stanford University.
+                  - link [ref=f111e53] [cursor=pointer]:
+                    - /url: https://superintendent.lausd.org/apps/pages/index.jsp?uREC_ID=4387916&type=d&pREC_ID=2723011&tota11y=true
+                    - text: Watch Video. ➜
+          - group [ref=f111e54]:
+            - figure [ref=f111e56]:
+              - generic [ref=f111e61]:
+                - heading [level=2] [ref=f111e62]: Summer of Learning 2026
+                - paragraph [ref=f111e63]:
+                  - text: Join us June 22 – July 20 for academic support, enrichment camps, college course opportunities, internships, and programs designed to help students stay on track and get ahead.
+                  - link [ref=f111e64] [cursor=pointer]:
+                    - /url: https://summeroflearning.lausd.org/
+                    - generic [ref=f111e65]: Sign up and learn more
+                    - text: ➜
+          - group [ref=f111e66]:
+            - figure [ref=f111e68]:
+              - generic [ref=f111e73]:
+                - heading [level=2] [ref=f111e74]: 2026-27 Choices Late Application Now Open
+                - paragraph [ref=f111e75]:
+                  - text: Apply for Magnet Schools, Dual Language programs, Schools for Advanced Studies (SAS), and more.
+                  - link [ref=f111e77] [cursor=pointer]:
+                    - /url: https://choices.lausd.net/
+                    - text: Submit your application online ➜
+          - group [ref=f111e78]:
+            - figure [ref=f111e80]:
+              - generic [ref=f111e85]:
+                - heading [level=2] [ref=f111e86]: Los Angeles Unified 2026-30 Strategic Plan
+                - paragraph [ref=f111e87]:
+                  - text: Discover the priorities that will guide our work over the next four years as we strengthen student outcomes, expand opportunities, and ensure every student is Ready for the World.
+                  - link [ref=f111e89] [cursor=pointer]:
+                    - /url: https://strategicplan.lausd.org/
+                    - text: Read the full plan ➜
+          - group [ref=f111e90]:
+            - figure [ref=f111e92]:
+              - generic [ref=f111e97]:
+                - heading [level=2] [ref=f111e98]: "See You In School: Francisco Bravo Senior High Medical Magnet -Biotechnology Pathway"
+                - paragraph [ref=f111e99]:
+                  - text: At Francisco Bravo Senior High Medical Magnet, Gates Scholar Esteban shares how the Biotechnology Pathway helped prepare him for groundbreaking research opportunities, a future in medicine, and his next chapter at Stanford University.
+                  - link [ref=f111e100] [cursor=pointer]:
+                    - /url: https://superintendent.lausd.org/apps/pages/index.jsp?uREC_ID=4387916&type=d&pREC_ID=2723011&tota11y=true
+                    - text: Watch Video. ➜
+          - group [ref=f111e101]:
+            - figure [ref=f111e103]:
+              - generic [ref=f111e108]:
+                - heading [level=2] [ref=f111e109]: Summer of Learning 2026
+                - paragraph [ref=f111e110]:
+                  - text: Join us June 22 – July 20 for academic support, enrichment camps, college course opportunities, internships, and programs designed to help students stay on track and get ahead.
+                  - link [ref=f111e111] [cursor=pointer]:
+                    - /url: https://summeroflearning.lausd.org/
+                    - generic [ref=f111e112]: Sign up and learn more
+                    - text: ➜
+          - group [ref=f111e113]:
+            - figure [ref=f111e115]:
+              - generic [ref=f111e120]:
+                - heading [level=2] [ref=f111e121]: 2026-27 Choices Late Application Now Open
+                - paragraph [ref=f111e122]:
+                  - text: Apply for Magnet Schools, Dual Language programs, Schools for Advanced Studies (SAS), and more.
+                  - link [ref=f111e124] [cursor=pointer]:
+                    - /url: https://choices.lausd.net/
+                    - text: Submit your application online ➜
+        - list [ref=f111e125]:
+          - listitem [ref=f111e126] [cursor=pointer]:
+            - button "Go to slide 1" [ref=f111e127]
+          - listitem [ref=f111e130] [cursor=pointer]:
+            - button "Go to slide 2" [ref=f111e131]
+          - listitem [ref=f111e134] [cursor=pointer]:
+            - button "Go to slide 3" [ref=f111e135]
+          - listitem [ref=f111e138] [cursor=pointer]:
+            - button "Go to slide 4" [ref=f111e139]
+  - main "Main Site Content" [ref=f111e142]:
+    - heading "Los Angeles Unified School District Home" [level=1] [ref=f111e143]
+    - generic [ref=f111e144]:
+      - region [ref=f111e147]:
+        - heading "What information would you like?" [level=2] [ref=f111e148]
+        - tablist [ref=f111e149]:
+          - tab [expanded] [selected] [ref=f111e150]:
+            - link "Students and Family Members" [ref=f111e151] [cursor=pointer]:
+              - /url: "#tabpanel_tab_container0"
+          - tab [ref=f111e152]:
+            - link "District Employees" [ref=f111e153] [cursor=pointer]:
+              - /url: "#tabpanel_tab_container1"
+          - tab [ref=f111e154]:
+            - link "Community Members" [ref=f111e155] [cursor=pointer]:
+              - /url: "#tabpanel_tab_container2"
+        - tabpanel "Students and Family Members" [ref=f111e157]:
+          - generic [ref=f111e158]:
+            - navigation [ref=f111e159]:
+              - heading "Resources for Students and Family Members" [level=2] [ref=f111e160]
+              - list [ref=f111e161]:
+                - listitem [ref=f111e162]:
+                  - link "Schoology" [ref=f111e164] [cursor=pointer]:
+                    - /url: https://lausdschoology.azurewebsites.net/
+                - listitem [ref=f111e169]:
+                  - link "Board Meetings" [ref=f111e171] [cursor=pointer]:
+                    - /url: http://boe.lausd.org/
+                - listitem [ref=f111e176]:
+                  - link "Parent Portal" [ref=f111e178] [cursor=pointer]:
+                    - /url: https://families.lausd.org/apps/pages/index.jsp?uREC_ID=4390902&type=d&pREC_ID=2612599
+                - listitem [ref=f111e182]:
+                  - link "Student Email" [ref=f111e184] [cursor=pointer]:
+                    - /url: https://parentportalapp.lausd.net/parentaccess/studentLogin.jsp
+            - generic [ref=f111e188]:
+              - region [ref=f111e189]:
+                - heading [level=2] [ref=f111e190]:
+                  - link "Enroll Now" [ref=f111e191] [cursor=pointer]:
+                    - /url: https://www.lausd.org/enrollnow
+              - region [ref=f111e192]:
+                - heading [level=2] [ref=f111e193]:
+                  - link "ITS Helpdesk" [ref=f111e194] [cursor=pointer]:
+                    - /url: https://www.lausd.org/helpdesk
+              - region [ref=f111e195]:
+                - heading [level=2] [ref=f111e196]:
+                  - link "Café LA Menu" [ref=f111e197] [cursor=pointer]:
+                    - /url: https://www.lausd.org/cafela
+              - region [ref=f111e198]:
+                - heading [level=2] [ref=f111e199]:
+                  - link "LAUSD Mobile App" [ref=f111e200] [cursor=pointer]:
+                    - /url: https://families.lausd.org/apps/pages/index.jsp?uREC_ID=4390902&type=d&pREC_ID=2612599
+      - region [ref=f111e203]:
+        - heading "Event Calendar" [level=2] [ref=f111e204]
+        - generic [ref=f111e205]:
+          - article "First Day of Instruction" [ref=f111e206]:
+            - generic [ref=f111e207]:
+              - time [ref=f111e208]:
+                - generic [ref=f111e209]: Aug
+                - generic [ref=f111e210]: "12"
+                - generic [ref=f111e211]: "2026"
+              - heading [level=3] [ref=f111e213]:
+                - link "First Day of Instruction" [ref=f111e214] [cursor=pointer]:
+                  - /url: /apps/events/2026/8/12/43497513/?REC_ID=43497513&id=0
+          - article "Admission Day" [ref=f111e215]:
+            - generic [ref=f111e216]:
+              - time [ref=f111e217]:
+                - generic [ref=f111e218]: Sep
+                - generic [ref=f111e219]: "4"
+                - generic [ref=f111e220]: "2026"
+              - heading [level=3] [ref=f111e222]:
+                - link "Admission Day" [ref=f111e223] [cursor=pointer]:
+                  - /url: /apps/events/2026/9/4/43497514/?REC_ID=43497514&id=0
+          - article "Labor Day" [ref=f111e224]:
+            - generic [ref=f111e225]:
+              - time [ref=f111e226]:
+                - generic [ref=f111e227]: Sep
+                - generic [ref=f111e228]: "7"
+                - generic [ref=f111e229]: "2026"
+              - heading [level=3] [ref=f111e231]:
+                - link "Labor Day" [ref=f111e232] [cursor=pointer]:
+                  - /url: /apps/events/2026/9/7/43499198/?REC_ID=43499198&id=0
+        - link "See full calendar" [ref=f111e234] [cursor=pointer]:
+          - /url: /apps/events/
+      - region [ref=f111e238]:
+        - heading "Announcements" [level=2] [ref=f111e239]
+        - generic [ref=f111e240]:
+          - article [ref=f111e241]:
+            - generic [ref=f111e242]:
+              - img "BOE" [ref=f111e244]
+              - heading [level=3] [ref=f111e246]:
+                - link "Los Angeles Unified Board of Education" [ref=f111e247] [cursor=pointer]:
+                  - /url: https://boe.lausd.org/
+          - article [ref=f111e249]:
+            - generic [ref=f111e250]:
+              - img "calendar page" [ref=f111e252]
+              - heading [level=3] [ref=f111e254]:
+                - link "Download 2025-28 Instructional School Calendars" [ref=f111e255] [cursor=pointer]:
+                  - /url: https://lausd.org/calendar
+          - article [ref=f111e257]:
+            - generic [ref=f111e258]:
+              - img "Strategic Plan" [ref=f111e260]
+              - heading [level=3] [ref=f111e262]:
+                - link "2026-30 Strategic Plan" [ref=f111e263] [cursor=pointer]:
+                  - /url: https://strategicplan.lausd.org/
+          - article [ref=f111e265]:
+            - generic [ref=f111e266]:
+              - img "high school graduates in white caps and gowns" [ref=f111e268]
+              - heading [level=3] [ref=f111e270]:
+                - link "Local Control Accountability Plan" [ref=f111e271] [cursor=pointer]:
+                  - /url: https://lausd.org/lcap
+          - article [ref=f111e273]:
+            - generic [ref=f111e274]:
+              - img "Family Newsletter" [ref=f111e276]
+              - heading [level=3] [ref=f111e278]:
+                - link "Family Newsletter" [ref=f111e279] [cursor=pointer]:
+                  - /url: https://www.lausd.org/apps/pages/index.jsp?uREC_ID=4463950&type=d&pREC_ID=2742181
+          - article [ref=f111e281]:
+            - generic [ref=f111e282]:
+              - img "girl at desk in library" [ref=f111e284]
+              - heading [level=3] [ref=f111e286]:
+                - link "Enroll at Los Angeles Unified" [ref=f111e287] [cursor=pointer]:
+                  - /url: https://www.lausd.org/enrollnow
+          - article [ref=f111e289]:
+            - generic [ref=f111e290]:
+              - img "TK" [ref=f111e292]
+              - heading [level=3] [ref=f111e294]:
+                - link "Los Angeles Unified Transitional Kindergarten" [ref=f111e295] [cursor=pointer]:
+                  - /url: https://eced.lausd.org/
+          - article [ref=f111e297]:
+            - generic [ref=f111e298]:
+              - img "student at computer" [ref=f111e300]
+              - heading [level=3] [ref=f111e302]:
+                - link "Los Angeles Unified Virtual Academy" [ref=f111e303] [cursor=pointer]:
+                  - /url: http://virtualacademy.lausd.org/
+          - article [ref=f111e305]:
+            - generic [ref=f111e306]:
+              - img "Metro tap card" [ref=f111e308]
+              - heading [level=3] [ref=f111e310]:
+                - link "Students Ride Free with the Metro GoPass Card" [ref=f111e311] [cursor=pointer]:
+                  - /url: https://www.lausd.org/metro
+          - article [ref=f111e313]:
+            - generic [ref=f111e314]:
+              - img "We are one" [ref=f111e316]
+              - heading [level=3] [ref=f111e318]:
+                - link "We Are One" [ref=f111e319] [cursor=pointer]:
+                  - /url: https://weareone.lausd.org/
+          - article [ref=f111e321]:
+            - generic [ref=f111e322]:
+              - img "taking a survey with smile, neutral, or frown" [ref=f111e324]
+              - heading [level=3] [ref=f111e326]:
+                - link "Take the ThoughtExchange Survey to Support Success for All Students" [ref=f111e327] [cursor=pointer]:
+                  - /url: https://my.thoughtexchange.com/scroll/890718435/survey
+          - article [ref=f111e329]:
+            - generic [ref=f111e330]:
+              - img "children washing hands" [ref=f111e332]
+              - heading [level=3] [ref=f111e334]:
+                - link "How to Safely Send Your Student to School" [ref=f111e335] [cursor=pointer]:
+                  - /url: /apps/news/article/2141951?categoryId=20583
+          - article [ref=f111e337]:
+            - generic [ref=f111e338]:
+              - img "Food Assistance" [ref=f111e340]
+              - heading [level=3] [ref=f111e342]:
+                - link "Food Assistance and Distribution Resources" [ref=f111e343] [cursor=pointer]:
+                  - /url: https://food.lausd.org/apps/pages/index.jsp?uREC_ID=4412452&type=d&pREC_ID=2719034
+          - article [ref=f111e345]:
+            - generic [ref=f111e346]:
+              - img "Nurse" [ref=f111e348]
+              - heading [level=3] [ref=f111e350]:
+                - link "We Are Hiring" [ref=f111e351] [cursor=pointer]:
+                  - /url: /apps/news/article/2141946?categoryId=20583
+          - article [ref=f111e353]:
+            - generic [ref=f111e354]:
+              - img "woman with phone headset" [ref=f111e356]
+              - heading [level=3] [ref=f111e358]:
+                - link "Need Help? Call the Student & Family Wellness Hotline at (213) 241-3840" [ref=f111e359] [cursor=pointer]:
+                  - /url: https://weareone.lausd.org/
+          - article [ref=f111e361]:
+            - generic [ref=f111e362]:
+              - img "teacher high fiving students" [ref=f111e364]
+              - heading [level=3] [ref=f111e366]:
+                - link "Los Angeles Unified Education Foundation" [ref=f111e367] [cursor=pointer]:
+                  - /url: https://lausdedfoundation.org/
+          - article [ref=f111e369]:
+            - generic [ref=f111e370]:
+              - img "computer screen with budget transparency website screen" [ref=f111e372]
+              - heading [level=3] [ref=f111e374]:
+                - link "Visit Budget Transparency to Learn About District and School Budgeting" [ref=f111e375] [cursor=pointer]:
+                  - /url: https://budgettransparency.lausd.net/
+          - article [ref=f111e377]:
+            - generic [ref=f111e378]:
+              - img "girl holding books" [ref=f111e380]
+              - heading [level=3] [ref=f111e382]:
+                - link "Report on Improving Student Outcomes and Ensuring Rights" [ref=f111e383] [cursor=pointer]:
+                  - /url: /apps/news/article/2141949?categoryId=20583
+        - link "See all announcements" [ref=f111e386] [cursor=pointer]:
+          - /url: /apps/news/
+      - region [ref=f111e390]:
+        - heading [level=2] [ref=f111e391]:
+          - link "Newsroom" [ref=f111e392] [cursor=pointer]:
+            - /url: /apps/news/category/23516
+        - generic [ref=f111e393]:
+          - article [ref=f111e394]:
+            - generic [ref=f111e395]:
+              - heading [level=3] [ref=f111e396]:
+                - link "Los Angeles Unified Responds to LACOE Fiscal Oversight Determination, Reaffirms Commitment to Long-Term Fiscal Stability" [ref=f111e397] [cursor=pointer]:
+                  - /url: /apps/news/article/2211306?categoryId=23516
+              - generic: July 08, 2026
+          - article [ref=f111e399]:
+            - generic [ref=f111e400]:
+              - heading [level=3] [ref=f111e401]:
+                - link "Los Angeles Unified Board of Education Appoints Andrés E. Chait as Superintendent" [ref=f111e402] [cursor=pointer]:
+                  - /url: /apps/news/article/2209655?categoryId=23516
+              - generic: June 24, 2026
+          - article [ref=f111e404]:
+            - generic [ref=f111e405]:
+              - heading [level=3] [ref=f111e406]:
+                - link "Los Angeles Unified Board Adopts 2026–2030 Strategic Plan Focused on Student Success and Innovation" [ref=f111e407] [cursor=pointer]:
+                  - /url: /apps/news/article/2209434?categoryId=23516
+              - generic: June 23, 2026
+          - article [ref=f111e409]:
+            - generic [ref=f111e410]:
+              - heading [level=3] [ref=f111e411]:
+                - link "Los Angeles Unified Board Adopts 2026–27 Budget and Local Control and Accountability Plan" [ref=f111e412] [cursor=pointer]:
+                  - /url: /apps/news/article/2209433?categoryId=23516
+              - generic: June 23, 2026
+          - article [ref=f111e414]:
+            - generic [ref=f111e415]:
+              - heading [level=3] [ref=f111e416]:
+                - link "Los Angeles Unified Proclaims June 27 as Play Day" [ref=f111e417] [cursor=pointer]:
+                  - /url: /apps/news/article/2209427?categoryId=23516
+              - generic: June 23, 2026
+          - article [ref=f111e419]:
+            - generic [ref=f111e420]:
+              - heading [level=3] [ref=f111e421]:
+                - link "Statement from the Los Angeles Unified Board of Education (6-22-26)" [ref=f111e422] [cursor=pointer]:
+                  - /url: /apps/news/article/2208973?categoryId=23516
+              - generic: June 22, 2026
+        - link "Show All News" [ref=f111e425] [cursor=pointer]:
+          - /url: /apps/news/category/23516
+  - contentinfo "Main Site Footer" [ref=f111e427]:
+    - generic [ref=f111e428]:
+      - generic [ref=f111e430]:
+        - generic [ref=f111e431]:
+          - img "Los Angeles Unified School District" [ref=f111e433]
+          - region [ref=f111e434]:
+            - heading "Footer Message" [level=2] [ref=f111e435]
+            - generic [ref=f111e436]: Second largest in the nation, the Los Angeles Unified School District enrolls more than 520,000 students. The District covers an area totaling 710 square miles, which includes most of the city of Los Angeles, along with all or portions of 25 cities and unincorporated areas of Los Angeles County.
+        - generic [ref=f111e440]:
+          - link "333 S Beaudry Ave. Los Angeles, CA 90017" [ref=f111e445] [cursor=pointer]:
+            - /url: /apps/maps
+          - link "(213) 241-1000" [ref=f111e450] [cursor=pointer]:
+            - /url: tel:+12132411000
+        - generic [ref=f111e451]:
+          - navigation "Info For" [ref=f111e452]:
+            - list [ref=f111e454]:
+              - listitem [ref=f111e455]:
+                - link "Families" [ref=f111e456] [cursor=pointer]:
+                  - /url: https://families.lausd.org/
+              - listitem [ref=f111e457]:
+                - link "Students" [ref=f111e458] [cursor=pointer]:
+                  - /url: https://studentempowerment.lausd.org/
+              - listitem [ref=f111e459]:
+                - link "Employees" [ref=f111e460] [cursor=pointer]:
+                  - /url: https://ess.lausd.net/
+          - navigation "Quick Links" [ref=f111e461]:
+            - list [ref=f111e463]:
+              - listitem [ref=f111e464]:
+                - link "Enroll Now" [ref=f111e465] [cursor=pointer]:
+                  - /url: https://enroll.lausd.net
+              - listitem [ref=f111e466]:
+                - link "ITS Helpdesk" [ref=f111e467] [cursor=pointer]:
+                  - /url: https://its.lausd.org/helpdesk
+              - listitem [ref=f111e468]:
+                - link "Parent Portal" [ref=f111e469] [cursor=pointer]:
+                  - /url: https://parentportalapp.lausd.net/parentaccess/
+              - listitem [ref=f111e470]:
+                - link "LAUSD Education Foundation" [ref=f111e471] [cursor=pointer]:
+                  - /url: https://lausdedfoundation.org/
+              - listitem [ref=f111e472]:
+                - link "Board-Adopted 2026-27 LCAP" [ref=f111e473] [cursor=pointer]:
+                  - /url: https://www.lausd.org/LCAP
+          - navigation "Helpful Resources" [ref=f111e474]:
+            - list [ref=f111e476]:
+              - listitem [ref=f111e477]:
+                - link "We Are One" [ref=f111e478] [cursor=pointer]:
+                  - /url: https://weareone.lausd.org
+              - listitem [ref=f111e479]:
+                - link "Know Your Immigration Rights" [ref=f111e480] [cursor=pointer]:
+                  - /url: https://weareone.lausd.org/apps/pages/index.jsp?uREC_ID=4425745&type=d&pREC_ID=2723092&tota11y=true
+              - listitem [ref=f111e481]:
+                - link "District Homeless Liaison" [ref=f111e482] [cursor=pointer]:
+                  - /url: https://studentsupport.lausd.org/apps/pages/index.jsp?uREC_ID=4413724&type=d&pREC_ID=2646152
+              - listitem [ref=f111e483]:
+                - link "OIG Hotline" [ref=f111e484] [cursor=pointer]:
+                  - /url: https://oig.lausd.org/apps/pages/index.jsp?uREC_ID=4429321&type=d&pREC_ID=2667620
+              - listitem [ref=f111e485]:
+                - link "Harassment Hotline" [ref=f111e486] [cursor=pointer]:
+                  - /url: https://www.lausd.org/apps/pages/index.jsp?uREC_ID=4432779&type=d&pREC_ID=2672747
+              - listitem [ref=f111e487]:
+                - link "Website Accessibility" [ref=f111e488] [cursor=pointer]:
+                  - /url: https://communications.lausd.org/apps/pages/index.jsp?uREC_ID=4401650&type=d&pREC_ID=2626465
+              - listitem [ref=f111e489]:
+                - link "Non-Discrimination Policy" [ref=f111e490] [cursor=pointer]:
+                  - /url: https://generalcounsel.lausd.org/apps/pages/index.jsp?uREC_ID=4397507&type=d&pREC_ID=2618148
+              - listitem [ref=f111e491]:
+                - link "Privacy Policy" [ref=f111e492] [cursor=pointer]:
+                  - /url: https://communications.lausd.org/apps/pages/index.jsp?uREC_ID=4401650&type=d&pREC_ID=2626487
+          - generic [ref=f111e493]:
+            - navigation "Social Links" [ref=f111e494]:
+              - list [ref=f111e496]:
+                - listitem [ref=f111e497]:
+                  - link "Facebook" [ref=f111e498] [cursor=pointer]:
+                    - /url: https://facebook.com/laschools
+                - listitem [ref=f111e504]:
+                  - link "X" [ref=f111e505] [cursor=pointer]:
+                    - /url: https://x.com/laschools
+                - listitem [ref=f111e510]:
+                  - link "Instagram" [ref=f111e511] [cursor=pointer]:
+                    - /url: https://Instagram.com/laschools
+                - listitem [ref=f111e518]:
+                  - link "Bluesky" [ref=f111e519] [cursor=pointer]:
+                    - /url: https://web-cdn.bsky.app/profile/laschools.bsky.social
+                - listitem [ref=f111e524]:
+                  - link "YouTube" [ref=f111e525] [cursor=pointer]:
+                    - /url: https://www.youtube.com/losangelesschools
+                - listitem [ref=f111e531]:
+                  - link "Threads" [ref=f111e532] [cursor=pointer]:
+                    - /url: https://www.threads.net/@laschools
+                - listitem [ref=f111e537]:
+                  - link "TikTok" [ref=f111e538] [cursor=pointer]:
+                    - /url: https://www.tiktok.com/@laschools1
+            - navigation "IT Help and Resources" [ref=f111e547]:
+              - list [ref=f111e549]:
+                - listitem [ref=f111e550]:
+                  - link "LAUSD IT Home" [ref=f111e551] [cursor=pointer]:
+                    - /url: https://its.lausd.org
+                    - generic [ref=f111e552]:
+                      - img [ref=f111e553]:
+                        - generic [ref=f111e558]: "1"
+                      - generic [ref=f111e563]: LAUSD IT Home
+                - listitem [ref=f111e564]:
+                  - link "LAUSD IT Help Desk" [ref=f111e565] [cursor=pointer]:
+                    - /url: https://www.lausd.org/helpdesk
+                    - generic [ref=f111e566]:
+                      - img [ref=f111e567]:
+                        - generic [ref=f111e573]: "2"
+                      - generic [ref=f111e574]: LAUSD IT Help Desk
+                - listitem [ref=f111e575]:
+                  - link "LAUSD Email" [ref=f111e576] [cursor=pointer]:
+                    - /url: https://outlook.office365.com/
+                - listitem [ref=f111e581]:
+                  - link "LAUSD IT Facebook" [ref=f111e582] [cursor=pointer]:
+                    - /url: https://www.facebook.com/itslausd/
+                - listitem [ref=f111e588]:
+                  - link "LAUSD IT X" [ref=f111e589] [cursor=pointer]:
+                    - /url: https://twitter.com/LAUSDCIO
+      - generic [ref=f111e595]:
+        - link "Edlio Login" [ref=f111e596] [cursor=pointer]:
+          - /url: http://admin.lausd.org
+          - generic [ref=f111e597]: Edlio
+          - text: Login
+        - link "Powered by Edlio" [ref=f111e601] [cursor=pointer]:
+          - /url: http://www.edlio.com
+  - navigation "Mobile Footer Links" [ref=f111e606]:
+    - list [ref=f111e608]:
+      - listitem [ref=f111e609]:
+        - link "LAUSD Mobile App" [ref=f111e610] [cursor=pointer]:
+          - /url: https://lausdapp.lausd.net/auth/landing
+      - listitem [ref=f111e613]:
+        - link "Calendar" [ref=f111e614] [cursor=pointer]:
+          - /url: /apps/events
+      - listitem [ref=f111e620]:
+        - link "News" [ref=f111e621] [cursor=pointer]:
+          - /url: https://www.lausd.org/apps/news/category/23516
+      - listitem [ref=f111e624]:
+        - link "Board Meetings" [ref=f111e625] [cursor=pointer]:
+          - /url: https://boe.lausd.org

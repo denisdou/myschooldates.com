@@ -1,0 +1,227 @@
+- generic [ref=f16e1]:
+  - link "Skip to main content" [ref=f16e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=f16e4]:
+    - navigation [ref=f16e5]:
+      - generic [ref=f16e6]:
+        - link [ref=f16e8] [cursor=pointer]:
+          - /url: /
+          - img "Northside Independent School District logo" [ref=f16e9]
+        - button "Toggle navigation" [ref=f16e10] [cursor=pointer]
+    - main [ref=f16e12]:
+      - list [ref=f16e16]:
+        - listitem [ref=f16e17]:
+          - link "Parents" [ref=f16e18] [cursor=pointer]:
+            - /url: /parents
+        - listitem [ref=f16e19]:
+          - link "Students" [ref=f16e20] [cursor=pointer]:
+            - /url: /students
+        - listitem [ref=f16e21]:
+          - link "Community" [ref=f16e22] [cursor=pointer]:
+            - /url: /community
+        - listitem [ref=f16e23]:
+          - link "Employees" [ref=f16e24] [cursor=pointer]:
+            - /url: https://nisd.net/employees/
+      - iframe [ref=f16e29]:
+        - generic [ref=f17e2]:
+          - generic: 以画中画模式播放
+          - button "暂停" [ref=f17e9] [cursor=pointer]
+      - link "Photo gallery link Photo Gallery" [ref=f16e31] [cursor=pointer]:
+        - /url: https://northsideisd.smugmug.com
+        - img "Photo gallery link" [ref=f16e32]
+        - generic [ref=f16e33]: Photo Gallery
+      - generic [ref=f16e40]:
+        - generic: /
+        - article [ref=f16e42]:
+          - generic [ref=f16e48]:
+            - generic [ref=f16e49]:
+              - button "Slide 0" [ref=f16e50] [cursor=pointer]
+              - button "Slide 1" [ref=f16e51] [cursor=pointer]
+              - button "Slide 2" [ref=f16e52] [cursor=pointer]
+              - button "Slide 3" [ref=f16e53] [cursor=pointer]
+            - list [ref=f16e54]:
+              - listitem [ref=f16e55]:
+                - link [ref=f16e66] [cursor=pointer]:
+                  - /url: /news/northside-isd-theatre-takes-center-stage-statewide-exemplary-recognition
+                  - img "Northside ISD Theatre Takes Center Stage with Statewide Exemplary Recognition" [ref=f16e67]
+            - button "Previous" [ref=f16e68] [cursor=pointer]
+            - button "Next" [ref=f16e71] [cursor=pointer]
+      - generic [ref=f16e77]:
+        - generic [ref=f16e79]:
+          - generic [ref=f16e80]:
+            - heading "Jul. 23:" [level=3] [ref=f16e82]
+            - paragraph [ref=f16e85]: Servant Leader Summit for Athletes, 8 a.m., Northside Sports Gym
+          - generic [ref=f16e86]:
+            - heading "Jul. 24:" [level=3] [ref=f16e88]
+            - paragraph [ref=f16e91]: Northside Coaches Academy, 8 a.m., NAC/Hardin Complex
+          - generic [ref=f16e92]:
+            - heading "Jul. 27:" [level=3] [ref=f16e94]
+            - paragraph [ref=f16e97]:
+              - link "Summer Graduation Ceremony" [ref=f16e98] [cursor=pointer]:
+                - /url: /schools/graduation/ceremony
+              - text: ", 6:30 p.m., NISD Sports Gym"
+          - generic [ref=f16e99]:
+            - heading "Jul. 27:" [level=3] [ref=f16e101]
+            - paragraph [ref=f16e104]: New Teacher Academy, 8 a.m. to 4 p.m., Brandeis HS
+        - link "More calendars" [ref=f16e109] [cursor=pointer]:
+          - /url: /schools/calendars
+      - generic [ref=f16e111]:
+        - heading "District News" [level=2] [ref=f16e112]
+        - generic [ref=f16e113]:
+          - generic [ref=f16e114]:
+            - heading "Northside News & Views" [level=3] [ref=f16e115]
+            - paragraph [ref=f16e116]:
+              - text: Stay informed and inspired with Northside ISD's
+              - emphasis [ref=f16e117]: News Hub
+              - text: ", featuring the latest updates, stories, and videos the highlight our schools, staff, and community."
+            - link "Visit the news hub" [ref=f16e118] [cursor=pointer]:
+              - /url: /district/news
+          - generic [ref=f16e122]:
+            - link [ref=f16e126] [cursor=pointer]:
+              - /url: /news/thousands-seniors-ready-graduate-ceremonies-will-be-live-webcast
+              - img "Thousands of seniors ready to graduate; ceremonies will be live webcast" [ref=f16e127]
+            - link [ref=f16e132] [cursor=pointer]:
+              - /url: /news/valedictorians-and-salutatorians-lead-class-2026
+              - img "Valedictorians and Salutatorians lead the Class of 2026" [ref=f16e133]
+          - iframe [ref=f16e141]:
+            - generic [ref=f35e1]:
+              - generic "YouTube 视频播放器" [ref=f35e3]
+              - generic [ref=f35e5]:
+                - generic:
+                  - generic:
+                    - button "播放视频" [ref=f35e10] [cursor=pointer]
+                    - button "隐藏播放器控件" [ref=f35e12] [cursor=pointer]
+                    - generic [ref=f35e14]:
+                      - generic [ref=f35e19]:
+                        - generic [ref=f35e20]:
+                          - link "Burke Bear Bites" [ref=f35e21] [cursor=pointer]:
+                            - /url: https://www.youtube.com/watch?v=CIIa9R71zSc
+                          - link "northsideisd" [ref=f35e22] [cursor=pointer]:
+                            - /url: /channel/UCCo-3gIYcGploLFthw7p9Rw
+                        - generic [ref=f35e24]:
+                          - button [ref=f35e25] [cursor=pointer]
+                          - generic [ref=f35e27]:
+                            - generic: northsideisd
+                            - generic: 7140位订阅者
+                      - generic [ref=f35e28]:
+                        - button "复制链接" [ref=f35e31] [cursor=pointer]
+                        - link "在 YouTube 上观看" [ref=f35e42] [cursor=pointer]:
+                          - /url: https://www.youtube.com/watch?v=CIIa9R71zSc
+                          - generic [ref=f35e43]: 前往平台观看：
+      - generic [ref=f16e143]:
+        - heading "Northside by the Numbers" [level=2] [ref=f16e144]
+        - generic [ref=f16e145]:
+          - generic [ref=f16e146]:
+            - generic [ref=f16e147]:
+              - generic [ref=f16e157]:
+                - generic [ref=f16e158]: 97,597
+                - generic [ref=f16e160]: Students
+              - generic [ref=f16e171]:
+                - generic [ref=f16e172]: $203.3
+                - generic [ref=f16e174]: Million in scholarships
+            - generic [ref=f16e176]:
+              - generic [ref=f16e186]:
+                - generic [ref=f16e187]: "133"
+                - generic [ref=f16e189]: Schools
+              - generic [ref=f16e200]:
+                - generic [ref=f16e201]: "12"
+                - generic [ref=f16e203]: Magnet Schools
+            - generic [ref=f16e205]:
+              - generic [ref=f16e215]:
+                - generic [ref=f16e216]: 13,000
+                - generic [ref=f16e218]: Employees
+              - generic [ref=f16e229]:
+                - generic [ref=f16e230]: "76"
+                - generic [ref=f16e232]: Full-Day Pre-K Schools
+          - separator [ref=f16e236]
+          - generic [ref=f16e240]:
+            - heading "Learn more about Northside ISD." [level=3] [ref=f16e241]
+            - link "View Welcome Magazine" [ref=f16e243] [cursor=pointer]:
+              - /url: /sites/default/files/documents/welcome-magazine.pdf
+      - generic [ref=f16e247]:
+        - heading "Roadmap to Excellence" [level=2] [ref=f16e248]
+        - generic [ref=f16e249]:
+          - list [ref=f16e250]:
+            - listitem [ref=f16e251]:
+              - link "Magnet Programs" [ref=f16e252] [cursor=pointer]:
+                - /url: /schools/magnet
+            - listitem [ref=f16e253]:
+              - link "CTE" [ref=f16e254] [cursor=pointer]:
+                - /url: /district/cte
+            - listitem [ref=f16e255]:
+              - link "Fine Arts" [ref=f16e256] [cursor=pointer]:
+                - /url: /district/fine-arts
+            - listitem [ref=f16e257]:
+              - link "College" [ref=f16e258] [cursor=pointer]:
+                - /url: /district/advanced-academics
+            - listitem [ref=f16e259]:
+              - link [ref=f16e260] [cursor=pointer]:
+                - /url: https://nisd.pdx1.qualtrics.com/public-dashboard/v0/dashboard/web/6756dbad9a1b4800083cb6a5/pages/Page_bcff8f3e-9670-476c-bad8-3c29ea4d12e3/view?language=EN
+                - text: Strategic planning
+                - img "(link is external)" [ref=f16e261]
+          - generic [ref=f16e265]:
+            - paragraph [ref=f16e266]: Northside ISD has both high school and middle school magnet schools, which offer specialized academic focuses in addition to the standard curriculum.
+            - link "Learn more" [ref=f16e268] [cursor=pointer]:
+              - /url: /schools/magnet
+      - generic [ref=f16e269]:
+        - heading "Our Social Spot" [level=2] [ref=f16e270]
+        - blockquote [ref=f16e275]:
+          - generic [ref=f16e276]:
+            - link "View this profile on Instagram" [ref=f16e277] [cursor=pointer]:
+              - /url: https://www.instagram.com/northsideisd/?utm_source=ig_embed&utm_campaign=loading
+            - paragraph [ref=f16e308]:
+              - link [ref=f16e309] [cursor=pointer]:
+                - /url: https://www.instagram.com/northsideisd/?utm_source=ig_embed&utm_campaign=loading
+                - text: Northside ISD
+                - img "(link is external)" [ref=f16e310]
+              - text: (@
+              - link [ref=f16e313] [cursor=pointer]:
+                - /url: https://www.instagram.com/northsideisd/?utm_source=ig_embed&utm_campaign=loading
+                - text: northsideisd
+                - img "(link is external)" [ref=f16e314]
+              - text: ) • Instagram photos and videos
+    - contentinfo [ref=f16e317]:
+      - generic [ref=f16e319]:
+        - link [ref=f16e321] [cursor=pointer]:
+          - /url: /
+          - img "Returns you to the NISD homepage" [ref=f16e322]
+        - generic [ref=f16e323]:
+          - generic [ref=f16e324]:
+            - strong [ref=f16e325]: Northside ISD|
+            - generic [ref=f16e326]: 5900 Evers Road, San Antonio TX 78238|
+            - paragraph [ref=f16e327]:
+              - text: "Phone:"
+              - link "210-397-8500" [ref=f16e328] [cursor=pointer]:
+                - /url: tel:210-397-8500
+              - text: "|"
+            - link "info@nisd.net" [ref=f16e329] [cursor=pointer]:
+              - /url: mail:info@nisd.net
+          - list [ref=f16e331]:
+            - listitem [ref=f16e332]:
+              - link "Emergency Information|" [ref=f16e333] [cursor=pointer]:
+                - /url: /safeline
+            - listitem [ref=f16e334]:
+              - link "Job Opportunities|" [ref=f16e335] [cursor=pointer]:
+                - /url: /hr
+            - listitem [ref=f16e336]:
+              - link "Privacy Policies|" [ref=f16e337] [cursor=pointer]:
+                - /url: /privacy
+            - listitem [ref=f16e338]:
+              - link "Required postings|" [ref=f16e339] [cursor=pointer]:
+                - /url: /district/required-postings
+            - listitem [ref=f16e340]:
+              - link "Site Feedback" [ref=f16e341] [cursor=pointer]:
+                - /url: /contact
+          - generic [ref=f16e343]:
+            - link "@NISD on twitter" [ref=f16e344] [cursor=pointer]:
+              - /url: http://www.twitter.com/NISD
+            - link "@NorthsideISD on facebook" [ref=f16e347] [cursor=pointer]:
+              - /url: http://www.facebook.com/NorthsideISD
+            - link "@NorthsideISD on instagram" [ref=f16e350] [cursor=pointer]:
+              - /url: https://www.instagram.com/NorthsideISD
+            - link "@NorthsideISD on youtube" [ref=f16e353] [cursor=pointer]:
+              - /url: http://www.youtube.com/NorthsideISD
+            - link "Get notifications from NISD with SchoolMessenger" [ref=f16e356] [cursor=pointer]:
+              - /url: https://go.schoolmessenger.com
+          - link "Sitemap" [ref=f16e359] [cursor=pointer]:
+            - /url: /sitemap.xml
