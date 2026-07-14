@@ -147,6 +147,19 @@ export default defineNuxtConfig({
 
         '/frisco-independent-school-district-calendar/2025-2026',
         '/frisco-independent-school-district-calendar/2026-2027',
+
+        '/round-rock-independent-school-district-calendar',
+        '/round-rock-independent-school-district-calendar/2025-2026',
+        '/round-rock-independent-school-district-calendar/2026-2027',
+
+        '/katy-independent-school-district-calendar',
+        '/katy-independent-school-district-calendar/2025-2026',
+        '/katy-independent-school-district-calendar/2026-2027',
+        '/katy-independent-school-district-calendar/2027-2028',
+
+        '/conroe-independent-school-district-calendar',
+        '/conroe-independent-school-district-calendar/2025-2026',
+        '/conroe-independent-school-district-calendar/2026-2027',
       ],
     },
   },
