@@ -150,6 +150,7 @@ const makeBreakEvent = (b: { name: string; start: string; end: string }) => ({
   eventStatus: 'https://schema.org/EventScheduled',
   eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
   image: district.value!.logo || 'https://myschooldates.com/icons/myschooldates-og-img.png',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock', validFrom: b.start, url: canonicalUrl },
   organizer: orgRef,
   location: { '@type': 'Place', name: district.value!.name, address: orgAddress },
 })
