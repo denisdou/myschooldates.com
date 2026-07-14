@@ -40,8 +40,8 @@
 
 | 优先级 | 学区 | Slug | 状态 |
 |--------|------|------|------|
-| P1 补缺 | Plano ISD | `/plano-independent-school-district-calendar/` | ✓ 已完成 |
-| P2 | Frisco ISD | `/frisco-isd/` | 待创建 |
+| P1 补缺 | Plano ISD | `/plano-independent-school-district-calendar` | ✓ 已完成 |
+| P2 | Frisco ISD | `/frisco-independent-school-district-calendar` | ✓ 已完成 |
 | P2 | Katy ISD | `/katy-isd/` | 待创建 |
 | P2 | Round Rock ISD | `/round-rock-isd/` | 待创建 |
 | P2 | Conroe ISD | `/conroe-isd/` | 待创建 |
@@ -64,7 +64,7 @@
 
 | 优先级 | 学区 | Slug | 状态 |
 |--------|------|------|------|
-| P1 补缺 | Henrico County Public Schools | `/henrico-county/` | 待创建 |
+| P1 补缺 | Henrico County Public Schools | `/henrico-county-school-calendar` | ✓ 已完成 |
 | P2 | Arlington Public Schools | `/arlington-public-schools/` | 待创建 |
 
 > Henrico County 约 52,000 学生，紧邻 Richmond。Arlington 约 27,000 学生，与 DC 联邦就业高度绑定，是 Pentagon / Amazon HQ2 家庭的主要学区。

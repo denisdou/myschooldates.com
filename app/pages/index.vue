@@ -77,7 +77,7 @@ function onSearchBlur() { setTimeout(() => { showDropdown.value = false }, 150) 
 
 useSeoMeta({
   title: 'US School Calendars 2025–2026 | Holidays, Breaks & Key Dates | MySchoolDates',
-  description: 'School calendars for 25+ US public school districts. Find school start dates, spring break, winter break, and all holidays. Add to Google Calendar or Apple Calendar.',
+  description: 'School calendars for 30+ US public school districts. Find school start dates, spring break, winter break, and all holidays. Add to Google Calendar or Apple Calendar.',
 })
 
 useHead({
@@ -125,7 +125,7 @@ useHead({
       <!-- Stats bar -->
       <div class="bg-gray-900 text-white">
         <div class="max-w-4xl mx-auto px-4 py-4 flex flex-wrap justify-center gap-x-10 gap-y-2 text-sm">
-          <span><strong class="text-white">25</strong> <span class="text-gray-400">school districts</span></span>
+          <span><strong class="text-white">30</strong> <span class="text-gray-400">school districts</span></span>
           <span><strong class="text-white">9</strong> <span class="text-gray-400">states</span></span>
           <span><strong class="text-white">2025–2026</strong> <span class="text-gray-400">&amp; 2026–2027</span></span>
           <span><strong class="text-white">Official</strong> <span class="text-gray-400">district sources</span></span>

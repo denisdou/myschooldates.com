@@ -4,7 +4,6 @@
   "firstDay": "2026-08-07",
   "lastDay": "2027-05-28",
   "totalSchoolDays": 182,
-  "teacherWorkDays": 200,
   "semesters": 2,
   "sourceUrl": "https://www.ccs.k12.nc.us/page/districts-board-approved-calendars",
   "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4929/Ccs/7a7ae4d8-0ae9-4aaf-a762-230cf2eb7f0b/2026-2027-Traditional-Calendar.pdf",
@@ -21,6 +20,33 @@
       "type": "international",
       "label": "Cross Creek & Cumberland International Calendar",
       "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4929/Ccs/f61cc8a2-45ac-41bd-97cc-d096e6f9a6ce/2026-2027-Early-Colleges-Calendar.pdf"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Does Cumberland County Schools have a fall break in 2026-2027?",
+      "a": "Yes. Cumberland County Schools has a fall break running from Oct 12, 2026 to Oct 16, 2026, a total of 5 days."
+    },
+    {
+      "q": "When does school start for Cumberland County Schools in 2026-2027?",
+      "a": "The first day of school for Cumberland County Schools is Friday, August 7, 2026. Students and staff are expected to report on this date to begin the new academic year."
+    }
+  ],
+  "yearNumbers": [
+    {
+      "label": "Starts Earlier",
+      "value": "4 days",
+      "detail": "First day moves from Aug 11 to Aug 7 vs 2025–2026 — and uniquely starts on a Friday."
+    },
+    {
+      "label": "Fall Break",
+      "value": "Oct 12–16",
+      "detail": "5-day fall break continues; shifts one day earlier than 2025–2026 (Oct 13–17) due to the calendar alignment."
+    },
+    {
+      "label": "Good Friday",
+      "value": "Mar 26",
+      "detail": "Good Friday shifts from Apr 3 (2025–2026) to Mar 26 — now falls the Friday after Spring Break ends (Mar 19), rather than two weeks later."
     }
   ],
   "events": [
@@ -100,5 +126,5 @@
       "type": "holiday"
     }
   ],
-  "calendarNotes": "Cumberland County Schools begins the 2026–2027 school year on August 7, 2026 — among the earliest start dates in North Carolina. Spring Break runs March 15–19, 2027. The school year ends May 28, 2027."
+  "calendarNotes": "Cumberland County Schools opens the 2026–2027 school year on Friday, August 7, 2026 — four days earlier than 2025–2026 and one of the earliest first days of school in North Carolina. The year begins on a Friday by design: a single-day soft start gives students and staff a transition day before the first full instructional week begins on Monday, August 10. This approach, used when calendar math places the target first day on a Friday, is preferred by some districts over starting mid-week.\n\nThe rationale for CCS's early August start goes beyond scheduling preference. North Carolina's 1,025-hour instructional requirement makes earlier starts strategically valuable: End-of-Grade (EOG) and End-of-Course (EOC) testing windows can be completed before Memorial Day, buffer days are built in for Atlantic hurricane closures that affect eastern NC, and the school year closes before June — when Fort Liberty's PCS peak season intensifies and large numbers of military families begin summer transfers. A school year that runs into June creates enrollment and records-transfer complexity that CCS actively avoids.\n\nThe 5-day Fall Break continues in 2026–2027, running October 12–16 — one day earlier than 2025–2026 due to the calendar alignment. This fall break remains unusual among NC traditional-calendar districts, most of which have no fall break at all. Winter Break runs December 21 – January 1, with classes resuming January 4.\n\nGood Friday shifts to March 26, 2027 — one week after Spring Break ends on March 19, rather than the two-week gap in 2025–2026. The shift reflects the earlier Easter date in 2027 (April 4 vs. April 5 in 2026). Presidents' Day (February 15) is observed as a school holiday this year.\n\nCCS also maintains Board-approved Year-Round and Cross Creek & Cumberland International calendars for families in those programs, each with a distinct break structure from the traditional calendar shown here."
 }

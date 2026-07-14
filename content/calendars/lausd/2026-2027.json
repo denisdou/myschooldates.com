@@ -4,12 +4,60 @@
   "firstDay": "2026-08-12",
   "lastDay": "2027-06-04",
   "totalSchoolDays": 180,
-  "teacherWorkDays": 185,
+  "teacherWorkDays": null,
   "semesters": 2,
   "sourceUrl": "https://www.lausd.org/apps/pages/index.jsp?uREC_ID=4432518&type=d&pREC_ID=2672183",
   "sourcePdfUrl": "https://media.edlio.net/135dff18/cc2a29d3/f0dbab90/03abacb9bbd44b1c8b86d1828e9ad968?_=2026-27%20Instructional%20Cal_Eng_Month_rev%206.9.26.pdf",
   "lastVerifiedAt": "2026-07-02",
   "calendarType": "traditional",
+  "whatsNew": {
+    "title": "What's Different in 2026–2027",
+    "content": [
+      "School starts two days earlier — Wednesday, August 12 instead of August 14. Summer program and camp end dates that worked in prior years may need to shift.",
+      "Spring Recess moves a full week earlier: March 22–26 instead of March 30–April 3. If you booked spring travel based on the 2025–2026 dates, the new window doesn't overlap.",
+      "The last day of school is June 4 — six days earlier than last year's June 10. Families enrolling in summer programs that begin the Monday after school ends will have more lead time."
+    ]
+  },
+  "calendarFaqs": [
+    {
+      "q": "When does school start for Los Angeles Unified School District in 2026-2027?",
+      "a": "The first day of school is Wednesday, August 12, 2026. Worth noting: Admission Day on September 4 and Labor Day on September 7 create a four-day break just three weeks into the year — many families are caught off guard by that early September gap when arranging childcare for the first month."
+    },
+    {
+      "q": "When is the last day of school for Los Angeles Unified School District in 2026-2027?",
+      "a": "The last day of school for Los Angeles Unified School District is Friday, June 4, 2027. The school year runs from August through early June, covering 180 instructional days."
+    },
+    {
+      "q": "When is spring break 2026-2027 for Los Angeles Unified School District?",
+      "a": "LAUSD Spring Recess runs March 22–26, 2027. What families frequently miss: Farm Workers Day falls on March 31, just two school days after break ends. Students return briefly Monday and Tuesday, then have another day off before the final stretch to June."
+    },
+    {
+      "q": "When is winter break 2026-2027 for Los Angeles Unified School District?",
+      "a": "Winter Recess runs December 21, 2026 through January 8, 2027. Because the break ends on a Friday, students don't return until Monday, January 11 — nearly three full weeks away from school. Many families travel during this window, so flights and accommodations near popular destinations tend to fill faster than usual."
+    }
+  ],
+  "yearNumbers": [
+    {
+      "label": "Starts Earlier",
+      "value": "2 days sooner",
+      "detail": "First day is August 12 vs August 14 in 2025-2026 — summer programs and camps that ended the week of August 10 in prior years may now overlap with the school start."
+    },
+    {
+      "label": "Spring Recess Shifts",
+      "value": "1 week earlier",
+      "detail": "Spring Recess moves to Mar 22-26 from Mar 30-Apr 3 — families who booked spring travel based on last year's dates will find the window does not overlap."
+    },
+    {
+      "label": "Ends Earlier",
+      "value": "6 days sooner",
+      "detail": "Last day is June 4 vs June 10 in 2025-2026, giving families more lead time before summer programs that typically start the Monday after school ends."
+    },
+    {
+      "label": "Farm Workers Day",
+      "value": "Mar 31",
+      "detail": "Farm Workers Day falls on March 31 — two days after Spring Recess ends, creating a disjointed return with only Monday-Tuesday in class before a standalone holiday."
+    }
+  ],
   "events": [
     {
       "date": "2026-08-12",
@@ -87,5 +135,5 @@
       "type": "school_end"
     }
   ],
-  "calendarNotes": "LAUSD traditional-calendar schools begin the 2026–2027 school year on August 12, 2026. Year-round campuses operate on separate rotating track schedules (Track A, B, and C) with different start, break, and end dates — always confirm which calendar your child's school follows before making plans. Traditional-calendar schools end June 4, 2027."
+  "calendarNotes": "Families new to LAUSD are often caught off guard by the September rhythm: school opens August 12, but Admission Day on September 4 and Labor Day on September 7 combine to create a four-day break just three weeks in — plan childcare before those routines settle. Winter Recess runs December 21 through January 8; because the break ends on a Friday, students don't return until Monday, January 11, giving families nearly three full weeks away from school. Spring Recess runs March 22–26, 2027, but what many families miss is Farm Workers Day on March 31 — students return briefly for Monday and Tuesday, then have a standalone day off before the final stretch to June 4."
 }

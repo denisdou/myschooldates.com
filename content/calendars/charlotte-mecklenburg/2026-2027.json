@@ -4,12 +4,33 @@
   "firstDay": "2026-08-25",
   "lastDay": "2027-06-09",
   "totalSchoolDays": 185,
-  "teacherWorkDays": 200,
   "semesters": 2,
   "sourceUrl": "https://www.cms.k12.nc.us/communications/calendars/Pages/Calendars.aspx",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1751635545/cmsk12ncus/npmaxkftovi0mmyxf37r/CMS_2026-2027_Traditional_Calendar_with_Early_Release_Days.pdf",
   "lastVerifiedAt": "2026-07-05",
   "calendarType": "traditional",
+  "calendarFaqs": [
+    {
+      "q": "When does school start for Charlotte-Mecklenburg Schools in 2026-2027?",
+      "a": "The first day of school for Charlotte-Mecklenburg Schools is Tuesday, August 25, 2026. Students and staff are expected to report on this date to begin the new academic year."
+    },
+    {
+      "q": "When is the last day of school for Charlotte-Mecklenburg Schools in 2026-2027?",
+      "a": "The last day of school for Charlotte-Mecklenburg Schools is Wednesday, June 9, 2027. The school year runs from August through June, covering 185 instructional days."
+    }
+  ],
+  "yearNumbers": [
+    {
+      "label": "Spring Break Shifts Earlier",
+      "value": "1 week",
+      "detail": "Spring Break moves from Apr 6–10 (2025–2026) to Mar 29–Apr 2, pulling the break about one week earlier."
+    },
+    {
+      "label": "Good Friday",
+      "value": "Mar 26",
+      "detail": "Good Friday (Mar 26) is observed as a school holiday the Friday before Spring Break begins (Mar 29), creating a 6-day break window."
+    }
+  ],
   "events": [
     {
       "date": "2026-08-25",

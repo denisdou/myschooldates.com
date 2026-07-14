@@ -32,76 +32,104 @@
   "region": "Southern California",
   "metro": "Greater Los Angeles",
   "currentSchoolYear": "2026-2027",
-  "studentCount": 65000,
-  "schoolCount": 85,
-  "founded": 1884,
-  "calendarType": "traditional",
-  "districtFact": "Third largest school district in California, serving the port city of Long Beach and surrounding communities.",
-  "about": [
+  "studentCount": 61000,
+  "schoolCount": 83,
+  "founded": 1885,
+  "calendarType": "traditional_with_exceptions",
+  "calendarExceptions": [
     {
-      "title": "About the District",
-      "content": "Long Beach Unified School District serves approximately 62,000 students in Long Beach and adjacent communities in Los Angeles County, California."
+      "schools": [
+        "California Academy of Mathematics and Science (CAMS)",
+        "Sato Academy of Mathematics and Science"
+      ],
+      "note": "These schools publish a separate calendar. Use the campus-specific version rather than the general district calendar.",
+      "calendarPage": "https://www.lbschools.net/about/calendar"
     }
   ],
-  "planningTips": [
-    "If children in your family attend both LBUSD and LAUSD schools, note that their spring breaks differ — LBUSD is early April while LAUSD is late March. Plan trips around the later break (LBUSD) to avoid pulling kids from school.",
-    "Choice and magnet school applications for LBUSD typically open in October or November for the following school year. Do not wait until spring — most popular programs close enrollment by January.",
-    "Teacher Professional Development Days (Buyback Days) are student holidays scattered throughout the year and are not always visible on the main district calendar. Contact your school's office in August to get a complete list for the year.",
-    "Long Beach's mild coastal climate makes late-August back-to-school shopping comfortable, but popular uniform and supply stores near LBUSD schools get crowded the week before school starts. Shop by August 18 to avoid the rush."
+  "districtFact": "Long Beach Unified is a founding partner in the Long Beach College Promise — a joint commitment with CSU Long Beach and Long Beach City College that provides eligible LBUSD graduates with college-transition support, two years of tuition-free enrollment at Long Beach City College, and local-preference admission consideration at CSU Long Beach.",
+  "about": [
+    {
+      "title": "About Long Beach Unified School District",
+      "content": "Long Beach Unified serves approximately 61,000 students across 83 schools in Long Beach, Lakewood, Signal Hill, and Avalon. The district's campuses run from the east-side neighborhoods near Naples and Belmont Shore through Signal Hill — a separate city entirely surrounded by Long Beach — to the Poly and Jordan high school zones that cover some of the denser western and central corridors. Many newcomers assume a Long Beach mailing address automatically means LBUSD, but district boundaries don't follow the city line. Nearby addresses can fall into LAUSD, ABC Unified, Paramount Unified, or Compton Unified depending on the specific street. The school finder at lbschools.net identifies the assigned campus by address."
+    },
+    {
+      "title": "What to Know Before the First School Year",
+      "content": "One thing that consistently surprises families moving from LAUSD or other LA County districts: LBUSD spring break falls in early April, typically a week or two after LAUSD's late-March recess. The two breaks rarely coincide, which matters for parents whose workplace schedules follow a neighboring district's calendar or for households managing kids across both districts.\n\nThe Long Beach College Promise connects LBUSD to CSU Long Beach and Long Beach City College through a formal program providing eligible graduates with college-transition support, two years of tuition-free enrollment at LBCC, and local-preference admission consideration at CSULB. CSULB applicants must still meet the university's admission requirements. Many LBUSD families first encounter the College Promise in high school, but knowing the requirements earlier makes course planning a lot more straightforward. Details are at lbschools.net."
+    }
   ],
+  "planningTips": {
+    "content": [
+      "LBUSD high school graduation ceremonies typically take place in late May or early June, several weeks before the general last day of school for other grades. Parents of seniors should check the specific graduation schedule rather than the district's general end-of-year date.",
+      "School Choice and magnet applications don't all open at the same time. High school specialty programs typically open earlier than general elementary enrollment. The grade-specific School Choice page at lbschools.net has current-cycle deadlines.",
+      "Campus schedules may include minimum days and conference periods that don't appear in the district's main calendar view. Your school's own page within lbschools.net is where to find those."
+    ]
+  },
   "districtFaqs": [
     {
-      "q": "How does Long Beach Unified's calendar differ from LAUSD's?",
-      "a": "While both districts are in Los Angeles County, their calendars differ each year. LBUSD typically starts in late August, while LAUSD begins in mid-August. Spring break dates also diverge: LBUSD's spring break usually falls in early-to-mid April, while LAUSD's tends to be in late March. Families coordinating schedules across both districts should verify dates each year, as the gap between the two can shift."
+      "q": "Why does LBUSD spring break fall later than LAUSD's?",
+      "a": "The two districts set their calendars independently. In recent years, LBUSD spring break has landed in early April while LAUSD's has been in late March — a gap of roughly one to two weeks, though the exact difference shifts each year. Parents moving from LAUSD often don't expect this. Check both districts' published calendars for the specific school year before making travel or childcare arrangements."
     },
     {
-      "q": "Does Long Beach Unified have year-round schools?",
-      "a": "No. Unlike LAUSD, which operates both traditional and year-round campuses, Long Beach Unified School District follows a single traditional school year calendar. All LBUSD schools start and end at the same time and observe the same break schedule."
+      "q": "Do CAMS and Sato Academy follow the same calendar as other LBUSD schools?",
+      "a": "No. CAMS and Sato Academy publish a separate school calendar with different dates. The general district calendar on lbschools.net does not apply to those two schools. Families at CAMS or Sato should download the campus-specific calendar from the same page."
     },
     {
-      "q": "How do I know if my child attends LBUSD or LAUSD?",
-      "a": "The boundary between Long Beach Unified and LAUSD runs through parts of South Los Angeles, Compton, and Carson. Students on adjacent streets can fall into different districts. The easiest way to confirm is to use your home address on each district's official school finder tool, or contact your city's local school board office. Do not assume based on city name alone — Long Beach city limits and LBUSD boundaries do not always match."
+      "q": "Is my Long Beach mailing address automatically in LBUSD?",
+      "a": "Not always. LBUSD serves schools in Long Beach, Lakewood, Signal Hill, and Avalon, but the district boundary doesn't follow the city line. Some Long Beach addresses fall into LAUSD, Compton Unified, or Paramount Unified, and some Signal Hill or Lakewood addresses are in LBUSD. Enter your home address in the school finder at lbschools.net to confirm which campus is assigned."
+    },
+    {
+      "q": "What is the Long Beach College Promise?",
+      "a": "The Long Beach College Promise is a partnership among LBUSD, Long Beach City College, CSU Long Beach, and the City of Long Beach. Eligible LBUSD graduates may receive two years of tuition-free enrollment at LBCC, college-transition support, and local-preference admission consideration at CSULB. CSULB applicants must still meet the university's applicable admission requirements. Reviewing the program before ninth grade allows course planning to stay aligned with college goals. Details are at lbschools.net."
     }
   ],
   "livingHere": {
-    "intro": "Long Beach is California's second-largest city by population and home to one of the world's busiest cargo ports — a fact that shapes the local economy, traffic, and community in ways that are immediately visible to arriving families. Sitting between Los Angeles and Orange County, the city blends a working waterfront with a distinct beach-city identity.",
+    "intro": "Long Beach sits at the edge of the LA basin where the city meets the ocean — lower density than central LA, with a working port on one side and beach neighborhoods on the other. The district serves communities across Long Beach, Lakewood, Signal Hill, and Avalon, and the day-to-day experience of school life here is shaped by that range.",
     "highlights": [
       {
-        "label": "Port of Long Beach",
-        "detail": "One of the two busiest container ports in the Western Hemisphere (alongside the adjacent Port of LA). Tens of thousands of local jobs are tied to port operations, logistics, and shipping. Truck traffic on I-710 (the 710 Freeway) is heaviest on school-day mornings — a direct factor for families commuting through the corridor."
+        "label": "Specialized School Pathways",
+        "detail": "CAMS, Sato Academy, and programs like Millikan COMPASS consistently attract more applicants than available seats. Families often end up comparing CAMS and Millikan COMPASS during the application process — the two attract similar interest and their timelines overlap. Parents interested in these pathways tend to start the School Choice process in the fall before they want their child to enroll. High school specialty applications typically open before the general elementary enrollment window. CAMS and Sato also follow a separate calendar, so siblings at different campuses won't always share the same no-school days."
       },
       {
-        "label": "Long Beach Airport (LGB)",
-        "detail": "A mid-sized airport with Southwest, Delta, and American service to major US cities. Quieter and faster than LAX — parking is walkable, security lines are short. During school breaks, LGB flights sell out quickly; book 4–6 weeks ahead for Spring Break travel."
+        "label": "The I-710 Corridor",
+        "detail": "The I-710 carries substantial port and freight traffic between the Ports of Long Beach and Los Angeles and the inland distribution network. Families whose school route uses the corridor should check morning travel conditions and allow extra time during heavy traffic periods."
       },
       {
-        "label": "Marine Layer and Coastal Climate",
-        "detail": "Long Beach's proximity to the ocean keeps summer temperatures 10–20°F cooler than the inland LA basin. A morning marine layer (low clouds and fog) is common through late morning from May to September — 'June Gloom' is a local term for this pattern, and it extends well into July most years."
+        "label": "Coastal Climate and Morning Arrival",
+        "detail": "Coastal mornings in Long Beach are often noticeably cooler and cloudier than the inland LA basin. A marine layer — low coastal fog — is common through late morning during spring and summer, a pattern locals call 'June Gloom' even though it extends well into July most years. Students may need a light layer at morning drop-off even when afternoons warm up considerably."
       },
       {
-        "label": "Oil Industry Presence",
-        "detail": "Long Beach sits above one of California's largest oil fields. Offshore oil islands disguised as tropical resort islands (Astronaut Island, etc.) are visible from the shoreline, and oil-related employment has shaped local industry for generations. Several LBUSD schools sit near legacy industrial zones."
+        "label": "Morning Drop-Off and Campus Logistics",
+        "detail": "Drop-off timing at LBUSD elementary schools is worth scouting before the first week. Many neighborhood campuses have limited curb space and open access shortly before the bell — arriving at the tail end of the window means longer waits. Older campuses in established neighborhoods tend to have tighter drop-off logistics than newer developments. Poly High and Wilson High both see significant afternoon congestion near campus at dismissal."
       },
       {
-        "label": "Beach Access and Summer Programs",
-        "detail": "Long Beach's waterfront stretches several miles along the Pacific. City beaches, the Aquarium of the Pacific, and Rainbow Harbor draw families year-round. Summer LBUSD camps and city recreation programs fill quickly after the school year ends — register in April or May for summer programming."
-      },
-      {
-        "label": "LA Metro and Bus Access",
-        "detail": "The Blue Line (A Line) connects Long Beach to downtown Los Angeles in about 50 minutes. Several LBUSD high school students commute via Metro. The schedule aligns poorly with early school dismissal times — families relying on transit for older students should verify last-mile connections from each station."
+        "label": "LA Metro Access",
+        "detail": "The A Line (Blue Line) connects Long Beach to downtown Los Angeles. Parents relying on Metro or Long Beach Transit for older students should check campus-specific dismissal times, particularly on minimum days and conference days when schedules differ from the regular calendar."
       }
     ]
   },
+  "searchAliases": [
+    "LBUSD",
+    "Long Beach Unified School District",
+    "Long Beach Unified calendar",
+    "Long Beach school calendar",
+    "Long Beach CA public schools",
+    "Signal Hill school district",
+    "Belmont Shore school district",
+    "Naples Long Beach school district",
+    "CAMS LBUSD calendar",
+    "Sato Academy calendar"
+  ],
   "relatedDistricts": [
     {
       "name": "Los Angeles Unified School District",
       "slug": "los-angeles-unified-school-district-calendar",
-      "state": "California"
+      "state": "California",
+      "reason": "LAUSD serves nearby communities and is the most common comparison for Long Beach families. The two districts publish separate calendars with different start dates and break schedules — worth checking directly for each school year rather than assuming they track together."
     },
     {
-      "name": "San Diego Unified School District",
-      "slug": "san-diego-unified-school-district-calendar",
-      "state": "California"
+      "name": "ABC Unified School District",
+      "state": "California",
+      "reason": "ABC Unified serves Cerritos, Artesia, Lakewood, and Hawaiian Gardens, communities directly adjacent to LBUSD's eastern boundary. Households near that border should confirm which district their specific address falls in."
     }
   ],
   "sources": [
@@ -114,8 +142,20 @@
       "url": "https://www.lbschools.net"
     },
     {
+      "label": "Long Beach Unified School Choice",
+      "url": "https://www.lbschools.net/departments/school-choice/home"
+    },
+    {
+      "label": "Long Beach College Promise",
+      "url": "https://www.lbschools.net/departments/college-career-readiness/college-promise"
+    },
+    {
       "label": "California Department of Education",
       "url": "https://www.cde.ca.gov"
+    },
+    {
+      "label": "NCES — Common Core of Data, Long Beach Unified School District",
+      "url": "https://nces.ed.gov/ccd/districtsearch/"
     }
   ]
 }

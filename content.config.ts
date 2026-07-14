@@ -3,7 +3,13 @@ import { defineContentConfig, defineCollection, z } from '@nuxt/content'
 const eventSchema = z.object({
   date: z.string(),
   name: z.string(),
-  type: z.enum(['school_start', 'school_end', 'holiday', 'break_start', 'break_end', 'no_school', 'early_dismissal']),
+  type: z.enum([
+    'school_start', 'school_end', 'school_resume',
+    'holiday', 'no_school', 'student_holiday',
+    'break_start', 'break_end',
+    'early_release', 'early_dismissal',
+    'academic', 'observance', 'teacher_workday',
+  ]),
 })
 
 const relatedDistrictSchema = z.object({
@@ -67,11 +73,25 @@ export default defineContentConfig({
         county: z.string().optional(),
         region: z.string().optional(),
         metro: z.string().optional(),
+        seoTitle: z.string().optional(),
+        seoDescription: z.string().optional(),
         districtFaqs: z.array(districtFaqSchema).optional(),
-        planningTips: z.array(z.string()).optional(),
+        planningTips: z.object({
+          title: z.string().optional(),
+          content: z.array(z.string()),
+        }).optional(),
         livingHere: livingHereSchema.optional(),
         relatedDistricts: z.array(relatedDistrictSchema).optional(),
+        compareIntro: z.string().optional(),  // sentence(s) shown above the calendar comparison table
         sources: z.array(districtSourceSchema).optional(),
+        // Section customization
+        hiddenSections: z.array(z.string()).optional(),
+        customSections: z.array(z.object({
+          id: z.string(),
+          label: z.string(),
+          content: z.string(),
+          position: z.string().optional(), // 'afterAbout' | 'afterFaq' | 'afterPlanningTips' | 'beforeSources'
+        })).optional(),
       }),
     }),
 
@@ -115,6 +135,18 @@ export default defineContentConfig({
           pdfUrl: z.string().optional(),
           firstDay: z.string().optional(),
         })).optional(),
+        seoTitle: z.string().optional(),
+        seoDescription: z.string().optional(),
+        calendarFaqs: z.array(districtFaqSchema).optional(),
+        yearNumbers: z.array(z.object({
+          label: z.string(),
+          value: z.string(),
+          detail: z.string(),
+        })).optional(),
+        whatsNew: z.object({
+          title: z.string().optional(),
+          content: z.array(z.string()),
+        }).optional(),
         events: z.array(eventSchema),
       }),
     }),

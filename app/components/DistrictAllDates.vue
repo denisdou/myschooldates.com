@@ -31,7 +31,7 @@ defineProps<{
     </div>
     <div class="divide-y divide-gray-50">
       <div
-        v-for="event in events"
+        v-for="event in events.filter(e => e.type !== 'break_end')"
         :key="event.date + event.type"
         class="flex items-center justify-between px-6 py-4 hover:bg-gray-50 transition-colors"
       >

@@ -4,25 +4,46 @@
   "firstDay": "2025-08-11",
   "lastDay": "2026-05-27",
   "totalSchoolDays": 182,
-  "teacherWorkDays": 200,
   "semesters": 2,
   "sourceUrl": "https://www.ccs.k12.nc.us/page/districts-board-approved-calendars",
   "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4929/Ccs/ec04de2a-d018-4f0e-bda9-0e5a6cd62f8d/2025-2026-Traditional-Board-Approved-Calendar.pdf",
   "lastVerifiedAt": "2026-07-05",
   "calendarType": "traditional",
   "alternateCalendars": [
-      {
-        "type": "year-round",
-        "label": "Year-Round Calendar",
-        "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4929/Ccs/b1b76431-c2ff-43fb-916e-0f114ad456a7/2025-2026-Year-Round-Board-Approved-Calendar.pdf",
-        "firstDay": "2026-07-16"
-      },
-      {
-        "type": "international",
-        "label": "Cross Creek & Cumberland International Calendar",
-        "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4929/Ccs/10e990b4-8de2-40ce-96d3-b7debb1e85eb/2025-2026-Early-Colleges-Board-Approved-Calendar.pdf",
-        "firstDay": "2026-08-11"
-      }
+    {
+      "type": "year-round",
+      "label": "Year-Round Calendar",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4929/Ccs/b1b76431-c2ff-43fb-916e-0f114ad456a7/2025-2026-Year-Round-Board-Approved-Calendar.pdf",
+      "firstDay": "2026-07-16"
+    },
+    {
+      "type": "international",
+      "label": "Cross Creek & Cumberland International Calendar",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4929/Ccs/10e990b4-8de2-40ce-96d3-b7debb1e85eb/2025-2026-Early-Colleges-Board-Approved-Calendar.pdf",
+      "firstDay": "2026-08-11"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Does Cumberland County Schools have a fall break in 2025-2026?",
+      "a": "Yes. Cumberland County Schools has a fall break running from Oct 13, 2025 to Oct 17, 2025, a total of 5 days."
+    },
+    {
+      "q": "When does school start for Cumberland County Schools in 2025-2026?",
+      "a": "The first day of school for Cumberland County Schools is Monday, August 11, 2025. Students and staff are expected to report on this date to begin the new academic year."
+    }
+  ],
+  "yearNumbers": [
+    {
+      "label": "Fall Break",
+      "value": "Oct 13–17",
+      "detail": "Cumberland County includes a 5-day fall break in mid-October — uncommon among North Carolina traditional-calendar districts."
+    },
+    {
+      "label": "Good Friday",
+      "value": "Apr 3",
+      "detail": "Good Friday is observed as a school holiday, two weeks after Spring Break ends (Mar 20)."
+    }
   ],
   "events": [
     {
@@ -96,5 +117,5 @@
       "type": "school_end"
     }
   ],
-  "calendarNotes": "Cumberland County Schools begins the 2025–2026 school year on August 11, 2025 — among the earliest start dates in North Carolina. Spring Break runs March 16–20, 2026. The school year ends May 27, 2026."
+  "calendarNotes": "Cumberland County Schools opens the 2025–2026 school year on Monday, August 11, 2025 — one of the earliest start dates among North Carolina traditional-calendar districts. The early August start isn't arbitrary: North Carolina's 1,025-hour instructional requirement rewards earlier starts by allowing End-of-Grade (EOG) and End-of-Course (EOC) assessments to complete before Memorial Day weekend. Starting in early August also gives CCS critical buffer days for hurricane-related school closures — Fayetteville's location in eastern North Carolina puts it in the path of Atlantic storms that can force multi-day shutdowns. A third factor unique to Cumberland County: closing the school year by late May keeps families on-track before the June peak of Fort Liberty's PCS transfer season, when large numbers of military families begin summer moves.\n\nA structurally notable feature of this calendar is the 5-day Fall Break running October 13–17. Most North Carolina traditional-calendar districts do not have a fall break of this length — at most a day or two in October. The Fall Break serves as a mid-semester reset roughly halfway between the August start and Winter Break (December 22 – January 2), and is one of the CCS calendar elements that most distinguishes it from peer NC districts like Wake County and Charlotte-Mecklenburg.\n\nGood Friday (April 3, 2026) is observed as a school holiday. Easter falls on April 5, 2026, placing Good Friday two weeks after Spring Break ends on March 20 — an unusually wide gap that reflects the late Easter date that year.\n\nCCS also maintains Board-approved Year-Round and Cross Creek & Cumberland International calendars for families enrolled in those programs, each with a different break structure than the traditional calendar shown here."
 }

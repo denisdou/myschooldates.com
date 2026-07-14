@@ -56,17 +56,23 @@ export function useDistrictPage() {
       e => e.type === 'break_end' && e.name.toLowerCase().includes('winter')
     )
     if (!winterEnd) return ''
-    const noSchoolDates = new Set(events.filter(e => e.type === 'no_school').map(e => e.date))
-    const d = new Date(winterEnd.date + 'T00:00:00')
-    d.setDate(d.getDate() + 1)
+    // Prefer an explicit school_resume event (e.g. "First Day of Spring Semester")
+    const resumeEvent = events.find(e => e.type === 'school_resume' && e.date > winterEnd.date)
+    if (resumeEvent) return resumeEvent.date
+    // Fallback: advance past weekends and any no-student day
+    const noStudentDates = new Set(
+      events.filter(e => ['no_school', 'student_holiday', 'holiday'].includes(e.type)).map(e => e.date)
+    )
     const toDateStr = (dt: Date) => {
       const y = dt.getFullYear()
       const m = String(dt.getMonth() + 1).padStart(2, '0')
       const day = String(dt.getDate()).padStart(2, '0')
       return `${y}-${m}-${day}`
     }
+    const d = new Date(winterEnd.date + 'T00:00:00')
+    d.setDate(d.getDate() + 1)
     let dateStr = toDateStr(d)
-    while (d.getDay() === 0 || d.getDay() === 6 || noSchoolDates.has(dateStr)) {
+    while (d.getDay() === 0 || d.getDay() === 6 || noStudentDates.has(dateStr)) {
       d.setDate(d.getDate() + 1)
       dateStr = toDateStr(d)
     }
@@ -221,7 +227,8 @@ export function useDistrictPage() {
   const eventTypeLabel: Record<string, string> = {
     school_start: 'First Day', school_end: 'Last Day', holiday: 'Holiday',
     break_start: 'Break Starts', break_end: 'Break Ends',
-    no_school: 'No School', early_dismissal: 'Early Dismissal',
+    no_school: 'No School', student_holiday: 'No School',
+    early_dismissal: 'Early Dismissal', makeup_day: 'Make-Up Day',
   }
 
   const eventTypeColor: Record<string, string> = {
@@ -231,7 +238,9 @@ export function useDistrictPage() {
     break_start: 'bg-purple-100 text-purple-800',
     break_end: 'bg-purple-100 text-purple-800',
     no_school: 'bg-yellow-100 text-yellow-800',
+    student_holiday: 'bg-yellow-100 text-yellow-800',
     early_dismissal: 'bg-orange-100 text-orange-800',
+    makeup_day: 'bg-orange-100 text-orange-800',
   }
 
   return {
