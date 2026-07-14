@@ -228,7 +228,11 @@ export function useDistrictPage() {
     school_start: 'First Day', school_end: 'Last Day', holiday: 'Holiday',
     break_start: 'Break Starts', break_end: 'Break Ends',
     no_school: 'No School', student_holiday: 'No School',
-    early_dismissal: 'Early Dismissal', makeup_day: 'Make-Up Day',
+    early_release: 'Early Release', early_dismissal: 'Early Dismissal',
+    makeup_day: 'Make-Up Day', school_resume: 'School Resumes', school_reopen: 'School Resumes',
+    quarter_end: 'End of Quarter', semester_end: 'End of Semester',
+    graduation: 'Graduation', academic: 'Academic', observance: 'Observance',
+    teacher_workday: 'Teacher Workday',
   }
 
   const eventTypeColor: Record<string, string> = {
@@ -239,8 +243,17 @@ export function useDistrictPage() {
     break_end: 'bg-purple-100 text-purple-800',
     no_school: 'bg-yellow-100 text-yellow-800',
     student_holiday: 'bg-yellow-100 text-yellow-800',
+    early_release: 'bg-orange-100 text-orange-800',
     early_dismissal: 'bg-orange-100 text-orange-800',
     makeup_day: 'bg-orange-100 text-orange-800',
+    school_resume: 'bg-green-100 text-green-800',
+    school_reopen: 'bg-green-100 text-green-800',
+    quarter_end: 'bg-gray-100 text-gray-700',
+    semester_end: 'bg-gray-100 text-gray-700',
+    graduation: 'bg-green-100 text-green-800',
+    academic: 'bg-gray-100 text-gray-700',
+    observance: 'bg-blue-50 text-blue-700',
+    teacher_workday: 'bg-yellow-100 text-yellow-800',
   }
 
   return {

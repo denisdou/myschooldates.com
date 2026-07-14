@@ -4,11 +4,12 @@ const eventSchema = z.object({
   date: z.string(),
   name: z.string(),
   type: z.enum([
-    'school_start', 'school_end', 'school_resume',
+    'school_start', 'school_end', 'school_resume', 'school_reopen',
     'holiday', 'no_school', 'student_holiday',
     'break_start', 'break_end',
     'early_release', 'early_dismissal',
     'academic', 'observance', 'teacher_workday',
+    'makeup_day', 'quarter_end', 'semester_end', 'graduation',
   ]),
 })
 
