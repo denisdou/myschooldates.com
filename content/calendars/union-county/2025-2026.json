@@ -1,0 +1,201 @@
+{
+  "institutionId": "union-county",
+  "schoolYear": "2025-2026",
+  "firstDay": "2025-08-25",
+  "lastDay": "2026-06-05",
+  "totalSchoolDays": 175,
+  "teacherWorkDays": 215,
+  "semesters": 2,
+  "sourceUrl": "https://www.ucpsnc.org/calendars",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1743181045/unioncountyps/lmaeoanicpkjcbfdv2sx/2025-2026-Traditional-School-Academic-Calendar-Updated-032625.pdf",
+  "lastVerifiedAt": "2026-07-15",
+  "calendarType": "traditional",
+  "calendarFaqs": [
+    {
+      "q": "When does school start for Union County Public Schools in 2025-2026?",
+      "a": "The first day of school is Monday, August 25, 2025."
+    },
+    {
+      "q": "When is the last day of school for Union County Public Schools in 2025-2026?",
+      "a": "The last day of school is Friday, June 5, 2026."
+    },
+    {
+      "q": "How many instructional days are included?",
+      "a": "Students attend 175 instructional days. Semester 1 contains 86 instructional days and Semester 2 contains 89 instructional days."
+    },
+    {
+      "q": "How many staff calendar days are scheduled?",
+      "a": "The calendar includes 215 calendar days for staff."
+    },
+    {
+      "q": "Are there designated make-up days?",
+      "a": "Yes. October 2, 2025 (Elementary) and January 16, 2026 (Secondary) are designated required make-up days. Saturdays and/or extended school days may also be used if necessary."
+    },
+    {
+      "q": "When is Spring Break?",
+      "a": "Spring Break runs from Monday, April 6 through Friday, April 10, 2026."
+    }
+  ],
+  "yearNumbers": [
+    {
+      "label": "Why 175 Days?",
+      "value": "State calendar fit",
+      "detail": "UCPS organizes the student calendar around state instructional requirements while separating student attendance dates from staff-only calendar rules."
+    },
+    {
+      "label": "Staff Calendar Length",
+      "value": "215 days",
+      "detail": "The staff calendar is broader than the student calendar, so some weekdays are no-school days for families but still matter for district operations."
+    },
+    {
+      "label": "Semester 1",
+      "value": "86 days",
+      "detail": "The first semester carries students from the late-August start through the winter recess and early-January transition."
+    },
+    {
+      "label": "Semester 2",
+      "value": "89 days",
+      "detail": "The second semester includes spring testing, Spring Break, Memorial Day, graduations, and the year-end closeout window."
+    }
+  ],
+  "events": [
+    {
+      "date": "2025-08-25",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2025-09-01",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-09-23",
+      "name": "No School (Teacher Workday)",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-10-02",
+      "name": "Required Make-up Day (Elementary)",
+      "type": "makeup_day"
+    },
+    {
+      "date": "2025-11-04",
+      "name": "No School (Professional Development)",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-11-11",
+      "name": "Veterans Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-11-26",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2025-11-27",
+      "name": "Thanksgiving Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-11-28",
+      "name": "Thanksgiving Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2025-12-22",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2025-12-24",
+      "name": "Christmas Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2025-12-25",
+      "name": "Christmas Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-12-26",
+      "name": "No School (Teacher Workday)",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-12-26",
+      "name": "Christmas Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2026-01-01",
+      "name": "New Year's Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-01-02",
+      "name": "No School (Professional Development)",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-01-02",
+      "name": "Winter Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2026-01-16",
+      "name": "Required Make-up Day (Secondary)",
+      "type": "makeup_day"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-02-16",
+      "name": "No School (Teacher Workday)",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-03-03",
+      "name": "No School (Professional Development)",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "No School (Teacher Workday)",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Good Friday",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Spring Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2026-05-25",
+      "name": "Memorial Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-06-05",
+      "name": "Last Day of School",
+      "type": "school_end"
+    }
+  ],
+  "calendarNotes": "Union County Public Schools 2025-2026 Traditional Academic Calendar. Students attend 175 instructional days with 86 days in Semester 1 and 89 days in Semester 2. Staff follow a 215-day calendar. Students do not attend school on holidays, teacher workdays, district professional development days, and major breaks. The calendar includes designated make-up days for Elementary (October 2, 2025) and Secondary (January 16, 2026). Additional make-up days may be scheduled by the superintendent if needed. The first day of school is August 25, 2025, and the last day of school is June 5, 2026.",
+  "datePublished": "2026-07-15",
+  "dateModified": "2026-07-15"
+}

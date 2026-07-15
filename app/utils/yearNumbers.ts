@@ -20,7 +20,7 @@ export interface YearNumbersPool {
   lastDay:           string
 }
 
-// Fixed 4-card layout: Instructional Days · Student Holidays · Winter Break · Semester Split
+// Fixed layout: Instructional Days · Student No-School Days · Winter Break
 // Plus extra cards from the calendar's yearNumbers field (change indicators + district-specific).
 export function scoreYearNumbers(
   pool: YearNumbersPool,
@@ -28,6 +28,17 @@ export function scoreYearNumbers(
   fmtShort: (d: string) => string,
 ): NumberCard[] {
   const cards: NumberCard[] = []
+  const weekdaysBetween = (startStr: string, endStr: string) => {
+    const cursor = new Date(startStr + 'T00:00:00')
+    const end = new Date(endStr + 'T00:00:00')
+    let count = 0
+    while (cursor <= end) {
+      const day = cursor.getDay()
+      if (day !== 0 && day !== 6) count++
+      cursor.setDate(cursor.getDate() + 1)
+    }
+    return count
+  }
 
   // Card 1: Instructional Days
   cards.push({
@@ -35,28 +46,27 @@ export function scoreYearNumbers(
     label: 'Instructional Days',
     value: pool.instructionalDays,
     unit: 'days',
-    description: pool.secondSemStart
-      ? `${fmtShort(pool.firstDay)} – ${fmtShort(pool.lastDay)} · Semester 2 begins ${fmtShort(pool.secondSemStart)}.`
-      : `The ${currentYearVal} school year runs ${fmtShort(pool.firstDay)} through ${fmtShort(pool.lastDay)}.`,
+    description: `The district calendar lists this instructional-day count for ${currentYearVal}.`,
   })
 
-  // Card 2: Student Holidays
+  // Card 2: Student no-school weekdays
   cards.push({
     key: 'studentHolidays',
-    label: 'Student Holidays',
+    label: 'Additional Student No-School Weekdays',
     value: pool.noSchoolDayCount,
     unit: 'days',
-    description: `Individual no-school days for students, not counting named multi-day breaks like Thanksgiving, Winter, or Spring Break.`,
+    description: `Additional weekdays without classes, excluding listed Thanksgiving, Winter, and Spring Break periods.`,
   })
 
   // Card 3: Winter Break
   if (pool.winterBreakLength !== null && pool.winterBreakStart && pool.winterBreakEnd) {
+    const winterWeekdays = weekdaysBetween(pool.winterBreakStart, pool.winterBreakEnd)
     cards.push({
       key: 'winterBreakLength',
       label: 'Winter Break',
       value: pool.winterBreakLength,
       unit: 'days',
-      description: `Winter break runs ${fmtShort(pool.winterBreakStart)} – ${fmtShort(pool.winterBreakEnd)}.`,
+      description: `Winter break runs ${fmtShort(pool.winterBreakStart)} – ${fmtShort(pool.winterBreakEnd)} (${winterWeekdays} weekdays without school / ${pool.winterBreakLength} calendar days).`,
     })
   } else {
     cards.push({
@@ -67,17 +77,6 @@ export function scoreYearNumbers(
       description: `Winter break dates are listed in the calendar above.`,
     })
   }
-
-  // Card 4: Semester Split
-  cards.push({
-    key: 'semesterSplit',
-    label: 'Semester Split',
-    value: pool.semesters,
-    unit: pool.semesters === 1 ? 'semester' : 'semesters',
-    description: pool.secondSemStart
-      ? `Semester 2 begins ${fmtShort(pool.secondSemStart)}.`
-      : `The school year is divided into ${pool.semesters} ${pool.semesters === 1 ? 'semester' : 'semesters'}.`,
-  })
 
   // Extra cards from yearNumbers field (change indicators + district-specific)
   for (const [i, extra] of pool.extraCards.entries()) {

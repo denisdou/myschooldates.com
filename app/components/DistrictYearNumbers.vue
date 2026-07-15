@@ -18,9 +18,20 @@ const cards = computed(() => {
     b.name.toLowerCase().includes('december')
   ) ?? null
   const secondSemStart = getSecondSemesterStart(events) || null
-  const noSchoolDayCount = events.filter((e: any) =>
-    ['holiday', 'no_school', 'student_holiday'].includes(e.type)
-  ).length
+  const breakRanges = breaks.map((b: any) => ({ start: b.start, end: b.end }))
+  const isWeekday = (date: string) => {
+    const day = new Date(date + 'T00:00:00').getDay()
+    return day !== 0 && day !== 6
+  }
+  const isInsideMajorBreak = (date: string) =>
+    breakRanges.some((range: { start: string; end: string }) => date >= range.start && date <= range.end)
+  const noSchoolDates = new Set(
+    events
+      .filter((e: any) => ['holiday', 'no_school', 'student_holiday'].includes(e.type))
+      .filter((e: any) => isWeekday(e.date) && !isInsideMajorBreak(e.date))
+      .map((e: any) => e.date)
+  )
+  const noSchoolDayCount = noSchoolDates.size
 
   const pool: YearNumbersPool = {
     instructionalDays: props.cal.totalSchoolDays ?? 180,
@@ -35,7 +46,17 @@ const cards = computed(() => {
     lastDay: props.cal.lastDay,
   }
 
-  return scoreYearNumbers(pool, props.schoolYear, formatShortDate)
+  let cards = scoreYearNumbers(pool, props.schoolYear, formatShortDate)
+  const hasCustomNoSchoolCard = (props.cal.yearNumbers ?? []).some((card: any) =>
+    typeof card.label === 'string' && card.label.toLowerCase().includes('no-school')
+  )
+  if (hasCustomNoSchoolCard) {
+    cards = cards.filter(card => card.key !== 'studentHolidays')
+  }
+  if (props.cal.yearNumbersMode === 'compact') {
+    return cards.filter(card => card.key === 'instructionalDays' || card.key.startsWith('extra_'))
+  }
+  return cards
 })
 </script>
 
@@ -51,6 +72,6 @@ const cards = computed(() => {
         </p>
       </div>
     </div>
-    <p class="mt-5 text-xs text-gray-400 leading-relaxed">Counts include listed weekday student no-school dates between the first and last day of school. Weekends and pre-year teacher workdays are not counted.</p>
+    <p class="mt-5 text-xs text-gray-400 leading-relaxed">Additional no-school weekday counts include staff workdays and standalone holidays outside the listed Thanksgiving, Winter, and Spring Break periods. Early-dismissal days are not included.</p>
   </section>
 </template>

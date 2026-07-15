@@ -1,0 +1,206 @@
+{
+  "institutionId": "cabarrus-county",
+  "schoolYear": "2025-2026",
+  "firstDay": "2025-08-11",
+  "lastDay": "2026-05-20",
+  "totalSchoolDays": 175,
+  "semesters": 2,
+  "sourceUrl": "https://www.cabarrus.k12.nc.us/1508_4",
+  "sourcePdfUrl": "https://files.smartsites.parentsquare.com/3048/2025-26_ccs_academic_calendar_-_revised_10132025_rev-exam_half_days.pdf",
+  "seoDescription": "View the Cabarrus County Schools 2025-2026 calendar, including the first day, last day, holidays, breaks, workdays and early dismissals. Download the official CCS PDF.",
+  "lastVerifiedAt": "2026-07-15",
+  "calendarType": "traditional",
+  "yearNumbersMode": "compact",
+  "alternateCalendars": [
+    {
+      "type": "early-college",
+      "label": "2025-2026 CCS Early College Calendar",
+      "pdfUrl": "https://files.smartsites.parentsquare.com/3048/2025-26_ccs_early_college_calendar_3.pdf",
+      "firstDay": "2025-08-13"
+    },
+    {
+      "type": "restart",
+      "label": "2025-2026 CMS, ROSA, RRES, WES, WMIES Calendar",
+      "pdfUrl": "https://files.smartsites.parentsquare.com/3048/2025-26_ccs_academic_calendar_restart_revised_10132025.pdf",
+      "firstDay": "2025-08-11"
+    }
+  ],
+  "calendarFaqs": [],
+  "yearNumbers": [
+    {
+      "label": "Instructional Hours",
+      "value": "1045.76",
+      "detail": "The traditional calendar lists 1045.76 hours of instruction, above North Carolina's 1,025-hour requirement. This may reduce the amount of time that must be recovered after some disruptions."
+    },
+    {
+      "label": "Semester 1",
+      "value": "87 days",
+      "detail": "The first semester runs from the August start through the December exam and winter break window."
+    },
+    {
+      "label": "Semester 2",
+      "value": "88 days",
+      "detail": "The second semester includes spring break, Good Friday, exams, graduation, and the May closeout."
+    }
+  ],
+  "events": [
+    {
+      "date": "2025-08-11",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2025-09-01",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-09-10",
+      "name": "Early Dismissal",
+      "type": "early_dismissal"
+    },
+    {
+      "date": "2025-09-23",
+      "name": "No School (Capped Workday)",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-10-10",
+      "name": "End of Quarter",
+      "type": "early_dismissal"
+    },
+    {
+      "date": "2025-10-13",
+      "name": "No School (Uncapped Workday)",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-11-04",
+      "name": "No School (Uncapped Workday)",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-11-11",
+      "name": "Veterans Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-11-26",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2025-11-27",
+      "name": "Thanksgiving Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-11-28",
+      "name": "Thanksgiving Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2025-12-15",
+      "name": "High School Exam Window Begins",
+      "type": "academic"
+    },
+    {
+      "date": "2025-12-19",
+      "name": "End of Quarter",
+      "type": "early_dismissal"
+    },
+    {
+      "date": "2025-12-22",
+      "name": "No School (Uncapped Workday)",
+      "type": "no_school"
+    },
+    {
+      "date": "2025-12-23",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-01-01",
+      "name": "New Year's Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-01-01",
+      "name": "Winter Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2026-01-02",
+      "name": "No School (Uncapped Workday)",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-02-04",
+      "name": "Early Dismissal",
+      "type": "early_dismissal"
+    },
+    {
+      "date": "2026-02-16",
+      "name": "No School (Capped Workday)",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-03-03",
+      "name": "No School (Capped Workday)",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-03-06",
+      "name": "End of Quarter",
+      "type": "early_dismissal"
+    },
+    {
+      "date": "2026-03-09",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-03-13",
+      "name": "Spring Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Good Friday",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "No School (Uncapped Workday)",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-05-14",
+      "name": "High School Exam Window Begins",
+      "type": "academic"
+    },
+    {
+      "date": "2026-05-20",
+      "name": "Last Day of School",
+      "type": "school_end"
+    },
+    {
+      "date": "2026-05-20",
+      "name": "Early Dismissal",
+      "type": "early_dismissal"
+    },
+    {
+      "date": "2026-05-20",
+      "name": "Graduation Window Begins",
+      "type": "graduation"
+    }
+  ],
+  "calendarNotes": "The revised CCS traditional calendar includes separate student no-school weekdays, quarter-end early dismissals, December and May high school exam windows, and a graduation window that is finalized by individual high schools. Families should also confirm whether their student follows the traditional, Early College, or Restart calendar before using dates for travel, childcare, or transportation planning.",
+  "datePublished": "2026-07-15",
+  "dateModified": "2026-07-15"
+}

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { formatDate, formatShortDate, getBreaks, getSecondSemesterStart } = useDistrictPage()
+const { formatDate, getBreaks } = useDistrictPage()
 
 const props = defineProps<{
   cal: any
@@ -8,7 +8,6 @@ const props = defineProps<{
 }>()
 
 const breaks = computed(() => getBreaks(props.cal.events ?? []))
-const secondSemStart = computed(() => getSecondSemesterStart(props.cal.events ?? []) || null)
 </script>
 
 <template>
@@ -21,14 +20,11 @@ const secondSemStart = computed(() => getSecondSemesterStart(props.cal.events ??
         The {{ cal.schoolYear }} academic year for {{ district.name }} runs from
         <strong>{{ formatDate(cal.firstDay) }}</strong> to
         <strong>{{ formatDate(cal.lastDay) }}</strong>,
-        covering {{ cal.totalSchoolDays ?? 180 }} instructional days across {{ cal.semesters ?? 2 }} semesters.
-        <span v-if="secondSemStart">
-          The second semester begins {{ formatShortDate(secondSemStart) }} following the winter recess.
-        </span>
+        with {{ cal.totalSchoolDays ?? 180 }} instructional days listed on the student calendar.
       </p>
       <p v-if="breaks.length">
         Students have {{ breaks.length }} major school break{{ breaks.length !== 1 ? 's' : '' }} throughout the year —
-        {{ breaks.map(b => b.name).join(', ') }} — plus all federal holidays.
+        {{ breaks.map(b => b.name).join(', ') }} — plus district-observed holidays and additional no-school days.
         <span v-if="yearComparison" class="italic text-gray-500"> {{ yearComparison }}</span>
       </p>
     </div>

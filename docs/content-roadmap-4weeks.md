@@ -7,17 +7,17 @@
 
 ## 当前进度快照
 
-**已完成学区（26个）**
+**已完成学区（33个）**
 
 | 州 | 已完成 | P1 完成度 | P2 完成度 |
 |----|--------|-----------|-----------|
-| Texas | Houston ISD, Dallas ISD, Fort Worth ISD, Austin ISD, Northside ISD, Plano ISD | 6/6 ✓ | 0/5 |
+| Texas | Houston ISD, Dallas ISD, Fort Worth ISD, Austin ISD, Northside ISD, Plano ISD, Frisco ISD, Katy ISD, Round Rock ISD, Conroe ISD | 6/6 ✓ | 4/5 |
 | California | LAUSD, San Diego Unified, Long Beach Unified, Fresno Unified, Sacramento City USD | 5/5 ✓ | 0/5 |
 | Florida | Miami-Dade, Broward County, Orange County, Palm Beach County, Hillsborough County | 5/5 ✓ | 0/5 |
 | Virginia | Fairfax County, Prince William County, Loudoun County, Virginia Beach City, Chesterfield County | 4/5 (缺 Henrico County) | 1/5 |
-| North Carolina | Wake County, Charlotte-Mecklenburg, Guilford County, Winston-Salem/Forsyth, Cumberland County | 5/5 ✓ | 0/5 |
+| North Carolina | Wake County, Charlotte-Mecklenburg, Guilford County, Winston-Salem/Forsyth, Cumberland County, Union County, Cabarrus County, Johnston County | 5/5 ✓ | 3/5 |
 
-**合计：P1 已完成 25/27，P2 已完成 1/24，P3 尚未开始。**
+**合计：P1 已完成 27/27 ✓，P2 已完成 7/24，P3 尚未开始。**
 
 ---
 
@@ -42,9 +42,9 @@
 |--------|------|------|------|
 | P1 补缺 | Plano ISD | `/plano-independent-school-district-calendar` | ✓ 已完成 |
 | P2 | Frisco ISD | `/frisco-independent-school-district-calendar` | ✓ 已完成 |
-| P2 | Katy ISD | `/katy-isd/` | 待创建 |
-| P2 | Round Rock ISD | `/round-rock-isd/` | 待创建 |
-| P2 | Conroe ISD | `/conroe-isd/` | 待创建 |
+| P2 | Katy ISD | `/katy-independent-school-district-calendar` | ✓ 已完成 |
+| P2 | Round Rock ISD | `/round-rock-independent-school-district-calendar` | ✓ 已完成 |
+| P2 | Conroe ISD | `/conroe-independent-school-district-calendar` | ✓ 已完成 |
 
 > Plano ISD 约 54,000 学生，位于达拉斯北部郊区。Frisco 和 Katy 是 DFW/Houston 增长最快的学区，搜索量高，适合内链 Dallas ISD 和 Houston ISD。
 
@@ -52,9 +52,9 @@
 
 | 优先级 | 学区 | Slug | 状态 |
 |--------|------|------|------|
-| P2 | Union County Public Schools | `/union-county/` | 待创建 |
-| P2 | Cabarrus County Schools | `/cabarrus-county/` | 待创建 |
-| P2 | Johnston County Public Schools | `/johnston-county/` | 待创建 |
+| P2 | Union County Public Schools | `/union-county-school-calendar` | ✓ 已完成 |
+| P2 | Cabarrus County Schools | `/cabarrus-county-school-calendar` | ✓ 已完成 |
+| P2 | Johnston County Public Schools | `/johnston-county-school-calendar` | ✓ 已完成 |
 | P2 | Durham Public Schools | `/durham-public-schools/` | 待创建 |
 | P2 | New Hanover County Schools | `/new-hanover-county/` | 待创建 |
 
@@ -201,7 +201,8 @@
 | 周 | 新增学区数 | 累计总量 | 说明 |
 |----|-----------|---------|------|
 | 基准（已完成） | 26 | 26 | 含 Plano ISD（2026-07-12 完成） |
-| Week 1 | +11 | 37 | Plano ISD 已完成，剩余 TX P2 + NC P2 + VA P1 补缺 |
+| Week 1 进度 | +7 | 33 | Frisco ISD、Katy ISD、Round Rock ISD、Conroe ISD、Union County、Cabarrus County、Johnston County（2026-07-15 完成），TX P2 剩余 Cy-Fair ISD，NC P2 剩余 2 个 |
+| Week 1 目标 | +11 | 37 | 剩余：Cy-Fair ISD + NC P2(2) + VA Arlington(1) |
 | Week 2 | +11 | 48 | TX/CA P2 收尾 + VA P2 |
 | Week 3 | +15 | 63 | FL P2 + TX/CA P3 批次1 |
 | Week 4 | +20 | 83 | VA/NC P3 + TX/CA P3 批次2 |

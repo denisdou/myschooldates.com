@@ -21,9 +21,21 @@
     }
   ],
   "yearNumbers": [
-    { "label": "Starts Earlier", "value": "1 day", "detail": "First day moves from Aug 25 to Aug 24 vs 2025–2026." },
-    { "label": "Rosh Hashanah", "value": "Sep 12", "detail": "School closed district-wide; date shifts earlier than 2025–2026 (Sep 23) due to the Jewish lunar calendar." },
-    { "label": "Yom Kippur", "value": "Sep 21", "detail": "School closed district-wide; falls about 10 days earlier than in 2025–2026 (Oct 2)." }
+    {
+      "label": "Starts Earlier",
+      "value": "1 day",
+      "detail": "First day moves from Aug 25 to Aug 24 vs 2025–2026."
+    },
+    {
+      "label": "Rosh Hashanah",
+      "value": "Sep 12",
+      "detail": "School closed district-wide; date shifts earlier than 2025–2026 (Sep 23) due to the Jewish lunar calendar."
+    },
+    {
+      "label": "Yom Kippur",
+      "value": "Sep 21",
+      "detail": "School closed district-wide; falls about 10 days earlier than in 2025–2026 (Oct 2)."
+    }
   ],
   "events": [
     {
@@ -112,5 +124,7 @@
       "type": "school_end"
     }
   ],
-  "calendarNotes": "Fairfax County Public Schools begins the 2026–2027 school year on August 24, 2026 and ends June 16, 2027 — one of the later end dates among Virginia's large districts. Spring Break runs March 22–26, 2027, aligned with Prince William County and Loudoun County."
+  "calendarNotes": "Fairfax County Public Schools begins the 2026–2027 school year on August 24, 2026 and ends June 16, 2027 — one of the later end dates among Virginia's large districts. Spring Break runs March 22–26, 2027, aligned with Prince William County and Loudoun County.",
+  "datePublished": "2026-07-05",
+  "dateModified": "2026-07-05"
 }

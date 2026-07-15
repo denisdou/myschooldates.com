@@ -32,32 +32,130 @@
     }
   ],
   "yearNumbers": [
-    { "label": "4-Quarter Year", "value": "4 quarters", "detail": "Frisco ISD operates on a four-quarter grading structure within 2 semesters, unlike the simple two-semester calendar used by most Texas districts." },
-    { "label": "Make-Up Days", "value": "3 pre-set", "detail": "Three bad-weather make-up days (Apr 6, Apr 30, May 1) are pre-scheduled as regular school days unless winter closures require them for makeup." },
-    { "label": "Good Friday", "value": "Apr 3", "detail": "Good Friday is listed as a student holiday, extending the Easter weekend to four consecutive days off for families." }
+    {
+      "label": "4-Quarter Year",
+      "value": "4 quarters",
+      "detail": "Frisco ISD operates on a four-quarter grading structure within 2 semesters, unlike the simple two-semester calendar used by most Texas districts."
+    },
+    {
+      "label": "Make-Up Days",
+      "value": "3 pre-set",
+      "detail": "Three bad-weather make-up days (Apr 6, Apr 30, May 1) are pre-scheduled as regular school days unless winter closures require them for makeup."
+    },
+    {
+      "label": "Good Friday",
+      "value": "Apr 3",
+      "detail": "Good Friday is listed as a student holiday, extending the Easter weekend to four consecutive days off for families."
+    }
   ],
   "events": [
-    { "date": "2025-08-13", "name": "First Day of School", "type": "school_start" },
-    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
-    { "date": "2025-10-13", "name": "Student Holiday", "type": "student_holiday" },
-    { "date": "2025-10-14", "name": "Student Holiday", "type": "student_holiday" },
-    { "date": "2025-11-24", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2025-11-28", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2025-12-22", "name": "Winter Break", "type": "break_start" },
-    { "date": "2025-12-25", "name": "Christmas Day", "type": "holiday" },
-    { "date": "2026-01-01", "name": "New Year's Day", "type": "holiday" },
-    { "date": "2026-01-02", "name": "Winter Break End", "type": "break_end" },
-    { "date": "2026-01-05", "name": "Student Holiday", "type": "student_holiday" },
-    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2026-02-13", "name": "Student Holiday", "type": "student_holiday" },
-    { "date": "2026-02-16", "name": "Presidents' Day", "type": "holiday" },
-    { "date": "2026-03-09", "name": "Spring Break", "type": "break_start" },
-    { "date": "2026-03-13", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2026-04-03", "name": "Student Holiday", "type": "student_holiday" },
-    { "date": "2026-04-06", "name": "Bad Weather Make-Up Day", "type": "makeup_day" },
-    { "date": "2026-04-30", "name": "Bad Weather Make-Up Day", "type": "makeup_day" },
-    { "date": "2026-05-01", "name": "Bad Weather Make-Up Day", "type": "makeup_day" },
-    { "date": "2026-05-22", "name": "Last Day of School", "type": "school_end" }
+    {
+      "date": "2025-08-13",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2025-09-01",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-10-13",
+      "name": "Student Holiday",
+      "type": "student_holiday"
+    },
+    {
+      "date": "2025-10-14",
+      "name": "Student Holiday",
+      "type": "student_holiday"
+    },
+    {
+      "date": "2025-11-24",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2025-11-28",
+      "name": "Thanksgiving Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2025-12-22",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2025-12-25",
+      "name": "Christmas Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-01-01",
+      "name": "New Year's Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-01-02",
+      "name": "Winter Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2026-01-05",
+      "name": "Student Holiday",
+      "type": "student_holiday"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-02-13",
+      "name": "Student Holiday",
+      "type": "student_holiday"
+    },
+    {
+      "date": "2026-02-16",
+      "name": "Presidents' Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-03-09",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-03-13",
+      "name": "Spring Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Student Holiday",
+      "type": "student_holiday"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Bad Weather Make-Up Day",
+      "type": "makeup_day"
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Bad Weather Make-Up Day",
+      "type": "makeup_day"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Bad Weather Make-Up Day",
+      "type": "makeup_day"
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Last Day of School",
+      "type": "school_end"
+    }
   ],
-  "calendarNotes": "The 2025–2026 school year runs from August 13, 2025, through May 22, 2026. Spring Break falls March 9–13. Good Friday (April 3) is a student holiday, falling the Friday before Easter weekend. Three bad weather make-up days are pre-scheduled on the calendar — April 6, April 30, and May 1 — each a school day unless winter weather closures earlier in the year require them for makeup."
+  "calendarNotes": "The 2025–2026 school year runs from August 13, 2025, through May 22, 2026. Spring Break falls March 9–13. Good Friday (April 3) is a student holiday, falling the Friday before Easter weekend. Three bad weather make-up days are pre-scheduled on the calendar — April 6, April 30, and May 1 — each a school day unless winter weather closures earlier in the year require them for makeup.",
+  "datePublished": "2026-07-12",
+  "dateModified": "2026-07-12"
 }

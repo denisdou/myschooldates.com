@@ -67,6 +67,7 @@ const formatWeekdayDate = (d: string) =>
 
 const breaks = computed(() => getBreaks(cal.value!.events))
 const secondSemStart = computed(() => getSecondSemesterStart(cal.value!.events))
+const showSemesterCount = computed(() => (cal.value as any)?.hideSemesterCount !== true)
 const springBreak = computed(() =>
   breaks.value.find(b => b.name.toLowerCase().includes('spring')) ?? null
 )
@@ -78,6 +79,7 @@ const verifiedDate = computed(() => {
 
 const hiddenSections = computed(() => new Set<string>((district.value as any).hiddenSections ?? []))
 const customSections = computed(() => ((district.value as any).customSections ?? []) as { id: string; label: string; content: string; position?: string }[])
+const allDatesMode = computed(() => ((district.value as any)?.allDatesMode === 'keyDates' ? 'keyDates' : 'all') as 'all' | 'keyDates')
 
 const faqs = computed(() => {
   if (!district.value || !cal.value) return []
@@ -100,7 +102,7 @@ const _descTemplates = [
   // C — user benefit (~135 chars)
   `${_sn} Calendar ${year} — verified holidays${_hasSpring ? ', spring break' : ''}, key dates, and official PDF download. Works with Google Calendar.`,
   // D — ICS/sync (~130 chars)
-  `Official ${_sn} ${year} calendar with holidays${_hasSpring ? ', spring break' : ''} and winter break. Download PDF or sync to Google Calendar.`,
+  `${_sn} ${year} calendar dates sourced from official district calendars, with holidays${_hasSpring ? ', spring break' : ''} and winter break. Download PDF or sync to Google Calendar.`,
   // E — verified dates (~130 chars)
   `${_sn} ${year}: first day ${_fd}, last day ${_ld}. Holidays${_hasSpring ? ', spring break' : ''} and official PDF. Syncs with Google Calendar.`,
 ]
@@ -124,74 +126,41 @@ useSeoMeta({
   twitterDescription: _pageDesc,
 })
 
-const orgAddress = {
-  '@type': 'PostalAddress',
-  addressLocality: district.value.city ?? '',
-  addressRegion: (district.value as any).stateCode ?? district.value.state,
-  addressCountry: 'US',
+const sitePublisher = {
+  '@type': 'Organization',
+  name: 'MySchoolDates',
+  url: 'https://myschooldates.com',
 }
-const orgId = `https://myschooldates.com/${district.value.slug}#org`
-const orgEntity = {
-  '@context': 'https://schema.org',
+const districtAbout = {
   '@type': 'EducationalOrganization',
-  '@id': orgId,
   name: district.value.name,
   url: district.value.officialWebsite,
-  sameAs: [district.value.officialWebsite],
-  address: orgAddress,
 }
-const orgRef = { '@type': 'EducationalOrganization', '@id': orgId }
-
-const makeBreakEvent = (b: { name: string; start: string; end: string }) => ({
-  '@context': 'https://schema.org', '@type': 'Event',
-  name: `${b.name} — ${district.value!.name} ${year}`,
-  description: `${b.name} for ${district.value!.name} in the ${year} school year: ${b.start} through ${b.end}.`,
-  startDate: b.start, endDate: b.end,
-  eventStatus: 'https://schema.org/EventScheduled',
-  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-  image: district.value!.logo || 'https://myschooldates.com/icons/myschooldates-og-img.png',
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock', validFrom: b.start, url: canonicalUrl },
-  organizer: orgRef,
-  location: { '@type': 'Place', name: district.value!.name, address: orgAddress },
-})
-
-const keyEvents = [
-  {
-    '@context': 'https://schema.org', '@type': 'Event',
-    name: `First Day of School — ${district.value.name} ${year}`,
-    description: `First day of school for ${district.value.name} in the ${year} school year.`,
-    startDate: cal.value.firstDay, endDate: cal.value.firstDay,
-    eventStatus: 'https://schema.org/EventScheduled',
-    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    image: district.value.logo || 'https://myschooldates.com/icons/myschooldates-og-img.png',
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock', validFrom: cal.value.firstDay, url: canonicalUrl },
-    performer: orgRef,
-    organizer: orgRef, location: { '@type': 'Place', name: district.value.name, address: orgAddress },
+const pageDateModified = (cal.value as any).dateModified ?? (cal.value as any).lastVerifiedAt
+const pageDatePublished = (cal.value as any).datePublished ?? pageDateModified
+const webPageEntity = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: _pageTitle,
+  description: _pageDesc,
+  url: canonicalUrl,
+  inLanguage: 'en-US',
+  ...(pageDateModified ? { dateModified: pageDateModified, datePublished: pageDatePublished } : {}),
+  publisher: sitePublisher,
+  about: districtAbout,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'MySchoolDates',
+    url: 'https://myschooldates.com',
   },
-  {
-    '@context': 'https://schema.org', '@type': 'Event',
-    name: `Last Day of School — ${district.value.name} ${year}`,
-    description: `Last day of school for ${district.value.name} in the ${year} school year.`,
-    startDate: cal.value.lastDay, endDate: cal.value.lastDay,
-    eventStatus: 'https://schema.org/EventScheduled',
-    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    image: district.value.logo || 'https://myschooldates.com/icons/myschooldates-og-img.png',
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock', validFrom: cal.value.lastDay, url: canonicalUrl },
-    performer: orgRef,
-    organizer: orgRef, location: { '@type': 'Place', name: district.value.name, address: orgAddress },
-  },
-  // Spring Break only — the primary user search target; winter/thanksgiving omitted to keep schema lean
-  ...breaks.value
-    .filter(b => /spring/i.test(b.name))
-    .map(b => makeBreakEvent(b)),
-]
+}
 
 useHead({
   link: [{ rel: 'canonical', href: canonicalUrl }],
   script: [{
     type: 'application/ld+json',
     innerHTML: JSON.stringify([
-      orgEntity,
+      webPageEntity,
       {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
@@ -202,7 +171,6 @@ useHead({
           { '@type': 'ListItem', position: 4, name: year, item: canonicalUrl },
         ],
       },
-      ...keyEvents,
       ...(faqs.value.length ? [{
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -238,6 +206,36 @@ useHead({
         </p>
       </div>
 
+      <!-- Title -->
+      <div>
+        <h1 class="text-3xl font-bold text-gray-900">
+          {{ district!.name }} Calendar {{ year }}
+        </h1>
+        <div class="mt-3 text-gray-600 leading-relaxed space-y-2">
+          <p>
+            The first day of school for {{ district!.name }}<template v-if="district!.shortName && !district!.name.includes(district!.shortName)">, also known as {{ district!.shortName }},</template> {{ isFutureYear ? 'is' : 'was' }}
+            <strong>{{ formatWeekdayDate(cal!.firstDay) }}</strong>.
+            The last day {{ isFutureYear || isCurrentYear ? 'is' : 'was' }}
+            <strong>{{ formatWeekdayDate(cal!.lastDay) }}</strong>.
+            <span v-if="springBreak">
+              Spring Break {{ isFutureYear || isCurrentYear ? 'runs' : 'ran' }}
+              {{ formatShortDate(springBreak.start) }}–{{ formatShortDate(springBreak.end) }}.
+            </span>
+          </p>
+          <p class="text-sm text-gray-500">
+            {{ cal!.totalSchoolDays ?? 180 }} instructional days
+            <span v-if="showSemesterCount"> · {{ cal!.semesters ?? 2 }} semesters</span>
+            <span v-if="secondSemStart"> · Students return after Winter Break on {{ formatShortDate(secondSemStart) }}</span>
+          </p>
+          <p class="text-xs text-gray-400">
+            MySchoolDates is an independent calendar reference and is not affiliated with {{ district!.name }}.
+          </p>
+        </div>
+      </div>
+
+      <!-- Key Date Cards -->
+      <DistrictKeyDateCards :cal="cal!" />
+
       <!-- Alternate calendars notice -->
       <div v-if="(cal as any)?.alternateCalendars?.length" class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
         <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -250,40 +248,8 @@ useHead({
         </p>
       </div>
 
-      <!-- Title -->
-      <div>
-        <h1 class="text-3xl font-bold text-gray-900">
-          {{ district!.name }} Calendar {{ year }}
-        </h1>
-        <div class="mt-3 text-gray-600 leading-relaxed space-y-2">
-          <p>
-            The first day of school for {{ district!.name }} {{ isFutureYear ? 'is' : 'was' }}
-            <strong>{{ formatWeekdayDate(cal!.firstDay) }}</strong>.
-            The last day {{ isFutureYear || isCurrentYear ? 'is' : 'was' }}
-            <strong>{{ formatWeekdayDate(cal!.lastDay) }}</strong>.
-            <span v-if="springBreak">
-              Spring Break {{ isFutureYear || isCurrentYear ? 'runs' : 'ran' }}
-              {{ formatShortDate(springBreak.start) }}–{{ formatShortDate(springBreak.end) }}.
-            </span>
-          </p>
-          <p class="text-sm text-gray-500">
-            {{ cal!.totalSchoolDays ?? 180 }} instructional days · {{ cal!.semesters ?? 2 }} semesters
-            <span v-if="secondSemStart"> · Second semester begins {{ formatShortDate(secondSemStart) }}</span>
-          </p>
-        </div>
-      </div>
-
-      <!-- Key Date Cards -->
-      <DistrictKeyDateCards :cal="cal!" />
-
       <!-- Today / Year Status -->
       <DistrictTodayStatus :cal="cal!" />
-
-      <!-- Year by the Numbers -->
-      <DistrictYearNumbers v-if="!hiddenSections.has('yearNumbers')" :cal="cal!" :school-year="year" />
-
-      <!-- What's Different This Year -->
-      <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal!" :prev-cal="prevCal ?? undefined" />
 
       <!-- Quick Facts -->
       <DistrictQuickFacts
@@ -295,6 +261,16 @@ useHead({
         :prev-cal="prevCal ?? undefined"
       />
 
+      <!-- All Dates -->
+      <DistrictAllDates
+        :events="cal!.events"
+        :title="`All Important Dates — ${year}`"
+        :source-url="cal!.sourceUrl ?? district!.officialWebsite"
+        :district-name="district!.name"
+        :verified-date="verifiedDate"
+        :mode="allDatesMode"
+      />
+
       <!-- Add to Calendar + Share -->
       <CalendarExportShare
         :district-name="district!.name"
@@ -304,14 +280,18 @@ useHead({
         :cal="cal!"
       />
 
-      <!-- All Dates -->
-      <DistrictAllDates
-        :events="cal!.events"
-        :title="`All Important Dates — ${year}`"
-        :source-url="cal!.sourceUrl ?? district!.officialWebsite"
+      <!-- Other Official Calendars -->
+      <DistrictOtherCalendars
+        v-if="(cal as any)?.alternateCalendars?.length"
+        :alternate-calendars="(cal as any).alternateCalendars"
         :district-name="district!.name"
-        :verified-date="verifiedDate"
       />
+
+      <!-- Year by the Numbers -->
+      <DistrictYearNumbers v-if="!hiddenSections.has('yearNumbers')" :cal="cal!" :school-year="year" />
+
+      <!-- What's Different This Year -->
+      <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal!" :prev-cal="prevCal ?? undefined" />
 
       <!-- Calendar Context + About -->
       <DistrictCalendarAbout :cal="cal!" :district="district!" />
@@ -360,13 +340,6 @@ useHead({
         :district-fact="(district as any).districtFact"
       />
 
-      <!-- Other Official Calendars -->
-      <DistrictOtherCalendars
-        v-if="(cal as any)?.alternateCalendars?.length"
-        :alternate-calendars="(cal as any).alternateCalendars"
-        :district-name="district!.name"
-      />
-
       <!-- Custom Sections: beforeSources -->
       <DistrictCustomSections :sections="customSections" position="beforeSources" />
 
@@ -378,10 +351,16 @@ useHead({
         :short-name="district!.shortName || district!.name"
         :year="year"
         :verified-date="verifiedDate"
+        :source-version="(cal as any).sourceVersion"
       />
 
       <!-- Data quality notice -->
-      <DistrictDataQuality :cal="cal!" :district="district!" :year="year" />
+      <DistrictDataQuality
+        v-if="!(district as any).sources?.length"
+        :cal="cal!"
+        :district="district!"
+        :year="year"
+      />
 
       <!-- Back to current -->
       <div class="text-center">

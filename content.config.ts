@@ -64,6 +64,7 @@ export default defineContentConfig({
         logo: z.string().optional(),
         timezone: z.string().optional(),
         currentSchoolYear: z.string(),
+        allDatesMode: z.enum(['all', 'keyDates']).optional(),
         studentCount: z.number().optional(),
         schoolCount: z.number().optional(),
         founded: z.number().optional(),
@@ -128,6 +129,11 @@ export default defineContentConfig({
         sourceUrl: z.string().optional(),      // alias: sourcePageUrl (stable hub, district-level)
         sourcePdfUrl: z.string().optional(),   // direct PDF for this school year (changes annually)
         lastVerifiedAt: z.string().optional(), // ISO date: when data was last verified against official source
+        datePublished: z.string().optional(),
+        dateModified: z.string().optional(),
+        sourceVersion: z.string().optional(),
+        hideSemesterCount: z.boolean().optional(),
+        yearNumbersMode: z.enum(['compact']).optional(),
         calendarNotes: z.string().optional(),  // year-specific narrative (moved from districts/)
         calendarType: z.enum(['traditional', 'year-round', 'magnet', 'international', 'early-college', 'alternative']).optional(),
         alternateCalendars: z.array(z.object({

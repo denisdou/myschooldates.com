@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 const slug = route.params.district as string
-const { formatDate, formatShortDate, daysUntil, getBreaks, getSecondSemesterStart, downloadICS, eventTypeLabel, eventTypeColor } = useDistrictPage()
+const { formatDate, formatShortDate, daysUntil, getBreaks, getSecondSemesterStart, downloadICS, isCoveredByBreak, eventTypeLabel, eventTypeColor } = useDistrictPage()
 
 // Load all data in parallel (allDistricts needed for state detection)
 const [{ data: allDistricts }, { data: district }, { data: allCals }, { data: statePageData }] = await Promise.all([
@@ -41,7 +41,7 @@ const stateCurrentYear = (() => {
 
 if (isStatePage) {
   const stateTitle = `${matchedStateName} School Calendars ${stateCurrentYear} | MySchoolDates`
-  const stateDesc = `Official ${stateCurrentYear} school calendars for ${stateDistricts.length} public school district${stateDistricts.length !== 1 ? 's' : ''} in ${matchedStateName}. First day of school, spring break, winter break, and all important dates.`
+  const stateDesc = `${stateCurrentYear} school calendar dates sourced from official district websites for ${stateDistricts.length} public school district${stateDistricts.length !== 1 ? 's' : ''} in ${matchedStateName}. First day of school, spring break, winter break, and all important dates.`
   useSeoMeta({ title: stateTitle, description: stateDesc })
   useHead({
     link: [{ rel: 'canonical', href: `https://myschooldates.com/${slug}` }],
@@ -60,7 +60,7 @@ if (isStatePage) {
           '@context': 'https://schema.org',
           '@type': 'ItemList',
           name: `${matchedStateName} Public School Districts — ${stateCurrentYear} Calendars`,
-          description: `Official ${stateCurrentYear} school calendars for ${stateDistricts.length} public school districts in ${matchedStateName}.`,
+          description: `${stateCurrentYear} school calendar dates sourced from official district websites for ${stateDistricts.length} public school districts in ${matchedStateName}.`,
           numberOfItems: stateDistricts.length,
           itemListElement: stateDistricts.map((d, i) => ({
             '@type': 'ListItem',
@@ -176,9 +176,25 @@ const breaks = computed(() => getBreaks(cal?.events ?? []))
 
 const keyDateHighlights = computed(() => {
   if (!cal?.events) return []
-  const HIGHLIGHT_TYPES = new Set(['school_start', 'school_end', 'holiday', 'break_start'])
-  return cal.events.filter(e => HIGHLIGHT_TYPES.has(e.type))
+  const HIGHLIGHT_TYPES = new Set(['school_start', 'school_end', 'break_start'])
+  const CORE_HOLIDAYS = ['labor day', 'martin luther king', 'good friday']
+  return cal.events.filter(e =>
+    HIGHLIGHT_TYPES.has(e.type) ||
+    (e.type === 'holiday' && CORE_HOLIDAYS.some(name => e.name.toLowerCase().includes(name)) && !isCoveredByBreak(e, cal.events))
+  )
 })
+
+function keyDateLabel(event: { type: string }) {
+  if (event.type === 'break_start') return 'Break'
+  return eventTypeLabel[event.type]
+}
+
+function keyDateDisplayDate(event: { date: string; name: string; type: string }) {
+  if (event.type !== 'break_start') return formatShortDate(event.date)
+  const match = breaks.value.find(b => b.name === event.name && b.start === event.date)
+  if (!match) return formatShortDate(event.date)
+  return `${formatShortDate(match.start)} – ${formatShortDate(match.end)}`
+}
 
 const calendarSummary = computed(() => {
   if (!cal || !district.value) return ''
@@ -186,7 +202,10 @@ const calendarSummary = computed(() => {
   const springPart = springBreak
     ? ` Spring Break runs ${formatShortDate(springBreak.start)}–${formatShortDate(springBreak.end)}.`
     : ''
-  return `${district.value.name} starts the ${currentYear} school year on ${formatDate(cal.firstDay)} and ends on ${formatDate(cal.lastDay)}.${springPart}`
+  const shortName = district.value.shortName && !district.value.name.includes(district.value.shortName)
+    ? `, also known as ${district.value.shortName},`
+    : ''
+  return `${district.value.name}${shortName} starts the ${currentYear} school year on ${formatDate(cal.firstDay)} and ends on ${formatDate(cal.lastDay)}.${springPart}`
 })
 
 const faqs = computed(() => {
@@ -200,6 +219,27 @@ const hiddenSections = computed(() => new Set<string>((district.value as any).hi
 const customSections = computed(() => ((district.value as any).customSections ?? []) as { id: string; label: string; content: string; position?: string }[])
 
 const secondSemStart = computed(() => cal ? getSecondSemesterStart(cal.events) : '')
+const showSemesterCount = computed(() => (cal as any)?.hideSemesterCount !== true)
+
+function countWeekdays(start: string, end: string) {
+  const cursor = new Date(start + 'T00:00:00')
+  const stop = new Date(end + 'T00:00:00')
+  let count = 0
+  while (cursor <= stop) {
+    const day = cursor.getDay()
+    if (day !== 0 && day !== 6) count++
+    cursor.setDate(cursor.getDate() + 1)
+  }
+  return count
+}
+
+function breakDurationLabel(b: { name: string; start: string; end: string; days: number }) {
+  const weekdays = countWeekdays(b.start, b.end)
+  if (weekdays === b.days) {
+    return `${weekdays} weekday${weekdays !== 1 ? 's' : ''} without school`
+  }
+  return `${weekdays} weekday${weekdays !== 1 ? 's' : ''} / ${b.days} calendar day${b.days !== 1 ? 's' : ''}`
+}
 
 const todayStr = (() => {
   const y = today.getFullYear()
@@ -239,12 +279,18 @@ const prevYear = computed(() => {
 })
 const prevCal = computed(() => allCals.value?.find(c => c.schoolYear === prevYear.value) ?? null)
 
-const dateLegend = [
-  { label: 'Breaks', dot: 'bg-purple-400' },
-  { label: 'Holidays', dot: 'bg-blue-400' },
-  { label: 'No school', dot: 'bg-amber-400' },
-  { label: 'Early release', dot: 'bg-green-400' },
-]
+const allDatesMode = computed(() => ((district.value as any)?.allDatesMode === 'keyDates' ? 'keyDates' : 'all') as 'all' | 'keyDates')
+
+const dateLegend = computed(() => {
+  return [
+    { label: 'Breaks', dot: 'bg-purple-400' },
+    { label: 'Holidays', dot: 'bg-blue-400' },
+    { label: 'No school', dot: 'bg-amber-400' },
+    { label: 'Early dismissal', dot: 'bg-orange-400' },
+    { label: 'School resumes', dot: 'bg-green-400' },
+    { label: 'Academic', dot: 'bg-gray-400' },
+  ]
+})
 
 if (!isStatePage && district.value) {
   const canonicalUrl = `https://myschooldates.com/${slug}`
@@ -263,7 +309,7 @@ if (!isStatePage && district.value) {
     // C — user benefit (~135 chars)
     `${_sn} Calendar ${currentYear} — verified holidays${_hasSpring ? ', spring break' : ''}, key dates, and official PDF download. Works with Google Calendar.`,
     // D — ICS/sync (~130 chars)
-    `Official ${_sn} ${currentYear} calendar with holidays${_hasSpring ? ', spring break' : ''} and winter break. Download PDF or sync to Google Calendar.`,
+    `${_sn} ${currentYear} calendar dates sourced from official district calendars, with holidays${_hasSpring ? ', spring break' : ''} and winter break. Download PDF or sync to Google Calendar.`,
     // E — verified dates (~130 chars)
     `${_sn} ${currentYear}: first day ${_fd}, last day ${_ld}. Holidays${_hasSpring ? ', spring break' : ''} and official PDF. Syncs with Google Calendar.`,
   ]
@@ -286,60 +332,41 @@ if (!isStatePage && district.value) {
     ogUrl: canonicalUrl,
   })
 
-  const orgAddress = {
-    '@type': 'PostalAddress',
-    addressLocality: meta.value!.city ?? '',
-    addressRegion: (meta.value! as any).stateCode ?? meta.value!.state,
-    addressCountry: 'US',
+  const sitePublisher = {
+    '@type': 'Organization',
+    name: 'MySchoolDates',
+    url: 'https://myschooldates.com',
   }
-  const orgRef = { '@type': 'EducationalOrganization', name: meta.value!.name, url: meta.value!.officialWebsite || canonicalUrl }
-
-  const keyEvents = cal ? [
-    ...(cal.firstDay ? [{
-      '@context': 'https://schema.org', '@type': 'Event',
-      name: `First Day of School — ${meta.value!.name} ${currentYear}`,
-      description: `First day of school for ${meta.value!.name} in the ${currentYear} school year.`,
-      startDate: cal.firstDay, endDate: cal.firstDay,
-      eventStatus: 'https://schema.org/EventScheduled',
-      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-      image: (meta.value! as any).logo || 'https://myschooldates.com/icons/myschooldates-og-img.png',
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock', validFrom: cal.firstDay, url: canonicalUrl },
-      performer: orgRef,
-      organizer: orgRef, location: { '@type': 'Place', name: meta.value!.name, address: orgAddress },
-    }] : []),
-    ...(cal.lastDay ? [{
-      '@context': 'https://schema.org', '@type': 'Event',
-      name: `Last Day of School — ${meta.value!.name} ${currentYear}`,
-      description: `Last day of school for ${meta.value!.name} in the ${currentYear} school year.`,
-      startDate: cal.lastDay, endDate: cal.lastDay,
-      eventStatus: 'https://schema.org/EventScheduled',
-      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-      image: (meta.value! as any).logo || 'https://myschooldates.com/icons/myschooldates-og-img.png',
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock', validFrom: cal.lastDay, url: canonicalUrl },
-      performer: orgRef,
-      organizer: orgRef, location: { '@type': 'Place', name: meta.value!.name, address: orgAddress },
-    }] : []),
-    ...breaks.value
-      .filter((b: any) => ['thanksgiving', 'winter', 'christmas', 'spring'].some(kw => b.name.toLowerCase().includes(kw)))
-      .map((b: any) => ({
-        '@context': 'https://schema.org', '@type': 'Event',
-        name: `${b.name} — ${meta.value!.name} ${currentYear}`,
-        description: `${b.name} for ${meta.value!.name} ${currentYear}. No school during this period.`,
-        startDate: b.start, endDate: b.end,
-        eventStatus: 'https://schema.org/EventScheduled',
-        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-        image: (meta.value! as any).logo || 'https://myschooldates.com/icons/myschooldates-og-img.png',
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock', validFrom: b.start, url: canonicalUrl },
-        performer: orgRef,
-        organizer: orgRef, location: { '@type': 'Place', name: meta.value!.name, address: orgAddress },
-      })),
-  ] : []
+  const districtAbout = {
+    '@type': 'EducationalOrganization',
+    name: meta.value!.name,
+    url: meta.value!.officialWebsite || canonicalUrl,
+  }
+  const pageDateModified = (cal as any)?.dateModified ?? cal?.lastVerifiedAt
+  const pageDatePublished = (cal as any)?.datePublished ?? pageDateModified
+  const webPageEntity = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: _pageTitle,
+    description: _pageDesc,
+    url: canonicalUrl,
+    inLanguage: 'en-US',
+    ...(pageDateModified ? { dateModified: pageDateModified, datePublished: pageDatePublished } : {}),
+    publisher: sitePublisher,
+    about: districtAbout,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'MySchoolDates',
+      url: 'https://myschooldates.com',
+    },
+  }
 
   useHead({
     link: [{ rel: 'canonical', href: canonicalUrl }],
     script: [{
       type: 'application/ld+json',
       innerHTML: JSON.stringify([
+        webPageEntity,
         {
           '@context': 'https://schema.org',
           '@type': 'BreadcrumbList',
@@ -349,19 +376,6 @@ if (!isStatePage && district.value) {
             { '@type': 'ListItem', position: 3, name: `${meta.value!.name} Calendar`, item: canonicalUrl },
           ],
         },
-        {
-          '@context': 'https://schema.org',
-          '@type': 'EducationalOrganization',
-          name: meta.value!.name,
-          url: meta.value!.officialWebsite || canonicalUrl,
-          sameAs: [canonicalUrl, meta.value!.officialWebsite].filter(Boolean),
-          description: (meta.value! as any).districtFact
-            || (Array.isArray(meta.value!.about) && meta.value!.about.length > 0
-              ? (meta.value!.about[0] as { content: string }).content
-              : (typeof meta.value!.about === 'string' ? meta.value!.about : '')),
-          address: orgAddress,
-        },
-        ...keyEvents,
         ...(faqs.value.length ? [{
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
@@ -392,7 +406,7 @@ if (!isStatePage && district.value) {
             {{ matchedStateName }} School Calendars {{ stateCurrentYear }}
           </h1>
           <p class="mt-2 text-sm text-gray-500">
-            Official {{ stateCurrentYear }} school calendars · {{ stateDistricts.length }} public school district{{ stateDistricts.length !== 1 ? 's' : '' }} · Sourced from official district websites
+            {{ stateCurrentYear }} school calendar dates · {{ stateDistricts.length }} public school district{{ stateDistricts.length !== 1 ? 's' : '' }} · Sourced from official district websites
           </p>
           <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2">
             <span class="flex items-center gap-1.5 text-sm text-gray-700">
@@ -608,32 +622,24 @@ if (!isStatePage && district.value) {
           { label: district.name },
         ]" />
 
-        <!-- Alternate calendars notice -->
-        <div v-if="(cal as any)?.alternateCalendars?.length" class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
-          <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <p class="text-sm text-amber-800">
-            This page shows the <strong>Traditional Calendar</strong>, which applies to most {{ district.name }} schools.
-            If your child attends a year-round school or specialized program, see
-            <a href="#other-calendars" class="underline font-medium">Other Official Calendars</a> below.
-          </p>
-        </div>
-
         <!-- Title -->
         <div>
           <h1 class="text-3xl font-bold text-gray-900">
             {{ district.name }} Calendar {{ currentYear }}
           </h1>
           <p class="mt-2 text-sm text-gray-500">
-            Official {{ currentYear }} school calendar · Sourced from {{ district.name }} ·
-            <button @click="downloadICS(district, cal)" class="underline hover:text-blue-600 transition-colors">Add to Google Calendar</button>
+            {{ currentYear }} calendar dates · Sourced from the official {{ district.shortName || district.name }} calendar ·
+            <a href="#add-to-calendar" class="underline hover:text-blue-600 transition-colors">Add school dates to calendar</a>
+          </p>
+          <p class="mt-1 text-xs text-gray-400">
+            MySchoolDates is an independent calendar reference and is not affiliated with {{ district.name }}.
           </p>
           <!-- Featured snippet: direct answer for search intent -->
           <p v-if="calendarSummary" class="mt-3 text-sm text-gray-700 leading-relaxed">{{ calendarSummary }}</p>
           <p class="mt-1 text-sm text-gray-500">
             {{ cal.totalSchoolDays ?? 180 }} instructional days
-            <span v-if="secondSemStart"> · Second semester begins {{ formatShortDate(secondSemStart) }}</span>
+            <span v-if="showSemesterCount"> · {{ cal.semesters ?? 2 }} semesters</span>
+            <span v-if="secondSemStart"> · Students return after Winter Break on {{ formatShortDate(secondSemStart) }}</span>
           </p>
           <!-- Verification badge -->
           <div class="mt-3 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full"
@@ -662,7 +668,7 @@ if (!isStatePage && district.value) {
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              Add to Calendar
+              Add school dates to calendar
             </button>
           </template>
         </DistrictTodayStatus>
@@ -670,10 +676,22 @@ if (!isStatePage && district.value) {
         <!-- Key Date Cards -->
         <DistrictKeyDateCards :cal="cal" />
 
+        <!-- Alternate calendars notice -->
+        <div v-if="(cal as any)?.alternateCalendars?.length" class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
+          <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <p class="text-sm text-amber-800">
+            This page shows the <strong>Traditional Calendar</strong>, which applies to most {{ district.name }} schools.
+            If your child attends a year-round school or specialized program, see
+            <a href="#other-calendars" class="underline font-medium">Other Official Calendars</a> below.
+          </p>
+        </div>
+
         <!-- Key Dates & Holidays Summary -->
         <div v-if="keyDateHighlights.length" class="bg-white rounded-xl border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ currentYear }} Key Dates &amp; Holidays</h2>
-          <p class="text-xs text-gray-400 mb-4">First day, last day, school holidays, and break start dates</p>
+          <p class="text-xs text-gray-400 mb-4">First day, last day, school holidays, and major break ranges</p>
           <div class="divide-y divide-gray-100">
             <div
               v-for="event in keyDateHighlights"
@@ -684,13 +702,40 @@ if (!isStatePage && district.value) {
                 <span
                   class="text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap flex-shrink-0"
                   :class="eventTypeColor[event.type]"
-                >{{ eventTypeLabel[event.type] }}</span>
+                >{{ keyDateLabel(event) }}</span>
                 <span class="text-sm text-gray-900 truncate">{{ event.name }}</span>
               </div>
-              <span class="text-sm text-gray-500 tabular-nums ml-4 flex-shrink-0">{{ formatShortDate(event.date) }}</span>
+              <span class="text-sm text-gray-500 tabular-nums ml-4 flex-shrink-0">{{ keyDateDisplayDate(event) }}</span>
             </div>
           </div>
         </div>
+
+        <!-- All Dates -->
+        <DistrictAllDates
+          :events="cal.events"
+          title="All Important Dates"
+          :source-url="(cal?.sourceUrl ?? district.calendarPage) ?? district.officialWebsite"
+          :district-name="district.name"
+          :verified-date="verifiedDate"
+          :legend="dateLegend"
+          :mode="allDatesMode"
+        />
+
+        <!-- Add to Calendar + Share -->
+        <CalendarExportShare
+          :district-name="district.name"
+          :year="currentYear"
+          :source-url="(cal.sourceUrl ?? district.calendarPage) ?? district.officialWebsite"
+          :district="district"
+          :cal="cal"
+        />
+
+        <!-- Other Official Calendars -->
+        <DistrictOtherCalendars
+          v-if="(cal as any)?.alternateCalendars?.length"
+          :alternate-calendars="(cal as any).alternateCalendars"
+          :district-name="district.name"
+        />
 
         <!-- Quick Facts (fixed position — moved above Year by Numbers) -->
         <DistrictQuickFacts
@@ -700,34 +745,6 @@ if (!isStatePage && district.value) {
           :related-cals="relatedCals ?? []"
           :all-districts="allDistricts ?? []"
           :prev-cal="prevCal ?? undefined"
-        />
-
-        <!-- Year by the Numbers -->
-        <DistrictYearNumbers v-if="!hiddenSections.has('yearNumbers')" :cal="cal" :school-year="currentYear" />
-
-        <!-- What's Different This Year -->
-        <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal" :prev-cal="prevCal ?? undefined" />
-
-        <!-- Year Switcher -->
-        <div v-if="archivedYears.length" class="flex items-center gap-2 flex-wrap">
-          <span class="text-sm text-gray-500">Other years:</span>
-          <NuxtLink
-            v-for="y in archivedYears"
-            :key="y"
-            :to="`/${slug}/${y}`"
-            class="text-sm px-3 py-1 rounded-full border border-gray-300 text-gray-600 hover:border-blue-400 hover:text-blue-600 transition-colors"
-          >
-            {{ y }}
-          </NuxtLink>
-        </div>
-
-        <!-- Add to Calendar + Share -->
-        <CalendarExportShare
-          :district-name="district.name"
-          :year="currentYear"
-          :source-url="(cal.sourceUrl ?? district.calendarPage) ?? district.officialWebsite"
-          :district="district"
-          :cal="cal"
         />
 
         <!-- Dynamic mid sections: order varies by time context -->
@@ -743,14 +760,14 @@ if (!isStatePage && district.value) {
                 The {{ currentYear }} academic year for {{ district.name }} runs from
                 <strong>{{ formatDate(cal.firstDay) }}</strong> to
                 <strong>{{ formatDate(cal.lastDay) }}</strong>,
-                covering {{ cal.totalSchoolDays ?? 180 }} instructional days across {{ cal.semesters ?? 2 }} semesters.
+                with {{ cal.totalSchoolDays ?? 180 }} instructional days listed on the student calendar.
                 <span v-if="secondSemStart">
-                  The second semester begins {{ formatShortDate(secondSemStart) }} following the winter recess.
+                  Students return after Winter Break on {{ formatShortDate(secondSemStart) }}.
                 </span>
               </p>
               <p v-if="breaks.length">
                 Students have {{ breaks.length }} major school break{{ breaks.length !== 1 ? 's' : '' }} throughout the year —
-                {{ breaks.map(b => b.name).join(', ') }} — plus all federal holidays.
+                {{ breaks.map(b => b.name).join(', ') }} — plus district-observed holidays and additional no-school days.
               </p>
             </template>
             <template v-if="(district as any).about?.length">
@@ -806,14 +823,11 @@ if (!isStatePage && district.value) {
                 <div>
                   <div class="font-medium text-gray-900">{{ b.name }}</div>
                   <div class="text-sm text-gray-500">{{ formatShortDate(b.start) }} – {{ formatShortDate(b.end) }}</div>
-                  <div v-if="daysUntil(b.start) > 0" class="text-xs text-blue-600 mt-0.5 font-medium">
-                    Starts in {{ daysUntil(b.start) }} day{{ daysUntil(b.start) !== 1 ? 's' : '' }}
-                  </div>
-                  <div v-else-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-purple-600 mt-0.5 font-medium">
+                  <div v-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-purple-600 mt-0.5 font-medium">
                     In progress
                   </div>
                 </div>
-                <div class="text-sm font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full">{{ b.days }} days</div>
+                <div class="text-sm font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full">{{ breakDurationLabel(b) }}</div>
               </div>
             </div>
           </div>
@@ -823,15 +837,24 @@ if (!isStatePage && district.value) {
         <!-- Custom Sections: afterAbout (default position) -->
         <DistrictCustomSections :sections="customSections" position="afterAbout" />
 
-        <!-- All Dates -->
-        <DistrictAllDates
-          :events="cal.events"
-          title="All Important Dates"
-          :source-url="(cal?.sourceUrl ?? district.calendarPage) ?? district.officialWebsite"
-          :district-name="district.name"
-          :verified-date="verifiedDate"
-          :legend="dateLegend"
-        />
+        <!-- Year by the Numbers -->
+        <DistrictYearNumbers v-if="!hiddenSections.has('yearNumbers')" :cal="cal" :school-year="currentYear" />
+
+        <!-- What's Different This Year -->
+        <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal" :prev-cal="prevCal ?? undefined" />
+
+        <!-- Year Switcher -->
+        <div v-if="archivedYears.length" class="flex items-center gap-2 flex-wrap">
+          <span class="text-sm text-gray-500">Other years:</span>
+          <NuxtLink
+            v-for="y in archivedYears"
+            :key="y"
+            :to="`/${slug}/${y}`"
+            class="text-sm px-3 py-1 rounded-full border border-gray-300 text-gray-600 hover:border-blue-400 hover:text-blue-600 transition-colors"
+          >
+            {{ y }}
+          </NuxtLink>
+        </div>
 
         <!-- Compare with Nearby Districts -->
         <DistrictComparison :cal="cal" :district="district" :related-cals="relatedCals ?? []" :all-districts="allDistricts ?? []" :year="currentYear" />
@@ -876,16 +899,9 @@ if (!isStatePage && district.value) {
 
         <!-- Related Districts -->
         <DistrictRelatedDistricts
-          v-if="(district as any).relatedDistricts?.length"
+          v-if="!hiddenSections.has('relatedDistricts') && (district as any).relatedDistricts?.length"
           :related-districts="(district as any).relatedDistricts"
           :state-name="district.state"
-        />
-
-        <!-- Other Official Calendars -->
-        <DistrictOtherCalendars
-          v-if="(cal as any)?.alternateCalendars?.length"
-          :alternate-calendars="(cal as any).alternateCalendars"
-          :district-name="district.name"
         />
 
         <!-- Custom Sections: beforeSources -->
@@ -899,10 +915,16 @@ if (!isStatePage && district.value) {
           :short-name="(district as any).shortName || district.name"
           :year="currentYear"
           :verified-date="verifiedDate"
+          :source-version="(cal as any).sourceVersion"
         />
 
         <!-- Data quality notice -->
-        <DistrictDataQuality :cal="cal" :district="district" :year="currentYear" />
+        <DistrictDataQuality
+          v-if="!(district as any).sources?.length"
+          :cal="cal"
+          :district="district"
+          :year="currentYear"
+        />
 
       </main>
     </template>

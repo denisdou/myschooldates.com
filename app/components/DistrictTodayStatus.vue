@@ -21,8 +21,9 @@ const todayStr = (() => {
 })()
 
 const breaks = computed(() => getBreaks(props.cal.events))
+const keyDateTypes = new Set(['school_start', 'school_end', 'holiday', 'break_start', 'early_dismissal', 'early_release', 'academic', 'graduation'])
 const nextEvent = computed(() =>
-  props.cal.events.find(e => new Date(e.date + 'T00:00:00') >= today) ?? null
+  props.cal.events.find(e => keyDateTypes.has(e.type) && new Date(e.date + 'T00:00:00') >= today) ?? null
 )
 
 const todayStatus = computed(() => {
@@ -51,7 +52,7 @@ const todayStatus = computed(() => {
   if (holiday) {
     return {
       type: 'holiday' as const,
-      headline: `No school today — ${holiday.name}`,
+      headline: holiday.type === 'holiday' ? `No school today — ${holiday.name}` : 'No school today',
       detail: nextEvent.value ? `Next school event: ${formatShortDate(nextEvent.value.date)}` : '',
     }
   }

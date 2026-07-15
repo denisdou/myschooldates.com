@@ -29,6 +29,18 @@ export function useDistrictPage() {
     return Math.round((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24)) + 1
   }
 
+  function weekdaysBetween(startStr: string, endStr: string) {
+    const cursor = new Date(startStr + 'T00:00:00')
+    const end = new Date(endStr + 'T00:00:00')
+    let count = 0
+    while (cursor <= end) {
+      const day = cursor.getDay()
+      if (day !== 0 && day !== 6) count++
+      cursor.setDate(cursor.getDate() + 1)
+    }
+    return count
+  }
+
   function getBreaks(events: Array<{ date: string; name: string; type: string }>) {
     const result: { name: string; start: string; end: string; days: number }[] = []
     for (let i = 0; i < events.length; i++) {
@@ -48,6 +60,14 @@ export function useDistrictPage() {
       }
     }
     return result
+  }
+
+  function isCoveredByBreak(
+    event: { date: string; type: string },
+    events: Array<{ date: string; name: string; type: string }>
+  ) {
+    if (!['holiday', 'no_school', 'student_holiday', 'teacher_workday'].includes(event.type)) return false
+    return getBreaks(events).some(b => event.date >= b.start && event.date <= b.end)
   }
 
   // Returns the first student school day after winter break ends (skips weekends and no_school days)
@@ -106,6 +126,7 @@ export function useDistrictPage() {
     const planningDays = cal.teacherWorkDays ? cal.teacherWorkDays - totalDays : null
     const firstMonth = new Date(cal.firstDay + 'T00:00:00').toLocaleString('en-US', { month: 'long' })
     const lastMonth = new Date(cal.lastDay + 'T00:00:00').toLocaleString('en-US', { month: 'long' })
+    const springBreakLength = springBreak ? weekdaysBetween(springBreak.start, springBreak.end) : 0
 
     // Utility questions first — these are NOT duplicated elsewhere on the page.
     // Date questions come after; they're still useful for districts without districtFaqs.
@@ -113,7 +134,7 @@ export function useDistrictPage() {
       {
         q: `Does ${district.name} have a fall break in ${cal.schoolYear}?`,
         a: fallBreak
-          ? `Yes. ${district.name} has a fall break running from ${formatShortDate(fallBreak.start)} to ${formatShortDate(fallBreak.end)}, a total of ${fallBreak.days} days.`
+          ? `Yes. ${district.name} has a fall break running from ${formatShortDate(fallBreak.start)} to ${formatShortDate(fallBreak.end)}, a total of ${fallBreak.days} calendar days.`
           : `${district.name} does not have a scheduled fall break in the ${cal.schoolYear} calendar. The fall semester runs continuously from the first day of school in ${firstMonth} until the Thanksgiving recess in November.`,
       },
       {
@@ -123,7 +144,7 @@ export function useDistrictPage() {
       {
         q: `When is Spring Break for ${district.name} in ${cal.schoolYear}?`,
         a: springBreak
-          ? `Spring Break for ${district.name} runs ${formatShortDate(springBreak.start)}–${formatShortDate(springBreak.end)}, a ${springBreak.days}-day break.`
+          ? `Spring Break for ${district.name} runs ${formatShortDate(springBreak.start)}–${formatShortDate(springBreak.end)}, a ${springBreakLength}-weekday break.`
           : `Spring break dates for ${district.name} ${cal.schoolYear} are listed in the calendar above.`,
       },
       {
@@ -145,30 +166,30 @@ export function useDistrictPage() {
       {
         q: `When does the second semester start for ${district.name} in ${cal.schoolYear}?`,
         a: secondSemStart
-          ? `The second semester for ${district.name} begins on ${formatDate(secondSemStart)}, following the winter recess. This marks the start of the spring portion of the ${cal.schoolYear} academic year.`
-          : `The second semester begins in January after the winter recess. Check the official ${district.name} calendar for the exact return date.`,
+          ? `Students return after winter break on ${formatDate(secondSemStart)}. Check the official ${district.name} calendar if you need confirmation of semester or grading-period labels.`
+          : `Students usually return in January after the winter recess. Check the official ${district.name} calendar for the exact return date.`,
       },
       {
         q: `When is spring break ${cal.schoolYear} for ${district.name}?`,
         a: springBreak
-          ? `Spring break for ${district.name} runs ${formatShortDate(springBreak.start)}–${formatShortDate(springBreak.end)}, ${springBreak.days} days.`
+          ? `Spring break for ${district.name} runs ${formatShortDate(springBreak.start)}–${formatShortDate(springBreak.end)}, ${springBreakLength} weekdays.`
           : `Spring break dates are listed in the calendar above.`,
       },
       {
         q: `When is winter break ${cal.schoolYear} for ${district.name}?`,
         a: winterBreak
-          ? `Winter break for ${district.name} runs ${formatShortDate(winterBreak.start)}–${formatShortDate(winterBreak.end)}, ${winterBreak.days} days.${secondSemStart ? ` School resumes ${formatShortDate(secondSemStart)}.` : ''}`
+          ? `Winter break for ${district.name} runs ${formatShortDate(winterBreak.start)}–${formatShortDate(winterBreak.end)}, ${winterBreak.days} calendar days.${secondSemStart ? ` School resumes ${formatShortDate(secondSemStart)}.` : ''}`
           : `Winter break dates are listed in the calendar above.`,
       },
       {
         q: `How long is Thanksgiving break for ${district.name} in ${cal.schoolYear}?`,
         a: thanksgivingBreak
-          ? `Thanksgiving break for ${district.name} runs ${formatShortDate(thanksgivingBreak.start)}–${formatShortDate(thanksgivingBreak.end)}, ${thanksgivingBreak.days} days.`
+          ? `Thanksgiving break for ${district.name} runs ${formatShortDate(thanksgivingBreak.start)}–${formatShortDate(thanksgivingBreak.end)}, ${thanksgivingBreak.days} calendar days.`
           : `Thanksgiving break dates are listed in the calendar above.`,
       },
       {
         q: `How many school days are in the ${cal.schoolYear} school year for ${district.name}?`,
-        a: `${district.name} has ${totalDays} instructional days in the ${cal.schoolYear} academic year. This count excludes weekends, federal holidays, school breaks, and teacher planning days.`,
+        a: `${district.name} has ${totalDays} instructional days in the ${cal.schoolYear} academic year. This count excludes weekends, listed school breaks, district-observed holidays, and teacher planning days.`,
       },
       {
         q: `How many teacher work days does ${district.name} have in ${cal.schoolYear}?`,
@@ -182,7 +203,7 @@ export function useDistrictPage() {
       },
       {
         q: `How many school breaks does ${district.name} have in ${cal.schoolYear}?`,
-        a: `${district.name} has ${breaks.length} major school break${breaks.length !== 1 ? 's' : ''} in the ${cal.schoolYear} school year: ${breaks.map(b => b.name).join(', ')}. Together these breaks total ${breaks.reduce((sum, b) => sum + b.days, 0)} days off outside of federal holidays.`,
+        a: `${district.name} has ${breaks.length} major school break${breaks.length !== 1 ? 's' : ''} in the ${cal.schoolYear} school year: ${breaks.map(b => b.name).join(', ')}. Together these listed break periods total ${breaks.reduce((sum, b) => sum + b.days, 0)} calendar days.`,
       },
     ]
   }
@@ -199,9 +220,17 @@ export function useDistrictPage() {
       'METHOD:PUBLISH',
       `X-WR-CALNAME:${district.name} ${cal.schoolYear}`,
     ]
-    for (const event of cal.events) {
+    const eventsForExport = cal.events.filter(event =>
+      event.type !== 'break_end' &&
+      !isCoveredByBreak(event, cal.events)
+    )
+    const breaks = getBreaks(cal.events)
+    for (const event of eventsForExport) {
       const start = event.date.replace(/-/g, '')
-      const nextDay = new Date(event.date + 'T00:00:00')
+      const breakRange = event.type === 'break_start'
+        ? breaks.find(b => b.name === event.name && b.start === event.date)
+        : null
+      const nextDay = new Date((breakRange?.end ?? event.date) + 'T00:00:00')
       nextDay.setDate(nextDay.getDate() + 1)
       const end = nextDay.toISOString().slice(0, 10).replace(/-/g, '')
       lines.push(
@@ -209,7 +238,7 @@ export function useDistrictPage() {
         `DTSTART;VALUE=DATE:${start}`,
         `DTEND;VALUE=DATE:${end}`,
         `SUMMARY:${event.name} – ${district.name}`,
-        `UID:${start}-${event.type}@myschooldates.com`,
+        `UID:${start}-${end}-${event.type}@myschooldates.com`,
         'END:VEVENT',
       )
     }
@@ -258,7 +287,7 @@ export function useDistrictPage() {
 
   return {
     formatDate, formatShortDate, formatMonthYear, daysUntil, daysBetween,
-    getBreaks, getSecondSemesterStart, generateFaqs, downloadICS,
+    getBreaks, getSecondSemesterStart, generateFaqs, downloadICS, isCoveredByBreak,
     eventTypeLabel, eventTypeColor,
   }
 }

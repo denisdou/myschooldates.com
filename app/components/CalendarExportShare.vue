@@ -9,6 +9,17 @@ const props = defineProps<{
 
 const { downloadICS } = useDistrictPage()
 
+const isDrivePdf = computed(() => typeof props.cal?.sourcePdfUrl === 'string' && props.cal.sourcePdfUrl.includes('drive.google.com'))
+const pdfHeading = computed(() => isDrivePdf.value
+  ? `${props.districtName} Calendar ${props.year}: Printable PDF`
+  : `${props.districtName} Calendar ${props.year}: Printable PDF`
+)
+const pdfDescription = computed(() => isDrivePdf.value
+  ? `Open or print the calendar PDF linked from the ${props.districtName} calendar page. Verify the latest version on the official district source before making critical plans.`
+  : `Open or print the official calendar PDF published by ${props.districtName}. Verify the latest version on the official district source before making critical plans.`
+)
+const pdfButtonLabel = computed(() => isDrivePdf.value ? 'View Printable PDF' : 'View Official PDF')
+
 const copied = ref(false)
 function copyLink() {
   navigator.clipboard.writeText(window.location.href)
@@ -36,11 +47,11 @@ function shareReddit() {
 </script>
 
 <template>
-  <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+  <div id="add-to-calendar" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
     <!-- Add to Calendar -->
     <div class="p-6 border-b border-gray-100">
-      <h2 class="text-lg font-semibold text-gray-900 mb-1">Add to Calendar</h2>
-      <p class="text-sm text-gray-500 mb-4">Download the {{ districtName }} {{ year }} calendar and import it into your calendar app.</p>
+      <h2 class="text-lg font-semibold text-gray-900 mb-1">Add School Dates to Calendar</h2>
+      <p class="text-sm text-gray-500 mb-4">Import student holidays, breaks, and key dates into Google Calendar, Apple Calendar, or Outlook in one click.</p>
       <!-- Primary CTA -->
       <button
         @click="downloadICS(district, cal)"
@@ -49,7 +60,7 @@ function shareReddit() {
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
         </svg>
-        Download .ics File
+        Download calendar file (.ics)
       </button>
       <div class="grid grid-cols-3 gap-3 mb-4">
         <!-- Apple Calendar -->
@@ -92,13 +103,13 @@ function shareReddit() {
           <span class="text-xs font-medium text-gray-700 leading-tight">Outlook</span>
         </button>
       </div>
-      <p class="text-xs text-gray-400">All formats use the standard .ics file. After downloading, open the file to import into your calendar app.</p>
+      <p class="text-xs text-gray-400">All formats use the standard .ics file, so the same download works with Google Calendar, Apple Calendar, and Outlook.</p>
     </div>
 
-    <!-- Official PDF Download -->
+    <!-- PDF Download -->
     <div v-if="cal.sourcePdfUrl" class="p-6 border-b border-gray-100">
-      <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ districtName }} Calendar {{ year }} PDF</h2>
-      <p class="text-sm text-gray-500 mb-4">Official PDF published by {{ districtName }}. Verified by our editorial team.</p>
+      <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ pdfHeading }}</h2>
+      <p class="text-sm text-gray-500 mb-4">{{ pdfDescription }}</p>
       <div class="flex flex-wrap gap-3">
         <a
           :href="cal.sourcePdfUrl"
@@ -109,17 +120,16 @@ function shareReddit() {
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
-          Download Official PDF
+          {{ pdfButtonLabel }}
         </a>
-        <button
-          @click="downloadICS(district, cal)"
-          class="inline-flex items-center gap-2 px-4 py-2.5 border border-blue-300 hover:border-blue-400 hover:bg-blue-50 active:scale-95 transition-all text-blue-700 text-sm font-semibold rounded-lg"
+        <a
+          :href="sourceUrl"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-2 px-4 py-2.5 border border-gray-200 hover:border-gray-300 hover:bg-gray-50 active:scale-95 transition-all text-gray-700 text-sm font-semibold rounded-lg"
         >
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-          Add to Google Calendar
-        </button>
+          Verify on official source
+        </a>
       </div>
     </div>
 
@@ -185,7 +195,7 @@ function shareReddit() {
         <a
           :href="sourceUrl"
           target="_blank"
-          rel="nofollow noopener"
+          rel="noopener"
           class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-sm font-medium text-gray-700 transition-all"
         >
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

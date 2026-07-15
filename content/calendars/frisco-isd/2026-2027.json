@@ -32,33 +32,135 @@
     }
   ],
   "yearNumbers": [
-    { "label": "Ends Earlier", "value": "8 days", "detail": "Last day moves from May 22 to May 14 vs 2025–2026 — the earliest end date in recent Frisco ISD history." },
-    { "label": "Labor Day Extended", "value": "4-day wknd", "detail": "Sep 8 is a student holiday immediately following Labor Day, creating a four-consecutive-day break at the start of the school year." },
-    { "label": "Spring Break Later", "value": "Mar 15–19", "detail": "Spring Break shifts one week later from Mar 9–13 in 2025–2026, aligning Frisco ISD with Plano ISD that week." }
+    {
+      "label": "Ends Earlier",
+      "value": "8 days",
+      "detail": "Last day moves from May 22 to May 14 vs 2025–2026 — the earliest end date in recent Frisco ISD history."
+    },
+    {
+      "label": "Labor Day Extended",
+      "value": "4-day wknd",
+      "detail": "Sep 8 is a student holiday immediately following Labor Day, creating a four-consecutive-day break at the start of the school year."
+    },
+    {
+      "label": "Spring Break Later",
+      "value": "Mar 15–19",
+      "detail": "Spring Break shifts one week later from Mar 9–13 in 2025–2026, aligning Frisco ISD with Plano ISD that week."
+    }
   ],
   "events": [
-    { "date": "2026-08-12", "name": "First Day of School", "type": "school_start" },
-    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
-    { "date": "2026-09-08", "name": "Labor Day Holiday", "type": "holiday" },
-    { "date": "2026-10-09", "name": "Student Holiday", "type": "student_holiday" },
-    { "date": "2026-10-12", "name": "Student Holiday", "type": "student_holiday" },
-    { "date": "2026-10-13", "name": "Student Holiday", "type": "student_holiday" },
-    { "date": "2026-11-23", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
-    { "date": "2026-12-25", "name": "Christmas Day", "type": "holiday" },
-    { "date": "2027-01-01", "name": "New Year's Day", "type": "holiday" },
-    { "date": "2027-01-01", "name": "Winter Break End", "type": "break_end" },
-    { "date": "2027-01-04", "name": "Student Holiday", "type": "student_holiday" },
-    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2027-02-12", "name": "Student Holiday", "type": "student_holiday" },
-    { "date": "2027-02-15", "name": "Presidents Day", "type": "holiday" },
-    { "date": "2027-03-15", "name": "Spring Break", "type": "break_start" },
-    { "date": "2027-03-19", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2027-03-26", "name": "Bad Weather Make-Up Day", "type": "makeup_day" },
-    { "date": "2027-04-16", "name": "Bad Weather Make-Up Day", "type": "makeup_day" },
-    { "date": "2027-04-30", "name": "Student Holiday", "type": "student_holiday" },
-    { "date": "2027-05-14", "name": "Last Day of School", "type": "school_end" }
+    {
+      "date": "2026-08-12",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-08",
+      "name": "Labor Day Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-10-09",
+      "name": "Student Holiday",
+      "type": "student_holiday"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Student Holiday",
+      "type": "student_holiday"
+    },
+    {
+      "date": "2026-10-13",
+      "name": "Student Holiday",
+      "type": "student_holiday"
+    },
+    {
+      "date": "2026-11-23",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-11-27",
+      "name": "Thanksgiving Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2026-12-21",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-25",
+      "name": "Christmas Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-01",
+      "name": "New Year's Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-01",
+      "name": "Winter Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Student Holiday",
+      "type": "student_holiday"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-12",
+      "name": "Student Holiday",
+      "type": "student_holiday"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-15",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-19",
+      "name": "Spring Break End",
+      "type": "break_end"
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Bad Weather Make-Up Day",
+      "type": "makeup_day"
+    },
+    {
+      "date": "2027-04-16",
+      "name": "Bad Weather Make-Up Day",
+      "type": "makeup_day"
+    },
+    {
+      "date": "2027-04-30",
+      "name": "Student Holiday",
+      "type": "student_holiday"
+    },
+    {
+      "date": "2027-05-14",
+      "name": "Last Day of School",
+      "type": "school_end"
+    }
   ],
-  "calendarNotes": "The 2026–2027 school year runs from August 12, 2026, through May 14, 2027. Spring Break falls March 15–19 and aligns with Plano ISD, making it one of the busiest travel weeks across the northern DFW suburbs. Three bad weather make-up days are pre-scheduled on the calendar — March 26, April 16, and April 30 — each a regular school day unless winter weather closures earlier in the year require them for makeup. September 8 is a student holiday immediately following Labor Day, extending that weekend to four consecutive days off."
+  "calendarNotes": "The 2026–2027 school year runs from August 12, 2026, through May 14, 2027. Spring Break falls March 15–19 and aligns with Plano ISD, making it one of the busiest travel weeks across the northern DFW suburbs. Three bad weather make-up days are pre-scheduled on the calendar — March 26, April 16, and April 30 — each a regular school day unless winter weather closures earlier in the year require them for makeup. September 8 is a student holiday immediately following Labor Day, extending that weekend to four consecutive days off.",
+  "datePublished": "2026-07-12",
+  "dateModified": "2026-07-12"
 }

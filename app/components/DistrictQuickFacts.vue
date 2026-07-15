@@ -428,7 +428,7 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
     raw.push({ key: 'secondSemStart', value: fmt(pool.secondSemStart), label: 'Semester 2 Begins', score: 72 })
   }
   raw.push({ key: 'holidayCount', value: String(pool.holidayCount), label: 'Holidays & No-School Days', score: 65 })
-  // instructionWeeks omitted — low user value; Teacher Workdays slot fills instead
+  // instructionWeeks omitted — low user value; staff calendar length is more actionable.
   if (pool.daysUntilWinterBreak !== null && pool.daysUntilWinterBreak <= 365) {
     raw.push({ key: 'daysUntilWinterBreak', value: String(pool.daysUntilWinterBreak), label: 'Days Until Winter Break', score: 22 + nearRecency(pool.daysUntilWinterBreak) })
   }
@@ -437,7 +437,7 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
     raw.push({ key: 'nextHoliday', value: fmt(x.date), label: x.name, score: 60 + recency(x.daysUntil) })
   }
   if (pool.teacherWorkDays !== null) {
-    raw.push({ key: 'teacherWorkDays', value: String(pool.teacherWorkDays), label: 'Teacher Workdays', score: 42 })
+    raw.push({ key: 'teacherWorkDays', value: String(pool.teacherWorkDays), label: 'Staff Calendar Length', score: 42 })
   }
   if (pool.winterBreakLength !== null) {
     raw.push({ key: 'winterBreakDays', value: `${pool.winterBreakLength} days`, label: 'Winter Break', score: 20 })

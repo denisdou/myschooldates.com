@@ -51,6 +51,9 @@ export default defineNuxtConfig({
         '/plano-independent-school-district-calendar',
         '/henrico-county-school-calendar',
         '/frisco-independent-school-district-calendar',
+        '/union-county-school-calendar',
+        '/cabarrus-county-school-calendar',
+        '/johnston-county-school-calendar',
 
         // ── District year pages ────────────────────────────────────────────────
         '/austin-independent-school-district-calendar/2025-2026',
@@ -160,6 +163,16 @@ export default defineNuxtConfig({
         '/conroe-independent-school-district-calendar',
         '/conroe-independent-school-district-calendar/2025-2026',
         '/conroe-independent-school-district-calendar/2026-2027',
+
+        '/union-county-school-calendar/2026-2027',
+        '/union-county-school-calendar/2025-2026',
+        '/union-county-school-calendar/2027-2028',
+
+        '/cabarrus-county-school-calendar/2026-2027',
+        '/cabarrus-county-school-calendar/2025-2026',
+
+        '/johnston-county-school-calendar/2026-2027',
+        '/johnston-county-school-calendar/2025-2026',
       ],
     },
   },

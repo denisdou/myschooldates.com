@@ -14,8 +14,9 @@ today.setHours(0, 0, 0, 0)
 
 const breaks = computed(() => getBreaks(props.cal.events))
 const daysUntilStart = computed(() => daysUntil(props.cal.firstDay))
+const keyDateTypes = new Set(['school_start', 'school_end', 'holiday', 'break_start', 'early_dismissal', 'early_release', 'academic', 'graduation'])
 const nextEvent = computed(() =>
-  props.cal.events.find(e => new Date(e.date + 'T00:00:00') >= today) ?? null
+  props.cal.events.find(e => keyDateTypes.has(e.type) && new Date(e.date + 'T00:00:00') >= today) ?? null
 )
 </script>
 
@@ -37,7 +38,7 @@ const nextEvent = computed(() =>
       <div class="text-lg font-bold text-gray-900">{{ formatDate(cal.lastDay) }}</div>
     </div>
     <div class="bg-white rounded-xl border border-gray-200 p-5">
-      <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">{{ nextEvent ? 'Next Event' : 'School Breaks' }}</div>
+      <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">{{ nextEvent ? 'Next Key Date' : 'School Breaks' }}</div>
       <template v-if="nextEvent">
         <div class="text-lg font-bold text-gray-900">{{ nextEvent.name }}</div>
         <div class="text-sm text-gray-500 mt-1">{{ formatShortDate(nextEvent.date) }}</div>

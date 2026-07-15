@@ -33,8 +33,16 @@
     }
   ],
   "yearNumbers": [
-    { "label": "Starts Earlier", "value": "1 day", "detail": "First day moves from Aug 12 to Aug 11 vs 2025–2026." },
-    { "label": "Fall Break", "value": "2 days", "detail": "Oct 8–9 two-day fall break continues as a Dallas ISD-specific feature, shifting one day earlier than last year." }
+    {
+      "label": "Starts Earlier",
+      "value": "1 day",
+      "detail": "First day moves from Aug 12 to Aug 11 vs 2025–2026."
+    },
+    {
+      "label": "Fall Break",
+      "value": "2 days",
+      "detail": "Oct 8–9 two-day fall break continues as a Dallas ISD-specific feature, shifting one day earlier than last year."
+    }
   ],
   "events": [
     {
@@ -118,5 +126,7 @@
       "type": "school_end"
     }
   ],
-  "calendarNotes": "Dallas ISD begins the 2026–2027 school year on August 11, 2026. Spring Break runs March 15–19, 2027. The school year ends May 26, 2027."
+  "calendarNotes": "Dallas ISD begins the 2026–2027 school year on August 11, 2026. Spring Break runs March 15–19, 2027. The school year ends May 26, 2027.",
+  "datePublished": "2026-07-02",
+  "dateModified": "2026-07-02"
 }

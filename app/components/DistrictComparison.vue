@@ -7,8 +7,6 @@ export type ComparisonRow = {
   firstDay: string
   lastDay: string
   springBreak: { start: string; end: string } | null
-  fallBreak: boolean
-  instructionalDays: number | null
   comparisonNote?: string
 }
 
@@ -25,17 +23,14 @@ const { getBreaks } = useDistrictPage()
 const fmt = (d: string) =>
   new Date(d + 'T00:00:00').toLocaleString('en-US', { month: 'short', day: 'numeric' })
 
-const displayName = (row: ComparisonRow) => row.shortName ?? row.name
-
-const detectFallBreak = (events: { type: string; date: string; name: string }[], firstDay: string) => {
-  const yr = firstDay.substring(0, 4)
-  return events.some(e =>
-    e.type === 'break_start' &&
-    e.date >= firstDay &&
-    e.date <= `${yr}-11-15` &&
-    !e.name.toLowerCase().includes('thanksgiving')
-  )
+const displayName = (row: ComparisonRow) => {
+  if (row.shortName === 'CCS' && row.name.includes('Cabarrus')) return 'Cabarrus County'
+  return row.shortName ?? row.name
 }
+const reviewedDate = computed(() => {
+  if (!props.cal?.lastVerifiedAt) return ''
+  return new Date(props.cal.lastVerifiedAt + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+})
 
 const rows = computed((): ComparisonRow[] => {
   const result: ComparisonRow[] = []
@@ -47,8 +42,6 @@ const rows = computed((): ComparisonRow[] => {
       slug: props.district.slug, isCurrent: true,
       firstDay: props.cal.firstDay, lastDay: props.cal.lastDay,
       springBreak: sp ? { start: sp.start, end: sp.end } : null,
-      fallBreak: detectFallBreak(props.cal.events ?? [], props.cal.firstDay),
-      instructionalDays: props.cal.totalSchoolDays ?? null,
     })
   }
   for (const c of (props.relatedCals ?? []).slice(0, 3)) {
@@ -62,8 +55,6 @@ const rows = computed((): ComparisonRow[] => {
       slug: d.slug, isCurrent: false,
       firstDay: c.firstDay, lastDay: c.lastDay,
       springBreak: sp ? { start: sp.start, end: sp.end } : null,
-      fallBreak: detectFallBreak((c.events ?? []) as any[], c.firstDay),
-      instructionalDays: (c as any).totalSchoolDays ?? null,
       comparisonNote: relatedDef?.comparisonNote,
     })
   }
@@ -88,13 +79,29 @@ const insight = computed((): string => {
   return `${sn(current.name)} starts ${parts.join(' and ')}.`
 })
 
-const compareIntro = computed(() => (props.district as any).compareIntro ?? '')
+const dynamicIntro = computed(() => {
+  const names = rows.value.map(row => displayName(row))
+  if (names.length < 2) return ''
+  const last = names[names.length - 1]
+  const list = names.length === 2 ? names.join(' and ') : `${names.slice(0, -1).join(', ')}, and ${last}`
+  return `Compare the ${props.year} traditional student calendars for ${list}. Dates shown include the first day, last day, and spring break.`
+})
+
+const compareIntro = computed(() => {
+  const intro = (props.district as any).compareIntro ?? ''
+  const yearPattern = /\b\d{4}-\d{4}\b/
+  if (!intro) return dynamicIntro.value
+  if (yearPattern.test(intro) && !intro.includes(props.year)) return dynamicIntro.value
+  const lowerIntro = intro.toLowerCase()
+  const missingNamedDistrict = rows.value.some(row => !row.isCurrent && !lowerIntro.includes(displayName(row).toLowerCase().split(' ')[0]))
+  return missingNamedDistrict ? dynamicIntro.value : intro
+})
 </script>
 
 <template>
   <div v-if="rows.length > 1" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
     <div class="px-6 py-4 border-b border-gray-100">
-      <h2 class="text-lg font-semibold text-gray-900">Compare with Nearby School Districts</h2>
+      <h2 class="text-lg font-semibold text-gray-900">{{ year }} Calendar Comparison with Nearby School Districts</h2>
       <p v-if="compareIntro" class="text-sm text-gray-600 mt-1 leading-relaxed">{{ compareIntro }}</p>
       <p v-else-if="insight" class="text-sm text-gray-500 mt-1">{{ insight }}</p>
     </div>
@@ -144,18 +151,6 @@ const compareIntro = computed(() => (props.district as any).compareIntro ?? '')
               {{ fmt(row.lastDay) }}
             </td>
           </tr>
-          <!-- Fall Break -->
-          <tr class="hover:bg-gray-50 transition-colors">
-            <td class="px-6 py-3 text-xs font-medium text-gray-500 whitespace-nowrap">Fall Break</td>
-            <td
-              v-for="row in rows"
-              :key="row.slug"
-              class="px-4 py-3 whitespace-nowrap"
-            >
-              <span v-if="row.fallBreak" class="text-green-600 font-medium">✓ Yes</span>
-              <span v-else class="text-gray-300">—</span>
-            </td>
-          </tr>
           <!-- Spring Break -->
           <tr class="hover:bg-gray-50 transition-colors">
             <td class="px-6 py-3 text-xs font-medium text-gray-500 whitespace-nowrap">Spring Break</td>
@@ -166,19 +161,6 @@ const compareIntro = computed(() => (props.district as any).compareIntro ?? '')
               :class="row.isCurrent ? 'font-semibold text-blue-800' : 'text-gray-600'"
             >
               <span v-if="row.springBreak">{{ fmt(row.springBreak.start) }} – {{ fmt(row.springBreak.end) }}</span>
-              <span v-else class="text-gray-300">—</span>
-            </td>
-          </tr>
-          <!-- School Days -->
-          <tr class="hover:bg-gray-50 transition-colors">
-            <td class="px-6 py-3 text-xs font-medium text-gray-500 whitespace-nowrap">School Days</td>
-            <td
-              v-for="row in rows"
-              :key="row.slug"
-              class="px-4 py-3 whitespace-nowrap"
-              :class="row.isCurrent ? 'font-semibold text-blue-800' : 'text-gray-600'"
-            >
-              <span v-if="row.instructionalDays !== null">{{ row.instructionalDays }}</span>
               <span v-else class="text-gray-300">—</span>
             </td>
           </tr>
@@ -195,8 +177,10 @@ const compareIntro = computed(() => (props.district as any).compareIntro ?? '')
     </div>
 
     <p class="px-6 py-3 border-t border-gray-100 text-xs text-gray-400">
-      Comparison dates reflect each district's official published academic calendar, verified individually.
-      Districts shown are selected from calendars currently available on MySchoolDates.
+      All dates use each district's {{ year }} traditional student calendar.
+      <template v-if="reviewedDate"> Comparison last reviewed {{ reviewedDate }}.</template>
+      Comparison shows the first day, last day, and spring break from each district's published academic calendar.
+      Open the linked district calendar for the full date list and source PDF.
     </p>
   </div>
 </template>
