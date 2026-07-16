@@ -9,6 +9,8 @@ export type NumberCard = {
 
 export interface YearNumbersPool {
   instructionalDays: number
+  instructionalDaysLabel?: string
+  instructionalDaysDescription?: string
   noSchoolDayCount:  number
   semesters:         number
   extraCards:        { label: string; value: string; detail: string }[]
@@ -43,10 +45,10 @@ export function scoreYearNumbers(
   // Card 1: Instructional Days
   cards.push({
     key: 'instructionalDays',
-    label: 'Instructional Days',
+    label: pool.instructionalDaysLabel ?? 'Instructional Days',
     value: pool.instructionalDays,
     unit: 'days',
-    description: `The district calendar lists this instructional-day count for ${currentYearVal}.`,
+    description: pool.instructionalDaysDescription ?? `Instructional-day count for the ${currentYearVal} student calendar.`,
   })
 
   // Card 2: Student no-school weekdays

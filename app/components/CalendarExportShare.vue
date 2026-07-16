@@ -7,20 +7,42 @@ const props = defineProps<{
   cal: any
 }>()
 
-const { downloadICS } = useDistrictPage()
-
-const isDrivePdf = computed(() => typeof props.cal?.sourcePdfUrl === 'string' && props.cal.sourcePdfUrl.includes('drive.google.com'))
-const pdfHeading = computed(() => isDrivePdf.value
+const pdfUrl = computed(() => String(props.cal?.sourcePdfUrl ?? ''))
+const isDrivePdf = computed(() => pdfUrl.value.includes('drive.google.com'))
+const isArchivedPdfCopy = computed(() => pdfUrl.value.includes('assets.myschooldates.com'))
+const pdfHeading = computed(() => isArchivedPdfCopy.value
+  ? `${props.districtName} Calendar ${props.year}: Official Calendar PDF — Archived Copy`
+  : isDrivePdf.value
   ? `${props.districtName} Calendar ${props.year}: Printable PDF`
   : `${props.districtName} Calendar ${props.year}: Printable PDF`
 )
-const pdfDescription = computed(() => isDrivePdf.value
+const pdfDescription = computed(() => isArchivedPdfCopy.value
+  ? `This is an archived copy of the official ${props.year} calendar published by ${props.districtName}. MySchoolDates stores the file for reliable long-term access because original district file URLs may expire. Check the official district source for revisions or newer versions.`
+  : isDrivePdf.value
   ? `Open or print the calendar PDF linked from the ${props.districtName} calendar page. Verify the latest version on the official district source before making critical plans.`
   : `Open or print the official calendar PDF published by ${props.districtName}. Verify the latest version on the official district source before making critical plans.`
 )
-const pdfButtonLabel = computed(() => isDrivePdf.value ? 'View Printable PDF' : 'View Official PDF')
+const pdfButtonLabel = computed(() => isArchivedPdfCopy.value ? 'View Archived Copy of Official PDF' : isDrivePdf.value ? 'View Printable PDF' : 'View Official PDF')
 
 const copied = ref(false)
+const icsHref = computed(() => `/calendars/${props.district.slug}-${props.cal.schoolYear}.ics`)
+const icsFilename = computed(() => `${props.district.slug}-${props.cal.schoolYear}.ics`)
+const compatibleCalendars = ['Apple Calendar', 'Google Calendar', 'Outlook']
+const icsIncludedItems = computed(() => {
+  const events = props.cal?.events ?? []
+  const hasType = (types: string[]) => events.some((event: any) => types.includes(event.type))
+  const items = ['student holidays', 'break ranges']
+  if (hasType(['no_school', 'student_holiday'])) items.push('student no-school dates')
+  if (hasType(['early_dismissal', 'early_release'])) items.push('early-release dates')
+  if (hasType(['school_resume', 'school_reopen'])) items.push('school resume dates')
+  if (hasType(['academic', 'quarter_end', 'semester_end'])) items.push('key academic dates')
+  return [...new Set(items)]
+})
+const icsIncludedText = computed(() => {
+  const items = icsIncludedItems.value
+  if (items.length <= 1) return items[0] ?? 'school calendar dates'
+  return `${items.slice(0, -1).join(', ')}, and ${items[items.length - 1]}`
+})
 function copyLink() {
   navigator.clipboard.writeText(window.location.href)
   copied.value = true
@@ -44,6 +66,8 @@ function shareReddit() {
   const url = encodeURIComponent(window.location.href)
   window.open(`https://www.reddit.com/submit?title=${title}&url=${url}`, '_blank')
 }
+
+const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year} calendar file for Google Calendar, Apple Calendar, and Outlook`)
 </script>
 
 <template>
@@ -51,59 +75,42 @@ function shareReddit() {
     <!-- Add to Calendar -->
     <div class="p-6 border-b border-gray-100">
       <h2 class="text-lg font-semibold text-gray-900 mb-1">Add School Dates to Calendar</h2>
-      <p class="text-sm text-gray-500 mb-4">Import student holidays, breaks, and key dates into Google Calendar, Apple Calendar, or Outlook in one click.</p>
+      <p class="text-sm text-gray-500 mb-4">Download one standard .ics file containing {{ icsIncludedText }}.</p>
       <!-- Primary CTA -->
-      <button
-        @click="downloadICS(district, cal)"
+      <a
+        :href="icsHref"
+        :download="icsFilename"
+        :aria-label="icsAriaLabel"
         class="w-full flex items-center justify-center gap-2.5 px-4 py-3 mb-3 rounded-xl bg-blue-600 hover:bg-blue-700 active:scale-95 transition-all text-white font-semibold text-sm shadow-sm"
       >
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
         </svg>
         Download calendar file (.ics)
-      </button>
-      <div class="grid grid-cols-3 gap-3 mb-4">
-        <!-- Apple Calendar -->
-        <button
-          @click="downloadICS(district, cal)"
-          class="flex flex-col items-center gap-2 px-3 py-3 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 active:scale-95 transition-all text-center"
-        >
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <rect x="3" y="4" width="18" height="18" rx="2" stroke-width="1.5"/>
-            <path d="M3 9h18" stroke-width="1.5"/>
-            <path d="M8 2v4M16 2v4" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M8 14h2l1 2 2-5 1 3h2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="text-xs font-medium text-gray-700 leading-tight">Apple Calendar</span>
-        </button>
-        <!-- Google Calendar -->
-        <button
-          @click="downloadICS(district, cal)"
-          class="flex flex-col items-center gap-2 px-3 py-3 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 active:scale-95 transition-all text-center"
-        >
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <rect x="3" y="4" width="18" height="18" rx="2" stroke-width="1.5"/>
-            <path d="M3 9h18" stroke-width="1.5"/>
-            <path d="M8 2v4M16 2v4" stroke-width="1.5" stroke-linecap="round"/>
-            <circle cx="12" cy="15" r="2.5" stroke-width="1.5"/>
-          </svg>
-          <span class="text-xs font-medium text-gray-700 leading-tight">Google Calendar</span>
-        </button>
-        <!-- Outlook -->
-        <button
-          @click="downloadICS(district, cal)"
-          class="flex flex-col items-center gap-2 px-3 py-3 rounded-xl border border-gray-200 hover:border-gray-300 hover:bg-gray-50 active:scale-95 transition-all text-center"
-        >
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <rect x="3" y="4" width="18" height="18" rx="2" stroke-width="1.5"/>
-            <path d="M3 9h18" stroke-width="1.5"/>
-            <path d="M8 2v4M16 2v4" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M8 13h8M8 17h5" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-          <span class="text-xs font-medium text-gray-700 leading-tight">Outlook</span>
-        </button>
+      </a>
+      <div class="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3">
+        <p class="text-xs font-medium text-gray-500 mb-2">Compatible with</p>
+        <ul class="flex flex-wrap gap-2" aria-label="Compatible calendar apps">
+          <li
+            v-for="calendarName in compatibleCalendars"
+            :key="calendarName"
+            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-gray-200 text-xs font-medium text-gray-700"
+          >
+            <svg class="w-3.5 h-3.5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="3" y="4" width="18" height="18" rx="2" stroke-width="1.5"/>
+              <path d="M3 9h18" stroke-width="1.5"/>
+              <path d="M8 2v4M16 2v4" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            {{ calendarName }}
+          </li>
+        </ul>
       </div>
-      <p class="text-xs text-gray-400">All formats use the standard .ics file, so the same download works with Google Calendar, Apple Calendar, and Outlook.</p>
+      <p class="text-xs text-gray-600 mt-3">
+        The .ics file is generated from the same reviewed records shown on this page. After downloading, import the file into your preferred calendar app.
+      </p>
+      <p class="text-xs text-gray-600 mt-2">
+        This is an unofficial convenience file generated by MySchoolDates from the reviewed {{ districtName }} calendar. It is a one-time import and will not automatically update if the district revises its calendar. Always verify schedule changes with the district.
+      </p>
     </div>
 
     <!-- PDF Download -->
@@ -114,7 +121,7 @@ function shareReddit() {
         <a
           :href="cal.sourcePdfUrl"
           target="_blank"
-          rel="nofollow noopener"
+          rel="noopener"
           class="inline-flex items-center gap-2 px-4 py-2.5 bg-red-600 hover:bg-red-700 active:scale-95 transition-all text-white text-sm font-semibold rounded-lg shadow-sm"
         >
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -135,10 +142,11 @@ function shareReddit() {
 
     <!-- Share with Parents -->
     <div class="p-6">
-      <h3 class="text-base font-semibold text-gray-900 mb-3">Share with Parents</h3>
+      <h2 class="text-base font-semibold text-gray-900 mb-3">Share with Parents</h2>
       <div class="flex flex-wrap gap-3">
         <!-- Copy Link -->
         <button
+          type="button"
           @click="copyLink"
           class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 active:scale-95 transition-all"
         >
@@ -150,8 +158,10 @@ function shareReddit() {
           </svg>
           {{ copied ? 'Copied!' : 'Copy Link' }}
         </button>
+        <span class="sr-only" aria-live="polite">{{ copied ? 'Link copied to clipboard.' : '' }}</span>
         <!-- WhatsApp -->
         <button
+          type="button"
           @click="shareWhatsApp"
           class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 text-sm font-medium text-gray-700 transition-all"
         >
@@ -163,6 +173,7 @@ function shareReddit() {
         </button>
         <!-- Text / SMS -->
         <button
+          type="button"
           @click="shareSMS"
           class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-sm font-medium text-gray-700 transition-all"
         >
@@ -173,6 +184,7 @@ function shareReddit() {
         </button>
         <!-- Twitter / X -->
         <button
+          type="button"
           @click="shareTwitter"
           class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-sm font-medium text-gray-700 transition-all"
         >
@@ -183,6 +195,7 @@ function shareReddit() {
         </button>
         <!-- Reddit -->
         <button
+          type="button"
           @click="shareReddit"
           class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-orange-300 hover:bg-orange-50 text-sm font-medium text-gray-700 transition-all"
         >

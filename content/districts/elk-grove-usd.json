@@ -1,0 +1,108 @@
+{
+  "institutionId": "elk-grove-usd",
+  "name": "Elk Grove Unified School District",
+  "shortName": "EGUSD",
+  "slug": "elk-grove-unified-school-district-calendar",
+  "state": "California",
+  "stateCode": "CA",
+  "city": "Elk Grove",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.egusd.net",
+  "calendarPage": "https://www.egusd.net/StudentsFamilies/FormsQuick-Links/Calendars/",
+  "logo": "https://schoolmanager.s3.amazonaws.com/uploads/pictures/aabf574086194dd2ba0c43bcc21f1302.png",
+  "timezone": "America/Los_Angeles",
+  "county": "Sacramento County",
+  "region": "Sacramento Area California",
+  "metro": "Sacramento-Roseville-Folsom",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "keyDates",
+  "hiddenSections": [
+    "keyDates",
+    "yearNumbers",
+    "quickFacts",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "relatedDistricts"
+  ],
+  "calendarType": "traditional",
+  "districtFact": "Elk Grove Unified School District serves families in the Sacramento region and publishes multiple calendar tracks, including Traditional, Modified Traditional, and A/B/C/D track calendars.",
+  "about": [],
+  "planningTips": {
+    "title": "Planning Tips for Elk Grove Families",
+    "content": [
+      "Confirm whether your student follows the Traditional Calendar, Modified Traditional Calendar, or an A/B/C/D track calendar before relying on districtwide dates.",
+      "Use this page for the EGUSD Traditional Calendar and check the official calendar PDF for other tracks.",
+      "Add winter break, spring break, and staff report-card preparation dates to family calendars before booking travel or childcare."
+    ]
+  },
+  "compareIntro": "Compare the traditional calendars for EGUSD and Sacramento City Unified School District. Dates shown include the first day, last day, and spring break.",
+  "districtFaqs": [
+    {
+      "q": "Can Elk Grove Unified calendar dates change after board approval?",
+      "a": "Yes. Board action, labor agreements, or operational needs can affect calendar dates. Families should check the official EGUSD calendar page and school announcements before making critical plans."
+    },
+    {
+      "q": "How do families know which EGUSD calendar track applies?",
+      "a": "Do not assume every EGUSD school follows the Traditional Calendar. Check your school's website, enrollment materials, or office communications, and use the official EGUSD calendars page when you need to confirm the assigned calendar track."
+    },
+    {
+      "q": "Where should families verify last-minute EGUSD changes?",
+      "a": "Use the official Elk Grove Unified calendar page and school-level announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with EGUSD."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "identify-egusd-calendar-track",
+      "label": "How to Identify Your EGUSD Calendar Track",
+      "content": "EGUSD publishes multiple calendar tracks. This page summarizes the Traditional Calendar only, so families should confirm the calendar assigned to their school before making plans.",
+      "position": "afterAbout",
+      "groups": [
+        {
+          "label": "Where to check",
+          "items": [
+            "Check your individual school's website or family communications for its assigned calendar track.",
+            "Review enrollment materials or back-to-school notices if your student is new to EGUSD.",
+            "Use the official EGUSD calendars page to compare Traditional, Modified Traditional, and A/B/C/D track calendars.",
+            "Contact the school office if you are unsure which calendar applies to your student."
+          ]
+        }
+      ]
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Sacramento City Unified School District",
+      "slug": "sacramento-city-unified-school-calendar",
+      "state": "California",
+      "comparisonNote": "Nearby Sacramento-area district with a separate traditional calendar and holiday pattern."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Elk Grove Unified School District official website",
+      "url": "https://www.egusd.net"
+    },
+    {
+      "label": "Elk Grove Unified School District calendars",
+      "url": "https://www.egusd.net/StudentsFamilies/FormsQuick-Links/Calendars/"
+    }
+  ]
+}

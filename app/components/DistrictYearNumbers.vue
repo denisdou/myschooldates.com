@@ -35,6 +35,8 @@ const cards = computed(() => {
 
   const pool: YearNumbersPool = {
     instructionalDays: props.cal.totalSchoolDays ?? 180,
+    instructionalDaysLabel: props.cal.instructionalDaysLabel,
+    instructionalDaysDescription: props.cal.instructionalDaysDescription,
     noSchoolDayCount,
     semesters: props.cal.semesters ?? 2,
     extraCards: props.cal.yearNumbers ?? [],
@@ -65,13 +67,13 @@ const cards = computed(() => {
     <h2 class="text-xl font-bold text-gray-900 mb-5">The Year, by the Numbers</h2>
     <div class="divide-y divide-gray-100">
       <div v-for="card in cards" :key="card.key" class="py-1.5 first:pt-0">
-        <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">{{ card.label }}</h3>
+        <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">{{ card.label }}</h3>
         <p class="text-sm text-gray-700 leading-relaxed">
           <strong class="text-gray-900">{{ card.displayValue ?? `${card.value}\u00a0${card.unit}` }}</strong>
           — {{ card.description }}
         </p>
       </div>
     </div>
-    <p class="mt-5 text-xs text-gray-400 leading-relaxed">Additional no-school weekday counts include staff workdays and standalone holidays outside the listed Thanksgiving, Winter, and Spring Break periods. Early-dismissal days are not included.</p>
+    <p class="mt-5 text-xs text-gray-600 leading-relaxed">Additional no-school weekday counts include staff workdays and standalone holidays outside the listed Thanksgiving, Winter, and Spring Break periods. Early-dismissal days are not included.</p>
   </section>
 </template>

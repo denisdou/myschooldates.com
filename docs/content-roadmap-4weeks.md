@@ -7,17 +7,17 @@
 
 ## 当前进度快照
 
-**已完成学区（33个）**
+**已完成学区（39个）**
 
 | 州 | 已完成 | P1 完成度 | P2 完成度 |
 |----|--------|-----------|-----------|
-| Texas | Houston ISD, Dallas ISD, Fort Worth ISD, Austin ISD, Northside ISD, Plano ISD, Frisco ISD, Katy ISD, Round Rock ISD, Conroe ISD | 6/6 ✓ | 4/5 |
-| California | LAUSD, San Diego Unified, Long Beach Unified, Fresno Unified, Sacramento City USD | 5/5 ✓ | 0/5 |
+| Texas | Houston ISD, Dallas ISD, Fort Worth ISD, Austin ISD, Northside ISD, Plano ISD, Frisco ISD, Katy ISD, Round Rock ISD, Conroe ISD, Cy-Fair ISD | 6/6 ✓ | 5/5 ✓ |
+| California | LAUSD, San Diego Unified, Long Beach Unified, Fresno Unified, Sacramento City USD, Elk Grove USD | 5/5 ✓ | 1/5 |
 | Florida | Miami-Dade, Broward County, Orange County, Palm Beach County, Hillsborough County | 5/5 ✓ | 0/5 |
-| Virginia | Fairfax County, Prince William County, Loudoun County, Virginia Beach City, Chesterfield County | 4/5 (缺 Henrico County) | 1/5 |
-| North Carolina | Wake County, Charlotte-Mecklenburg, Guilford County, Winston-Salem/Forsyth, Cumberland County, Union County, Cabarrus County, Johnston County | 5/5 ✓ | 3/5 |
+| Virginia | Fairfax County, Prince William County, Loudoun County, Virginia Beach City, Chesterfield County, Henrico County, Arlington Public Schools | 5/5 ✓ | 2/5 |
+| North Carolina | Wake County, Charlotte-Mecklenburg, Guilford County, Winston-Salem/Forsyth, Cumberland County, Union County, Cabarrus County, Johnston County, Durham Public Schools, New Hanover County | 5/5 ✓ | 5/5 ✓ |
 
-**合计：P1 已完成 27/27 ✓，P2 已完成 7/24，P3 尚未开始。**
+**合计：P1 已完成 27/27 ✓，P2 已完成 12/24，P3 尚未开始。**
 
 ---
 
@@ -55,8 +55,8 @@
 | P2 | Union County Public Schools | `/union-county-school-calendar` | ✓ 已完成 |
 | P2 | Cabarrus County Schools | `/cabarrus-county-school-calendar` | ✓ 已完成 |
 | P2 | Johnston County Public Schools | `/johnston-county-school-calendar` | ✓ 已完成 |
-| P2 | Durham Public Schools | `/durham-public-schools/` | 待创建 |
-| P2 | New Hanover County Schools | `/new-hanover-county/` | 待创建 |
+| P2 | Durham Public Schools | `/durham-public-schools-calendar` | ✓ 已完成 |
+| P2 | New Hanover County Schools | `/new-hanover-county-school-calendar` | ✓ 已完成 |
 
 > NC P1 已全部完成，P2 各学区规模 30,000–70,000，覆盖 Charlotte 郊区（Union、Cabarrus）、Raleigh 郊区（Johnston）、Durham 三角研究区和沿海（New Hanover/Wilmington）。
 
@@ -65,7 +65,7 @@
 | 优先级 | 学区 | Slug | 状态 |
 |--------|------|------|------|
 | P1 补缺 | Henrico County Public Schools | `/henrico-county-school-calendar` | ✓ 已完成 |
-| P2 | Arlington Public Schools | `/arlington-public-schools/` | 待创建 |
+| P2 | Arlington Public Schools | `/arlington-public-schools-calendar` | ✓ 已完成 |
 
 > Henrico County 约 52,000 学生，紧邻 Richmond。Arlington 约 27,000 学生，与 DC 联邦就业高度绑定，是 Pentagon / Amazon HQ2 家庭的主要学区。
 
@@ -79,7 +79,7 @@
 
 | 优先级 | 学区 | Slug | 状态 |
 |--------|------|------|------|
-| P2 | Cy-Fair ISD | `/cy-fair-isd/` | 待创建 |
+| P2 | Cy-Fair ISD | `/cy-fair-isd-calendar` | ✓ 已完成 |
 
 > Cy-Fair ISD 约 116,000 学生，是 Houston 最大郊区学区，搜索量高，应内链 Houston ISD。
 
@@ -87,7 +87,7 @@
 
 | 优先级 | 学区 | Slug | 状态 |
 |--------|------|------|------|
-| P2 | Elk Grove USD | `/elk-grove-usd/` | 待创建 |
+| P2 | Elk Grove USD | `/elk-grove-usd-calendar` | ✓ 已完成 |
 | P2 | San Francisco USD | `/san-francisco-usd/` | 待创建 |
 | P2 | San Jose USD | `/san-jose-usd/` | 待创建 |
 | P2 | Oakland USD | `/oakland-usd/` | 待创建 |
@@ -201,8 +201,8 @@
 | 周 | 新增学区数 | 累计总量 | 说明 |
 |----|-----------|---------|------|
 | 基准（已完成） | 26 | 26 | 含 Plano ISD（2026-07-12 完成） |
-| Week 1 进度 | +7 | 33 | Frisco ISD、Katy ISD、Round Rock ISD、Conroe ISD、Union County、Cabarrus County、Johnston County（2026-07-15 完成），TX P2 剩余 Cy-Fair ISD，NC P2 剩余 2 个 |
-| Week 1 目标 | +11 | 37 | 剩余：Cy-Fair ISD + NC P2(2) + VA Arlington(1) |
+| Week 1 进度 | +11 | 38 | Frisco ISD、Katy ISD、Round Rock ISD、Conroe ISD、Cy-Fair ISD、Union County、Cabarrus County、Johnston County、Durham Public Schools、New Hanover County、Arlington Public Schools（2026-07-16 完成），TX P2、NC P2 和 VA Arlington 已完成 |
+| Week 1 目标 | +11 | 38 | ✓ 已完成 |
 | Week 2 | +11 | 48 | TX/CA P2 收尾 + VA P2 |
 | Week 3 | +15 | 63 | FL P2 + TX/CA P3 批次1 |
 | Week 4 | +20 | 83 | VA/NC P3 + TX/CA P3 批次2 |

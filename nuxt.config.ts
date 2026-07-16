@@ -54,6 +54,11 @@ export default defineNuxtConfig({
         '/union-county-school-calendar',
         '/cabarrus-county-school-calendar',
         '/johnston-county-school-calendar',
+        '/durham-public-schools-calendar',
+        '/new-hanover-county-school-calendar',
+        '/arlington-public-schools-calendar',
+        '/cy-fair-isd-calendar',
+        '/elk-grove-usd-calendar',
 
         // ── District year pages ────────────────────────────────────────────────
         '/austin-independent-school-district-calendar/2025-2026',
@@ -173,6 +178,22 @@ export default defineNuxtConfig({
 
         '/johnston-county-school-calendar/2026-2027',
         '/johnston-county-school-calendar/2025-2026',
+
+        '/durham-public-schools-calendar/2025-2026',
+        '/durham-public-schools-calendar/2026-2027',
+        '/durham-public-schools-calendar/2027-2028',
+
+        '/new-hanover-county-school-calendar/2025-2026',
+        '/new-hanover-county-school-calendar/2026-2027',
+
+        '/arlington-public-schools-calendar/2025-2026',
+        '/arlington-public-schools-calendar/2026-2027',
+
+        '/cy-fair-isd-calendar/2025-2026',
+        '/cy-fair-isd-calendar/2026-2027',
+
+        '/elk-grove-usd-calendar/2025-2026',
+        '/elk-grove-usd-calendar/2026-2027',
       ],
     },
   },

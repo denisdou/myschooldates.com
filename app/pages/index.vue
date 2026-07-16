@@ -293,7 +293,7 @@ useHead({
             <div class="bg-white rounded-xl border border-gray-200 p-5">
               <h3 class="font-semibold text-gray-900 mb-2">Add to Google or Apple Calendar</h3>
               <p class="text-sm text-gray-500 leading-relaxed">
-                Download any district calendar as an ICS file and import it directly into Google Calendar, Apple Calendar, or Outlook in one step. All key dates — first day, holidays, breaks — synced automatically.
+                Download any district calendar as an ICS file and import it into Google Calendar, Apple Calendar, or Outlook. The file includes key dates such as the first day, holidays, and breaks.
               </p>
             </div>
             <div class="bg-white rounded-xl border border-gray-200 p-5">

@@ -8,6 +8,8 @@ export type ComparisonRow = {
   lastDay: string
   springBreak: { start: string; end: string } | null
   comparisonNote?: string
+  sourceUrl?: string
+  sourceVersion?: string
 }
 
 const props = defineProps<{
@@ -42,6 +44,8 @@ const rows = computed((): ComparisonRow[] => {
       slug: props.district.slug, isCurrent: true,
       firstDay: props.cal.firstDay, lastDay: props.cal.lastDay,
       springBreak: sp ? { start: sp.start, end: sp.end } : null,
+      sourceUrl: props.cal.sourceUrl ?? props.cal.sourcePdfUrl ?? props.district.calendarPage ?? props.district.officialWebsite,
+      sourceVersion: props.cal.sourceVersion,
     })
   }
   for (const c of (props.relatedCals ?? []).slice(0, 3)) {
@@ -56,6 +60,8 @@ const rows = computed((): ComparisonRow[] => {
       firstDay: c.firstDay, lastDay: c.lastDay,
       springBreak: sp ? { start: sp.start, end: sp.end } : null,
       comparisonNote: relatedDef?.comparisonNote,
+      sourceUrl: c.sourceUrl ?? c.sourcePdfUrl ?? d.calendarPage ?? d.officialWebsite,
+      sourceVersion: c.sourceVersion,
     })
   }
   return result
@@ -96,6 +102,8 @@ const compareIntro = computed(() => {
   const missingNamedDistrict = rows.value.some(row => !row.isCurrent && !lowerIntro.includes(displayName(row).toLowerCase().split(' ')[0]))
   return missingNamedDistrict ? dynamicIntro.value : intro
 })
+
+const sourceRows = computed(() => rows.value.filter(row => row.sourceUrl))
 </script>
 
 <template>
@@ -108,16 +116,20 @@ const compareIntro = computed(() => {
 
     <div class="overflow-x-auto">
       <table class="w-full text-sm">
+        <caption class="sr-only">
+          {{ year }} calendar comparison for {{ rows.map(row => row.name).join(', ') }}
+        </caption>
         <thead>
           <tr class="bg-gray-50 border-b border-gray-100">
-            <th class="text-left px-6 py-3 text-xs font-semibold text-gray-400 uppercase tracking-wide w-36 whitespace-nowrap">
+            <th scope="col" class="text-left px-6 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide w-36 whitespace-nowrap">
               Calendar Feature
             </th>
             <th
               v-for="row in rows"
               :key="row.slug"
+              scope="col"
               class="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wide whitespace-nowrap"
-              :class="row.isCurrent ? 'text-blue-600' : 'text-gray-400'"
+              :class="row.isCurrent ? 'text-blue-600' : 'text-gray-500'"
             >
               <span v-if="row.isCurrent">{{ displayName(row) }}</span>
               <NuxtLink v-else :to="`/${row.slug}`" class="hover:text-blue-600 transition-colors">
@@ -129,7 +141,7 @@ const compareIntro = computed(() => {
         <tbody class="divide-y divide-gray-100">
           <!-- First Day -->
           <tr class="hover:bg-gray-50 transition-colors">
-            <td class="px-6 py-3 text-xs font-medium text-gray-500 whitespace-nowrap">First Day</td>
+            <th scope="row" class="px-6 py-3 text-left text-xs font-medium text-gray-500 whitespace-nowrap">First Day</th>
             <td
               v-for="row in rows"
               :key="row.slug"
@@ -141,7 +153,7 @@ const compareIntro = computed(() => {
           </tr>
           <!-- Last Day -->
           <tr class="hover:bg-gray-50 transition-colors">
-            <td class="px-6 py-3 text-xs font-medium text-gray-500 whitespace-nowrap">Last Day</td>
+            <th scope="row" class="px-6 py-3 text-left text-xs font-medium text-gray-500 whitespace-nowrap">Last Day</th>
             <td
               v-for="row in rows"
               :key="row.slug"
@@ -153,7 +165,7 @@ const compareIntro = computed(() => {
           </tr>
           <!-- Spring Break -->
           <tr class="hover:bg-gray-50 transition-colors">
-            <td class="px-6 py-3 text-xs font-medium text-gray-500 whitespace-nowrap">Spring Break</td>
+            <th scope="row" class="px-6 py-3 text-left text-xs font-medium text-gray-500 whitespace-nowrap">Spring Break</th>
             <td
               v-for="row in rows"
               :key="row.slug"
@@ -176,11 +188,19 @@ const compareIntro = computed(() => {
       </template>
     </div>
 
-    <p class="px-6 py-3 border-t border-gray-100 text-xs text-gray-400">
+    <p class="px-6 py-3 border-t border-gray-100 text-xs text-gray-600">
       All dates use each district's {{ year }} traditional student calendar.
       <template v-if="reviewedDate"> Comparison last reviewed {{ reviewedDate }}.</template>
-      Comparison shows the first day, last day, and spring break from each district's published academic calendar.
-      Open the linked district calendar for the full date list and source PDF.
+      Comparison shows the first day, last day, and spring break from each district's published academic calendar. Spring Break ranges follow each district's official calendar label and may include surrounding weekends.
+      <template v-if="sourceRows.length">
+        Sources:
+        <template v-for="(row, index) in sourceRows" :key="row.slug">
+          <a :href="row.sourceUrl" target="_blank" rel="noopener" class="underline hover:text-blue-600 transition-colors">{{ displayName(row) }} official calendar</a><template v-if="row.sourceVersion"> ({{ row.sourceVersion }})</template><template v-if="index < sourceRows.length - 1"> · </template>
+        </template>.
+      </template>
+      <template v-else>
+        Open the linked district calendar for the full date list and source PDF.
+      </template>
     </p>
   </div>
 </template>

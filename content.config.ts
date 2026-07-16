@@ -11,6 +11,7 @@ const eventSchema = z.object({
     'academic', 'observance', 'teacher_workday',
     'makeup_day', 'quarter_end', 'semester_end', 'graduation',
   ]),
+  description: z.string().optional(),
 })
 
 const relatedDistrictSchema = z.object({
@@ -31,6 +32,11 @@ const districtSourceSchema = z.object({
 })
 
 const districtFaqSchema = z.object({ q: z.string(), a: z.string() })
+const gradingPeriodSchema = z.object({
+  label: z.string(),
+  start: z.string(),
+  end: z.string(),
+})
 
 const livingHereHighlightSchema = z.object({ label: z.string(), detail: z.string() })
 const livingHereSchema = z.object({
@@ -134,6 +140,9 @@ export default defineContentConfig({
         sourceVersion: z.string().optional(),
         hideSemesterCount: z.boolean().optional(),
         yearNumbersMode: z.enum(['compact']).optional(),
+        instructionalDaysLabel: z.string().optional(),
+        instructionalDaysDescription: z.string().optional(),
+        gradingPeriods: z.array(gradingPeriodSchema).optional(),
         calendarNotes: z.string().optional(),  // year-specific narrative (moved from districts/)
         calendarType: z.enum(['traditional', 'year-round', 'magnet', 'international', 'early-college', 'alternative']).optional(),
         alternateCalendars: z.array(z.object({

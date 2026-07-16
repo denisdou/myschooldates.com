@@ -4,6 +4,36 @@ const slug = route.params.district as string
 const year = route.params.year as string
 const { formatShortDate, getBreaks, getSecondSemesterStart } = useDistrictPage()
 
+function toDistrictSummary(d: any) {
+  return {
+    institutionId: d.institutionId,
+    name: d.name,
+    shortName: d.shortName,
+    slug: d.slug,
+    state: d.state,
+    stateCode: d.stateCode,
+    city: d.city,
+    currentSchoolYear: d.currentSchoolYear,
+    officialWebsite: d.officialWebsite,
+    calendarPage: d.calendarPage,
+  }
+}
+
+function toComparisonCalendarSummary(c: any) {
+  return {
+    institutionId: c.institutionId,
+    schoolYear: c.schoolYear,
+    firstDay: c.firstDay,
+    lastDay: c.lastDay,
+    sourceUrl: c.sourceUrl,
+    sourcePdfUrl: c.sourcePdfUrl,
+    sourceVersion: c.sourceVersion,
+    events: (c.events ?? [])
+      .filter((e: any) => e.type === 'break_start' || e.type === 'break_end')
+      .map((e: any) => ({ name: e.name, date: e.date, type: e.type })),
+  }
+}
+
 const [{ data: district }, { data: cal }, { data: allDistricts }] = await Promise.all([
   useAsyncData(`district:${slug}`, () =>
     queryCollection('districts').where('slug', '=', slug).first()
@@ -16,8 +46,8 @@ const [{ data: district }, { data: cal }, { data: allDistricts }] = await Promis
       .where('schoolYear', '=', year)
       .first()
   }),
-  useAsyncData('districts-all', () =>
-    queryCollection('districts').order('name', 'ASC').all()
+  useAsyncData('districts-all', async () =>
+    (await queryCollection('districts').order('name', 'ASC').all()).map(toDistrictSummary)
   ),
 ])
 
@@ -29,7 +59,9 @@ const { data: relatedCals } = await useAsyncData(`related-cals:${slug}:${year}`,
     .map(d => d.institutionId)
   if (!relatedIds.length) return []
   const all = await queryCollection('calendars').all()
-  return (all ?? []).filter(c => relatedIds.includes(c.institutionId) && c.schoolYear === year)
+  return (all ?? [])
+    .filter(c => relatedIds.includes(c.institutionId) && c.schoolYear === year)
+    .map(toComparisonCalendarSummary)
 })
 
 if (!district.value || !cal.value) {
@@ -78,8 +110,35 @@ const verifiedDate = computed(() => {
 })
 
 const hiddenSections = computed(() => new Set<string>((district.value as any).hiddenSections ?? []))
+const hasCalendarTrackCaution = computed(() => {
+  const text = `${(cal.value as any)?.calendarNotes ?? ''} ${(district.value as any)?.districtFact ?? ''}`.toLowerCase()
+  return text.includes('track') || text.includes('modified traditional') || text.includes('year-round')
+})
+const calendarTrackLabel = computed(() => {
+  const type = String((cal.value as any)?.calendarType ?? '').replace(/[_-]+/g, ' ')
+  return type ? type.replace(/\b\w/g, c => c.toUpperCase()) : 'Student'
+})
+
+const instructionalDaysLine = computed(() => {
+  const days = cal.value?.totalSchoolDays ?? 180
+  const description = String((cal.value as any)?.instructionalDaysDescription ?? '').toLowerCase()
+  const label = String((cal.value as any)?.instructionalDaysLabel ?? '').toLowerCase()
+  if (description.includes('calculated')) {
+    const sourceName = district.value?.shortName || district.value?.name || 'district'
+    if (label.includes('attendance')) {
+      return `${days} calculated student attendance days, based on the published ${sourceName} calendar`
+    }
+    return `${days} currently scheduled instructional days, calculated from the published ${sourceName} calendar`
+  }
+  return `${days} instructional days`
+})
 const customSections = computed(() => ((district.value as any).customSections ?? []) as { id: string; label: string; content: string; position?: string }[])
 const allDatesMode = computed(() => ((district.value as any)?.allDatesMode === 'keyDates' ? 'keyDates' : 'all') as 'all' | 'keyDates')
+const allDatesTitle = computed(() =>
+  allDatesMode.value === 'keyDates'
+    ? `Major Student Calendar Dates — ${year}`
+    : `All Important Dates — ${year}`
+)
 
 const faqs = computed(() => {
   if (!district.value || !cal.value) return []
@@ -128,59 +187,137 @@ useSeoMeta({
 
 const sitePublisher = {
   '@type': 'Organization',
+  '@id': 'https://myschooldates.com/#organization',
   name: 'MySchoolDates',
   url: 'https://myschooldates.com',
 }
+const siteEntity = {
+  '@type': 'WebSite',
+  '@id': 'https://myschooldates.com/#website',
+  name: 'MySchoolDates',
+  url: 'https://myschooldates.com',
+  publisher: { '@id': 'https://myschooldates.com/#organization' },
+}
 const districtAbout = {
   '@type': 'EducationalOrganization',
+  '@id': `${hubUrl}#district`,
   name: district.value.name,
   url: district.value.officialWebsite,
 }
 const pageDateModified = (cal.value as any).dateModified ?? (cal.value as any).lastVerifiedAt
 const pageDatePublished = (cal.value as any).datePublished ?? pageDateModified
+const sourcePdfUrl = (cal.value as any).sourcePdfUrl
+const sourceUrl = (cal.value as any).sourceUrl ?? district.value.calendarPage
+const sourcePdfIsArchivedCopy = typeof sourcePdfUrl === 'string' && sourcePdfUrl.includes('assets.myschooldates.com')
+const basedOnUrl = sourcePdfUrl && !sourcePdfIsArchivedCopy ? sourcePdfUrl : sourceUrl
+const sourceCitation = [sourceUrl, sourcePdfUrl && !sourcePdfIsArchivedCopy ? sourcePdfUrl : null].filter(Boolean)
+const calendarTypeName = String((cal.value as any)?.calendarType ?? '').replace(/[_-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+const schemaCalendarName = calendarTypeName
+  ? `${district.value.name} ${calendarTypeName} Calendar ${year}`
+  : `${district.value.name} Calendar ${year}`
+const sourceCalendarEntity = basedOnUrl ? {
+  '@type': 'CreativeWork',
+  '@id': `${canonicalUrl}#source-calendar`,
+  name: (cal.value as any).sourceVersion ?? `${district.value.name} ${year} Calendar PDF`,
+  url: basedOnUrl,
+  publisher: { '@id': districtAbout['@id'] },
+} : null
+const calendarIcsUrl = `https://myschooldates.com/calendars/${district.value.slug}-${cal.value.schoolYear}.ics`
+const datasetEntity = {
+  '@type': 'Dataset',
+  '@id': `${canonicalUrl}#calendar-dataset`,
+  name: schemaCalendarName,
+  description: _pageDesc,
+  url: canonicalUrl,
+  inLanguage: 'en-US',
+  ...(pageDateModified ? { dateModified: pageDateModified } : {}),
+  temporalCoverage: `${cal.value.firstDay}/${cal.value.lastDay}`,
+  creator: { '@id': 'https://myschooldates.com/#organization' },
+  publisher: { '@id': 'https://myschooldates.com/#organization' },
+  provider: { '@id': 'https://myschooldates.com/#organization' },
+  isBasedOn: basedOnUrl ? { '@id': `${canonicalUrl}#source-calendar` } : undefined,
+  distribution: [
+    {
+      '@type': 'DataDownload',
+      name: `${schemaCalendarName} calendar file`,
+      description: `Unofficial one-time calendar import generated from reviewed ${district.value.name} calendar dates.`,
+      encodingFormat: 'text/calendar',
+      contentUrl: calendarIcsUrl,
+    },
+    sourcePdfUrl ? {
+      '@type': 'DataDownload',
+      name: `Official ${schemaCalendarName} PDF`,
+      encodingFormat: 'application/pdf',
+      contentUrl: sourcePdfUrl,
+    } : null,
+  ].filter(Boolean),
+}
 const webPageEntity = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
+  '@id': `${canonicalUrl}#webpage`,
   name: _pageTitle,
   description: _pageDesc,
   url: canonicalUrl,
   inLanguage: 'en-US',
   ...(pageDateModified ? { dateModified: pageDateModified, datePublished: pageDatePublished } : {}),
-  publisher: sitePublisher,
-  about: districtAbout,
+  publisher: { '@id': 'https://myschooldates.com/#organization' },
+  about: { '@id': districtAbout['@id'] },
+  mainEntity: { '@id': `${canonicalUrl}#calendar-dataset` },
+  ...(faqs.value.length ? { hasPart: { '@id': `${canonicalUrl}#faq` } } : {}),
+  ...(basedOnUrl ? { isBasedOn: { '@id': `${canonicalUrl}#source-calendar` } } : {}),
+  ...(sourcePdfIsArchivedCopy ? {
+    associatedMedia: {
+      '@type': 'MediaObject',
+      '@id': `${canonicalUrl}#official-pdf`,
+      name: `Archived official ${year} calendar PDF`,
+      contentUrl: sourcePdfUrl,
+      encodingFormat: 'application/pdf',
+    },
+  } : {}),
+  ...(sourceCitation.length ? { citation: sourceCitation } : {}),
   isPartOf: {
-    '@type': 'WebSite',
-    name: 'MySchoolDates',
-    url: 'https://myschooldates.com',
+    '@id': 'https://myschooldates.com/#website',
   },
 }
+const faqPageEntity = faqs.value.length ? {
+  '@type': 'FAQPage',
+  '@id': `${canonicalUrl}#faq`,
+  mainEntity: faqs.value.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.a,
+    },
+  })),
+} : null
 
 useHead({
   link: [{ rel: 'canonical', href: canonicalUrl }],
   script: [{
     type: 'application/ld+json',
-    innerHTML: JSON.stringify([
-      webPageEntity,
-      {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://myschooldates.com' },
-          { '@type': 'ListItem', position: 2, name: district.value.state, item: `https://myschooldates.com/${district.value.state.toLowerCase().replace(/\s+/g, '-')}` },
-          { '@type': 'ListItem', position: 3, name: `${district.value.name} Calendar`, item: hubUrl },
-          { '@type': 'ListItem', position: 4, name: year, item: canonicalUrl },
-        ],
-      },
-      ...(faqs.value.length ? [{
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.value.map(f => ({
-          '@type': 'Question',
-          name: f.q,
-          acceptedAnswer: { '@type': 'Answer', text: f.a },
-        })),
-      }] : []),
-    ]),
+    innerHTML: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': [
+        sitePublisher,
+        siteEntity,
+        districtAbout,
+        ...(sourceCalendarEntity ? [sourceCalendarEntity] : []),
+        datasetEntity,
+        webPageEntity,
+        ...(faqPageEntity ? [faqPageEntity] : []),
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://myschooldates.com' },
+            { '@type': 'ListItem', position: 2, name: district.value.state, item: `https://myschooldates.com/${district.value.state.toLowerCase().replace(/\s+/g, '-')}` },
+            { '@type': 'ListItem', position: 3, name: `${district.value.name} Calendar`, item: hubUrl },
+            { '@type': 'ListItem', position: 4, name: year, item: canonicalUrl },
+          ],
+        },
+      ],
+    }),
   }],
 })
 </script>
@@ -223,14 +360,26 @@ useHead({
             </span>
           </p>
           <p class="text-sm text-gray-500">
-            {{ cal!.totalSchoolDays ?? 180 }} instructional days
+            {{ instructionalDaysLine }}
             <span v-if="showSemesterCount"> · {{ cal!.semesters ?? 2 }} semesters</span>
             <span v-if="secondSemStart"> · Students return after Winter Break on {{ formatShortDate(secondSemStart) }}</span>
           </p>
-          <p class="text-xs text-gray-400">
+          <p class="text-xs text-gray-600">
             MySchoolDates is an independent calendar reference and is not affiliated with {{ district!.name }}.
           </p>
         </div>
+      </div>
+
+      <!-- Calendar track notice -->
+      <div v-if="hasCalendarTrackCaution" class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex gap-3">
+        <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <p class="text-sm text-blue-800">
+          <strong>Calendar shown:</strong> {{ district!.shortName || district!.name }} {{ calendarTrackLabel }} Calendar.
+          Other calendar tracks or specialized programs may use different dates. Check your school's assigned calendar before making plans.
+          <a href="#identify-egusd-calendar-track" class="underline font-medium">How to confirm your calendar track</a>
+        </p>
       </div>
 
       <!-- Key Date Cards -->
@@ -264,7 +413,7 @@ useHead({
       <!-- All Dates -->
       <DistrictAllDates
         :events="cal!.events"
-        :title="`All Important Dates — ${year}`"
+        :title="allDatesTitle"
         :source-url="cal!.sourceUrl ?? district!.officialWebsite"
         :district-name="district!.name"
         :verified-date="verifiedDate"
@@ -289,6 +438,9 @@ useHead({
 
       <!-- Year by the Numbers -->
       <DistrictYearNumbers v-if="!hiddenSections.has('yearNumbers')" :cal="cal!" :school-year="year" />
+
+      <!-- Grading Periods -->
+      <DistrictGradingPeriods :periods="(cal as any).gradingPeriods" />
 
       <!-- What's Different This Year -->
       <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal!" :prev-cal="prevCal ?? undefined" />
@@ -352,6 +504,7 @@ useHead({
         :year="year"
         :verified-date="verifiedDate"
         :source-version="(cal as any).sourceVersion"
+        :source-pdf-url="(cal as any).sourcePdfUrl"
       />
 
       <!-- Data quality notice -->

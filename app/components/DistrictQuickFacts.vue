@@ -512,7 +512,7 @@ const facts = computed(() => {
       <a
         :href="sourceUrl"
         target="_blank"
-        rel="nofollow noopener"
+        rel="noopener"
         class="underline text-gray-500 hover:text-blue-600 transition-colors"
       >{{ districtName }} official calendar</a>
       <span v-if="verifiedDate" class="ml-1 text-green-600 font-medium">· Last reviewed {{ verifiedDate }}</span>

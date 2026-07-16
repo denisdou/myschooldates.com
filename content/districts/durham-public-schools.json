@@ -1,0 +1,103 @@
+{
+  "institutionId": "durham-public-schools",
+  "name": "Durham Public Schools",
+  "shortName": "DPS",
+  "slug": "durham-public-schools-calendar",
+  "state": "North Carolina",
+  "stateCode": "NC",
+  "city": "Durham",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.dpsnc.net/",
+  "calendarPage": "https://www.dpsnc.net/o/dps/page/district-calendars",
+  "logo": "https://cmsv2-assets.apptegy.net/uploads/25110/logo/27923/durham-logo.png",
+  "timezone": "America/New_York",
+  "county": "Durham County",
+  "region": "Triangle Area North Carolina",
+  "metro": "Durham-Chapel Hill",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "keyDates",
+  "hiddenSections": [
+    "quickFacts",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "relatedDistricts"
+  ],
+  "calendarType": "traditional",
+  "districtFact": "Durham Public Schools serves families in Durham and Durham County, including communities in the Research Triangle region near Wake County, Orange County, and Chapel Hill.",
+  "about": [],
+  "planningTips": {
+    "title": "Planning Tips for Durham Families",
+    "content": [
+      "Use the DPS traditional calendar for most students unless your school follows the year-round or Cooperative Innovation High Schools calendar.",
+      "Add teacher workdays, annual leave days, holidays, and early release days to family calendars before planning childcare or travel.",
+      "Check the official DPS district calendars page after weather closures because inclement-weather reserve days may change student attendance plans.",
+      "Families comparing Triangle-area school schedules should check DPS, Wake County, and Johnston County dates separately."
+    ]
+  },
+  "compareIntro": "Compare the traditional calendars for DPS, Wake County Public School System, and Johnston County Public Schools. Dates shown include the first day, last day, and spring break.",
+  "districtFaqs": [
+    {
+      "q": "Which Durham Public Schools calendar should families use?",
+      "a": "Most DPS students follow the traditional calendar shown on this page. Year-round schools and Cooperative Innovation High Schools publish separate calendars, so families in those programs should use the matching official calendar."
+    },
+    {
+      "q": "Can Durham Public Schools calendar dates change after approval?",
+      "a": "Yes. Weather closures, board decisions, or instructional-time requirements can change the calendar. DPS marks some dates as inclement weather reserve days, so families should re-check the official district calendars page after closures."
+    },
+    {
+      "q": "How should families read teacher workdays and annual leave days?",
+      "a": "Teacher workdays, required teacher workdays, annual leave days, and listed holidays are no-school dates for students when they fall inside the student calendar. MySchoolDates simplifies those labels when the main impact for families is student attendance."
+    },
+    {
+      "q": "Where should families verify last-minute DPS calendar changes?",
+      "a": "Use the official Durham Public Schools district calendars page and school-level announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with DPS."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Wake County Public School System",
+      "slug": "wake-county-school-calendar",
+      "state": "North Carolina",
+      "comparisonNote": "Neighboring Triangle-area district. Useful for families comparing Durham, Raleigh, Cary, Morrisville, and RTP-area school schedules."
+    },
+    {
+      "name": "Johnston County Public Schools",
+      "slug": "johnston-county-school-calendar",
+      "state": "North Carolina",
+      "comparisonNote": "Nearby Raleigh-area district with a different traditional calendar and separate school break pattern."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Durham Public Schools official website",
+      "url": "https://www.dpsnc.net/"
+    },
+    {
+      "label": "Durham Public Schools district calendars",
+      "url": "https://www.dpsnc.net/o/dps/page/district-calendars"
+    },
+    {
+      "label": "North Carolina Department of Public Instruction",
+      "url": "https://www.dpi.nc.gov"
+    }
+  ]
+}

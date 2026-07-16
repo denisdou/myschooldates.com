@@ -139,7 +139,7 @@ export function useDistrictPage() {
       },
       {
         q: `How can I add ${district.name}'s school calendar to Google Calendar?`,
-        a: `To add the ${district.name} ${cal.schoolYear} calendar to Google Calendar, download the .ics file from this page, then open Google Calendar, go to Settings → Import & Export → Import, and upload the file. All school holidays, breaks, and key dates will appear on your calendar automatically.`,
+        a: `To add the ${district.name} ${cal.schoolYear} calendar to Google Calendar, download the .ics file from this page, then open Google Calendar, go to Settings → Import & Export → Import, and upload the file. This is a one-time import and will not automatically update if the district revises its calendar.`,
       },
       {
         q: `When is Spring Break for ${district.name} in ${cal.schoolYear}?`,

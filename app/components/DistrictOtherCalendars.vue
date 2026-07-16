@@ -15,9 +15,9 @@ defineProps<{
       <li
         v-for="alt in alternateCalendars"
         :key="alt.type"
-        class="flex items-center justify-between gap-4 py-3 border-b border-gray-100 last:border-0"
+        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 py-3 border-b border-gray-100 last:border-0"
       >
-        <div>
+        <div class="min-w-0">
           <div class="text-sm font-medium text-gray-900">{{ alt.label }}</div>
           <div v-if="alt.firstDay" class="text-xs text-gray-500 mt-0.5">First day: {{ formatShortDate(alt.firstDay) }}</div>
         </div>
@@ -25,13 +25,13 @@ defineProps<{
           v-if="alt.pdfUrl"
           :href="alt.pdfUrl"
           target="_blank"
-          rel="nofollow noopener"
-          class="flex-shrink-0 inline-flex items-center gap-1.5 text-xs font-medium text-blue-600 hover:text-blue-800 border border-blue-200 rounded-lg px-3 py-1.5 hover:bg-blue-50 transition-colors"
+          rel="noopener"
+          class="w-full sm:w-auto sm:flex-shrink-0 inline-flex items-center justify-center gap-1.5 text-center whitespace-normal text-xs font-medium text-blue-600 hover:text-blue-800 border border-blue-200 rounded-lg px-3 py-1.5 hover:bg-blue-50 transition-colors"
         >
           <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
-          View PDF
+          View {{ alt.label }} PDF
         </a>
       </li>
     </ul>
