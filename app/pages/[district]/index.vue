@@ -460,7 +460,6 @@ if (!isStatePage && district.value) {
     temporalCoverage: cal ? `${cal.firstDay}/${cal.lastDay}` : undefined,
     creator: { '@id': 'https://myschooldates.com/#organization' },
     publisher: { '@id': 'https://myschooldates.com/#organization' },
-    provider: { '@id': 'https://myschooldates.com/#organization' },
     isBasedOn: basedOnUrl ? { '@id': `${canonicalUrl}#source-calendar` } : undefined,
     distribution: [
       calendarIcsUrl ? {
@@ -469,12 +468,6 @@ if (!isStatePage && district.value) {
         description: `Unofficial one-time calendar import generated from reviewed ${meta.value!.name} calendar dates.`,
         encodingFormat: 'text/calendar',
         contentUrl: calendarIcsUrl,
-      } : null,
-      sourcePdfUrl ? {
-        '@type': 'DataDownload',
-        name: `Official ${schemaCalendarName} PDF`,
-        encodingFormat: 'application/pdf',
-        contentUrl: sourcePdfUrl,
       } : null,
     ].filter(Boolean),
   }
@@ -509,6 +502,7 @@ if (!isStatePage && district.value) {
   const faqPageEntity = faqs.value.length ? {
     '@type': 'FAQPage',
     '@id': `${canonicalUrl}#faq`,
+    isPartOf: { '@id': `${canonicalUrl}#webpage` },
     mainEntity: faqs.value.map(f => ({
       '@type': 'Question',
       name: f.q,
@@ -928,7 +922,7 @@ if (!isStatePage && district.value) {
         <template v-for="section in midSectionOrder" :key="section">
 
           <!-- About / Calendar Context -->
-          <div v-if="section === 'about'" class="text-gray-600 leading-relaxed space-y-3 text-sm">
+          <div v-if="section === 'about' && !hiddenSections.has('about')" class="text-gray-600 leading-relaxed space-y-3 text-sm">
             <template v-if="cal.calendarNotes">
               <p v-for="(para, i) in cal.calendarNotes.split('\n\n')" :key="i">{{ para }}</p>
             </template>

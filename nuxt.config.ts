@@ -57,8 +57,8 @@ export default defineNuxtConfig({
         '/durham-public-schools-calendar',
         '/new-hanover-county-school-calendar',
         '/arlington-public-schools-calendar',
-        '/cy-fair-isd-calendar',
-        '/elk-grove-usd-calendar',
+        '/cypress-fairbanks-isd-calendar',
+        '/elk-grove-unified-school-district-calendar',
 
         // ── District year pages ────────────────────────────────────────────────
         '/austin-independent-school-district-calendar/2025-2026',
@@ -189,11 +189,11 @@ export default defineNuxtConfig({
         '/arlington-public-schools-calendar/2025-2026',
         '/arlington-public-schools-calendar/2026-2027',
 
-        '/cy-fair-isd-calendar/2025-2026',
-        '/cy-fair-isd-calendar/2026-2027',
+        '/cypress-fairbanks-isd-calendar/2025-2026',
+        '/cypress-fairbanks-isd-calendar/2026-2027',
 
-        '/elk-grove-usd-calendar/2025-2026',
-        '/elk-grove-usd-calendar/2026-2027',
+        '/elk-grove-unified-school-district-calendar/2025-2026',
+        '/elk-grove-unified-school-district-calendar/2026-2027',
       ],
     },
   },

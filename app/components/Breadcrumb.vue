@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <nav class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+  <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
     <template v-for="(item, i) in items" :key="i">
       <span v-if="i > 0">›</span>
       <NuxtLink v-if="item.href" :to="item.href" class="hover:text-blue-600">{{ item.label }}</NuxtLink>

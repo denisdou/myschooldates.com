@@ -234,7 +234,6 @@ const datasetEntity = {
   temporalCoverage: `${cal.value.firstDay}/${cal.value.lastDay}`,
   creator: { '@id': 'https://myschooldates.com/#organization' },
   publisher: { '@id': 'https://myschooldates.com/#organization' },
-  provider: { '@id': 'https://myschooldates.com/#organization' },
   isBasedOn: basedOnUrl ? { '@id': `${canonicalUrl}#source-calendar` } : undefined,
   distribution: [
     {
@@ -244,12 +243,6 @@ const datasetEntity = {
       encodingFormat: 'text/calendar',
       contentUrl: calendarIcsUrl,
     },
-    sourcePdfUrl ? {
-      '@type': 'DataDownload',
-      name: `Official ${schemaCalendarName} PDF`,
-      encodingFormat: 'application/pdf',
-      contentUrl: sourcePdfUrl,
-    } : null,
   ].filter(Boolean),
 }
 const webPageEntity = {
@@ -283,6 +276,7 @@ const webPageEntity = {
 const faqPageEntity = faqs.value.length ? {
   '@type': 'FAQPage',
   '@id': `${canonicalUrl}#faq`,
+  isPartOf: { '@id': `${canonicalUrl}#webpage` },
   mainEntity: faqs.value.map(f => ({
     '@type': 'Question',
     name: f.q,
@@ -446,7 +440,7 @@ useHead({
       <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal!" :prev-cal="prevCal ?? undefined" />
 
       <!-- Calendar Context + About -->
-      <DistrictCalendarAbout :cal="cal!" :district="district!" />
+      <DistrictCalendarAbout v-if="!hiddenSections.has('about')" :cal="cal!" :district="district!" />
 
       <!-- Custom Sections: afterAbout (default position) -->
       <DistrictCustomSections :sections="customSections" position="afterAbout" />

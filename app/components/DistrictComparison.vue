@@ -104,12 +104,19 @@ const compareIntro = computed(() => {
 })
 
 const sourceRows = computed(() => rows.value.filter(row => row.sourceUrl))
+const comparisonTitle = computed(() => {
+  const others = rows.value.filter(row => !row.isCurrent)
+  if (others.length === 1) {
+    return `${props.year} Calendar Comparison with ${others[0].name}`
+  }
+  return `${props.year} Calendar Comparison with Nearby School Districts`
+})
 </script>
 
 <template>
   <div v-if="rows.length > 1" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
     <div class="px-6 py-4 border-b border-gray-100">
-      <h2 class="text-lg font-semibold text-gray-900">{{ year }} Calendar Comparison with Nearby School Districts</h2>
+      <h2 class="text-lg font-semibold text-gray-900">{{ comparisonTitle }}</h2>
       <p v-if="compareIntro" class="text-sm text-gray-600 mt-1 leading-relaxed">{{ compareIntro }}</p>
       <p v-else-if="insight" class="text-sm text-gray-500 mt-1">{{ insight }}</p>
     </div>
@@ -191,7 +198,7 @@ const sourceRows = computed(() => rows.value.filter(row => row.sourceUrl))
     <p class="px-6 py-3 border-t border-gray-100 text-xs text-gray-600">
       All dates use each district's {{ year }} traditional student calendar.
       <template v-if="reviewedDate"> Comparison last reviewed {{ reviewedDate }}.</template>
-      Comparison shows the first day, last day, and spring break from each district's published academic calendar. Spring Break ranges follow each district's official calendar label and may include surrounding weekends.
+      Comparison shows the first day, last day, and spring break from each district's published academic calendar.
       <template v-if="sourceRows.length">
         Sources:
         <template v-for="(row, index) in sourceRows" :key="row.slug">
