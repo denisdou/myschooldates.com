@@ -286,7 +286,7 @@ function breakDurationLabel(b: { name: string; start: string; end: string; days:
   if (weekdays === b.days) {
     return `${weekdays} weekday${weekdays !== 1 ? 's' : ''} without school`
   }
-  return `${weekdays} weekday${weekdays !== 1 ? 's' : ''} / ${b.days} calendar day${b.days !== 1 ? 's' : ''}`
+  return `${weekdays} weekday${weekdays !== 1 ? 's' : ''} without school · ${b.days} calendar day${b.days !== 1 ? 's' : ''} total`
 }
 
 const todayStr = (() => {
@@ -342,9 +342,9 @@ const dateLegend = computed(() => {
     return name.includes('possible') && (name.includes('make-up') || name.includes('makeup'))
   })
   const items = [
-    { label: 'Breaks', dot: 'bg-purple-400' },
-    { label: 'Holidays', dot: 'bg-blue-400' },
-    { label: 'No school', dot: 'bg-amber-400' },
+    ...(hasEventType(['break_start']) ? [{ label: 'Breaks', dot: 'bg-purple-400' }] : []),
+    ...(hasEventType(['holiday']) ? [{ label: 'Holidays', dot: 'bg-blue-400' }] : []),
+    ...(hasEventType(['no_school', 'student_holiday', 'teacher_workday']) ? [{ label: 'No school', dot: 'bg-amber-400' }] : []),
     ...(hasPossibleMakeupDay ? [{ label: 'Possible make-up day', dot: 'bg-orange-400' }] : []),
     ...(hasEventType(['early_dismissal', 'early_release']) ? [{ label: 'Early dismissal', dot: 'bg-orange-400' }] : []),
     ...(hasEventType(['school_resume', 'school_reopen']) ? [{ label: 'School resumes', dot: 'bg-green-400' }] : []),

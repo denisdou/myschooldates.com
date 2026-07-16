@@ -23,7 +23,16 @@ const props = defineProps<{
 const { getBreaks } = useDistrictPage()
 
 const fmt = (d: string) =>
-  new Date(d + 'T00:00:00').toLocaleString('en-US', { month: 'short', day: 'numeric' })
+  new Date(d + 'T00:00:00').toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+
+const fmtRange = (start: string, end: string) => {
+  const startDate = new Date(start + 'T00:00:00')
+  const endDate = new Date(end + 'T00:00:00')
+  if (startDate.getFullYear() === endDate.getFullYear() && startDate.getMonth() === endDate.getMonth()) {
+    return `${startDate.toLocaleString('en-US', { month: 'short' })} ${startDate.getDate()}–${endDate.getDate()}, ${endDate.getFullYear()}`
+  }
+  return `${fmt(start)} – ${fmt(end)}`
+}
 
 const displayName = (row: ComparisonRow) => {
   if (row.shortName === 'CCS' && row.name.includes('Cabarrus')) return 'Cabarrus County'
@@ -179,7 +188,7 @@ const comparisonTitle = computed(() => {
               class="px-4 py-3 whitespace-nowrap"
               :class="row.isCurrent ? 'font-semibold text-blue-800' : 'text-gray-600'"
             >
-              <span v-if="row.springBreak">{{ fmt(row.springBreak.start) }} – {{ fmt(row.springBreak.end) }}</span>
+              <span v-if="row.springBreak">{{ fmtRange(row.springBreak.start, row.springBreak.end) }}</span>
               <span v-else class="text-gray-300">—</span>
             </td>
           </tr>

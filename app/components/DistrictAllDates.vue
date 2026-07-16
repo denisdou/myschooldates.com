@@ -272,12 +272,15 @@ function formatRangeEnd(event: DisplayEvent) {
     </div>
     <div class="px-6 py-3 border-t border-gray-50 flex items-center gap-1.5 text-xs text-gray-600">
       <span>
-        <template v-if="mode === 'keyDates'">Routine staff-only labels are simplified for readability.</template>
+        <template v-if="mode === 'keyDates'">This list summarizes major student dates and may not include every staff development day, minimum day, school-specific change, or track-specific event. See the official PDF for the complete calendar.</template>
         <template v-if="coveredBreakDateNames.length">
           Dates that fall inside a listed break are included in that break{{ coveredBreakDateNames.length ? ` (${coveredBreakDateNames.join(', ')})` : '' }}.
         </template>
         Sourced from the
-        <a :href="sourceUrl" target="_blank" rel="noopener" class="underline hover:text-blue-600 transition-colors">{{ districtName }} official calendar</a>
+        <a :href="sourceUrl" target="_blank" rel="noopener" class="underline hover:text-blue-600 transition-colors">
+          {{ districtName }} official calendar
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
         <template v-if="verifiedDate"> · Last reviewed {{ verifiedDate }}</template>
       </span>
     </div>
