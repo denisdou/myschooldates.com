@@ -132,7 +132,17 @@ const instructionalDaysLine = computed(() => {
   }
   return `${days} instructional days`
 })
-const customSections = computed(() => ((district.value as any).customSections ?? []) as { id: string; label: string; content: string; position?: string }[])
+type DistrictCustomSection = {
+  id: string
+  label: string
+  content: string
+  position?: string
+  groups?: { label: string; items: string[] }[]
+}
+const customSections = computed(() => [
+  ...(((district.value as any).customSections ?? []) as DistrictCustomSection[]),
+  ...(((cal.value as any)?.customSections ?? []) as DistrictCustomSection[]),
+])
 const allDatesMode = computed(() => ((district.value as any)?.allDatesMode === 'keyDates' ? 'keyDates' : 'all') as 'all' | 'keyDates')
 const allDatesTitle = computed(() =>
   allDatesMode.value === 'keyDates'
@@ -215,6 +225,9 @@ const calendarTypeName = String((cal.value as any)?.calendarType ?? '').replace(
 const schemaCalendarName = calendarTypeName
   ? `${district.value.name} ${calendarTypeName} Calendar ${year}`
   : `${district.value.name} Calendar ${year}`
+const datasetDescription = calendarTypeName
+  ? `Major ${calendarTypeName} Calendar dates for ${district.value.name} in ${year}, including school-year boundaries, major holidays, break ranges, and school resume dates.`
+  : `Major calendar dates for ${district.value.name} in ${year}, including school-year boundaries, major holidays, break ranges, and school resume dates.`
 const sourceCalendarEntity = basedOnUrl ? {
   '@type': 'CreativeWork',
   '@id': `${canonicalUrl}#source-calendar`,
@@ -227,7 +240,7 @@ const datasetEntity = {
   '@type': 'Dataset',
   '@id': `${canonicalUrl}#calendar-dataset`,
   name: schemaCalendarName,
-  description: _pageDesc,
+  description: datasetDescription,
   url: canonicalUrl,
   inLanguage: 'en-US',
   ...(pageDateModified ? { dateModified: pageDateModified } : {}),
@@ -239,7 +252,7 @@ const datasetEntity = {
     {
       '@type': 'DataDownload',
       name: `${schemaCalendarName} calendar file`,
-      description: `Unofficial one-time calendar import generated from reviewed ${district.value.name} calendar dates.`,
+      description: `Unofficial one-time calendar import generated from ${schemaCalendarName} records used for this page.`,
       encodingFormat: 'text/calendar',
       contentUrl: calendarIcsUrl,
     },

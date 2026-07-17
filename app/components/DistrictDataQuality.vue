@@ -24,7 +24,10 @@ const sourceUrl = computed(() => props.cal?.sourceUrl ?? props.district?.officia
         <p>
           These dates have not been confirmed against the official {{ year }} calendar.
           Always check the
-          <a :href="sourceUrl" target="_blank" rel="noopener" class="underline font-medium text-gray-700">official {{ district.name }} calendar</a>
+          <a :href="sourceUrl" target="_blank" rel="noopener" class="underline font-medium text-gray-700">
+            official {{ district.name }} calendar
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
           before making travel or childcare plans.
         </p>
       </div>
@@ -40,7 +43,10 @@ const sourceUrl = computed(() => props.cal?.sourceUrl ?? props.district?.officia
         <p class="font-medium">Reviewed by MySchoolDates calendar editors against the official district calendar</p>
         <p>
           Dates sourced directly from the
-          <a :href="sourceUrl" target="_blank" rel="noopener" class="underline font-medium">official {{ district.shortName || district.name }} calendar</a>.
+          <a :href="sourceUrl" target="_blank" rel="noopener" class="underline font-medium">
+            official {{ district.shortName || district.name }} calendar
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>.
           Dates are subject to board approval and may change — always confirm before making travel or childcare plans.
         </p>
         <p class="text-green-600 text-xs">Last verified: {{ verifiedDate }}</p>

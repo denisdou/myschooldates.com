@@ -256,7 +256,17 @@ const faqs = computed(() => {
 })
 
 const hiddenSections = computed(() => new Set<string>((district.value as any).hiddenSections ?? []))
-const customSections = computed(() => ((district.value as any).customSections ?? []) as { id: string; label: string; content: string; position?: string }[])
+type DistrictCustomSection = {
+  id: string
+  label: string
+  content: string
+  position?: string
+  groups?: { label: string; items: string[] }[]
+}
+const customSections = computed(() => [
+  ...(((district.value as any).customSections ?? []) as DistrictCustomSection[]),
+  ...(((cal as any)?.customSections ?? []) as DistrictCustomSection[]),
+])
 const hasCalendarTrackCaution = computed(() => {
   const text = `${(cal as any)?.calendarNotes ?? ''} ${(district.value as any)?.districtFact ?? ''}`.toLowerCase()
   return text.includes('track') || text.includes('modified traditional') || text.includes('year-round')
@@ -439,6 +449,9 @@ if (!isStatePage && district.value) {
   const schemaCalendarName = calendarTypeName
     ? `${meta.value!.name} ${calendarTypeName} Calendar ${currentYear}`
     : `${meta.value!.name} Calendar ${currentYear}`
+  const datasetDescription = calendarTypeName
+    ? `Major ${calendarTypeName} Calendar dates for ${meta.value!.name} in ${currentYear}, including school-year boundaries, major holidays, break ranges, and school resume dates.`
+    : `Major calendar dates for ${meta.value!.name} in ${currentYear}, including school-year boundaries, major holidays, break ranges, and school resume dates.`
   const sourceCalendarEntity = basedOnUrl ? {
     '@type': 'CreativeWork',
     '@id': `${canonicalUrl}#source-calendar`,
@@ -453,7 +466,7 @@ if (!isStatePage && district.value) {
     '@type': 'Dataset',
     '@id': `${canonicalUrl}#calendar-dataset`,
     name: schemaCalendarName,
-    description: _pageDesc,
+    description: datasetDescription,
     url: canonicalUrl,
     inLanguage: 'en-US',
     ...(pageDateModified ? { dateModified: pageDateModified } : {}),
@@ -465,7 +478,7 @@ if (!isStatePage && district.value) {
       calendarIcsUrl ? {
         '@type': 'DataDownload',
         name: `${schemaCalendarName} calendar file`,
-        description: `Unofficial one-time calendar import generated from reviewed ${meta.value!.name} calendar dates.`,
+        description: `Unofficial one-time calendar import generated from ${schemaCalendarName} records used for this page.`,
         encodingFormat: 'text/calendar',
         contentUrl: calendarIcsUrl,
       } : null,

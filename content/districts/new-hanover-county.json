@@ -42,7 +42,16 @@
   ],
   "calendarType": "traditional",
   "districtFact": "New Hanover County Schools serves Wilmington and coastal New Hanover County communities, including families who may need to compare traditional, year-round, restart, early college, technical high school, and Pre-K calendars.",
-  "about": [],
+  "about": [
+    {
+      "title": "About New Hanover County Schools",
+      "content": "New Hanover County Schools serves students in Wilmington and nearby coastal communities in New Hanover County, North Carolina. The district publishes a traditional calendar for most K-12 students, along with separate calendars for year-round schools, restart year-round schools, early college and technical high school programs, and Pre-K. Because those programs can use different first days, breaks, teacher workdays, and final student days, families should match their school or program to the correct NHCS calendar before making travel, childcare, or appointment plans."
+    },
+    {
+      "title": "How to Use This NHCS Calendar",
+      "content": "This page summarizes the traditional NHCS student calendar in a searchable format and adds a calendar download for Google Calendar, Apple Calendar, and Outlook. It highlights the first day, last day, major breaks, teacher workdays that affect student attendance, and the last-day half day. School-specific events, athletic schedules, testing windows, and program-specific dates may still appear only on school websites or in the official NHCS PDF."
+    }
+  ],
   "planningTips": {
     "title": "Planning Tips for New Hanover County Families",
     "content": [
@@ -70,7 +79,25 @@
       "a": "Use the official New Hanover County Schools printable calendars page and school-level announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with NHCS."
     }
   ],
-  "customSections": [],
+  "customSections": [
+    {
+      "id": "nhcs-verification-method",
+      "label": "How We Verify NHCS Calendar Dates",
+      "content": "MySchoolDates checks the NHCS traditional calendar against the official printable calendar source before publishing this page.",
+      "position": "beforeSources",
+      "groups": [
+        {
+          "label": "Review steps",
+          "items": [
+            "Use the official NHCS printable calendars page and traditional calendar PDF as the source of record.",
+            "Cross-check first day, last day, break ranges, teacher workdays that affect students, holidays, and the last-day half day.",
+            "Keep separate NHCS program calendars separate from the traditional calendar summary.",
+            "Update the page when NHCS publishes a revised calendar or a newer official PDF."
+          ]
+        }
+      ]
+    }
+  ],
   "relatedDistricts": [
     {
       "name": "Cumberland County Schools",
@@ -93,10 +120,6 @@
     {
       "label": "New Hanover County Schools printable calendars",
       "url": "https://www.nhcs.net/about-us/calendar/print-calendars"
-    },
-    {
-      "label": "North Carolina Department of Public Instruction",
-      "url": "https://www.dpi.nc.gov"
     }
   ]
 }

@@ -211,7 +211,10 @@ const comparisonTitle = computed(() => {
       <template v-if="sourceRows.length">
         Sources:
         <template v-for="(row, index) in sourceRows" :key="row.slug">
-          <a :href="row.sourceUrl" target="_blank" rel="noopener" class="underline hover:text-blue-600 transition-colors">{{ displayName(row) }} official calendar</a><template v-if="row.sourceVersion"> ({{ row.sourceVersion }})</template><template v-if="index < sourceRows.length - 1"> · </template>
+          <a :href="row.sourceUrl" target="_blank" rel="noopener" class="underline hover:text-blue-600 transition-colors">
+            {{ displayName(row) }} official calendar
+            <span class="sr-only">(opens in a new tab)</span>
+          </a><template v-if="row.sourceVersion"> ({{ row.sourceVersion }})</template><template v-if="index < sourceRows.length - 1"> · </template>
         </template>.
       </template>
       <template v-else>

@@ -26,7 +26,10 @@ const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' 
         <svg class="w-3 h-3 text-gray-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
         </svg>
-        <a v-if="src.url" :href="src.url" target="_blank" rel="noopener" class="underline hover:text-blue-600 transition-colors">{{ src.label }}</a>
+        <a v-if="src.url" :href="src.url" target="_blank" rel="noopener" class="underline hover:text-blue-600 transition-colors">
+          {{ src.label }}
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
         <span v-else>{{ src.label }}</span>
       </li>
     </ul>
@@ -39,13 +42,16 @@ const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' 
           target="_blank"
           rel="noopener"
           class="font-medium text-blue-600 hover:text-blue-800 underline"
-        >{{ sourceVersion }}</a>
+        >
+          {{ sourceVersion }}
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
         <template v-else>{{ sourceVersion }}</template>
         <template v-if="sourcePdfUrl && isArchivedPdfCopy"> · Archived official PDF copy stored by MySchoolDates</template>
       </p>
       <p class="font-medium text-gray-600">How we collect and verify this data</p>
       <p>Each school year, MySchoolDates calendar editors review the official calendar source published or linked by the district. We use AI to extract key dates and events from the source document, then cross-check the first day, last day, major breaks, holidays, student no-school dates, early dismissals, exam windows, and alternate-calendar links when those items appear in the official source.</p>
-      <p>Any discrepancy between extracted data and the official source is corrected by hand. This page displays major student calendar dates; early dismissals, exam windows, staff-specific details, and track-specific items may remain available only in the official PDF. The downloadable calendar file is generated from the same reviewed records shown on this page, and the official district calendar remains the source of record for last-minute changes.</p>
+      <p>Any discrepancy between extracted data and the official source is corrected by hand. This page displays major student calendar dates; early dismissals, exam windows, staff-specific details, and track-specific items may remain available only in the official PDF. The downloadable calendar file is generated from the reviewed calendar records used for this page, and the official district calendar remains the source of record for last-minute changes.</p>
       <p>Supplemental planning notes and district profile information may change by year. Families should confirm program deadlines, transportation notices, and emergency schedule updates directly with {{ shortName }}.</p>
       <p>
         <a

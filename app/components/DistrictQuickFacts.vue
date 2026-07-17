@@ -514,7 +514,10 @@ const facts = computed(() => {
         target="_blank"
         rel="noopener"
         class="underline text-gray-500 hover:text-blue-600 transition-colors"
-      >{{ districtName }} official calendar</a>
+      >
+        {{ districtName }} official calendar
+        <span class="sr-only">(opens in a new tab)</span>
+      </a>
       <span v-if="verifiedDate" class="ml-1 text-green-600 font-medium">· Last reviewed {{ verifiedDate }}</span>
       <span v-else class="ml-1 text-gray-400">· Not yet verified against official source</span>
     </div>
