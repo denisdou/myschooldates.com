@@ -242,6 +242,7 @@ const datasetEntity = {
   name: schemaCalendarName,
   description: datasetDescription,
   url: canonicalUrl,
+  license: 'https://myschooldates.com/terms',
   inLanguage: 'en-US',
   ...(pageDateModified ? { dateModified: pageDateModified } : {}),
   temporalCoverage: `${cal.value.firstDay}/${cal.value.lastDay}`,

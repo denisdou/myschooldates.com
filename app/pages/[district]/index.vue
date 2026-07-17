@@ -468,6 +468,7 @@ if (!isStatePage && district.value) {
     name: schemaCalendarName,
     description: datasetDescription,
     url: canonicalUrl,
+    license: 'https://myschooldates.com/terms',
     inLanguage: 'en-US',
     ...(pageDateModified ? { dateModified: pageDateModified } : {}),
     temporalCoverage: cal ? `${cal.firstDay}/${cal.lastDay}` : undefined,
