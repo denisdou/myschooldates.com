@@ -40,7 +40,7 @@ const sourceUrl = computed(() => props.cal?.sourceUrl ?? props.district?.officia
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
       <div class="text-sm text-green-700 space-y-1">
-        <p class="font-medium">Reviewed by MySchoolDates calendar editors against the official district calendar</p>
+        <p class="font-medium">Calendar data checked against the official district calendar</p>
         <p>
           Dates sourced directly from the
           <a :href="sourceUrl" target="_blank" rel="noopener" class="underline font-medium">

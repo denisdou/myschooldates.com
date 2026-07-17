@@ -44,6 +44,7 @@ export default defineNuxtConfig({
         '/palm-beach-county-school-calendar',
         '/prince-william-county-school-calendar',
         '/sacramento-city-unified-school-calendar',
+        '/san-jose-unified-school-calendar',
         '/san-diego-unified-school-district-calendar',
         '/virginia-beach-school-calendar',
         '/wake-county-school-calendar',
@@ -132,6 +133,10 @@ export default defineNuxtConfig({
 
         '/sacramento-city-unified-school-calendar/2025-2026',
         '/sacramento-city-unified-school-calendar/2026-2027',
+
+        '/san-jose-unified-school-calendar/2025-2026',
+        '/san-jose-unified-school-calendar/2026-2027',
+        '/san-jose-unified-school-calendar/2027-2028',
 
         '/san-diego-unified-school-district-calendar/2025-2026',
         '/san-diego-unified-school-district-calendar/2026-2027',

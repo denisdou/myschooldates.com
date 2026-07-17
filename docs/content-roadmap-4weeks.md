@@ -7,17 +7,17 @@
 
 ## 当前进度快照
 
-**已完成学区（39个）**
+**已完成学区（40个）**
 
 | 州 | 已完成 | P1 完成度 | P2 完成度 |
 |----|--------|-----------|-----------|
 | Texas | Houston ISD, Dallas ISD, Fort Worth ISD, Austin ISD, Northside ISD, Plano ISD, Frisco ISD, Katy ISD, Round Rock ISD, Conroe ISD, Cy-Fair ISD | 6/6 ✓ | 5/5 ✓ |
-| California | LAUSD, San Diego Unified, Long Beach Unified, Fresno Unified, Sacramento City USD, Elk Grove USD | 5/5 ✓ | 1/5 |
+| California | LAUSD, San Diego Unified, Long Beach Unified, Fresno Unified, Sacramento City USD, Elk Grove USD, San Jose USD | 5/5 ✓ | 2/5 |
 | Florida | Miami-Dade, Broward County, Orange County, Palm Beach County, Hillsborough County | 5/5 ✓ | 0/5 |
 | Virginia | Fairfax County, Prince William County, Loudoun County, Virginia Beach City, Chesterfield County, Henrico County, Arlington Public Schools | 5/5 ✓ | 2/5 |
 | North Carolina | Wake County, Charlotte-Mecklenburg, Guilford County, Winston-Salem/Forsyth, Cumberland County, Union County, Cabarrus County, Johnston County, Durham Public Schools, New Hanover County | 5/5 ✓ | 5/5 ✓ |
 
-**合计：P1 已完成 27/27 ✓，P2 已完成 12/24，P3 尚未开始。**
+**合计：P1 已完成 27/27 ✓，P2 已完成 13/24，P3 尚未开始。**
 
 ---
 
@@ -89,11 +89,11 @@
 |--------|------|------|------|
 | P2 | Elk Grove USD | `/elk-grove-usd-calendar` | ✓ 已完成 |
 | P2 | San Francisco USD | `/san-francisco-usd/` | 待创建 |
-| P2 | San Jose USD | `/san-jose-usd/` | 待创建 |
+| P2 | San Jose USD | `/san-jose-unified-school-calendar` | ✓ 已完成 |
 | P2 | Oakland USD | `/oakland-usd/` | 待创建 |
 | P2 | Irvine USD | `/irvine-usd/` | 待创建 |
 
-> CA P1 已全部完成。Elk Grove 是 Sacramento 南郊最大学区；SF USD 具有极高品牌知名度；Irvine USD 是 Orange County 高收入学区，搜索精准度高。
+> CA P1 已全部完成。Elk Grove 是 Sacramento 南郊最大学区；San Jose USD 覆盖 Bay Area / Silicon Valley 核心搜索意图；SF USD 具有极高品牌知名度；Irvine USD 是 Orange County 高收入学区，搜索精准度高。
 
 ### Virginia（4个）
 
@@ -203,6 +203,7 @@
 | 基准（已完成） | 26 | 26 | 含 Plano ISD（2026-07-12 完成） |
 | Week 1 进度 | +11 | 38 | Frisco ISD、Katy ISD、Round Rock ISD、Conroe ISD、Cy-Fair ISD、Union County、Cabarrus County、Johnston County、Durham Public Schools、New Hanover County、Arlington Public Schools（2026-07-16 完成），TX P2、NC P2 和 VA Arlington 已完成 |
 | Week 1 目标 | +11 | 38 | ✓ 已完成 |
+| Week 2 进度 | +1 | 40 | San Jose USD（2026-07-17 完成），CA P2 进度 2/5 |
 | Week 2 | +11 | 48 | TX/CA P2 收尾 + VA P2 |
 | Week 3 | +15 | 63 | FL P2 + TX/CA P3 批次1 |
 | Week 4 | +20 | 83 | VA/NC P3 + TX/CA P3 批次2 |

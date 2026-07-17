@@ -1,0 +1,166 @@
+{
+  "institutionId": "san-jose-unified",
+  "name": "San José Unified School District",
+  "shortName": "SJUSD",
+  "slug": "san-jose-unified-school-calendar",
+  "state": "California",
+  "stateCode": "CA",
+  "city": "San José",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.sjusd.org/",
+  "calendarPage": "https://www.sjusd.org/events",
+  "logo": "https://resources.finalsite.net/images/v1689335660/sjusdorg/hwxqbenvvogoy66hkjnv/header-logo.svg",
+  "timezone": "America/Los_Angeles",
+  "county": "Santa Clara County",
+  "region": "Bay Area",
+  "metro": "San José",
+  "studentCount": 24000,
+  "schoolCount": 36,
+  "founded": 1853,
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "keyDates",
+  "hiddenSections": [
+    "quickFacts",
+    "livingHere"
+  ],
+  "calendarType": "student",
+  "searchAliases": [
+    "SJUSD",
+    "San Jose Unified",
+    "San José Unified",
+    "San Jose Unified School District",
+    "San Jose USD",
+    "SJUSD calendar",
+    "San Jose school calendar"
+  ],
+  "districtFact": "San José Unified was founded in 1853 and serves about 24,000 students in 36 schools from downtown San José to Almaden Valley. This page focuses on the official SJUSD Student Calendar, not every district event listed on the separate community calendar.",
+  "about": [
+    {
+      "title": "About San José Unified School District",
+      "content": "San José Unified School District serves families in San José, Santa Clara County, and the broader Silicon Valley area. The district publishes student calendars through its events and calendar page, and local families often use those dates to coordinate school schedules with commute patterns, childcare, after-school programs, youth sports, summer camps, and family travel. The official SJUSD Student Calendar identifies the first day, last day, recess periods, shortened student days, high school graduation windows, and optional extended school year windows. Because SJUSD also publishes a community calendar, families should distinguish student attendance dates from broader district events before planning childcare, travel, or appointments."
+    },
+    {
+      "title": "How to Use This SJUSD Calendar",
+      "content": "This page summarizes the official SJUSD Student Calendar in a searchable format and provides a one-time ICS calendar import for Google Calendar, Apple Calendar, and Outlook. It highlights student attendance dates, recesses, school resume dates, early-release windows, and official PDF links. School-specific events, athletics, and community calendar items may still appear only on the SJUSD events page or in the separate community calendar PDF."
+    }
+  ],
+  "planningTips": {
+    "title": "Planning Tips for San José Unified Families",
+    "content": [
+      "Use the Student Calendar for regular student attendance planning, including the first day, last day, recess periods, and early-release windows.",
+      "Check the SJUSD Community Calendar for broader district events that are not necessarily student attendance dates.",
+      "Shortened student days differ by school level on some dates, so families should confirm elementary, secondary, and all-school early-release windows before making after-school plans.",
+      "Use the official SJUSD events page and school announcements for last-minute changes."
+    ]
+  },
+  "compareIntro": "Compare the 2026-2027 student calendars for San José Unified and another California district with published source data. Dates shown include the first day, last day, and spring break.",
+  "districtFaqs": [
+    {
+      "q": "Is this the same as the SJUSD Community Calendar?",
+      "a": "No. This page summarizes the SJUSD Student Calendar. The district also publishes a Community Calendar for broader district events. Use the official SJUSD events page when you need event listings beyond student attendance dates."
+    },
+    {
+      "q": "Do SJUSD shortened days apply to every school?",
+      "a": "Not always. The SJUSD Student Calendar separates elementary shortened days, secondary shortened days, and all-school shortened days. Families should check the label for each early-release window before planning pickup or after-school care."
+    },
+    {
+      "q": "Where should families verify last-minute SJUSD changes?",
+      "a": "Use the official San José Unified events page, the official student calendar PDF, and school-level announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with SJUSD."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "san-jose-local-calendar-context",
+      "label": "San José Calendar Context for Families",
+      "content": "San José school calendar planning often involves more than the first and last day of school. Families in and around central San José neighborhoods, including Downtown San José, Willow Glen, Rose Garden, Almaden Valley, and nearby Santa Clara County attendance areas, commonly coordinate SJUSD dates with commute schedules, after-school activities, youth sports, summer camps, and local college or workplace calendars. In Silicon Valley households with staggered work schedules or longer Bay Area commutes, early-release windows can matter as much as full recess weeks because pickup, tutoring, and activity transportation may need separate planning. The SJUSD Student Calendar is the best source for regular student attendance dates, while the Community Calendar helps families track broader district events that may matter for meetings, performances, or community planning.",
+      "position": "afterAbout",
+      "groups": [
+        {
+          "label": "Why local context matters",
+          "items": [
+            "SJUSD uses separate student and community calendar files, so families should not treat every community event as a change to student attendance.",
+            "Early-release windows differ by elementary, secondary, and all-school labels, which can affect pickup and after-school care differently by grade level.",
+            "Bay Area families often compare SJUSD dates with neighboring district, childcare, and activity calendars before booking travel or camp weeks.",
+            "Summer camp and childcare providers in Santa Clara County may publish registration windows before every district event is final, so families should use the official SJUSD Student Calendar for attendance dates and check the district events page for updates."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sju-calendar-files",
+      "label": "Official SJUSD Calendar Files",
+      "content": "SJUSD publishes student calendar PDFs for multiple school years and a separate community calendar. This page uses the Student Calendar as the source for student attendance dates.",
+      "position": "afterAbout",
+      "groups": [
+        {
+          "label": "How the files differ",
+          "items": [
+            "Student Calendar: first day, last day, recess periods, early-release windows, graduation windows, and optional extended school year windows.",
+            "Community Calendar: broader district events and community dates that may not directly change student attendance.",
+            "Official events page: the best place to check for newer calendar files or district updates."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sju-verification-method",
+      "label": "How We Verify SJUSD Calendar Dates",
+      "content": "MySchoolDates checks SJUSD calendar pages and official Student Calendar PDFs before publishing student attendance dates.",
+      "position": "beforeSources",
+      "groups": [
+        {
+          "label": "Review steps",
+          "items": [
+            "Use the SJUSD events page and official Student Calendar PDF as the primary source.",
+            "Cross-check first day, last day, recess ranges, student holidays, shortened-day windows, and school resume dates.",
+            "Keep community calendar events separate from the student attendance calendar.",
+            "Update the page when SJUSD publishes a revised Student Calendar or a newer official PDF."
+          ]
+        }
+      ]
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Sacramento City Unified School District",
+      "slug": "sacramento-city-unified-school-calendar",
+      "state": "California",
+      "comparisonNote": "Northern California district with published student calendar data for the same school year."
+    }
+  ],
+  "sources": [
+    {
+      "label": "San José Unified School District official website",
+      "url": "https://www.sjusd.org/"
+    },
+    {
+      "label": "San José Unified School District about page",
+      "url": "https://www.sjusd.org/about"
+    },
+    {
+      "label": "San José Unified School District events and calendars",
+      "url": "https://www.sjusd.org/events"
+    },
+    {
+      "label": "San José Unified School District logo",
+      "url": "https://resources.finalsite.net/images/v1689335660/sjusdorg/hwxqbenvvogoy66hkjnv/header-logo.svg"
+    }
+  ]
+}

@@ -36,7 +36,7 @@ useHead({
         </li>
         <li class="flex items-start gap-3">
           <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold flex items-center justify-center mt-0.5">2</span>
-          <span><strong class="text-gray-800">Manual cross-check.</strong> A member of our editorial team reviews every extracted date against the original source document. Any discrepancy between the AI output and the official PDF is corrected by hand before the calendar is published.</span>
+          <span><strong class="text-gray-800">Source comparison.</strong> We compare extracted dates against the original source document before publication. When extracted data does not match the official source, we update the page record before the calendar is published.</span>
         </li>
       </ol>
       <p class="text-gray-600 leading-relaxed mt-3">
