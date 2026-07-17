@@ -31,12 +31,13 @@
   "county": "New Hanover County",
   "region": "Coastal North Carolina",
   "metro": "Wilmington",
+  "studentCount": 25155,
+  "schoolCount": 42,
   "currentSchoolYear": "2026-2027",
   "allDatesMode": "keyDates",
   "hiddenSections": [
     "quickFacts",
     "planningTips",
-    "districtProfile",
     "livingHere",
     "relatedDistricts"
   ],
@@ -45,7 +46,7 @@
   "about": [
     {
       "title": "About New Hanover County Schools",
-      "content": "New Hanover County Schools serves students in Wilmington and nearby coastal communities in New Hanover County, North Carolina. The district publishes a traditional calendar for most K-12 students, along with separate calendars for year-round schools, restart year-round schools, early college and technical high school programs, and Pre-K. Because those programs can use different first days, breaks, teacher workdays, and final student days, families should match their school or program to the correct NHCS calendar before making travel, childcare, or appointment plans."
+      "content": "New Hanover County Schools serves more than 25,000 students across 42 schools in Wilmington and coastal New Hanover County, including families in communities such as Carolina Beach, Wrightsville Beach, Castle Hayne, and nearby unincorporated areas. The district publishes a traditional calendar for most K-12 students, along with separate calendars for year-round schools, restart year-round schools, early college and technical high school programs, and Pre-K. Because those programs can use different first days, breaks, teacher workdays, and final student days, families should match their school or program to the correct NHCS calendar before making travel, childcare, or appointment plans."
     },
     {
       "title": "How to Use This NHCS Calendar",
@@ -81,6 +82,40 @@
   ],
   "customSections": [
     {
+      "id": "why-use-myschooldates-nhcs",
+      "label": "Why Use This NHCS Calendar Page?",
+      "content": "The official NHCS PDF remains the source of record. MySchoolDates makes that calendar easier to use by turning the district document into a searchable summary, a one-time ICS calendar import, year-to-year comparisons, and quick links to alternate NHCS program calendars.",
+      "position": "afterAbout",
+      "groups": [
+        {
+          "label": "What this page adds",
+          "items": [
+            "Direct answers for first day, last day, Spring Break, Winter Break, teacher workdays, and the last-day half day.",
+            "A standard calendar file that families can import into Google Calendar, Apple Calendar, or Outlook.",
+            "Separate links to year-round, restart year-round, early college, technical high school, and Pre-K calendars so families do not confuse program calendars.",
+            "Year-over-year and nearby-district comparisons that are easier to scan than a standalone PDF."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "identify-nhcs-calendar-track",
+      "label": "How to Confirm Your NHCS Calendar Type",
+      "content": "NHCS publishes multiple official calendars, so families should confirm which calendar applies to their school or program before relying on a date.",
+      "position": "afterAbout",
+      "groups": [
+        {
+          "label": "What to check",
+          "items": [
+            "Use the Traditional Calendar for most K-12 NHCS schools unless your school says otherwise.",
+            "Check the official NHCS printable calendars page for year-round, restart year-round, early college, technical high school, and Pre-K calendars.",
+            "Confirm school-specific schedules through your school website or office, especially for testing windows, athletic events, and program-specific days.",
+            "When a date affects travel, childcare, or work schedules, treat the official NHCS calendar and school announcements as the final source."
+          ]
+        }
+      ]
+    },
+    {
       "id": "nhcs-verification-method",
       "label": "How We Verify NHCS Calendar Dates",
       "content": "MySchoolDates checks the NHCS traditional calendar against the official printable calendar source before publishing this page.",
@@ -110,6 +145,12 @@
       "slug": "johnston-county-school-calendar",
       "state": "North Carolina",
       "comparisonNote": "Raleigh-area district useful for comparing eastern North Carolina school calendars."
+    },
+    {
+      "name": "Wake County Public School System",
+      "slug": "wake-county-school-calendar",
+      "state": "North Carolina",
+      "comparisonNote": "Large North Carolina district useful for statewide comparison when families coordinate school breaks across regions."
     }
   ],
   "sources": [
@@ -120,6 +161,10 @@
     {
       "label": "New Hanover County Schools printable calendars",
       "url": "https://www.nhcs.net/about-us/calendar/print-calendars"
+    },
+    {
+      "label": "NCES district profile for New Hanover County Schools",
+      "url": "https://nces.ed.gov/ccd/districtsearch/district_detail.asp?ID2=3703330"
     }
   ]
 }

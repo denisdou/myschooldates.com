@@ -267,6 +267,14 @@ const customSections = computed(() => [
   ...(((district.value as any).customSections ?? []) as DistrictCustomSection[]),
   ...(((cal as any)?.customSections ?? []) as DistrictCustomSection[]),
 ])
+const calendarTrackHelpId = computed(() => {
+  const section = customSections.value.find(s =>
+    s.id.toLowerCase().includes('calendar-track') ||
+    s.label.toLowerCase().includes('calendar track') ||
+    s.label.toLowerCase().includes('calendar type')
+  )
+  return section?.id || (((cal as any)?.alternateCalendars?.length) ? 'other-calendars' : 'sources')
+})
 const hasCalendarTrackCaution = computed(() => {
   const text = `${(cal as any)?.calendarNotes ?? ''} ${(district.value as any)?.districtFact ?? ''}`.toLowerCase()
   return text.includes('track') || text.includes('modified traditional') || text.includes('year-round')
@@ -826,17 +834,32 @@ if (!isStatePage && district.value) {
         <!-- Today Status — HERO: first thing users see after the title -->
         <DistrictTodayStatus :cal="cal">
           <template #cta>
-            <a
-              :href="calendarIcsHref"
-              :download="district && cal ? `${district.slug}-${cal.schoolYear}.ics` : undefined"
-              :aria-label="district && cal ? `Download ${district.name} ${cal.schoolYear} calendar file` : 'Download calendar file'"
-              class="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors"
-            >
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Add school dates to calendar
-            </a>
+            <div class="mt-4 flex flex-col sm:flex-row gap-2">
+              <a
+                :href="calendarIcsHref"
+                :download="district && cal ? `${district.slug}-${cal.schoolYear}.ics` : undefined"
+                :aria-label="district && cal ? `Download ${district.name} ${cal.schoolYear} calendar file` : 'Download calendar file'"
+                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors"
+              >
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Add school dates
+              </a>
+              <a
+                v-if="(cal as any).sourcePdfUrl"
+                :href="(cal as any).sourcePdfUrl"
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 text-sm font-medium rounded-lg transition-colors"
+              >
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10M7 11h10M7 15h6M6 3h8l4 4v14H6V3z" />
+                </svg>
+                View official PDF
+                <span class="sr-only">(opens in a new tab)</span>
+              </a>
+            </div>
           </template>
         </DistrictTodayStatus>
 
@@ -848,7 +871,7 @@ if (!isStatePage && district.value) {
           <p class="text-sm text-blue-800">
             <strong>Calendar shown:</strong> {{ district.shortName || district.name }} {{ calendarTrackLabel }} Calendar.
             Other calendar tracks or specialized programs may use different dates. Check your school's assigned calendar before making plans.
-            <a href="#identify-egusd-calendar-track" class="underline font-medium">How to confirm your calendar track</a>
+            <a :href="`#${calendarTrackHelpId}`" class="underline font-medium">How to confirm your calendar track</a>
           </p>
         </div>
 

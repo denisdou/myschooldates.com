@@ -143,6 +143,14 @@ const customSections = computed(() => [
   ...(((district.value as any).customSections ?? []) as DistrictCustomSection[]),
   ...(((cal.value as any)?.customSections ?? []) as DistrictCustomSection[]),
 ])
+const calendarTrackHelpId = computed(() => {
+  const section = customSections.value.find(s =>
+    s.id.toLowerCase().includes('calendar-track') ||
+    s.label.toLowerCase().includes('calendar track') ||
+    s.label.toLowerCase().includes('calendar type')
+  )
+  return section?.id || (((cal.value as any)?.alternateCalendars?.length) ? 'other-calendars' : 'sources')
+})
 const allDatesMode = computed(() => ((district.value as any)?.allDatesMode === 'keyDates' ? 'keyDates' : 'all') as 'all' | 'keyDates')
 const allDatesTitle = computed(() =>
   allDatesMode.value === 'keyDates'
@@ -386,7 +394,7 @@ useHead({
         <p class="text-sm text-blue-800">
           <strong>Calendar shown:</strong> {{ district!.shortName || district!.name }} {{ calendarTrackLabel }} Calendar.
           Other calendar tracks or specialized programs may use different dates. Check your school's assigned calendar before making plans.
-          <a href="#identify-egusd-calendar-track" class="underline font-medium">How to confirm your calendar track</a>
+          <a :href="`#${calendarTrackHelpId}`" class="underline font-medium">How to confirm your calendar track</a>
         </p>
       </div>
 
