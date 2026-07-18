@@ -1,0 +1,158 @@
+{
+  "institutionId": "irvine-unified",
+  "schoolYear": "2027-2028",
+  "firstDay": "2027-08-18",
+  "lastDay": "2028-06-02",
+  "totalSchoolDays": 180,
+  "teacherWorkDays": 186,
+  "sourceUrl": "https://iusd.org/district-school-calendars",
+  "sourcePdfUrl": "https://iusd.org/sites/default/files/documents/2027-28%20TR_0.pdf",
+  "lastVerifiedAt": "2026-07-18",
+  "datePublished": "2026-07-18",
+  "dateModified": "2026-07-18",
+  "calendarType": "traditional",
+  "hideSemesterCount": true,
+  "instructionalDaysDescription": "The official IUSD Traditional Calendar lists 180 instructional days for PK-8 and 180 instructional days for high school.",
+  "seoTitle": "IUSD Calendar 2027-2028 | Holidays, PDF & ICS",
+  "seoDescription": "View the IUSD 2027-2028 traditional academic calendar with Aug 18 first day, Jun 2 last day, holidays, breaks, printable PDF and ICS download.",
+  "calendarNotes": "IUSD's 2027-2028 Traditional Calendar starts on August 18, 2027 and ends on June 2, 2028. Thanksgiving recess runs November 22-26, winter recess runs December 20-31, and spring recess runs April 3-7. IUSD also publishes a separate Year Round Calendar for 2027-2028.",
+  "alternateCalendars": [
+    {
+      "type": "year-round",
+      "label": "2027-2028 IUSD Year Round Calendar",
+      "pdfUrl": "https://iusd.org/sites/default/files/documents/2027-28%20YR_0.pdf"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When does Irvine Unified start school in 2027?",
+      "a": "Irvine Unified traditional-calendar students start school on Wednesday, August 18, 2027."
+    },
+    {
+      "q": "When is IUSD Spring Recess in 2028?",
+      "a": "Spring Recess on the IUSD 2027-2028 Traditional Calendar runs Monday, April 3 through Friday, April 7, 2028."
+    },
+    {
+      "q": "When is the last day of school for IUSD in 2028?",
+      "a": "The last day on the IUSD 2027-2028 Traditional Calendar is Friday, June 2, 2028."
+    },
+    {
+      "q": "Does IUSD have a 2027-2028 year-round calendar?",
+      "a": "Yes. IUSD publishes a separate 2027-2028 Year Round Calendar PDF. This page summarizes the Traditional Calendar and links the year-round PDF under Other Official Calendars."
+    }
+  ],
+  "yearNumbers": [
+    {
+      "label": "Longest Instructional Stretch",
+      "value": "35 weekdays",
+      "detail": "The longest uninterrupted instructional weekday stretch after a major break runs from April 10 through May 26, before Memorial Day and the last day."
+    },
+    {
+      "label": "No-School Mondays",
+      "value": "10",
+      "detail": "Monday no-school weekdays include holidays, staff development days, and recess Mondays listed on the traditional calendar."
+    },
+    {
+      "label": "School-Year Span",
+      "value": "42 calendar weeks",
+      "detail": "The traditional calendar runs from August 18, 2027 through June 2, 2028, giving families about 42 calendar weeks to coordinate instruction, breaks, camps, childcare, and summer planning."
+    }
+  ],
+  "whatsNew": {
+    "title": "Changes from the 2026-2027 Calendar",
+    "content": [
+      "IUSD starts on August 18 in both the 2026-2027 and 2027-2028 Traditional Calendars.",
+      "The last day moves from June 4 in 2027 to June 2 in 2028.",
+      "Spring Recess moves from March 29-April 2 in 2027 to April 3-7 in 2028."
+    ]
+  },
+  "events": [
+    {
+      "date": "2027-08-18",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2027-09-06",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-10-18",
+      "name": "Staff Development Day",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2027-10-29",
+      "name": "PK-8 Floating Teacher Work Day",
+      "type": "teacher_workday",
+      "description": "PK-8 floating teacher work day listed on the official traditional calendar."
+    },
+    {
+      "date": "2027-11-11",
+      "name": "Veterans Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-11-22",
+      "name": "Thanksgiving Recess",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-11-26",
+      "name": "Thanksgiving Recess End",
+      "type": "break_end"
+    },
+    {
+      "date": "2027-12-20",
+      "name": "Winter Recess",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-12-31",
+      "name": "Winter Recess End",
+      "type": "break_end"
+    },
+    {
+      "date": "2028-01-14",
+      "name": "High School Teacher Work Day",
+      "type": "teacher_workday",
+      "description": "Teacher work day for grades 9-12."
+    },
+    {
+      "date": "2028-01-17",
+      "name": "Martin Luther King Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-02-21",
+      "name": "Presidents Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-03-06",
+      "name": "Staff Development Day",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2028-04-03",
+      "name": "Spring Recess",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-04-07",
+      "name": "Spring Recess End",
+      "type": "break_end"
+    },
+    {
+      "date": "2028-05-29",
+      "name": "Memorial Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-06-02",
+      "name": "Last Day of School",
+      "type": "school_end"
+    }
+  ]
+}

@@ -49,6 +49,17 @@ const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' 
         <template v-else>{{ sourceVersion }}</template>
         <template v-if="sourcePdfUrl && isArchivedPdfCopy"> · Archived official PDF copy stored by MySchoolDates</template>
       </p>
+      <p v-if="verifiedDate">
+        <span class="font-medium text-gray-600">Reviewed by:</span>
+        MySchoolDates Education Research Team · Calendar Data Team ·
+        <NuxtLink to="/calendar-verification-methodology" class="font-medium text-blue-600 hover:text-blue-800 underline">
+          Verification Methodology
+        </NuxtLink>
+        ·
+        <NuxtLink to="/editorial-policy" class="font-medium text-blue-600 hover:text-blue-800 underline">
+          Editorial Policy
+        </NuxtLink>
+      </p>
       <p class="font-medium text-gray-600">How we collect and verify this data</p>
       <p>Each school year, MySchoolDates checks the official calendar source published or linked by the district. We use AI to extract key dates and events from the source document, then compare the first day, last day, major breaks, holidays, student no-school dates, early dismissals, exam windows, and alternate-calendar links when those items appear in the official source.</p>
       <p>When extracted data does not match the official source, we update the page record before publication. This page displays major student calendar dates; early dismissals, exam windows, staff-specific details, and track-specific items may remain available only in the official PDF. The downloadable calendar file is generated from the calendar records used for this page, and the official district calendar remains the source of record for last-minute changes.</p>
@@ -60,6 +71,10 @@ const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' 
         >Report a calendar error</a>
         if a date appears incorrect or outdated.
         See our
+        <NuxtLink to="/calendar-verification-methodology" class="font-medium text-blue-600 hover:text-blue-800 underline">
+          Calendar Verification Methodology
+        </NuxtLink>
+        and
         <NuxtLink to="/editorial-policy" class="font-medium text-blue-600 hover:text-blue-800 underline">
           Editorial Policy
         </NuxtLink>

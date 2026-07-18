@@ -1,0 +1,175 @@
+{
+  "institutionId": "pasco-county",
+  "name": "Pasco County Schools",
+  "shortName": "PCS",
+  "slug": "pasco-county-school-calendar",
+  "state": "Florida",
+  "stateCode": "FL",
+  "city": "Land O' Lakes",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.pasco.k12.fl.us",
+  "calendarPage": "https://www.pasco.k12.fl.us/calendar",
+  "logo": "https://www.pasco.k12.fl.us/library/home/images/PCS-Logo-web-header-100-new.png",
+  "timezone": "America/New_York",
+  "county": "Pasco County",
+  "region": "Tampa Bay",
+  "metro": "Tampa-St. Petersburg-Clearwater",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "keyDates",
+  "calendarType": "traditional",
+  "searchAliases": [
+    "PCS",
+    "Pasco County Schools",
+    "Pasco County school calendar",
+    "Pasco school calendar",
+    "Pasco schools calendar",
+    "Land O' Lakes school calendar",
+    "New Port Richey school calendar"
+  ],
+  "districtFact": "Pasco County Schools serves families across Land O' Lakes, New Port Richey, Wesley Chapel, Dade City, Zephyrhills, and the northern Tampa Bay area, where school calendar planning often intersects with rapid growth, commuter schedules, and hurricane season.",
+  "about": [
+    {
+      "title": "About Pasco County Schools",
+      "content": "Pasco County Schools serves families across Pasco County, Florida, including Land O' Lakes, New Port Richey, Wesley Chapel, Dade City, Zephyrhills, Hudson, and Trinity. The district publishes student and teacher calendars with first and last day dates, teacher planning days, professional development days, holidays, breaks, quarter dates, report cards, progress reports, FTE survey weeks, early release days, and make-up day notes. Calendar planning in Pasco often intersects with northern Tampa Bay commuting, rapid suburban growth around Wesley Chapel and Land O' Lakes, and Florida storm-season schedule changes."
+    },
+    {
+      "title": "How to Use This Pasco Calendar",
+      "content": "This page summarizes the official Pasco County Schools student and teacher calendar PDFs in a searchable format. Families should still confirm school-specific open houses, testing windows, athletics, graduation dates, and emergency schedule changes through PCS and their assigned school."
+    }
+  ],
+  "planningTips": {
+    "title": "Planning Tips for Pasco Families",
+    "content": [
+      "Track early release days separately because Pasco lists monthly ERD dates that change pickup and after-school care timing.",
+      "Separate teacher planning and professional development days from major breaks because they create additional no-school weekdays for students.",
+      "Watch make-up day notes before booking travel around February, April, and the end of the school year.",
+      "Check the official PCS calendar page for revisions before relying on printed PDF dates."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "pasco-official-source",
+      "label": "Official Pasco County Schools Calendar Source",
+      "content": "This page is based on the Pasco County Schools calendar page and the official 2026-2027 student and teacher calendar PDF linked by the district. MySchoolDates organizes those dates into searchable tables, FAQ answers, and a one-time calendar file, but the official PCS source remains the record for late revisions.",
+      "position": "afterKeyDates",
+      "groups": [
+        {
+          "label": "What we verify",
+          "items": [
+            "First student day, last student day, holidays, breaks, and early release days are checked against the official PCS source.",
+            "Teacher planning, professional development, report card, progress report, FTE survey, and make-up day notes are included when they appear in the published calendar.",
+            "Families should use PCS and school-level announcements for last-minute changes, open houses, testing, athletics, graduation, and emergency closures."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pasco-family-calendar-notes",
+      "label": "Important Pasco-Specific Calendar Notes",
+      "content": "Pasco's 2026-2027 calendar has several planning details beyond the first day, winter break, and spring break. The February 12 and April 16 conversion notes, monthly early release days, and June extended-closure make-up window are the dates most likely to affect childcare, work schedules, and travel planning.",
+      "position": "afterKeyDates",
+      "groups": [
+        {
+          "label": "Dates that need extra attention",
+          "items": [
+            "February 12 and April 16, 2027 are listed as student days that can convert to no-school days if make-up time is not needed.",
+            "Early release days on October 28, January 27, and February 24 change afternoon pickup and after-school care timing.",
+            "June 1-4, 2027 are reserved extended-closure student make-up days; treat them as tentative until PCS confirms whether they are needed."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pasco-teacher-calendar",
+      "label": "Pasco County Schools Teacher Calendar Notes",
+      "content": "Pasco County Schools publishes teacher planning and professional development dates alongside the student calendar. These dates matter for families because students may be off while teachers report for planning, training, grading, or campus preparation.",
+      "position": "afterAbout",
+      "groups": [
+        {
+          "label": "Teacher and staff calendar checks",
+          "items": [
+            "Teacher planning and professional development days appear before the first student day and after major grading periods.",
+            "Student calendars and teacher calendars are related but not identical; use the student attendance dates when planning childcare.",
+            "School-level events, teacher conference windows, testing, and graduation dates may be announced separately by individual campuses."
+          ]
+        }
+      ]
+    }
+  ],
+  "compareIntro": "Compare the Pasco County school calendar with other Florida district calendars currently available on MySchoolDates. Dates shown include the first day, last day, and spring break.",
+  "districtFaqs": [
+    {
+      "q": "Which Pasco calendar does this page summarize?",
+      "a": "This page summarizes the official Pasco County Schools student and teacher calendar PDFs, including first day, last day, holidays, teacher planning days, professional development days, breaks, report card dates, progress reports, early release days, and make-up day notes."
+    },
+    {
+      "q": "Does Pasco County list make-up days?",
+      "a": "Yes. Pasco marks certain student days or no-school days with make-up notes and also reserves extended closure student make-up days in June on the 2026-2027 calendar."
+    },
+    {
+      "q": "Does Pasco County use early release days?",
+      "a": "Yes. The official calendars list early release days during the school year. Families should check school-level bell schedules for exact dismissal times."
+    },
+    {
+      "q": "Where should families verify last-minute Pasco calendar changes?",
+      "a": "Use the official Pasco County Schools calendar page and school-level announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with PCS."
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Pinellas County Schools",
+      "slug": "pinellas-county-school-calendar",
+      "state": "Florida",
+      "comparisonNote": "Neighboring Tampa Bay district southwest of Pasco with a separate school year calendar."
+    },
+    {
+      "name": "Hillsborough County Public Schools",
+      "slug": "hillsborough-county-school-calendar",
+      "state": "Florida",
+      "comparisonNote": "Large Tampa Bay district south of Pasco often compared for holiday and break timing."
+    },
+    {
+      "name": "Polk County Public Schools",
+      "slug": "polk-county-school-calendar",
+      "state": "Florida",
+      "comparisonNote": "Nearby Central Florida district with similar storm make-up planning concerns."
+    },
+    {
+      "name": "Orange County Public Schools",
+      "slug": "orange-county-school-calendar",
+      "state": "Florida",
+      "comparisonNote": "Central Florida district often compared for statewide holiday, break, and PDF calendar timing."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Pasco County Schools official website",
+      "url": "https://www.pasco.k12.fl.us"
+    },
+    {
+      "label": "Pasco County Schools calendar",
+      "url": "https://www.pasco.k12.fl.us/calendar"
+    },
+    {
+      "label": "Pasco County Schools logo",
+      "url": "https://www.pasco.k12.fl.us/library/home/images/PCS-Logo-web-header-100-new.png"
+    }
+  ]
+}

@@ -2,9 +2,11 @@
 const props = defineProps<{
   cal: any
   district: any
+  faqs?: { q: string; a: string }[]
 }>()
 
 const faqs = computed((): { q: string; a: string }[] => {
+  if (props.faqs) return props.faqs
   const specificFaqs: { q: string; a: string }[] = (props.district as any).districtFaqs ?? []
   const calendarFaqs: { q: string; a: string }[] = (props.cal as any).calendarFaqs ?? []
   return [...specificFaqs, ...calendarFaqs]
@@ -12,7 +14,7 @@ const faqs = computed((): { q: string; a: string }[] => {
 </script>
 
 <template>
-  <div v-if="faqs.length" class="bg-white rounded-xl border border-gray-200 p-6">
+  <div id="faq" v-if="faqs.length" class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
     <h2 class="text-lg font-semibold text-gray-900 mb-5">Frequently Asked Questions</h2>
     <div class="space-y-5 divide-y divide-gray-100">
       <div v-for="faq in faqs" :key="faq.q" class="pt-5 first:pt-0">

@@ -37,6 +37,76 @@
     "Spring Break",
     "Memorial Day"
   ],
+  "districtClusters": [
+    {
+      "label": "Tampa Bay and Gulf Coast school calendars",
+      "description": "Families around Tampa Bay often compare county calendars because spring break, hurricane make-up days, and last-day timing can differ across nearby districts.",
+      "districts": [
+        {
+          "label": "Hillsborough County school calendar",
+          "slug": "hillsborough-county-school-calendar",
+          "note": "Tampa-area district often compared with Pinellas, Pasco, and Polk."
+        },
+        {
+          "label": "Pinellas County Schools calendar",
+          "slug": "pinellas-county-school-calendar",
+          "note": "Gulf Coast district serving St. Petersburg, Clearwater, Largo, and nearby communities."
+        },
+        {
+          "label": "Pasco County school calendar",
+          "slug": "pasco-county-school-calendar",
+          "note": "Neighboring district north of Hillsborough with separate break and holiday timing."
+        },
+        {
+          "label": "Polk County school calendar",
+          "slug": "polk-county-school-calendar",
+          "note": "Lakeland-Winter Haven district between Tampa and Orlando with storm make-up day planning."
+        }
+      ]
+    },
+    {
+      "label": "Central Florida school calendars",
+      "description": "Central Florida families often plan around school breaks, theme park travel, childcare, and cross-county schedules.",
+      "districts": [
+        {
+          "label": "Orange County school calendar",
+          "slug": "orange-county-school-calendar",
+          "note": "Orlando-area district with high demand around first day, spring break, and winter break dates."
+        },
+        {
+          "label": "Polk County Public Schools calendar",
+          "slug": "polk-county-school-calendar",
+          "note": "Includes Lakeland, Winter Haven, Bartow, Haines City, Lake Wales, and Auburndale families."
+        },
+        {
+          "label": "Hillsborough County Public Schools calendar",
+          "slug": "hillsborough-county-school-calendar",
+          "note": "Nearby Tampa Bay calendar useful for families comparing regional break weeks."
+        }
+      ]
+    },
+    {
+      "label": "South Florida school calendars",
+      "description": "South Florida districts may use different spring break weeks, hurricane closure policies, and teacher planning days.",
+      "districts": [
+        {
+          "label": "Miami-Dade school calendar",
+          "slug": "miami-dade-school-calendar",
+          "note": "Large South Florida district frequently searched for holidays, breaks, and PDF dates."
+        },
+        {
+          "label": "Broward County school calendar",
+          "slug": "broward-county-school-calendar",
+          "note": "Often compared with Miami-Dade because spring break weeks may differ."
+        },
+        {
+          "label": "Palm Beach County school calendar",
+          "slug": "palm-beach-county-school-calendar",
+          "note": "North of Broward with separate district calendar dates and holiday planning."
+        }
+      ]
+    }
+  ],
   "faqs": [
     {
       "q": "When do Florida public schools start in 2026?",

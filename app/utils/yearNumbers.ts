@@ -22,7 +22,7 @@ export interface YearNumbersPool {
   lastDay:           string
 }
 
-// Fixed layout: Instructional Days · Student No-School Days · Winter Break
+// Fixed layout: Instructional Days · Student No-School Days · Winter Recess
 // Plus extra cards from the calendar's yearNumbers field (change indicators + district-specific).
 export function scoreYearNumbers(
   pool: YearNumbersPool,
@@ -60,23 +60,23 @@ export function scoreYearNumbers(
     description: `Additional weekdays without classes, excluding listed Thanksgiving, Winter, and Spring Break periods.`,
   })
 
-  // Card 3: Winter Break
+  // Card 3: Winter Recess
   if (pool.winterBreakLength !== null && pool.winterBreakStart && pool.winterBreakEnd) {
     const winterWeekdays = weekdaysBetween(pool.winterBreakStart, pool.winterBreakEnd)
     cards.push({
       key: 'winterBreakLength',
-      label: 'Winter Break',
+      label: 'Winter Recess',
       value: pool.winterBreakLength,
-      unit: 'days',
-      description: `Winter break runs ${fmtShort(pool.winterBreakStart)} – ${fmtShort(pool.winterBreakEnd)} (${winterWeekdays} weekdays without school / ${pool.winterBreakLength} calendar days).`,
+      unit: 'calendar days',
+      description: `Winter recess runs ${fmtShort(pool.winterBreakStart)} – ${fmtShort(pool.winterBreakEnd)} (${winterWeekdays} weekdays without school).`,
     })
   } else {
     cards.push({
       key: 'winterBreakLength',
-      label: 'Winter Break',
+      label: 'Winter Recess',
       value: 0,
-      unit: 'days',
-      description: `Winter break dates are listed in the calendar above.`,
+      unit: 'calendar days',
+      description: `Winter recess dates are listed in the calendar above.`,
     })
   }
 

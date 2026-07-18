@@ -1,0 +1,68 @@
+{
+  "institutionId": "lee-county",
+  "schoolYear": "2026-2027",
+  "firstDay": "2026-08-11",
+  "lastDay": "2027-05-27",
+  "sourceUrl": "https://www.leeschools.net/calendars/instructional_calendar",
+  "sourcePdfUrl": "https://www.leeschools.net/common/pages/GetFile.ashx?key=OFlyDbWr",
+  "lastVerifiedAt": "2026-07-18",
+  "dateModified": "2026-07-18",
+  "calendarType": "traditional",
+  "hideSemesterCount": true,
+  "yearNumbersMode": "compact",
+  "faqLimit": 6,
+  "faqSchemaLimit": 5,
+  "seoTitle": "Lee County School Calendar 2026-2027: Holidays, Breaks & PDF",
+  "seoDescription": "Lee County School District 2026-2027 calendar with Aug 11 first day, May 27 last day, holidays, breaks, severe weather make-up days, PDF and ICS.",
+  "calendarNotes": "The School District of Lee County starts the 2026-2027 school year on August 11, 2026 and lists May 27, 2027 as the students' last day with early dismissal. Thanksgiving Break runs November 23-27, Winter Break runs December 21-January 1, and Spring Break runs March 22-25. The calendar lists June 1-4, 2027 as reserved severe weather make-up windows that are only used if required.",
+  "calendarFaqs": [
+    { "q": "When does Lee County school start in 2026?", "a": "The first student day for The School District of Lee County is Tuesday, August 11, 2026." },
+    { "q": "When is the last day of school for Lee County in 2027?", "a": "The last student day is Thursday, May 27, 2027, with early dismissal listed on the official instructional calendar." },
+    { "q": "Which Lee County 2026-2027 dates are severe weather make-up days?", "a": "The calendar lists June 1-4, 2027 as severe weather make-up days. Families should treat those dates as possible school days until Lee Schools confirms whether they are needed." },
+    { "q": "Can I add the Lee County school calendar to Google Calendar?", "a": "Yes. MySchoolDates provides a one-time .ics calendar file that can be imported into Google Calendar, Apple Calendar, or Outlook. It does not automatically update if Lee Schools revises the calendar." },
+    { "q": "Where can I download the Lee County school calendar PDF?", "a": "Use the printable PDF link on this page to open the official Lee County instructional calendar source. MySchoolDates also links back to the district calendar page for verification." }
+  ],
+  "yearNumbers": [
+    { "label": "Severe Weather Make-Up Days", "value": "Jun 1-4", "detail": "June 1-4 are reserved make-up windows and are only used if required after severe weather or other extended closures." },
+    { "label": "Professional Duty Days", "value": "4", "detail": "No-school professional duty days include October 19, January 4, March 29, and May 28." },
+    { "label": "Spring Break", "value": "Mar 22-25", "detail": "Spring Break runs Monday through Thursday, followed by Good Friday." }
+  ],
+  "whatsNew": {
+    "title": "Changes from the 2025-2026 Calendar",
+    "content": [
+      "The first student day remains August 11.",
+      "Spring Break moves from March 16-20 in 2026 to March 22-25 in 2027.",
+      "The last student day moves from June 1 in 2026 to May 27 in 2027."
+    ]
+  },
+  "events": [
+    { "date": "2026-08-03", "name": "Pre-School Week", "type": "teacher_workday" },
+    { "date": "2026-08-10", "name": "Pre-School Week End", "type": "teacher_workday" },
+    { "date": "2026-08-11", "name": "Students First Day", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
+    { "date": "2026-09-21", "name": "Yom Kippur", "type": "holiday" },
+    { "date": "2026-10-05", "name": "FTE Week", "type": "academic" },
+    { "date": "2026-10-16", "name": "End of Quarter 1", "type": "academic" },
+    { "date": "2026-10-19", "name": "Professional Duty Day - Remote", "type": "teacher_workday" },
+    { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday" },
+    { "date": "2026-11-23", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
+    { "date": "2026-12-18", "name": "Early Dismissal/End of Quarter 2", "type": "early_release" },
+    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-01-01", "name": "Winter Break End/New Year's Day", "type": "break_end" },
+    { "date": "2027-01-04", "name": "Professional Duty Day - Remote", "type": "teacher_workday" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-02-08", "name": "FTE Week", "type": "academic" },
+    { "date": "2027-02-15", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2027-03-19", "name": "Early Dismissal/End of Quarter 3", "type": "early_release" },
+    { "date": "2027-03-22", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-03-25", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2027-03-26", "name": "Good Friday", "type": "holiday" },
+    { "date": "2027-03-29", "name": "Professional Duty Day - Remote", "type": "teacher_workday" },
+    { "date": "2027-05-27", "name": "Students Last Day - Early Dismissal", "type": "school_end" },
+    { "date": "2027-05-28", "name": "Professional Duty Day - On Campus", "type": "teacher_workday" },
+    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2027-06-01", "name": "Severe Weather Make-Up Days", "type": "no_school" },
+    { "date": "2027-06-04", "name": "Severe Weather Make-Up Days End", "type": "no_school" }
+  ]
+}

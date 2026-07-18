@@ -401,43 +401,37 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
 
   const recency = (d: number | undefined) =>
     d === undefined ? 0 : d < 7 ? 20 : d < 14 ? 15 : d < 30 ? 10 : 0
-  // Large boost when a countdown metric is imminent — score of 22 base only wins slots when ≤14 days away
-  const nearRecency = (d: number | undefined) =>
-    d === undefined ? 0 : d < 7 ? 50 : d < 14 ? 35 : d < 21 ? 18 : 0
-
   type Candidate = FactItem & { score: number }
   const raw: Candidate[] = []
 
+  raw.push({ key: 'firstStudentDay', value: fmt(pool.firstDay), label: 'First Student Day', score: 120 })
+  raw.push({ key: 'lastStudentDay', value: fmt(pool.lastDay), label: 'Last Student Day', score: 118 })
+  if (pool.winterBreakStart) {
+    raw.push({ key: 'winterBreakDate', value: fmt(pool.winterBreakStart), label: 'Winter Break', score: 116 })
+  }
+  if (pool.springBreakStart) {
+    raw.push({ key: 'springBreakDate', value: fmt(pool.springBreakStart), label: 'Spring Break', score: 114 })
+  }
+  raw.push({ key: 'noSchoolDayCount', value: String(pool.noSchoolDayCount), label: 'Student No-School Days', score: 112 })
+  raw.push({ key: 'instructionalDays', value: String(pool.instructionalDays), label: 'School Days', score: 110 })
+  // instructionWeeks omitted — low user value; staff calendar length is more actionable.
   if (pool.nextStudentDayOff) {
     const x = pool.nextStudentDayOff
-    raw.push({ key: 'nextStudentDayOff', value: fmt(x.date), label: x.name, score: 90 + recency(x.daysUntil) })
-  }
-  if (pool.nextTeacherWorkday) {
-    const x = pool.nextTeacherWorkday
-    raw.push({ key: 'nextTeacherWorkday', value: fmt(x.date), label: 'Next Teacher Workday', score: 85 + recency(x.daysUntil) })
+    raw.push({ key: 'nextStudentDayOff', value: fmt(x.date), label: x.name, score: 45 + recency(x.daysUntil) })
   }
   if (pool.nextBreak) {
     const x = pool.nextBreak
-    raw.push({ key: 'nextBreak', value: fmt(x.start), label: x.name, score: 80 + recency(x.daysUntil) })
-  }
-  if (pool.daysUntilSpringBreak !== null && pool.daysUntilSpringBreak <= 365) {
-    raw.push({ key: 'daysUntilSpringBreak', value: String(pool.daysUntilSpringBreak), label: 'Days Until Spring Break', score: 22 + nearRecency(pool.daysUntilSpringBreak) })
+    raw.push({ key: 'nextBreak', value: fmt(x.start), label: x.name, score: 44 + recency(x.daysUntil) })
   }
   if (pool.secondSemStart) {
-    const fmt = (d: string) => new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
-    raw.push({ key: 'secondSemStart', value: fmt(pool.secondSemStart), label: 'Semester 2 Begins', score: 72 })
-  }
-  raw.push({ key: 'holidayCount', value: String(pool.holidayCount), label: 'Holidays & No-School Days', score: 65 })
-  // instructionWeeks omitted — low user value; staff calendar length is more actionable.
-  if (pool.daysUntilWinterBreak !== null && pool.daysUntilWinterBreak <= 365) {
-    raw.push({ key: 'daysUntilWinterBreak', value: String(pool.daysUntilWinterBreak), label: 'Days Until Winter Break', score: 22 + nearRecency(pool.daysUntilWinterBreak) })
+    raw.push({ key: 'secondSemStart', value: fmt(pool.secondSemStart), label: 'Semester 2 Begins', score: 43 })
   }
   if (pool.nextHoliday) {
     const x = pool.nextHoliday
-    raw.push({ key: 'nextHoliday', value: fmt(x.date), label: x.name, score: 60 + recency(x.daysUntil) })
+    raw.push({ key: 'nextHoliday', value: fmt(x.date), label: x.name, score: 40 + recency(x.daysUntil) })
   }
   if (pool.teacherWorkDays !== null) {
-    raw.push({ key: 'teacherWorkDays', value: String(pool.teacherWorkDays), label: 'Staff Calendar Length', score: 42 })
+    raw.push({ key: 'teacherWorkDays', value: String(pool.teacherWorkDays), label: 'Staff Calendar Length', score: 30 })
   }
   if (pool.winterBreakLength !== null) {
     raw.push({ key: 'winterBreakDays', value: `${pool.winterBreakLength} days`, label: 'Winter Break', score: 20 })
@@ -457,8 +451,8 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
   const scored = raw.map(c => {
     if (hasNsdo && c.key === 'nextHoliday') return { ...c, score: -999 }
     if (hasNsdo && nextBreakMatchesNsdo && c.key === 'nextBreak') return { ...c, score: -999 }
-    if (hasNextBreak && nextBreakIsSpring && c.key === 'daysUntilSpringBreak') return { ...c, score: -999 }
-    if (hasNextBreak && nextBreakIsWinter && c.key === 'daysUntilWinterBreak') return { ...c, score: -999 }
+    if (hasNextBreak && nextBreakIsSpring && c.key === 'springBreakDate') return { ...c, score: -999 }
+    if (hasNextBreak && nextBreakIsWinter && c.key === 'winterBreakDate') return { ...c, score: -999 }
     return c
   }).filter(c => c.score > -999)
 

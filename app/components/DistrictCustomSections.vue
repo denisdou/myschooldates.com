@@ -20,7 +20,7 @@ const filtered = computed(() => {
 
 <template>
   <template v-for="section in filtered" :key="section.id">
-    <div class="bg-white rounded-xl border border-gray-200 p-6">
+    <div :id="section.id" class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
       <h2 class="text-lg font-semibold text-gray-900 mb-3">{{ section.label }}</h2>
       <div v-if="section.groups?.length" class="space-y-4">
         <p v-if="section.content" class="text-sm text-gray-600 leading-relaxed">{{ section.content }}</p>

@@ -1,0 +1,68 @@
+{
+  "institutionId": "lee-county",
+  "schoolYear": "2027-2028",
+  "firstDay": "2027-08-10",
+  "lastDay": "2028-05-30",
+  "sourceUrl": "https://www.leeschools.net/calendars/instructional_calendar",
+  "sourcePdfUrl": "https://www.leeschools.net/common/pages/GetFile.ashx?key=OllyDber",
+  "lastVerifiedAt": "2026-07-18",
+  "datePublished": "2026-07-18",
+  "dateModified": "2026-07-18",
+  "calendarType": "traditional",
+  "hideSemesterCount": true,
+  "yearNumbersMode": "compact",
+  "seoTitle": "Lee County School Calendar 2027-2028: Holidays, Breaks & PDF",
+  "seoDescription": "Lee County School District 2027-2028 calendar with Aug 10 first day, May 30 last day, holidays, breaks, severe weather make-up days, PDF and ICS.",
+  "calendarNotes": "The School District of Lee County starts the 2027-2028 school year on August 10, 2027 and lists May 30, 2028 as the students' last day with early dismissal. Thanksgiving Break runs November 22-26, Winter Break runs December 20-31, and Spring Break runs March 13-17. The calendar lists June 1-6, 2028 as severe weather make-up days.",
+  "calendarFaqs": [
+    { "q": "When does Lee County start school in 2027?", "a": "The School District of Lee County starts school on Tuesday, August 10, 2027." },
+    { "q": "When is Lee County Spring Break in 2028?", "a": "Spring Break runs Monday, March 13 through Friday, March 17, 2028." },
+    { "q": "When is the last day of school for Lee County in 2028?", "a": "The students' last day is Tuesday, May 30, 2028, with early dismissal." },
+    { "q": "Which Lee County 2027-2028 dates are severe weather make-up days?", "a": "The calendar lists June 1-6, 2028 as severe weather make-up days." }
+  ],
+  "yearNumbers": [
+    { "label": "Severe Weather Make-Up Days", "value": "Jun 1-6", "detail": "The calendar lists June 1-6 as make-up days if extended severe weather days are needed." },
+    { "label": "Spring Break", "value": "Mar 13-17", "detail": "Spring Break runs Monday through Friday in mid-March." },
+    { "label": "Winter Break", "value": "Dec 20-31", "detail": "Winter Break runs through the end of December before students return in January." }
+  ],
+  "whatsNew": {
+    "title": "Changes from the 2026-2027 Calendar",
+    "content": [
+      "The first student day moves from August 11 in 2026 to August 10 in 2027.",
+      "Spring Break moves from March 22-25 in 2027 to March 13-17 in 2028.",
+      "The last student day moves from May 27 in 2027 to May 30 in 2028."
+    ]
+  },
+  "events": [
+    { "date": "2027-08-02", "name": "Pre-School Week", "type": "teacher_workday" },
+    { "date": "2027-08-09", "name": "Pre-School Week End", "type": "teacher_workday" },
+    { "date": "2027-08-10", "name": "Students First Day", "type": "school_start" },
+    { "date": "2027-09-06", "name": "Labor Day", "type": "holiday" },
+    { "date": "2027-10-04", "name": "FTE Week", "type": "academic" },
+    { "date": "2027-10-08", "name": "End of Quarter 1", "type": "academic" },
+    { "date": "2027-10-11", "name": "Yom Kippur", "type": "holiday" },
+    { "date": "2027-10-12", "name": "Professional Duty Day - Remote", "type": "teacher_workday" },
+    { "date": "2027-11-11", "name": "Veterans Day", "type": "holiday" },
+    { "date": "2027-11-22", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2027-11-26", "name": "Thanksgiving Break End", "type": "break_end" },
+    { "date": "2027-12-17", "name": "Early Dismissal/End of Quarter 2", "type": "early_release" },
+    { "date": "2027-12-20", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-12-31", "name": "Winter Break End", "type": "break_end" },
+    { "date": "2028-01-03", "name": "Professional Duty Day - Remote", "type": "teacher_workday" },
+    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2028-02-07", "name": "FTE Week", "type": "academic" },
+    { "date": "2028-02-21", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2028-03-09", "name": "End of Quarter 3", "type": "academic" },
+    { "date": "2028-03-10", "name": "Professional Duty Day - Remote", "type": "teacher_workday" },
+    { "date": "2028-03-13", "name": "Spring Break", "type": "break_start" },
+    { "date": "2028-03-17", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2028-04-14", "name": "Good Friday", "type": "holiday" },
+    { "date": "2028-04-17", "name": "Easter Monday", "type": "holiday" },
+    { "date": "2028-05-29", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2028-05-30", "name": "Students Last Day - Early Dismissal", "type": "school_end" },
+    { "date": "2028-05-31", "name": "Professional Duty Day - On Campus", "type": "teacher_workday" },
+    { "date": "2028-06-01", "name": "Severe Weather Make-Up Days", "type": "no_school" },
+    { "date": "2028-06-06", "name": "Severe Weather Make-Up Days End", "type": "no_school" },
+    { "date": "2028-06-19", "name": "Juneteenth", "type": "holiday" }
+  ]
+}

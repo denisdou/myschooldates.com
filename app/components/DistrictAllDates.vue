@@ -225,7 +225,7 @@ function formatRangeEnd(event: DisplayEvent) {
 </script>
 
 <template>
-  <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+  <div id="all-dates" class="bg-white rounded-xl border border-gray-200 overflow-hidden scroll-mt-24">
     <div class="px-6 py-4 border-b border-gray-100">
       <h2 class="text-lg font-semibold text-gray-900" :class="legend?.length ? 'mb-3' : ''">{{ title }}</h2>
       <div v-if="legend?.length" class="flex flex-wrap gap-3">

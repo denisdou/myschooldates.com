@@ -32,6 +32,17 @@ const districtSourceSchema = z.object({
 })
 
 const districtFaqSchema = z.object({ q: z.string(), a: z.string() })
+const customSectionGroupSchema = z.object({
+  label: z.string(),
+  items: z.array(z.string()),
+})
+const customSectionSchema = z.object({
+  id: z.string(),
+  label: z.string(),
+  content: z.string(),
+  position: z.string().optional(), // 'afterAbout' | 'afterFaq' | 'afterPlanningTips' | 'beforeSources'
+  groups: z.array(customSectionGroupSchema).optional(),
+})
 const gradingPeriodSchema = z.object({
   label: z.string(),
   start: z.string(),
@@ -47,6 +58,15 @@ const livingHereSchema = z.object({
 const stateQuickFactSchema = z.object({ label: z.string(), value: z.string() })
 const stateFaqSchema = z.object({ q: z.string(), a: z.string() })
 const relatedStateSchema = z.object({ name: z.string(), slug: z.string() })
+const stateDistrictClusterSchema = z.object({
+  label: z.string(),
+  description: z.string().optional(),
+  districts: z.array(z.object({
+    label: z.string(),
+    slug: z.string(),
+    note: z.string().optional(),
+  })),
+})
 
 export default defineContentConfig({
   collections: {
@@ -94,12 +114,9 @@ export default defineContentConfig({
         sources: z.array(districtSourceSchema).optional(),
         // Section customization
         hiddenSections: z.array(z.string()).optional(),
-        customSections: z.array(z.object({
-          id: z.string(),
-          label: z.string(),
-          content: z.string(),
-          position: z.string().optional(), // 'afterAbout' | 'afterFaq' | 'afterPlanningTips' | 'beforeSources'
-        })).optional(),
+        faqLimit: z.number().optional(),
+        faqSchemaLimit: z.number().optional(),
+        customSections: z.array(customSectionSchema).optional(),
       }),
     }),
 
@@ -115,6 +132,7 @@ export default defineContentConfig({
         quickFacts: z.array(stateQuickFactSchema),
         planningTips: z.array(z.string()),
         commonHolidays: z.array(z.string()),
+        districtClusters: z.array(stateDistrictClusterSchema).optional(),
         faqs: z.array(stateFaqSchema),
         relatedStates: z.array(relatedStateSchema),
       }),
@@ -135,6 +153,7 @@ export default defineContentConfig({
         sourceUrl: z.string().optional(),      // alias: sourcePageUrl (stable hub, district-level)
         sourcePdfUrl: z.string().optional(),   // direct PDF for this school year (changes annually)
         lastVerifiedAt: z.string().optional(), // ISO date: when data was last verified against official source
+        dateCreated: z.string().optional(),
         datePublished: z.string().optional(),
         dateModified: z.string().optional(),
         sourceVersion: z.string().optional(),
@@ -142,6 +161,12 @@ export default defineContentConfig({
         yearNumbersMode: z.enum(['compact']).optional(),
         instructionalDaysLabel: z.string().optional(),
         instructionalDaysDescription: z.string().optional(),
+        pageHeading: z.string().optional(),
+        faqLimit: z.number().optional(),
+        faqSchemaLimit: z.number().optional(),
+        hiddenSections: z.array(z.string()).optional(),
+        hideDatasetSchema: z.boolean().optional(),
+        itemListMode: z.enum(['keyDates', 'allImportantDates']).optional(),
         gradingPeriods: z.array(gradingPeriodSchema).optional(),
         calendarNotes: z.string().optional(),  // year-specific narrative (moved from districts/)
         calendarType: z.enum(['traditional', 'year-round', 'magnet', 'international', 'early-college', 'alternative']).optional(),
@@ -154,6 +179,7 @@ export default defineContentConfig({
         seoTitle: z.string().optional(),
         seoDescription: z.string().optional(),
         calendarFaqs: z.array(districtFaqSchema).optional(),
+        customSections: z.array(customSectionSchema).optional(),
         yearNumbers: z.array(z.object({
           label: z.string(),
           value: z.string(),

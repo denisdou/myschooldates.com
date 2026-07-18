@@ -1,8 +1,26 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
+  sourcemap: false,
 
   modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
+
+  content: {
+    _localDatabase: {
+      type: 'sqlite',
+      filename: '/tmp/myschooldates-content-local.sqlite',
+    },
+    database: {
+      type: 'sqlite',
+      filename: '/tmp/myschooldates-content.sqlite',
+    },
+  },
+
+  vite: {
+    build: {
+      sourcemap: false,
+    },
+  },
 
   routeRules: {
     '/': { prerender: true },
@@ -10,6 +28,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    sourceMap: false,
     prerender: {
       autoSubfolderIndex: false,
       routes: [
@@ -29,6 +48,7 @@ export default defineNuxtConfig({
         '/chesterfield-county-school-calendar',
         '/cumberland-county-school-calendar',
         '/dallas-independent-school-district-calendar',
+        '/duval-county-school-calendar',
         '/fairfax-county-school-calendar',
         '/fort-worth-independent-school-district-calendar',
         '/fresno-unified-school-district-calendar',
@@ -42,9 +62,16 @@ export default defineNuxtConfig({
         '/northside-independent-school-district-calendar',
         '/orange-county-school-calendar',
         '/palm-beach-county-school-calendar',
+        '/pasco-county-school-calendar',
+        '/pinellas-county-school-calendar',
+        '/polk-county-school-calendar',
         '/prince-william-county-school-calendar',
         '/sacramento-city-unified-school-calendar',
+        '/san-francisco-unified-school-district-calendar',
         '/san-jose-unified-school-calendar',
+        '/oakland-unified-school-district-calendar',
+        '/irvine-unified-school-district-calendar',
+        '/lee-county-school-calendar',
         '/san-diego-unified-school-district-calendar',
         '/virginia-beach-school-calendar',
         '/wake-county-school-calendar',
@@ -58,6 +85,9 @@ export default defineNuxtConfig({
         '/durham-public-schools-calendar',
         '/new-hanover-county-school-calendar',
         '/arlington-public-schools-calendar',
+        '/alexandria-city-public-schools-calendar',
+        '/stafford-county-public-schools-calendar',
+        '/spotsylvania-county-public-schools-calendar',
         '/cypress-fairbanks-isd-calendar',
         '/elk-grove-unified-school-district-calendar',
 
@@ -82,6 +112,9 @@ export default defineNuxtConfig({
 
         '/dallas-independent-school-district-calendar/2025-2026',
         '/dallas-independent-school-district-calendar/2026-2027',
+
+        '/duval-county-school-calendar/2025-2026',
+        '/duval-county-school-calendar/2026-2027',
 
         '/fairfax-county-school-calendar/2025-2026',
         '/fairfax-county-school-calendar/2026-2027',
@@ -128,15 +161,42 @@ export default defineNuxtConfig({
         '/palm-beach-county-school-calendar/2025-2026',
         '/palm-beach-county-school-calendar/2026-2027',
 
+        '/pasco-county-school-calendar/2025-2026',
+        '/pasco-county-school-calendar/2026-2027',
+
+        '/pinellas-county-school-calendar/2025-2026',
+        '/pinellas-county-school-calendar/2026-2027',
+
+        '/polk-county-school-calendar/2025-2026',
+        '/polk-county-school-calendar/2026-2027',
+        '/polk-county-school-calendar/2027-2028',
+        '/polk-county-school-calendar/2028-2029',
+
+        '/lee-county-school-calendar/2025-2026',
+        '/lee-county-school-calendar/2026-2027',
+        '/lee-county-school-calendar/2027-2028',
+
         '/prince-william-county-school-calendar/2025-2026',
         '/prince-william-county-school-calendar/2026-2027',
 
         '/sacramento-city-unified-school-calendar/2025-2026',
         '/sacramento-city-unified-school-calendar/2026-2027',
 
+        '/san-francisco-unified-school-district-calendar/2025-2026',
+        '/san-francisco-unified-school-district-calendar/2026-2027',
+        '/san-francisco-unified-school-district-calendar/2027-2028',
+
         '/san-jose-unified-school-calendar/2025-2026',
         '/san-jose-unified-school-calendar/2026-2027',
         '/san-jose-unified-school-calendar/2027-2028',
+
+        '/oakland-unified-school-district-calendar/2025-2026',
+        '/oakland-unified-school-district-calendar/2026-2027',
+        '/oakland-unified-school-district-calendar/2027-2028',
+
+        '/irvine-unified-school-district-calendar/2025-2026',
+        '/irvine-unified-school-district-calendar/2026-2027',
+        '/irvine-unified-school-district-calendar/2027-2028',
 
         '/san-diego-unified-school-district-calendar/2025-2026',
         '/san-diego-unified-school-district-calendar/2026-2027',
@@ -193,6 +253,16 @@ export default defineNuxtConfig({
 
         '/arlington-public-schools-calendar/2025-2026',
         '/arlington-public-schools-calendar/2026-2027',
+
+        '/alexandria-city-public-schools-calendar/2025-2026',
+        '/alexandria-city-public-schools-calendar/2026-2027',
+
+        '/stafford-county-public-schools-calendar/2025-2026',
+        '/stafford-county-public-schools-calendar/2026-2027',
+
+        '/spotsylvania-county-public-schools-calendar/2025-2026',
+        '/spotsylvania-county-public-schools-calendar/2026-2027',
+        '/spotsylvania-county-public-schools-calendar/2027-2028',
 
         '/cypress-fairbanks-isd-calendar/2025-2026',
         '/cypress-fairbanks-isd-calendar/2026-2027',

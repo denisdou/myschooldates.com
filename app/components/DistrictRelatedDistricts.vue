@@ -8,7 +8,7 @@ defineProps<{
 <template>
   <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
     <div class="px-6 py-4 border-b border-gray-100">
-      <h2 class="text-lg font-semibold text-gray-900">Nearby School Districts</h2>
+      <h2 class="text-lg font-semibold text-gray-900">Related {{ stateName }} School Calendars</h2>
       <p class="text-sm text-gray-500 mt-1">Compare nearby {{ stateName }} school districts.</p>
     </div>
     <div class="divide-y divide-gray-50">

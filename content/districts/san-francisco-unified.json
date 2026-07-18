@@ -1,0 +1,183 @@
+{
+  "institutionId": "san-francisco-unified",
+  "name": "San Francisco Unified School District",
+  "shortName": "SFUSD",
+  "slug": "san-francisco-unified-school-district-calendar",
+  "state": "California",
+  "stateCode": "CA",
+  "city": "San Francisco",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.sfusd.edu/",
+  "calendarPage": "https://www.sfusd.edu/calendars",
+  "logo": "https://www.sfusd.edu/themes/custom/sfusd_base/images/logo_square.svg",
+  "timezone": "America/Los_Angeles",
+  "county": "San Francisco County",
+  "region": "Bay Area",
+  "metro": "San Francisco-Oakland-Berkeley",
+  "currentSchoolYear": "2026-2027",
+  "studentCount": 50000,
+  "schoolCount": 100,
+  "founded": 1851,
+  "calendarType": "district-wide",
+  "allDatesMode": "keyDates",
+  "hiddenSections": [
+    "quickFacts",
+    "livingHere"
+  ],
+  "searchAliases": [
+    "SFUSD",
+    "San Francisco Unified",
+    "San Francisco Unified School District",
+    "San Francisco USD",
+    "San Francisco school calendar",
+    "SFUSD calendar"
+  ],
+  "districtFact": "San Francisco Unified is a single district county: the district administers public schools for the City and County of San Francisco as well as the San Francisco County Office of Education. This page focuses on major student attendance dates from the district-wide academic calendar, while program-specific, staff, charter, and school-level items may use separate notices.",
+  "about": [
+    {
+      "title": "About San Francisco Unified School District",
+      "content": "San Francisco Unified School District serves more than 50,000 students in PK-12 schools across the City and County of San Francisco. SFUSD operates as a single district county with the San Francisco County Office of Education, so its public school district boundary follows the city-county geography. The district includes schools and campuses serving neighborhoods such as the Richmond, Sunset, Mission, Bayview, Chinatown, Visitacion Valley, Twin Peaks, and other parts of San Francisco."
+    },
+    {
+      "title": "How to Use This SFUSD Calendar",
+      "content": "Use this page for regular district-wide student attendance planning: first day, last day, fall recess, winter recess, spring recess, major holidays, and school resume dates. For school-specific events such as orientations, performances, athletics, field trips, and ceremonies, use the individual school calendar or school announcement channel."
+    }
+  ],
+  "planningTips": {
+    "title": "Planning Tips for San Francisco Unified Families",
+    "content": [
+      "Use Winter Recess, Spring Recess, and the first week after June 2, 2027 as practical deadlines for San Francisco summer camp, recreation program, and backup childcare registration.",
+      "For high school families, treat late May and early June as a separate planning window because graduation ceremonies, senior activities, and final school events may be announced by each school.",
+      "If your student is entering, transferring, or changing schools, compare the academic calendar with SFUSD enrollment, assignment, and ParentVUE timelines before booking travel.",
+      "Plan the first day back after long breaks around commute and pickup logistics; Muni, BART, bridge traffic, and caregiver availability can make resume dates more important than ordinary weekdays."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Is SFUSD the same as the San Francisco County Office of Education?",
+      "a": "SFUSD operates as a single district county, meaning the district administers public schools for the City and County of San Francisco and also functions with the San Francisco County Office of Education. Calendar dates on this page focus on SFUSD student attendance."
+    },
+    {
+      "q": "Does the SFUSD calendar boundary cover all of San Francisco?",
+      "a": "SFUSD is the public school district for the City and County of San Francisco, so the district-wide academic calendar applies to regular SFUSD student attendance across the city. Independently operated schools and some specialized programs may publish separate calendars."
+    },
+    {
+      "q": "Do staff work days on the SFUSD PDF always mean students are out?",
+      "a": "Not always. The official PDF can include academic calendar, work calendar, and key-date details in one file. MySchoolDates lists major student attendance dates, so families should read staff-only and professional-development labels carefully."
+    },
+    {
+      "q": "Can SFUSD calendar dates change after approval?",
+      "a": "Yes. SFUSD can revise calendar dates after board action, operational changes, emergency closures, or make-up day decisions. The 2025-2026 calendar included labor action make-up days, which is why families should check the current official calendar before fixed plans."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "sfusd-calendar-types",
+      "label": "SFUSD Calendar Types and Programs",
+      "content": "SFUSD calendar planning is not limited to one date list. Use the district-wide academic calendar for regular student attendance, then check program or school calendars when a student follows a specialized schedule.",
+      "position": "afterAbout",
+      "groups": [
+        {
+          "label": "Program calendar matrix",
+          "items": [
+            "District-wide academic calendar: regular PK-12 student attendance dates, recesses, holidays, first day, last day, and school resume dates.",
+            "Work calendar: staff-facing work days, professional-development days, and key dates that may appear in the official PDF but are not always student no-school days.",
+            "Early education and extended school year: program-specific date details may apply outside the regular academic calendar.",
+            "Charter and independently operated schools: use the individual school calendar rather than assuming the SFUSD district-wide dates apply.",
+            "Adult education and specialized programs: check the program calendar or school notice when the schedule is not a standard PK-12 attendance calendar."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sfusd-calendar-history",
+      "label": "Three-Year SFUSD Calendar History",
+      "content": "Recent SFUSD calendar files show why year-specific pages matter. Start dates, last days, spring break windows, and make-up days can shift from one approved calendar to the next.",
+      "position": "afterPlanningTips",
+      "groups": [
+        {
+          "label": "Recent year notes",
+          "items": [
+            "2025-2026: SFUSD added labor action make-up days at the end of the school year, moving the final instruction window into June 2026.",
+            "2026-2027: The academic calendar starts August 17, 2026 and ends June 2, 2027, with 82 fall instructional days and 98 spring instructional days.",
+            "2027-2028: The following year starts August 16, 2027 and ends June 1, 2028, keeping a similar mid-August start and early-June finish."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sfusd-enrollment-calendar-notes",
+      "label": "SFUSD Enrollment and Assignment Calendar Notes",
+      "content": "SFUSD families often use the academic calendar alongside school assignment, waitlist, and ParentVUE timelines. These dates are not the same as student holidays, but they can affect when families need to make school-year decisions.",
+      "position": "afterPlanningTips",
+      "groups": [
+        {
+          "label": "Calendar-linked planning checkpoints",
+          "items": [
+            "Main Round and Open Enrollment timelines can affect families entering SFUSD or changing schools for the 2026-2027 school year.",
+            "ParentVUE is used for school information, online forms, assignment documents, and waitlist status, so families should keep account access and contact information current before summer.",
+            "Language pathways may require eligibility checks or language assessments, which should be planned separately from regular school holidays and recess dates.",
+            "Waitlist offers and school assignment changes can continue into the summer, so travel and childcare plans should leave room for possible assignment updates."
+          ]
+        }
+      ]
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "San José Unified School District",
+      "slug": "san-jose-unified-school-calendar",
+      "state": "California",
+      "comparisonNote": "Large Bay Area district with published student calendar data for the same school year."
+    },
+    {
+      "name": "Sacramento City Unified School District",
+      "slug": "sacramento-city-unified-school-calendar",
+      "state": "California",
+      "comparisonNote": "Northern California urban district often compared with SFUSD for start dates, breaks, and family planning."
+    }
+  ],
+  "sources": [
+    {
+      "label": "San Francisco Unified School District official website",
+      "url": "https://www.sfusd.edu/"
+    },
+    {
+      "label": "San Francisco Unified School District calendars",
+      "url": "https://www.sfusd.edu/calendars"
+    },
+    {
+      "label": "San Francisco Unified School District about SFUSD",
+      "url": "https://www.sfusd.edu/about-sfusd"
+    },
+    {
+      "label": "San Francisco Unified School District enrollment",
+      "url": "https://www.sfusd.edu/schools/enroll/apply"
+    },
+    {
+      "label": "San Francisco Unified School District ParentVUE",
+      "url": "https://www.sfusd.edu/services/family-supports-services/family-school-communications/family-portal-parentvue"
+    },
+    {
+      "label": "San Francisco Unified School District logo",
+      "url": "https://www.sfusd.edu/themes/custom/sfusd_base/images/logo_square.svg"
+    }
+  ]
+}

@@ -39,7 +39,7 @@ useHead({
       </p>
       <p class="text-gray-600 leading-relaxed">
         When districts issue mid-year revisions, we update our records and refresh the "Last reviewed" date shown on each page.
-        See our <NuxtLink to="/editorial-policy" class="text-blue-600 hover:underline">Editorial Policy</NuxtLink> for the full details on our verification process.
+        See our <NuxtLink to="/calendar-verification-methodology" class="text-blue-600 hover:underline">Calendar Verification Methodology</NuxtLink> and <NuxtLink to="/editorial-policy" class="text-blue-600 hover:underline">Editorial Policy</NuxtLink> for the full details on our verification process.
       </p>
     </section>
 

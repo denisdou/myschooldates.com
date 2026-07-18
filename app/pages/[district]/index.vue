@@ -207,11 +207,15 @@ const breaks = computed(() => getBreaks(cal?.events ?? []))
 const keyDateHighlights = computed(() => {
   if (!cal?.events) return []
   const HIGHLIGHT_TYPES = new Set(['school_start', 'school_end', 'break_start'])
-  const CORE_HOLIDAYS = ['labor day', 'martin luther king', 'good friday']
-  return cal.events.filter(e =>
-    HIGHLIGHT_TYPES.has(e.type) ||
-    (e.type === 'holiday' && CORE_HOLIDAYS.some(name => e.name.toLowerCase().includes(name)) && !isCoveredByBreak(e, cal.events))
-  )
+  return cal.events.filter(e => HIGHLIGHT_TYPES.has(e.type))
+})
+
+const itemListEvents = computed(() => {
+  if (!cal?.events) return []
+  if ((cal as any).itemListMode === 'allImportantDates') {
+    return cal.events.filter(event => event.type !== 'break_end')
+  }
+  return keyDateHighlights.value
 })
 
 function keyDateLabel(event: { type: string }) {
@@ -252,7 +256,27 @@ const faqs = computed(() => {
   if (!cal || !district.value) return []
   const specificFaqs: { q: string; a: string }[] = (district.value as any).districtFaqs ?? []
   const calendarFaqs: { q: string; a: string }[] = (cal as any).calendarFaqs ?? []
+  const faqLimit = (cal as any).faqLimit ?? (cal as any).meta?.faqLimit ?? (district.value as any).faqLimit ?? (district.value as any).meta?.faqLimit
+  if (typeof faqLimit === 'number' && faqLimit > 0) {
+    return [...calendarFaqs, ...specificFaqs].slice(0, faqLimit)
+  }
   return [...specificFaqs, ...calendarFaqs]
+})
+const faqSchemaItems = computed(() => {
+  const limit = (cal as any)?.faqSchemaLimit ?? (cal as any)?.meta?.faqSchemaLimit ?? (district.value as any)?.faqSchemaLimit ?? (district.value as any)?.meta?.faqSchemaLimit
+  if (typeof limit !== 'number' || limit <= 0) return faqs.value
+  const priority = (q: string) => {
+    const text = q.toLowerCase()
+    if (text.includes('first day') || text.includes('start')) return 1
+    if (text.includes('last day') || text.includes('end')) return 2
+    if (text.includes('pdf') || text.includes('print')) return 3
+    if (text.includes('google calendar') || text.includes('ics') || text.includes('import')) return 4
+    if (text.includes('weather') || text.includes('make-up') || text.includes('makeup')) return 5
+    return 20
+  }
+  return [...faqs.value]
+    .sort((a, b) => priority(a.q) - priority(b.q))
+    .slice(0, limit)
 })
 
 const hiddenSections = computed(() => new Set<string>((district.value as any).hiddenSections ?? []))
@@ -266,6 +290,7 @@ type DistrictCustomSection = {
 const customSections = computed(() => [
   ...(((district.value as any).customSections ?? []) as DistrictCustomSection[]),
   ...(((cal as any)?.customSections ?? []) as DistrictCustomSection[]),
+  ...(((cal as any)?.meta?.customSections ?? []) as DistrictCustomSection[]),
 ])
 const calendarTrackHelpId = computed(() => {
   const section = customSections.value.find(s =>
@@ -396,15 +421,15 @@ if (!isStatePage && district.value) {
   const _hasSpring = breaks.value.some((b: any) => b.name.toLowerCase().includes('spring'))
   const _descTemplates = [
     // A — PDF + key dates (~130 chars)
-    `${_sn} Calendar ${currentYear} with holidays${_hasSpring ? ', spring break' : ''} and key dates. Download the official PDF or add to Google Calendar.`,
+    `${_sn} Calendar ${currentYear} with holidays${_hasSpring ? ', spring break' : ''} and key dates. Download the official PDF or calendar import file.`,
     // B — verified + download (~125 chars)
-    `${_sn} Calendar ${currentYear}: first day ${_fd}, last day ${_ld}${_hasSpring ? ', spring break' : ''}. Verified. Download the PDF or sync to Google Calendar.`,
+    `${_sn} Calendar ${currentYear}: first day ${_fd}, last day ${_ld}${_hasSpring ? ', spring break' : ''}. Verified. Download the PDF or .ics calendar file.`,
     // C — user benefit (~135 chars)
     `${_sn} Calendar ${currentYear} — verified holidays${_hasSpring ? ', spring break' : ''}, key dates, and official PDF download. Works with Google Calendar.`,
     // D — ICS/sync (~130 chars)
-    `${_sn} ${currentYear} calendar dates sourced from official district calendars, with holidays${_hasSpring ? ', spring break' : ''} and winter break. Download PDF or sync to Google Calendar.`,
+    `${_sn} ${currentYear} calendar dates sourced from official district calendars, with holidays${_hasSpring ? ', spring break' : ''} and winter break. Download PDF or importable .ics file.`,
     // E — verified dates (~130 chars)
-    `${_sn} ${currentYear}: first day ${_fd}, last day ${_ld}. Holidays${_hasSpring ? ', spring break' : ''} and official PDF. Syncs with Google Calendar.`,
+    `${_sn} ${currentYear}: first day ${_fd}, last day ${_ld}. Holidays${_hasSpring ? ', spring break' : ''}, official PDF, and calendar import file.`,
   ]
   const _idxDesc = cal
     ? _descTemplates[simpleHash(_slug + currentYear) % _descTemplates.length]
@@ -444,12 +469,15 @@ if (!isStatePage && district.value) {
     name: meta.value!.name,
     url: meta.value!.officialWebsite || canonicalUrl,
   }
+  const pageDateCreated = (cal as any)?.dateCreated
   const pageDateModified = (cal as any)?.dateModified ?? cal?.lastVerifiedAt
-  const pageDatePublished = (cal as any)?.datePublished ?? pageDateModified
+  const pageDatePublished = (cal as any)?.datePublished
   const sourcePdfUrl = (cal as any)?.sourcePdfUrl
   const sourceUrl = (cal as any)?.sourceUrl ?? meta.value!.calendarPage
   const sourcePdfIsArchivedCopy = typeof sourcePdfUrl === 'string' && sourcePdfUrl.includes('assets.myschooldates.com')
   const basedOnUrl = sourcePdfUrl && !sourcePdfIsArchivedCopy ? sourcePdfUrl : sourceUrl
+  const sourceCalendarName = (cal as any)?.sourceVersion
+    ?? `${meta.value!.name} ${currentYear} Calendar ${sourcePdfUrl && !sourcePdfIsArchivedCopy ? 'PDF' : 'Source'}`
   const sourceCitation = [sourceUrl, sourcePdfUrl && !sourcePdfIsArchivedCopy ? sourcePdfUrl : null].filter(Boolean)
   const calendarTypeName = cal
     ? String((cal as any)?.calendarType ?? '').replace(/[_-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
@@ -463,48 +491,56 @@ if (!isStatePage && district.value) {
   const sourceCalendarEntity = basedOnUrl ? {
     '@type': 'CreativeWork',
     '@id': `${canonicalUrl}#source-calendar`,
-    name: (cal as any)?.sourceVersion ?? `${meta.value!.name} ${currentYear} Calendar PDF`,
+    name: sourceCalendarName,
     url: basedOnUrl,
     publisher: { '@id': districtAbout['@id'] },
   } : null
   const calendarIcsUrl = district.value && cal
     ? `https://myschooldates.com/calendars/${district.value.slug}-${cal.schoolYear}.ics`
     : ''
-  const datasetEntity = {
+  const hideDatasetSchema = Boolean((cal as any)?.hideDatasetSchema || (cal as any)?.meta?.hideDatasetSchema)
+  const datasetEntity = hideDatasetSchema ? null : {
     '@type': 'Dataset',
     '@id': `${canonicalUrl}#calendar-dataset`,
     name: schemaCalendarName,
     description: datasetDescription,
     url: canonicalUrl,
-    license: 'https://myschooldates.com/terms',
     inLanguage: 'en-US',
+    ...(pageDateCreated ? { dateCreated: pageDateCreated } : {}),
     ...(pageDateModified ? { dateModified: pageDateModified } : {}),
     temporalCoverage: cal ? `${cal.firstDay}/${cal.lastDay}` : undefined,
     creator: { '@id': 'https://myschooldates.com/#organization' },
     publisher: { '@id': 'https://myschooldates.com/#organization' },
+    provider: { '@id': 'https://myschooldates.com/#organization' },
+    sourceOrganization: { '@id': districtAbout['@id'] },
     isBasedOn: basedOnUrl ? { '@id': `${canonicalUrl}#source-calendar` } : undefined,
     distribution: [
       calendarIcsUrl ? {
         '@type': 'DataDownload',
         name: `${schemaCalendarName} calendar file`,
-        description: `Unofficial one-time calendar import generated from ${schemaCalendarName} records used for this page.`,
+        description: `Calendar import file generated from the verified official ${meta.value!.shortName ?? meta.value!.name} calendar dates used for this page.`,
         encodingFormat: 'text/calendar',
         contentUrl: calendarIcsUrl,
       } : null,
     ].filter(Boolean),
   }
   const webPageEntity = {
-    '@context': 'https://schema.org',
     '@type': 'WebPage',
     '@id': `${canonicalUrl}#webpage`,
     name: _pageTitle,
     description: _pageDesc,
     url: canonicalUrl,
     inLanguage: 'en-US',
-    ...(pageDateModified ? { dateModified: pageDateModified, datePublished: pageDatePublished } : {}),
+    ...(pageDateCreated ? { dateCreated: pageDateCreated } : {}),
+    ...(pageDateModified ? { dateModified: pageDateModified } : {}),
+    ...(pageDatePublished ? { datePublished: pageDatePublished } : {}),
     publisher: { '@id': 'https://myschooldates.com/#organization' },
     about: { '@id': districtAbout['@id'] },
-    mainEntity: { '@id': `${canonicalUrl}#calendar-dataset` },
+    ...(datasetEntity
+      ? { mainEntity: { '@id': `${canonicalUrl}#calendar-dataset` } }
+      : itemListEvents.value.length
+        ? { mainEntity: { '@id': `${canonicalUrl}#key-dates` } }
+        : {}),
     ...(faqs.value.length ? { hasPart: { '@id': `${canonicalUrl}#faq` } } : {}),
     ...(basedOnUrl ? { isBasedOn: { '@id': `${canonicalUrl}#source-calendar` } } : {}),
     ...(sourcePdfIsArchivedCopy ? {
@@ -521,16 +557,66 @@ if (!isStatePage && district.value) {
       '@id': 'https://myschooldates.com/#website',
     },
   }
-  const faqPageEntity = faqs.value.length ? {
+  const faqPageEntity = faqSchemaItems.value.length ? {
     '@type': 'FAQPage',
     '@id': `${canonicalUrl}#faq`,
     isPartOf: { '@id': `${canonicalUrl}#webpage` },
-    mainEntity: faqs.value.map(f => ({
+    mainEntity: faqSchemaItems.value.map(f => ({
       '@type': 'Question',
       name: f.q,
       acceptedAnswer: {
         '@type': 'Answer',
         text: f.a,
+      },
+    })),
+  } : null
+  const keyDateItemListEntity = cal && itemListEvents.value.length ? {
+    '@type': 'ItemList',
+    '@id': `${canonicalUrl}#key-dates`,
+    name: `${meta.value!.shortName || meta.value!.name} ${currentYear} key school calendar dates`,
+    itemListElement: itemListEvents.value.map((event, i) => {
+      const range = keyDateRange(event)
+      return {
+        '@type': 'ListItem',
+        position: i + 1,
+        item: {
+          '@type': 'Event',
+          name: event.name,
+          startDate: range.start,
+          ...(range.end !== range.start ? { endDate: range.end } : {}),
+          eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+          eventStatus: 'https://schema.org/EventScheduled',
+          organizer: { '@id': districtAbout['@id'] },
+        },
+      }
+    }),
+  } : null
+  const comparisonItems = cal && district.value
+    ? [
+        { district: meta.value!, calendar: cal, url: canonicalUrl },
+        ...((relatedCals.value ?? []).slice(0, 3).map((relatedCal: any) => {
+          const relatedDistrict = (allDistricts.value ?? []).find((d: any) => d.institutionId === relatedCal.institutionId)
+          return relatedDistrict ? { district: relatedDistrict, calendar: relatedCal, url: `https://myschooldates.com/${relatedDistrict.slug}` } : null
+        }).filter(Boolean)),
+      ]
+    : []
+  const comparisonItemListEntity = comparisonItems.length > 1 ? {
+    '@type': 'ItemList',
+    '@id': `${canonicalUrl}#nearby-calendar-comparison`,
+    name: `${meta.value!.name} nearby district calendar comparison`,
+    itemListElement: comparisonItems.map((item: any, i: number) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'EducationalOrganization',
+        '@id': item.url ? `${item.url}#district` : undefined,
+        name: item.district.name,
+        url: item.url,
+        additionalProperty: [
+          { '@type': 'PropertyValue', name: 'School year', value: item.calendar.schoolYear },
+          { '@type': 'PropertyValue', name: 'First day', value: item.calendar.firstDay },
+          { '@type': 'PropertyValue', name: 'Last day', value: item.calendar.lastDay },
+        ],
       },
     })),
   } : null
@@ -546,8 +632,10 @@ if (!isStatePage && district.value) {
           siteEntity,
           districtAbout,
           ...(sourceCalendarEntity ? [sourceCalendarEntity] : []),
-          datasetEntity,
+          ...(datasetEntity ? [datasetEntity] : []),
           webPageEntity,
+          ...(keyDateItemListEntity ? [keyDateItemListEntity] : []),
+          ...(comparisonItemListEntity ? [comparisonItemListEntity] : []),
           ...(faqPageEntity ? [faqPageEntity] : []),
           {
             '@type': 'BreadcrumbList',
@@ -730,6 +818,29 @@ if (!isStatePage && district.value) {
           </div>
         </div>
 
+        <!-- District clusters -->
+        <div v-if="statePageData?.districtClusters?.length" class="bg-white rounded-xl border border-gray-200 p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ matchedStateName }} District Calendar Clusters</h2>
+          <p class="text-sm text-gray-500 mb-5">Use these regional links to compare nearby district calendars, spring break weeks, PDF availability, and Google Calendar import options.</p>
+          <div class="space-y-5">
+            <section v-for="cluster in statePageData.districtClusters" :key="cluster.label">
+              <h3 class="text-sm font-semibold text-gray-900">{{ cluster.label }}</h3>
+              <p v-if="cluster.description" class="text-sm text-gray-600 mt-1">{{ cluster.description }}</p>
+              <div class="mt-3 grid gap-3 sm:grid-cols-2">
+                <NuxtLink
+                  v-for="item in cluster.districts"
+                  :key="`${cluster.label}-${item.slug}`"
+                  :to="`/${item.slug}`"
+                  class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 hover:border-blue-300 hover:bg-blue-50 transition-colors"
+                >
+                  <div class="text-sm font-medium text-gray-900">{{ item.label }}</div>
+                  <p v-if="item.note" class="mt-1 text-xs leading-relaxed text-gray-500">{{ item.note }}</p>
+                </NuxtLink>
+              </div>
+            </section>
+          </div>
+        </div>
+
         <!-- Planning Tips -->
         <div v-if="statePageData?.planningTips?.length" class="bg-blue-50 border border-blue-200 rounded-xl p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-3">Planning Tips for {{ matchedStateName }} Families</h2>
@@ -798,7 +909,7 @@ if (!isStatePage && district.value) {
         <!-- Title -->
         <div>
           <h1 class="text-3xl font-bold text-gray-900">
-            {{ district.name }} Calendar {{ currentYear }}
+            {{ (cal as any).pageHeading || `${district.name} Calendar ${currentYear}` }}
           </h1>
           <p class="mt-2 text-sm text-gray-500">
             {{ currentYear }} calendar dates · Sourced from the official {{ district.shortName || district.name }} calendar ·
@@ -826,42 +937,27 @@ if (!isStatePage && district.value) {
             <svg v-else class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
             </svg>
-            <span v-if="!isEstimated">Calendar data checked against official source · Last reviewed {{ verifiedDate }}</span>
+            <span v-if="!isEstimated">Calendar data checked against official source · Reviewed by MySchoolDates Education Research Team · Updated {{ verifiedDate }} · Verified {{ verifiedDate }}</span>
             <span v-else>Based on official district website · Not yet human-verified</span>
           </div>
+          <div v-if="!isEstimated && verifiedDate" class="mt-3 rounded-xl border border-gray-200 bg-white p-3">
+            <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">Verification process</p>
+            <ul class="mt-2 grid gap-1.5 text-xs text-gray-600 sm:grid-cols-3">
+              <li class="flex items-start gap-1.5">
+                <span class="mt-0.5 text-green-600">✓</span>
+                <span>Official district source checked</span>
+              </li>
+              <li class="flex items-start gap-1.5">
+                <span class="mt-0.5 text-green-600">✓</span>
+                <span>Key dates compared against source</span>
+              </li>
+              <li class="flex items-start gap-1.5">
+                <span class="mt-0.5 text-green-600">✓</span>
+                <span>Calendar file generated from verified records</span>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <!-- Today Status — HERO: first thing users see after the title -->
-        <DistrictTodayStatus :cal="cal">
-          <template #cta>
-            <div class="mt-4 flex flex-col sm:flex-row gap-2">
-              <a
-                :href="calendarIcsHref"
-                :download="district && cal ? `${district.slug}-${cal.schoolYear}.ics` : undefined"
-                :aria-label="district && cal ? `Download ${district.name} ${cal.schoolYear} calendar file` : 'Download calendar file'"
-                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors"
-              >
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                Add school dates
-              </a>
-              <a
-                v-if="(cal as any).sourcePdfUrl"
-                :href="(cal as any).sourcePdfUrl"
-                target="_blank"
-                rel="noopener"
-                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 text-sm font-medium rounded-lg transition-colors"
-              >
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10M7 11h10M7 15h6M6 3h8l4 4v14H6V3z" />
-                </svg>
-                View official PDF
-                <span class="sr-only">(opens in a new tab)</span>
-              </a>
-            </div>
-          </template>
-        </DistrictTodayStatus>
 
         <!-- Calendar track notice -->
         <div v-if="hasCalendarTrackCaution" class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex gap-3">
@@ -876,7 +972,9 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Key Date Cards -->
-        <DistrictKeyDateCards :cal="cal" />
+        <div id="key-dates" class="scroll-mt-24">
+          <DistrictKeyDateCards :cal="cal" />
+        </div>
 
         <!-- Alternate calendars notice -->
         <div v-if="(cal as any)?.alternateCalendars?.length" class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
@@ -918,6 +1016,82 @@ if (!isStatePage && district.value) {
           </div>
         </div>
 
+        <div class="rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-sm text-blue-900">
+            Need a saved copy? Download the calendar file or open the official PDF after reviewing the key dates.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <a
+              href="#add-to-calendar"
+              class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700 transition-colors"
+            >
+              Download Calendar File
+            </a>
+            <a
+              v-if="(cal as any).sourcePdfUrl"
+              :href="(cal as any).sourcePdfUrl"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center justify-center rounded-lg border border-blue-200 bg-white px-3 py-2 text-sm font-semibold text-blue-700 hover:border-blue-300 hover:bg-blue-50 transition-colors"
+            >
+              View Official PDF
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
+          </div>
+        </div>
+
+        <nav aria-label="Page sections" class="flex flex-wrap gap-2 text-xs">
+          <a href="#key-dates" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Key Dates</a>
+          <a href="#add-to-calendar" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">PDF &amp; Calendar</a>
+          <a href="#all-dates" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Dates</a>
+          <a href="#comparison" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Comparison</a>
+          <a href="#faq" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">FAQ</a>
+        </nav>
+
+        <!-- Custom Sections: afterKeyDates -->
+        <DistrictCustomSections :sections="customSections" position="afterKeyDates" />
+
+        <!-- Today Status -->
+        <DistrictTodayStatus :cal="cal">
+          <template #cta>
+            <div class="mt-4 flex flex-col sm:flex-row gap-2">
+              <a
+                :href="calendarIcsHref"
+                :download="district && cal ? `${district.slug}-${cal.schoolYear}.ics` : undefined"
+                :aria-label="district && cal ? `Download ${district.name} ${cal.schoolYear} calendar file` : 'Download calendar file'"
+                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors"
+              >
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Add school dates
+              </a>
+              <a
+                v-if="(cal as any).sourcePdfUrl"
+                :href="(cal as any).sourcePdfUrl"
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 text-sm font-medium rounded-lg transition-colors"
+              >
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10M7 11h10M7 15h6M6 3h8l4 4v14H6V3z" />
+                </svg>
+                View official PDF
+                <span class="sr-only">(opens in a new tab)</span>
+              </a>
+            </div>
+          </template>
+        </DistrictTodayStatus>
+
+        <!-- Add to Calendar + Share -->
+        <CalendarExportShare
+          :district-name="district.name"
+          :year="currentYear"
+          :source-url="(cal.sourceUrl ?? district.calendarPage) ?? district.officialWebsite"
+          :district="district"
+          :cal="cal"
+        />
+
         <!-- All Dates -->
         <DistrictAllDates
           :events="cal.events"
@@ -927,15 +1101,6 @@ if (!isStatePage && district.value) {
           :verified-date="verifiedDate"
           :legend="dateLegend"
           :mode="allDatesMode"
-        />
-
-        <!-- Add to Calendar + Share -->
-        <CalendarExportShare
-          :district-name="district.name"
-          :year="currentYear"
-          :source-url="(cal.sourceUrl ?? district.calendarPage) ?? district.officialWebsite"
-          :district="district"
-          :cal="cal"
         />
 
         <!-- Other Official Calendars -->
@@ -1068,10 +1233,10 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Compare with Nearby Districts -->
-        <DistrictComparison :cal="cal" :district="district" :related-cals="relatedCals ?? []" :all-districts="allDistricts ?? []" :year="currentYear" />
+        <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal" :district="district" :related-cals="relatedCals ?? []" :all-districts="allDistricts ?? []" :year="currentYear" />
 
         <!-- FAQ -->
-        <DistrictFaq :cal="cal" :district="district" />
+        <DistrictFaq :cal="cal" :district="district" :faqs="faqs" />
 
         <!-- Custom Sections: afterFaq -->
         <DistrictCustomSections :sections="customSections" position="afterFaq" />
@@ -1098,6 +1263,7 @@ if (!isStatePage && district.value) {
           :county="(district as any).county"
           :metro="(district as any).metro"
           :district-fact="(district as any).districtFact"
+          :title="(district as any).profileTitle ?? (district as any).meta?.profileTitle"
         />
 
         <!-- Living Here -->

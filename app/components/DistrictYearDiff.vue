@@ -65,14 +65,22 @@ const title = computed(() => props.cal?.whatsNew?.title)
 </script>
 
 <template>
-  <div v-if="items.length" class="bg-white rounded-xl border border-gray-200 p-6">
-    <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ title ?? `What's New for ${currentYear}` }}</h2>
-    <p class="text-sm text-gray-500 mb-4">How this school year compares to {{ prevYear }}.</p>
-    <ul class="space-y-2">
+  <details v-if="items.length" open class="bg-white rounded-xl border border-gray-200 p-6 group">
+    <summary class="cursor-pointer list-none">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ title ?? `What's New for ${currentYear}` }}</h2>
+          <p class="text-sm text-gray-500">How this school year compares to {{ prevYear }}.</p>
+        </div>
+        <span class="mt-1 text-sm font-medium text-blue-600 group-open:hidden">Show</span>
+        <span class="mt-1 text-sm font-medium text-blue-600 hidden group-open:inline">Hide</span>
+      </div>
+    </summary>
+    <ul class="mt-4 space-y-2">
       <li v-for="item in items" :key="item" class="flex items-start gap-2 text-sm text-gray-700">
         <span class="text-gray-300 mt-0.5 flex-shrink-0 select-none">•</span>
         <span>{{ item }}</span>
       </li>
     </ul>
-  </div>
+  </details>
 </template>

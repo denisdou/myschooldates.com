@@ -46,8 +46,16 @@ export function useDistrictPage() {
     for (let i = 0; i < events.length; i++) {
       if (events[i].type === 'break_start') {
         const baseName = events[i].name
+        const normalizedBase = baseName.toLowerCase().trim()
         const endEvent = events.find(
-          (e, j) => j > i && e.type === 'break_end' && e.name.replace(' End', '') === baseName
+          (e, j) => {
+            if (j <= i || e.type !== 'break_end') return false
+            const normalizedEnd = e.name.toLowerCase().trim()
+            return normalizedEnd === `${normalizedBase} end` ||
+              normalizedEnd.startsWith(`${normalizedBase} end/`) ||
+              normalizedEnd.startsWith(`${normalizedBase} end -`) ||
+              normalizedEnd.startsWith(`${normalizedBase} end:`)
+          }
         )
         if (endEvent) {
           result.push({
