@@ -62,6 +62,10 @@ const todayStatus = computed(() => {
     detail: nextEvent.value ? `Next: ${nextEvent.value.name} — ${formatShortDate(nextEvent.value.date)}` : '',
   }
 })
+
+const schoolYearRange = computed(() =>
+  `${formatShortDate(props.cal.firstDay)} – ${formatShortDate(props.cal.lastDay)}`
+)
 </script>
 
 <template>
@@ -107,5 +111,12 @@ const todayStatus = computed(() => {
       >{{ todayStatus.detail }}</div>
       <slot name="cta" />
     </div>
+    <template #fallback>
+      <div class="rounded-2xl px-6 py-6 bg-blue-50 border border-blue-200">
+        <div class="text-xs font-semibold uppercase tracking-wide mb-1 text-blue-500">School Year Status</div>
+        <div class="font-bold text-2xl leading-tight text-blue-800">{{ props.cal.schoolYear }} school year</div>
+        <div class="text-sm mt-1 text-blue-600">{{ schoolYearRange }}</div>
+      </div>
+    </template>
   </ClientOnly>
 </template>

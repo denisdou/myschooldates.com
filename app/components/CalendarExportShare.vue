@@ -27,6 +27,10 @@ const pdfButtonLabel = computed(() => isArchivedPdfCopy.value ? 'View Archived C
 const copied = ref(false)
 const icsHref = computed(() => `/calendars/${props.district.slug}-${props.cal.schoolYear}.ics`)
 const icsFilename = computed(() => `${props.district.slug}-${props.cal.schoolYear}.ics`)
+const icsButtonLabel = computed(() => {
+  const name = props.district?.shortName || props.districtName
+  return `Download ${name} calendar (.ics)`
+})
 const compatibleCalendars = ['Apple Calendar', 'Google Calendar', 'Outlook']
 const icsIncludedItems = computed(() => {
   const events = props.cal?.events ?? []
@@ -75,7 +79,7 @@ const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
         </svg>
-        Download calendar file (.ics)
+        {{ icsButtonLabel }}
       </a>
       <div class="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3">
         <p class="text-xs font-medium text-gray-500 mb-2">Compatible with</p>
