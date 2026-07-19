@@ -160,10 +160,10 @@
 | 优先级 | 学区 | 预计 Slug | 状态 |
 |--------|------|-----------|------|
 | P3 | Arlington ISD | `/arlington-isd/` | 待创建 |
-| P3 | Lewisville ISD | `/lewisville-isd/` | 待创建 |
-| P3 | Garland ISD | `/garland-isd/` | 待创建 |
-| P3 | Pasadena ISD | `/pasadena-isd/` | 待创建 |
-| P3 | Aldine ISD | `/aldine-isd/` | 待创建 |
+| P3 | Lewisville ISD | `/lewisville-independent-school-district-calendar` | ✓ 已完成 |
+| P3 | Garland ISD | `/garland-independent-school-district-calendar` | ✓ 已完成 |
+| P3 | Pasadena ISD | `/pasadena-independent-school-district-calendar` | ✓ 已完成 |
+| P3 | Aldine ISD | `/aldine-independent-school-district-calendar` | ✓ 已完成 |
 
 > 均为 DFW 或 Houston 郊区，学生规模 50,000–65,000，适合通过 Dallas ISD / Houston ISD 页面的内链引流。
 
@@ -171,11 +171,11 @@
 
 | 优先级 | 学区 | 预计 Slug | 状态 |
 |--------|------|-----------|------|
-| P3 | Santa Ana USD | `/santa-ana-usd/` | 待创建 |
-| P3 | Riverside USD | `/riverside-usd/` | 待创建 |
-| P3 | Garden Grove USD | `/garden-grove-usd/` | 待创建 |
-| P3 | San Bernardino City USD | `/san-bernardino-usd/` | 待创建 |
-| P3 | Stockton USD | `/stockton-usd/` | 待创建 |
+| P3 | Santa Ana USD | `/santa-ana-unified-school-district-calendar` | ✓ 已完成 |
+| P3 | Riverside USD | `/riverside-unified-school-district-calendar` | ✓ 已完成 |
+| P3 | Garden Grove USD | `/garden-grove-unified-school-district-calendar` | ✓ 已完成 |
+| P3 | San Bernardino City USD | `/san-bernardino-city-unified-school-district-calendar` | ✓ 已完成 |
+| P3 | Stockton USD | `/stockton-unified-school-district-calendar` | ✓ 已完成 |
 
 ---
 

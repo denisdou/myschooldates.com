@@ -42,6 +42,7 @@ export default defineNuxtConfig({
         '/virginia',
 
         // ── District index pages ───────────────────────────────────────────────
+        '/aldine-independent-school-district-calendar',
         '/austin-independent-school-district-calendar',
         '/broward-county-school-calendar',
         '/charlotte-mecklenburg-schools-calendar',
@@ -52,23 +53,31 @@ export default defineNuxtConfig({
         '/fairfax-county-school-calendar',
         '/fort-worth-independent-school-district-calendar',
         '/fresno-unified-school-district-calendar',
+        '/garland-independent-school-district-calendar',
+        '/garden-grove-unified-school-district-calendar',
         '/guilford-county-school-calendar',
         '/hillsborough-county-school-calendar',
         '/houston-independent-school-district-calendar',
         '/long-beach-unified-school-district-calendar',
         '/los-angeles-unified-school-district-calendar',
+        '/lewisville-independent-school-district-calendar',
         '/loudoun-county-school-calendar',
         '/miami-dade-school-calendar',
         '/northside-independent-school-district-calendar',
         '/orange-county-school-calendar',
         '/palm-beach-county-school-calendar',
         '/pasco-county-school-calendar',
+        '/pasadena-independent-school-district-calendar',
         '/pinellas-county-school-calendar',
         '/polk-county-school-calendar',
         '/prince-william-county-school-calendar',
+        '/riverside-unified-school-district-calendar',
         '/sacramento-city-unified-school-calendar',
+        '/santa-ana-unified-school-district-calendar',
+        '/san-bernardino-city-unified-school-district-calendar',
         '/san-francisco-unified-school-district-calendar',
         '/san-jose-unified-school-calendar',
+        '/stockton-unified-school-district-calendar',
         '/oakland-unified-school-district-calendar',
         '/irvine-unified-school-district-calendar',
         '/lee-county-school-calendar',
@@ -92,6 +101,9 @@ export default defineNuxtConfig({
         '/elk-grove-unified-school-district-calendar',
 
         // ── District year pages ────────────────────────────────────────────────
+        '/aldine-independent-school-district-calendar/2025-2026',
+        '/aldine-independent-school-district-calendar/2026-2027',
+
         '/austin-independent-school-district-calendar/2025-2026',
         '/austin-independent-school-district-calendar/2026-2027',
 
@@ -127,6 +139,13 @@ export default defineNuxtConfig({
         '/fresno-unified-school-district-calendar/2026-2027',
         '/fresno-unified-school-district-calendar/2027-2028',
 
+        '/garland-independent-school-district-calendar/2025-2026',
+        '/garland-independent-school-district-calendar/2026-2027',
+        '/garland-independent-school-district-calendar/2027-2028',
+
+        '/garden-grove-unified-school-district-calendar/2025-2026',
+        '/garden-grove-unified-school-district-calendar/2026-2027',
+
         '/guilford-county-school-calendar/2025-2026',
         '/guilford-county-school-calendar/2026-2027',
         '/guilford-county-school-calendar/2027-2028',
@@ -143,6 +162,9 @@ export default defineNuxtConfig({
         '/los-angeles-unified-school-district-calendar/2025-2026',
         '/los-angeles-unified-school-district-calendar/2026-2027',
         '/los-angeles-unified-school-district-calendar/2027-2028',
+
+        '/lewisville-independent-school-district-calendar/2025-2026',
+        '/lewisville-independent-school-district-calendar/2026-2027',
 
         '/loudoun-county-school-calendar/2025-2026',
         '/loudoun-county-school-calendar/2026-2027',
@@ -164,6 +186,9 @@ export default defineNuxtConfig({
         '/pasco-county-school-calendar/2025-2026',
         '/pasco-county-school-calendar/2026-2027',
 
+        '/pasadena-independent-school-district-calendar/2025-2026',
+        '/pasadena-independent-school-district-calendar/2026-2027',
+
         '/pinellas-county-school-calendar/2025-2026',
         '/pinellas-county-school-calendar/2026-2027',
 
@@ -179,8 +204,19 @@ export default defineNuxtConfig({
         '/prince-william-county-school-calendar/2025-2026',
         '/prince-william-county-school-calendar/2026-2027',
 
+        '/riverside-unified-school-district-calendar/2025-2026',
+        '/riverside-unified-school-district-calendar/2026-2027',
+        '/riverside-unified-school-district-calendar/2027-2028',
+        '/riverside-unified-school-district-calendar/2028-2029',
+
         '/sacramento-city-unified-school-calendar/2025-2026',
         '/sacramento-city-unified-school-calendar/2026-2027',
+
+        '/santa-ana-unified-school-district-calendar/2025-2026',
+        '/santa-ana-unified-school-district-calendar/2026-2027',
+
+        '/san-bernardino-city-unified-school-district-calendar/2025-2026',
+        '/san-bernardino-city-unified-school-district-calendar/2026-2027',
 
         '/san-francisco-unified-school-district-calendar/2025-2026',
         '/san-francisco-unified-school-district-calendar/2026-2027',
@@ -189,6 +225,9 @@ export default defineNuxtConfig({
         '/san-jose-unified-school-calendar/2025-2026',
         '/san-jose-unified-school-calendar/2026-2027',
         '/san-jose-unified-school-calendar/2027-2028',
+
+        '/stockton-unified-school-district-calendar/2025-2026',
+        '/stockton-unified-school-district-calendar/2026-2027',
 
         '/oakland-unified-school-district-calendar/2025-2026',
         '/oakland-unified-school-district-calendar/2026-2027',

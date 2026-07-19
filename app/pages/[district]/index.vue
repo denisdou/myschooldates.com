@@ -238,6 +238,8 @@ function keyDateRange(event: { date: string; name: string; type: string }) {
 
 const calendarSummary = computed(() => {
   if (!cal || !district.value) return ''
+  const customSummary = (cal as any).heroSummary ?? (cal as any).meta?.heroSummary
+  if (customSummary) return customSummary
   const springBreak = breaks.value.find(b => b.name.toLowerCase().includes('spring'))
   const schoolEndEvent = cal.events?.find((e: any) => e.type === 'school_end')
   const lastDayNote = schoolEndEvent?.name?.toLowerCase().includes('early')
@@ -264,7 +266,14 @@ const faqs = computed(() => {
 })
 const faqSchemaItems = computed(() => {
   const limit = (cal as any)?.faqSchemaLimit ?? (cal as any)?.meta?.faqSchemaLimit ?? (district.value as any)?.faqSchemaLimit ?? (district.value as any)?.meta?.faqSchemaLimit
-  if (typeof limit !== 'number' || limit <= 0) return faqs.value
+  const excludes = [
+    ...(((district.value as any)?.faqSchemaExclude ?? (district.value as any)?.meta?.faqSchemaExclude ?? []) as string[]),
+    ...(((cal as any)?.faqSchemaExclude ?? (cal as any)?.meta?.faqSchemaExclude ?? []) as string[]),
+  ].map(item => item.toLowerCase())
+  const candidates = excludes.length
+    ? faqs.value.filter(item => !excludes.some(exclude => item.q.toLowerCase().includes(exclude)))
+    : faqs.value
+  if (typeof limit !== 'number' || limit <= 0) return candidates
   const priority = (q: string) => {
     const text = q.toLowerCase()
     if (text.includes('first day') || text.includes('start')) return 1
@@ -274,7 +283,7 @@ const faqSchemaItems = computed(() => {
     if (text.includes('weather') || text.includes('make-up') || text.includes('makeup')) return 5
     return 20
   }
-  return [...faqs.value]
+  return [...candidates]
     .sort((a, b) => priority(a.q) - priority(b.q))
     .slice(0, limit)
 })
@@ -286,6 +295,7 @@ type DistrictCustomSection = {
   content: string
   position?: string
   groups?: { label: string; items: string[] }[]
+  links?: { label: string; to: string; description?: string }[]
 }
 const customSections = computed(() => [
   ...(((district.value as any).customSections ?? []) as DistrictCustomSection[]),
@@ -456,6 +466,13 @@ if (!isStatePage && district.value) {
     name: 'MySchoolDates',
     url: 'https://myschooldates.com',
   }
+  const reviewTeamEntity = {
+    '@type': 'Organization',
+    '@id': 'https://myschooldates.com/#education-research-team',
+    name: 'MySchoolDates Education Research Team',
+    url: 'https://myschooldates.com/calendar-verification-methodology',
+    parentOrganization: { '@id': 'https://myschooldates.com/#organization' },
+  }
   const siteEntity = {
     '@type': 'WebSite',
     '@id': 'https://myschooldates.com/#website',
@@ -468,11 +485,16 @@ if (!isStatePage && district.value) {
     '@id': `${canonicalUrl}#district`,
     name: meta.value!.name,
     url: meta.value!.officialWebsite || canonicalUrl,
+    sameAs: [meta.value!.officialWebsite, meta.value!.calendarPage].filter(Boolean),
   }
   const pageDateCreated = (cal as any)?.dateCreated
   const pageDateModified = (cal as any)?.dateModified ?? cal?.lastVerifiedAt
   const pageDatePublished = (cal as any)?.datePublished
   const sourcePdfUrl = (cal as any)?.sourcePdfUrl
+  const printablePdfPath = (cal as any)?.printablePdfUrl
+  const printablePdfUrl = typeof printablePdfPath === 'string'
+    ? printablePdfPath.startsWith('http') ? printablePdfPath : `https://myschooldates.com${printablePdfPath}`
+    : ''
   const sourceUrl = (cal as any)?.sourceUrl ?? meta.value!.calendarPage
   const sourcePdfIsArchivedCopy = typeof sourcePdfUrl === 'string' && sourcePdfUrl.includes('assets.myschooldates.com')
   const basedOnUrl = sourcePdfUrl && !sourcePdfIsArchivedCopy ? sourcePdfUrl : sourceUrl
@@ -499,6 +521,9 @@ if (!isStatePage && district.value) {
     ? `https://myschooldates.com/calendars/${district.value.slug}-${cal.schoolYear}.ics`
     : ''
   const hideDatasetSchema = Boolean((cal as any)?.hideDatasetSchema || (cal as any)?.meta?.hideDatasetSchema)
+  const datasetTemporalCoverage = cal
+    ? `${(cal as any)?.temporalCoverageStart || cal.firstDay}/${(cal as any)?.temporalCoverageEnd || cal.lastDay}`
+    : undefined
   const datasetEntity = hideDatasetSchema ? null : {
     '@type': 'Dataset',
     '@id': `${canonicalUrl}#calendar-dataset`,
@@ -508,7 +533,7 @@ if (!isStatePage && district.value) {
     inLanguage: 'en-US',
     ...(pageDateCreated ? { dateCreated: pageDateCreated } : {}),
     ...(pageDateModified ? { dateModified: pageDateModified } : {}),
-    temporalCoverage: cal ? `${cal.firstDay}/${cal.lastDay}` : undefined,
+    temporalCoverage: datasetTemporalCoverage,
     creator: { '@id': 'https://myschooldates.com/#organization' },
     publisher: { '@id': 'https://myschooldates.com/#organization' },
     provider: { '@id': 'https://myschooldates.com/#organization' },
@@ -522,8 +547,33 @@ if (!isStatePage && district.value) {
         encodingFormat: 'text/calendar',
         contentUrl: calendarIcsUrl,
       } : null,
+      sourcePdfUrl ? {
+        '@type': 'DataDownload',
+        name: `${schemaCalendarName} official PDF`,
+        description: `Official ${currentYear} calendar PDF used as a source for this ${meta.value!.shortName ?? meta.value!.name} calendar dataset.`,
+        encodingFormat: 'application/pdf',
+        contentUrl: sourcePdfUrl,
+      } : null,
+      printablePdfUrl ? {
+        '@type': 'DataDownload',
+        name: `${schemaCalendarName} printable PDF`,
+        description: `Printable PDF generated by MySchoolDates from the reviewed ${meta.value!.shortName ?? meta.value!.name} ${currentYear} calendar records.`,
+        encodingFormat: 'application/pdf',
+        contentUrl: printablePdfUrl,
+      } : null,
     ].filter(Boolean),
   }
+  const yearPageLinks = (allCals.value ?? [])
+    .filter(y => y.schoolYear !== currentYear)
+    .map(y => `https://myschooldates.com/${slug}/${y.schoolYear}`)
+  const webPageParts = [
+    ...(faqs.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
+    ...yearPageLinks.map((url) => ({
+      '@type': 'WebPage',
+      url,
+      name: `${meta.value!.name} Calendar ${url.split('/').pop()}`,
+    })),
+  ]
   const webPageEntity = {
     '@type': 'WebPage',
     '@id': `${canonicalUrl}#webpage`,
@@ -535,13 +585,16 @@ if (!isStatePage && district.value) {
     ...(pageDateModified ? { dateModified: pageDateModified } : {}),
     ...(pageDatePublished ? { datePublished: pageDatePublished } : {}),
     publisher: { '@id': 'https://myschooldates.com/#organization' },
+    author: { '@id': 'https://myschooldates.com/#education-research-team' },
+    reviewedBy: { '@id': 'https://myschooldates.com/#education-research-team' },
     about: { '@id': districtAbout['@id'] },
     ...(datasetEntity
       ? { mainEntity: { '@id': `${canonicalUrl}#calendar-dataset` } }
       : itemListEvents.value.length
         ? { mainEntity: { '@id': `${canonicalUrl}#key-dates` } }
         : {}),
-    ...(faqs.value.length ? { hasPart: { '@id': `${canonicalUrl}#faq` } } : {}),
+    ...(webPageParts.length ? { hasPart: webPageParts } : {}),
+    ...(yearPageLinks.length ? { relatedLink: yearPageLinks } : {}),
     ...(basedOnUrl ? { isBasedOn: { '@id': `${canonicalUrl}#source-calendar` } } : {}),
     ...(sourcePdfIsArchivedCopy ? {
       associatedMedia: {
@@ -582,6 +635,7 @@ if (!isStatePage && district.value) {
         item: {
           '@type': 'Event',
           name: event.name,
+          ...(event.description ? { description: event.description } : {}),
           startDate: range.start,
           ...(range.end !== range.start ? { endDate: range.end } : {}),
           eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
@@ -600,7 +654,8 @@ if (!isStatePage && district.value) {
         }).filter(Boolean)),
       ]
     : []
-  const comparisonItemListEntity = comparisonItems.length > 1 ? {
+  const includeComparisonSchema = (district.value as any)?.includeComparisonSchema !== false && (cal as any)?.includeComparisonSchema !== false
+  const comparisonItemListEntity = includeComparisonSchema && comparisonItems.length > 1 ? {
     '@type': 'ItemList',
     '@id': `${canonicalUrl}#nearby-calendar-comparison`,
     name: `${meta.value!.name} nearby district calendar comparison`,
@@ -629,6 +684,7 @@ if (!isStatePage && district.value) {
         '@context': 'https://schema.org',
         '@graph': [
           sitePublisher,
+          reviewTeamEntity,
           siteEntity,
           districtAbout,
           ...(sourceCalendarEntity ? [sourceCalendarEntity] : []),
@@ -1018,7 +1074,7 @@ if (!isStatePage && district.value) {
 
         <div class="rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p class="text-sm text-blue-900">
-            Need a saved copy? Download the calendar file or open the official PDF after reviewing the key dates.
+            Need a saved copy? Download the calendar file or open the printable PDF after reviewing the key dates.
           </p>
           <div class="flex flex-wrap gap-2">
             <a
@@ -1028,13 +1084,13 @@ if (!isStatePage && district.value) {
               Download Calendar File
             </a>
             <a
-              v-if="(cal as any).sourcePdfUrl"
-              :href="(cal as any).sourcePdfUrl"
+              v-if="(cal as any).sourcePdfUrl || (cal as any).printablePdfUrl"
+              :href="(cal as any).sourcePdfUrl || (cal as any).printablePdfUrl"
               target="_blank"
               rel="noopener"
               class="inline-flex items-center justify-center rounded-lg border border-blue-200 bg-white px-3 py-2 text-sm font-semibold text-blue-700 hover:border-blue-300 hover:bg-blue-50 transition-colors"
             >
-              View Official PDF
+              {{ (cal as any).sourcePdfUrl ? 'View Official PDF' : 'Download Printable PDF' }}
               <span class="sr-only">(opens in a new tab)</span>
             </a>
           </div>
@@ -1047,9 +1103,6 @@ if (!isStatePage && district.value) {
           <a href="#comparison" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Comparison</a>
           <a href="#faq" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">FAQ</a>
         </nav>
-
-        <!-- Custom Sections: afterKeyDates -->
-        <DistrictCustomSections :sections="customSections" position="afterKeyDates" />
 
         <!-- Today Status -->
         <DistrictTodayStatus :cal="cal">
@@ -1067,8 +1120,8 @@ if (!isStatePage && district.value) {
                 Add school dates
               </a>
               <a
-                v-if="(cal as any).sourcePdfUrl"
-                :href="(cal as any).sourcePdfUrl"
+                v-if="(cal as any).sourcePdfUrl || (cal as any).printablePdfUrl"
+                :href="(cal as any).sourcePdfUrl || (cal as any).printablePdfUrl"
                 target="_blank"
                 rel="noopener"
                 class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 text-sm font-medium rounded-lg transition-colors"
@@ -1076,7 +1129,7 @@ if (!isStatePage && district.value) {
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10M7 11h10M7 15h6M6 3h8l4 4v14H6V3z" />
                 </svg>
-                View official PDF
+                {{ (cal as any).sourcePdfUrl ? 'View official PDF' : 'Printable PDF' }}
                 <span class="sr-only">(opens in a new tab)</span>
               </a>
             </div>
@@ -1091,6 +1144,9 @@ if (!isStatePage && district.value) {
           :district="district"
           :cal="cal"
         />
+
+        <!-- Custom Sections: afterKeyDates -->
+        <DistrictCustomSections :sections="customSections" position="afterKeyDates" />
 
         <!-- All Dates -->
         <DistrictAllDates

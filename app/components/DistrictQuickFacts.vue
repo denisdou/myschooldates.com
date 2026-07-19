@@ -412,7 +412,7 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
   if (pool.springBreakStart) {
     raw.push({ key: 'springBreakDate', value: fmt(pool.springBreakStart), label: 'Spring Break', score: 114 })
   }
-  raw.push({ key: 'noSchoolDayCount', value: String(pool.noSchoolDayCount), label: 'Student No-School Days', score: 112 })
+  raw.push({ key: 'noSchoolDayCount', value: String(pool.noSchoolDayCount), label: 'Listed Student No-School Dates', score: 112 })
   raw.push({ key: 'instructionalDays', value: String(pool.instructionalDays), label: 'School Days', score: 110 })
   // instructionWeeks omitted — low user value; staff calendar length is more actionable.
   if (pool.nextStudentDayOff) {
@@ -485,6 +485,13 @@ const metricPool = computed(() => {
 
 const facts = computed(() => {
   if (!metricPool.value || !props.district) return []
+  if (Array.isArray(props.cal?.quickFacts) && props.cal.quickFacts.length) {
+    return props.cal.quickFacts.slice(0, 6).map((fact: any, index: number) => ({
+      key: `customQuickFact_${index}`,
+      value: String(fact.value),
+      label: String(fact.label),
+    }))
+  }
   return scoreQuickFacts(metricPool.value, props.district.slug)
 })
 </script>
@@ -515,6 +522,6 @@ const facts = computed(() => {
       <span v-if="verifiedDate" class="ml-1 text-green-600 font-medium">· Last reviewed {{ verifiedDate }}</span>
       <span v-else class="ml-1 text-gray-400">· Not yet verified against official source</span>
     </div>
-    <p class="text-xs text-gray-400 mt-1.5">Counts include listed weekday student no-school dates between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instructional weeks are approximate.</p>
+    <p class="text-xs text-gray-400 mt-1.5">Listed student no-school date counts include weekday no-school dates shown between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instructional weeks are approximate.</p>
   </div>
 </template>

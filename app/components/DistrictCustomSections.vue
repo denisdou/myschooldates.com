@@ -6,6 +6,8 @@ const props = defineProps<{
     content: string
     position?: string
     groups?: { label: string; items: string[] }[]
+    links?: { label: string; to: string; description?: string }[]
+    table?: { columns: string[]; rows: string[][] }
   }[]
   position: string
 }>()
@@ -35,6 +37,44 @@ const filtered = computed(() => {
         </div>
       </div>
       <p v-else class="text-sm text-gray-600 leading-relaxed">{{ section.content }}</p>
+      <div v-if="section.table?.columns?.length && section.table?.rows?.length" class="mt-4 overflow-x-auto rounded-lg border border-gray-200">
+        <table class="min-w-full divide-y divide-gray-200 text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th
+                v-for="column in section.table.columns"
+                :key="column"
+                scope="col"
+                class="px-4 py-2 text-left text-xs font-semibold uppercase tracking-wide text-gray-500"
+              >
+                {{ column }}
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100 bg-white">
+            <tr v-for="(row, rowIndex) in section.table.rows" :key="rowIndex">
+              <td
+                v-for="(cell, cellIndex) in row"
+                :key="`${rowIndex}-${cellIndex}`"
+                class="px-4 py-2 text-gray-700"
+              >
+                {{ cell }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div v-if="section.links?.length" class="mt-4 grid gap-3 sm:grid-cols-2">
+        <NuxtLink
+          v-for="link in section.links"
+          :key="link.to"
+          :to="link.to"
+          class="rounded-lg border border-gray-200 px-4 py-3 hover:border-blue-300 hover:bg-blue-50 transition-colors"
+        >
+          <span class="block text-sm font-semibold text-gray-900">{{ link.label }}</span>
+          <span v-if="link.description" class="mt-1 block text-xs text-gray-600 leading-relaxed">{{ link.description }}</span>
+        </NuxtLink>
+      </div>
     </div>
   </template>
 </template>

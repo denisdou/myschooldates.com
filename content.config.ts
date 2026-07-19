@@ -36,12 +36,23 @@ const customSectionGroupSchema = z.object({
   label: z.string(),
   items: z.array(z.string()),
 })
+const customSectionLinkSchema = z.object({
+  label: z.string(),
+  to: z.string(),
+  description: z.string().optional(),
+})
+const customSectionTableSchema = z.object({
+  columns: z.array(z.string()),
+  rows: z.array(z.array(z.string())),
+})
 const customSectionSchema = z.object({
   id: z.string(),
   label: z.string(),
   content: z.string(),
   position: z.string().optional(), // 'afterAbout' | 'afterFaq' | 'afterPlanningTips' | 'beforeSources'
   groups: z.array(customSectionGroupSchema).optional(),
+  links: z.array(customSectionLinkSchema).optional(),
+  table: customSectionTableSchema.optional(),
 })
 const gradingPeriodSchema = z.object({
   label: z.string(),
@@ -114,8 +125,10 @@ export default defineContentConfig({
         sources: z.array(districtSourceSchema).optional(),
         // Section customization
         hiddenSections: z.array(z.string()).optional(),
+        includeComparisonSchema: z.boolean().optional(),
         faqLimit: z.number().optional(),
         faqSchemaLimit: z.number().optional(),
+        faqSchemaExclude: z.array(z.string()).optional(),
         customSections: z.array(customSectionSchema).optional(),
       }),
     }),
@@ -147,27 +160,37 @@ export default defineContentConfig({
         schoolYear: z.string(),
         firstDay: z.string(),
         lastDay: z.string(),
+        temporalCoverageStart: z.string().optional(),
+        temporalCoverageEnd: z.string().optional(),
         totalSchoolDays: z.number().optional(),
         teacherWorkDays: z.number().optional(),
         semesters: z.number().optional(),
         sourceUrl: z.string().optional(),      // alias: sourcePageUrl (stable hub, district-level)
-        sourcePdfUrl: z.string().optional(),   // direct PDF for this school year (changes annually)
+        sourcePdfUrl: z.string().optional(),   // direct official PDF for this school year (changes annually)
+        printablePdfUrl: z.string().optional(), // MySchoolDates-generated printable PDF for this school year
         lastVerifiedAt: z.string().optional(), // ISO date: when data was last verified against official source
         dateCreated: z.string().optional(),
         datePublished: z.string().optional(),
         dateModified: z.string().optional(),
         sourceVersion: z.string().optional(),
         hideSemesterCount: z.boolean().optional(),
+        quickFacts: z.array(z.object({
+          label: z.string(),
+          value: z.string(),
+        })).optional(),
         yearNumbersMode: z.enum(['compact']).optional(),
         instructionalDaysLabel: z.string().optional(),
         instructionalDaysDescription: z.string().optional(),
         pageHeading: z.string().optional(),
         faqLimit: z.number().optional(),
         faqSchemaLimit: z.number().optional(),
+        faqSchemaExclude: z.array(z.string()).optional(),
         hiddenSections: z.array(z.string()).optional(),
+        includeComparisonSchema: z.boolean().optional(),
         hideDatasetSchema: z.boolean().optional(),
         itemListMode: z.enum(['keyDates', 'allImportantDates']).optional(),
         gradingPeriods: z.array(gradingPeriodSchema).optional(),
+        heroSummary: z.string().optional(),
         calendarNotes: z.string().optional(),  // year-specific narrative (moved from districts/)
         calendarType: z.enum(['traditional', 'year-round', 'magnet', 'international', 'early-college', 'alternative']).optional(),
         alternateCalendars: z.array(z.object({
