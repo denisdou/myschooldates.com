@@ -19,7 +19,7 @@ const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' 
       MySchoolDates is an independent calendar reference and is not affiliated with {{ districtName }}.
       Calendar dates are based on {{ districtName }}'s official {{ year }} calendar.
       <template v-if="verifiedDate"> Calendar data checked against the official district source on {{ verifiedDate }}.</template>
-      <template v-else> Not yet independently reviewed against the official source.</template>
+      <template v-else> Not yet checked against the official source.</template>
     </p>
     <ul class="space-y-1.5 mb-3">
       <li v-for="src in sources" :key="src.label" class="flex items-start gap-2 text-xs text-gray-500">
@@ -50,8 +50,8 @@ const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' 
         <template v-if="sourcePdfUrl && isArchivedPdfCopy"> · Archived official PDF copy stored by MySchoolDates</template>
       </p>
       <p v-if="verifiedDate">
-        <span class="font-medium text-gray-600">Reviewed by:</span>
-        MySchoolDates Education Research Team · Calendar Data Team ·
+        <span class="font-medium text-gray-600">Maintained by:</span>
+        MySchoolDates Calendar Data Team ·
         <NuxtLink to="/calendar-verification-methodology" class="font-medium text-blue-600 hover:text-blue-800 underline">
           Verification Methodology
         </NuxtLink>

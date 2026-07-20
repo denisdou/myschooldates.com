@@ -96,6 +96,19 @@ const canonicalUrl = isCurrentYear ? hubUrl : `${hubUrl}/${year}`
 const availableYears = computed(() => yearOptions.value ?? [])
 const yearLink = (y: string) => y === district.value!.currentSchoolYear ? `/${slug}` : `/${slug}/${y}`
 
+function eventSchemaLocation() {
+  return {
+    '@type': 'Place',
+    name: `${district.value!.name} districtwide calendar`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: district.value!.city ?? '',
+      addressRegion: (district.value as any).stateCode ?? district.value!.state,
+      addressCountry: district.value!.country ?? 'US',
+    },
+  }
+}
+
 const today = new Date(); today.setHours(0, 0, 0, 0)
 const todayStr = (() => {
   const y = today.getFullYear()
@@ -218,7 +231,7 @@ const _descTemplates = [
   // A — PDF + key dates (~130 chars)
   `${_sn} Calendar ${year} with holidays${_hasSpring ? ', spring break' : ''} and key dates. Download the official PDF or calendar import file.`,
   // B — verified + download (~125 chars)
-  `${_sn} Calendar ${year}: first day ${_fd}, last day ${_ld}${_hasSpring ? ', spring break' : ''}. Verified. Download the PDF or .ics calendar file.`,
+  `${_sn} Calendar ${year}: first day ${_fd}, last day ${_ld}${_hasSpring ? ', spring break' : ''}. Checked against district source. Download the PDF or .ics calendar file.`,
   // C — user benefit (~135 chars)
   `${_sn} Calendar ${year} — verified holidays${_hasSpring ? ', spring break' : ''}, key dates, and official PDF download. Works with Google Calendar.`,
   // D — ICS/sync (~130 chars)
@@ -255,7 +268,7 @@ const sitePublisher = {
 const reviewTeamEntity = {
   '@type': 'Organization',
   '@id': 'https://myschooldates.com/#education-research-team',
-  name: 'MySchoolDates Education Research Team',
+  name: 'MySchoolDates Calendar Data Team',
   url: 'https://myschooldates.com/calendar-verification-methodology',
   parentOrganization: { '@id': 'https://myschooldates.com/#organization' },
 }
@@ -327,7 +340,7 @@ const datasetEntity = hideDatasetSchema.value ? null : {
     {
       '@type': 'DataDownload',
       name: `${schemaCalendarName} calendar file`,
-      description: `Calendar import file generated from the verified official ${district.value.shortName ?? district.value.name} calendar dates used for this page.`,
+      description: `Calendar import file generated from ${district.value.shortName ?? district.value.name} dates checked against the public official district source used for this page.`,
       encodingFormat: 'text/calendar',
       contentUrl: calendarIcsUrl,
     },
@@ -355,7 +368,7 @@ const keyDateItemListEvents = computed(() => {
   if ((cal.value as any)?.itemListMode === 'allImportantDates') {
     return (cal.value?.events ?? []).filter((event: any) => event.type !== 'break_end')
   }
-  return (cal.value?.events ?? []).filter((event: any) => HIGHLIGHT_TYPES.has(event.type))
+  return (cal.value?.events ?? []).filter((event: any) => HIGHLIGHT_TYPES.has(event.type) || event.schemaEvent === true)
 })
 const webPageEntity = {
   '@type': 'WebPage',
@@ -369,7 +382,6 @@ const webPageEntity = {
   ...(pageDatePublished ? { datePublished: pageDatePublished } : {}),
   publisher: { '@id': 'https://myschooldates.com/#organization' },
   author: { '@id': 'https://myschooldates.com/#education-research-team' },
-  reviewedBy: { '@id': 'https://myschooldates.com/#education-research-team' },
   about: { '@id': districtAbout['@id'] },
   ...(datasetEntity
     ? { mainEntity: { '@id': `${canonicalUrl}#calendar-dataset` } }
@@ -422,9 +434,10 @@ const keyDateItemListEntity = keyDateItemListEvents.value.length ? {
         name: event.name,
         ...(event.description ? { description: event.description } : {}),
         startDate: range.start,
-        ...(range.end !== range.start ? { endDate: range.end } : {}),
+        endDate: range.end,
         eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
         eventStatus: 'https://schema.org/EventScheduled',
+        location: eventSchemaLocation(),
         organizer: { '@id': districtAbout['@id'] },
       },
     }
@@ -543,7 +556,7 @@ useHead({
             <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
             </svg>
-            <span>Calendar data checked against official source · Reviewed by MySchoolDates Education Research Team · Updated {{ verifiedDate }} · Verified {{ verifiedDate }}</span>
+            <span>Checked against publicly available official district source · Maintained by MySchoolDates · Last checked {{ verifiedDate }}</span>
           </div>
           <div v-if="verifiedDate" class="mt-3 rounded-xl border border-gray-200 bg-white p-3">
             <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">Verification process</p>
@@ -558,10 +571,11 @@ useHead({
               </li>
               <li class="flex items-start gap-1.5">
                 <span class="mt-0.5 text-green-600">✓</span>
-                <span>Calendar file generated from verified records</span>
+                <span>Calendar file generated from checked records</span>
               </li>
             </ul>
           </div>
+          <DistrictCustomSections :sections="customSections" position="afterVerification" />
         </div>
       </div>
 
@@ -647,6 +661,7 @@ useHead({
         :all-districts="allDistricts ?? []"
         :prev-cal="prevCal ?? undefined"
       />
+      <DistrictCustomSections :sections="customSections" position="afterQuickFacts" />
 
       <!-- Custom Sections: afterKeyDates -->
       <DistrictCustomSections :sections="customSections" position="afterKeyDates" />
@@ -660,6 +675,9 @@ useHead({
         :verified-date="verifiedDate"
         :mode="allDatesMode"
       />
+
+      <!-- Custom Sections: afterBreaks (year pages render this after the full date list) -->
+      <DistrictCustomSections :sections="customSections" position="afterBreaks" />
 
       <!-- Other Official Calendars -->
       <DistrictOtherCalendars
@@ -676,10 +694,11 @@ useHead({
 
       <!-- What's Different This Year -->
       <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal!" :prev-cal="prevCal ?? undefined" />
+      <DistrictCustomSections :sections="customSections" position="afterYearDiff" />
 
       <!-- Year Switcher -->
       <div v-if="availableYears.length > 1" class="flex items-center gap-2 flex-wrap">
-        <span class="text-sm text-gray-500">Other years:</span>
+        <span class="text-sm text-gray-500">Previous / next calendars:</span>
         <NuxtLink
           v-for="y in availableYears"
           :key="y"

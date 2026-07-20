@@ -172,6 +172,10 @@ const monthGroups = computed(() => {
   return groups
 })
 
+function monthAnchor(key: string) {
+  return `dates-${key}`
+}
+
 function formatDateRange(event: DisplayEvent) {
   if (event.startDate === event.endDate) return formatDate(event.startDate)
 
@@ -238,6 +242,20 @@ function formatRangeEnd(event: DisplayEvent) {
           {{ item.label }}
         </span>
       </div>
+      <nav
+        v-if="monthGroups.length > 1"
+        aria-label="Jump to month"
+        class="mt-4 flex gap-2 overflow-x-auto pb-1"
+      >
+        <a
+          v-for="group in monthGroups"
+          :key="group.key"
+          :href="`#${monthAnchor(group.key)}`"
+          class="inline-flex flex-shrink-0 items-center rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 text-xs font-medium text-gray-600 transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+        >
+          {{ group.label.split(' ')[0] }}
+        </a>
+      </nav>
     </div>
     <div>
       <div
@@ -245,7 +263,12 @@ function formatRangeEnd(event: DisplayEvent) {
         :key="group.key"
         class="border-b border-gray-100 last:border-b-0"
       >
-        <div class="px-6 py-3 bg-gray-50 text-xs font-semibold text-gray-500 uppercase tracking-widest">{{ group.label }}</div>
+        <div
+          :id="monthAnchor(group.key)"
+          class="px-6 py-3 bg-gray-50 text-xs font-semibold text-gray-500 uppercase tracking-widest scroll-mt-24"
+        >
+          {{ group.label }}
+        </div>
         <div class="divide-y divide-gray-50">
           <div
             v-for="event in group.events"

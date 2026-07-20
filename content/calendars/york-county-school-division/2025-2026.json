@@ -1,0 +1,75 @@
+{
+  "institutionId": "york-county-school-division",
+  "schoolYear": "2025-2026",
+  "firstDay": "2025-08-25",
+  "lastDay": "2026-06-10",
+  "sourceUrl": "https://yorkcountyschools.org/aboutUs/calendar/default.aspx",
+  "lastVerifiedAt": "2026-07-20",
+  "datePublished": "2026-07-20",
+  "dateModified": "2026-07-20",
+  "calendarType": "traditional",
+  "yearNumbersMode": "compact",
+  "hideDatasetSchema": true,
+  "seoTitle": "York County School Division Calendar 2025-2026: Holidays & Breaks",
+  "seoDescription": "York County School Division 2025-2026 calendar with Aug 25 first day, Jun 10 last day, holidays, winter break, spring break, and early releases.",
+  "calendarNotes": "York County School Division starts the 2025-2026 school year on August 25, 2025 and ends on June 10, 2026. No official PDF URL was provided for this school year, so this page uses the official YCSD calendar page as the source of record. The calendar includes student holidays, schools and offices closed dates, early releases, quarter starts, interims, report cards, winter break, spring break, and make-up day notes.",
+  "calendarFaqs": [
+    {
+      "q": "When does York County School Division start school in 2025?",
+      "a": "The first day of school is Monday, August 25, 2025."
+    },
+    {
+      "q": "When is York County School Division Spring Break in 2026?",
+      "a": "Spring Break runs Monday, April 6 through Friday, April 10, 2026."
+    },
+    {
+      "q": "When is the last day of school for York County School Division in 2026?",
+      "a": "The last day of school is Wednesday, June 10, 2026."
+    },
+    {
+      "q": "Why is there no PDF link for the YCSD 2025-2026 calendar?",
+      "a": "No official PDF URL was provided for this school year. The page links to the official YCSD calendar webpage instead."
+    }
+  ],
+  "yearNumbers": [
+    {
+      "label": "First Day",
+      "value": "Aug 25",
+      "detail": "The first day of school is August 25, 2025."
+    },
+    {
+      "label": "Spring Break",
+      "value": "Apr 6-10",
+      "detail": "Spring Break runs April 6-10, 2026."
+    },
+    {
+      "label": "Last Day",
+      "value": "Jun 10",
+      "detail": "The last day of school is June 10, 2026."
+    }
+  ],
+  "events": [
+    { "date": "2025-08-25", "name": "First Day of School", "type": "school_start" },
+    { "date": "2025-08-25", "name": "First Quarter Begins", "type": "academic" },
+    { "date": "2025-08-29", "name": "Student Holiday", "type": "student_holiday" },
+    { "date": "2025-09-01", "name": "Schools and Offices Closed", "type": "holiday" },
+    { "date": "2025-10-03", "name": "Student Holiday", "type": "student_holiday" },
+    { "date": "2025-11-03", "name": "Student Holiday", "type": "student_holiday" },
+    { "date": "2025-11-04", "name": "Student Holiday; Second Quarter Begins", "type": "academic" },
+    { "date": "2025-11-26", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-11-28", "name": "Thanksgiving Break End", "type": "break_end" },
+    { "date": "2025-12-22", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-01-02", "name": "Winter Break End", "type": "break_end" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2026-01-26", "name": "Student Holiday", "type": "student_holiday" },
+    { "date": "2026-01-27", "name": "Third Quarter Begins", "type": "academic" },
+    { "date": "2026-02-16", "name": "Presidents' Day", "type": "holiday" },
+    { "date": "2026-03-06", "name": "Student Holiday", "type": "student_holiday" },
+    { "date": "2026-04-03", "name": "Early Release Day", "type": "early_release" },
+    { "date": "2026-04-06", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-04-10", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2026-04-13", "name": "Fourth Quarter Begins", "type": "academic" },
+    { "date": "2026-05-25", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2026-06-10", "name": "Last Day of School; Early Release Day", "type": "school_end" }
+  ]
+}

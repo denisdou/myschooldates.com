@@ -20,7 +20,7 @@ const sourceUrl = computed(() => props.cal?.sourceUrl ?? props.district?.officia
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
       <div class="text-sm text-gray-600 space-y-1">
-        <p class="font-medium text-gray-700">Dates not yet verified</p>
+        <p class="font-medium text-gray-700">Dates not yet checked</p>
         <p>
           These dates have not been confirmed against the official {{ year }} calendar.
           Always check the
@@ -49,7 +49,7 @@ const sourceUrl = computed(() => props.cal?.sourceUrl ?? props.district?.officia
           </a>.
           Dates are subject to board approval and may change — always confirm before making travel or childcare plans.
         </p>
-        <p class="text-green-600 text-xs">Last verified: {{ verifiedDate }}</p>
+        <p class="text-green-600 text-xs">Last checked: {{ verifiedDate }}</p>
       </div>
     </div>
   </div>

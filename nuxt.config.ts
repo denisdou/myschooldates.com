@@ -56,6 +56,7 @@ export default defineNuxtConfig({
         '/garland-independent-school-district-calendar',
         '/garden-grove-unified-school-district-calendar',
         '/guilford-county-school-calendar',
+        '/hampton-city-schools-calendar',
         '/hillsborough-county-school-calendar',
         '/houston-independent-school-district-calendar',
         '/long-beach-unified-school-district-calendar',
@@ -63,6 +64,7 @@ export default defineNuxtConfig({
         '/lewisville-independent-school-district-calendar',
         '/loudoun-county-school-calendar',
         '/miami-dade-school-calendar',
+        '/newport-news-public-schools-calendar',
         '/northside-independent-school-district-calendar',
         '/orange-county-school-calendar',
         '/palm-beach-county-school-calendar',
@@ -72,6 +74,7 @@ export default defineNuxtConfig({
         '/polk-county-school-calendar',
         '/prince-william-county-school-calendar',
         '/riverside-unified-school-district-calendar',
+        '/roanoke-county-public-schools-calendar',
         '/sacramento-city-unified-school-calendar',
         '/santa-ana-unified-school-district-calendar',
         '/san-bernardino-city-unified-school-district-calendar',
@@ -84,6 +87,8 @@ export default defineNuxtConfig({
         '/san-diego-unified-school-district-calendar',
         '/virginia-beach-school-calendar',
         '/wake-county-school-calendar',
+        '/williamsburg-james-city-county-schools-calendar',
+        '/york-county-school-division-calendar',
         '/winston-salem-forsyth-school-calendar',
         '/plano-independent-school-district-calendar',
         '/henrico-county-school-calendar',
@@ -150,6 +155,9 @@ export default defineNuxtConfig({
         '/guilford-county-school-calendar/2026-2027',
         '/guilford-county-school-calendar/2027-2028',
 
+        '/hampton-city-schools-calendar/2025-2026',
+        '/hampton-city-schools-calendar/2026-2027',
+
         '/hillsborough-county-school-calendar/2025-2026',
         '/hillsborough-county-school-calendar/2026-2027',
 
@@ -172,6 +180,9 @@ export default defineNuxtConfig({
 
         '/miami-dade-school-calendar/2025-2026',
         '/miami-dade-school-calendar/2026-2027',
+
+        '/newport-news-public-schools-calendar/2025-2026',
+        '/newport-news-public-schools-calendar/2026-2027',
 
         '/northside-independent-school-district-calendar/2025-2026',
         '/northside-independent-school-district-calendar/2026-2027',
@@ -208,6 +219,10 @@ export default defineNuxtConfig({
         '/riverside-unified-school-district-calendar/2026-2027',
         '/riverside-unified-school-district-calendar/2027-2028',
         '/riverside-unified-school-district-calendar/2028-2029',
+
+        '/roanoke-county-public-schools-calendar/2025-2026',
+        '/roanoke-county-public-schools-calendar/2026-2027',
+        '/roanoke-county-public-schools-calendar/2027-2028',
 
         '/sacramento-city-unified-school-calendar/2025-2026',
         '/sacramento-city-unified-school-calendar/2026-2027',
@@ -246,6 +261,13 @@ export default defineNuxtConfig({
         '/wake-county-school-calendar/2025-2026',
         '/wake-county-school-calendar/2026-2027',
         '/wake-county-school-calendar/2027-2028',
+
+        '/williamsburg-james-city-county-schools-calendar/2025-2026',
+        '/williamsburg-james-city-county-schools-calendar/2026-2027',
+        '/williamsburg-james-city-county-schools-calendar/2027-2028',
+
+        '/york-county-school-division-calendar/2025-2026',
+        '/york-county-school-division-calendar/2026-2027',
 
         '/winston-salem-forsyth-school-calendar/2025-2026',
         '/winston-salem-forsyth-school-calendar/2026-2027',

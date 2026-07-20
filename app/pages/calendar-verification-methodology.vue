@@ -47,7 +47,17 @@ useHead({
     </section>
 
     <section class="mb-10">
-      <h2 class="text-xl font-semibold text-gray-900 mb-3">4. Publish Searchable and Downloadable Formats</h2>
+      <h2 class="text-xl font-semibold text-gray-900 mb-3">4. Maintain Independent Source Attribution</h2>
+      <p class="text-gray-600 leading-relaxed mb-3">
+        MySchoolDates is an independent calendar reference. We do not claim to be an official school district website, and we identify the district source of record on each calendar page so families can verify high-impact plans directly with the district.
+      </p>
+      <p class="text-gray-600 leading-relaxed">
+        When a page includes planning notes, FAQ answers, or downloadable calendar files, those additions are maintained by MySchoolDates and are separate from the official district publication.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-gray-900 mb-3">5. Publish Searchable and Downloadable Formats</h2>
       <p class="text-gray-600 leading-relaxed mb-3">
         Once verified, the calendar is published as a district page with visible dates, FAQ answers, source links, structured data, and an optional .ics calendar import file.
       </p>
@@ -57,12 +67,22 @@ useHead({
     </section>
 
     <section class="mb-10">
-      <h2 class="text-xl font-semibold text-gray-900 mb-3">5. Track Updates and Corrections</h2>
+      <h2 class="text-xl font-semibold text-gray-900 mb-3">6. Track Updates and Corrections</h2>
       <p class="text-gray-600 leading-relaxed mb-3">
         District calendars can change after publication because of weather, board decisions, staffing needs, or emergency closures. When we identify a revised official source, we update the affected date records and refresh the page review date.
       </p>
       <p class="text-gray-600 leading-relaxed">
         Families should still verify high-impact plans such as travel, childcare, transportation, graduation, athletics, and school-specific events with the district or assigned school.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-gray-900 mb-3">7. Update Frequency</h2>
+      <p class="text-gray-600 leading-relaxed mb-3">
+        We refresh a district calendar when a new school year source is published, when an official source is revised, or when a correction report points to a public district update. The page review date reflects the most recent source check for that school-year record.
+      </p>
+      <p class="text-gray-600 leading-relaxed">
+        We do not change review dates just to make pages appear newer. Review dates should correspond to a source check, data correction, or calendar refresh.
       </p>
     </section>
 

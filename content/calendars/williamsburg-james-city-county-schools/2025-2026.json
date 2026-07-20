@@ -1,0 +1,86 @@
+{
+  "institutionId": "williamsburg-james-city-county-schools",
+  "schoolYear": "2025-2026",
+  "firstDay": "2025-08-25",
+  "lastDay": "2026-06-10",
+  "sourceUrl": "https://wjccschools.org/calendar/",
+  "sourcePdfUrl": "https://wjccschools.org/wp-content/uploads/2021/07/2025-26-Academic-Calendar.pdf",
+  "lastVerifiedAt": "2026-07-20",
+  "datePublished": "2026-07-20",
+  "dateModified": "2026-07-20",
+  "calendarType": "traditional",
+  "hideSemesterCount": true,
+  "yearNumbersMode": "compact",
+  "seoTitle": "WJCC Schools Calendar 2025-2026: Holidays, Breaks & PDF",
+  "seoDescription": "Williamsburg-James City County Schools 2025-2026 calendar with Aug 25 first day, Jun 10 last day, holidays, winter break, spring break, PDF and ICS.",
+  "calendarNotes": "Williamsburg-James City County Public Schools starts the 2025-2026 school year on August 25, 2025. Winter Break runs December 22-January 3, Spring Break runs April 6-10, and the last day of school is June 10, 2026. The calendar also lists family conferences, student holidays, marking period starts, report cards, early releases, and make-up day notes.",
+  "calendarFaqs": [
+    {
+      "q": "When does WJCC start school in 2025?",
+      "a": "The first day of school is Monday, August 25, 2025."
+    },
+    {
+      "q": "When is WJCC Spring Break in 2026?",
+      "a": "Spring Break runs Monday, April 6 through Friday, April 10, 2026."
+    },
+    {
+      "q": "When is the last day of school for WJCC in 2026?",
+      "a": "The last day of school is Wednesday, June 10, 2026."
+    },
+    {
+      "q": "When are WJCC early release days near the end of 2025-2026?",
+      "a": "Grades 9-12 have early release on June 5 and June 8, and all Pre-K-12 students have early release on June 9 and June 10."
+    }
+  ],
+  "yearNumbers": [
+    {
+      "label": "First Day",
+      "value": "Aug 25",
+      "detail": "The first day of school is August 25, 2025."
+    },
+    {
+      "label": "Spring Break",
+      "value": "Apr 6-10",
+      "detail": "Spring Break runs April 6-10, 2026."
+    },
+    {
+      "label": "Last Day",
+      "value": "Jun 10",
+      "detail": "The last day of school is June 10, 2026."
+    }
+  ],
+  "events": [
+    { "date": "2025-08-25", "name": "First Day of School", "type": "school_start" },
+    { "date": "2025-08-29", "name": "Student/Teacher Holiday", "type": "student_holiday" },
+    { "date": "2025-09-01", "name": "Labor Day - Schools and Offices Closed", "type": "holiday" },
+    { "date": "2025-09-19", "name": "Student Holiday - K-5", "type": "student_holiday" },
+    { "date": "2025-10-03", "name": "Student Holiday - Pre-K-12", "type": "student_holiday" },
+    { "date": "2025-10-30", "name": "Start of Second Marking Period", "type": "academic" },
+    { "date": "2025-11-03", "name": "Family Conferences - Student Holiday", "type": "no_school" },
+    { "date": "2025-11-04", "name": "Family Conferences - Student Holiday", "type": "no_school" },
+    { "date": "2025-11-13", "name": "Report Cards", "type": "academic" },
+    { "date": "2025-11-26", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-11-28", "name": "Thanksgiving Break End", "type": "break_end" },
+    { "date": "2025-12-08", "name": "Student Holiday - K-5", "type": "student_holiday" },
+    { "date": "2025-12-22", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-01-03", "name": "Winter Break End", "type": "break_end" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Holiday - Schools and Offices Closed", "type": "holiday" },
+    { "date": "2026-01-26", "name": "Student Holiday - Pre-K-12", "type": "student_holiday" },
+    { "date": "2026-01-27", "name": "Start of Third Marking Period", "type": "academic" },
+    { "date": "2026-02-05", "name": "Report Cards", "type": "academic" },
+    { "date": "2026-02-16", "name": "Presidents' Day - Schools and Offices Closed", "type": "holiday" },
+    { "date": "2026-03-30", "name": "Start of Fourth Marking Period", "type": "academic" },
+    { "date": "2026-04-03", "name": "Early Release - Pre-K-12", "type": "early_release" },
+    { "date": "2026-04-06", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-04-10", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2026-04-16", "name": "Report Cards", "type": "academic" },
+    { "date": "2026-04-21", "name": "Asynchronous Remote Learning Day", "type": "academic" },
+    { "date": "2026-05-25", "name": "Memorial Day - Schools and Offices Closed", "type": "holiday" },
+    { "date": "2026-06-05", "name": "Early Release - Grades 9-12", "type": "early_release" },
+    { "date": "2026-06-08", "name": "Early Release - Grades 9-12", "type": "early_release" },
+    { "date": "2026-06-09", "name": "Early Release - Pre-K-12", "type": "early_release" },
+    { "date": "2026-06-10", "name": "Last Day of School; Early Release - Pre-K-12", "type": "school_end" },
+    { "date": "2026-06-17", "name": "Report Cards", "type": "academic" },
+    { "date": "2026-06-19", "name": "Juneteenth - Schools and Offices Closed", "type": "holiday" }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "institutionId": "williamsburg-james-city-county-schools",
+  "schoolYear": "2027-2028",
+  "firstDay": "2027-08-23",
+  "lastDay": "2028-06-08",
+  "sourceUrl": "https://wjccschools.org/calendar/",
+  "sourcePdfUrl": "https://wjccschools.org/wp-content/uploads/2021/07/2027-28-Academic-Calendar-4-1-26.pdf",
+  "lastVerifiedAt": "2026-07-20",
+  "datePublished": "2026-07-20",
+  "dateModified": "2026-07-20",
+  "calendarType": "traditional",
+  "hideSemesterCount": true,
+  "yearNumbersMode": "compact",
+  "seoTitle": "WJCC Schools Calendar 2027-2028: Holidays, Breaks & PDF",
+  "seoDescription": "Williamsburg-James City County Schools 2027-2028 calendar with Aug 23 first day, Jun 8 last day, holidays, winter break, spring break, PDF and ICS.",
+  "calendarNotes": "Williamsburg-James City County Public Schools starts the 2027-2028 school year on August 23, 2027. Winter Break runs December 20-31, Spring Break runs April 3-7, and the last day of school is June 8, 2028. The calendar also lists CLP days, family conferences, holidays, early releases, and make-up day notes.",
+  "calendarFaqs": [
+    {
+      "q": "When does WJCC start school in 2027?",
+      "a": "The first day of school is Monday, August 23, 2027."
+    },
+    {
+      "q": "When is WJCC Spring Break in 2028?",
+      "a": "Spring Break runs Monday, April 3 through Friday, April 7, 2028."
+    },
+    {
+      "q": "When is the last day of school for WJCC in 2028?",
+      "a": "The last day of school is Thursday, June 8, 2028."
+    },
+    {
+      "q": "When are WJCC early release days near the end of 2027-2028?",
+      "a": "Grades 9-12 have early release on June 5-6, and all Pre-K-12 students have early release on June 7-8."
+    }
+  ],
+  "yearNumbers": [
+    {
+      "label": "First Day",
+      "value": "Aug 23",
+      "detail": "The first day of school is August 23, 2027."
+    },
+    {
+      "label": "Spring Break",
+      "value": "Apr 3-7",
+      "detail": "Spring Break runs April 3-7, 2028."
+    },
+    {
+      "label": "Last Day",
+      "value": "Jun 8",
+      "detail": "The last day of school is June 8, 2028."
+    }
+  ],
+  "events": [
+    { "date": "2027-08-23", "name": "First Day of School", "type": "school_start" },
+    { "date": "2027-09-03", "name": "Student and Teacher Holiday", "type": "student_holiday" },
+    { "date": "2027-09-06", "name": "Labor Day", "type": "holiday" },
+    { "date": "2027-10-11", "name": "Student Holiday/Staff CLP Day", "type": "student_holiday" },
+    { "date": "2027-11-01", "name": "Student Holiday - Family Conferences", "type": "no_school" },
+    { "date": "2027-11-02", "name": "Student Holiday - Family Conferences", "type": "no_school" },
+    { "date": "2027-11-24", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2027-11-26", "name": "Thanksgiving Break End", "type": "break_end" },
+    { "date": "2027-12-20", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-12-31", "name": "Winter Break End", "type": "break_end" },
+    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2028-01-27", "name": "Student Holiday/Staff CLP Day", "type": "student_holiday" },
+    { "date": "2028-01-28", "name": "Student Holiday/Staff CLP Day", "type": "student_holiday" },
+    { "date": "2028-02-21", "name": "Presidents' Day", "type": "holiday" },
+    { "date": "2028-03-07", "name": "Student Holiday/Staff CLP Day", "type": "student_holiday" },
+    { "date": "2028-03-31", "name": "Early Release - Pre-K-12", "type": "early_release" },
+    { "date": "2028-04-03", "name": "Spring Break", "type": "break_start" },
+    { "date": "2028-04-07", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2028-05-29", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2028-06-05", "name": "Early Release - Grades 9-12", "type": "early_release" },
+    { "date": "2028-06-06", "name": "Early Release - Grades 9-12", "type": "early_release" },
+    { "date": "2028-06-07", "name": "Early Release - Pre-K-12", "type": "early_release" },
+    { "date": "2028-06-08", "name": "Last Day of School; Early Release - Pre-K-12", "type": "school_end" },
+    { "date": "2028-06-19", "name": "Juneteenth", "type": "holiday" }
+  ]
+}

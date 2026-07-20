@@ -1,0 +1,154 @@
+{
+  "institutionId": "hampton-city-schools",
+  "name": "Hampton City Schools",
+  "shortName": "HCS",
+  "slug": "hampton-city-schools-calendar",
+  "state": "Virginia",
+  "stateCode": "VA",
+  "city": "Hampton",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.hampton.k12.va.us",
+  "calendarPage": "https://www.hampton.k12.va.us/calendars/calendar.html",
+  "logo": "https://www.hampton.k12.va.us/images/HCS_LOGO_main2.png",
+  "timezone": "America/New_York",
+  "county": "Hampton",
+  "region": "Hampton Roads",
+  "metro": "Virginia Beach-Norfolk-Newport News",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "calendarType": "traditional",
+  "searchAliases": [
+    "HCS",
+    "Hampton City Schools",
+    "Hampton Schools",
+    "Hampton school calendar",
+    "Hampton VA school calendar",
+    "Hampton Roads school calendar"
+  ],
+  "districtFact": "Hampton City Schools is a public school district in Hampton, Virginia. The district publishes official school calendar PDFs with first day, last day, teacher workdays, elementary planning days, progress reports, report cards, early release days, exam dates, and high school graduation windows.",
+  "about": [
+    {
+      "title": "About Hampton City Schools",
+      "content": "Hampton City Schools is a public school district located in Hampton, Virginia, in the Hampton Roads region. The district calendar lists the first day of school, holidays, teacher workdays, elementary planning and professional development days, conference days, winter break, spring break, progress reports, report cards, exam schedules, early release dates, and high school graduations."
+    },
+    {
+      "title": "How to Use This Hampton Calendar",
+      "content": "Use this page for districtwide school-year planning. Families should confirm school-specific events, bell schedules, exam timing, graduation details, weather make-up decisions, and program calendars through Hampton City Schools and their assigned school."
+    }
+  ],
+  "planningTips": {
+    "title": "Planning Tips for Hampton Families",
+    "content": [
+      "Track elementary-only planning days separately because elementary students may not report while secondary schools continue.",
+      "Watch early release and early close dates because they affect pickup times even when students attend school.",
+      "Use the January and June exam windows for high school planning.",
+      "Check the official Hampton City Schools calendar page for revised PDFs and superintendent-directed inclement weather make-up decisions."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "hampton-city-schools-district-calendar-context",
+      "label": "Hampton City Schools District Calendar Context",
+      "position": "afterAbout",
+      "content": "Located in Hampton, Virginia, Hampton City Schools serves families in a coastal Hampton Roads community where school schedules often need to coordinate with military families, commuter transportation, after-school activities, athletics, and regional events across the Peninsula. This Hampton school calendar page focuses on districtwide academic dates rather than individual campus events, helping parents compare holidays, teacher workdays, exam windows, graduation timing, and breaks with nearby Virginia school divisions such as Newport News, York County, and Virginia Beach."
+    },
+    {
+      "id": "related-hampton-city-schools-calendars",
+      "label": "Related Hampton City Schools Calendars",
+      "position": "afterFaq",
+      "content": "Use these related calendar pages to compare Hampton City Schools with previous school years and nearby Virginia school calendar resources.",
+      "links": [
+        {
+          "label": "Hampton City Schools Calendar 2025-2026",
+          "to": "/hampton-city-schools-calendar/2025-2026",
+          "description": "Previous school year calendar for Hampton City Schools."
+        },
+        {
+          "label": "Virginia School Calendars",
+          "to": "/virginia",
+          "description": "Browse Virginia public school district calendars."
+        },
+        {
+          "label": "Newport News Public Schools Calendar",
+          "to": "/newport-news-public-schools-calendar",
+          "description": "Nearby Hampton Roads school division calendar."
+        },
+        {
+          "label": "York County School Division Calendar",
+          "to": "/york-county-school-division-calendar",
+          "description": "Nearby Peninsula school division calendar."
+        }
+      ]
+    }
+  ],
+  "compareIntro": "Compare the Hampton City Schools calendar with other Virginia district calendars currently available on MySchoolDates. Dates shown include the first day, last day, and spring break.",
+  "districtFaqs": [
+    {
+      "q": "What are the important dates for Hampton City Schools 2026-2027?",
+      "a": "Important Hampton City Schools 2026-2027 dates include the first day of school, the last day of school, Thanksgiving Break, Winter Break, Spring Break, teacher workdays, high school exam windows, early release dates, and high school graduations."
+    },
+    {
+      "q": "Does Hampton City Schools list elementary-only planning days?",
+      "a": "Yes. The official calendar marks elementary teacher planning and professional development days when elementary students do not report."
+    },
+    {
+      "q": "Does Hampton City Schools list high school exams and graduations?",
+      "a": "Yes. The calendar includes high school exam schedule windows, early release dates, and high school graduation dates."
+    },
+    {
+      "q": "Where should families verify Hampton calendar updates?",
+      "a": "Use the official Hampton City Schools calendar page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with Hampton City Schools."
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Newport News Public Schools",
+      "slug": "newport-news-public-schools-calendar",
+      "state": "Virginia",
+      "comparisonNote": "Nearby Hampton Roads city school division with a similar Peninsula planning context."
+    },
+    {
+      "name": "Virginia Beach City Public Schools",
+      "slug": "virginia-beach-school-calendar",
+      "state": "Virginia",
+      "comparisonNote": "Nearby Hampton Roads district with a separate school-year calendar."
+    },
+    {
+      "name": "York County School Division",
+      "slug": "york-county-school-division-calendar",
+      "state": "Virginia",
+      "comparisonNote": "Nearby Peninsula school division often compared by Hampton families."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Hampton City Schools official website",
+      "url": "https://www.hampton.k12.va.us"
+    },
+    {
+      "label": "Hampton City Schools calendar page",
+      "url": "https://www.hampton.k12.va.us/calendars/calendar.html"
+    },
+    {
+      "label": "Hampton City Schools logo",
+      "url": "https://www.hampton.k12.va.us/images/HCS_LOGO_main2.png"
+    }
+  ]
+}

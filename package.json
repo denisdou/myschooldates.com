@@ -3,9 +3,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
+    "build": "nuxt build && node scripts/sanitize-build-paths.mjs",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate && node scripts/sanitize-build-paths.mjs",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },

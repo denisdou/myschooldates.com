@@ -6,8 +6,8 @@ const props = defineProps<{
     content: string
     position?: string
     groups?: { label: string; items: string[] }[]
-    links?: { label: string; to: string; description?: string }[]
-    table?: { columns: string[]; rows: string[][] }
+    links?: { label: string; to?: string; url?: string; description?: string }[]
+    table?: { columns?: string[]; headers?: string[]; rows: string[][] }
   }[]
   position: string
 }>()
@@ -18,6 +18,9 @@ const filtered = computed(() => {
   }
   return props.sections.filter(s => s.position === props.position)
 })
+
+const tableColumns = (section: (typeof props.sections)[number]) => section.table?.columns ?? section.table?.headers ?? []
+const linkTarget = (link: { to?: string; url?: string }) => link.to ?? link.url ?? ''
 </script>
 
 <template>
@@ -37,12 +40,12 @@ const filtered = computed(() => {
         </div>
       </div>
       <p v-else class="text-sm text-gray-600 leading-relaxed">{{ section.content }}</p>
-      <div v-if="section.table?.columns?.length && section.table?.rows?.length" class="mt-4 overflow-x-auto rounded-lg border border-gray-200">
+      <div v-if="tableColumns(section).length && section.table?.rows?.length" class="mt-4 overflow-x-auto rounded-lg border border-gray-200">
         <table class="min-w-full divide-y divide-gray-200 text-sm">
           <thead class="bg-gray-50">
             <tr>
               <th
-                v-for="column in section.table.columns"
+                v-for="column in tableColumns(section)"
                 :key="column"
                 scope="col"
                 class="px-4 py-2 text-left text-xs font-semibold uppercase tracking-wide text-gray-500"
@@ -67,8 +70,8 @@ const filtered = computed(() => {
       <div v-if="section.links?.length" class="mt-4 grid gap-3 sm:grid-cols-2">
         <NuxtLink
           v-for="link in section.links"
-          :key="link.to"
-          :to="link.to"
+          :key="linkTarget(link)"
+          :to="linkTarget(link)"
           class="rounded-lg border border-gray-200 px-4 py-3 hover:border-blue-300 hover:bg-blue-50 transition-colors"
         >
           <span class="block text-sm font-semibold text-gray-900">{{ link.label }}</span>

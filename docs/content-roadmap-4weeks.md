@@ -187,11 +187,11 @@
 
 | 优先级 | 学区 | 预计 Slug | 状态 |
 |--------|------|-----------|------|
-| P3 | Newport News City Public Schools | `/newport-news-city/` | 待创建 |
-| P3 | Hampton City Schools | `/hampton-city/` | 待创建 |
-| P3 | Roanoke County Public Schools | `/roanoke-county/` | 待创建 |
-| P3 | Williamsburg-James City County Schools | `/williamsburg-james-city-county/` | 待创建 |
-| P3 | York County School Division | `/york-county/` | 待创建 |
+| P3 | Newport News City Public Schools | `/newport-news-public-schools-calendar` | ✓ 已完成 |
+| P3 | Hampton City Schools | `/hampton-city-schools-calendar` | ✓ 已完成 |
+| P3 | Roanoke County Public Schools | `/roanoke-county-public-schools-calendar` | ✓ 已完成 |
+| P3 | Williamsburg-James City County Schools | `/williamsburg-james-city-county-schools-calendar` | ✓ 已完成 |
+| P3 | York County School Division | `/york-county-school-division-calendar` | ✓ 已完成 |
 
 ### North Carolina P3 批次1（5个）
 

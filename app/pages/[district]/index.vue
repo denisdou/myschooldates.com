@@ -192,6 +192,19 @@ const { data: relatedCals } = await useAsyncData(`related-cals:${slug}`, async (
 const currentYear = district.value?.currentSchoolYear ?? ''
 const cal = allCals.value?.find(y => y.schoolYear === currentYear) ?? null
 const meta = district
+
+function eventSchemaLocation() {
+  return {
+    '@type': 'Place',
+    name: `${meta.value!.name} districtwide calendar`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: meta.value!.city ?? '',
+      addressRegion: (meta.value as any).stateCode ?? meta.value!.state,
+      addressCountry: meta.value!.country ?? 'US',
+    },
+  }
+}
 const calendarIcsHref = computed(() =>
   district.value && cal
     ? `/calendars/${district.value.slug}-${cal.schoolYear}.ics`
@@ -207,7 +220,7 @@ const breaks = computed(() => getBreaks(cal?.events ?? []))
 const keyDateHighlights = computed(() => {
   if (!cal?.events) return []
   const HIGHLIGHT_TYPES = new Set(['school_start', 'school_end', 'break_start'])
-  return cal.events.filter(e => HIGHLIGHT_TYPES.has(e.type))
+  return cal.events.filter(e => HIGHLIGHT_TYPES.has(e.type) || (e as any).schemaEvent === true)
 })
 
 const itemListEvents = computed(() => {
@@ -433,7 +446,7 @@ if (!isStatePage && district.value) {
     // A — PDF + key dates (~130 chars)
     `${_sn} Calendar ${currentYear} with holidays${_hasSpring ? ', spring break' : ''} and key dates. Download the official PDF or calendar import file.`,
     // B — verified + download (~125 chars)
-    `${_sn} Calendar ${currentYear}: first day ${_fd}, last day ${_ld}${_hasSpring ? ', spring break' : ''}. Verified. Download the PDF or .ics calendar file.`,
+    `${_sn} Calendar ${currentYear}: first day ${_fd}, last day ${_ld}${_hasSpring ? ', spring break' : ''}. Checked against district source. Download the PDF or .ics calendar file.`,
     // C — user benefit (~135 chars)
     `${_sn} Calendar ${currentYear} — verified holidays${_hasSpring ? ', spring break' : ''}, key dates, and official PDF download. Works with Google Calendar.`,
     // D — ICS/sync (~130 chars)
@@ -469,7 +482,7 @@ if (!isStatePage && district.value) {
   const reviewTeamEntity = {
     '@type': 'Organization',
     '@id': 'https://myschooldates.com/#education-research-team',
-    name: 'MySchoolDates Education Research Team',
+    name: 'MySchoolDates Calendar Data Team',
     url: 'https://myschooldates.com/calendar-verification-methodology',
     parentOrganization: { '@id': 'https://myschooldates.com/#organization' },
   }
@@ -543,7 +556,7 @@ if (!isStatePage && district.value) {
       calendarIcsUrl ? {
         '@type': 'DataDownload',
         name: `${schemaCalendarName} calendar file`,
-        description: `Calendar import file generated from the verified official ${meta.value!.shortName ?? meta.value!.name} calendar dates used for this page.`,
+        description: `Calendar import file generated from ${meta.value!.shortName ?? meta.value!.name} dates checked against the public official district source used for this page.`,
         encodingFormat: 'text/calendar',
         contentUrl: calendarIcsUrl,
       } : null,
@@ -586,7 +599,6 @@ if (!isStatePage && district.value) {
     ...(pageDatePublished ? { datePublished: pageDatePublished } : {}),
     publisher: { '@id': 'https://myschooldates.com/#organization' },
     author: { '@id': 'https://myschooldates.com/#education-research-team' },
-    reviewedBy: { '@id': 'https://myschooldates.com/#education-research-team' },
     about: { '@id': districtAbout['@id'] },
     ...(datasetEntity
       ? { mainEntity: { '@id': `${canonicalUrl}#calendar-dataset` } }
@@ -637,9 +649,10 @@ if (!isStatePage && district.value) {
           name: event.name,
           ...(event.description ? { description: event.description } : {}),
           startDate: range.start,
-          ...(range.end !== range.start ? { endDate: range.end } : {}),
+          endDate: range.end,
           eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
           eventStatus: 'https://schema.org/EventScheduled',
+          location: eventSchemaLocation(),
           organizer: { '@id': districtAbout['@id'] },
         },
       }
@@ -993,7 +1006,7 @@ if (!isStatePage && district.value) {
             <svg v-else class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
             </svg>
-            <span v-if="!isEstimated">Calendar data checked against official source · Reviewed by MySchoolDates Education Research Team · Updated {{ verifiedDate }} · Verified {{ verifiedDate }}</span>
+            <span v-if="!isEstimated">Checked against publicly available official district source · Maintained by MySchoolDates · Last checked {{ verifiedDate }}</span>
             <span v-else>Based on official district website · Not yet human-verified</span>
           </div>
           <div v-if="!isEstimated && verifiedDate" class="mt-3 rounded-xl border border-gray-200 bg-white p-3">
@@ -1009,10 +1022,11 @@ if (!isStatePage && district.value) {
               </li>
               <li class="flex items-start gap-1.5">
                 <span class="mt-0.5 text-green-600">✓</span>
-                <span>Calendar file generated from verified records</span>
+                <span>Calendar file generated from checked records</span>
               </li>
             </ul>
           </div>
+          <DistrictCustomSections :sections="customSections" position="afterVerification" />
         </div>
 
         <!-- Calendar track notice -->
@@ -1175,6 +1189,7 @@ if (!isStatePage && district.value) {
           :all-districts="allDistricts ?? []"
           :prev-cal="prevCal ?? undefined"
         />
+        <DistrictCustomSections :sections="customSections" position="afterQuickFacts" />
 
         <!-- Dynamic mid sections: order varies by time context -->
         <template v-for="section in midSectionOrder" :key="section">
@@ -1245,21 +1260,24 @@ if (!isStatePage && district.value) {
           </div>
 
           <!-- Break Summary -->
-          <div v-else-if="section === 'breaks' && breaks.length" class="bg-white rounded-xl border border-gray-200 p-6">
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Major School Breaks</h2>
-            <div class="space-y-3">
-              <div v-for="b in breaks" :key="b.name" class="flex items-center justify-between py-3 border-b border-gray-50 last:border-0">
-                <div>
-                  <div class="font-medium text-gray-900">{{ b.name }}</div>
-                  <div class="text-sm text-gray-500">{{ formatShortDate(b.start) }} – {{ formatShortDate(b.end) }}</div>
-                  <div v-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-purple-600 mt-0.5 font-medium">
-                    In progress
+          <template v-else-if="section === 'breaks' && breaks.length">
+            <div class="bg-white rounded-xl border border-gray-200 p-6">
+              <h2 class="text-lg font-semibold text-gray-900 mb-4">Major School Breaks</h2>
+              <div class="space-y-3">
+                <div v-for="b in breaks" :key="b.name" class="flex items-center justify-between py-3 border-b border-gray-50 last:border-0">
+                  <div>
+                    <div class="font-medium text-gray-900">{{ b.name }}</div>
+                    <div class="text-sm text-gray-500">{{ formatShortDate(b.start) }} – {{ formatShortDate(b.end) }}</div>
+                    <div v-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-purple-600 mt-0.5 font-medium">
+                      In progress
+                    </div>
                   </div>
+                  <div class="text-sm font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full">{{ breakDurationLabel(b) }}</div>
                 </div>
-                <div class="text-sm font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full">{{ breakDurationLabel(b) }}</div>
               </div>
             </div>
-          </div>
+            <DistrictCustomSections :sections="customSections" position="afterBreaks" />
+          </template>
 
         </template>
 
@@ -1274,10 +1292,11 @@ if (!isStatePage && district.value) {
 
         <!-- What's Different This Year -->
         <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal" :prev-cal="prevCal ?? undefined" />
+        <DistrictCustomSections :sections="customSections" position="afterYearDiff" />
 
         <!-- Year Switcher -->
         <div v-if="archivedYears.length" class="flex items-center gap-2 flex-wrap">
-          <span class="text-sm text-gray-500">Other years:</span>
+          <span class="text-sm text-gray-500">Previous / next calendars:</span>
           <NuxtLink
             v-for="y in archivedYears"
             :key="y"
