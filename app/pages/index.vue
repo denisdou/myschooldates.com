@@ -4,12 +4,17 @@ const { data: districts } = await useAsyncData(
   () => queryCollection('districts').order('name', 'ASC').all()
 )
 
+const { data: calendars } = await useAsyncData(
+  'homepage-calendars-list',
+  () => queryCollection('calendars').select('schoolYear').all()
+)
+
 const toStateSlug = (name: string) => name.toLowerCase().replace(/\s+/g, '-')
 
 // State display order by search volume, not alphabet
 const STATE_ORDER = [
   'California', 'Florida', 'Texas', 'New York',
-  'Illinois', 'North Carolina', 'Nevada', 'Virginia', 'Maryland',
+  'Illinois', 'North Carolina', 'Nevada', 'Virginia', 'Kentucky', 'Maryland',
 ]
 
 const STATE_SUMMARIES: Record<string, string> = {
@@ -21,6 +26,7 @@ const STATE_SUMMARIES: Record<string, string> = {
   'North Carolina': `North Carolina requires 185 instructional days for students — more than the national standard of 180. Most districts start in mid-to-late August. A distinctive feature of the NC school calendar is a fall break in October, typically one week long, in addition to standard Thanksgiving, winter, and spring breaks. Wake County and Charlotte-Mecklenburg Schools are the two largest districts, together serving nearly 300,000 students. Spring break generally falls in mid-March. The school year ends in early June.`,
   Nevada: `Nevada's largest district, Clark County School District (Las Vegas), serves over 300,000 students and is one of the ten largest in the United States. CCSD typically starts school in early August — earlier than most states — and ends in late May. The district observes Nevada Day (last Friday of October) in addition to standard federal holidays. Spring break falls in late March or early April. The Clark County calendar is closely watched by families across the Las Vegas metro area, which includes Henderson, North Las Vegas, and surrounding communities.`,
   Virginia: `Virginia school divisions set their own academic calendars. Most begin in late August and end in mid-June. Fairfax County Public Schools, located in Northern Virginia's DC suburbs, is the tenth-largest school district in the country and consistently ranks among the top academic performers nationally. Virginia school divisions observe all federal holidays plus scheduled teacher workdays throughout the year. The DC metro area — including Fairfax and neighboring districts — tends to have high parental interest in precise calendar dates for childcare and travel planning.`,
+  Kentucky: `Kentucky school districts publish local academic calendars with district-specific first days, holidays, breaks, professional development days, and make-up day notes. Families should verify dates with the official district calendar because weather, election days, and staff-only days can affect student attendance schedules.`,
   Maryland: `Maryland state law prohibits public schools from starting before Labor Day, making it one of a handful of states with this restriction. Both Montgomery County and Prince George's County Public Schools — the two largest districts — begin school in early September and run through mid-June. Maryland schools observe all federal holidays. Montgomery County is consistently ranked among the top large school districts in the country for academic achievement and is a high-demand calendar for the DC metro area.`,
 }
 
@@ -60,6 +66,23 @@ const byState = computed(() => {
     .map(s => ({ state: s, districts: map.get(s)! }))
 })
 
+const districtCount = computed(() => districts.value?.length ?? 0)
+const stateCount = computed(() => byState.value.length)
+const availableYears = computed(() => {
+  const years = new Set((calendars.value ?? []).map(c => c.schoolYear).filter(Boolean))
+  return Array.from(years).sort().reverse()
+})
+const yearCoverage = computed(() => {
+  const counts = new Map<string, number>()
+  for (const cal of calendars.value ?? []) {
+    if (!cal.schoolYear) continue
+    counts.set(cal.schoolYear, (counts.get(cal.schoolYear) ?? 0) + 1)
+  }
+  return counts
+})
+const featuredYears = ['2027-2028', '2026-2027']
+const supportingYears = computed(() => availableYears.value.filter(year => !featuredYears.includes(year)))
+
 // Client-side search
 const searchQuery = ref('')
 const showDropdown = ref(false)
@@ -76,8 +99,8 @@ function onSearchFocus() { showDropdown.value = true }
 function onSearchBlur() { setTimeout(() => { showDropdown.value = false }, 150) }
 
 useSeoMeta({
-  title: 'US School Calendars 2025–2026 | Holidays, Breaks & Key Dates | MySchoolDates',
-  description: 'School calendars for 30+ US public school districts. Find school start dates, spring break, winter break, and all holidays. Add to Google Calendar or Apple Calendar.',
+  title: 'US School Calendars 2026-2027 & 2027-2028 | Holidays, Breaks & Key Dates | MySchoolDates',
+  description: 'School calendars for 70+ US public school districts. Find school start dates, spring break, winter break, holidays, PDFs, and calendar downloads for 2027-2028 and 2026-2027.',
 })
 
 useHead({
@@ -125,9 +148,14 @@ useHead({
       <!-- Stats bar -->
       <div class="bg-gray-900 text-white">
         <div class="max-w-4xl mx-auto px-4 py-4 flex flex-wrap justify-center gap-x-10 gap-y-2 text-sm">
-          <span><strong class="text-white">30</strong> <span class="text-gray-400">school districts</span></span>
-          <span><strong class="text-white">9</strong> <span class="text-gray-400">states</span></span>
-          <span><strong class="text-white">2025–2026</strong> <span class="text-gray-400">&amp; 2026–2027</span></span>
+          <span><strong class="text-white">{{ districtCount }}</strong> <span class="text-gray-400">school districts</span></span>
+          <span><strong class="text-white">{{ stateCount }}</strong> <span class="text-gray-400">states</span></span>
+          <span>
+            <strong class="text-white">2027–2028</strong>
+            <span class="text-gray-400"> &amp; </span>
+            <strong class="text-white">2026–2027</strong>
+            <span v-if="supportingYears.includes('2025-2026')" class="text-gray-400"> · 2025–2026 available</span>
+          </span>
           <span><strong class="text-white">Official</strong> <span class="text-gray-400">district sources</span></span>
           <span><strong class="text-white">Free</strong> <span class="text-gray-400">calendar downloads</span></span>
         </div>
@@ -200,6 +228,30 @@ useHead({
         </div>
 
         <!-- About (before district listing for SEO weight) -->
+        <section class="mb-12">
+          <h2 class="text-xl font-semibold text-gray-900 mb-4">Current School Years</h2>
+          <div class="grid gap-3 sm:grid-cols-3">
+            <div class="rounded-xl border border-blue-200 bg-blue-50 p-5">
+              <div class="text-lg font-semibold text-blue-950">2027-2028</div>
+              <p class="mt-1 text-sm text-blue-800">
+                Newest school year pages available for {{ yearCoverage.get('2027-2028') ?? 0 }} districts.
+              </p>
+            </div>
+            <div class="rounded-xl border border-blue-200 bg-blue-50 p-5">
+              <div class="text-lg font-semibold text-blue-950">2026-2027</div>
+              <p class="mt-1 text-sm text-blue-800">
+                Primary planning year with {{ yearCoverage.get('2026-2027') ?? 0 }} district calendars.
+              </p>
+            </div>
+            <div class="rounded-xl border border-gray-200 bg-white p-5">
+              <div class="text-lg font-semibold text-gray-900">2025-2026</div>
+              <p class="mt-1 text-sm text-gray-500">
+                Archive year available for {{ yearCoverage.get('2025-2026') ?? 0 }} districts.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section class="mb-12">
           <div class="bg-white rounded-xl border border-gray-200 p-8">
             <h2 class="text-xl font-semibold text-gray-900 mb-5">About US School Calendars</h2>
@@ -315,9 +367,9 @@ useHead({
         <div class="mb-10 flex flex-wrap justify-center gap-5 text-xs text-gray-400">
           <span>Official district sources</span>
           <span>&middot;</span>
-          <span>Updated for 2025–2026 &amp; 2026–2027</span>
+          <span>Updated for 2027–2028 &amp; 2026–2027</span>
           <span>&middot;</span>
-          <span>25 districts, 9 states</span>
+          <span>{{ districtCount }} districts, {{ stateCount }} states</span>
           <span>&middot;</span>
           <span>Last updated July 2026</span>
         </div>

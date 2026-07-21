@@ -1,3 +1,20 @@
+<script setup lang="ts">
+const route = useRoute()
+
+const statePageNames: Record<string, string> = {
+  california: 'California',
+  florida: 'Florida',
+  texas: 'Texas',
+  'north-carolina': 'North Carolina',
+  virginia: 'Virginia',
+  kentucky: 'Kentucky',
+}
+
+const currentStateSlug = computed(() => route.path.split('/').filter(Boolean)[0] ?? '')
+const currentStateName = computed(() => statePageNames[currentStateSlug.value] ?? '')
+const isStateLandingPage = computed(() => route.path === `/${currentStateSlug.value}` && !!currentStateName.value)
+</script>
+
 <template>
   <div class="min-h-screen bg-gray-50 flex flex-col">
     <!-- Shared Header -->
@@ -16,6 +33,7 @@
           <NuxtLink to="/california" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">California</NuxtLink>
           <NuxtLink to="/north-carolina" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden md:inline">NC</NuxtLink>
           <NuxtLink to="/virginia" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden md:inline">Virginia</NuxtLink>
+          <NuxtLink to="/kentucky" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden lg:inline">Kentucky</NuxtLink>
         </nav>
       </div>
     </header>
@@ -37,9 +55,10 @@
               <li><NuxtLink to="/texas" class="text-sm text-gray-500 hover:text-blue-600">Texas School Calendars</NuxtLink></li>
               <li><NuxtLink to="/north-carolina" class="text-sm text-gray-500 hover:text-blue-600">North Carolina School Calendars</NuxtLink></li>
               <li><NuxtLink to="/virginia" class="text-sm text-gray-500 hover:text-blue-600">Virginia School Calendars</NuxtLink></li>
+              <li><NuxtLink to="/kentucky" class="text-sm text-gray-500 hover:text-blue-600">Kentucky School Calendars</NuxtLink></li>
             </ul>
           </div>
-          <div>
+          <div v-if="!isStateLandingPage">
             <h4 class="text-sm font-semibold text-gray-700 mb-3">Popular Districts</h4>
             <ul class="space-y-2">
               <li><NuxtLink to="/los-angeles-unified-school-district-calendar" class="text-sm text-gray-500 hover:text-blue-600">Los Angeles Unified</NuxtLink></li>
@@ -47,6 +66,15 @@
               <li><NuxtLink to="/houston-independent-school-district-calendar" class="text-sm text-gray-500 hover:text-blue-600">Houston ISD</NuxtLink></li>
               <li><NuxtLink to="/wake-county-school-calendar" class="text-sm text-gray-500 hover:text-blue-600">Wake County</NuxtLink></li>
               <li><NuxtLink to="/fairfax-county-school-calendar" class="text-sm text-gray-500 hover:text-blue-600">Fairfax County</NuxtLink></li>
+            </ul>
+          </div>
+          <div v-else>
+            <h4 class="text-sm font-semibold text-gray-700 mb-3">{{ currentStateName }} Resources</h4>
+            <ul class="space-y-2">
+              <li><NuxtLink :to="`/${currentStateSlug}`" class="text-sm text-gray-500 hover:text-blue-600">{{ currentStateName }} District Calendars</NuxtLink></li>
+              <li><NuxtLink to="/calendar-verification-methodology" class="text-sm text-gray-500 hover:text-blue-600">Verification Methodology</NuxtLink></li>
+              <li><NuxtLink to="/editorial-policy" class="text-sm text-gray-500 hover:text-blue-600">Editorial Policy</NuxtLink></li>
+              <li><a href="mailto:hello@myschooldates.com?subject=Calendar%20Correction" class="text-sm text-gray-500 hover:text-blue-600">Report a Calendar Correction</a></li>
             </ul>
           </div>
           <div class="col-span-2 sm:col-span-1">

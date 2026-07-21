@@ -40,6 +40,7 @@ export default defineNuxtConfig({
         '/texas',
         '/north-carolina',
         '/virginia',
+        '/kentucky',
 
         // ── District index pages ───────────────────────────────────────────────
         '/aldine-independent-school-district-calendar',

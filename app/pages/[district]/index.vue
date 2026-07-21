@@ -72,47 +72,105 @@ const stateCurrentYear = (() => {
 })()
 
 if (isStatePage) {
-  const stateTitle = `${matchedStateName} School Calendars ${stateCurrentYear} | MySchoolDates`
-  const stateDesc = `${stateCurrentYear} school calendar dates sourced from official district websites for ${stateDistricts.length} public school district${stateDistricts.length !== 1 ? 's' : ''} in ${matchedStateName}. First day of school, spring break, winter break, and all important dates.`
+  const hasStateContent = !!statePageData.value
+  const stateTitle = hasStateContent
+    ? `${matchedStateName} School Calendar ${stateCurrentYear} | Holidays, Breaks & District Dates | MySchoolDates`
+    : `${matchedStateName} School Calendars ${stateCurrentYear} | MySchoolDates`
+  const stateDesc = hasStateContent
+    ? `Find ${matchedStateName} public school calendar dates for ${stateCurrentYear}, including start dates, holidays, breaks, district schedules, PDFs, and downloads. Verified from official sources.`
+    : `${stateCurrentYear} school calendar dates sourced from official district websites for ${stateDistricts.length} public school district${stateDistricts.length !== 1 ? 's' : ''} in ${matchedStateName}. First day of school, spring break, winter break, and all important dates.`
+  const stateUrl = `https://myschooldates.com/${slug}`
+  const stateDistrictListEntity = {
+    '@context': 'https://schema.org',
+    '@id': `${stateUrl}#district-list`,
+    '@type': 'ItemList',
+    name: `${matchedStateName} Public School Districts — ${stateCurrentYear} Calendars`,
+    description: hasStateContent
+      ? `${matchedStateName} public school district calendar links for ${stateCurrentYear}, with official-source calendar pages, first day, breaks, holidays, and download options where available.`
+      : `${stateCurrentYear} school calendar dates sourced from official district websites for ${stateDistricts.length} public school districts in ${matchedStateName}.`,
+    ...(hasStateContent && stateDistricts.length < 2 ? {} : { numberOfItems: stateDistricts.length }),
+    itemListElement: stateDistricts.map((d, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: d.name,
+      url: `https://myschooldates.com/${d.slug}`,
+      item: {
+        '@type': 'EducationalOrganization',
+        name: d.name,
+        url: `https://myschooldates.com/${d.slug}`,
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: d.city ?? '',
+          addressRegion: (d as any).stateCode ?? d.state,
+          addressCountry: 'US',
+        },
+      },
+    })),
+  }
+  const stateSchemaGraph: any[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://myschooldates.com' },
+        { '@type': 'ListItem', position: 2, name: `${matchedStateName} School Calendars`, item: stateUrl },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': ['WebPage', 'CollectionPage'],
+      name: `${matchedStateName} School Calendar ${stateCurrentYear}`,
+      url: stateUrl,
+      description: stateDesc,
+      ...(statePageData.value?.lastVerifiedAt ? { dateModified: statePageData.value.lastVerifiedAt } : {}),
+      mainEntity: { '@id': `${stateUrl}#district-list` },
+      publisher: {
+        '@type': 'Organization',
+        name: 'MySchoolDates',
+        url: 'https://myschooldates.com',
+      },
+      reviewedBy: {
+        '@type': 'Organization',
+        name: 'MySchoolDates Calendar Research Team',
+        url: 'https://myschooldates.com/calendar-verification-methodology',
+      },
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'MySchoolDates',
+        url: 'https://myschooldates.com',
+      },
+      about: {
+        '@type': 'AdministrativeArea',
+        name: matchedStateName,
+        address: {
+          '@type': 'PostalAddress',
+          addressRegion: statePageData.value?.stateCode ?? matchedStateName,
+          addressCountry: 'US',
+        },
+      },
+    },
+    stateDistrictListEntity,
+  ]
+  if (statePageData.value?.faqs?.length) {
+    stateSchemaGraph.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: statePageData.value.faqs.map(faq => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.a,
+        },
+      })),
+    })
+  }
   useSeoMeta({ title: stateTitle, description: stateDesc })
   useHead({
-    link: [{ rel: 'canonical', href: `https://myschooldates.com/${slug}` }],
+    link: [{ rel: 'canonical', href: stateUrl }],
     script: [{
       type: 'application/ld+json',
-      innerHTML: JSON.stringify([
-        {
-          '@context': 'https://schema.org',
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://myschooldates.com' },
-            { '@type': 'ListItem', position: 2, name: `${matchedStateName} School Calendars`, item: `https://myschooldates.com/${slug}` },
-          ],
-        },
-        {
-          '@context': 'https://schema.org',
-          '@type': 'ItemList',
-          name: `${matchedStateName} Public School Districts — ${stateCurrentYear} Calendars`,
-          description: `${stateCurrentYear} school calendar dates sourced from official district websites for ${stateDistricts.length} public school districts in ${matchedStateName}.`,
-          numberOfItems: stateDistricts.length,
-          itemListElement: stateDistricts.map((d, i) => ({
-            '@type': 'ListItem',
-            position: i + 1,
-            name: d.name,
-            url: `https://myschooldates.com/${d.slug}`,
-            item: {
-              '@type': 'EducationalOrganization',
-              name: d.name,
-              url: `https://myschooldates.com/${d.slug}`,
-              address: {
-                '@type': 'PostalAddress',
-                addressLocality: d.city ?? '',
-                addressRegion: (d as any).stateCode ?? d.state,
-                addressCountry: 'US',
-              },
-            },
-          })),
-        },
-      ]),
+      innerHTML: JSON.stringify(stateSchemaGraph),
     }],
   })
 }
@@ -755,15 +813,21 @@ if (!isStatePage && district.value) {
         <!-- Hero -->
         <div>
           <h1 class="text-3xl font-bold text-gray-900">
-            {{ matchedStateName }} School Calendars {{ stateCurrentYear }}
+            {{ matchedStateName }} School Calendar {{ stateCurrentYear }}
           </h1>
           <p class="mt-2 text-sm text-gray-500">
-            {{ stateCurrentYear }} school calendar dates · {{ stateDistricts.length }} public school district{{ stateDistricts.length !== 1 ? 's' : '' }} · Sourced from official district websites
+            <template v-if="statePageData">
+              {{ stateCurrentYear }} school calendar dates, holidays, breaks, district schedules, PDFs, and calendar downloads · Sourced from official district websites
+            </template>
+            <template v-else>
+              {{ stateCurrentYear }} school calendar dates · {{ stateDistricts.length }} public school district{{ stateDistricts.length !== 1 ? 's' : '' }} · Sourced from official district websites
+            </template>
           </p>
           <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2">
             <span class="flex items-center gap-1.5 text-sm text-gray-700">
               <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-              {{ stateDistricts.length }} districts covered
+              <template v-if="statePageData">Browse district calendars</template>
+              <template v-else>{{ stateDistricts.length }} districts covered</template>
             </span>
             <span class="flex items-center gap-1.5 text-sm text-gray-700">
               <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
@@ -777,7 +841,23 @@ if (!isStatePage && district.value) {
               <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
               Official district sources
             </span>
+            <span v-if="statePageData?.lastVerifiedAt" class="flex items-center gap-1.5 text-sm text-gray-700">
+              <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+              Last verified {{ new Date(statePageData.lastVerifiedAt + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) }}
+            </span>
+            <span class="flex items-center gap-1.5 text-sm text-gray-700">
+              <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+              Verified by MySchoolDates Calendar Research Team
+            </span>
           </div>
+        </div>
+
+        <!-- Quick Answer -->
+        <div v-if="statePageData" class="bg-blue-50 border border-blue-200 rounded-xl p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-2">Quick Answer: {{ matchedStateName }} School Calendar {{ stateCurrentYear }}</h2>
+          <p class="text-sm leading-relaxed text-gray-700">
+            {{ matchedStateName }} public school calendars are set by local districts, so first day of school, holidays, winter break, spring break, staff-only days, and make-up days vary by district. Families can use this page to find {{ matchedStateName }} district calendar links, compare key dates when available, and verify schedules against official school sources.
+          </p>
         </div>
 
         <!-- Quick Facts from state data -->
@@ -797,7 +877,7 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- District Comparison Table -->
-        <div v-if="Object.keys(stateDistrictStats).length" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <div v-if="stateDistricts.length > 1 && Object.keys(stateDistrictStats).length" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
           <div class="px-6 py-4 border-b border-gray-100">
             <h2 class="text-lg font-semibold text-gray-900">Compare {{ matchedStateName }} Districts at a Glance</h2>
             <p class="text-sm text-gray-500 mt-1">First and last days, major breaks, and days off — side by side.</p>
@@ -893,6 +973,25 @@ if (!isStatePage && district.value) {
                 <span class="text-xs font-medium text-blue-600">View calendar →</span>
               </div>
             </NuxtLink>
+          </div>
+        </div>
+
+        <!-- Popular district searches -->
+        <div v-if="statePageData?.popularDistricts?.length" class="bg-white rounded-xl border border-gray-200 p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-1">Popular {{ matchedStateName }} School Calendar Searches</h2>
+          <p class="text-sm text-gray-500 mb-5">
+            These are common {{ matchedStateName }} district calendar searches. MySchoolDates links district pages after official-source calendar data has been verified, so unavailable districts are shown as coverage targets rather than inactive links.
+          </p>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div
+              v-for="item in statePageData.popularDistricts"
+              :key="item.label"
+              class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-3"
+            >
+              <div class="text-sm font-medium text-gray-900">{{ item.label }}</div>
+              <div v-if="item.area" class="mt-0.5 text-xs text-gray-400">{{ item.area }}</div>
+              <p v-if="item.note" class="mt-2 text-xs leading-relaxed text-gray-500">{{ item.note }}</p>
+            </div>
           </div>
         </div>
 

@@ -69,6 +69,11 @@ const livingHereSchema = z.object({
 const stateQuickFactSchema = z.object({ label: z.string(), value: z.string() })
 const stateFaqSchema = z.object({ q: z.string(), a: z.string() })
 const relatedStateSchema = z.object({ name: z.string(), slug: z.string() })
+const statePopularDistrictSchema = z.object({
+  label: z.string(),
+  area: z.string().optional(),
+  note: z.string().optional(),
+})
 const stateDistrictClusterSchema = z.object({
   label: z.string(),
   description: z.string().optional(),
@@ -141,10 +146,12 @@ export default defineContentConfig({
         stateSlug: z.string(),
         stateName: z.string(),
         stateCode: z.string(),
+        lastVerifiedAt: z.string().optional(),
         about: z.string(),
         quickFacts: z.array(stateQuickFactSchema),
         planningTips: z.array(z.string()),
         commonHolidays: z.array(z.string()),
+        popularDistricts: z.array(statePopularDistrictSchema).optional(),
         districtClusters: z.array(stateDistrictClusterSchema).optional(),
         faqs: z.array(stateFaqSchema),
         relatedStates: z.array(relatedStateSchema),

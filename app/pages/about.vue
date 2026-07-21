@@ -46,7 +46,7 @@ useHead({
     <section class="mb-10">
       <h2 class="text-xl font-semibold text-gray-900 mb-3">Coverage</h2>
       <p class="text-gray-600 leading-relaxed">
-        We currently cover 30 of the largest public school districts across California, Florida, Texas, North Carolina, and Virginia — with more districts and states being added regularly. Our goal is comprehensive coverage of the largest districts in every state.
+        We currently cover 70+ public school districts across California, Florida, Texas, North Carolina, Virginia, and Kentucky — with more districts and states being added regularly. Our goal is comprehensive coverage of the largest districts in every state.
       </p>
     </section>
 
