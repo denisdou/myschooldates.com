@@ -197,11 +197,17 @@
 
 | 优先级 | 学区 | 预计 Slug | 状态 |
 |--------|------|-----------|------|
-| P3 | Iredell-Statesville Schools | `/iredell-statesville/` | 待创建 |
-| P3 | Brunswick County Schools | `/brunswick-county-nc/` | 待创建 |
-| P3 | Henderson County Schools | `/henderson-county-nc/` | 待创建 |
-| P3 | Catawba County Schools | `/catawba-county/` | 待创建 |
-| P3 | Randolph County Schools | `/randolph-county-nc/` | 待创建 |
+| P3 | Iredell-Statesville Schools | `/iredell-statesville-schools-calendar` | ✓ 已完成 |
+| P3 | Brunswick County Schools | `/brunswick-county-schools-calendar` | ✓ 已完成 |
+| P3 | Henderson County Public Schools | `/henderson-county-public-schools-calendar` | ✓ 已完成 |
+| P3 | Catawba County Schools | `/catawba-county-schools-calendar` | ✓ 已完成 |
+| P3 | Randolph County Schools | `/randolph-county-school-system-calendar` | ✓ 已完成 |
+
+### Kentucky P3 补充（1个）
+
+| 优先级 | 学区 | 预计 Slug | 状态 |
+|--------|------|-----------|------|
+| P3 | Henderson County Schools (KY) | `/henderson-county-schools-ky-calendar` | ✓ 已完成 |
 
 ### Texas P3 批次2（5个）
 

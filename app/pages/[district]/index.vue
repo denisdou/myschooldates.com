@@ -420,9 +420,22 @@ const dateLegend = computed(() => {
 })
 
 const instructionalDaysLine = computed(() => {
+  if ((cal as any)?.hideInstructionalDaysSummary === true || (cal as any)?.meta?.hideInstructionalDaysSummary === true) {
+    return `School year span: ${formatShortDate(cal!.firstDay)} - ${formatShortDate(cal!.lastDay)}`
+  }
   const days = cal?.totalSchoolDays ?? 180
-  const description = String((cal as any)?.instructionalDaysDescription ?? '').toLowerCase()
-  const label = String((cal as any)?.instructionalDaysLabel ?? '').toLowerCase()
+  const description = String((cal as any)?.instructionalDaysDescription ?? (cal as any)?.meta?.instructionalDaysDescription ?? '').toLowerCase()
+  const label = String((cal as any)?.instructionalDaysLabel ?? (cal as any)?.meta?.instructionalDaysLabel ?? '').toLowerCase()
+  if (description.includes('attendance-day count') || description.includes('exact attendance')) {
+    return `School year span: ${formatShortDate(cal!.firstDay)} - ${formatShortDate(cal!.lastDay)}`
+  }
+  if (description.includes('approximately') || description.includes('approximate')) {
+    const sourceName = district.value?.shortName || district.value?.name || 'district'
+    return `Approximately ${days} instructional days are scheduled, based on the published ${sourceName} calendar`
+  }
+  if (description.includes('summarized') || description.includes('summary')) {
+    return `${days} listed calendar days (calendar summary)`
+  }
   if (description.includes('calculated')) {
     const sourceName = district.value?.shortName || district.value?.name || 'district'
     if (label.includes('attendance')) {
@@ -584,6 +597,7 @@ if (!isStatePage && district.value) {
     .filter(y => y.schoolYear !== currentYear)
     .map(y => `https://myschooldates.com/${slug}/${y.schoolYear}`)
   const webPageParts = [
+    ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
     ...(faqs.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
     ...yearPageLinks.map((url) => ({
       '@type': 'WebPage',
@@ -604,10 +618,10 @@ if (!isStatePage && district.value) {
     publisher: { '@id': 'https://myschooldates.com/#organization' },
     author: { '@id': 'https://myschooldates.com/#education-research-team' },
     about: { '@id': districtAbout['@id'] },
-    ...(datasetEntity
-      ? { mainEntity: { '@id': `${canonicalUrl}#calendar-dataset` } }
-      : itemListEvents.value.length
-        ? { mainEntity: { '@id': `${canonicalUrl}#key-dates` } }
+    ...(itemListEvents.value.length
+      ? { mainEntity: { '@id': `${canonicalUrl}#key-dates` } }
+      : datasetEntity
+        ? { mainEntity: { '@id': `${canonicalUrl}#calendar-dataset` } }
         : {}),
     ...(webPageParts.length ? { hasPart: webPageParts } : {}),
     ...(yearPageLinks.length ? { relatedLink: yearPageLinks } : {}),
@@ -662,14 +676,6 @@ if (!isStatePage && district.value) {
           organizer: { '@id': districtAbout['@id'] },
           performer: { '@id': districtAbout['@id'] },
           isAccessibleForFree: true,
-          offers: {
-            '@type': 'Offer',
-            url: canonicalUrl,
-            price: '0',
-            priceCurrency: 'USD',
-            availability: 'https://schema.org/InStock',
-            validFrom: pageDatePublished ?? pageDateModified ?? range.start,
-          },
         },
       }
     }),
@@ -1022,7 +1028,7 @@ if (!isStatePage && district.value) {
             <svg v-else class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
             </svg>
-            <span v-if="!isEstimated">Checked against publicly available official district source · Maintained by MySchoolDates · Last checked {{ verifiedDate }}</span>
+            <span v-if="!isEstimated">Verified against {{ meta.name }} official calendar source · Maintained by MySchoolDates · Last updated {{ verifiedDate }}</span>
             <span v-else>Based on official district website · Not yet human-verified</span>
           </div>
           <div v-if="!isEstimated && verifiedDate" class="mt-3 rounded-xl border border-gray-200 bg-white p-3">
@@ -1042,7 +1048,9 @@ if (!isStatePage && district.value) {
               </li>
             </ul>
           </div>
-          <DistrictCustomSections :sections="customSections" position="afterVerification" />
+          <div class="mt-8">
+            <DistrictCustomSections :sections="customSections" position="afterVerification" />
+          </div>
         </div>
 
         <!-- Calendar track notice -->
@@ -1120,7 +1128,7 @@ if (!isStatePage && district.value) {
               rel="noopener"
               class="inline-flex items-center justify-center rounded-lg border border-blue-200 bg-white px-3 py-2 text-sm font-semibold text-blue-700 hover:border-blue-300 hover:bg-blue-50 transition-colors"
             >
-              {{ (cal as any).sourcePdfUrl ? 'View Official PDF' : 'Download Printable PDF' }}
+              {{ (cal as any).sourcePdfUrl ? 'Download PDF' : 'Download Printable PDF' }}
               <span class="sr-only">(opens in a new tab)</span>
             </a>
           </div>
@@ -1159,7 +1167,7 @@ if (!isStatePage && district.value) {
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10M7 11h10M7 15h6M6 3h8l4 4v14H6V3z" />
                 </svg>
-                {{ (cal as any).sourcePdfUrl ? 'View official PDF' : 'Printable PDF' }}
+                {{ (cal as any).sourcePdfUrl ? 'Download PDF' : 'Printable PDF' }}
                 <span class="sr-only">(opens in a new tab)</span>
               </a>
             </div>
@@ -1307,8 +1315,10 @@ if (!isStatePage && district.value) {
         <DistrictGradingPeriods :periods="(cal as any).gradingPeriods" />
 
         <!-- What's Different This Year -->
-        <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal" :prev-cal="prevCal ?? undefined" />
-        <DistrictCustomSections :sections="customSections" position="afterYearDiff" />
+        <div id="comparison" class="scroll-mt-24 space-y-8">
+          <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal" :prev-cal="prevCal ?? undefined" />
+          <DistrictCustomSections :sections="customSections" position="afterYearDiff" />
+        </div>
 
         <!-- Year Switcher -->
         <div v-if="archivedYears.length" class="flex items-center gap-2 flex-wrap">

@@ -45,6 +45,7 @@ export default defineNuxtConfig({
         '/aldine-independent-school-district-calendar',
         '/austin-independent-school-district-calendar',
         '/broward-county-school-calendar',
+        '/brunswick-county-schools-calendar',
         '/charlotte-mecklenburg-schools-calendar',
         '/chesterfield-county-school-calendar',
         '/cumberland-county-school-calendar',
@@ -73,6 +74,7 @@ export default defineNuxtConfig({
         '/pinellas-county-school-calendar',
         '/polk-county-school-calendar',
         '/prince-william-county-school-calendar',
+        '/randolph-county-school-system-calendar',
         '/riverside-unified-school-district-calendar',
         '/roanoke-county-public-schools-calendar',
         '/sacramento-city-unified-school-calendar',
@@ -83,6 +85,7 @@ export default defineNuxtConfig({
         '/stockton-unified-school-district-calendar',
         '/oakland-unified-school-district-calendar',
         '/irvine-unified-school-district-calendar',
+        '/iredell-statesville-schools-calendar',
         '/lee-county-school-calendar',
         '/san-diego-unified-school-district-calendar',
         '/virginia-beach-school-calendar',
@@ -92,9 +95,12 @@ export default defineNuxtConfig({
         '/winston-salem-forsyth-school-calendar',
         '/plano-independent-school-district-calendar',
         '/henrico-county-school-calendar',
+        '/henderson-county-schools-ky-calendar',
+        '/henderson-county-public-schools-calendar',
         '/frisco-independent-school-district-calendar',
         '/union-county-school-calendar',
         '/cabarrus-county-school-calendar',
+        '/catawba-county-schools-calendar',
         '/johnston-county-school-calendar',
         '/durham-public-schools-calendar',
         '/new-hanover-county-school-calendar',
@@ -115,6 +121,10 @@ export default defineNuxtConfig({
         '/broward-county-school-calendar/2025-2026',
         '/broward-county-school-calendar/2026-2027',
         '/broward-county-school-calendar/2027-2028',
+
+        '/brunswick-county-schools-calendar/2025-2026',
+        '/brunswick-county-schools-calendar/2026-2027',
+        '/brunswick-county-schools-calendar/2027-2028',
 
         '/charlotte-mecklenburg-schools-calendar/2025-2026',
         '/charlotte-mecklenburg-schools-calendar/2026-2027',
@@ -252,6 +262,9 @@ export default defineNuxtConfig({
         '/irvine-unified-school-district-calendar/2026-2027',
         '/irvine-unified-school-district-calendar/2027-2028',
 
+        '/iredell-statesville-schools-calendar/2025-2026',
+        '/iredell-statesville-schools-calendar/2026-2027',
+
         '/san-diego-unified-school-district-calendar/2025-2026',
         '/san-diego-unified-school-district-calendar/2026-2027',
 
@@ -278,6 +291,20 @@ export default defineNuxtConfig({
 
         '/henrico-county-school-calendar/2026-2027',
         '/henrico-county-school-calendar/2027-2028',
+
+        '/henderson-county-schools-ky-calendar/2025-2026',
+        '/henderson-county-schools-ky-calendar/2026-2027',
+
+        '/henderson-county-public-schools-calendar/2025-2026',
+        '/henderson-county-public-schools-calendar/2026-2027',
+        '/henderson-county-public-schools-calendar/2027-2028',
+
+        '/catawba-county-schools-calendar/2025-2026',
+        '/catawba-county-schools-calendar/2026-2027',
+
+        '/randolph-county-school-system-calendar/2025-2026',
+        '/randolph-county-school-system-calendar/2026-2027',
+        '/randolph-county-school-system-calendar/2027-2028',
 
         '/frisco-independent-school-district-calendar/2025-2026',
         '/frisco-independent-school-district-calendar/2026-2027',

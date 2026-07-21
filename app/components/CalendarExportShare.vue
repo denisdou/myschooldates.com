@@ -31,7 +31,7 @@ const pdfDescription = computed(() => isArchivedPdfCopy.value
 const pdfButtonLabel = computed(() => {
   if (isArchivedPdfCopy.value) return 'View Archived Copy of Official PDF'
   if (hasGeneratedPrintablePdf.value) return 'Download Printable PDF Calendar'
-  if (isDrivePdf.value) return 'View Printable PDF'
+  if (isDrivePdf.value) return 'Download PDF'
   return 'View Official PDF'
 })
 
@@ -96,6 +96,9 @@ const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year
         </svg>
         {{ icsButtonLabel }}
       </a>
+      <p class="mb-3 text-center text-xs font-medium text-gray-500">
+        One-time calendar download. Not a live district sync.
+      </p>
       <div class="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3">
         <p class="text-xs font-medium text-gray-500 mb-2">Compatible with</p>
         <ul class="flex flex-wrap gap-2" aria-label="Compatible calendar apps">

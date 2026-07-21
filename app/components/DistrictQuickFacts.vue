@@ -126,6 +126,7 @@ type MetricPool = {
   winterBreakEnd:              string | null
   longestInstructionalStretch: { weeks: number; start: string; end: string } | null
   instructionalDays:           number
+  instructionalDaysDescription: string | null
   springBreakVsPrevYear:       string | null
   springBreakDiffDays:         number | null
   firstDay:                    string
@@ -380,6 +381,7 @@ function computeMetricPool(
     winterBreakEnd: winterBreakObj ? winterBreakObj.end : null,
     longestInstructionalStretch,
     instructionalDays: cal.totalSchoolDays ?? 180,
+    instructionalDaysDescription: cal.instructionalDaysDescription ?? cal.meta?.instructionalDaysDescription ?? null,
     springBreakVsPrevYear,
     springBreakDiffDays,
     firstDay: cal.firstDay,
@@ -413,7 +415,11 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
     raw.push({ key: 'springBreakDate', value: fmt(pool.springBreakStart), label: 'Spring Break', score: 114 })
   }
   raw.push({ key: 'noSchoolDayCount', value: String(pool.noSchoolDayCount), label: 'Listed Student No-School Dates', score: 112 })
-  raw.push({ key: 'instructionalDays', value: String(pool.instructionalDays), label: 'School Days', score: 110 })
+  const instructionalDaysDescription = String(pool.instructionalDaysDescription ?? '').toLowerCase()
+  const instructionalDaysLabel = instructionalDaysDescription.includes('summary') || instructionalDaysDescription.includes('summarized')
+    ? 'Listed Calendar Days'
+    : 'School Days'
+  raw.push({ key: 'instructionalDays', value: String(pool.instructionalDays), label: instructionalDaysLabel, score: 110 })
   // instructionWeeks omitted — low user value; staff calendar length is more actionable.
   if (pool.nextStudentDayOff) {
     const x = pool.nextStudentDayOff

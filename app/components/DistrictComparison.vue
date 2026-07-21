@@ -238,7 +238,7 @@ const comparisonTitle = computed(() => {
 </script>
 
 <template>
-  <details id="comparison" v-if="rows.length > 1" open class="bg-white rounded-xl border border-gray-200 overflow-hidden scroll-mt-24 group">
+  <details id="nearby-district-comparison" v-if="rows.length > 1" open class="bg-white rounded-xl border border-gray-200 overflow-hidden scroll-mt-24 group">
     <summary class="cursor-pointer list-none px-6 py-4 border-b border-gray-100">
       <div class="flex items-start justify-between gap-4">
         <div>
