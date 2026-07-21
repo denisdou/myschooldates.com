@@ -465,6 +465,8 @@ if (!isStatePage && district.value) {
   const _districtDesc = (meta.value as any).seoDescription ? _replacePlaceholders((meta.value as any).seoDescription) : undefined
   const _pageTitle = _calTitle ?? _districtTitle ?? `${_dn} Calendar ${currentYear}${_titleSuffix}`
   const _pageDesc = _calDesc ?? _districtDesc ?? _idxDesc
+  const schemaImageUrl = 'https://myschooldates.com/icons/myschooldates-og-img.png'
+  const schemaLicenseUrl = 'https://myschooldates.com/terms'
   useSeoMeta({
     title: _pageTitle,
     description: _pageDesc,
@@ -543,6 +545,8 @@ if (!isStatePage && district.value) {
     name: schemaCalendarName,
     description: datasetDescription,
     url: canonicalUrl,
+    license: schemaLicenseUrl,
+    usageInfo: schemaLicenseUrl,
     inLanguage: 'en-US',
     ...(pageDateCreated ? { dateCreated: pageDateCreated } : {}),
     ...(pageDateModified ? { dateModified: pageDateModified } : {}),
@@ -647,13 +651,25 @@ if (!isStatePage && district.value) {
         item: {
           '@type': 'Event',
           name: event.name,
-          ...(event.description ? { description: event.description } : {}),
+          description: event.description
+            ?? `${event.name} for the ${meta.value!.name} ${currentYear} districtwide school calendar.`,
+          image: schemaImageUrl,
           startDate: range.start,
           endDate: range.end,
           eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
           eventStatus: 'https://schema.org/EventScheduled',
           location: eventSchemaLocation(),
           organizer: { '@id': districtAbout['@id'] },
+          performer: { '@id': districtAbout['@id'] },
+          isAccessibleForFree: true,
+          offers: {
+            '@type': 'Offer',
+            url: canonicalUrl,
+            price: '0',
+            priceCurrency: 'USD',
+            availability: 'https://schema.org/InStock',
+            validFrom: pageDatePublished ?? pageDateModified ?? range.start,
+          },
         },
       }
     }),
