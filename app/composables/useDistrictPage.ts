@@ -43,19 +43,25 @@ export function useDistrictPage() {
 
   function getBreaks(events: Array<{ date: string; name: string; type: string }>) {
     const result: { name: string; start: string; end: string; days: number }[] = []
+    const normalizeBreakName = (name: string) => name
+      .toLowerCase()
+      .replace(/\bend\b/g, '')
+      .replace(/\bstart\b/g, '')
+      .replace(/\/.*$/g, '')
+      .replace(/[-:]+.*$/g, '')
+      .replace(/\s+/g, ' ')
+      .trim()
     for (let i = 0; i < events.length; i++) {
       if (events[i].type === 'break_start') {
         const baseName = events[i].name
-        const normalizedBase = baseName.toLowerCase().trim()
+        const normalizedBase = normalizeBreakName(baseName)
         const endEvent = events.find(
           (e, j) => {
             if (j <= i || e.type !== 'break_end') return false
-            const normalizedEnd = e.name.toLowerCase().trim()
-            return normalizedEnd === `${normalizedBase} end` ||
-              normalizedEnd.startsWith(`${normalizedBase} end`) ||
-              normalizedEnd.startsWith(`${normalizedBase} end/`) ||
-              normalizedEnd.startsWith(`${normalizedBase} end -`) ||
-              normalizedEnd.startsWith(`${normalizedBase} end:`)
+            const normalizedEnd = normalizeBreakName(e.name)
+            return normalizedEnd === normalizedBase ||
+              normalizedEnd.includes(normalizedBase) ||
+              normalizedBase.includes(normalizedEnd)
           }
         )
         if (endEvent) {
@@ -85,8 +91,10 @@ export function useDistrictPage() {
       e => e.type === 'break_end' && e.name.toLowerCase().includes('winter')
     )
     if (!winterEnd) return ''
-    // Prefer an explicit school_resume event (e.g. "First Day of Spring Semester")
-    const resumeEvent = events.find(e => e.type === 'school_resume' && e.date > winterEnd.date)
+    // Prefer an explicit student return event before falling back to the next weekday.
+    const resumeEvent = events.find(e =>
+      ['school_resume', 'school_reopen', 'semester_start'].includes(e.type) && e.date > winterEnd.date
+    )
     if (resumeEvent) return resumeEvent.date
     // Fallback: advance past weekends and any no-student day
     const noStudentDates = new Set(
@@ -268,7 +276,7 @@ export function useDistrictPage() {
     no_school: 'No School', student_holiday: 'No School',
     early_release: 'Early Release', early_dismissal: 'Early Dismissal',
     makeup_day: 'Make-Up Day', school_resume: 'School Resumes', school_reopen: 'School Resumes',
-    quarter_end: 'End of Quarter', semester_end: 'End of Semester',
+    quarter_start: 'Start of Quarter', quarter_end: 'End of Quarter', semester_end: 'End of Semester',
     graduation: 'Graduation', academic: 'Academic', observance: 'Observance',
     teacher_workday: 'Teacher Workday',
   }
@@ -286,6 +294,7 @@ export function useDistrictPage() {
     makeup_day: 'bg-orange-100 text-orange-800',
     school_resume: 'bg-green-100 text-green-800',
     school_reopen: 'bg-green-100 text-green-800',
+    quarter_start: 'bg-gray-100 text-gray-700',
     quarter_end: 'bg-gray-100 text-gray-700',
     semester_end: 'bg-gray-100 text-gray-700',
     graduation: 'bg-green-100 text-green-800',

@@ -213,11 +213,11 @@
 
 | 优先级 | 学区 | 预计 Slug | 状态 |
 |--------|------|-----------|------|
-| P3 | McKinney ISD | `/mckinney-isd/` | 待创建 |
-| P3 | Klein ISD | `/klein-isd/` | 待创建 |
-| P3 | Spring ISD | `/spring-isd/` | 待创建 |
-| P3 | Humble ISD | `/humble-isd/` | 待创建 |
-| P3 | Mansfield ISD | `/mansfield-isd/` | 待创建 |
+| P3 | McKinney ISD | `/mckinney-isd-calendar` | ✓ 已完成 |
+| P3 | Klein ISD | `/klein-isd-calendar` | ✓ 已完成 |
+| P3 | Spring ISD | `/spring-isd-calendar` | ✓ 已完成 |
+| P3 | Humble ISD | `/humble-isd-calendar` | ✓ 已完成 |
+| P3 | Mansfield ISD | `/mansfield-isd-calendar` | ✓ 已完成 |
 
 ### California P3 批次2（5个）
 

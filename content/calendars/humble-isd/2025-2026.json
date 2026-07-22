@@ -1,0 +1,82 @@
+{
+  "institutionId": "humble-isd",
+  "schoolYear": "2025-2026",
+  "firstDay": "2025-08-13",
+  "lastDay": "2026-05-29",
+  "sourceUrl": "https://www.humbleisd.net/o/humbleisd/page/academic-calendar#printable",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3592/Humble_Isd/cdc01af1-235a-49a9-b58a-672dda631ea8/25-26_Calendar_Eng_with_Text___v060925.pdf?disposition=inline",
+  "lastVerifiedAt": "2026-07-22",
+  "datePublished": "2026-07-22",
+  "dateModified": "2026-07-22",
+  "calendarType": "traditional",
+  "yearNumbersMode": "compact",
+  "seoTitle": "Humble ISD Calendar 2025-2026: Holidays & Breaks",
+  "seoDescription": "Humble ISD 2025-2026 calendar with Aug 13 first day, May 29 last day, student/teacher break, Thanksgiving, winter break, spring break, PDF and ICS.",
+  "calendarNotes": "Humble ISD starts the 2025-2026 school year on August 13, 2025 and ends on May 29, 2026. Student/Teacher Break runs October 13-17, Thanksgiving Holiday runs November 24-28, Winter Break runs December 22-January 2, and Spring Break runs March 16-20. February 9-10 are listed as inclement weather days that may become school days if time is lost to bad weather.",
+  "calendarFaqs": [
+    {
+      "q": "When does Humble ISD start school in 2025?",
+      "a": "The first day of school is Wednesday, August 13, 2025."
+    },
+    {
+      "q": "When is Humble ISD Spring Break in 2026?",
+      "a": "Spring Break runs Monday, March 16 through Friday, March 20, 2026."
+    },
+    {
+      "q": "When is the last day of school for Humble ISD in 2026?",
+      "a": "The last day of school is Friday, May 29, 2026."
+    },
+    {
+      "q": "What are Humble ISD inclement weather days in 2025-2026?",
+      "a": "February 9 and February 10, 2026 are listed as inclement weather days and may become school days if time is lost to bad weather."
+    }
+  ],
+  "yearNumbers": [
+    {
+      "label": "First Day",
+      "value": "Aug 13",
+      "detail": "The first day of school is August 13, 2025."
+    },
+    {
+      "label": "Spring Break",
+      "value": "Mar 16-20",
+      "detail": "Spring Break runs March 16-20, 2026."
+    },
+    {
+      "label": "Last Day",
+      "value": "May 29",
+      "detail": "The last day of school is May 29, 2026."
+    }
+  ],
+  "events": [
+    { "date": "2025-08-13", "name": "First Day of School", "type": "school_start" },
+    { "date": "2025-09-01", "name": "Labor Day Holiday", "type": "holiday" },
+    { "date": "2025-10-10", "name": "End of 1st 9 Weeks", "type": "quarter_end" },
+    { "date": "2025-10-13", "name": "Student/Teacher Break", "type": "break_start" },
+    { "date": "2025-10-17", "name": "Student/Teacher Break End", "type": "break_end" },
+    { "date": "2025-10-20", "name": "Elementary Holiday / Staff Workday; Begin 2nd 9 Weeks", "type": "student_holiday" },
+    { "date": "2025-10-31", "name": "Elementary Parent/Teacher Conference", "type": "other" },
+    { "date": "2025-11-24", "name": "Thanksgiving Holiday", "type": "break_start" },
+    { "date": "2025-11-28", "name": "Thanksgiving Holiday End", "type": "break_end" },
+    { "date": "2025-12-18", "name": "Early Release for Middle School and High School", "type": "early_release" },
+    { "date": "2025-12-19", "name": "Early Release for All Schools / End of 2nd 9 Weeks", "type": "semester_end" },
+    { "date": "2025-12-22", "name": "Winter Break Holiday", "type": "break_start" },
+    { "date": "2026-01-02", "name": "Winter Break Holiday End", "type": "break_end" },
+    { "date": "2026-01-05", "name": "Staff Workday", "type": "student_holiday" },
+    { "date": "2026-01-06", "name": "Begin Spring Semester / 3rd 9 Weeks", "type": "semester_start" },
+    { "date": "2026-01-19", "name": "MLK Day Holiday", "type": "holiday" },
+    { "date": "2026-02-09", "name": "Inclement Weather Day / All Student Holiday / Staff Workday", "type": "student_holiday" },
+    { "date": "2026-02-10", "name": "Inclement Weather Day / All Student Holiday / Staff Workday", "type": "student_holiday" },
+    { "date": "2026-02-11", "name": "Student/Teacher Break", "type": "break_start" },
+    { "date": "2026-02-13", "name": "Student/Teacher Break End", "type": "break_end" },
+    { "date": "2026-02-16", "name": "Elementary Holiday / Staff Workday", "type": "student_holiday" },
+    { "date": "2026-03-13", "name": "End of 3rd 9 Weeks", "type": "quarter_end" },
+    { "date": "2026-03-16", "name": "Spring Break Holiday", "type": "break_start" },
+    { "date": "2026-03-20", "name": "Spring Break Holiday End", "type": "break_end" },
+    { "date": "2026-03-23", "name": "Elementary Holiday / Staff Workday; Begin 4th 9 Weeks", "type": "quarter_start" },
+    { "date": "2026-04-03", "name": "Good Friday Holiday", "type": "holiday" },
+    { "date": "2026-05-25", "name": "Memorial Day Holiday", "type": "holiday" },
+    { "date": "2026-05-28", "name": "Early Release for Middle School and High School", "type": "early_release" },
+    { "date": "2026-05-29", "name": "Early Release for All Students / Last Day of School", "type": "school_end" }
+  ]
+}

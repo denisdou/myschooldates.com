@@ -1,0 +1,79 @@
+{
+  "institutionId": "mckinney-isd",
+  "schoolYear": "2025-2026",
+  "firstDay": "2025-08-12",
+  "lastDay": "2026-05-21",
+  "totalSchoolDays": 171,
+  "sourceUrl": "https://www.mckinneyisd.net/page/calendars",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4789/Misd/633ac9e0-8abc-427c-a1d7-c2b98440559e/2025-26_Academic_Calendar.pdf?disposition=inline",
+  "lastVerifiedAt": "2026-07-22",
+  "datePublished": "2026-07-22",
+  "dateModified": "2026-07-22",
+  "calendarType": "traditional",
+  "yearNumbersMode": "compact",
+  "seoTitle": "McKinney ISD Calendar 2025-2026: Holidays & Breaks",
+  "seoDescription": "McKinney ISD 2025-2026 calendar with Aug 12 first day, May 21 last day, fall break, Thanksgiving, winter break, spring break, PDF and ICS.",
+  "calendarNotes": "McKinney ISD starts the 2025-2026 school year on August 12, 2025 and ends instruction on May 21, 2026, with graduation day listed on May 22. Fall Break runs October 13-17, Thanksgiving runs November 24-28, Winter Holiday runs December 22-January 2, and Spring Break runs March 16-20. The calendar also lists staff development and teacher workdays, student holidays, bad weather days, and nine-week grading period markers.",
+  "calendarFaqs": [
+    {
+      "q": "When does McKinney ISD start school in 2025?",
+      "a": "The first day of school is Tuesday, August 12, 2025."
+    },
+    {
+      "q": "When is McKinney ISD Spring Break in 2026?",
+      "a": "Spring Break runs Monday, March 16 through Friday, March 20, 2026."
+    },
+    {
+      "q": "When is the last day of school for McKinney ISD in 2026?",
+      "a": "The final instructional day is Thursday, May 21, 2026. Graduation day is listed for Friday, May 22."
+    }
+  ],
+  "yearNumbers": [
+    {
+      "label": "First Day",
+      "value": "Aug 12",
+      "detail": "The first day of school is August 12, 2025."
+    },
+    {
+      "label": "Spring Break",
+      "value": "Mar 16-20",
+      "detail": "Spring Break runs March 16-20, 2026."
+    },
+    {
+      "label": "Last Day",
+      "value": "May 21",
+      "detail": "The final instructional day is May 21, 2026."
+    }
+  ],
+  "events": [
+    { "date": "2025-08-04", "name": "Staff Development / Teacher Workdays", "type": "student_holiday" },
+    { "date": "2025-08-08", "name": "Staff Development / Teacher Workdays End", "type": "student_holiday" },
+    { "date": "2025-08-11", "name": "Staff Development / Teacher Workday", "type": "student_holiday" },
+    { "date": "2025-08-12", "name": "First Day of School", "type": "school_start" },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
+    { "date": "2025-10-10", "name": "Nine Weeks Begin / End", "type": "quarter_end" },
+    { "date": "2025-10-13", "name": "Fall Break", "type": "break_start" },
+    { "date": "2025-10-17", "name": "Fall Break End", "type": "break_end" },
+    { "date": "2025-10-20", "name": "Nine Weeks Begin / End", "type": "quarter_start" },
+    { "date": "2025-11-24", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-11-28", "name": "Thanksgiving Break End", "type": "break_end" },
+    { "date": "2025-12-19", "name": "Nine Weeks Begin / End", "type": "quarter_end" },
+    { "date": "2025-12-22", "name": "Winter Holiday", "type": "break_start" },
+    { "date": "2026-01-02", "name": "Winter Holiday End", "type": "break_end" },
+    { "date": "2026-01-05", "name": "Staff Development / Teacher Workday", "type": "student_holiday" },
+    { "date": "2026-01-06", "name": "Nine Weeks Begin / End", "type": "quarter_start" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2026-02-16", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2026-03-13", "name": "Nine Weeks Begin / End", "type": "quarter_end" },
+    { "date": "2026-03-16", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-03-20", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2026-03-23", "name": "Nine Weeks Begin / End", "type": "quarter_start" },
+    { "date": "2026-04-03", "name": "School Holiday", "type": "holiday" },
+    { "date": "2026-04-06", "name": "Bad Weather Day", "type": "makeup_day" },
+    { "date": "2026-04-27", "name": "Bad Weather Day", "type": "makeup_day" },
+    { "date": "2026-05-21", "name": "Last Day of School", "type": "school_end" },
+    { "date": "2026-05-22", "name": "Graduation Day", "type": "other" },
+    { "date": "2026-05-25", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2026-05-26", "name": "Staff Development / Teacher Workday", "type": "student_holiday" }
+  ]
+}

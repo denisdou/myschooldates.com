@@ -570,6 +570,7 @@ if (!isStatePage && district.value) {
     '@type': 'EducationalOrganization',
     '@id': `${canonicalUrl}#district`,
     name: meta.value!.name,
+    ...(meta.value!.shortName && meta.value!.shortName !== meta.value!.name ? { alternateName: meta.value!.shortName } : {}),
     url: meta.value!.officialWebsite || canonicalUrl,
     sameAs: [meta.value!.officialWebsite, meta.value!.calendarPage].filter(Boolean),
   }
@@ -586,7 +587,9 @@ if (!isStatePage && district.value) {
   const basedOnUrl = sourcePdfUrl && !sourcePdfIsArchivedCopy ? sourcePdfUrl : sourceUrl
   const sourceCalendarName = (cal as any)?.sourceVersion
     ?? `${meta.value!.name} ${currentYear} Calendar ${sourcePdfUrl && !sourcePdfIsArchivedCopy ? 'PDF' : 'Source'}`
-  const sourceCitation = [sourceUrl, sourcePdfUrl && !sourcePdfIsArchivedCopy ? sourcePdfUrl : null].filter(Boolean)
+  const sourceCitation = basedOnUrl
+    ? [{ '@id': `${canonicalUrl}#source-calendar` }]
+    : []
   const calendarTypeName = cal
     ? String((cal as any)?.calendarType ?? '').replace(/[_-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
     : ''
@@ -621,10 +624,12 @@ if (!isStatePage && district.value) {
     inLanguage: 'en-US',
     ...(pageDateCreated ? { dateCreated: pageDateCreated } : {}),
     ...(pageDateModified ? { dateModified: pageDateModified } : {}),
+    ...(pageDateModified ? { lastReviewed: pageDateModified } : {}),
     temporalCoverage: datasetTemporalCoverage,
     creator: { '@id': 'https://myschooldates.com/#organization' },
     publisher: { '@id': 'https://myschooldates.com/#organization' },
     provider: { '@id': 'https://myschooldates.com/#organization' },
+    reviewedBy: { '@id': 'https://myschooldates.com/#education-research-team' },
     sourceOrganization: { '@id': districtAbout['@id'] },
     isBasedOn: basedOnUrl ? { '@id': `${canonicalUrl}#source-calendar` } : undefined,
     distribution: [
@@ -672,9 +677,11 @@ if (!isStatePage && district.value) {
     inLanguage: 'en-US',
     ...(pageDateCreated ? { dateCreated: pageDateCreated } : {}),
     ...(pageDateModified ? { dateModified: pageDateModified } : {}),
+    ...(pageDateModified ? { lastReviewed: pageDateModified } : {}),
     ...(pageDatePublished ? { datePublished: pageDatePublished } : {}),
     publisher: { '@id': 'https://myschooldates.com/#organization' },
     author: { '@id': 'https://myschooldates.com/#education-research-team' },
+    reviewedBy: { '@id': 'https://myschooldates.com/#education-research-team' },
     about: { '@id': districtAbout['@id'] },
     ...(itemListEvents.value.length
       ? { mainEntity: { '@id': `${canonicalUrl}#key-dates` } }

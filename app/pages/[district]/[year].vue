@@ -298,6 +298,7 @@ const districtAbout = {
   '@type': 'EducationalOrganization',
   '@id': `${hubUrl}#district`,
   name: district.value.name,
+  ...(district.value.shortName && district.value.shortName !== district.value.name ? { alternateName: district.value.shortName } : {}),
   url: district.value.officialWebsite,
   sameAs: [district.value.officialWebsite, district.value.calendarPage].filter(Boolean),
 }
@@ -314,7 +315,9 @@ const sourcePdfIsArchivedCopy = typeof sourcePdfUrl === 'string' && sourcePdfUrl
 const basedOnUrl = sourcePdfUrl && !sourcePdfIsArchivedCopy ? sourcePdfUrl : sourceUrl
 const sourceCalendarName = (cal.value as any).sourceVersion
   ?? `${district.value.name} ${year} Calendar ${sourcePdfUrl && !sourcePdfIsArchivedCopy ? 'PDF' : 'Source'}`
-const sourceCitation = [sourceUrl, sourcePdfUrl && !sourcePdfIsArchivedCopy ? sourcePdfUrl : null].filter(Boolean)
+const sourceCitation = basedOnUrl
+  ? [{ '@id': `${canonicalUrl}#source-calendar` }]
+  : []
 const calendarTypeName = String((cal.value as any)?.calendarType ?? '').replace(/[_-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 const schemaCalendarName = calendarTypeName
   ? `${district.value.name} ${calendarTypeName} Calendar ${year}`
@@ -347,10 +350,12 @@ const datasetEntity = hideDatasetSchema.value ? null : {
   inLanguage: 'en-US',
   ...(pageDateCreated ? { dateCreated: pageDateCreated } : {}),
   ...(pageDateModified ? { dateModified: pageDateModified } : {}),
+  ...(pageDateModified ? { lastReviewed: pageDateModified } : {}),
   temporalCoverage: datasetTemporalCoverage.value,
   creator: { '@id': 'https://myschooldates.com/#organization' },
   publisher: { '@id': 'https://myschooldates.com/#organization' },
   provider: { '@id': 'https://myschooldates.com/#organization' },
+  reviewedBy: { '@id': 'https://myschooldates.com/#education-research-team' },
   sourceOrganization: { '@id': districtAbout['@id'] },
   isBasedOn: basedOnUrl ? { '@id': `${canonicalUrl}#source-calendar` } : undefined,
   distribution: [
@@ -396,9 +401,11 @@ const webPageEntity = {
   inLanguage: 'en-US',
   ...(pageDateCreated ? { dateCreated: pageDateCreated } : {}),
   ...(pageDateModified ? { dateModified: pageDateModified } : {}),
+  ...(pageDateModified ? { lastReviewed: pageDateModified } : {}),
   ...(pageDatePublished ? { datePublished: pageDatePublished } : {}),
   publisher: { '@id': 'https://myschooldates.com/#organization' },
   author: { '@id': 'https://myschooldates.com/#education-research-team' },
+  reviewedBy: { '@id': 'https://myschooldates.com/#education-research-team' },
   about: { '@id': districtAbout['@id'] },
   ...(keyDateItemListEvents.value.length
     ? { mainEntity: { '@id': `${canonicalUrl}#key-dates` } }

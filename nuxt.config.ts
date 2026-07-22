@@ -61,11 +61,15 @@ export default defineNuxtConfig({
         '/hampton-city-schools-calendar',
         '/hillsborough-county-school-calendar',
         '/houston-independent-school-district-calendar',
+        '/humble-isd-calendar',
         '/long-beach-unified-school-district-calendar',
         '/los-angeles-unified-school-district-calendar',
         '/lewisville-independent-school-district-calendar',
+        '/klein-isd-calendar',
         '/loudoun-county-school-calendar',
+        '/mansfield-isd-calendar',
         '/miami-dade-school-calendar',
+        '/mckinney-isd-calendar',
         '/newport-news-public-schools-calendar',
         '/northside-independent-school-district-calendar',
         '/orange-county-school-calendar',
@@ -76,6 +80,7 @@ export default defineNuxtConfig({
         '/polk-county-school-calendar',
         '/prince-william-county-school-calendar',
         '/randolph-county-school-system-calendar',
+        '/spring-isd-calendar',
         '/riverside-unified-school-district-calendar',
         '/roanoke-county-public-schools-calendar',
         '/sacramento-city-unified-school-calendar',
@@ -309,6 +314,21 @@ export default defineNuxtConfig({
 
         '/frisco-independent-school-district-calendar/2025-2026',
         '/frisco-independent-school-district-calendar/2026-2027',
+
+        '/mckinney-isd-calendar/2025-2026',
+        '/mckinney-isd-calendar/2026-2027',
+
+        '/klein-isd-calendar/2025-2026',
+        '/klein-isd-calendar/2026-2027',
+
+        '/humble-isd-calendar/2025-2026',
+        '/humble-isd-calendar/2026-2027',
+
+        '/mansfield-isd-calendar/2025-2026',
+        '/mansfield-isd-calendar/2026-2027',
+
+        '/spring-isd-calendar/2025-2026',
+        '/spring-isd-calendar/2026-2027',
 
         '/round-rock-independent-school-district-calendar',
         '/round-rock-independent-school-district-calendar/2025-2026',

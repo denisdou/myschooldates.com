@@ -9,7 +9,7 @@ const eventSchema = z.object({
     'break_start', 'break_end',
     'early_release', 'early_dismissal',
     'academic', 'observance', 'teacher_workday',
-    'makeup_day', 'quarter_end', 'semester_end', 'graduation',
+    'makeup_day', 'quarter_start', 'quarter_end', 'semester_end', 'graduation',
   ]),
   description: z.string().optional(),
 })
