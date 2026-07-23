@@ -1,0 +1,130 @@
+{
+  "institutionId": "pomona-unified",
+  "name": "Pomona Unified School District",
+  "shortName": "PUSD",
+  "slug": "pomona-unified-school-district-calendar",
+  "state": "California",
+  "stateCode": "CA",
+  "city": "Pomona",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "TK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://proudtobe.pusd.org",
+  "calendarPage": "https://proudtobe.pusd.org/apps/pages/SchoolYearCalendars",
+  "logo": "https://proudtobe.pusd.org/pics/school_logo.png",
+  "timezone": "America/Los_Angeles",
+  "county": "Los Angeles County",
+  "region": "Southern California",
+  "metro": "Los Angeles-Long Beach-Anaheim",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "keyDates",
+  "searchAliases": [
+    "PUSD",
+    "Pomona Unified",
+    "Pomona Unified School District",
+    "Pomona school calendar",
+    "Los Angeles County school calendar",
+    "San Gabriel Valley school calendar"
+  ],
+  "districtFact": "Pomona Unified publishes school-year calendars with student-free professional development days, teacher work days, shortened days, elementary conference windows, winter break, spring break, grading period dates, and TK-kindergarten phase-in schedules.",
+  "about": [
+    {
+      "title": "About Pomona Unified School District",
+      "content": "Pomona Unified School District, also known as PUSD, serves families in Pomona and nearby San Gabriel Valley communities in Los Angeles County, California. The district calendar helps students, parents, and educators track the first day of school, student-free professional development days, teacher work days, holidays, shortened days, parent conference windows, winter break, spring break, grading periods, and the last day of school."
+    },
+    {
+      "title": "How to Use This Pomona Unified Calendar",
+      "content": "Use this page for districtwide school-year planning. Families should still confirm school-specific bell schedules, elementary Wednesday shortened-day routines, Friday late-start exceptions, testing, athletics, graduation, and campus events through Pomona Unified and their assigned school."
+    }
+  ],
+  "planningTips": {
+    "title": "Planning Tips for Pomona Unified Families",
+    "content": [
+      "Track student-free professional development days separately because students do not attend even when staff report.",
+      "Elementary parent conference windows may bring shortened schedules by campus, so verify dismissal times with your school.",
+      "Pomona Unified notes Friday late starts with exceptions on specific end-of-term days; check the year calendar before planning recurring Friday care.",
+      "TK and kindergarten phase-in schedules can have different dismissal times from the regular elementary schedule."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "pomona-unified-area-information",
+      "label": "Pomona Unified Area Information",
+      "position": "afterAbout",
+      "content": "Pomona Unified School District is located in Pomona, California, within Los Angeles County and the San Gabriel Valley region of Southern California. This local context matters because families often compare Pomona Unified school holidays, shortened days, and break windows with nearby Los Angeles County and Inland Empire district calendars."
+    }
+  ],
+  "compareIntro": "Compare the Pomona Unified calendar with other Southern California district calendars currently available on MySchoolDates. Dates shown include the first day, last day, and major breaks. This comparison is provided for planning purposes; families should use each district's official calendar as the final source for schedule changes.",
+  "districtFaqs": [
+    {
+      "q": "What days are students off at Pomona Unified?",
+      "a": "Pomona Unified student off days can include district holidays, student-free professional development days, teacher work days, Thanksgiving week, Winter Break, Spring Break, and other no-school dates listed on the school-year calendar."
+    },
+    {
+      "q": "Does Pomona Unified have student-free professional development days?",
+      "a": "Yes. PUSD calendars list professional development days when students do not attend school."
+    },
+    {
+      "q": "Does Pomona Unified have minimum days?",
+      "a": "Pomona Unified uses shortened-day schedules rather than a single universal minimum-day label in the calendar data summarized here. Families should check whether a shortened day applies to all students, elementary students, or high school students."
+    },
+    {
+      "q": "Are Pomona Unified shortened days the same for every school?",
+      "a": "Not always. The district calendar lists shortened days for all students, high school students, and elementary students. Families should confirm exact dismissal times with their school."
+    },
+    {
+      "q": "Where should families verify Pomona Unified calendar updates?",
+      "a": "Use the official Pomona Unified School Year Calendars page and campus announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with Pomona Unified."
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Los Angeles Unified School District",
+      "slug": "los-angeles-unified-school-district-calendar",
+      "state": "California",
+      "comparisonNote": "Large Los Angeles County district with separately set start, break, and end dates."
+    },
+    {
+      "name": "San Bernardino City Unified School District",
+      "slug": "san-bernardino-city-unified-school-district-calendar",
+      "state": "California",
+      "comparisonNote": "Nearby Inland Empire district often compared for school-year timing."
+    },
+    {
+      "name": "Riverside Unified School District",
+      "slug": "riverside-unified-school-district-calendar",
+      "state": "California",
+      "comparisonNote": "Southern California district with comparable family travel and break-planning needs."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Pomona Unified official website",
+      "url": "https://proudtobe.pusd.org"
+    },
+    {
+      "label": "Pomona Unified school year calendars page",
+      "url": "https://proudtobe.pusd.org/apps/pages/SchoolYearCalendars"
+    },
+    {
+      "label": "Pomona Unified logo image",
+      "url": "https://proudtobe.pusd.org/pics/school_logo.png"
+    }
+  ]
+}

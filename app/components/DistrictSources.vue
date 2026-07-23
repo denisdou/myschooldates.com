@@ -60,9 +60,9 @@ const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' 
           Editorial Policy
         </NuxtLink>
       </p>
-      <p class="font-medium text-gray-600">How we collect and verify this data</p>
-      <p>Each school year, MySchoolDates checks the official calendar source published or linked by the district. We use AI to extract key dates and events from the source document, then compare the first day, last day, major breaks, holidays, student no-school dates, early dismissals, exam windows, and alternate-calendar links when those items appear in the official source.</p>
-      <p>When extracted data does not match the official source, we update the page record before publication. This page displays major student calendar dates; early dismissals, exam windows, staff-specific details, and track-specific items may remain available only in the official PDF. The downloadable calendar file is generated from the calendar records used for this page, and the official district calendar remains the source of record for last-minute changes.</p>
+      <p class="font-medium text-gray-600">How we verify this calendar</p>
+      <p>Each school year, MySchoolDates checks the official calendar source published or linked by the district. The page record is reviewed against the official first day, last day, major breaks, holidays, student no-school dates, early dismissals, exam windows, and alternate-calendar links when those items appear in the official source.</p>
+      <p>When page data does not match the official source, we update the record before publication. This page displays major student calendar dates; early dismissals, exam windows, staff-specific details, and track-specific items may remain available only in the official PDF. The downloadable calendar file is generated from the calendar records used for this page, and the official district calendar remains the source of record for last-minute changes.</p>
       <p>Supplemental planning notes and district profile information may change by year. Families should confirm program deadlines, transportation notices, and emergency schedule updates directly with {{ shortName }}.</p>
       <p>
         <a

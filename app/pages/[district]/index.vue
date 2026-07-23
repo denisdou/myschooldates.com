@@ -367,12 +367,37 @@ type DistrictCustomSection = {
   position?: string
   groups?: { label: string; items: string[] }[]
   links?: { label: string; to: string; description?: string }[]
+  table?: { columns?: string[]; headers?: string[]; rows: string[][] }
 }
 const customSections = computed(() => [
   ...(((district.value as any).customSections ?? []) as DistrictCustomSection[]),
   ...(((cal as any)?.customSections ?? []) as DistrictCustomSection[]),
   ...(((cal as any)?.meta?.customSections ?? []) as DistrictCustomSection[]),
 ])
+const summarySectionId = computed(() => {
+  const section = customSections.value.find(s =>
+    s.id.toLowerCase().includes('summary') ||
+    s.label.toLowerCase().includes('summary')
+  )
+  return section?.id
+})
+const planningSectionId = computed(() => {
+  const section = customSections.value.find(s =>
+    s.id.toLowerCase().includes('planning-around') ||
+    s.label.toLowerCase().includes('planning around')
+  )
+  return section?.id || ((district.value as any).planningTips?.content?.length ? 'planning-tips' : undefined)
+})
+const earlyDismissalSectionId = computed(() => {
+  const section = customSections.value.find(s => {
+    const text = `${s.id} ${s.label}`.toLowerCase()
+    return text.includes('early-dismissal') ||
+      text.includes('early dismissal') ||
+      text.includes('shortened-days') ||
+      text.includes('shortened days')
+  })
+  return section?.id
+})
 const calendarTrackHelpId = computed(() => {
   const section = customSections.value.find(s =>
     s.id.toLowerCase().includes('calendar-track') ||
@@ -392,6 +417,16 @@ const calendarTrackLabel = computed(() => {
 
 const secondSemStart = computed(() => cal ? getSecondSemesterStart(cal.events) : '')
 const showSemesterCount = computed(() => (cal as any)?.hideSemesterCount !== true)
+const winterBreakLabel = computed(() => {
+  const winterBreak = breaks.value.find(b =>
+    b.name.toLowerCase().includes('winter') ||
+    b.name.toLowerCase().includes('christmas') ||
+    b.name.toLowerCase().includes('december')
+  )
+  return winterBreak
+    ? winterBreak.name.replace(/\b(Begins|Starts|Begin|Start)\b/gi, '').replace(/\s+/g, ' ').trim()
+    : 'Winter Break'
+})
 
 function countWeekdays(start: string, end: string) {
   const cursor = new Date(start + 'T00:00:00')
@@ -1120,7 +1155,7 @@ if (!isStatePage && district.value) {
           <p class="mt-1 text-sm text-gray-500">
             {{ instructionalDaysLine }}
             <span v-if="showSemesterCount"> · {{ cal.semesters ?? 2 }} semesters</span>
-            <span v-if="secondSemStart"> · Students return after Winter Break on {{ formatShortDate(secondSemStart) }}</span>
+            <span v-if="secondSemStart"> · Students return after {{ winterBreakLabel }} on {{ formatShortDate(secondSemStart) }}</span>
           </p>
           <!-- Verification badge -->
           <div class="mt-3 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full"
@@ -1242,8 +1277,12 @@ if (!isStatePage && district.value) {
 
         <nav aria-label="Page sections" class="flex flex-wrap gap-2 text-xs">
           <a href="#key-dates" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Key Dates</a>
+          <a v-if="summarySectionId" :href="`#${summarySectionId}`" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Summary</a>
           <a href="#add-to-calendar" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">PDF &amp; Calendar</a>
           <a href="#all-dates" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Dates</a>
+          <a v-if="breaks.length" href="#breaks" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Breaks</a>
+          <a v-if="planningSectionId" :href="`#${planningSectionId}`" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Planning</a>
+          <a v-if="earlyDismissalSectionId" :href="`#${earlyDismissalSectionId}`" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Early Dismissal</a>
           <a href="#comparison" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Comparison</a>
           <a href="#faq" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">FAQ</a>
         </nav>
@@ -1336,7 +1375,7 @@ if (!isStatePage && district.value) {
                 <strong>{{ formatDate(cal.lastDay) }}</strong>,
                 with {{ instructionalDaysLine }}.
                 <span v-if="secondSemStart">
-                  Students return after Winter Break on {{ formatShortDate(secondSemStart) }}.
+                  Students return after {{ winterBreakLabel }} on {{ formatShortDate(secondSemStart) }}.
                 </span>
               </p>
               <p v-if="breaks.length">
@@ -1391,7 +1430,7 @@ if (!isStatePage && district.value) {
 
           <!-- Break Summary -->
           <template v-else-if="section === 'breaks' && breaks.length">
-            <div class="bg-white rounded-xl border border-gray-200 p-6">
+            <div id="breaks" class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
               <h2 class="text-lg font-semibold text-gray-900 mb-4">Major School Breaks</h2>
               <div class="space-y-3">
                 <div v-for="b in breaks" :key="b.name" class="flex items-center justify-between py-3 border-b border-gray-50 last:border-0">
@@ -1450,6 +1489,7 @@ if (!isStatePage && district.value) {
 
         <!-- Planning Tips -->
         <DistrictPlanningTips
+          id="planning-tips"
           v-if="!hiddenSections.has('planningTips') && (district as any).planningTips?.content?.length"
           :name="district.shortName || district.name"
           :tips="(district as any).planningTips.content"

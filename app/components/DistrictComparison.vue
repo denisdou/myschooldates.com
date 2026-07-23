@@ -58,6 +58,23 @@ const calendarTypeLabel = (type?: string | null) => {
     .join(' ')
 }
 
+const cleanBreakLabel = (name: string, fallback: string) => {
+  const cleaned = name
+    .replace(/\b(Begins|Starts|Begin|Start)\b/gi, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+  return cleaned || fallback
+}
+
+const winterBreakLabel = computed(() => {
+  const winterBreak = getBreaks(props.cal?.events ?? []).find((b: any) =>
+    b.name.toLowerCase().includes('winter') ||
+    b.name.toLowerCase().includes('christmas') ||
+    b.name.toLowerCase().includes('december')
+  )
+  return winterBreak ? cleanBreakLabel(winterBreak.name, 'Winter Break') : 'Winter Break'
+})
+
 const displayName = (row: ComparisonRow) => {
   if (row.name.includes('Pinellas')) return 'Pinellas'
   if (row.name.includes('Pasco')) return 'Pasco'
@@ -185,7 +202,7 @@ const comparisonRows = computed(() => {
     },
     {
       key: 'winterBreak',
-      label: 'Winter Break',
+      label: winterBreakLabel.value,
       value: (row: ComparisonRow) => row.winterBreak ? fmtRange(row.winterBreak.start, row.winterBreak.end) : '',
     },
     {
@@ -229,16 +246,19 @@ const compareIntro = computed(() => {
 
 const sourceRows = computed(() => rows.value.filter(row => row.sourceUrl))
 const comparisonTitle = computed(() => {
-  const others = rows.value.filter(row => !row.isCurrent)
-  if (others.length === 1) {
-    return `${props.year} Calendar Comparison with ${others[0].name}`
-  }
-  return `${props.year} Calendar Comparison with Nearby School Districts`
+  const current = rows.value.find(row => row.isCurrent)
+  const currentName = current?.name
+    ? current.name
+      .replace(/ School District$/, '')
+      .replace(/ Unified$/, ' Unified')
+      .replace(/ Independent$/, ' Independent')
+    : (props.district?.shortName ?? props.district?.name ?? 'District')
+  return `${currentName} Calendar Compared With Nearby Districts`
 })
 </script>
 
 <template>
-  <details id="nearby-district-comparison" v-if="rows.length > 1" open class="bg-white rounded-xl border border-gray-200 overflow-hidden scroll-mt-24 group">
+  <details id="nearby-district-comparison" v-if="rows.length > 1" class="bg-white rounded-xl border border-gray-200 overflow-hidden scroll-mt-24 group">
     <summary class="cursor-pointer list-none px-6 py-4 border-b border-gray-100">
       <div class="flex items-start justify-between gap-4">
         <div>
@@ -292,7 +312,7 @@ const comparisonTitle = computed(() => {
               :class="row.isCurrent ? 'font-semibold text-blue-800' : 'text-gray-600'"
             >
               <span v-if="feature.value(row)">{{ feature.value(row) }}</span>
-              <span v-else class="text-gray-400">Not listed in summary</span>
+              <span v-else class="text-gray-400">Not available in reviewed source</span>
             </td>
           </tr>
         </tbody>

@@ -45,8 +45,12 @@ export function useDistrictPage() {
     const result: { name: string; start: string; end: string; days: number }[] = []
     const normalizeBreakName = (name: string) => name
       .toLowerCase()
+      .replace(/\bbegins\b/g, '')
+      .replace(/\bbegin\b/g, '')
+      .replace(/\bends\b/g, '')
       .replace(/\bend\b/g, '')
       .replace(/\bstart\b/g, '')
+      .replace(/\bstarts\b/g, '')
       .replace(/\/.*$/g, '')
       .replace(/[-:]+.*$/g, '')
       .replace(/\s+/g, ' ')

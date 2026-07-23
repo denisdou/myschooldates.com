@@ -125,6 +125,16 @@ const formatWeekdayDate = (d: string) =>
 const breaks = computed(() => getBreaks(cal.value!.events))
 const secondSemStart = computed(() => getSecondSemesterStart(cal.value!.events))
 const showSemesterCount = computed(() => (cal.value as any)?.hideSemesterCount !== true)
+const winterBreakLabel = computed(() => {
+  const winterBreak = breaks.value.find(b =>
+    b.name.toLowerCase().includes('winter') ||
+    b.name.toLowerCase().includes('christmas') ||
+    b.name.toLowerCase().includes('december')
+  )
+  return winterBreak
+    ? winterBreak.name.replace(/\b(Begins|Starts|Begin|Start)\b/gi, '').replace(/\s+/g, ' ').trim()
+    : 'Winter Break'
+})
 const springBreak = computed(() =>
   breaks.value.find(b => b.name.toLowerCase().includes('spring')) ?? null
 )
@@ -177,12 +187,38 @@ type DistrictCustomSection = {
   position?: string
   groups?: { label: string; items: string[] }[]
   links?: { label: string; to: string; description?: string }[]
+  table?: { columns?: string[]; headers?: string[]; rows: string[][] }
 }
 const customSections = computed(() => [
   ...(((district.value as any).customSections ?? []) as DistrictCustomSection[]),
   ...(((cal.value as any)?.customSections ?? []) as DistrictCustomSection[]),
   ...(((cal.value as any)?.meta?.customSections ?? []) as DistrictCustomSection[]),
 ])
+const summarySectionId = computed(() => {
+  const section = customSections.value.find(s =>
+    s.id.toLowerCase().includes('summary') ||
+    s.label.toLowerCase().includes('summary')
+  )
+  return section?.id
+})
+const planningSectionId = computed(() => {
+  const section = customSections.value.find(s =>
+    s.id.toLowerCase().includes('planning-around') ||
+    s.label.toLowerCase().includes('planning around')
+  )
+  return section?.id || ((district.value as any).planningTips?.content?.length ? 'planning-tips' : undefined)
+})
+const earlyDismissalSectionId = computed(() => {
+  const section = customSections.value.find(s => {
+    const text = `${s.id} ${s.label}`.toLowerCase()
+    return text.includes('early-dismissal') ||
+      text.includes('early dismissal') ||
+      text.includes('shortened-days') ||
+      text.includes('shortened days')
+  })
+  return section?.id
+})
+const hasBreaksSection = computed(() => customSections.value.some(s => s.position === 'afterBreaks'))
 const calendarTrackHelpId = computed(() => {
   const section = customSections.value.find(s =>
     s.id.toLowerCase().includes('calendar-track') ||
@@ -580,7 +616,7 @@ useHead({
           <p class="text-sm text-gray-500">
             {{ instructionalDaysLine }}
             <span v-if="showSemesterCount"> · {{ cal!.semesters ?? 2 }} semesters</span>
-            <span v-if="secondSemStart"> · Students return after Winter Break on {{ formatShortDate(secondSemStart) }}</span>
+            <span v-if="secondSemStart"> · Students return after {{ winterBreakLabel }} on {{ formatShortDate(secondSemStart) }}</span>
           </p>
           <p class="text-xs text-gray-600">
             MySchoolDates is an independent calendar reference and is not affiliated with {{ district!.name }}.
@@ -657,8 +693,12 @@ useHead({
 
       <nav aria-label="Page sections" class="flex flex-wrap gap-2 text-xs">
         <a href="#key-dates" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Key Dates</a>
+        <a v-if="summarySectionId" :href="`#${summarySectionId}`" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Summary</a>
         <a href="#add-to-calendar" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">PDF &amp; Calendar</a>
         <a href="#all-dates" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Dates</a>
+        <a v-if="hasBreaksSection" href="#breaks" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Breaks</a>
+        <a v-if="planningSectionId" :href="`#${planningSectionId}`" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Planning</a>
+        <a v-if="earlyDismissalSectionId" :href="`#${earlyDismissalSectionId}`" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Early Dismissal</a>
         <a href="#comparison" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Comparison</a>
         <a href="#faq" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">FAQ</a>
       </nav>
@@ -712,7 +752,9 @@ useHead({
       />
 
       <!-- Custom Sections: afterBreaks (year pages render this after the full date list) -->
-      <DistrictCustomSections :sections="customSections" position="afterBreaks" />
+      <div id="breaks" class="scroll-mt-24">
+        <DistrictCustomSections :sections="customSections" position="afterBreaks" />
+      </div>
 
       <!-- Other Official Calendars -->
       <DistrictOtherCalendars
@@ -764,6 +806,7 @@ useHead({
 
       <!-- Planning Tips -->
       <DistrictPlanningTips
+        id="planning-tips"
         v-if="!hiddenSections.has('planningTips') && (district as any).planningTips?.content?.length"
         :name="district!.shortName || district!.name"
         :tips="(district as any).planningTips.content"

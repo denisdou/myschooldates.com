@@ -38,6 +38,8 @@ const pdfButtonLabel = computed(() => {
 const copied = ref(false)
 const icsHref = computed(() => `/calendars/${props.district.slug}-${props.cal.schoolYear}.ics`)
 const icsFilename = computed(() => `${props.district.slug}-${props.cal.schoolYear}.ics`)
+const calendarShortName = computed(() => props.district?.shortName || props.districtName)
+const icsHeading = computed(() => `${calendarShortName.value} Calendar ${props.year} ICS File`)
 const icsButtonLabel = computed(() => {
   return `Download calendar file for Google Calendar, Apple Calendar, and Outlook`
 })
@@ -80,7 +82,7 @@ const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year
   <div id="add-to-calendar" class="bg-white rounded-xl border border-gray-200 overflow-hidden scroll-mt-24">
     <!-- Add to Calendar -->
     <div class="p-6 border-b border-gray-100">
-      <h2 class="text-lg font-semibold text-gray-900 mb-1">Download School Calendar File</h2>
+      <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ icsHeading }}</h2>
       <p class="text-sm text-gray-500 mb-4">
         Never miss a school holiday or early dismissal. Download one standard .ics file containing {{ icsIncludedText }}.
       </p>

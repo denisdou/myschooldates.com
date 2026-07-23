@@ -7,12 +7,12 @@
 
 ## 当前进度快照
 
-**已完成学区（41个）**
+**已完成学区（45个）**
 
 | 州 | 已完成 | P1 完成度 | P2 完成度 |
 |----|--------|-----------|-----------|
 | Texas | Houston ISD, Dallas ISD, Fort Worth ISD, Austin ISD, Northside ISD, Plano ISD, Frisco ISD, Katy ISD, Round Rock ISD, Conroe ISD, Cy-Fair ISD | 6/6 ✓ | 5/5 ✓ |
-| California | LAUSD, San Diego Unified, Long Beach Unified, Fresno Unified, Sacramento City USD, Elk Grove USD, San Francisco USD, San Jose USD | 5/5 ✓ | 3/5 |
+| California | LAUSD, San Diego Unified, Long Beach Unified, Fresno Unified, Sacramento City USD, Elk Grove USD, San Francisco USD, San Jose USD, Bakersfield City SD, Pomona USD, Capistrano USD, Moreno Valley USD | 5/5 ✓ | 3/5 |
 | Florida | Miami-Dade, Broward County, Orange County, Palm Beach County, Hillsborough County | 5/5 ✓ | 0/5 |
 | Virginia | Fairfax County, Prince William County, Loudoun County, Virginia Beach City, Chesterfield County, Henrico County, Arlington Public Schools | 5/5 ✓ | 2/5 |
 | North Carolina | Wake County, Charlotte-Mecklenburg, Guilford County, Winston-Salem/Forsyth, Cumberland County, Union County, Cabarrus County, Johnston County, Durham Public Schools, New Hanover County | 5/5 ✓ | 5/5 ✓ |
@@ -223,11 +223,11 @@
 
 | 优先级 | 学区 | 预计 Slug | 状态 |
 |--------|------|-----------|------|
-| P3 | Bakersfield City SD | `/bakersfield-city-usd/` | 待创建 |
+| P3 | Bakersfield City SD | `/bakersfield-city-school-district-calendar` | ✓ 已完成 |
 | P3 | Corona-Norco USD | `/corona-norco-usd/` | 待创建 |
-| P3 | Pomona USD | `/pomona-usd/` | 待创建 |
-| P3 | Capistrano USD | `/capistrano-usd/` | 待创建 |
-| P3 | Moreno Valley USD | `/moreno-valley-usd/` | 待创建 |
+| P3 | Pomona USD | `/pomona-unified-school-district-calendar` | ✓ 已完成 |
+| P3 | Capistrano USD | `/capistrano-unified-school-district-calendar` | ✓ 已完成 |
+| P3 | Moreno Valley USD | `/moreno-valley-unified-school-district-calendar` | ✓ 已完成 |
 
 ---
 

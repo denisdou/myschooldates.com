@@ -45,8 +45,10 @@ export default defineNuxtConfig({
         // ── District index pages ───────────────────────────────────────────────
         '/aldine-independent-school-district-calendar',
         '/austin-independent-school-district-calendar',
+        '/bakersfield-city-school-district-calendar',
         '/broward-county-school-calendar',
         '/brunswick-county-schools-calendar',
+        '/capistrano-unified-school-district-calendar',
         '/charlotte-mecklenburg-schools-calendar',
         '/chesterfield-county-school-calendar',
         '/cumberland-county-school-calendar',
@@ -69,6 +71,7 @@ export default defineNuxtConfig({
         '/loudoun-county-school-calendar',
         '/mansfield-isd-calendar',
         '/miami-dade-school-calendar',
+        '/moreno-valley-unified-school-district-calendar',
         '/mckinney-isd-calendar',
         '/newport-news-public-schools-calendar',
         '/northside-independent-school-district-calendar',
@@ -77,6 +80,7 @@ export default defineNuxtConfig({
         '/pasco-county-school-calendar',
         '/pasadena-independent-school-district-calendar',
         '/pinellas-county-school-calendar',
+        '/pomona-unified-school-district-calendar',
         '/polk-county-school-calendar',
         '/prince-william-county-school-calendar',
         '/randolph-county-school-system-calendar',
@@ -123,6 +127,14 @@ export default defineNuxtConfig({
 
         '/austin-independent-school-district-calendar/2025-2026',
         '/austin-independent-school-district-calendar/2026-2027',
+
+        '/bakersfield-city-school-district-calendar/2025-2026',
+        '/bakersfield-city-school-district-calendar/2026-2027',
+
+        '/capistrano-unified-school-district-calendar/2025-2026',
+        '/capistrano-unified-school-district-calendar/2026-2027',
+        '/capistrano-unified-school-district-calendar/2027-2028',
+        '/capistrano-unified-school-district-calendar/2028-2029',
 
         '/broward-county-school-calendar/2025-2026',
         '/broward-county-school-calendar/2026-2027',
@@ -197,6 +209,9 @@ export default defineNuxtConfig({
         '/miami-dade-school-calendar/2025-2026',
         '/miami-dade-school-calendar/2026-2027',
 
+        '/moreno-valley-unified-school-district-calendar/2025-2026',
+        '/moreno-valley-unified-school-district-calendar/2026-2027',
+
         '/newport-news-public-schools-calendar/2025-2026',
         '/newport-news-public-schools-calendar/2026-2027',
 
@@ -218,6 +233,9 @@ export default defineNuxtConfig({
 
         '/pinellas-county-school-calendar/2025-2026',
         '/pinellas-county-school-calendar/2026-2027',
+
+        '/pomona-unified-school-district-calendar/2025-2026',
+        '/pomona-unified-school-district-calendar/2026-2027',
 
         '/polk-county-school-calendar/2025-2026',
         '/polk-county-school-calendar/2026-2027',

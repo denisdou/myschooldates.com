@@ -124,6 +124,8 @@ type MetricPool = {
   winterBreakLength:           number | null
   winterBreakStart:            string | null
   winterBreakEnd:              string | null
+  winterBreakLabel:            string | null
+  springBreakLabel:            string | null
   longestInstructionalStretch: { weeks: number; start: string; end: string } | null
   instructionalDays:           number
   instructionalDaysDescription: string | null
@@ -264,6 +266,16 @@ function computeMetricPool(
     b.name.toLowerCase().includes('christmas') ||
     b.name.toLowerCase().includes('december')
   ) ?? null
+  const cleanBreakLabel = (name: string, fallback: string) => {
+    const cleaned = name
+      .replace(/\bBegins\b/gi, '')
+      .replace(/\bStarts\b/gi, '')
+      .replace(/\bBegin\b/gi, '')
+      .replace(/\bStart\b/gi, '')
+      .replace(/\s+/g, ' ')
+      .trim()
+    return cleaned || fallback
+  }
 
   const daysUntilWinterBreak = winterBreakObj && winterBreakObj.start > todayStrVal
     ? daysUntilFn(winterBreakObj.start)
@@ -379,6 +391,8 @@ function computeMetricPool(
     winterBreakLength: winterBreakObj ? winterBreakDaysVal : null,
     winterBreakStart: winterBreakObj ? winterBreakObj.start : null,
     winterBreakEnd: winterBreakObj ? winterBreakObj.end : null,
+    winterBreakLabel: winterBreakObj ? cleanBreakLabel(winterBreakObj.name, 'Winter Break') : null,
+    springBreakLabel: springBreak ? cleanBreakLabel(springBreak.name, 'Spring Break') : null,
     longestInstructionalStretch,
     instructionalDays: cal.totalSchoolDays ?? 180,
     instructionalDaysDescription: cal.instructionalDaysDescription ?? cal.meta?.instructionalDaysDescription ?? null,
@@ -409,12 +423,12 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
   raw.push({ key: 'firstStudentDay', value: fmt(pool.firstDay), label: 'First Student Day', score: 120 })
   raw.push({ key: 'lastStudentDay', value: fmt(pool.lastDay), label: 'Last Student Day', score: 118 })
   if (pool.winterBreakStart) {
-    raw.push({ key: 'winterBreakDate', value: fmt(pool.winterBreakStart), label: 'Winter Break', score: 116 })
+    raw.push({ key: 'winterBreakDate', value: fmt(pool.winterBreakStart), label: pool.winterBreakLabel ?? 'Winter Break', score: 116 })
   }
   if (pool.springBreakStart) {
-    raw.push({ key: 'springBreakDate', value: fmt(pool.springBreakStart), label: 'Spring Break', score: 114 })
+    raw.push({ key: 'springBreakDate', value: fmt(pool.springBreakStart), label: pool.springBreakLabel ?? 'Spring Break', score: 114 })
   }
-  raw.push({ key: 'noSchoolDayCount', value: String(pool.noSchoolDayCount), label: 'Listed Student No-School Dates', score: 112 })
+  raw.push({ key: 'noSchoolDayCount', value: String(pool.noSchoolDayCount), label: 'Listed No-School Weekdays', score: 112 })
   const instructionalDaysDescription = String(pool.instructionalDaysDescription ?? '').toLowerCase()
   const instructionalDaysLabel = instructionalDaysDescription.includes('summary') || instructionalDaysDescription.includes('summarized')
     ? 'Listed Calendar Days'
@@ -440,7 +454,7 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
     raw.push({ key: 'teacherWorkDays', value: String(pool.teacherWorkDays), label: 'Staff Calendar Length', score: 30 })
   }
   if (pool.winterBreakLength !== null) {
-    raw.push({ key: 'winterBreakDays', value: `${pool.winterBreakLength} days`, label: 'Winter Break', score: 20 })
+    raw.push({ key: 'winterBreakDays', value: `${pool.winterBreakLength} days`, label: pool.winterBreakLabel ?? 'Winter Break', score: 20 })
   } else {
     raw.push({ key: 'breakCount', value: String(pool.breakCount), label: 'Major Breaks', score: 50 })
   }
@@ -528,6 +542,6 @@ const facts = computed(() => {
       <span v-if="verifiedDate" class="ml-1 text-green-600 font-medium">· Last reviewed {{ verifiedDate }}</span>
       <span v-else class="ml-1 text-gray-400">· Not yet verified against official source</span>
     </div>
-    <p class="text-xs text-gray-400 mt-1.5">Listed student no-school date counts include weekday no-school dates shown between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instructional weeks are approximate.</p>
+    <p class="text-xs text-gray-400 mt-1.5">No-school weekday counts include weekday no-school dates shown between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instructional weeks are approximate.</p>
   </div>
 </template>

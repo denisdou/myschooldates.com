@@ -65,7 +65,7 @@ const title = computed(() => props.cal?.whatsNew?.title)
 </script>
 
 <template>
-  <details v-if="items.length" open class="bg-white rounded-xl border border-gray-200 p-6 group">
+  <details v-if="items.length" class="bg-white rounded-xl border border-gray-200 p-6 group">
     <summary class="cursor-pointer list-none">
       <div class="flex items-start justify-between gap-4">
         <div>
