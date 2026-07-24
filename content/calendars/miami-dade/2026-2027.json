@@ -10,6 +10,8 @@
   "sourcePdfUrl": "https://api.dadeschools.net/WMSFiles/392/calendars/25-26/School-Calendars-2026-2027-Elementary.pdf",
   "lastVerifiedAt": "2026-07-02",
   "calendarType": "traditional",
+  "seoTitle": "Miami Dade School Calendar 2026-2027 | Holidays, Breaks & PDF",
+  "seoDescription": "Miami Dade school calendar 2026-2027 with Aug 13 first day, Jun 3 last day, holidays, teacher planning days, Winter Break, Spring Break, PDF and ICS.",
   "alternateCalendars": [
     {
       "type": "technical-colleges",
@@ -32,6 +34,83 @@
     {
       "q": "When is the last day of school for Miami-Dade County Public Schools in 2026-2027?",
       "a": "The last day of school for Miami-Dade County Public Schools is Thursday, June 3, 2027. The school year runs from August through June, covering 180 instructional days."
+    },
+    {
+      "q": "When is Miami-Dade Winter Break in 2026-2027?",
+      "a": "Miami-Dade Winter Break runs Monday, December 21, 2026 through Friday, January 1, 2027. Students return after Winter Break on Monday, January 4, 2027."
+    },
+    {
+      "q": "When is Miami-Dade Spring Break in 2027?",
+      "a": "Miami-Dade Spring Break runs Monday, March 22 through Friday, March 26, 2027. Because March 29 is a teacher planning day, students return Tuesday, March 30, 2027."
+    },
+    {
+      "q": "Where can I download the Miami Dade school calendar PDF?",
+      "a": "Use the PDF link on this page to open the official Miami-Dade County Public Schools 2026-2027 school calendar PDF. The district also publishes alternate calendar PDFs for technical colleges, adult education, and juvenile justice education."
+    },
+    {
+      "q": "What days are students off in Miami-Dade County Public Schools?",
+      "a": "Student no-school days include holidays, teacher planning days, Thanksgiving Break, Winter Break, Spring Break, and other student holidays listed in the official M-DCPS calendar."
+    },
+    {
+      "q": "Can I add the Miami Dade school calendar to Google Calendar?",
+      "a": "Yes. MySchoolDates provides an ICS calendar file that can be imported into Google Calendar, Apple Calendar, and Outlook. The file is a one-time import, so families should verify later district changes with Miami-Dade County Public Schools."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "miami-dade-school-calendar-pdf-guide-2026-2027",
+      "label": "Miami Dade School Calendar PDF Guide",
+      "position": "afterKeyDates",
+      "content": "The official Miami-Dade County Public Schools calendar PDF is the source document for this page. Families use it as a printable school calendar for holidays, teacher planning days, Winter Break, Spring Break, student attendance dates, and alternate program calendars. Because M-DCPS publishes multiple calendar PDFs, families should confirm whether their student follows the elementary and secondary calendar, technical college calendar, adult education calendar, or juvenile justice education calendar.",
+      "table": {
+        "columns": ["PDF Item", "Why families use it"],
+        "rows": [
+          ["Elementary and secondary school calendar", "Main districtwide calendar for most M-DCPS students."],
+          ["Technical college and adult education calendars", "Separate schedules for career, technical, and adult education programs."],
+          ["Teacher planning days", "Student no-school dates that affect childcare and transportation."],
+          ["Holiday and break windows", "Useful for travel planning, family visits, and South Florida childcare coverage."]
+        ]
+      }
+    },
+    {
+      "id": "miami-dade-family-planning-guide-2026-2027",
+      "label": "Miami Dade Family Planning Guide 2026-2027",
+      "position": "afterPlanningTips",
+      "content": "Miami-Dade families often use the school calendar to coordinate childcare, transportation, after-school care, family travel, hurricane-season schedule changes, and summer program timing. Before school starts on August 13, 2026, families should confirm school assignment, bus or carpool plans, meal program updates, after-school coverage, and the correct calendar type for their student's program.",
+      "table": {
+        "columns": ["Planning Item", "Dates or Timing", "Why it matters"],
+        "rows": [
+          ["Back-to-school preparation", "Before August 13, 2026", "Confirm school assignment, transportation, supplies, meals, and after-school care."],
+          ["Teacher planning days", "Several student holidays during the year", "Students do not attend, so families may need childcare even when staff report."],
+          ["Hurricane-season updates", "August through October peak risk", "Weather closures can change attendance days or create makeup-day needs."],
+          ["South Florida travel windows", "Winter Break and Spring Break", "Flights, hotels, beaches, and attractions see heavy demand when neighboring counties align."],
+          ["Summer program planning", "After June 3, 2027", "Miami-Dade's school year often ends later than nearby counties, affecting camp start dates."]
+        ]
+      }
+    },
+    {
+      "id": "miami-dade-calendar-updates-2026-2027",
+      "label": "Miami-Dade School Calendar Updates",
+      "position": "beforeSources",
+      "content": "Check this page after district calendar revisions, hurricane-related closures, board updates, or emergency schedule announcements. The official Miami-Dade County Public Schools calendar remains the final source for campus-specific updates, emergency closures, teacher planning days, and makeup-day decisions."
+    },
+    {
+      "id": "miami-dade-calendar-review-information-2026-2027",
+      "label": "Miami-Dade Calendar Review Information",
+      "position": "beforeSources",
+      "content": "This page was last reviewed on July 2, 2026 against the official Miami-Dade County Public Schools 2026-2027 calendar source. MySchoolDates checked the first day, last day, holidays, teacher planning days, Thanksgiving Break, Winter Break, Spring Break, alternate calendar links, downloadable files, and official source links."
+    },
+    {
+      "id": "miami-dade-calendar-data-coverage-2026-2027",
+      "label": "Miami-Dade Calendar Data Coverage",
+      "position": "beforeSources",
+      "content": "This page covers districtwide school calendar dates, including first and last student days, holidays, teacher planning days, Thanksgiving Break, Winter Break, Spring Break, alternate calendar PDFs, and downloadable calendar files. It does not replace campus-specific event calendars, athletics schedules, graduation ceremony details, testing schedules, or individual bell schedules."
+    },
+    {
+      "id": "how-this-miami-dade-calendar-was-prepared-2026-2027",
+      "label": "How This Miami-Dade Calendar Was Prepared",
+      "position": "beforeSources",
+      "content": "This Miami-Dade school calendar page is prepared from the district's published calendar documents. MySchoolDates extracts and reviews first and last student days, holidays and break periods, teacher planning days, alternate calendar links, and downloadable calendar files. Calendar records are maintained by the MySchoolDates Calendar Data Team, and dates are checked against the official district source before publication."
     }
   ],
   "yearNumbers": [
