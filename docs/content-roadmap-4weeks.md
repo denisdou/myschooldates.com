@@ -259,6 +259,274 @@ P3 内容可采用更高度模板化的方式生成（calendarNotes 精简为 4-
 
 ---
 
+## Top300 剩余学区周计划
+
+基于 `/Users/doujiajun/Downloads/myschooldates_us_top_300_school_districts.md`，按当前实际存在的 `content/districts/*.json` 学区文件过滤已创建学区；不以本 roadmap 表格中的完成状态作为过滤依据。创建 Chicago Public Schools、Clark County School District 和 Gwinnett County Public Schools 后，Top300 中剩余待创建 229 个学区。本周安排 20 个学区，后续每周安排 45 个学区，最后一周安排剩余 32 个学区。执行时仍按原 Top300 排名顺序推进，并逐一核验官方名称、日历页面、PDF/网页日历来源、当前学年和特殊日历适用范围。
+
+### 本周（20个）
+
+| 排名 | 州/地区 | 学区 | 主要都市圈 | 状态 |
+|-----:|---------|------|------------|------|
+| 1 | New York | New York City Public Schools | New York City | 待创建 |
+| 4 | Illinois | Chicago Public Schools | Chicago | ✓ 已完成 |
+| 5 | Nevada | Clark County School District | Las Vegas | ✓ 已完成 |
+| 11 | Georgia | Gwinnett County Public Schools | Atlanta | ✓ 已完成 |
+| 13 | Hawaii | Hawaii State Department of Education | Statewide | 待创建 |
+| 15 | Maryland | Montgomery County Public Schools | Washington, D.C. metro | 待创建 |
+| 19 | Maryland | Prince George's County Public Schools | Washington, D.C. metro | 待创建 |
+| 20 | Pennsylvania | School District of Philadelphia | Philadelphia | 待创建 |
+| 30 | Texas | Arlington Independent School District | Dallas-Fort Worth | 待创建 |
+| 32 | Texas | North East Independent School District | San Antonio | 待创建 |
+| 34 | Texas | Fort Bend Independent School District | Houston | 待创建 |
+| 38 | Texas | Judson Independent School District | San Antonio | 待创建 |
+| 40 | Texas | Mesquite Independent School District | Dallas-Fort Worth | 待创建 |
+| 46 | California | Corona-Norco Unified School District | Inland Empire | 待创建 |
+| 54 | California | Poway Unified School District | San Diego | 待创建 |
+| 55 | California | Sweetwater Union High School District | San Diego | 待创建 |
+| 57 | California | Chula Vista Elementary School District | San Diego | 待创建 |
+| 58 | California | Anaheim Union High School District | Orange County | 待创建 |
+| 59 | California | San Juan Unified School District | Sacramento | 待创建 |
+| 60 | California | Fontana Unified School District | Inland Empire | 待创建 |
+
+### 第 2 周（45个）
+
+| 排名 | 州/地区 | 学区 | 主要都市圈 | 状态 |
+|-----:|---------|------|------------|------|
+| 65 | Florida | Volusia County Schools | Daytona Beach | 待创建 |
+| 66 | Florida | Seminole County Public Schools | Orlando | 待创建 |
+| 67 | Florida | Osceola School District | Orlando | 待创建 |
+| 68 | Florida | Brevard Public Schools | Space Coast | 待创建 |
+| 69 | Florida | Collier County Public Schools | Naples | 待创建 |
+| 70 | Florida | Sarasota County Schools | Sarasota | 待创建 |
+| 71 | Georgia | Cobb County School District | Atlanta | 待创建 |
+| 72 | Georgia | DeKalb County School District | Atlanta | 待创建 |
+| 73 | Georgia | Fulton County Schools | Atlanta | 待创建 |
+| 74 | Georgia | Atlanta Public Schools | Atlanta | 待创建 |
+| 75 | Georgia | Forsyth County Schools | Atlanta | 待创建 |
+| 76 | Georgia | Clayton County Public Schools | Atlanta | 待创建 |
+| 90 | Maryland | Baltimore County Public Schools | Baltimore | 待创建 |
+| 91 | Maryland | Anne Arundel County Public Schools | Baltimore-Washington | 待创建 |
+| 92 | Maryland | Howard County Public School System | Baltimore-Washington | 待创建 |
+| 93 | Maryland | Baltimore City Public Schools | Baltimore | 待创建 |
+| 94 | Massachusetts | Boston Public Schools | Boston | 待创建 |
+| 95 | Washington | Seattle Public Schools | Seattle | 待创建 |
+| 96 | Washington | Lake Washington School District | Seattle | 待创建 |
+| 97 | Washington | Northshore School District | Seattle | 待创建 |
+| 98 | Arizona | Mesa Public Schools | Phoenix | 待创建 |
+| 99 | Arizona | Chandler Unified School District | Phoenix | 待创建 |
+| 100 | Arizona | Tucson Unified School District | Tucson | 待创建 |
+| 101 | Arizona | Peoria Unified School District | Phoenix | 待创建 |
+| 102 | Arizona | Gilbert Public Schools | Phoenix | 待创建 |
+| 103 | Arizona | Deer Valley Unified School District | Phoenix | 待创建 |
+| 104 | Arizona | Scottsdale Unified School District | Phoenix | 待创建 |
+| 105 | Arizona | Dysart Unified School District | Phoenix | 待创建 |
+| 106 | Arizona | Tempe Union High School District | Phoenix | 待创建 |
+| 107 | Colorado | Denver Public Schools | Denver | 待创建 |
+| 108 | Colorado | Jeffco Public Schools | Denver | 待创建 |
+| 109 | Colorado | Douglas County School District RE-1 | Denver | 待创建 |
+| 110 | Colorado | Cherry Creek School District | Denver | 待创建 |
+| 111 | Colorado | Aurora Public Schools | Denver | 待创建 |
+| 112 | Colorado | Adams 12 Five Star Schools | Denver | 待创建 |
+| 113 | Colorado | St. Vrain Valley Schools | Boulder-Longmont | 待创建 |
+| 114 | Colorado | Poudre School District | Fort Collins | 待创建 |
+| 115 | Washington | Tacoma Public Schools | Tacoma | 待创建 |
+| 116 | Washington | Kent School District | Seattle | 待创建 |
+| 117 | Washington | Bellevue School District | Seattle | 待创建 |
+| 118 | Washington | Federal Way Public Schools | Seattle | 待创建 |
+| 119 | Washington | Everett Public Schools | Seattle | 待创建 |
+| 120 | Washington | Edmonds School District | Seattle | 待创建 |
+| 121 | Washington | Puyallup School District | Tacoma | 待创建 |
+| 122 | Washington | Spokane Public Schools | Spokane | 待创建 |
+
+### 第 3 周（45个）
+
+| 排名 | 州/地区 | 学区 | 主要都市圈 | 状态 |
+|-----:|---------|------|------------|------|
+| 123 | Oregon | Portland Public Schools | Portland | 待创建 |
+| 124 | Oregon | Beaverton School District | Portland | 待创建 |
+| 125 | Oregon | Salem-Keizer Public Schools | Salem | 待创建 |
+| 126 | Oregon | Hillsboro School District | Portland | 待创建 |
+| 127 | Oregon | North Clackamas Schools | Portland | 待创建 |
+| 128 | Oregon | Eugene School District 4J | Eugene | 待创建 |
+| 129 | Utah | Alpine School District | Provo-Orem | 待创建 |
+| 130 | Utah | Davis School District | Salt Lake City | 待创建 |
+| 131 | Utah | Granite School District | Salt Lake City | 待创建 |
+| 132 | Utah | Jordan School District | Salt Lake City | 待创建 |
+| 133 | Utah | Canyons School District | Salt Lake City | 待创建 |
+| 134 | Utah | Weber School District | Ogden | 待创建 |
+| 135 | Nevada | Washoe County School District | Reno | 待创建 |
+| 136 | New Mexico | Albuquerque Public Schools | Albuquerque | 待创建 |
+| 137 | New Mexico | Las Cruces Public Schools | Las Cruces | 待创建 |
+| 138 | Idaho | West Ada School District | Boise | 待创建 |
+| 139 | Idaho | Boise School District | Boise | 待创建 |
+| 140 | Minnesota | Anoka-Hennepin School District | Minneapolis-St. Paul | 待创建 |
+| 141 | Minnesota | Minneapolis Public Schools | Minneapolis | 待创建 |
+| 142 | Minnesota | Saint Paul Public Schools | Saint Paul | 待创建 |
+| 143 | Minnesota | Osseo Area Schools | Minneapolis-St. Paul | 待创建 |
+| 144 | Minnesota | Rosemount-Apple Valley-Eagan Public Schools | Minneapolis-St. Paul | 待创建 |
+| 145 | Wisconsin | Milwaukee Public Schools | Milwaukee | 待创建 |
+| 146 | Wisconsin | Madison Metropolitan School District | Madison | 待创建 |
+| 147 | Wisconsin | Kenosha Unified School District | Kenosha | 待创建 |
+| 148 | Wisconsin | Racine Unified School District | Racine | 待创建 |
+| 149 | Michigan | Detroit Public Schools Community District | Detroit | 待创建 |
+| 150 | Michigan | Utica Community Schools | Detroit | 待创建 |
+| 151 | Michigan | Dearborn Public Schools | Detroit | 待创建 |
+| 152 | Michigan | Plymouth-Canton Community Schools | Detroit | 待创建 |
+| 153 | Michigan | Ann Arbor Public Schools | Ann Arbor | 待创建 |
+| 154 | Ohio | Columbus City Schools | Columbus | 待创建 |
+| 155 | Ohio | Cleveland Metropolitan School District | Cleveland | 待创建 |
+| 156 | Ohio | Cincinnati Public Schools | Cincinnati | 待创建 |
+| 157 | Ohio | Toledo Public Schools | Toledo | 待创建 |
+| 158 | Ohio | Akron Public Schools | Akron | 待创建 |
+| 159 | Ohio | South-Western City School District | Columbus | 待创建 |
+| 160 | Ohio | Olentangy Local School District | Columbus | 待创建 |
+| 161 | Indiana | Indianapolis Public Schools | Indianapolis | 待创建 |
+| 162 | Indiana | Fort Wayne Community Schools | Fort Wayne | 待创建 |
+| 163 | Indiana | Metropolitan School District of Wayne Township | Indianapolis | 待创建 |
+| 164 | Indiana | Hamilton Southeastern Schools | Indianapolis | 待创建 |
+| 165 | Indiana | Carmel Clay Schools | Indianapolis | 待创建 |
+| 166 | Missouri | St. Louis Public Schools | St. Louis | 待创建 |
+| 167 | Missouri | Kansas City Public Schools | Kansas City | 待创建 |
+
+### 第 4 周（45个）
+
+| 排名 | 州/地区 | 学区 | 主要都市圈 | 状态 |
+|-----:|---------|------|------------|------|
+| 168 | Missouri | Parkway School District | St. Louis | 待创建 |
+| 169 | Missouri | Rockwood School District | St. Louis | 待创建 |
+| 170 | Missouri | Springfield Public Schools | Springfield | 待创建 |
+| 171 | Kansas | Wichita Public Schools | Wichita | 待创建 |
+| 172 | Kansas | Olathe Public Schools | Kansas City | 待创建 |
+| 173 | Kansas | Shawnee Mission School District | Kansas City | 待创建 |
+| 174 | Kansas | Blue Valley Schools | Kansas City | 待创建 |
+| 175 | Nebraska | Omaha Public Schools | Omaha | 待创建 |
+| 176 | Nebraska | Lincoln Public Schools | Lincoln | 待创建 |
+| 177 | Oklahoma | Oklahoma City Public Schools | Oklahoma City | 待创建 |
+| 178 | Oklahoma | Tulsa Public Schools | Tulsa | 待创建 |
+| 179 | Oklahoma | Edmond Public Schools | Oklahoma City | 待创建 |
+| 180 | Oklahoma | Moore Public Schools | Oklahoma City | 待创建 |
+| 181 | Tennessee | Memphis-Shelby County Schools | Memphis | 待创建 |
+| 182 | Tennessee | Metro Nashville Public Schools | Nashville | 待创建 |
+| 183 | Tennessee | Knox County Schools | Knoxville | 待创建 |
+| 184 | Tennessee | Hamilton County Schools | Chattanooga | 待创建 |
+| 185 | Tennessee | Rutherford County Schools | Nashville | 待创建 |
+| 186 | Tennessee | Williamson County Schools | Nashville | 待创建 |
+| 187 | Kentucky | Jefferson County Public Schools | Louisville | 待创建 |
+| 188 | Kentucky | Fayette County Public Schools | Lexington | 待创建 |
+| 189 | Alabama | Mobile County Public Schools | Mobile | 待创建 |
+| 190 | Alabama | Jefferson County Schools | Birmingham | 待创建 |
+| 191 | Alabama | Montgomery Public Schools | Montgomery | 待创建 |
+| 192 | Alabama | Birmingham City Schools | Birmingham | 待创建 |
+| 193 | Alabama | Madison County Schools | Huntsville | 待创建 |
+| 194 | Alabama | Huntsville City Schools | Huntsville | 待创建 |
+| 195 | Louisiana | Jefferson Parish Schools | New Orleans | 待创建 |
+| 196 | Louisiana | East Baton Rouge Parish School System | Baton Rouge | 待创建 |
+| 197 | Louisiana | Caddo Parish Public Schools | Shreveport | 待创建 |
+| 198 | Mississippi | DeSoto County Schools | Memphis metro | 待创建 |
+| 199 | Mississippi | Rankin County School District | Jackson | 待创建 |
+| 200 | Arkansas | Little Rock School District | Little Rock | 待创建 |
+| 201 | Pennsylvania | Pittsburgh Public Schools | Pittsburgh | 待创建 |
+| 202 | Pennsylvania | Central Bucks School District | Philadelphia suburbs | 待创建 |
+| 203 | Pennsylvania | Allentown School District | Lehigh Valley | 待创建 |
+| 204 | Pennsylvania | Reading School District | Reading | 待创建 |
+| 205 | Pennsylvania | Downingtown Area School District | Philadelphia suburbs | 待创建 |
+| 206 | New Jersey | Newark Public Schools | Newark | 待创建 |
+| 207 | New Jersey | Jersey City Public Schools | New York metro | 待创建 |
+| 208 | New Jersey | Paterson Public Schools | New York metro | 待创建 |
+| 209 | New Jersey | Elizabeth Public Schools | New York metro | 待创建 |
+| 210 | New Jersey | Edison Township Public Schools | New York metro | 待创建 |
+| 211 | New Jersey | Toms River Regional Schools | Jersey Shore | 待创建 |
+| 212 | New Jersey | Cherry Hill Public Schools | Philadelphia metro | 待创建 |
+
+### 第 5 周（45个）
+
+| 排名 | 州/地区 | 学区 | 主要都市圈 | 状态 |
+|-----:|---------|------|------------|------|
+| 213 | New York | Buffalo Public Schools | Buffalo | 待创建 |
+| 214 | New York | Rochester City School District | Rochester | 待创建 |
+| 215 | New York | Yonkers Public Schools | New York metro | 待创建 |
+| 216 | New York | Syracuse City School District | Syracuse | 待创建 |
+| 217 | New York | Sachem Central School District | Long Island | 待创建 |
+| 218 | New York | Brentwood Union Free School District | Long Island | 待创建 |
+| 219 | Connecticut | Bridgeport Public Schools | Bridgeport | 待创建 |
+| 220 | Connecticut | Hartford Public Schools | Hartford | 待创建 |
+| 221 | Connecticut | New Haven Public Schools | New Haven | 待创建 |
+| 222 | Connecticut | Stamford Public Schools | Stamford | 待创建 |
+| 223 | Rhode Island | Providence Public School District | Providence | 待创建 |
+| 224 | Massachusetts | Worcester Public Schools | Worcester | 待创建 |
+| 225 | Massachusetts | Springfield Public Schools | Springfield | 待创建 |
+| 226 | Massachusetts | Brockton Public Schools | Boston metro | 待创建 |
+| 227 | Massachusetts | Newton Public Schools | Boston metro | 待创建 |
+| 228 | New Hampshire | Manchester School District | Manchester | 待创建 |
+| 229 | Maine | Portland Public Schools | Portland | 待创建 |
+| 230 | Delaware | Red Clay Consolidated School District | Wilmington | 待创建 |
+| 231 | Delaware | Christina School District | Wilmington | 待创建 |
+| 232 | District of Columbia | District of Columbia Public Schools | Washington, D.C. | 待创建 |
+| 233 | Virginia | Norfolk Public Schools | Hampton Roads | 待创建 |
+| 234 | Virginia | Chesapeake Public Schools | Hampton Roads | 待创建 |
+| 236 | Virginia | Richmond Public Schools | Richmond | 待创建 |
+| 239 | Maryland | Frederick County Public Schools | Frederick | 待创建 |
+| 240 | Maryland | Harford County Public Schools | Baltimore | 待创建 |
+| 241 | Maryland | Charles County Public Schools | Washington, D.C. metro | 待创建 |
+| 244 | North Carolina | Buncombe County Schools | Asheville | 待创建 |
+| 245 | North Carolina | Pitt County Schools | Greenville | 待创建 |
+| 246 | North Carolina | Onslow County Schools | Jacksonville | 待创建 |
+| 247 | South Carolina | Greenville County Schools | Greenville | 待创建 |
+| 248 | South Carolina | Charleston County School District | Charleston | 待创建 |
+| 249 | South Carolina | Richland School District Two | Columbia | 待创建 |
+| 250 | South Carolina | Horry County Schools | Myrtle Beach | 待创建 |
+| 251 | South Carolina | Lexington County School District One | Columbia | 待创建 |
+| 252 | Georgia | Henry County Schools | Atlanta | 待创建 |
+| 253 | Georgia | Cherokee County School District | Atlanta | 待创建 |
+| 254 | Georgia | Hall County Schools | Gainesville | 待创建 |
+| 255 | Georgia | Richmond County School System | Augusta | 待创建 |
+| 256 | Florida | St. Johns County School District | Jacksonville | 待创建 |
+| 257 | Florida | Manatee County School District | Bradenton | 待创建 |
+| 258 | Florida | Lake County Schools | Orlando | 待创建 |
+| 259 | Florida | Escambia County Public Schools | Pensacola | 待创建 |
+| 260 | Florida | Leon County Schools | Tallahassee | 待创建 |
+| 261 | Texas | Leander Independent School District | Austin | 待创建 |
+| 262 | Texas | Prosper Independent School District | Dallas-Fort Worth | 待创建 |
+
+### 第 6 周（32个）
+
+| 排名 | 州/地区 | 学区 | 主要都市圈 | 状态 |
+|-----:|---------|------|------------|------|
+| 263 | Texas | Denton Independent School District | Dallas-Fort Worth | 待创建 |
+| 264 | Texas | Clear Creek Independent School District | Houston | 待创建 |
+| 265 | Texas | Lamar Consolidated Independent School District | Houston | 待创建 |
+| 268 | Texas | Socorro Independent School District | El Paso | 待创建 |
+| 269 | Texas | El Paso Independent School District | El Paso | 待创建 |
+| 270 | Texas | Ysleta Independent School District | El Paso | 待创建 |
+| 271 | Texas | Lubbock Independent School District | Lubbock | 待创建 |
+| 272 | Texas | Amarillo Independent School District | Amarillo | 待创建 |
+| 273 | Texas | Corpus Christi Independent School District | Corpus Christi | 待创建 |
+| 275 | California | Kern High School District | Bakersfield | 待创建 |
+| 277 | California | Modesto City Schools | Modesto | 待创建 |
+| 278 | California | Clovis Unified School District | Fresno | 待创建 |
+| 279 | California | Visalia Unified School District | Visalia | 待创建 |
+| 280 | California | Mt. Diablo Unified School District | East Bay | 待创建 |
+| 281 | California | Fremont Unified School District | Bay Area | 待创建 |
+| 282 | California | Santa Clara Unified School District | Bay Area | 待创建 |
+| 284 | California | Palo Alto Unified School District | Bay Area | 待创建 |
+| 285 | California | Antioch Unified School District | East Bay | 待创建 |
+| 286 | California | Oxnard Union High School District | Ventura County | 待创建 |
+| 287 | California | Conejo Valley Unified School District | Ventura County | 待创建 |
+| 288 | California | Pasadena Unified School District | Los Angeles | 待创建 |
+| 289 | California | Compton Unified School District | Los Angeles | 待创建 |
+| 291 | California | Murrieta Valley Unified School District | Inland Empire | 待创建 |
+| 292 | California | Temecula Valley Unified School District | Inland Empire | 待创建 |
+| 293 | California | Rocklin Unified School District | Sacramento | 待创建 |
+| 294 | California | Roseville City School District | Sacramento | 待创建 |
+| 295 | Washington | Highline Public Schools | Seattle | 待创建 |
+| 296 | Washington | Renton School District | Seattle | 待创建 |
+| 297 | Colorado | Academy School District 20 | Colorado Springs | 待创建 |
+| 298 | Colorado | Colorado Springs School District 11 | Colorado Springs | 待创建 |
+| 299 | Alaska | Anchorage School District | Anchorage | 待创建 |
+| 300 | Puerto Rico | Puerto Rico Department of Education | Territory-wide | 待创建 |
+
+---
+
 ## 内容质量标准参考
 
 | 字段 | P1/P2 标准 | P3 标准 |

@@ -246,6 +246,8 @@ const compareIntro = computed(() => {
 
 const sourceRows = computed(() => rows.value.filter(row => row.sourceUrl))
 const comparisonTitle = computed(() => {
+  const customTitle = (props.district as any)?.comparisonTitle ?? (props.district as any)?.meta?.comparisonTitle
+  if (customTitle) return customTitle
   const current = rows.value.find(row => row.isCurrent)
   const currentName = current?.name
     ? current.name
@@ -253,12 +255,18 @@ const comparisonTitle = computed(() => {
       .replace(/ Unified$/, ' Unified')
       .replace(/ Independent$/, ' Independent')
     : (props.district?.shortName ?? props.district?.name ?? 'District')
-  return `${currentName} Calendar Compared With Nearby Districts`
+  const relatedRows = rows.value.filter(row => !row.isCurrent)
+  const currentState = props.district?.state
+  const allRelatedInState = Boolean(currentState) && relatedRows.length > 0 && relatedRows.every(row => {
+    const relatedDistrict = (props.allDistricts ?? []).find((d: any) => d.slug === row.slug)
+    return relatedDistrict?.state === currentState
+  })
+  return `${currentName} Calendar Compared With ${allRelatedInState ? 'Nearby Districts' : 'Large Districts'}`
 })
 </script>
 
 <template>
-  <details id="nearby-district-comparison" v-if="rows.length > 1" class="bg-white rounded-xl border border-gray-200 overflow-hidden scroll-mt-24 group">
+  <details id="comparison" v-if="rows.length > 1" class="bg-white rounded-xl border border-gray-200 overflow-hidden scroll-mt-24 group">
     <summary class="cursor-pointer list-none px-6 py-4 border-b border-gray-100">
       <div class="flex items-start justify-between gap-4">
         <div>

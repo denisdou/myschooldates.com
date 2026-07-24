@@ -1,0 +1,186 @@
+{
+  "institutionId": "chicago-public-schools",
+  "name": "Chicago Public Schools",
+  "shortName": "CPS",
+  "slug": "chicago-public-schools-calendar",
+  "state": "Illinois",
+  "stateCode": "IL",
+  "city": "Chicago",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.cps.edu",
+  "calendarPage": "https://www.cps.edu/calendar/?calendars=1149%2C1151%2C1135%2C1150%2C1106%2C1115%2C1118",
+  "logo": "https://www.cps.edu/globalassets/cps-global-media/cps-logos/cps-logo-2024_cobaltblue.svg",
+  "timezone": "America/Chicago",
+  "county": "Cook County",
+  "region": "Northeastern Illinois",
+  "metro": "Chicago",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "keyDates",
+  "hideHeroVerificationProcess": true,
+  "searchAliases": [
+    "CPS",
+    "CPS calendar",
+    "Chicago Public Schools",
+    "Chicago school calendar",
+    "CPS family calendar",
+    "Chicago Public Schools calendar",
+    "Cook County school calendar"
+  ],
+  "schemaKeywords": [
+    "CPS calendar",
+    "Chicago Public Schools calendar",
+    "CPS school holidays",
+    "CPS start date",
+    "CPS calendar PDF",
+    "CPS winter break",
+    "CPS spring break",
+    "CPS printable calendar"
+  ],
+  "districtFact": "The CPS calendar published by Chicago Public Schools includes family calendar PDFs for elementary and high schools with K-12 first and last days, preschool dates, holidays, professional development days, parent-teacher conference days, quarter endings, report card dates, winter vacation, spring vacation, graduation windows, and anticipated summer program windows.",
+  "about": [
+    {
+      "title": "About Chicago Public Schools",
+      "content": "Chicago Public Schools, also known as CPS, serves students across Chicago, Illinois. The CPS calendar is useful for tracking the K-12 first day, preschool start date, holidays, professional development days, parent-teacher conference days, winter vacation, spring vacation, quarter endings, report-card distribution dates, and the last day of school."
+    },
+    {
+      "title": "How to Use This CPS Calendar",
+      "content": "Use this page for districtwide elementary and high school calendar planning. Families should still confirm school-specific bell schedules, local events, graduation ceremonies, summer programs, athletics, testing, and emergency schedule changes through CPS and their assigned school."
+    }
+  ],
+  "planningTips": {
+    "title": "Planning Tips for CPS Families",
+    "content": [
+      "Track professional development days separately because CPS lists them as non-attendance days for students.",
+      "Parent-teacher conference days after the first and third quarters are student non-attendance days for elementary and high schools.",
+      "Preschool dates differ from K-12 dates, so families with younger children should check the preschool start and end dates.",
+      "Emergency days in June may become school days if required to meet state attendance requirements."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "about-cps-calendar-structure",
+      "label": "About CPS Calendar Structure",
+      "position": "afterAbout",
+      "content": "The CPS calendar is built around a districtwide traditional calendar for most elementary and high school students, but the official family calendars include details that matter specifically in Chicago. CPS separates K-12 and preschool first and last days, identifies parent-teacher conference days as student non-attendance days, and marks professional development days that can affect childcare and transportation. The calendar also lists quarter endings, progress report dates, report card distribution dates, graduation windows, and anticipated summer program timing. For 2026-2027, CPS publishes translated family calendars in Arabic, Polish, Simplified Chinese, Ukrainian, Urdu, and Vietnamese, which is important for families comparing the same school-year dates across languages. Emergency days are also part of the CPS calendar structure, so the June schedule should be verified before final travel or summer plans."
+    },
+    {
+      "id": "chicago-public-schools-calendar-planning-notes",
+      "label": "Chicago Public Schools Calendar Planning Notes",
+      "position": "afterAbout",
+      "content": "The Chicago Public Schools calendar includes several planning details beyond major holidays. The CPS family calendar PDFs identify K-12 dates separately from preschool dates, mark professional development days, show parent-teacher conference days as student non-attendance days, list report and progress report distribution dates, and reserve emergency days in June if student days fall below state requirements."
+    },
+    {
+      "id": "cps-calendar-vs-school-specific-calendars",
+      "label": "CPS Calendar vs School-Specific Calendars",
+      "position": "afterPlanningTips",
+      "content": "The district CPS calendar is the right source for systemwide dates such as the first day of school, winter vacation, spring vacation, parent-teacher conference days, and district holidays. It does not always include school-specific events, athletics, testing schedules, local ceremonies, transportation changes, or program calendars. Families should use the Chicago Public Schools calendar for districtwide planning and then confirm campus-level details with their assigned school."
+    },
+    {
+      "id": "how-we-collect-cps-calendar-data",
+      "label": "How We Collect CPS Calendar Data",
+      "position": "beforeSources",
+      "content": "MySchoolDates reviews the official CPS family calendar and extracts student dates, holidays, breaks, parent-teacher conference days, professional development days, and other planning dates. The page links back to the official Chicago Public Schools source so families can verify updates before making final childcare, travel, transportation, or work plans."
+    },
+    {
+      "id": "illinois-school-calendars-link",
+      "label": "Illinois School Calendars",
+      "position": "beforeSources",
+      "content": "Compare CPS dates with other Illinois school calendar pages as more district calendars are added.",
+      "links": [
+        {
+          "label": "Illinois School Calendars",
+          "to": "/illinois",
+          "description": "Browse Illinois district calendar pages, holidays, breaks, PDF links, and official-source planning notes."
+        }
+      ]
+    }
+  ],
+  "compareIntro": "Compare the Chicago Public Schools calendar with other large urban district calendars currently available on MySchoolDates. Dates shown include the first day, last day, and major breaks.",
+  "comparisonTitle": "Chicago Public Schools Calendar Compared With Large Urban Districts",
+  "faqSchemaQuestions": [
+    "Which Chicago Public Schools calendar does this page summarize?",
+    "Does CPS list preschool dates separately?",
+    "Are CPS parent-teacher conference days student attendance days?",
+    "Are CPS calendar dates the same for every school?",
+    "When does CPS start school in 2026?",
+    "When is CPS Winter Vacation in 2026-2027?",
+    "When is CPS Spring Vacation in 2027?",
+    "When is the last day of school for CPS in 2027?"
+  ],
+  "districtFaqs": [
+    {
+      "q": "Which Chicago Public Schools calendar does this page summarize?",
+      "a": "This page summarizes the official CPS Family Calendar for elementary and high schools for the listed school years."
+    },
+    {
+      "q": "Does CPS list preschool dates separately?",
+      "a": "Yes. CPS family calendars list K-12 first and last days separately from preschool first and last days."
+    },
+    {
+      "q": "Are CPS parent-teacher conference days student attendance days?",
+      "a": "No. CPS states that elementary and high school parent-teacher conference days are non-attendance days for students."
+    },
+    {
+      "q": "Where should families verify Chicago Public Schools calendar updates?",
+      "a": "Use the official CPS calendar page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with Chicago Public Schools."
+    },
+    {
+      "q": "Are CPS calendar dates the same for every school?",
+      "a": "Not always. The CPS family calendar covers districtwide elementary and high school dates, but individual schools may publish separate events, testing dates, athletics schedules, graduation details, or program-specific calendars."
+    },
+    {
+      "q": "What calendar does CPS use for most students?",
+      "a": "Most CPS students follow the districtwide traditional family calendar for elementary and high schools, while some programs or schools may publish additional school-specific schedules."
+    },
+    {
+      "q": "Does CPS have a calendar for charter schools?",
+      "a": "Charter schools may follow separate calendars or publish school-specific schedule details. Families should verify charter school dates directly with the school in addition to checking CPS districtwide calendar information."
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Los Angeles Unified School District",
+      "slug": "los-angeles-unified-school-district-calendar",
+      "state": "California",
+      "comparisonNote": "Large urban district often compared with CPS for start, break, and end-date timing."
+    },
+    {
+      "name": "Houston Independent School District",
+      "slug": "houston-independent-school-district-calendar",
+      "state": "Texas",
+      "comparisonNote": "Large urban district with different professional development, holiday, and break patterns."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Chicago Public Schools official website",
+      "url": "https://www.cps.edu"
+    },
+    {
+      "label": "Chicago Public Schools calendar page",
+      "url": "https://www.cps.edu/calendar/?calendars=1149%2C1151%2C1135%2C1150%2C1106%2C1115%2C1118"
+    },
+    {
+      "label": "Chicago Public Schools logo",
+      "url": "https://www.cps.edu/globalassets/cps-global-media/cps-logos/cps-logo-2024_cobaltblue.svg"
+    }
+  ]
+}

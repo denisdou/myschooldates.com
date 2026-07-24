@@ -60,6 +60,10 @@ const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' 
           Editorial Policy
         </NuxtLink>
       </p>
+      <p v-if="verifiedDate">
+        <span class="font-medium text-gray-600">Next review:</span>
+        When {{ shortName }} publishes a calendar update or a revised official source.
+      </p>
       <p class="font-medium text-gray-600">How we verify this calendar</p>
       <p>Each school year, MySchoolDates checks the official calendar source published or linked by the district. The page record is reviewed against the official first day, last day, major breaks, holidays, student no-school dates, early dismissals, exam windows, and alternate-calendar links when those items appear in the official source.</p>
       <p>When page data does not match the official source, we update the record before publication. This page displays major student calendar dates; early dismissals, exam windows, staff-specific details, and track-specific items may remain available only in the official PDF. The downloadable calendar file is generated from the calendar records used for this page, and the official district calendar remains the source of record for last-minute changes.</p>

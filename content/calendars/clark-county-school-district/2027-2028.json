@@ -1,0 +1,107 @@
+{
+  "institutionId": "clark-county-school-district",
+  "schoolYear": "2027-2028",
+  "firstDay": "2027-08-09",
+  "lastDay": "2028-05-19",
+  "sourceUrl": "https://www.ccsd.net/calendars",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1772840155/ccsdnet/kgwmjhwledwhfr64doao/Student-2027-2028-Calendar.pdf",
+  "lastVerifiedAt": "2026-07-24",
+  "datePublished": "2026-07-24",
+  "dateModified": "2026-07-24",
+  "calendarType": "traditional",
+  "totalSchoolDays": 180,
+  "yearNumbersMode": "compact",
+  "alternateCalendars": [
+    {
+      "type": "spanish",
+      "label": "2027-2028 School Calendar (Spanish)",
+      "pdfUrl": "https://resources.finalsite.net/images/v1772840171/ccsdnet/n6ba0yv1w43jtq5z9fg2/SPANISH-Student-2027-2028-Calendar.pdf"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "ccsd-calendar-2027-2028-spanish-version",
+      "label": "CCSD Calendar 2027-2028 Spanish Version",
+      "position": "afterOtherCalendars",
+      "content": "Clark County School District also publishes a Spanish version of the 2027-2028 student calendar. Families who prefer Spanish can use the official Spanish PDF for the same school-year planning topics, including holidays, breaks, staff development days, contingency days, and student calendar dates.",
+      "links": [
+        {
+          "label": "Download the CCSD Spanish Calendar PDF",
+          "url": "https://resources.finalsite.net/images/v1772840171/ccsdnet/n6ba0yv1w43jtq5z9fg2/SPANISH-Student-2027-2028-Calendar.pdf",
+          "description": "Open the official CCSD 2027-2028 student calendar in Spanish."
+        }
+      ]
+    }
+  ],
+  "seoTitle": "CCSD Calendar 2027-2028: Clark County Holidays, Breaks & PDF",
+  "seoDescription": "CCSD 2027-2028 calendar with Aug 9 first day, May 19 last day, staff development days, Thanksgiving, winter break, spring break, PDF and ICS.",
+  "calendarNotes": "Clark County School District lists 180 student days for 2027-2028. Classes begin on August 9, 2027 and the school year ends on May 19, 2028. Winter Break begins at the end of the day on December 17, with no school December 20-31, 2027; classes resume January 4, 2028 after the January 3 staff development day. Spring Break begins at the end of the day on March 10, with no school March 13-17 and classes resuming March 20. CCSD also publishes a Spanish student calendar for 2027-2028.",
+  "calendarFaqs": [
+    {
+      "q": "When does CCSD start school in 2027?",
+      "a": "Clark County School District starts classes on Monday, August 9, 2027."
+    },
+    {
+      "q": "When is CCSD Winter Break in 2027-2028?",
+      "a": "Winter Break begins at the end of the day on December 17, 2027. No school is scheduled December 20-31, 2027."
+    },
+    {
+      "q": "When is CCSD Spring Break in 2028?",
+      "a": "Spring Break begins at the end of the day on March 10, 2028. No school is scheduled March 13-17, and classes resume March 20."
+    },
+    {
+      "q": "Does CCSD publish a Spanish calendar for 2027-2028?",
+      "a": "Yes. Clark County School District publishes a Spanish version of the 2027-2028 student calendar, linked as an alternate calendar."
+    },
+    {
+      "q": "When is the last day of school for CCSD in 2028?",
+      "a": "The last day of school is Friday, May 19, 2028."
+    }
+  ],
+  "yearNumbers": [
+    {
+      "label": "First Day",
+      "value": "Aug 9",
+      "detail": "Classes begin on August 9, 2027."
+    },
+    {
+      "label": "Student Days",
+      "value": "180",
+      "detail": "The official calendar lists 180 student days."
+    },
+    {
+      "label": "Spring Break",
+      "value": "Mar 13-17",
+      "detail": "No school is scheduled March 13-17, 2028."
+    }
+  ],
+  "events": [
+    { "date": "2027-08-09", "name": "Classes Begin", "type": "school_start" },
+    { "date": "2027-09-06", "name": "Labor Day", "type": "holiday" },
+    { "date": "2027-09-20", "name": "Staff Development Day - No School for Students", "type": "teacher_workday" },
+    { "date": "2027-10-08", "name": "End of First Grading Period", "type": "academic" },
+    { "date": "2027-10-11", "name": "Elementary School Parent-Teacher Conferences - No School for Elementary Students Only", "type": "academic" },
+    { "date": "2027-10-29", "name": "Nevada Day Observed", "type": "holiday" },
+    { "date": "2027-11-03", "name": "Staff Development Day - No School for Students", "type": "teacher_workday" },
+    { "date": "2027-11-11", "name": "Veterans Day", "type": "holiday" },
+    { "date": "2027-11-24", "name": "No School - First Contingency Day if Needed", "type": "no_school" },
+    { "date": "2027-11-25", "name": "Thanksgiving Day", "type": "holiday" },
+    { "date": "2027-11-26", "name": "Family Day", "type": "holiday" },
+    { "date": "2027-12-17", "name": "End of Second Grading Period and First Semester", "type": "academic" },
+    { "date": "2027-12-17", "name": "Winter Break Begins - End of Day", "type": "break_start" },
+    { "date": "2027-12-31", "name": "Winter Break Ends", "type": "break_end" },
+    { "date": "2028-01-03", "name": "Staff Development Day - No School for Students", "type": "teacher_workday" },
+    { "date": "2028-01-04", "name": "Classes Resume", "type": "school_resume" },
+    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2028-02-14", "name": "No School for Students", "type": "no_school" },
+    { "date": "2028-02-21", "name": "Presidents' Day", "type": "holiday" },
+    { "date": "2028-03-10", "name": "End of Third Grading Period", "type": "academic" },
+    { "date": "2028-03-10", "name": "Spring Break Begins - End of Day", "type": "break_start" },
+    { "date": "2028-03-17", "name": "Spring Break Ends", "type": "break_end" },
+    { "date": "2028-03-20", "name": "Classes Resume", "type": "school_resume" },
+    { "date": "2028-03-27", "name": "Staff Development Day - No School for Students", "type": "teacher_workday" },
+    { "date": "2028-04-14", "name": "No School - Second Contingency Day if Needed", "type": "no_school" },
+    { "date": "2028-05-19", "name": "End of Fourth Grading Period and School Year", "type": "school_end" },
+    { "date": "2028-05-22", "name": "Third Contingency Day if Needed", "type": "no_school" }
+  ]
+}

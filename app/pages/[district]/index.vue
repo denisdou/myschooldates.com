@@ -74,18 +74,22 @@ const stateCurrentYear = (() => {
 if (isStatePage) {
   const hasStateContent = !!statePageData.value
   const stateTitle = hasStateContent
-    ? `${matchedStateName} School Calendar ${stateCurrentYear} | Holidays, Breaks & District Dates | MySchoolDates`
+    ? (statePageData.value.seoTitle ?? `${matchedStateName} School Calendar ${stateCurrentYear} | Holidays, Breaks & District Dates | MySchoolDates`)
     : `${matchedStateName} School Calendars ${stateCurrentYear} | MySchoolDates`
   const stateDesc = hasStateContent
-    ? `Find ${matchedStateName} public school calendar dates for ${stateCurrentYear}, including start dates, holidays, breaks, district schedules, PDFs, and downloads. Verified from official sources.`
+    ? (statePageData.value.seoDescription ?? `Find ${matchedStateName} public school calendar dates for ${stateCurrentYear}, including start dates, holidays, breaks, district schedules, PDFs, and downloads. Verified from official sources.`)
     : `${stateCurrentYear} school calendar dates sourced from official district websites for ${stateDistricts.length} public school district${stateDistricts.length !== 1 ? 's' : ''} in ${matchedStateName}. First day of school, spring break, winter break, and all important dates.`
   const stateUrl = `https://myschooldates.com/${slug}`
   const stateDistrictListEntity = {
     '@context': 'https://schema.org',
     '@id': `${stateUrl}#district-list`,
     '@type': 'ItemList',
-    name: `${matchedStateName} Public School Districts — ${stateCurrentYear} Calendars`,
-    description: hasStateContent
+    name: stateDistricts.length === 1
+      ? `${stateDistricts[0].name} Calendar — ${stateCurrentYear}`
+      : `${matchedStateName} Public School District Calendars — ${stateCurrentYear}`,
+    description: stateDistricts.length === 1
+      ? `Verified ${stateCurrentYear} school calendar page currently available for ${stateDistricts[0].name} in ${matchedStateName}. Additional ${matchedStateName} district calendar pages are added after official-source data is verified.`
+      : hasStateContent
       ? `${matchedStateName} public school district calendar links for ${stateCurrentYear}, with official-source calendar pages, first day, breaks, holidays, and download options where available.`
       : `${stateCurrentYear} school calendar dates sourced from official district websites for ${stateDistricts.length} public school districts in ${matchedStateName}.`,
     ...(hasStateContent && stateDistricts.length < 2 ? {} : { numberOfItems: stateDistricts.length }),
@@ -181,6 +185,12 @@ const { data: stateCals } = await useAsyncData(`state-cals:${slug}`, async () =>
   const all = await queryCollection('calendars').all()
   const ids = new Set(stateDistricts.map(d => d.institutionId))
   return (all ?? []).filter(c => ids.has(c.institutionId) && c.schoolYear === stateCurrentYear)
+})
+
+const stateDistrictCalendarById = computed(() => {
+  const result: Record<string, any> = {}
+  for (const c of stateCals.value ?? []) result[c.institutionId] = c
+  return result
 })
 
 // Format "2026-08-10" → "Aug 10" (compact, no year)
@@ -317,7 +327,13 @@ const calendarSummary = computed(() => {
     ? ', with early release'
     : ''
   const springPart = springBreak
-    ? ` Spring Break runs ${formatShortDate(springBreak.start)}–${formatShortDate(springBreak.end)}.`
+    ? (() => {
+      const returnEvent = cal.events?.find((e: any) =>
+        ['school_resume', 'school_reopen'].includes(e.type) && e.date > springBreak.end
+      )
+      const returnPart = returnEvent ? `, with students returning ${formatShortDate(returnEvent.date)}` : ''
+      return ` Spring Break runs ${formatShortDate(springBreak.start)}–${formatShortDate(springBreak.end)}${returnPart}.`
+    })()
     : ''
   const shortName = district.value.shortName && !district.value.name.includes(district.value.shortName)
     ? `, also known as ${district.value.shortName},`
@@ -329,21 +345,42 @@ const faqs = computed(() => {
   if (!cal || !district.value) return []
   const specificFaqs: { q: string; a: string }[] = (district.value as any).districtFaqs ?? []
   const calendarFaqs: { q: string; a: string }[] = (cal as any).calendarFaqs ?? []
+  const dedupeFaqs = (items: { q: string; a: string }[]) => {
+    const seen = new Set<string>()
+    return items.filter((faq) => {
+      const key = faq.q.trim().toLowerCase()
+      if (seen.has(key)) return false
+      seen.add(key)
+      return true
+    })
+  }
   const faqLimit = (cal as any).faqLimit ?? (cal as any).meta?.faqLimit ?? (district.value as any).faqLimit ?? (district.value as any).meta?.faqLimit
   if (typeof faqLimit === 'number' && faqLimit > 0) {
-    return [...calendarFaqs, ...specificFaqs].slice(0, faqLimit)
+    return dedupeFaqs([...calendarFaqs, ...specificFaqs]).slice(0, faqLimit)
   }
-  return [...specificFaqs, ...calendarFaqs]
+  return dedupeFaqs([...specificFaqs, ...calendarFaqs])
 })
 const faqSchemaItems = computed(() => {
   const limit = (cal as any)?.faqSchemaLimit ?? (cal as any)?.meta?.faqSchemaLimit ?? (district.value as any)?.faqSchemaLimit ?? (district.value as any)?.meta?.faqSchemaLimit
+  const includeQuestions = [
+    ...(((district.value as any)?.faqSchemaQuestions ?? (district.value as any)?.meta?.faqSchemaQuestions ?? []) as string[]),
+    ...(((cal as any)?.faqSchemaQuestions ?? (cal as any)?.meta?.faqSchemaQuestions ?? []) as string[]),
+  ]
   const excludes = [
     ...(((district.value as any)?.faqSchemaExclude ?? (district.value as any)?.meta?.faqSchemaExclude ?? []) as string[]),
     ...(((cal as any)?.faqSchemaExclude ?? (cal as any)?.meta?.faqSchemaExclude ?? []) as string[]),
   ].map(item => item.toLowerCase())
-  const candidates = excludes.length
-    ? faqs.value.filter(item => !excludes.some(exclude => item.q.toLowerCase().includes(exclude)))
+  const includedCandidates = includeQuestions.length
+    ? includeQuestions
+      .map(q => faqs.value.find(item => item.q.trim().toLowerCase() === q.trim().toLowerCase()))
+      .filter(Boolean) as { q: string; a: string }[]
     : faqs.value
+  const candidates = excludes.length
+    ? includedCandidates.filter(item => !excludes.some(exclude => item.q.toLowerCase().includes(exclude)))
+    : includedCandidates
+  if (includeQuestions.length) {
+    return typeof limit === 'number' && limit > 0 ? candidates.slice(0, limit) : candidates
+  }
   if (typeof limit !== 'number' || limit <= 0) return candidates
   const priority = (q: string) => {
     const text = q.toLowerCase()
@@ -360,6 +397,9 @@ const faqSchemaItems = computed(() => {
 })
 
 const hiddenSections = computed(() => new Set<string>((district.value as any).hiddenSections ?? []))
+const hideHeroVerificationProcess = computed(() =>
+  Boolean(slug === 'chicago-public-schools-calendar' || (district.value as any).hideHeroVerificationProcess || (meta.value as any).hideHeroVerificationProcess || (cal as any)?.hideHeroVerificationProcess || (cal as any)?.meta?.hideHeroVerificationProcess)
+)
 type DistrictCustomSection = {
   id: string
   label: string
@@ -379,6 +419,27 @@ const summarySectionId = computed(() => {
     s.id.toLowerCase().includes('summary') ||
     s.label.toLowerCase().includes('summary')
   )
+  return section?.id
+})
+const overviewSectionId = computed(() => {
+  const section = customSections.value.find(s =>
+    s.id.toLowerCase().includes('overview') ||
+    s.label.toLowerCase().includes('overview')
+  )
+  return section?.id
+})
+const changesSectionId = computed(() => {
+  const section = customSections.value.find(s => {
+    const text = `${s.id} ${s.label}`.toLowerCase()
+    return text.includes('change') || text.includes('year-diff') || text.includes('previous year')
+  })
+  return section?.id
+})
+const importantDatesSectionId = computed(() => {
+  const section = customSections.value.find(s => {
+    const text = `${s.id} ${s.label}`.toLowerCase()
+    return text.includes('important-date') || text.includes('important date')
+  })
   return section?.id
 })
 const planningSectionId = computed(() => {
@@ -634,6 +695,10 @@ if (!isStatePage && district.value) {
   const datasetDescription = calendarTypeName
     ? `Major ${calendarTypeName} Calendar dates for ${meta.value!.name} in ${currentYear}, including school-year boundaries, major holidays, break ranges, and school resume dates.`
     : `Major calendar dates for ${meta.value!.name} in ${currentYear}, including school-year boundaries, major holidays, break ranges, and school resume dates.`
+  const schemaKeywords = [
+    ...(((meta.value as any).schemaKeywords ?? (meta.value as any).meta?.schemaKeywords ?? []) as string[]),
+    ...(((cal as any)?.schemaKeywords ?? (cal as any)?.meta?.schemaKeywords ?? []) as string[]),
+  ]
   const sourceCalendarEntity = basedOnUrl ? {
     '@type': 'CreativeWork',
     '@id': `${canonicalUrl}#source-calendar`,
@@ -654,6 +719,7 @@ if (!isStatePage && district.value) {
     name: schemaCalendarName,
     description: datasetDescription,
     url: canonicalUrl,
+    ...(schemaKeywords.length ? { keywords: schemaKeywords } : {}),
     license: schemaLicenseUrl,
     usageInfo: schemaLicenseUrl,
     inLanguage: 'en-US',
@@ -661,6 +727,10 @@ if (!isStatePage && district.value) {
     ...(pageDateModified ? { dateModified: pageDateModified } : {}),
     ...(pageDateModified ? { lastReviewed: pageDateModified } : {}),
     temporalCoverage: datasetTemporalCoverage,
+    audience: {
+      '@type': 'Audience',
+      audienceType: 'Parents and Families',
+    },
     creator: { '@id': 'https://myschooldates.com/#organization' },
     publisher: { '@id': 'https://myschooldates.com/#organization' },
     provider: { '@id': 'https://myschooldates.com/#organization' },
@@ -717,6 +787,10 @@ if (!isStatePage && district.value) {
     publisher: { '@id': 'https://myschooldates.com/#organization' },
     author: { '@id': 'https://myschooldates.com/#education-research-team' },
     reviewedBy: { '@id': 'https://myschooldates.com/#education-research-team' },
+    audience: {
+      '@type': 'Audience',
+      audienceType: 'Parents and Families',
+    },
     about: { '@id': districtAbout['@id'] },
     ...(itemListEvents.value.length
       ? { mainEntity: { '@id': `${canonicalUrl}#key-dates` } }
@@ -918,6 +992,24 @@ if (!isStatePage && district.value) {
           </div>
         </div>
 
+        <!-- State calendar rules -->
+        <div v-if="statePageData?.calendarRules?.length" class="bg-white rounded-xl border border-gray-200 p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ matchedStateName }} School Calendar Rules and Terms</h2>
+          <p class="text-sm text-gray-500 mb-5">
+            {{ matchedStateName }} district calendars often use state-specific labels for attendance, closure, and planning days. Always confirm final dates with the official district calendar.
+          </p>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div
+              v-for="rule in statePageData.calendarRules"
+              :key="rule.label"
+              class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-3"
+            >
+              <div class="text-sm font-medium text-gray-900">{{ rule.label }}</div>
+              <p v-if="rule.description" class="mt-1.5 text-xs leading-relaxed text-gray-500">{{ rule.description }}</p>
+            </div>
+          </div>
+        </div>
+
         <!-- District Comparison Table -->
         <div v-if="stateDistricts.length > 1 && Object.keys(stateDistrictStats).length" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
           <div class="px-6 py-4 border-b border-gray-100">
@@ -1010,9 +1102,21 @@ if (!isStatePage && district.value) {
               <template v-else>
                 <div class="mt-3 text-xs text-gray-400">{{ d.currentSchoolYear }}</div>
               </template>
-              <div class="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
+              <div class="mt-3 pt-3 border-t border-gray-100">
+                <div v-if="stateDistrictCalendarById[d.institutionId]" class="mb-2 space-y-1 text-xs text-gray-500">
+                  <div>
+                    <span class="text-gray-400">Official source:</span>
+                    {{ d.name }}
+                  </div>
+                  <div v-if="stateDistrictCalendarById[d.institutionId].lastVerifiedAt">
+                    <span class="text-gray-400">Last checked:</span>
+                    {{ new Date(stateDistrictCalendarById[d.institutionId].lastVerifiedAt + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) }}
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
                 <span class="text-xs text-gray-400">{{ d.currentSchoolYear }}</span>
                 <span class="text-xs font-medium text-blue-600">View calendar →</span>
+                </div>
               </div>
             </NuxtLink>
           </div>
@@ -1020,9 +1124,9 @@ if (!isStatePage && district.value) {
 
         <!-- Popular district searches -->
         <div v-if="statePageData?.popularDistricts?.length" class="bg-white rounded-xl border border-gray-200 p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-1">Popular {{ matchedStateName }} School Calendar Searches</h2>
+          <h2 class="text-lg font-semibold text-gray-900 mb-1">Popular {{ matchedStateName }} District Calendar Searches</h2>
           <p class="text-sm text-gray-500 mb-5">
-            These are common {{ matchedStateName }} district calendar searches. MySchoolDates links district pages after official-source calendar data has been verified, so unavailable districts are shown as coverage targets rather than inactive links.
+            These are common {{ matchedStateName }} district calendar searches families use when comparing school-year dates. MySchoolDates links district pages after official calendar data has been verified, so planned districts are listed without inactive links.
           </p>
           <div class="grid gap-3 sm:grid-cols-2">
             <div
@@ -1172,7 +1276,7 @@ if (!isStatePage && district.value) {
             <span v-if="!isEstimated">Verified against {{ meta.name }} official calendar source · Maintained by MySchoolDates · Last updated {{ verifiedDate }}</span>
             <span v-else>Based on official district website · Not yet human-verified</span>
           </div>
-          <div v-if="!isEstimated && verifiedDate" class="mt-3 rounded-xl border border-gray-200 bg-white p-3">
+          <div v-if="!isEstimated && verifiedDate && !hideHeroVerificationProcess" class="mt-3 rounded-xl border border-gray-200 bg-white p-3">
             <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">Verification process</p>
             <ul class="mt-2 grid gap-1.5 text-xs text-gray-600 sm:grid-cols-3">
               <li class="flex items-start gap-1.5">
@@ -1275,16 +1379,19 @@ if (!isStatePage && district.value) {
           </div>
         </div>
 
-        <nav aria-label="Page sections" class="flex flex-wrap gap-2 text-xs">
-          <a href="#key-dates" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Key Dates</a>
-          <a v-if="summarySectionId" :href="`#${summarySectionId}`" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Summary</a>
-          <a href="#add-to-calendar" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">PDF &amp; Calendar</a>
-          <a href="#all-dates" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Dates</a>
-          <a v-if="breaks.length" href="#breaks" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Breaks</a>
-          <a v-if="planningSectionId" :href="`#${planningSectionId}`" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Planning</a>
-          <a v-if="earlyDismissalSectionId" :href="`#${earlyDismissalSectionId}`" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Early Dismissal</a>
-          <a href="#comparison" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Comparison</a>
-          <a href="#faq" class="rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">FAQ</a>
+        <nav aria-label="Page sections" class="sticky top-2 z-20 -mx-4 flex gap-2 overflow-x-auto border-y border-gray-100 bg-white/95 px-4 py-2 text-xs shadow-sm backdrop-blur sm:mx-0 sm:flex-wrap sm:rounded-xl sm:border">
+          <a href="#key-dates" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Key Dates</a>
+          <a v-if="summarySectionId" :href="`#${summarySectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Summary</a>
+          <a v-if="overviewSectionId" :href="`#${overviewSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Overview</a>
+          <a href="#add-to-calendar" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">PDF &amp; Calendar</a>
+          <a href="#all-dates" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Dates</a>
+          <a v-if="breaks.length" href="#breaks" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Breaks</a>
+          <a v-if="changesSectionId" :href="`#${changesSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Changes</a>
+          <a v-if="planningSectionId" :href="`#${planningSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Planning</a>
+          <a v-if="importantDatesSectionId" :href="`#${importantDatesSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Important Dates</a>
+          <a v-if="earlyDismissalSectionId" :href="`#${earlyDismissalSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Early Dismissal</a>
+          <a href="#comparison" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Comparison</a>
+          <a href="#faq" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">FAQ</a>
         </nav>
 
         <!-- Today Status -->
@@ -1327,6 +1434,7 @@ if (!isStatePage && district.value) {
           :district="district"
           :cal="cal"
         />
+        <DistrictCustomSections :sections="customSections" position="afterCalendarExport" />
 
         <!-- Custom Sections: afterKeyDates -->
         <DistrictCustomSections :sections="customSections" position="afterKeyDates" />
@@ -1348,6 +1456,7 @@ if (!isStatePage && district.value) {
           :alternate-calendars="(cal as any).alternateCalendars"
           :district-name="district.name"
         />
+        <DistrictCustomSections :sections="customSections" position="afterOtherCalendars" />
 
         <!-- Quick Facts (fixed position — moved above Year by Numbers) -->
         <DistrictQuickFacts
@@ -1460,7 +1569,7 @@ if (!isStatePage && district.value) {
         <DistrictGradingPeriods :periods="(cal as any).gradingPeriods" />
 
         <!-- What's Different This Year -->
-        <div id="comparison" class="scroll-mt-24 space-y-8">
+        <div id="year-comparison" class="scroll-mt-24 space-y-8">
           <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal" :prev-cal="prevCal ?? undefined" />
           <DistrictCustomSections :sections="customSections" position="afterYearDiff" />
         </div>
@@ -1480,6 +1589,7 @@ if (!isStatePage && district.value) {
 
         <!-- Compare with Nearby Districts -->
         <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal" :district="district" :related-cals="relatedCals ?? []" :all-districts="allDistricts ?? []" :year="currentYear" />
+        <DistrictCustomSections :sections="customSections" position="afterComparison" />
 
         <!-- FAQ -->
         <DistrictFaq :cal="cal" :district="district" :faqs="faqs" />

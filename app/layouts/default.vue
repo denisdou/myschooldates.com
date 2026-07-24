@@ -8,6 +8,9 @@ const statePageNames: Record<string, string> = {
   'north-carolina': 'North Carolina',
   virginia: 'Virginia',
   kentucky: 'Kentucky',
+  illinois: 'Illinois',
+  nevada: 'Nevada',
+  georgia: 'Georgia',
 }
 
 const currentStateSlug = computed(() => route.path.split('/').filter(Boolean)[0] ?? '')
@@ -31,9 +34,12 @@ const isStateLandingPage = computed(() => route.path === `/${currentStateSlug.va
           <NuxtLink to="/florida" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">Florida</NuxtLink>
           <NuxtLink to="/texas" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">Texas</NuxtLink>
           <NuxtLink to="/california" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">California</NuxtLink>
+          <NuxtLink to="/illinois" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden md:inline">Illinois</NuxtLink>
+          <NuxtLink to="/nevada" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden lg:inline">Nevada</NuxtLink>
+          <NuxtLink to="/georgia" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden lg:inline">Georgia</NuxtLink>
           <NuxtLink to="/north-carolina" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden md:inline">NC</NuxtLink>
           <NuxtLink to="/virginia" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden md:inline">Virginia</NuxtLink>
-          <NuxtLink to="/kentucky" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden lg:inline">Kentucky</NuxtLink>
+          <NuxtLink to="/kentucky" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden xl:inline">Kentucky</NuxtLink>
         </nav>
       </div>
     </header>
@@ -56,6 +62,9 @@ const isStateLandingPage = computed(() => route.path === `/${currentStateSlug.va
               <li><NuxtLink to="/north-carolina" class="text-sm text-gray-500 hover:text-blue-600">North Carolina School Calendars</NuxtLink></li>
               <li><NuxtLink to="/virginia" class="text-sm text-gray-500 hover:text-blue-600">Virginia School Calendars</NuxtLink></li>
               <li><NuxtLink to="/kentucky" class="text-sm text-gray-500 hover:text-blue-600">Kentucky School Calendars</NuxtLink></li>
+              <li><NuxtLink to="/illinois" class="text-sm text-gray-500 hover:text-blue-600">Illinois School Calendars</NuxtLink></li>
+              <li><NuxtLink to="/nevada" class="text-sm text-gray-500 hover:text-blue-600">Nevada School Calendars</NuxtLink></li>
+              <li><NuxtLink to="/georgia" class="text-sm text-gray-500 hover:text-blue-600">Georgia School Calendars</NuxtLink></li>
             </ul>
           </div>
           <div v-if="!isStateLandingPage">

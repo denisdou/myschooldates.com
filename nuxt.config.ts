@@ -41,6 +41,9 @@ export default defineNuxtConfig({
         '/north-carolina',
         '/virginia',
         '/kentucky',
+        '/illinois',
+        '/nevada',
+        '/georgia',
 
         // ── District index pages ───────────────────────────────────────────────
         '/aldine-independent-school-district-calendar',
@@ -50,6 +53,9 @@ export default defineNuxtConfig({
         '/brunswick-county-schools-calendar',
         '/capistrano-unified-school-district-calendar',
         '/charlotte-mecklenburg-schools-calendar',
+        '/chicago-public-schools-calendar',
+        '/clark-county-school-district-calendar',
+        '/gwinnett-county-public-schools-calendar',
         '/chesterfield-county-school-calendar',
         '/cumberland-county-school-calendar',
         '/dallas-independent-school-district-calendar',
@@ -147,6 +153,18 @@ export default defineNuxtConfig({
         '/charlotte-mecklenburg-schools-calendar/2025-2026',
         '/charlotte-mecklenburg-schools-calendar/2026-2027',
         '/charlotte-mecklenburg-schools-calendar/2027-2028',
+
+        '/chicago-public-schools-calendar/2025-2026',
+        '/chicago-public-schools-calendar/2026-2027',
+        '/chicago-public-schools-calendar/2027-2028',
+
+        '/clark-county-school-district-calendar/2025-2026',
+        '/clark-county-school-district-calendar/2026-2027',
+        '/clark-county-school-district-calendar/2027-2028',
+
+        '/gwinnett-county-public-schools-calendar/2025-2026',
+        '/gwinnett-county-public-schools-calendar/2026-2027',
+        '/gwinnett-county-public-schools-calendar/2027-2028',
 
         '/chesterfield-county-school-calendar/2025-2026',
         '/chesterfield-county-school-calendar/2026-2027',

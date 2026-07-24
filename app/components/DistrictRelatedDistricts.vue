@@ -1,15 +1,19 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   relatedDistricts: { name: string; slug: string; state: string }[]
   stateName: string
 }>()
+
+const allRelatedInState = computed(() => props.relatedDistricts.every(rd => rd.state === props.stateName))
+const heading = computed(() => allRelatedInState.value ? `Related ${props.stateName} School Calendars` : 'Related Large District Calendars')
+const description = computed(() => allRelatedInState.value ? `Compare nearby ${props.stateName} school districts.` : 'Compare other large school district calendars.')
 </script>
 
 <template>
   <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
     <div class="px-6 py-4 border-b border-gray-100">
-      <h2 class="text-lg font-semibold text-gray-900">Related {{ stateName }} School Calendars</h2>
-      <p class="text-sm text-gray-500 mt-1">Compare nearby {{ stateName }} school districts.</p>
+      <h2 class="text-lg font-semibold text-gray-900">{{ heading }}</h2>
+      <p class="text-sm text-gray-500 mt-1">{{ description }}</p>
     </div>
     <div class="divide-y divide-gray-50">
       <NuxtLink
