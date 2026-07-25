@@ -10,6 +10,9 @@ const props = defineProps<{
 }>()
 
 const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' && props.sourcePdfUrl.includes('assets.myschooldates.com'))
+const possessiveDistrictName = computed(() =>
+  /(?:s|')$/i.test(props.districtName) ? `${props.districtName}'` : `${props.districtName}'s`
+)
 </script>
 
 <template>
@@ -17,7 +20,7 @@ const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' 
     <h2 class="text-sm font-semibold text-gray-700 mb-2">Sources and Verification</h2>
     <p class="text-sm text-gray-600 mb-3">
       MySchoolDates is an independent calendar reference and is not affiliated with {{ districtName }}.
-      Calendar dates are based on {{ districtName }}'s official {{ year }} calendar.
+      Calendar dates are based on {{ possessiveDistrictName }} official {{ year }} calendar.
       <template v-if="verifiedDate"> Calendar data checked against the official district source on {{ verifiedDate }}.</template>
       <template v-else> Not yet checked against the official source.</template>
     </p>
@@ -59,6 +62,10 @@ const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' 
         <NuxtLink to="/editorial-policy" class="font-medium text-blue-600 hover:text-blue-800 underline">
           Editorial Policy
         </NuxtLink>
+      </p>
+      <p v-if="verifiedDate">
+        <span class="font-medium text-gray-600">Last manual review:</span>
+        {{ verifiedDate }} by the MySchoolDates Calendar Data Team.
       </p>
       <p v-if="verifiedDate">
         <span class="font-medium text-gray-600">Next review:</span>

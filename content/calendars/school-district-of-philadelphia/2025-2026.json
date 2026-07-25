@@ -1,0 +1,140 @@
+{
+  "institutionId": "school-district-of-philadelphia",
+  "schoolYear": "2025-2026",
+  "firstDay": "2025-08-25",
+  "lastDay": "2026-06-11",
+  "totalSchoolDays": 180,
+  "sourceUrl": "https://www.philasd.org/calendar/",
+  "sourcePdfUrl": "https://drive.google.com/file/d/1AMAomsYtf-VpNFqqTjwYkKKxXQyxsFSy/view",
+  "lastVerifiedAt": "2026-07-25",
+  "datePublished": "2026-07-25",
+  "dateModified": "2026-07-25",
+  "sourceVersion": "SDP Academic Calendar SY 25-26",
+  "calendarType": "academic",
+  "seoTitle": "SDP Calendar 2025-2026: Philadelphia Holidays, Breaks & PDF",
+  "seoDescription": "View the SDP 2025-2026 academic calendar with first day, last day, holidays, early dismissal days, Winter Recess, Spring Recess, PDF and ICS download.",
+  "calendarNotes": "The School District of Philadelphia starts the 2025-2026 school year for students on August 25, 2025 and ends on June 11, 2026 with a full day. Winter Recess runs from December 24, 2025 through January 1, 2026, with January 2, 2026 listed as a staff professional development day when school is closed for students. Spring Recess runs from March 30 through April 2, 2026, followed by Good Friday on April 3, 2026. The calendar lists 180 student days, kindergarten interview early dismissals, staff professional development days, report card conference half-days, testing windows, and a graduation window.",
+  "calendarFaqs": [
+    {
+      "q": "When does SDP start school in 2025?",
+      "a": "The School District of Philadelphia starts the 2025-2026 school year for students on Monday, August 25, 2025."
+    },
+    {
+      "q": "When is SDP Winter Recess in 2025-2026?",
+      "a": "SDP Winter Recess runs from Wednesday, December 24, 2025 through Thursday, January 1, 2026."
+    },
+    {
+      "q": "When is SDP Spring Recess in 2026?",
+      "a": "SDP Spring Recess runs from Monday, March 30 through Thursday, April 2, 2026. Good Friday on April 3, 2026 is also a school closure."
+    },
+    {
+      "q": "How many student days are in the SDP 2025-2026 calendar?",
+      "a": "The SDP 2025-2026 academic calendar lists 180 student days."
+    },
+    {
+      "q": "When is the last day of school for SDP in 2026?",
+      "a": "The last day of school for students is Thursday, June 11, 2026, and the calendar marks it as a full day."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "sdp-calendar-important-dates-for-families",
+      "label": "SDP Calendar Important Dates for Families",
+      "position": "afterAbout",
+      "content": "Families usually check the SDP calendar first for the first day of school, kindergarten interview days, early dismissals, report card conferences, staff professional development days, Winter Recess, Spring Recess, testing windows, graduation windows, and the last day of school. These dates affect childcare, transportation, work schedules, appointments, and family travel in Philadelphia."
+    },
+    {
+      "id": "sdp-calendar-download-options",
+      "label": "SDP Calendar Download Options",
+      "position": "afterCalendarExport",
+      "content": "Use the SDP calendar tools to view the official PDF source, download a printable PDF, import the ICS calendar into Google Calendar or Apple Calendar, save school closure and early dismissal dates, and share school-year dates with family members. Always verify final schedule changes with the official School District of Philadelphia calendar source before making critical plans."
+    }
+  ],
+  "yearNumbers": [
+    {
+      "label": "Student Days",
+      "value": "180",
+      "detail": "The 2025-2026 SDP academic calendar lists 180 student days."
+    },
+    {
+      "label": "First Day",
+      "value": "Aug 25",
+      "detail": "Students begin the SDP school year on August 25, 2025."
+    },
+    {
+      "label": "Last Day",
+      "value": "Jun 11",
+      "detail": "The last day for students is June 11, 2026, listed as a full day."
+    }
+  ],
+  "events": [
+    { "date": "2025-08-18", "name": "Staff Professional Development and Reorganization Begins", "type": "teacher_workday" },
+    { "date": "2025-08-22", "name": "Staff Professional Development and Reorganization Ends", "type": "teacher_workday" },
+    { "date": "2025-08-25", "name": "First Day of School for Students", "type": "school_start" },
+    { "date": "2025-08-25", "name": "Kindergarten Interview Days Begin - Early Dismissal for Kindergarten", "type": "early_release" },
+    { "date": "2025-08-29", "name": "Kindergarten Interview Days End - Early Dismissal for Kindergarten", "type": "early_release" },
+    { "date": "2025-09-01", "name": "Labor Day - Schools Closed", "type": "holiday" },
+    { "date": "2025-09-12", "name": "Staff Professional Development Half-Day - Early Dismissal", "type": "early_release" },
+    { "date": "2025-09-23", "name": "Rosh Hashanah - Schools Closed", "type": "holiday" },
+    { "date": "2025-09-30", "name": "Term 1 Interim Reports Due", "type": "milestone" },
+    { "date": "2025-10-02", "name": "Yom Kippur - Schools Closed", "type": "holiday" },
+    { "date": "2025-10-10", "name": "Staff Professional Development - Schools Closed for Students", "type": "teacher_workday" },
+    { "date": "2025-10-13", "name": "Indigenous Peoples' Day - Schools Closed", "type": "holiday" },
+    { "date": "2025-10-20", "name": "Diwali", "type": "observance" },
+    { "date": "2025-11-04", "name": "Election Day - Schools Closed", "type": "holiday" },
+    { "date": "2025-11-10", "name": "Term 1 Ends", "type": "quarter_end" },
+    { "date": "2025-11-11", "name": "Veterans Day - Schools Closed", "type": "holiday" },
+    { "date": "2025-11-24", "name": "Report Card Conference Half-Day - Early Dismissal", "type": "conference" },
+    { "date": "2025-11-25", "name": "Report Card Conference Half-Day - Early Dismissal", "type": "conference" },
+    { "date": "2025-11-26", "name": "Early Dismissal for Students and Staff", "type": "early_release" },
+    { "date": "2025-11-27", "name": "Thanksgiving Recess Begins - Schools Closed", "type": "break_start" },
+    { "date": "2025-11-28", "name": "Thanksgiving Recess Ends - Schools Closed", "type": "break_end" },
+    { "date": "2025-12-11", "name": "Term 2 Interim Reports Due", "type": "milestone" },
+    { "date": "2025-12-12", "name": "Staff Professional Development Half-Day - Early Dismissal", "type": "early_release" },
+    { "date": "2025-12-24", "name": "Winter Recess Begins - Schools Closed", "type": "break_start" },
+    { "date": "2025-12-25", "name": "Christmas Day - Schools Closed", "type": "holiday" },
+    { "date": "2025-12-26", "name": "Winter Recess - Schools Closed", "type": "holiday" },
+    { "date": "2025-12-29", "name": "Winter Recess - Schools Closed", "type": "holiday" },
+    { "date": "2025-12-30", "name": "Winter Recess - Schools Closed", "type": "holiday" },
+    { "date": "2025-12-31", "name": "Winter Recess - Schools Closed", "type": "holiday" },
+    { "date": "2026-01-01", "name": "New Year's Day - Winter Recess Ends", "type": "break_end" },
+    { "date": "2026-01-02", "name": "Staff Professional Development - Schools Closed for Students", "type": "teacher_workday" },
+    { "date": "2026-01-05", "name": "Keystone Testing Window Begins", "type": "testing" },
+    { "date": "2026-01-16", "name": "Staff Professional Development Half-Day - Early Dismissal", "type": "early_release" },
+    { "date": "2026-01-16", "name": "Keystone Testing Window Ends", "type": "testing" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day - Schools Closed", "type": "holiday" },
+    { "date": "2026-01-21", "name": "Term 2 Ends", "type": "quarter_end" },
+    { "date": "2026-01-29", "name": "Term 2 Report Card Conference Half-Day - Early Dismissal", "type": "conference" },
+    { "date": "2026-01-30", "name": "Term 2 Report Card Conference Half-Day - Early Dismissal", "type": "conference" },
+    { "date": "2026-02-13", "name": "Staff Professional Development Half-Day - Early Dismissal", "type": "early_release" },
+    { "date": "2026-02-16", "name": "Presidents' Day - Schools Closed", "type": "holiday" },
+    { "date": "2026-02-17", "name": "Lunar New Year - Schools Closed", "type": "holiday" },
+    { "date": "2026-02-19", "name": "Term 3 Interim Reports Due", "type": "milestone" },
+    { "date": "2026-03-13", "name": "Staff Professional Development Half-Day - Early Dismissal", "type": "early_release" },
+    { "date": "2026-03-20", "name": "Eid al-Fitr - Schools Closed", "type": "holiday" },
+    { "date": "2026-03-24", "name": "Term 3 Ends", "type": "quarter_end" },
+    { "date": "2026-03-30", "name": "Spring Recess Begins - Schools Closed", "type": "break_start" },
+    { "date": "2026-03-31", "name": "Spring Recess - Schools Closed", "type": "holiday" },
+    { "date": "2026-04-01", "name": "Spring Recess - Schools Closed", "type": "holiday" },
+    { "date": "2026-04-02", "name": "Spring Recess Ends - Schools Closed", "type": "break_end" },
+    { "date": "2026-04-03", "name": "Good Friday - Schools Closed", "type": "holiday" },
+    { "date": "2026-04-09", "name": "Report Card Conference Half-Day - Early Dismissal", "type": "conference" },
+    { "date": "2026-04-10", "name": "Report Card Conference Half-Day - Early Dismissal", "type": "conference" },
+    { "date": "2026-04-17", "name": "Staff Professional Development Half-Day - Early Dismissal", "type": "early_release" },
+    { "date": "2026-04-20", "name": "PSSA Testing Begins", "type": "testing" },
+    { "date": "2026-05-01", "name": "PSSA Testing Ends", "type": "testing" },
+    { "date": "2026-05-05", "name": "Term 4 Interim Reports Due", "type": "milestone" },
+    { "date": "2026-05-08", "name": "Staff Professional Development Half-Day - Early Dismissal", "type": "early_release" },
+    { "date": "2026-05-11", "name": "Keystone Testing Window Begins", "type": "testing" },
+    { "date": "2026-05-19", "name": "Election Day - Schools Closed", "type": "holiday" },
+    { "date": "2026-05-22", "name": "Keystone Testing Window Ends", "type": "testing" },
+    { "date": "2026-05-25", "name": "Memorial Day - Schools Closed", "type": "holiday" },
+    { "date": "2026-05-27", "name": "Eid al-Adha - Schools Closed", "type": "holiday" },
+    { "date": "2026-06-09", "name": "Graduation Window Begins", "type": "graduation" },
+    { "date": "2026-06-11", "name": "Last Day of School for Students", "type": "school_end" },
+    { "date": "2026-06-12", "name": "Last Day for Staff / Reorganization Day", "type": "teacher_workday" },
+    { "date": "2026-06-12", "name": "Graduation Window Ends", "type": "graduation" },
+    { "date": "2026-06-19", "name": "Juneteenth - Administrative Offices Closed", "type": "holiday" },
+    { "date": "2026-07-03", "name": "Independence Day Observed - Schools Closed / No Summer Programming", "type": "holiday" }
+  ]
+}

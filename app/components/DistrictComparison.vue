@@ -263,10 +263,16 @@ const comparisonTitle = computed(() => {
   })
   return `${currentName} Calendar Compared With ${allRelatedInState ? 'Nearby Districts' : 'Large Districts'}`
 })
+const comparisonSubheading = computed(() =>
+  (props.district as any)?.comparisonSubheading ?? (props.district as any)?.meta?.comparisonSubheading ?? ''
+)
+const comparisonDefaultOpen = computed(() =>
+  Boolean((props.district as any)?.comparisonDefaultOpen ?? (props.district as any)?.meta?.comparisonDefaultOpen)
+)
 </script>
 
 <template>
-  <details id="comparison" v-if="rows.length > 1" class="bg-white rounded-xl border border-gray-200 overflow-hidden scroll-mt-24 group">
+  <details id="comparison" v-if="rows.length > 1" :open="comparisonDefaultOpen" class="bg-white rounded-xl border border-gray-200 overflow-hidden scroll-mt-24 group">
     <summary class="cursor-pointer list-none px-6 py-4 border-b border-gray-100">
       <div class="flex items-start justify-between gap-4">
         <div>
@@ -285,6 +291,10 @@ const comparisonTitle = computed(() => {
         </div>
       </div>
     </summary>
+
+    <div v-if="comparisonSubheading" class="px-6 pt-4">
+      <h3 class="text-sm font-semibold text-gray-900">{{ comparisonSubheading }}</h3>
+    </div>
 
     <div class="overflow-x-auto">
       <table class="w-full text-sm">

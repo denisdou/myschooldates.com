@@ -1,0 +1,243 @@
+{
+  "institutionId": "hawaii-state-department-of-education",
+  "name": "Hawaii State Department of Education",
+  "shortName": "HIDOE",
+  "slug": "hawaii-state-department-of-education-calendar",
+  "state": "Hawaii",
+  "stateCode": "HI",
+  "city": "Honolulu",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://hawaiipublicschools.org/",
+  "calendarPage": "https://hawaiipublicschools.org/useful-links/school-calendar/",
+  "logo": "https://hawaiipublicschools.org/wp-content/uploads/DOE-logo2-512.png",
+  "timezone": "Pacific/Honolulu",
+  "county": "Statewide",
+  "region": "Hawaii",
+  "metro": "Statewide Hawaii",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "keyDates",
+  "hideHeroVerificationProcess": true,
+  "districtFact": "The Hawaii State Department of Education publishes a statewide official school calendar with student work year dates, teacher work year dates, fall break, winter break, spring break, state holidays, teacher workdays, institute day windows, quarter endings, and last day information.",
+  "about": [
+    {
+      "title": "About Hawaii State Department of Education",
+      "content": "The Hawaii State Department of Education, also known as HIDOE, operates Hawaii public schools statewide. The official school calendar helps families across the islands plan student attendance dates, breaks, state holidays, teacher workdays, and the end of each semester."
+    },
+    {
+      "title": "How to Use This Hawaii Public Schools Calendar",
+      "content": "Use this page for statewide Hawaii public school calendar planning, including the first day of school, fall break, winter break, spring break, state holidays, institute day windows, teacher workdays, and the last day for students. Families should confirm school-specific events, athletics, graduation ceremonies, and multitrack schedules directly with their school."
+    }
+  ],
+  "planningTips": {
+    "title": "Planning Tips for Hawaii Public School Families",
+    "content": [
+      "The statewide calendar includes 180 student days, but two instructional days are converted to non-student days for school planning and collaboration.",
+      "Institute day is listed as one no-student day during a designated week, with the exact date determined by island.",
+      "State holidays such as Statehood Day, Kuhio Day, and observed federal holidays can affect childcare and travel planning.",
+      "Check whether your school follows the standard statewide calendar or a multitrack calendar before booking interisland or mainland travel."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "about-hidoe-calendar-structure",
+      "label": "About HIDOE Calendar Structure",
+      "position": "afterAbout",
+      "content": "Hawaii's statewide public school calendar lists separate student and teacher work years. It also identifies fall intersession, winter recess, spring recess, state holidays, quarter endings, teacher workdays, and institute day windows. The official calendar notes that one institute day during the listed week is a no-student day and that the exact island date is determined separately."
+    },
+    {
+      "id": "hawaii-state-department-of-education-profile",
+      "label": "Hawaii State Department of Education Profile",
+      "position": "afterAbout",
+      "content": "HIDOE is Hawaii's statewide public school system. Its academic calendar sets the statewide student attendance framework and teacher work year planning dates.",
+      "table": {
+        "columns": ["Item", "Details"],
+        "rows": [
+          ["Type", "Statewide public school system"],
+          ["Location", "Honolulu, Hawaii"],
+          ["Coverage", "Hawaii public schools statewide"],
+          ["Grades", "Kindergarten through grade 12"],
+          ["Calendar authority", "Official HIDOE academic calendar"],
+          ["Calendar type", "Traditional calendar, with separate multitrack calendars where published"]
+        ]
+      }
+    },
+    {
+      "id": "which-hawaii-school-calendar-should-families-follow",
+      "label": "Which Hawaii School Calendar Should Families Follow?",
+      "position": "afterAbout",
+      "content": "HIDOE publishes the official statewide academic calendar used for most Hawaii public school planning. Families should use that calendar for student work year dates, fall break, winter break, spring break, state holidays, teacher workdays, and last-day timing, then confirm school-level details directly with their school.",
+      "groups": [
+        {
+          "label": "Use the statewide HIDOE calendar for",
+          "items": [
+            "First day and last day for students",
+            "Fall, winter, and spring break periods",
+            "State holidays and statewide no-school dates",
+            "Teacher workdays, institute day windows, and quarter endings"
+          ]
+        },
+        {
+          "label": "Verify with your school for",
+          "items": [
+            "Testing schedules, graduation ceremonies, athletics, and campus events",
+            "Multitrack calendar dates for schools that do not follow the traditional calendar",
+            "Charter school calendars, special program dates, transportation notices, and emergency closures"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hawaii-calendar-vs-school-specific-calendars",
+      "label": "Hawaii Public Schools Calendar vs School-Specific Calendars",
+      "position": "afterPlanningTips",
+      "content": "The Hawaii public schools calendar is the source for statewide student dates and state holidays. It does not replace school-specific notices for campus events, athletics, testing windows, commencement ceremonies, complex-area notices, multitrack schools, or emergency schedule updates."
+    },
+    {
+      "id": "hawaii-school-calendar-terminology",
+      "label": "Hawaii School Calendar Terminology",
+      "position": "afterPlanningTips",
+      "content": "Hawaii public school calendars use several terms that affect whether students attend school, whether teachers report, and which dates families should confirm locally.",
+      "table": {
+        "columns": ["Term", "What it means for families"],
+        "rows": [
+          ["Fall intersession", "A fall break period when students are not in regular classes."],
+          ["Teacher workday", "A staff work date that may be a no-student day."],
+          ["Institute day", "One no-student professional learning day during the official institute day window; the exact date is determined by island."],
+          ["Student work year", "The school-year dates used for student attendance planning."],
+          ["Teacher work year", "The broader staff calendar that can include days before or after the student year."],
+          ["Multitrack calendar", "A separate calendar for specific schools or programs, such as the published Holomua Elementary multitrack calendar."]
+        ]
+      }
+    },
+    {
+      "id": "hawaii-school-calendar-by-school-type",
+      "label": "Hawaii Public Schools Calendar by School Type",
+      "position": "afterComparison",
+      "content": "Most families should start with the statewide HIDOE calendar, but some Hawaii school types may publish separate calendars or school-level date notices.",
+      "table": {
+        "columns": ["Calendar", "Applies to", "What to verify"],
+        "rows": [
+          ["Traditional HIDOE calendar", "Most Hawaii public schools", "Statewide student dates, breaks, holidays, and teacher workdays"],
+          ["Multitrack calendar", "Specific schools or programs where HIDOE publishes a separate calendar", "Track-specific breaks, start dates, and return dates"],
+          ["Charter school calendar", "Individual Hawaii charter schools", "Calendar source and school-specific attendance dates"],
+          ["School-level calendar", "Individual campuses", "Testing, graduation, athletics, family nights, and emergency schedule changes"]
+        ]
+      }
+    },
+    {
+      "id": "how-we-collect-hawaii-calendar-data",
+      "label": "How We Collect Hawaii Public Schools Calendar Data",
+      "position": "beforeSources",
+      "content": "MySchoolDates reviews the official Hawaii State Department of Education calendar PDFs and extracts student work year dates, teacher workdays, holidays, fall break, winter break, spring break, institute day windows, quarter endings, and last-day details. The page links back to HIDOE so families can verify updates before making final childcare, travel, transportation, or work plans."
+    }
+  ],
+  "compareIntro": "Compare the Hawaii State Department of Education calendar with other large public school calendars currently available on MySchoolDates. Dates shown include the first day, last day, and major breaks.",
+  "comparisonTitle": "Hawaii School Calendar Compared With Other US Public School Calendars",
+  "faqSchemaQuestions": [
+    "Which Hawaii public schools calendar does this page summarize?",
+    "Does the Hawaii public schools calendar apply statewide?",
+    "Does every Hawaii public school follow the same calendar?",
+    "Are Hawaii charter schools included in this calendar?",
+    "Does the Hawaii public schools calendar include teacher workdays?",
+    "When does Hawaii public school start in 2026?",
+    "When is Hawaii public schools Fall Break in 2026?",
+    "When is Hawaii public schools Winter Break in 2026-2027?",
+    "When is Hawaii public schools Spring Break in 2027?",
+    "When is the last day of school for Hawaii public schools in 2027?"
+  ],
+  "districtFaqs": [
+    {
+      "q": "Which Hawaii public schools calendar does this page summarize?",
+      "a": "This page summarizes the official Hawaii State Department of Education school calendar for the listed school years."
+    },
+    {
+      "q": "Does the Hawaii public schools calendar apply statewide?",
+      "a": "Yes, it is the statewide Hawaii public schools calendar. Families should still verify school-specific events, multitrack schedules, athletics, testing, and graduation details with their individual school."
+    },
+    {
+      "q": "What is the Hawaii DOE institute day?",
+      "a": "The official calendar lists an Educational Officer and Teacher Institute Day window. One day during the listed week is a no-student day, and the exact date is determined by island."
+    },
+    {
+      "q": "Does every Hawaii public school follow the same calendar?",
+      "a": "Most Hawaii public schools use the statewide HIDOE academic calendar, but families should check whether their school uses a multitrack calendar or has school-specific dates for testing, graduation, athletics, or emergencies."
+    },
+    {
+      "q": "Are Hawaii charter schools included in this calendar?",
+      "a": "Not necessarily. Hawaii charter schools may publish their own school calendars, so families should verify attendance dates directly with the charter school."
+    },
+    {
+      "q": "Does the Hawaii public schools calendar include teacher workdays?",
+      "a": "Yes. The HIDOE calendar includes teacher workdays, teacher work year dates, and institute day windows, but school-level schedules can add details that are not shown in the statewide calendar summary."
+    },
+    {
+      "q": "When should families book Hawaii travel around school breaks?",
+      "a": "Families often plan travel around Fall Break, Winter Break, Spring Break, and summer break timing. Confirm the official HIDOE calendar and school-specific notices before booking flights, hotels, interisland travel, or nonrefundable reservations."
+    },
+    {
+      "q": "Where can I download the Hawaii school calendar PDF?",
+      "a": "Use the official Hawaii State Department of Education school calendar page or the PDF link on this page to download the official calendar source for the selected school year."
+    },
+    {
+      "q": "Where should families verify Hawaii public school calendar updates?",
+      "a": "Use the official Hawaii State Department of Education school calendar page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with HIDOE."
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Los Angeles Unified School District",
+      "slug": "los-angeles-unified-school-district-calendar",
+      "state": "California",
+      "comparisonNote": "Large public school district useful for comparing West Coast school-year timing and break schedules."
+    },
+    {
+      "name": "New York City Public Schools",
+      "slug": "new-york-city-public-schools-calendar",
+      "state": "New York",
+      "comparisonNote": "Large urban school system with a later school-year start and different holiday pattern."
+    },
+    {
+      "name": "Clark County School District",
+      "slug": "clark-county-school-district-calendar",
+      "state": "Nevada",
+      "comparisonNote": "Large district calendar with an early August start and traditional school-year structure."
+    },
+    {
+      "name": "Chicago Public Schools",
+      "slug": "chicago-public-schools-calendar",
+      "state": "Illinois",
+      "comparisonNote": "Large district calendar often compared for winter break, spring break, and instructional-day planning."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Hawaii State Department of Education official website",
+      "url": "https://hawaiipublicschools.org/"
+    },
+    {
+      "label": "Hawaii State Department of Education school calendar page",
+      "url": "https://hawaiipublicschools.org/useful-links/school-calendar/"
+    },
+    {
+      "label": "Hawaii State Department of Education logo",
+      "url": "https://hawaiipublicschools.org/wp-content/uploads/DOE-logo2-512.png"
+    }
+  ]
+}

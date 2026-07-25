@@ -7,11 +7,11 @@
 
 ## 当前进度快照
 
-**已完成学区（45个）**
+**已完成学区（46个）**
 
 | 州 | 已完成 | P1 完成度 | P2 完成度 |
 |----|--------|-----------|-----------|
-| Texas | Houston ISD, Dallas ISD, Fort Worth ISD, Austin ISD, Northside ISD, Plano ISD, Frisco ISD, Katy ISD, Round Rock ISD, Conroe ISD, Cy-Fair ISD | 6/6 ✓ | 5/5 ✓ |
+| Texas | Houston ISD, Dallas ISD, Fort Worth ISD, Austin ISD, Northside ISD, Plano ISD, Frisco ISD, Katy ISD, Round Rock ISD, Conroe ISD, Cy-Fair ISD, Fort Bend ISD | 6/6 ✓ | 5/5 ✓ |
 | California | LAUSD, San Diego Unified, Long Beach Unified, Fresno Unified, Sacramento City USD, Elk Grove USD, San Francisco USD, San Jose USD, Bakersfield City SD, Pomona USD, Capistrano USD, Moreno Valley USD | 5/5 ✓ | 3/5 |
 | Florida | Miami-Dade, Broward County, Orange County, Palm Beach County, Hillsborough County | 5/5 ✓ | 0/5 |
 | Virginia | Fairfax County, Prince William County, Loudoun County, Virginia Beach City, Chesterfield County, Henrico County, Arlington Public Schools | 5/5 ✓ | 2/5 |
@@ -159,7 +159,7 @@
 
 | 优先级 | 学区 | 预计 Slug | 状态 |
 |--------|------|-----------|------|
-| P3 | Arlington ISD | `/arlington-isd/` | 待创建 |
+| P3 | Arlington ISD | `arlington-isd-calendar` | ✓ 已完成：`arlington-isd-calendar` |
 | P3 | Lewisville ISD | `/lewisville-independent-school-district-calendar` | ✓ 已完成 |
 | P3 | Garland ISD | `/garland-independent-school-district-calendar` | ✓ 已完成 |
 | P3 | Pasadena ISD | `/pasadena-independent-school-district-calendar` | ✓ 已完成 |
@@ -218,6 +218,7 @@
 | P3 | Spring ISD | `/spring-isd-calendar` | ✓ 已完成 |
 | P3 | Humble ISD | `/humble-isd-calendar` | ✓ 已完成 |
 | P3 | Mansfield ISD | `/mansfield-isd-calendar` | ✓ 已完成 |
+| P3 | Fort Bend ISD | `/fort-bend-independent-school-district-calendar` | ✓ 已完成 |
 
 ### California P3 批次2（5个）
 
@@ -267,17 +268,17 @@ P3 内容可采用更高度模板化的方式生成（calendarNotes 精简为 4-
 
 | 排名 | 州/地区 | 学区 | 主要都市圈 | 状态 |
 |-----:|---------|------|------------|------|
-| 1 | New York | New York City Public Schools | New York City | 待创建 |
+| 1 | New York | New York City Public Schools | New York City | ✓ 已完成：`new-york-city-public-schools-calendar` |
 | 4 | Illinois | Chicago Public Schools | Chicago | ✓ 已完成 |
 | 5 | Nevada | Clark County School District | Las Vegas | ✓ 已完成 |
 | 11 | Georgia | Gwinnett County Public Schools | Atlanta | ✓ 已完成 |
-| 13 | Hawaii | Hawaii State Department of Education | Statewide | 待创建 |
-| 15 | Maryland | Montgomery County Public Schools | Washington, D.C. metro | 待创建 |
-| 19 | Maryland | Prince George's County Public Schools | Washington, D.C. metro | 待创建 |
-| 20 | Pennsylvania | School District of Philadelphia | Philadelphia | 待创建 |
-| 30 | Texas | Arlington Independent School District | Dallas-Fort Worth | 待创建 |
-| 32 | Texas | North East Independent School District | San Antonio | 待创建 |
-| 34 | Texas | Fort Bend Independent School District | Houston | 待创建 |
+| 13 | Hawaii | Hawaii State Department of Education | Statewide | ✓ 已完成：`hawaii-state-department-of-education-calendar` |
+| 15 | Maryland | Montgomery County Public Schools | Washington, D.C. metro | ✓ 已完成：`montgomery-county-school-calendar` |
+| 19 | Maryland | Prince George's County Public Schools | Washington, D.C. metro | ✓ 已完成：`prince-georges-county-school-calendar` |
+| 20 | Pennsylvania | School District of Philadelphia | Philadelphia | ✓ 已完成：`school-district-of-philadelphia-calendar` |
+| 30 | Texas | Arlington Independent School District | Dallas-Fort Worth | ✓ 已完成：`arlington-isd-calendar` |
+| 32 | Texas | North East Independent School District | San Antonio | ✓ 已完成：`north-east-isd-calendar` |
+| 34 | Texas | Fort Bend Independent School District | Houston | ✓ 已完成：`fort-bend-independent-school-district-calendar` |
 | 38 | Texas | Judson Independent School District | San Antonio | 待创建 |
 | 40 | Texas | Mesquite Independent School District | Dallas-Fort Worth | 待创建 |
 | 46 | California | Corona-Norco Unified School District | Inland Empire | 待创建 |

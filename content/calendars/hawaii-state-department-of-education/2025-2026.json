@@ -1,0 +1,91 @@
+{
+  "institutionId": "hawaii-state-department-of-education",
+  "schoolYear": "2025-2026",
+  "firstDay": "2025-08-04",
+  "lastDay": "2026-05-28",
+  "totalSchoolDays": 180,
+  "teacherWorkDays": 189,
+  "semesters": 2,
+  "sourceUrl": "https://hawaiipublicschools.org/useful-links/school-calendar/",
+  "sourcePdfUrl": "https://hawaiipublicschools.org/DOE%20Forms/2025-26calendar.pdf",
+  "lastVerifiedAt": "2026-07-25",
+  "datePublished": "2026-07-25",
+  "dateModified": "2026-07-25",
+  "sourceVersion": "Approved June 1, 2023",
+  "calendarType": "traditional",
+  "seoTitle": "Hawaii Public Schools Calendar 2025-2026: Holidays, Breaks & PDF",
+  "seoDescription": "View the Hawaii public schools 2025-2026 calendar with first day, last day, Fall Break, Winter Break, Spring Break, state holidays, PDF and ICS download.",
+  "calendarNotes": "The Hawaii State Department of Education 2025-2026 school calendar lists August 4, 2025 as the first day for students and May 28, 2026 as the last day for students. Fall Break runs October 6-10, 2025, Winter Break runs December 22, 2025 through January 2, 2026, and Spring Break runs March 16-20, 2026. The calendar includes 180 student days, 189 teacher days, state holidays, a January 5 teacher workday, and an institute day window during February 9-13.",
+  "calendarFaqs": [
+    {
+      "q": "When does Hawaii public school start in 2025?",
+      "a": "Hawaii public school students start the 2025-2026 school year on Monday, August 4, 2025."
+    },
+    {
+      "q": "When is Hawaii public schools Fall Break in 2025?",
+      "a": "Fall Break runs Monday, October 6 through Friday, October 10, 2025."
+    },
+    {
+      "q": "When is Hawaii public schools Winter Break in 2025-2026?",
+      "a": "Winter Break runs Monday, December 22, 2025 through Friday, January 2, 2026."
+    },
+    {
+      "q": "When is Hawaii public schools Spring Break in 2026?",
+      "a": "Spring Break runs Monday, March 16 through Friday, March 20, 2026."
+    },
+    {
+      "q": "When is the last day of school for Hawaii public schools in 2026?",
+      "a": "The last day for students is Thursday, May 28, 2026."
+    }
+  ],
+  "yearNumbers": [
+    {
+      "label": "Student Days",
+      "value": "180",
+      "detail": "The official HIDOE calendar lists 180 student days for 2025-2026."
+    },
+    {
+      "label": "Fall Break",
+      "value": "Oct 6-10",
+      "detail": "Fall intersession is scheduled for October 6-10, 2025."
+    },
+    {
+      "label": "Last Day",
+      "value": "May 28",
+      "detail": "The 2025-2026 student work year ends on May 28, 2026."
+    }
+  ],
+  "events": [
+    { "date": "2025-07-29", "name": "Teachers' First Day", "type": "teacher_workday" },
+    { "date": "2025-07-29", "name": "Teacher Work Days Begin - No Students", "type": "teacher_workday" },
+    { "date": "2025-08-01", "name": "Teacher Work Days End - No Students", "type": "teacher_workday" },
+    { "date": "2025-08-04", "name": "Students' First Day", "type": "school_start" },
+    { "date": "2025-08-15", "name": "Statehood Day", "type": "holiday" },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
+    { "date": "2025-10-03", "name": "Quarter 1 Ends", "type": "quarter_end" },
+    { "date": "2025-10-06", "name": "Fall Break Begins", "type": "break_start" },
+    { "date": "2025-10-10", "name": "Fall Break Ends", "type": "break_end" },
+    { "date": "2025-11-11", "name": "Veterans' Day", "type": "holiday" },
+    { "date": "2025-11-27", "name": "Thanksgiving Day", "type": "holiday" },
+    { "date": "2025-11-28", "name": "School Holiday", "type": "holiday" },
+    { "date": "2025-12-19", "name": "Quarter 2 and First Semester End", "type": "semester_end" },
+    { "date": "2025-12-22", "name": "Winter Break Begins", "type": "break_start" },
+    { "date": "2025-12-25", "name": "Christmas Day", "type": "holiday" },
+    { "date": "2026-01-01", "name": "New Year's Day", "type": "holiday" },
+    { "date": "2026-01-02", "name": "Winter Break Ends", "type": "break_end" },
+    { "date": "2026-01-05", "name": "Teacher Workday - No Students", "type": "teacher_workday" },
+    { "date": "2026-01-06", "name": "Second Semester Begins", "type": "academic" },
+    { "date": "2026-01-19", "name": "Dr. Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2026-02-09", "name": "Institute Day Week Begins - One No-Student Day During Week", "type": "teacher_workday" },
+    { "date": "2026-02-13", "name": "Institute Day Week Ends", "type": "teacher_workday" },
+    { "date": "2026-02-16", "name": "Presidents' Day", "type": "holiday" },
+    { "date": "2026-03-13", "name": "Quarter 3 Ends", "type": "quarter_end" },
+    { "date": "2026-03-16", "name": "Spring Break Begins", "type": "break_start" },
+    { "date": "2026-03-20", "name": "Spring Break Ends", "type": "break_end" },
+    { "date": "2026-03-26", "name": "Prince Jonah Kuhio Kalanianaole Day", "type": "holiday" },
+    { "date": "2026-04-03", "name": "Good Friday", "type": "holiday" },
+    { "date": "2026-05-25", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2026-05-28", "name": "Last Day for Students and Second Semester Ends", "type": "school_end" },
+    { "date": "2026-05-29", "name": "Last Day for Teachers", "type": "teacher_workday" }
+  ]
+}

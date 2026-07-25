@@ -2,11 +2,13 @@
 const props = defineProps<{
   relatedDistricts: { name: string; slug: string; state: string }[]
   stateName: string
+  title?: string
+  description?: string
 }>()
 
 const allRelatedInState = computed(() => props.relatedDistricts.every(rd => rd.state === props.stateName))
-const heading = computed(() => allRelatedInState.value ? `Related ${props.stateName} School Calendars` : 'Related Large District Calendars')
-const description = computed(() => allRelatedInState.value ? `Compare nearby ${props.stateName} school districts.` : 'Compare other large school district calendars.')
+const heading = computed(() => props.title ?? (allRelatedInState.value ? `Related ${props.stateName} School Calendars` : 'Related Large District Calendars'))
+const description = computed(() => props.description ?? (allRelatedInState.value ? `Compare nearby ${props.stateName} school districts.` : 'Compare other large school district calendars.'))
 </script>
 
 <template>

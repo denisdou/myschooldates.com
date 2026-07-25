@@ -428,7 +428,7 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
   if (pool.springBreakStart) {
     raw.push({ key: 'springBreakDate', value: fmt(pool.springBreakStart), label: pool.springBreakLabel ?? 'Spring Break', score: 114 })
   }
-  raw.push({ key: 'noSchoolDayCount', value: String(pool.noSchoolDayCount), label: 'Listed No-School Weekdays', score: 112 })
+  raw.push({ key: 'noSchoolDayCount', value: String(pool.noSchoolDayCount), label: 'No-School Weekdays Listed', score: 112 })
   const instructionalDaysDescription = String(pool.instructionalDaysDescription ?? '').toLowerCase()
   const instructionalDaysLabel = instructionalDaysDescription.includes('summary') || instructionalDaysDescription.includes('summarized')
     ? 'Listed Calendar Days'
@@ -514,11 +514,15 @@ const facts = computed(() => {
   }
   return scoreQuickFacts(metricPool.value, props.district.slug)
 })
+
+const sectionTitle = computed(() =>
+  props.cal?.quickFactsTitle ?? props.cal?.meta?.quickFactsTitle ?? `Quick Facts — ${year.value}`
+)
 </script>
 
 <template>
-  <div class="bg-white rounded-xl border border-gray-200 p-6">
-    <h2 class="text-lg font-semibold text-gray-900 mb-4">Quick Facts — {{ year }}</h2>
+  <div id="calendar-statistics" class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
+    <h2 class="text-lg font-semibold text-gray-900 mb-4">{{ sectionTitle }}</h2>
     <div class="grid grid-cols-3 gap-4">
       <div v-for="fact in facts" :key="fact.key" class="text-center p-3 bg-gray-50 rounded-lg">
         <div class="text-2xl font-bold text-gray-900 truncate">{{ fact.value }}</div>

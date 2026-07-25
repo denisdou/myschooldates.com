@@ -41,7 +41,7 @@ const icsFilename = computed(() => `${props.district.slug}-${props.cal.schoolYea
 const calendarShortName = computed(() => props.district?.shortName || props.districtName)
 const icsHeading = computed(() => `${calendarShortName.value} Calendar ${props.year} ICS File`)
 const icsButtonLabel = computed(() => {
-  return `Download calendar file for Google Calendar, Apple Calendar, and Outlook`
+  return `Download ICS Calendar`
 })
 const compatibleCalendars = ['Apple Calendar', 'Google Calendar', 'Outlook']
 const icsIncludedItems = computed(() => {

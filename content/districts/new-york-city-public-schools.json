@@ -1,0 +1,173 @@
+{
+  "institutionId": "new-york-city-public-schools",
+  "name": "New York City Public Schools",
+  "shortName": "NYCPS",
+  "slug": "new-york-city-public-schools-calendar",
+  "state": "New York",
+  "stateCode": "NY",
+  "city": "New York City",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "3-K",
+    "Pre-K",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.schools.nyc.gov",
+  "calendarPage": "https://www.schools.nyc.gov/calendar",
+  "logo": "https://pwsblobprd.schools.nyc/prd-pws/docs/default-source/admin-files/nycps-logo.png",
+  "timezone": "America/New_York",
+  "county": "New York City",
+  "region": "New York City",
+  "metro": "New York City",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "keyDates",
+  "hideHeroVerificationProcess": true,
+  "districtFact": "New York City Public Schools publishes a school year calendar for NYCPS schools from 3-K through grade 12, including first day, last day, school closures, religious holidays, parent-teacher conference dates, Regents Administration windows, clerical days, staff development days, winter recess, midwinter recess, and spring recess.",
+  "about": [
+    {
+      "title": "About New York City Public Schools",
+      "content": "New York City Public Schools, also known as NYCPS, serves students across New York City. The NYCPS school year calendar is used for districtwide planning across 3-K, Pre-K, elementary, middle, high school, K-12, 6-12, and District 75 school communities."
+    },
+    {
+      "title": "How to Use This NYCPS Calendar",
+      "content": "Use this page for citywide school calendar planning, including the first day of school, school holidays, recess periods, parent-teacher conferences, Regents Administration windows, clerical days, and the last day of school. Families should confirm private, parochial, charter, NYC Early Education Center, Family Childcare, school-specific, athletic, testing, and graduation dates directly with their school."
+    }
+  ],
+  "planningTips": {
+    "title": "NYCPS Calendar Reminders Before Making Plans",
+    "content": [
+      "Confirm whether each parent-teacher conference or early dismissal date applies to your child's school level before arranging pickup.",
+      "Check the official NYCPS calendar and school notices before booking nonrefundable travel, childcare, or transportation.",
+      "Treat Regents Administration windows as high school planning dates unless your school says they affect a broader schedule.",
+      "Watch for NYCPS emergency updates, because remote learning or closure decisions may change during severe weather or other disruptions."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "about-nycps-calendar-structure",
+      "label": "About NYCPS Calendar Structure",
+      "position": "afterAbout",
+      "content": "The NYCPS calendar is a citywide school year calendar for 3-K through grade 12, but several dates depend on school level. Elementary, middle, high school, K-12, 6-12, and District 75 parent-teacher conference dates are listed separately, and some affected students are dismissed three hours early. The calendar also identifies Regents Administration windows, clerical days, Anniversary Day or Chancellor's Conference Day, and recess periods. Families should use the official NYCPS calendar for citywide dates and then verify school-specific events with their child's school."
+    },
+    {
+      "id": "nycps-calendar-vs-school-specific-calendars",
+      "label": "NYCPS Calendar vs School-Specific Calendars",
+      "position": "afterPlanningTips",
+      "content": "The NYCPS school year calendar is the right source for districtwide dates such as the first day of school, winter recess, midwinter recess, spring recess, school holidays, and the last day of school. It does not replace school-specific notices for private, parochial, charter, NYCEEC, Family Childcare, athletics, graduation ceremonies, testing, field trips, or local events."
+    },
+    {
+      "id": "how-we-collect-nycps-calendar-data",
+      "label": "How We Collect NYCPS Calendar Data",
+      "position": "beforeSources",
+      "content": "MySchoolDates reviews the official New York City Public Schools calendar and extracts student dates, holidays, recess periods, parent-teacher conferences, Regents windows, clerical days, and other school-year planning dates. The page links back to NYCPS so families can verify updates before making final childcare, travel, transportation, or work plans.",
+      "groups": [
+        {
+          "label": "Calendar fields checked",
+          "items": [
+            "First day and last day of school",
+            "School closures and remote instruction dates",
+            "Winter Recess, Midwinter Recess, Spring Recess, and Thanksgiving Recess",
+            "Parent-teacher conference dates by school level",
+            "Three-hour early dismissal dates",
+            "Regents Administration windows, clerical days, and staff development days"
+          ]
+        },
+        {
+          "label": "How updates are handled",
+          "items": [
+            "The official NYCPS calendar page and source PDF are kept as the source of record for this reference page.",
+            "When the official calendar changes, MySchoolDates updates the affected date records and the page review date.",
+            "Families should still confirm school-specific events, charter school calendars, graduation dates, testing dates, and emergency schedule changes directly with their school."
+          ]
+        }
+      ]
+    }
+  ],
+  "compareIntro": "Compare the New York City Public Schools calendar with other large urban district calendars currently available on MySchoolDates. Dates shown include the first day, last day, and major breaks.",
+  "comparisonTitle": "New York City Public Schools Calendar Compared With Large Urban Districts",
+  "faqSchemaQuestions": [
+    "Which New York City Public Schools calendar does this page summarize?",
+    "Does the NYCPS calendar apply to charter schools?",
+    "Are NYCPS parent-teacher conference dates the same for every school?",
+    "When does NYCPS start school in 2026?",
+    "When is NYCPS Winter Recess in 2026-2027?",
+    "When is NYCPS Midwinter Recess in 2027?",
+    "When is NYCPS Spring Recess in 2027?",
+    "How many school days are in NYCPS 2026-2027?",
+    "What is the longest NYCPS school break in 2026-2027?",
+    "When should NYC families start planning summer vacation?",
+    "When is the last day of school for NYCPS in 2027?"
+  ],
+  "districtFaqs": [
+    {
+      "q": "Which New York City Public Schools calendar does this page summarize?",
+      "a": "This page summarizes the official NYCPS school year calendar for 3-K through grade 12 for the listed school years."
+    },
+    {
+      "q": "Does the NYCPS calendar apply to charter schools?",
+      "a": "Not necessarily. NYCPS states that private, parochial, charter, NYC Early Education Center, and Family Childcare families should contact their child's school for calendar information."
+    },
+    {
+      "q": "Are NYCPS parent-teacher conference dates the same for every school?",
+      "a": "No. The NYCPS calendar notes that individual school parent-teacher conference dates might be different, and your child's teacher will work with you to schedule your conference."
+    },
+    {
+      "q": "Where should families verify New York City Public Schools calendar updates?",
+      "a": "Use the official NYCPS calendar page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with New York City Public Schools."
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Los Angeles Unified School District",
+      "slug": "los-angeles-unified-school-district-calendar",
+      "state": "California",
+      "comparisonNote": "Large urban district often compared with NYCPS for school-year timing and break schedules."
+    },
+    {
+      "name": "Chicago Public Schools",
+      "slug": "chicago-public-schools-calendar",
+      "state": "Illinois",
+      "comparisonNote": "Large urban district with winter, spring, parent-teacher conference, and professional development date patterns."
+    },
+    {
+      "name": "Clark County School District",
+      "slug": "clark-county-school-district-calendar",
+      "state": "Nevada",
+      "comparisonNote": "Large district calendar for Las Vegas and Southern Nevada families."
+    },
+    {
+      "name": "Houston Independent School District",
+      "slug": "houston-independent-school-district-calendar",
+      "state": "Texas",
+      "comparisonNote": "Large urban district with a different start date, holiday pattern, and academic calendar structure."
+    }
+  ],
+  "sources": [
+    {
+      "label": "New York City Public Schools official website",
+      "url": "https://www.schools.nyc.gov"
+    },
+    {
+      "label": "New York City Public Schools calendar page",
+      "url": "https://www.schools.nyc.gov/calendar"
+    },
+    {
+      "label": "New York City Public Schools logo",
+      "url": "https://pwsblobprd.schools.nyc/prd-pws/docs/default-source/admin-files/nycps-logo.png"
+    }
+  ]
+}

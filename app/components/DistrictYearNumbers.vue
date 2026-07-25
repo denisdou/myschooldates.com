@@ -58,13 +58,20 @@ const cards = computed(() => {
   if (props.cal.yearNumbersMode === 'compact') {
     return cards.filter(card => card.key === 'instructionalDays' || card.key.startsWith('extra_'))
   }
+  if (props.cal.yearNumbersMode === 'customOnly') {
+    return cards.filter(card => card.key.startsWith('extra_'))
+  }
   return cards
 })
+
+const sectionTitle = computed(() =>
+  props.cal?.yearNumbersTitle ?? props.cal?.meta?.yearNumbersTitle ?? 'The Year, by the Numbers'
+)
 </script>
 
 <template>
   <section v-if="cards.length">
-    <h2 class="text-xl font-bold text-gray-900 mb-5">The Year, by the Numbers</h2>
+    <h2 class="text-xl font-bold text-gray-900 mb-5">{{ sectionTitle }}</h2>
     <div class="divide-y divide-gray-100">
       <div v-for="card in cards" :key="card.key" class="py-1.5 first:pt-0">
         <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">{{ card.label }}</h3>

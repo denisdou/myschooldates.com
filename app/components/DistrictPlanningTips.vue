@@ -3,6 +3,7 @@ defineProps<{
   name: string
   tips: string[]
   title?: string
+  links?: { label: string; to: string; description?: string }[]
 }>()
 </script>
 
@@ -17,5 +18,15 @@ defineProps<{
         {{ tip }}
       </li>
     </ul>
+    <div v-if="links?.length" class="mt-4 flex flex-wrap gap-3">
+      <NuxtLink
+        v-for="link in links"
+        :key="link.to"
+        :to="link.to"
+        class="inline-flex items-center rounded-lg border border-blue-200 bg-white px-3 py-2 text-sm font-medium text-blue-700 hover:border-blue-300 hover:bg-blue-100 transition-colors"
+      >
+        {{ link.label }}
+      </NuxtLink>
+    </div>
   </div>
 </template>

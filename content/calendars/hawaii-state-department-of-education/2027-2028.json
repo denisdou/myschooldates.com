@@ -1,0 +1,91 @@
+{
+  "institutionId": "hawaii-state-department-of-education",
+  "schoolYear": "2027-2028",
+  "firstDay": "2027-08-02",
+  "lastDay": "2028-05-24",
+  "totalSchoolDays": 180,
+  "teacherWorkDays": 189,
+  "semesters": 2,
+  "sourceUrl": "https://hawaiipublicschools.org/useful-links/school-calendar/",
+  "sourcePdfUrl": "https://hawaiipublicschools.org/wp-content/uploads/2027-28-Calendar.pdf",
+  "lastVerifiedAt": "2026-07-25",
+  "datePublished": "2026-07-25",
+  "dateModified": "2026-07-25",
+  "sourceVersion": "Approved May 15, 2025",
+  "calendarType": "traditional",
+  "seoTitle": "Hawaii Public Schools Calendar 2027-2028: Holidays, Breaks & PDF",
+  "seoDescription": "View the Hawaii public schools 2027-2028 calendar with first day, last day, Fall Break, Winter Break, Spring Break, state holidays, PDF and ICS download.",
+  "calendarNotes": "The Hawaii State Department of Education 2027-2028 school calendar lists August 2, 2027 as the first day for students and May 24, 2028 as the last day for students. Fall Break runs October 4-8, 2027, Winter Break runs December 20-31, 2027, and Spring Break runs March 13-17, 2028. The calendar includes 180 student days, 189 teacher days, state holidays, a January 3 teacher workday, and an institute day window during October 18-22.",
+  "calendarFaqs": [
+    {
+      "q": "When does Hawaii public school start in 2027?",
+      "a": "Hawaii public school students start the 2027-2028 school year on Monday, August 2, 2027."
+    },
+    {
+      "q": "When is Hawaii public schools Fall Break in 2027?",
+      "a": "Fall Break runs Monday, October 4 through Friday, October 8, 2027."
+    },
+    {
+      "q": "When is Hawaii public schools Winter Break in 2027-2028?",
+      "a": "Winter Break runs Monday, December 20 through Friday, December 31, 2027."
+    },
+    {
+      "q": "When is Hawaii public schools Spring Break in 2028?",
+      "a": "Spring Break runs Monday, March 13 through Friday, March 17, 2028."
+    },
+    {
+      "q": "When is the last day of school for Hawaii public schools in 2028?",
+      "a": "The last day for students is Wednesday, May 24, 2028."
+    }
+  ],
+  "yearNumbers": [
+    {
+      "label": "Student Days",
+      "value": "180",
+      "detail": "The official HIDOE calendar lists 180 student days for 2027-2028."
+    },
+    {
+      "label": "Fall Break",
+      "value": "Oct 4-8",
+      "detail": "Fall intersession is scheduled for October 4-8, 2027."
+    },
+    {
+      "label": "Last Day",
+      "value": "May 24",
+      "detail": "The 2027-2028 student work year ends on May 24, 2028."
+    }
+  ],
+  "events": [
+    { "date": "2027-07-27", "name": "Teachers' First Day", "type": "teacher_workday" },
+    { "date": "2027-07-27", "name": "Teacher Work Days Begin - No Students", "type": "teacher_workday" },
+    { "date": "2027-07-30", "name": "Teacher Work Days End - No Students", "type": "teacher_workday" },
+    { "date": "2027-08-02", "name": "Students' First Day", "type": "school_start" },
+    { "date": "2027-08-20", "name": "Statehood Day", "type": "holiday" },
+    { "date": "2027-09-06", "name": "Labor Day", "type": "holiday" },
+    { "date": "2027-10-01", "name": "Quarter 1 Ends", "type": "quarter_end" },
+    { "date": "2027-10-04", "name": "Fall Break Begins", "type": "break_start" },
+    { "date": "2027-10-08", "name": "Fall Break Ends", "type": "break_end" },
+    { "date": "2027-10-18", "name": "Institute Day Week Begins - One No-Student Day During Week", "type": "teacher_workday" },
+    { "date": "2027-10-22", "name": "Institute Day Week Ends", "type": "teacher_workday" },
+    { "date": "2027-11-11", "name": "Veterans' Day", "type": "holiday" },
+    { "date": "2027-11-25", "name": "Thanksgiving Day", "type": "holiday" },
+    { "date": "2027-11-26", "name": "School Holiday", "type": "holiday" },
+    { "date": "2027-12-17", "name": "Quarter 2 and First Semester End", "type": "semester_end" },
+    { "date": "2027-12-20", "name": "Winter Break Begins", "type": "break_start" },
+    { "date": "2027-12-24", "name": "Christmas Day Observed", "type": "holiday" },
+    { "date": "2027-12-31", "name": "New Year's Day Observed", "type": "holiday" },
+    { "date": "2027-12-31", "name": "Winter Break Ends", "type": "break_end" },
+    { "date": "2028-01-03", "name": "Teacher Workday - No Students", "type": "teacher_workday" },
+    { "date": "2028-01-04", "name": "Second Semester Begins", "type": "academic" },
+    { "date": "2028-01-17", "name": "Dr. Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2028-02-21", "name": "Presidents' Day", "type": "holiday" },
+    { "date": "2028-03-10", "name": "Quarter 3 Ends", "type": "quarter_end" },
+    { "date": "2028-03-13", "name": "Spring Break Begins", "type": "break_start" },
+    { "date": "2028-03-17", "name": "Spring Break Ends", "type": "break_end" },
+    { "date": "2028-03-27", "name": "Kuhio Day Observed", "type": "holiday" },
+    { "date": "2028-04-14", "name": "Good Friday", "type": "holiday" },
+    { "date": "2028-05-24", "name": "Last Day for Students and Second Semester Ends", "type": "school_end" },
+    { "date": "2028-05-25", "name": "Last Day for Teachers", "type": "teacher_workday" },
+    { "date": "2028-05-29", "name": "Memorial Day", "type": "holiday" }
+  ]
+}

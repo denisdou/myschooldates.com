@@ -11,11 +11,38 @@ const statePageNames: Record<string, string> = {
   illinois: 'Illinois',
   nevada: 'Nevada',
   georgia: 'Georgia',
+  hawaii: 'Hawaii',
+  'new-york': 'New York',
+  pennsylvania: 'Pennsylvania',
+  maryland: 'Maryland',
 }
 
 const currentStateSlug = computed(() => route.path.split('/').filter(Boolean)[0] ?? '')
 const currentStateName = computed(() => statePageNames[currentStateSlug.value] ?? '')
 const isStateLandingPage = computed(() => route.path === `/${currentStateSlug.value}` && !!currentStateName.value)
+const mobileMenuOpen = ref(false)
+
+const stateLinks = [
+  { slug: 'florida', name: 'Florida' },
+  { slug: 'texas', name: 'Texas' },
+  { slug: 'california', name: 'California' },
+  { slug: 'new-york', name: 'New York' },
+  { slug: 'illinois', name: 'Illinois' },
+  { slug: 'georgia', name: 'Georgia' },
+  { slug: 'nevada', name: 'Nevada' },
+  { slug: 'north-carolina', name: 'North Carolina' },
+  { slug: 'virginia', name: 'Virginia' },
+  { slug: 'kentucky', name: 'Kentucky' },
+  { slug: 'hawaii', name: 'Hawaii' },
+  { slug: 'pennsylvania', name: 'Pennsylvania' },
+  { slug: 'maryland', name: 'Maryland' },
+]
+
+const primaryStateLinks = stateLinks.slice(0, 3)
+
+watch(() => route.fullPath, () => {
+  mobileMenuOpen.value = false
+})
 </script>
 
 <template>
@@ -30,18 +57,70 @@ const isStateLandingPage = computed(() => route.path === `/${currentStateSlug.va
           <span class="text-sm text-gray-400 hidden lg:inline">US School Calendar Platform</span>
         </NuxtLink>
         <!-- State navigation -->
-        <nav class="hidden sm:flex items-center gap-5">
-          <NuxtLink to="/florida" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">Florida</NuxtLink>
-          <NuxtLink to="/texas" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">Texas</NuxtLink>
-          <NuxtLink to="/california" class="text-sm text-gray-600 hover:text-blue-600 transition-colors">California</NuxtLink>
-          <NuxtLink to="/illinois" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden md:inline">Illinois</NuxtLink>
-          <NuxtLink to="/nevada" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden lg:inline">Nevada</NuxtLink>
-          <NuxtLink to="/georgia" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden lg:inline">Georgia</NuxtLink>
-          <NuxtLink to="/north-carolina" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden md:inline">NC</NuxtLink>
-          <NuxtLink to="/virginia" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden md:inline">Virginia</NuxtLink>
-          <NuxtLink to="/kentucky" class="text-sm text-gray-600 hover:text-blue-600 transition-colors hidden xl:inline">Kentucky</NuxtLink>
+        <nav class="hidden sm:flex items-center gap-4">
+          <NuxtLink
+            v-for="state in primaryStateLinks"
+            :key="state.slug"
+            :to="`/${state.slug}`"
+            class="text-sm text-gray-600 hover:text-blue-600 transition-colors"
+          >
+            {{ state.name }}
+          </NuxtLink>
+          <div class="relative group">
+            <button
+              type="button"
+              class="inline-flex items-center gap-1.5 rounded-full border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors"
+              aria-haspopup="true"
+            >
+              <span>More States</span>
+              <svg class="h-4 w-4 transition-transform group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div class="invisible absolute right-0 top-full z-30 w-64 pt-3 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              <div class="rounded-lg border border-gray-200 bg-white p-2 shadow-lg">
+                <NuxtLink
+                  v-for="state in stateLinks"
+                  :key="state.slug"
+                  :to="`/${state.slug}`"
+                  class="block rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+                >
+                  {{ state.name }} School Calendars
+                </NuxtLink>
+              </div>
+            </div>
+          </div>
         </nav>
+        <button
+          type="button"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-700 sm:hidden"
+          :aria-expanded="mobileMenuOpen"
+          aria-label="Open navigation menu"
+          @click="mobileMenuOpen = !mobileMenuOpen"
+        >
+          <svg v-if="!mobileMenuOpen" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16" />
+            <path d="M4 12h16" />
+            <path d="M4 17h16" />
+          </svg>
+          <svg v-else class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12" />
+            <path d="M18 6L6 18" />
+          </svg>
+        </button>
       </div>
+      <nav v-if="mobileMenuOpen" class="border-t border-gray-100 bg-white px-4 py-3 sm:hidden">
+        <div class="mx-auto grid max-w-5xl grid-cols-2 gap-2">
+          <NuxtLink
+            v-for="state in stateLinks"
+            :key="state.slug"
+            :to="`/${state.slug}`"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+          >
+            {{ state.name }}
+          </NuxtLink>
+        </div>
+      </nav>
     </header>
 
     <!-- Page content -->
@@ -65,6 +144,10 @@ const isStateLandingPage = computed(() => route.path === `/${currentStateSlug.va
               <li><NuxtLink to="/illinois" class="text-sm text-gray-500 hover:text-blue-600">Illinois School Calendars</NuxtLink></li>
               <li><NuxtLink to="/nevada" class="text-sm text-gray-500 hover:text-blue-600">Nevada School Calendars</NuxtLink></li>
               <li><NuxtLink to="/georgia" class="text-sm text-gray-500 hover:text-blue-600">Georgia School Calendars</NuxtLink></li>
+              <li><NuxtLink to="/hawaii" class="text-sm text-gray-500 hover:text-blue-600">Hawaii School Calendars</NuxtLink></li>
+              <li><NuxtLink to="/new-york" class="text-sm text-gray-500 hover:text-blue-600">New York School Calendars</NuxtLink></li>
+              <li><NuxtLink to="/pennsylvania" class="text-sm text-gray-500 hover:text-blue-600">Pennsylvania School Calendars</NuxtLink></li>
+              <li><NuxtLink to="/maryland" class="text-sm text-gray-500 hover:text-blue-600">Maryland School Calendars</NuxtLink></li>
             </ul>
           </div>
           <div v-if="!isStateLandingPage">

@@ -85,8 +85,8 @@ if (isStatePage) {
     '@id': `${stateUrl}#district-list`,
     '@type': 'ItemList',
     name: stateDistricts.length === 1
-      ? `${stateDistricts[0].name} Calendar — ${stateCurrentYear}`
-      : `${matchedStateName} Public School District Calendars — ${stateCurrentYear}`,
+      ? `Verified ${matchedStateName} District Calendars — ${stateCurrentYear}`
+      : `Verified ${matchedStateName} Public School District Calendars — ${stateCurrentYear}`,
     description: stateDistricts.length === 1
       ? `Verified ${stateCurrentYear} school calendar page currently available for ${stateDistricts[0].name} in ${matchedStateName}. Additional ${matchedStateName} district calendar pages are added after official-source data is verified.`
       : hasStateContent
@@ -192,6 +192,10 @@ const stateDistrictCalendarById = computed(() => {
   for (const c of stateCals.value ?? []) result[c.institutionId] = c
   return result
 })
+
+const statePdfSectionId = computed(() =>
+  (statePageData.value?.stateSections ?? []).find((section: any) => section.id?.includes('pdf'))?.id ?? null
+)
 
 // Format "2026-08-10" → "Aug 10" (compact, no year)
 const formatMonthDay = (d: string) =>
@@ -341,7 +345,7 @@ const calendarSummary = computed(() => {
   return `${district.value.name}${shortName} begins the ${currentYear} school year on ${formatDate(cal.firstDay)}. The final day is ${formatDate(cal.lastDay)}${lastDayNote}.${springPart}`
 })
 
-const faqs = computed(() => {
+const allFaqs = computed(() => {
   if (!cal || !district.value) return []
   const specificFaqs: { q: string; a: string }[] = (district.value as any).districtFaqs ?? []
   const calendarFaqs: { q: string; a: string }[] = (cal as any).calendarFaqs ?? []
@@ -354,11 +358,27 @@ const faqs = computed(() => {
       return true
     })
   }
-  const faqLimit = (cal as any).faqLimit ?? (cal as any).meta?.faqLimit ?? (district.value as any).faqLimit ?? (district.value as any).meta?.faqLimit
-  if (typeof faqLimit === 'number' && faqLimit > 0) {
-    return dedupeFaqs([...calendarFaqs, ...specificFaqs]).slice(0, faqLimit)
+  const prefersCalendarFirst = (cal as any).faqOrderLimit ?? (cal as any).meta?.faqOrderLimit ?? (district.value as any).faqOrderLimit ?? (district.value as any).meta?.faqOrderLimit ?? (cal as any).faqLimit ?? (cal as any).meta?.faqLimit ?? (district.value as any).faqLimit ?? (district.value as any).meta?.faqLimit
+  if (typeof prefersCalendarFirst === 'number' && prefersCalendarFirst > 0) {
+    return dedupeFaqs([...calendarFaqs, ...specificFaqs])
   }
   return dedupeFaqs([...specificFaqs, ...calendarFaqs])
+})
+const faqs = computed(() => {
+  const displayQuestions = [
+    ...(((district.value as any)?.faqDisplayQuestions ?? (district.value as any)?.meta?.faqDisplayQuestions ?? []) as string[]),
+    ...(((cal as any)?.faqDisplayQuestions ?? (cal as any)?.meta?.faqDisplayQuestions ?? []) as string[]),
+  ]
+  if (displayQuestions.length) {
+    return displayQuestions
+      .map(q => allFaqs.value.find(item => item.q.trim().toLowerCase() === q.trim().toLowerCase()))
+      .filter(Boolean) as { q: string; a: string }[]
+  }
+  const displayLimit = (cal as any)?.faqDisplayLimit ?? (cal as any)?.meta?.faqDisplayLimit ?? (district.value as any)?.faqDisplayLimit ?? (district.value as any)?.meta?.faqDisplayLimit ?? (cal as any)?.faqLimit ?? (cal as any)?.meta?.faqLimit ?? (district.value as any)?.faqLimit ?? (district.value as any)?.meta?.faqLimit
+  if (typeof displayLimit === 'number' && displayLimit > 0) {
+    return allFaqs.value.slice(0, displayLimit)
+  }
+  return allFaqs.value
 })
 const faqSchemaItems = computed(() => {
   const limit = (cal as any)?.faqSchemaLimit ?? (cal as any)?.meta?.faqSchemaLimit ?? (district.value as any)?.faqSchemaLimit ?? (district.value as any)?.meta?.faqSchemaLimit
@@ -372,9 +392,9 @@ const faqSchemaItems = computed(() => {
   ].map(item => item.toLowerCase())
   const includedCandidates = includeQuestions.length
     ? includeQuestions
-      .map(q => faqs.value.find(item => item.q.trim().toLowerCase() === q.trim().toLowerCase()))
+      .map(q => allFaqs.value.find(item => item.q.trim().toLowerCase() === q.trim().toLowerCase()))
       .filter(Boolean) as { q: string; a: string }[]
-    : faqs.value
+    : allFaqs.value
   const candidates = excludes.length
     ? includedCandidates.filter(item => !excludes.some(exclude => item.q.toLowerCase().includes(exclude)))
     : includedCandidates
@@ -424,8 +444,17 @@ const summarySectionId = computed(() => {
 const overviewSectionId = computed(() => {
   const section = customSections.value.find(s =>
     s.id.toLowerCase().includes('overview') ||
-    s.label.toLowerCase().includes('overview')
+    s.label.toLowerCase().includes('overview') ||
+    s.id.toLowerCase().includes('at-a-glance') ||
+    s.label.toLowerCase().includes('at a glance')
   )
+  return section?.id
+})
+const downloadGuideSectionId = computed(() => {
+  const section = customSections.value.find(s => {
+    const text = `${s.id} ${s.label}`.toLowerCase()
+    return s.position === 'afterCalendarExport' && (text.includes('download') || text.includes('print'))
+  })
   return section?.id
 })
 const changesSectionId = computed(() => {
@@ -478,6 +507,12 @@ const calendarTrackLabel = computed(() => {
 
 const secondSemStart = computed(() => cal ? getSecondSemesterStart(cal.events) : '')
 const showSemesterCount = computed(() => (cal as any)?.hideSemesterCount !== true)
+const heroFactChips = computed(() =>
+  (((cal as any)?.heroFactChips ?? (cal as any)?.meta?.heroFactChips ?? []) as string[]).filter(Boolean)
+)
+const breaksTitle = computed(() =>
+  (cal as any)?.breaksTitle ?? (cal as any)?.meta?.breaksTitle ?? 'Major School Breaks'
+)
 const winterBreakLabel = computed(() => {
   const winterBreak = breaks.value.find(b =>
     b.name.toLowerCase().includes('winter') ||
@@ -507,6 +542,14 @@ function breakDurationLabel(b: { name: string; start: string; end: string; days:
     return `${weekdays} weekday${weekdays !== 1 ? 's' : ''} without school`
   }
   return `${weekdays} weekday${weekdays !== 1 ? 's' : ''} without school · ${b.days} calendar day${b.days !== 1 ? 's' : ''} total`
+}
+
+function breakDisplayName(name: string) {
+  return name
+    .replace(/\b(Begins|Starts|Begin|Start|Ends|End)\b/gi, '')
+    .replace(/\s*-\s*(Schools and Offices Closed|Good Friday|New Year's Day)\b/gi, '')
+    .replace(/\s+/g, ' ')
+    .trim()
 }
 
 const todayStr = (() => {
@@ -764,9 +807,34 @@ if (!isStatePage && district.value) {
   const yearPageLinks = (allCals.value ?? [])
     .filter(y => y.schoolYear !== currentYear)
     .map(y => `https://myschooldates.com/${slug}/${y.schoolYear}`)
+  const customSectionSchemaParts = customSections.value
+    .filter((section) => {
+      const text = `${section.id} ${section.label}`.toLowerCase()
+      return text.includes('download') ||
+        text.includes('print') ||
+        text.includes('parent planning') ||
+        text.includes('family planning') ||
+        text.includes('planning guide') ||
+        text.includes('calendar insights')
+    })
+    .map(section => ({
+      '@type': 'WebPageElement',
+      '@id': `${canonicalUrl}#${section.id}`,
+      name: section.label,
+    }))
+  const yearNumbersTitle = (cal as any)?.yearNumbersTitle ?? (cal as any)?.meta?.yearNumbersTitle ?? ''
+  const yearNumbersSchemaParts = !hiddenSections.value.has('yearNumbers') && String(yearNumbersTitle).toLowerCase().includes('insights')
+    ? [{
+      '@type': 'WebPageElement',
+      '@id': `${canonicalUrl}#calendar-insights`,
+      name: yearNumbersTitle,
+    }]
+    : []
   const webPageParts = [
     ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
-    ...(faqs.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
+    ...(faqSchemaItems.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
+    ...customSectionSchemaParts,
+    ...yearNumbersSchemaParts,
     ...yearPageLinks.map((url) => ({
       '@type': 'WebPage',
       url,
@@ -933,7 +1001,7 @@ if (!isStatePage && district.value) {
           </h1>
           <p class="mt-2 text-sm text-gray-500">
             <template v-if="statePageData">
-              {{ stateCurrentYear }} school calendar dates, holidays, breaks, district schedules, PDFs, and calendar downloads · Sourced from official district websites
+              {{ statePageData.heroDescription || `${stateCurrentYear} school calendar dates, holidays, breaks, district schedules, PDFs, and calendar downloads · Sourced from official district websites` }}
             </template>
             <template v-else>
               {{ stateCurrentYear }} school calendar dates · {{ stateDistricts.length }} public school district{{ stateDistricts.length !== 1 ? 's' : '' }} · Sourced from official district websites
@@ -942,7 +1010,7 @@ if (!isStatePage && district.value) {
           <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2">
             <span class="flex items-center gap-1.5 text-sm text-gray-700">
               <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-              <template v-if="statePageData">Browse district calendars</template>
+              <template v-if="statePageData">{{ statePageData.browseLabel || 'Browse district calendars' }}</template>
               <template v-else>{{ stateDistricts.length }} districts covered</template>
             </span>
             <span class="flex items-center gap-1.5 text-sm text-gray-700">
@@ -955,7 +1023,7 @@ if (!isStatePage && district.value) {
             </span>
             <span class="flex items-center gap-1.5 text-sm text-gray-700">
               <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-              Official district sources
+              {{ statePageData.officialSourceLabel || 'Official district sources' }}
             </span>
             <span v-if="statePageData?.lastVerifiedAt" class="flex items-center gap-1.5 text-sm text-gray-700">
               <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
@@ -968,12 +1036,33 @@ if (!isStatePage && district.value) {
           </div>
         </div>
 
+        <!-- Jump navigation -->
+        <nav v-if="statePageData" class="sticky top-2 z-10 -mx-1 overflow-x-auto rounded-full border border-gray-200 bg-white/95 px-3 py-2 text-xs shadow-sm backdrop-blur">
+          <div class="flex min-w-max gap-2">
+            <a href="#state-quick-answer" class="rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">2026 Dates</a>
+            <a href="#state-districts" class="rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">{{ statePageData.collectionNavLabel || 'Districts' }}</a>
+            <a v-if="statePdfSectionId" :href="`#${statePdfSectionId}`" class="rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">PDF</a>
+            <a href="#state-holidays" class="rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">Holidays</a>
+            <a href="#faq" class="rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">FAQ</a>
+          </div>
+        </nav>
+
         <!-- Quick Answer -->
-        <div v-if="statePageData" class="bg-blue-50 border border-blue-200 rounded-xl p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-2">Quick Answer: {{ matchedStateName }} School Calendar {{ stateCurrentYear }}</h2>
+        <div v-if="statePageData" id="state-quick-answer" class="bg-blue-50 border border-blue-200 rounded-xl p-6 scroll-mt-24">
+          <h2 class="text-lg font-semibold text-gray-900 mb-2">{{ statePageData.quickAnswerTitle ?? `Quick Answer: ${matchedStateName} School Calendar ${stateCurrentYear}` }}</h2>
           <p class="text-sm leading-relaxed text-gray-700">
-            {{ matchedStateName }} public school calendars are set by local districts, so first day of school, holidays, winter break, spring break, staff-only days, and make-up days vary by district. Families can use this page to find {{ matchedStateName }} district calendar links, compare key dates when available, and verify schedules against official school sources.
+            {{ statePageData.quickAnswer ?? `${matchedStateName} public school calendars are set by local districts, so first day of school, holidays, winter break, spring break, staff-only days, and make-up days vary by district. Families can use this page to find ${matchedStateName} district calendar links, compare key dates when available, and verify schedules against official school sources.` }}
           </p>
+          <div v-if="statePageData.quickAnswerItems?.length" class="mt-4 overflow-x-auto rounded-lg border border-blue-100 bg-white">
+            <table class="min-w-full divide-y divide-blue-100 text-sm">
+              <tbody class="divide-y divide-blue-50">
+                <tr v-for="item in statePageData.quickAnswerItems" :key="item.label">
+                  <th scope="row" class="w-40 px-4 py-2 text-left text-xs font-semibold uppercase tracking-wide text-blue-700">{{ item.label }}</th>
+                  <td class="px-4 py-2 text-gray-700">{{ item.value }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <!-- Quick Facts from state data -->
@@ -996,7 +1085,7 @@ if (!isStatePage && district.value) {
         <div v-if="statePageData?.calendarRules?.length" class="bg-white rounded-xl border border-gray-200 p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ matchedStateName }} School Calendar Rules and Terms</h2>
           <p class="text-sm text-gray-500 mb-5">
-            {{ matchedStateName }} district calendars often use state-specific labels for attendance, closure, and planning days. Always confirm final dates with the official district calendar.
+            {{ statePageData.calendarRulesDescription || `${matchedStateName} district calendars often use state-specific labels for attendance, closure, and planning days. Always confirm final dates with the official district calendar.` }}
           </p>
           <div class="grid gap-3 sm:grid-cols-2">
             <div
@@ -1008,6 +1097,48 @@ if (!isStatePage && district.value) {
               <p v-if="rule.description" class="mt-1.5 text-xs leading-relaxed text-gray-500">{{ rule.description }}</p>
             </div>
           </div>
+        </div>
+
+        <!-- State-specific sections -->
+        <div v-if="statePageData?.stateSections?.length" class="space-y-6">
+          <section
+            v-for="section in statePageData.stateSections"
+            :id="section.id"
+            :key="section.id"
+            class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24"
+          >
+            <h2 class="text-lg font-semibold text-gray-900 mb-3">{{ section.label }}</h2>
+            <div v-if="section.content" class="text-sm text-gray-600 leading-relaxed space-y-3">
+              <p v-for="(para, i) in section.content.split('\n\n')" :key="i">{{ para }}</p>
+            </div>
+            <div v-if="section.table?.columns?.length && section.table?.rows?.length" class="mt-4 overflow-x-auto rounded-lg border border-gray-200">
+              <table class="min-w-full divide-y divide-gray-200 text-sm">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th
+                      v-for="column in section.table.columns"
+                      :key="column"
+                      scope="col"
+                      class="px-4 py-2 text-left text-xs font-semibold uppercase tracking-wide text-gray-500"
+                    >
+                      {{ column }}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 bg-white">
+                  <tr v-for="(row, rowIndex) in section.table.rows" :key="rowIndex">
+                    <td
+                      v-for="(cell, cellIndex) in row"
+                      :key="`${rowIndex}-${cellIndex}`"
+                      class="px-4 py-2 text-gray-700"
+                    >
+                      {{ cell }}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
         </div>
 
         <!-- District Comparison Table -->
@@ -1065,9 +1196,9 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- District Cards -->
-        <div>
-          <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ matchedStateName }} School Districts — {{ stateCurrentYear }}</h2>
-          <p class="text-sm text-gray-500 mb-4">Click any district to view the full calendar, add dates to Google Calendar, or download an ICS file.</p>
+        <div id="state-districts" class="scroll-mt-24">
+          <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ statePageData?.collectionHeading || `${matchedStateName} School Districts — ${stateCurrentYear}` }}</h2>
+          <p class="text-sm text-gray-500 mb-4">{{ statePageData?.collectionDescription || 'Click any district to view the full calendar, add dates to Google Calendar, or download an ICS file.' }}</p>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <NuxtLink
               v-for="d in stateDistricts"
@@ -1124,9 +1255,9 @@ if (!isStatePage && district.value) {
 
         <!-- Popular district searches -->
         <div v-if="statePageData?.popularDistricts?.length" class="bg-white rounded-xl border border-gray-200 p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-1">Popular {{ matchedStateName }} District Calendar Searches</h2>
+          <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ statePageData.popularDistrictsHeading || `Popular ${matchedStateName} District Calendar Searches` }}</h2>
           <p class="text-sm text-gray-500 mb-5">
-            These are common {{ matchedStateName }} district calendar searches families use when comparing school-year dates. MySchoolDates links district pages after official calendar data has been verified, so planned districts are listed without inactive links.
+            {{ statePageData.popularDistrictsDescription || `These are common ${matchedStateName} district calendar searches families use when comparing school-year dates. MySchoolDates links district pages after official calendar data has been verified, so planned districts are listed without inactive links.` }}
           </p>
           <div class="grid gap-3 sm:grid-cols-2">
             <div
@@ -1142,9 +1273,9 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Common Holidays -->
-        <div v-if="statePageData?.commonHolidays?.length" class="bg-white rounded-xl border border-gray-200 p-6">
+        <div v-if="statePageData?.commonHolidays?.length" id="state-holidays" class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
           <h2 class="text-lg font-semibold text-gray-900 mb-1">Common {{ matchedStateName }} School Holidays</h2>
-          <p class="text-sm text-gray-500 mb-4">Exact dates vary by district. Always verify with your district's official calendar before making plans.</p>
+          <p class="text-sm text-gray-500 mb-4">{{ statePageData.commonHolidaysDescription || `Exact dates vary by district. Always verify with your district's official calendar before making plans.` }}</p>
           <div class="flex flex-wrap gap-2">
             <span
               v-for="holiday in statePageData.commonHolidays"
@@ -1156,8 +1287,8 @@ if (!isStatePage && district.value) {
 
         <!-- District clusters -->
         <div v-if="statePageData?.districtClusters?.length" class="bg-white rounded-xl border border-gray-200 p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ matchedStateName }} District Calendar Clusters</h2>
-          <p class="text-sm text-gray-500 mb-5">Use these regional links to compare nearby district calendars, spring break weeks, PDF availability, and Google Calendar import options.</p>
+          <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ statePageData.clustersHeading || `${matchedStateName} District Calendar Clusters` }}</h2>
+          <p class="text-sm text-gray-500 mb-5">{{ statePageData.clustersDescription || 'Use these regional links to compare nearby district calendars, spring break weeks, PDF availability, and Google Calendar import options.' }}</p>
           <div class="space-y-5">
             <section v-for="cluster in statePageData.districtClusters" :key="cluster.label">
               <h3 class="text-sm font-semibold text-gray-900">{{ cluster.label }}</h3>
@@ -1191,7 +1322,7 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- FAQ -->
-        <div v-if="statePageData?.faqs?.length" class="bg-white rounded-xl border border-gray-200 p-6">
+        <div v-if="statePageData?.faqs?.length" id="faq" class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
           <h2 class="text-lg font-semibold text-gray-900 mb-5">Frequently Asked Questions</h2>
           <div class="space-y-5 divide-y divide-gray-100">
             <div v-for="faq in statePageData.faqs" :key="faq.q" class="pt-5 first:pt-0">
@@ -1199,6 +1330,17 @@ if (!isStatePage && district.value) {
               <p class="text-gray-600 mt-1.5">{{ faq.a }}</p>
             </div>
           </div>
+        </div>
+
+        <!-- Verification methodology -->
+        <div v-if="statePageData?.verificationMethodology?.length" class="bg-white rounded-xl border border-gray-200 p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-3">How We Verify {{ matchedStateName }} School Calendars</h2>
+          <ol class="space-y-2">
+            <li v-for="(step, index) in statePageData.verificationMethodology" :key="step" class="flex gap-3 text-sm text-gray-700">
+              <span class="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-blue-50 text-xs font-semibold text-blue-700">{{ index + 1 }}</span>
+              <span>{{ step }}</span>
+            </li>
+          </ol>
         </div>
 
         <!-- Related States -->
@@ -1258,6 +1400,7 @@ if (!isStatePage && district.value) {
           <p v-if="calendarSummary" class="mt-3 text-sm text-gray-700 leading-relaxed">{{ calendarSummary }}</p>
           <p class="mt-1 text-sm text-gray-500">
             {{ instructionalDaysLine }}
+            <span v-for="chip in heroFactChips" :key="chip"> · {{ chip }}</span>
             <span v-if="showSemesterCount"> · {{ cal.semesters ?? 2 }} semesters</span>
             <span v-if="secondSemStart"> · Students return after {{ winterBreakLabel }} on {{ formatShortDate(secondSemStart) }}</span>
           </p>
@@ -1276,8 +1419,8 @@ if (!isStatePage && district.value) {
             <span v-if="!isEstimated">Verified against {{ meta.name }} official calendar source · Maintained by MySchoolDates · Last updated {{ verifiedDate }}</span>
             <span v-else>Based on official district website · Not yet human-verified</span>
           </div>
-          <div v-if="!isEstimated && verifiedDate && !hideHeroVerificationProcess" class="mt-3 rounded-xl border border-gray-200 bg-white p-3">
-            <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">Verification process</p>
+          <details v-if="!isEstimated && verifiedDate && !hideHeroVerificationProcess" class="mt-3 rounded-xl border border-gray-200 bg-white p-3">
+            <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-gray-500">How verified</summary>
             <ul class="mt-2 grid gap-1.5 text-xs text-gray-600 sm:grid-cols-3">
               <li class="flex items-start gap-1.5">
                 <span class="mt-0.5 text-green-600">✓</span>
@@ -1292,7 +1435,7 @@ if (!isStatePage && district.value) {
                 <span>Calendar file generated from checked records</span>
               </li>
             </ul>
-          </div>
+          </details>
           <div class="mt-8">
             <DistrictCustomSections :sections="customSections" position="afterVerification" />
           </div>
@@ -1364,7 +1507,7 @@ if (!isStatePage && district.value) {
               href="#add-to-calendar"
               class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700 transition-colors"
             >
-              Download Calendar File
+              Download ICS Calendar
             </a>
             <a
               v-if="(cal as any).sourcePdfUrl || (cal as any).printablePdfUrl"
@@ -1384,6 +1527,7 @@ if (!isStatePage && district.value) {
           <a v-if="summarySectionId" :href="`#${summarySectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Summary</a>
           <a v-if="overviewSectionId" :href="`#${overviewSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Overview</a>
           <a href="#add-to-calendar" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">PDF &amp; Calendar</a>
+          <a v-if="downloadGuideSectionId" :href="`#${downloadGuideSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Download Guide</a>
           <a href="#all-dates" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Dates</a>
           <a v-if="breaks.length" href="#breaks" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Breaks</a>
           <a v-if="changesSectionId" :href="`#${changesSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Changes</a>
@@ -1489,7 +1633,7 @@ if (!isStatePage && district.value) {
               </p>
               <p v-if="breaks.length">
                 Students have {{ breaks.length }} major school break{{ breaks.length !== 1 ? 's' : '' }} throughout the year —
-                {{ breaks.map(b => b.name).join(', ') }} — plus district-observed holidays and additional no-school days.
+                {{ breaks.map(b => breakDisplayName(b.name)).join(', ') }} — plus district-observed holidays and additional no-school days.
               </p>
             </template>
             <template v-if="(district as any).about?.length">
@@ -1540,11 +1684,11 @@ if (!isStatePage && district.value) {
           <!-- Break Summary -->
           <template v-else-if="section === 'breaks' && breaks.length">
             <div id="breaks" class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
-              <h2 class="text-lg font-semibold text-gray-900 mb-4">Major School Breaks</h2>
+              <h2 class="text-lg font-semibold text-gray-900 mb-4">{{ breaksTitle }}</h2>
               <div class="space-y-3">
                 <div v-for="b in breaks" :key="b.name" class="flex items-center justify-between py-3 border-b border-gray-50 last:border-0">
                   <div>
-                    <div class="font-medium text-gray-900">{{ b.name }}</div>
+                    <div class="font-medium text-gray-900">{{ breakDisplayName(b.name) }}</div>
                     <div class="text-sm text-gray-500">{{ formatShortDate(b.start) }} – {{ formatShortDate(b.end) }}</div>
                     <div v-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-purple-600 mt-0.5 font-medium">
                       In progress
@@ -1563,7 +1707,9 @@ if (!isStatePage && district.value) {
         <DistrictCustomSections :sections="customSections" position="afterAbout" />
 
         <!-- Year by the Numbers -->
-        <DistrictYearNumbers v-if="!hiddenSections.has('yearNumbers')" :cal="cal" :school-year="currentYear" />
+        <div v-if="!hiddenSections.has('yearNumbers')" id="calendar-insights" class="scroll-mt-24">
+          <DistrictYearNumbers :cal="cal" :school-year="currentYear" />
+        </div>
 
         <!-- Grading Periods -->
         <DistrictGradingPeriods :periods="(cal as any).gradingPeriods" />
@@ -1604,6 +1750,7 @@ if (!isStatePage && district.value) {
           :name="district.shortName || district.name"
           :tips="(district as any).planningTips.content"
           :title="(district as any).planningTips.title"
+          :links="(district as any).planningTips.links"
         />
 
         <!-- Custom Sections: afterPlanningTips -->
@@ -1636,6 +1783,8 @@ if (!isStatePage && district.value) {
           v-if="!hiddenSections.has('relatedDistricts') && (district as any).relatedDistricts?.length"
           :related-districts="(district as any).relatedDistricts"
           :state-name="district.state"
+          :title="(district as any).relatedDistrictsTitle"
+          :description="(district as any).relatedDistrictsDescription"
         />
 
         <!-- Custom Sections: beforeSources -->
