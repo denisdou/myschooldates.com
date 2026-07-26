@@ -75,6 +75,14 @@ const winterBreakLabel = computed(() => {
   return winterBreak ? cleanBreakLabel(winterBreak.name, 'Winter Break') : 'Winter Break'
 })
 
+const springBreakComparisonLabel = computed(() =>
+  props.district?.springBreakComparisonLabel ??
+  props.district?.meta?.springBreakComparisonLabel ??
+  props.cal?.springBreakComparisonLabel ??
+  props.cal?.meta?.springBreakComparisonLabel ??
+  'Spring Break'
+)
+
 const displayName = (row: ComparisonRow) => {
   if (row.name.includes('Pinellas')) return 'Pinellas'
   if (row.name.includes('Pasco')) return 'Pasco'
@@ -175,7 +183,7 @@ const dynamicIntro = computed(() => {
   if (names.length < 2) return ''
   const last = names[names.length - 1]
   const list = names.length === 2 ? names.join(' and ') : `${names.slice(0, -1).join(', ')}, and ${last}`
-  return `Compare the ${props.year} traditional student calendars for ${list}. Dates shown include school-year boundaries, major breaks, instruction-day counts when available, and district profile fields.`
+  return `Compare the ${props.year} published calendar versions reviewed from district sources for ${list}. Dates shown include school-year boundaries, major breaks, instruction-day counts when available, and district profile fields.`
 })
 
 const comparisonRows = computed(() => {
@@ -207,7 +215,7 @@ const comparisonRows = computed(() => {
     },
     {
       key: 'springBreak',
-      label: 'Spring Break',
+      label: springBreakComparisonLabel.value,
       value: (row: ComparisonRow) => row.springBreak ? fmtRange(row.springBreak.start, row.springBreak.end) : '',
     },
     {
@@ -346,7 +354,7 @@ const comparisonDefaultOpen = computed(() =>
     </div>
 
     <p class="px-6 py-3 border-t border-gray-100 text-xs text-gray-600">
-      All dates use each district's {{ year }} traditional student calendar.
+      All dates use each district's {{ year }} published calendar version reviewed from district sources.
       <template v-if="reviewedDate"> Comparison last reviewed {{ reviewedDate }}.</template>
       Comparison shows date ranges, instruction-day counts when available, and district profile fields from each district's published calendar and public district information.
       <template v-if="sourceRows.length">

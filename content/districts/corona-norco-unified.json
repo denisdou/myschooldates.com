@@ -1,0 +1,107 @@
+{
+  "institutionId": "corona-norco-unified",
+  "name": "Corona-Norco Unified School District",
+  "shortName": "Corona-Norco USD",
+  "slug": "corona-norco-unified-school-district-calendar",
+  "state": "California",
+  "stateCode": "CA",
+  "city": "Norco",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["TK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.cnusd.k12.ca.us/",
+  "calendarPage": "https://www.cnusd.k12.ca.us/about_us/school_calendars___bell_schedules",
+  "logo": "https://cdnsm5-ss18.sharpschool.com/UserFiles/Servers/Server_211876/Templates/refresh/img/logo-new.png",
+  "timezone": "America/Los_Angeles",
+  "county": "Riverside County",
+  "region": "Inland Empire",
+  "metro": "Riverside-San Bernardino-Ontario",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "keyDates",
+  "calendarType": "track",
+  "searchAliases": [
+    "CNUSD",
+    "Corona-Norco USD",
+    "Corona Norco Unified",
+    "Corona-Norco Unified School District",
+    "CNUSD school calendar",
+    "Corona Norco track calendar"
+  ],
+  "districtFact": "Corona-Norco USD publishes separate elementary and secondary track calendar PDFs. A complete district calendar review requires checking both files because elementary A, B, C, D, and Traditional tracks are separate from secondary Orange Grove, Intermediate, High School, and JFK Middle College schedules.",
+  "about": [
+    {
+      "title": "About Corona-Norco USD",
+      "content": "Corona-Norco Unified School District serves students and families in Riverside County's Inland Empire, including Corona, Norco, and Eastvale-area communities. The district calendar is more complex than a single traditional calendar because CNUSD publishes separate elementary and secondary track calendar PDFs."
+    },
+    {
+      "title": "How to Use This Corona-Norco USD Calendar",
+      "content": "Use this page as a combined CNUSD calendar reference, then verify the calendar that matches your student's school level and track. Elementary families should check the Elementary School Track Calendar for A, B, C, D, or Traditional track dates. Secondary families should check the Secondary School Track Calendar for Orange Grove, Intermediate, High School, or JFK Middle College dates."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "corona-norco-unified-track-calendar-context",
+      "label": "Corona-Norco USD Track Calendar Context",
+      "position": "afterAbout",
+      "content": "CNUSD calendar planning is track-based. Some elementary schools use A, B, C, and D tracks, while other elementary campuses use a Traditional track. Secondary calendars are organized separately for Orange Grove, Intermediate, High School, and JFK Middle College schedules. Families should not rely on a single first day, last day, minimum day, or early dismissal date until they know the student's campus and track."
+    }
+  ],
+  "planningTips": {
+    "title": "Corona-Norco USD Calendar Usage Tips",
+    "content": [
+      "Use both the elementary and secondary PDF calendars when comparing districtwide CNUSD dates.",
+      "Confirm your student's track before planning around minimum days, early dismissal days, conference days, or track-change dates.",
+      "Watch common no-school dates such as Independence Day, Labor Day, Veterans Day, Thanksgiving, winter holidays, MLK Jr. Day, Lincoln's Day, Presidents Day, Memorial Day, and Juneteenth.",
+      "Use the PDF for official review and the ICS file for a one-time personal calendar import."
+    ],
+    "links": [
+      {
+        "label": "Track Calendar Guide",
+        "to": "#cnusd-track-calendar-guide-2026-2027",
+        "description": "See how elementary and secondary CNUSD calendar PDFs fit together."
+      }
+    ]
+  },
+  "comparisonTitle": "Corona-Norco USD Compared With Nearby California Districts",
+  "compareIntro": "Use this nearby-district reference to compare Corona-Norco USD with other California district calendars currently available on MySchoolDates. CNUSD uses a track-calendar structure, so compare campus-level dates carefully.",
+  "districtFaqs": [
+    {
+      "q": "Why does Corona-Norco USD have more than one calendar PDF?",
+      "a": "CNUSD publishes separate elementary and secondary track calendar PDFs. Elementary schools may follow A, B, C, D, or Traditional tracks, while secondary schools follow Orange Grove, Intermediate, High School, or JFK Middle College schedules."
+    },
+    {
+      "q": "Where should families verify Corona-Norco USD calendar updates?",
+      "a": "Use the official CNUSD school calendars and bell schedules page, the matching elementary or secondary PDF, and campus announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with CNUSD."
+    }
+  ],
+  "relatedDistrictsTitle": "Related Southern California School Calendars",
+  "relatedDistrictsDescription": "More California school calendar resources currently available on MySchoolDates.",
+  "relatedDistricts": [
+    {
+      "name": "Riverside Unified School District",
+      "slug": "riverside-unified-school-district-calendar",
+      "state": "California",
+      "comparisonNote": "Nearby Inland Empire district useful for comparing major holidays and break timing."
+    },
+    {
+      "name": "Moreno Valley Unified School District",
+      "slug": "moreno-valley-unified-school-district-calendar",
+      "state": "California",
+      "comparisonNote": "Nearby Riverside County district useful for comparing school-year timing."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Corona-Norco USD official website",
+      "url": "https://www.cnusd.k12.ca.us/"
+    },
+    {
+      "label": "CNUSD school calendars and bell schedules page",
+      "url": "https://www.cnusd.k12.ca.us/about_us/school_calendars___bell_schedules"
+    },
+    {
+      "label": "Corona-Norco USD logo",
+      "url": "https://cdnsm5-ss18.sharpschool.com/UserFiles/Servers/Server_211876/Templates/refresh/img/logo-new.png"
+    }
+  ]
+}

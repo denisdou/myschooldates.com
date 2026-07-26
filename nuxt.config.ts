@@ -51,6 +51,7 @@ export default defineNuxtConfig({
 
         // ── District index pages ───────────────────────────────────────────────
         '/aldine-independent-school-district-calendar',
+        '/anaheim-union-high-school-district-calendar',
         '/arlington-isd-calendar',
         '/austin-independent-school-district-calendar',
         '/bakersfield-city-school-district-calendar',
@@ -62,11 +63,14 @@ export default defineNuxtConfig({
         '/clark-county-school-district-calendar',
         '/gwinnett-county-public-schools-calendar',
         '/chesterfield-county-school-calendar',
+        '/chula-vista-elementary-school-district-calendar',
+        '/corona-norco-unified-school-district-calendar',
         '/cumberland-county-school-calendar',
         '/dallas-independent-school-district-calendar',
         '/duval-county-school-calendar',
         '/fairfax-county-school-calendar',
         '/fort-bend-independent-school-district-calendar',
+        '/fontana-unified-school-district-calendar',
         '/fort-worth-independent-school-district-calendar',
         '/fresno-unified-school-district-calendar',
         '/garland-independent-school-district-calendar',
@@ -77,12 +81,14 @@ export default defineNuxtConfig({
         '/hillsborough-county-school-calendar',
         '/houston-independent-school-district-calendar',
         '/humble-isd-calendar',
+        '/judson-isd-calendar',
         '/long-beach-unified-school-district-calendar',
         '/los-angeles-unified-school-district-calendar',
         '/lewisville-independent-school-district-calendar',
         '/klein-isd-calendar',
         '/loudoun-county-school-calendar',
         '/mansfield-isd-calendar',
+        '/mesquite-isd-calendar',
         '/miami-dade-school-calendar',
         '/montgomery-county-school-calendar',
         '/moreno-valley-unified-school-district-calendar',
@@ -98,6 +104,7 @@ export default defineNuxtConfig({
         '/pinellas-county-school-calendar',
         '/pomona-unified-school-district-calendar',
         '/polk-county-school-calendar',
+        '/poway-unified-school-district-calendar',
         '/prince-georges-county-school-calendar',
         '/prince-william-county-school-calendar',
         '/randolph-county-school-system-calendar',
@@ -108,9 +115,11 @@ export default defineNuxtConfig({
         '/santa-ana-unified-school-district-calendar',
         '/san-bernardino-city-unified-school-district-calendar',
         '/san-francisco-unified-school-district-calendar',
+        '/san-juan-unified-school-district-calendar',
         '/san-jose-unified-school-calendar',
         '/school-district-of-philadelphia-calendar',
         '/stockton-unified-school-district-calendar',
+        '/sweetwater-union-high-school-district-calendar',
         '/oakland-unified-school-district-calendar',
         '/irvine-unified-school-district-calendar',
         '/iredell-statesville-schools-calendar',
@@ -142,6 +151,9 @@ export default defineNuxtConfig({
         // ── District year pages ────────────────────────────────────────────────
         '/aldine-independent-school-district-calendar/2025-2026',
         '/aldine-independent-school-district-calendar/2026-2027',
+
+        '/anaheim-union-high-school-district-calendar/2025-2026',
+        '/anaheim-union-high-school-district-calendar/2026-2027',
 
         '/arlington-isd-calendar/2025-2026',
         '/arlington-isd-calendar/2026-2027',
@@ -185,6 +197,12 @@ export default defineNuxtConfig({
         '/chesterfield-county-school-calendar/2026-2027',
         '/chesterfield-county-school-calendar/2027-2028',
 
+        '/chula-vista-elementary-school-district-calendar/2025-2026',
+        '/chula-vista-elementary-school-district-calendar/2026-2027',
+
+        '/corona-norco-unified-school-district-calendar/2025-2026',
+        '/corona-norco-unified-school-district-calendar/2026-2027',
+
         '/cumberland-county-school-calendar/2025-2026',
         '/cumberland-county-school-calendar/2026-2027',
 
@@ -200,6 +218,10 @@ export default defineNuxtConfig({
 
         '/fort-bend-independent-school-district-calendar/2025-2026',
         '/fort-bend-independent-school-district-calendar/2026-2027',
+
+        '/fontana-unified-school-district-calendar/2025-2026',
+        '/fontana-unified-school-district-calendar/2026-2027',
+        '/fontana-unified-school-district-calendar/2027-2028',
 
         '/fort-worth-independent-school-district-calendar/2025-2026',
         '/fort-worth-independent-school-district-calendar/2026-2027',
@@ -233,6 +255,9 @@ export default defineNuxtConfig({
         '/houston-independent-school-district-calendar/2025-2026',
         '/houston-independent-school-district-calendar/2026-2027',
 
+        '/judson-isd-calendar/2025-2026',
+        '/judson-isd-calendar/2026-2027',
+
         '/long-beach-unified-school-district-calendar/2025-2026',
         '/long-beach-unified-school-district-calendar/2026-2027',
 
@@ -242,6 +267,9 @@ export default defineNuxtConfig({
 
         '/lewisville-independent-school-district-calendar/2025-2026',
         '/lewisville-independent-school-district-calendar/2026-2027',
+
+        '/mesquite-isd-calendar/2025-2026',
+        '/mesquite-isd-calendar/2026-2027',
 
         '/loudoun-county-school-calendar/2025-2026',
         '/loudoun-county-school-calendar/2026-2027',
@@ -294,6 +322,9 @@ export default defineNuxtConfig({
         '/polk-county-school-calendar/2027-2028',
         '/polk-county-school-calendar/2028-2029',
 
+        '/poway-unified-school-district-calendar/2025-2026',
+        '/poway-unified-school-district-calendar/2026-2027',
+
         '/lee-county-school-calendar/2025-2026',
         '/lee-county-school-calendar/2026-2027',
         '/lee-county-school-calendar/2027-2028',
@@ -323,6 +354,9 @@ export default defineNuxtConfig({
         '/san-francisco-unified-school-district-calendar/2026-2027',
         '/san-francisco-unified-school-district-calendar/2027-2028',
 
+        '/san-juan-unified-school-district-calendar/2025-2026',
+        '/san-juan-unified-school-district-calendar/2026-2027',
+
         '/san-jose-unified-school-calendar/2025-2026',
         '/san-jose-unified-school-calendar/2026-2027',
         '/san-jose-unified-school-calendar/2027-2028',
@@ -332,6 +366,9 @@ export default defineNuxtConfig({
 
         '/stockton-unified-school-district-calendar/2025-2026',
         '/stockton-unified-school-district-calendar/2026-2027',
+
+        '/sweetwater-union-high-school-district-calendar/2025-2026',
+        '/sweetwater-union-high-school-district-calendar/2026-2027',
 
         '/oakland-unified-school-district-calendar/2025-2026',
         '/oakland-unified-school-district-calendar/2026-2027',

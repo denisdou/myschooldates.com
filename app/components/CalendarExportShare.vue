@@ -39,9 +39,14 @@ const copied = ref(false)
 const icsHref = computed(() => `/calendars/${props.district.slug}-${props.cal.schoolYear}.ics`)
 const icsFilename = computed(() => `${props.district.slug}-${props.cal.schoolYear}.ics`)
 const calendarShortName = computed(() => props.district?.shortName || props.districtName)
-const icsHeading = computed(() => `${calendarShortName.value} Calendar ${props.year} ICS File`)
+const icsHeading = computed(() =>
+  props.cal?.icsHeading ?? props.cal?.meta?.icsHeading ?? `${calendarShortName.value} Calendar ${props.year} ICS File`
+)
 const icsButtonLabel = computed(() => {
-  return `Download ICS Calendar`
+  return props.cal?.icsButtonLabel ?? props.cal?.meta?.icsButtonLabel ?? `Download ICS Calendar`
+})
+const icsButtonSupportText = computed(() => {
+  return props.cal?.icsButtonSupportText ?? props.cal?.meta?.icsButtonSupportText ?? `One-time calendar download. Not a live district sync.`
 })
 const compatibleCalendars = ['Apple Calendar', 'Google Calendar', 'Outlook']
 const icsIncludedItems = computed(() => {
@@ -99,7 +104,7 @@ const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year
         {{ icsButtonLabel }}
       </a>
       <p class="mb-3 text-center text-xs font-medium text-gray-500">
-        One-time calendar download. Not a live district sync.
+        {{ icsButtonSupportText }}
       </p>
       <div class="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3">
         <p class="text-xs font-medium text-gray-500 mb-2">Compatible with</p>

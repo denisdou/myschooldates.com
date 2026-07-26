@@ -7,6 +7,10 @@ const props = defineProps<{
     lastDay: string
     totalSchoolDays?: number
     keyDateCardsVariant?: 'compact'
+    keyDateCardsFirstLabel?: string
+    keyDateCardsThirdLabel?: string
+    keyDateCardsThirdValue?: string
+    calendarType?: string
     events: Array<{ date: string; name: string; type: string }>
   }
 }>()
@@ -25,12 +29,19 @@ const cardClass = computed(() =>
 const valueClass = computed(() =>
   isCompact.value ? 'block text-base font-semibold text-gray-900' : 'block text-lg font-bold text-gray-900'
 )
+const isTrackCalendar = computed(() => String(props.cal.calendarType ?? '').toLowerCase() === 'track')
+const thirdCardLabel = computed(() =>
+  props.cal.keyDateCardsThirdLabel ?? (props.cal.totalSchoolDays ? 'Instructional Days' : isTrackCalendar.value ? 'Major Break Periods' : 'School Breaks')
+)
+const thirdCardValue = computed(() =>
+  props.cal.keyDateCardsThirdValue ?? (props.cal.totalSchoolDays ? `${props.cal.totalSchoolDays} days` : isTrackCalendar.value ? 'Vary by track' : `${breaks.value.length} breaks`)
+)
 </script>
 
 <template>
   <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
     <div :class="cardClass">
-      <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">First Day of School</div>
+      <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">{{ cal.keyDateCardsFirstLabel ?? 'First Day of School' }}</div>
       <time :datetime="cal.firstDay" :class="valueClass">{{ formatDate(cal.firstDay) }}</time>
       <ClientOnly>
         <div v-if="daysUntilStart > 0" class="mt-2 inline-flex text-sm font-medium text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full">
@@ -46,10 +57,9 @@ const valueClass = computed(() =>
     </div>
     <div :class="cardClass">
       <div class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">
-        {{ cal.totalSchoolDays ? 'Instructional Days' : 'School Breaks' }}
+        {{ thirdCardLabel }}
       </div>
-      <div v-if="cal.totalSchoolDays" :class="isCompact ? 'text-base font-semibold text-gray-900' : 'text-lg font-bold text-gray-900'">{{ cal.totalSchoolDays }} days</div>
-      <div v-else :class="isCompact ? 'text-base font-semibold text-gray-900' : 'text-lg font-bold text-gray-900'">{{ breaks.length }} breaks</div>
+      <div :class="isCompact ? 'text-base font-semibold text-gray-900' : 'text-lg font-bold text-gray-900'">{{ thirdCardValue }}</div>
     </div>
   </div>
 </template>

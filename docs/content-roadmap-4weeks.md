@@ -225,7 +225,7 @@
 | 优先级 | 学区 | 预计 Slug | 状态 |
 |--------|------|-----------|------|
 | P3 | Bakersfield City SD | `/bakersfield-city-school-district-calendar` | ✓ 已完成 |
-| P3 | Corona-Norco USD | `/corona-norco-usd/` | 待创建 |
+| P3 | Corona-Norco USD | `/corona-norco-unified-school-district-calendar` | ✓ 已完成 |
 | P3 | Pomona USD | `/pomona-unified-school-district-calendar` | ✓ 已完成 |
 | P3 | Capistrano USD | `/capistrano-unified-school-district-calendar` | ✓ 已完成 |
 | P3 | Moreno Valley USD | `/moreno-valley-unified-school-district-calendar` | ✓ 已完成 |
@@ -279,15 +279,15 @@ P3 内容可采用更高度模板化的方式生成（calendarNotes 精简为 4-
 | 30 | Texas | Arlington Independent School District | Dallas-Fort Worth | ✓ 已完成：`arlington-isd-calendar` |
 | 32 | Texas | North East Independent School District | San Antonio | ✓ 已完成：`north-east-isd-calendar` |
 | 34 | Texas | Fort Bend Independent School District | Houston | ✓ 已完成：`fort-bend-independent-school-district-calendar` |
-| 38 | Texas | Judson Independent School District | San Antonio | 待创建 |
-| 40 | Texas | Mesquite Independent School District | Dallas-Fort Worth | 待创建 |
-| 46 | California | Corona-Norco Unified School District | Inland Empire | 待创建 |
-| 54 | California | Poway Unified School District | San Diego | 待创建 |
-| 55 | California | Sweetwater Union High School District | San Diego | 待创建 |
-| 57 | California | Chula Vista Elementary School District | San Diego | 待创建 |
-| 58 | California | Anaheim Union High School District | Orange County | 待创建 |
-| 59 | California | San Juan Unified School District | Sacramento | 待创建 |
-| 60 | California | Fontana Unified School District | Inland Empire | 待创建 |
+| 38 | Texas | Judson Independent School District | San Antonio | ✓ 已完成：`judson-isd-calendar` |
+| 40 | Texas | Mesquite Independent School District | Dallas-Fort Worth | ✓ 已完成：`mesquite-isd-calendar` |
+| 46 | California | Corona-Norco Unified School District | Inland Empire | ✓ 已完成：`corona-norco-unified-school-district-calendar` |
+| 54 | California | Poway Unified School District | San Diego | ✓ 已完成：`poway-unified-school-district-calendar` |
+| 55 | California | Sweetwater Union High School District | San Diego | ✓ 已完成：`sweetwater-union-high-school-district-calendar` |
+| 57 | California | Chula Vista Elementary School District | San Diego | ✓ 已完成：`chula-vista-elementary-school-district-calendar` |
+| 58 | California | Anaheim Union High School District | Orange County | ✓ 已完成：`anaheim-union-high-school-district-calendar` |
+| 59 | California | San Juan Unified School District | Sacramento | ✓ 已完成：`san-juan-unified-school-district-calendar` |
+| 60 | California | Fontana Unified School District | Inland Empire | ✓ 已完成：`fontana-unified-school-district-calendar` |
 
 ### 第 2 周（45个）
 

@@ -1,0 +1,200 @@
+{
+  "institutionId": "anaheim-union-high-school-district",
+  "name": "Anaheim Union High School District",
+  "shortName": "AUHSD",
+  "slug": "anaheim-union-high-school-district-calendar",
+  "state": "California",
+  "stateCode": "CA",
+  "city": "Anaheim",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.auhsd.us",
+  "calendarPage": "https://www.auhsd.us/District/Department/14179-HR-CLASSIFIED/86644-Calendars.html",
+  "logo": "https://www.auhsd.us/files/school/1/anaheim%5Fdistrict%5Flogo1%2Epng",
+  "timezone": "America/Los_Angeles",
+  "county": "Orange County",
+  "region": "Southern California",
+  "metro": "Orange County",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "keyDates",
+  "calendarType": "traditional",
+  "programmaticSeoSignals": {
+    "calendarDistinctiveFactors": [
+      "grades_7_12_secondary_district",
+      "student_teacher_calendar",
+      "high_school_only_minimum_days",
+      "potential_make_up_days"
+    ],
+    "calendarPattern": "traditional_secondary_student_teacher_calendar",
+    "districtUniqueStory": {
+      "audience": "Orange County junior high and high school families",
+      "districtType": "grades 7-12 secondary district",
+      "calendarDifference": "AUHSD publishes a Student/Teacher Calendar that separates student days, teacher days, staff development days, high-school-only minimum days, and potential make-up days.",
+      "planningImpact": "Families need to distinguish districtwide no-student days from high-school-only minimum days and campus-specific schedules."
+    },
+    "localCalendarInsight": {
+      "difference": "AUHSD is a secondary district rather than a TK-12 unified district.",
+      "familyImpact": "Families comparing Orange County calendars may need one calendar for grades 7-12 and a separate elementary district calendar for younger students.",
+      "planningAdvice": "Confirm campus bell schedules, finals, activities, and graduation details with the student's school after using the district calendar for core dates."
+    },
+    "regionalPlanningContext": "Anaheim and nearby Orange County families often compare AUHSD dates with Garden Grove Unified, Santa Ana Unified, and Irvine Unified school calendars.",
+    "bellScheduleFaqPolicy": {
+      "generate": false,
+      "reason": "AUHSD calendar dates are districtwide, but bell schedules and dismissal times should be verified at the school-site level."
+    },
+    "seoQualitySignals": {
+      "hard": {
+        "hasOfficialSource": true,
+        "schemaComplete": true
+      },
+      "soft": {
+        "uniqueFactors": 4,
+        "hasLocalInsight": true,
+        "faqCount": 10
+      },
+      "score": {
+        "uniqueFactorScore": 8,
+        "weights": {
+          "secondary_district": 2,
+          "student_teacher_calendar": 2,
+          "minimum_day_complexity": 2,
+          "make_up_days": 2
+        }
+      }
+    }
+  },
+  "searchAliases": [
+    "AUHSD",
+    "Anaheim Union",
+    "Anaheim Union High School District",
+    "Anaheim Union school calendar",
+    "Anaheim high school calendar",
+    "Orange County high school calendar"
+  ],
+  "districtFact": "Anaheim Union High School District publishes Student/Teacher Calendar PDFs with the first day of school, quarter and semester end dates, minimum days, high-school-only minimum days, holidays, non-student/non-teacher days, staff development days, teacher days, progress report due dates, grade due dates, and potential make-up days.",
+  "about": [
+    {
+      "title": "About Anaheim Union High School District",
+      "content": "Anaheim Union High School District serves junior high and high school students in Anaheim and nearby Orange County communities. The Student/Teacher Calendar is the main planning source for the first day of school, last scheduled student day, quarter dates, semester dates, minimum days, holidays, non-student/non-teacher days, teacher work days, staff development days, and potential make-up days."
+    },
+    {
+      "title": "How to Use This AUHSD Calendar",
+      "content": "Use this page for districtwide Anaheim Union student calendar dates, then confirm campus-specific events, athletics, testing, activities, graduation details, bell schedules, emergency closures, and same-day updates through AUHSD or your student's school."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "anaheim-union-high-school-district-local-context",
+      "label": "AUHSD Local Calendar Context",
+      "position": "afterAbout",
+      "content": "AUHSD calendar planning is especially useful for Orange County secondary families because the district calendar distinguishes regular student days, non-student/non-teacher days, teacher days with no students, staff development days, end-of-quarter minimum days, and high-school-only minimum days. Anaheim Union High School District serves grades 7-12 students in Anaheim and nearby Orange County communities, so families may need a separate elementary district calendar for younger students. Families should check the official PDF and campus notices before making childcare, transportation, travel, testing, or activity plans."
+    },
+    {
+      "id": "auhsd-district-profile",
+      "label": "AUHSD District Profile",
+      "position": "afterAbout",
+      "content": "This profile summarizes the district entity behind the AUHSD calendar so families can confirm they are using the correct school system and calendar type.",
+      "table": {
+        "columns": ["Field", "Details"],
+        "rows": [
+          ["District name", "Anaheim Union High School District"],
+          ["District type", "Public school district"],
+          ["Grades served", "7-12"],
+          ["City", "Anaheim"],
+          ["County", "Orange County"],
+          ["State", "California"],
+          ["Calendar type", "Traditional Student/Teacher Calendar"],
+          ["Official calendar source", "AUHSD calendars page and Student/Teacher Calendar PDF"]
+        ]
+      }
+    },
+    {
+      "id": "auhsd-calendar-vs-bell-schedule",
+      "label": "AUHSD Calendar vs Bell Schedule",
+      "position": "afterAbout",
+      "content": "The AUHSD district calendar shows school-year dates, holidays, breaks, minimum days, staff development days, teacher days, and no-student days. Bell schedules, dismissal times, testing schedules, finals, graduation details, and daily class schedules are managed by individual AUHSD schools, so families should confirm those details with the student's campus."
+    },
+    {
+      "id": "communities-served-by-auhsd-calendar",
+      "label": "Communities Served by AUHSD Calendar Planning",
+      "position": "afterComparison",
+      "content": "Families in Anaheim and nearby Orange County communities often reference the AUHSD calendar when planning junior high and high school schedules. Because nearby elementary, unified, and high school districts may use different calendars, families should confirm whether a student belongs to AUHSD before relying on these dates.",
+      "groups": [
+        {
+          "label": "Local calendar context",
+          "items": [
+            "Anaheim families use AUHSD dates for grades 7-12 planning.",
+            "Nearby Orange County families may compare AUHSD with Garden Grove Unified, Santa Ana Unified, Irvine Unified, and local elementary district calendars.",
+            "Families with students in multiple districts should verify each district calendar separately before planning holidays, transportation, testing, or school activities."
+          ]
+        }
+      ]
+    }
+  ],
+  "planningTips": {
+    "title": "AUHSD Calendar Usage Tips",
+    "content": [
+      "Use the Student/Teacher Calendar PDF for districtwide student dates, quarter dates, semester dates, holidays, and no-student days.",
+      "Watch the symbols on the official PDF because AUHSD separates holidays, non-student/non-teacher days, teacher days, staff development days, and minimum days.",
+      "Check high-school-only minimum days separately if your student attends a high school rather than a junior high school.",
+      "Use the PDF for official review and the ICS file for a one-time personal calendar import."
+    ],
+    "links": [
+      {
+        "label": "Parent Planning Guide",
+        "to": "#family-planning-guide-for-auhsd-2026-2027",
+        "description": "See childcare, travel, quarter, and minimum-day planning notes for the 2026-2027 AUHSD calendar."
+      }
+    ]
+  },
+  "comparisonTitle": "AUHSD Calendar Comparison With Nearby Districts",
+  "springBreakComparisonLabel": "Spring Break / No-Student Period",
+  "compareIntro": "Use this nearby-district reference to compare Anaheim Union High School District with other Orange County and Southern California school calendars currently available on MySchoolDates. Dates shown include the first day, last scheduled student day, and spring no-student period. AUHSD is a grades 7-12 secondary district, while nearby districts may be elementary, unified, or traditional K-12 systems. Calendar comparison is for planning reference only; each district's official calendar remains authoritative.",
+  "districtFaqs": [
+    {
+      "q": "Does AUHSD serve elementary students?",
+      "a": "No. Anaheim Union High School District primarily serves grades 7-12. Elementary families in the area should use their elementary district's calendar."
+    },
+    {
+      "q": "Where should families verify AUHSD calendar updates?",
+      "a": "Use the official AUHSD calendars page and campus announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with Anaheim Union High School District."
+    }
+  ],
+  "relatedDistrictsTitle": "Related Orange County School Calendars",
+  "relatedDistrictsDescription": "More Orange County and nearby Southern California school calendar resources currently available on MySchoolDates.",
+  "relatedDistricts": [
+    {
+      "name": "Garden Grove Unified School District",
+      "slug": "garden-grove-unified-school-district-calendar",
+      "state": "California",
+      "comparisonNote": "Nearby Orange County district useful for comparing start dates, spring recess timing, and last day timing."
+    },
+    {
+      "name": "Santa Ana Unified School District",
+      "slug": "santa-ana-unified-school-district-calendar",
+      "state": "California",
+      "comparisonNote": "Nearby Orange County district often compared for major student holidays and recess periods."
+    },
+    {
+      "name": "Irvine Unified School District",
+      "slug": "irvine-unified-school-district-calendar",
+      "state": "California",
+      "comparisonNote": "Nearby Orange County district useful for comparing traditional calendar planning dates."
+    }
+  ],
+  "sources": [
+    {
+      "label": "AUHSD official website",
+      "url": "https://www.auhsd.us"
+    },
+    {
+      "label": "AUHSD calendars page",
+      "url": "https://www.auhsd.us/District/Department/14179-HR-CLASSIFIED/86644-Calendars.html"
+    },
+    {
+      "label": "AUHSD logo",
+      "url": "https://www.auhsd.us/files/school/1/anaheim%5Fdistrict%5Flogo1%2Epng"
+    }
+  ]
+}

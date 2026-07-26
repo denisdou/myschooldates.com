@@ -428,7 +428,7 @@ function scoreQuickFacts(pool: MetricPool, districtSlug: string): FactItem[] {
   if (pool.springBreakStart) {
     raw.push({ key: 'springBreakDate', value: fmt(pool.springBreakStart), label: pool.springBreakLabel ?? 'Spring Break', score: 114 })
   }
-  raw.push({ key: 'noSchoolDayCount', value: String(pool.noSchoolDayCount), label: 'No-School Weekdays Listed', score: 112 })
+  raw.push({ key: 'noSchoolDayCount', value: String(pool.noSchoolDayCount), label: 'Standalone No-School Dates', score: 112 })
   const instructionalDaysDescription = String(pool.instructionalDaysDescription ?? '').toLowerCase()
   const instructionalDaysLabel = instructionalDaysDescription.includes('summary') || instructionalDaysDescription.includes('summarized')
     ? 'Listed Calendar Days'
@@ -546,6 +546,6 @@ const sectionTitle = computed(() =>
       <span v-if="verifiedDate" class="ml-1 text-green-600 font-medium">· Last reviewed {{ verifiedDate }}</span>
       <span v-else class="ml-1 text-gray-400">· Not yet verified against official source</span>
     </div>
-    <p class="text-xs text-gray-400 mt-1.5">No-school weekday counts include weekday no-school dates shown between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instructional weeks are approximate.</p>
+    <p class="text-xs text-gray-400 mt-1.5">Standalone no-school date counts include listed holidays and no-school dates shown between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instructional weeks are approximate.</p>
   </div>
 </template>

@@ -1,0 +1,171 @@
+{
+  "institutionId": "sweetwater-union-high-school-district",
+  "name": "Sweetwater Union High School District",
+  "shortName": "Sweetwater UHSD",
+  "slug": "sweetwater-union-high-school-district-calendar",
+  "state": "California",
+  "stateCode": "CA",
+  "city": "Chula Vista",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.sweetwaterschools.org",
+  "calendarPage": "https://www.sweetwaterschools.org/calendars/student-calendars",
+  "logo": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1756146102/sweetwaterschoolsorg/kz3ujunyxo9s5bnpydie/SUHSD_RevBW.png",
+  "timezone": "America/Los_Angeles",
+  "county": "San Diego County",
+  "region": "Southern California",
+  "metro": "San Diego-Chula Vista-Carlsbad",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "keyDates",
+  "calendarType": "traditional",
+  "searchAliases": [
+    "SUHSD",
+    "Sweetwater UHSD",
+    "Sweetwater Union",
+    "Sweetwater Union High School District",
+    "Sweetwater schools calendar",
+    "Sweetwater student calendar"
+  ],
+  "programmaticSeoSignals": {
+    "calendarDistinctiveFactors": [
+      "early_july_start",
+      "grades_7_12_only",
+      "omchs_alternate_calendar"
+    ],
+    "calendarPattern": "early_july_start_traditional_7_12",
+    "alternatePrograms": [
+      "OMCHS"
+    ],
+    "districtUniqueStory": {
+      "audience": "San Diego South Bay families with students in grades 7-12",
+      "districtType": "grades_7_12_union_high_school_district",
+      "calendarDifference": "The regular student calendar starts in late July and the district also publishes a separate OMCHS calendar.",
+      "planningImpact": "Families often need to confirm which student calendar applies before planning summer activities, childcare, work schedules, or travel."
+    },
+    "localCalendarInsight": {
+      "difference": "The regular Sweetwater UHSD 7-12 calendar starts in late July while many nearby San Diego-area districts begin in August.",
+      "familyImpact": "Families may have fewer weeks between summer activities and the first student day than they would in nearby August-start districts.",
+      "planningAdvice": "Confirm the regular 7-12 or OMCHS calendar before booking camps, travel, childcare, or work schedule changes."
+    },
+    "regionalPlanningContext": "San Diego South Bay families may compare Sweetwater UHSD with nearby August-start districts before planning summer activities, childcare, work schedules, and travel.",
+    "bellScheduleFaqPolicy": "district_specific_only",
+    "comparisonDisplayPolicy": {
+      "sameStateRequired": true,
+      "sameRegionRequired": true,
+      "minimumVerifiedFields": [
+        "first_day",
+        "last_day",
+        "spring_break_or_major_break"
+      ]
+    },
+    "comparisonQualityThreshold": [
+      "first_day",
+      "last_day",
+      "spring_break_or_major_break"
+    ],
+    "seoQualitySignals": {
+      "hard": {
+        "hasOfficialSource": true,
+        "schemaComplete": true,
+        "comparisonPolicyDefined": true
+      },
+      "soft": {
+        "uniqueFactors": 3,
+        "hasLocalInsight": true,
+        "faqCount": 14
+      },
+      "score": {
+        "uniqueFactorScore": 8,
+        "weights": {
+          "alternate_calendar": 3,
+          "calendar_pattern_difference": 3,
+          "regional_insight": 2
+        }
+      }
+    }
+  },
+  "districtFact": "Sweetwater Union High School District publishes 7-12 student calendars with the first day of school, school year end, semester dates, fall break, Thanksgiving Break, Winter Break, Spring Break, legal and declared holidays, AP testing windows, and a separate OSS MCHS student calendar when applicable.",
+  "about": [
+    {
+      "title": "About Sweetwater UHSD",
+      "content": "Sweetwater Union High School District serves middle and high school students in the South Bay area of San Diego County. The 7-12 student calendar is the main planning source for first day and school year end dates, semester dates, fall break, Thanksgiving Break, Winter Break, Spring Break, legal holidays, declared holidays, non-instructional days, AP testing windows, and professional development days."
+    },
+    {
+      "title": "How to Use This Sweetwater UHSD Calendar",
+      "content": "Use this page for the regular Sweetwater UHSD 7-12 student calendar, then confirm campus-specific events, athletics, testing, graduation details, emergency closures, bell schedules, and same-day announcements through Sweetwater UHSD or your student's school. Students following the OSS MCHS calendar should check the separate OSS MCHS PDF."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "sweetwater-union-high-school-district-local-context",
+      "label": "Sweetwater UHSD Local Calendar Context",
+      "position": "afterAbout",
+      "content": "Sweetwater UHSD calendar planning is especially important for San Diego South Bay families because the district serves grades 7-12 and publishes detailed student calendars with fall, winter, and spring breaks. Because Sweetwater serves South Bay communities, families often coordinate school breaks with San Diego County travel periods, childcare coverage, campus activities, and high school testing windows. Families should also check alternate program calendars, such as OSS MCHS, when their student follows a non-regular 7-12 schedule."
+    }
+  ],
+  "planningTips": {
+    "title": "Sweetwater UHSD Calendar Usage Tips",
+    "content": [
+      "Use the regular 7-12 student calendar PDF for districtwide student dates, breaks, holidays, semester dates, and non-instructional days.",
+      "Check the OSS MCHS calendar separately if your student follows that alternate schedule.",
+      "Use campus announcements for bell schedules, testing, athletics, graduation details, and same-day changes because those items may not appear on the districtwide student calendar.",
+      "Use the PDF for official review and the ICS file for a one-time personal calendar import."
+    ],
+    "links": [
+      {
+        "label": "Parent Planning Guide",
+        "to": "#family-planning-guide-for-sweetwater-uhsd-2026-2027",
+        "description": "See childcare, travel, and school transition notes for the 2026-2027 Sweetwater UHSD calendar."
+      }
+    ]
+  },
+  "comparisonTitle": "Sweetwater UHSD Compared With Nearby California Districts",
+  "compareIntro": "Use this nearby-district reference to compare Sweetwater UHSD with other San Diego-area district calendars currently available on MySchoolDates. Dates shown include the first day, school year end, and spring break.",
+  "districtFaqs": [
+    {
+      "q": "Does Sweetwater UHSD publish a separate OSS MCHS calendar?",
+      "a": "Yes. For 2026-2027, Sweetwater UHSD publishes a separate OSS MCHS Student Calendar in addition to the regular 7-12 student calendar."
+    },
+    {
+      "q": "Where should families verify Sweetwater UHSD calendar updates?",
+      "a": "Use the official Sweetwater UHSD student calendars page and campus announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with Sweetwater UHSD."
+    }
+  ],
+  "relatedDistrictsTitle": "Related San Diego School Calendars",
+  "relatedDistrictsDescription": "More San Diego-area school calendar resources currently available on MySchoolDates.",
+  "relatedDistricts": [
+    {
+      "name": "San Diego Unified School District",
+      "slug": "san-diego-unified-school-district-calendar",
+      "state": "California",
+      "comparisonNote": "Nearby San Diego County district useful for comparing first day, major breaks, and last day timing."
+    },
+    {
+      "name": "Poway Unified School District",
+      "slug": "poway-unified-school-district-calendar",
+      "state": "California",
+      "comparisonNote": "Nearby San Diego-area district useful for comparing regular student calendar recesses."
+    },
+    {
+      "name": "Chula Vista Elementary School District",
+      "slug": "chula-vista-elementary-school-district-calendar",
+      "state": "California",
+      "comparisonNote": "South Bay elementary district useful for families comparing San Diego County school calendars."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Sweetwater UHSD official website",
+      "url": "https://www.sweetwaterschools.org"
+    },
+    {
+      "label": "Sweetwater UHSD student calendars page",
+      "url": "https://www.sweetwaterschools.org/calendars/student-calendars"
+    },
+    {
+      "label": "Sweetwater UHSD logo",
+      "url": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1756146102/sweetwaterschoolsorg/kz3ujunyxo9s5bnpydie/SUHSD_RevBW.png"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "institutionId": "san-juan-unified-school-district",
+  "name": "San Juan Unified School District",
+  "shortName": "San Juan Unified",
+  "slug": "san-juan-unified-school-district-calendar",
+  "state": "California",
+  "stateCode": "CA",
+  "city": "Carmichael",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "TK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.sanjuan.edu",
+  "calendarPage": "https://www.sanjuan.edu/calendar",
+  "logo": "https://resources.finalsite.net/images/f_auto,q_auto/v1690853366/sanjuanedu/bpcmq3nelxogr2nzxqox/SanJuanUnifiedSchoolDistrict-Vertical-FullColor-RGB.png",
+  "timezone": "America/Los_Angeles",
+  "county": "Sacramento County",
+  "region": "Sacramento Area California",
+  "metro": "Sacramento-Roseville-Folsom",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "keyDates",
+  "calendarType": "traditional",
+  "searchAliases": [
+    "SJUSD",
+    "San Juan Unified",
+    "San Juan Unified School District",
+    "San Juan school calendar",
+    "San Juan Unified student calendar",
+    "Sacramento school calendar",
+    "Carmichael school calendar",
+    "Citrus Heights school calendar",
+    "Fair Oaks school calendar",
+    "Orangevale school calendar"
+  ],
+  "districtFact": "San Juan Unified School District publishes student calendar PDFs with the first day and last day of school, federal and state holidays, local holidays, recess periods, no-school days, teacher work days, staff development days, and translated versions of the student calendar when available.",
+  "about": [
+    {
+      "title": "About San Juan Unified School District",
+      "content": "San Juan Unified School District serves students and families in northeastern Sacramento County, including Carmichael and nearby communities. The student calendar is the main planning source for first day and last day dates, Labor Day, Veterans Day, Thanksgiving Break, Winter Break, Presidents' Week Break, Spring Break, no-school days, Memorial Day, staff development days, and teacher work days."
+    },
+    {
+      "title": "How to Use This San Juan Unified Calendar",
+      "content": "Use this page for districtwide San Juan Unified student calendar dates, then confirm campus-specific events, testing, athletics, graduation details, bell schedules, emergency closures, and same-day updates through San Juan Unified or your student's school."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "san-juan-unified-local-context",
+      "label": "San Juan Unified Local Calendar Context",
+      "position": "afterAbout",
+      "content": "San Juan Unified calendar planning is important for Sacramento-area families because the district includes multiple no-school periods beyond major holidays, including Presidents' Week Break, spring recess, early-May no-school days, and teacher work or staff development days. Families comparing Sacramento City Unified, Elk Grove Unified, Twin Rivers Unified, and San Juan Unified should confirm each district separately because Sacramento-area calendars do not always align."
+    },
+    {
+      "id": "san-juan-unified-areas-served",
+      "label": "San Juan Unified School District Areas Served",
+      "position": "afterAbout",
+      "schemaHasPart": true,
+      "content": "San Juan Unified School District serves students and families across northeastern Sacramento County. Families searching for Carmichael school calendars, Citrus Heights school holidays, Fair Oaks school breaks, Orangevale no-school days, Rancho Cordova school calendar dates, or Arden-Arcade school planning should confirm whether their assigned school is part of San Juan Unified before relying on districtwide dates.",
+      "table": {
+        "columns": ["Area", "Calendar planning note"],
+        "rows": [
+          ["Carmichael", "Use San Juan Unified dates when the assigned school is part of the district."],
+          ["Citrus Heights", "Confirm the student's school assignment before planning around districtwide breaks."],
+          ["Fair Oaks", "Families often compare San Juan Unified dates with nearby Sacramento-area districts."],
+          ["Orangevale", "Use campus notices for bell schedules and events beyond the district calendar."],
+          ["Rancho Cordova", "Verify assigned district and school calendar before making childcare or travel plans."],
+          ["Arden-Arcade", "Check the official district calendar and campus announcements for final updates."]
+        ]
+      }
+    }
+  ],
+  "planningTips": {
+    "title": "San Juan Unified Calendar Usage Tips",
+    "content": [
+      "Use the official student calendar PDF for districtwide first day, last day, holidays, recesses, and no-school days.",
+      "Check teacher work days and staff development days separately because they can affect childcare even when they are not long recesses.",
+      "Use translated calendar PDFs when helpful, but verify that the dates match the English official student calendar.",
+      "Use the PDF for official review and the ICS file for a one-time personal calendar import."
+    ],
+    "links": [
+      {
+        "label": "Parent Planning Guide",
+        "to": "#family-planning-guide-for-san-juan-unified-2026-2027",
+        "description": "See childcare, travel, and Sacramento-area planning notes for the 2026-2027 San Juan Unified calendar."
+      },
+      {
+        "label": "Family Planning Checklist",
+        "to": "#san-juan-unified-calendar-planning-checklist",
+        "description": "Use the San Juan Unified school calendar checklist for back-to-school, long-break, and summer planning tasks."
+      }
+    ]
+  },
+  "comparisonTitle": "San Juan Unified Calendar Comparison With Nearby Districts",
+  "compareIntro": "Use this nearby-district reference to compare San Juan Unified with other Sacramento-area school calendars currently available on MySchoolDates. Dates shown include the first day, last day, and spring break.",
+  "districtFaqs": [
+    {
+      "q": "Does San Juan Unified publish translated student calendars?",
+      "a": "Yes. For 2026-2027, San Juan Unified publishes translated student calendar PDFs in Arabic, Pashto, Persian, Russian, Spanish, and Ukrainian in addition to the English calendar."
+    },
+    {
+      "q": "Where should families verify San Juan Unified calendar updates?",
+      "a": "Use the official San Juan Unified calendar page and campus announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with San Juan Unified School District."
+    }
+  ],
+  "relatedDistrictsTitle": "Related Sacramento School Calendars",
+  "relatedDistrictsDescription": "More Sacramento-area school calendar resources currently available on MySchoolDates.",
+  "relatedDistricts": [
+    {
+      "name": "Sacramento City Unified School District",
+      "slug": "sacramento-city-unified-school-calendar",
+      "state": "California",
+      "comparisonNote": "Nearby Sacramento-area district useful for comparing first day, spring break, and last day timing."
+    },
+    {
+      "name": "Elk Grove Unified School District",
+      "slug": "elk-grove-unified-school-district-calendar",
+      "state": "California",
+      "comparisonNote": "Nearby Sacramento County district useful for comparing traditional and track-calendar planning."
+    }
+  ],
+  "sources": [
+    {
+      "label": "San Juan Unified official website",
+      "url": "https://www.sanjuan.edu"
+    },
+    {
+      "label": "San Juan Unified calendar page",
+      "url": "https://www.sanjuan.edu/calendar"
+    },
+    {
+      "label": "San Juan Unified logo",
+      "url": "https://resources.finalsite.net/images/f_auto,q_auto/v1690853366/sanjuanedu/bpcmq3nelxogr2nzxqox/SanJuanUnifiedSchoolDistrict-Vertical-FullColor-RGB.png"
+    }
+  ]
+}

@@ -165,6 +165,21 @@ const calendarTrackLabel = computed(() => {
   const type = String((cal.value as any)?.calendarType ?? '').replace(/[_-]+/g, ' ')
   return type ? type.replace(/\b\w/g, c => c.toUpperCase()) : 'Student'
 })
+const calendarShownLabel = computed(() =>
+  String((cal.value as any)?.calendarShownLabel ?? (cal.value as any)?.meta?.calendarShownLabel ?? `${district.value?.shortName || district.value?.name} ${calendarTrackLabel.value} Calendar`)
+)
+const calendarShownDescription = computed(() =>
+  String((cal.value as any)?.calendarShownDescription ?? (cal.value as any)?.meta?.calendarShownDescription ?? 'Other calendar tracks or specialized programs may use different dates. Check your school\'s assigned calendar before making plans.')
+)
+const calendarSelectorGroups = computed(() =>
+  (((cal.value as any)?.calendarSelectorGroups ?? (cal.value as any)?.meta?.calendarSelectorGroups ?? []) as Array<{ label?: string, items?: string[] }>).filter(group => group.label && Array.isArray(group.items) && group.items.length)
+)
+const alternateCalendarsNotice = computed(() =>
+  String((cal.value as any)?.alternateCalendarsNotice ?? (cal.value as any)?.meta?.alternateCalendarsNotice ?? '')
+)
+const customJumpNavigation = computed(() =>
+  (((cal.value as any)?.jumpNavigation ?? (cal.value as any)?.meta?.jumpNavigation ?? []) as Array<{ label?: string, href?: string, id?: string }>).filter(item => item.label && (item.href || item.id))
+)
 
 const instructionalDaysLine = computed(() => {
   if ((cal.value as any)?.hideInstructionalDaysSummary === true || (cal.value as any)?.meta?.hideInstructionalDaysSummary === true) {
@@ -197,6 +212,9 @@ type DistrictCustomSection = {
   label: string
   content: string
   position?: string
+  collapsible?: boolean
+  defaultOpen?: boolean
+  image?: { src: string; alt: string; caption?: string; width?: number; height?: number }
   groups?: { label: string; items: string[] }[]
   links?: { label: string; to: string; description?: string }[]
   table?: { columns?: string[]; headers?: string[]; rows: string[][] }
@@ -348,6 +366,9 @@ const faqSchemaItems = computed(() => {
 })
 
 const heroSummary = computed(() => (cal.value as any).heroSummary ?? (cal.value as any).meta?.heroSummary ?? '')
+const heroQuickDates = computed(() =>
+  (((cal.value as any)?.heroQuickDates ?? (cal.value as any)?.meta?.heroQuickDates ?? []) as Array<{ label?: string, value?: string }>).filter(item => item.label && item.value)
+)
 
 const _dn = district.value.name
 const _sn = (district.value as any).shortName || _dn
@@ -437,6 +458,7 @@ const calendarTypeName = String((cal.value as any)?.calendarType ?? '').replace(
 const schemaCalendarName = calendarTypeName
   ? `${district.value.name} ${calendarTypeName} Calendar ${year}`
   : `${district.value.name} Calendar ${year}`
+const schemaDatasetName = (cal.value as any)?.schemaDatasetName ?? (cal.value as any)?.meta?.schemaDatasetName ?? `${schemaCalendarName} Dataset`
 const datasetDescription = calendarTypeName
   ? `Major ${calendarTypeName} Calendar dates for ${district.value.name} in ${year}, including school-year boundaries, major holidays, break ranges, and school resume dates.`
   : `Major calendar dates for ${district.value.name} in ${year}, including school-year boundaries, major holidays, break ranges, and school resume dates.`
@@ -461,7 +483,7 @@ const datasetTemporalCoverage = computed(() => {
 const datasetEntity = hideDatasetSchema.value ? null : {
   '@type': 'Dataset',
   '@id': `${canonicalUrl}#calendar-dataset`,
-  name: schemaCalendarName,
+  name: schemaDatasetName,
   description: datasetDescription,
   url: canonicalUrl,
   ...(schemaKeywords.length ? { keywords: schemaKeywords } : {}),
@@ -519,13 +541,19 @@ const keyDateItemListEvents = computed(() => {
 const customSectionSchemaParts = computed(() =>
   customSections.value
     .filter((section) => {
+      if ((section as any).schemaHasPart === true || (section as any).schema?.hasPart === true) return true
       const text = `${section.id} ${section.label}`.toLowerCase()
       return text.includes('download') ||
+        text.includes('pdf') ||
+        text.includes('preview') ||
         text.includes('print') ||
         text.includes('parent planning') ||
         text.includes('family planning') ||
         text.includes('planning guide') ||
-        text.includes('calendar insights')
+        text.includes('calendar insights') ||
+        text.includes('verification') ||
+        text.includes('review') ||
+        text.includes('update history')
     })
     .map(section => ({
       '@type': 'WebPageElement',
@@ -734,6 +762,14 @@ useHead({
               {{ formatShortDate(springBreak.start) }}–{{ formatShortDate(springBreak.end) }}<template v-if="springBreakReturnDate">, with students returning {{ formatShortDate(springBreakReturnDate) }}</template>.
             </span>
           </p>
+          <div v-if="heroQuickDates.length" class="mt-4 rounded-xl border border-gray-200 bg-white p-4">
+            <p class="text-sm font-semibold text-gray-900">{{ district!.shortName || district!.name }} {{ year }} quick dates:</p>
+            <ul class="mt-2 grid gap-1.5 text-sm text-gray-700 sm:grid-cols-2">
+              <li v-for="item in heroQuickDates" :key="`${item.label}-${item.value}`">
+                <strong>{{ item.label }}:</strong> {{ item.value }}
+              </li>
+            </ul>
+          </div>
           <p class="text-sm text-gray-500">
             {{ instructionalDaysLine }}
             <span v-for="chip in heroFactChips" :key="chip"> · {{ chip }}</span>
@@ -777,11 +813,19 @@ useHead({
         <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
-        <p class="text-sm text-blue-800">
-          <strong>Calendar shown:</strong> {{ district!.shortName || district!.name }} {{ calendarTrackLabel }} Calendar.
-          Other calendar tracks or specialized programs may use different dates. Check your school's assigned calendar before making plans.
-          <a :href="`#${calendarTrackHelpId}`" class="underline font-medium">How to confirm your calendar track</a>
-        </p>
+        <div class="space-y-3">
+          <p class="text-sm text-blue-800">
+            <strong>Calendar shown:</strong> {{ calendarShownLabel }}.
+            {{ calendarShownDescription }}
+            <a :href="`#${calendarTrackHelpId}`" class="underline font-medium">How to confirm your calendar track</a>
+          </p>
+          <div v-if="calendarSelectorGroups.length" class="grid gap-2 sm:grid-cols-2">
+            <div v-for="group in calendarSelectorGroups" :key="group.label" class="rounded-lg border border-blue-100 bg-white/70 p-3">
+              <div class="text-xs font-semibold uppercase tracking-wide text-blue-500">{{ group.label }}</div>
+              <div class="mt-1 text-sm font-medium text-blue-900">{{ group.items?.join(' / ') }}</div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Key Date Cards -->
@@ -791,7 +835,7 @@ useHead({
 
       <div class="rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p class="text-sm text-blue-900">
-          Need a saved copy? Download the calendar file or open the printable PDF after reviewing the key dates.
+          Save these school dates to Google Calendar, Apple Calendar, or Outlook, or print the official PDF after reviewing the key dates.
         </p>
         <div class="flex flex-wrap gap-2">
           <a
@@ -813,7 +857,15 @@ useHead({
         </div>
       </div>
 
-      <nav aria-label="Page sections" class="sticky top-2 z-20 -mx-4 flex gap-2 overflow-x-auto border-y border-gray-100 bg-white/95 px-4 py-2 text-xs shadow-sm backdrop-blur sm:mx-0 sm:flex-wrap sm:rounded-xl sm:border">
+      <nav v-if="customJumpNavigation.length" aria-label="Page sections" class="sticky top-2 z-20 -mx-4 flex gap-2 overflow-x-auto border-y border-gray-100 bg-white/95 px-4 py-2 text-xs shadow-sm backdrop-blur sm:mx-0 sm:flex-wrap sm:rounded-xl sm:border">
+        <a
+          v-for="item in customJumpNavigation"
+          :key="item.label"
+          :href="item.href || `#${item.id}`"
+          class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors"
+        >{{ item.label }}</a>
+      </nav>
+      <nav v-else aria-label="Page sections" class="sticky top-2 z-20 -mx-4 flex gap-2 overflow-x-auto border-y border-gray-100 bg-white/95 px-4 py-2 text-xs shadow-sm backdrop-blur sm:mx-0 sm:flex-wrap sm:rounded-xl sm:border">
         <a href="#key-dates" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Key Dates</a>
         <a v-if="summarySectionId" :href="`#${summarySectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Summary</a>
         <a v-if="overviewSectionId" :href="`#${overviewSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Overview</a>
@@ -848,9 +900,12 @@ useHead({
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         <p class="text-sm text-amber-800">
-          This page shows the <strong>Traditional Calendar</strong>, which applies to most {{ district!.name }} schools.
-          If your child attends a year-round school or specialized program, see
-          <a href="#other-calendars" class="underline font-medium">Other Official Calendars</a> below.
+          <template v-if="alternateCalendarsNotice">{{ alternateCalendarsNotice }}</template>
+          <template v-else>
+            This page shows the <strong>Traditional Calendar</strong>, which applies to most {{ district!.name }} schools.
+            If your child attends a year-round school or specialized program, see
+            <a href="#other-calendars" class="underline font-medium">Other Official Calendars</a> below.
+          </template>
         </p>
       </div>
 

@@ -5,8 +5,12 @@ const props = defineProps<{
     label: string
     content: string
     position?: string
+    collapsible?: boolean
+    defaultOpen?: boolean
+    image?: { src: string; alt: string; caption?: string; width?: number; height?: number }
     groups?: { label: string; items: string[] }[]
     links?: { label: string; to?: string; url?: string; description?: string }[]
+    timeline?: { marker: string; label: string; detail: string }[]
     table?: { columns?: string[]; headers?: string[]; rows: string[][] }
   }[]
   position: string
@@ -29,59 +33,170 @@ const linkTarget = (link: { to?: string; url?: string }) => link.to ?? link.url 
       v-for="section in filtered"
       :id="section.id"
       :key="section.id"
-      class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24"
+      class="bg-white rounded-xl border border-gray-200 scroll-mt-24"
     >
-      <h2 class="text-lg font-semibold text-gray-900 mb-3">{{ section.label }}</h2>
-      <div v-if="section.groups?.length" class="space-y-4">
-        <p v-if="section.content" class="text-sm text-gray-600 leading-relaxed">{{ section.content }}</p>
-        <div v-for="group in section.groups" :key="group.label">
-          <h3 class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
-          <ul class="space-y-1.5">
-            <li v-for="item in group.items" :key="item" class="flex items-start gap-2 text-sm text-gray-600">
-              <span class="mt-2 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0" />
-              <span>{{ item }}</span>
+      <details v-if="section.collapsible" :open="section.defaultOpen" class="group">
+        <summary class="cursor-pointer list-none p-6">
+          <div class="flex items-start justify-between gap-4">
+            <h2 class="text-lg font-semibold text-gray-900">{{ section.label }}</h2>
+            <span class="mt-1 text-sm font-medium text-blue-600 group-open:hidden">Show</span>
+            <span class="mt-1 text-sm font-medium text-blue-600 hidden group-open:inline">Hide</span>
+          </div>
+          <p v-if="section.content" class="mt-2 text-sm text-gray-600 leading-relaxed">{{ section.content }}</p>
+        </summary>
+        <div class="px-6 pb-6">
+          <div v-if="section.groups?.length" class="space-y-4">
+            <div v-for="group in section.groups" :key="group.label">
+              <h3 class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
+              <ul class="space-y-1.5">
+                <li v-for="item in group.items" :key="item" class="flex items-start gap-2 text-sm text-gray-600">
+                  <span class="mt-2 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0" />
+                  <span>{{ item }}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <figure v-if="section.image" class="mt-4 overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
+            <img
+              :src="section.image.src"
+              :alt="section.image.alt"
+              :width="section.image.width"
+              :height="section.image.height"
+              class="w-full h-auto"
+              loading="lazy"
+            >
+            <figcaption v-if="section.image.caption" class="border-t border-gray-200 px-4 py-2 text-xs text-gray-500">
+              {{ section.image.caption }}
+            </figcaption>
+          </figure>
+          <ol v-if="section.timeline?.length" class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <li
+              v-for="item in section.timeline"
+              :key="`${section.id}-${item.marker}-${item.label}`"
+              class="relative rounded-lg border border-gray-200 bg-white px-4 py-3"
+            >
+              <span class="block text-xs font-semibold uppercase tracking-wide text-blue-600">{{ item.marker }}</span>
+              <span class="mt-1 block text-sm font-semibold text-gray-900">{{ item.label }}</span>
+              <span class="mt-1 block text-xs leading-relaxed text-gray-600">{{ item.detail }}</span>
             </li>
-          </ul>
+          </ol>
+          <div v-if="tableColumns(section).length && section.table?.rows?.length" class="mt-4 overflow-x-auto rounded-lg border border-gray-200">
+            <table class="min-w-full divide-y divide-gray-200 text-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th
+                    v-for="column in tableColumns(section)"
+                    :key="column"
+                    scope="col"
+                    class="px-4 py-2 text-left text-xs font-semibold uppercase tracking-wide text-gray-500"
+                  >
+                    {{ column }}
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 bg-white">
+                <tr v-for="(row, rowIndex) in section.table.rows" :key="rowIndex">
+                  <td
+                    v-for="(cell, cellIndex) in row"
+                    :key="`${rowIndex}-${cellIndex}`"
+                    class="px-4 py-2 text-gray-700"
+                  >
+                    {{ cell }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div v-if="section.links?.length" class="mt-4 grid gap-3 sm:grid-cols-2">
+            <NuxtLink
+              v-for="link in section.links"
+              :key="linkTarget(link)"
+              :to="linkTarget(link)"
+              class="rounded-lg border border-gray-200 px-4 py-3 hover:border-blue-300 hover:bg-blue-50 transition-colors"
+            >
+              <span class="block text-sm font-semibold text-gray-900">{{ link.label }}</span>
+              <span v-if="link.description" class="mt-1 block text-xs text-gray-600 leading-relaxed">{{ link.description }}</span>
+            </NuxtLink>
+          </div>
         </div>
-      </div>
-      <p v-else class="text-sm text-gray-600 leading-relaxed">{{ section.content }}</p>
-      <div v-if="tableColumns(section).length && section.table?.rows?.length" class="mt-4 overflow-x-auto rounded-lg border border-gray-200">
-        <table class="min-w-full divide-y divide-gray-200 text-sm">
-          <thead class="bg-gray-50">
-            <tr>
-              <th
-                v-for="column in tableColumns(section)"
-                :key="column"
-                scope="col"
-                class="px-4 py-2 text-left text-xs font-semibold uppercase tracking-wide text-gray-500"
-              >
-                {{ column }}
-              </th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-100 bg-white">
-            <tr v-for="(row, rowIndex) in section.table.rows" :key="rowIndex">
-              <td
-                v-for="(cell, cellIndex) in row"
-                :key="`${rowIndex}-${cellIndex}`"
-                class="px-4 py-2 text-gray-700"
-              >
-                {{ cell }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div v-if="section.links?.length" class="mt-4 grid gap-3 sm:grid-cols-2">
-        <NuxtLink
-          v-for="link in section.links"
-          :key="linkTarget(link)"
-          :to="linkTarget(link)"
-          class="rounded-lg border border-gray-200 px-4 py-3 hover:border-blue-300 hover:bg-blue-50 transition-colors"
-        >
-          <span class="block text-sm font-semibold text-gray-900">{{ link.label }}</span>
-          <span v-if="link.description" class="mt-1 block text-xs text-gray-600 leading-relaxed">{{ link.description }}</span>
-        </NuxtLink>
+      </details>
+      <div v-else class="p-6">
+        <h2 class="text-lg font-semibold text-gray-900 mb-3">{{ section.label }}</h2>
+        <div v-if="section.groups?.length" class="space-y-4">
+          <p v-if="section.content" class="text-sm text-gray-600 leading-relaxed">{{ section.content }}</p>
+          <div v-for="group in section.groups" :key="group.label">
+            <h3 class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
+            <ul class="space-y-1.5">
+              <li v-for="item in group.items" :key="item" class="flex items-start gap-2 text-sm text-gray-600">
+                <span class="mt-2 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0" />
+                <span>{{ item }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p v-else class="text-sm text-gray-600 leading-relaxed">{{ section.content }}</p>
+        <figure v-if="section.image" class="mt-4 overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
+          <img
+            :src="section.image.src"
+            :alt="section.image.alt"
+            :width="section.image.width"
+            :height="section.image.height"
+            class="w-full h-auto"
+            loading="lazy"
+          >
+          <figcaption v-if="section.image.caption" class="border-t border-gray-200 px-4 py-2 text-xs text-gray-500">
+            {{ section.image.caption }}
+          </figcaption>
+        </figure>
+        <ol v-if="section.timeline?.length" class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <li
+            v-for="item in section.timeline"
+            :key="`${section.id}-${item.marker}-${item.label}`"
+            class="relative rounded-lg border border-gray-200 bg-white px-4 py-3"
+          >
+            <span class="block text-xs font-semibold uppercase tracking-wide text-blue-600">{{ item.marker }}</span>
+            <span class="mt-1 block text-sm font-semibold text-gray-900">{{ item.label }}</span>
+            <span class="mt-1 block text-xs leading-relaxed text-gray-600">{{ item.detail }}</span>
+          </li>
+        </ol>
+        <div v-if="tableColumns(section).length && section.table?.rows?.length" class="mt-4 overflow-x-auto rounded-lg border border-gray-200">
+          <table class="min-w-full divide-y divide-gray-200 text-sm">
+            <thead class="bg-gray-50">
+              <tr>
+                <th
+                  v-for="column in tableColumns(section)"
+                  :key="column"
+                  scope="col"
+                  class="px-4 py-2 text-left text-xs font-semibold uppercase tracking-wide text-gray-500"
+                >
+                  {{ column }}
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 bg-white">
+              <tr v-for="(row, rowIndex) in section.table.rows" :key="rowIndex">
+                <td
+                  v-for="(cell, cellIndex) in row"
+                  :key="`${rowIndex}-${cellIndex}`"
+                  class="px-4 py-2 text-gray-700"
+                >
+                  {{ cell }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div v-if="section.links?.length" class="mt-4 grid gap-3 sm:grid-cols-2">
+          <NuxtLink
+            v-for="link in section.links"
+            :key="linkTarget(link)"
+            :to="linkTarget(link)"
+            class="rounded-lg border border-gray-200 px-4 py-3 hover:border-blue-300 hover:bg-blue-50 transition-colors"
+          >
+            <span class="block text-sm font-semibold text-gray-900">{{ link.label }}</span>
+            <span v-if="link.description" class="mt-1 block text-xs text-gray-600 leading-relaxed">{{ link.description }}</span>
+          </NuxtLink>
+        </div>
       </div>
     </div>
   </div>
