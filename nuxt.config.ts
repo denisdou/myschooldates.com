@@ -133,6 +133,7 @@ export default defineNuxtConfig({
         '/san-francisco-unified-school-district-calendar',
         '/san-juan-unified-school-district-calendar',
         '/san-jose-unified-school-calendar',
+        '/seminole-county-school-calendar',
         '/school-district-of-philadelphia-calendar',
         '/stockton-unified-school-district-calendar',
         '/sweetwater-union-high-school-district-calendar',
@@ -386,6 +387,10 @@ export default defineNuxtConfig({
         '/san-jose-unified-school-calendar/2025-2026',
         '/san-jose-unified-school-calendar/2026-2027',
         '/san-jose-unified-school-calendar/2027-2028',
+
+        '/seminole-county-school-calendar/2025-2026',
+        '/seminole-county-school-calendar/2026-2027',
+        '/seminole-county-school-calendar/2027-2028',
 
         '/school-district-of-philadelphia-calendar/2025-2026',
         '/school-district-of-philadelphia-calendar/2026-2027',
