@@ -102,7 +102,7 @@ export function useDistrictPage() {
     if (resumeEvent) return resumeEvent.date
     // Fallback: advance past weekends and any no-student day
     const noStudentDates = new Set(
-      events.filter(e => ['no_school', 'student_holiday', 'holiday'].includes(e.type)).map(e => e.date)
+      events.filter(e => ['no_school', 'student_holiday', 'holiday', 'teacher_workday'].includes(e.type)).map(e => e.date)
     )
     const toDateStr = (dt: Date) => {
       const y = dt.getFullYear()

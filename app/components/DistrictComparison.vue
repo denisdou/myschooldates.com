@@ -356,7 +356,7 @@ const comparisonDefaultOpen = computed(() =>
     <p class="px-6 py-3 border-t border-gray-100 text-xs text-gray-600">
       All dates use each district's {{ year }} published calendar version reviewed from district sources.
       <template v-if="reviewedDate"> Comparison last reviewed {{ reviewedDate }}.</template>
-      Comparison shows date ranges, instruction-day counts when available, and district profile fields from each district's published calendar and public district information.
+      Comparison shows date ranges, instruction-day counts when available, and district profile fields from each district's published calendar and public district information. Break ranges represent published no-school periods and may not indicate the exact number of student attendance days.
       <template v-if="sourceRows.length">
         Sources:
         <template v-for="(row, index) in sourceRows" :key="row.slug">

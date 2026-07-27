@@ -1,0 +1,325 @@
+{
+  "institutionId": "brevard-public-schools",
+  "name": "Brevard Public Schools",
+  "shortName": "BPS",
+  "slug": "brevard-public-schools-calendar",
+  "state": "Florida",
+  "stateCode": "FL",
+  "city": "Viera",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.brevardschools.org",
+  "calendarPage": "https://www.brevardschools.org/documents/district-calendars/printable-district-calendars/579609",
+  "logo": "https://cmsv2-assets.apptegy.net/uploads/20395/logo/23209/brevard-public-schools.png",
+  "timezone": "America/New_York",
+  "county": "Brevard County",
+  "region": "Space Coast",
+  "metro": "Palm Bay-Melbourne-Titusville",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "keyDates",
+  "calendarType": "traditional",
+  "searchAliases": [
+    "Brevard Public Schools",
+    "BPS calendar",
+    "Brevard school calendar",
+    "Brevard County school calendar",
+    "Space Coast school calendar",
+    "Melbourne school calendar",
+    "Palm Bay school calendar",
+    "Titusville school calendar",
+    "Cocoa Beach school calendar",
+    "Viera school calendar",
+    "Merritt Island school calendar"
+  ],
+  "districtFact": "Brevard Public Schools serves Florida's Space Coast, where the school calendar intersects with aerospace shift work, Patrick Space Force Base families, Kennedy Space Center operations, beachside bridge commutes, weekly Friday early release days, and Atlantic hurricane-season planning.",
+  "about": [
+    {
+      "title": "About Brevard Public Schools",
+      "content": "Brevard Public Schools is the countywide public school district for Brevard County, Florida. The district serves Space Coast communities including Palm Bay, Melbourne, Titusville, Cocoa, Cocoa Beach, Merritt Island, Rockledge, Viera, Satellite Beach, Melbourne Beach, Indian Harbour Beach, West Melbourne, and Cape Canaveral. Its printable district calendars list teacher preplanning, first student day, separate first days for kindergarten and pre-kindergarten, holidays, student holidays, teacher workdays, FTE survey weeks, early release Fridays, exam early release windows, report card publication dates, Winter Break, Spring Break, and the last student and teacher days."
+    },
+    {
+      "title": "Why the Brevard Calendar Needs Space Coast Context",
+      "content": "Brevard's school calendar is shaped by more than normal holiday timing. Families in the county often coordinate school days with aerospace, defense, healthcare, port, tourism, and military schedules. Launch operations around Kennedy Space Center and Cape Canaveral Space Force Station, Patrick Space Force Base assignments, cruise traffic at Port Canaveral, and beachside bridge commutes may influence family planning around student holidays and early release Fridays. Hurricane season also overlaps with the opening quarter of school, and Brevard's official calendar points families to a separate Hurricane Make-up Days document for storm-related schedule changes."
+    }
+  ],
+  "planningTips": {
+    "title": "Planning Tips for Brevard County Families",
+    "content": [
+      "Add Friday early release days separately. Brevard's printable calendars list many Friday early release days, plus exam early release windows in December and May.",
+      "Kindergarten and pre-kindergarten start after the first student day. The official calendars list separate first days for those grade levels.",
+      "Check the separate Hurricane Make-up Days document before booking late-May or early-June travel, especially after any tropical storm closure.",
+      "Beachside families should plan extra time on early release Fridays because bridge traffic can affect pickup from schools on or near the barrier islands.",
+      "Military and aerospace households should compare school holidays with Patrick Space Force Base, Kennedy Space Center, Cape Canaveral, and contractor work schedules rather than assuming breaks align."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "brevard-calendar-explained",
+      "label": "Brevard School Calendar Explained: What Families Should Know",
+      "position": "afterAbout",
+      "schemaHasPart": true,
+      "content": "Brevard Public Schools follows a traditional districtwide academic calendar for most students, but several source-backed details make it different from a simple holiday list. Families should pay attention to separate kindergarten and pre-kindergarten start dates, Friday early release patterns, December and May exam release windows, teacher workdays, and the district's separate hurricane make-up day reference."
+    },
+    {
+      "id": "brevard-who-uses-this-calendar",
+      "label": "Who Uses This Calendar?",
+      "position": "afterAbout",
+      "schemaHasPart": true,
+      "content": "This page summarizes the districtwide Brevard Public Schools traditional calendar for families checking whether the published BPS schedule applies to their school-year planning. Families should still confirm school-specific events, athletics, testing, graduation, and program calendars with the campus or district.",
+      "table": {
+        "columns": ["User", "Use this calendar for"],
+        "rows": [
+          ["Elementary parents", "District holidays, breaks, early release planning, and kindergarten or pre-kindergarten first-day notes."],
+          ["Middle school families", "Districtwide student holidays, teacher workdays, Winter Break, Spring Break, and daily planning around early release Fridays."],
+          ["High school families", "District dates, exam early release windows, last-day planning, and reminders to verify graduation or athletics schedules separately."],
+          ["New residents", "School-year planning, childcare timing, transportation routines, and comparison with nearby Florida district calendars."]
+        ]
+      },
+      "groups": [
+        {
+          "label": "This calendar generally applies to",
+          "items": [
+            "Brevard Public Schools elementary schools using the districtwide traditional calendar.",
+            "BPS middle schools and high schools following the traditional academic calendar.",
+            "Families checking districtwide student holidays, early release windows, Winter Break, Spring Break, and the last student day."
+          ]
+        },
+        {
+          "label": "Separate schedules may apply to",
+          "items": [
+            "Charter schools, private schools, adult education, athletics, graduation events, testing windows, and individual campus activities.",
+            "Kindergarten and pre-kindergarten first-day details, which are listed separately on the official Brevard calendar.",
+            "Hurricane make-up decisions and storm-related closures, which families should verify through official BPS announcements."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "brevard-local-calendar-context",
+      "label": "Brevard School Calendar by Community",
+      "position": "afterAbout",
+      "schemaHasPart": true,
+      "content": "Families often search by city name, but the main academic calendar is districtwide. Palm Bay, Melbourne, Titusville, Cocoa, Viera, Rockledge, Merritt Island, Cocoa Beach, Satellite Beach, Cape Canaveral, West Melbourne, and beachside communities all use the Brevard Public Schools district calendar unless a specific school or program publishes a separate schedule.",
+      "groups": [
+        {
+          "label": "Mainland communities",
+          "items": [
+            "Melbourne and Palm Bay families use the BPS district calendar, with separate campus events and athletics schedules published by individual schools.",
+            "Viera, Rockledge, Cocoa, and West Melbourne households should use the same districtwide academic calendar for student holidays and breaks.",
+            "Titusville families follow the BPS calendar while also watching local school announcements for testing, graduation, and activity dates."
+          ]
+        },
+        {
+          "label": "Beachside and coastal communities",
+          "items": [
+            "Merritt Island, Cocoa Beach, Satellite Beach, Melbourne Beach, Indian Harbour Beach, and Cape Canaveral schools use the same district calendar.",
+            "Beachside families may need extra pickup time on Friday early release days because causeway and bridge traffic can affect transportation.",
+            "Port Canaveral and Cape Canaveral work schedules can make short student holidays more important for childcare planning."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "brevard-space-coast-planning",
+      "label": "Space Coast Planning Notes",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "Brevard's calendar has several local planning details that generic Florida calendar summaries miss. Early release is usually a Friday pattern, kindergarten and pre-kindergarten start later than the first student day, and the official district calendar points to a separate hurricane make-up day document. Those details matter for families managing base schedules, aerospace contractor shifts, Port Canaveral work, and beachside transportation.",
+      "groups": [
+        {
+          "label": "School-year mechanics",
+          "items": [
+            "The official calendars total 180 pupil days and 190 teacher paid days.",
+            "Kindergarten and pre-kindergarten have separate first-day entries after the main first student day.",
+            "Exam days in December and May are also early release days."
+          ]
+        },
+        {
+          "label": "Local schedule pressure",
+          "items": [
+            "Kennedy Space Center and Cape Canaveral launch activity can affect work schedules and local traffic even when school remains open.",
+            "Patrick Space Force Base families should compare BPS holidays with military duty schedules and PCS timing.",
+            "Beachside and mainland families should account for causeway and bridge traffic on early release Fridays."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "brevard-official-calendar-use",
+      "label": "How MySchoolDates Uses the Official BPS Calendar",
+      "position": "beforeSources",
+      "schemaHasPart": true,
+      "content": "MySchoolDates uses the official Brevard Public Schools printable district calendar as the source of record, then turns reviewed dates into searchable summaries, quick facts, parent planning notes, and calendar export files. Brevard Public Schools remains the official publisher for final calendar decisions and last-minute changes.",
+      "groups": [
+        {
+          "label": "Official source collection",
+          "items": [
+            "Review the Brevard Public Schools printable district calendar page and official PDF/source records before publishing dates.",
+            "Link back to the district source so families can confirm final calendar changes directly with BPS."
+          ]
+        },
+        {
+          "label": "Date verification",
+          "items": [
+            "Compare first day, last student day, Winter Break, Spring Break, kindergarten and pre-kindergarten starts, Friday early release windows, and hurricane make-up references against reviewed source data.",
+            "Keep uncertainty visible when a detail depends on a separate school, program, or district update."
+          ]
+        },
+        {
+          "label": "Calendar export generation",
+          "items": [
+            "Generate MySchoolDates PDF and ICS calendar tools from the reviewed calendar record so families can search, print, and import key dates more easily.",
+            "Treat the official Brevard Public Schools calendar as the final source of record if later revisions are published."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "brevard-calendar-research-process",
+      "label": "Calendar Research Process",
+      "position": "beforeSources",
+      "schemaHasPart": true,
+      "content": "The Brevard calendar page is maintained as a reviewed school calendar resource, not as an official district publication. The workflow below explains how MySchoolDates turns the official BPS calendar source into searchable date summaries and calendar tools.",
+      "timeline": [
+        {
+          "marker": "Step 1",
+          "label": "Find the official source",
+          "detail": "Review the Brevard Public Schools printable district calendar page and official PDF used for the 2026-2027 school year."
+        },
+        {
+          "marker": "Step 2",
+          "label": "Extract student dates",
+          "detail": "Record the first student day, last student day, breaks, kindergarten and pre-kindergarten starts, teacher workdays, and early release windows."
+        },
+        {
+          "marker": "Step 3",
+          "label": "Verify exceptions",
+          "detail": "Check source-backed exceptions such as hurricane make-up references, exam early release windows, and program-specific schedule notes."
+        },
+        {
+          "marker": "Step 4",
+          "label": "Generate calendar tools",
+          "detail": "Create MySchoolDates summaries, quick facts, PDF/ICS exports, and parent planning notes while keeping BPS as the final source of record."
+        }
+      ]
+    },
+    {
+      "id": "brevard-calendar-terms",
+      "label": "Understanding Brevard Calendar Terms",
+      "position": "afterQuickFacts",
+      "content": "Brevard's printable district calendar uses several school-calendar terms that can affect family planning. These definitions help families read the date list without confusing student attendance days, staff workdays, and early release windows.",
+      "groups": [
+        {
+          "label": "Attendance terms",
+          "items": [
+            "Student Holiday: a no-school day for students, even when staff may have work scheduled.",
+            "Teacher Workday: a staff workday when students usually do not attend classes.",
+            "Pupil Days: the student instructional days counted in the official school-year total."
+          ]
+        },
+        {
+          "label": "Planning terms",
+          "items": [
+            "Early Release: a school day when students leave earlier than the normal dismissal time; exact times vary by school level.",
+            "Preplanning and Post Planning: staff work periods before students start and after students finish the school year.",
+            "Hurricane Make-up Days: dates or references families should review after storm-related closures."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "brevard-parent-checklist",
+      "label": "Brevard Parent Planning Checklist",
+      "position": "afterPlanningTips",
+      "content": "Use this short checklist after reviewing the 2026-2027 Brevard calendar dates.",
+      "groups": [
+        {
+          "label": "Before the first school day",
+          "items": [
+            "Download the PDF or ICS calendar file.",
+            "Confirm transportation and pickup routines before August 10, 2026.",
+            "Check the separate kindergarten and pre-kindergarten start dates if they apply to your family."
+          ]
+        },
+        {
+          "label": "Before breaks or early release windows",
+          "items": [
+            "Review Friday early release dates before scheduling childcare or after-school care.",
+            "Save the official BPS calendar page and hurricane make-up reference for storm-season updates.",
+            "Verify graduation, testing, athletics, and campus events with the individual school."
+          ]
+        }
+      ]
+    }
+  ],
+  "comparisonTitle": "Brevard School Calendar vs Nearby Florida Districts (2026-2027)",
+  "compareIntro": "Compare the Brevard Public Schools calendar with other Florida district calendars currently available on MySchoolDates. Dates shown include first day, last day, spring break, and official PDF availability.",
+  "districtFaqs": [
+    {
+      "q": "Does the Brevard calendar apply to Melbourne, Palm Bay, Titusville, Viera, and Cocoa Beach?",
+      "a": "Yes. The districtwide Brevard Public Schools calendar applies to schools in Melbourne, Palm Bay, Titusville, Viera, Cocoa Beach, and other Brevard County communities unless a specific campus or program publishes separate event, testing, athletics, or graduation details."
+    },
+    {
+      "q": "Are Brevard early release days usually on Fridays?",
+      "a": "Yes. The printable Brevard district calendars list many Friday early release days, with additional exam early release windows near the end of each semester. Families should use the year-specific calendar because the exact Friday dates change."
+    },
+    {
+      "q": "Do kindergarten and pre-kindergarten start on the same day as other Brevard students?",
+      "a": "No. Brevard's official calendars list separate first days for kindergarten and pre-kindergarten after the first day for most students."
+    },
+    {
+      "q": "How does Brevard handle hurricane make-up days?",
+      "a": "The official district calendar points families to a separate document identifying Hurricane Make-up Days. After storm closures, families should verify that make-up day document and district announcements before finalizing late-May or early-June plans."
+    },
+    {
+      "q": "Where should families verify Brevard calendar changes?",
+      "a": "Use the official Brevard Public Schools printable district calendar page and campus announcements for final confirmation. MySchoolDates summarizes official district documents and is not affiliated with Brevard Public Schools."
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Volusia County Schools",
+      "slug": "volusia-county-schools-calendar",
+      "state": "Florida",
+      "comparisonNote": "Neighboring Atlantic-coast district north of Brevard with similar hurricane-season and beachside transportation planning concerns."
+    },
+    {
+      "name": "Orange County Public Schools",
+      "slug": "orange-county-school-calendar",
+      "state": "Florida",
+      "comparisonNote": "Large Orlando-area district west of Brevard, useful for Space Coast families comparing school breaks with Central Florida travel and work schedules."
+    },
+    {
+      "name": "Osceola School District",
+      "slug": "osceola-school-district-calendar",
+      "state": "Florida",
+      "comparisonNote": "Central Florida district southwest of Brevard with similar Orlando metro commute and hurricane-season planning concerns."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Brevard Public Schools official website",
+      "url": "https://www.brevardschools.org"
+    },
+    {
+      "label": "Brevard Public Schools printable district calendars",
+      "url": "https://www.brevardschools.org/documents/district-calendars/printable-district-calendars/579609"
+    }
+  ]
+}

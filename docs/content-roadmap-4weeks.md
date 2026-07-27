@@ -293,11 +293,11 @@ P3 内容可采用更高度模板化的方式生成（calendarNotes 精简为 4-
 
 | 排名 | 州/地区 | 学区 | 主要都市圈 | 状态 |
 |-----:|---------|------|------------|------|
-| 65 | Florida | Volusia County Schools | Daytona Beach | 待创建 |
-| 66 | Florida | Seminole County Public Schools | Orlando | 待创建 |
-| 67 | Florida | Osceola School District | Orlando | 待创建 |
-| 68 | Florida | Brevard Public Schools | Space Coast | 待创建 |
-| 69 | Florida | Collier County Public Schools | Naples | 待创建 |
+| 65 | Florida | Volusia County Schools | Daytona Beach | ✓ 已完成：`volusia-county-schools-calendar` |
+| 66 | Florida | Seminole County Public Schools | Orlando | ✓ 已完成：`seminole-county-school-calendar` |
+| 67 | Florida | Osceola School District | Orlando | ✓ 已完成：`osceola-school-district-calendar` |
+| 68 | Florida | Brevard Public Schools | Space Coast | ✓ 已完成：`brevard-public-schools-calendar` |
+| 69 | Florida | Collier County Public Schools | Naples | ✓ 已完成：`collier-county-school-calendar` |
 | 70 | Florida | Sarasota County Schools | Sarasota | 待创建 |
 | 71 | Georgia | Cobb County School District | Atlanta | 待创建 |
 | 72 | Georgia | DeKalb County School District | Atlanta | 待创建 |

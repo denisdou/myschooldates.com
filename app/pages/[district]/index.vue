@@ -283,6 +283,76 @@ const calendarIcsHref = computed(() =>
     : ''
 )
 
+function resolveCalendarHref(href?: string, url?: string) {
+  if (!cal) return ''
+  const raw = href ?? url ?? ''
+  if (raw === '__sourcePdfUrl') return (cal as any).sourcePdfUrl ?? (cal as any).printablePdfUrl ?? ''
+  if (raw === '__icsUrl') return calendarIcsHref.value
+  return raw
+}
+
+const heroCtas = computed(() => {
+  if (!cal || !district.value) return []
+  const configured = (((cal as any).heroCtas ?? (cal as any).meta?.heroCtas ?? []) as Array<{
+    label?: string
+    href?: string
+    url?: string
+    variant?: 'primary' | 'secondary'
+    download?: boolean
+    filename?: string
+  }>)
+
+  return configured
+    .map((cta, index) => {
+      const href = resolveCalendarHref(cta.href, cta.url)
+      const filename = cta.filename === '__icsFilename'
+        ? `${district.value!.slug}-${cal.schoolYear}.ics`
+        : cta.filename
+
+      return {
+        key: `${cta.label ?? 'hero-cta'}-${index}`,
+        label: cta.label ?? '',
+        href,
+        variant: cta.variant ?? (index === 0 ? 'primary' : 'secondary'),
+        download: Boolean(cta.download),
+        filename,
+      }
+    })
+    .filter(cta => cta.label && cta.href)
+})
+
+const heroLinks = computed(() => {
+  if (!cal) return []
+  const configured = (((cal as any).heroLinks ?? (cal as any).meta?.heroLinks ?? []) as Array<{ label?: string; href?: string; url?: string }>)
+  return configured
+    .map((link, index) => {
+      const href = resolveCalendarHref(link.href, link.url)
+      return {
+        key: `${link.label ?? 'hero-link'}-${index}`,
+        label: link.label ?? '',
+        href,
+        isExternal: href.startsWith('http'),
+      }
+    })
+    .filter(link => link.label && link.href)
+})
+
+const keyDateShortcuts = computed(() => {
+  if (!cal) return []
+  const configured = (((cal as any).keyDateShortcuts ?? (cal as any).meta?.keyDateShortcuts ?? []) as Array<{ label?: string; href?: string; url?: string }>)
+  return configured
+    .map((link, index) => {
+      const href = resolveCalendarHref(link.href, link.url)
+      return {
+        key: `${link.label ?? 'key-date-shortcut'}-${index}`,
+        label: link.label ?? '',
+        href,
+        isExternal: href.startsWith('http'),
+      }
+    })
+    .filter(link => link.label && link.href)
+})
+
 const archivedYears = computed(() =>
   (allCals.value ?? []).filter(y => y.schoolYear !== currentYear).map(y => y.schoolYear)
 )
@@ -453,6 +523,13 @@ const overviewSectionId = computed(() => {
   )
   return section?.id
 })
+const audienceSectionId = computed(() => {
+  const section = customSections.value.find(s => {
+    const text = `${s.id} ${s.label}`.toLowerCase()
+    return text.includes('who-uses') || text.includes('who uses') || text.includes('applies to')
+  })
+  return section?.id
+})
 const downloadGuideSectionId = computed(() => {
   const section = customSections.value.find(s => {
     const text = `${s.id} ${s.label}`.toLowerCase()
@@ -464,6 +541,20 @@ const changesSectionId = computed(() => {
   const section = customSections.value.find(s => {
     const text = `${s.id} ${s.label}`.toLowerCase()
     return text.includes('change') || text.includes('year-diff') || text.includes('previous year')
+  })
+  return section?.id
+})
+const highlightsSectionId = computed(() => {
+  const section = customSections.value.find(s => {
+    const text = `${s.id} ${s.label}`.toLowerCase()
+    return text.includes('highlight')
+  })
+  return section?.id
+})
+const termsSectionId = computed(() => {
+  const section = customSections.value.find(s => {
+    const text = `${s.id} ${s.label}`.toLowerCase()
+    return text.includes('term') || text.includes('glossary')
   })
   return section?.id
 })
@@ -604,6 +695,7 @@ const verifiedDate = computed(() => {
   if (!cal?.lastVerifiedAt) return null
   return new Date(cal.lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 })
+const editorialAuthorName = 'Denis Dou'
 
 const prevYear = computed(() => {
   const [y1, y2] = currentYear.split('-').map(Number)
@@ -718,6 +810,24 @@ if (!isStatePage && district.value) {
     name: 'MySchoolDates Calendar Data Team',
     url: 'https://myschooldates.com/calendar-verification-methodology',
     parentOrganization: { '@id': 'https://myschooldates.com/#organization' },
+  }
+  const authorPersonEntity = {
+    '@type': 'Person',
+    '@id': 'https://myschooldates.com/author#person',
+    name: editorialAuthorName,
+    jobTitle: 'Founder & Education Data Research Lead',
+    url: 'https://myschooldates.com/author',
+    image: 'https://myschooldates.com/images/denis-dou.png',
+    sameAs: ['https://www.linkedin.com/in/denis-dou/'],
+    worksFor: { '@id': 'https://myschooldates.com/#organization' },
+    knowsAbout: [
+      'school calendar data',
+      'K-12 education data',
+      'district calendar verification',
+      'structured calendar datasets',
+      'official source verification',
+      'parent-facing planning resources',
+    ],
   }
   const siteEntity = {
     '@type': 'WebSite',
@@ -859,6 +969,7 @@ if (!isStatePage && district.value) {
     }]
     : []
   const webPageParts = [
+    { '@id': `${canonicalUrl}#calendar-analysis` },
     ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
     ...(faqSchemaItems.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
     ...customSectionSchemaParts,
@@ -881,7 +992,7 @@ if (!isStatePage && district.value) {
     ...(pageDateModified ? { lastReviewed: pageDateModified } : {}),
     ...(pageDatePublished ? { datePublished: pageDatePublished } : {}),
     publisher: { '@id': 'https://myschooldates.com/#organization' },
-    author: { '@id': 'https://myschooldates.com/#education-research-team' },
+    author: { '@id': 'https://myschooldates.com/author#person' },
     reviewedBy: { '@id': 'https://myschooldates.com/#education-research-team' },
     audience: {
       '@type': 'Audience',
@@ -909,6 +1020,24 @@ if (!isStatePage && district.value) {
     isPartOf: {
       '@id': 'https://myschooldates.com/#website',
     },
+  }
+  const articleEntity = {
+    '@type': 'Article',
+    '@id': `${canonicalUrl}#calendar-analysis`,
+    headline: _pageTitle,
+    description: _pageDesc,
+    url: canonicalUrl,
+    inLanguage: 'en-US',
+    ...(pageDatePublished ? { datePublished: pageDatePublished } : {}),
+    ...(pageDateModified ? { dateModified: pageDateModified } : {}),
+    ...(pageDateModified ? { dateReviewed: pageDateModified } : {}),
+    author: { '@id': 'https://myschooldates.com/author#person' },
+    publisher: { '@id': 'https://myschooldates.com/#organization' },
+    reviewedBy: { '@id': 'https://myschooldates.com/#education-research-team' },
+    about: { '@id': districtAbout['@id'] },
+    isPartOf: { '@id': `${canonicalUrl}#webpage` },
+    ...(datasetEntity ? { mainEntity: { '@id': `${canonicalUrl}#calendar-dataset` } } : {}),
+    ...(basedOnUrl ? { isBasedOn: { '@id': `${canonicalUrl}#source-calendar` } } : {}),
   }
   const faqPageEntity = faqSchemaItems.value.length ? {
     '@type': 'FAQPage',
@@ -960,6 +1089,7 @@ if (!isStatePage && district.value) {
       ]
     : []
   const includeComparisonSchema = (district.value as any)?.includeComparisonSchema !== false && (cal as any)?.includeComparisonSchema !== false
+  const includeArticleSchema = (district.value as any)?.includeArticleSchema !== false && (cal as any)?.includeArticleSchema !== false
   const comparisonItemListEntity = includeComparisonSchema && comparisonItems.length > 1 ? {
     '@type': 'ItemList',
     '@id': `${canonicalUrl}#nearby-calendar-comparison`,
@@ -990,10 +1120,12 @@ if (!isStatePage && district.value) {
         '@graph': [
           sitePublisher,
           reviewTeamEntity,
+          authorPersonEntity,
           siteEntity,
           districtAbout,
           ...(sourceCalendarEntity ? [sourceCalendarEntity] : []),
           ...(datasetEntity ? [datasetEntity] : []),
+          ...(includeArticleSchema ? [articleEntity] : []),
           webPageEntity,
           ...(keyDateItemListEntity ? [keyDateItemListEntity] : []),
           ...(comparisonItemListEntity ? [comparisonItemListEntity] : []),
@@ -1072,6 +1204,7 @@ if (!isStatePage && district.value) {
             <a v-if="statePdfSectionId" :href="`#${statePdfSectionId}`" class="rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">PDF</a>
             <a href="#state-holidays" class="rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">Holidays</a>
             <a href="#faq" class="rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">FAQ</a>
+            <a href="#state-calendar-data" class="rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">Trends</a>
           </div>
         </nav>
 
@@ -1371,6 +1504,34 @@ if (!isStatePage && district.value) {
           </ol>
         </div>
 
+        <!-- National calendar data context -->
+        <div id="state-calendar-data" class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
+          <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ matchedStateName }} School Calendars in National Context</h2>
+          <p class="text-sm text-gray-500 mb-5">
+            Use these research pages to compare {{ matchedStateName }} district calendars with broader U.S. school calendar patterns.
+          </p>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <NuxtLink
+              to="/school-calendar-trends"
+              class="rounded-lg border border-gray-200 bg-gray-50 p-4 hover:border-blue-200 hover:bg-blue-50 transition-colors"
+            >
+              <div class="text-sm font-semibold text-gray-900">School Calendar Trends Hub</div>
+              <p class="mt-1 text-xs leading-relaxed text-gray-500">
+                Browse school calendar data releases, trend reports, charts, and archive planning.
+              </p>
+            </NuxtLink>
+            <NuxtLink
+              to="/school-calendar-trends/2026-2027-report"
+              class="rounded-lg border border-gray-200 bg-gray-50 p-4 hover:border-blue-200 hover:bg-blue-50 transition-colors"
+            >
+              <div class="text-sm font-semibold text-gray-900">2026-2027 School Calendar Trends Report</div>
+              <p class="mt-1 text-xs leading-relaxed text-gray-500">
+                See start dates, break patterns, end dates, and planning trends from reviewed U.S. district calendars.
+              </p>
+            </NuxtLink>
+          </div>
+        </div>
+
         <!-- Related States -->
         <div v-if="statePageData?.relatedStates?.length" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
           <div class="px-6 py-4 border-b border-gray-100">
@@ -1426,7 +1587,36 @@ if (!isStatePage && district.value) {
           </p>
           <!-- Featured snippet: direct answer for search intent -->
           <p v-if="calendarSummary" class="mt-3 text-sm text-gray-700 leading-relaxed">{{ calendarSummary }}</p>
-          <div v-if="heroQuickDates.length" class="mt-4 rounded-xl border border-gray-200 bg-white p-4">
+          <div v-if="heroCtas.length" class="mt-4 flex flex-wrap gap-2">
+            <a
+              v-for="cta in heroCtas"
+              :key="cta.key"
+              :href="cta.href"
+              :download="cta.download ? (cta.filename || '') : undefined"
+              :target="cta.download ? undefined : '_blank'"
+              :rel="cta.download ? undefined : 'noopener'"
+              class="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold transition-colors"
+              :class="cta.variant === 'primary'
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50'"
+            >
+              {{ cta.label }}
+            </a>
+          </div>
+          <div v-if="heroLinks.length" class="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm">
+            <a
+              v-for="link in heroLinks"
+              :key="link.key"
+              :href="link.href"
+              :target="link.isExternal ? '_blank' : undefined"
+              :rel="link.isExternal ? 'noopener' : undefined"
+              class="font-medium text-blue-600 hover:underline"
+            >
+              {{ link.label }}
+              <span v-if="link.isExternal" class="sr-only">(opens in a new tab)</span>
+            </a>
+          </div>
+          <div v-if="heroQuickDates.length" id="quick-answer" class="mt-4 rounded-xl border border-gray-200 bg-white p-4 scroll-mt-24">
             <p class="text-sm font-semibold text-gray-900">{{ district.shortName || district.name }} {{ currentYear }} quick dates:</p>
             <ul class="mt-2 grid gap-1.5 text-sm text-gray-700 sm:grid-cols-2">
               <li v-for="item in heroQuickDates" :key="`${item.label}-${item.value}`">
@@ -1440,6 +1630,22 @@ if (!isStatePage && district.value) {
             <span v-if="showSemesterCount"> · {{ cal.semesters ?? 2 }} semesters</span>
             <span v-if="secondSemStart"> · Students return after {{ winterBreakLabel }} on {{ formatShortDate(secondSemStart) }}</span>
           </p>
+          <dl v-if="!isEstimated && verifiedDate" class="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-xs text-gray-500">
+            <div>
+              <dt class="inline font-semibold uppercase tracking-wide text-gray-400">Reviewed</dt>
+              <dd class="ml-1 inline font-medium text-gray-700">{{ verifiedDate }}</dd>
+            </div>
+            <div>
+              <dt class="inline font-semibold uppercase tracking-wide text-gray-400">By</dt>
+              <dd class="ml-1 inline font-medium">
+                <NuxtLink to="/author" class="text-blue-600 hover:underline">{{ editorialAuthorName }}</NuxtLink>
+              </dd>
+            </div>
+            <div>
+              <dt class="inline font-semibold uppercase tracking-wide text-gray-400">Updated</dt>
+              <dd class="ml-1 inline font-medium text-gray-700">{{ verifiedDate }}</dd>
+            </div>
+          </dl>
           <!-- Verification badge -->
           <div class="mt-3 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full"
             :class="isEstimated
@@ -1568,6 +1774,33 @@ if (!isStatePage && district.value) {
             </a>
           </div>
         </div>
+        <div v-if="keyDateShortcuts.length" class="rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-600">
+          <a
+            v-for="link in keyDateShortcuts"
+            :key="link.key"
+            :href="link.href"
+            :target="link.isExternal ? '_blank' : undefined"
+            :rel="link.isExternal ? 'noopener' : undefined"
+            class="font-semibold text-blue-600 hover:underline"
+          >
+            {{ link.label }} →
+            <span v-if="link.isExternal" class="sr-only">(opens in a new tab)</span>
+          </a>
+        </div>
+
+        <!-- Custom Sections: afterKeyDates -->
+        <DistrictCustomSections :sections="customSections" position="afterKeyDates" />
+
+        <!-- Quick Facts (fixed position — moved above Year by Numbers) -->
+        <DistrictQuickFacts
+          v-if="!hiddenSections.has('quickFacts')"
+          :cal="cal"
+          :district="district"
+          :related-cals="relatedCals ?? []"
+          :all-districts="allDistricts ?? []"
+          :prev-cal="prevCal ?? undefined"
+        />
+        <DistrictCustomSections :sections="customSections" position="afterQuickFacts" />
 
         <nav v-if="customJumpNavigation.length" aria-label="Page sections" class="sticky top-2 z-20 -mx-4 flex gap-2 overflow-x-auto border-y border-gray-100 bg-white/95 px-4 py-2 text-xs shadow-sm backdrop-blur sm:mx-0 sm:flex-wrap sm:rounded-xl sm:border">
           <a
@@ -1579,13 +1812,17 @@ if (!isStatePage && district.value) {
         </nav>
         <nav v-else aria-label="Page sections" class="sticky top-2 z-20 -mx-4 flex gap-2 overflow-x-auto border-y border-gray-100 bg-white/95 px-4 py-2 text-xs shadow-sm backdrop-blur sm:mx-0 sm:flex-wrap sm:rounded-xl sm:border">
           <a href="#key-dates" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Key Dates</a>
+          <a v-if="heroQuickDates.length" href="#quick-answer" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Quick Answer</a>
           <a v-if="summarySectionId" :href="`#${summarySectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Summary</a>
           <a v-if="overviewSectionId" :href="`#${overviewSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Overview</a>
-          <a href="#add-to-calendar" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">PDF &amp; Calendar</a>
+          <a v-if="audienceSectionId" :href="`#${audienceSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Who Uses</a>
+          <a href="#add-to-calendar" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Download</a>
           <a v-if="downloadGuideSectionId" :href="`#${downloadGuideSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Download Guide</a>
           <a href="#all-dates" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Dates</a>
           <a v-if="breaks.length" href="#breaks" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Breaks</a>
           <a v-if="changesSectionId" :href="`#${changesSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Changes</a>
+          <a v-if="highlightsSectionId" :href="`#${highlightsSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Highlights</a>
+          <a v-if="termsSectionId" :href="`#${termsSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Terms</a>
           <a v-if="planningSectionId" :href="`#${planningSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Planning</a>
           <a v-if="importantDatesSectionId" :href="`#${importantDatesSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Important Dates</a>
           <a v-if="earlyDismissalSectionId" :href="`#${earlyDismissalSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Early Dismissal</a>
@@ -1635,9 +1872,6 @@ if (!isStatePage && district.value) {
         />
         <DistrictCustomSections :sections="customSections" position="afterCalendarExport" />
 
-        <!-- Custom Sections: afterKeyDates -->
-        <DistrictCustomSections :sections="customSections" position="afterKeyDates" />
-
         <!-- All Dates -->
         <DistrictAllDates
           :events="cal.events"
@@ -1656,17 +1890,6 @@ if (!isStatePage && district.value) {
           :district-name="district.name"
         />
         <DistrictCustomSections :sections="customSections" position="afterOtherCalendars" />
-
-        <!-- Quick Facts (fixed position — moved above Year by Numbers) -->
-        <DistrictQuickFacts
-          v-if="!hiddenSections.has('quickFacts')"
-          :cal="cal"
-          :district="district"
-          :related-cals="relatedCals ?? []"
-          :all-districts="allDistricts ?? []"
-          :prev-cal="prevCal ?? undefined"
-        />
-        <DistrictCustomSections :sections="customSections" position="afterQuickFacts" />
 
         <!-- Dynamic mid sections: order varies by time context -->
         <template v-for="section in midSectionOrder" :key="section">
@@ -1841,6 +2064,16 @@ if (!isStatePage && district.value) {
           :title="(district as any).relatedDistrictsTitle"
           :description="(district as any).relatedDistrictsDescription"
         />
+
+        <section v-if="!hiddenSections.has('nationalTrends')" class="rounded-xl border border-gray-200 bg-white p-6">
+          <h2 class="text-lg font-semibold text-gray-900 mb-2">{{ district.shortName || district.name }} in National Calendar Trends</h2>
+          <p class="text-sm leading-relaxed text-gray-600">
+            To compare this district calendar with broader U.S. start-date, break, and end-date patterns, see the
+            <NuxtLink to="/school-calendar-trends/2026-2027-report" class="font-semibold text-blue-600 hover:underline">
+              2026-2027 School Calendar Trends Report
+            </NuxtLink>.
+          </p>
+        </section>
 
         <!-- Custom Sections: beforeSources -->
         <DistrictCustomSections :sections="customSections" position="beforeSources" />

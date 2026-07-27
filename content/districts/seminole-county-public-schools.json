@@ -1,0 +1,206 @@
+{
+  "institutionId": "seminole-county-public-schools",
+  "name": "Seminole County Public Schools",
+  "shortName": "SCPS",
+  "slug": "seminole-county-school-calendar",
+  "state": "Florida",
+  "stateCode": "FL",
+  "city": "Sanford",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.scps.k12.fl.us",
+  "calendarPage": "https://www.scps.k12.fl.us/124364_2",
+  "logo": "https://files.smartsites.parentsquare.com/6662/header_logo_img_o4bop1pt327s2dogpmf.jpg",
+  "timezone": "America/New_York",
+  "county": "Seminole County",
+  "region": "Central Florida",
+  "metro": "Orlando-Kissimmee-Sanford",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "keyDates",
+  "calendarType": "traditional",
+  "searchAliases": [
+    "SCPS",
+    "Seminole County Public Schools",
+    "Seminole County school calendar",
+    "Seminole schools calendar",
+    "Sanford school calendar",
+    "Lake Mary school calendar",
+    "Oviedo school calendar",
+    "Altamonte Springs school calendar"
+  ],
+  "districtFact": "Seminole County Public Schools publishes board-approved student attendance calendars with quarter dates, semester day counts, teacher workdays, district professional development days, major breaks, post-planning days, and an explicit make-up day order for inclement weather.",
+  "about": [
+    {
+      "title": "About Seminole County Public Schools",
+      "content": "Seminole County Public Schools serves families across Seminole County, Florida, including Sanford, Lake Mary, Altamonte Springs, Longwood, Oviedo, Winter Springs, Casselberry, and surrounding Central Florida communities. The district calendar is especially useful for planning first day and last day dates, quarter transitions, Thanksgiving Break, Winter Break, Spring Break, teacher workdays, district professional development days, post-planning dates, and the published inclement-weather make-up day order."
+    },
+    {
+      "title": "How to Use This SCPS Calendar",
+      "content": "Use this page for districtwide Seminole County Public Schools student attendance dates, then confirm bell schedules, testing, athletics, graduation events, school-specific open houses, and emergency announcements through SCPS and the assigned school. The official SCPS calendar PDFs remain the source of record for changes after publication."
+    }
+  ],
+  "planningTips": {
+    "title": "Planning Tips for Seminole County Families",
+    "content": [
+      "Watch teacher workdays and district professional development days because several are student holidays placed immediately before or after major breaks.",
+      "Check the make-up day order before booking travel around January, March, October, or late May because SCPS publishes a specific sequence for inclement-weather recovery days.",
+      "Plan around Central Florida storm season during the first semester; district closures may affect the published make-up day order even when major breaks do not change.",
+      "Use campus-level announcements for bell schedules, testing windows, athletics, performances, and graduation details because those items are not fully represented in the districtwide attendance calendar."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "seminole-county-local-calendar-context",
+      "label": "Seminole County Local Calendar Context",
+      "position": "afterAbout",
+      "content": "Seminole County sits within the Orlando-Kissimmee-Sanford metro area, so families comparing Central Florida school calendars often check SCPS alongside Orange County Public Schools and Volusia County Schools. That comparison matters for shared childcare, commuting, travel planning, and families with students in different districts. The SCPS calendar is distinctive because it publishes quarter date ranges, semester day totals, teacher workdays, district PD days, and an ordered make-up day list directly on the student attendance calendar."
+    },
+    {
+      "id": "seminole-county-calendar-audience",
+      "label": "Who Uses the SCPS Calendar?",
+      "position": "afterAbout",
+      "schemaHasPart": true,
+      "content": "The Seminole County school calendar is useful for more than a quick date lookup. Different groups use the district calendar to understand how the school year affects childcare, work schedules, campus planning, and Central Florida family logistics.",
+      "groups": [
+        {
+          "label": "Parents and guardians",
+          "items": [
+            "Plan childcare for teacher workdays, district professional development days, and student holidays near major breaks.",
+            "Compare Thanksgiving, Winter Break, and Spring Break timing before booking travel."
+          ]
+        },
+        {
+          "label": "Teachers and school staff",
+          "items": [
+            "Track quarter transitions, pre-planning, post-planning, and professional development days listed on the district calendar.",
+            "Coordinate classroom planning around districtwide no-school days and make-up day decisions."
+          ]
+        },
+        {
+          "label": "New Seminole County residents",
+          "items": [
+            "Understand the yearly rhythm before moving into Sanford, Lake Mary, Oviedo, Altamonte Springs, Longwood, Winter Springs, or Casselberry.",
+            "Use the districtwide calendar first, then confirm school-specific bell schedules and events with the assigned campus."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seminole-county-make-up-day-planning",
+      "label": "SCPS Make-Up Day Planning Notes",
+      "position": "afterAbout",
+      "content": "SCPS lists inclement-weather make-up days in a specific order on the calendar PDF. Families should treat those dates as conditional until the district confirms whether storm closures or other emergency days require them. This is especially important for January return dates, March teacher workdays, October workdays, and post-planning dates near the end of May."
+    },
+    {
+      "id": "seminole-county-school-level-schedule-notes",
+      "label": "SCPS Calendar vs School-Level Schedules",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "The SCPS student attendance calendar shows districtwide school-year dates, but it does not replace campus calendars. Individual schools may publish separate times for bell schedules, open house, testing, club activities, athletics, performances, senior events, and graduation."
+    },
+    {
+      "id": "seminole-county-nearby-calendar-context",
+      "label": "Nearby District Calendar Context",
+      "position": "afterComparison",
+      "schemaHasPart": true,
+      "collapsible": true,
+      "defaultOpen": false,
+      "content": "Families in Central Florida often compare the Seminole County calendar with nearby districts because work commutes, shared custody schedules, childcare arrangements, and youth activities can cross county lines. The most useful comparisons are not only the first and last day of school, but also winter return dates, spring break timing, teacher workdays, and storm-season make-up policies.",
+      "groups": [
+        {
+          "label": "Why compare SCPS with Orange County and Volusia?",
+          "items": [
+            "Seminole County borders the Orlando and Atlantic-coast school markets, so family schedules can overlap even when students attend different districts.",
+            "Break timing and student return dates can affect shared childcare, family travel, and parent work coverage."
+          ]
+        },
+        {
+          "label": "What to compare first",
+          "items": [
+            "First student day, last student day, Thanksgiving Break, Winter Break return, Spring Break return, and any published make-up day sequence.",
+            "Campus-level schedules after the district calendar confirms the districtwide attendance dates."
+          ]
+        }
+      ]
+    }
+  ],
+  "compareIntro": "Compare the Seminole County school calendar with other Central Florida district calendars used by families across the Orlando-Kissimmee-Sanford region. This is especially useful for households connected to Sanford, Lake Mary, Oviedo, Altamonte Springs, Longwood, Winter Springs, Casselberry, Orlando, Deltona, or Daytona-area schedules. Dates shown include first day, last day, and spring break; families should still verify official district sources before making cross-county plans.",
+  "districtFaqs": [
+    {
+      "q": "Which Seminole County calendar does this page summarize?",
+      "a": "This page summarizes the official Seminole County Public Schools student attendance calendar PDFs, including first day, last day, quarters, semesters, holidays, teacher workdays, district professional development days, major breaks, post-planning days, and make-up day notes."
+    },
+    {
+      "q": "Does SCPS publish make-up days for inclement weather?",
+      "a": "Yes. The SCPS calendar PDFs list make-up days for inclement weather in the order they will be taken. These dates are conditional and should be verified after any district closure announcement."
+    },
+    {
+      "q": "Are teacher workdays student holidays in Seminole County?",
+      "a": "Several SCPS teacher workdays and district professional development days are listed as student holidays. Families should check the year-specific calendar because those dates can sit next to Winter Break, Spring Break, and quarter transitions."
+    },
+    {
+      "q": "Where should families verify SCPS calendar updates?",
+      "a": "Use the official Seminole County Public Schools calendar page and campus announcements for final confirmation. MySchoolDates is an independent calendar reference and is not affiliated with Seminole County Public Schools."
+    },
+    {
+      "q": "Does the SCPS district calendar cover Sanford, Lake Mary, Oviedo, and Altamonte Springs?",
+      "a": "Yes. The districtwide Seminole County Public Schools calendar applies across SCPS communities such as Sanford, Lake Mary, Oviedo, Altamonte Springs, Longwood, Winter Springs, and Casselberry. Individual schools may still publish separate campus event calendars and bell schedules."
+    },
+    {
+      "q": "Why do Central Florida families compare SCPS with nearby district calendars?",
+      "a": "Families often compare SCPS with Orange County, Volusia, Polk, and Hillsborough calendars because commuting, shared childcare, family travel, and activities can cross district boundaries. Winter return dates, spring break timing, and make-up day policies are usually the most important differences to check."
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Orange County Public Schools",
+      "slug": "orange-county-school-calendar",
+      "state": "Florida",
+      "comparisonNote": "Neighboring Orlando-area district often compared with Seminole County for first day, spring break, and Central Florida family planning."
+    },
+    {
+      "name": "Volusia County Schools",
+      "slug": "volusia-county-schools-calendar",
+      "state": "Florida",
+      "comparisonNote": "Neighboring district east of Seminole County with separate break timing and Atlantic-coast storm-season considerations."
+    },
+    {
+      "name": "Polk County Public Schools",
+      "slug": "polk-county-school-calendar",
+      "state": "Florida",
+      "comparisonNote": "Nearby Central Florida district useful for comparing August starts, May endings, and make-up day planning."
+    },
+    {
+      "name": "Hillsborough County Public Schools",
+      "slug": "hillsborough-county-school-calendar",
+      "state": "Florida",
+      "comparisonNote": "Large Tampa Bay district often compared with Central Florida calendars for spring break and holiday timing."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Seminole County Public Schools official website",
+      "url": "https://www.scps.k12.fl.us"
+    },
+    {
+      "label": "Seminole County Public Schools calendar page",
+      "url": "https://www.scps.k12.fl.us/124364_2"
+    }
+  ]
+}

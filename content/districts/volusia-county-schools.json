@@ -1,0 +1,295 @@
+{
+  "institutionId": "volusia-county-schools",
+  "name": "Volusia County Schools",
+  "shortName": "VCS",
+  "slug": "volusia-county-schools-calendar",
+  "state": "Florida",
+  "stateCode": "FL",
+  "city": "DeLand",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.vcsedu.org/",
+  "calendarPage": "https://www.vcsedu.org/directory/departments/community-information-services/calendars",
+  "logo": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1720633743/myvolusiaschoolsorg/ulxrvwy10qwtawybel7r/VCS_2024_with_Theme.jpg",
+  "timezone": "America/New_York",
+  "county": "Volusia County",
+  "region": "Central Florida Atlantic Coast",
+  "metro": "Deltona-Daytona Beach-Ormond Beach",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "keyDates",
+  "calendarType": "traditional",
+  "contentTier": "A2",
+  "contentTierLabel": "Large County District",
+  "depthMode": "enhanced",
+  "depthModeRule": {
+    "standard": [
+      "quickAnswer",
+      "keyDates",
+      "downloads",
+      "importantDates",
+      "faq",
+      "sources"
+    ],
+    "enhanced": [
+      "calendarExplained",
+      "parentTimeline",
+      "localContext",
+      "changeTracker"
+    ],
+    "research": [
+      "comparison",
+      "nationalTrends",
+      "dataset"
+    ],
+    "currentModeReason": "Volusia is treated as enhanced because the district has official PDF/ICS utility value plus clear local planning factors, but comparison and national trends remain low-priority supporting content."
+  },
+  "pageQualityScore": {
+    "overall": 96,
+    "sourceCoverage": 98,
+    "localEvidence": 90,
+    "originalContext": 92,
+    "freshness": 96,
+    "templateSimilarityRisk": 8,
+    "enhancedEligibility": true,
+    "minimumEnhancedScore": 85
+  },
+  "qualityScoringModel": {
+    "formula": "sourceCoverage + localEvidence + originalContext + freshness - templateSimilarityRisk",
+    "gates": [
+      "Enhanced pages require official source coverage plus at least two reviewed local planning factors.",
+      "Research depth requires comparison or trends content with district-specific evidence.",
+      "Parent timeline, planning tips, and local context require manual review before publication."
+    ]
+  },
+  "modulePriority": {
+    "quickAnswer": 100,
+    "keyDates": 100,
+    "downloads": 95,
+    "calendarExplained": 90,
+    "importantDates": 90,
+    "faq": 80,
+    "parentTimeline": 75,
+    "localContext": 60,
+    "relatedDistricts": 35,
+    "comparison": 30,
+    "nationalTrends": 20
+  },
+  "moduleQualityScore": {
+    "calendarExplained": 95,
+    "importantDates": 92,
+    "parentTimeline": 90,
+    "localContext": 88,
+    "planningTips": 86,
+    "relatedDistricts": 70,
+    "comparison": 45,
+    "nationalTrends": 35
+  },
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "spanishPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-07-27",
+    "coverageNote": "The 2026-2027 Volusia page uses the official district calendar page, official English PDF, Spanish PDF, generated ICS file, and a change tracker for future revisions."
+  },
+  "contentRiskControls": {
+    "duplicateMonitoringTargets": [
+      "parentTimeline",
+      "planningTips",
+      "localContext"
+    ],
+    "similarityThreshold": 0.85,
+    "autoDowngradeRule": "If parent timeline, planning tips, or local context exceeds the similarity threshold against published district pages, downgrade the module or hide it until reviewed.",
+    "manualReviewRequiredFor": [
+      "localContext",
+      "parentTimeline",
+      "planningTips"
+    ],
+    "scaleRule": "If a district lacks at least two verified local planning factors, disable or shorten local context and parent timeline modules."
+  },
+  "parentTimelineMode": {
+    "type": "florida-county",
+    "qualityScore": 90,
+    "humanReviewed": true,
+    "enabledFactors": [
+      "storm monitoring",
+      "transportation timing",
+      "beachside and inland commute patterns",
+      "major local event travel"
+    ],
+    "scaleRule": "Use district-specific planning factors only; do not reuse a generic July-to-May parent timeline unless at least two local factors apply."
+  },
+  "localContextReview": {
+    "level": "A2",
+    "status": "district-specific",
+    "minimumEvidenceRule": {
+      "requiredFactors": 2,
+      "acceptedFactors": [
+        "climate impact",
+        "transportation factor",
+        "tourism or event impact",
+        "geography complexity",
+        "district size"
+      ],
+      "matchedFactors": [
+        "climate impact",
+        "transportation factor",
+        "tourism or event impact",
+        "geography complexity"
+      ]
+    },
+    "factors": [
+      "hurricane-season calendar changes",
+      "Daytona-area event traffic",
+      "I-4 commute timing",
+      "beachside and inland transportation patterns"
+    ],
+    "reviewNote": "Local context is enabled because Volusia has clear district-specific planning factors that affect how families use the school calendar."
+  },
+  "hiddenSections": [
+    "quickFacts",
+    "comparison",
+    "nationalTrends"
+  ],
+  "relatedDistrictsTitle": "Optional Nearby Florida Calendar Links",
+  "relatedDistrictsDescription": "Use these nearby district links only when comparing Volusia County Schools with other Florida school calendars for family scheduling, travel, or cross-district planning.",
+  "searchAliases": [
+    "Volusia County Schools",
+    "VCS calendar",
+    "Volusia school calendar",
+    "Volusia County school calendar",
+    "Daytona Beach school calendar",
+    "DeLand school calendar",
+    "Deltona school calendar",
+    "Ormond Beach school calendar",
+    "Port Orange school calendar",
+    "New Smyrna Beach school calendar"
+  ],
+  "districtFact": "Volusia County Schools serves a countywide mix of Atlantic beach communities, I-4 commuter suburbs, and inland county-seat neighborhoods, so the school calendar is especially important for families balancing hurricane-season closures, tourism traffic around Daytona Beach events, and long cross-county school commutes.",
+  "about": [
+    {
+      "title": "About Volusia County Schools",
+      "content": "Volusia County Schools is the public school district for Volusia County, Florida, serving communities that include Daytona Beach, DeLand, Deltona, Ormond Beach, Port Orange, New Smyrna Beach, DeBary, Edgewater, Holly Hill, and Orange City. The district publishes school year calendars with preplanning, first and last student days, holidays, teacher duty days, professional development days, Thanksgiving Break, Winter Break, Spring Break, early release dates, grading periods, and report card windows."
+    },
+    {
+      "title": "Why the Volusia Calendar Needs Local Context",
+      "content": "A Volusia school calendar is not just a list of holidays. The district spans beachside neighborhoods along A1A, Daytona Beach tourism corridors, DeLand's county-seat and Stetson University area, and fast-growing I-4 communities such as Deltona and DeBary. Families often plan around hurricane-season alerts in August and September, Bike Week and racing-event traffic near Daytona International Speedway, and cross-county commutes between residential growth areas and school programs. The official calendar's inclement-weather make-up notes matter because a single storm can change whether a professional development day becomes a student attendance day."
+    }
+  ],
+  "planningTips": {
+    "title": "Planning Tips for Volusia County Families",
+    "content": [
+      "Treat the September professional development day as conditional. Volusia's official calendars identify the September professional development day as an inclement-weather make-up day if needed.",
+      "Use the Spanish calendar PDF when planning with bilingual households. Volusia publishes Spanish versions for both 2025-2026 and 2026-2027.",
+      "Families near Daytona Beach, Ormond Beach, and Port Orange should check school and transportation updates during major beachside events, even when the academic calendar itself does not change.",
+      "If you live in Deltona, DeBary, or Orange City and commute toward Orlando, add early release days separately because a one-hour early dismissal can affect after-school care and work pickup timing.",
+      "Before booking late-May travel, verify whether any storm make-up day has been activated by Volusia County Schools."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "volusia-local-calendar-context",
+      "label": "Volusia County School Calendar by Community",
+      "position": "afterFaq",
+      "content": "Volusia County families often search by city name even though the calendar is districtwide. Daytona Beach, Ormond Beach, Port Orange, New Smyrna Beach, DeLand, Deltona, DeBary, Orange City, Edgewater, and Holly Hill all rely on Volusia County Schools for the main student calendar. Individual campuses may still publish separate orientation nights, testing windows, athletics schedules, graduation details, and program-specific events."
+    },
+    {
+      "id": "volusia-weather-and-tourism-planning",
+      "label": "Weather, Beachside Events, and School Planning",
+      "position": "afterFaq",
+      "content": "Volusia's calendar has two local planning pressures that do not appear on a generic Florida school calendar page: storm season and Daytona-area event traffic. The district's official calendars mark September professional development as a possible inclement-weather make-up day. Beachside families should also watch school transportation messages during major Daytona Beach event periods, when A1A, International Speedway Boulevard, and bridges between mainland and beachside communities can affect pickup and arrival times.",
+      "groups": [
+        {
+          "label": "Weather Make-Up Reference",
+          "items": [
+            "September 21, 2026 is listed as a professional development day and may be used as an inclement-weather make-up day if needed.",
+            "Families should keep late-May and early-June plans flexible until Volusia confirms whether storm closures changed the calendar."
+          ]
+        },
+        {
+          "label": "Local planning context",
+          "items": [
+            "Daytona Beach and beachside communities may experience event-related traffic even when school remains in session.",
+            "Deltona, DeBary, and Orange City families often coordinate school pickup with I-4 commute timing.",
+            "DeLand families should separate Volusia County Schools dates from Stetson University and city event calendars."
+          ]
+        }
+      ]
+    }
+  ],
+  "compareIntro": "Compare the Volusia County Schools calendar with other Florida district calendars currently available on MySchoolDates. Dates shown include first day, last day, spring break, and official PDF availability.",
+  "districtFaqs": [
+    {
+      "q": "What school district serves Daytona Beach?",
+      "a": "Daytona Beach is served by Volusia County Schools. The districtwide student calendar applies to Daytona Beach public schools, but individual campuses may publish separate event, testing, athletics, and graduation schedules."
+    },
+    {
+      "q": "Does Volusia County Schools include Deltona and DeLand?",
+      "a": "Yes. Volusia County Schools serves both Deltona and DeLand, along with other county communities such as Ormond Beach, Port Orange, New Smyrna Beach, DeBary, Edgewater, Holly Hill, and Orange City."
+    },
+    {
+      "q": "How do hurricanes affect the Volusia County school calendar?",
+      "a": "Volusia County Schools may close schools during tropical storms or hurricanes and can activate listed inclement-weather make-up days. Families should verify storm-related closures, make-up days, and return-to-school notices through the official district calendar page and campus announcements."
+    },
+    {
+      "q": "Are Volusia early release days every Wednesday?",
+      "a": "Most early release days are Wednesdays, but the official calendars include Friday exceptions. Families should use the year-specific calendar page because the exception dates change by school year."
+    },
+    {
+      "q": "Where should families verify last-minute Volusia calendar changes?",
+      "a": "Use the official Volusia County Schools calendar page and campus announcements for final confirmation. MySchoolDates summarizes official calendar documents but is not affiliated with Volusia County Schools."
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Orange County Public Schools",
+      "slug": "orange-county-school-calendar",
+      "state": "Florida",
+      "comparisonNote": "Large Orlando-area district west of Volusia, useful for I-4 corridor families comparing Central Florida school breaks."
+    },
+    {
+      "name": "Seminole County Public Schools",
+      "slug": "seminole-county-school-calendar",
+      "state": "Florida",
+      "comparisonNote": "Neighboring Central Florida district between Volusia and Orlando with a separate school year calendar."
+    },
+    {
+      "name": "Brevard Public Schools",
+      "slug": "brevard-public-schools-calendar",
+      "state": "Florida",
+      "comparisonNote": "Space Coast district south of Volusia with similar Atlantic-coast storm-season planning concerns."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Volusia County Schools official website",
+      "url": "https://www.vcsedu.org/"
+    },
+    {
+      "label": "Volusia County Schools calendars",
+      "url": "https://www.vcsedu.org/directory/departments/community-information-services/calendars"
+    },
+    {
+      "label": "Volusia County Schools logo",
+      "url": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_3/v1720633743/myvolusiaschoolsorg/ulxrvwy10qwtawybel7r/VCS_2024_with_Theme.jpg"
+    }
+  ]
+}

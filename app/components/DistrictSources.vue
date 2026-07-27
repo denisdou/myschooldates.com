@@ -71,26 +71,32 @@ const possessiveDistrictName = computed(() =>
         <span class="font-medium text-gray-600">Next review:</span>
         When {{ shortName }} publishes a calendar update or a revised official source.
       </p>
-      <p class="font-medium text-gray-600">How we verify this calendar</p>
-      <p>Each school year, MySchoolDates checks the official calendar source published or linked by the district. The page record is reviewed against the official first day, last day, major breaks, holidays, student no-school dates, early dismissals, exam windows, and alternate-calendar links when those items appear in the official source.</p>
-      <p>When page data does not match the official source, we update the record before publication. This page displays major student calendar dates; early dismissals, exam windows, staff-specific details, and track-specific items may remain available only in the official PDF. The downloadable calendar file is generated from the calendar records used for this page, and the official district calendar remains the source of record for last-minute changes.</p>
-      <p>Supplemental planning notes and district profile information may change by year. Families should confirm program deadlines, transportation notices, and emergency schedule updates directly with {{ shortName }}.</p>
-      <p>
-        <a
-          href="mailto:hello@myschooldates.com?subject=Calendar%20Correction"
-          class="font-medium text-blue-600 hover:text-blue-800 underline"
-        >Report a calendar error</a>
-        if a date appears incorrect or outdated.
-        See our
-        <NuxtLink to="/calendar-verification-methodology" class="font-medium text-blue-600 hover:text-blue-800 underline">
-          Calendar Verification Methodology
-        </NuxtLink>
-        and
-        <NuxtLink to="/editorial-policy" class="font-medium text-blue-600 hover:text-blue-800 underline">
-          Editorial Policy
-        </NuxtLink>
-        for the verification method and corrections process.
-      </p>
+      <details class="pt-1">
+        <summary class="cursor-pointer select-none font-medium text-gray-600 hover:text-gray-800">
+          How we verify this calendar
+        </summary>
+        <div class="mt-2 space-y-1.5">
+          <p>Each school year, MySchoolDates checks the official calendar source published or linked by the district. The page record is reviewed against the official first day, last day, major breaks, holidays, student no-school dates, early dismissals, exam windows, and alternate-calendar links when those items appear in the official source.</p>
+          <p>When page data does not match the official source, we update the record before publication. This page displays major student calendar dates; early dismissals, exam windows, staff-specific details, and track-specific items may remain available only in the official PDF. The downloadable calendar file is generated from the calendar records used for this page, and the official district calendar remains the source of record for last-minute changes.</p>
+          <p>Supplemental planning notes and district profile information may change by year. Families should confirm program deadlines, transportation notices, and emergency schedule updates directly with {{ shortName }}.</p>
+          <p>
+            <a
+              href="mailto:hello@myschooldates.com?subject=Calendar%20Correction"
+              class="font-medium text-blue-600 hover:text-blue-800 underline"
+            >Report a calendar error</a>
+            if a date appears incorrect or outdated.
+            See our
+            <NuxtLink to="/calendar-verification-methodology" class="font-medium text-blue-600 hover:text-blue-800 underline">
+              Calendar Verification Methodology
+            </NuxtLink>
+            and
+            <NuxtLink to="/editorial-policy" class="font-medium text-blue-600 hover:text-blue-800 underline">
+              Editorial Policy
+            </NuxtLink>
+            for the verification method and corrections process.
+          </p>
+        </div>
+      </details>
     </div>
   </div>
 </template>

@@ -30,9 +30,22 @@ export default defineNuxtConfig({
   nitro: {
     sourceMap: false,
     prerender: {
+      crawlLinks: false,
       autoSubfolderIndex: false,
       routes: [
         '/sitemap.xml',
+
+        // ── Editorial and data pages ───────────────────────────────────────────
+        '/blog',
+        '/author',
+        '/school-calendar-trends/2026-2027-report',
+        '/school-calendar-trends',
+        '/datasets/school-calendar-trends',
+        '/school-start-dates-2026',
+        '/winter-break-2026',
+        '/spring-break-2027',
+        '/summer-break-2027',
+        '/districts',
 
         // ── State pages ────────────────────────────────────────────────────────
         '/california',
@@ -55,12 +68,14 @@ export default defineNuxtConfig({
         '/arlington-isd-calendar',
         '/austin-independent-school-district-calendar',
         '/bakersfield-city-school-district-calendar',
+        '/brevard-public-schools-calendar',
         '/broward-county-school-calendar',
         '/brunswick-county-schools-calendar',
         '/capistrano-unified-school-district-calendar',
         '/charlotte-mecklenburg-schools-calendar',
         '/chicago-public-schools-calendar',
         '/clark-county-school-district-calendar',
+        '/collier-county-school-calendar',
         '/gwinnett-county-public-schools-calendar',
         '/chesterfield-county-school-calendar',
         '/chula-vista-elementary-school-district-calendar',
@@ -98,6 +113,7 @@ export default defineNuxtConfig({
         '/north-east-isd-calendar',
         '/northside-independent-school-district-calendar',
         '/orange-county-school-calendar',
+        '/osceola-school-district-calendar',
         '/palm-beach-county-school-calendar',
         '/pasco-county-school-calendar',
         '/pasadena-independent-school-district-calendar',
@@ -126,6 +142,7 @@ export default defineNuxtConfig({
         '/lee-county-school-calendar',
         '/san-diego-unified-school-district-calendar',
         '/virginia-beach-school-calendar',
+        '/volusia-county-schools-calendar',
         '/wake-county-school-calendar',
         '/williamsburg-james-city-county-schools-calendar',
         '/york-county-school-division-calendar',
@@ -164,6 +181,9 @@ export default defineNuxtConfig({
         '/bakersfield-city-school-district-calendar/2025-2026',
         '/bakersfield-city-school-district-calendar/2026-2027',
 
+        '/brevard-public-schools-calendar/2025-2026',
+        '/brevard-public-schools-calendar/2026-2027',
+
         '/capistrano-unified-school-district-calendar/2025-2026',
         '/capistrano-unified-school-district-calendar/2026-2027',
         '/capistrano-unified-school-district-calendar/2027-2028',
@@ -188,6 +208,9 @@ export default defineNuxtConfig({
         '/clark-county-school-district-calendar/2025-2026',
         '/clark-county-school-district-calendar/2026-2027',
         '/clark-county-school-district-calendar/2027-2028',
+
+        '/collier-county-school-calendar/2025-2026',
+        '/collier-county-school-calendar/2026-2027',
 
         '/gwinnett-county-public-schools-calendar/2025-2026',
         '/gwinnett-county-public-schools-calendar/2026-2027',
@@ -302,6 +325,9 @@ export default defineNuxtConfig({
         '/orange-county-school-calendar/2025-2026',
         '/orange-county-school-calendar/2026-2027',
 
+        '/osceola-school-district-calendar/2025-2026',
+        '/osceola-school-district-calendar/2026-2027',
+
         '/palm-beach-county-school-calendar/2025-2026',
         '/palm-beach-county-school-calendar/2026-2027',
 
@@ -386,6 +412,9 @@ export default defineNuxtConfig({
 
         '/virginia-beach-school-calendar/2025-2026',
         '/virginia-beach-school-calendar/2026-2027',
+
+        '/volusia-county-schools-calendar/2025-2026',
+        '/volusia-county-schools-calendar/2026-2027',
 
         '/wake-county-school-calendar/2025-2026',
         '/wake-county-school-calendar/2026-2027',

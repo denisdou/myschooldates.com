@@ -51,6 +51,17 @@ export default defineEventHandler((event) => {
 
   const urls: SitemapUrl[] = [
     { loc: `${baseUrl}/`, priority: '1.0', changefreq: 'weekly' },
+    { loc: `${baseUrl}/blog`, priority: '0.7', changefreq: 'monthly' },
+    { loc: `${baseUrl}/author`, priority: '0.6', changefreq: 'monthly' },
+    { loc: `${baseUrl}/school-calendar-trends/2026-2027-report`, priority: '0.8', changefreq: 'monthly' },
+    { loc: `${baseUrl}/school-calendar-trends`, priority: '0.8', changefreq: 'monthly' },
+    { loc: `${baseUrl}/datasets/school-calendar-trends`, priority: '0.8', changefreq: 'monthly' },
+    { loc: `${baseUrl}/school-start-dates-2026`, priority: '0.7', changefreq: 'monthly' },
+    { loc: `${baseUrl}/winter-break-2026`, priority: '0.7', changefreq: 'monthly' },
+    { loc: `${baseUrl}/spring-break-2027`, priority: '0.7', changefreq: 'monthly' },
+    { loc: `${baseUrl}/summer-break-2027`, priority: '0.7', changefreq: 'monthly' },
+    { loc: `${baseUrl}/districts`, priority: '0.8', changefreq: 'monthly' },
+    { loc: `${baseUrl}/calendar-verification-methodology`, priority: '0.6', changefreq: 'monthly' },
     ...stateSlugs.map(s => ({ loc: `${baseUrl}/${s}`, priority: '0.8', changefreq: 'monthly' })),
     ...districtData.map(d => ({ loc: `${baseUrl}/${d.slug}`, priority: '0.9', changefreq: 'monthly' })),
     ...archiveUrls.map(u => ({ loc: u, priority: '0.5', changefreq: 'yearly' })),

@@ -1,11 +1,81 @@
 <script setup lang="ts">
+const pageUrl = 'https://myschooldates.com/calendar-verification-methodology'
+const pageTitle = 'School Calendar Verification Methodology | MySchoolDates'
+const pageDescription = 'How MySchoolDates verifies district school calendar dates against official PDFs, board-approved calendars, and district source pages before publishing.'
+const organizationId = 'https://myschooldates.com/#organization'
+const authorId = 'https://myschooldates.com/author#person'
+const researchTeamId = 'https://myschooldates.com/#education-research-team'
+
 useSeoMeta({
-  title: 'School Calendar Verification Methodology | MySchoolDates',
-  description: 'How MySchoolDates verifies district school calendar dates against official PDFs, board-approved calendars, and district source pages before publishing.',
+  title: pageTitle,
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogUrl: pageUrl,
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
 })
 
 useHead({
-  link: [{ rel: 'canonical', href: 'https://myschooldates.com/calendar-verification-methodology' }],
+  link: [{ rel: 'canonical', href: pageUrl }],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'Organization',
+            '@id': organizationId,
+            name: 'MySchoolDates',
+            url: 'https://myschooldates.com',
+          },
+          {
+            '@type': 'Organization',
+            '@id': researchTeamId,
+            name: 'MySchoolDates Calendar Data Team',
+            url: pageUrl,
+            parentOrganization: { '@id': organizationId },
+          },
+          {
+            '@type': 'Person',
+            '@id': authorId,
+            name: 'Denis Dou',
+            jobTitle: 'Founder & Education Data Research Lead',
+            url: 'https://myschooldates.com/author',
+            image: 'https://myschooldates.com/images/denis-dou.png',
+            sameAs: ['https://www.linkedin.com/in/denis-dou/'],
+            worksFor: { '@id': organizationId },
+          },
+          {
+            '@type': 'WebPage',
+            '@id': `${pageUrl}#webpage`,
+            url: pageUrl,
+            name: pageTitle,
+            description: pageDescription,
+            inLanguage: 'en-US',
+            dateModified: '2026-07-27',
+            lastReviewed: '2026-07-27',
+            publisher: { '@id': organizationId },
+            author: { '@id': authorId },
+            reviewedBy: { '@id': researchTeamId },
+            about: [
+              { '@type': 'Thing', name: 'school calendar verification' },
+              { '@type': 'Thing', name: 'district calendar source review' },
+              { '@type': 'Thing', name: 'structured school calendar data' },
+            ],
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://myschooldates.com' },
+              { '@type': 'ListItem', position: 2, name: 'Calendar Verification Methodology', item: pageUrl },
+            ],
+          },
+        ],
+      }),
+    },
+  ],
 })
 </script>
 
@@ -15,6 +85,22 @@ useHead({
     <p class="text-lg text-gray-500 mb-12">
       How MySchoolDates turns official district calendar sources into searchable dates, PDF references, and calendar import files.
     </p>
+    <dl class="mb-12 flex flex-wrap gap-x-5 gap-y-2 rounded-xl border border-gray-200 bg-white p-4 text-sm text-gray-600">
+      <div>
+        <dt class="inline font-semibold uppercase tracking-wide text-gray-400">By</dt>
+        <dd class="ml-1 inline font-medium">
+          <NuxtLink to="/author" class="text-blue-600 hover:underline">Denis Dou</NuxtLink>
+        </dd>
+      </div>
+      <div>
+        <dt class="inline font-semibold uppercase tracking-wide text-gray-400">Reviewed</dt>
+        <dd class="ml-1 inline font-medium text-gray-700">July 27, 2026</dd>
+      </div>
+      <div>
+        <dt class="inline font-semibold uppercase tracking-wide text-gray-400">Maintained by</dt>
+        <dd class="ml-1 inline font-medium text-gray-700">MySchoolDates Calendar Data Team</dd>
+      </div>
+    </dl>
 
     <section class="mb-10">
       <h2 class="text-xl font-semibold text-gray-900 mb-3">1. Identify the Official Source</h2>

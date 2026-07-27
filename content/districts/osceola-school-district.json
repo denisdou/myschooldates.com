@@ -1,0 +1,456 @@
+{
+  "institutionId": "osceola-school-district",
+  "name": "The School District of Osceola County, Florida",
+  "shortName": "SDOC",
+  "slug": "osceola-school-district-calendar",
+  "state": "Florida",
+  "stateCode": "FL",
+  "city": "Kissimmee",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.osceolaschools.net/",
+  "calendarPage": "https://www.osceolaschools.net/70842_3",
+  "logo": "https://files.smartsites.parentsquare.com/5825/header_logo_img_celdio.png",
+  "timezone": "America/New_York",
+  "county": "Osceola County",
+  "region": "Central Florida",
+  "metro": "Orlando-Kissimmee-Sanford",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "keyDates",
+  "calendarType": "traditional",
+  "contentTier": "A2",
+  "contentTierLabel": "Large County District",
+  "depthMode": "enhanced",
+  "depthModeRule": {
+    "standard": [
+      "quickAnswer",
+      "keyDates",
+      "downloads",
+      "faq",
+      "sources"
+    ],
+    "enhanced": [
+      "calendarInterpretation",
+      "familyPlanningGuide",
+      "localFactors",
+      "communityContext"
+    ],
+    "research": [
+      "comparison",
+      "nationalTrends",
+      "dataset"
+    ],
+    "currentModeReason": "Osceola is treated as enhanced because the district has official PDF utility value plus district-specific local factors such as Rodeo Day, emergency make-up days, tourism work schedules, hurricane season, and Central Florida commute corridors."
+  },
+  "contentDepthBudget": {
+    "mode": "enhanced",
+    "maxEnrichmentModules": 8,
+    "currentEnrichmentModules": [
+      "calendarTrackInformation",
+      "calendarInterpretation",
+      "familyPlanningGuide",
+      "localFactors",
+      "planningInsights",
+      "yearNumbers",
+      "whatChangedThisYear",
+      "calendarReminders"
+    ],
+    "researchOnlyModules": [
+      "comparison",
+      "nationalTrends",
+      "long-form district profile"
+    ],
+    "budgetRule": "Enhanced district pages should stay within eight enrichment modules. Quick facts should focus on district-specific signals rather than repeat key dates. Additional modules require research depth or suppression of a lower-priority module."
+  },
+  "modulePriority": {
+    "quickAnswer": 100,
+    "keyDates": 100,
+    "downloads": 95,
+    "calendarInterpretation": 92,
+    "familyPlanningGuide": 88,
+    "faq": 82,
+    "localFactors": 78,
+    "communityContext": 70,
+    "yearNumbers": 55,
+    "relatedDistricts": 35,
+    "comparison": 30,
+    "nationalTrends": 20
+  },
+  "moduleQualityScore": {
+    "calendarInterpretation": 94,
+    "familyPlanningGuide": 90,
+    "localFactors": 90,
+    "communityContext": 84,
+    "planningTips": 84,
+    "relatedDistricts": 70,
+    "comparison": 45,
+    "nationalTrends": 35
+  },
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-07-27",
+    "coverageNote": "The 2026-2027 Osceola page uses the official district calendar page, official PDF, generated ICS file, and reviewed local planning notes."
+  },
+  "pageReadinessScore": {
+    "overall": 92,
+    "officialSource": 20,
+    "uniqueFactors": 27,
+    "interpretationValue": 19,
+    "familyValue": 18,
+    "updateHistory": 8,
+    "minimumEnhancedScore": 85,
+    "status": "ready-enhanced"
+  },
+  "contentFreshnessScore": {
+    "overall": 94,
+    "sourceUpdated": "2026-07-27",
+    "lastManualReview": "2026-07-27",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the official Osceola calendar page and PDF when the source page changes, after emergency closures, or at least every 90 days during the active school year."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official calendar revision, emergency closure, stale freshness score, or local factor confidence below medium."
+  },
+  "userUtilityScore": {
+    "visibility": "internal",
+    "status": "tracking-ready",
+    "overall": null,
+    "signals": {
+      "pdfClick": {
+        "weight": 25,
+        "status": "pending-analytics"
+      },
+      "icsDownload": {
+        "weight": 25,
+        "status": "pending-analytics"
+      },
+      "faqExpansion": {
+        "weight": 15,
+        "status": "pending-analytics"
+      },
+      "timeOnPage": {
+        "weight": 15,
+        "status": "pending-analytics"
+      },
+      "scrollDepth": {
+        "weight": 20,
+        "status": "pending-analytics"
+      }
+    },
+    "optimizationScope": "module-optimization-only",
+    "usageRule": "Use real engagement data to decide whether enhanced modules should remain visible, move lower, collapse, or be removed from future district pages. Do not use this score by itself to raise SEO priority, expand content, or replace source quality, freshness, and evidence checks."
+  },
+  "seoTestCandidates": {
+    "visibility": "internal",
+    "titleStatus": "candidate-only",
+    "currentTitle": "Osceola School District Calendar 2026-2027: Holidays, Breaks & PDF",
+    "candidates": [
+      "Osceola School District Calendar 2026-2027: Dates, Breaks, Family Guide & PDF",
+      "Osceola School District Calendar 2026-2027: Important Dates, Breaks & Planning Guide"
+    ],
+    "testRule": "Do not replace the live title until Search Console query and CTR data support testing a family-guide or planning-guide variant."
+  },
+  "contentRiskControls": {
+    "duplicateMonitoringTargets": [
+      "familyPlanningGuide",
+      "planningTips",
+      "localFactors",
+      "communityContext"
+    ],
+    "similarityThreshold": 0.85,
+    "cityFaqEligibilityRule": "Only generate city or community FAQ when the city alias has meaningful search demand or the district source clearly explains separate community or program calendar behavior.",
+    "cityFaqMaxCount": 2,
+    "localFactorConfidenceScale": {
+      "high": "Supported directly by the official district calendar, official district page, or explicit district calendar language.",
+      "medium": "Supported by reviewed local geography, work-pattern, weather, or community context and tied directly to calendar planning.",
+      "low": "Potentially useful but not enough for publication without manual review; keep pending or suppress from rendered enhanced modules."
+    },
+    "localFactorEvidenceTypeScale": {
+      "verified": "Directly supported by official calendar language or an official district source.",
+      "editorial": "Human-reviewed local interpretation tied to calendar planning but not stated as an official district claim.",
+      "pending": "Candidate factor requiring manual verification before publication."
+    },
+    "sourceRequiredForMedium": "Medium-confidence editorial local factors require at least one reviewed external context source, official planning source, or documented local geography/work-pattern basis before publication. Otherwise mark the factor pending or suppress it from rendered enhanced modules.",
+    "manualReviewRequiredFor": [
+      "familyPlanningGuide",
+      "planningTips",
+      "localFactors",
+      "communityContext",
+      "lowConfidenceLocalFactors",
+      "cityFaqs"
+    ],
+    "scaleRule": "Only enable enhanced Osceola-style local context when a district has at least two reviewed local planning factors; otherwise keep the page to core dates, downloads, FAQ, and sources."
+  },
+  "moduleEligibilityRules": {
+    "calendarInterpretation": {
+      "minimumUniqueLabels": 3,
+      "requiredEvidence": [
+        "Rodeo Day",
+        "Emergency make-up days",
+        "PATHS or program-specific calendar exception"
+      ],
+      "rule": "Show the calendar interpretation module only when the district calendar includes at least three non-generic labels or exceptions that families need explained."
+    },
+    "familyPlanningGuide": {
+      "minimumLocalFactors": 2,
+      "requiredEvidence": [
+        "tourism or shift-work schedules",
+        "commute corridors",
+        "weather or emergency make-up planning"
+      ],
+      "rule": "Show the family planning guide only when planning advice is tied to district-specific conditions, not generic back-to-school tips."
+    },
+    "localFactors": {
+      "minimumLocalFactors": 2,
+      "rule": "Show local calendar factors only when the district has reviewed local evidence such as unique holidays, program exceptions, weather risks, commute patterns, or work-schedule impacts."
+    }
+  },
+  "localFactors": {
+    "title": "Local Calendar Factors",
+    "status": "district-specific",
+    "humanReviewed": true,
+    "evidenceSource": "Official Osceola calendar labels, official district calendar page, district community geography, and reviewed local planning context.",
+    "factors": [
+      {
+        "claim": "Rodeo Day is a local February student holiday.",
+        "reason": "It is a district-specific no-school date that families new to Osceola may not expect.",
+        "evidence": "Official 2026-2027 SDOC calendar lists Rodeo Day as a teacher non-workday/student holiday.",
+        "confidenceLevel": "high",
+        "evidenceType": "verified"
+      },
+      {
+        "claim": "Tourism and shift-work schedules affect break planning around Kissimmee and Celebration.",
+        "reason": "Many households coordinate childcare with resort, restaurant, hospitality, healthcare, logistics, and event schedules.",
+        "evidence": "District-specific editorial context for Osceola's Orlando-Kissimmee-Sanford metro location and nearby tourism corridor.",
+        "confidenceLevel": "medium",
+        "evidenceType": "editorial"
+      },
+      {
+        "claim": "US-192, Florida Turnpike, Narcoossee Road, and I-4 commute corridors affect pickup and childcare planning.",
+        "reason": "Single-day student holidays and early schedule changes can be more disruptive when work and school trips cross the county.",
+        "evidence": "Reviewed local geography for Kissimmee, St. Cloud, Poinciana, Celebration, Narcoossee, and Orlando-area commuter patterns.",
+        "confidenceLevel": "medium",
+        "evidenceType": "editorial"
+      },
+      {
+        "claim": "Emergency make-up day language matters during hurricane season.",
+        "reason": "Teacher workdays can become instructional days if the district needs to recover time after closures.",
+        "evidence": "Official 2026-2027 SDOC calendar marks October 12 and January 8 as teacher workdays/student holidays or emergency make-up days.",
+        "confidenceLevel": "high",
+        "evidenceType": "verified"
+      },
+      {
+        "claim": "Specialized program calendars such as PATHS may differ.",
+        "reason": "Families in specialized programs should not assume every districtwide academic date applies unchanged.",
+        "evidence": "District page and page FAQ direct families to verify program-specific schedules with the school or district.",
+        "confidenceLevel": "high",
+        "evidenceType": "verified"
+      }
+    ]
+  },
+  "hiddenSections": [
+    "about",
+    "comparison",
+    "nationalTrends"
+  ],
+  "includeComparisonSchema": false,
+  "includeArticleSchema": true,
+  "schemaTierPolicy": {
+    "standard": ["WebPage", "Dataset", "FAQPage"],
+    "enhanced": ["WebPage", "Dataset", "FAQPage", "Article", "Event"],
+    "research": ["WebPage", "Dataset", "FAQPage", "Article", "Event", "DataDownload"],
+    "currentPolicy": "Enhanced pages may use Article schema when the page includes real interpretation, family impact, local evidence, and year-change analysis. Standard pages should set includeArticleSchema to false."
+  },
+  "relatedDistrictsTitle": "Explore Nearby Central Florida School Calendars",
+  "relatedDistrictsDescription": "Use these links as supporting references when comparing Osceola with nearby district calendars for travel, childcare, or cross-district family planning.",
+  "searchAliases": [
+    "School District of Osceola County",
+    "Osceola County Schools",
+    "Osceola School District",
+    "SDOC calendar",
+    "Osceola schools calendar",
+    "Kissimmee school calendar",
+    "St. Cloud school calendar",
+    "Poinciana school calendar",
+    "Celebration school calendar",
+    "Central Florida school calendar"
+  ],
+  "districtFact": "The School District of Osceola County serves Kissimmee, St. Cloud, Poinciana, Celebration, and fast-growing Central Florida communities where school calendars affect theme-park shift work, I-4 commute timing, hurricane-season make-up days, and year-round tourism childcare demand.",
+  "about": [
+    {
+      "title": "About The School District of Osceola County",
+      "content": "The School District of Osceola County, Florida is the countywide public school system for Osceola County. Its calendar is used by families in Kissimmee, St. Cloud, Poinciana, Celebration, Buenaventura Lakes, Harmony, Narcoossee, and other communities along the southern and eastern side of the Orlando metro area. The district calendar lists teacher preplanning, first and last student days, grading periods, progress report and report card dates, Labor Day, Veterans Day, Thanksgiving, Winter Break, Martin Luther King Jr. Day, Rodeo Day, Spring Break, Memorial Day, teacher workdays, professional learning days, and emergency make-up day notes."
+    },
+    {
+      "title": "Why Osceola Calendar Planning Is Different",
+      "content": "Osceola County sits between Orlando's tourism economy, Lake Nona-area growth, the Florida Turnpike, and large residential communities such as Poinciana and St. Cloud. Many families coordinate school breaks with theme-park, hotel, restaurant, healthcare, logistics, and shift-based work schedules. The district also serves communities with long commutes across US-192, the Turnpike, Narcoossee Road, and I-4. Because hurricane season overlaps with the first semester, the official calendar's emergency make-up day language is not a footnote: it can change whether a teacher workday remains a student holiday."
+    }
+  ],
+  "planningTips": {
+    "title": "Osceola Calendar Reminders",
+    "content": [
+      "Verify October 12 and January 8 before treating them as fixed no-school days.",
+      "Add February 19 Rodeo Day to family and work calendars.",
+      "Check PATHS and specialized program calendars directly with the school or district.",
+      "Recheck official Osceola updates before booking childcare or travel around teacher workdays and major breaks."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "osceola-local-calendar-context",
+      "label": "Local Calendar Factors for Osceola Families",
+      "position": "afterAbout",
+      "schemaHasPart": true,
+      "content": "Osceola families often search by community, but the main student calendar is published districtwide by The School District of Osceola County. The local factors that most affect calendar planning are not extra holidays; they are work schedules, commute corridors, emergency make-up days, and program-specific calendars.",
+      "groups": [
+        {
+          "label": "Communities using the district calendar",
+          "items": [
+            "Kissimmee, St. Cloud, Poinciana, Celebration, Buenaventura Lakes, Harmony, Narcoossee, and other Osceola County communities use the districtwide student calendar for main academic dates.",
+            "Campus-level orientation, testing, athletics, graduation, and program schedules can still differ from the districtwide academic calendar."
+          ]
+        },
+        {
+          "label": "Local calendar factors",
+          "items": [
+            "Rodeo Day is a local February student holiday that families new to Osceola may not expect.",
+            "Tourism, hospitality, restaurant, healthcare, logistics, and shift-based work schedules can make Thanksgiving, Winter Break, Spring Break, Rodeo Day, and teacher workdays harder to cover.",
+            "US-192, the Florida Turnpike, Narcoossee Road, and I-4 commute corridors can make single-day student holidays important for pickup and childcare planning.",
+            "Emergency make-up day language matters during hurricane season because a listed teacher workday can become a student attendance day if needed."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osceola-planning-insights",
+      "label": "Osceola Planning Notes for Families",
+      "position": "afterAbout",
+      "schemaHasPart": true,
+      "content": "Osceola's school calendar has several planning details that are easy to miss in the PDF. This section focuses on how official calendar labels affect family decisions after the dates are already known.",
+      "groups": [
+        {
+          "label": "Decision points",
+          "items": [
+            "Rodeo Day requires separate childcare or work coverage because many workplaces do not observe it.",
+            "Teacher workdays after grading periods should be checked again if emergency make-up time becomes necessary.",
+            "No early-release Wednesday exceptions can change normal pickup routines even when school remains in session."
+          ]
+        },
+        {
+          "label": "When to verify with the school",
+          "items": [
+            "Verify campus communications for testing, athletics, graduation, orientation, and program events.",
+            "Check school-level messages before assuming districtwide dates cover PATHS or other specialized schedules.",
+            "Use district announcements as the final source for emergency make-up decisions."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osceola-district-context-bottom",
+      "label": "About The School District of Osceola County",
+      "position": "beforeSources",
+      "schemaHasPart": false,
+      "collapsible": true,
+      "defaultOpen": false,
+      "content": "The School District of Osceola County, Florida is the countywide public school system for Osceola County. Families in Kissimmee, St. Cloud, Poinciana, Celebration, Buenaventura Lakes, Harmony, Narcoossee, and nearby communities generally use the districtwide calendar for main academic dates, while campus-level events, testing, athletics, graduation, and program schedules may differ.",
+      "groups": [
+        {
+          "label": "Why calendar planning differs locally",
+          "items": [
+            "Osceola sits inside the Orlando-Kissimmee-Sanford metro area, where tourism, shift work, and cross-county commutes can make single-day student holidays more disruptive.",
+            "The official calendar includes Rodeo Day, emergency make-up day notes, grading periods, teacher workdays, professional learning days, and no early-release Wednesday exceptions.",
+            "Families should use the official district calendar as the source of record and verify school-specific dates with individual campuses when events fall outside the districtwide academic calendar."
+          ]
+        }
+      ]
+    }
+  ],
+  "compareIntro": "Compare the Osceola school calendar with nearby Central Florida district calendars currently available on MySchoolDates. Dates shown include first day, last day, spring break, and official PDF availability.",
+  "districtFaqs": [
+    {
+      "q": "What school district serves Kissimmee, Florida?",
+      "a": "Kissimmee public schools are served by The School District of Osceola County, Florida. The districtwide calendar applies to Kissimmee schools unless a specific program or campus publishes a separate schedule."
+    },
+    {
+      "q": "Does the Osceola school calendar apply to St. Cloud and Poinciana?",
+      "a": "Yes. St. Cloud and Osceola County portions of Poinciana are served by The School District of Osceola County. Families should still confirm individual campus events, testing, athletics, and graduation details with their school."
+    },
+    {
+      "q": "What is Rodeo Day on the Osceola school calendar?",
+      "a": "Rodeo Day is a local February student holiday listed on the Osceola school calendar. It is not a federal holiday, so families new to the district should add it separately for childcare and work planning."
+    },
+    {
+      "q": "How does Osceola handle emergency make-up days?",
+      "a": "The official calendars identify some teacher workdays as possible emergency make-up days. If additional make-up days are required beyond those listed, the district says they will be assigned based on the circumstances at the time."
+    },
+    {
+      "q": "Does PATHS follow the same Osceola calendar?",
+      "a": "PATHS may follow a program-specific calendar instead of the districtwide student calendar. PATHS families should verify current-year dates directly with the school or district before making attendance, childcare, or transportation plans."
+    },
+    {
+      "q": "Where should families verify Osceola calendar changes?",
+      "a": "Use the official Osceola Schools calendar page and campus announcements for final confirmation. MySchoolDates summarizes district documents and is not affiliated with The School District of Osceola County."
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Orange County Public Schools",
+      "slug": "orange-county-school-calendar",
+      "state": "Florida",
+      "comparisonNote": "Neighboring Orlando-area district west of Osceola, useful for families comparing school breaks around the tourism corridor."
+    },
+    {
+      "name": "Polk County Public Schools",
+      "slug": "polk-county-school-calendar",
+      "state": "Florida",
+      "comparisonNote": "Neighboring district west and southwest of Osceola, relevant for Poinciana-area and I-4 corridor families."
+    },
+    {
+      "name": "Volusia County Schools",
+      "slug": "volusia-county-schools-calendar",
+      "state": "Florida",
+      "comparisonNote": "Central Florida district northeast of Osceola with similar hurricane-season and commuter-calendar planning concerns."
+    }
+  ],
+  "sources": [
+    {
+      "label": "The School District of Osceola County official website",
+      "url": "https://www.osceolaschools.net/"
+    },
+    {
+      "label": "Osceola Schools district calendar",
+      "url": "https://www.osceolaschools.net/70842_3"
+    }
+  ]
+}

@@ -8,7 +8,10 @@ const props = defineProps<{
 
 const allRelatedInState = computed(() => props.relatedDistricts.every(rd => rd.state === props.stateName))
 const heading = computed(() => props.title ?? (allRelatedInState.value ? `Related ${props.stateName} School Calendars` : 'Related Large District Calendars'))
-const description = computed(() => props.description ?? (allRelatedInState.value ? `Compare nearby ${props.stateName} school districts.` : 'Compare other large school district calendars.'))
+const description = computed(() => props.description ?? (allRelatedInState.value
+  ? `Compare nearby ${props.stateName} school districts for different start dates, spring breaks, and no-school periods.`
+  : 'Compare other large school district calendars for different start dates, spring breaks, and no-school periods.'))
+const stateSlug = computed(() => props.stateName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))
 </script>
 
 <template>
@@ -16,6 +19,13 @@ const description = computed(() => props.description ?? (allRelatedInState.value
     <div class="px-6 py-4 border-b border-gray-100">
       <h2 class="text-lg font-semibold text-gray-900">{{ heading }}</h2>
       <p class="text-sm text-gray-500 mt-1">{{ description }}</p>
+      <NuxtLink
+        v-if="allRelatedInState"
+        :to="`/${stateSlug}`"
+        class="mt-2 inline-flex text-sm font-medium text-blue-600 hover:underline"
+      >
+        Explore {{ stateName }} school calendars
+      </NuxtLink>
     </div>
     <div class="divide-y divide-gray-50">
       <NuxtLink

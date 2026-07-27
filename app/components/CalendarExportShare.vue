@@ -89,7 +89,7 @@ const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year
     <div class="p-6 border-b border-gray-100">
       <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ icsHeading }}</h2>
       <p class="text-sm text-gray-500 mb-4">
-        Never miss a school holiday or early dismissal. Download one standard .ics file containing {{ icsIncludedText }}.
+        Never miss a school holiday or major academic date. Download one standard .ics file containing {{ icsIncludedText }}.
       </p>
       <!-- Primary CTA -->
       <a

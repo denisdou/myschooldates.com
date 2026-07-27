@@ -152,6 +152,7 @@ const verifiedDate = computed(() => {
   if (!(cal.value as any)?.lastVerifiedAt) return null
   return new Date((cal.value as any).lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 })
+const editorialAuthorName = 'Denis Dou'
 
 const hiddenSections = computed(() => new Set<string>((district.value as any).hiddenSections ?? []))
 const hideHeroVerificationProcess = computed(() =>
@@ -597,6 +598,7 @@ const webPageEntity = {
       : {}),
   ...((datasetEntity || faqSchemaItems.value.length || customSectionSchemaParts.value.length || yearNumbersSchemaParts.value.length)
     ? { hasPart: [
+      { '@id': `${canonicalUrl}#calendar-analysis` },
       ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
       ...(faqSchemaItems.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
       ...customSectionSchemaParts.value,
@@ -618,6 +620,24 @@ const webPageEntity = {
   isPartOf: {
     '@id': 'https://myschooldates.com/#website',
   },
+}
+const articleEntity = {
+  '@type': 'Article',
+  '@id': `${canonicalUrl}#calendar-analysis`,
+  headline: _pageTitle,
+  description: _pageDesc,
+  url: canonicalUrl,
+  inLanguage: 'en-US',
+  ...(pageDatePublished ? { datePublished: pageDatePublished } : {}),
+  ...(pageDateModified ? { dateModified: pageDateModified } : {}),
+  ...(pageDateModified ? { dateReviewed: pageDateModified } : {}),
+  author: { '@id': 'https://myschooldates.com/#education-research-team' },
+  publisher: { '@id': 'https://myschooldates.com/#organization' },
+  reviewedBy: { '@id': 'https://myschooldates.com/#education-research-team' },
+  about: { '@id': districtAbout['@id'] },
+  isPartOf: { '@id': `${canonicalUrl}#webpage` },
+  ...(datasetEntity ? { mainEntity: { '@id': `${canonicalUrl}#calendar-dataset` } } : {}),
+  ...(basedOnUrl ? { isBasedOn: { '@id': `${canonicalUrl}#source-calendar` } } : {}),
 }
 const faqPageEntity = faqSchemaItems.value.length ? {
   '@type': 'FAQPage',
@@ -669,6 +689,7 @@ const comparisonItems = [
   }).filter(Boolean)),
 ]
 const includeComparisonSchema = (district.value as any)?.includeComparisonSchema !== false && (cal.value as any)?.includeComparisonSchema !== false
+const includeArticleSchema = (district.value as any)?.includeArticleSchema !== false && (cal.value as any)?.includeArticleSchema !== false
 const comparisonItemListEntity = includeComparisonSchema && comparisonItems.length > 1 ? {
   '@type': 'ItemList',
   '@id': `${canonicalUrl}#nearby-calendar-comparison`,
@@ -703,6 +724,7 @@ useHead({
         districtAbout,
         ...(sourceCalendarEntity ? [sourceCalendarEntity] : []),
         ...(datasetEntity ? [datasetEntity] : []),
+        ...(includeArticleSchema ? [articleEntity] : []),
         webPageEntity,
         ...(keyDateItemListEntity ? [keyDateItemListEntity] : []),
         ...(comparisonItemListEntity ? [comparisonItemListEntity] : []),
@@ -779,6 +801,22 @@ useHead({
           <p class="text-xs text-gray-600">
             MySchoolDates is an independent calendar reference and is not affiliated with {{ district!.name }}.
           </p>
+          <dl v-if="verifiedDate" class="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-xs text-gray-500">
+            <div>
+              <dt class="inline font-semibold uppercase tracking-wide text-gray-400">Reviewed</dt>
+              <dd class="ml-1 inline font-medium text-gray-700">{{ verifiedDate }}</dd>
+            </div>
+            <div>
+              <dt class="inline font-semibold uppercase tracking-wide text-gray-400">By</dt>
+              <dd class="ml-1 inline font-medium">
+                <NuxtLink to="/author" class="text-blue-600 hover:underline">{{ editorialAuthorName }}</NuxtLink>
+              </dd>
+            </div>
+            <div>
+              <dt class="inline font-semibold uppercase tracking-wide text-gray-400">Updated</dt>
+              <dd class="ml-1 inline font-medium text-gray-700">{{ verifiedDate }}</dd>
+            </div>
+          </dl>
           <div v-if="verifiedDate" class="mt-3 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full bg-green-50 text-green-700 border border-green-200">
             <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
@@ -832,6 +870,20 @@ useHead({
       <div id="key-dates" class="scroll-mt-24">
         <DistrictKeyDateCards :cal="cal!" />
       </div>
+
+      <!-- Custom Sections: afterKeyDates -->
+      <DistrictCustomSections :sections="customSections" position="afterKeyDates" />
+
+      <!-- Quick Facts -->
+      <DistrictQuickFacts
+        v-if="!hiddenSections.has('quickFacts')"
+        :cal="cal!"
+        :district="district!"
+        :related-cals="relatedCals ?? []"
+        :all-districts="allDistricts ?? []"
+        :prev-cal="prevCal ?? undefined"
+      />
+      <DistrictCustomSections :sections="customSections" position="afterQuickFacts" />
 
       <div class="rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p class="text-sm text-blue-900">
@@ -908,20 +960,6 @@ useHead({
           </template>
         </p>
       </div>
-
-      <!-- Quick Facts -->
-      <DistrictQuickFacts
-        v-if="!hiddenSections.has('quickFacts')"
-        :cal="cal!"
-        :district="district!"
-        :related-cals="relatedCals ?? []"
-        :all-districts="allDistricts ?? []"
-        :prev-cal="prevCal ?? undefined"
-      />
-      <DistrictCustomSections :sections="customSections" position="afterQuickFacts" />
-
-      <!-- Custom Sections: afterKeyDates -->
-      <DistrictCustomSections :sections="customSections" position="afterKeyDates" />
 
       <!-- All Dates -->
       <DistrictAllDates
@@ -1033,6 +1071,16 @@ useHead({
         :title="(district as any).relatedDistrictsTitle"
         :description="(district as any).relatedDistrictsDescription"
       />
+
+      <section v-if="!hiddenSections.has('nationalTrends')" class="rounded-xl border border-gray-200 bg-white p-6">
+        <h2 class="text-lg font-semibold text-gray-900 mb-2">{{ district!.shortName || district!.name }} in National Calendar Trends</h2>
+        <p class="text-sm leading-relaxed text-gray-600">
+          To compare this district calendar with broader U.S. start-date, break, and end-date patterns, see the
+          <NuxtLink to="/school-calendar-trends/2026-2027-report" class="font-semibold text-blue-600 hover:underline">
+            2026-2027 School Calendar Trends Report
+          </NuxtLink>.
+        </p>
+      </section>
 
       <!-- Custom Sections: beforeSources -->
       <DistrictCustomSections :sections="customSections" position="beforeSources" />

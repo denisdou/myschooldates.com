@@ -21,6 +21,7 @@ const currentStateSlug = computed(() => route.path.split('/').filter(Boolean)[0]
 const currentStateName = computed(() => statePageNames[currentStateSlug.value] ?? '')
 const isStateLandingPage = computed(() => route.path === `/${currentStateSlug.value}` && !!currentStateName.value)
 const mobileMenuOpen = ref(false)
+const activeDesktopMenu = ref<'states' | 'calendar' | null>(null)
 
 const stateLinks = [
   { slug: 'florida', name: 'Florida' },
@@ -38,10 +39,37 @@ const stateLinks = [
   { slug: 'maryland', name: 'Maryland' },
 ]
 
-const primaryStateLinks = stateLinks.slice(0, 3)
+const calendarDataLinks = [
+  {
+    to: '/school-calendar-trends',
+    name: 'Trends Hub',
+    description: 'Reports, charts, and analysis',
+  },
+  {
+    to: '/datasets/school-calendar-trends',
+    name: 'Dataset',
+    description: 'CSV data and citation details',
+  },
+  {
+    to: '/school-calendar-trends/2026-2027-report',
+    name: '2026-2027 Report',
+    description: 'Full national trends report',
+  },
+]
+
+const navigateCalendarData = async (to: string) => {
+  mobileMenuOpen.value = false
+  activeDesktopMenu.value = null
+  await navigateTo(to)
+}
+
+const closeDesktopMenu = () => {
+  activeDesktopMenu.value = null
+}
 
 watch(() => route.fullPath, () => {
   mobileMenuOpen.value = false
+  activeDesktopMenu.value = null
 })
 </script>
 
@@ -56,36 +84,79 @@ watch(() => route.fullPath, () => {
           <span class="text-xl font-bold text-gray-900">MySchoolDates</span>
           <span class="text-sm text-gray-400 hidden lg:inline">US School Calendar Platform</span>
         </NuxtLink>
-        <!-- State navigation -->
-        <nav class="hidden sm:flex items-center gap-4">
+        <!-- Main navigation -->
+        <nav class="hidden sm:flex items-center gap-5">
           <NuxtLink
-            v-for="state in primaryStateLinks"
-            :key="state.slug"
-            :to="`/${state.slug}`"
+            to="/"
             class="text-sm text-gray-600 hover:text-blue-600 transition-colors"
           >
-            {{ state.name }}
+            Home
           </NuxtLink>
-          <div class="relative group">
-            <button
-              type="button"
-              class="inline-flex items-center gap-1.5 rounded-full border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors"
-              aria-haspopup="true"
-            >
-              <span>More States</span>
-              <svg class="h-4 w-4 transition-transform group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <div
+            class="relative"
+            tabindex="0"
+            @mouseenter="activeDesktopMenu = 'states'"
+            @mouseleave="closeDesktopMenu"
+            @focusin="activeDesktopMenu = 'states'"
+            @focusout="closeDesktopMenu"
+          >
+            <div class="inline-flex cursor-default items-center gap-1 text-sm text-gray-600 hover:text-blue-600 transition-colors">
+              <span>States</span>
+              <svg class="h-4 w-4 transition-transform" :class="{ 'rotate-180': activeDesktopMenu === 'states' }" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
               </svg>
-            </button>
-            <div class="invisible absolute right-0 top-full z-30 w-64 pt-3 opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-              <div class="rounded-lg border border-gray-200 bg-white p-2 shadow-lg">
+            </div>
+            <div
+              v-show="activeDesktopMenu === 'states'"
+              class="absolute left-0 top-full z-30 w-[34rem] pt-3"
+            >
+              <div class="grid grid-cols-3 gap-1 rounded-lg border border-gray-200 bg-white p-2 shadow-lg">
                 <NuxtLink
                   v-for="state in stateLinks"
                   :key="state.slug"
                   :to="`/${state.slug}`"
-                  class="block rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+                  class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+                  @click="closeDesktopMenu"
                 >
-                  {{ state.name }} School Calendars
+                  {{ state.name }}
+                </NuxtLink>
+              </div>
+            </div>
+          </div>
+          <NuxtLink
+            to="/districts"
+            class="text-sm text-gray-600 hover:text-blue-600 transition-colors"
+          >
+            Districts
+          </NuxtLink>
+          <div
+            class="relative"
+            tabindex="0"
+            @mouseenter="activeDesktopMenu = 'calendar'"
+            @mouseleave="closeDesktopMenu"
+            @focusin="activeDesktopMenu = 'calendar'"
+            @focusout="closeDesktopMenu"
+          >
+            <div class="inline-flex cursor-default items-center gap-1 text-sm text-gray-600 hover:text-blue-600 transition-colors">
+              <span>Calendar Data</span>
+              <svg class="h-4 w-4 transition-transform" :class="{ 'rotate-180': activeDesktopMenu === 'calendar' }" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div
+              v-show="activeDesktopMenu === 'calendar'"
+              class="absolute right-0 top-full z-30 w-72 pt-3"
+            >
+              <div class="rounded-lg border border-gray-200 bg-white p-2 shadow-lg">
+                <NuxtLink
+                  v-for="link in calendarDataLinks"
+                  :key="link.to"
+                  :to="link.to"
+                  class="block rounded-md px-3 py-2.5 hover:bg-blue-50"
+                  @click.prevent="navigateCalendarData(link.to)"
+                >
+                  <span class="block text-sm font-semibold text-gray-800">{{ link.name }}</span>
+                  <span class="block text-xs text-gray-500">{{ link.description }}</span>
                 </NuxtLink>
               </div>
             </div>
@@ -110,15 +181,49 @@ watch(() => route.fullPath, () => {
         </button>
       </div>
       <nav v-if="mobileMenuOpen" class="border-t border-gray-100 bg-white px-4 py-3 sm:hidden">
-        <div class="mx-auto grid max-w-5xl grid-cols-2 gap-2">
-          <NuxtLink
-            v-for="state in stateLinks"
-            :key="state.slug"
-            :to="`/${state.slug}`"
-            class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700"
-          >
-            {{ state.name }}
-          </NuxtLink>
+        <div class="mx-auto max-w-5xl space-y-4">
+          <div class="grid grid-cols-2 gap-2">
+            <NuxtLink
+              to="/"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+            >
+              Home
+            </NuxtLink>
+            <NuxtLink
+              to="/districts"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+            >
+              Districts
+            </NuxtLink>
+          </div>
+          <div>
+            <p class="px-3 pb-1 text-xs font-semibold uppercase tracking-wide text-gray-400">Calendar Data</p>
+            <div class="grid grid-cols-1 gap-2">
+              <NuxtLink
+                v-for="link in calendarDataLinks"
+                :key="link.to"
+                :to="link.to"
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-700"
+                @click.prevent="navigateCalendarData(link.to)"
+              >
+                <span class="block">{{ link.name }}</span>
+                <span class="block text-xs font-normal text-gray-500">{{ link.description }}</span>
+              </NuxtLink>
+            </div>
+          </div>
+          <div>
+            <p class="px-3 pb-1 text-xs font-semibold uppercase tracking-wide text-gray-400">States</p>
+            <div class="grid grid-cols-2 gap-2">
+              <NuxtLink
+                v-for="state in stateLinks"
+                :key="state.slug"
+                :to="`/${state.slug}`"
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+              >
+                {{ state.name }}
+              </NuxtLink>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -180,6 +285,9 @@ watch(() => route.fullPath, () => {
             </p>
             <ul class="space-y-2">
               <li><NuxtLink to="/about" class="text-sm text-gray-500 hover:text-blue-600">About</NuxtLink></li>
+              <li><NuxtLink to="/author" class="text-sm text-gray-500 hover:text-blue-600">Author</NuxtLink></li>
+              <li><NuxtLink to="/school-calendar-trends" class="text-sm text-gray-500 hover:text-blue-600">School Calendar Trends</NuxtLink></li>
+              <li><NuxtLink to="/datasets/school-calendar-trends" class="text-sm text-gray-500 hover:text-blue-600">Calendar Trends Dataset</NuxtLink></li>
               <li><NuxtLink to="/calendar-verification-methodology" class="text-sm text-gray-500 hover:text-blue-600">Verification Methodology</NuxtLink></li>
               <li><NuxtLink to="/editorial-policy" class="text-sm text-gray-500 hover:text-blue-600">Editorial Policy</NuxtLink></li>
               <li><a href="mailto:hello@myschooldates.com?subject=Calendar%20Correction" class="text-sm text-gray-500 hover:text-blue-600">Report a Correction</a></li>
