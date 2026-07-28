@@ -529,7 +529,7 @@ const sectionTitle = computed(() =>
         <div class="text-xs text-gray-500 mt-1 leading-snug">{{ fact.label }}</div>
       </div>
     </div>
-    <div class="mt-4 pt-4 border-t border-gray-100 flex items-center gap-1.5 text-xs text-gray-400">
+    <div class="mt-4 pt-4 border-t border-gray-100 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-gray-600">
       <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
       </svg>
@@ -538,14 +538,14 @@ const sectionTitle = computed(() =>
         :href="sourceUrl"
         target="_blank"
         rel="noopener"
-        class="underline text-gray-500 hover:text-blue-600 transition-colors"
+        class="inline-flex min-h-11 items-center underline text-gray-700 hover:text-blue-700 transition-colors"
       >
         {{ districtName }} official calendar
         <span class="sr-only">(opens in a new tab)</span>
       </a>
-      <span v-if="verifiedDate" class="ml-1 text-green-600 font-medium">· Last reviewed {{ verifiedDate }}</span>
-      <span v-else class="ml-1 text-gray-400">· Not yet verified against official source</span>
+      <span v-if="verifiedDate" class="ml-1 text-green-700 font-medium">· Last reviewed {{ verifiedDate }}</span>
+      <span v-else class="ml-1 text-gray-600">· Not yet verified against official source</span>
     </div>
-    <p class="text-xs text-gray-400 mt-1.5">Standalone no-school date counts include listed holidays and no-school dates shown between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instructional weeks are approximate.</p>
+    <p class="text-xs text-gray-600 mt-1.5">Standalone no-school date counts include listed holidays and no-school dates shown between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instructional weeks are approximate.</p>
   </div>
 </template>

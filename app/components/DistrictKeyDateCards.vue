@@ -41,18 +41,18 @@ const thirdCardValue = computed(() =>
 <template>
   <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
     <div :class="cardClass">
-      <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">{{ cal.keyDateCardsFirstLabel ?? 'First Day of School' }}</div>
+      <div class="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-1">{{ cal.keyDateCardsFirstLabel ?? 'First Day of School' }}</div>
       <time :datetime="cal.firstDay" :class="valueClass">{{ formatDate(cal.firstDay) }}</time>
       <ClientOnly>
         <div v-if="daysUntilStart > 0" class="mt-2 inline-flex text-sm font-medium text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full">
           {{ daysUntilStart }} days away
         </div>
         <div v-else-if="daysUntilStart === 0" class="mt-2 text-sm font-medium text-green-700">Today!</div>
-        <div v-else class="mt-2 text-sm text-green-600">School is in session</div>
+        <div v-else class="mt-2 text-sm text-green-700">School is in session</div>
       </ClientOnly>
     </div>
     <div :class="cardClass">
-      <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Last Day of School</div>
+      <div class="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-1">Last Day of School</div>
       <time :datetime="cal.lastDay" :class="valueClass">{{ formatDate(cal.lastDay) }}</time>
     </div>
     <div :class="cardClass">

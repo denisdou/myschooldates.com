@@ -1311,7 +1311,7 @@ if (!isStatePage && district.value) {
           <div class="overflow-x-auto">
             <table class="w-full text-sm">
               <thead>
-                <tr class="bg-gray-50 text-xs font-semibold text-gray-400 uppercase tracking-wide">
+                <tr class="bg-gray-50 text-xs font-semibold text-gray-600 uppercase tracking-wide">
                   <th class="text-left px-6 py-3 whitespace-nowrap">District</th>
                   <th class="text-left px-4 py-3 whitespace-nowrap">First Day</th>
                   <th class="text-left px-4 py-3 whitespace-nowrap">Winter Break</th>
@@ -1351,7 +1351,7 @@ if (!isStatePage && district.value) {
               </tbody>
             </table>
           </div>
-          <div class="px-6 py-3 border-t border-gray-50 text-xs text-gray-400">
+          <div class="px-6 py-3 border-t border-gray-50 text-xs text-gray-600">
             Days off = full student weekdays off (breaks, holidays, no-school days). Click any district for the full calendar.
           </div>
         </div>
@@ -1368,45 +1368,45 @@ if (!isStatePage && district.value) {
               class="bg-white rounded-xl border border-gray-200 p-5 hover:border-blue-300 hover:shadow-sm transition-all"
             >
               <div class="font-semibold text-gray-900 leading-snug">{{ d.name }}</div>
-              <div class="text-xs text-gray-400 mt-0.5">{{ d.city ? `${d.city}, ` : '' }}{{ (d as any).stateCode ?? d.state }}</div>
+              <div class="text-xs text-gray-600 mt-0.5">{{ d.city ? `${d.city}, ` : '' }}{{ (d as any).stateCode ?? d.state }}</div>
               <template v-if="stateDistrictStats[d.institutionId]">
                 <div class="mt-3 grid grid-cols-2 gap-x-4 gap-y-1.5">
                   <div>
-                    <div class="text-xs text-gray-400">First day</div>
+                    <div class="text-xs text-gray-600">First day</div>
                     <div class="text-sm font-medium text-gray-800">{{ formatMonthDay(stateDistrictStats[d.institutionId].firstDay) }}</div>
                   </div>
                   <div>
-                    <div class="text-xs text-gray-400">Last day</div>
+                    <div class="text-xs text-gray-600">Last day</div>
                     <div class="text-sm font-medium text-gray-800">{{ formatMonthDay(stateDistrictStats[d.institutionId].lastDay) }}</div>
                   </div>
                   <div v-if="stateDistrictStats[d.institutionId].winterBreak">
-                    <div class="text-xs text-gray-400">Winter break</div>
+                    <div class="text-xs text-gray-600">Winter break</div>
                     <div class="text-sm font-medium text-gray-800">
                       {{ formatMonthDay(stateDistrictStats[d.institutionId].winterBreak!.start) }} – {{ formatMonthDay(stateDistrictStats[d.institutionId].winterBreak!.end) }}
                     </div>
                   </div>
                   <div>
-                    <div class="text-xs text-gray-400">Days off</div>
+                    <div class="text-xs text-gray-600">Days off</div>
                     <div class="text-sm font-medium text-gray-800">{{ stateDistrictStats[d.institutionId].daysOff }} days</div>
                   </div>
                 </div>
               </template>
               <template v-else>
-                <div class="mt-3 text-xs text-gray-400">{{ d.currentSchoolYear }}</div>
+                <div class="mt-3 text-xs text-gray-600">{{ d.currentSchoolYear }}</div>
               </template>
               <div class="mt-3 pt-3 border-t border-gray-100">
                 <div v-if="stateDistrictCalendarById[d.institutionId]" class="mb-2 space-y-1 text-xs text-gray-500">
                   <div>
-                    <span class="text-gray-400">Official source:</span>
+                    <span class="text-gray-600">Official source:</span>
                     {{ d.name }}
                   </div>
                   <div v-if="stateDistrictCalendarById[d.institutionId].lastVerifiedAt">
-                    <span class="text-gray-400">Last checked:</span>
+                    <span class="text-gray-600">Last checked:</span>
                     {{ new Date(stateDistrictCalendarById[d.institutionId].lastVerifiedAt + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) }}
                   </div>
                 </div>
                 <div class="flex items-center justify-between">
-                <span class="text-xs text-gray-400">{{ d.currentSchoolYear }}</span>
+                <span class="text-xs text-gray-600">{{ d.currentSchoolYear }}</span>
                 <span class="text-xs font-medium text-blue-600">View calendar →</span>
                 </div>
               </div>
@@ -1427,7 +1427,7 @@ if (!isStatePage && district.value) {
               class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-3"
             >
               <div class="text-sm font-medium text-gray-900">{{ item.label }}</div>
-              <div v-if="item.area" class="mt-0.5 text-xs text-gray-400">{{ item.area }}</div>
+              <div v-if="item.area" class="mt-0.5 text-xs text-gray-600">{{ item.area }}</div>
               <p v-if="item.note" class="mt-2 text-xs leading-relaxed text-gray-500">{{ item.note }}</p>
             </div>
           </div>
@@ -1474,7 +1474,7 @@ if (!isStatePage && district.value) {
           <h2 class="text-lg font-semibold text-gray-900 mb-3">Planning Tips for {{ matchedStateName }} Families</h2>
           <ul class="space-y-3">
             <li v-for="tip in statePageData.planningTips" :key="tip" class="flex items-start gap-2 text-sm text-gray-700">
-              <svg class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-4 h-4 text-blue-700 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               {{ tip }}
@@ -1546,7 +1546,7 @@ if (!isStatePage && district.value) {
               class="flex items-center justify-between px-6 py-4 hover:bg-gray-50 transition-colors"
             >
               <div class="font-medium text-gray-900">{{ rs.name }} School Calendars</div>
-              <svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             </NuxtLink>
@@ -1554,7 +1554,7 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- SEO footer note -->
-        <p class="text-xs text-gray-400 text-center">
+        <p class="text-xs text-gray-600 text-center">
           All calendar data is sourced from official {{ matchedStateName }} school district websites.
           Dates are subject to board approval — always verify with your district before making plans.
         </p>
@@ -1580,7 +1580,7 @@ if (!isStatePage && district.value) {
           </h1>
           <p class="mt-2 text-sm text-gray-500">
             {{ currentYear }} calendar dates · Sourced from the official {{ district.shortName || district.name }} calendar ·
-            <a href="#add-to-calendar" class="underline hover:text-blue-600 transition-colors">Add school dates to calendar</a>
+            <a href="#add-to-calendar" class="inline-flex min-h-11 items-center underline hover:text-blue-700 transition-colors">Add school dates to calendar</a>
           </p>
           <p class="mt-1 text-xs text-gray-600">
             MySchoolDates is an independent calendar reference and is not affiliated with {{ district.name }}.
@@ -1632,17 +1632,17 @@ if (!isStatePage && district.value) {
           </p>
           <dl v-if="!isEstimated && verifiedDate" class="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-xs text-gray-500">
             <div>
-              <dt class="inline font-semibold uppercase tracking-wide text-gray-400">Reviewed</dt>
+              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Reviewed</dt>
               <dd class="ml-1 inline font-medium text-gray-700">{{ verifiedDate }}</dd>
             </div>
             <div>
-              <dt class="inline font-semibold uppercase tracking-wide text-gray-400">By</dt>
+              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">By</dt>
               <dd class="ml-1 inline font-medium">
                 <NuxtLink to="/author" class="text-blue-600 hover:underline">{{ editorialAuthorName }}</NuxtLink>
               </dd>
             </div>
             <div>
-              <dt class="inline font-semibold uppercase tracking-wide text-gray-400">Updated</dt>
+              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Updated</dt>
               <dd class="ml-1 inline font-medium text-gray-700">{{ verifiedDate }}</dd>
             </div>
           </dl>
@@ -1665,15 +1665,15 @@ if (!isStatePage && district.value) {
             <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-gray-500">How verified</summary>
             <ul class="mt-2 grid gap-1.5 text-xs text-gray-600 sm:grid-cols-3">
               <li class="flex items-start gap-1.5">
-                <span class="mt-0.5 text-green-600">✓</span>
+                <span class="mt-0.5 text-green-700">✓</span>
                 <span>Official district source checked</span>
               </li>
               <li class="flex items-start gap-1.5">
-                <span class="mt-0.5 text-green-600">✓</span>
+                <span class="mt-0.5 text-green-700">✓</span>
                 <span>Key dates compared against source</span>
               </li>
               <li class="flex items-start gap-1.5">
-                <span class="mt-0.5 text-green-600">✓</span>
+                <span class="mt-0.5 text-green-700">✓</span>
                 <span>Calendar file generated from checked records</span>
               </li>
             </ul>
@@ -1685,7 +1685,7 @@ if (!isStatePage && district.value) {
 
         <!-- Calendar track notice -->
         <div v-if="hasCalendarTrackCaution" class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex gap-3">
-          <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <div class="space-y-3">
@@ -1696,7 +1696,7 @@ if (!isStatePage && district.value) {
             </p>
             <div v-if="calendarSelectorGroups.length" class="grid gap-2 sm:grid-cols-2">
               <div v-for="group in calendarSelectorGroups" :key="group.label" class="rounded-lg border border-blue-100 bg-white/70 p-3">
-                <div class="text-xs font-semibold uppercase tracking-wide text-blue-500">{{ group.label }}</div>
+                <div class="text-xs font-semibold uppercase tracking-wide text-blue-700">{{ group.label }}</div>
                 <div class="mt-1 text-sm font-medium text-blue-900">{{ group.items?.join(' / ') }}</div>
               </div>
             </div>
@@ -1935,7 +1935,7 @@ if (!isStatePage && district.value) {
               >
                 <!-- Date column -->
                 <div class="w-16 flex-shrink-0 text-center">
-                  <div class="text-xs font-semibold text-gray-400 uppercase">
+                  <div class="text-xs font-semibold text-gray-600 uppercase">
                     {{ new Date(event.date + 'T00:00:00').toLocaleString('en-US', { month: 'short' }) }}
                   </div>
                   <div class="text-xl font-bold text-gray-900 leading-tight">
@@ -1947,7 +1947,7 @@ if (!isStatePage && district.value) {
                 <!-- Event info -->
                 <div class="flex-1 min-w-0">
                   <div class="font-medium text-gray-900 text-sm">{{ event.name }}</div>
-                  <div class="text-xs text-gray-400 mt-0.5">
+                  <div class="text-xs text-gray-600 mt-0.5">
                     {{ new Date(event.date + 'T00:00:00').toLocaleString('en-US', { weekday: 'long' }) }}
                   </div>
                 </div>

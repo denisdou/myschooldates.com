@@ -83,11 +83,11 @@ const schoolYearRange = computed(() =>
     >
       <div class="text-xs font-semibold uppercase tracking-wide mb-1"
         :class="{
-          'text-green-500': todayStatus.type === 'school',
-          'text-blue-500': todayStatus.type === 'upcoming',
-          'text-purple-500': todayStatus.type === 'break',
-          'text-amber-500': todayStatus.type === 'holiday',
-          'text-gray-400': todayStatus.type === 'ended',
+          'text-green-700': todayStatus.type === 'school',
+          'text-blue-700': todayStatus.type === 'upcoming',
+          'text-purple-700': todayStatus.type === 'break',
+          'text-amber-700': todayStatus.type === 'holiday',
+          'text-gray-700': todayStatus.type === 'ended',
         }"
       >Today</div>
       <div
@@ -102,20 +102,20 @@ const schoolYearRange = computed(() =>
       >{{ todayStatus.headline }}</div>
       <div v-if="todayStatus.detail" class="text-sm mt-1"
         :class="{
-          'text-green-600': todayStatus.type === 'school',
-          'text-blue-600': todayStatus.type === 'upcoming',
-          'text-purple-600': todayStatus.type === 'break',
-          'text-amber-600': todayStatus.type === 'holiday',
-          'text-gray-500': todayStatus.type === 'ended',
+          'text-green-700': todayStatus.type === 'school',
+          'text-blue-700': todayStatus.type === 'upcoming',
+          'text-purple-700': todayStatus.type === 'break',
+          'text-amber-700': todayStatus.type === 'holiday',
+          'text-gray-700': todayStatus.type === 'ended',
         }"
       >{{ todayStatus.detail }}</div>
       <slot name="cta" />
     </div>
     <template #fallback>
       <div class="rounded-2xl px-6 py-6 bg-blue-50 border border-blue-200">
-        <div class="text-xs font-semibold uppercase tracking-wide mb-1 text-blue-500">School Year Status</div>
+        <div class="text-xs font-semibold uppercase tracking-wide mb-1 text-blue-700">School Year Status</div>
         <div class="font-bold text-2xl leading-tight text-blue-800">{{ props.cal.schoolYear }} school year</div>
-        <div class="text-sm mt-1 text-blue-600">{{ schoolYearRange }}</div>
+        <div class="text-sm mt-1 text-blue-700">{{ schoolYearRange }}</div>
       </div>
     </template>
   </ClientOnly>

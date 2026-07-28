@@ -758,7 +758,7 @@ useHead({
 
       <!-- Notice for non-current year (past or future) -->
       <div v-if="!isCurrentYear" class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-start gap-3">
-        <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        <svg class="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
         <p class="text-sm text-blue-700">
           You're viewing the <strong>{{ isFutureYear ? 'upcoming' : 'archived' }} {{ year }}</strong> calendar.
           <NuxtLink :to="`/${slug}`" class="underline font-medium">View the current {{ district!.currentSchoolYear }} calendar →</NuxtLink>
@@ -803,17 +803,17 @@ useHead({
           </p>
           <dl v-if="verifiedDate" class="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-xs text-gray-500">
             <div>
-              <dt class="inline font-semibold uppercase tracking-wide text-gray-400">Reviewed</dt>
+              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Reviewed</dt>
               <dd class="ml-1 inline font-medium text-gray-700">{{ verifiedDate }}</dd>
             </div>
             <div>
-              <dt class="inline font-semibold uppercase tracking-wide text-gray-400">By</dt>
+              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">By</dt>
               <dd class="ml-1 inline font-medium">
                 <NuxtLink to="/author" class="text-blue-600 hover:underline">{{ editorialAuthorName }}</NuxtLink>
               </dd>
             </div>
             <div>
-              <dt class="inline font-semibold uppercase tracking-wide text-gray-400">Updated</dt>
+              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Updated</dt>
               <dd class="ml-1 inline font-medium text-gray-700">{{ verifiedDate }}</dd>
             </div>
           </dl>
@@ -827,15 +827,15 @@ useHead({
             <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-gray-500">How verified</summary>
             <ul class="mt-2 grid gap-1.5 text-xs text-gray-600 sm:grid-cols-3">
               <li class="flex items-start gap-1.5">
-                <span class="mt-0.5 text-green-600">✓</span>
+                <span class="mt-0.5 text-green-700">✓</span>
                 <span>Official district source checked</span>
               </li>
               <li class="flex items-start gap-1.5">
-                <span class="mt-0.5 text-green-600">✓</span>
+                <span class="mt-0.5 text-green-700">✓</span>
                 <span>Key dates compared against source</span>
               </li>
               <li class="flex items-start gap-1.5">
-                <span class="mt-0.5 text-green-600">✓</span>
+                <span class="mt-0.5 text-green-700">✓</span>
                 <span>Calendar file generated from checked records</span>
               </li>
             </ul>
@@ -848,7 +848,7 @@ useHead({
 
       <!-- Calendar track notice -->
       <div v-if="hasCalendarTrackCaution" class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex gap-3">
-        <svg class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         <div class="space-y-3">
@@ -859,7 +859,7 @@ useHead({
           </p>
           <div v-if="calendarSelectorGroups.length" class="grid gap-2 sm:grid-cols-2">
             <div v-for="group in calendarSelectorGroups" :key="group.label" class="rounded-lg border border-blue-100 bg-white/70 p-3">
-              <div class="text-xs font-semibold uppercase tracking-wide text-blue-500">{{ group.label }}</div>
+              <div class="text-xs font-semibold uppercase tracking-wide text-blue-700">{{ group.label }}</div>
               <div class="mt-1 text-sm font-medium text-blue-900">{{ group.items?.join(' / ') }}</div>
             </div>
           </div>

@@ -87,17 +87,17 @@ useHead({
     </p>
     <dl class="mb-12 flex flex-wrap gap-x-5 gap-y-2 rounded-xl border border-gray-200 bg-white p-4 text-sm text-gray-600">
       <div>
-        <dt class="inline font-semibold uppercase tracking-wide text-gray-400">By</dt>
+        <dt class="inline font-semibold uppercase tracking-wide text-gray-600">By</dt>
         <dd class="ml-1 inline font-medium">
           <NuxtLink to="/author" class="text-blue-600 hover:underline">Denis Dou</NuxtLink>
         </dd>
       </div>
       <div>
-        <dt class="inline font-semibold uppercase tracking-wide text-gray-400">Reviewed</dt>
+        <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Reviewed</dt>
         <dd class="ml-1 inline font-medium text-gray-700">July 27, 2026</dd>
       </div>
       <div>
-        <dt class="inline font-semibold uppercase tracking-wide text-gray-400">Maintained by</dt>
+        <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Maintained by</dt>
         <dd class="ml-1 inline font-medium text-gray-700">MySchoolDates Calendar Data Team</dd>
       </div>
     </dl>

@@ -29,7 +29,7 @@ const possessiveDistrictName = computed(() =>
         <svg class="w-3 h-3 text-gray-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
         </svg>
-        <a v-if="src.url" :href="src.url" target="_blank" rel="noopener" class="underline hover:text-blue-600 transition-colors">
+        <a v-if="src.url" :href="src.url" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-blue-700 transition-colors">
           {{ src.label }}
           <span class="sr-only">(opens in a new tab)</span>
         </a>

@@ -82,7 +82,7 @@ watch(() => route.fullPath, () => {
         <NuxtLink to="/" class="flex items-center gap-2.5 flex-shrink-0">
           <img src="/icons/myschooldates-logo.svg" alt="MySchoolDates" class="h-8 w-auto" />
           <span class="text-xl font-bold text-gray-900">MySchoolDates</span>
-          <span class="text-sm text-gray-400 hidden lg:inline">US School Calendar Platform</span>
+          <span class="text-sm text-gray-600 hidden lg:inline">US School Calendar Platform</span>
         </NuxtLink>
         <!-- Main navigation -->
         <nav class="hidden sm:flex items-center gap-5">
@@ -197,7 +197,7 @@ watch(() => route.fullPath, () => {
             </NuxtLink>
           </div>
           <div>
-            <p class="px-3 pb-1 text-xs font-semibold uppercase tracking-wide text-gray-400">Calendar Data</p>
+            <p class="px-3 pb-1 text-xs font-semibold uppercase tracking-wide text-gray-600">Calendar Data</p>
             <div class="grid grid-cols-1 gap-2">
               <NuxtLink
                 v-for="link in calendarDataLinks"
@@ -212,7 +212,7 @@ watch(() => route.fullPath, () => {
             </div>
           </div>
           <div>
-            <p class="px-3 pb-1 text-xs font-semibold uppercase tracking-wide text-gray-400">States</p>
+            <p class="px-3 pb-1 text-xs font-semibold uppercase tracking-wide text-gray-600">States</p>
             <div class="grid grid-cols-2 gap-2">
               <NuxtLink
                 v-for="state in stateLinks"
@@ -238,7 +238,7 @@ watch(() => route.fullPath, () => {
       <div class="max-w-5xl mx-auto px-4 py-10">
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-8">
           <div>
-            <h4 class="text-sm font-semibold text-gray-700 mb-3">Popular States</h4>
+            <p class="text-sm font-semibold text-gray-700 mb-3">Popular States</p>
             <ul class="space-y-2">
               <li><NuxtLink to="/california" class="text-sm text-gray-500 hover:text-blue-600">California School Calendars</NuxtLink></li>
               <li><NuxtLink to="/florida" class="text-sm text-gray-500 hover:text-blue-600">Florida School Calendars</NuxtLink></li>
@@ -256,7 +256,7 @@ watch(() => route.fullPath, () => {
             </ul>
           </div>
           <div v-if="!isStateLandingPage">
-            <h4 class="text-sm font-semibold text-gray-700 mb-3">Popular Districts</h4>
+            <p class="text-sm font-semibold text-gray-700 mb-3">Popular Districts</p>
             <ul class="space-y-2">
               <li><NuxtLink to="/los-angeles-unified-school-district-calendar" class="text-sm text-gray-500 hover:text-blue-600">Los Angeles Unified</NuxtLink></li>
               <li><NuxtLink to="/miami-dade-school-calendar" class="text-sm text-gray-500 hover:text-blue-600">Miami-Dade School Calendar</NuxtLink></li>
@@ -266,7 +266,7 @@ watch(() => route.fullPath, () => {
             </ul>
           </div>
           <div v-else>
-            <h4 class="text-sm font-semibold text-gray-700 mb-3">{{ currentStateName }} Resources</h4>
+            <p class="text-sm font-semibold text-gray-700 mb-3">{{ currentStateName }} Resources</p>
             <ul class="space-y-2">
               <li><NuxtLink :to="`/${currentStateSlug}`" class="text-sm text-gray-500 hover:text-blue-600">{{ currentStateName }} District Calendars</NuxtLink></li>
               <li><NuxtLink to="/calendar-verification-methodology" class="text-sm text-gray-500 hover:text-blue-600">Verification Methodology</NuxtLink></li>
@@ -296,7 +296,7 @@ watch(() => route.fullPath, () => {
             </ul>
           </div>
         </div>
-        <div class="pt-6 border-t border-gray-100 text-center text-xs text-gray-400">
+        <div class="pt-6 border-t border-gray-100 text-center text-xs text-gray-600">
           <p>&copy; {{ new Date().getFullYear() }} MySchoolDates &mdash; US School Calendar Platform</p>
         </div>
       </div>
