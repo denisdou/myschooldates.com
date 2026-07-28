@@ -11,6 +11,7 @@ export type ComparisonRow = {
   studentCount?: number | null
   schoolCount?: number | null
   county?: string | null
+  fallBreak: { start: string; end: string } | null
   springBreak: { start: string; end: string } | null
   winterBreak: { start: string; end: string } | null
   thanksgivingBreak: { start: string; end: string } | null
@@ -38,7 +39,7 @@ const fmtRange = (start: string, end: string) => {
   if (startDate.getFullYear() === endDate.getFullYear() && startDate.getMonth() === endDate.getMonth()) {
     return `${startDate.toLocaleString('en-US', { month: 'short' })} ${startDate.getDate()}–${endDate.getDate()}, ${endDate.getFullYear()}`
   }
-  return `${fmt(start)} – ${fmt(end)}`
+  return `${fmt(start)}–${fmt(end)}`
 }
 
 const fmtValue = (value: unknown) => {
@@ -46,6 +47,11 @@ const fmtValue = (value: unknown) => {
   if (typeof value === 'number') return value.toLocaleString('en-US')
   return String(value)
 }
+
+const displaySchoolYear = computed(() => {
+  const match = String(props.year).match(/^(\d{4})-(\d{4})$/)
+  return match ? `${match[1]}–${match[2]!.slice(2)}` : props.year
+})
 
 const calendarTypeLabel = (type?: string | null) => {
   if (!type) return ''
@@ -101,6 +107,7 @@ const rows = computed((): ComparisonRow[] => {
   if (props.cal && props.district) {
     const calBreaks = getBreaks(props.cal.events ?? [])
     const sp = calBreaks.find((b: any) => b.name.toLowerCase().includes('spring')) ?? null
+    const fall = calBreaks.find((b: any) => b.name.toLowerCase().includes('fall')) ?? null
     const winter = calBreaks.find((b: any) =>
       b.name.toLowerCase().includes('winter') ||
       b.name.toLowerCase().includes('christmas') ||
@@ -116,6 +123,7 @@ const rows = computed((): ComparisonRow[] => {
       studentCount: props.district.studentCount ?? null,
       schoolCount: props.district.schoolCount ?? null,
       county: props.district.county ?? null,
+      fallBreak: fall ? { start: fall.start, end: fall.end } : null,
       springBreak: sp ? { start: sp.start, end: sp.end } : null,
       winterBreak: winter ? { start: winter.start, end: winter.end } : null,
       thanksgivingBreak: thanksgiving ? { start: thanksgiving.start, end: thanksgiving.end } : null,
@@ -128,6 +136,7 @@ const rows = computed((): ComparisonRow[] => {
     if (!d) continue
     const calBreaks = getBreaks(c.events ?? [])
     const sp = calBreaks.find((b: any) => b.name.toLowerCase().includes('spring')) ?? null
+    const fall = calBreaks.find((b: any) => b.name.toLowerCase().includes('fall')) ?? null
     const winter = calBreaks.find((b: any) =>
       b.name.toLowerCase().includes('winter') ||
       b.name.toLowerCase().includes('christmas') ||
@@ -144,6 +153,7 @@ const rows = computed((): ComparisonRow[] => {
       studentCount: d.studentCount ?? null,
       schoolCount: d.schoolCount ?? null,
       county: d.county ?? null,
+      fallBreak: fall ? { start: fall.start, end: fall.end } : null,
       springBreak: sp ? { start: sp.start, end: sp.end } : null,
       winterBreak: winter ? { start: winter.start, end: winter.end } : null,
       thanksgivingBreak: thanksgiving ? { start: thanksgiving.start, end: thanksgiving.end } : null,
@@ -169,7 +179,7 @@ const comparisonInsights = computed((): { label: string; items: string[] }[] => 
       )
       if (diff > 0) return `${Math.abs(diff)} day${Math.abs(diff) !== 1 ? 's' : ''} earlier than ${sn(other.name)}`
       if (diff < 0) return `${Math.abs(diff)} day${Math.abs(diff) !== 1 ? 's' : ''} later than ${sn(other.name)}`
-      return `on the same ${label} as ${sn(other.name)}`
+      return `Same ${label} as ${sn(other.name)}`
     })
   }
   return [
@@ -183,7 +193,7 @@ const dynamicIntro = computed(() => {
   if (names.length < 2) return ''
   const last = names[names.length - 1]
   const list = names.length === 2 ? names.join(' and ') : `${names.slice(0, -1).join(', ')}, and ${last}`
-  return `Compare the ${props.year} published calendar versions reviewed from district sources for ${list}. Dates shown include school-year boundaries, major breaks, instruction-day counts when available, and district profile fields.`
+  return `Compare ${displayName(rows.value[0]!)} with ${names.slice(1).join(', ')}. The table focuses on school-year boundaries and major breaks.`
 })
 
 const comparisonRows = computed(() => {
@@ -197,6 +207,11 @@ const comparisonRows = computed(() => {
       key: 'lastDay',
       label: 'Last Day',
       value: (row: ComparisonRow) => fmt(row.lastDay),
+    },
+    {
+      key: 'fallBreak',
+      label: 'Fall Break',
+      value: (row: ComparisonRow) => row.fallBreak ? fmtRange(row.fallBreak.start, row.fallBreak.end) : '',
     },
     {
       key: 'instructionalDays',
@@ -239,22 +254,34 @@ const comparisonRows = computed(() => {
       value: (row: ComparisonRow) => fmtValue(row.county),
     },
   ]
-  return baseRows.filter(def => rows.value.some(row => def.value(row)))
+  const includeRows = (((props.cal as any)?.comparisonRowsInclude ?? (props.cal as any)?.meta?.comparisonRowsInclude ?? (props.district as any)?.comparisonRowsInclude ?? (props.district as any)?.meta?.comparisonRowsInclude ?? []) as string[])
+  const candidates = includeRows.length
+    ? baseRows.filter(def => includeRows.includes(def.key))
+    : baseRows
+  if ((props.district as any)?.comparisonRowsMode === 'sharedValuesOnly' || (props.district as any)?.meta?.comparisonRowsMode === 'sharedValuesOnly') {
+    return candidates.filter(def => rows.value.every(row => def.value(row)))
+  }
+  return candidates.filter(def => rows.value.some(row => def.value(row)))
 })
 
 const compareIntro = computed(() => {
-  const intro = (props.district as any).compareIntro ?? ''
+  const intro = (props.cal as any)?.compareIntro ?? (props.cal as any)?.meta?.compareIntro ?? (props.district as any).compareIntro ?? ''
   const yearPattern = /\b\d{4}-\d{4}\b/
   if (!intro) return dynamicIntro.value
   if (yearPattern.test(intro) && !intro.includes(props.year)) return dynamicIntro.value
   const lowerIntro = intro.toLowerCase()
-  const missingNamedDistrict = rows.value.some(row => !row.isCurrent && !lowerIntro.includes(displayName(row).toLowerCase().split(' ')[0]))
+  const missingNamedDistrict = rows.value.some((row) => {
+    if (row.isCurrent) return false
+    const displayToken = displayName(row).toLowerCase().split(' ')[0]
+    const nameToken = row.name.toLowerCase().split(' ')[0]
+    return !lowerIntro.includes(displayToken) && !lowerIntro.includes(nameToken)
+  })
   return missingNamedDistrict ? dynamicIntro.value : intro
 })
 
 const sourceRows = computed(() => rows.value.filter(row => row.sourceUrl))
 const comparisonTitle = computed(() => {
-  const customTitle = (props.district as any)?.comparisonTitle ?? (props.district as any)?.meta?.comparisonTitle
+  const customTitle = (props.cal as any)?.comparisonTitle ?? (props.cal as any)?.meta?.comparisonTitle ?? (props.district as any)?.comparisonTitle ?? (props.district as any)?.meta?.comparisonTitle
   if (customTitle) return customTitle
   const current = rows.value.find(row => row.isCurrent)
   const currentName = current?.name
@@ -272,24 +299,31 @@ const comparisonTitle = computed(() => {
   return `${currentName} Calendar Compared With ${allRelatedInState ? 'Nearby Districts' : 'Large Districts'}`
 })
 const comparisonSubheading = computed(() =>
-  (props.district as any)?.comparisonSubheading ?? (props.district as any)?.meta?.comparisonSubheading ?? ''
+  (props.cal as any)?.comparisonSubheading ?? (props.cal as any)?.meta?.comparisonSubheading ?? (props.district as any)?.comparisonSubheading ?? (props.district as any)?.meta?.comparisonSubheading ?? ''
 )
 const comparisonDefaultOpen = computed(() =>
-  Boolean((props.district as any)?.comparisonDefaultOpen ?? (props.district as any)?.meta?.comparisonDefaultOpen)
+  Boolean((props.cal as any)?.comparisonDefaultOpen ?? (props.cal as any)?.meta?.comparisonDefaultOpen ?? (props.district as any)?.comparisonDefaultOpen ?? (props.district as any)?.meta?.comparisonDefaultOpen)
+)
+const showComparisonNotes = computed(() =>
+  !Boolean((props.cal as any)?.hideComparisonNotes ?? (props.cal as any)?.meta?.hideComparisonNotes)
+)
+const comparisonReviewedText = computed(() =>
+  (props.cal as any)?.comparisonReviewedText ?? (props.cal as any)?.meta?.comparisonReviewedText ?? (props.district as any)?.comparisonReviewedText ?? (props.district as any)?.meta?.comparisonReviewedText ?? ''
+)
+const comparisonSourceNote = computed(() =>
+  (props.cal as any)?.comparisonSourceNote ??
+  (props.cal as any)?.meta?.comparisonSourceNote ??
+  (props.district as any)?.comparisonSourceNote ??
+  (props.district as any)?.meta?.comparisonSourceNote ??
+  "Rows compare equivalent break periods, although districts may use different labels. Adjacent holidays and staff workdays are not included unless they fall within the listed range."
 )
 </script>
 
 <template>
-  <details id="comparison" v-if="rows.length > 1" :open="comparisonDefaultOpen" class="bg-white rounded-xl border border-gray-200 overflow-hidden scroll-mt-24 group">
-    <summary class="cursor-pointer list-none px-6 py-4 border-b border-gray-100">
-      <div class="flex items-start justify-between gap-4">
-        <div>
-          <h2 class="text-lg font-semibold text-gray-900">{{ comparisonTitle }}</h2>
-          <p v-if="compareIntro" class="text-sm text-gray-600 mt-1 leading-relaxed">{{ compareIntro }}</p>
-        </div>
-        <span class="mt-1 text-sm font-medium text-blue-600 group-open:hidden">Show</span>
-        <span class="mt-1 text-sm font-medium text-blue-600 hidden group-open:inline">Hide</span>
-      </div>
+  <section id="comparison" v-if="rows.length > 1" class="bg-white rounded-xl border border-gray-200 overflow-hidden scroll-mt-24">
+    <div class="px-6 py-4 border-b border-gray-100">
+      <h2 class="text-lg font-semibold text-gray-900">{{ comparisonTitle }}</h2>
+      <p v-if="compareIntro" class="text-sm text-gray-600 mt-1 leading-relaxed">{{ compareIntro }}</p>
       <div v-if="comparisonInsights.length" class="mt-3 grid gap-3 sm:grid-cols-2">
         <div v-for="group in comparisonInsights" :key="group.label" class="rounded-lg bg-gray-50 border border-gray-100 p-3">
           <h3 class="text-xs font-semibold uppercase tracking-wide text-gray-500">{{ group.label }}</h3>
@@ -298,7 +332,16 @@ const comparisonDefaultOpen = computed(() =>
           </ul>
         </div>
       </div>
-    </summary>
+    </div>
+
+    <details :open="comparisonDefaultOpen" class="group">
+      <summary class="cursor-pointer list-none px-6 py-3 border-b border-gray-100">
+        <span class="flex items-center justify-between gap-4">
+          <span class="text-sm font-semibold text-gray-700">View full comparison table</span>
+          <span class="text-sm font-medium text-blue-600 group-open:hidden">Show</span>
+          <span class="text-sm font-medium text-blue-600 hidden group-open:inline">Hide</span>
+        </span>
+      </summary>
 
     <div v-if="comparisonSubheading" class="px-6 pt-4">
       <h3 class="text-sm font-semibold text-gray-900">{{ comparisonSubheading }}</h3>
@@ -307,7 +350,7 @@ const comparisonDefaultOpen = computed(() =>
     <div class="overflow-x-auto">
       <table class="w-full text-sm">
         <caption class="sr-only">
-          {{ year }} calendar comparison for {{ rows.map(row => row.name).join(', ') }}
+          {{ displaySchoolYear }} calendar comparison for {{ rows.map(row => row.name).join(', ') }}
         </caption>
         <thead>
           <tr class="bg-gray-50 border-b border-gray-100">
@@ -345,7 +388,7 @@ const comparisonDefaultOpen = computed(() =>
       </table>
     </div>
 
-    <div v-if="rows.some(r => !r.isCurrent && r.comparisonNote)" class="px-6 py-4 border-t border-gray-100 space-y-2">
+    <div v-if="showComparisonNotes && rows.some(r => !r.isCurrent && r.comparisonNote)" class="px-6 py-4 border-t border-gray-100 space-y-2">
       <template v-for="row in rows.filter(r => !r.isCurrent && r.comparisonNote)" :key="row.slug">
         <p class="text-sm text-gray-600 leading-relaxed">
           <NuxtLink :to="`/${row.slug}`" class="font-medium text-gray-900 hover:text-blue-600 transition-colors">{{ displayName(row) }}</NuxtLink>: {{ row.comparisonNote }}
@@ -353,10 +396,12 @@ const comparisonDefaultOpen = computed(() =>
       </template>
     </div>
 
+    </details>
+
     <p class="px-6 py-3 border-t border-gray-100 text-xs text-gray-600">
-      All dates use each district's {{ year }} published calendar version reviewed from district sources.
-      <template v-if="reviewedDate"> Comparison last reviewed {{ reviewedDate }}.</template>
-      Comparison shows date ranges, instruction-day counts when available, and district profile fields from each district's published calendar and public district information. Break ranges represent published no-school periods and may not indicate the exact number of student attendance days.
+      Dates come from each district's published {{ displaySchoolYear }} calendar. {{ comparisonSourceNote }}
+      <template v-if="comparisonReviewedText"> {{ comparisonReviewedText }}</template>
+      <template v-else-if="reviewedDate"> Last reviewed {{ reviewedDate }}.</template>
       <template v-if="sourceRows.length">
         Sources:
         <template v-for="(row, index) in sourceRows" :key="row.slug">
@@ -370,5 +415,5 @@ const comparisonDefaultOpen = computed(() =>
         Open the linked district calendar for the full date list and source PDF.
       </template>
     </p>
-  </details>
+  </section>
 </template>

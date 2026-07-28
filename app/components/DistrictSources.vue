@@ -13,15 +13,19 @@ const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' 
 const possessiveDistrictName = computed(() =>
   /(?:s|')$/i.test(props.districtName) ? `${props.districtName}'` : `${props.districtName}'s`
 )
+const displayYear = computed(() => {
+  const match = props.year.match(/^(\d{4})-(\d{4})$/)
+  return match ? `${match[1]}–${match[2]!.slice(2)}` : props.year
+})
 </script>
 
 <template>
   <div class="bg-gray-50 rounded-xl border border-gray-100 p-5">
-    <h2 class="text-sm font-semibold text-gray-700 mb-2">Sources and Verification</h2>
+    <h2 class="text-sm font-semibold text-gray-700 mb-2">Sources and Review Notes</h2>
     <p class="text-sm text-gray-600 mb-3">
       MySchoolDates is an independent calendar reference and is not affiliated with {{ districtName }}.
-      Calendar dates are based on {{ possessiveDistrictName }} official {{ year }} calendar.
-      <template v-if="verifiedDate"> Calendar data checked against the official district source on {{ verifiedDate }}.</template>
+      Calendar dates are based on {{ possessiveDistrictName }} official {{ displayYear }} calendar.
+      <template v-if="verifiedDate"> We checked the dates against the official district source on {{ verifiedDate }}.</template>
       <template v-else> Not yet checked against the official source.</template>
     </p>
     <ul class="space-y-1.5 mb-3">
@@ -65,7 +69,7 @@ const possessiveDistrictName = computed(() =>
       </p>
       <p v-if="verifiedDate">
         <span class="font-medium text-gray-600">Last manual review:</span>
-        {{ verifiedDate }} by the MySchoolDates Calendar Data Team.
+        {{ verifiedDate }}, by the MySchoolDates Calendar Data Team.
       </p>
       <p v-if="verifiedDate">
         <span class="font-medium text-gray-600">Next review:</span>
@@ -76,9 +80,9 @@ const possessiveDistrictName = computed(() =>
           How we verify this calendar
         </summary>
         <div class="mt-2 space-y-1.5">
-          <p>Each school year, MySchoolDates checks the official calendar source published or linked by the district. The page record is reviewed against the official first day, last day, major breaks, holidays, student no-school dates, early dismissals, exam windows, and alternate-calendar links when those items appear in the official source.</p>
-          <p>When page data does not match the official source, we update the record before publication. This page displays major student calendar dates; early dismissals, exam windows, staff-specific details, and track-specific items may remain available only in the official PDF. The downloadable calendar file is generated from the calendar records used for this page, and the official district calendar remains the source of record for last-minute changes.</p>
-          <p>Supplemental planning notes and district profile information may change by year. Families should confirm program deadlines, transportation notices, and emergency schedule updates directly with {{ shortName }}.</p>
+          <p>Each school year, MySchoolDates checks the dates shown on this page against the district's published calendar and other official calendar documents.</p>
+          <p>If we find a mismatch, we correct the page and update its review date. This page focuses on major districtwide student dates. School-specific dismissal times, testing, staff details, and program events may appear only in the official PDF or individual school calendars. The downloadable calendar file is a one-time import generated from the calendar records used for this page, and the official district calendar remains the source of record for last-minute changes.</p>
+          <p>Confirm program deadlines, transportation notices, and emergency schedule changes directly with {{ shortName }}.</p>
           <p>
             <a
               href="mailto:hello@myschooldates.com?subject=Calendar%20Correction"

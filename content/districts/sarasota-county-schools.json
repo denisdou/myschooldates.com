@@ -1,0 +1,316 @@
+{
+  "institutionId": "sarasota-county-schools",
+  "name": "Sarasota County Schools",
+  "shortName": "SCS",
+  "slug": "sarasota-county-school-calendar",
+  "state": "Florida",
+  "stateCode": "FL",
+  "city": "Sarasota",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.sarasotacountyschools.net",
+  "calendarPage": "https://www.sarasotacountyschools.net/events",
+  "logo": "https://cmsv2-assets.apptegy.net/uploads/21535/logo/24349/logo_2x.png",
+  "timezone": "America/New_York",
+  "county": "Sarasota County",
+  "region": "Southwest Florida Gulf Coast",
+  "metro": "North Port-Sarasota-Bradenton",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "keyDates",
+  "calendarType": "traditional",
+  "hiddenSections": [
+    "comparison",
+    "nationalTrends"
+  ],
+  "contentControls": {
+    "contentTier": "enhanced",
+    "pageArchetype": "enhanced_calendar",
+    "moduleDepth": "district-knowledge-resource",
+    "moduleRule": "Use Sarasota-specific modules only when they explain official calendar patterns, student no-school dates, staff/student date differences, or the district's inclement weather makeup note. Do not add lifestyle, tourism, traffic, or generic family guide sections that repeat the same break dates.",
+    "enabledModules": {
+      "calendarIntelligence": false,
+      "calendarPatternAnalysis": false,
+      "familyPlanningCalendar": false,
+      "communityContext": false,
+      "comparison": "collapsed",
+      "nationalTrends": false
+    },
+    "moduleQualityScore": {
+      "criticalNoSchoolDates": {
+        "enabled": true,
+        "qualityScore": 5,
+        "confidence": "high",
+        "confidenceReason": "The official calendar lists professional days and mini breaks that are easy to miss because they fall outside the major break windows.",
+        "reason": "October 12, January 4, March 12, March 26, and April 16 add clear user value beyond the major holiday list."
+      },
+      "staffCalendar": {
+        "enabled": true,
+        "qualityScore": 4,
+        "confidence": "high",
+        "confidenceReason": "The official calendar separates 186-, 196-, 220-, and 240-day staff groups.",
+        "reason": "Staff dates are useful for accuracy but should stay separate from the main student calendar."
+      },
+      "weatherNote": {
+        "enabled": true,
+        "qualityScore": 3,
+        "confidence": "high",
+        "confidenceReason": "The official calendar includes an inclement weather makeup-day note.",
+        "reason": "Weather makeup should be mentioned without expanding into unsupported tourism, traffic, or lifestyle claims."
+      },
+      "regionalCalendarContext": {
+        "enabled": "collapsed",
+        "qualityScore": 3,
+        "confidence": "medium",
+        "confidenceReason": "Regional context is relevant for cross-county planning, but it remains supporting content and should stay collapsed unless user intent is comparative.",
+        "reason": "Regional context is useful for cross-county childcare, custody, work, and travel planning, but it is supporting content rather than the page's primary intent."
+      }
+    },
+    "contentConfidence": {
+      "criticalNoSchoolDates": "high",
+      "staffCalendar": "high",
+      "weatherNote": "high",
+      "regionalCalendarContext": "medium"
+    },
+    "calendarDistinctivenessScore": {
+      "score": 85,
+      "band": "high",
+      "reasons": [
+        "Staff/student schedule complexity",
+        "Mini breaks outside major holiday windows",
+        "Professional days adjacent to major breaks",
+        "Inclement weather makeup note",
+        "Inclement weather makeup note"
+      ]
+    },
+    "districtComplexityScore": {
+      "score": 78,
+      "band": "large-county-enhanced",
+      "factors": [
+        "multiple_staff_calendars",
+        "multiple_communities",
+        "weather_dependency"
+      ],
+      "displayRecommendation": "enhanced"
+    },
+    "searchIntentScore": {
+      "score": 95,
+      "coveredIntents": [
+        "calendar query",
+        "PDF download query",
+        "ICS import query",
+        "holiday and break query",
+        "professional day query"
+      ]
+    },
+    "editorialRiskScore": {
+      "score": 20,
+      "band": "low",
+      "riskFactors": [
+        "community context requires verification",
+        "regional context should remain collapsed",
+        "avoid expanding Sarasota-specific planning modules to low-complexity districts"
+      ]
+    },
+    "moduleRecommendation": {
+      "criticalNoSchoolDates": true,
+      "staffCalendar": true,
+      "weatherNote": true,
+      "regionalCalendarContext": "collapsed",
+      "nationalTrends": false
+    },
+    "pageDepthStrategy": {
+      "scoreMatrix": [
+        {
+          "scoreRange": "90+",
+          "archetype": "enhanced_calendar",
+          "description": "Enhanced calendar resource with critical no-school dates, staff calendar separation, and evidence-backed notes."
+        },
+        {
+          "scoreRange": "70-90",
+          "archetype": "standard_calendar",
+          "description": "Standard calendar page with core dates, downloads, FAQ, and limited notes."
+        },
+        {
+          "scoreRange": "50-70",
+          "archetype": "calendar_faq",
+          "description": "Calendar plus FAQ only; no local planning or regional context unless evidence is strong."
+        },
+        {
+          "scoreRange": "<50",
+          "archetype": "basic_calendar",
+          "description": "Basic verified calendar lookup page with official source, key dates, and downloads."
+        }
+      ]
+    },
+    "moduleDisplayRules": {
+      "minimumScore": {
+        "alwaysShow": 5,
+        "enhancedOnly": 4,
+        "optionalCollapsed": 3,
+        "hide": 2
+      },
+      "criticalDatesTableMode": {
+        "enhanced": "full",
+        "standard": "summary",
+        "smallDistrict": "top3"
+      }
+    },
+    "localContextTriggers": [
+      "weather",
+      "staffCalendarGroups",
+      "officialWeatherMakeupNote"
+    ],
+    "evidenceRequirement": {
+      "localContext": {
+        "enabled": false,
+        "requiredEvidence": [
+          "official_note",
+          "regional_factor"
+        ],
+        "minimumEvidenceCount": 2,
+        "rule": "Do not show lifestyle or community context unless it changes how families use official calendar dates."
+      },
+      "criticalNoSchoolDates": {
+        "enabled": true,
+        "requiredEvidence": [
+          "official_date",
+          "no_student_status"
+        ],
+        "minimumEvidenceCount": 2,
+        "rule": "Critical dates must be official no-student dates, professional days, mini breaks, or return dates that are easy to miss."
+      },
+      "regionalCalendarContext": {
+        "enabled": "collapsed",
+        "requiredEvidence": [
+          "nearby_district_calendar",
+          "cross_county_planning_use_case"
+        ],
+        "minimumEvidenceCount": 2,
+        "rule": "Regional context stays collapsed unless the page is answering cross-county childcare, custody, work, or travel planning needs."
+      }
+    },
+    "contentGuardrails": {
+      "avoid": [
+        "generic family guide language that repeats break dates without adding decisions",
+        "neighborhood recommendations or lifestyle content outside school-calendar intent",
+        "unsupported local claims about tourism, traffic, weather, or commute patterns",
+        "school-specific events, athletics, testing, performances, or graduation dates without a campus or official source",
+        "expanding regional comparison content into a primary page topic"
+      ],
+      "require": [
+        "official calendar source for dates",
+        "clear distinction between official district dates and MySchoolDates interpretation",
+        "collapsed display for supporting regional context",
+        "module suppression when evidence or distinctiveness is weak"
+      ]
+    },
+    "faqSchemaLimit": 6
+  },
+  "searchAliases": [
+    "Sarasota County Schools",
+    "SCS calendar",
+    "Sarasota County school calendar",
+    "Sarasota schools calendar",
+    "North Port school calendar",
+    "Venice school calendar",
+    "Englewood school calendar",
+    "Nokomis school calendar",
+    "Osprey school calendar",
+    "Siesta Key school calendar",
+    "Southwest Florida school calendar"
+  ],
+  "districtFact": "Sarasota County Schools publishes a districtwide academic calendar with student days, professional days, mini breaks, staff calendar groups, and an inclement weather makeup note. Campus events, athletics, testing, performances, and graduation details should be checked with the assigned school.",
+  "about": [
+    {
+      "title": "About Sarasota County Schools",
+      "content": "Sarasota County Schools is the countywide public school district for Sarasota County, Florida. The district serves Sarasota, North Port, Venice, Englewood, Nokomis, Osprey, Laurel, and nearby Gulf Coast communities. Its district academic calendar lists the student start date, teacher and staff return dates, grading period endings, professional days, Thanksgiving Break, Winter Break, Spring Break, mini breaks, staff calendar milestones, Memorial Day, and the final student and staff days."
+    },
+    {
+      "title": "What This Calendar Covers",
+      "content": "This page covers districtwide Sarasota County Schools academic dates. It does not replace school-level calendars for athletics, testing, performances, graduation, program events, or campus-specific announcements."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "sarasota-calendar-scope-note",
+      "label": "What This Calendar Covers",
+      "position": "afterAbout",
+      "schemaHasPart": false,
+      "content": "This page covers districtwide Sarasota County Schools dates. Check your school's calendar for testing, athletics, performances, graduation, and other campus events."
+    }
+  ],
+  "relatedDistrictsTitle": "More Florida School Calendars",
+  "relatedDistrictsDescription": "Browse calendars for other Florida school districts.",
+  "districtFaqs": [
+    {
+      "q": "What school district serves Sarasota, Florida?",
+      "a": "Public schools in Sarasota are served by Sarasota County Schools. The districtwide academic calendar applies to systemwide holidays, breaks, professional days, and student attendance dates."
+    },
+    {
+      "q": "Does Sarasota County Schools include North Port and Venice?",
+      "a": "Yes. Sarasota County Schools serves Sarasota, North Port, Venice, Englewood, Nokomis, Osprey, Laurel, and other Sarasota County communities."
+    },
+    {
+      "q": "Does the Sarasota County Schools calendar include school events?",
+      "a": "The district academic calendar covers systemwide dates such as the first day, last day, holidays, breaks, professional days, grading period endings, and staff calendar notes. Campus events, athletics, testing, performances, and graduation details may be published separately by each school."
+    },
+    {
+      "q": "Can Sarasota County Schools change dates after weather closures?",
+      "a": "Yes. The official calendar notes that makeup days may be used after weather-related closures. Check district announcements before relying on late-year dates."
+    },
+    {
+      "q": "What are mini breaks on the Sarasota County Schools calendar?",
+      "a": "Mini breaks are district-listed no-school days for students and selected staff groups. They are separate from Thanksgiving Break, Winter Break, and Spring Break and should be treated as childcare planning dates."
+    },
+    {
+      "q": "Where should families verify Sarasota County Schools calendar changes?",
+      "a": "Use the official Sarasota County Schools events/calendar page and campus announcements for final confirmation. MySchoolDates summarizes official calendar documents and is not affiliated with Sarasota County Schools."
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "The School District of Lee County",
+      "slug": "lee-county-school-calendar",
+      "state": "Florida",
+      "comparisonNote": "Southwest Florida district useful for comparing Gulf Coast spring break, hurricane makeup, and end-of-year planning."
+    },
+    {
+      "name": "Collier County Public Schools",
+      "slug": "collier-county-school-calendar",
+      "state": "Florida",
+      "comparisonNote": "Neighboring Southwest Florida calendar useful for comparing spring break, hurricane makeup, and end-of-year planning."
+    },
+    {
+      "name": "Hillsborough County Public Schools",
+      "slug": "hillsborough-county-school-calendar",
+      "state": "Florida",
+      "comparisonNote": "Tampa Bay district often compared by families with work, childcare, or travel ties north of Sarasota County."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Sarasota County Schools official website",
+      "url": "https://www.sarasotacountyschools.net"
+    },
+    {
+      "label": "Sarasota County Schools events and calendar page",
+      "url": "https://www.sarasotacountyschools.net/events"
+    }
+  ]
+}

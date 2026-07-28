@@ -10,47 +10,46 @@
   "sourcePdfUrl": "https://api.dadeschools.net/WMSFiles/392/calendars/26-25/School-Calendars-2025-2026-Elementary-Secondary.pdf",
   "lastVerifiedAt": "2026-07-02",
   "calendarType": "traditional",
+  "displaySchoolYear": "2025–26",
+  "hiddenSections": [
+    "quickFacts",
+    "keyDatesSummary",
+    "yearNumbers",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "todayStatus",
+    "downloadCta",
+    "whatsDifferent",
+    "nationalTrends"
+  ],
+  "allDatesMode": "all",
   "alternateCalendars": [
     {
       "type": "technical-colleges",
-      "label": "2025-2026 Technical Colleges & Adult Education",
+      "label": "2025–26 Technical Colleges & Adult Education",
       "pdfUrl": "https://api.dadeschools.net/WMSFiles/392/calendars/25-26/School-Calendars-2025-2026-Technical.pdf",
       "firstDay": "2025-08-14"
     },
     {
       "type": "juvenile-justice",
-      "label": "2025-2026 Juvenile Justice Education Calendar",
+      "label": "2025–26 Juvenile Justice Education Calendar",
       "pdfUrl": "https://api.dadeschools.net/WMSFiles/392/calendars/25-26/School-Calendars-2025-2026-Juvenile-Justice.pdf",
       "firstDay": "2025-08-19"
     }
   ],
   "calendarFaqs": [
     {
-      "q": "When does school start for Miami-Dade County Public Schools in 2025-2026?",
-      "a": "The first day of school for Miami-Dade County Public Schools is Thursday, August 14, 2025. Students and staff are expected to report on this date to begin the new academic year."
+      "q": "When does school start for Miami-Dade County Public Schools in 2025–26?",
+      "a": "The first day of classes for students is Thursday, August 14, 2025."
     },
     {
-      "q": "When is the last day of school for Miami-Dade County Public Schools in 2025-2026?",
+      "q": "When is the last day of school for Miami-Dade County Public Schools in 2025–26?",
       "a": "The last day of school for Miami-Dade County Public Schools is Thursday, June 4, 2026. The school year runs from August through June, covering 180 instructional days."
     }
   ],
-  "yearNumbers": [
-    {
-      "label": "Offset Spring Break",
-      "value": "1 week later",
-      "detail": "Miami-Dade's Spring Break runs Mar 23-27, one week after Broward, Palm Beach, and Hillsborough counties (Mar 16-20) — South Florida families in mixed-district households will have staggered breaks."
-    },
-    {
-      "label": "Ends in June",
-      "value": "Jun 4",
-      "detail": "The school year ends June 4, later than most neighboring districts that conclude in late May."
-    },
-    {
-      "label": "Latest Start",
-      "value": "Aug 14",
-      "detail": "Miami-Dade starts on Thursday, August 14 — three days after Broward, Palm Beach, and Hillsborough which all open August 11."
-    }
-  ],
+  "yearNumbers": [],
   "events": [
     {
       "date": "2025-08-14",
@@ -64,17 +63,17 @@
     },
     {
       "date": "2025-09-23",
-      "name": "No School (Teacher Planning)",
+      "name": "Teacher Planning Day — No School for Students",
       "type": "no_school"
     },
     {
       "date": "2025-10-02",
-      "name": "No School (Teacher Planning)",
+      "name": "Teacher Planning Day — No School for Students",
       "type": "no_school"
     },
     {
       "date": "2025-11-03",
-      "name": "No School (Teacher Planning)",
+      "name": "Teacher Planning Day — No School for Students",
       "type": "no_school"
     },
     {
@@ -104,7 +103,7 @@
     },
     {
       "date": "2026-01-16",
-      "name": "No School (Teacher Planning)",
+      "name": "Teacher Planning Day — No School for Students",
       "type": "no_school"
     },
     {
@@ -119,7 +118,7 @@
     },
     {
       "date": "2026-03-20",
-      "name": "No School (Teacher Planning)",
+      "name": "Teacher Planning Day — No School for Students",
       "type": "no_school"
     },
     {
@@ -134,7 +133,7 @@
     },
     {
       "date": "2026-04-03",
-      "name": "No School (Teacher Planning)",
+      "name": "Teacher Planning Day — No School for Students",
       "type": "no_school"
     },
     {
@@ -148,7 +147,7 @@
       "type": "school_end"
     }
   ],
-  "calendarNotes": "Miami-Dade County Public Schools begins the 2025–2026 school year on August 14, 2025. Spring Break runs March 23–27, 2026 — one week later than Broward County, Palm Beach County, and Hillsborough County (all March 16–20). The school year ends June 4, 2026.",
+  "calendarNotes": "Miami-Dade County Public Schools begins the 2025–26 school year on Thursday, August 14, 2025. Spring break runs March 23–27, 2026, and the school year ends Thursday, June 4, 2026.",
   "datePublished": "2026-07-02",
-  "dateModified": "2026-07-02"
+  "dateModified": "2026-07-28"
 }

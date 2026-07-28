@@ -7,7 +7,7 @@
 
 ## 当前进度快照
 
-**已完成学区（46个）**
+**已完成学区（48个）**
 
 | 州 | 已完成 | P1 完成度 | P2 完成度 |
 |----|--------|-----------|-----------|
@@ -16,8 +16,16 @@
 | Florida | Miami-Dade, Broward County, Orange County, Palm Beach County, Hillsborough County | 5/5 ✓ | 0/5 |
 | Virginia | Fairfax County, Prince William County, Loudoun County, Virginia Beach City, Chesterfield County, Henrico County, Arlington Public Schools | 5/5 ✓ | 2/5 |
 | North Carolina | Wake County, Charlotte-Mecklenburg, Guilford County, Winston-Salem/Forsyth, Cumberland County, Union County, Cabarrus County, Johnston County, Durham Public Schools, New Hanover County | 5/5 ✓ | 5/5 ✓ |
+| Georgia | Gwinnett County Public Schools, Fulton County Schools, Atlanta Public Schools | — | — |
 
 **合计：P1 已完成 27/27 ✓，P2 已完成 14/24，P3 尚未开始。**
+
+### 追加创建记录
+
+| 创建日期 | 州 | 学区 | 实际 Slug | 已创建学年 | 备注 |
+|----------|----|------|-----------|------------|------|
+| 2026-07-28 | Georgia | Fulton County Schools | `/fulton-county-schools-calendar` | 2025-2026, 2026-2027, 2027-2028 | 基于官方 Fulton County Schools calendar page 与三份官方 PDF；2028-2029 PDF URL 未提供，暂不创建。 |
+| 2026-07-28 | Georgia | Atlanta Public Schools | `/atlanta-public-schools-calendar` | 2025-2026, 2026-2027, 2027-2028 | 基于官方 Atlanta Public Schools calendar page 与三份官方 Student Calendar PDF；官网 logo 未提供，主文件暂不写 logo。 |
 
 ---
 
@@ -297,12 +305,12 @@ P3 内容可采用更高度模板化的方式生成（calendarNotes 精简为 4-
 | 66 | Florida | Seminole County Public Schools | Orlando | ✓ 已完成：`seminole-county-school-calendar` |
 | 67 | Florida | Osceola School District | Orlando | ✓ 已完成：`osceola-school-district-calendar` |
 | 68 | Florida | Brevard Public Schools | Space Coast | ✓ 已完成：`brevard-public-schools-calendar` |
-| 69 | Florida | Collier County Public Schools | Naples | ✓ 已完成：`collier-county-school-calendar` |
-| 70 | Florida | Sarasota County Schools | Sarasota | 待创建 |
-| 71 | Georgia | Cobb County School District | Atlanta | 待创建 |
-| 72 | Georgia | DeKalb County School District | Atlanta | 待创建 |
-| 73 | Georgia | Fulton County Schools | Atlanta | 待创建 |
-| 74 | Georgia | Atlanta Public Schools | Atlanta | 待创建 |
+| 69 | Florida | Collier County Public Schools | Naples | ✓ 已完成：`collier-county-school-calendar` | 已审计完 7.27
+| 70 | Florida | Sarasota County Schools | Sarasota | ✓ 已完成：`sarasota-county-school-calendar` 2026-07-28 |
+| 71 | Georgia | Cobb County School District | Atlanta | ✓ 已完成：`cobb-county-school-calendar` 2026-07-28|
+| 72 | Georgia | DeKalb County School District | Atlanta | ✓ 已完成：`dekalb-county-school-calendar` 2026-07-28|
+| 73 | Georgia | Fulton County Schools | Atlanta | ✓ 已完成：`fulton-county-schools-calendar` 2026-07-28 |
+| 74 | Georgia | Atlanta Public Schools | Atlanta | ✓ 已完成：`atlanta-public-schools-calendar`（2026-07-28） |
 | 75 | Georgia | Forsyth County Schools | Atlanta | 待创建 |
 | 76 | Georgia | Clayton County Public Schools | Atlanta | 待创建 |
 | 90 | Maryland | Baltimore County Public Schools | Baltimore | 待创建 |

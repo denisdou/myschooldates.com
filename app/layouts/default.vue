@@ -67,6 +67,14 @@ const closeDesktopMenu = () => {
   activeDesktopMenu.value = null
 }
 
+const handleDesktopMenuFocusout = (event: FocusEvent) => {
+  const currentTarget = event.currentTarget as HTMLElement | null
+  const relatedTarget = event.relatedTarget as Node | null
+  if (!currentTarget || !relatedTarget || !currentTarget.contains(relatedTarget)) {
+    closeDesktopMenu()
+  }
+}
+
 watch(() => route.fullPath, () => {
   mobileMenuOpen.value = false
   activeDesktopMenu.value = null
@@ -94,19 +102,28 @@ watch(() => route.fullPath, () => {
           </NuxtLink>
           <div
             class="relative"
-            tabindex="0"
             @mouseenter="activeDesktopMenu = 'states'"
             @mouseleave="closeDesktopMenu"
-            @focusin="activeDesktopMenu = 'states'"
-            @focusout="closeDesktopMenu"
+            @focusout="handleDesktopMenuFocusout"
+            @keydown.escape.stop="closeDesktopMenu"
           >
-            <div class="inline-flex cursor-default items-center gap-1 text-sm text-gray-600 hover:text-blue-600 transition-colors">
+            <button
+              type="button"
+              id="states-menu-button"
+              class="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+              :aria-expanded="activeDesktopMenu === 'states'"
+              aria-controls="states-menu"
+              @click="activeDesktopMenu = 'states'"
+              @focus="activeDesktopMenu = 'states'"
+            >
               <span>States</span>
               <svg class="h-4 w-4 transition-transform" :class="{ 'rotate-180': activeDesktopMenu === 'states' }" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
               </svg>
-            </div>
+            </button>
             <div
+              id="states-menu"
+              aria-labelledby="states-menu-button"
               v-show="activeDesktopMenu === 'states'"
               class="absolute left-0 top-full z-30 w-[34rem] pt-3"
             >
@@ -131,19 +148,28 @@ watch(() => route.fullPath, () => {
           </NuxtLink>
           <div
             class="relative"
-            tabindex="0"
             @mouseenter="activeDesktopMenu = 'calendar'"
             @mouseleave="closeDesktopMenu"
-            @focusin="activeDesktopMenu = 'calendar'"
-            @focusout="closeDesktopMenu"
+            @focusout="handleDesktopMenuFocusout"
+            @keydown.escape.stop="closeDesktopMenu"
           >
-            <div class="inline-flex cursor-default items-center gap-1 text-sm text-gray-600 hover:text-blue-600 transition-colors">
+            <button
+              type="button"
+              id="calendar-data-menu-button"
+              class="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+              :aria-expanded="activeDesktopMenu === 'calendar'"
+              aria-controls="calendar-data-menu"
+              @click="activeDesktopMenu = 'calendar'"
+              @focus="activeDesktopMenu = 'calendar'"
+            >
               <span>Calendar Data</span>
               <svg class="h-4 w-4 transition-transform" :class="{ 'rotate-180': activeDesktopMenu === 'calendar' }" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
               </svg>
-            </div>
+            </button>
             <div
+              id="calendar-data-menu"
+              aria-labelledby="calendar-data-menu-button"
               v-show="activeDesktopMenu === 'calendar'"
               class="absolute right-0 top-full z-30 w-72 pt-3"
             >
@@ -166,6 +192,7 @@ watch(() => route.fullPath, () => {
           type="button"
           class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-700 sm:hidden"
           :aria-expanded="mobileMenuOpen"
+          aria-controls="mobile-navigation"
           aria-label="Open navigation menu"
           @click="mobileMenuOpen = !mobileMenuOpen"
         >
@@ -180,7 +207,7 @@ watch(() => route.fullPath, () => {
           </svg>
         </button>
       </div>
-      <nav v-if="mobileMenuOpen" class="border-t border-gray-100 bg-white px-4 py-3 sm:hidden">
+      <nav id="mobile-navigation" v-show="mobileMenuOpen" class="border-t border-gray-100 bg-white px-4 py-3 sm:hidden">
         <div class="mx-auto max-w-5xl space-y-4">
           <div class="grid grid-cols-2 gap-2">
             <NuxtLink
@@ -281,7 +308,7 @@ watch(() => route.fullPath, () => {
             </NuxtLink>
             <p class="text-sm text-gray-500 leading-relaxed mb-4">
               US School Calendar Platform. All data is sourced from official school district websites.
-              Dates are subject to board approval — always verify with your district before making plans.
+              Districts may revise calendars after publication — always verify with your district before making plans.
             </p>
             <ul class="space-y-2">
               <li><NuxtLink to="/about" class="text-sm text-gray-500 hover:text-blue-600">About</NuxtLink></li>

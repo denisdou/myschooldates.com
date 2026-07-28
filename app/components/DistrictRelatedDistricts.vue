@@ -7,10 +7,10 @@ const props = defineProps<{
 }>()
 
 const allRelatedInState = computed(() => props.relatedDistricts.every(rd => rd.state === props.stateName))
-const heading = computed(() => props.title ?? (allRelatedInState.value ? `Related ${props.stateName} School Calendars` : 'Related Large District Calendars'))
+const heading = computed(() => props.title ?? (allRelatedInState.value ? `More ${props.stateName} School Calendars` : 'More School Calendars'))
 const description = computed(() => props.description ?? (allRelatedInState.value
-  ? `Compare nearby ${props.stateName} school districts for different start dates, spring breaks, and no-school periods.`
-  : 'Compare other large school district calendars for different start dates, spring breaks, and no-school periods.'))
+  ? `Browse calendars for other ${props.stateName} school districts.`
+  : 'Browse calendars for other school districts.'))
 const stateSlug = computed(() => props.stateName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))
 </script>
 

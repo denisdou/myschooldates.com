@@ -1,0 +1,297 @@
+{
+  "institutionId": "sarasota-county-schools",
+  "schoolYear": "2026-2027",
+  "firstDay": "2026-08-10",
+  "lastDay": "2027-05-26",
+  "totalSchoolDays": 180,
+  "teacherWorkDays": 196,
+  "sourceUrl": "https://www.sarasotacountyschools.net/events",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4647/Scs/124abac1-b279-4649-aead-6c585ce6ed8b/2026-2027_Published_Calendar__1_.pdf?disposition=inline",
+  "lastVerifiedAt": "2026-07-28",
+  "datePublished": "2026-07-28",
+  "dateModified": "2026-07-28",
+  "calendarType": "traditional",
+  "hideSemesterCount": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerifiedBadge": true,
+  "hideHeroVerificationProcess": true,
+  "compactDownloadModule": true,
+  "displaySchoolYear": "2026–27",
+  "icsHeading": "Download the 2026–27 Calendar",
+  "icsDescription": "Download these dates as an .ics file for Google Calendar, Apple Calendar, or Outlook. This is a one-time import and will not update automatically if the district changes its calendar.",
+  "icsButtonSupportText": "One-time download. Not a live district sync.",
+  "allDatesMode": "all",
+  "allDatesTitle": "Districtwide Student Calendar Dates — 2026–27",
+  "allDatesIncludedDatesInKeyDates": [
+    "2026-09-07",
+    "2027-01-18",
+    "2027-02-15"
+  ],
+  "allDatesCoverageNote": "This table lists districtwide student calendar dates from the official district calendar. Check the official PDF and your school's calendar for campus events, dismissal times, testing, and schedule changes.",
+  "temporalCoverageStart": "2026-07-06",
+  "temporalCoverageEnd": "2027-06-11",
+  "hiddenSections": [
+    "keyDateCards",
+    "keyDatesSummary",
+    "downloadCta",
+    "quickFacts",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "comparison",
+    "todayStatus",
+    "nationalTrends"
+  ],
+  "yearNumbersMode": "compact",
+  "faqLimit": 8,
+  "faqSchemaLimit": 6,
+  "seoTitle": "Sarasota County Schools Calendar 2026–27: Key Dates & PDF",
+  "seoDescription": "Find the first and last days of school, holidays, breaks, professional days, and the official Sarasota County Schools 2026–27 calendar PDF.",
+  "schemaDatasetDescription": "Reviewed Sarasota County Schools 2026–27 calendar dataset including school-year boundaries, major breaks, professional days, mini breaks, staff schedule groups, and weather makeup notes from the official district calendar.",
+  "schemaCalendarDownloadName": "Sarasota County Schools 2026–27 student calendar file",
+  "schemaCalendarDownloadDescription": "Calendar import file containing the districtwide student dates shown on this page.",
+  "schemaVariableMeasured": [
+    "School year boundaries",
+    "Break dates",
+    "Professional days",
+    "No-student planning windows",
+    "Staff schedule groups",
+    "Weather makeup notes"
+  ],
+  "pageHeading": "Sarasota County Schools Calendar 2026–27",
+  "heroSummary": "Sarasota County Schools begins the 2026–27 school year on Monday, August 10, 2026, and the last day for students is Wednesday, May 26, 2027. Spring Break runs March 15–19.",
+  "heroCtas": [
+    {
+      "label": "View official PDF",
+      "href": "__sourcePdfUrl",
+      "variant": "primary"
+    },
+    {
+      "label": "Download calendar (.ics)",
+      "href": "__icsUrl",
+      "variant": "secondary",
+      "download": true,
+      "filename": "__icsFilename"
+    }
+  ],
+  "heroLinks": [
+    {
+      "label": "Official calendar page",
+      "href": "https://www.sarasotacountyschools.net/events"
+    },
+    {
+      "label": "Calendar verification methodology",
+      "href": "/calendar-verification-methodology"
+    }
+  ],
+  "heroQuickDates": [
+    {
+      "label": "First day",
+      "value": "Monday, August 10, 2026"
+    },
+    {
+      "label": "Last day",
+      "value": "Wednesday, May 26, 2027"
+    },
+    {
+      "label": "Thanksgiving Break",
+      "value": "Nov 23–27, 2026"
+    },
+    {
+      "label": "Winter Break",
+      "value": "Dec 21, 2026–Jan 1, 2027"
+    },
+    {
+      "label": "Spring Break",
+      "value": "Mar 15–19, 2027"
+    },
+    {
+      "label": "Students return",
+      "value": "Tuesday, January 5, 2027"
+    }
+  ],
+  "resourcePositioning": "Last checked July 28, 2026 against the district's published calendar. The downloadable calendar is a one-time import and does not update automatically.",
+  "calendarSignals": {
+    "majorBreakCount": 3,
+    "majorBreaks": [
+      "Thanksgiving Break",
+      "Winter Break",
+      "Spring Break"
+    ],
+    "standaloneNoStudentWeekdays": [
+      "2026-10-12",
+      "2027-01-04",
+      "2027-03-12",
+      "2027-03-26",
+      "2027-04-16"
+    ],
+    "professionalDays": [
+      "2026-10-12",
+      "2027-01-04",
+      "2027-03-12"
+    ],
+    "gradingPeriodCount": 3,
+    "longestBreak": "Winter Break, Dec 21, 2026–Jan 1, 2027",
+    "busiestPlanningMonth": "March",
+    "calendarPattern": "Traditional early-August start with a late-May finish, three major breaks, two mini breaks, and several no-student weekdays outside the major breaks.",
+    "weatherRisk": "The official calendar notes that inclement weather makeup days may be used if needed."
+  },
+  "jumpNavigation": [
+    {
+      "label": "Quick Answer",
+      "href": "#quick-answer"
+    },
+    {
+      "label": "Easy-to-Miss Dates",
+      "id": "sarasota-2026-2027-critical-dates"
+    },
+    {
+      "label": "Dates",
+      "href": "#all-dates"
+    },
+    {
+      "label": "Breaks",
+      "href": "#breaks"
+    },
+    {
+      "label": "Download",
+      "href": "#add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "href": "#faq"
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When does Sarasota County school start in 2026?",
+    "When is the last day of school for Sarasota County in 2027?",
+    "When is Sarasota County Spring Break in 2027?",
+    "When is Winter Break for Sarasota County Schools in 2026–27?",
+    "Does Sarasota County use the same calendar for all schools?",
+    "Which professional days and mini breaks fall outside the major breaks?",
+    "Where can I download the Sarasota County Schools 2026–27 calendar PDF?",
+    "Can Sarasota County Schools change dates after weather closures?"
+  ],
+  "faqSchemaQuestions": [
+    "When does Sarasota County school start in 2026?",
+    "When is the last day of school for Sarasota County in 2027?",
+    "When is Sarasota County Spring Break in 2027?",
+    "When is Winter Break for Sarasota County Schools in 2026–27?",
+    "Does Sarasota County use the same calendar for all schools?",
+    "Where can I download the Sarasota County Schools 2026–27 calendar PDF?"
+  ],
+  "calendarNotes": "Sarasota County Schools starts the 2026–27 school year for students on Monday, August 10, 2026 and ends the student year on Wednesday, May 26, 2027. The 196-day staff calendar begins August 3, and the last 196-day staff day is May 28. Thanksgiving Break runs November 23–27, Winter Break runs December 21–January 1 with a January 4 professional day before students return January 5, and Spring Break runs March 15–19 after the March 12 professional day. The calendar also lists mini breaks on March 26 and April 16 and notes that inclement weather makeup days may be used if needed.",
+  "calendarFaqs": [
+    {
+      "q": "When does Sarasota County school start in 2026?",
+      "a": "The first student day for Sarasota County Schools is Monday, August 10, 2026."
+    },
+    {
+      "q": "When is the last day of school for Sarasota County in 2027?",
+      "a": "The last student day is Wednesday, May 26, 2027. The calendar lists May 28 as the last day for 196-day staff."
+    },
+    {
+      "q": "When is Sarasota County Spring Break in 2027?",
+      "a": "Spring Break runs Monday, March 15 through Friday, March 19, 2027."
+    },
+    {
+      "q": "When is Winter Break for Sarasota County Schools in 2026–27?",
+      "a": "Winter Break runs Monday, December 21, 2026 through Friday, January 1, 2027. January 4 is a professional day, so students do not attend school. Students return Tuesday, January 5."
+    },
+    {
+      "q": "What mini breaks are on the Sarasota 2026–27 calendar?",
+      "a": "The official calendar lists mini breaks on Friday, March 26, 2027 and Friday, April 16, 2027 for students and selected staff groups."
+    },
+    {
+      "q": "When do students return after Winter Break in Sarasota County?",
+      "a": "Students return on Tuesday, January 5, 2027, after Winter Break and the January 4 professional day."
+    },
+    {
+      "q": "Does Sarasota County use the same calendar for all schools?",
+      "a": "The district calendar applies to districtwide dates such as holidays, breaks, and professional days. Individual schools may publish separate calendars for athletics, testing, performances, graduation, and campus events."
+    },
+    {
+      "q": "Which professional days and mini breaks fall outside the major breaks?",
+      "a": "Students are also off on October 12, 2026, and January 4, March 12, March 26, and April 16, 2027."
+    },
+    {
+      "q": "Where can I download the Sarasota County Schools 2026–27 calendar PDF?",
+      "a": "Use the PDF download button on this page or the official Sarasota County Schools calendar source linked above. MySchoolDates also provides a one-time ICS calendar file for Google Calendar, Apple Calendar, and Outlook."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "sarasota-2026-2027-critical-dates",
+      "label": "Easy-to-Miss Dates",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "These scheduled no-school dates fall outside the major breaks or immediately next to one. The official calendar marks October 12, 2026, and January 4, March 12, March 26, April 16, and May 27, 2027, as possible inclement-weather makeup days. May 27, 2027, is a possible makeup day immediately after the scheduled last day for students.",
+      "table": {
+        "columns": ["Date", "What it means"],
+        "rows": [
+          ["October 12, 2026", "Professional day; no school for students"],
+          ["January 4, 2027", "Professional day; students return January 5"],
+          ["March 12, 2027", "Professional day immediately before Spring Break"],
+          ["March 26, 2027", "Mini break"],
+          ["April 16, 2027", "Mini break"]
+        ]
+      }
+    },
+    {
+      "id": "sarasota-2026-2027-staff-calendar-dates",
+      "label": "Selected Staff Calendar Dates",
+      "position": "afterCalendarExport",
+      "schemaHasPart": false,
+      "collapsible": true,
+      "defaultOpen": false,
+      "content": "Sarasota County Schools lists separate 186-, 196-, 220-, and 240-day staff calendars. These are staff dates and do not affect student attendance unless noted.",
+      "table": {
+        "columns": ["Date", "Staff group", "What it means"],
+        "rows": [
+          ["July 6–10, 2026", "240-day staff", "Non-work days for 240-day staff"],
+          ["July 13, 2026", "220-day staff", "220-day staff return"],
+          ["August 3, 2026", "196-day staff", "196-day staff return"],
+          ["August 10, 2026", "186-day staff / students", "First day for students and 186-day staff"],
+          ["May 26, 2027", "186-day staff / students", "Last day for students and 186-day staff"],
+          ["May 28, 2027", "196-day staff", "Last day for 196-day staff"],
+          ["May 31, 2027", "All staff", "Memorial Day"],
+          ["June 11, 2027", "220-day staff", "Last day for 220-day staff"]
+        ]
+      }
+    }
+  ],
+  "whatsNew": {
+    "title": "Changes from the 2025–26 Calendar",
+    "content": [
+      "The first student day moves from August 11 in 2025 to August 10 in 2026.",
+      "The last student day moves one day earlier, from May 27 in 2026 to May 26 in 2027.",
+      "Spring Break moves from March 16–20 in 2026 to March 15–19 in 2027.",
+      "Mini-break dates change from April 3 in 2025–26 to March 26 and April 16 in 2026–27."
+    ]
+  },
+  "breakNotes": {
+    "Winter Break": "Students return Tuesday, January 5, after a professional day on Monday, January 4."
+  },
+  "events": [
+    { "date": "2026-08-10", "name": "First Day for Students", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
+    { "date": "2026-10-09", "name": "End of 1st Grading Period", "type": "academic" },
+    { "date": "2026-10-12", "name": "Professional Day - No School for Students", "type": "no_school" },
+    { "date": "2026-11-23", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
+    { "date": "2026-12-18", "name": "End of 2nd Grading Period", "type": "academic" },
+    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-01-01", "name": "Winter Break End", "type": "break_end" },
+    { "date": "2027-01-04", "name": "Professional Day - No School for Students", "type": "no_school" },
+    { "date": "2027-01-05", "name": "Students Return to School", "type": "academic" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-02-15", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2027-03-11", "name": "End of 3rd Grading Period", "type": "academic" },
+    { "date": "2027-03-12", "name": "Professional Day - No School for Students", "type": "no_school" },
+    { "date": "2027-03-15", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-03-19", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2027-03-26", "name": "Mini Break - No School for Students and Selected Staff", "type": "no_school" },
+    { "date": "2027-04-16", "name": "Mini Break - No School for Students and Selected Staff", "type": "no_school" },
+    { "date": "2027-05-26", "name": "Last Day for Students", "type": "school_end" }
+  ]
+}

@@ -36,7 +36,7 @@ const sourceUrl = computed(() => props.cal?.sourceUrl ?? props.district?.officia
 
   <div v-else class="bg-green-50 border border-green-200 rounded-xl p-5">
     <div class="flex items-start gap-3">
-      <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
       <div class="text-sm text-green-700 space-y-1">
@@ -47,9 +47,9 @@ const sourceUrl = computed(() => props.cal?.sourceUrl ?? props.district?.officia
             official {{ district.shortName || district.name }} calendar
             <span class="sr-only">(opens in a new tab)</span>
           </a>.
-          Dates are subject to board approval and may change — always confirm before making travel or childcare plans.
+          The district may revise the calendar after publication — always confirm before making travel or childcare plans.
         </p>
-        <p class="text-green-600 text-xs">Last checked: {{ verifiedDate }}</p>
+        <p class="text-green-800 text-xs">Last checked: {{ verifiedDate }}</p>
       </div>
     </div>
   </div>

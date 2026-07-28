@@ -38,6 +38,7 @@ export default defineNuxtConfig({
         // ── Editorial and data pages ───────────────────────────────────────────
         '/blog',
         '/author',
+        '/data-license',
         '/school-calendar-trends/2026-2027-report',
         '/school-calendar-trends',
         '/datasets/school-calendar-trends',
@@ -65,6 +66,7 @@ export default defineNuxtConfig({
         // ── District index pages ───────────────────────────────────────────────
         '/aldine-independent-school-district-calendar',
         '/anaheim-union-high-school-district-calendar',
+        '/atlanta-public-schools-calendar',
         '/arlington-isd-calendar',
         '/austin-independent-school-district-calendar',
         '/bakersfield-city-school-district-calendar',
@@ -76,6 +78,9 @@ export default defineNuxtConfig({
         '/chicago-public-schools-calendar',
         '/clark-county-school-district-calendar',
         '/collier-county-school-calendar',
+        '/cobb-county-school-calendar',
+        '/dekalb-county-school-calendar',
+        '/sarasota-county-school-calendar',
         '/gwinnett-county-public-schools-calendar',
         '/chesterfield-county-school-calendar',
         '/chula-vista-elementary-school-district-calendar',
@@ -88,6 +93,7 @@ export default defineNuxtConfig({
         '/fontana-unified-school-district-calendar',
         '/fort-worth-independent-school-district-calendar',
         '/fresno-unified-school-district-calendar',
+        '/fulton-county-schools-calendar',
         '/garland-independent-school-district-calendar',
         '/garden-grove-unified-school-district-calendar',
         '/guilford-county-school-calendar',
@@ -213,6 +219,16 @@ export default defineNuxtConfig({
         '/collier-county-school-calendar/2025-2026',
         '/collier-county-school-calendar/2026-2027',
 
+        '/cobb-county-school-calendar/2025-2026',
+        '/cobb-county-school-calendar/2026-2027',
+        '/cobb-county-school-calendar/2027-2028',
+
+        '/dekalb-county-school-calendar/2025-2026',
+        '/dekalb-county-school-calendar/2026-2027',
+
+        '/sarasota-county-school-calendar/2025-2026',
+        '/sarasota-county-school-calendar/2026-2027',
+
         '/gwinnett-county-public-schools-calendar/2025-2026',
         '/gwinnett-county-public-schools-calendar/2026-2027',
         '/gwinnett-county-public-schools-calendar/2027-2028',
@@ -253,6 +269,14 @@ export default defineNuxtConfig({
         '/fresno-unified-school-district-calendar/2025-2026',
         '/fresno-unified-school-district-calendar/2026-2027',
         '/fresno-unified-school-district-calendar/2027-2028',
+
+        '/fulton-county-schools-calendar/2025-2026',
+        '/fulton-county-schools-calendar/2026-2027',
+        '/fulton-county-schools-calendar/2027-2028',
+
+        '/atlanta-public-schools-calendar/2025-2026',
+        '/atlanta-public-schools-calendar/2026-2027',
+        '/atlanta-public-schools-calendar/2027-2028',
 
         '/garland-independent-school-district-calendar/2025-2026',
         '/garland-independent-school-district-calendar/2026-2027',

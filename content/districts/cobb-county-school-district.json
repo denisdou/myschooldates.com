@@ -1,0 +1,355 @@
+{
+  "institutionId": "cobb-county-school-district",
+  "name": "Cobb County School District",
+  "shortName": "CCSD",
+  "slug": "cobb-county-school-calendar",
+  "state": "Georgia",
+  "stateCode": "GA",
+  "city": "Marietta",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.cobbk12.org",
+  "calendarPage": "https://www.cobbk12.org/calendar",
+  "timezone": "America/New_York",
+  "county": "Cobb County",
+  "region": "Metro Atlanta",
+  "metro": "Atlanta",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "hiddenSections": [
+    "keyDateCards",
+    "keyDates",
+    "quickFacts",
+    "yearNumbers",
+    "downloadCta",
+    "todayStatus",
+    "breaks",
+    "about",
+    "planningTips",
+    "relatedDistricts",
+    "nationalTrends"
+  ],
+  "calendarType": "traditional",
+  "contentControls": {
+    "contentTier": "A",
+    "pageArchetype": "large_metro_calendar",
+    "moduleDisplayPolicy": {
+      "whoApplies": "tierAAndAmbiguousBoundaries",
+      "datesFamiliesMiss": "tierAAndTierB",
+      "familySchedule": "tierAOnly",
+      "travelPlans": "tierAOnly",
+      "legendGuide": "whenOfficialCalendarUsesLegend",
+      "quickFacts": "tierADefaultTierBOptional",
+      "comparison": "tierAOrMetroDistrictOnly",
+      "nationalTrends": "hide"
+    },
+    "userIntentModes": {
+      "default": "calendar_answer_mode",
+      "expanded": "family_planning_mode",
+      "calendarAnswerMode": [
+        "hero",
+        "quickAnswer",
+        "keyDates",
+        "downloads",
+        "faq",
+        "sources"
+      ],
+      "familyPlanningMode": [
+        "quickFacts",
+        "datesFamiliesMiss",
+        "legendGuide",
+        "familySchedule",
+        "travelPlans",
+        "nearbyDistrictDates"
+      ]
+    },
+    "comparisonEligibilityRules": {
+      "enabledForCobb": true,
+      "maxComparisonDistricts": 3,
+      "requiredSignals": [
+        "enrollmentOver50000",
+        "metroDistrict",
+        "crossDistrictRelevance"
+      ],
+      "comparisonIntentSignal": [
+        "crossDistrictFamilySchedules",
+        "metroCommute",
+        "nearbyCountyActivities"
+      ],
+      "defaultForSmallDistricts": false,
+      "reason": "Cobb families often compare dates across Metro Atlanta work, childcare, custody, and activity schedules."
+    },
+    "contentDensityRules": {
+      "largeDistrictMaxModules": 12,
+      "mediumDistrictMaxModules": 8,
+      "smallDistrictMaxModules": 5,
+      "tierA": [
+        "legendGuide",
+        "datesFamiliesMiss",
+        "quickFacts",
+        "familySchedule",
+        "nearbyDistrictDates"
+      ],
+      "tierB": [
+        "legendGuide",
+        "datesFamiliesMiss",
+        "faq"
+      ],
+      "tierBOptional": [
+        "quickFacts"
+      ],
+      "tierC": [
+        "hero",
+        "keyDates",
+        "breaks",
+        "faq",
+        "sources"
+      ]
+    },
+    "districtContentPersonality": {
+      "primaryTraits": [
+        "Metro Atlanta",
+        "commute",
+        "childcare",
+        "cross-district schedules",
+        "digital learning",
+        "conference week",
+        "early release"
+      ],
+      "personalityTemplate": "metro_district",
+      "avoidGenericAngles": [
+        "generic family guide",
+        "broad education advice",
+        "neighborhood recommendations",
+        "unsupported lifestyle claims"
+      ]
+    },
+    "humanVoiceRules": {
+      "prefer": [
+        "parents often check",
+        "one detail families miss is",
+        "one date that can surprise families is",
+        "a detail to watch is",
+        "the district calendar does not include",
+        "check your assigned school",
+        "students stay home",
+        "school day",
+        "family schedule"
+      ],
+      "sentenceVariationLibrary": [
+        "Parents often check...",
+        "One date that can surprise families is...",
+        "A detail to watch is...",
+        "The district calendar does not include...",
+        "Check your assigned school before..."
+      ],
+      "avoid": [
+        "insights",
+        "context",
+        "considerations",
+        "framework",
+        "comprehensive guide",
+        "X is more than Y",
+        "households should read the calendar"
+      ]
+    },
+    "contentQualityChecks": {
+      "automaticQualityScores": {
+        "aiFootprintScore": 95,
+        "localUniquenessScore": 94,
+        "moduleAppropriatenessScore": 96,
+        "contentCompletenessScore": 97
+      },
+      "editorialReview": {
+        "reviewedBy": "Calendar Data Team",
+        "reviewerRole": "Editorial calendar verification",
+        "founderAttributionMode": "entityAuthorityOnly"
+      },
+      "preGenerationQA": {
+        "failIfSmallDistrictHas": [
+          "metroComparison",
+          "nationalTrends",
+          "childcareScenarios",
+          "travelPlanning"
+        ],
+        "requireForTierA": [
+          "districtPersonality",
+          "moduleDensityLimit",
+          "sentenceVariationLibrary",
+          "comparisonEligibilityRules"
+        ]
+      },
+      "aiFootprintCheck": {
+        "flagPhrases": [
+          "X is more than Y",
+          "comprehensive guide",
+          "important considerations",
+          "families should",
+          "households should read"
+        ],
+        "maxRepeatedSentenceOpenings": 2
+      },
+      "uniquenessCheck": {
+        "requiredForTierA": [
+          "localTraits",
+          "districtBoundaryQuestion",
+          "calendarLegendOrScheduleComplexity",
+          "distinctSentenceOpenings"
+        ],
+        "minimumLocalTraits": 3
+      },
+      "moduleSanityCheck": {
+        "smallDistrictEnrollmentThreshold": 5000,
+        "disableForSmallDistricts": [
+          "metroComparison",
+          "nationalTrends",
+          "childcareScenarios",
+          "travelPlanning"
+        ]
+      }
+    }
+  },
+  "searchAliases": [
+    "Cobb County School District",
+    "Cobb County Schools",
+    "CCSD calendar",
+    "Cobb schools calendar",
+    "Cobb County school calendar",
+    "Marietta school calendar",
+    "Kennesaw school calendar",
+    "Smyrna school calendar",
+    "Acworth school calendar",
+    "Powder Springs school calendar",
+    "Mableton school calendar",
+    "East Cobb school calendar"
+  ],
+  "districtFact": "Cobb County School District publishes multi-year year-at-a-glance calendars for a large Metro Atlanta district where families need to distinguish regular holidays, student holiday/staff days, digital learning days, elementary and middle school conference week, and early release for all grade levels.",
+  "about": [
+    {
+      "title": "About Cobb County School District",
+      "content": "Cobb County School District serves most public school students in Cobb County, Georgia. Marietta City Schools is a separate district, so families with a Marietta address should confirm which school system serves their home before using a district calendar."
+    },
+    {
+      "title": "Cobb District Calendar vs School-Level Schedules",
+      "content": "The district year-at-a-glance calendar covers systemwide dates. Individual schools may publish separate dates for testing, athletics, performances, club activities, graduation ceremonies, bus updates, and emergency schedule changes."
+    }
+  ],
+  "planningTips": {
+    "title": "Planning Notes for Cobb Families",
+    "content": [
+      "Check the legend before treating a date as a full closure. Cobb separates school-closed holidays, student holiday/staff days, digital learning days, conference week, and early release days.",
+      "Elementary and middle school conference week can affect dismissal for younger students while high school schedules may follow a different pattern.",
+      "Early release days for all grade levels in December and May affect transportation, after-school care, and work schedules across grade levels.",
+      "Digital learning days require a device, internet access, supervision, and time to complete assignments even when students are not attending school in person.",
+      "Families whose work, childcare, custody arrangements, or activities cross district boundaries may want to compare Cobb with nearby Metro Atlanta school systems."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "cobb-calendar-legend-guide",
+      "label": "How to Read the Cobb County Calendar Legend",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "Cobb's official PDF is a color-coded year-at-a-glance calendar. The legend is important because the same week can include different kinds of non-standard school days. This page separates those categories so families can tell whether school is closed, students are out while staff report, a date is designated as a digital learning day, or students attend on an early release schedule.",
+      "groups": [
+        {
+          "label": "Calendar categories",
+          "items": [
+            "First and last days of school are marked in black on the official PDF.",
+            "School-closed holidays are marked in gray.",
+            "Student holiday/staff days are marked in yellow.",
+            "Digital learning days are shown in pink on Cobb's official calendar.",
+            "Elementary and middle school conference week and early release for all grade levels are marked separately from regular holidays."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cobb-school-level-schedule-notes",
+      "label": "Cobb District Calendar vs School-Level Schedules",
+      "position": "afterPlanningTips",
+      "schemaHasPart": true,
+      "content": "The Cobb County School District year-at-a-glance calendar is the districtwide schedule summary. It does not replace school-level calendars for bell schedules, bus route updates, testing, athletics, club events, performances, graduation ceremonies, magnet or academy program dates, or emergency schedule announcements. Use the district calendar for systemwide dates, then confirm campus-specific details with the assigned school."
+    }
+  ],
+  "comparisonTitle": "Nearby District Dates for Cobb Families",
+  "comparisonRowsMode": "sharedValuesOnly",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "fallBreak",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "springBreakComparisonLabel": "Spring Recess",
+  "compareIntro": "Compare Cobb's 2026-2027 calendar with DeKalb County, Fulton County, and Gwinnett County, including the first day, last day, and major breaks.",
+  "districtFaqs": [
+    {
+      "q": "Do I live in Cobb County School District or Marietta City Schools?",
+      "a": "Most public schools in Cobb County are served by Cobb County School District. Marietta City Schools is a separate school system, so parents inside Marietta should confirm which district serves their address."
+    },
+    {
+      "q": "What is a digital learning day on the Cobb County calendar?",
+      "a": "A digital learning day means students may complete schoolwork remotely instead of attending in person. Check school instructions for assignments, technology requirements, and attendance expectations."
+    },
+    {
+      "q": "Are Cobb student holiday/staff days the same as school-closed holidays?",
+      "a": "No. On the official Cobb PDF, student holiday/staff days are a separate category from school-closed holidays. Students do not attend, but staff may have scheduled work."
+    },
+    {
+      "q": "Does Cobb County have early release days?",
+      "a": "Yes. Cobb calendars may list early release dates for all grade levels and separate elementary or middle school conference-week early release dates. The exact dates vary by school year."
+    },
+    {
+      "q": "Where should families verify Cobb County School District calendar updates?",
+      "a": "Use the official Cobb County School District calendar page and school announcements for final confirmation. MySchoolDates summarizes official calendar documents and is not affiliated with Cobb County School District."
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Gwinnett County Public Schools",
+      "slug": "gwinnett-county-public-schools-calendar",
+      "state": "Georgia",
+      "comparisonNote": ""
+    },
+    {
+      "name": "Fulton County Schools",
+      "slug": "fulton-county-schools-calendar",
+      "state": "Georgia",
+      "comparisonNote": ""
+    },
+    {
+      "name": "DeKalb County School District",
+      "slug": "dekalb-county-school-calendar",
+      "state": "Georgia",
+      "comparisonNote": ""
+    }
+  ],
+  "sources": [
+    {
+      "label": "Cobb County School District official website",
+      "url": "https://www.cobbk12.org"
+    },
+    {
+      "label": "Cobb County School District calendar page",
+      "url": "https://www.cobbk12.org/calendar"
+    }
+  ]
+}

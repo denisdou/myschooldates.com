@@ -1,0 +1,67 @@
+{
+  "institutionId": "cobb-county-school-district",
+  "schoolYear": "2027-2028",
+  "firstDay": "2027-08-02",
+  "lastDay": "2028-05-17",
+  "sourceUrl": "https://www.cobbk12.org/calendar",
+  "sourcePdfUrl": "https://media.cobbk12.org/media/WWWCobb/medialib/2027-2028-year-at-a-glance.67e902113515.pdf",
+  "lastVerifiedAt": "2026-07-28",
+  "datePublished": "2026-07-28",
+  "dateModified": "2026-07-28",
+  "calendarType": "traditional",
+  "yearNumbersMode": "compact",
+  "hideInstructionalDaysSummary": true,
+  "faqLimit": 8,
+  "faqSchemaLimit": 8,
+  "seoTitle": "Cobb County School Calendar 2027-2028: Holidays, Breaks & PDF",
+  "seoDescription": "Cobb County School District 2027-2028 calendar with first day, last day, holidays, breaks, student holiday/staff days, PDF, and ICS.",
+  "calendarNotes": "Cobb County School District starts the 2027-2028 school year on Monday, August 2, 2027 and ends the student year on Wednesday, May 17, 2028. The official year-at-a-glance calendar marks Fall Break on September 20-24, Thanksgiving Break on November 22-26, Winter Break on December 20-31, Spring Holidays on April 3-7, student holiday/staff days on July 26-30, November 2, January 3, and May 18-19. The 2027-2028 PDF reviewed for this page does not list digital learning days or early release windows in its legend.",
+  "calendarFaqs": [
+    { "q": "When does Cobb County school start in 2027?", "a": "The first day of school for Cobb County School District is Monday, August 2, 2027." },
+    { "q": "When is the last day of school for Cobb County in 2028?", "a": "The last day of school is Wednesday, May 17, 2028." },
+    { "q": "When are Cobb County Spring Holidays in 2028?", "a": "Spring Holidays run Monday, April 3 through Friday, April 7, 2028." },
+    { "q": "When is Winter Break for Cobb County School District in 2027-2028?", "a": "Winter Break runs Monday, December 20 through Friday, December 31, 2027. January 3 is a student holiday/staff day." },
+    { "q": "When is Fall Break for Cobb County Schools in 2027?", "a": "Fall Break runs Monday, September 20 through Friday, September 24, 2027." },
+    { "q": "Does the Cobb 2027-2028 calendar list digital learning days?", "a": "The reviewed 2027-2028 Cobb year-at-a-glance PDF does not include a digital learning day category in its legend." },
+    { "q": "Does the Cobb 2027-2028 calendar list early release days?", "a": "The reviewed 2027-2028 Cobb year-at-a-glance PDF does not list early release windows in its legend. Families should verify school-level and district updates before relying on dismissal times." },
+    { "q": "What is a student holiday/staff day on the Cobb calendar?", "a": "A student holiday/staff day is a no-school day for students while staff may have scheduled work, planning, or professional responsibilities." }
+  ],
+  "yearNumbers": [
+    { "label": "First Day", "value": "Aug 2", "detail": "Students begin school on Monday, August 2, 2027." },
+    { "label": "Spring Holidays", "value": "Apr 3-7", "detail": "Spring Holidays run Monday through Friday in early April." },
+    { "label": "Legend Categories", "value": "3", "detail": "The PDF legend shows first/last day, holiday school closed, and student holiday/staff day categories." }
+  ],
+  "whatsNew": {
+    "title": "Changes from the 2026-2027 Calendar",
+    "content": [
+      "The first day moves from August 3 in 2026 to August 2 in 2027.",
+      "The last day moves from May 19 in 2027 to May 17 in 2028.",
+      "The reviewed 2027-2028 PDF does not list digital learning or early release legend categories.",
+      "Spring Holidays move from April 5-9 in 2027 to April 3-7 in 2028."
+    ]
+  },
+  "events": [
+    { "date": "2027-07-05", "name": "Independence Day Observed - School Closed", "type": "holiday" },
+    { "date": "2027-07-26", "name": "Student Holiday / Staff Day Begins", "type": "teacher_workday" },
+    { "date": "2027-07-30", "name": "Student Holiday / Staff Day Ends", "type": "teacher_workday" },
+    { "date": "2027-08-02", "name": "First Day of School", "type": "school_start" },
+    { "date": "2027-09-06", "name": "Labor Day - School Closed", "type": "holiday" },
+    { "date": "2027-09-20", "name": "Fall Break Begins", "type": "break_start" },
+    { "date": "2027-09-24", "name": "Fall Break Ends", "type": "break_end" },
+    { "date": "2027-11-02", "name": "Election Day - Student Holiday / Staff Day", "type": "teacher_workday" },
+    { "date": "2027-11-22", "name": "Thanksgiving Break Begins", "type": "break_start" },
+    { "date": "2027-11-26", "name": "Thanksgiving Break Ends", "type": "break_end" },
+    { "date": "2027-12-20", "name": "Winter Break Begins", "type": "break_start" },
+    { "date": "2027-12-31", "name": "Winter Break Ends", "type": "break_end" },
+    { "date": "2028-01-03", "name": "Student Holiday / Staff Day", "type": "teacher_workday" },
+    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day - School Closed", "type": "holiday" },
+    { "date": "2028-02-21", "name": "February Break Begins", "type": "break_start" },
+    { "date": "2028-02-25", "name": "February Break Ends", "type": "break_end" },
+    { "date": "2028-04-03", "name": "Spring Holidays Begin", "type": "break_start" },
+    { "date": "2028-04-07", "name": "Spring Holidays End", "type": "break_end" },
+    { "date": "2028-05-17", "name": "Last Day of School", "type": "school_end" },
+    { "date": "2028-05-18", "name": "Student Holiday / Staff Day Begins", "type": "teacher_workday" },
+    { "date": "2028-05-19", "name": "Student Holiday / Staff Day Ends", "type": "teacher_workday" },
+    { "date": "2028-05-29", "name": "Memorial Day - School Closed", "type": "holiday" }
+  ]
+}

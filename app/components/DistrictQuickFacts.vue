@@ -523,9 +523,9 @@ const sectionTitle = computed(() =>
 <template>
   <div id="calendar-statistics" class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
     <h2 class="text-lg font-semibold text-gray-900 mb-4">{{ sectionTitle }}</h2>
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
       <div v-for="fact in facts" :key="fact.key" class="text-center p-3 bg-gray-50 rounded-lg">
-        <div class="text-2xl font-bold text-gray-900 truncate">{{ fact.value }}</div>
+        <div class="break-words text-lg font-bold text-gray-900 sm:text-2xl">{{ fact.value }}</div>
         <div class="text-xs text-gray-500 mt-1 leading-snug">{{ fact.label }}</div>
       </div>
     </div>
@@ -546,6 +546,5 @@ const sectionTitle = computed(() =>
       <span v-if="verifiedDate" class="ml-1 text-green-700 font-medium">· Last reviewed {{ verifiedDate }}</span>
       <span v-else class="ml-1 text-gray-600">· Not yet verified against official source</span>
     </div>
-    <p class="text-xs text-gray-600 mt-1.5">Standalone no-school date counts include listed holidays and no-school dates shown between the first and last day of school. Weekends and pre-year teacher/buyback days are not counted. Instructional weeks are approximate.</p>
   </div>
 </template>

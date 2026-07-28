@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { formatDate, eventTypeLabel, eventTypeColor, isCoveredByBreak } = useDistrictPage()
 
-type CalendarEvent = { date: string; name: string; type: string }
+type CalendarEvent = { date: string; name: string; type: string; description?: string; preserveOfficialName?: boolean }
 type LegendItem = { label: string; dot: string }
 
 const props = defineProps<{
@@ -12,6 +12,10 @@ const props = defineProps<{
   verifiedDate: string | null
   legend?: LegendItem[]
   mode?: 'all' | 'keyDates'
+  coverageNote?: string
+  includedDatesInKeyDates?: string[]
+  firstDay?: string
+  lastDay?: string
 }>()
 
 type DisplayEvent = CalendarEvent & {
@@ -27,10 +31,30 @@ function isPossibleMakeupDay(event: CalendarEvent) {
 }
 
 const hiddenInKeyDates = new Set(['break_end', 'teacher_workday'])
+const includedDatesInKeyDates = computed(() => new Set(props.includedDatesInKeyDates ?? []))
+function isHolidayOutsideStudentYear(event: CalendarEvent) {
+  return Boolean(props.firstDay && props.lastDay) &&
+    event.type === 'holiday' &&
+    (event.date < props.firstDay || event.date > props.lastDay)
+}
+function isRangeEndEvent(event: CalendarEvent) {
+  if (event.type !== 'teacher_workday' && event.type !== 'teacher_professional_learning') return false
+  if (!/\bends?\b/i.test(event.name)) return false
+  const normalizedEnd = normalizeName(event).toLowerCase()
+  return props.events.some(candidate =>
+    candidate.type === event.type &&
+    candidate.date <= event.date &&
+    /\b(begins?|starts?)\b/i.test(candidate.name) &&
+    normalizeName(candidate).toLowerCase() === normalizedEnd
+  )
+}
 const visibleEvents = computed(() => props.events.filter(e =>
   props.mode === 'keyDates'
-    ? !hiddenInKeyDates.has(e.type) && !isCoveredByBreak(e, props.events)
-    : e.type !== 'break_end' && !isCoveredByBreak(e, props.events)
+    ? (!hiddenInKeyDates.has(e.type) || includedDatesInKeyDates.value.has(e.date)) &&
+      !isRangeEndEvent(e) &&
+      !isHolidayOutsideStudentYear(e) &&
+      (e.type === 'holiday' || !isCoveredByBreak(e, props.events))
+    : e.type !== 'break_end' && !isRangeEndEvent(e) && !isCoveredByBreak(e, props.events)
 ))
 
 const coveredBreakDateNames = computed(() => {
@@ -48,6 +72,22 @@ function normalizeName(event: CalendarEvent) {
   const name = event.name.trim()
   const lower = name.toLowerCase()
 
+  if (event.preserveOfficialName) return name
+
+  if (event.type === 'break_start' || event.type === 'break_end') {
+    return name
+      .replace(/\b(Begins|Begin|Starts|Start|Ends|End)\b/gi, '')
+      .replace(/\s+/g, ' ')
+      .trim()
+  }
+
+  if (event.type === 'teacher_workday' || event.type === 'teacher_professional_learning') {
+    return name
+      .replace(/\b(Begins|Begin|Starts|Start|Ends|End)\b/gi, '')
+      .replace(/\s+/g, ' ')
+      .trim()
+  }
+
   if (event.type === 'no_school' || event.type === 'student_holiday') {
     if (lower.includes('student/staff holiday')) return 'Student/Staff Holiday'
     if (lower.includes('professional learning')) return 'Professional Learning Day'
@@ -58,6 +98,8 @@ function normalizeName(event: CalendarEvent) {
   }
 
   if (event.type === 'holiday') {
+    if (lower === 'district holiday') return 'District Holiday'
+    if (lower.includes('martin luther king')) return 'Martin Luther King Jr. Day'
     return name.replace(/\s+Holiday$/i, '')
   }
 
@@ -70,16 +112,47 @@ function normalizeName(event: CalendarEvent) {
 
 function displayLabelType(event: CalendarEvent) {
   if (isPossibleMakeupDay(event)) return 'makeup_day'
-  if (event.type === 'student_holiday' || event.type === 'teacher_workday') return 'no_school'
+  if (event.type === 'student_holiday') return 'no_school'
   return event.type
 }
 
 function displayLabelText(event: DisplayEvent) {
   if (isPossibleMakeupDay(event)) return 'Possible Make-up Day'
   if (event.type === 'break_start') return 'Break'
-  if (event.type === 'school_end' && event.displayName.toLowerCase().includes('early dismissal')) return 'Last Day · Early Dismissal'
+  if (event.type === 'teacher_professional_learning') return event.startDate !== event.endDate ? 'Teacher Professional Learning Days' : 'Teacher Professional Learning Day'
+  if (event.type === 'teacher_workday') return 'Staff Day'
+  if (event.type === 'school_end' && (event.displayName.toLowerCase().includes('early dismissal') || event.displayName.toLowerCase().includes('early release'))) return 'Last Day · Early Release'
   if (event.type === 'academic' && event.displayName.toLowerCase().includes('exam')) return 'Exam Window'
   return eventTypeLabel[event.labelType] ?? event.labelType
+}
+
+function displayEventName(event: DisplayEvent) {
+  if (event.type === 'teacher_professional_learning' && event.startDate !== event.endDate) {
+    return 'Teacher Professional Learning Days'
+  }
+  if (
+    (event.type === 'teacher_workday' || event.type === 'teacher_professional_learning') &&
+    event.startDate !== event.endDate &&
+    event.displayName.toLowerCase().includes('workday')
+  ) {
+    return event.displayName.replace(/\bWorkday\b/i, 'Workdays')
+  }
+  if (
+    (event.type === 'teacher_workday' || event.type === 'teacher_professional_learning') &&
+    event.displayName === 'Professional Development Day' &&
+    event.startDate !== event.endDate
+  ) {
+    return 'Professional Development Days'
+  }
+  if (
+    event.type === 'teacher_professional_learning' &&
+    event.startDate !== event.endDate &&
+    event.displayName.toLowerCase().includes('teacher professional learning') &&
+    !event.displayName.toLowerCase().includes('days')
+  ) {
+    return event.displayName.replace(/Teacher Professional Learning(?: Day)?/i, 'Teacher Professional Learning Days')
+  }
+  return event.displayName
 }
 
 function parseDate(date: string) {
@@ -110,10 +183,22 @@ function canMerge(prev: DisplayEvent, next: DisplayEvent) {
 
 function rangeEndFor(event: CalendarEvent) {
   if (event.type === 'break_start') {
+    const normalizedStart = normalizeName(event).toLowerCase()
     const end = sortedEvents.value.find(e =>
       e.type === 'break_end' &&
       e.date >= event.date &&
-      e.name.replace(/\s+End$/i, '').toLowerCase() === event.name.toLowerCase()
+      normalizeName(e).toLowerCase() === normalizedStart
+    )
+    return end?.date ?? event.date
+  }
+
+  if ((event.type === 'teacher_workday' || event.type === 'teacher_professional_learning') && /\b(begins?|starts?)\b/i.test(event.name)) {
+    const normalizedStart = normalizeName(event).toLowerCase()
+    const end = sortedEvents.value.find(e =>
+      e.type === event.type &&
+      e.date >= event.date &&
+      /\bends?\b/i.test(e.name) &&
+      normalizeName(e).toLowerCase() === normalizedStart
     )
     return end?.date ?? event.date
   }
@@ -273,10 +358,10 @@ function formatRangeEnd(event: DisplayEvent) {
           <div
             v-for="event in group.events"
             :key="event.startDate + event.endDate + event.type + event.displayName"
-            class="flex items-center justify-between gap-4 px-6 py-4 hover:bg-gray-50 transition-colors"
+            class="flex flex-col items-start gap-2 px-6 py-4 hover:bg-gray-50 transition-colors sm:flex-row sm:items-center sm:justify-between sm:gap-4"
           >
             <div>
-              <div class="font-medium text-gray-900">{{ event.displayName }}</div>
+              <div class="font-medium text-gray-900">{{ displayEventName(event) }}</div>
               <div class="text-sm text-gray-500">
                 <time v-if="event.startDate === event.endDate" :datetime="event.startDate">{{ formatDateRange(event) }}</time>
                 <template v-else>
@@ -285,8 +370,11 @@ function formatRangeEnd(event: DisplayEvent) {
                   <time :datetime="event.endDate">{{ formatRangeEnd(event) }}</time>
                 </template>
               </div>
+              <p v-if="event.description" class="mt-1 text-sm text-gray-600">
+                {{ event.description }}
+              </p>
             </div>
-            <span class="text-xs font-medium px-2.5 py-1 rounded-full whitespace-nowrap" :class="eventTypeColor[event.labelType]">
+            <span class="text-xs font-medium px-2.5 py-1 rounded-full whitespace-normal sm:whitespace-nowrap" :class="eventTypeColor[event.labelType]">
               {{ displayLabelText(event) }}
             </span>
           </div>
@@ -295,7 +383,8 @@ function formatRangeEnd(event: DisplayEvent) {
     </div>
     <div class="px-6 py-3 border-t border-gray-50 flex items-center gap-1.5 text-xs text-gray-600">
       <span>
-        <template v-if="mode === 'keyDates'">This list summarizes major student dates and may not include every staff development day, minimum day, school-specific change, or track-specific event. See the official PDF for the complete calendar.</template>
+        <template v-if="mode === 'keyDates'">{{ coverageNote || "This table lists major districtwide student dates. Check the official PDF and your school's calendar for campus events, dismissal times, testing, and schedule changes." }}</template>
+        <template v-else>{{ coverageNote || "This table lists major districtwide student dates. Check the official PDF and your school's calendar for campus events, dismissal times, testing, and schedule changes." }} </template>
         <template v-if="coveredBreakDateNames.length">
           Dates that fall inside a listed break are included in that break{{ coveredBreakDateNames.length ? ` (${coveredBreakDateNames.join(', ')})` : '' }}.
         </template>
@@ -304,7 +393,6 @@ function formatRangeEnd(event: DisplayEvent) {
           {{ districtName }} official calendar
           <span class="sr-only">(opens in a new tab)</span>
         </a>
-        <template v-if="verifiedDate"> · Last reviewed {{ verifiedDate }}</template>
       </span>
     </div>
   </div>

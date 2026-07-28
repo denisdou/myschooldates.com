@@ -1,0 +1,442 @@
+{
+  "institutionId": "atlanta-public-schools",
+  "name": "Atlanta Public Schools",
+  "shortName": "APS",
+  "slug": "atlanta-public-schools-calendar",
+  "state": "Georgia",
+  "stateCode": "GA",
+  "city": "Atlanta",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.atlantapublicschools.us/",
+  "calendarPage": "https://www.atlantapublicschools.us/about/calendar",
+  "timezone": "America/New_York",
+  "county": "Fulton County",
+  "region": "Metro Atlanta",
+  "metro": "Atlanta-Sandy Springs-Roswell",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "keyDates",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Urban Metro Atlanta District",
+  "depthMode": "enhanced",
+  "depthModeRule": {
+    "standard": [
+      "quickAnswer",
+      "keyDates",
+      "downloads",
+      "faq",
+      "sources"
+    ],
+    "enhanced": [
+      "calendarInterpretation",
+      "familyPlanningGuide",
+      "localFactors",
+      "yearChanges"
+    ],
+    "research": [
+      "comparison",
+      "nationalTrends",
+      "dataset"
+    ],
+    "currentModeReason": "Atlanta Public Schools is treated as enhanced because the official student calendars include district-specific planning labels such as Extended Learning Days, Teacher Professional Learning Days, Teacher Planning Flex Days, PreK-12 Early Release Days, Election Day, semester ends, and multi-year official PDF coverage."
+  },
+  "contentDepthBudget": {
+    "mode": "enhanced",
+    "maxEnrichmentModules": 8,
+    "currentEnrichmentModules": [
+      "calendarInterpretation",
+      "familyPlanningGuide",
+      "localFactors",
+      "yearNumbers",
+      "whatChangedThisYear",
+      "calendarReminders"
+    ],
+    "researchOnlyModules": [
+      "comparison",
+      "nationalTrends",
+      "long-form district profile"
+    ],
+    "budgetRule": "Enhanced APS pages should stay within eight enrichment modules. APS pages should prioritize official label interpretation, early release and extended learning notes, election-day planning, and Atlanta family routines over generic city description."
+  },
+  "modulePriority": {
+    "quickAnswer": 100,
+    "keyDates": 100,
+    "downloads": 95,
+    "calendarInterpretation": 92,
+    "familyPlanningGuide": 88,
+    "faq": 82,
+    "localFactors": 78,
+    "yearChanges": 72,
+    "relatedDistricts": 35,
+    "comparison": 25,
+    "nationalTrends": 20
+  },
+  "moduleQualityScore": {
+    "calendarInterpretation": 93,
+    "familyPlanningGuide": 88,
+    "localFactors": 86,
+    "yearChanges": 84,
+    "planningTips": 82,
+    "relatedDistricts": 70,
+    "comparison": 40,
+    "nationalTrends": 30
+  },
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-07-28",
+    "coverageNote": "The Atlanta Public Schools page uses the official APS website, the official APS calendar page, and official student calendar PDFs for 2025-2026, 2026-2027, and 2027-2028."
+  },
+  "pageReadinessScore": {
+    "overall": 92,
+    "officialSource": 20,
+    "uniqueFactors": 27,
+    "interpretationValue": 19,
+    "familyValue": 18,
+    "updateHistory": 8,
+    "minimumEnhancedScore": 85,
+    "status": "ready-enhanced"
+  },
+  "contentFreshnessScore": {
+    "overall": 95,
+    "sourceUpdated": "2026-07-28",
+    "lastManualReview": "2026-07-28",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the Atlanta Public Schools calendar page and PDF links when APS posts a revised student calendar, changes early release or extended learning dates, or at least every 90 days during the active school year."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official APS revision, stale freshness score, missing future-year PDF, or local factor confidence below medium."
+  },
+  "userUtilityScore": {
+    "visibility": "internal",
+    "status": "tracking-ready",
+    "overall": null,
+    "signals": {
+      "pdfClick": {
+        "weight": 25,
+        "status": "pending-analytics"
+      },
+      "icsDownload": {
+        "weight": 25,
+        "status": "pending-analytics"
+      },
+      "faqExpansion": {
+        "weight": 15,
+        "status": "pending-analytics"
+      },
+      "timeOnPage": {
+        "weight": 15,
+        "status": "pending-analytics"
+      },
+      "scrollDepth": {
+        "weight": 20,
+        "status": "pending-analytics"
+      }
+    },
+    "optimizationScope": "module-optimization-only",
+    "usageRule": "Use real engagement data to decide whether APS enhanced modules should remain visible, move lower, collapse, or be removed. Do not use this score by itself to expand content or override source quality, freshness, and evidence checks."
+  },
+  "contentRiskControls": {
+    "duplicateMonitoringTargets": [
+      "familyPlanningGuide",
+      "planningTips",
+      "localFactors",
+      "communityContext"
+    ],
+    "similarityThreshold": 0.85,
+    "cityFaqEligibilityRule": "Only generate city or community FAQ when the city alias has meaningful search demand or the district source clearly explains community-specific calendar behavior.",
+    "cityFaqMaxCount": 2,
+    "localFactorConfidenceScale": {
+      "high": "Supported directly by the official district calendar, official district page, or explicit district calendar language.",
+      "medium": "Supported by reviewed local geography, work-pattern, transportation, or community context and tied directly to calendar planning.",
+      "low": "Potentially useful but not enough for publication without manual review; keep pending or suppress from rendered enhanced modules."
+    },
+    "localFactorEvidenceTypeScale": {
+      "verified": "Directly supported by official calendar language or an official district source.",
+      "editorial": "Human-reviewed local interpretation tied to calendar planning but not stated as an official district claim.",
+      "pending": "Candidate factor requiring manual verification before publication."
+    },
+    "sourceRequiredForMedium": "Medium-confidence editorial local factors require reviewed external context, official planning context, or documented local geography/work-pattern basis before publication.",
+    "manualReviewRequiredFor": [
+      "familyPlanningGuide",
+      "planningTips",
+      "localFactors",
+      "communityContext",
+      "lowConfidenceLocalFactors",
+      "cityFaqs"
+    ],
+    "scaleRule": "Only enable APS-style local context when the page can connect calendar labels to official APS dates and reviewed Atlanta family planning factors such as early release, extended learning, election days, commute patterns, or citywide after-school routines."
+  },
+  "moduleEligibilityRules": {
+    "calendarInterpretation": {
+      "minimumUniqueLabels": 3,
+      "requiredEvidence": [
+        "Extended Learning Days",
+        "Teacher Professional Learning Days",
+        "PreK-12 Early Release Days",
+        "Teacher Planning Flex Days"
+      ],
+      "rule": "Show calendar interpretation when the APS calendar includes labels that change whether students attend, release early, or stay home while staff report."
+    },
+    "familyPlanningGuide": {
+      "minimumLocalFactors": 2,
+      "requiredEvidence": [
+        "Atlanta commute and pickup routines",
+        "Extended learning and early release dates",
+        "Election-day and staff-only planning"
+      ],
+      "rule": "Show the family planning guide only when advice is tied to APS-specific labels and Atlanta family routines, not generic back-to-school tips."
+    },
+    "localFactors": {
+      "minimumLocalFactors": 2,
+      "rule": "Show local calendar factors only when APS has reviewed local evidence such as official early release dates, extended learning dates, election-day planning, citywide schedules, or official multi-year source coverage."
+    }
+  },
+  "localFactors": {
+    "title": "Local Calendar Factors",
+    "status": "district-specific",
+    "humanReviewed": true,
+    "evidenceSource": "Official APS student calendars, APS calendar page, City of Atlanta geography, and reviewed Metro Atlanta planning context.",
+    "factors": [
+      {
+        "claim": "APS calendars use Extended Learning Day language in addition to ordinary holidays and breaks.",
+        "reason": "Families should not treat an Extended Learning Day as the same thing as a regular school holiday without checking the official APS guidance.",
+        "evidence": "Official APS 2025-2026 calendar lists Extended Learning Day on October 13 and November 4.",
+        "confidenceLevel": "high",
+        "evidenceType": "verified"
+      },
+      {
+        "claim": "APS separates Teacher Professional Learning Days and Teacher Planning Flex Days from student attendance days.",
+        "reason": "These staff-focused labels affect childcare and student supervision even when teachers or staff have scheduled work.",
+        "evidence": "Official APS PDFs list Teacher Professional Learning Days, Teacher Preplanning Days, Teacher Planning Flex Day, and Teacher Post-Planning Days.",
+        "confidenceLevel": "high",
+        "evidenceType": "verified"
+      },
+      {
+        "claim": "PreK-12 Early Release Days require separate pickup planning.",
+        "reason": "Early release changes the school-day routine without being a full student holiday.",
+        "evidence": "Official APS 2026-2027 and 2027-2028 PDFs list PreK-12 Early Release Days.",
+        "confidenceLevel": "high",
+        "evidenceType": "verified"
+      },
+      {
+        "claim": "City of Atlanta commute and after-school routines make single-day calendar changes important.",
+        "reason": "Families may coordinate school pickup, MARTA or road commutes, after-school programs, and work schedules across intown Atlanta neighborhoods.",
+        "evidence": "Reviewed local geography for Atlanta Public Schools and the Atlanta-Sandy Springs-Roswell metro area.",
+        "confidenceLevel": "medium",
+        "evidenceType": "editorial"
+      }
+    ]
+  },
+  "includeArticleSchema": true,
+  "includeComparisonSchema": false,
+  "schemaTierPolicy": {
+    "standard": ["WebPage", "Dataset", "FAQPage"],
+    "enhanced": ["WebPage", "Dataset", "FAQPage", "Article", "Event"],
+    "research": ["WebPage", "Dataset", "FAQPage", "Article", "Event", "DataDownload"],
+    "currentPolicy": "Enhanced pages may use Article schema when page includes real interpretation, family impact, local evidence, and year-change analysis. Standard pages should set includeArticleSchema to false."
+  },
+  "searchAliases": [
+    "Atlanta Public Schools",
+    "APS calendar",
+    "Atlanta school calendar",
+    "Atlanta Public Schools calendar",
+    "APS student calendar",
+    "APS school holidays",
+    "Atlanta Public Schools student calendar",
+    "Atlanta Public Schools PDF calendar",
+    "APS extended learning day"
+  ],
+  "districtFact": "Atlanta Public Schools publishes official student calendars for the City of Atlanta. The calendars include first and last days, fall break, Thanksgiving break, December break, winter break, spring break, Teacher Professional Learning Days, Teacher Planning Flex Days, Extended Learning Days, PreK-12 Early Release Days, semester ends, and instructional-day totals.",
+  "about": [
+    {
+      "title": "About Atlanta Public Schools",
+      "content": "Atlanta Public Schools, also known as APS, serves students across the City of Atlanta. Families use the APS student calendar to track the first day of school, last day, breaks, holidays, early release days, extended learning days, teacher professional learning days, semester ends, and official PDF updates."
+    },
+    {
+      "title": "Why APS Calendar Planning Is Different",
+      "content": "APS calendar planning is shaped by more than breaks and holidays. Extended Learning Days, Teacher Professional Learning Days, PreK-12 Early Release Days, and Election Day can change whether students attend, release early, or need supervision outside the normal routine. For Atlanta families coordinating work, transit, after-school programs, and school-specific activities, these labels matter as much as the major break dates."
+    }
+  ],
+  "planningTips": {
+    "title": "APS Calendar Reminders",
+    "content": [
+      "Add PreK-12 Early Release Days separately because pickup times can change even when school is still in session.",
+      "Treat Extended Learning Days as special APS calendar dates and verify whether your school sends additional instructions.",
+      "Check Teacher Professional Learning Days and Teacher Planning Flex Days before arranging childcare.",
+      "Use the official APS PDF for final confirmation before booking travel around fall break, winter break, spring break, or the end of the school year."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "aps-calendar-interpretation-guide",
+      "label": "Understanding APS Calendar Labels",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "collapsible": true,
+      "defaultOpen": true,
+      "content": "Atlanta Public Schools calendars include several labels that affect family planning. The dates below help families understand whether students attend, release early, stay home while staff report, or move between semesters.",
+      "table": {
+        "columns": ["Calendar label", "What it means for families"],
+        "rows": [
+          ["Extended Learning Day", "A district-designated APS learning date that families should treat differently from an ordinary holiday. Check school guidance for student expectations."],
+          ["Teacher Professional Learning Day", "Students do not attend school on APS teacher professional learning days shown on the calendar."],
+          ["Teacher Planning Flex Day", "A staff planning date that can affect the student return schedule after a break."],
+          ["PreK-12 Early Release Day", "Students attend school but are dismissed earlier than usual. Families should confirm pickup, transportation, and after-school care."],
+          ["Begin 2nd Semester", "Students return for the second semester on this date."],
+          ["Semester or Quarter Ends", "These dates help families track grading periods, report cards, and academic progress checkpoints."]
+        ]
+      }
+    },
+    {
+      "id": "aps-family-planning-guide",
+      "label": "Atlanta Public Schools Family Planning Guide",
+      "position": "afterCalendarExport",
+      "schemaHasPart": true,
+      "content": "Use the APS calendar as a planning tool, not just a list of holidays. The highest-impact dates are the ones that change attendance, pickup time, supervision needs, or return dates after breaks.",
+      "groups": [
+        {
+          "label": "Before the school year starts",
+          "items": [
+            "Add the first student day to your family calendar and confirm transportation, after-school care, and first-week routines.",
+            "Review Teacher Preplanning Days separately because staff may report before students return.",
+            "Use the official APS source again if your student follows a school-specific program, testing schedule, athletics calendar, or graduation calendar."
+          ]
+        },
+        {
+          "label": "Before early release and staff-only dates",
+          "items": [
+            "Confirm pickup and after-school care before each PreK-12 Early Release Day.",
+            "Check whether a Teacher Professional Learning Day or Teacher Planning Flex Day is a student-off date before arranging childcare.",
+            "Treat Election Day and Extended Learning Day labels as dates that require school-specific verification."
+          ]
+        },
+        {
+          "label": "For Atlanta family routines",
+          "items": [
+            "Families coordinating MARTA, road commutes, after-school programs, or multiple school campuses should flag single-day schedule changes early.",
+            "Use APS multi-year PDFs for long-range planning, but verify the current PDF before booking travel."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aps-local-calendar-factors",
+      "label": "Local Calendar Factors for Atlanta Families",
+      "position": "afterAbout",
+      "schemaHasPart": true,
+      "content": "Atlanta families often search for APS dates by neighborhood or school, but the main student calendar is published districtwide. The calendar factors that matter most are APS-specific labels, early release, staff-only days, and school-level activities that may not appear on the district calendar.",
+      "groups": [
+        {
+          "label": "Calendar coverage",
+          "items": [
+            "The APS student calendar covers districtwide academic dates for Atlanta Public Schools.",
+            "School-specific testing, athletics, graduation, bell schedules, and program events can still differ from the districtwide calendar."
+          ]
+        },
+        {
+          "label": "Local calendar factors",
+          "items": [
+            "Extended Learning Days and Teacher Professional Learning Days are not the same as ordinary holiday breaks.",
+            "PreK-12 Early Release Days can affect pickup, transportation, and after-school care across the city.",
+            "Election Day may affect school routines and should be verified against APS and school-level communications.",
+            "APS publishes multi-year PDFs, which helps families compare first day, winter break, spring break, and last-day timing across school years."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aps-calendar-source-vs-myschooldates",
+      "label": "Official APS Calendar Source vs MySchoolDates",
+      "position": "beforeSources",
+      "schemaHasPart": true,
+      "content": "The official Atlanta Public Schools calendar page and PDF are the source of record. MySchoolDates turns those official APS dates into a searchable reference with key dates, explanations, ICS download options, family planning notes, and year-to-year context. MySchoolDates is independent and is not affiliated with Atlanta Public Schools."
+    }
+  ],
+  "faqSchemaQuestions": [
+    "Which Atlanta Public Schools calendar does this page summarize?",
+    "What is an APS Extended Learning Day?",
+    "Do students attend on Teacher Professional Learning Days?",
+    "Does APS have PreK-12 Early Release Days?",
+    "Where should families verify APS calendar updates?",
+    "Can I add the APS school calendar to Google Calendar?"
+  ],
+  "districtFaqs": [
+    {
+      "q": "Which Atlanta Public Schools calendar does this page summarize?",
+      "a": "This page summarizes official Atlanta Public Schools student calendar PDFs for the listed school years."
+    },
+    {
+      "q": "What is an APS Extended Learning Day?",
+      "a": "An Extended Learning Day is a district-designated APS calendar label. Families should check the official APS calendar and school communications because it is not the same as an ordinary holiday break."
+    },
+    {
+      "q": "Do students attend on Teacher Professional Learning Days?",
+      "a": "Teacher Professional Learning Days are staff-focused dates. When the official APS calendar lists students as off, families should plan childcare or supervision."
+    },
+    {
+      "q": "Does APS have PreK-12 Early Release Days?",
+      "a": "Yes. The reviewed APS calendars include PreK-12 Early Release Days. Families should confirm dismissal, transportation, and after-school care details with their school."
+    },
+    {
+      "q": "Where should families verify APS calendar updates?",
+      "a": "Use the official Atlanta Public Schools calendar page and official student calendar PDFs for final confirmation. MySchoolDates is an independent reference and is not affiliated with Atlanta Public Schools."
+    },
+    {
+      "q": "Can I add the APS school calendar to Google Calendar?",
+      "a": "Yes. MySchoolDates provides ICS calendar files when generated for a school year, which can be imported into Google Calendar, Apple Calendar, or Outlook."
+    }
+  ],
+  "relatedDistrictsTitle": "Explore Related Georgia School Calendars",
+  "relatedDistrictsDescription": "Use these links as supporting references when comparing Atlanta Public Schools with nearby Metro Atlanta district calendars.",
+  "relatedDistricts": [
+    {
+      "name": "Fulton County Schools",
+      "slug": "fulton-county-schools-calendar",
+      "state": "Georgia",
+      "comparisonNote": "Large Metro Atlanta district with multi-year PDFs, remote learning/election days, and professional development dates."
+    },
+    {
+      "name": "DeKalb County School District",
+      "slug": "dekalb-county-school-calendar",
+      "state": "Georgia",
+      "comparisonNote": "Nearby Metro Atlanta district with PD days, make-up days, and grading period boundaries."
+    },
+    {
+      "name": "Cobb County School District",
+      "slug": "cobb-county-school-calendar",
+      "state": "Georgia",
+      "comparisonNote": "Metro Atlanta district with student holiday/staff day and break planning information."
+    }
+  ]
+}

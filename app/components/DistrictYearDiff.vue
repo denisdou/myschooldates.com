@@ -62,6 +62,10 @@ const items = computed(() => {
 })
 
 const title = computed(() => props.cal?.whatsNew?.title)
+const displayPrevYear = computed(() => {
+  const match = prevYear.value.match(/^(\d{4})-(\d{4})$/)
+  return match ? `${match[1]}–${match[2]!.slice(2)}` : prevYear.value
+})
 </script>
 
 <template>
@@ -70,7 +74,7 @@ const title = computed(() => props.cal?.whatsNew?.title)
       <div class="flex items-start justify-between gap-4">
         <div>
           <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ title ?? `What's New for ${currentYear}` }}</h2>
-          <p class="text-sm text-gray-500">How this school year compares to {{ prevYear }}.</p>
+          <p class="text-sm text-gray-500">How this school year compares with {{ displayPrevYear }}.</p>
         </div>
         <span class="mt-1 text-sm font-medium text-blue-600 group-open:hidden">Show</span>
         <span class="mt-1 text-sm font-medium text-blue-600 hidden group-open:inline">Hide</span>

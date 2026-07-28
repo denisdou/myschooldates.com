@@ -1,0 +1,368 @@
+{
+  "institutionId": "fulton-county-schools",
+  "name": "Fulton County Schools",
+  "shortName": "FCS",
+  "slug": "fulton-county-schools-calendar",
+  "state": "Georgia",
+  "stateCode": "GA",
+  "city": "Atlanta",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.fultonschools.org",
+  "calendarPage": "https://www.fultonschools.org/calendar01",
+  "logo": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1707770123/fultonschoolsorg/d5mkr7fkdyxp24nfaht4/FCSLogo-01.png",
+  "timezone": "America/New_York",
+  "county": "Fulton County",
+  "region": "Metro Atlanta",
+  "metro": "Atlanta-Sandy Springs-Roswell",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "A2",
+  "contentTierLabel": "Large Metro Atlanta District",
+  "depthMode": "enhanced",
+  "depthModeRule": {
+    "standard": [
+      "quickAnswer",
+      "keyDates",
+      "downloads",
+      "faq",
+      "sources"
+    ],
+    "enhanced": [
+      "calendarInterpretation",
+      "familyPlanningGuide",
+      "localFactors",
+      "yearChanges"
+    ],
+    "research": [
+      "comparison",
+      "nationalTrends",
+      "dataset"
+    ],
+    "currentModeReason": "Fulton County Schools is treated as enhanced because the district publishes multi-year official PDFs and includes planning-specific labels such as remote learning/election days, professional development and teacher workdays, semester boundaries, and different instructional-day totals by year."
+  },
+  "contentDepthBudget": {
+    "mode": "enhanced",
+    "maxEnrichmentModules": 8,
+    "currentEnrichmentModules": [
+      "calendarInterpretation",
+      "familyPlanningGuide",
+      "localFactors",
+      "yearNumbers",
+      "whatChangedThisYear",
+      "calendarReminders"
+    ],
+    "researchOnlyModules": [
+      "comparison",
+      "nationalTrends",
+      "long-form district profile"
+    ],
+    "budgetRule": "Enhanced district pages should stay within eight enrichment modules. Fulton pages should prioritize official date interpretation, election/remote-learning notes, and Metro Atlanta family planning over generic district description."
+  },
+  "modulePriority": {
+    "quickAnswer": 100,
+    "keyDates": 100,
+    "downloads": 95,
+    "calendarInterpretation": 90,
+    "familyPlanningGuide": 86,
+    "faq": 82,
+    "localFactors": 76,
+    "yearChanges": 70,
+    "relatedDistricts": 35,
+    "comparison": 30,
+    "nationalTrends": 20
+  },
+  "moduleQualityScore": {
+    "calendarInterpretation": 90,
+    "familyPlanningGuide": 86,
+    "localFactors": 84,
+    "yearChanges": 82,
+    "planningTips": 82,
+    "relatedDistricts": 70,
+    "comparison": 45,
+    "nationalTrends": 35
+  },
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-07-28",
+    "coverageNote": "The Fulton County Schools page uses the official district website, official calendar page, and official PDF calendars for 2025-2026, 2026-2027, and 2027-2028. No 2028-2029 PDF was provided or created."
+  },
+  "pageReadinessScore": {
+    "overall": 90,
+    "officialSource": 20,
+    "uniqueFactors": 25,
+    "interpretationValue": 18,
+    "familyValue": 18,
+    "updateHistory": 9,
+    "minimumEnhancedScore": 85,
+    "status": "ready-enhanced"
+  },
+  "contentFreshnessScore": {
+    "overall": 94,
+    "sourceUpdated": "2026-07-28",
+    "lastManualReview": "2026-07-28",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the Fulton County Schools calendar page and PDF links when the official source changes, after election-day remote learning updates, or at least every 90 days during the active school year."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official calendar revision, stale freshness score, missing future-year PDF, or local factor confidence below medium."
+  },
+  "userUtilityScore": {
+    "visibility": "internal",
+    "status": "tracking-ready",
+    "overall": null,
+    "signals": {
+      "pdfClick": {
+        "weight": 25,
+        "status": "pending-analytics"
+      },
+      "icsDownload": {
+        "weight": 25,
+        "status": "pending-analytics"
+      },
+      "faqExpansion": {
+        "weight": 15,
+        "status": "pending-analytics"
+      },
+      "timeOnPage": {
+        "weight": 15,
+        "status": "pending-analytics"
+      },
+      "scrollDepth": {
+        "weight": 20,
+        "status": "pending-analytics"
+      }
+    },
+    "optimizationScope": "module-optimization-only",
+    "usageRule": "Use real engagement data to decide whether Fulton enhanced modules should remain visible, move lower, collapse, or be removed. Do not use this score by itself to expand content or override source quality, freshness, and evidence checks."
+  },
+  "contentRiskControls": {
+    "duplicateMonitoringTargets": [
+      "familyPlanningGuide",
+      "planningTips",
+      "localFactors",
+      "communityContext"
+    ],
+    "similarityThreshold": 0.85,
+    "cityFaqEligibilityRule": "Only generate city or community FAQ when the city alias has meaningful search demand or the district source clearly explains community-specific calendar behavior.",
+    "cityFaqMaxCount": 2,
+    "localFactorConfidenceScale": {
+      "high": "Supported directly by the official district calendar, official district page, or explicit district calendar language.",
+      "medium": "Supported by reviewed local geography, work-pattern, transportation, or community context and tied directly to calendar planning.",
+      "low": "Potentially useful but not enough for publication without manual review; keep pending or suppress from rendered enhanced modules."
+    },
+    "localFactorEvidenceTypeScale": {
+      "verified": "Directly supported by official calendar language or an official district source.",
+      "editorial": "Human-reviewed local interpretation tied to calendar planning but not stated as an official district claim.",
+      "pending": "Candidate factor requiring manual verification before publication."
+    },
+    "sourceRequiredForMedium": "Medium-confidence editorial local factors require reviewed external context, official planning context, or documented local geography/work-pattern basis before publication.",
+    "manualReviewRequiredFor": [
+      "familyPlanningGuide",
+      "planningTips",
+      "localFactors",
+      "communityContext",
+      "lowConfidenceLocalFactors",
+      "cityFaqs"
+    ],
+    "scaleRule": "Only enable Fulton-style local context when the page can connect calendar labels to documented local planning factors such as Metro Atlanta commute patterns, election-day remote learning, district size, or north/south county geography."
+  },
+  "moduleEligibilityRules": {
+    "calendarInterpretation": {
+      "minimumUniqueLabels": 3,
+      "requiredEvidence": [
+        "Remote learning/election days",
+        "Professional development and teacher workdays",
+        "Semester boundaries and instructional-day totals"
+      ],
+      "rule": "Show calendar interpretation when the district calendar includes labels that change whether students attend in person, learn remotely, or stay home."
+    },
+    "familyPlanningGuide": {
+      "minimumLocalFactors": 2,
+      "requiredEvidence": [
+        "Metro Atlanta commute corridors",
+        "North Fulton and South Fulton geography",
+        "Election-day or remote-learning planning"
+      ],
+      "rule": "Show the family planning guide only when advice is tied to district-specific conditions, not generic back-to-school tips."
+    },
+    "localFactors": {
+      "minimumLocalFactors": 2,
+      "rule": "Show local calendar factors only when the district has reviewed local evidence such as election-day learning status, commute patterns, district geography, or multi-year source coverage."
+    }
+  },
+  "localFactors": {
+    "title": "Local Calendar Factors",
+    "status": "district-specific",
+    "humanReviewed": true,
+    "evidenceSource": "Official Fulton calendar labels, official calendar PDFs, Fulton County geography, and reviewed Metro Atlanta planning context.",
+    "factors": [
+      {
+        "claim": "Fulton calendars distinguish student instructional days from professional development and teacher workdays.",
+        "reason": "Families need to know whether students attend, stay home, or return after a staff-only day.",
+        "evidence": "Official 2025-2026 and 2026-2027 PDFs list professional development and teacher workdays separately from student instructional days.",
+        "confidenceLevel": "high",
+        "evidenceType": "verified"
+      },
+      {
+        "claim": "Election-day remote learning can change family routines.",
+        "reason": "A remote learning day is not the same as a school holiday; families may need device access, supervision, and work coverage.",
+        "evidence": "Official Fulton PDFs list remote learning/elections for 2026-2027 and state that statewide election days will be remote for students unless otherwise indicated.",
+        "confidenceLevel": "high",
+        "evidenceType": "verified"
+      },
+      {
+        "claim": "North Fulton and South Fulton commuting patterns make single-day schedule changes important.",
+        "reason": "Families may coordinate school pickup, childcare, and work schedules across Atlanta, Sandy Springs, Roswell, Alpharetta, Johns Creek, and South Fulton communities.",
+        "evidence": "Reviewed local geography for Fulton County and the Atlanta-Sandy Springs-Roswell metro area.",
+        "confidenceLevel": "medium",
+        "evidenceType": "editorial"
+      },
+      {
+        "claim": "Multi-year Fulton PDFs help families plan beyond one school year.",
+        "reason": "Fulton provides official 2025-2026, 2026-2027, and 2027-2028 calendar PDFs, which supports long-range planning for breaks and summer activities.",
+        "evidence": "Official Fulton calendar source links for three school years were provided and reviewed.",
+        "confidenceLevel": "high",
+        "evidenceType": "verified"
+      }
+    ]
+  },
+  "includeArticleSchema": true,
+  "includeComparisonSchema": false,
+  "schemaTierPolicy": {
+    "standard": ["WebPage", "Dataset", "FAQPage"],
+    "enhanced": ["WebPage", "Dataset", "FAQPage", "Article", "Event"],
+    "research": ["WebPage", "Dataset", "FAQPage", "Article", "Event", "DataDownload"],
+    "currentPolicy": "Enhanced pages may use Article schema when page includes real interpretation, family impact, local evidence, and year-change analysis. Standard pages should set includeArticleSchema to false."
+  },
+  "searchAliases": [
+    "Fulton County Schools",
+    "FCS calendar",
+    "Fulton County school calendar",
+    "Fulton schools calendar",
+    "Fulton County Schools calendar",
+    "Atlanta school calendar",
+    "North Fulton school calendar",
+    "South Fulton school calendar",
+    "Fulton County school holidays"
+  ],
+  "districtFact": "Fulton County Schools publishes official multi-year instructional calendars for a large Metro Atlanta district. The calendars include first and last days, fall break, Thanksgiving break, winter break, spring break, remote learning/election days, professional development and teacher workdays, semester boundaries, staff days, and instructional-day totals.",
+  "about": [
+    {
+      "title": "About Fulton County Schools",
+      "content": "Fulton County Schools, also known as FCS, serves communities across Fulton County and the Metro Atlanta area. Families use the district calendar to track the first day of school, last day, fall break, Thanksgiving break, winter break, spring break, professional development days, teacher workdays, remote learning days, semester boundaries, and official PDF updates."
+    },
+    {
+      "title": "Why Fulton Calendar Planning Is Different",
+      "content": "Fulton County includes both dense Atlanta-area communities and suburban North Fulton and South Fulton areas. Calendar changes can affect families who coordinate school schedules with downtown Atlanta workdays, GA-400 and I-285 commute patterns, after-school care, and multi-campus family routines. Election-day remote learning and staff-only days are especially important because they are not the same as ordinary school holidays."
+    }
+  ],
+  "planningTips": {
+    "title": "Fulton Calendar Reminders",
+    "content": [
+      "Treat remote learning/election days as instructional planning days, not ordinary holidays.",
+      "Check whether a listed professional development or teacher workday is a student-off day before arranging childcare.",
+      "Confirm return dates after winter break because staff workdays can occur before students return.",
+      "Use the official Fulton PDF for final confirmation before booking travel around fall break, spring break, or the end of the school year."
+    ]
+  },
+  "customSections": [],
+  "faqSchemaQuestions": [
+    "Which Fulton County Schools calendar does this page summarize?",
+    "Does Fulton County Schools use remote learning days?",
+    "Are Fulton professional development days student holidays?",
+    "Where should families verify Fulton County Schools calendar updates?",
+    "Does the Fulton calendar apply to Atlanta and North Fulton schools?",
+    "Can I add the Fulton school calendar to Google Calendar?"
+  ],
+  "districtFaqs": [
+    {
+      "q": "Which Fulton County Schools calendar does this page summarize?",
+      "a": "This page summarizes official Fulton County Schools instructional calendar PDFs for the listed school years."
+    },
+    {
+      "q": "Does Fulton County Schools use remote learning days?",
+      "a": "Yes. The reviewed Fulton calendars include remote learning/election-day language. Families should treat those dates as learning days that may not require in-person attendance."
+    },
+    {
+      "q": "Are Fulton professional development days student holidays?",
+      "a": "Professional development and teacher workdays are staff-focused dates. When the official calendar indicates students are off, families should plan childcare or home supervision."
+    },
+    {
+      "q": "Where should families verify Fulton County Schools calendar updates?",
+      "a": "Use the official Fulton County Schools calendar page and official PDFs for final confirmation. MySchoolDates is an independent reference and is not affiliated with Fulton County Schools."
+    },
+    {
+      "q": "Does the Fulton calendar apply to Atlanta and North Fulton schools?",
+      "a": "The districtwide calendar covers main instructional dates for Fulton County Schools. School-specific events, testing, athletics, graduation, and program calendars may still differ."
+    },
+    {
+      "q": "Can I add the Fulton school calendar to Google Calendar?",
+      "a": "Yes. MySchoolDates provides ICS calendar files when generated for a school year, which can be imported into Google Calendar, Apple Calendar, or Outlook."
+    }
+  ],
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "fallBreak",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "compareIntro": "Compare Fulton County Schools with Atlanta Public Schools, Cobb County School District, and DeKalb County School District, including the first day, last day, and major breaks.",
+  "relatedDistrictsTitle": "Compare Nearby Metro Atlanta School Calendars",
+  "relatedDistrictsDescription": "Compare Fulton County Schools with nearby Georgia districts when work, childcare, or school activities cross district lines.",
+  "relatedDistricts": [
+    {
+      "name": "Atlanta Public Schools",
+      "slug": "atlanta-public-schools-calendar",
+      "state": "Georgia"
+    },
+    {
+      "name": "Cobb County School District",
+      "slug": "cobb-county-school-calendar",
+      "state": "Georgia"
+    },
+    {
+      "name": "DeKalb County School District",
+      "slug": "dekalb-county-school-calendar",
+      "state": "Georgia"
+    },
+    {
+      "name": "Gwinnett County Public Schools",
+      "slug": "gwinnett-county-public-schools-calendar",
+      "state": "Georgia"
+    }
+  ]
+}

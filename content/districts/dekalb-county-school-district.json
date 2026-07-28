@@ -1,0 +1,154 @@
+{
+  "institutionId": "dekalb-county-school-district",
+  "name": "DeKalb County School District",
+  "shortName": "DCSD",
+  "slug": "dekalb-county-school-calendar",
+  "state": "Georgia",
+  "stateCode": "GA",
+  "city": "Stone Mountain",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.dekalbschoolsga.org",
+  "calendarPage": "https://www.dekalbschoolsga.org/official-school-calendars",
+  "logo": "https://resources.finalsite.net/images/f_auto,q_auto/v1750948330/dekalbschoolsgaorg/ttjdj5e7r34zliahe2jw/DekalbCountySchoolDistrictPrimaryThumbnailImage.png",
+  "timezone": "America/New_York",
+  "county": "DeKalb County",
+  "region": "Metro Atlanta",
+  "metro": "Atlanta",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "keyDates",
+  "calendarType": "traditional",
+  "searchAliases": [
+    "DeKalb County School District",
+    "DeKalb County Schools",
+    "DCSD calendar",
+    "DeKalb schools calendar",
+    "DeKalb County school calendar",
+    "Stone Mountain school calendar",
+    "Decatur school calendar",
+    "Lithonia school calendar",
+    "Tucker school calendar",
+    "Clarkston school calendar",
+    "Chamblee school calendar",
+    "Dunwoody school calendar",
+    "Brookhaven school calendar"
+  ],
+  "districtFact": "DeKalb County School District publishes official school calendars for a large Metro Atlanta district where families need to distinguish holidays, breaks, PD days, make-up days, flex days, and grading period boundaries.",
+  "about": [
+    {
+      "title": "About DeKalb County School District",
+      "content": "DeKalb County School District serves public school students across DeKalb County, Georgia. The district's official calendars list first and last student days, workdays, professional development days, major breaks, make-up days when scheduled, flex days, grading period endings, and semester boundaries."
+    },
+    {
+      "title": "District Boundaries and School-Level Schedules",
+      "content": "DeKalb County School District serves many DeKalb County communities, but City Schools of Decatur is a separate school system. The district calendar is also separate from school-level notices for testing, athletics, magnet programs, graduations, transportation updates, and emergency announcements."
+    }
+  ],
+  "planningTips": {
+    "title": "Planning Tips for DeKalb County Families",
+    "content": [
+      "Check whether a no-student date is a holiday, PD day, make-up day, or flex day because each category can affect family planning differently.",
+      "Use the official year calendar rather than assuming a standard 180-day summary; DeKalb's published instructional-day count can vary by school year.",
+      "Make-up days may be exchanged as student days if weather or another school event requires schedule recovery.",
+      "Confirm school-level events, testing, athletics, magnet program dates, graduation details, and bus updates with the assigned school.",
+      "Families with work, childcare, or custody arrangements across district lines may want to compare DeKalb dates with Atlanta, Fulton, Gwinnett, and Cobb calendars."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "dekalb-calendar-terms-guide",
+      "label": "How to Read DeKalb Calendar Terms",
+      "position": "afterAbout",
+      "schemaHasPart": true,
+      "content": "The DeKalb calendar uses several labels that are easy to confuse. Holidays and breaks usually mean schools are closed. PD days and workdays are staff-focused days. Make-up days can become student attendance days if the district needs to recover instructional time after weather or another closure.",
+      "groups": [
+        {
+          "label": "Terms families should check",
+          "items": [
+            "PD Day: professional development or staff planning time with no regular student attendance.",
+            "Make-up Day: may become a student day if the district needs to make up instructional time lost to weather or another closure.",
+            "Flex Day/PD Day: April 27 is listed under this label on the district calendar. Families should confirm whether the date affects student attendance before making childcare plans."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dekalb-school-level-schedule-notes",
+      "label": "DeKalb District Calendar vs School-Level Schedules",
+      "position": "beforeSources",
+      "schemaHasPart": true,
+      "content": "City Schools of Decatur is a separate school system. The DeKalb district calendar covers systemwide dates, but individual schools may publish separate schedules for testing, athletics, magnet programs, transportation, graduation, and emergency changes."
+    }
+  ],
+  "compareIntro": "Compare DeKalb's 2026–27 calendar with Atlanta, Cobb, and Gwinnett. The table focuses on the dates local families are most likely to compare.",
+  "comparisonRowsInclude": ["firstDay", "fallBreak", "winterBreak", "springBreak", "lastDay"],
+  "comparisonRowsMode": "sharedValuesOnly",
+  "districtFaqs": [
+    {
+      "q": "What school district serves DeKalb County, Georgia?",
+      "a": "Most addresses in DeKalb County are served by DeKalb County School District, but City Schools of Decatur is a separate school system. Families should confirm the district and school assigned to their home address."
+    },
+    {
+      "q": "Does DeKalb County School District include Decatur?",
+      "a": "DeKalb County School District serves many DeKalb County communities, but City Schools of Decatur is a separate school system. Families in the Decatur area should verify which district serves their address."
+    },
+    {
+      "q": "What is a DeKalb make-up day?",
+      "a": "A make-up day is a calendar date that may be exchanged as a student day if the district needs to recover time after weather or another school event. If it is not used as a student day, the calendar notes it may be considered a holiday."
+    },
+    {
+      "q": "Does DeKalb County use professional development days?",
+      "a": "Yes. DeKalb calendars list PD days and workdays separately from regular holidays and student attendance days."
+    },
+    {
+      "q": "Where should families verify DeKalb County School District calendar updates?",
+      "a": "Use the official DeKalb County School District calendar page and school announcements for final confirmation. MySchoolDates summarizes official calendar documents and is not affiliated with DeKalb County School District."
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Gwinnett County Public Schools",
+      "slug": "gwinnett-county-public-schools-calendar",
+      "state": "Georgia",
+      "comparisonNote": "Gwinnett starts two days earlier and shares DeKalb's May 26 last day."
+    },
+    {
+      "name": "Cobb County School District",
+      "slug": "cobb-county-school-calendar",
+      "state": "Georgia",
+      "comparisonNote": "Cobb County starts earlier and schedules fall break in September."
+    },
+    {
+      "name": "Atlanta Public Schools",
+      "slug": "atlanta-public-schools-calendar",
+      "state": "Georgia",
+      "comparisonNote": "Atlanta starts four days earlier, ends one day later, and schedules spring break two weeks after DeKalb."
+    }
+  ],
+  "sources": [
+    {
+      "label": "DeKalb County School District official website",
+      "url": "https://www.dekalbschoolsga.org"
+    },
+    {
+      "label": "DeKalb County School District official school calendars",
+      "url": "https://www.dekalbschoolsga.org/official-school-calendars"
+    }
+  ]
+}

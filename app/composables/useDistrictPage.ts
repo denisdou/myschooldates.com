@@ -91,6 +91,12 @@ export function useDistrictPage() {
 
   // Returns the first student school day after winter break ends (skips weekends and no_school days)
   function getSecondSemesterStart(events: Array<{ date: string; name: string; type: string }>): string {
+    const explicitSemesterStart = events
+      .filter(e => ['school_resume', 'school_reopen', 'semester_start'].includes(e.type))
+      .sort((a, b) => a.date.localeCompare(b.date))
+      .find(e => e.name.toLowerCase().includes('semester'))
+    if (explicitSemesterStart) return explicitSemesterStart.date
+
     const winterEnd = events.find(
       e => e.type === 'break_end' && e.name.toLowerCase().includes('winter')
     )
@@ -279,12 +285,16 @@ export function useDistrictPage() {
     break_start: 'Break Starts', break_end: 'Break Ends',
     no_school: 'No School', student_holiday: 'No School',
     early_release: 'Early Release', early_dismissal: 'Early Dismissal',
+    digital_learning: 'Digital Learning',
+    remote_learning: 'Remote Learning',
     makeup_day: 'Make-Up Day', school_resume: 'School Resumes', school_reopen: 'School Resumes',
     quarter_start: 'Start of Quarter', quarter_end: 'End of Quarter',
     grading_period_start: 'Grading Period', grading_period_end: 'Grading Period',
     semester_start: 'Semester', semester_end: 'End of Semester',
     graduation: 'Graduation', academic: 'Academic', observance: 'Observance',
     teacher_workday: 'Teacher Workday',
+    teacher_professional_learning: 'Teacher Professional Learning Day',
+    extended_learning: 'Extended Learning Day',
   }
 
   const eventTypeColor: Record<string, string> = {
@@ -297,6 +307,8 @@ export function useDistrictPage() {
     student_holiday: 'bg-yellow-100 text-yellow-800',
     early_release: 'bg-orange-100 text-orange-800',
     early_dismissal: 'bg-orange-100 text-orange-800',
+    digital_learning: 'bg-pink-100 text-pink-800',
+    remote_learning: 'bg-pink-100 text-pink-800',
     makeup_day: 'bg-orange-100 text-orange-800',
     school_resume: 'bg-green-100 text-green-800',
     school_reopen: 'bg-green-100 text-green-800',
@@ -310,6 +322,8 @@ export function useDistrictPage() {
     academic: 'bg-gray-100 text-gray-700',
     observance: 'bg-blue-50 text-blue-700',
     teacher_workday: 'bg-yellow-100 text-yellow-800',
+    teacher_professional_learning: 'bg-yellow-100 text-yellow-800',
+    extended_learning: 'bg-pink-100 text-pink-800',
   }
 
   return {

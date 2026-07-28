@@ -1,97 +1,83 @@
 <script setup lang="ts">
-const pageUrl = 'https://myschooldates.com/blog'
-const title = 'MySchoolDates Blog | School Calendar Research and Data'
-const description = 'Read MySchoolDates school calendar research, dataset releases, trend reports, and planning notes for U.S. district calendars.'
+useSeoMeta({
+  title: 'School Calendar Research Blog | MySchoolDates',
+  description: 'Research notes, school calendar trends, and data reports from the MySchoolDates calendar dataset.',
+  ogTitle: 'School Calendar Research Blog | MySchoolDates',
+  ogDescription: 'Research notes, school calendar trends, and data reports from the MySchoolDates calendar dataset.',
+})
 
-const featuredPosts = [
+const posts = [
   {
     title: '2026-2027 School Calendar Trends: Start Dates, Breaks & End Dates From 100 Districts',
-    description: 'A data-backed report on U.S. school start dates, winter break timing, spring break clusters, last days, and downloadable calendar dataset records.',
+    description: 'A data-backed look at when schools start, winter break dates, spring break patterns, last days, PDFs, ICS files, and planning trends across 100 reviewed district calendars.',
     href: '/school-calendar-trends/2026-2027-report',
-    label: 'Research report',
+    date: 'July 27, 2026',
+    tag: 'Research Report',
   },
 ]
 
-useSeoMeta({
-  title,
-  description,
-  ogTitle: title,
-  ogDescription: description,
-  ogUrl: pageUrl,
-  twitterTitle: title,
-  twitterDescription: description,
-})
-
-useHead({
-  link: [{ rel: 'canonical', href: pageUrl }],
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'CollectionPage',
-        '@id': `${pageUrl}#webpage`,
-        url: pageUrl,
-        name: title,
-        description,
-        isPartOf: {
-          '@type': 'WebSite',
-          name: 'MySchoolDates',
-          url: 'https://myschooldates.com',
-        },
-        hasPart: featuredPosts.map(post => ({
-          '@type': 'Article',
-          name: post.title,
-          url: `https://myschooldates.com${post.href}`,
-        })),
-      }),
-    },
-  ],
-})
+const researchLinks = [
+  {
+    title: 'School Calendar Trends Hub',
+    description: 'A central entry point for annual school calendar trends reports, current findings, archive planning, and state calendar hubs.',
+    href: '/school-calendar-trends',
+    tag: 'Hub',
+  },
+  {
+    title: 'School Calendar Trends Dataset 2026-2027',
+    description: 'Download the public CSV dataset behind the 2026-2027 report, with field definitions, methodology, and citation guidance.',
+    href: '/datasets/school-calendar-trends',
+    tag: 'Dataset',
+  },
+]
 </script>
 
 <template>
-  <main class="bg-gray-50">
-    <div class="mx-auto max-w-5xl px-4 py-10">
-      <header class="rounded-xl border border-gray-200 bg-white p-6 sm:p-8">
-        <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">MySchoolDates Blog</p>
-        <h1 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-          School Calendar Research and Data
-        </h1>
-        <p class="mt-4 max-w-3xl text-lg leading-relaxed text-gray-600">
-          Research notes, data releases, and school calendar trend analysis from the MySchoolDates Calendar Data Team.
-        </p>
-      </header>
-
-      <section class="mt-8 rounded-xl border border-gray-200 bg-white p-6">
-        <h2 class="text-2xl font-bold text-gray-900">Featured Research</h2>
-        <div class="mt-5 grid gap-4">
-          <NuxtLink
-            v-for="post in featuredPosts"
-            :key="post.href"
-            :to="post.href"
-            class="rounded-lg border border-gray-200 bg-gray-50 p-5 transition hover:border-blue-200 hover:bg-blue-50"
-          >
-            <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">{{ post.label }}</p>
-            <h3 class="mt-2 text-xl font-bold text-gray-900">{{ post.title }}</h3>
-            <p class="mt-2 text-sm leading-relaxed text-gray-600">{{ post.description }}</p>
-          </NuxtLink>
-        </div>
-      </section>
-
-      <section class="mt-8 rounded-xl border border-gray-200 bg-white p-6">
-        <h2 class="text-2xl font-bold text-gray-900">Data Resources</h2>
-        <div class="mt-5 grid gap-4 sm:grid-cols-2">
-          <NuxtLink to="/school-calendar-trends" class="rounded-lg border border-gray-200 bg-gray-50 p-4 hover:border-blue-200 hover:bg-blue-50">
-            <h3 class="font-semibold text-gray-900">School Calendar Trends Hub</h3>
-            <p class="mt-2 text-sm leading-relaxed text-gray-600">Browse reports, charts, datasets, archive plans, and school calendar analysis.</p>
-          </NuxtLink>
-          <NuxtLink to="/datasets/school-calendar-trends" class="rounded-lg border border-gray-200 bg-gray-50 p-4 hover:border-blue-200 hover:bg-blue-50">
-            <h3 class="font-semibold text-gray-900">School Calendar Dataset</h3>
-            <p class="mt-2 text-sm leading-relaxed text-gray-600">Download the 2026-2027 U.S. school calendar CSV dataset and citation details.</p>
-          </NuxtLink>
-        </div>
-      </section>
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <div class="mb-8">
+      <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide">MySchoolDates Blog</p>
+      <h1 class="mt-2 text-3xl sm:text-4xl font-bold text-gray-900">School Calendar Research and Trends</h1>
+      <p class="mt-3 max-w-3xl text-gray-600 leading-relaxed">
+        Data reports and planning notes based on reviewed public school district calendar records, official source PDFs, and MySchoolDates calendar exports.
+      </p>
     </div>
+
+    <section class="grid gap-4">
+      <article
+        v-for="post in posts"
+        :key="post.href"
+        class="rounded-xl border border-gray-200 bg-white p-6 hover:border-blue-200 hover:shadow-sm transition"
+      >
+        <div class="flex flex-wrap items-center gap-2 text-xs text-gray-500">
+          <span class="rounded-full bg-blue-50 px-2.5 py-1 font-semibold text-blue-700">{{ post.tag }}</span>
+          <time>{{ post.date }}</time>
+        </div>
+        <h2 class="mt-3 text-xl font-semibold text-gray-900">
+          <NuxtLink :to="post.href" class="hover:text-blue-700 transition-colors">
+            {{ post.title }}
+          </NuxtLink>
+        </h2>
+        <p class="mt-2 text-sm leading-relaxed text-gray-600">{{ post.description }}</p>
+        <NuxtLink :to="post.href" class="mt-4 inline-flex text-sm font-semibold text-blue-600 hover:text-blue-800">
+          Read the report
+        </NuxtLink>
+      </article>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-semibold text-gray-900">Research Assets</h2>
+      <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        <NuxtLink
+          v-for="link in researchLinks"
+          :key="link.href"
+          :to="link.href"
+          class="rounded-xl border border-gray-200 bg-white p-6 hover:border-blue-200 hover:shadow-sm transition"
+        >
+          <span class="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700">{{ link.tag }}</span>
+          <h3 class="mt-3 text-lg font-semibold text-gray-900">{{ link.title }}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-600">{{ link.description }}</p>
+        </NuxtLink>
+      </div>
+    </section>
   </main>
 </template>

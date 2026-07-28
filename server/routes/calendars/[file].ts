@@ -1,5 +1,6 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs'
-import { join } from 'node:path'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 type DistrictRecord = {
   institutionId: string
@@ -22,6 +23,13 @@ type CalendarRecord = {
   totalSchoolDays?: number
   events: CalendarEvent[]
 }
+
+type CalendarManifest = {
+  districts: DistrictRecord[]
+  calendarsByInstitutionYear: Record<string, CalendarRecord>
+}
+
+let manifestCache: CalendarManifest | null = null
 
 function parseDate(date: string) {
   return new Date(`${date}T00:00:00`)
@@ -76,10 +84,11 @@ function getBreaks(events: CalendarEvent[]) {
   return events
     .filter(event => event.type === 'break_start')
     .map((start) => {
+      const normalizedStart = normalizeCalendarName(start).toLowerCase()
       const end = events.find(event =>
         event.type === 'break_end' &&
         event.date >= start.date &&
-        event.name.replace(/\s+End$/i, '').toLowerCase() === start.name.toLowerCase()
+        normalizeCalendarName(event).toLowerCase() === normalizedStart
       )
       return {
         name: start.name,
@@ -87,6 +96,40 @@ function getBreaks(events: CalendarEvent[]) {
         end: end?.date ?? start.date,
       }
     })
+}
+
+function normalizeCalendarName(event: CalendarEvent) {
+  return event.name
+    .replace(/\b(Begins|Begin|Starts|Start|Ends|End)\b/gi, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function isRangeEndEvent(event: CalendarEvent, events: CalendarEvent[]) {
+  if (event.type !== 'teacher_workday' && event.type !== 'teacher_professional_learning') return false
+  if (!/\bends?\b/i.test(event.name)) return false
+  const normalizedEnd = normalizeCalendarName(event).toLowerCase()
+  return events.some(candidate =>
+    candidate.type === event.type &&
+    candidate.date <= event.date &&
+    /\b(begins?|starts?)\b/i.test(candidate.name) &&
+    normalizeCalendarName(candidate).toLowerCase() === normalizedEnd
+  )
+}
+
+function rangeEndFor(event: CalendarEvent, events: CalendarEvent[]) {
+  if ((event.type === 'teacher_workday' || event.type === 'teacher_professional_learning') && /\b(begins?|starts?)\b/i.test(event.name)) {
+    const normalizedStart = normalizeCalendarName(event).toLowerCase()
+    const end = events.find(candidate =>
+      candidate.type === event.type &&
+      candidate.date >= event.date &&
+      /\bends?\b/i.test(candidate.name) &&
+      normalizeCalendarName(candidate).toLowerCase() === normalizedStart
+    )
+    return end?.date ?? event.date
+  }
+
+  return event.date
 }
 
 function isCoveredByBreak(event: CalendarEvent, events: CalendarEvent[]) {
@@ -97,30 +140,82 @@ function isCoveredByBreak(event: CalendarEvent, events: CalendarEvent[]) {
   )
 }
 
-function findCalendarFile(root: string, fileParam: string) {
+function readJson<T>(path: string) {
+  return JSON.parse(readFileSync(path, 'utf-8')) as T
+}
+
+function buildManifestFromContent(root: string): CalendarManifest | null {
+  const districtsDir = join(root, 'content', 'districts')
+  const calendarsDir = join(root, 'content', 'calendars')
+  if (!existsSync(districtsDir) || !existsSync(calendarsDir)) return null
+
+  const districts: DistrictRecord[] = []
+  const calendarsByInstitutionYear: Record<string, CalendarRecord> = {}
+
+  for (const file of readdirSync(districtsDir)) {
+    if (!file.endsWith('.json')) continue
+    const district = readJson<DistrictRecord>(join(districtsDir, file))
+    if (district.institutionId && district.slug) districts.push(district)
+  }
+
+  for (const institutionId of readdirSync(calendarsDir)) {
+    const institutionDir = join(calendarsDir, institutionId)
+    if (!existsSync(institutionDir)) continue
+
+    for (const file of readdirSync(institutionDir)) {
+      if (!file.endsWith('.json')) continue
+      const calendar = readJson<CalendarRecord>(join(institutionDir, file))
+      if (!calendar.schoolYear) continue
+      calendarsByInstitutionYear[`${institutionId}:${calendar.schoolYear}`] = calendar
+    }
+  }
+
+  return { districts, calendarsByInstitutionYear }
+}
+
+function readManifest() {
+  if (manifestCache) return manifestCache
+
+  const routeDir = dirname(fileURLToPath(import.meta.url))
+  const candidates = [
+    join(routeDir, '..', '..', '..', 'calendar-route-manifest.json'),
+    join(process.cwd(), 'calendar-route-manifest.json'),
+    join(process.cwd(), '.output', 'server', 'calendar-route-manifest.json'),
+  ]
+
+  for (const path of candidates) {
+    if (!existsSync(path)) continue
+    manifestCache = readJson<CalendarManifest>(path)
+    return manifestCache
+  }
+
+  const fallback = buildManifestFromContent(process.cwd())
+  if (fallback) {
+    manifestCache = fallback
+    return manifestCache
+  }
+
+  throw createError({ statusCode: 500, statusMessage: 'Calendar manifest not available' })
+}
+
+function findCalendar(fileParam: string) {
   const normalizedFileParam = fileParam.replace(/\.(ics|pdf)$/i, '')
   const match = normalizedFileParam.match(/^(.+)-(\d{4}-\d{4})$/)
   if (!match) return null
 
+  const manifest = readManifest()
   const [, slug, schoolYear] = match
-  const districtDir = join(root, 'content', 'districts')
+  const district = manifest.districts.find(item => item.slug === slug)
+  if (!district) return null
 
-  for (const file of readdirSync(districtDir)) {
-    if (!file.endsWith('.json')) continue
-    const district = JSON.parse(readFileSync(join(districtDir, file), 'utf-8')) as DistrictRecord
-    if (district.slug !== slug) continue
+  const calendar = manifest.calendarsByInstitutionYear[`${district.institutionId}:${schoolYear}`]
+  if (!calendar) return null
 
-    const calendarPath = join(root, 'content', 'calendars', district.institutionId, `${schoolYear}.json`)
-    if (!existsSync(calendarPath)) return null
-
-    return {
-      district,
-      calendarPath,
-      schoolYear,
-    }
+  return {
+    district,
+    calendar,
+    schoolYear,
   }
-
-  return null
 }
 
 function buildIcs(district: DistrictRecord, calendar: CalendarRecord) {
@@ -136,6 +231,7 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord) {
   const breaks = getBreaks(calendar.events)
   const eventsForExport = calendar.events.filter(event =>
     event.type !== 'break_end' &&
+    !isRangeEndEvent(event, calendar.events) &&
     !isCoveredByBreak(event, calendar.events)
   )
 
@@ -143,20 +239,23 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord) {
     const breakRange = event.type === 'break_start'
       ? breaks.find(item => item.name === event.name && item.start === event.date)
       : null
-    const eventEndDate = breakRange?.end ?? event.date
+    const eventEndDate = breakRange?.end ?? rangeEndFor(event, calendar.events)
     const nextDay = parseDate(eventEndDate)
     nextDay.setDate(nextDay.getDate() + 1)
 
     const start = compactDate(event.date)
     const end = compactDate(dateKey(nextDay))
     const uidSlug = district.slug.replace(/[^a-z0-9-]/gi, '-').toLowerCase()
+    const summaryName = event.type === 'teacher_workday' || event.type === 'teacher_professional_learning' || event.type === 'break_start'
+      ? normalizeCalendarName(event)
+      : event.name
 
     lines.push(
       'BEGIN:VEVENT',
       `DTSTAMP:${start}T000000Z`,
       `DTSTART;VALUE=DATE:${start}`,
       `DTEND;VALUE=DATE:${end}`,
-      `SUMMARY:${escapeText(`${event.name} - ${district.name}`)}`,
+      `SUMMARY:${escapeText(`${summaryName} - ${district.name}`)}`,
       ...(event.description ? [`DESCRIPTION:${escapeText(event.description)}`] : []),
       `UID:${start}-${end}-${event.type}-${uidSlug}@myschooldates.com`,
       'END:VEVENT',
@@ -252,19 +351,17 @@ function buildPdf(district: DistrictRecord, calendar: CalendarRecord) {
 
 export default defineEventHandler((event) => {
   const fileParam = getRouterParam(event, 'file') ?? ''
-  const root = process.cwd()
-  const match = findCalendarFile(root, fileParam)
+  const match = findCalendar(fileParam)
 
   if (!match) {
     throw createError({ statusCode: 404, statusMessage: 'Calendar file not found' })
   }
 
-  const calendar = JSON.parse(readFileSync(match.calendarPath, 'utf-8')) as CalendarRecord
   const isPdfRequest = fileParam.toLowerCase().endsWith('.pdf')
   const filename = `${match.district.slug}-${match.schoolYear}.${isPdfRequest ? 'pdf' : 'ics'}`
 
   if (isPdfRequest) {
-    const body = buildPdf(match.district, calendar)
+    const body = buildPdf(match.district, match.calendar)
     setHeader(event, 'Content-Type', 'application/pdf')
     setHeader(event, 'Content-Disposition', `inline; filename="${filename}"`)
     setHeader(event, 'X-Robots-Tag', 'noindex')
@@ -272,7 +369,7 @@ export default defineEventHandler((event) => {
     return body
   }
 
-  const body = buildIcs(match.district, calendar)
+  const body = buildIcs(match.district, match.calendar)
   setHeader(event, 'Content-Type', 'text/calendar; charset=utf-8')
   setHeader(event, 'Content-Disposition', `attachment; filename="${filename}"`)
   setHeader(event, 'X-Robots-Tag', 'noindex')

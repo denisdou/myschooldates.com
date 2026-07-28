@@ -10,7 +10,7 @@ defineProps<{
 <template>
   <div id="other-calendars" class="bg-white rounded-xl border border-gray-200 p-6">
     <h2 class="text-lg font-semibold text-gray-900 mb-1">Other Official Calendars</h2>
-    <p class="text-sm text-gray-500 mb-4">{{ districtName }} also publishes official calendars for specific school types.</p>
+    <p class="text-sm text-gray-500 mb-4">{{ districtName }} publishes separate calendars for specific programs.</p>
     <ul class="space-y-0">
       <li
         v-for="alt in alternateCalendars"
