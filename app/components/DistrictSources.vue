@@ -69,7 +69,7 @@ const displayYear = computed(() => {
       </p>
       <p v-if="verifiedDate">
         <span class="font-medium text-gray-600">Last manual review:</span>
-        {{ verifiedDate }}, by the MySchoolDates Calendar Data Team.
+        {{ verifiedDate }}, by Denis Dou.
       </p>
       <p v-if="verifiedDate">
         <span class="font-medium text-gray-600">Next review:</span>

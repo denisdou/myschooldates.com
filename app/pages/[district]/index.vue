@@ -400,7 +400,7 @@ function keyDateSchemaDescription(event: any) {
   if (event.type === 'break_start') {
     const schoolBreak = breaks.value.find((b: any) => b.name === event.name && b.start === event.date)
     if (schoolBreak?.end) {
-      return `${districtLabel} ${eventName} runs ${formatShortDate(event.date)}–${formatShortDate(schoolBreak.end)}.`
+      return `${districtLabel} ${eventName} runs ${formatCompactDateRange(event.date, schoolBreak.end)}.`
     }
     return `${districtLabel} ${eventName} in the ${displaySchoolYear.value} school year.`
   }
@@ -770,6 +770,19 @@ const verifiedDate = computed(() => {
   if (!cal?.lastVerifiedAt) return null
   return new Date(cal.lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 })
+function formatCompactDateRange(start: string, end: string) {
+  const startDate = new Date(start + 'T00:00:00')
+  const endDate = new Date(end + 'T00:00:00')
+  const sameYear = startDate.getFullYear() === endDate.getFullYear()
+  const sameMonth = sameYear && startDate.getMonth() === endDate.getMonth()
+  if (sameMonth) {
+    return `${startDate.toLocaleString('en-US', { month: 'short' })} ${startDate.getDate()}–${endDate.getDate()}, ${endDate.getFullYear()}`
+  }
+  if (sameYear) {
+    return `${startDate.toLocaleString('en-US', { month: 'short' })} ${startDate.getDate()}–${endDate.toLocaleString('en-US', { month: 'short' })} ${endDate.getDate()}, ${endDate.getFullYear()}`
+  }
+  return `${formatShortDate(start)}–${formatShortDate(end)}`
+}
 const editorialAuthorName = 'Denis Dou'
 
 const prevYear = computed(() => {
@@ -1045,9 +1058,9 @@ if (!isStatePage && district.value) {
     .filter(y => y.schoolYear !== currentYear)
     .map(y => `https://myschooldates.com/${slug}/${y.schoolYear}`)
   const schemaReviewedBySetting = (cal as any)?.schemaReviewedBy ?? (cal as any)?.meta?.schemaReviewedBy ?? (meta.value as any)?.schemaReviewedBy ?? (meta.value as any)?.meta?.schemaReviewedBy
-  const schemaReviewedById = schemaReviewedBySetting === 'author'
+  const schemaReviewedById = schemaReviewedBySetting === 'author' || !schemaReviewedBySetting
     ? 'https://myschooldates.com/author#person'
-    : schemaReviewedBySetting === 'team' || !schemaReviewedBySetting
+    : schemaReviewedBySetting === 'team'
       ? 'https://myschooldates.com/#education-research-team'
       : String(schemaReviewedBySetting)
   const customSectionSchemaParts = customSections.value
@@ -1830,7 +1843,7 @@ if (!isStatePage && district.value) {
 
         <!-- Key Date Cards -->
         <div v-if="!hiddenSections.has('keyDateCards')" id="key-dates" class="scroll-mt-24">
-          <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-5">Key Dates</h2>
+          <h2 class="text-xl font-bold text-gray-900 mb-4">Key Dates</h2>
           <DistrictKeyDateCards :cal="cal" />
         </div>
 
@@ -1986,7 +1999,7 @@ if (!isStatePage && district.value) {
             <div v-for="b in breaks" :key="b.name" class="flex flex-col items-start gap-2 py-3 border-b border-gray-50 last:border-0 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <div class="font-medium text-gray-900">{{ breakDisplayName(b.name) }}</div>
-                <div class="text-sm text-gray-500">{{ formatShortDate(b.start) }} – {{ formatShortDate(b.end) }}</div>
+                <div class="text-sm text-gray-500">{{ formatCompactDateRange(b.start, b.end) }}</div>
                 <p v-if="breakNoteFor(b)" class="mt-1 text-sm text-gray-600">{{ breakNoteFor(b) }}</p>
                 <div v-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-purple-600 mt-0.5 font-medium">
                   In progress

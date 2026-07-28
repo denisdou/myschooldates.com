@@ -170,7 +170,15 @@ const comparisonInsights = computed((): { label: string; items: string[] }[] => 
   const current = rows.value.find(s => s.isCurrent)
   const others = rows.value.filter(s => !s.isCurrent)
   if (!current || !others.length) return []
-  const sn = (n: string) => n.replace(/ School District$/, '').replace(/ Unified$/, '').replace(/ Independent$/, '') || n
+  const sn = (n: string) => {
+    if (n.includes('Broward')) return 'Broward'
+    if (n.includes('Palm Beach')) return 'Palm Beach'
+    return n
+      .replace(/ County Public Schools$/, '')
+      .replace(/ School District$/, '')
+      .replace(/ Unified$/, '')
+      .replace(/ Independent$/, '') || n
+  }
   const compareDate = (field: 'firstDay' | 'lastDay', label: string) => {
     return others.map(other => {
       const diff = Math.round(

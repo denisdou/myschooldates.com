@@ -388,7 +388,7 @@ function formatRangeEnd(event: DisplayEvent) {
         <template v-if="coveredBreakDateNames.length">
           Dates that fall inside a listed break are included in that break{{ coveredBreakDateNames.length ? ` (${coveredBreakDateNames.join(', ')})` : '' }}.
         </template>
-        Sourced from the
+        Based on the
         <a :href="sourceUrl" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-blue-700 transition-colors">
           {{ districtName }} official calendar
           <span class="sr-only">(opens in a new tab)</span>
