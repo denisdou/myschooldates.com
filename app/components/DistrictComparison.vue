@@ -328,31 +328,31 @@ const comparisonSourceNote = computed(() =>
 </script>
 
 <template>
-  <section id="comparison" v-if="rows.length > 1" class="bg-white rounded-xl border border-gray-200 overflow-hidden scroll-mt-24">
-    <div class="px-6 py-4 border-b border-gray-100">
-      <h2 class="text-lg font-semibold text-gray-900">{{ comparisonTitle }}</h2>
-      <p v-if="compareIntro" class="text-sm text-gray-600 mt-1 leading-relaxed">{{ compareIntro }}</p>
+  <section id="comparison" v-if="rows.length > 1" class="bg-rds-surface-panel rounded-lg border border-rds-hairline overflow-hidden scroll-mt-24 shadow-[0_1px_0_rgba(31,41,51,0.03)]">
+    <div class="px-6 py-4 border-b border-[#ebe6dd]">
+      <h2 class="text-lg font-semibold text-[#1f2933]">{{ comparisonTitle }}</h2>
+      <p v-if="compareIntro" class="text-sm text-[#6b645c] mt-1 leading-relaxed">{{ compareIntro }}</p>
       <div v-if="comparisonInsights.length" class="mt-3 grid gap-3 sm:grid-cols-2">
-        <div v-for="group in comparisonInsights" :key="group.label" class="rounded-lg bg-gray-50 border border-gray-100 p-3">
-          <h3 class="text-xs font-semibold uppercase tracking-wide text-gray-500">{{ group.label }}</h3>
+        <div v-for="group in comparisonInsights" :key="group.label" class="rounded-lg bg-[#f3f0e8] border border-[#e6e1d8] p-3">
+          <h3 class="text-xs font-semibold uppercase tracking-wide text-[#7b756d]">{{ group.label }}</h3>
           <ul class="mt-2 space-y-1">
-            <li v-for="item in group.items" :key="item" class="text-sm text-gray-600">{{ item }}</li>
+            <li v-for="item in group.items" :key="item" class="text-sm text-[#6b645c]">{{ item }}</li>
           </ul>
         </div>
       </div>
     </div>
 
     <details :open="comparisonDefaultOpen" class="group">
-      <summary class="cursor-pointer list-none px-6 py-3 border-b border-gray-100">
+      <summary class="cursor-pointer list-none px-6 py-3 border-b border-[#ebe6dd]">
         <span class="flex items-center justify-between gap-4">
-          <span class="text-sm font-semibold text-gray-700">View full comparison table</span>
-          <span class="text-sm font-medium text-blue-600 group-open:hidden">Show</span>
-          <span class="text-sm font-medium text-blue-600 hidden group-open:inline">Hide</span>
+          <span class="text-sm font-semibold text-[#4f5b5f]">View full comparison table</span>
+          <span class="text-sm font-medium text-[#0f5d6b] group-open:hidden">Show</span>
+          <span class="text-sm font-medium text-[#0f5d6b] hidden group-open:inline">Hide</span>
         </span>
       </summary>
 
     <div v-if="comparisonSubheading" class="px-6 pt-4">
-      <h3 class="text-sm font-semibold text-gray-900">{{ comparisonSubheading }}</h3>
+      <h3 class="text-sm font-semibold text-[#1f2933]">{{ comparisonSubheading }}</h3>
     </div>
 
     <div class="overflow-x-auto">
@@ -361,8 +361,8 @@ const comparisonSourceNote = computed(() =>
           {{ displaySchoolYear }} calendar comparison for {{ rows.map(row => row.name).join(', ') }}
         </caption>
         <thead>
-          <tr class="bg-gray-50 border-b border-gray-100">
-            <th scope="col" class="text-left px-6 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide w-36 whitespace-nowrap">
+          <tr class="bg-[#f3f0e8] border-b border-[#ebe6dd]">
+            <th scope="col" class="text-left px-6 py-3 text-xs font-semibold text-[#7b756d] uppercase tracking-wide w-36 whitespace-nowrap">
               Calendar Feature
             </th>
             <th
@@ -370,50 +370,50 @@ const comparisonSourceNote = computed(() =>
               :key="row.slug"
               scope="col"
               class="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wide whitespace-nowrap"
-              :class="row.isCurrent ? 'text-blue-600' : 'text-gray-500'"
+              :class="row.isCurrent ? 'text-[#0f5d6b]' : 'text-[#7b756d]'"
             >
               <span v-if="row.isCurrent">{{ displayName(row) }}</span>
-              <NuxtLink v-else :to="`/${row.slug}`" class="hover:text-blue-600 transition-colors">
+              <NuxtLink v-else :to="`/${row.slug}`" class="hover:text-[#0f5d6b] transition-colors">
                 {{ displayName(row) }}
               </NuxtLink>
             </th>
           </tr>
         </thead>
-        <tbody class="divide-y divide-gray-100">
-          <tr v-for="feature in comparisonRows" :key="feature.key" class="hover:bg-gray-50 transition-colors">
-            <th scope="row" class="px-6 py-3 text-left text-xs font-medium text-gray-500 whitespace-nowrap">{{ feature.label }}</th>
+        <tbody class="divide-y divide-[#eee9df]">
+          <tr v-for="feature in comparisonRows" :key="feature.key" class="hover:bg-[#f6f2ea] transition-colors">
+            <th scope="row" class="px-6 py-3 text-left text-xs font-medium text-[#7b756d] whitespace-nowrap">{{ feature.label }}</th>
             <td
               v-for="row in rows"
               :key="row.slug"
               class="px-4 py-3 whitespace-nowrap"
-              :class="row.isCurrent ? 'font-semibold text-blue-800' : 'text-gray-600'"
+              :class="row.isCurrent ? 'font-semibold text-[#0f5d6b]' : 'text-[#6b645c]'"
             >
               <span v-if="feature.value(row)">{{ feature.value(row) }}</span>
-              <span v-else class="text-gray-400">Not available in reviewed source</span>
+              <span v-else class="text-[#aaa39a]">Not available in reviewed source</span>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <div v-if="showComparisonNotes && rows.some(r => !r.isCurrent && r.comparisonNote)" class="px-6 py-4 border-t border-gray-100 space-y-2">
+    <div v-if="showComparisonNotes && rows.some(r => !r.isCurrent && r.comparisonNote)" class="px-6 py-4 border-t border-[#ebe6dd] space-y-2">
       <template v-for="row in rows.filter(r => !r.isCurrent && r.comparisonNote)" :key="row.slug">
-        <p class="text-sm text-gray-600 leading-relaxed">
-          <NuxtLink :to="`/${row.slug}`" class="font-medium text-gray-900 hover:text-blue-600 transition-colors">{{ displayName(row) }}</NuxtLink>: {{ row.comparisonNote }}
+        <p class="text-sm text-[#6b645c] leading-relaxed">
+          <NuxtLink :to="`/${row.slug}`" class="font-medium text-[#1f2933] hover:text-[#0f5d6b] transition-colors">{{ displayName(row) }}</NuxtLink>: {{ row.comparisonNote }}
         </p>
       </template>
     </div>
 
     </details>
 
-    <p class="px-6 py-3 border-t border-gray-100 text-xs text-gray-600">
+    <p class="px-6 py-3 border-t border-[#ebe6dd] text-xs text-[#6b645c]">
       Dates come from each district's published {{ displaySchoolYear }} calendar. {{ comparisonSourceNote }}
       <template v-if="comparisonReviewedText"> {{ comparisonReviewedText }}</template>
       <template v-else-if="reviewedDate"> Last reviewed {{ reviewedDate }}.</template>
       <template v-if="sourceRows.length">
         Sources:
         <template v-for="(row, index) in sourceRows" :key="row.slug">
-          <a :href="row.sourceUrl" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-blue-700 transition-colors">
+          <a :href="row.sourceUrl" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">
             {{ displayName(row) }} official calendar
             <span class="sr-only">(opens in a new tab)</span>
           </a><template v-if="row.sourceVersion"> ({{ row.sourceVersion }})</template><template v-if="index < sourceRows.length - 1"> · </template>

@@ -92,11 +92,11 @@ const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year
 </script>
 
 <template>
-  <div id="add-to-calendar" class="bg-white rounded-xl border border-gray-200 overflow-hidden scroll-mt-24">
+  <div id="add-to-calendar" class="bg-rds-surface-panel rounded-lg border border-rds-hairline overflow-hidden scroll-mt-24 shadow-[0_1px_0_rgba(31,41,51,0.03)]">
     <!-- Add to Calendar -->
-    <div class="p-6 border-b border-gray-100">
-      <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ icsHeading }}</h2>
-      <p class="text-sm text-gray-500 mb-4">
+    <div class="p-6 border-b border-[#ebe6dd]">
+      <h2 class="text-lg font-semibold text-[#1f2933] mb-1">{{ icsHeading }}</h2>
+      <p class="text-sm text-[#6b645c] mb-4">
         {{ icsDescription }}
       </p>
       <!-- Primary CTA -->
@@ -104,25 +104,25 @@ const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year
         :href="icsHref"
         :download="icsFilename"
         :aria-label="icsAriaLabel"
-        class="w-full flex items-center justify-center gap-2.5 px-4 py-3 mb-3 rounded-xl bg-blue-600 hover:bg-blue-700 active:scale-95 transition-all text-white font-semibold text-sm shadow-sm"
+        class="w-full flex items-center justify-center gap-2.5 px-4 py-3 mb-3 rounded-lg bg-[#0f5d6b] hover:bg-[#0b4c58] active:scale-[0.99] transition-all text-white font-semibold text-sm shadow-sm"
       >
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
         </svg>
         {{ icsButtonLabel }}
       </a>
-      <p class="mb-3 text-center text-xs font-medium text-gray-600">
+      <p class="mb-3 text-center text-xs font-medium text-[#6b645c]">
         {{ icsButtonSupportText }}
       </p>
-      <div class="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3">
-        <p class="text-xs font-medium text-gray-500 mb-2">Compatible with</p>
+      <div class="rounded-lg border border-[#e1dbd0] bg-[#f3f0e8] px-4 py-3">
+        <p class="text-xs font-medium text-[#7b756d] mb-2">Compatible with</p>
         <ul class="flex flex-wrap gap-2" aria-label="Compatible calendar apps">
           <li
             v-for="calendarName in compatibleCalendars"
             :key="calendarName"
-            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-gray-200 text-xs font-medium text-gray-700"
+            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#fbfaf7] border border-[#e1dbd0] text-xs font-medium text-[#4f5b5f]"
           >
-            <svg class="w-3.5 h-3.5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
+            <svg class="w-3.5 h-3.5 text-[#8f8a82]" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
               <rect x="3" y="4" width="18" height="18" rx="2" stroke-width="1.5"/>
               <path d="M3 9h18" stroke-width="1.5"/>
               <path d="M8 2v4M16 2v4" stroke-width="1.5" stroke-linecap="round"/>
@@ -131,25 +131,25 @@ const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year
           </li>
         </ul>
       </div>
-      <p v-if="!compactDownloadModule" class="text-xs text-gray-600 mt-3">
+      <p v-if="!compactDownloadModule" class="text-xs text-[#6b645c] mt-3">
         The .ics file is generated from the reviewed calendar records used for this page. After downloading, import the file into your preferred calendar app.
       </p>
-      <p v-if="!compactDownloadModule" class="text-xs text-gray-600 mt-2">
+      <p v-if="!compactDownloadModule" class="text-xs text-[#6b645c] mt-2">
         This calendar import file is generated from verified {{ year }} {{ districtName }} district calendar data. It is an independent one-time import from MySchoolDates and will not automatically update if the district revises its calendar, so always verify schedule changes with the district.
       </p>
     </div>
 
     <!-- PDF Download -->
-    <div v-if="pdfUrl" class="p-6 border-b border-gray-100">
-      <component :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-gray-900 mb-1">{{ pdfHeading }}</component>
-      <p v-if="pdfVersionLabel" class="text-xs font-medium text-gray-600 mb-2">{{ pdfVersionLabel }}</p>
-      <p class="text-sm text-gray-500 mb-4">{{ pdfDescription }}</p>
+    <div v-if="pdfUrl" class="p-6 border-b border-[#ebe6dd]">
+      <component :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-[#1f2933] mb-1">{{ pdfHeading }}</component>
+      <p v-if="pdfVersionLabel" class="text-xs font-medium text-[#6b645c] mb-2">{{ pdfVersionLabel }}</p>
+      <p class="text-sm text-[#6b645c] mb-4">{{ pdfDescription }}</p>
       <div class="flex flex-wrap gap-3">
         <a
           :href="pdfUrl"
           target="_blank"
           rel="noopener"
-          class="inline-flex items-center gap-2 px-4 py-2.5 bg-red-600 hover:bg-red-700 active:scale-95 transition-all text-white text-sm font-semibold rounded-lg shadow-sm"
+          class="inline-flex items-center gap-2 px-4 py-2.5 bg-[#8a4b3a] hover:bg-[#743c2f] active:scale-[0.99] transition-all text-white text-sm font-semibold rounded-lg shadow-sm"
         >
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -161,7 +161,7 @@ const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year
           :href="sourceUrl"
           target="_blank"
           rel="noopener"
-          class="inline-flex items-center gap-2 px-4 py-2.5 border border-gray-200 hover:border-gray-300 hover:bg-gray-50 active:scale-95 transition-all text-gray-700 text-sm font-semibold rounded-lg"
+          class="inline-flex items-center gap-2 px-4 py-2.5 border border-[#d9d2c7] hover:border-[#b8c9c9] hover:bg-[#f3f0e8] active:scale-[0.99] transition-all text-[#4f5b5f] text-sm font-semibold rounded-lg"
         >
           Check for Calendar Updates
           <span class="sr-only">(opens in a new tab)</span>
@@ -171,13 +171,13 @@ const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year
 
     <!-- Share with Parents -->
     <div class="p-6">
-      <component :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-gray-900 mb-3">Share This Calendar</component>
+      <component :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-[#1f2933] mb-3">Share This Calendar</component>
       <div class="flex flex-wrap gap-3">
         <!-- Copy Link -->
         <button
           type="button"
           @click="copyLink"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 active:scale-95 transition-all"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#b8c9c9] text-sm font-medium text-[#4f5b5f] hover:bg-[#f3f0e8] active:scale-[0.99] transition-all"
         >
           <svg v-if="!copied" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -192,7 +192,7 @@ const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year
         <button
           type="button"
           @click="printCalendar"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 text-sm font-medium text-gray-700 transition-all"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#b8c9c9] hover:bg-[#e6f0ef] text-sm font-medium text-[#4f5b5f] transition-all"
         >
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9V4h12v5M6 18H5a2 2 0 01-2-2v-5a2 2 0 012-2h14a2 2 0 012 2v5a2 2 0 01-2 2h-1M6 14h12v6H6v-6z" />
@@ -203,7 +203,7 @@ const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year
         <button
           type="button"
           @click="shareWhatsApp"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 text-sm font-medium text-gray-700 transition-all"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#aec2b1] hover:bg-[#e7efe5] text-sm font-medium text-[#4f5b5f] transition-all"
         >
           <svg class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
@@ -215,7 +215,7 @@ const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year
         <button
           type="button"
           @click="shareSMS"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-sm font-medium text-gray-700 transition-all"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#b8c9c9] hover:bg-[#f3f0e8] text-sm font-medium text-[#4f5b5f] transition-all"
         >
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />

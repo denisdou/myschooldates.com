@@ -139,7 +139,7 @@ useHead({
         <span class="font-semibold text-gray-900" aria-current="page">Author</span>
       </nav>
 
-      <header class="rounded-xl border border-gray-200 bg-white p-6 sm:p-8">
+      <header class="rounded-lg border border-gray-200 bg-white p-6 sm:p-8">
         <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">Author Profile</p>
         <div class="mt-4 grid gap-6 sm:grid-cols-[1fr_auto] sm:items-start">
           <div>
@@ -152,7 +152,7 @@ useHead({
           <img
             src="/images/denis-dou.png"
             alt="Denis Dou"
-            class="h-28 w-28 rounded-xl border border-blue-100 bg-blue-50 object-cover shadow-sm"
+            class="h-28 w-28 rounded-lg border border-blue-100 bg-blue-50 object-cover shadow-sm"
           />
         </div>
         <div class="mt-5 flex flex-wrap gap-3">
@@ -162,7 +162,7 @@ useHead({
         </div>
       </header>
 
-      <section class="mt-8 rounded-xl border border-gray-200 bg-white p-6">
+      <section class="mt-8 rounded-lg border border-gray-200 bg-white p-6">
         <h2 class="text-2xl font-bold text-gray-900">Background</h2>
         <p class="mt-3 leading-relaxed text-gray-600">
           Denis founded MySchoolDates to make fragmented school district calendar information easier to verify, compare, and use. The work centers on public education information that is often published across district calendar pages, board-approved PDFs, school-year files, and local update notices.
@@ -179,7 +179,7 @@ useHead({
         </div>
       </section>
 
-      <section class="mt-8 rounded-xl border border-gray-200 bg-white p-6">
+      <section class="mt-8 rounded-lg border border-gray-200 bg-white p-6">
         <h2 class="text-2xl font-bold text-gray-900">About MySchoolDates</h2>
         <p class="mt-3 leading-relaxed text-gray-600">
           MySchoolDates is a U.S. school calendar data platform that publishes independent district calendar references, state calendar hubs, annual school calendar trend reports, and reusable dataset pages. It is not affiliated with school districts; official district websites remain the source of record.
@@ -191,7 +191,7 @@ useHead({
         </div>
       </section>
 
-      <section class="mt-8 rounded-xl border border-gray-200 bg-white p-6">
+      <section class="mt-8 rounded-lg border border-gray-200 bg-white p-6">
         <h2 class="text-2xl font-bold text-gray-900">Research Focus</h2>
         <p class="mt-3 leading-relaxed text-gray-600">
           MySchoolDates publishes school calendar pages and calendar data resources built from official district sources. Denis oversees the research and editorial direction for making those records understandable, searchable, and useful for parents, researchers, and local planning use cases.
@@ -204,14 +204,14 @@ useHead({
         </div>
       </section>
 
-      <section class="mt-8 rounded-xl border border-gray-200 bg-white p-6">
+      <section class="mt-8 rounded-lg border border-gray-200 bg-white p-6">
         <h2 class="text-2xl font-bold text-gray-900">Calendar Data Workflow</h2>
         <p class="mt-3 leading-relaxed text-gray-600">
           MySchoolDates is an independent reference, not an official school district website. The editorial workflow is designed to keep district calendar pages and data reports grounded in official source material while making the information easier to search and compare.
         </p>
         <ol class="mt-5 space-y-3">
           <li v-for="(row, index) in workflowRows" :key="row" class="flex gap-3 rounded-lg border border-gray-100 bg-gray-50 p-4">
-            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">{{ index + 1 }}</span>
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-sm font-bold text-white">{{ index + 1 }}</span>
             <span class="text-sm leading-relaxed text-gray-700">{{ row }}</span>
           </li>
         </ol>
@@ -221,7 +221,7 @@ useHead({
         </div>
       </section>
 
-      <section class="mt-8 rounded-xl border border-gray-200 bg-white p-6">
+      <section class="mt-8 rounded-lg border border-gray-200 bg-white p-6">
         <h2 class="text-2xl font-bold text-gray-900">Selected Research and Data Assets</h2>
         <div class="mt-5 grid gap-3 sm:grid-cols-2">
           <NuxtLink v-for="row in selectedResearchRows" :key="row.href" :to="row.href" class="rounded-lg border border-gray-200 bg-gray-50 p-4 hover:border-blue-200 hover:bg-blue-50">
@@ -231,7 +231,7 @@ useHead({
         </div>
       </section>
 
-      <section class="mt-8 rounded-xl border border-amber-200 bg-amber-50 p-6">
+      <section class="mt-8 rounded-lg border border-amber-200 bg-amber-50 p-6">
         <h2 class="text-xl font-semibold text-gray-900">Corrections and Source Updates</h2>
         <p class="mt-2 text-sm leading-relaxed text-amber-950">
           School calendars can change after board action, weather closures, or district revisions. Send corrections, source updates, or dataset questions to

@@ -31,11 +31,11 @@ useHead({
       </p>
       <ol class="space-y-3 text-gray-600 list-none">
         <li class="flex items-start gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold flex items-center justify-center mt-0.5">1</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-lg bg-blue-100 text-blue-700 text-xs font-bold flex items-center justify-center mt-0.5">1</span>
           <span><strong class="text-gray-800">AI-assisted extraction.</strong> We use AI to extract key dates and events from the source document — first day of school, last day, breaks, holidays, and teacher workdays.</span>
         </li>
         <li class="flex items-start gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold flex items-center justify-center mt-0.5">2</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-lg bg-blue-100 text-blue-700 text-xs font-bold flex items-center justify-center mt-0.5">2</span>
           <span><strong class="text-gray-800">Source comparison.</strong> We compare extracted dates against the original source document before publication. When extracted data does not match the official source, we update the page record before the calendar is published.</span>
         </li>
       </ol>
@@ -77,7 +77,7 @@ useHead({
       </p>
     </section>
 
-    <section class="bg-blue-50 border border-blue-200 rounded-xl p-6">
+    <section class="bg-blue-50 border border-blue-200 rounded-lg p-6">
       <h2 class="text-xl font-semibold text-gray-900 mb-2">Report a Calendar Error</h2>
       <p class="text-gray-600 leading-relaxed mb-4">
         If you believe a date on MySchoolDates is incorrect or outdated, please let us know. We review all correction reports and aim to respond within 48 hours.

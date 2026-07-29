@@ -82,21 +82,21 @@ watch(() => route.fullPath, () => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-50 flex flex-col">
+  <div class="min-h-screen bg-[hsl(var(--background))] text-[#1f2933] flex flex-col">
     <!-- Shared Header -->
-    <header class="bg-white border-b border-gray-200">
-      <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
+    <header class="bg-rds-surface-panel/95 border-b border-rds-hairline backdrop-blur">
+      <div class="max-w-5xl mx-auto py-4 flex items-center justify-between gap-4">
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center gap-2.5 flex-shrink-0">
           <img src="/icons/myschooldates-logo.svg" alt="MySchoolDates" class="h-8 w-auto" />
-          <span class="text-xl font-bold text-gray-900">MySchoolDates</span>
-          <span class="text-sm text-gray-600 hidden lg:inline">US School Calendar Platform</span>
+          <span class="text-xl font-semibold tracking-tight text-[#1f2933]">MySchoolDates</span>
+          <span class="text-sm text-[#6b645c] hidden lg:inline">US School Calendar Platform</span>
         </NuxtLink>
         <!-- Main navigation -->
         <nav class="hidden sm:flex items-center gap-5">
           <NuxtLink
             to="/"
-            class="text-sm text-gray-600 hover:text-blue-600 transition-colors"
+            class="text-sm text-[#6b645c] hover:text-[#0f5d6b] transition-colors"
           >
             Home
           </NuxtLink>
@@ -110,7 +110,7 @@ watch(() => route.fullPath, () => {
             <button
               type="button"
               id="states-menu-button"
-              class="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+              class="inline-flex items-center gap-1 text-sm text-[#6b645c] hover:text-[#0f5d6b] transition-colors"
               :aria-expanded="activeDesktopMenu === 'states'"
               aria-controls="states-menu"
               @click="activeDesktopMenu = 'states'"
@@ -127,12 +127,12 @@ watch(() => route.fullPath, () => {
               v-show="activeDesktopMenu === 'states'"
               class="absolute left-0 top-full z-30 w-[34rem] pt-3"
             >
-              <div class="grid grid-cols-3 gap-1 rounded-lg border border-gray-200 bg-white p-2 shadow-lg">
+              <div class="grid grid-cols-3 gap-1 rounded-lg border border-rds-hairline bg-rds-surface-panel p-2 shadow-sm">
                 <NuxtLink
                   v-for="state in stateLinks"
                   :key="state.slug"
                   :to="`/${state.slug}`"
-                  class="rounded-md px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+                  class="rounded-lg px-3 py-2 text-sm text-[#6b645c] hover:bg-[#f0ede5] hover:text-[#0f5d6b]"
                   @click="closeDesktopMenu"
                 >
                   {{ state.name }}
@@ -142,7 +142,7 @@ watch(() => route.fullPath, () => {
           </div>
           <NuxtLink
             to="/districts"
-            class="text-sm text-gray-600 hover:text-blue-600 transition-colors"
+            class="text-sm text-[#6b645c] hover:text-[#0f5d6b] transition-colors"
           >
             Districts
           </NuxtLink>
@@ -156,7 +156,7 @@ watch(() => route.fullPath, () => {
             <button
               type="button"
               id="calendar-data-menu-button"
-              class="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+              class="inline-flex items-center gap-1 text-sm text-[#6b645c] hover:text-[#0f5d6b] transition-colors"
               :aria-expanded="activeDesktopMenu === 'calendar'"
               aria-controls="calendar-data-menu"
               @click="activeDesktopMenu = 'calendar'"
@@ -173,16 +173,16 @@ watch(() => route.fullPath, () => {
               v-show="activeDesktopMenu === 'calendar'"
               class="absolute right-0 top-full z-30 w-72 pt-3"
             >
-              <div class="rounded-lg border border-gray-200 bg-white p-2 shadow-lg">
+              <div class="rounded-lg border border-rds-hairline bg-rds-surface-panel p-2 shadow-sm">
                 <NuxtLink
                   v-for="link in calendarDataLinks"
                   :key="link.to"
                   :to="link.to"
-                  class="block rounded-md px-3 py-2.5 hover:bg-blue-50"
+                  class="block rounded-lg px-3 py-2.5 hover:bg-[#f0ede5]"
                   @click.prevent="navigateCalendarData(link.to)"
                 >
-                  <span class="block text-sm font-semibold text-gray-800">{{ link.name }}</span>
-                  <span class="block text-xs text-gray-500">{{ link.description }}</span>
+                  <span class="block text-sm font-semibold text-[#2f3a3f]">{{ link.name }}</span>
+                  <span class="block text-xs text-[#7b756d]">{{ link.description }}</span>
                 </NuxtLink>
               </div>
             </div>
@@ -190,7 +190,7 @@ watch(() => route.fullPath, () => {
         </nav>
         <button
           type="button"
-          class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-700 sm:hidden"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[#d9d2c7] text-[#6b645c] hover:border-[#9fb8bb] hover:text-[#0f5d6b] sm:hidden"
           :aria-expanded="mobileMenuOpen"
           aria-controls="mobile-navigation"
           aria-label="Open navigation menu"
@@ -207,18 +207,18 @@ watch(() => route.fullPath, () => {
           </svg>
         </button>
       </div>
-      <nav id="mobile-navigation" v-show="mobileMenuOpen" class="border-t border-gray-100 bg-white px-4 py-3 sm:hidden">
+      <nav id="mobile-navigation" v-show="mobileMenuOpen" class="border-t border-[#ebe6dd] bg-[#fbfaf7] px-4 py-3 sm:hidden">
         <div class="mx-auto max-w-5xl space-y-4">
           <div class="grid grid-cols-2 gap-2">
             <NuxtLink
               to="/"
-              class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+              class="rounded-lg px-3 py-2 text-sm font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700"
             >
               Home
             </NuxtLink>
             <NuxtLink
               to="/districts"
-              class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+              class="rounded-lg px-3 py-2 text-sm font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700"
             >
               Districts
             </NuxtLink>
@@ -230,7 +230,7 @@ watch(() => route.fullPath, () => {
                 v-for="link in calendarDataLinks"
                 :key="link.to"
                 :to="link.to"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-700"
+                class="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-700"
                 @click.prevent="navigateCalendarData(link.to)"
               >
                 <span class="block">{{ link.name }}</span>
@@ -245,7 +245,7 @@ watch(() => route.fullPath, () => {
                 v-for="state in stateLinks"
                 :key="state.slug"
                 :to="`/${state.slug}`"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+                class="rounded-lg px-3 py-2 text-sm font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700"
               >
                 {{ state.name }}
               </NuxtLink>
@@ -256,12 +256,10 @@ watch(() => route.fullPath, () => {
     </header>
 
     <!-- Page content -->
-    <div class="flex-1">
-      <slot />
-    </div>
+    <slot />
 
     <!-- Shared Footer -->
-    <footer class="bg-white border-t border-gray-200 mt-auto">
+    <footer class="bg-[#fbfaf7] border-t border-[#e6e1d8] mt-auto">
       <div class="max-w-5xl mx-auto px-4 py-10">
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-8">
           <div>

@@ -7,7 +7,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <section v-if="props.periods?.length" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+  <section v-if="props.periods?.length" class="bg-white rounded-lg border border-gray-200 overflow-hidden">
     <div class="px-6 py-4 border-b border-gray-100">
       <h2 class="text-lg font-semibold text-gray-900">Grading Periods</h2>
       <p class="text-sm text-gray-500 mt-1">Start and end dates from the published student calendar.</p>

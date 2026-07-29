@@ -314,16 +314,16 @@ function formatRangeEnd(event: DisplayEvent) {
 </script>
 
 <template>
-  <div id="all-dates" class="bg-white rounded-xl border border-gray-200 overflow-hidden scroll-mt-24">
-    <div class="px-6 py-4 border-b border-gray-100">
-      <h2 class="text-lg font-semibold text-gray-900" :class="legend?.length ? 'mb-3' : ''">{{ title }}</h2>
+  <div id="all-dates" class="bg-rds-surface-panel rounded-lg border border-rds-hairline overflow-hidden scroll-mt-24 shadow-[0_1px_0_rgba(31,41,51,0.03)]">
+    <div class="px-6 py-4 border-b border-[#ebe6dd]">
+      <h2 class="text-lg font-semibold text-[#1f2933]" :class="legend?.length ? 'mb-3' : ''">{{ title }}</h2>
       <div v-if="legend?.length" class="flex flex-wrap gap-3">
         <span
           v-for="item in legend"
           :key="item.label"
-          class="inline-flex items-center gap-1.5 text-xs text-gray-500"
+          class="inline-flex items-center gap-1.5 text-xs text-[#7b756d]"
         >
-          <span class="w-2 h-2 rounded-full flex-shrink-0" :class="item.dot" />
+          <span class="w-2 h-2 rounded-lg flex-shrink-0" :class="item.dot" />
           {{ item.label }}
         </span>
       </div>
@@ -336,7 +336,7 @@ function formatRangeEnd(event: DisplayEvent) {
           v-for="group in monthGroups"
           :key="group.key"
           :href="`#${monthAnchor(group.key)}`"
-          class="inline-flex flex-shrink-0 items-center rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 text-xs font-medium text-gray-600 transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+          class="inline-flex flex-shrink-0 items-center rounded-lg border border-[#e1dbd0] bg-[#f3f0e8] px-3 py-1.5 text-xs font-medium text-[#6b645c] transition-colors hover:border-[#b8c9c9] hover:bg-[#e6f0ef] hover:text-[#0f5d6b]"
         >
           {{ group.label.split(' ')[0] }}
         </a>
@@ -346,23 +346,23 @@ function formatRangeEnd(event: DisplayEvent) {
       <div
         v-for="group in monthGroups"
         :key="group.key"
-        class="border-b border-gray-100 last:border-b-0"
+        class="border-b border-[#ebe6dd] last:border-b-0"
       >
         <div
           :id="monthAnchor(group.key)"
-          class="px-6 py-3 bg-gray-50 text-xs font-semibold text-gray-500 uppercase tracking-widest scroll-mt-24"
+          class="px-6 py-3 bg-[#f3f0e8] text-xs font-semibold text-[#7b756d] uppercase tracking-widest scroll-mt-24"
         >
           {{ group.label }}
         </div>
-        <div class="divide-y divide-gray-50">
+        <div class="divide-y divide-[#eee9df]">
           <div
             v-for="event in group.events"
             :key="event.startDate + event.endDate + event.type + event.displayName"
-            class="flex flex-col items-start gap-2 px-6 py-4 hover:bg-gray-50 transition-colors sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+            class="flex flex-col items-start gap-2 px-6 py-4 hover:bg-[#f6f2ea] transition-colors sm:flex-row sm:items-center sm:justify-between sm:gap-4"
           >
             <div>
-              <div class="font-medium text-gray-900">{{ displayEventName(event) }}</div>
-              <div class="text-sm text-gray-500">
+              <div class="font-medium text-[#1f2933]">{{ displayEventName(event) }}</div>
+              <div class="text-sm text-[#7b756d]">
                 <time v-if="event.startDate === event.endDate" :datetime="event.startDate">{{ formatDateRange(event) }}</time>
                 <template v-else>
                   <time :datetime="event.startDate">{{ formatRangeStart(event) }}</time>
@@ -370,18 +370,18 @@ function formatRangeEnd(event: DisplayEvent) {
                   <time :datetime="event.endDate">{{ formatRangeEnd(event) }}</time>
                 </template>
               </div>
-              <p v-if="event.description" class="mt-1 text-sm text-gray-600">
+              <p v-if="event.description" class="mt-1 text-sm text-[#6b645c]">
                 {{ event.description }}
               </p>
             </div>
-            <span class="text-xs font-medium px-2.5 py-1 rounded-full whitespace-normal sm:whitespace-nowrap" :class="eventTypeColor[event.labelType]">
+            <span class="text-xs font-medium px-2.5 py-1 rounded-lg whitespace-normal sm:whitespace-nowrap" :class="eventTypeColor[event.labelType]">
               {{ displayLabelText(event) }}
             </span>
           </div>
         </div>
       </div>
     </div>
-    <div class="px-6 py-3 border-t border-gray-50 flex items-center gap-1.5 text-xs text-gray-600">
+    <div class="px-6 py-3 border-t border-[#ebe6dd] flex items-center gap-1.5 text-xs text-[#6b645c]">
       <span>
         <template v-if="mode === 'keyDates'">{{ coverageNote || "This table lists major districtwide student dates. Check the official PDF and your school's calendar for campus events, dismissal times, testing, and schedule changes." }}</template>
         <template v-else>{{ coverageNote || "This table lists major districtwide student dates. Check the official PDF and your school's calendar for campus events, dismissal times, testing, and schedule changes." }} </template>
@@ -389,7 +389,7 @@ function formatRangeEnd(event: DisplayEvent) {
           Dates that fall inside a listed break are included in that break{{ coveredBreakDateNames.length ? ` (${coveredBreakDateNames.join(', ')})` : '' }}.
         </template>
         Based on the
-        <a :href="sourceUrl" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-blue-700 transition-colors">
+        <a :href="sourceUrl" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">
           {{ districtName }} official calendar
           <span class="sr-only">(opens in a new tab)</span>
         </a>

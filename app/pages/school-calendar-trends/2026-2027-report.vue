@@ -522,7 +522,7 @@ const appendixRows = [
         <span class="font-semibold text-gray-900" aria-current="page">2026-2027 Report</span>
       </nav>
 
-      <header class="rounded-xl border border-gray-200 bg-white p-6 sm:p-8">
+      <header class="rounded-lg border border-gray-200 bg-white p-6 sm:p-8">
         <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide">School Calendar Research Report</p>
         <h1 class="mt-3 text-3xl sm:text-5xl font-bold tracking-tight text-gray-900">
           {{ reportTitle }}
@@ -540,14 +540,14 @@ const appendixRows = [
           </div>
         </dl>
         <div class="mt-5 flex flex-wrap gap-2 text-sm text-gray-600">
-          <span class="rounded-full bg-gray-100 px-3 py-1">100 reviewed 2026-2027 calendars</span>
-          <span class="rounded-full bg-gray-100 px-3 py-1">13 states</span>
-          <span class="rounded-full bg-gray-100 px-3 py-1">Next review January 2027</span>
-          <span class="rounded-full bg-gray-100 px-3 py-1">MySchoolDates dataset</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">100 reviewed 2026-2027 calendars</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">13 states</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">Next review January 2027</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">MySchoolDates dataset</span>
         </div>
       </header>
 
-      <section id="quick-answer" class="mt-6 rounded-xl border border-emerald-100 bg-emerald-50 p-6">
+      <section id="quick-answer" class="mt-6 rounded-lg border border-emerald-100 bg-emerald-50 p-6">
         <h2 class="text-xl font-semibold text-gray-900">Quick Answer: When Do Schools Start in 2026?</h2>
         <p class="mt-3 text-sm leading-relaxed text-emerald-950">
           Most reviewed U.S. school districts start the 2026-2027 school year in August 2026. In this 100-district dataset, August 12 and August 24 are tied as the most common first student days, December 21 is the strongest winter break signal, and May 27 is the most common last student day.
@@ -567,7 +567,7 @@ const appendixRows = [
         </p>
       </section>
 
-      <section class="mt-6 rounded-xl border border-blue-100 bg-blue-50 p-6">
+      <section class="mt-6 rounded-lg border border-blue-100 bg-blue-50 p-6">
         <h2 class="text-xl font-semibold text-gray-900">Key Takeaways</h2>
         <ul class="mt-4 grid gap-3 text-sm leading-relaxed text-blue-950 sm:grid-cols-2">
           <li><strong>95 of 100</strong> reviewed districts start school in August for 2026-2027.</li>
@@ -581,7 +581,7 @@ const appendixRows = [
 
       <div class="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_260px]">
         <div class="space-y-8">
-          <section id="executive-summary" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="executive-summary" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Executive Summary</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               This report analyzes 100 reviewed 2026-2027 public school district calendar records from the MySchoolDates dataset. The sample is designed to identify calendar-planning patterns, not to act as a complete national census.
@@ -612,7 +612,7 @@ const appendixRows = [
             </div>
           </section>
 
-          <section id="charts" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="charts" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">School Calendar Trends Charts</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               These lightweight charts summarize the strongest signals in the 100-record dataset: start month, end month, winter break timing, and spring break clusters.
@@ -663,7 +663,7 @@ const appendixRows = [
             </div>
           </section>
 
-          <section class="rounded-xl border border-gray-200 bg-white p-6">
+          <section class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Methodology and Data Scope</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               This report uses the current MySchoolDates calendar dataset as of July 27, 2026. The sample includes 100 reviewed district records for the 2026-2027 school year across 13 states. It is a reviewed platform dataset, not a census of every public school district in the United States.
@@ -692,7 +692,7 @@ const appendixRows = [
             </div>
           </section>
 
-          <section id="research-ownership" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="research-ownership" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Research Ownership and Freshness</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               This report is authored by Denis Dou and reviewed through the MySchoolDates calendar data workflow against official district calendar sources, district calendar pages, and board-approved PDFs where available. Dataset questions, corrections, or source updates can be sent to <a href="mailto:hello@myschooldates.com" class="font-semibold text-blue-600 hover:underline">hello@myschooldates.com</a>.
@@ -731,7 +731,7 @@ const appendixRows = [
             </div>
           </section>
 
-          <section id="state-patterns" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="state-patterns" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">State-Level Calendar Patterns</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               The national view is useful, but state patterns matter for searchers comparing local districts. The strongest sample groups in this report are California, Texas, Virginia, North Carolina, and Florida.
@@ -756,7 +756,7 @@ const appendixRows = [
             </div>
           </section>
 
-          <section id="source-examples" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="source-examples" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Official Source Examples</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               The report is based on reviewed MySchoolDates district records, which are built from official district calendar pages, board-approved PDFs, and public calendar sources. These examples show the types of official sources used to verify the trend data.
@@ -785,7 +785,7 @@ const appendixRows = [
             </div>
           </section>
 
-          <section id="holiday-overview" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="holiday-overview" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">2026 School Holidays Calendar and 2027 School Break Dates Overview</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               Families often search by calendar year rather than school year. These two summaries connect the 2026-2027 school-year data to common searches for 2026 school holidays and 2027 school break dates.
@@ -816,7 +816,7 @@ const appendixRows = [
             </div>
           </section>
 
-          <section class="rounded-xl border border-gray-200 bg-white p-6">
+          <section class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">When Does School Start in 2026? August Is the Standard Start Month</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               In the reviewed 2026-2027 dataset, August is the overwhelming start-month norm. Ninety-five districts start in August, compared with four July starts and one September start. The July starts are not random outliers; they are concentrated in calendar systems with early-start, year-round, track, or specialized regional patterns, especially in California.
@@ -848,7 +848,7 @@ const appendixRows = [
             </div>
           </section>
 
-          <section class="rounded-xl border border-gray-200 bg-white p-6">
+          <section class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">When Is Summer Break 2027? May End Dates Are More Common Than June</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               For many families, summer break 2027 begins after the final student day listed by the district. Sixty-one reviewed districts end the 2026-2027 school year in May, while 39 end in June. The most common last student day is May 27, 2027, followed by May 28 and May 26. June endings remain important in the Northeast, Mid-Atlantic, and some California districts.
@@ -872,7 +872,7 @@ const appendixRows = [
             </div>
           </section>
 
-          <section class="rounded-xl border border-gray-200 bg-white p-6">
+          <section class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Trend 3: Spring Break Clusters Around Three Main Weeks</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               Spring break is less uniform than winter break. The largest spring break cluster begins March 22, 2027, followed closely by March 15, 2027. Additional clusters begin March 29, April 5, and March 8. This matters for families comparing neighboring districts, because a one-week difference can affect childcare, travel pricing, shared custody planning, and multi-district households.
@@ -895,7 +895,7 @@ const appendixRows = [
             </div>
           </section>
 
-          <section class="rounded-xl border border-gray-200 bg-white p-6">
+          <section class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Trend 4: 180 Student Days Still Anchors the School Year</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               Among the reviewed records, 84 calendars include an explicit totalSchoolDays value. Of those, 55 list 180 student days. That makes 180 days the dominant published count in the dataset, even though several districts list shorter or longer counts depending on state law, calendar type, teacher workday treatment, and local board rules.
@@ -920,7 +920,7 @@ const appendixRows = [
             </div>
           </section>
 
-          <section class="rounded-xl border border-gray-200 bg-white p-6">
+          <section class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Trend 5: Calendar Utility Is Moving Beyond PDFs</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               PDFs are still central to school calendar publishing. In this dataset, 98 of 100 reviewed 2026-2027 pages include an official or source PDF. But parent behavior is shifting toward usable calendar files. MySchoolDates generates ICS calendar exports for all 100 reviewed records so families can import dates into Google Calendar, Apple Calendar, or Outlook.
@@ -930,7 +930,7 @@ const appendixRows = [
             </p>
           </section>
 
-          <section class="rounded-xl border border-gray-200 bg-white p-6">
+          <section class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">What This Means for Families</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               Families should not assume nearby districts share the same first day, spring break, or last day. Even in the same region, districts may use traditional calendars, track calendars, year-round calendars, early release days, minimum days, or separate program calendars. The safest planning path is to use the districtwide calendar for first day, last day, holidays, and major breaks, then verify campus-level details for bell schedules, finals, athletics, transportation, and same-day announcements.
@@ -955,7 +955,7 @@ const appendixRows = [
             </div>
           </section>
 
-          <section id="topic-cluster" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="topic-cluster" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Focused School Calendar Topic Guides</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               The report summarizes national trends. These focused guides answer the most common date-specific searches with shorter explanations and links back to the full dataset.
@@ -973,7 +973,7 @@ const appendixRows = [
             </div>
           </section>
 
-          <section id="faq" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="faq" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">2026-2027 School Calendar Trends FAQ</h2>
             <div class="mt-5 divide-y divide-gray-100">
               <div v-for="row in faqRows" :key="row.q" class="py-4 first:pt-0 last:pb-0">
@@ -983,7 +983,7 @@ const appendixRows = [
             </div>
           </section>
 
-          <section id="data-appendix" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="data-appendix" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Data Appendix: Reviewed District Calendar Records</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               This appendix lists the 100 reviewed 2026-2027 district records used for the report. Break columns are listed as reviewed winter break and spring break start signals when available in the local calendar record; families should use the linked district page and official source for final planning.
@@ -1057,7 +1057,7 @@ const appendixRows = [
             </details>
           </section>
 
-          <section id="citation" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="citation" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">How to Cite This Report</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               Use this citation when referencing the report in education research notes, local planning articles, school calendar roundups, or data summaries.
@@ -1075,7 +1075,7 @@ const appendixRows = [
             </div>
           </section>
 
-          <section class="rounded-xl border border-gray-200 bg-white p-6">
+          <section class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Limitations</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               This report reflects the current MySchoolDates coverage, which is weighted toward large districts and states where district calendar pages have been reviewed. It should be used as a platform dataset report, not as a claim about every school district in the United States. Calendar records can change after board action, emergency closures, state policy changes, or district revisions.
@@ -1084,7 +1084,7 @@ const appendixRows = [
         </div>
 
         <aside class="space-y-4">
-          <div class="sticky top-4 rounded-xl border border-gray-200 bg-white p-5">
+          <div class="sticky top-4 rounded-lg border border-gray-200 bg-white p-5">
             <h2 class="text-sm font-semibold uppercase tracking-wide text-gray-500">Report Links</h2>
             <nav class="mt-3 grid gap-2 text-sm">
               <a href="#top" class="text-blue-600 hover:underline">Top of report</a>

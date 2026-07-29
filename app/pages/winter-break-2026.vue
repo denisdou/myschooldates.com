@@ -84,27 +84,27 @@ useHead({
         <span class="font-semibold text-gray-900" aria-current="page">Winter Break 2026</span>
       </nav>
 
-      <header class="rounded-xl border border-gray-200 bg-white p-6 sm:p-8">
+      <header class="rounded-lg border border-gray-200 bg-white p-6 sm:p-8">
         <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">School Break Trend Guide</p>
         <h1 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Winter Break 2026</h1>
         <p class="mt-4 max-w-3xl text-lg leading-relaxed text-gray-600">
           December 21, 2026 is the dominant winter break start-date signal in the current MySchoolDates 2026-2027 trend dataset, appearing in 89 of 100 reviewed district calendar records.
         </p>
         <div class="mt-5 flex flex-wrap gap-2 text-sm text-gray-600">
-          <span class="rounded-full bg-gray-100 px-3 py-1">100 reviewed calendars</span>
-          <span class="rounded-full bg-gray-100 px-3 py-1">13 states</span>
-          <span class="rounded-full bg-gray-100 px-3 py-1">Last verified July 27, 2026</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">100 reviewed calendars</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">13 states</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified July 27, 2026</span>
         </div>
       </header>
 
-      <section class="mt-6 rounded-xl border border-emerald-100 bg-emerald-50 p-6">
+      <section class="mt-6 rounded-lg border border-emerald-100 bg-emerald-50 p-6">
         <h2 class="text-xl font-semibold text-gray-900">Quick Answer</h2>
         <p class="mt-3 text-sm leading-relaxed text-emerald-950">
           Most reviewed district calendars point to Monday, December 21, 2026 as the start of winter break. Local calendars can vary, so district source verification still matters.
         </p>
       </section>
 
-      <section class="mt-8 rounded-xl border border-gray-200 bg-white p-6">
+      <section class="mt-8 rounded-lg border border-gray-200 bg-white p-6">
         <h2 class="text-2xl font-bold text-gray-900">Winter Break Start-Date Distribution</h2>
         <div class="mt-5 overflow-x-auto rounded-lg border border-gray-200">
           <table class="w-full text-sm">
@@ -126,14 +126,14 @@ useHead({
         </div>
       </section>
 
-      <section class="mt-8 rounded-xl border border-gray-200 bg-white p-6">
+      <section class="mt-8 rounded-lg border border-gray-200 bg-white p-6">
         <h2 class="text-2xl font-bold text-gray-900">Why Winter Break Is More Consistent Than Spring Break</h2>
         <p class="mt-3 leading-relaxed text-gray-600">
           Winter break is anchored by late-December holidays, semester calendars, and district closure patterns. That makes it more consistent across districts than spring break, which is more affected by state testing windows, Easter timing, local board decisions, and regional travel calendars.
         </p>
       </section>
 
-      <section id="faq" class="mt-8 rounded-xl border border-gray-200 bg-white p-6">
+      <section id="faq" class="mt-8 rounded-lg border border-gray-200 bg-white p-6">
         <h2 class="text-2xl font-bold text-gray-900">Winter Break 2026 FAQ</h2>
         <div class="mt-5 divide-y divide-gray-100">
           <div v-for="row in faqRows" :key="row.q" class="py-4 first:pt-0 last:pb-0">
@@ -143,7 +143,7 @@ useHead({
         </div>
       </section>
 
-      <section class="mt-8 rounded-xl border border-blue-100 bg-blue-50 p-6">
+      <section class="mt-8 rounded-lg border border-blue-100 bg-blue-50 p-6">
         <h2 class="text-xl font-semibold text-gray-900">Related Calendar Data</h2>
         <div class="mt-4 flex flex-wrap gap-3">
           <NuxtLink to="/school-calendar-trends/2026-2027-report" class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">Full trends report</NuxtLink>

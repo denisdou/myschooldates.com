@@ -327,10 +327,7 @@ useHead({
             description: 'Reviewed U.S. school district calendar records used for MySchoolDates trend reporting, including first day, last day, winter break signal, spring break signal, source availability, and district page references.',
             url: 'https://myschooldates.com/datasets/school-calendar-trends',
             temporalCoverage: '2026-2027',
-            spatialCoverage: {
-              '@type': 'Country',
-              name: 'United States',
-            },
+            spatialCoverage: 'United States',
             creator: {
               '@type': 'Organization',
               name: 'MySchoolDates',
@@ -384,7 +381,7 @@ useHead({
 <template>
   <main id="top" class="bg-gray-50">
     <div class="max-w-5xl mx-auto px-4 py-10">
-      <header class="rounded-xl border border-gray-200 bg-white p-6 sm:p-8">
+      <header class="rounded-lg border border-gray-200 bg-white p-6 sm:p-8">
         <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide">School Calendar Trends Hub</p>
         <h1 class="mt-3 text-3xl sm:text-5xl font-bold tracking-tight text-gray-900">
           US School Calendar Trends 2026-2027: Data Report & Analysis
@@ -393,17 +390,17 @@ useHead({
           A research hub for U.S. school calendar statistics, start-date patterns, winter break dates, spring break trends, school-year end dates, CSV datasets, charts, and annual reports from the reviewed MySchoolDates calendar dataset.
         </p>
         <div class="mt-5 flex flex-wrap gap-2 text-sm text-gray-600">
-          <span class="rounded-full bg-gray-100 px-3 py-1">Last updated {{ coverage.lastUpdated }}</span>
-          <span class="rounded-full bg-gray-100 px-3 py-1">Next review {{ coverage.nextReview }}</span>
-          <span class="rounded-full bg-gray-100 px-3 py-1">{{ coverage.recordsLabel }} reviewed records</span>
-          <span class="rounded-full bg-gray-100 px-3 py-1">Growing U.S. coverage</span>
-          <span class="rounded-full bg-gray-100 px-3 py-1">Reports</span>
-          <span class="rounded-full bg-gray-100 px-3 py-1">CSV datasets</span>
-          <span class="rounded-full bg-gray-100 px-3 py-1">Charts</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">Last updated {{ coverage.lastUpdated }}</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">Next review {{ coverage.nextReview }}</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">{{ coverage.recordsLabel }} reviewed records</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">Growing U.S. coverage</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">Reports</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">CSV datasets</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">Charts</span>
         </div>
       </header>
 
-      <section id="live-coverage" class="mt-8 rounded-xl border border-gray-200 bg-white p-6">
+      <section id="live-coverage" class="mt-8 rounded-lg border border-gray-200 bg-white p-6">
         <div class="flex flex-wrap items-start justify-between gap-4">
           <div>
             <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">Live Coverage Snapshot</p>
@@ -427,7 +424,7 @@ useHead({
 
       <div class="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_260px]">
         <div class="space-y-8">
-          <section id="dataset-preview" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="dataset-preview" class="rounded-lg border border-gray-200 bg-white p-6">
             <div class="flex flex-wrap items-start justify-between gap-4">
               <div>
                 <h2 class="text-2xl font-bold text-gray-900">Dataset Preview</h2>
@@ -465,7 +462,7 @@ useHead({
             </div>
           </section>
 
-          <section id="key-insights" class="rounded-xl border border-blue-100 bg-blue-50 p-6">
+          <section id="key-insights" class="rounded-lg border border-blue-100 bg-blue-50 p-6">
             <h2 class="text-2xl font-bold text-gray-900">Key Insights From 2026-2027 School Calendar Data</h2>
             <p class="mt-3 text-blue-950 leading-relaxed">
               The current MySchoolDates report analyzes a {{ coverage.sampleSize }}-record reviewed district calendar sample across {{ coverage.states }} states. These are the highest-signal findings for users searching for school calendar statistics, school start date trends, winter break dates, and spring break patterns.
@@ -479,7 +476,7 @@ useHead({
             </div>
           </section>
 
-          <section id="charts" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="charts" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">School Calendar Statistics and Interactive Charts</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               These charts summarize the current U.S. school calendar analysis: start month distribution, end month distribution, winter break concentration, and spring break clustering.
@@ -516,7 +513,7 @@ useHead({
             </p>
           </section>
 
-          <section id="growth-history" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="growth-history" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Dataset Growth History</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               MySchoolDates treats school calendar trends as a growing dataset, not a one-time article. This timeline tracks the public coverage milestones used for trend reporting and future archive comparisons.
@@ -541,7 +538,7 @@ useHead({
             </div>
           </section>
 
-          <section id="state-comparison" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="state-comparison" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">School Calendar by State: Current Sample Comparison</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               State-level calendar patterns matter because school start dates, spring break timing, instructional days, and weather make-up rules are not nationally uniform. The current sample is strongest for California, Texas, Virginia, North Carolina, and Florida.
@@ -568,7 +565,7 @@ useHead({
             </div>
           </section>
 
-          <section id="source-mix" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="source-mix" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">PDF and ICS Calendar Adoption Signals</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               One reason school calendar data is hard to compare nationally is that districts publish calendars in different formats. The current MySchoolDates sample tracks both official source formats and user-facing calendar exports.
@@ -577,14 +574,14 @@ useHead({
               <div v-for="row in sourceMixRows" :key="row[0]" class="rounded-lg border border-gray-100 bg-gray-50 p-4">
                 <div class="flex flex-wrap items-center justify-between gap-2">
                   <h3 class="font-semibold text-gray-900">{{ row[0] }}</h3>
-                  <span class="rounded-full bg-white px-3 py-1 text-sm font-semibold text-blue-700">{{ row[1] }}</span>
+                  <span class="rounded-lg bg-white px-3 py-1 text-sm font-semibold text-blue-700">{{ row[1] }}</span>
                 </div>
                 <p class="mt-2 text-sm leading-relaxed text-gray-600">{{ row[2] }}</p>
               </div>
             </div>
           </section>
 
-          <section id="dataset-methodology" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="dataset-methodology" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Dataset Methodology: How Current Calendar Records Are Reviewed</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               The current published analysis uses {{ coverage.sampleSize }} reviewed records from the broader MySchoolDates platform dataset. The sample is not a random national survey and not an enrollment-weighted census; it is designed to identify school calendar trends from districts with public, reviewable calendar sources while coverage continues to expand.
@@ -614,7 +611,7 @@ useHead({
             </p>
           </section>
 
-          <section id="featured" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="featured" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Featured School Calendar Data Assets</h2>
             <div class="mt-5 grid gap-4">
               <NuxtLink
@@ -624,7 +621,7 @@ useHead({
                 class="rounded-lg border border-gray-200 bg-gray-50 p-5 hover:border-blue-200 hover:bg-blue-50 transition"
               >
                 <div class="flex flex-wrap items-center gap-2 text-xs text-gray-500">
-                  <span class="rounded-full bg-blue-50 px-2.5 py-1 font-semibold text-blue-700">{{ asset.tag }}</span>
+                  <span class="rounded-lg bg-blue-50 px-2.5 py-1 font-semibold text-blue-700">{{ asset.tag }}</span>
                   <span>{{ asset.label }}</span>
                 </div>
                 <h3 class="mt-3 text-lg font-semibold text-gray-900">{{ asset.title }}</h3>
@@ -633,7 +630,7 @@ useHead({
             </div>
           </section>
 
-          <section id="topic-guides" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="topic-guides" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Focused School Calendar Topic Guides</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               These guides support high-intent date searches while the national report remains the source for full methodology, appendix records, and downloadable data.
@@ -651,7 +648,7 @@ useHead({
             </div>
           </section>
 
-          <section id="current-findings" class="rounded-xl border border-blue-100 bg-blue-50 p-6">
+          <section id="current-findings" class="rounded-lg border border-blue-100 bg-blue-50 p-6">
             <h2 class="text-2xl font-bold text-gray-900">Current 2026-2027 Findings</h2>
             <p class="mt-3 text-blue-950 leading-relaxed">
               The current report is based on a {{ coverage.sampleSize }}-record reviewed sample across {{ coverage.states }} states. These findings summarize the main trends that should guide deeper analysis while the dataset continues expanding.
@@ -664,7 +661,7 @@ useHead({
             </div>
           </section>
 
-          <section id="research-team" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="research-team" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Research Team and Update Notes</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               Published by the MySchoolDates Calendar Data Team, this hub summarizes reviewed district calendar records from official source pages, board-approved PDFs, and MySchoolDates structured calendar pages. The current data collection period for the 2026-2027 report runs through {{ coverage.lastUpdated }}.
@@ -696,7 +693,7 @@ useHead({
             </p>
           </section>
 
-          <section id="faq" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="faq" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">School Calendar Trends FAQ</h2>
             <div class="mt-5 divide-y divide-gray-100">
               <div v-for="row in faqRows" :key="row.q" class="py-4 first:pt-0 last:pb-0">
@@ -706,7 +703,7 @@ useHead({
             </div>
           </section>
 
-          <section id="archive" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="archive" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">School Calendar Trends Archive</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               This hub will collect annual trend reports as more school-year datasets are reviewed. The 2026-2027 report is the current published national report; future reports will be added as coverage expands.
@@ -735,7 +732,7 @@ useHead({
             </div>
           </section>
 
-          <section id="state-hubs" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="state-hubs" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">State Calendar Hubs for Trend Analysis</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               State hubs provide the district-level pages that support future state-specific trend reports. Use these hubs to compare district calendars by region, calendar type, break timing, and source availability.
@@ -753,7 +750,7 @@ useHead({
             </div>
           </section>
 
-          <section id="upcoming" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="upcoming" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Planned Research Releases</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               MySchoolDates will expand the report series as additional district records are reviewed. The next meaningful upgrades are not more prose on the current report, but larger samples, annual archives, and state-specific reports.
@@ -768,7 +765,7 @@ useHead({
         </div>
 
         <aside class="space-y-4">
-          <div class="sticky top-4 rounded-xl border border-gray-200 bg-white p-5">
+          <div class="sticky top-4 rounded-lg border border-gray-200 bg-white p-5">
             <h2 class="text-sm font-semibold uppercase tracking-wide text-gray-500">Trends Links</h2>
             <nav class="mt-3 grid gap-2 text-sm">
               <a href="#live-coverage" class="text-blue-600 hover:underline">Live coverage</a>

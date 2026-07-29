@@ -28,12 +28,12 @@ const linkTarget = (link: { to?: string; url?: string }) => link.to ?? link.url 
 </script>
 
 <template>
-  <div v-if="filtered.length" class="space-y-8">
+  <div v-if="filtered.length" class="district-custom-sections space-y-8">
     <div
       v-for="section in filtered"
       :id="section.id"
       :key="section.id"
-      class="bg-white rounded-xl border border-gray-200 scroll-mt-24"
+      class="bg-white rounded-lg border border-gray-200 scroll-mt-24"
     >
       <details v-if="section.collapsible" :open="section.defaultOpen" class="group">
         <summary class="cursor-pointer list-none p-6">
@@ -50,7 +50,7 @@ const linkTarget = (link: { to?: string; url?: string }) => link.to ?? link.url 
               <h3 class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
               <ul class="space-y-1.5">
                 <li v-for="item in group.items" :key="item" class="flex items-start gap-2 text-sm text-gray-600">
-                  <span class="mt-2 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0" />
+                  <span class="mt-2 h-1.5 w-1.5 rounded-lg bg-blue-400 flex-shrink-0" />
                   <span>{{ item }}</span>
                 </li>
               </ul>
@@ -128,7 +128,7 @@ const linkTarget = (link: { to?: string; url?: string }) => link.to ?? link.url 
             <h3 class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
             <ul class="space-y-1.5">
               <li v-for="item in group.items" :key="item" class="flex items-start gap-2 text-sm text-gray-600">
-                <span class="mt-2 h-1.5 w-1.5 rounded-full bg-blue-400 flex-shrink-0" />
+                <span class="mt-2 h-1.5 w-1.5 rounded-lg bg-blue-400 flex-shrink-0" />
                 <span>{{ item }}</span>
               </li>
             </ul>

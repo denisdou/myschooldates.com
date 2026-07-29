@@ -20,35 +20,35 @@ const displayYear = computed(() => {
 </script>
 
 <template>
-  <div class="bg-gray-50 rounded-xl border border-gray-100 p-5">
-    <h2 class="text-sm font-semibold text-gray-700 mb-2">Sources and Review Notes</h2>
-    <p class="text-sm text-gray-600 mb-3">
+  <div class="bg-[#f3f0e8] rounded-lg border border-[#e1dbd0] p-5">
+    <h2 class="text-sm font-semibold text-[#4f5b5f] mb-2">Sources and Review Notes</h2>
+    <p class="text-sm text-[#6b645c] mb-3">
       MySchoolDates is an independent calendar reference and is not affiliated with {{ districtName }}.
       Calendar dates are based on {{ possessiveDistrictName }} official {{ displayYear }} calendar.
       <template v-if="verifiedDate"> We checked the dates against the official district source on {{ verifiedDate }}.</template>
       <template v-else> Not yet checked against the official source.</template>
     </p>
-    <ul class="space-y-1.5 mb-3">
-      <li v-for="src in sources" :key="src.label" class="flex items-start gap-2 text-xs text-gray-500">
-        <svg class="w-3 h-3 text-gray-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <ul class="space-y-2 mb-3">
+      <li v-for="src in sources" :key="src.label" class="flex items-center gap-2 text-xs text-[#7b756d]">
+        <svg class="w-3 h-3 text-[#9a938a] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
         </svg>
-        <a v-if="src.url" :href="src.url" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-blue-700 transition-colors">
+        <a v-if="src.url" :href="src.url" target="_blank" rel="noopener" class="inline-flex items-center underline hover:text-[#0f5d6b] transition-colors">
           {{ src.label }}
           <span class="sr-only">(opens in a new tab)</span>
         </a>
         <span v-else>{{ src.label }}</span>
       </li>
     </ul>
-    <div class="text-xs text-gray-500 pt-3 border-t border-gray-200 space-y-1.5">
+    <div class="text-xs text-[#7b756d] pt-3 border-t border-[#ddd6cb] space-y-1.5">
       <p v-if="sourceVersion">
-        <span class="font-medium text-gray-600">Calendar version:</span>
+        <span class="font-medium text-[#6b645c]">Calendar version:</span>
         <a
           v-if="sourcePdfUrl"
           :href="sourcePdfUrl"
           target="_blank"
           rel="noopener"
-          class="font-medium text-blue-600 hover:text-blue-800 underline"
+          class="font-medium text-[#0f5d6b] hover:text-[#0b4c58] underline"
         >
           {{ sourceVersion }}
           <span class="sr-only">(opens in a new tab)</span>
@@ -57,26 +57,26 @@ const displayYear = computed(() => {
         <template v-if="sourcePdfUrl && isArchivedPdfCopy"> · Archived official PDF copy stored by MySchoolDates</template>
       </p>
       <p v-if="verifiedDate">
-        <span class="font-medium text-gray-600">Maintained by:</span>
+        <span class="font-medium text-[#6b645c]">Maintained by:</span>
         MySchoolDates Calendar Data Team ·
-        <NuxtLink to="/calendar-verification-methodology" class="font-medium text-blue-600 hover:text-blue-800 underline">
+        <NuxtLink to="/calendar-verification-methodology" class="font-medium text-[#0f5d6b] hover:text-[#0b4c58] underline">
           Verification Methodology
         </NuxtLink>
         ·
-        <NuxtLink to="/editorial-policy" class="font-medium text-blue-600 hover:text-blue-800 underline">
+        <NuxtLink to="/editorial-policy" class="font-medium text-[#0f5d6b] hover:text-[#0b4c58] underline">
           Editorial Policy
         </NuxtLink>
       </p>
       <p v-if="verifiedDate">
-        <span class="font-medium text-gray-600">Last manual review:</span>
+        <span class="font-medium text-[#6b645c]">Last manual review:</span>
         {{ verifiedDate }}, by Denis Dou.
       </p>
       <p v-if="verifiedDate">
-        <span class="font-medium text-gray-600">Next review:</span>
+        <span class="font-medium text-[#6b645c]">Next review:</span>
         When {{ shortName }} publishes a calendar update or a revised official source.
       </p>
       <details class="pt-1">
-        <summary class="cursor-pointer select-none font-medium text-gray-600 hover:text-gray-800">
+        <summary class="cursor-pointer select-none font-medium text-[#6b645c] hover:text-[#1f2933]">
           How we verify this calendar
         </summary>
         <div class="mt-2 space-y-1.5">
@@ -86,15 +86,15 @@ const displayYear = computed(() => {
           <p>
             <a
               href="mailto:hello@myschooldates.com?subject=Calendar%20Correction"
-              class="font-medium text-blue-600 hover:text-blue-800 underline"
+              class="font-medium text-[#0f5d6b] hover:text-[#0b4c58] underline"
             >Report a calendar error</a>
             if a date appears incorrect or outdated.
             See our
-            <NuxtLink to="/calendar-verification-methodology" class="font-medium text-blue-600 hover:text-blue-800 underline">
+            <NuxtLink to="/calendar-verification-methodology" class="font-medium text-[#0f5d6b] hover:text-[#0b4c58] underline">
               Calendar Verification Methodology
             </NuxtLink>
             and
-            <NuxtLink to="/editorial-policy" class="font-medium text-blue-600 hover:text-blue-800 underline">
+            <NuxtLink to="/editorial-policy" class="font-medium text-[#0f5d6b] hover:text-[#0b4c58] underline">
               Editorial Policy
             </NuxtLink>
             for the verification method and corrections process.

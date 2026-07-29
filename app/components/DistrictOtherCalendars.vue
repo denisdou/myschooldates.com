@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <div id="other-calendars" class="bg-white rounded-xl border border-gray-200 p-6">
+  <div id="other-calendars" class="bg-white rounded-lg border border-gray-200 p-6">
     <h2 class="text-lg font-semibold text-gray-900 mb-1">Other Official Calendars</h2>
     <p class="text-sm text-gray-500 mb-4">{{ districtName }} publishes separate calendars for specific programs.</p>
     <ul class="space-y-0">

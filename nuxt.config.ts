@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   sourcemap: false,
 
   modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
+  css: ['~/assets/css/main.css'],
 
   content: {
     _localDatabase: {

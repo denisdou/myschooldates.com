@@ -65,7 +65,7 @@ useHead({
       </p>
     </section>
 
-    <section class="bg-amber-50 border border-amber-200 rounded-xl p-6">
+    <section class="bg-amber-50 border border-amber-200 rounded-lg p-6">
       <h2 class="text-xl font-semibold text-gray-900 mb-2">Found an Error?</h2>
       <p class="text-gray-600 leading-relaxed mb-4">
         Calendar dates can change after initial publication. If you spot an incorrect date or a missing update, please let us know — we review all corrections and aim to respond within 48 hours.

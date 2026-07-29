@@ -180,14 +180,14 @@ useHead({
                 type="text"
                 placeholder="e.g. Miami-Dade, Houston ISD, LAUSD…"
                 autocomplete="off"
-                class="w-full pl-12 pr-4 py-4 text-base rounded-xl border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                class="w-full pl-12 pr-4 py-4 text-base rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
                 @focus="onSearchFocus"
                 @blur="onSearchBlur"
               >
               <!-- Results dropdown -->
               <div
                 v-if="showDropdown && searchResults.length"
-                class="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden"
+                class="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden"
               >
                 <NuxtLink
                   v-for="d in searchResults"
@@ -209,7 +209,7 @@ useHead({
               </div>
               <div
                 v-else-if="showDropdown && searchQuery.length >= 2 && !searchResults.length"
-                class="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-xl shadow-sm px-5 py-3.5 text-sm text-gray-500"
+                class="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-sm px-5 py-3.5 text-sm text-gray-500"
               >
                 No districts found matching "{{ searchQuery }}"
               </div>
@@ -221,7 +221,7 @@ useHead({
                 v-for="d in popularSearches"
                 :key="d.slug"
                 :to="`/${d.slug}`"
-                class="text-xs px-3 py-1.5 rounded-full bg-white border border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-600 transition-colors"
+                class="text-xs px-3 py-1.5 rounded-lg bg-white border border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-600 transition-colors"
               >
                 {{ d.shortName ?? d.name.split(' ').slice(0, 2).join(' ') }}
               </NuxtLink>
@@ -233,19 +233,19 @@ useHead({
         <section class="mb-12">
           <h2 class="text-xl font-semibold text-gray-900 mb-4">Current School Years</h2>
           <div class="grid gap-3 sm:grid-cols-3">
-            <div class="rounded-xl border border-blue-200 bg-blue-50 p-5">
+            <div class="rounded-lg border border-blue-200 bg-blue-50 p-5">
               <div class="text-lg font-semibold text-blue-950">2027-2028</div>
               <p class="mt-1 text-sm text-blue-800">
                 Newest school year pages available for {{ yearCoverage.get('2027-2028') ?? 0 }} districts.
               </p>
             </div>
-            <div class="rounded-xl border border-blue-200 bg-blue-50 p-5">
+            <div class="rounded-lg border border-blue-200 bg-blue-50 p-5">
               <div class="text-lg font-semibold text-blue-950">2026-2027</div>
               <p class="mt-1 text-sm text-blue-800">
                 Primary planning year with {{ yearCoverage.get('2026-2027') ?? 0 }} district calendars.
               </p>
             </div>
-            <div class="rounded-xl border border-gray-200 bg-white p-5">
+            <div class="rounded-lg border border-gray-200 bg-white p-5">
               <div class="text-lg font-semibold text-gray-900">2025-2026</div>
               <p class="mt-1 text-sm text-gray-500">
                 Archive year available for {{ yearCoverage.get('2025-2026') ?? 0 }} districts.
@@ -255,7 +255,7 @@ useHead({
         </section>
 
         <section class="mb-12">
-          <div class="bg-white rounded-xl border border-gray-200 p-8">
+          <div class="bg-white rounded-lg border border-gray-200 p-8">
             <h2 class="text-xl font-semibold text-gray-900 mb-5">About US School Calendars</h2>
             <div class="text-sm text-gray-600 space-y-4 leading-relaxed">
               <p>
@@ -282,7 +282,7 @@ useHead({
               v-for="d in popularDistricts"
               :key="d.slug"
               :to="`/${d.slug}`"
-              class="flex items-center justify-between bg-white rounded-xl border border-gray-200 px-5 py-4 hover:border-blue-300 hover:shadow-sm transition-all"
+              class="flex items-center justify-between bg-white rounded-lg border border-gray-200 px-5 py-4 hover:border-blue-300 hover:shadow-sm transition-all"
             >
               <div>
                 <div class="font-medium text-gray-900 text-sm">{{ d.name }}</div>
@@ -312,7 +312,7 @@ useHead({
               <p v-if="STATE_SUMMARIES[state]" class="text-sm text-gray-500 mb-3 leading-relaxed">
                 {{ STATE_SUMMARIES[state] }}
               </p>
-              <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+              <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
                 <div class="divide-y divide-gray-50">
                   <NuxtLink
                     v-for="d in stateDistricts"
@@ -338,25 +338,25 @@ useHead({
         <section class="mb-16">
           <h2 class="text-xl font-semibold text-gray-900 mb-5">Why MySchoolDates</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="bg-white rounded-xl border border-gray-200 p-5">
+            <div class="bg-white rounded-lg border border-gray-200 p-5">
               <h3 class="font-semibold text-gray-900 mb-2">Easier than official PDFs</h3>
               <p class="text-sm text-gray-500 leading-relaxed">
                 District calendar PDFs are designed for printing, not for parents on mobile. MySchoolDates presents the same data in a fast, readable format — searchable, linkable, and importable to any calendar app.
               </p>
             </div>
-            <div class="bg-white rounded-xl border border-gray-200 p-5">
+            <div class="bg-white rounded-lg border border-gray-200 p-5">
               <h3 class="font-semibold text-gray-900 mb-2">Add to Google or Apple Calendar</h3>
               <p class="text-sm text-gray-500 leading-relaxed">
                 Download any district calendar as an ICS file and import it into Google Calendar, Apple Calendar, or Outlook. The file includes key dates such as the first day, holidays, and breaks.
               </p>
             </div>
-            <div class="bg-white rounded-xl border border-gray-200 p-5">
+            <div class="bg-white rounded-lg border border-gray-200 p-5">
               <h3 class="font-semibold text-gray-900 mb-2">Verified from official sources</h3>
               <p class="text-sm text-gray-500 leading-relaxed">
                 All calendar data is sourced from official school district websites and board-approved calendars. Each district page links directly to the official source so you can always cross-check.
               </p>
             </div>
-            <div class="bg-white rounded-xl border border-gray-200 p-5">
+            <div class="bg-white rounded-lg border border-gray-200 p-5">
               <h3 class="font-semibold text-gray-900 mb-2">Built for parents, not administrators</h3>
               <p class="text-sm text-gray-500 leading-relaxed">
                 See the first day of school, last day, spring break, and all holidays in plain language — no navigating confusing district websites or downloading 20-page PDFs to find a single date.

@@ -85,7 +85,7 @@ useHead({
     <p class="text-lg text-gray-500 mb-12">
       How MySchoolDates turns official district calendar sources into searchable dates, PDF references, and calendar import files.
     </p>
-    <dl class="mb-12 flex flex-wrap gap-x-5 gap-y-2 rounded-xl border border-gray-200 bg-white p-4 text-sm text-gray-600">
+    <dl class="mb-12 flex flex-wrap gap-x-5 gap-y-2 rounded-lg border border-gray-200 bg-white p-4 text-sm text-gray-600">
       <div>
         <dt class="inline font-semibold uppercase tracking-wide text-gray-600">By</dt>
         <dd class="ml-1 inline font-medium">
@@ -172,7 +172,7 @@ useHead({
       </p>
     </section>
 
-    <section class="bg-blue-50 border border-blue-200 rounded-xl p-6">
+    <section class="bg-blue-50 border border-blue-200 rounded-lg p-6">
       <h2 class="text-xl font-semibold text-gray-900 mb-2">Report a Calendar Correction</h2>
       <p class="text-gray-600 leading-relaxed mb-4">
         If a district changes its calendar or a date appears incorrect, send us the district name, school year, event date, and official source link.

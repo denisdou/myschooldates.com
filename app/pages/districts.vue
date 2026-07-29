@@ -152,7 +152,7 @@ useHead({
                 {{ district.city ? `${district.city}, ` : '' }}{{ district.state }}
               </p>
             </div>
-            <span class="rounded-md bg-gray-100 px-2 py-1 text-xs font-semibold text-gray-600">{{ district.stateCode }}</span>
+            <span class="rounded-lg bg-gray-100 px-2 py-1 text-xs font-semibold text-gray-600">{{ district.stateCode }}</span>
           </div>
           <p class="mt-4 line-clamp-3 text-sm leading-relaxed text-gray-600">
             {{ district.districtFact || `${district.name} calendar dates, holidays, breaks, and official calendar source links.` }}
@@ -172,7 +172,7 @@ useHead({
       <nav v-if="totalPages > 1" class="mt-8 flex flex-wrap items-center justify-center gap-2" aria-label="District pagination">
         <button
           type="button"
-          class="rounded-md border border-gray-200 px-3 py-2 text-sm font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 disabled:cursor-not-allowed disabled:opacity-40"
+          class="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 disabled:cursor-not-allowed disabled:opacity-40"
           :disabled="currentPage === 1"
           @click="setPage(currentPage - 1)"
         >
@@ -182,7 +182,7 @@ useHead({
           v-for="page in visiblePages"
           :key="page"
           type="button"
-          class="rounded-md border px-3 py-2 text-sm font-medium"
+          class="rounded-lg border px-3 py-2 text-sm font-medium"
           :class="page === currentPage ? 'border-blue-600 bg-blue-600 text-white' : 'border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-700'"
           @click="setPage(page)"
         >
@@ -190,7 +190,7 @@ useHead({
         </button>
         <button
           type="button"
-          class="rounded-md border border-gray-200 px-3 py-2 text-sm font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 disabled:cursor-not-allowed disabled:opacity-40"
+          class="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 disabled:cursor-not-allowed disabled:opacity-40"
           :disabled="currentPage === totalPages"
           @click="setPage(currentPage + 1)"
         >

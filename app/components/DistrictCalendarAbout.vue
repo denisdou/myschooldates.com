@@ -29,7 +29,7 @@ const breaks = computed(() => getBreaks(props.cal.events ?? []))
       </p>
     </div>
     <template v-if="district.about?.length">
-      <div v-for="card in district.about" :key="card.title" class="bg-white rounded-xl border border-gray-200 p-5">
+      <div v-for="card in district.about" :key="card.title" class="bg-white rounded-lg border border-gray-200 p-5">
         <h3 class="text-sm font-semibold text-gray-900 mb-2">{{ card.title }}</h3>
         <p class="text-sm text-gray-600 leading-relaxed">{{ card.content }}</p>
       </div>

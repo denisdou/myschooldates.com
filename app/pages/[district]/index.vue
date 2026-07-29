@@ -1005,6 +1005,8 @@ if (!isStatePage && district.value) {
   const spatialCoverageOverride = (cal as any)?.schemaSpatialCoverage ?? (cal as any)?.meta?.schemaSpatialCoverage ?? (meta.value as any)?.schemaSpatialCoverage ?? (meta.value as any)?.meta?.schemaSpatialCoverage
   const spatialCoverageName = typeof spatialCoverageOverride === 'string'
     ? spatialCoverageOverride
+    : spatialCoverageOverride?.name
+      ? spatialCoverageOverride.name
     : [meta.value?.county, meta.value?.state].filter(Boolean).join(', ')
   const datasetTemporalCoverage = cal
     ? `${(cal as any)?.temporalCoverageStart || cal.firstDay}/${(cal as any)?.temporalCoverageEnd || cal.lastDay}`
@@ -1023,12 +1025,7 @@ if (!isStatePage && district.value) {
     ...(pageDateModified ? { dateModified: pageDateModified } : {}),
     temporalCoverage: datasetTemporalCoverage,
     ...(spatialCoverageName ? {
-      spatialCoverage: typeof spatialCoverageOverride === 'object'
-        ? spatialCoverageOverride
-        : {
-            '@type': 'Place',
-            name: spatialCoverageName,
-          },
+      spatialCoverage: spatialCoverageName,
     } : {}),
     audience: {
       '@type': 'Audience',
@@ -1258,9 +1255,8 @@ if (!isStatePage && district.value) {
 </script>
 
 <template>
-  <div>
-    <!-- ── State Page ─────────────────────────────────────────────────────── -->
-    <template v-if="isStatePage">
+  <!-- ── State Page ─────────────────────────────────────────────────────── -->
+  <template v-if="isStatePage">
       <main class="max-w-4xl mx-auto px-4 py-8 space-y-8">
 
         <!-- Breadcrumb -->
@@ -1268,10 +1264,10 @@ if (!isStatePage && district.value) {
 
         <!-- Hero -->
         <div>
-          <h1 class="text-3xl font-bold text-gray-900">
+          <h1 class="text-3xl font-semibold tracking-tight text-[#1f2933]">
             {{ matchedStateName }} School Calendar {{ stateCurrentYear }}
           </h1>
-          <p class="mt-2 text-sm text-gray-500">
+          <p class="mt-2 text-sm text-[#7b756d]">
             <template v-if="statePageData">
               {{ statePageData.heroDescription || `${stateCurrentYear} school calendar dates, holidays, breaks, district schedules, PDFs, and calendar downloads · Sourced from official district websites` }}
             </template>
@@ -1309,19 +1305,19 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Jump navigation -->
-        <nav v-if="statePageData" class="sticky top-2 z-10 -mx-1 overflow-x-auto rounded-full border border-gray-200 bg-white/95 px-3 py-2 text-xs shadow-sm backdrop-blur">
+        <nav v-if="statePageData" class="sticky top-2 z-10 -mx-1 overflow-x-auto rounded-lg border border-gray-200 bg-white/95 px-3 py-2 text-xs shadow-sm backdrop-blur">
           <div class="flex min-w-max gap-2">
-            <a href="#state-quick-answer" class="rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">2026 Dates</a>
-            <a href="#state-districts" class="rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">{{ statePageData.collectionNavLabel || 'Districts' }}</a>
-            <a v-if="statePdfSectionId" :href="`#${statePdfSectionId}`" class="rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">PDF</a>
-            <a href="#state-holidays" class="rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">Holidays</a>
-            <a href="#faq" class="rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">FAQ</a>
-            <a href="#state-calendar-data" class="rounded-full px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">Trends</a>
+            <a href="#state-quick-answer" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">2026 Dates</a>
+            <a href="#state-districts" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">{{ statePageData.collectionNavLabel || 'Districts' }}</a>
+            <a v-if="statePdfSectionId" :href="`#${statePdfSectionId}`" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">PDF</a>
+            <a href="#state-holidays" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">Holidays</a>
+            <a href="#faq" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">FAQ</a>
+            <a href="#state-calendar-data" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">Trends</a>
           </div>
         </nav>
 
         <!-- Quick Answer -->
-        <div v-if="statePageData" id="state-quick-answer" class="bg-blue-50 border border-blue-200 rounded-xl p-6 scroll-mt-24">
+        <div v-if="statePageData" id="state-quick-answer" class="bg-blue-50 border border-blue-200 rounded-lg p-6 scroll-mt-24">
           <h2 class="text-lg font-semibold text-gray-900 mb-2">{{ statePageData.quickAnswerTitle ?? `Quick Answer: ${matchedStateName} School Calendar ${stateCurrentYear}` }}</h2>
           <p class="text-sm leading-relaxed text-gray-700">
             {{ statePageData.quickAnswer ?? `${matchedStateName} public school calendars are set by local districts, so first day of school, holidays, winter break, spring break, staff-only days, and make-up days vary by district. Families can use this page to find ${matchedStateName} district calendar links, compare key dates when available, and verify schedules against official school sources.` }}
@@ -1340,14 +1336,14 @@ if (!isStatePage && district.value) {
 
         <!-- Quick Facts from state data -->
         <div v-if="statePageData?.quickFacts?.length" class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          <div v-for="fact in statePageData.quickFacts" :key="fact.label" class="bg-white rounded-xl border border-gray-200 p-4 text-center">
+          <div v-for="fact in statePageData.quickFacts" :key="fact.label" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-4 text-center">
             <div class="text-lg font-bold text-gray-900">{{ fact.value }}</div>
             <div class="text-xs text-gray-500 mt-1">{{ fact.label }}</div>
           </div>
         </div>
 
         <!-- About section -->
-        <div v-if="statePageData?.about" class="bg-white rounded-xl border border-gray-200 p-6">
+        <div v-if="statePageData?.about" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-3">About {{ matchedStateName }} School Calendars</h2>
           <div class="text-gray-600 leading-relaxed space-y-3">
             <p v-for="(para, i) in statePageData.about.split('\n\n')" :key="i">{{ para }}</p>
@@ -1355,9 +1351,9 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- State calendar rules -->
-        <div v-if="statePageData?.calendarRules?.length" class="bg-white rounded-xl border border-gray-200 p-6">
+        <div v-if="statePageData?.calendarRules?.length" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ matchedStateName }} School Calendar Rules and Terms</h2>
-          <p class="text-sm text-gray-500 mb-5">
+          <p class="text-sm text-[#7b756d] mb-5">
             {{ statePageData.calendarRulesDescription || `${matchedStateName} district calendars often use state-specific labels for attendance, closure, and planning days. Always confirm final dates with the official district calendar.` }}
           </p>
           <div class="grid gap-3 sm:grid-cols-2">
@@ -1366,7 +1362,7 @@ if (!isStatePage && district.value) {
               :key="rule.label"
               class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-3"
             >
-              <div class="text-sm font-medium text-gray-900">{{ rule.label }}</div>
+              <div class="text-sm font-medium text-[#1f2933]">{{ rule.label }}</div>
               <p v-if="rule.description" class="mt-1.5 text-xs leading-relaxed text-gray-500">{{ rule.description }}</p>
             </div>
           </div>
@@ -1378,7 +1374,7 @@ if (!isStatePage && district.value) {
             v-for="section in statePageData.stateSections"
             :id="section.id"
             :key="section.id"
-            class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24"
+            class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24"
           >
             <h2 class="text-lg font-semibold text-gray-900 mb-3">{{ section.label }}</h2>
             <div v-if="section.content" class="text-sm text-gray-600 leading-relaxed space-y-3">
@@ -1415,10 +1411,10 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- District Comparison Table -->
-        <div v-if="stateDistricts.length > 1 && Object.keys(stateDistrictStats).length" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <div v-if="stateDistricts.length > 1 && Object.keys(stateDistrictStats).length" class="bg-rds-surface-panel rounded-lg border border-rds-hairline overflow-hidden">
           <div class="px-6 py-4 border-b border-gray-100">
             <h2 class="text-lg font-semibold text-gray-900">Compare {{ matchedStateName }} Districts at a Glance</h2>
-            <p class="text-sm text-gray-500 mt-1">First and last days, major breaks, and days off — side by side.</p>
+            <p class="text-sm text-[#7b756d] mt-1">First and last days, major breaks, and days off — side by side.</p>
           </div>
           <div class="overflow-x-auto">
             <table class="w-full text-sm">
@@ -1435,7 +1431,7 @@ if (!isStatePage && district.value) {
               <tbody class="divide-y divide-gray-200">
                 <tr v-for="d in stateDistricts" :key="d.slug" class="hover:bg-gray-50 transition-colors">
                   <td class="px-6 py-3">
-                    <NuxtLink :to="`/${d.slug}`" class="font-medium text-gray-900 hover:text-blue-600 transition-colors whitespace-nowrap">
+                    <NuxtLink :to="`/${d.slug}`" class="font-medium text-[#1f2933] hover:text-blue-600 transition-colors whitespace-nowrap">
                       {{ d.shortName || d.name }}
                     </NuxtLink>
                   </td>
@@ -1471,13 +1467,13 @@ if (!isStatePage && district.value) {
         <!-- District Cards -->
         <div id="state-districts" class="scroll-mt-24">
           <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ statePageData?.collectionHeading || `${matchedStateName} School Districts — ${stateCurrentYear}` }}</h2>
-          <p class="text-sm text-gray-500 mb-4">{{ statePageData?.collectionDescription || 'Click any district to view the full calendar, add dates to Google Calendar, or download an ICS file.' }}</p>
+          <p class="text-sm text-[#7b756d] mb-4">{{ statePageData?.collectionDescription || 'Click any district to view the full calendar, add dates to Google Calendar, or download an ICS file.' }}</p>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <NuxtLink
               v-for="d in stateDistricts"
               :key="d.slug"
               :to="`/${d.slug}`"
-              class="bg-white rounded-xl border border-gray-200 p-5 hover:border-blue-300 hover:shadow-sm transition-all"
+              class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-5 hover:border-blue-300 hover:shadow-sm transition-all"
             >
               <div class="font-semibold text-gray-900 leading-snug">{{ d.name }}</div>
               <div class="text-xs text-gray-600 mt-0.5">{{ d.city ? `${d.city}, ` : '' }}{{ (d as any).stateCode ?? d.state }}</div>
@@ -1527,9 +1523,9 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Popular district searches -->
-        <div v-if="statePageData?.popularDistricts?.length" class="bg-white rounded-xl border border-gray-200 p-6">
+        <div v-if="statePageData?.popularDistricts?.length" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ statePageData.popularDistrictsHeading || `Popular ${matchedStateName} District Calendar Searches` }}</h2>
-          <p class="text-sm text-gray-500 mb-5">
+          <p class="text-sm text-[#7b756d] mb-5">
             {{ statePageData.popularDistrictsDescription || `These are common ${matchedStateName} district calendar searches families use when comparing school-year dates. MySchoolDates links district pages after official calendar data has been verified, so planned districts are listed without inactive links.` }}
           </p>
           <div class="grid gap-3 sm:grid-cols-2">
@@ -1538,7 +1534,7 @@ if (!isStatePage && district.value) {
               :key="item.label"
               class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-3"
             >
-              <div class="text-sm font-medium text-gray-900">{{ item.label }}</div>
+              <div class="text-sm font-medium text-[#1f2933]">{{ item.label }}</div>
               <div v-if="item.area" class="mt-0.5 text-xs text-gray-600">{{ item.area }}</div>
               <p v-if="item.note" class="mt-2 text-xs leading-relaxed text-gray-500">{{ item.note }}</p>
             </div>
@@ -1546,22 +1542,22 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Common Holidays -->
-        <div v-if="statePageData?.commonHolidays?.length" id="state-holidays" class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
+        <div v-if="statePageData?.commonHolidays?.length" id="state-holidays" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
           <h2 class="text-lg font-semibold text-gray-900 mb-1">Common {{ matchedStateName }} School Holidays</h2>
-          <p class="text-sm text-gray-500 mb-4">{{ statePageData.commonHolidaysDescription || `Exact dates vary by district. Always verify with your district's official calendar before making plans.` }}</p>
+          <p class="text-sm text-[#7b756d] mb-4">{{ statePageData.commonHolidaysDescription || `Exact dates vary by district. Always verify with your district's official calendar before making plans.` }}</p>
           <div class="flex flex-wrap gap-2">
             <span
               v-for="holiday in statePageData.commonHolidays"
               :key="holiday"
-              class="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-sm text-gray-700"
+              class="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-700"
             >{{ holiday }}</span>
           </div>
         </div>
 
         <!-- District clusters -->
-        <div v-if="statePageData?.districtClusters?.length" class="bg-white rounded-xl border border-gray-200 p-6">
+        <div v-if="statePageData?.districtClusters?.length" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ statePageData.clustersHeading || `${matchedStateName} District Calendar Clusters` }}</h2>
-          <p class="text-sm text-gray-500 mb-5">{{ statePageData.clustersDescription || 'Use these regional links to compare nearby district calendars, spring break weeks, PDF availability, and Google Calendar import options.' }}</p>
+          <p class="text-sm text-[#7b756d] mb-5">{{ statePageData.clustersDescription || 'Use these regional links to compare nearby district calendars, spring break weeks, PDF availability, and Google Calendar import options.' }}</p>
           <div class="space-y-5">
             <section v-for="cluster in statePageData.districtClusters" :key="cluster.label">
               <h3 class="text-sm font-semibold text-gray-900">{{ cluster.label }}</h3>
@@ -1573,7 +1569,7 @@ if (!isStatePage && district.value) {
                   :to="`/${item.slug}`"
                   class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 hover:border-blue-300 hover:bg-blue-50 transition-colors"
                 >
-                  <div class="text-sm font-medium text-gray-900">{{ item.label }}</div>
+                  <div class="text-sm font-medium text-[#1f2933]">{{ item.label }}</div>
                   <p v-if="item.note" class="mt-1 text-xs leading-relaxed text-gray-500">{{ item.note }}</p>
                 </NuxtLink>
               </div>
@@ -1582,7 +1578,7 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Planning Tips -->
-        <div v-if="statePageData?.planningTips?.length" class="bg-blue-50 border border-blue-200 rounded-xl p-6">
+        <div v-if="statePageData?.planningTips?.length" class="bg-blue-50 border border-blue-200 rounded-lg p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-3">Planning Tips for {{ matchedStateName }} Families</h2>
           <ul class="space-y-3">
             <li v-for="tip in statePageData.planningTips" :key="tip" class="flex items-start gap-2 text-sm text-gray-700">
@@ -1595,31 +1591,31 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- FAQ -->
-        <div v-if="statePageData?.faqs?.length" id="faq" class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
+        <div v-if="statePageData?.faqs?.length" id="faq" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
           <h2 class="text-lg font-semibold text-gray-900 mb-5">Frequently Asked Questions</h2>
           <div class="space-y-5 divide-y divide-gray-100">
             <div v-for="faq in statePageData.faqs" :key="faq.q" class="pt-5 first:pt-0">
-              <h3 class="font-medium text-gray-900">{{ faq.q }}</h3>
+              <h3 class="font-medium text-[#1f2933]">{{ faq.q }}</h3>
               <p class="text-gray-600 mt-1.5">{{ faq.a }}</p>
             </div>
           </div>
         </div>
 
         <!-- Verification methodology -->
-        <div v-if="statePageData?.verificationMethodology?.length" class="bg-white rounded-xl border border-gray-200 p-6">
+        <div v-if="statePageData?.verificationMethodology?.length" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-3">How We Verify {{ matchedStateName }} School Calendars</h2>
           <ol class="space-y-2">
             <li v-for="(step, index) in statePageData.verificationMethodology" :key="step" class="flex gap-3 text-sm text-gray-700">
-              <span class="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-blue-50 text-xs font-semibold text-blue-700">{{ index + 1 }}</span>
+              <span class="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-lg bg-blue-50 text-xs font-semibold text-blue-700">{{ index + 1 }}</span>
               <span>{{ step }}</span>
             </li>
           </ol>
         </div>
 
         <!-- National calendar data context -->
-        <div id="state-calendar-data" class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
+        <div id="state-calendar-data" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
           <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ matchedStateName }} School Calendars in National Context</h2>
-          <p class="text-sm text-gray-500 mb-5">
+          <p class="text-sm text-[#7b756d] mb-5">
             Use these research pages to compare {{ matchedStateName }} district calendars with broader U.S. school calendar patterns.
           </p>
           <div class="grid gap-3 sm:grid-cols-2">
@@ -1645,10 +1641,10 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Related States -->
-        <div v-if="statePageData?.relatedStates?.length" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <div v-if="statePageData?.relatedStates?.length" class="bg-rds-surface-panel rounded-lg border border-rds-hairline overflow-hidden">
           <div class="px-6 py-4 border-b border-gray-100">
             <h2 class="text-lg font-semibold text-gray-900">Compare Nearby States</h2>
-            <p class="text-sm text-gray-500 mt-1">School start dates, spring break, and holiday schedules vary significantly between states — even for neighboring districts across state lines.</p>
+            <p class="text-sm text-[#7b756d] mt-1">School start dates, spring break, and holiday schedules vary significantly between states — even for neighboring districts across state lines.</p>
           </div>
           <div class="divide-y divide-gray-50">
             <NuxtLink
@@ -1657,7 +1653,7 @@ if (!isStatePage && district.value) {
               :to="`/${rs.slug}`"
               class="flex items-center justify-between px-6 py-4 hover:bg-gray-50 transition-colors"
             >
-              <div class="font-medium text-gray-900">{{ rs.name }} School Calendars</div>
+              <div class="font-medium text-[#1f2933]">{{ rs.name }} School Calendars</div>
               <svg class="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
@@ -1672,33 +1668,35 @@ if (!isStatePage && district.value) {
         </p>
 
       </main>
-    </template>
+  </template>
 
-    <!-- ── District Page ──────────────────────────────────────────────────── -->
-    <template v-else-if="district && cal">
-      <main class="max-w-4xl mx-auto px-4 py-8 space-y-8">
+  <!-- ── District Page ──────────────────────────────────────────────────── -->
+  <template v-else-if="district && cal">
+      <main class="py-8">
 
-        <!-- Breadcrumb -->
-        <Breadcrumb :items="[
-          { label: 'Home', href: '/' },
-          { label: district.state, href: `/${toStateSlug(district.state)}` },
-          { label: district.name },
-        ]" />
+        <section class="district-page-section">
+          <div class="district-page-inner space-y-8">
+            <!-- Breadcrumb -->
+            <Breadcrumb :items="[
+              { label: 'Home', href: '/' },
+              { label: district.state, href: `/${toStateSlug(district.state)}` },
+              { label: district.name },
+            ]" />
 
-        <!-- Title -->
-        <div>
+            <!-- Title -->
+            <div>
           <h1 class="text-3xl font-bold text-gray-900">
             {{ (cal as any).pageHeading || `${district.name} Calendar ${displaySchoolYear}` }}
           </h1>
-          <p class="mt-2 text-sm text-gray-500">
+          <p class="mt-2 text-sm text-[#7b756d]">
             {{ displaySchoolYear }} calendar dates · Based on the official {{ district.shortName || district.name }} calendar ·
-            <a href="#add-to-calendar" class="inline-flex min-h-11 items-center underline hover:text-blue-700 transition-colors">Download calendar file</a>
+            <a href="#add-to-calendar" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">Download calendar file</a>
           </p>
-          <p class="mt-1 text-xs text-gray-600">
+          <p class="mt-2 text-xs text-[#6b645c]">
             MySchoolDates is an independent calendar reference and is not affiliated with {{ district.name }}.
           </p>
           <!-- Featured snippet: direct answer for search intent -->
-          <p v-if="calendarSummary" class="mt-3 text-sm text-gray-700 leading-relaxed">{{ calendarSummary }}</p>
+          <p v-if="calendarSummary" class="mt-5 text-sm text-[hsl(var(--rds-ink-muted)/1)] leading-relaxed">{{ calendarSummary }}</p>
           <div v-if="heroCtas.length" class="mt-4 flex flex-wrap gap-2">
             <a
               v-for="cta in heroCtas"
@@ -1709,8 +1707,8 @@ if (!isStatePage && district.value) {
               :rel="cta.download ? undefined : 'noopener'"
               class="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold transition-colors"
               :class="cta.variant === 'primary'
-                ? 'bg-blue-600 text-white hover:bg-blue-700'
-                : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50'"
+                ? 'bg-[#0f5d6b] text-white hover:bg-[#0b4c58]'
+                : 'border border-[#d9d2c7] bg-[#fbfaf7] text-[#4f5b5f] hover:bg-[#f3f0e8]'"
             >
               {{ cta.label }}
             </a>
@@ -1722,46 +1720,46 @@ if (!isStatePage && district.value) {
               :href="link.href"
               :target="link.isExternal ? '_blank' : undefined"
               :rel="link.isExternal ? 'noopener' : undefined"
-              class="font-medium text-blue-600 hover:underline"
+              class="font-medium text-[#0f5d6b] hover:underline"
             >
               {{ link.label }}
               <span v-if="link.isExternal" class="sr-only">(opens in a new tab)</span>
             </a>
           </div>
-          <div v-if="heroQuickDates.length" id="quick-answer" class="mt-4 rounded-xl border border-gray-200 bg-white p-4 scroll-mt-24">
-            <p class="text-sm font-semibold text-gray-900">{{ displaySchoolYear }} Dates at a Glance</p>
-            <ul class="mt-2 grid gap-1.5 text-sm text-gray-700 sm:grid-cols-2">
+          <div v-if="heroQuickDates.length" id="quick-answer" class="mt-4 rounded-lg border border-rds-hairline bg-rds-surface-panel p-4 scroll-mt-24">
+            <p class="text-sm font-semibold text-[#1f2933]">{{ displaySchoolYear }} Dates at a Glance</p>
+            <ul class="mt-2 grid gap-1.5 text-sm text-[#4f5b5f] sm:grid-cols-2">
               <li v-for="item in heroQuickDates" :key="`${item.label}-${item.value}`">
                 <strong>{{ item.label }}:</strong> {{ item.value }}
               </li>
             </ul>
           </div>
-          <p v-if="heroSummaryFacts.length" class="mt-1 text-sm text-gray-500">
+          <p v-if="heroSummaryFacts.length" class="mt-3 text-sm text-[#7b756d]">
             {{ heroSummaryFacts.join(' · ') }}
           </p>
-          <dl v-if="!isEstimated && verifiedDate" class="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-xs text-gray-500">
+          <dl v-if="!isEstimated && verifiedDate" class="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-xs text-[#7b756d]">
             <div v-if="!((cal as any).hideHeroReviewedField || (cal as any).meta?.hideHeroReviewedField)">
-              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Reviewed</dt>
-              <dd class="ml-1 inline font-medium text-gray-700">{{ verifiedDate }}</dd>
+              <dt class="inline font-semibold uppercase tracking-wide text-[#6b645c]">Reviewed</dt>
+              <dd class="ml-1 inline font-medium text-[#4f5b5f]">{{ verifiedDate }}</dd>
             </div>
             <div>
-              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Reviewed by</dt>
+              <dt class="inline font-semibold uppercase tracking-wide text-[#6b645c]">Reviewed by</dt>
               <dd class="ml-1 inline font-medium">
-                <NuxtLink to="/author" class="text-blue-600 hover:underline">{{ editorialAuthorName }}</NuxtLink>
+                <NuxtLink to="/author" class="text-[#0f5d6b] hover:underline">{{ editorialAuthorName }}</NuxtLink>
               </dd>
             </div>
             <div v-if="!((cal as any).hideHeroUpdatedField || (cal as any).meta?.hideHeroUpdatedField)">
-              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Updated</dt>
-              <dd class="ml-1 inline font-medium text-gray-700">{{ verifiedDate }}</dd>
+              <dt class="inline font-semibold uppercase tracking-wide text-[#6b645c]">Updated</dt>
+              <dd class="ml-1 inline font-medium text-[#4f5b5f]">{{ verifiedDate }}</dd>
             </div>
           </dl>
           <!-- Verification badge -->
           <div
             v-if="!((cal as any).hideHeroVerifiedBadge || (cal as any).meta?.hideHeroVerifiedBadge)"
-            class="mt-3 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full"
+            class="mt-5 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg"
             :class="isEstimated
-              ? 'bg-amber-50 text-amber-700 border border-amber-200'
-              : 'bg-green-50 text-green-700 border border-green-200'"
+              ? 'bg-[#f3ead7] text-[#74552a] border border-[#e5d5b8]'
+              : 'bg-[#e7efe5] text-[#315b39] border border-[#cfdfcc]'"
           >
             <svg v-if="!isEstimated" class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
@@ -1772,57 +1770,66 @@ if (!isStatePage && district.value) {
             <span v-if="!isEstimated">{{ verificationBadgeText || `Checked against the official ${district.shortName || meta.name} calendar on ${verifiedDate}.` }}</span>
             <span v-else>Based on official district website · Not yet human-verified</span>
           </div>
-          <details v-if="!isEstimated && verifiedDate && !hideHeroVerificationProcess" class="mt-3 rounded-xl border border-gray-200 bg-white p-3">
-            <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-gray-500">How verified</summary>
-            <ul class="mt-2 grid gap-1.5 text-xs text-gray-600 sm:grid-cols-3">
+          <details v-if="!isEstimated && verifiedDate && !hideHeroVerificationProcess" class="mt-5 rounded-lg border border-rds-hairline bg-rds-surface-panel p-3">
+            <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-[#7b756d]">How verified</summary>
+            <ul class="mt-2 grid gap-1.5 text-xs text-[#6b645c] sm:grid-cols-3">
               <li class="flex items-start gap-1.5">
-                <span class="mt-0.5 text-green-700">✓</span>
+                <span class="mt-0.5 text-[#315b39]">✓</span>
                 <span>Official district source checked</span>
               </li>
               <li class="flex items-start gap-1.5">
-                <span class="mt-0.5 text-green-700">✓</span>
+                <span class="mt-0.5 text-[#315b39]">✓</span>
                 <span>Key dates compared against source</span>
               </li>
               <li v-if="!((cal as any).hideHeroVerificationIcs || (cal as any).meta?.hideHeroVerificationIcs)" class="flex items-start gap-1.5">
-                <span class="mt-0.5 text-green-700">✓</span>
+                <span class="mt-0.5 text-[#315b39]">✓</span>
                 <span>ICS file generated from the dates reviewed for this page</span>
               </li>
             </ul>
           </details>
-        </div>
+            </div>
+          </div>
+        </section>
 
-        <nav v-if="customJumpNavigation.length" aria-label="Page sections" class="sticky top-2 z-20 -mx-4 flex gap-2 overflow-x-auto border-y border-gray-100 bg-white/95 px-4 py-2 text-xs shadow-sm backdrop-blur sm:mx-0 sm:flex-wrap sm:rounded-xl sm:border">
-          <a
-            v-for="item in customJumpNavigation"
-            :key="item.label"
-            :href="item.href || `#${item.id}`"
-            class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors"
-          >{{ item.label }}</a>
+        <nav v-if="customJumpNavigation.length" aria-label="Page sections" class="sticky top-0 z-20 my-8 border-y border-[#ddd7cc] bg-[#f7f5f0]/95 backdrop-blur">
+          <div class="district-page-inner flex items-center gap-7 overflow-x-auto py-4 text-sm">
+            <span class="flex-shrink-0 font-semibold text-[#7b756d]">On this page</span>
+            <a
+              v-for="item in customJumpNavigation"
+              :key="item.label"
+              :href="item.href || `#${item.id}`"
+              class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors"
+            >{{ item.label }}</a>
+          </div>
         </nav>
-        <nav v-else aria-label="Page sections" class="sticky top-2 z-20 -mx-4 flex gap-2 overflow-x-auto border-y border-gray-100 bg-white/95 px-4 py-2 text-xs shadow-sm backdrop-blur sm:mx-0 sm:flex-wrap sm:rounded-xl sm:border">
-          <a v-if="!hiddenSections.has('keyDateCards')" href="#key-dates" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Key Dates</a>
-          <a v-if="heroQuickDates.length" href="#quick-answer" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Quick Answer</a>
-          <a v-if="summarySectionId" :href="`#${summarySectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Summary</a>
-          <a v-if="overviewSectionId" :href="`#${overviewSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Overview</a>
-          <a v-if="audienceSectionId" :href="`#${audienceSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Who Uses</a>
-          <a href="#all-dates" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Dates</a>
-          <a v-if="breaks.length && !hiddenSections.has('breaks')" href="#breaks" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Breaks</a>
-          <a href="#add-to-calendar" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Download</a>
-          <a v-if="downloadGuideSectionId" :href="`#${downloadGuideSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Download Guide</a>
-          <a v-if="changesSectionId" :href="`#${changesSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Changes</a>
-          <a v-if="highlightsSectionId" :href="`#${highlightsSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Highlights</a>
-          <a v-if="termsSectionId" :href="`#${termsSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Terms</a>
-          <a v-if="planningSectionId" :href="`#${planningSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Planning</a>
-          <a v-if="importantDatesSectionId" :href="`#${importantDatesSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Important Dates</a>
-          <a v-if="earlyDismissalSectionId" :href="`#${earlyDismissalSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Early Release</a>
-          <a v-if="!hiddenSections.has('comparison')" href="#comparison" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Comparison</a>
-          <a href="#faq" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">FAQ</a>
+        <nav v-else aria-label="Page sections" class="sticky top-0 z-20 my-8 border-y border-[#ddd7cc] bg-[#f7f5f0]/95 backdrop-blur">
+          <div class="district-page-inner flex items-center gap-7 overflow-x-auto py-4 text-sm">
+            <span class="flex-shrink-0 font-semibold text-[#7b756d]">On this page</span>
+            <a v-if="!hiddenSections.has('keyDateCards')" href="#key-dates" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Key Dates</a>
+            <a v-if="heroQuickDates.length" href="#quick-answer" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Quick Answer</a>
+            <a v-if="summarySectionId" :href="`#${summarySectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Summary</a>
+            <a v-if="overviewSectionId" :href="`#${overviewSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Overview</a>
+            <a v-if="audienceSectionId" :href="`#${audienceSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Who Uses</a>
+            <a href="#all-dates" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Dates</a>
+            <a v-if="breaks.length && !hiddenSections.has('breaks')" href="#breaks" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Breaks</a>
+            <a href="#add-to-calendar" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Download</a>
+            <a v-if="downloadGuideSectionId" :href="`#${downloadGuideSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Download Guide</a>
+            <a v-if="changesSectionId" :href="`#${changesSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Changes</a>
+            <a v-if="highlightsSectionId" :href="`#${highlightsSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Highlights</a>
+            <a v-if="termsSectionId" :href="`#${termsSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Terms</a>
+            <a v-if="planningSectionId" :href="`#${planningSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Planning</a>
+            <a v-if="importantDatesSectionId" :href="`#${importantDatesSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Important Dates</a>
+            <a v-if="earlyDismissalSectionId" :href="`#${earlyDismissalSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Early Release</a>
+            <a v-if="!hiddenSections.has('comparison')" href="#comparison" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Comparison</a>
+            <a href="#faq" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">FAQ</a>
+          </div>
         </nav>
 
+        <div class="district-page-content">
         <DistrictCustomSections :sections="customSections" position="afterVerification" />
 
         <!-- Calendar track notice -->
-        <div v-if="hasCalendarTrackCaution" class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex gap-3">
+        <div v-if="hasCalendarTrackCaution" class="bg-blue-50 border border-blue-200 rounded-lg p-4 flex gap-3">
           <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
@@ -1848,7 +1855,7 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Alternate calendars notice -->
-        <div v-if="(cal as any)?.alternateCalendars?.length" class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
+        <div v-if="(cal as any)?.alternateCalendars?.length" class="bg-amber-50 border border-amber-200 rounded-lg p-4 flex gap-3">
           <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
@@ -1866,7 +1873,7 @@ if (!isStatePage && district.value) {
         <div
           v-if="!hiddenSections.has('keyDates') && !hiddenSections.has('keyDatesSummary') && keyDateHighlights.length"
           :id="hiddenSections.has('keyDateCards') ? 'key-dates' : undefined"
-          class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24"
+          class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24"
         >
           <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ keyDatesSummaryTitle }}</h2>
           <p class="text-xs text-gray-600 mb-4">{{ keyDatesSummarySubtitle }}</p>
@@ -1878,12 +1885,12 @@ if (!isStatePage && district.value) {
             >
               <div class="flex items-center gap-2.5 min-w-0">
                 <span
-                  class="text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap flex-shrink-0"
+                  class="text-xs font-medium px-2 py-0.5 rounded-lg whitespace-nowrap flex-shrink-0"
                   :class="eventTypeColor[event.type]"
                 >{{ keyDateLabel(event) }}</span>
                 <span class="min-w-0 break-words text-sm text-gray-900">{{ keyDateDisplayName(event) }}</span>
               </div>
-              <span class="text-sm text-gray-500 tabular-nums ml-4 flex-shrink-0">
+              <span class="text-sm text-[#7b756d] tabular-nums ml-4 flex-shrink-0">
                 <time :datetime="keyDateRange(event).start">{{ event.type === 'break_start' ? formatShortDate(keyDateRange(event).start) : keyDateDisplayDate(event) }}</time>
                 <template v-if="keyDateRange(event).end !== keyDateRange(event).start">
                   <span> – </span>
@@ -1894,14 +1901,14 @@ if (!isStatePage && district.value) {
           </div>
         </div>
 
-        <div v-if="!hiddenSections.has('downloadCta')" class="rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p class="text-sm text-blue-900">
+        <div v-if="!hiddenSections.has('downloadCta')" class="rounded-lg border border-[#d9d2c7] bg-[#f3f0e8] px-4 py-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-sm text-[#4f5b5f]">
             Download the dates for Google Calendar, Apple Calendar, or Outlook, or view the district's official PDF.
           </p>
           <div class="flex flex-wrap gap-2">
             <a
               href="#add-to-calendar"
-              class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700 transition-colors"
+              class="inline-flex items-center justify-center rounded-lg bg-[#0f5d6b] px-3 py-2 text-sm font-semibold text-white hover:bg-[#0b4c58] transition-colors"
             >
               Download ICS Calendar
             </a>
@@ -1917,7 +1924,7 @@ if (!isStatePage && district.value) {
             </a>
           </div>
         </div>
-        <div v-if="keyDateShortcuts.length" class="rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-600">
+        <div v-if="keyDateShortcuts.length" class="rounded-lg border border-rds-hairline bg-rds-surface-panel px-4 py-3 text-sm text-gray-600">
           <a
             v-for="link in keyDateShortcuts"
             :key="link.key"
@@ -1953,7 +1960,7 @@ if (!isStatePage && district.value) {
                 :href="calendarIcsHref"
                 :download="district && cal ? `${district.slug}-${cal.schoolYear}.ics` : undefined"
                 :aria-label="district && cal ? `Download ${district.name} ${cal.schoolYear} calendar file` : 'Download calendar file'"
-                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors"
+                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#0f5d6b] hover:bg-[#0b4c58] text-white text-sm font-medium rounded-lg transition-colors"
               >
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -1965,7 +1972,7 @@ if (!isStatePage && district.value) {
                 :href="(cal as any).sourcePdfUrl || (cal as any).printablePdfUrl"
                 target="_blank"
                 rel="noopener"
-                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 text-sm font-medium rounded-lg transition-colors"
+                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#fbfaf7] hover:bg-[#f3f0e8] text-[#4f5b5f] border border-[#d9d2c7] text-sm font-medium rounded-lg transition-colors"
               >
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10M7 11h10M7 15h6M6 3h8l4 4v14H6V3z" />
@@ -1993,19 +2000,19 @@ if (!isStatePage && district.value) {
         />
 
         <!-- Break Summary -->
-        <div v-if="breaks.length && !hiddenSections.has('breaks')" id="breaks" class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
-          <h2 class="text-lg font-semibold text-gray-900 mb-4">{{ breaksTitle }}</h2>
+        <div v-if="breaks.length && !hiddenSections.has('breaks')" id="breaks" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
+          <h2 class="text-lg font-semibold text-[#1f2933] mb-4">{{ breaksTitle }}</h2>
           <div class="space-y-3">
-            <div v-for="b in breaks" :key="b.name" class="flex flex-col items-start gap-2 py-3 border-b border-gray-50 last:border-0 sm:flex-row sm:items-center sm:justify-between">
+            <div v-for="b in breaks" :key="b.name" class="flex flex-col items-start gap-2 py-3 border-b border-[#eee9df] last:border-0 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <div class="font-medium text-gray-900">{{ breakDisplayName(b.name) }}</div>
-                <div class="text-sm text-gray-500">{{ formatCompactDateRange(b.start, b.end) }}</div>
-                <p v-if="breakNoteFor(b)" class="mt-1 text-sm text-gray-600">{{ breakNoteFor(b) }}</p>
-                <div v-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-purple-600 mt-0.5 font-medium">
+                <div class="font-medium text-[#1f2933]">{{ breakDisplayName(b.name) }}</div>
+                <div class="text-sm text-[#7b756d]">{{ formatCompactDateRange(b.start, b.end) }}</div>
+                <p v-if="breakNoteFor(b)" class="mt-1 text-sm text-[#6b645c]">{{ breakNoteFor(b) }}</p>
+                <div v-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-[#5b4b6f] mt-0.5 font-medium">
                   In progress
                 </div>
               </div>
-              <div v-if="!hideBreakDurationBadges" class="self-start text-sm font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full sm:self-auto">{{ breakDurationLabel(b) }}</div>
+              <div v-if="!hideBreakDurationBadges" class="self-start text-sm font-semibold text-[#5b4b6f] bg-[#eee9f3] px-3 py-1 rounded-lg sm:self-auto">{{ breakDurationLabel(b) }}</div>
             </div>
           </div>
         </div>
@@ -2052,7 +2059,7 @@ if (!isStatePage && district.value) {
               </p>
             </template>
             <template v-if="(district as any).about?.length">
-              <div v-for="card in (district as any).about" :key="card.title" class="bg-white rounded-xl border border-gray-200 p-5">
+              <div v-for="card in (district as any).about" :key="card.title" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-5">
                 <h3 class="text-sm font-semibold text-gray-900 mb-2">{{ card.title }}</h3>
                 <p class="text-sm text-gray-600 leading-relaxed">{{ card.content }}</p>
               </div>
@@ -2060,7 +2067,7 @@ if (!isStatePage && district.value) {
           </div>
 
           <!-- Upcoming Events — timeline of next 6 events -->
-          <div v-else-if="section === 'upcoming' && upcomingEvents.length" class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <div v-else-if="section === 'upcoming' && upcomingEvents.length" class="bg-rds-surface-panel rounded-lg border border-rds-hairline overflow-hidden">
             <div class="px-6 py-4 border-b border-gray-100">
               <h2 class="text-lg font-semibold text-gray-900">Upcoming Dates</h2>
             </div>
@@ -2083,13 +2090,13 @@ if (!isStatePage && district.value) {
                 <div class="w-px h-8 bg-gray-200 flex-shrink-0" />
                 <!-- Event info -->
                 <div class="flex-1 min-w-0">
-                  <div class="font-medium text-gray-900 text-sm">{{ event.name }}</div>
+                  <div class="font-medium text-[#1f2933] text-sm">{{ event.name }}</div>
                   <div class="text-xs text-gray-600 mt-0.5">
                     {{ new Date(event.date + 'T00:00:00').toLocaleString('en-US', { weekday: 'long' }) }}
                   </div>
                 </div>
                 <!-- Badge -->
-                <span class="text-xs font-medium px-2 py-0.5 rounded-full flex-shrink-0" :class="eventTypeColor[event.type]">
+                <span class="text-xs font-medium px-2 py-0.5 rounded-lg flex-shrink-0" :class="eventTypeColor[event.type]">
                   {{ eventTypeLabel[event.type] }}
                 </span>
               </div>
@@ -2116,12 +2123,12 @@ if (!isStatePage && district.value) {
 
         <!-- Year Switcher -->
         <div v-if="archivedYears.length" class="flex items-center gap-2 flex-wrap">
-          <span class="text-sm text-gray-500">Other school years:</span>
+          <span class="text-sm text-[#7b756d]">Other school years:</span>
           <NuxtLink
             v-for="y in archivedYears"
             :key="y"
             :to="`/${slug}/${y}`"
-            class="text-sm px-3 py-1 rounded-full border border-gray-300 text-gray-600 hover:border-blue-400 hover:text-blue-600 transition-colors"
+            class="text-sm px-3 py-1 rounded-lg border border-gray-300 text-gray-600 hover:border-blue-400 hover:text-blue-600 transition-colors"
           >
             {{ displaySchoolYearLabel(y) }}
           </NuxtLink>
@@ -2204,7 +2211,7 @@ if (!isStatePage && district.value) {
           :description="(district as any).relatedDistrictsDescription"
         />
 
-        <section v-if="!hiddenSections.has('nationalTrends')" class="rounded-xl border border-gray-200 bg-white p-6">
+        <section v-if="!hiddenSections.has('nationalTrends')" class="rounded-lg border border-rds-hairline bg-rds-surface-panel p-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-2">{{ district.shortName || district.name }} in National Calendar Trends</h2>
           <p class="text-sm leading-relaxed text-gray-600">
             To compare this district calendar with broader U.S. start-date, break, and end-date patterns, see the
@@ -2213,8 +2220,8 @@ if (!isStatePage && district.value) {
             </NuxtLink>.
           </p>
         </section>
+        </div>
 
       </main>
-    </template>
-  </div>
+  </template>
 </template>

@@ -324,10 +324,7 @@ useHead({
             datePublished: '2026-07-27',
             dateModified: '2026-07-27',
             temporalCoverage: '2026-07-01/2027-06-30',
-            spatialCoverage: {
-              '@type': 'Place',
-              name: 'United States',
-            },
+            spatialCoverage: 'United States',
             keywords: [
               'school calendar dataset',
               'education data',
@@ -412,7 +409,7 @@ useHead({
         <NuxtLink to="/school-calendar-trends/2026-2027-report" class="font-semibold text-blue-600 hover:underline">2026-2027 Report</NuxtLink>
       </div>
 
-      <header class="rounded-xl border border-gray-200 bg-white p-6 sm:p-8">
+      <header class="rounded-lg border border-gray-200 bg-white p-6 sm:p-8">
         <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide">School Calendar Dataset</p>
         <h1 class="mt-3 text-3xl sm:text-5xl font-bold tracking-tight text-gray-900">
           School Calendar Trends Dataset 2026-2027
@@ -421,16 +418,16 @@ useHead({
           Download the reviewed CSV dataset behind the MySchoolDates 2026-2027 School Calendar Trends Report. The current release covers 100 district calendar records across 13 states, including start dates, end dates, winter break signals, spring break signals, and district page links for U.S. school calendar data analysis.
         </p>
         <div class="mt-5 flex flex-wrap gap-2 text-sm text-gray-600">
-          <span class="rounded-full bg-gray-100 px-3 py-1">100 reviewed records</span>
-          <span class="rounded-full bg-gray-100 px-3 py-1">13 states</span>
-          <span class="rounded-full bg-gray-100 px-3 py-1">CSV download</span>
-          <span class="rounded-full bg-gray-100 px-3 py-1">Last verified July 27, 2026</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">100 reviewed records</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">13 states</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">CSV download</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified July 27, 2026</span>
         </div>
       </header>
 
       <div class="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_260px]">
         <div class="space-y-8">
-          <section id="download" class="rounded-xl border border-blue-100 bg-blue-50 p-6">
+          <section id="download" class="rounded-lg border border-blue-100 bg-blue-50 p-6">
             <h2 class="text-2xl font-bold text-gray-900">Download the CSV Dataset</h2>
             <p class="mt-3 text-blue-950 leading-relaxed">
               Use the CSV for education research notes, school calendar roundups, parent planning analysis, local reporting, or internal trend checks. The file is a reviewed platform dataset, not a complete national census.
@@ -458,7 +455,7 @@ useHead({
             </div>
           </section>
 
-          <section id="quick-answer" class="rounded-xl border border-emerald-100 bg-emerald-50 p-6">
+          <section id="quick-answer" class="rounded-lg border border-emerald-100 bg-emerald-50 p-6">
             <h2 class="text-2xl font-bold text-gray-900">Quick Answer: What Is This Dataset?</h2>
             <p class="mt-3 text-emerald-950 leading-relaxed">
               This 2026-2027 U.S. school calendar dataset contains 100 reviewed district calendar records across 13 states. It covers first student day, last student day, winter break timing, spring break patterns, and source page links for school calendar data analysis.
@@ -468,7 +465,7 @@ useHead({
             </p>
           </section>
 
-          <section class="rounded-xl border border-gray-200 bg-white p-6">
+          <section class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Dataset Summary</h2>
             <div class="mt-5 grid gap-4 sm:grid-cols-3">
               <div class="rounded-lg border border-gray-100 bg-gray-50 p-4">
@@ -523,7 +520,7 @@ useHead({
             </div>
           </section>
 
-          <section id="findings" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="findings" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Key Findings From the 2026-2027 School Calendar Data</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               The 2026-2027 school calendar dataset is designed to make district calendar records easier to compare. Instead of reading 100 separate PDFs or district calendar pages, users can quickly analyze the most visible patterns in U.S. public school calendar data.
@@ -544,7 +541,7 @@ useHead({
             </p>
           </section>
 
-          <section id="trend-context" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="trend-context" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Why These School Calendar Trends Exist</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               The dataset shows that August starts, May or June endings, winter break clusters, and spring break variation are not random. District calendars reflect academic requirements, local operations, staffing calendars, board approval timelines, and regional planning patterns.
@@ -564,7 +561,7 @@ useHead({
             </p>
           </section>
 
-          <section id="contains" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="contains" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">What This School Calendar Dataset Contains</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               Each CSV row represents one reviewed district calendar record for the 2026-2027 school year. The dataset is intentionally compact so it can be opened in spreadsheet tools, cited in education data analysis, or combined with local reporting notes for a school year calendar dataset or K-12 education data project.
@@ -601,7 +598,7 @@ useHead({
             </div>
           </section>
 
-          <section id="preview" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="preview" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">CSV Preview: First 10 Dataset Records</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               This preview shows the first 10 rows from the public school calendar CSV so researchers can inspect the structure before downloading the full 100-record dataset.
@@ -640,7 +637,7 @@ useHead({
             </div>
           </section>
 
-          <section id="fields" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="fields" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Field Definitions</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               The public CSV is intentionally compact so it can be cited and reused easily. Each row represents one reviewed district calendar record for the 2026-2027 school year.
@@ -665,7 +662,7 @@ useHead({
             </div>
           </section>
 
-          <section id="methodology" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="methodology" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Methodology and Scope</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               This dataset is built from MySchoolDates district calendar records that are reviewed against official district calendar pages, board-approved PDFs, source calendar pages, and district-published calendar files when available.
@@ -695,7 +692,7 @@ useHead({
             </div>
           </section>
 
-          <section id="research-team" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="research-team" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Research Team and Review Notes</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               This dataset is prepared by Denis Dou and the MySchoolDates calendar data workflow for readers who need a reusable U.S. school calendar dataset rather than a single district calendar lookup page.
@@ -742,7 +739,7 @@ useHead({
             </div>
           </section>
 
-          <section id="faq" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="faq" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">School Calendar Dataset FAQ</h2>
             <div class="mt-5 divide-y divide-gray-100">
               <details
@@ -758,7 +755,7 @@ useHead({
             </div>
           </section>
 
-          <section id="version-history" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="version-history" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Dataset Version History</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               Version notes help researchers and publishers understand which release they cited or downloaded.
@@ -783,7 +780,7 @@ useHead({
             </div>
           </section>
 
-          <section id="citation" class="rounded-xl border border-gray-200 bg-white p-6">
+          <section id="citation" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">How to Cite This Dataset</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
               Use this citation when referencing the CSV dataset in education analysis, local planning articles, data notes, or research summaries.
@@ -796,7 +793,7 @@ useHead({
             </p>
           </section>
 
-          <section class="rounded-xl border border-gray-200 bg-white p-6">
+          <section class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Related School Calendar Data Assets</h2>
             <div class="mt-5 grid gap-3">
               <NuxtLink
@@ -813,7 +810,7 @@ useHead({
         </div>
 
         <aside class="space-y-4">
-          <div class="sticky top-4 rounded-xl border border-gray-200 bg-white p-5">
+          <div class="sticky top-4 rounded-lg border border-gray-200 bg-white p-5">
             <h2 class="text-sm font-semibold uppercase tracking-wide text-gray-500">Dataset Links</h2>
             <nav class="mt-3 grid gap-2 text-sm">
               <a href="#download" class="text-blue-600 hover:underline">Download CSV</a>

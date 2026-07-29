@@ -521,7 +521,7 @@ const sectionTitle = computed(() =>
 </script>
 
 <template>
-  <div id="calendar-statistics" class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
+  <div id="calendar-statistics" class="bg-white rounded-lg border border-gray-200 p-6 scroll-mt-24">
     <h2 class="text-lg font-semibold text-gray-900 mb-4">{{ sectionTitle }}</h2>
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
       <div v-for="fact in facts" :key="fact.key" class="text-center p-3 bg-gray-50 rounded-lg">

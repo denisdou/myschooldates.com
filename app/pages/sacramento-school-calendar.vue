@@ -50,7 +50,7 @@ useHead({
     </section>
 
     <div class="max-w-4xl mx-auto px-4 py-10 space-y-8">
-      <section class="bg-white rounded-xl border border-gray-200 p-6">
+      <section class="bg-white rounded-lg border border-gray-200 p-6">
         <h2 class="text-xl font-semibold text-gray-900 mb-4">
           Sacramento Area Calendar Links
         </h2>
@@ -73,7 +73,7 @@ useHead({
         </div>
       </section>
 
-      <section class="bg-white rounded-xl border border-gray-200 p-6">
+      <section class="bg-white rounded-lg border border-gray-200 p-6">
         <h2 class="text-xl font-semibold text-gray-900 mb-3">
           Why Sacramento Area Dates Need Separate Checks
         </h2>
@@ -82,7 +82,7 @@ useHead({
         </p>
       </section>
 
-      <section class="bg-white rounded-xl border border-gray-200 p-6">
+      <section class="bg-white rounded-lg border border-gray-200 p-6">
         <h2 class="text-xl font-semibold text-gray-900 mb-3">
           Verification
         </h2>

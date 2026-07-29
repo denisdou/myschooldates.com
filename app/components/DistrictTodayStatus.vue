@@ -72,7 +72,7 @@ const schoolYearRange = computed(() =>
   <ClientOnly>
     <div
       v-if="todayStatus"
-      class="rounded-2xl px-6 py-6"
+      class="rounded-lg px-6 py-6"
       :class="{
         'bg-green-50 border border-green-200': todayStatus.type === 'school',
         'bg-blue-50 border border-blue-200': todayStatus.type === 'upcoming',
@@ -112,7 +112,7 @@ const schoolYearRange = computed(() =>
       <slot name="cta" />
     </div>
     <template #fallback>
-      <div class="rounded-2xl px-6 py-6 bg-blue-50 border border-blue-200">
+      <div class="rounded-lg px-6 py-6 bg-blue-50 border border-blue-200">
         <div class="text-xs font-semibold uppercase tracking-wide mb-1 text-blue-700">School Year Status</div>
         <div class="font-bold text-2xl leading-tight text-blue-800">{{ props.cal.schoolYear }} school year</div>
         <div class="text-sm mt-1 text-blue-700">{{ schoolYearRange }}</div>

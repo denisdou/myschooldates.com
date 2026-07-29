@@ -621,6 +621,8 @@ const hideDatasetSchema = computed(() => Boolean((cal.value as any)?.hideDataset
 const spatialCoverageOverride = (cal.value as any)?.schemaSpatialCoverage ?? (cal.value as any)?.meta?.schemaSpatialCoverage ?? (district.value as any)?.schemaSpatialCoverage ?? (district.value as any)?.meta?.schemaSpatialCoverage
 const spatialCoverageName = typeof spatialCoverageOverride === 'string'
   ? spatialCoverageOverride
+  : spatialCoverageOverride?.name
+    ? spatialCoverageOverride.name
   : [district.value.county, district.value.state].filter(Boolean).join(', ')
 const datasetTemporalCoverage = computed(() => {
   const start = (cal.value as any)?.temporalCoverageStart || cal.value.firstDay
@@ -642,12 +644,7 @@ const datasetEntity = hideDatasetSchema.value ? null : {
   ...(pageDateModified ? { dateModified: pageDateModified } : {}),
   temporalCoverage: datasetTemporalCoverage.value,
   ...(spatialCoverageName ? {
-    spatialCoverage: typeof spatialCoverageOverride === 'object'
-      ? spatialCoverageOverride
-      : {
-          '@type': 'Place',
-          name: spatialCoverageName,
-        },
+    spatialCoverage: spatialCoverageName,
   } : {}),
   audience: {
     '@type': 'Audience',
@@ -917,32 +914,33 @@ useHead({
 </script>
 
 <template>
-  <div>
-    <main class="max-w-4xl mx-auto px-4 py-8 space-y-8">
+  <main class="py-8">
 
-      <!-- Breadcrumb -->
-      <Breadcrumb :items="[
-        { label: 'Home', href: '/' },
-        { label: district!.state, href: `/${district!.state.toLowerCase().replace(/\s+/g, '-')}` },
-        { label: district!.name, href: `/${slug}` },
-        { label: year },
-      ]" />
+      <section class="district-page-section">
+        <div class="district-page-inner space-y-8">
+          <!-- Breadcrumb -->
+          <Breadcrumb :items="[
+            { label: 'Home', href: '/' },
+            { label: district!.state, href: `/${district!.state.toLowerCase().replace(/\s+/g, '-')}` },
+            { label: district!.name, href: `/${slug}` },
+            { label: year },
+          ]" />
 
-      <!-- Notice for non-current year (past or future) -->
-      <div v-if="!isCurrentYear" class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-start gap-3">
-        <svg class="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-        <p class="text-sm text-blue-700">
-          You're viewing the <strong>{{ isFutureYear ? 'upcoming' : 'archived' }} {{ year }}</strong> calendar.
-          <NuxtLink :to="`/${slug}`" class="underline font-medium">View the current {{ district!.currentSchoolYear }} calendar →</NuxtLink>
-        </p>
-      </div>
+          <!-- Notice for non-current year (past or future) -->
+          <div v-if="!isCurrentYear" class="bg-blue-50 border border-blue-200 rounded-lg p-4 flex items-start gap-3">
+            <svg class="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <p class="text-sm text-blue-700">
+              You're viewing the <strong>{{ isFutureYear ? 'upcoming' : 'archived' }} {{ year }}</strong> calendar.
+              <NuxtLink :to="`/${slug}`" class="underline font-medium">View the current {{ district!.currentSchoolYear }} calendar →</NuxtLink>
+            </p>
+          </div>
 
-      <!-- Title -->
-      <div>
+          <!-- Title -->
+          <div>
         <h1 class="text-3xl font-bold text-gray-900">
           {{ (cal as any).pageHeading || `${district!.name} Calendar ${displaySchoolYear}` }}
         </h1>
-        <div class="mt-3 text-gray-600 leading-relaxed space-y-2">
+        <div class="mt-3 text-[hsl(var(--rds-ink-muted)/1)] leading-relaxed space-y-2">
           <p v-if="heroSummary">
             {{ heroSummary }}
           </p>
@@ -956,7 +954,7 @@ useHead({
               {{ formatShortDate(springBreak.start) }}–{{ formatShortDate(springBreak.end) }}<template v-if="springBreakReturnDate">, with students returning {{ formatShortDate(springBreakReturnDate) }}</template>.
             </span>
           </p>
-          <div v-if="heroQuickDates.length" class="mt-4 rounded-xl border border-gray-200 bg-white p-4">
+          <div v-if="heroQuickDates.length" class="mt-4 rounded-lg border border-rds-hairline bg-rds-surface-panel p-4">
             <p class="text-sm font-semibold text-gray-900">{{ displaySchoolYear }} Dates at a Glance</p>
             <ul class="mt-2 grid gap-1.5 text-sm text-gray-700 sm:grid-cols-2">
               <li v-for="item in heroQuickDates" :key="`${item.label}-${item.value}`">
@@ -964,13 +962,13 @@ useHead({
               </li>
             </ul>
           </div>
-          <p v-if="heroSummaryFacts.length" class="text-sm text-gray-500">
+          <p v-if="heroSummaryFacts.length" class="mt-3 text-sm text-[#7b756d]">
             {{ heroSummaryFacts.join(' · ') }}
           </p>
-          <p class="text-xs text-gray-600">
+          <p class="mt-2 text-xs text-gray-600">
             MySchoolDates is an independent calendar reference and is not affiliated with {{ district!.name }}.
           </p>
-          <dl v-if="verifiedDate" class="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-xs text-gray-500">
+          <dl v-if="verifiedDate" class="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-xs text-gray-500">
             <div v-if="!((cal as any).hideHeroReviewedField || (cal as any).meta?.hideHeroReviewedField)">
               <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Reviewed</dt>
               <dd class="ml-1 inline font-medium text-gray-700">{{ verifiedDate }}</dd>
@@ -978,7 +976,7 @@ useHead({
             <div>
               <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Reviewed by</dt>
               <dd class="ml-1 inline font-medium">
-                <NuxtLink to="/author" class="text-blue-600 hover:underline">{{ editorialAuthorName }}</NuxtLink>
+                <NuxtLink to="/author" class="text-[#0f5d6b] hover:underline">{{ editorialAuthorName }}</NuxtLink>
               </dd>
             </div>
             <div v-if="!((cal as any).hideHeroUpdatedField || (cal as any).meta?.hideHeroUpdatedField)">
@@ -986,13 +984,13 @@ useHead({
               <dd class="ml-1 inline font-medium text-gray-700">{{ verifiedDate }}</dd>
             </div>
           </dl>
-          <div v-if="verifiedDate && !((cal as any).hideHeroVerifiedBadge || (cal as any).meta?.hideHeroVerifiedBadge)" class="mt-3 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full bg-green-50 text-green-700 border border-green-200">
+          <div v-if="verifiedDate && !((cal as any).hideHeroVerifiedBadge || (cal as any).meta?.hideHeroVerifiedBadge)" class="mt-5 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg bg-green-50 text-green-700 border border-green-200">
             <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
             </svg>
             <span>{{ verificationBadgeText || `Checked against the official ${district.shortName || district.name} calendar on ${verifiedDate}.` }}</span>
           </div>
-          <details v-if="verifiedDate && !hideHeroVerificationProcess" class="mt-3 rounded-xl border border-gray-200 bg-white p-3">
+          <details v-if="verifiedDate && !hideHeroVerificationProcess" class="mt-5 rounded-lg border border-rds-hairline bg-rds-surface-panel p-3">
             <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-gray-500">How verified</summary>
             <ul class="mt-2 grid gap-1.5 text-xs text-gray-600 sm:grid-cols-3">
               <li class="flex items-start gap-1.5">
@@ -1010,36 +1008,45 @@ useHead({
             </ul>
           </details>
         </div>
-      </div>
+          </div>
+        </div>
+      </section>
 
-      <nav v-if="customJumpNavigation.length" aria-label="Page sections" class="sticky top-2 z-20 -mx-4 flex gap-2 overflow-x-auto border-y border-gray-100 bg-white/95 px-4 py-2 text-xs shadow-sm backdrop-blur sm:mx-0 sm:flex-wrap sm:rounded-xl sm:border">
-        <a
-          v-for="item in customJumpNavigation"
-          :key="item.label"
-          :href="item.href || `#${item.id}`"
-          class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors"
-        >{{ item.label }}</a>
+      <nav v-if="customJumpNavigation.length" aria-label="Page sections" class="sticky top-0 z-20 my-8 border-y border-[#ddd7cc] bg-[#f7f5f0]/95 backdrop-blur">
+        <div class="district-page-inner flex items-center gap-7 overflow-x-auto py-4 text-sm">
+          <span class="flex-shrink-0 font-semibold text-[#7b756d]">On this page</span>
+          <a
+            v-for="item in customJumpNavigation"
+            :key="item.label"
+            :href="item.href || `#${item.id}`"
+            class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors"
+          >{{ item.label }}</a>
+        </div>
       </nav>
-      <nav v-else aria-label="Page sections" class="sticky top-2 z-20 -mx-4 flex gap-2 overflow-x-auto border-y border-gray-100 bg-white/95 px-4 py-2 text-xs shadow-sm backdrop-blur sm:mx-0 sm:flex-wrap sm:rounded-xl sm:border">
-        <a v-if="!hiddenSections.has('keyDateCards')" href="#key-dates" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Key Dates</a>
-        <a v-if="summarySectionId" :href="`#${summarySectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Summary</a>
-        <a v-if="overviewSectionId" :href="`#${overviewSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Overview</a>
-        <a href="#add-to-calendar" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">PDF &amp; Calendar</a>
-        <a v-if="downloadGuideSectionId" :href="`#${downloadGuideSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Download Guide</a>
-        <a href="#all-dates" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Dates</a>
-        <a v-if="hasBreaksSection" href="#breaks" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Breaks</a>
-        <a v-if="changesSectionId" :href="`#${changesSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Changes</a>
-        <a v-if="planningSectionId" :href="`#${planningSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Planning</a>
-        <a v-if="importantDatesSectionId" :href="`#${importantDatesSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Important Dates</a>
-        <a v-if="earlyDismissalSectionId" :href="`#${earlyDismissalSectionId}`" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Early Release</a>
-        <a v-if="!hiddenSections.has('comparison')" href="#comparison" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">Comparison</a>
-        <a href="#faq" class="flex-shrink-0 rounded-full border border-gray-200 bg-white px-3 py-1.5 font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 transition-colors">FAQ</a>
+      <nav v-else aria-label="Page sections" class="sticky top-0 z-20 my-8 border-y border-[#ddd7cc] bg-[#f7f5f0]/95 backdrop-blur">
+        <div class="district-page-inner flex items-center gap-7 overflow-x-auto py-4 text-sm">
+          <span class="flex-shrink-0 font-semibold text-[#7b756d]">On this page</span>
+          <a v-if="!hiddenSections.has('keyDateCards')" href="#key-dates" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Key Dates</a>
+          <a v-if="summarySectionId" :href="`#${summarySectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Summary</a>
+          <a v-if="overviewSectionId" :href="`#${overviewSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Overview</a>
+          <a href="#add-to-calendar" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">PDF &amp; Calendar</a>
+          <a v-if="downloadGuideSectionId" :href="`#${downloadGuideSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Download Guide</a>
+          <a href="#all-dates" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Dates</a>
+          <a v-if="hasBreaksSection" href="#breaks" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Breaks</a>
+          <a v-if="changesSectionId" :href="`#${changesSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Changes</a>
+          <a v-if="planningSectionId" :href="`#${planningSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Planning</a>
+          <a v-if="importantDatesSectionId" :href="`#${importantDatesSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Important Dates</a>
+          <a v-if="earlyDismissalSectionId" :href="`#${earlyDismissalSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Early Release</a>
+          <a v-if="!hiddenSections.has('comparison')" href="#comparison" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Comparison</a>
+          <a href="#faq" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">FAQ</a>
+        </div>
       </nav>
 
+      <div class="district-page-content">
       <DistrictCustomSections :sections="customSections" position="afterVerification" />
 
       <!-- Calendar track notice -->
-      <div v-if="hasCalendarTrackCaution" class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex gap-3">
+      <div v-if="hasCalendarTrackCaution" class="bg-blue-50 border border-blue-200 rounded-lg p-4 flex gap-3">
         <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
@@ -1078,14 +1085,14 @@ useHead({
       />
       <DistrictCustomSections :sections="customSections" position="afterQuickFacts" />
 
-      <div v-if="!hiddenSections.has('downloadCta')" class="rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div v-if="!hiddenSections.has('downloadCta')" class="rounded-lg border border-blue-100 bg-blue-50 px-4 py-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p class="text-sm text-blue-900">
           Download the dates for Google Calendar, Apple Calendar, or Outlook, or view the district's official PDF.
         </p>
         <div class="flex flex-wrap gap-2">
           <a
             href="#add-to-calendar"
-            class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-700 transition-colors"
+            class="inline-flex items-center justify-center rounded-lg bg-[#0f5d6b] px-3 py-2 text-sm font-semibold text-white hover:bg-[#0b4c58] transition-colors"
           >
             Download ICS Calendar
           </a>
@@ -1094,7 +1101,7 @@ useHead({
             :href="(cal as any).sourcePdfUrl || (cal as any).printablePdfUrl"
             target="_blank"
             rel="noopener"
-            class="inline-flex items-center justify-center rounded-lg border border-blue-200 bg-white px-3 py-2 text-sm font-semibold text-blue-700 hover:border-blue-300 hover:bg-blue-50 transition-colors"
+            class="inline-flex items-center justify-center rounded-lg border border-[#d9d2c7] bg-[#fbfaf7] px-3 py-2 text-sm font-semibold text-[#0f5d6b] hover:border-[#b8c9c9] hover:bg-[#e6f0ef] transition-colors"
           >
             {{ (cal as any).sourcePdfUrl ? 'Download PDF' : 'Download Printable PDF' }}
             <span class="sr-only">(opens in a new tab)</span>
@@ -1106,7 +1113,7 @@ useHead({
       <DistrictTodayStatus v-if="!hiddenSections.has('todayStatus')" :cal="cal!" />
 
       <!-- Alternate calendars notice -->
-      <div v-if="(cal as any)?.alternateCalendars?.length" class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
+      <div v-if="(cal as any)?.alternateCalendars?.length" class="bg-amber-50 border border-amber-200 rounded-lg p-4 flex gap-3">
         <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
@@ -1137,19 +1144,19 @@ useHead({
       />
 
       <!-- Break Summary -->
-      <div v-if="breaks.length && !hiddenSections.has('breaks')" id="breaks" class="bg-white rounded-xl border border-gray-200 p-6 scroll-mt-24">
-        <h2 class="text-lg font-semibold text-gray-900 mb-4">{{ breaksTitle }}</h2>
+      <div v-if="breaks.length && !hiddenSections.has('breaks')" id="breaks" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
+        <h2 class="text-lg font-semibold text-[#1f2933] mb-4">{{ breaksTitle }}</h2>
         <div class="space-y-3">
-          <div v-for="b in breaks" :key="b.name" class="flex flex-col items-start gap-2 py-3 border-b border-gray-50 last:border-0 sm:flex-row sm:items-center sm:justify-between">
+          <div v-for="b in breaks" :key="b.name" class="flex flex-col items-start gap-2 py-3 border-b border-[#eee9df] last:border-0 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <div class="font-medium text-gray-900">{{ breakDisplayName(b.name) }}</div>
-              <div class="text-sm text-gray-500">{{ formatCompactDateRange(b.start, b.end) }}</div>
-              <p v-if="breakNoteFor(b)" class="mt-1 text-sm text-gray-600">{{ breakNoteFor(b) }}</p>
-              <div v-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-purple-600 mt-0.5 font-medium">
+              <div class="font-medium text-[#1f2933]">{{ breakDisplayName(b.name) }}</div>
+              <div class="text-sm text-[#7b756d]">{{ formatCompactDateRange(b.start, b.end) }}</div>
+              <p v-if="breakNoteFor(b)" class="mt-1 text-sm text-[#6b645c]">{{ breakNoteFor(b) }}</p>
+              <div v-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-[#5b4b6f] mt-0.5 font-medium">
                 In progress
               </div>
             </div>
-            <div v-if="!hideBreakDurationBadges" class="self-start text-sm font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full sm:self-auto">{{ breakDurationLabel(b) }}</div>
+            <div v-if="!hideBreakDurationBadges" class="self-start text-sm font-semibold text-[#5b4b6f] bg-[#eee9f3] px-3 py-1 rounded-lg sm:self-auto">{{ breakDurationLabel(b) }}</div>
           </div>
         </div>
       </div>
@@ -1194,13 +1201,13 @@ useHead({
 
       <!-- Year Switcher -->
       <div v-if="availableYears.length > 1" class="flex items-center gap-2 flex-wrap">
-        <span class="text-sm text-gray-500">Other school years:</span>
+        <span class="text-sm text-[#7b756d]">Other school years:</span>
         <NuxtLink
           v-for="y in availableYears"
           :key="y"
           :to="yearLink(y)"
-          class="text-sm px-3 py-1 rounded-full border transition-colors"
-          :class="y === year ? 'border-blue-200 bg-blue-50 text-blue-700 font-medium' : 'border-gray-300 text-gray-600 hover:border-blue-400 hover:text-blue-600'"
+          class="text-sm px-3 py-1 rounded-lg border transition-colors"
+          :class="y === year ? 'border-[#b8c9c9] bg-[#e6f0ef] text-[#0f5d6b] font-medium' : 'border-[#d9d2c7] text-[#6b645c] hover:border-[#b8c9c9] hover:text-[#0f5d6b]'"
         >
           {{ displaySchoolYearLabel(y) }}
         </NuxtLink>
@@ -1289,11 +1296,11 @@ useHead({
         :description="(district as any).relatedDistrictsDescription"
       />
 
-      <section v-if="!hiddenSections.has('nationalTrends')" class="rounded-xl border border-gray-200 bg-white p-6">
+      <section v-if="!hiddenSections.has('nationalTrends')" class="rounded-lg border border-rds-hairline bg-rds-surface-panel p-6">
         <h2 class="text-lg font-semibold text-gray-900 mb-2">{{ district!.shortName || district!.name }} in National Calendar Trends</h2>
         <p class="text-sm leading-relaxed text-gray-600">
           To compare this district calendar with broader U.S. start-date, break, and end-date patterns, see the
-          <NuxtLink to="/school-calendar-trends/2026-2027-report" class="font-semibold text-blue-600 hover:underline">
+          <NuxtLink to="/school-calendar-trends/2026-2027-report" class="font-semibold text-[#0f5d6b] hover:underline">
             2026-2027 School Calendar Trends Report
           </NuxtLink>.
         </p>
@@ -1301,11 +1308,11 @@ useHead({
 
       <!-- Back to current -->
       <div class="text-center">
-        <NuxtLink :to="`/${slug}`" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+        <NuxtLink :to="`/${slug}`" class="text-[#0f5d6b] hover:text-[#0b4c58] text-sm font-medium">
           ← Back to {{ district!.name }} current calendar ({{ district!.currentSchoolYear }})
         </NuxtLink>
       </div>
+      </div>
 
-    </main>
-  </div>
+  </main>
 </template>

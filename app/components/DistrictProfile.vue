@@ -13,7 +13,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="bg-white rounded-xl border border-gray-200 p-6">
+  <div class="bg-white rounded-lg border border-gray-200 p-6">
     <h2 class="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-4">{{ title || 'District Profile' }}</h2>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-4">
       <div v-if="studentCount">

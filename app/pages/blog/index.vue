@@ -46,10 +46,10 @@ const researchLinks = [
       <article
         v-for="post in posts"
         :key="post.href"
-        class="rounded-xl border border-gray-200 bg-white p-6 hover:border-blue-200 hover:shadow-sm transition"
+        class="rounded-lg border border-gray-200 bg-white p-6 hover:border-blue-200 hover:shadow-sm transition"
       >
         <div class="flex flex-wrap items-center gap-2 text-xs text-gray-500">
-          <span class="rounded-full bg-blue-50 px-2.5 py-1 font-semibold text-blue-700">{{ post.tag }}</span>
+          <span class="rounded-lg bg-blue-50 px-2.5 py-1 font-semibold text-blue-700">{{ post.tag }}</span>
           <time>{{ post.date }}</time>
         </div>
         <h2 class="mt-3 text-xl font-semibold text-gray-900">
@@ -71,9 +71,9 @@ const researchLinks = [
           v-for="link in researchLinks"
           :key="link.href"
           :to="link.href"
-          class="rounded-xl border border-gray-200 bg-white p-6 hover:border-blue-200 hover:shadow-sm transition"
+          class="rounded-lg border border-gray-200 bg-white p-6 hover:border-blue-200 hover:shadow-sm transition"
         >
-          <span class="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700">{{ link.tag }}</span>
+          <span class="rounded-lg bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700">{{ link.tag }}</span>
           <h3 class="mt-3 text-lg font-semibold text-gray-900">{{ link.title }}</h3>
           <p class="mt-2 text-sm leading-relaxed text-gray-600">{{ link.description }}</p>
         </NuxtLink>
