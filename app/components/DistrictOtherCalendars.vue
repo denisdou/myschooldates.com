@@ -4,13 +4,16 @@ const { formatShortDate } = useDistrictPage()
 defineProps<{
   alternateCalendars: { label: string; type: string; firstDay?: string; pdfUrl?: string }[]
   districtName: string
+  title?: string
+  description?: string
+  buttonLabel?: string
 }>()
 </script>
 
 <template>
   <div id="other-calendars" class="bg-white rounded-lg border border-gray-200 p-6">
-    <h2 class="text-lg font-semibold text-gray-900 mb-1">Other Official Calendars</h2>
-    <p class="text-sm text-gray-500 mb-4">{{ districtName }} publishes separate calendars for specific programs.</p>
+    <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ title || 'Other Official Calendars' }}</h2>
+    <p class="text-sm text-gray-500 mb-4">{{ description || `${districtName} publishes separate calendars for specific programs.` }}</p>
     <ul class="space-y-0">
       <li
         v-for="alt in alternateCalendars"
@@ -31,7 +34,7 @@ defineProps<{
           <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
-          View {{ alt.label }} PDF
+          {{ buttonLabel || `View ${alt.label} PDF` }}
           <span class="sr-only">(opens in a new tab)</span>
         </a>
       </li>

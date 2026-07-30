@@ -1,0 +1,173 @@
+{
+  "institutionId": "baltimore-city-public-schools",
+  "name": "Baltimore City Public Schools",
+  "shortName": "City Schools",
+  "slug": "baltimore-city-public-schools-calendar",
+  "state": "Maryland",
+  "stateCode": "MD",
+  "city": "Baltimore",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "Pre-K",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.baltimorecityschools.org",
+  "calendarPage": "https://www.baltimorecityschools.org/events",
+  "logo": "https://cmsv2-assets.apptegy.net/uploads/16360/logo/17714/City-Schools-logo.png",
+  "timezone": "America/New_York",
+  "county": "Baltimore City",
+  "region": "Maryland",
+  "metro": "Baltimore",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "hideHeroVerificationProcess": true,
+  "districtFact": "Baltimore City Public Schools publishes a one-page school year calendar that applies to most schools, while noting that some charter schools may use different start dates and school leaders may announce school-specific calendar changes.",
+  "about": [
+    {
+      "title": "About Baltimore City Public Schools",
+      "content": "Baltimore City Public Schools, also called City Schools, serves students across Baltimore, Maryland. This page summarizes the districtwide school year calendar published by City Schools for most schools."
+    },
+    {
+      "title": "How to Use This City Schools Calendar",
+      "content": "Use this page for districtwide dates such as the first day of school, staff return, schools-closed dates, professional development days, early release days, conference windows, winter break, spring break, inclement weather recovery days, and the scheduled last day. Some charter schools and individual schools may publish different or additional dates."
+    }
+  ],
+  "planningTips": {
+    "title": "What Baltimore City Families Should Check",
+    "content": [
+      "The official calendar says it applies to most schools, but families should watch school leader updates because some charter schools may use different dates.",
+      "Early release means schools release four hours after the start time, not a standard half day.",
+      "Observance days do not always mean schools are closed. The calendar says first-time testing and field trips should not be scheduled on those days.",
+      "Conference windows can affect family schedules even when the calendar does not list every school as closed.",
+      "Inclement weather recovery days near the end of the year may change the scheduled last day."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "city-schools-calendar-scope",
+      "label": "Which City Schools Calendar This Covers",
+      "position": "afterAbout",
+      "content": "The official Baltimore City Public Schools calendar says it applies to most schools. Some charter schools may have a different start date, and individual school leaders may announce school-specific calendar dates. Use the district calendar for systemwide planning, then confirm school-specific events with your school."
+    },
+    {
+      "id": "city-schools-early-release-rule",
+      "label": "Early Release Means Four Hours After Start Time",
+      "position": "afterKeyDates",
+      "content": "City Schools defines early release days as days when schools release four hours after the start time. These dates are important for transportation and after-school care because they are not simply regular school days with a small schedule change."
+    },
+    {
+      "id": "city-schools-observance-days",
+      "label": "Observance Days Are Different From Closures",
+      "position": "afterKeyDates",
+      "content": "The official calendar uses observance days for dates when first-time testing and field trips should not be scheduled and schools should make a reasonable effort to avoid athletic events. Observance days do not always mean schools are closed."
+    },
+    {
+      "id": "city-schools-inclement-weather-recovery",
+      "label": "Inclement Weather Recovery Days",
+      "position": "beforeFaq",
+      "content": "City Schools lists inclement weather recovery days after the scheduled last day. If the district needs recovery days, the final week of school can change. Families should confirm the latest district calendar before relying on June travel or camp start dates."
+    },
+    {
+      "id": "city-schools-calendar-scope-note",
+      "label": "What This Calendar Covers",
+      "position": "beforeFaq",
+      "content": "This page covers the districtwide Baltimore City Public Schools calendar. It does not replace school-specific calendars for testing, athletics, performances, graduation details, charter school schedules, emergency notices, or campus events."
+    }
+  ],
+  "compareIntro": "Compare the Baltimore City Public Schools calendar with nearby Maryland districts when planning childcare, shared custody schedules, moves, school-year travel, or work routines across the Baltimore region.",
+  "comparisonTitle": "Baltimore City Calendar Compared With Nearby Districts",
+  "faqDisplayLimit": 8,
+  "faqSchemaQuestions": [
+    "Which Baltimore City Public Schools calendar does this page summarize?",
+    "Does the City Schools calendar apply to every school?",
+    "What does early release mean in Baltimore City Public Schools?",
+    "Are observance days the same as school closures?",
+    "How does City Schools handle inclement weather recovery days?",
+    "Can I add the Baltimore City calendar to Google Calendar?",
+    "Where should families verify Baltimore City school calendar updates?"
+  ],
+  "districtFaqs": [
+    {
+      "q": "Which Baltimore City Public Schools calendar does this page summarize?",
+      "a": "This page summarizes the official Baltimore City Public Schools calendar for the selected school year."
+    },
+    {
+      "q": "Does the City Schools calendar apply to every school?",
+      "a": "The official calendar says it applies to most schools. Some charter schools and individual schools may publish different or additional dates, so families should check school leader updates."
+    },
+    {
+      "q": "What does early release mean in Baltimore City Public Schools?",
+      "a": "The official calendar says early release days are days when schools release four hours after the start time."
+    },
+    {
+      "q": "Are observance days the same as school closures?",
+      "a": "No. Observance days do not always mean schools are closed. The calendar says first-time testing and field trips should not be scheduled and schools should make a reasonable effort to avoid athletic events."
+    },
+    {
+      "q": "How does City Schools handle inclement weather recovery days?",
+      "a": "City Schools lists inclement weather recovery days after the scheduled last day. If the district needs recovery days, those dates may affect the final week of school."
+    },
+    {
+      "q": "Can I add the Baltimore City calendar to Google Calendar?",
+      "a": "Yes. Download the .ics file from this page and import it into Google Calendar, Apple Calendar, or Outlook. The file is a one-time import and does not automatically sync with later City Schools revisions."
+    },
+    {
+      "q": "Where should families verify Baltimore City school calendar updates?",
+      "a": "Use the official Baltimore City Public Schools events page and district announcements for final confirmation. MySchoolDates is an independent calendar reference and is not affiliated with City Schools."
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Baltimore County Public Schools",
+      "slug": "baltimore-county-school-calendar",
+      "state": "Maryland",
+      "comparisonLabel": "Baltimore County Public Schools",
+      "reason": "Closest county district for comparing start dates, breaks, professional days, and recovery-day rules."
+    },
+    {
+      "name": "Howard County Public School System",
+      "slug": "howard-county-school-calendar",
+      "state": "Maryland",
+      "comparisonLabel": "Howard County Public School System",
+      "reason": "Nearby central Maryland district with early closings, conference dates, and inclement weather days."
+    },
+    {
+      "name": "Prince George's County Public Schools",
+      "slug": "prince-georges-county-school-calendar",
+      "state": "Maryland",
+      "comparisonLabel": "Prince George's County Public Schools",
+      "reason": "Large Maryland district with its own holidays, breaks, and professional day pattern."
+    },
+    {
+      "name": "Anne Arundel County Public Schools",
+      "slug": "anne-arundel-county-school-calendar",
+      "state": "Maryland",
+      "comparisonLabel": "Anne Arundel County Public Schools",
+      "reason": "Baltimore-Washington district useful for comparing openings, breaks, conferences, and make-up rules."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Baltimore City Public Schools official website",
+      "url": "https://www.baltimorecityschools.org"
+    },
+    {
+      "label": "Baltimore City Public Schools events calendar",
+      "url": "https://www.baltimorecityschools.org/events"
+    }
+  ]
+}

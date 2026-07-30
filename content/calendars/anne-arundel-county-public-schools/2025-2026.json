@@ -1,0 +1,127 @@
+{
+  "institutionId": "anne-arundel-county-public-schools",
+  "schoolYear": "2025-2026",
+  "firstDay": "2025-08-25",
+  "lastDay": "2026-06-17",
+  "sourceUrl": "https://www.aacps.org/o/aacps/page/school-calendar",
+  "sourcePdfUrl": "",
+  "sourceCalendarName": "Anne Arundel County Public Schools 2025-2026 School Year Calendar PDF",
+  "sourceVersion": "Adopted by the Board on 1/8/25; current as of 7/15/25",
+  "lastVerifiedAt": "2026-07-30",
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-07-30",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "pageHeading": "Anne Arundel County Public Schools Calendar 2025-2026",
+  "seoTitle": "Anne Arundel County School Calendar 2025-2026: Dates & PDF",
+  "seoDescription": "View AACPS 2025-2026 calendar dates, including staggered openings, school holidays, early dismissals, winter and spring breaks, make-up rules, and the official calendar source.",
+  "heroSummary": "Anne Arundel County Public Schools began the 2025-2026 school year with staggered openings on Monday, August 25, 2025. Grades 1-12 opened on Tuesday, August 26, and the last scheduled student day was Wednesday, June 17, 2026.",
+  "heroSummaryFacts": [
+    "Staggered ECSE, Pre-K, and Kindergarten opening",
+    "Project Unity early dismissal days",
+    "Three weather make-up days built into the end of the year"
+  ],
+  "calendarNotes": "The AACPS 2025-2026 calendar begins with teacher onboarding and opening activities before students arrive. Grades 1-5 and grades 6 and 9 begin on August 25, while grades 1-12 begin on August 26. ECSE, Pre-K, and Kindergarten families follow a separate conference and staggered opening schedule from August 25 through September 2. The calendar includes Project Unity two-hour early dismissal days on October 14, December 9, February 10, and March 17, with additional early dismissals at marking period and year-end points. Parent-teacher conferences close schools for all students on November 24-25. Easter/Spring Break runs March 30-April 6, and the calendar notes three make-up days at the end of the year.",
+  "calendarFaqs": [
+    {
+      "q": "When did AACPS start school in 2025?",
+      "a": "AACPS opened for grades 1-5 and grades 6 and 9 on Monday, August 25, 2025. Grades 1-12 opened on Tuesday, August 26, 2025."
+    },
+    {
+      "q": "When was AACPS Spring Break in 2026?",
+      "a": "AACPS Easter/Spring Break ran March 30-April 6, 2026, with schools and central offices closed."
+    },
+    {
+      "q": "When was the last student day for AACPS in 2026?",
+      "a": "The official calendar listed Wednesday, June 17, 2026 as the last day for students, with a two-hour early dismissal."
+    },
+    {
+      "q": "Did AACPS use staggered openings in 2025-2026?",
+      "a": "Yes. ECSE, Pre-K, and Kindergarten used conferences and staggered openings from August 25 through September 2."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "aacps-2025-2026-opening-sequence",
+      "label": "AACPS 2025-2026 Opening Sequence",
+      "position": "afterKeyDates",
+      "content": "AACPS did not use one single opening day for every student group in 2025-2026. Families with younger students needed to follow the ECSE, Pre-K, and Kindergarten staggered opening chart.",
+      "table": {
+        "columns": ["Date", "Student group"],
+        "rows": [
+          ["August 25, 2025", "Grades 1-5 and grades 6 and 9 only"],
+          ["August 26, 2025", "Grades 1-12"],
+          ["August 25-September 2, 2025", "ECSE, Pre-K, and Kindergarten conferences and staggered openings"]
+        ]
+      }
+    },
+    {
+      "id": "aacps-2025-2026-easy-to-miss-dates",
+      "label": "Easy-to-Miss AACPS Dates",
+      "position": "afterKeyDates",
+      "content": "The dates below were especially important for family planning because they changed attendance, dismissal, or afternoon ECSE routines without being ordinary full-week breaks.",
+      "table": {
+        "columns": ["Date", "What changes"],
+        "rows": [
+          ["October 14, 2025", "Two-hour early dismissal; no afternoon ECSE; Project Unity and professional development"],
+          ["November 12, 2025", "Elementary and middle school students only: schools closed; high schools open"],
+          ["November 24-25, 2025", "Schools closed for all students for parent-teacher conferences"],
+          ["January 15-16, 2026", "Two-hour early dismissal; marking period ending and teacher workday notes"],
+          ["June 16-17, 2026", "End-of-year early dismissal and final student day sequence"]
+        ]
+      }
+    }
+  ],
+  "events": [
+    { "date": "2025-08-11", "name": "New Teacher Onboarding Activities Begin", "type": "staff_workday" },
+    { "date": "2025-08-14", "name": "New Teacher Onboarding Activities End", "type": "staff_workday" },
+    { "date": "2025-08-15", "name": "Opening Activities for All Teachers Begin", "type": "teacher_workday" },
+    { "date": "2025-08-22", "name": "Opening Activities for All Teachers End", "type": "teacher_workday" },
+    { "date": "2025-08-25", "name": "Schools Open for Grades 1-5 and Grades 6 and 9 Only", "type": "school_start" },
+    { "date": "2025-08-25", "name": "ECSE, Pre-K, and Kindergarten Conferences and Staggered Openings Begin", "type": "conference" },
+    { "date": "2025-08-26", "name": "Schools Open for Grades 1-12", "type": "school_start" },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
+    { "date": "2025-09-02", "name": "ECSE, Pre-K, and Kindergarten Conferences and Staggered Openings End", "type": "conference" },
+    { "date": "2025-09-23", "name": "Rosh Hashanah", "type": "holiday" },
+    { "date": "2025-10-02", "name": "Yom Kippur", "type": "holiday" },
+    { "date": "2025-10-14", "name": "Two-Hour Early Dismissal - Project Unity Day", "type": "early_release" },
+    { "date": "2025-10-20", "name": "Diwali", "type": "observance" },
+    { "date": "2025-10-23", "name": "First Marking Period Ends", "type": "milestone" },
+    { "date": "2025-10-26", "name": "Mo Gaba Day", "type": "observance" },
+    { "date": "2025-10-27", "name": "Two-Hour Early Dismissal", "type": "early_release" },
+    { "date": "2025-10-28", "name": "Two-Hour Early Dismissal", "type": "early_release" },
+    { "date": "2025-11-12", "name": "Elementary and Middle School Students Only - Schools Closed", "type": "partial_closure" },
+    { "date": "2025-11-24", "name": "Parent-Teacher Conferences - Schools Closed for All Students", "type": "conference" },
+    { "date": "2025-11-25", "name": "Parent-Teacher Conferences - Schools Closed for All Students", "type": "conference" },
+    { "date": "2025-11-26", "name": "Thanksgiving Holiday Begins", "type": "break_start" },
+    { "date": "2025-11-28", "name": "Thanksgiving Holiday Ends", "type": "break_end" },
+    { "date": "2025-12-09", "name": "Two-Hour Early Dismissal - Project Unity Day", "type": "early_release" },
+    { "date": "2025-12-20", "name": "Semester Break - Schools Closed for All Students", "type": "student_holiday" },
+    { "date": "2025-12-22", "name": "Christmas/Winter Break Begins", "type": "break_start" },
+    { "date": "2025-12-31", "name": "Christmas/Winter Break Ends", "type": "break_end" },
+    { "date": "2026-01-01", "name": "New Year's Day", "type": "holiday" },
+    { "date": "2026-01-15", "name": "Two-Hour Early Dismissal", "type": "early_release" },
+    { "date": "2026-01-16", "name": "Two-Hour Early Dismissal - End of Second Marking Period", "type": "early_release" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Birthday Commemoration", "type": "holiday" },
+    { "date": "2026-02-10", "name": "Two-Hour Early Dismissal - Project Unity Day", "type": "early_release" },
+    { "date": "2026-02-16", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2026-02-17", "name": "Lunar New Year", "type": "observance" },
+    { "date": "2026-03-17", "name": "Two-Hour Early Dismissal - Project Unity Day", "type": "early_release" },
+    { "date": "2026-03-20", "name": "Eid al-Fitr", "type": "holiday" },
+    { "date": "2026-03-22", "name": "Last Day for Graduating Seniors", "type": "milestone" },
+    { "date": "2026-03-25", "name": "Third Marking Period Ends", "type": "milestone" },
+    { "date": "2026-03-26", "name": "Two-Hour Early Dismissal", "type": "early_release" },
+    { "date": "2026-03-27", "name": "Two-Hour Early Dismissal", "type": "early_release" },
+    { "date": "2026-03-30", "name": "Easter/Spring Break Begins", "type": "break_start" },
+    { "date": "2026-04-06", "name": "Easter/Spring Break Ends", "type": "break_end" },
+    { "date": "2026-04-07", "name": "Schools Reopen After Easter/Spring Break", "type": "school_return" },
+    { "date": "2026-05-25", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2026-05-27", "name": "Eid al-Adha", "type": "observance" },
+    { "date": "2026-06-16", "name": "Two-Hour Early Dismissal", "type": "early_release" },
+    { "date": "2026-06-17", "name": "Last Day for Students - Two-Hour Early Dismissal", "type": "school_end" },
+    { "date": "2026-06-18", "name": "Last Day for Teachers", "type": "teacher_workday" },
+    { "date": "2026-06-19", "name": "Juneteenth", "type": "holiday" },
+    { "date": "2026-06-23", "name": "Primary Election Day", "type": "holiday" },
+    { "date": "2026-07-03", "name": "Independence Day Observed", "type": "holiday" }
+  ]
+}

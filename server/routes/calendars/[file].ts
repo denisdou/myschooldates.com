@@ -232,7 +232,7 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord) {
   const eventsForExport = calendar.events.filter(event =>
     event.type !== 'break_end' &&
     !isRangeEndEvent(event, calendar.events) &&
-    !isCoveredByBreak(event, calendar.events)
+    (event.type === 'observance' || !isCoveredByBreak(event, calendar.events))
   )
 
   for (const event of eventsForExport) {

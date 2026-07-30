@@ -9,7 +9,10 @@ const props = defineProps<{
     defaultOpen?: boolean
     image?: { src: string; alt: string; caption?: string; width?: number; height?: number }
     groups?: { label: string; items: string[] }[]
+    definitions?: { term: string; description: string }[]
     links?: { label: string; to?: string; url?: string; description?: string }[]
+    linksDisplay?: 'cards' | 'inline'
+    linksLabel?: string
     timeline?: { marker: string; label: string; detail: string }[]
     table?: { columns?: string[]; headers?: string[]; rows: string[][] }
   }[]
@@ -25,6 +28,7 @@ const filtered = computed(() => {
 
 const tableColumns = (section: (typeof props.sections)[number]) => section.table?.columns ?? section.table?.headers ?? []
 const linkTarget = (link: { to?: string; url?: string }) => link.to ?? link.url ?? ''
+const isExternalLink = (link: { to?: string; url?: string }) => /^https?:\/\//.test(linkTarget(link))
 </script>
 
 <template>
@@ -56,6 +60,16 @@ const linkTarget = (link: { to?: string; url?: string }) => link.to ?? link.url 
               </ul>
             </div>
           </div>
+          <dl v-if="section.definitions?.length" class="mt-4 divide-y divide-gray-100">
+            <div
+              v-for="item in section.definitions"
+              :key="item.term"
+              class="grid gap-1 py-3 first:pt-0 sm:grid-cols-[180px_1fr] sm:gap-4"
+            >
+              <dt class="text-sm font-semibold text-gray-900">{{ item.term }}</dt>
+              <dd class="text-sm leading-relaxed text-gray-600">{{ item.description }}</dd>
+            </div>
+          </dl>
           <figure v-if="section.image" class="mt-4 overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
             <img
               :src="section.image.src"
@@ -107,7 +121,21 @@ const linkTarget = (link: { to?: string; url?: string }) => link.to ?? link.url 
               </tbody>
             </table>
           </div>
-          <div v-if="section.links?.length" class="mt-4 grid gap-3 sm:grid-cols-2">
+          <p v-if="section.links?.length && section.linksDisplay === 'inline'" class="mt-4 text-sm text-gray-600">
+            <span class="font-medium text-gray-900">{{ section.linksLabel || 'Sources:' }}</span>
+            <template v-for="(link, linkIndex) in section.links" :key="linkTarget(link)">
+              <template v-if="linkIndex"> · </template>
+              <a
+                v-if="isExternalLink(link)"
+                :href="linkTarget(link)"
+                target="_blank"
+                rel="noopener"
+                class="underline hover:text-[#0f5d6b] transition-colors"
+              >{{ link.label }}<span class="sr-only">(opens in a new tab)</span></a>
+              <NuxtLink v-else :to="linkTarget(link)" class="underline hover:text-[#0f5d6b] transition-colors">{{ link.label }}</NuxtLink>
+            </template>
+          </p>
+          <div v-else-if="section.links?.length" class="mt-4 grid gap-3 sm:grid-cols-2">
             <NuxtLink
               v-for="link in section.links"
               :key="linkTarget(link)"
@@ -134,7 +162,17 @@ const linkTarget = (link: { to?: string; url?: string }) => link.to ?? link.url 
             </ul>
           </div>
         </div>
-        <p v-else class="text-sm text-gray-600 leading-relaxed">{{ section.content }}</p>
+        <p v-else-if="section.content" class="text-sm text-gray-600 leading-relaxed">{{ section.content }}</p>
+        <dl v-if="section.definitions?.length" class="mt-4 divide-y divide-gray-100">
+          <div
+            v-for="item in section.definitions"
+            :key="item.term"
+            class="grid gap-1 py-3 first:pt-0 sm:grid-cols-[180px_1fr] sm:gap-4"
+          >
+            <dt class="text-sm font-semibold text-gray-900">{{ item.term }}</dt>
+            <dd class="text-sm leading-relaxed text-gray-600">{{ item.description }}</dd>
+          </div>
+        </dl>
         <figure v-if="section.image" class="mt-4 overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
           <img
             :src="section.image.src"
@@ -186,7 +224,21 @@ const linkTarget = (link: { to?: string; url?: string }) => link.to ?? link.url 
             </tbody>
           </table>
         </div>
-        <div v-if="section.links?.length" class="mt-4 grid gap-3 sm:grid-cols-2">
+        <p v-if="section.links?.length && section.linksDisplay === 'inline'" class="mt-4 text-sm text-gray-600">
+          <span class="font-medium text-gray-900">{{ section.linksLabel || 'Sources:' }}</span>
+          <template v-for="(link, linkIndex) in section.links" :key="linkTarget(link)">
+            <template v-if="linkIndex"> · </template>
+            <a
+              v-if="isExternalLink(link)"
+              :href="linkTarget(link)"
+              target="_blank"
+              rel="noopener"
+              class="underline hover:text-[#0f5d6b] transition-colors"
+            >{{ link.label }}<span class="sr-only">(opens in a new tab)</span></a>
+            <NuxtLink v-else :to="linkTarget(link)" class="underline hover:text-[#0f5d6b] transition-colors">{{ link.label }}</NuxtLink>
+          </template>
+        </p>
+        <div v-else-if="section.links?.length" class="mt-4 grid gap-3 sm:grid-cols-2">
           <NuxtLink
             v-for="link in section.links"
             :key="linkTarget(link)"

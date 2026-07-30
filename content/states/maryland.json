@@ -4,7 +4,7 @@
   "stateCode": "MD",
   "lastVerifiedAt": "2026-07-25",
   "seoTitle": "Maryland School Calendar 2026-2027: Start Dates, Holidays, Breaks & District Calendars",
-  "seoDescription": "Find Maryland school calendars for 2026-2027, including Montgomery County and Prince George's County start dates, holidays, winter break, spring break, PDFs and downloads.",
+  "seoDescription": "Find Maryland school calendars for 2026-2027, including Baltimore City, Baltimore County, Howard County, Montgomery County and Prince George's County start dates, holidays, breaks, PDFs and downloads.",
   "about": "Maryland public school calendars are approved locally by each school system, so first day of school, last day, winter break, spring break, professional days, parent conference days, religious observance notes, and make-up day plans can vary by county. The Washington, D.C. suburbs are especially important for calendar planning because many families compare Montgomery County Public Schools, Prince George's County Public Schools, District of Columbia schools, and Northern Virginia school divisions.\n\nFamilies should use each district calendar as the source of record for attendance planning, then verify school-specific details for testing, graduation, athletics, performances, magnet programs, transportation notices, and weather closures. MySchoolDates organizes available Maryland district calendar pages and links back to official district sources for final verification.",
   "calendarRules": [
     {
@@ -63,9 +63,24 @@
   ],
   "districtClusters": [
     {
-      "label": "Washington, D.C. Metro Maryland School Calendars",
-      "description": "Maryland families in the D.C. suburbs often compare first day, last day, professional days, winter break, spring break, and weather make-up plans across nearby systems.",
+      "label": "Large Maryland School Calendars",
+      "description": "Maryland families often compare first day, last day, professional days, conference days, winter break, spring break, and weather make-up plans across county school systems.",
       "districts": [
+        {
+          "label": "Baltimore County Public Schools Calendar",
+          "slug": "baltimore-county-school-calendar",
+          "note": "BCPS calendar dates for Baltimore County families, including the Pre-Labor Day Start calendar, breaks, conference days, make-up days, PDF links, and calendar downloads."
+        },
+        {
+          "label": "Baltimore City Public Schools Calendar",
+          "slug": "baltimore-city-public-schools-calendar",
+          "note": "City Schools calendar dates for most Baltimore City schools, including first day, early release days, conference windows, observance days, inclement weather recovery days, PDF links, and calendar downloads."
+        },
+        {
+          "label": "Howard County Public School System Calendar",
+          "slug": "howard-county-school-calendar",
+          "note": "HCPSS calendar dates for Howard County families, including K-12 and Pre-K/RECC opening days, early closings, conference days, inclement weather days, PDF links, and calendar downloads."
+        },
         {
           "label": "Montgomery County Public Schools Calendar",
           "slug": "montgomery-county-school-calendar",
@@ -93,7 +108,7 @@
     {
       "label": "Baltimore County Public Schools Calendar",
       "area": "Baltimore County, MD",
-      "note": "Planned district page for Baltimore-area families after official calendar data is verified."
+      "note": "Available district page for BCPS Pre-Labor Day Start calendar dates, holidays, conference days, emergency closure make-up days, PDFs, and calendar downloads."
     },
     {
       "label": "Anne Arundel County Public Schools Calendar",
@@ -103,7 +118,12 @@
     {
       "label": "Howard County Public School System Calendar",
       "area": "Ellicott City and Columbia, MD",
-      "note": "Planned central Maryland district page for official calendar dates after source verification."
+      "note": "Available district page for HCPSS K-12 and Pre-K/RECC start dates, holidays, early closings, conference days, breaks, inclement weather days, PDFs, and calendar downloads."
+    },
+    {
+      "label": "Baltimore City Public Schools Calendar",
+      "area": "Baltimore, MD",
+      "note": "Available district page for City Schools dates, early release days, professional development closures, observance days, recovery days, PDFs, and calendar downloads."
     }
   ],
   "faqs": [
@@ -114,6 +134,18 @@
     {
       "q": "Are Maryland school calendars the same statewide?",
       "a": "No. Maryland public school calendars are approved locally, so first day, last day, holidays, breaks, professional days, and make-up day plans can differ by county school system."
+    },
+    {
+      "q": "Where can I find the Baltimore County Public Schools calendar?",
+      "a": "Use the Baltimore County Public Schools calendar page on MySchoolDates for BCPS first day, scheduled last day, holidays, breaks, conference days, emergency closure make-up days, official PDF links, and calendar download options."
+    },
+    {
+      "q": "Where can I find the Baltimore City Public Schools calendar?",
+      "a": "Use the Baltimore City Public Schools calendar page on MySchoolDates for City Schools first day, holidays, early release days, conference windows, observance days, inclement weather recovery days, official PDF links, and calendar download options."
+    },
+    {
+      "q": "Where can I find the Howard County Public School System calendar?",
+      "a": "Use the Howard County Public School System calendar page on MySchoolDates for HCPSS first day, Pre-K/RECC opening day, holidays, early closings, breaks, inclement weather days, official PDF links, and calendar download options."
     },
     {
       "q": "Where can I find the Montgomery County Public Schools calendar?",

@@ -249,7 +249,7 @@ export function useDistrictPage() {
     ]
     const eventsForExport = cal.events.filter(event =>
       event.type !== 'break_end' &&
-      !isCoveredByBreak(event, cal.events)
+      (event.type === 'observance' || !isCoveredByBreak(event, cal.events))
     )
     const breaks = getBreaks(cal.events)
     for (const event of eventsForExport) {
@@ -285,15 +285,24 @@ export function useDistrictPage() {
     break_start: 'Break Starts', break_end: 'Break Ends',
     no_school: 'No School', student_holiday: 'No School',
     early_release: 'Early Release', early_dismissal: 'Early Dismissal',
-    digital_learning: 'Digital Learning',
+    digital_learning: 'Online Learning',
     remote_learning: 'Remote Learning',
     makeup_day: 'Make-Up Day', school_resume: 'School Resumes', school_reopen: 'School Resumes',
     quarter_start: 'Start of Quarter', quarter_end: 'End of Quarter',
     grading_period_start: 'Grading Period', grading_period_end: 'Grading Period',
     semester_start: 'Semester', semester_end: 'End of Semester',
     graduation: 'Graduation', academic: 'Academic', observance: 'Observance',
+    staff_workday: 'Staff Workday',
+    schools_closed: 'Schools Closed',
+    schools_offices_closed: 'Schools & Offices Closed',
+    partial_closure: 'Some Students Off',
+    orientation: 'Student Orientation',
+    milestone: 'School Event',
+    school_return: 'Schools Reopen',
+    conference: 'Conference Day',
+    staff_date: 'Teachers',
     teacher_workday: 'Teacher Workday',
-    teacher_professional_learning: 'Teacher Professional Learning Day',
+    teacher_professional_learning: 'Professional Development',
     extended_learning: 'Extended Learning Day',
   }
 
@@ -320,7 +329,16 @@ export function useDistrictPage() {
     semester_end: 'bg-[#eeeae2] text-[#625b52]',
     graduation: 'bg-[#e7efe5] text-[#315b39]',
     academic: 'bg-[#eeeae2] text-[#625b52]',
-    observance: 'bg-[#e6f0ef] text-[#0f5d6b]',
+    observance: 'bg-[#e2f0ea] text-[#22614a]',
+    staff_workday: 'bg-[#f3ead7] text-[#74552a]',
+    schools_closed: 'bg-[#f7dfdc] text-[#8a3328]',
+    schools_offices_closed: 'bg-[#f1d9de] text-[#7a2435]',
+    partial_closure: 'bg-[#eee7ec] text-[#68495f]',
+    orientation: 'bg-[#e7efe5] text-[#315b39]',
+    milestone: 'bg-[#eeeae2] text-[#625b52]',
+    school_return: 'bg-[#e7efe5] text-[#315b39]',
+    conference: 'bg-[#f3ead7] text-[#74552a]',
+    staff_date: 'bg-[#eeeae2] text-[#625b52]',
     teacher_workday: 'bg-[#f3ead7] text-[#74552a]',
     teacher_professional_learning: 'bg-[#f3ead7] text-[#74552a]',
     extended_learning: 'bg-[#eee7ec] text-[#68495f]',

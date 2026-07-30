@@ -8,9 +8,15 @@ const props = defineProps<{
     totalSchoolDays?: number
     keyDateCardsVariant?: 'compact'
     keyDateCardsFirstLabel?: string
+    keyDateCardsSecondLabel?: string
+    keyDateCardsSecondValue?: string
+    keyDateCardsSecondDate?: string
     keyDateCardsThirdLabel?: string
     keyDateCardsThirdValue?: string
+    keyDateCardsThirdDate?: string
+    hideInstructionalDaysSummary?: boolean
     calendarType?: string
+    meta?: Record<string, any>
     events: Array<{ date: string; name: string; type: string }>
   }
 }>()
@@ -30,12 +36,18 @@ const valueClass = computed(() =>
   isCompact.value ? 'block text-base font-semibold text-[#1f2933]' : 'block text-lg font-semibold tracking-tight text-[#1f2933]'
 )
 const isTrackCalendar = computed(() => String(props.cal.calendarType ?? '').toLowerCase() === 'track')
+const cardSetting = (key: string) => (props.cal as any)[key] ?? props.cal.meta?.[key]
+const secondCardLabel = computed(() => cardSetting('keyDateCardsSecondLabel') ?? 'Last Day of School')
+const secondCardValue = computed(() => cardSetting('keyDateCardsSecondValue') ?? formatDate(props.cal.lastDay))
+const secondCardDate = computed(() => cardSetting('keyDateCardsSecondDate') ?? props.cal.lastDay)
+const defaultDaysLabel = computed(() => ((props.cal as any).hideInstructionalDaysSummary ?? props.cal.meta?.hideInstructionalDaysSummary) ? 'Student Days' : 'Instructional Days')
 const thirdCardLabel = computed(() =>
-  props.cal.keyDateCardsThirdLabel ?? (props.cal.totalSchoolDays ? 'Instructional Days' : isTrackCalendar.value ? 'Major Break Periods' : 'School Breaks')
+  cardSetting('keyDateCardsThirdLabel') ?? (props.cal.totalSchoolDays ? defaultDaysLabel.value : isTrackCalendar.value ? 'Major Break Periods' : 'School Breaks')
 )
 const thirdCardValue = computed(() =>
-  props.cal.keyDateCardsThirdValue ?? (props.cal.totalSchoolDays ? `${props.cal.totalSchoolDays} days` : isTrackCalendar.value ? 'Vary by track' : `${breaks.value.length} breaks`)
+  cardSetting('keyDateCardsThirdValue') ?? (props.cal.totalSchoolDays ? `${props.cal.totalSchoolDays} days` : isTrackCalendar.value ? 'Vary by track' : `${breaks.value.length} breaks`)
 )
+const thirdCardDate = computed(() => cardSetting('keyDateCardsThirdDate'))
 </script>
 
 <template>
@@ -45,7 +57,7 @@ const thirdCardValue = computed(() =>
       : 'grid grid-cols-1 overflow-hidden rounded-lg border border-rds-hairline bg-rds-surface-panel shadow-[0_1px_0_rgba(31,41,51,0.03)] sm:grid-cols-3'"
   >
     <div :class="cardClass">
-      <div class="text-xs font-semibold text-[#7b756d] uppercase tracking-wide mb-1">{{ cal.keyDateCardsFirstLabel ?? 'First Day of School' }}</div>
+      <div class="text-xs font-semibold text-[#7b756d] uppercase tracking-wide mb-1">{{ cardSetting('keyDateCardsFirstLabel') ?? 'First Day of School' }}</div>
       <time :datetime="cal.firstDay" :class="valueClass">{{ formatDate(cal.firstDay) }}</time>
       <ClientOnly>
         <div v-if="daysUntilStart > 0" class="mt-2 inline-flex text-sm font-medium text-[#0f5d6b] bg-[#e6f0ef] px-2.5 py-1 rounded-lg">
@@ -56,14 +68,15 @@ const thirdCardValue = computed(() =>
       </ClientOnly>
     </div>
     <div :class="[cardClass, !isCompact ? 'border-t border-rds-hairline sm:border-l sm:border-t-0' : '']">
-      <div class="text-xs font-semibold text-[#7b756d] uppercase tracking-wide mb-1">Last Day of School</div>
-      <time :datetime="cal.lastDay" :class="valueClass">{{ formatDate(cal.lastDay) }}</time>
+      <div class="text-xs font-semibold text-[#7b756d] uppercase tracking-wide mb-1">{{ secondCardLabel }}</div>
+      <time :datetime="secondCardDate" :class="valueClass">{{ secondCardValue }}</time>
     </div>
     <div :class="[cardClass, !isCompact ? 'border-t border-rds-hairline sm:border-l sm:border-t-0' : '']">
       <div class="text-xs font-semibold text-[#7b756d] uppercase tracking-wide mb-1">
         {{ thirdCardLabel }}
       </div>
-      <div :class="isCompact ? 'text-base font-semibold text-[#1f2933]' : 'text-lg font-semibold tracking-tight text-[#1f2933]'">{{ thirdCardValue }}</div>
+      <time v-if="thirdCardDate" :datetime="thirdCardDate" :class="valueClass">{{ thirdCardValue }}</time>
+      <div v-else :class="isCompact ? 'text-base font-semibold text-[#1f2933]' : 'text-lg font-semibold tracking-tight text-[#1f2933]'">{{ thirdCardValue }}</div>
     </div>
   </div>
 </template>

@@ -66,11 +66,14 @@ export default defineNuxtConfig({
 
         // ── District index pages ───────────────────────────────────────────────
         '/aldine-independent-school-district-calendar',
+        '/anne-arundel-county-school-calendar',
         '/anaheim-union-high-school-district-calendar',
         '/atlanta-public-schools-calendar',
         '/arlington-isd-calendar',
         '/austin-independent-school-district-calendar',
         '/bakersfield-city-school-district-calendar',
+        '/baltimore-county-school-calendar',
+        '/baltimore-city-public-schools-calendar',
         '/brevard-public-schools-calendar',
         '/broward-county-school-calendar',
         '/brunswick-county-schools-calendar',
@@ -78,6 +81,7 @@ export default defineNuxtConfig({
         '/charlotte-mecklenburg-schools-calendar',
         '/chicago-public-schools-calendar',
         '/clark-county-school-district-calendar',
+        '/clayton-county-public-schools-calendar',
         '/collier-county-school-calendar',
         '/cobb-county-school-calendar',
         '/dekalb-county-school-calendar',
@@ -94,6 +98,7 @@ export default defineNuxtConfig({
         '/fontana-unified-school-district-calendar',
         '/fort-worth-independent-school-district-calendar',
         '/fresno-unified-school-district-calendar',
+        '/forsyth-county-schools-calendar',
         '/fulton-county-schools-calendar',
         '/garland-independent-school-district-calendar',
         '/garden-grove-unified-school-district-calendar',
@@ -102,6 +107,7 @@ export default defineNuxtConfig({
         '/hawaii-state-department-of-education-calendar',
         '/hillsborough-county-school-calendar',
         '/houston-independent-school-district-calendar',
+        '/howard-county-school-calendar',
         '/humble-isd-calendar',
         '/judson-isd-calendar',
         '/long-beach-unified-school-district-calendar',
@@ -177,6 +183,10 @@ export default defineNuxtConfig({
         '/aldine-independent-school-district-calendar/2025-2026',
         '/aldine-independent-school-district-calendar/2026-2027',
 
+        '/anne-arundel-county-school-calendar/2025-2026',
+        '/anne-arundel-county-school-calendar/2026-2027',
+        '/anne-arundel-county-school-calendar/2027-2028',
+
         '/anaheim-union-high-school-district-calendar/2025-2026',
         '/anaheim-union-high-school-district-calendar/2026-2027',
 
@@ -188,6 +198,12 @@ export default defineNuxtConfig({
 
         '/bakersfield-city-school-district-calendar/2025-2026',
         '/bakersfield-city-school-district-calendar/2026-2027',
+
+        '/baltimore-county-school-calendar/2025-2026',
+        '/baltimore-county-school-calendar/2026-2027',
+
+        '/baltimore-city-public-schools-calendar/2025-2026',
+        '/baltimore-city-public-schools-calendar/2026-2027',
 
         '/brevard-public-schools-calendar/2025-2026',
         '/brevard-public-schools-calendar/2026-2027',
@@ -212,6 +228,9 @@ export default defineNuxtConfig({
         '/chicago-public-schools-calendar/2025-2026',
         '/chicago-public-schools-calendar/2026-2027',
         '/chicago-public-schools-calendar/2027-2028',
+
+        '/clayton-county-public-schools-calendar/2025-2026',
+        '/clayton-county-public-schools-calendar/2026-2027',
 
         '/clark-county-school-district-calendar/2025-2026',
         '/clark-county-school-district-calendar/2026-2027',
@@ -271,6 +290,10 @@ export default defineNuxtConfig({
         '/fresno-unified-school-district-calendar/2026-2027',
         '/fresno-unified-school-district-calendar/2027-2028',
 
+        '/forsyth-county-schools-calendar/2025-2026',
+        '/forsyth-county-schools-calendar/2026-2027',
+        '/forsyth-county-schools-calendar/2027-2028',
+
         '/fulton-county-schools-calendar/2025-2026',
         '/fulton-county-schools-calendar/2026-2027',
         '/fulton-county-schools-calendar/2027-2028',
@@ -303,6 +326,9 @@ export default defineNuxtConfig({
 
         '/houston-independent-school-district-calendar/2025-2026',
         '/houston-independent-school-district-calendar/2026-2027',
+
+        '/howard-county-school-calendar/2025-2026',
+        '/howard-county-school-calendar/2026-2027',
 
         '/judson-isd-calendar/2025-2026',
         '/judson-isd-calendar/2026-2027',

@@ -1,0 +1,129 @@
+{
+  "institutionId": "baltimore-city-public-schools",
+  "schoolYear": "2025-2026",
+  "firstDay": "2025-08-25",
+  "lastDay": "2026-06-11",
+  "totalSchoolDays": 180,
+  "teacherWorkDays": 190,
+  "semesters": 2,
+  "sourceUrl": "https://www.baltimorecityschools.org/events",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3843/Bcps/59743d86-e8ac-4f57-8a49-32f392e68695/One_Page_Calendar_2025_final_v3_2.pdf?disposition=inline",
+  "lastVerifiedAt": "2026-07-30",
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-07-30",
+  "sourceVersion": "Calendar reflects dates as of July 2025",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "pageHeading": "Baltimore City Public Schools Calendar 2025-2026",
+  "seoTitle": "Baltimore City Schools Calendar 2025-2026: Dates, Breaks & PDF",
+  "seoDescription": "See the Baltimore City Schools 2025-2026 calendar with first day, holidays, early release days, breaks, recovery days, official PDF and ICS download.",
+  "heroSummary": "Baltimore City Public Schools begins the 2025-2026 school year for most traditional schools on Monday, August 25, 2025. Spring break runs March 28-April 6, 2026. The scheduled last day is Thursday, June 11, unless inclement weather recovery days are needed.",
+  "heroSummaryFacts": [
+    "Applies to most schools",
+    "Early release is four hours after start time",
+    "June 12, 15, and 16 are recovery days"
+  ],
+  "calendarNotes": "Baltimore City Public Schools starts the 2025-2026 school year on August 25, 2025 for traditional schools, while noting that some charter schools may use a different start date. The calendar includes multiple professional development days when schools are closed for students. Early release days mean schools release four hours after the start time. Winter break runs December 24, 2025 through January 4, 2026, with schools returning Monday, January 5. Spring break runs March 28-April 6, 2026. The scheduled last day is June 11, 2026, unless inclement weather recovery days are needed on June 12, June 15, or June 16.",
+  "calendarFaqs": [
+    {
+      "q": "When does Baltimore City Public Schools start in 2025?",
+      "a": "Baltimore City Public Schools starts the 2025-2026 school year for most traditional schools on Monday, August 25, 2025."
+    },
+    {
+      "q": "When is Baltimore City Schools Spring Break in 2026?",
+      "a": "Spring break runs March 28-April 6, 2026."
+    },
+    {
+      "q": "When is the last scheduled day for Baltimore City Schools in 2026?",
+      "a": "The scheduled last day is Thursday, June 11, 2026, unless inclement weather recovery days are needed."
+    },
+    {
+      "q": "What are the Baltimore City Schools inclement weather recovery days in 2025-2026?",
+      "a": "The official calendar lists June 12, June 15, and June 16, 2026 as inclement weather recovery days."
+    },
+    {
+      "q": "Which Baltimore City dates are easy to miss in 2025-2026?",
+      "a": "Dates families often miss include early release days on October 16, October 31, January 16, March 27, and June 11, plus student-only professional development closures on October 17, November 7, January 9, February 6, March 6, and May 1."
+    },
+    {
+      "q": "Does the 2025-2026 Baltimore City calendar apply to charter schools?",
+      "a": "The official calendar says it applies to most schools and notes that some charter schools may have a different start date. Families should confirm school-specific dates with their school leader."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "city-schools-2025-2026-easy-to-miss-dates",
+      "label": "Easy-to-Miss Dates",
+      "position": "afterKeyDates",
+      "content": "These City Schools dates can affect transportation, childcare, or attendance even though they are not the main winter or spring break dates.",
+      "table": {
+        "columns": ["Date", "What it means"],
+        "rows": [
+          ["October 16 and 31, 2025", "Early release days; schools release four hours after start time"],
+          ["October 17 and November 7, 2025", "Schools closed for students for professional development"],
+          ["January 9 and February 6, 2026", "Schools closed for students for professional development"],
+          ["March 27, 2026", "Early release day before spring break"],
+          ["May 1, 2026", "Schools closed for students for professional development"],
+          ["June 12, 15, and 16, 2026", "Inclement weather recovery days if City Schools needs them"]
+        ]
+      }
+    }
+  ],
+  "events": [
+    { "date": "2025-08-19", "name": "Staff Return", "type": "staff_workday" },
+    { "date": "2025-08-19", "name": "Teacher/PSRP Worktime and Professional Training Begins", "type": "teacher_workday" },
+    { "date": "2025-08-22", "name": "Teacher/PSRP Worktime and Professional Training Ends", "type": "teacher_workday" },
+    { "date": "2025-08-25", "name": "First Day of School for Traditional Schools", "type": "school_start" },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
+    { "date": "2025-09-23", "name": "Observance Day", "type": "observance" },
+    { "date": "2025-09-24", "name": "Observance Day", "type": "observance" },
+    { "date": "2025-10-02", "name": "Schools Closed - Wellness Day / Observance Day", "type": "holiday" },
+    { "date": "2025-10-16", "name": "Early Release Day - Parent-Teacher Conference Afternoon", "type": "early_release" },
+    { "date": "2025-10-17", "name": "Professional Development Day - Schools Closed for Students", "type": "teacher_workday" },
+    { "date": "2025-10-20", "name": "Parent-Teacher Conference Window Begins", "type": "conference" },
+    { "date": "2025-10-24", "name": "Parent-Teacher Conference Window Ends", "type": "conference" },
+    { "date": "2025-10-31", "name": "Early Release Day", "type": "early_release" },
+    { "date": "2025-11-07", "name": "Professional Development Day - Schools Closed for Students", "type": "teacher_workday" },
+    { "date": "2025-11-26", "name": "Schools and District Office Closed - Wellness Day", "type": "holiday" },
+    { "date": "2025-11-27", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-11-28", "name": "Thanksgiving Break Ends", "type": "break_end" },
+    { "date": "2025-12-08", "name": "Parent-Teacher Conference Window Begins", "type": "conference" },
+    { "date": "2025-12-12", "name": "Parent-Teacher Conference Window Ends", "type": "conference" },
+    { "date": "2025-12-24", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-01-04", "name": "Winter Break Ends", "type": "break_end" },
+    { "date": "2026-01-05", "name": "Schools Reopen", "type": "school_return" },
+    { "date": "2026-01-09", "name": "Professional Development Day - Schools Closed for Students", "type": "teacher_workday" },
+    { "date": "2026-01-16", "name": "Early Release Day", "type": "early_release" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2026-02-06", "name": "Professional Development Day - Schools Closed for Students", "type": "teacher_workday" },
+    { "date": "2026-02-16", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2026-02-18", "name": "Observance Day", "type": "observance" },
+    { "date": "2026-03-02", "name": "Parent-Teacher Conference Window Begins", "type": "conference" },
+    { "date": "2026-03-06", "name": "Professional Development Day - Schools Closed for Students", "type": "teacher_workday" },
+    { "date": "2026-03-06", "name": "Parent-Teacher Conference Window Ends", "type": "conference" },
+    { "date": "2026-03-20", "name": "Schools Closed - Wellness Day / Observance Day", "type": "holiday" },
+    { "date": "2026-03-27", "name": "Early Release Day", "type": "early_release" },
+    { "date": "2026-03-28", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-04-06", "name": "Spring Break Ends", "type": "break_end" },
+    { "date": "2026-04-07", "name": "Schools Reopen", "type": "school_return" },
+    { "date": "2026-04-08", "name": "Observance Day", "type": "observance" },
+    { "date": "2026-04-09", "name": "Observance Day", "type": "observance" },
+    { "date": "2026-04-10", "name": "Observance Day", "type": "observance" },
+    { "date": "2026-05-01", "name": "Professional Development Day - Schools Closed for Students", "type": "teacher_workday" },
+    { "date": "2026-05-11", "name": "Parent-Teacher Conference Window Begins", "type": "conference" },
+    { "date": "2026-05-15", "name": "Parent-Teacher Conference Window Ends", "type": "conference" },
+    { "date": "2026-05-22", "name": "Observance Day", "type": "observance" },
+    { "date": "2026-05-23", "name": "Observance Day", "type": "observance" },
+    { "date": "2026-05-25", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2026-05-27", "name": "Observance Day", "type": "observance" },
+    { "date": "2026-06-01", "name": "Senior Graduation Dates Begin", "type": "milestone" },
+    { "date": "2026-06-10", "name": "Senior Graduation Dates End", "type": "milestone" },
+    { "date": "2026-06-11", "name": "Last Day of School and Early Release Day", "type": "school_end" },
+    { "date": "2026-06-12", "name": "Inclement Weather Recovery Day 1", "type": "makeup_day" },
+    { "date": "2026-06-15", "name": "Inclement Weather Recovery Day 2", "type": "makeup_day" },
+    { "date": "2026-06-16", "name": "Inclement Weather Recovery Day 3", "type": "makeup_day" },
+    { "date": "2026-06-19", "name": "Juneteenth", "type": "holiday" },
+    { "date": "2026-07-03", "name": "Independence Day Observance", "type": "holiday" },
+    { "date": "2026-07-04", "name": "Independence Day", "type": "holiday" }
+  ]
+}

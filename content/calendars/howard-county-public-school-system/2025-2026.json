@@ -1,0 +1,116 @@
+{
+  "institutionId": "howard-county-public-school-system",
+  "schoolYear": "2025-2026",
+  "firstDay": "2025-08-25",
+  "lastDay": "2026-06-15",
+  "totalSchoolDays": 180,
+  "teacherWorkDays": 190,
+  "semesters": 2,
+  "sourceUrl": "https://www.hcpss.org/calendar/",
+  "sourcePdfUrl": "https://www.hcpss.org/f/news/calendars/datesonly202526.pdf?b",
+  "lastVerifiedAt": "2026-07-30",
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-07-30",
+  "sourceVersion": "Dates-only calendar PDF",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "pageHeading": "Howard County Public School System Calendar 2025-2026",
+  "seoTitle": "Howard County School Calendar 2025-2026: Dates, Breaks & PDF",
+  "seoDescription": "See the HCPSS 2025-2026 calendar with K-12 first day, Pre-K/RECC first day, holidays, early closings, breaks, official PDF and ICS download.",
+  "heroSummary": "Howard County Public School System begins the 2025-2026 school year for K-12 students on Monday, August 25, 2025. Pre-K and RECC students begin Thursday, August 28. Spring break runs March 30-April 6, 2026, and the scheduled last day is Monday, June 15, 2026.",
+  "heroSummaryFacts": [
+    "K-12 and Pre-K/RECC start dates differ",
+    "Many three-hour early closings",
+    "June dates may shift after weather closures"
+  ],
+  "calendarNotes": "HCPSS starts the 2025-2026 school year for K-12 students on August 25, 2025, while Pre-K and RECC students begin on August 28. The calendar includes several three-hour early closings, including professional learning days, conference days, and late-year work days. Thanksgiving includes student conference days before the two-day holiday closure. Winter break runs December 24, 2025 through January 2, 2026, with schools returning Monday, January 5. Spring break runs March 30-April 6, 2026. The scheduled last day is June 15, 2026, with several late-year early closings listed before that date.",
+  "calendarFaqs": [
+    {
+      "q": "When does Howard County Public School System start in 2025?",
+      "a": "HCPSS starts the 2025-2026 school year for K-12 students on Monday, August 25, 2025."
+    },
+    {
+      "q": "When do HCPSS Pre-K and RECC students start in 2025?",
+      "a": "The official HCPSS dates-only calendar lists Thursday, August 28, 2025 as the first day of school for Pre-K and RECC students."
+    },
+    {
+      "q": "When is HCPSS Spring Break in 2026?",
+      "a": "HCPSS spring break runs March 30-April 6, 2026."
+    },
+    {
+      "q": "When is the last scheduled day for HCPSS in 2026?",
+      "a": "The scheduled last day of school is Monday, June 15, 2026. HCPSS lists it as a three-hour early closing and professional work day."
+    },
+    {
+      "q": "Which HCPSS dates are easy to miss in 2025-2026?",
+      "a": "Dates families often miss include early closings on September 17, October 31, November 12, November 24-25, January 22-23, February 5-6, March 3, May 14, June 8, June 11, June 12, and June 15, plus student-only closure dates such as October 17, November 26, January 26, February 4, March 20, and April 15."
+    },
+    {
+      "q": "Does HCPSS close for parent-teacher conferences in 2025-2026?",
+      "a": "Yes. HCPSS lists several conference-related dates, including ES/MS parent-teacher conferences on November 24-25, a student closure on November 26, and elementary-only early closings on February 5-6."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "hcpss-2025-2026-easy-to-miss-dates",
+      "label": "Easy-to-Miss Dates",
+      "position": "afterKeyDates",
+      "content": "These HCPSS dates are easy to miss because schools may close early, close only for students, or use different rules for Pre-K/RECC.",
+      "table": {
+        "columns": ["Date", "What it means"],
+        "rows": [
+          ["August 28, 2025", "First day for Pre-K and RECC students, after the K-12 opening day"],
+          ["September 17, 2025", "Three-hour early closing; no half-day Pre-K/RECC"],
+          ["November 24-25, 2025", "Three-hour early closings for ES/MS conferences; no half-day Pre-K/RECC"],
+          ["January 23, 2026", "Middle and high schools only close three hours early; no half-day Pre-K/RECC"],
+          ["February 5-6, 2026", "Elementary schools only close three hours early for conferences"],
+          ["June 8, 11, 12, and 15, 2026", "Late-year three-hour early closings listed by HCPSS"]
+        ]
+      }
+    }
+  ],
+  "events": [
+    { "date": "2025-08-14", "name": "First Day for Staff", "type": "staff_workday" },
+    { "date": "2025-08-25", "name": "First Day of School for K-12 Students", "type": "school_start" },
+    { "date": "2025-08-28", "name": "First Day of School for Pre-K/RECC Students", "type": "milestone" },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
+    { "date": "2025-09-17", "name": "Schools Close 3 Hours Early - Professional Learning / Work and Wellness Day", "type": "early_release" },
+    { "date": "2025-09-23", "name": "Schools and Offices Closed", "type": "holiday" },
+    { "date": "2025-10-02", "name": "Schools and Offices Closed", "type": "holiday" },
+    { "date": "2025-10-17", "name": "Professional Work Day / MSEA Convention - Schools Closed for Students", "type": "teacher_workday" },
+    { "date": "2025-10-20", "name": "Schools and Offices Closed", "type": "holiday" },
+    { "date": "2025-10-31", "name": "Schools Close 3 Hours Early - Professional Work Day", "type": "early_release" },
+    { "date": "2025-11-12", "name": "Schools Close 3 Hours Early - Professional Learning / Work and Wellness Day", "type": "early_release" },
+    { "date": "2025-11-24", "name": "Schools Close 3 Hours Early - ES/MS Parent-Teacher Conferences", "type": "conference" },
+    { "date": "2025-11-25", "name": "Schools Close 3 Hours Early - ES/MS Parent-Teacher Conferences", "type": "conference" },
+    { "date": "2025-11-26", "name": "Parent-Teacher Conferences - Schools Closed for Students", "type": "conference" },
+    { "date": "2025-11-27", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-11-28", "name": "Thanksgiving Break Ends", "type": "break_end" },
+    { "date": "2025-12-24", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-01-02", "name": "Winter Break Ends", "type": "break_end" },
+    { "date": "2026-01-05", "name": "Schools Reopen", "type": "school_return" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2026-01-22", "name": "Schools Close 3 Hours Early - Professional Learning Day", "type": "early_release" },
+    { "date": "2026-01-23", "name": "Middle and High Schools Only Close 3 Hours Early", "type": "early_release" },
+    { "date": "2026-01-26", "name": "Professional Work Day - Schools Closed for Students", "type": "teacher_workday" },
+    { "date": "2026-02-04", "name": "Countywide Professional Learning Day - Schools Closed for Students", "type": "teacher_workday" },
+    { "date": "2026-02-05", "name": "Elementary Schools Only Close 3 Hours Early - Parent-Teacher Conferences", "type": "conference" },
+    { "date": "2026-02-06", "name": "Elementary Schools Only Close 3 Hours Early - Parent-Teacher Conferences", "type": "conference" },
+    { "date": "2026-02-16", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2026-02-17", "name": "Schools and Offices Closed", "type": "holiday" },
+    { "date": "2026-03-03", "name": "Schools Close 3 Hours Early - Professional Learning / Work and Wellness Day", "type": "early_release" },
+    { "date": "2026-03-20", "name": "Professional Work Day and Professional Development Day - Schools Closed for Students", "type": "teacher_workday" },
+    { "date": "2026-03-30", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-04-06", "name": "Spring Break Ends", "type": "break_end" },
+    { "date": "2026-04-07", "name": "Schools Reopen", "type": "school_return" },
+    { "date": "2026-04-15", "name": "Professional Work Day and Professional Learning Day - Schools Closed for Students", "type": "teacher_workday" },
+    { "date": "2026-05-14", "name": "Schools Close 3 Hours Early - School-Based Professional Work Day", "type": "early_release" },
+    { "date": "2026-05-25", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2026-05-27", "name": "Schools and Offices Closed", "type": "holiday" },
+    { "date": "2026-06-08", "name": "Schools Close 3 Hours Early - Professional Work Day", "type": "early_release" },
+    { "date": "2026-06-11", "name": "Schools Close 3 Hours Early - School-Based Professional Learning Day", "type": "early_release" },
+    { "date": "2026-06-12", "name": "Schools Close 3 Hours Early - Professional Work Day", "type": "early_release" },
+    { "date": "2026-06-15", "name": "Last Scheduled Day of School - Schools Close 3 Hours Early", "type": "school_end" },
+    { "date": "2026-06-19", "name": "Juneteenth", "type": "holiday" }
+  ]
+}

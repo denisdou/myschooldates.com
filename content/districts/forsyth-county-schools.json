@@ -1,0 +1,157 @@
+{
+  "institutionId": "forsyth-county-schools",
+  "name": "Forsyth County Schools",
+  "shortName": "FCS",
+  "comparisonLabel": "Forsyth",
+  "slug": "forsyth-county-schools-calendar",
+  "state": "Georgia",
+  "stateCode": "GA",
+  "city": "Cumming",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.forsyth.k12.ga.us",
+  "calendarPage": "https://www.forsyth.k12.ga.us/calendar",
+  "logo": "https://resources.finalsite.net/images/v1707727072/forsythk12gaus/mjbgl4b1xgvsjtv8brop/header-logo.svg",
+  "timezone": "America/New_York",
+  "county": "Forsyth County",
+  "region": "Metro Atlanta",
+  "metro": "Atlanta-Sandy Springs-Roswell",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "keyDates",
+  "contentTier": "enhanced",
+  "contentTierLabel": "North Metro Atlanta District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-07-29",
+    "coverageNote": "Forsyth County Schools coverage uses the district website, official calendar page, and official student calendar PDFs for 2025-2026, 2026-2027, and 2027-2028. No 2028-2029 PDF URL was provided, so that year was not created."
+  },
+  "contentFreshnessScore": {
+    "overall": 95,
+    "sourceUpdated": "2026-07-29",
+    "lastManualReview": "2026-07-29",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the Forsyth County Schools calendar page when FCS posts a revised student calendar, changes online learning or early-release dates, or publishes a future-year PDF."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official FCS revision, missing 2028-2029 PDF, changed bell schedule, or stale freshness score."
+  },
+  "includeArticleSchema": true,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Forsyth County Schools",
+    "FCS calendar",
+    "Forsyth County school calendar",
+    "Forsyth County Schools student calendar",
+    "Forsyth County Schools PDF calendar",
+    "Forsyth County early release days",
+    "Forsyth County Schools online learning days"
+  ],
+  "districtFact": "Forsyth County Schools publishes a student calendar with fall break, Thanksgiving break, Holiday Break, spring break, online learning and parent conference days, professional development days when students do not attend, early-release dates, and separate early-release times by school level.",
+  "about": [
+    {
+      "title": "About Forsyth County Schools",
+      "content": "Forsyth County Schools serves students in Forsyth County, Georgia, including Cumming and north metro Atlanta communities. The district's student calendar is useful for tracking first and last days, student/staff holidays, fall break, Thanksgiving break, Holiday Break, spring break, online learning and parent conference dates, professional development days when students do not attend, and early-release days."
+    },
+    {
+      "title": "How to Use the FCS Calendar",
+      "content": "Use this page for districtwide student dates. Families should still check their assigned school for bell schedules, testing, athletics, performances, graduation events, transportation updates, and emergency schedule changes."
+    }
+  ],
+  "planningTips": {
+    "title": "Forsyth County Calendar Notes",
+    "content": [
+      "FCS early-release days are not one-size-fits-all: elementary, middle, high school, and Alliance Academy dismissal times differ.",
+      "Online learning and parent conference dates are student calendar dates, but they do not follow a normal in-person school day.",
+      "Professional development dates are days when students do not attend while staff report.",
+      "Holiday Break is the late-December break; February student/staff holidays are listed separately and should not be assumed to match nearby districts."
+    ]
+  },
+  "compareIntro": "Compare Forsyth County Schools with other Metro Atlanta districts. Rows group comparable break periods; district terminology may differ.",
+  "relatedDistricts": [
+    {
+      "name": "Gwinnett County Public Schools",
+      "slug": "gwinnett-county-public-schools-calendar",
+      "state": "Georgia",
+      "comparisonNote": "Nearby large Metro Atlanta district with translated PDFs, digital learning days, and early release dates."
+    },
+    {
+      "name": "Fulton County Schools",
+      "slug": "fulton-county-schools-calendar",
+      "state": "Georgia",
+      "comparisonLabel": "Fulton",
+      "comparisonNote": "North metro families may compare first day, fall break, holiday break, and spring break timing."
+    },
+    {
+      "name": "Cobb County School District",
+      "slug": "cobb-county-school-calendar",
+      "state": "Georgia",
+      "comparisonNote": "Another major Atlanta-area district with fall break and spring break dates families often compare."
+    },
+    {
+      "name": "Atlanta Public Schools",
+      "slug": "atlanta-public-schools-calendar",
+      "state": "Georgia",
+      "comparisonNote": "City district calendar useful for families comparing APS with north metro Atlanta school systems."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Forsyth County Schools official website",
+      "url": "https://www.forsyth.k12.ga.us"
+    },
+    {
+      "label": "Forsyth County Schools calendar page",
+      "url": "https://www.forsyth.k12.ga.us/calendar"
+    }
+  ],
+  "districtFaqs": [
+    {
+      "q": "Which Forsyth County Schools calendar does this page summarize?",
+      "a": "This page summarizes official Forsyth County Schools student calendar PDFs for the listed school years."
+    },
+    {
+      "q": "Are Forsyth County professional development days student holidays?",
+      "a": "Yes. When the FCS student calendar labels a professional development day as a student holiday, students do not attend school."
+    },
+    {
+      "q": "Do early-release times differ by school level in Forsyth County Schools?",
+      "a": "Yes. FCS publishes different early-release times for Elementary I, Elementary II, middle schools, high schools, and Alliance Academy, so families should check the official calendar and their assigned school."
+    },
+    {
+      "q": "Where should families verify Forsyth County Schools calendar updates?",
+      "a": "Use the official Forsyth County Schools calendar page and the district PDF for final confirmation before making travel, child care, or school-specific plans."
+    }
+  ]
+}

@@ -28,7 +28,7 @@ const sourceUrl = computed(() => props.cal?.sourceUrl ?? props.district?.officia
             official {{ district.name }} calendar
             <span class="sr-only">(opens in a new tab)</span>
           </a>
-          before making travel or childcare plans.
+          before making travel or child care plans.
         </p>
       </div>
     </div>
@@ -47,7 +47,7 @@ const sourceUrl = computed(() => props.cal?.sourceUrl ?? props.district?.officia
             official {{ district.shortName || district.name }} calendar
             <span class="sr-only">(opens in a new tab)</span>
           </a>.
-          The district may revise the calendar after publication — always confirm before making travel or childcare plans.
+          The district may revise the calendar after publication — always confirm before making travel or child care plans.
         </p>
         <p class="text-green-800 text-xs">Last checked: {{ verifiedDate }}</p>
       </div>

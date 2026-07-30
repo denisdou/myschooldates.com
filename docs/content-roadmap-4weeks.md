@@ -7,7 +7,7 @@
 
 ## 当前进度快照
 
-**已完成学区（48个）**
+**已完成学区（53个）**
 
 | 州 | 已完成 | P1 完成度 | P2 完成度 |
 |----|--------|-----------|-----------|
@@ -16,7 +16,8 @@
 | Florida | Miami-Dade, Broward County, Orange County, Palm Beach County, Hillsborough County | 5/5 ✓ | 0/5 |
 | Virginia | Fairfax County, Prince William County, Loudoun County, Virginia Beach City, Chesterfield County, Henrico County, Arlington Public Schools | 5/5 ✓ | 2/5 |
 | North Carolina | Wake County, Charlotte-Mecklenburg, Guilford County, Winston-Salem/Forsyth, Cumberland County, Union County, Cabarrus County, Johnston County, Durham Public Schools, New Hanover County | 5/5 ✓ | 5/5 ✓ |
-| Georgia | Gwinnett County Public Schools, Fulton County Schools, Atlanta Public Schools | — | — |
+| Georgia | Gwinnett County Public Schools, Fulton County Schools, Atlanta Public Schools, Forsyth County Schools, Clayton County Public Schools | — | — |
+| Maryland | Montgomery County Public Schools, Prince George's County Public Schools, Baltimore County Public Schools, Anne Arundel County Public Schools, Howard County Public School System, Baltimore City Public Schools | — | — |
 
 **合计：P1 已完成 27/27 ✓，P2 已完成 14/24，P3 尚未开始。**
 
@@ -26,6 +27,12 @@
 |----------|----|------|-----------|------------|------|
 | 2026-07-28 | Georgia | Fulton County Schools | `/fulton-county-schools-calendar` | 2025-2026, 2026-2027, 2027-2028 | 基于官方 Fulton County Schools calendar page 与三份官方 PDF；2028-2029 PDF URL 未提供，暂不创建。 |
 | 2026-07-28 | Georgia | Atlanta Public Schools | `/atlanta-public-schools-calendar` | 2025-2026, 2026-2027, 2027-2028 | 基于官方 Atlanta Public Schools calendar page 与三份官方 Student Calendar PDF；官网 logo 未提供，主文件暂不写 logo。 |
+| 2026-07-29 | Georgia | Forsyth County Schools | `/forsyth-county-schools-calendar` | 2025-2026, 2026-2027, 2027-2028 | 基于官方 Forsyth County Schools calendar page 与三份官方 Student Calendar PDF；2028-2029 PDF URL 未提供，暂不创建。 |
+| 2026-07-30 | Georgia | Clayton County Public Schools | `/clayton-county-public-schools-calendar` | 2025-2026, 2026-2027 | 基于官方 Clayton County Public Schools school-year calendars page、两份官方 PDF 和 2026-2027 本地图片副本；2027-2028 与 2028-2029 PDF URL 未提供，暂不创建。 |
+| 2026-07-30 | Maryland | Baltimore County Public Schools | `/baltimore-county-school-calendar` | 2025-2026, 2026-2027 | 基于官方 BCPS calendars page、官网 logo、两份官方 Pre-Labor Day Start Calendar PDF 和本地 PDF 副本；2027-2028 与 2028-2029 PDF URL 未提供，暂不创建。 |
+| 2026-07-30 | Maryland | Anne Arundel County Public Schools | `/anne-arundel-county-school-calendar` | 2025-2026, 2026-2027, 2027-2028 | 基于官方 AACPS school calendar page、官网 logo、本地 2025-2026 PDF、官方 2026-2027 approved PDF、2027-2028 PDF 和 Spanish 扩展日历；2028-2029 PDF URL 未提供，暂不创建。 |
+| 2026-07-30 | Maryland | Howard County Public School System | `/howard-county-school-calendar` | 2025-2026, 2026-2027 | 基于官方 HCPSS calendar page、官网 logo、两份官方 dates-only calendar PDF 和本地 PDF 副本；2027-2028 与 2028-2029 PDF URL 未提供，暂不创建。 |
+| 2026-07-30 | Maryland | Baltimore City Public Schools | `/baltimore-city-public-schools-calendar` | 2025-2026, 2026-2027 | 基于官方 City Schools events page、官网 logo、两份官方 school year calendar PDF、本地 PDF 副本和 2026-2027 Spanish 扩展日历；2027-2028 与 2028-2029 PDF URL 未提供，暂不创建。 |
 
 ---
 
@@ -270,7 +277,7 @@ P3 内容可采用更高度模板化的方式生成（calendarNotes 精简为 4-
 
 ## Top300 剩余学区周计划
 
-基于 `/Users/doujiajun/Downloads/myschooldates_us_top_300_school_districts.md`，按当前实际存在的 `content/districts/*.json` 学区文件过滤已创建学区；不以本 roadmap 表格中的完成状态作为过滤依据。创建 Chicago Public Schools、Clark County School District 和 Gwinnett County Public Schools 后，Top300 中剩余待创建 229 个学区。本周安排 20 个学区，后续每周安排 45 个学区，最后一周安排剩余 32 个学区。执行时仍按原 Top300 排名顺序推进，并逐一核验官方名称、日历页面、PDF/网页日历来源、当前学年和特殊日历适用范围。
+基于 `/Users/doujiajun/Downloads/myschooldates_us_top_300_school_districts.md`，按当前实际存在的 `content/districts/*.json` 学区文件过滤已创建学区；不以本 roadmap 表格中的完成状态作为过滤依据。创建 Chicago Public Schools、Clark County School District、Gwinnett County Public Schools、Forsyth County Schools 和 Clayton County Public Schools 后，Top300 中剩余待创建 227 个学区。本周安排 20 个学区，后续每周安排 45 个学区，最后一周安排剩余 32 个学区。执行时仍按原 Top300 排名顺序推进，并逐一核验官方名称、日历页面、PDF/网页日历来源、当前学年和特殊日历适用范围。
 
 ### 本周（20个）
 
@@ -311,12 +318,12 @@ P3 内容可采用更高度模板化的方式生成（calendarNotes 精简为 4-
 | 72 | Georgia | DeKalb County School District | Atlanta | ✓ 已完成：`dekalb-county-school-calendar` 2026-07-28|
 | 73 | Georgia | Fulton County Schools | Atlanta | ✓ 已完成：`fulton-county-schools-calendar` 2026-07-28 |
 | 74 | Georgia | Atlanta Public Schools | Atlanta | ✓ 已完成：`atlanta-public-schools-calendar`（2026-07-28） |
-| 75 | Georgia | Forsyth County Schools | Atlanta | 待创建 |
-| 76 | Georgia | Clayton County Public Schools | Atlanta | 待创建 |
-| 90 | Maryland | Baltimore County Public Schools | Baltimore | 待创建 |
-| 91 | Maryland | Anne Arundel County Public Schools | Baltimore-Washington | 待创建 |
-| 92 | Maryland | Howard County Public School System | Baltimore-Washington | 待创建 |
-| 93 | Maryland | Baltimore City Public Schools | Baltimore | 待创建 |
+| 75 | Georgia | Forsyth County Schools | Atlanta | ✓ 已完成：`forsyth-county-schools-calendar`（2026-07-29） |
+| 76 | Georgia | Clayton County Public Schools | Atlanta | ✓ 已完成：`clayton-county-public-schools-calendar`（2026-07-30） |
+| 90 | Maryland | Baltimore County Public Schools | Baltimore | ✓ 已完成：`baltimore-county-school-calendar`（2026-07-30） |
+| 91 | Maryland | Anne Arundel County Public Schools | Baltimore-Washington | ✓ 已完成：`anne-arundel-county-school-calendar`（2026-07-30） |
+| 92 | Maryland | Howard County Public School System | Baltimore-Washington | ✓ 已完成：`howard-county-school-calendar`（2026-07-30） |
+| 93 | Maryland | Baltimore City Public Schools | Baltimore | ✓ 已完成：`baltimore-city-public-schools-calendar`（2026-07-30） |
 | 94 | Massachusetts | Boston Public Schools | Boston | 待创建 |
 | 95 | Washington | Seattle Public Schools | Seattle | 待创建 |
 | 96 | Washington | Lake Washington School District | Seattle | 待创建 |

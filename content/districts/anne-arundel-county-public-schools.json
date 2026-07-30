@@ -1,0 +1,185 @@
+{
+  "institutionId": "anne-arundel-county-public-schools",
+  "name": "Anne Arundel County Public Schools",
+  "shortName": "AACPS",
+  "slug": "anne-arundel-county-school-calendar",
+  "state": "Maryland",
+  "stateCode": "MD",
+  "city": "Annapolis",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "ECSE",
+    "Pre-K",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.aacps.org",
+  "calendarPage": "https://www.aacps.org/o/aacps/page/school-calendar",
+  "logo": "https://cmsv2-assets.apptegy.net/uploads/20274/logo/23130/ogo.png",
+  "timezone": "America/New_York",
+  "county": "Anne Arundel County",
+  "region": "Maryland",
+  "metro": "Baltimore-Washington",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "hideHeroVerificationProcess": true,
+  "districtFact": "Anne Arundel County Public Schools uses a traditional countywide calendar with staggered openings for ECSE, Pre-K, and Kindergarten, selected grade-level opening days, Project Unity early dismissals, parent-teacher conference days, religious observance rules, and weather make-up guidance that may shift the final school day.",
+  "about": [
+    {
+      "title": "About Anne Arundel County Public Schools",
+      "content": "Anne Arundel County Public Schools, also known as AACPS, serves students across Anne Arundel County, Maryland, including Annapolis, Glen Burnie, Severna Park, Crofton, Odenton, Pasadena, Edgewater, and county communities between Baltimore and Washington, D.C. This page summarizes the districtwide AACPS school-year calendar published by the district."
+    },
+    {
+      "title": "How to Use This AACPS Calendar",
+      "content": "Use this page for districtwide AACPS dates such as staggered openings, first student days, school closures, early dismissals, parent-teacher conferences, marking period dates, winter and spring breaks, senior last day, teacher workdays, and weather make-up rules. Individual schools may publish separate dates for testing, athletics, performances, graduations, bus updates, and campus-specific events."
+    }
+  ],
+  "planningTips": {
+    "title": "Planning Notes for AACPS Families",
+    "content": [
+      "AACPS opening week is not a single pattern for every student. Grades 1-5 and grades 6 and 9 may begin before all grades 1-12, while ECSE, Pre-K, and Kindergarten use conferences and staggered openings.",
+      "Two-hour early dismissal days often include Project Unity and professional development notes. Families should check school dismissal times and ECSE afternoon-session notes.",
+      "Some no-school dates apply only to specific student groups, such as elementary and middle school students, ECSE, Pre-K, or Kindergarten.",
+      "AACPS publishes religious and cultural observance rules that affect testing, school-sponsored activities, and excused absences even when the district operates on a normal schedule.",
+      "AACPS states that three make-up days are included at the end of the school year. If unused, make-up days may be deducted from the June closing date."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "aacps-calendar-structure",
+      "label": "How the AACPS Calendar Is Structured",
+      "position": "afterAbout",
+      "content": "AACPS calendars separate districtwide closures from student-only closures, teacher workdays, parent-teacher conferences, staggered openings, Project Unity early dismissals, marking period dates, and religious observance rules. That structure matters because a date can be a regular school day for one grade level and a conference or no-student day for another."
+    },
+    {
+      "id": "aacps-staggered-opening-note",
+      "label": "AACPS Opening Week Is Staggered",
+      "position": "afterKeyDates",
+      "content": "AACPS uses a staggered start for younger students and transition grades. Families should check the selected school year for the exact opening pattern before arranging transportation or childcare.",
+      "table": {
+        "columns": ["Student group", "What to check"],
+        "rows": [
+          ["Grades 1-5", "May begin on the first student opening day listed for the year."],
+          ["Grades 6 and 9", "Often start on the first opening day as transition grades."],
+          ["Grades 1-12", "The full grades 1-12 opening day may be the next listed school day."],
+          ["ECSE, Pre-K, and Kindergarten", "Use the AACPS conference and staggered opening schedule for that year."]
+        ]
+      }
+    },
+    {
+      "id": "aacps-project-unity-early-dismissals",
+      "label": "Project Unity and Early Dismissal Days",
+      "position": "afterKeyDates",
+      "content": "AACPS identifies several two-hour early dismissal days tied to Project Unity and professional development. The calendar also notes when there is no afternoon ECSE. These dates are easy to miss because schools are open, but dismissal and afternoon program routines change."
+    },
+    {
+      "id": "aacps-religious-observance-rules",
+      "label": "Religious Observance Rules",
+      "position": "afterBreaks",
+      "content": "The AACPS calendar includes religious and cultural observance notes beyond ordinary school-closed holidays. The district describes limits on tests and examinations around listed observances and restricts school-sponsored activities around Rosh Hashanah, Yom Kippur, Eid al-Fitr, and Eid al-Adha. Families should use the official calendar for the exact observance language each year."
+    },
+    {
+      "id": "aacps-weather-makeup-rule",
+      "label": "Weather Make-Up Rule",
+      "position": "beforeFaq",
+      "content": "AACPS states that three make-up days are included at the end of the school year. Additional days may be added to the June closing date if needed, and unused make-up days may be deducted from the June closing date. After the built-in make-up days are used, AACPS may use virtual learning days when conditions permit."
+    },
+    {
+      "id": "aacps-calendar-scope",
+      "label": "What This AACPS Calendar Covers",
+      "position": "beforeFaq",
+      "content": "This page covers the districtwide AACPS school-year calendar. It does not replace school-specific calendars for athletics, testing windows, graduation ceremonies, bell schedules, emergency notices, bus updates, or campus events."
+    }
+  ],
+  "compareIntro": "Compare AACPS dates with Baltimore County, Montgomery County, Prince George’s County, and Fairfax County public schools.",
+  "comparisonTitle": "How AACPS Compares With Other Baltimore–Washington Districts",
+  "faqDisplayLimit": 8,
+  "faqSchemaQuestions": [
+    "Which Anne Arundel County Public Schools calendar does this page summarize?",
+    "Does AACPS use staggered openings?",
+    "What are AACPS Project Unity days?",
+    "Does the AACPS calendar apply to every school event?",
+    "How does AACPS handle weather make-up days?",
+    "Does AACPS publish Spanish calendar PDFs?",
+    "Where should families verify AACPS calendar updates?"
+  ],
+  "districtFaqs": [
+    {
+      "q": "Which Anne Arundel County Public Schools calendar does this page summarize?",
+      "a": "This page summarizes the official AACPS districtwide school-year calendar for the selected school year."
+    },
+    {
+      "q": "Does AACPS use staggered openings?",
+      "a": "Yes. AACPS uses staggered openings and conferences for ECSE, Pre-K, and Kindergarten. Some transition grades may also start before the full grades 1-12 opening day."
+    },
+    {
+      "q": "What are AACPS Project Unity days?",
+      "a": "AACPS calendars identify selected two-hour early dismissal days as Project Unity and professional development dates. Families should check school dismissal times and afternoon ECSE notes for those dates."
+    },
+    {
+      "q": "Does the AACPS calendar apply to every school event?",
+      "a": "No. The district calendar covers countywide dates such as school openings, holidays, conferences, early dismissals, breaks, and marking period dates. Schools may publish separate dates for testing, athletics, performances, graduations, and campus events."
+    },
+    {
+      "q": "How does AACPS handle weather make-up days?",
+      "a": "AACPS states that three make-up days are included at the end of the school year. Additional closures may be added to the June closing date, and unused make-up days may be deducted from the June closing date."
+    },
+    {
+      "q": "Does AACPS publish Spanish calendar PDFs?",
+      "a": "Yes. AACPS publishes Spanish versions for available school-year calendars. When a Spanish PDF is available, it is linked as an alternate calendar on the school-year page."
+    },
+    {
+      "q": "Where should families verify AACPS calendar updates?",
+      "a": "Use the official AACPS school calendar page and district announcements for final confirmation. MySchoolDates is an independent calendar reference and is not affiliated with AACPS."
+    }
+  ],
+  "relatedDistricts": [
+    {
+      "name": "Baltimore County Public Schools",
+      "slug": "baltimore-county-school-calendar",
+      "state": "Maryland",
+      "reason": "Nearby Maryland district useful for comparing start dates, breaks, professional days, and weather make-up rules."
+    },
+    {
+      "name": "Montgomery County Public Schools",
+      "slug": "montgomery-county-school-calendar",
+      "state": "Maryland",
+      "reason": "Large Maryland district with separate opening, non-instructional day, early release, and make-up day patterns."
+    },
+    {
+      "name": "Prince George's County Public Schools",
+      "slug": "prince-georges-county-school-calendar",
+      "state": "Maryland",
+      "reason": "Nearby Maryland district in the Washington, D.C. region with its own holiday and break timing."
+    },
+    {
+      "name": "Fairfax County Public Schools",
+      "slug": "fairfax-county-school-calendar",
+      "state": "Virginia",
+      "reason": "Large Mid-Atlantic district often compared by families moving between Maryland and Northern Virginia."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Anne Arundel County Public Schools official website",
+      "url": "https://www.aacps.org"
+    },
+    {
+      "label": "Anne Arundel County Public Schools school calendar page",
+      "url": "https://www.aacps.org/o/aacps/page/school-calendar"
+    }
+  ]
+}

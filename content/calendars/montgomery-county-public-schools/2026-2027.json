@@ -14,7 +14,7 @@
   "pageHeading": "Montgomery County Public Schools (MCPS) Calendar 2026-2027",
   "seoTitle": "MCPS Calendar 2026-2027: Start Date, Holidays, Breaks & PDF",
   "seoDescription": "View the MCPS 2026-2027 traditional school calendar with first day, last day, holidays, early release days, Winter Break, Spring Break, PDF and ICS download.",
-  "calendarNotes": "Montgomery County Public Schools starts the 2026-2027 traditional school year on August 25, 2026 and ends on June 11, 2027 with an early release day. Student Transition Day is August 24, 2026. Winter Break includes holidays, non-instructional days, and systemwide closures from December 23, 2026 through January 2, 2027. Spring Break includes holidays and systemwide closures from March 31 through April 2, 2027. The adopted calendar lists 181 instructional days, marking period end dates, early release days, grading and planning days, and designated make-up days.",
+  "calendarNotes": "Montgomery County Public Schools starts the 2026-2027 traditional school year on August 25, 2026 and ends on June 11, 2027 with an early release day. Student Transition Day is August 24, 2026. Winter Break includes holidays, non-instructional days, and systemwide closures from December 23, 2026 through January 2, 2027. Spring Break includes holidays, non-instructional days, and systemwide closures from March 26 through April 2, 2027. The adopted calendar lists 181 instructional days, marking period end dates, early release days, grading and planning days, and designated make-up days.",
   "faqLimit": 20,
   "calendarFaqs": [
     {
@@ -31,7 +31,7 @@
     },
     {
       "q": "When is MCPS Spring Break in 2027?",
-      "a": "The traditional MCPS calendar lists spring closure dates from March 31 through April 2, 2027."
+      "a": "The traditional MCPS calendar lists a continuous spring closure period from March 26 through April 2, 2027, including holidays, non-instructional days, and systemwide closures."
     },
     {
       "q": "How many instructional days are in the MCPS 2026-2027 calendar?",
@@ -56,7 +56,7 @@
       "label": "Instructional Days"
     },
     {
-      "value": "Mar 31-Apr 2",
+      "value": "Mar 26-Apr 2",
       "label": "Spring Break"
     }
   ],
@@ -74,7 +74,7 @@
           ["Last day", "Friday, June 11, 2027"],
           ["Instructional days", "181"],
           ["Winter Break window", "December 24, 2026-January 2, 2027"],
-          ["Spring Break window", "March 31-April 2, 2027"]
+          ["Spring Break window", "March 26-April 2, 2027"]
         ]
       }
     },
@@ -125,7 +125,7 @@
             "Student Transition Day on August 24, 2026 affects transition grades and students new to a school.",
             "Early release dates before Thanksgiving and Winter Break may require pickup, transportation, or after-school care adjustments.",
             "Winter closure dates run around December 23, 2026 through January 2, 2027.",
-            "Spring closure dates run March 31 through April 2, 2027.",
+            "Spring closure dates run March 26 through April 2, 2027.",
             "The last student day is June 11, 2027 and is listed as an early release day."
           ]
         },
@@ -206,7 +206,10 @@
     { "date": "2027-02-15", "name": "Holiday", "type": "holiday" },
     { "date": "2027-02-26", "name": "Early Release Day for Students", "type": "early_release" },
     { "date": "2027-03-17", "name": "Non-Instructional Day and Designated Make-Up Day", "type": "makeup_day" },
-    { "date": "2027-03-31", "name": "Spring Break Begins - Holiday", "type": "break_start" },
+    { "date": "2027-03-26", "name": "Spring Break Begins - Holiday", "type": "break_start" },
+    { "date": "2027-03-29", "name": "Spring Break - Holiday", "type": "holiday" },
+    { "date": "2027-03-30", "name": "Spring Break - Non-Instructional Day", "type": "no_school" },
+    { "date": "2027-03-31", "name": "Spring Break - Non-Instructional Day", "type": "no_school" },
     { "date": "2027-04-01", "name": "Spring Break - Systemwide Closure", "type": "holiday" },
     { "date": "2027-04-02", "name": "Spring Break Ends - Systemwide Closure", "type": "break_end" },
     { "date": "2027-04-09", "name": "Quarter 3 Ends", "type": "quarter_end" },

@@ -1,12 +1,16 @@
 <script setup lang="ts">
+type SourceLink = { label: string; url?: string; note?: string; versionLabel?: string }
+
 const props = defineProps<{
-  sources: { label: string; url?: string }[]
+  sources: SourceLink[]
   districtName: string
   shortName: string
   year: string
   verifiedDate: string | null
   sourceVersion?: string | null
   sourcePdfUrl?: string | null
+  reviewSummary?: string | null
+  reviewDetails?: string[] | null
 }>()
 
 const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' && props.sourcePdfUrl.includes('assets.myschooldates.com'))
@@ -17,31 +21,66 @@ const displayYear = computed(() => {
   const match = props.year.match(/^(\d{4})-(\d{4})$/)
   return match ? `${match[1]}–${match[2]!.slice(2)}` : props.year
 })
+const sourceVersionInline = computed(() =>
+  Boolean(sourceVersionSourceUrl.value && props.sourceVersion)
+)
+const sourceVersionSourceUrl = computed(() => {
+  if (!props.sourceVersion) return ''
+  if (props.sourcePdfUrl && props.sources.some(src => src.url === props.sourcePdfUrl)) {
+    return props.sourcePdfUrl
+  }
+  return ''
+})
+const isSourceVersionLink = (src: SourceLink) =>
+  Boolean(sourceVersionSourceUrl.value && src.url === sourceVersionSourceUrl.value)
 </script>
 
 <template>
-  <div class="bg-[#f3f0e8] rounded-lg border border-[#e1dbd0] p-5">
+  <div id="sources" class="bg-[#f3f0e8] rounded-lg border border-[#e1dbd0] p-5 scroll-mt-24">
     <h2 class="text-sm font-semibold text-[#4f5b5f] mb-2">Sources and Review Notes</h2>
-    <p class="text-sm text-[#6b645c] mb-3">
+    <p v-if="reviewSummary" class="text-sm text-[#6b645c] mb-3">
+      {{ reviewSummary }}
+    </p>
+    <p v-else class="text-sm text-[#6b645c] mb-3">
       MySchoolDates is an independent calendar reference and is not affiliated with {{ districtName }}.
       Calendar dates are based on {{ possessiveDistrictName }} official {{ displayYear }} calendar.
       <template v-if="verifiedDate"> We checked the dates against the official district source on {{ verifiedDate }}.</template>
       <template v-else> Not yet checked against the official source.</template>
     </p>
     <ul class="space-y-2 mb-3">
-      <li v-for="src in sources" :key="src.label" class="flex items-center gap-2 text-xs text-[#7b756d]">
+      <li v-for="src in sources" :key="src.label" class="flex min-w-0 items-center gap-2 text-xs text-[#7b756d]">
         <svg class="w-3 h-3 text-[#9a938a] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
         </svg>
-        <a v-if="src.url" :href="src.url" target="_blank" rel="noopener" class="inline-flex items-center underline hover:text-[#0f5d6b] transition-colors">
-          {{ src.label }}
-          <span class="sr-only">(opens in a new tab)</span>
-        </a>
-        <span v-else>{{ src.label }}</span>
+        <span class="flex min-w-0 max-w-full items-center overflow-hidden whitespace-nowrap">
+          <a v-if="src.url" :href="src.url" target="_blank" rel="noopener" class="inline-flex min-w-0 items-center truncate underline hover:text-[#0f5d6b] transition-colors">
+            {{ src.label }}
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+          <span v-else class="truncate">{{ src.label }}</span>
+          <span
+            v-if="isSourceVersionLink(src) && sourceVersion"
+            class="hidden flex-shrink-0 text-[#8a837a] lg:inline"
+          >
+            · {{ sourceVersion }}
+          </span>
+          <span
+            v-if="src.note || src.versionLabel"
+            class="hidden flex-shrink-0 text-[#8a837a] lg:inline"
+          >
+            · {{ src.note || src.versionLabel }}
+          </span>
+          <span
+            v-if="isSourceVersionLink(src) && isArchivedPdfCopy"
+            class="hidden flex-shrink-0 text-[#8a837a] xl:inline"
+          >
+            · Archived official PDF copy stored by MySchoolDates
+          </span>
+        </span>
       </li>
     </ul>
     <div class="text-xs text-[#7b756d] pt-3 border-t border-[#ddd6cb] space-y-1.5">
-      <p v-if="sourceVersion">
+      <p v-if="sourceVersion && !sourceVersionInline">
         <span class="font-medium text-[#6b645c]">Calendar version:</span>
         <a
           v-if="sourcePdfUrl"
@@ -80,9 +119,14 @@ const displayYear = computed(() => {
           How we verify this calendar
         </summary>
         <div class="mt-2 space-y-1.5">
-          <p>Each school year, MySchoolDates checks the dates shown on this page against the district's published calendar and other official calendar documents.</p>
-          <p>If we find a mismatch, we correct the page and update its review date. This page focuses on major districtwide student dates. School-specific dismissal times, testing, staff details, and program events may appear only in the official PDF or individual school calendars. The downloadable calendar file is a one-time import generated from the calendar records used for this page, and the official district calendar remains the source of record for last-minute changes.</p>
-          <p>Confirm program deadlines, transportation notices, and emergency schedule changes directly with {{ shortName }}.</p>
+          <template v-if="reviewDetails?.length">
+            <p v-for="detail in reviewDetails" :key="detail">{{ detail }}</p>
+          </template>
+          <template v-else>
+            <p>Each school year, MySchoolDates checks the dates shown on this page against the district's published calendar and other official calendar documents.</p>
+            <p>If we find a mismatch, we correct the page and update its review date. This page focuses on major districtwide student dates. School-specific dismissal times, testing, staff details, and program events may appear only in the official PDF or individual school calendars. The downloadable calendar file is a one-time import generated from the calendar records used for this page, and the official district calendar remains the source of record for last-minute changes.</p>
+            <p>Confirm program deadlines, transportation notices, and emergency schedule changes directly with {{ shortName }}.</p>
+          </template>
           <p>
             <a
               href="mailto:hello@myschooldates.com?subject=Calendar%20Correction"

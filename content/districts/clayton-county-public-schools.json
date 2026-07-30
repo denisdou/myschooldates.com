@@ -1,0 +1,150 @@
+{
+  "institutionId": "clayton-county-public-schools",
+  "name": "Clayton County Public Schools",
+  "shortName": "CCPS",
+  "slug": "clayton-county-public-schools-calendar",
+  "state": "Georgia",
+  "stateCode": "GA",
+  "city": "Jonesboro",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.clayton.k12.ga.us",
+  "calendarPage": "https://www.clayton.k12.ga.us/about/calendars/school-year-calendars",
+  "logo": "https://resources.finalsite.net/images/f_auto,q_auto/v1693815488/claytonk12gaus/nqnbpkostrsmxyupwi0k/district-logo.png",
+  "timezone": "America/New_York",
+  "county": "Clayton County",
+  "region": "Metro Atlanta",
+  "metro": "Atlanta-Sandy Springs-Roswell",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "keyDates",
+  "contentTier": "enhanced",
+  "contentTierLabel": "South Metro Atlanta District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-07-30",
+    "coverageNote": "Clayton County Public Schools coverage uses the district website, official school-year calendars page, and official student calendar PDFs for 2025-2026 and 2026-2027. The 2026-2027 review also checked the locally provided image copy of the calendar. No 2027-2028 or 2028-2029 PDF URL was provided, so those years were not created."
+  },
+  "contentFreshnessScore": {
+    "overall": 95,
+    "sourceUpdated": "2026-07-30",
+    "lastManualReview": "2026-07-30",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the Clayton County Public Schools calendar page when CCPS posts a corrected calendar, changes ELBC or PL Day labels, or publishes a future-year PDF."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official CCPS revision, missing future-year PDF, ELBC schedule change, or stale freshness score."
+  },
+  "includeArticleSchema": true,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Clayton County Public Schools",
+    "CCPS calendar",
+    "Clayton County school calendar",
+    "Clayton County Public Schools student calendar",
+    "Clayton County Schools calendar",
+    "Clayton County ELBC days",
+    "Clayton County Public Schools PDF calendar"
+  ],
+  "districtFact": "Clayton County Public Schools publishes a traditional student calendar that families need to read carefully because ELBC days are virtual instructional days for students, while PL Day is a staff-focused professional learning/workday.",
+  "about": [
+    {
+      "title": "About Clayton County Public Schools",
+      "content": "Clayton County Public Schools serves students in Clayton County, Georgia, including Jonesboro and south metro Atlanta communities. The district calendar lists the first and last school days, fall break, Thanksgiving break, semester break, winter break when scheduled, spring break, ELBC days, professional learning days, and major holidays."
+    },
+    {
+      "title": "District Calendar and School-Level Schedules",
+      "content": "This districtwide calendar is a starting point for family planning. Families should still check their assigned school for bell schedules, testing, athletics, graduation, transportation notices, program events, and emergency schedule changes."
+    }
+  ],
+  "planningTips": {
+    "title": "Clayton County Calendar Notes",
+    "content": [
+      "ELBC means Extended Learning Beyond the Classroom. The district describes ELBC days as virtual instructional days for students and planning or professional development days for teachers.",
+      "PL Day is a Professional Learning Day. When it appears on the student calendar as a workday, families should not treat it as a regular student attendance day.",
+      "Clayton County uses Semester Break for the late-December break and may list a separate February Winter Break in some school years.",
+      "Election Day can also be an ELBC day, so families should check whether the date is virtual instruction rather than a normal in-person day."
+    ]
+  },
+  "compareIntro": "Compare Clayton County Public Schools with nearby Metro Atlanta districts. The table focuses on school-year boundaries and major breaks.",
+  "relatedDistricts": [
+    {
+      "name": "Atlanta Public Schools",
+      "slug": "atlanta-public-schools-calendar",
+      "state": "Georgia",
+      "comparisonSourceLabel": "APS 2026–27 student calendar PDF",
+      "comparisonNote": "Atlanta Public Schools is useful for comparing south metro and city district start dates, break timing, and last day."
+    },
+    {
+      "name": "DeKalb County School District",
+      "slug": "dekalb-county-school-calendar",
+      "state": "Georgia",
+      "comparisonSourceLabel": "DCSD 2026–27 calendar PDF",
+      "comparisonNote": "DeKalb provides a nearby Metro Atlanta comparison for fall break, winter break, spring break, and make-up day planning."
+    },
+    {
+      "name": "Fulton County Schools",
+      "slug": "fulton-county-schools-calendar",
+      "state": "Georgia",
+      "comparisonLabel": "Fulton",
+      "comparisonSourceLabel": "Fulton 2026–27 approved calendar PDF",
+      "comparisonPageSourceLabel": "Fulton calendar page",
+      "comparisonNote": "Fulton County Schools is another large Atlanta-area district families may compare for start, end, and break timing."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Clayton County Public Schools official website",
+      "url": "https://www.clayton.k12.ga.us"
+    },
+    {
+      "label": "Clayton County Public Schools school-year calendars",
+      "url": "https://www.clayton.k12.ga.us/about/calendars/school-year-calendars"
+    }
+  ],
+  "districtFaqs": [
+    {
+      "q": "What does ELBC mean on the Clayton County Public Schools calendar?",
+      "a": "ELBC means Extended Learning Beyond the Classroom. The district describes ELBC days as virtual instructional days for students and planning or professional development days for teachers."
+    },
+    {
+      "q": "What is a PL Day on the Clayton County calendar?",
+      "a": "PL Day means Professional Learning Day. On the student calendar, a PL Day / Workday is a staff-focused date rather than a normal student attendance day."
+    },
+    {
+      "q": "Where should families verify Clayton County Public Schools calendar updates?",
+      "a": "Use the official Clayton County Public Schools school-year calendars page and the district PDF for final confirmation before making travel, childcare, or school-specific plans."
+    }
+  ]
+}
