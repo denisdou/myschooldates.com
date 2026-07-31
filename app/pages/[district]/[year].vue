@@ -52,8 +52,12 @@ const [{ data: district }, { data: cal }, { data: allDistricts }] = await Promis
 ])
 
 const { data: relatedCals } = await useAsyncData(`related-cals:${slug}:${year}`, async () => {
-  if (!district.value?.relatedDistricts?.length) return []
-  const relatedSlugs = new Set((district.value.relatedDistricts as { slug: string }[]).map(rd => rd.slug))
+  const configuredComparisonSlugs = [
+    ...(((district.value as any)?.relatedDistricts ?? []) as { slug: string }[]).map(rd => rd.slug),
+    ...(((cal.value as any)?.comparisonDistrictSlugs ?? (cal.value as any)?.meta?.comparisonDistrictSlugs ?? []) as string[]),
+  ].filter(Boolean)
+  if (!configuredComparisonSlugs.length) return []
+  const relatedSlugs = new Set(configuredComparisonSlugs)
   const relatedIds = (allDistricts.value ?? [])
     .filter(d => relatedSlugs.has(d.slug))
     .map(d => d.institutionId)
@@ -67,6 +71,27 @@ const { data: relatedCals } = await useAsyncData(`related-cals:${slug}:${year}`,
 if (!district.value || !cal.value) {
   throw createError({ statusCode: 404, statusMessage: 'Calendar not found' })
 }
+
+function removeHiddenCustomSections() {
+  const hiddenIds = new Set([
+    ...(((district.value as any)?.hiddenCustomSectionIds ?? (district.value as any)?.meta?.hiddenCustomSectionIds ?? []) as string[]),
+    ...(((cal.value as any)?.hiddenCustomSectionIds ?? (cal.value as any)?.meta?.hiddenCustomSectionIds ?? []) as string[]),
+  ])
+  if (!hiddenIds.size) return
+  if ((district.value as any)?.customSections) {
+    ;(district.value as any).customSections = ((district.value as any).customSections as DistrictCustomSection[]).filter(section => !hiddenIds.has(section.id))
+  }
+  if ((district.value as any)?.meta?.customSections) {
+    ;(district.value as any).meta.customSections = ((district.value as any).meta.customSections as DistrictCustomSection[]).filter(section => !hiddenIds.has(section.id))
+  }
+  if ((cal.value as any)?.customSections) {
+    ;(cal.value as any).customSections = ((cal.value as any).customSections as DistrictCustomSection[]).filter(section => !hiddenIds.has(section.id))
+  }
+  if ((cal.value as any)?.meta?.customSections) {
+    ;(cal.value as any).meta.customSections = ((cal.value as any).meta.customSections as DistrictCustomSection[]).filter(section => !hiddenIds.has(section.id))
+  }
+}
+removeHiddenCustomSections()
 
 const prevYearVal = (() => {
   const [y1, y2] = year.split('-').map(Number)
@@ -385,6 +410,7 @@ const dateLegend = computed(() => {
     ...(hasEventType(['holiday', 'schools_closed', 'schools_offices_closed']) ? [{ label: 'School Closure', dot: 'bg-red-400' }] : []),
     ...(hasEventType(['no_school', 'student_holiday', 'teacher_workday', 'teacher_professional_learning']) ? [{ label: 'No School for Students', dot: 'bg-amber-400' }] : []),
     ...(hasEventType(['partial_closure']) ? [{ label: 'Some Students Off', dot: 'bg-pink-400' }] : []),
+    ...(hasEventType(['half_day_high_school', 'half_day_dismissal']) ? [{ label: 'Half-Day Dismissal', dot: 'bg-orange-300' }] : []),
     ...(hasEventType(['early_dismissal', 'early_release']) ? [{ label: 'Early Release', dot: 'bg-orange-400' }] : []),
     ...(hasEventType(['break_start']) || hasPossibleMakeupDay ? [{ label: 'Break', dot: 'bg-purple-400' }] : []),
     ...(hasEventType(['observance']) ? [{ label: 'Observance', dot: 'bg-teal-400' }] : []),
@@ -723,6 +749,7 @@ const configuredKeyDateSummaryItems = computed(() =>
       label: item.label,
       type: item.type ?? 'milestone',
       description: item.description,
+      schemaDescription: item.schemaDescription,
     }))
 )
 const keyDateItemListEvents = computed(() => {
@@ -859,6 +886,7 @@ function keyDateDisplayName(event: { name: string; type: string; displayName?: s
   return event.name
 }
 function keyDateSchemaDescription(event: any) {
+  if (event.schemaDescription) return event.schemaDescription
   if (event.description) return event.description
   const districtLabel = district.value.shortName || district.value.name
   const eventName = keyDateDisplayName(event)
@@ -1211,6 +1239,7 @@ useHead({
         :first-day="cal!.firstDay"
         :last-day="cal!.lastDay"
         :coverage-note="(cal as any).allDatesCoverageNote ?? (cal as any).meta?.allDatesCoverageNote"
+        :legend-style="(cal as any).dateLegendStyle ?? (cal as any).meta?.dateLegendStyle"
       />
       <DistrictCustomSections :sections="customSections" position="afterAllDates" />
 

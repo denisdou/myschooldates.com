@@ -1,226 +1,348 @@
 {
   "institutionId": "newport-news-public-schools",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Newport News Public Schools Calendar 2026–27",
   "firstDay": "2026-08-24",
   "lastDay": "2027-06-08",
+  "totalSchoolDays": 178,
+  "teacherWorkDays": 192,
   "sourceUrl": "https://sbo.nn.k12.va.us/calendars/",
-  "sourcePdfUrl": "https://sbo.nn.k12.va.us/calendars/cal-current.pdf",
-  "lastVerifiedAt": "2026-07-20",
+  "sourcePdfUrl": "https://sbo.nn.k12.va.us/calendars/archive/cal-2026-27-approved.pdf",
+  "sourceCalendarName": "NNPS 2026–2027 Approved School Calendar",
+  "sourceVersion": "Approved March 17, 2026",
+  "lastVerifiedAt": "2026-07-31",
   "datePublished": "2026-07-20",
-  "dateModified": "2026-07-20",
+  "dateModified": "2026-07-31",
   "calendarType": "traditional",
-  "totalSchoolDays": 180,
+  "seoTitle": "Newport News Public Schools Calendar 2026–27 | PDF & Dates",
+  "seoDescription": "View the approved NNPS 2026–27 calendar with 178 student days, breaks, half days, exams, report cards, graduations, PDF, and ICS downloads.",
+  "heroSummary": "Newport News Public Schools begins classes on Monday, August 24, 2026, and the last student day is Tuesday, June 8, 2027. The approved calendar includes 178 student days and more than 990 instructional hours. Students return on January 5, 2027, after Winter Break. After Spring Break, classes resume on April 13, 2027, because April 12 is a teacher planning day.",
+  "heroFactChips": [
+    "178 student days · More than 990 instructional hours"
+  ],
+  "verificationBadgeText": "Reviewed July 31, 2026, against the NNPS calendar approved March 17, 2026.",
+  "hideInstructionalDaysSummary": true,
   "hideSemesterCount": true,
-  "yearNumbersMode": "compact",
-  "seoTitle": "Newport News Public Schools Calendar 2026-2027 | Holidays, Breaks, PDF",
-  "seoDescription": "Find the NNPS 2026-2027 calendar with holidays, Aug 24 first day, Jun 8 last student day, Winter Break, Spring Break, teacher workdays, exam dates, printable PDF and calendar download.",
-  "calendarNotes": "Newport News Public Schools starts the 2026-2027 school year on August 24, 2026. Winter Break runs December 21-January 1, Spring Break runs April 5-9, and the last student day is June 8, 2027. The calendar also lists teacher planning days, regional professional development, exam dates, early dismissals, and tentative high school graduation dates.",
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hiddenSections": [
+    "downloadCta",
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "breaks",
+    "about",
+    "yearNumbers",
+    "whatsDifferent",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends"
+  ],
+  "hiddenCustomSectionIds": [
+    "newport-news-school-district-overview",
+    "myschooldates-education-research-team",
+    "about-newport-news-public-schools-calendar",
+    "who-uses-nnps-calendar",
+    "nnps-school-closures-schedule-changes",
+    "parent-planning-guide-nnps-2026-2027"
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Family Notes", "id": "nnps-family-calendar-notes" },
+    { "label": "Full Calendar", "id": "all-dates" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Grading Periods", "id": "grading-periods" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "keyDatesSummaryTitle": "At a Glance",
+  "keyDatesSummarySubtitle": "Student dates and no-school periods families are most likely to need",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First student day",
+      "date": "2026-08-24",
+      "type": "school_start",
+      "schemaDescription": "NNPS students begin the 2026–27 school year on August 24, 2026."
+    },
+    {
+      "label": "No School",
+      "name": "Thanksgiving no-school period",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "milestone",
+      "description": "Schools are closed November 25; NNPS labels November 26–27 as the Thanksgiving Observance."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "milestone",
+      "description": "Students return Tuesday, January 5, after the January 4 teacher planning day."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-04-05",
+      "endDate": "2027-04-09",
+      "type": "milestone",
+      "description": "Students do not attend on the teacher planning day Monday, April 12, and return Tuesday, April 13."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last student day",
+      "date": "2027-06-08",
+      "type": "school_end",
+      "schemaDescription": "The last student day on the approved NNPS 2026–27 calendar is June 8, 2027."
+    }
+  ],
+  "allDatesTitle": "Student and Family Calendar Dates — 2026–27",
+  "allDatesSourceLabel": "NNPS approved 2026–27 calendar PDF",
+  "allDatesSourceUrl": "https://sbo.nn.k12.va.us/calendars/archive/cal-2026-27-approved.pdf",
+  "allDatesCoverageNote": "This list focuses on districtwide dates that affect students, including no-school days, breaks, return dates, half days, early dismissals, exams, and tentative graduations. Staff and office dates outside the student year are summarized separately below. Check announcements from your child’s school for bell schedules, testing, athletics, performances, and final graduation details.",
+  "dateLegendLabelOverrides": {
+    "School Closure": "Holiday",
+    "No School for Students": "No School",
+    "Half-Day Dismissal": "Half-Day Schedule",
+    "Half-Day High Schools": "Half-Day Schedule",
+    "Early Release": "Early Dismissal",
+    "Early release": "Early Dismissal",
+    "No School": "No School",
+    "Staff Day": "No School",
+    "Teachers": "Staff Date"
+  },
+  "dateLegendStyle": "text",
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideExtendedShareButtons": true,
+  "icsHeading": "Add NNPS Dates to Your Calendar",
+  "icsDescription": "Download the 2026–27 student and family dates for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonSupportText": "One-time import. This calendar does not automatically sync with later NNPS updates.",
+  "pdfHeading": "NNPS 2026–27 Approved Calendar PDF",
+  "pdfDescription": "View the school calendar approved by the Newport News School Board. Check the NNPS calendar page for later revisions before making travel or child care plans.",
+  "pdfButtonLabel": "View Approved PDF",
+  "pdfVersionLabel": "Approved March 17, 2026",
+  "schemaCalendarName": "NNPS 2026–2027 Approved School Calendar",
+  "schemaDatasetName": "Newport News Public Schools 2026–2027 Student Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Newport News Public Schools dates for the 2026–2027 school year, including 178 student days, no-school periods, breaks, return dates, half-day schedules, early dismissals, high school exams, grading periods, and tentative graduations.",
+  "schemaCalendarDownloadName": "Newport News Public Schools 2026–2027 calendar file",
+  "includeArticleSchema": false,
+  "temporalCoverageStart": "2026-08-24",
+  "temporalCoverageEnd": "2027-06-08",
+  "calendarNotes": "The approved NNPS calendar contains 178 student days and more than 990 instructional hours. This page focuses on districtwide dates that affect students; office-only dates and staff reporting dates are summarized separately.",
+  "gradingPeriods": [
+    { "label": "Marking Period 1", "end": "2026-11-02", "studentDays": 48, "reportsIssued": "2026-11-11" },
+    { "label": "Marking Period 2", "end": "2027-01-22", "studentDays": 43, "reportsIssued": "2027-02-02" },
+    { "label": "Marking Period 3", "end": "2027-04-02", "studentDays": 47, "reportsIssued": "2027-04-20" },
+    { "label": "Marking Period 4", "end": "2027-06-08", "studentDays": 40, "reportsIssued": "2027-06-08" }
+  ],
   "calendarFaqs": [
     {
-      "q": "When does Newport News Public Schools start school in 2026?",
-      "a": "All students report on Monday, August 24, 2026."
+      "q": "When is the first day of school for NNPS in 2026?",
+      "a": "The first student day is Monday, August 24, 2026."
     },
     {
-      "q": "When is NNPS Spring Break in 2027?",
-      "a": "Spring Break runs Monday, April 5 through Friday, April 9, 2027."
+      "q": "When is the last student day for NNPS in 2027?",
+      "a": "The approved calendar lists Tuesday, June 8, 2027, as the last student day, although make-up days could change the schedule."
     },
     {
-      "q": "When is the last day of school for Newport News in 2027?",
-      "a": "The last student day is Tuesday, June 8, 2027. The last teacher day is June 9."
+      "q": "When is Winter Break, and when do students return?",
+      "a": "Winter Break runs December 21, 2026, through January 1, 2027. January 4 is a teacher planning day when students do not attend, and schools reopen Tuesday, January 5. The second semester begins January 27."
     },
     {
-      "q": "Are Newport News high school graduation dates final for 2027?",
-      "a": "The official calendar labels June 3-4, 2027 as tentative high school graduation dates."
+      "q": "When is Spring Break, and when do students return?",
+      "a": "Spring Break runs April 5–9, 2027. Students do not attend on the teacher planning day Monday, April 12, and return Tuesday, April 13."
     },
     {
-      "q": "Does Newport News Public Schools have early dismissal days?",
-      "a": "Yes. The NNPS 2026-2027 calendar lists early dismissal dates, including half-day dismissal and exam-related early dismissal dates during the school year and final week."
+      "q": "How many student days are in the NNPS 2026–27 calendar?",
+      "a": "The approved calendar contains 178 student days and more than 990 instructional hours. Virginia permits school divisions to meet the requirement through 180 days or 990 instructional hours."
     },
     {
-      "q": "How many instructional days are in the NNPS 2026-2027 calendar?",
-      "a": "The Newport News Public Schools 2026-2027 calendar lists 180 instructional days for students."
+      "q": "Which NNPS dates affect high school students?",
+      "a": "High schools have half-day exam schedules January 20–22 and early dismissal and exam dates June 4, 7, and 8. Tentative graduation ceremonies are listed for June 3–4."
     },
     {
-      "q": "Does the Newport News Public Schools calendar include teacher workdays?",
-      "a": "Yes. The NNPS calendar includes teacher planning days, regional professional development days, and teacher workdays separately from regular student attendance dates."
+      "q": "Are the 2027 NNPS graduation dates final?",
+      "a": "No. NNPS labels June 3–4, 2027, as tentative high school graduation dates. Families of graduating seniors should confirm final times and locations with their school."
     },
     {
-      "q": "Where can I download the Newport News Public Schools calendar PDF?",
-      "a": "The official NNPS calendar PDF is linked from this page, and families can also download the MySchoolDates calendar file for Google Calendar, Apple Calendar, and Outlook."
-    },
-    {
-      "q": "When does Newport News Public Schools start after winter break?",
-      "a": "Newport News Public Schools reopens after Winter Break on Tuesday, January 5, 2027. January 4 is listed as a teacher planning day with schools closed for students."
-    },
-    {
-      "q": "Are NNPS calendars different for elementary and high schools?",
-      "a": "Most districtwide dates apply across NNPS schools, but high schools have additional exam dates, early dismissal schedules, and tentative graduation dates. Families should check campus notices for school-specific schedules."
-    },
-    {
-      "q": "Does this page include school-specific NNPS events?",
-      "a": "This page focuses on the districtwide NNPS academic calendar. School-specific events, bell schedules, athletics, performances, testing details, and campus announcements should be confirmed directly with the school."
+      "q": "Where should families check for NNPS calendar changes?",
+      "a": "Check the official NNPS calendars page and announcements from your child’s school before making plans. The ICS file on this page is a one-time import and does not update automatically."
     }
+  ],
+  "faqDisplayLimit": 8,
+  "faqDisplayQuestions": [
+    "When is the first day of school for NNPS in 2026?",
+    "When is the last student day for NNPS in 2027?",
+    "When is Winter Break, and when do students return?",
+    "When is Spring Break, and when do students return?",
+    "How many student days are in the NNPS 2026–27 calendar?",
+    "Which NNPS dates affect high school students?",
+    "Are the 2027 NNPS graduation dates final?",
+    "Where should families check for NNPS calendar changes?"
+  ],
+  "faqSchemaQuestions": [
+    "When is the first day of school for NNPS in 2026?",
+    "When is the last student day for NNPS in 2027?",
+    "When is Winter Break, and when do students return?",
+    "When is Spring Break, and when do students return?",
+    "How many student days are in the NNPS 2026–27 calendar?",
+    "Which NNPS dates affect high school students?",
+    "Are the 2027 NNPS graduation dates final?",
+    "Where should families check for NNPS calendar changes?"
   ],
   "customSections": [
     {
-      "id": "newport-news-calendar-2026-2027-highlights",
-      "label": "Newport News Public Schools Calendar 2026-2027 Highlights",
+      "id": "nnps-family-calendar-notes",
+      "label": "What Families Should Know",
       "position": "afterKeyDates",
-      "content": "These are the NNPS dates families usually need first when planning the 2026-2027 academic calendar.",
+      "content": "A few teacher workdays extend the time students are out of school beyond the dates officially labeled as a break.",
       "groups": [
         {
-          "label": "Most important dates",
+          "label": "Winter Break and the second semester are separate milestones",
           "items": [
-            "First student day: August 24, 2026.",
-            "Winter Break: December 21, 2026-January 1, 2027.",
-            "Spring Break: April 5-9, 2027.",
-            "Last student day: June 8, 2027.",
-            "Instructional days: 180.",
-            "High school graduation dates are listed as tentative for June 3-4, 2027."
+            "Winter Break ends January 1, but January 4 is a teacher planning day and students return January 5.",
+            "The second semester begins January 27 after high school exams and two additional no-school days."
           ]
         },
         {
-          "label": "Planning notes",
+          "label": "Thanksgiving creates a three-day no-school period",
           "items": [
-            "Families planning vacations should pay close attention to Winter Break and Spring Break because they are the longest districtwide student breaks in the NNPS academic calendar.",
-            "High school families should review January and June exam windows separately because exam periods can affect early dismissal, transportation, and after-school schedules.",
-            "Graduation dates are listed as tentative, so senior families should verify final ceremony dates, times, and locations before making travel arrangements."
+            "Schools are closed Wednesday, November 25.",
+            "NNPS labels Thursday and Friday, November 26–27, as the Thanksgiving Observance."
+          ]
+        },
+        {
+          "label": "Spring Break is followed by a teacher planning day",
+          "items": [
+            "Spring Break runs April 5–9.",
+            "Students do not attend Monday, April 12, and return Tuesday, April 13."
+          ]
+        },
+        {
+          "label": "Half-day and early-dismissal schedules affect several dates",
+          "items": [
+            "High schools follow half-day exam schedules January 20–22.",
+            "All schools have half-day dismissal May 28, while June 4, 7, and 8 are early-dismissal and exam dates."
           ]
         }
       ]
     },
     {
-      "id": "how-to-add-nnps-calendar-google-calendar",
-      "label": "How to Add the NNPS Calendar to Google Calendar",
+      "id": "nnps-exams-and-graduation",
+      "label": "High School Exams and Graduation",
+      "position": "afterAllDates",
+      "content": "For high school families: exams use half-day schedules January 20–22 and early-dismissal schedules June 4, 7, and 8. NNPS lists June 3–4 graduation dates as tentative, so families should confirm ceremony times and locations with their school."
+    },
+    {
+      "id": "nnps-staff-and-office-dates",
+      "label": "Staff and District Office Dates",
       "position": "beforeSources",
-      "content": "Download the NNPS 2026-2027 calendar file from this page when you want a one-time import for Google Calendar, Apple Calendar, or Outlook. The file is generated from reviewed calendar records and does not automatically update if Newport News Public Schools revises the official calendar.",
+      "content": "These dates appear on the approved NNPS calendar but fall outside the main student attendance list.",
+      "collapsible": true,
+      "defaultOpen": false,
       "groups": [
         {
-          "label": "Calendar import steps",
+          "label": "Staff reporting dates",
           "items": [
-            "Download the NNPS .ics calendar file from the calendar download section.",
-            "Open Google Calendar and choose Settings, then Import & export.",
-            "Upload the .ics file and select the calendar where the NNPS dates should appear.",
-            "Confirm school holidays, breaks, teacher workdays, and key dates after import."
+            "New teachers report August 4, 2026.",
+            "All teachers and teacher assistants report August 13, 2026.",
+            "The last teacher day is June 9, 2027."
           ]
-        }
-      ]
-    },
-    {
-      "id": "nnps-month-by-month-planning-tips",
-      "label": "Month-by-Month Planning Tips for NNPS Families",
-      "position": "beforeSources",
-      "content": "Use these Newport News Public Schools planning notes to connect major calendar dates with family scheduling decisions.",
-      "groups": [
+        },
         {
-          "label": "Key planning windows",
+          "label": "Office schedule dates",
           "items": [
-            "August: complete enrollment, transportation, and school supply planning before all students report on August 24.",
-            "December-January: arrange childcare and travel around Winter Break and the January 4 teacher planning day.",
-            "January and June: review exam and early dismissal dates, especially for high school students.",
-            "April: Spring Break is scheduled April 5-9, with students returning after the break and teacher planning period.",
-            "June: confirm tentative graduation dates and summer program timing before the last student day on June 8."
+            "Independence Day is observed July 3, 2026, and Juneteenth is observed June 18, 2027.",
+            "NNPS schools and offices are closed on designated Fridays during summer operations."
           ]
         }
       ]
-    },
-    {
-      "id": "nnps-academic-calendar-changes-2026-2027",
-      "label": "Newport News Public Schools Calendar Changes",
-      "position": "afterYearDiff",
-      "content": "Compared with the previous Newport News Public Schools calendar, this Newport News Public Schools school calendar 2026-2027 overview keeps a similar late-August start and early-June finish while shifting several key dates one calendar day earlier.",
-      "table": {
-        "columns": [
-          "Calendar item",
-          "2025-2026",
-          "2026-2027",
-          "Change"
-        ],
-        "rows": [
-          [
-            "First student day",
-            "August 25, 2025",
-            "August 24, 2026",
-            "One calendar day earlier"
-          ],
-          [
-            "Last student day",
-            "June 9, 2026",
-            "June 8, 2027",
-            "One calendar day earlier"
-          ],
-          [
-            "Winter Break",
-            "December 22-January 2",
-            "December 21-January 1",
-            "Starts and ends one calendar day earlier"
-          ],
-          [
-            "Spring Break",
-            "April 6-10",
-            "April 5-9",
-            "Starts and ends one calendar day earlier"
-          ]
-        ]
-      }
     }
   ],
-  "yearNumbers": [
+  "comparisonBeforeFaq": true,
+  "comparisonTitle": "NNPS Calendar Compared With Hampton Roads Districts",
+  "comparisonDistrictSlugs": [
+    "hampton-city-schools-calendar",
+    "virginia-beach-school-calendar",
+    "york-county-school-division-calendar"
+  ],
+  "comparisonSummary": "NNPS, Hampton City Schools, Virginia Beach City Public Schools, and York County School Division all begin classes on August 24, 2026. Their spring-break and last-day schedules differ.",
+  "comparisonInsights": [
     {
-      "label": "First Day",
-      "value": "Aug 24",
-      "detail": "All students report on August 24, 2026."
+      "label": "Opening day",
+      "items": [
+        "All four Hampton Roads divisions begin classes on Monday, August 24."
+      ]
     },
     {
-      "label": "Spring Break",
-      "value": "Apr 5-9",
-      "detail": "Spring Break is the first week of April for Peninsula school divisions."
+      "label": "Spring break",
+      "items": [
+        "NNPS, Hampton, and York schedule Spring Break for April 5–9.",
+        "Virginia Beach schedules Spring Break one week earlier, March 29–April 2."
+      ]
     },
     {
-      "label": "Last Student Day",
-      "value": "Jun 8",
-      "detail": "The last student day is June 8, 2027."
+      "label": "Scheduled last day",
+      "items": [
+        "NNPS ends June 8, Hampton and York end June 9, and Virginia Beach ends June 11."
+      ]
     }
+  ],
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "springBreak"
+  ],
+  "hideComparisonNotes": true,
+  "comparisonSourceNote": "The table compares published districtwide dates. Emergency closures or later revisions may change the final student day.",
+  "sourceReviewSummary": "Dates on this page were checked against the NNPS school calendar approved March 17, 2026.",
+  "sourceReviewDetails": [
+    "We verified the first and last student days, the 178-day total, break ranges, no-school dates, teacher planning days, half-day schedules, early dismissals, exam dates, grading periods, report-card dates, and tentative graduations against the approved NNPS calendar.",
+    "If we find a mismatch or NNPS publishes a revision, we correct the page and update the review date.",
+    "School-specific bell schedules, testing, athletics, performances, and final graduation details may appear only in announcements from individual schools."
   ],
   "events": [
-    { "date": "2026-07-03", "name": "Independence Day Observance", "type": "holiday" },
-    { "date": "2026-08-04", "name": "New Teachers Report", "type": "teacher_workday" },
-    { "date": "2026-08-13", "name": "All Teachers and Teacher Assistants Report", "type": "teacher_workday" },
-    { "date": "2026-08-24", "name": "First Day of School - All Students Report", "type": "school_start", "description": "First instructional day for all Newport News Public Schools students in the 2026-2027 school year." },
-    { "date": "2026-09-04", "name": "Schools Closed as Required by State Code", "type": "holiday" },
-    { "date": "2026-09-07", "name": "Labor Day - Schools and Offices Closed", "type": "holiday" },
-    { "date": "2026-10-16", "name": "Schools Closed for Students; Half-Day Teacher Professional Development and Family Conferences", "type": "teacher_workday" },
-    { "date": "2026-11-02", "name": "End of First Nine Weeks", "type": "academic" },
-    { "date": "2026-11-03", "name": "E-Commute Teacher Workday - Students Do Not Report", "type": "teacher_workday" },
-    { "date": "2026-11-25", "name": "Schools Closed; Half Day for Twelve-Month Employees", "type": "student_holiday" },
+    { "date": "2026-08-24", "name": "First Day of School — All Students Report", "type": "school_start", "description": "First student day of the NNPS 2026–27 school year." },
+    { "date": "2026-09-04", "name": "No School for Students — Schools Closed as Required by State Code", "type": "no_school", "description": "Twelve-month employees report." },
+    { "date": "2026-09-07", "name": "Labor Day — Schools and Offices Closed", "type": "holiday" },
+    { "date": "2026-10-16", "name": "No School for Students — Teacher Professional Development and Family Conferences", "type": "teacher_workday" },
+    { "date": "2026-11-03", "name": "No School for Students — E-Commute Teacher Workday", "type": "teacher_workday" },
+    { "date": "2026-11-25", "name": "Schools Closed for Students", "type": "student_holiday", "description": "Half-day schedule for 12-month employees." },
     { "date": "2026-11-26", "name": "Thanksgiving Observance", "type": "break_start" },
     { "date": "2026-11-27", "name": "Thanksgiving Observance End", "type": "break_end" },
     { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
     { "date": "2027-01-01", "name": "Winter Break End", "type": "break_end" },
-    { "date": "2027-01-04", "name": "Schools Closed for Students; Full Teacher Planning Day", "type": "teacher_workday", "schemaEvent": true, "description": "Teacher planning day after Winter Break; Newport News Public Schools students do not report." },
-    { "date": "2027-01-05", "name": "Schools Reopen", "type": "school_resume" },
+    { "date": "2027-01-04", "name": "Teacher Planning Day — No School for Students", "type": "teacher_workday" },
+    { "date": "2027-01-05", "name": "Schools Reopen After Winter Break", "type": "school_resume" },
     { "date": "2027-01-18", "name": "Rev. Dr. Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2027-01-20", "name": "High School Exam Window Begins", "type": "academic", "schemaEvent": true, "description": "High school exam window begins with half-day high school schedules and high school teacher workdays." },
-    { "date": "2027-01-22", "name": "Exam Dates - Half-Day High Schools End; Second Nine Weeks Ends", "type": "academic" },
-    { "date": "2027-01-25", "name": "Support Staff Workday and E-Commute Teacher Workday - Students Do Not Report", "type": "teacher_workday" },
-    { "date": "2027-01-26", "name": "Regional Professional Development Day", "type": "teacher_workday" },
-    { "date": "2027-01-27", "name": "Second Semester Begins", "type": "school_resume" },
-    { "date": "2027-02-15", "name": "Presidents' Day - Schools Closed", "type": "holiday" },
-    { "date": "2027-03-05", "name": "Half Day for Students; Family Conferences", "type": "early_release" },
-    { "date": "2027-04-02", "name": "Students Half-Day Dismissal; Teacher Workday", "type": "early_release" },
-    { "date": "2027-04-02", "name": "End of Third Nine Weeks", "type": "academic" },
+    { "date": "2027-01-20", "name": "High School Exams and Half-Day Dismissal", "type": "half_day_high_school", "description": "The second marking period ends January 22." },
+    { "date": "2027-01-21", "name": "High School Exams and Half-Day Dismissal", "type": "half_day_high_school", "description": "The second marking period ends January 22." },
+    { "date": "2027-01-22", "name": "High School Exams and Half-Day Dismissal", "type": "half_day_high_school", "description": "The second marking period ends January 22." },
+    { "date": "2027-01-25", "name": "No School for Students — Support Staff and E-Commute Teacher Workday", "type": "teacher_workday" },
+    { "date": "2027-01-26", "name": "Regional Professional Development Day — No School for Students", "type": "teacher_workday" },
+    { "date": "2027-01-27", "name": "Second Semester Begins", "type": "academic" },
+    { "date": "2027-02-15", "name": "Presidents’ Day — Schools Closed", "type": "holiday" },
+    { "date": "2027-03-05", "name": "Half-Day Dismissal and Family Conferences", "type": "half_day_dismissal" },
+    { "date": "2027-04-02", "name": "Half-Day Dismissal and Teacher Workday", "type": "half_day_dismissal", "description": "Third marking period ends." },
     { "date": "2027-04-05", "name": "Spring Break", "type": "break_start" },
     { "date": "2027-04-09", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2027-04-12", "name": "Schools Closed for Students; Full Teacher Planning Day", "type": "teacher_workday" },
-    { "date": "2027-05-28", "name": "Half-Day Dismissal for Students and School Staff", "type": "early_release" },
-    { "date": "2027-05-31", "name": "Memorial Day Observance - Schools and Offices Closed", "type": "holiday" },
-    { "date": "2027-06-03", "name": "High School Graduations Begin - Tentative", "type": "graduation", "schemaEvent": true, "description": "Tentative first day of NNPS high school graduation ceremonies for 2027." },
-    { "date": "2027-06-04", "name": "High School Graduations End - Tentative", "type": "graduation", "schemaEvent": true, "description": "Tentative final day of NNPS high school graduation ceremonies for 2027." },
-    { "date": "2027-06-04", "name": "Early Dismissal and Exam Dates", "type": "early_release" },
-    { "date": "2027-06-07", "name": "Early Dismissal and Exam Dates", "type": "early_release" },
-    { "date": "2027-06-08", "name": "Last Student Day", "type": "school_end", "description": "Final scheduled student attendance day for the NNPS 2026-2027 academic calendar." },
-    { "date": "2027-06-08", "name": "Early Dismissal and Exam Dates", "type": "early_release" },
-    { "date": "2027-06-09", "name": "Last Teacher Day", "type": "teacher_workday" },
-    { "date": "2027-06-18", "name": "Juneteenth - Schools and Offices Closed", "type": "holiday" }
+    { "date": "2027-04-12", "name": "Teacher Planning Day — No School for Students", "type": "teacher_workday" },
+    { "date": "2027-04-13", "name": "Schools Reopen After Spring Break", "type": "school_resume", "description": "Next scheduled student attendance day after Spring Break and the April 12 teacher planning day." },
+    { "date": "2027-05-28", "name": "Half-Day Dismissal", "type": "half_day_dismissal" },
+    { "date": "2027-05-31", "name": "Memorial Day — Schools and Offices Closed", "type": "holiday" },
+    { "date": "2027-06-03", "name": "High School Graduations (Tentative)", "type": "graduation", "description": "Confirm final ceremony dates, times, and locations with the school." },
+    { "date": "2027-06-04", "name": "High School Graduations (Tentative)", "type": "graduation", "description": "Confirm final ceremony dates, times, and locations with the school." },
+    { "date": "2027-06-04", "name": "Early Dismissal and Exams", "type": "early_dismissal", "displayDate": "June 4, 7, and 8, 2027", "dates": ["2027-06-04", "2027-06-07", "2027-06-08"] },
+    { "date": "2027-06-07", "name": "Early Dismissal and Exams", "type": "early_dismissal", "hideFromAllDates": true },
+    { "date": "2027-06-08", "name": "Last Student Day", "type": "school_end", "description": "Final scheduled student attendance day; early dismissal and exams." },
+    { "date": "2027-06-08", "name": "Early Dismissal and Exams", "type": "early_dismissal", "hideFromAllDates": true }
   ]
 }

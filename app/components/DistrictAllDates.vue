@@ -1,7 +1,17 @@
 <script setup lang="ts">
 const { formatDate, eventTypeLabel, eventTypeColor, isCoveredByBreak } = useDistrictPage()
 
-type CalendarEvent = { date: string; name: string; type: string; description?: string; preserveOfficialName?: boolean; labelType?: string }
+type CalendarEvent = {
+  date: string
+  name: string
+  type: string
+  description?: string
+  preserveOfficialName?: boolean
+  labelType?: string
+  displayDate?: string
+  dates?: string[]
+  hideFromAllDates?: boolean
+}
 type LegendItem = { label: string; dot: string }
 
 const props = defineProps<{
@@ -22,6 +32,7 @@ const props = defineProps<{
   firstDay?: string
   lastDay?: string
   labelOverrides?: Record<string, string>
+  legendStyle?: 'dots' | 'text'
 }>()
 
 type DisplayEvent = CalendarEvent & {
@@ -55,12 +66,12 @@ function isRangeEndEvent(event: CalendarEvent) {
   )
 }
 const visibleEvents = computed(() => props.events.filter(e =>
-  props.mode === 'keyDates'
+  !e.hideFromAllDates && (props.mode === 'keyDates'
     ? (!hiddenInKeyDates.has(e.type) || includedDatesInKeyDates.value.has(e.date)) &&
       !isRangeEndEvent(e) &&
       !isHolidayOutsideStudentYear(e) &&
       (e.type === 'holiday' || !isCoveredByBreak(e, props.events))
-    : e.type !== 'break_end' && !isRangeEndEvent(e) && !isCoveredByBreak(e, props.events)
+    : e.type !== 'break_end' && !isRangeEndEvent(e) && !isCoveredByBreak(e, props.events))
 ))
 
 const coveredBreakDateNames = computed(() => {
@@ -298,6 +309,7 @@ function monthAnchor(key: string) {
 }
 
 function formatDateRange(event: DisplayEvent) {
+  if (event.displayDate) return event.displayDate
   if (event.startDate === event.endDate) return formatDate(event.startDate)
 
   const start = parseDate(event.startDate)
@@ -315,6 +327,31 @@ function formatDateRange(event: DisplayEvent) {
   const startPart = start.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
   const endPart = end.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
   return `${startPart} to ${endPart}`
+}
+
+function formatDateListParts(dates: string[]) {
+  const parsed = dates.map(date => ({ date, parsed: parseDate(date) }))
+  const sameYear = parsed.every(item => item.parsed.getFullYear() === parsed[0]!.parsed.getFullYear())
+  const sameMonth = sameYear && parsed.every(item => item.parsed.getMonth() === parsed[0]!.parsed.getMonth())
+  if (sameMonth) {
+    const month = parsed[0]!.parsed.toLocaleDateString('en-US', { month: 'long' })
+    const year = parsed[0]!.parsed.getFullYear()
+    return parsed.map((item, index) => ({
+      date: item.date,
+      label: index === 0
+        ? `${month} ${item.parsed.getDate()}`
+        : index === parsed.length - 1
+        ? `${item.parsed.getDate()}, ${year}`
+        : `${item.parsed.getDate()}`,
+    }))
+  }
+  return parsed.map(item => ({ date: item.date, label: formatDate(item.date) }))
+}
+
+function dateListSeparator(index: number, total: number) {
+  if (index === 0) return ''
+  if (index === total - 1) return total === 2 ? ' and ' : ', and '
+  return ', '
 }
 
 function formatRangeStart(event: DisplayEvent) {
@@ -360,7 +397,7 @@ function formatRangeEnd(event: DisplayEvent) {
           :key="item.label"
           class="inline-flex items-center gap-1.5 text-xs text-[#7b756d]"
         >
-          <span class="w-2 h-2 rounded-lg flex-shrink-0" :class="item.dot" />
+          <span v-if="legendStyle !== 'text'" class="w-2 h-2 rounded-lg flex-shrink-0" :class="item.dot" />
           {{ item.label }}
         </span>
       </div>
@@ -400,7 +437,12 @@ function formatRangeEnd(event: DisplayEvent) {
             <div>
               <div class="font-medium text-[#1f2933]">{{ displayEventName(event) }}</div>
               <div class="text-sm text-[#7b756d]">
-                <time v-if="event.startDate === event.endDate" :datetime="event.startDate">{{ formatDateRange(event) }}</time>
+                <template v-if="event.dates?.length && event.dates.length > 1">
+                  <template v-for="(part, index) in formatDateListParts(event.dates)" :key="part.date">
+                    <span v-if="index">{{ dateListSeparator(index, event.dates.length) }}</span><time :datetime="part.date">{{ part.label }}</time>
+                  </template>
+                </template>
+                <time v-else-if="event.startDate === event.endDate" :datetime="event.startDate">{{ formatDateRange(event) }}</time>
                 <template v-else>
                   <time :datetime="event.startDate">{{ formatRangeStart(event) }}</time>
                   <span> – </span>

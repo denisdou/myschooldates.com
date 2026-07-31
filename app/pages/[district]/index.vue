@@ -265,6 +265,28 @@ const currentYear = district.value?.currentSchoolYear ?? ''
 const cal = allCals.value?.find(y => y.schoolYear === currentYear) ?? null
 const meta = district
 
+function removeHiddenCustomSections() {
+  if (isStatePage || !district.value || !cal) return
+  const hiddenIds = new Set([
+    ...(((district.value as any)?.hiddenCustomSectionIds ?? (district.value as any)?.meta?.hiddenCustomSectionIds ?? []) as string[]),
+    ...(((cal as any)?.hiddenCustomSectionIds ?? (cal as any)?.meta?.hiddenCustomSectionIds ?? []) as string[]),
+  ])
+  if (!hiddenIds.size) return
+  if ((district.value as any)?.customSections) {
+    ;(district.value as any).customSections = ((district.value as any).customSections as DistrictCustomSection[]).filter(section => !hiddenIds.has(section.id))
+  }
+  if ((district.value as any)?.meta?.customSections) {
+    ;(district.value as any).meta.customSections = ((district.value as any).meta.customSections as DistrictCustomSection[]).filter(section => !hiddenIds.has(section.id))
+  }
+  if ((cal as any)?.customSections) {
+    ;(cal as any).customSections = ((cal as any).customSections as DistrictCustomSection[]).filter(section => !hiddenIds.has(section.id))
+  }
+  if ((cal as any)?.meta?.customSections) {
+    ;(cal as any).meta.customSections = ((cal as any).meta.customSections as DistrictCustomSection[]).filter(section => !hiddenIds.has(section.id))
+  }
+}
+removeHiddenCustomSections()
+
 function eventSchemaLocation() {
   return {
     '@type': 'Place',
@@ -373,6 +395,7 @@ const keyDateHighlights = computed(() => {
         label: item.label,
         type: item.type ?? 'milestone',
         description: item.description,
+        schemaDescription: item.schemaDescription,
       }))
   }
   const HIGHLIGHT_TYPES = new Set(['school_start', 'school_end', 'break_start'])
@@ -405,6 +428,7 @@ function keyDateDisplayName(event: { name: string; type: string; displayName?: s
   return event.name
 }
 function keyDateSchemaDescription(event: any) {
+  if (event.schemaDescription) return event.schemaDescription
   if (event.description) return event.description
   const districtLabel = meta.value!.shortName || meta.value!.name
   const eventName = keyDateDisplayName(event)
@@ -863,6 +887,7 @@ const dateLegend = computed(() => {
     ...(hasEventType(['holiday', 'schools_closed', 'schools_offices_closed']) ? [{ label: 'School Closure', dot: 'bg-red-400' }] : []),
     ...(hasEventType(['no_school', 'student_holiday', 'teacher_workday', 'teacher_professional_learning']) ? [{ label: 'No School for Students', dot: 'bg-amber-400' }] : []),
     ...(hasEventType(['partial_closure']) ? [{ label: 'Some Students Off', dot: 'bg-pink-400' }] : []),
+    ...(hasEventType(['half_day_high_school', 'half_day_dismissal']) ? [{ label: 'Half-Day Dismissal', dot: 'bg-orange-300' }] : []),
     ...(hasEventType(['early_dismissal', 'early_release']) ? [{ label: 'Early Release', dot: 'bg-orange-400' }] : []),
     ...(hasEventType(['break_start']) || hasPossibleMakeupDay ? [{ label: 'Break', dot: 'bg-purple-400' }] : []),
     ...(hasEventType(['observance']) ? [{ label: 'Observance', dot: 'bg-teal-400' }] : []),
@@ -2062,6 +2087,7 @@ if (!isStatePage && district.value) {
           :first-day="cal.firstDay"
           :last-day="cal.lastDay"
           :coverage-note="(cal as any).allDatesCoverageNote ?? (cal as any).meta?.allDatesCoverageNote"
+          :legend-style="(cal as any).dateLegendStyle ?? (cal as any).meta?.dateLegendStyle"
         />
         <DistrictCustomSections :sections="customSections" position="afterAllDates" />
 

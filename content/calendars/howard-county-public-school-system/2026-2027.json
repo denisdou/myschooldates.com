@@ -57,7 +57,7 @@
   "schemaCalendarDownloadName": "Howard County Public School System 2026-2027 calendar file",
   "excludePrintablePdfFromDatasetDistribution": true,
   "temporalCoverageStart": "2026-08-13",
-  "temporalCoverageEnd": "2027-06-18",
+  "temporalCoverageEnd": "2027-07-05",
   "dateLegendLabelOverrides": {
     "Make-Up Day": "Possible Weather Make-Up Day",
     "Possible Make-up Day": "Possible Weather Make-Up Day",
@@ -109,7 +109,8 @@
       "label": "First Day",
       "name": "Pre-K/RECC first day",
       "date": "2026-08-27",
-      "type": "milestone"
+      "type": "milestone",
+      "schemaDescription": "HCPSS Pre-K and RECC students begin school on August 27, 2026."
     },
     {
       "label": "Break",
@@ -292,7 +293,7 @@
       }
     },
     {
-      "label": "Weather make-up provision",
+      "label": "End-of-year make-up window",
       "values": {
         "howard-county-school-calendar": "Jun 9–11 and Jun 14–16",
         "anne-arundel-county-school-calendar": "Up to three unused built-in days are deducted from the June closing date",
@@ -342,13 +343,14 @@
     { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
     { "date": "2027-06-02", "name": "Three-Hour Early Closing", "type": "early_release", "description": "Staff professional learning/workday · No half-day Pre-K/RECC" },
     { "date": "2027-06-07", "name": "Three-Hour Early Closing", "type": "early_release", "description": "Staff professional learning/workday; may become a full day if weather make-up days are used · No half-day Pre-K/RECC" },
-    { "date": "2027-06-08", "name": "Scheduled Last Day", "type": "school_end", "description": "Three-hour early closing; may become a full day if weather make-up days are used." },
+    { "date": "2027-06-08", "name": "Scheduled Last Day", "type": "school_end", "description": "Three-hour early closing · No half-day Pre-K/RECC · May become a full day if weather make-up days are used." },
     { "date": "2027-06-09", "name": "Possible Weather Make-Up Days, June 9–11", "type": "makeup_day" },
     { "date": "2027-06-10", "name": "Possible Weather Make-Up Days, June 9–11", "type": "makeup_day" },
     { "date": "2027-06-11", "name": "Possible Weather Make-Up Days, June 9–11", "type": "makeup_day" },
     { "date": "2027-06-14", "name": "Possible Weather Make-Up Days, June 14–16", "type": "makeup_day" },
     { "date": "2027-06-15", "name": "Possible Weather Make-Up Days, June 14–16", "type": "makeup_day" },
     { "date": "2027-06-16", "name": "Possible Weather Make-Up Days, June 14–16", "type": "makeup_day" },
-    { "date": "2027-06-18", "name": "Juneteenth (observed)", "type": "holiday" }
+    { "date": "2027-06-18", "name": "Juneteenth (observed)", "type": "holiday" },
+    { "date": "2027-07-05", "name": "Independence Day (observed)", "type": "holiday" }
   ]
 }
