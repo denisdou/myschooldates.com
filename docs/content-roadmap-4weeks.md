@@ -33,6 +33,7 @@
 | 2026-07-30 | Maryland | Anne Arundel County Public Schools | `/anne-arundel-county-school-calendar` | 2025-2026, 2026-2027, 2027-2028 | 基于官方 AACPS school calendar page、官网 logo、本地 2025-2026 PDF、官方 2026-2027 approved PDF、2027-2028 PDF 和 Spanish 扩展日历；2028-2029 PDF URL 未提供，暂不创建。 |
 | 2026-07-30 | Maryland | Howard County Public School System | `/howard-county-school-calendar` | 2025-2026, 2026-2027 | 基于官方 HCPSS calendar page、官网 logo、两份官方 dates-only calendar PDF 和本地 PDF 副本；2027-2028 与 2028-2029 PDF URL 未提供，暂不创建。 |
 | 2026-07-30 | Maryland | Baltimore City Public Schools | `/baltimore-city-public-schools-calendar` | 2025-2026, 2026-2027 | 基于官方 City Schools events page、官网 logo、两份官方 school year calendar PDF、本地 PDF 副本和 2026-2027 Spanish 扩展日历；2027-2028 与 2028-2029 PDF URL 未提供，暂不创建。 |
+| 2026-07-31 | Washington | Lake Washington School District | `/lake-washington-school-district-calendar` | 2025-2026, 2026-2027, 2027-2028 | 基于官方 LWSD calendar page、官网 logo、本地 2025-2026 PDF、官方 2026-2027 final PDF、2026-2027 Spanish 扩展日历和 2027-2028 tentative PDF；2028-2029 PDF URL 未提供，暂不创建。 |
 
 ---
 
@@ -324,9 +325,9 @@ P3 内容可采用更高度模板化的方式生成（calendarNotes 精简为 4-
 | 91 | Maryland | Anne Arundel County Public Schools | Baltimore-Washington | ✓ 已完成：`anne-arundel-county-school-calendar`（2026-07-30） |
 | 92 | Maryland | Howard County Public School System | Baltimore-Washington | ✓ 已完成：`howard-county-school-calendar`（2026-07-30） |
 | 93 | Maryland | Baltimore City Public Schools | Baltimore | ✓ 已完成：`baltimore-city-public-schools-calendar`（2026-07-30） |
-| 94 | Massachusetts | Boston Public Schools | Boston | 待创建 |
-| 95 | Washington | Seattle Public Schools | Seattle | 待创建 |
-| 96 | Washington | Lake Washington School District | Seattle | 待创建 |
+| 94 | Massachusetts | Boston Public Schools | Boston | ✓ 已完成：`boston-public-schools-calendar`（2026-07-31） |
+| 95 | Washington | Seattle Public Schools | Seattle | ✓ 已完成：`seattle-public-schools-calendar`（2026-07-31） |
+| 96 | Washington | Lake Washington School District | Seattle | ✓ 已完成：`lake-washington-school-district-calendar`（2026-07-31） |
 | 97 | Washington | Northshore School District | Seattle | 待创建 |
 | 98 | Arizona | Mesa Public Schools | Phoenix | 待创建 |
 | 99 | Arizona | Chandler Unified School District | Phoenix | 待创建 |

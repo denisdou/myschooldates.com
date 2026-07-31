@@ -2,7 +2,7 @@
 const route = useRoute()
 const slug = route.params.district as string
 const year = route.params.year as string
-const { formatShortDate, getBreaks, getSecondSemesterStart } = useDistrictPage()
+const { formatDate, formatShortDate, getBreaks, getSecondSemesterStart, eventTypeColor } = useDistrictPage()
 
 function toDistrictSummary(d: any) {
   return {
@@ -399,6 +399,7 @@ const dateLabelOverrides = computed(() =>
   ((cal.value as any)?.dateLegendLabelOverrides ?? (cal.value as any)?.meta?.dateLegendLabelOverrides ?? (district.value as any)?.dateLegendLabelOverrides ?? (district.value as any)?.meta?.dateLegendLabelOverrides ?? {}) as Record<string, string>
 )
 const dateLegend = computed(() => {
+  if ((cal.value as any)?.hideDateLegend === true || (cal.value as any)?.meta?.hideDateLegend === true) return []
   const legendTypes = new Set((cal.value?.events ?? []).map((event: any) => event.labelType ?? event.type))
   const hasEventType = (types: string[]) =>
     types.some(type => legendTypes.has(type))
@@ -424,6 +425,10 @@ const dateLegend = computed(() => {
       return true
     })
 })
+
+const moveCalendarExportBeforeAllDates = computed(() =>
+  (cal.value as any)?.moveCalendarExportBeforeAllDates === true || (cal.value as any)?.meta?.moveCalendarExportBeforeAllDates === true
+)
 
 function countWeekdays(start: string, end: string) {
   const cursor = new Date(start + 'T00:00:00')
@@ -750,8 +755,80 @@ const configuredKeyDateSummaryItems = computed(() =>
       type: item.type ?? 'milestone',
       description: item.description,
       schemaDescription: item.schemaDescription,
+      dates: item.dates,
+      dateDisplayMode: item.dateDisplayMode,
+      dateJoiner: item.dateJoiner,
+      datePropertyLabel: item.datePropertyLabel,
     }))
 )
+const keyDatesSummaryTitle = computed(() =>
+  (cal.value as any)?.keyDatesSummaryTitle ?? (cal.value as any)?.meta?.keyDatesSummaryTitle ?? `${displaySchoolYear.value} Key Dates & Holidays`
+)
+const keyDatesSummarySubtitle = computed(() =>
+  (cal.value as any)?.keyDatesSummarySubtitle ?? (cal.value as any)?.meta?.keyDatesSummarySubtitle ?? 'First day, last day, school holidays, and major break ranges'
+)
+function compactJoinedDate(startDate: string, endDate: string, joiner: string) {
+  const start = new Date(startDate + 'T00:00:00')
+  const end = new Date(endDate + 'T00:00:00')
+  if (start.getFullYear() === end.getFullYear() && start.getMonth() === end.getMonth()) {
+    const month = start.toLocaleDateString('en-US', { month: 'short' })
+    return `${month} ${start.getDate()} ${joiner} ${end.getDate()}, ${start.getFullYear()}`
+  }
+  return `${formatShortDate(startDate)} ${joiner} ${formatShortDate(endDate)}`
+}
+function keyDateListDates(event: any) {
+  if (Array.isArray(event.dates) && event.dates.length) return event.dates
+  if (event.dateDisplayMode === 'list' && event.endDate) return [event.date, event.endDate]
+  return []
+}
+function keyDateListDateParts(event: any) {
+  const dates = keyDateListDates(event)
+  if (!dates.length) return []
+  if (dates.length === 2) {
+    const start = new Date(dates[0] + 'T00:00:00')
+    const end = new Date(dates[1] + 'T00:00:00')
+    if (start.getFullYear() === end.getFullYear() && start.getMonth() === end.getMonth()) {
+      const month = start.toLocaleDateString('en-US', { month: 'short' })
+      return [
+        { date: dates[0], label: `${month} ${start.getDate()}`, ariaLabel: formatDate(dates[0]) },
+        { date: dates[1], label: `${end.getDate()}, ${end.getFullYear()}`, ariaLabel: formatDate(dates[1]) },
+      ]
+    }
+  }
+  return dates.map((date: string) => ({ date, label: formatShortDate(date), ariaLabel: formatDate(date) }))
+}
+function keyDateSummaryRange(event: any) {
+  return { start: event.date, end: event.endDate ?? event.date }
+}
+function keyDateSummaryDateLabel(event: any) {
+  if (event.endDate && event.dateJoiner) return compactJoinedDate(event.date, event.endDate, event.dateJoiner)
+  if (event.endDate && event.endDate !== event.date) return `${formatShortDate(event.date)} – ${formatShortDate(event.endDate)}`
+  return formatShortDate(event.date)
+}
+function keyDateSchemaProperties(event: any) {
+  const dates = keyDateListDates(event)
+  if (dates.length) {
+    return dates.map((date: string) => ({
+      '@type': 'PropertyValue',
+      name: event.datePropertyLabel ?? 'Opening date',
+      value: date,
+    }))
+  }
+  const range = event.endDate
+    ? { start: event.date, end: event.endDate }
+    : event.type === 'break_start'
+      ? { start: event.date, end: breaks.value.find((b: any) => b.name === event.name && b.start === event.date)?.end ?? event.date }
+      : { start: event.date, end: event.date }
+  if (range.start === range.end) {
+    return [
+      { '@type': 'PropertyValue', name: 'Date', value: range.start },
+    ]
+  }
+  return [
+    { '@type': 'PropertyValue', name: 'Start date', value: range.start },
+    { '@type': 'PropertyValue', name: 'End date', value: range.end },
+  ]
+}
 const keyDateItemListEvents = computed(() => {
   if (configuredKeyDateSummaryItems.value.length) {
     return configuredKeyDateSummaryItems.value
@@ -796,6 +873,18 @@ const yearNumbersSchemaParts = computed(() => {
     : []
 })
 const includeArticleSchema = (district.value as any)?.includeArticleSchema !== false && (district.value as any)?.meta?.includeArticleSchema !== false && (cal.value as any)?.includeArticleSchema !== false && (cal.value as any)?.meta?.includeArticleSchema !== false
+const webPageMainEntityMode = (cal.value as any)?.webPageMainEntity ?? (cal.value as any)?.meta?.webPageMainEntity ?? (district.value as any)?.webPageMainEntity ?? (district.value as any)?.meta?.webPageMainEntity
+const webPageMainEntity = webPageMainEntityMode === 'none'
+  ? null
+  : webPageMainEntityMode === 'keyDates'
+    ? (keyDateItemListEvents.value.length ? { '@id': `${canonicalUrl}#key-dates` } : null)
+    : webPageMainEntityMode === 'dataset'
+      ? (datasetEntity ? { '@id': `${canonicalUrl}#calendar-dataset` } : null)
+      : datasetEntity
+        ? { '@id': `${canonicalUrl}#calendar-dataset` }
+        : keyDateItemListEvents.value.length
+          ? { '@id': `${canonicalUrl}#key-dates` }
+          : null
 const webPageEntity = {
   '@type': 'WebPage',
   '@id': `${canonicalUrl}#webpage`,
@@ -815,11 +904,7 @@ const webPageEntity = {
     audienceType: 'Parents and Families',
   },
   about: { '@id': districtAbout['@id'] },
-  ...(datasetEntity
-    ? { mainEntity: { '@id': `${canonicalUrl}#calendar-dataset` } }
-    : keyDateItemListEvents.value.length
-      ? { mainEntity: { '@id': `${canonicalUrl}#key-dates` } }
-      : {}),
+  ...(webPageMainEntity ? { mainEntity: webPageMainEntity } : {}),
   ...((datasetEntity || faqSchemaItems.value.length || customSectionSchemaParts.value.length || yearNumbersSchemaParts.value.length)
     ? { hasPart: [
       ...(includeArticleSchema ? [{ '@id': `${canonicalUrl}#calendar-analysis` }] : []),
@@ -914,11 +999,6 @@ const keyDateItemListEntity = !hideItemListSchema.value && keyDateItemListEvents
   '@id': `${canonicalUrl}#key-dates`,
   name: `${district.value.shortName || district.value.name} ${year} key school calendar dates`,
   itemListElement: keyDateItemListEvents.value.map((event: any, i: number) => {
-    const range = event.endDate
-      ? { start: event.date, end: event.endDate }
-      : event.type === 'break_start'
-      ? { start: event.date, end: breaks.value.find((b: any) => b.name === event.name && b.start === event.date)?.end ?? event.date }
-      : { start: event.date, end: event.date }
     return {
       '@type': 'ListItem',
       position: i + 1,
@@ -926,10 +1006,7 @@ const keyDateItemListEntity = !hideItemListSchema.value && keyDateItemListEvents
         '@type': 'Thing',
         name: keyDateDisplayName(event),
         description: keyDateSchemaDescription(event),
-        additionalProperty: [
-          { '@type': 'PropertyValue', name: 'Start date', value: range.start },
-          { '@type': 'PropertyValue', name: 'End date', value: range.end },
-        ],
+        additionalProperty: keyDateSchemaProperties(event),
       },
     }
   }),
@@ -1163,6 +1240,44 @@ useHead({
         <DistrictKeyDateCards :cal="cal!" />
       </div>
 
+      <div
+        v-if="hiddenSections.has('keyDateCards') && configuredKeyDateSummaryItems.length"
+        id="key-dates"
+        class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24"
+      >
+        <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ keyDatesSummaryTitle }}</h2>
+        <p v-if="keyDatesSummarySubtitle" class="text-xs text-gray-600 mb-4">{{ keyDatesSummarySubtitle }}</p>
+        <div class="divide-y divide-gray-100">
+          <div
+            v-for="event in configuredKeyDateSummaryItems"
+            :key="event.date + event.name"
+            class="flex items-center justify-between py-2.5 first:pt-0 last:pb-0"
+          >
+            <div class="flex items-center gap-2.5 min-w-0">
+              <span
+                class="text-xs font-medium px-2 py-0.5 rounded-lg whitespace-nowrap flex-shrink-0"
+                :class="eventTypeColor[event.type]"
+              >{{ event.label || 'Key Date' }}</span>
+              <span class="min-w-0 break-words text-sm text-gray-900">{{ keyDateDisplayName(event) }}</span>
+            </div>
+            <span class="text-sm text-[#7b756d] tabular-nums ml-4 flex-shrink-0">
+              <template v-if="keyDateListDateParts(event).length">
+                <template
+                  v-for="(part, index) in keyDateListDateParts(event)"
+                  :key="part.date"
+                >
+                  <span v-if="index > 0">&nbsp;{{ event.dateJoiner ?? 'and' }}&nbsp;</span>
+                  <time :datetime="part.date" :aria-label="part.ariaLabel">{{ part.label }}</time>
+                </template>
+              </template>
+              <template v-else>
+                <time :datetime="keyDateSummaryRange(event).start">{{ keyDateSummaryDateLabel(event) }}</time>
+              </template>
+            </span>
+          </div>
+        </div>
+      </div>
+
       <!-- Custom Sections: afterKeyDates -->
       <DistrictCustomSections :sections="customSections" position="afterKeyDates" />
 
@@ -1219,6 +1334,18 @@ useHead({
         </p>
       </div>
 
+      <!-- Add to Calendar + Share (optional early position) -->
+      <template v-if="moveCalendarExportBeforeAllDates">
+        <CalendarExportShare
+          :district-name="district!.name"
+          :year="year"
+          :source-url="cal!.sourceUrl ?? district!.officialWebsite"
+          :district="district!"
+          :cal="cal!"
+        />
+        <DistrictCustomSections :sections="customSections" position="afterCalendarExport" />
+      </template>
+
       <!-- All Dates -->
       <div v-if="hiddenSections.has('keyDateCards')" id="key-dates" class="scroll-mt-24" />
       <DistrictAllDates
@@ -1262,14 +1389,16 @@ useHead({
       </div>
 
       <!-- Add to Calendar + Share -->
-      <CalendarExportShare
-        :district-name="district!.name"
-        :year="year"
-        :source-url="cal!.sourceUrl ?? district!.officialWebsite"
-        :district="district!"
-        :cal="cal!"
-      />
-      <DistrictCustomSections :sections="customSections" position="afterCalendarExport" />
+      <template v-if="!moveCalendarExportBeforeAllDates">
+        <CalendarExportShare
+          :district-name="district!.name"
+          :year="year"
+          :source-url="cal!.sourceUrl ?? district!.officialWebsite"
+          :district="district!"
+          :cal="cal!"
+        />
+        <DistrictCustomSections :sections="customSections" position="afterCalendarExport" />
+      </template>
 
       <!-- Custom Sections: afterBreaks (year pages render this after the full date list) -->
       <div v-if="!breaks.length" id="breaks" class="scroll-mt-24">
@@ -1387,6 +1516,8 @@ useHead({
         :year="year"
         :verified-date="verifiedDate"
         :source-version="(cal as any).sourceVersion"
+        :source-version-label="(cal as any).sourceVersionLabel ?? (cal as any).meta?.sourceVersionLabel"
+        :source-version-display="(cal as any).sourceVersionDisplay ?? (cal as any).meta?.sourceVersionDisplay"
         :source-pdf-url="(cal as any).sourcePdfUrl"
         :review-summary="(cal as any).sourceReviewSummary ?? (cal as any).meta?.sourceReviewSummary"
         :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"

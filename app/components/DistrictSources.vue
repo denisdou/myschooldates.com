@@ -8,6 +8,8 @@ const props = defineProps<{
   year: string
   verifiedDate: string | null
   sourceVersion?: string | null
+  sourceVersionLabel?: string | null
+  sourceVersionDisplay?: string | null
   sourcePdfUrl?: string | null
   reviewSummary?: string | null
   reviewDetails?: string[] | null
@@ -33,6 +35,8 @@ const sourceVersionSourceUrl = computed(() => {
 })
 const isSourceVersionLink = (src: SourceLink) =>
   Boolean(sourceVersionSourceUrl.value && src.url === sourceVersionSourceUrl.value)
+const sourceVersionLabel = computed(() => props.sourceVersionLabel || 'Calendar version')
+const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.sourceVersion)
 </script>
 
 <template>
@@ -62,7 +66,7 @@ const isSourceVersionLink = (src: SourceLink) =>
             v-if="isSourceVersionLink(src) && sourceVersion"
             class="hidden flex-shrink-0 text-[#8a837a] lg:inline"
           >
-            · {{ sourceVersion }}
+            · {{ sourceVersionLabel }}: {{ sourceVersionDisplay }}
           </span>
           <span
             v-if="src.note || src.versionLabel"
@@ -81,7 +85,7 @@ const isSourceVersionLink = (src: SourceLink) =>
     </ul>
     <div class="text-xs text-[#7b756d] pt-3 border-t border-[#ddd6cb] space-y-1.5">
       <p v-if="sourceVersion && !sourceVersionInline">
-        <span class="font-medium text-[#6b645c]">Calendar version:</span>
+        <span class="font-medium text-[#6b645c]">{{ sourceVersionLabel }}:</span>
         <a
           v-if="sourcePdfUrl"
           :href="sourcePdfUrl"
@@ -89,10 +93,10 @@ const isSourceVersionLink = (src: SourceLink) =>
           rel="noopener"
           class="font-medium text-[#0f5d6b] hover:text-[#0b4c58] underline"
         >
-          {{ sourceVersion }}
+          {{ sourceVersionDisplay }}
           <span class="sr-only">(opens in a new tab)</span>
         </a>
-        <template v-else>{{ sourceVersion }}</template>
+        <template v-else>{{ sourceVersionDisplay }}</template>
         <template v-if="sourcePdfUrl && isArchivedPdfCopy"> · Archived official PDF copy stored by MySchoolDates</template>
       </p>
       <p v-if="verifiedDate">

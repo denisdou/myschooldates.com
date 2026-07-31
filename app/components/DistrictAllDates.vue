@@ -3,12 +3,14 @@ const { formatDate, eventTypeLabel, eventTypeColor, isCoveredByBreak } = useDist
 
 type CalendarEvent = {
   date: string
+  endDate?: string
   name: string
   type: string
   description?: string
   preserveOfficialName?: boolean
   labelType?: string
   displayDate?: string
+  displayAsRange?: boolean
   dates?: string[]
   hideFromAllDates?: boolean
 }
@@ -229,6 +231,10 @@ function canMerge(prev: DisplayEvent, next: DisplayEvent) {
 }
 
 function rangeEndFor(event: CalendarEvent) {
+  if (event.endDate && event.displayAsRange) {
+    return event.endDate
+  }
+
   if (event.type === 'break_start') {
     const normalizedStart = normalizeName(event).toLowerCase()
     const end = sortedEvents.value.find(e =>

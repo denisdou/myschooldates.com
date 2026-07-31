@@ -61,8 +61,10 @@ export default defineNuxtConfig({
         '/georgia',
         '/hawaii',
         '/maryland',
+        '/massachusetts',
         '/new-york',
         '/pennsylvania',
+        '/washington',
 
         // ── District index pages ───────────────────────────────────────────────
         '/aldine-independent-school-district-calendar',
@@ -75,6 +77,7 @@ export default defineNuxtConfig({
         '/baltimore-county-school-calendar',
         '/baltimore-city-public-schools-calendar',
         '/brevard-public-schools-calendar',
+        '/boston-public-schools-calendar',
         '/broward-county-school-calendar',
         '/brunswick-county-schools-calendar',
         '/capistrano-unified-school-district-calendar',
@@ -147,6 +150,7 @@ export default defineNuxtConfig({
         '/san-juan-unified-school-district-calendar',
         '/san-jose-unified-school-calendar',
         '/seminole-county-school-calendar',
+        '/seattle-public-schools-calendar',
         '/school-district-of-philadelphia-calendar',
         '/stockton-unified-school-district-calendar',
         '/sweetwater-union-high-school-district-calendar',
@@ -207,6 +211,9 @@ export default defineNuxtConfig({
 
         '/brevard-public-schools-calendar/2025-2026',
         '/brevard-public-schools-calendar/2026-2027',
+
+        '/boston-public-schools-calendar/2025-2026',
+        '/boston-public-schools-calendar/2026-2027',
 
         '/capistrano-unified-school-district-calendar/2025-2026',
         '/capistrano-unified-school-district-calendar/2026-2027',
@@ -442,6 +449,9 @@ export default defineNuxtConfig({
         '/seminole-county-school-calendar/2025-2026',
         '/seminole-county-school-calendar/2026-2027',
         '/seminole-county-school-calendar/2027-2028',
+
+        '/seattle-public-schools-calendar/2025-2026',
+        '/seattle-public-schools-calendar/2026-2027',
 
         '/school-district-of-philadelphia-calendar/2025-2026',
         '/school-district-of-philadelphia-calendar/2026-2027',

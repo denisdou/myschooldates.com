@@ -1,0 +1,299 @@
+{
+  "institutionId": "seattle-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Seattle Public Schools Calendar 2026–27",
+  "firstDay": "2026-09-02",
+  "lastDay": "2027-06-21",
+  "totalSchoolDays": 180,
+  "sourceUrl": "https://www.seattleschools.org/news/school-calendar/",
+  "sourcePdfUrl": "https://www.seattleschools.org/wp-content/uploads/2026/04/2026-27-SY-Calendar-for-Webpage.pdf",
+  "sourceCalendarName": "2026-2027 School Year Calendar",
+  "sourceVersion": "Official SPS 2026–27 Calendar PDF",
+  "lastVerifiedAt": "2026-07-31",
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-07-31",
+  "temporalCoverageStart": "2026-08-27",
+  "temporalCoverageEnd": "2027-06-23",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "webPageMainEntity": "keyDates",
+  "schemaReviewedBy": "author",
+  "seoTitle": "Seattle Public Schools Calendar 2026–27: Key Dates & Breaks",
+  "seoDescription": "Seattle Public Schools 2026–27 calendar: first days by grade, breaks, conferences, term dates, makeup days, official PDF, and calendar download.",
+  "schemaCalendarName": "Seattle Public Schools Calendar 2026–27",
+  "schemaDatasetName": "Seattle Public Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Seattle Public Schools dates for 2026–27, including first days by grade, Family Connections, TRI days, school closures, family-teacher conferences, term dates, breaks, emergency makeup days, and the official PDF.",
+  "schemaCalendarDownloadName": "Seattle Public Schools 2026–27 calendar file",
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hidePdfVersionLabel": true,
+  "hideExtendedShareButtons": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "whatsDifferent",
+    "nationalTrends",
+    "relatedDistricts",
+    "comparison"
+  ],
+  "heroSummary": "Students in grades 1–12 start school on Wednesday, September 2, 2026. Preschool and kindergarten students start Tuesday, September 8, after Family Connections on September 2–4. The scheduled last day is Monday, June 21, 2027, with a one-hour early dismissal. January 28 may be used as the first emergency makeup day; June 22 and 23 are additional makeup days if needed.",
+  "calendarNotes": "SPS lists 180 student days and five TRI days. January 28, 2027 is the day between semesters; it is also listed as Emergency Closure Make Up Day 1 if SPS needs to make up a closure. June 22 and June 23 are additional emergency makeup days.",
+  "heroFactChips": [
+    "Grades 1–12 start Sep 2",
+    "Pre-K & kindergarten start Sep 8",
+    "Winter Break: Dec 21–Jan 1",
+    "Last scheduled day: Jun 21"
+  ],
+  "verificationBadgeText": "Reviewed July 31, 2026, against the official SPS calendar page and 2026–27 school-year PDF.",
+  "keyDatesSummaryTitle": "2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First days by grade, major breaks, and possible makeup days",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Grades 1–12",
+      "date": "2026-09-02",
+      "type": "school_start",
+      "schemaDescription": "Students in grades 1–12 start school on September 2, 2026."
+    },
+    {
+      "label": "Opening",
+      "name": "Preschool and Kindergarten Family Connections",
+      "date": "2026-09-02",
+      "endDate": "2026-09-04",
+      "type": "conference",
+      "description": "Preschool and kindergarten families attend Family Connections before the first student day."
+    },
+    {
+      "label": "First Day",
+      "name": "First Day for Preschool and Kindergarten",
+      "date": "2026-09-08",
+      "type": "school_start",
+      "schemaDescription": "Preschool and kindergarten students start school on September 8, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving and Native American Heritage Day",
+      "date": "2026-11-26",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "Winter Break includes New Year's Day on January 1, 2027."
+    },
+    {
+      "label": "If Needed",
+      "name": "Day Between Semesters / Possible Makeup Day 1",
+      "date": "2027-01-28",
+      "type": "makeup_day",
+      "description": "Scheduled as the day between semesters; SPS may use it as the first emergency makeup day if needed."
+    },
+    {
+      "label": "Break",
+      "name": "Mid-Winter Break, including Presidents Day",
+      "date": "2027-02-15",
+      "endDate": "2027-02-19",
+      "type": "break_start",
+      "description": "Students are out of school for Presidents Day and Mid-Winter Break."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-04-12",
+      "endDate": "2027-04-16",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-06-21",
+      "type": "school_end",
+      "description": "One-hour early dismissal.",
+      "schemaDescription": "The scheduled last day for Seattle Public Schools students is June 21, 2027, with a one-hour early dismissal."
+    },
+    {
+      "label": "If Needed",
+      "name": "Additional Emergency Makeup Days",
+      "date": "2027-06-22",
+      "endDate": "2027-06-23",
+      "type": "makeup_day",
+      "description": "June 22 and June 23 are additional makeup days if SPS needs to make up more than one day lost to emergency closures."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Schedule Notes", "id": "sps-2026-2027-family-schedule-notes" },
+    { "label": "Dates", "id": "all-dates" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Terms", "id": "sps-2026-2027-semester-and-grading-dates" },
+    { "label": "TRI & Makeup", "id": "sps-2026-2027-tri-and-makeup-days" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "SPS Calendar Dates — 2026–27",
+  "allDatesCoverageNote": "This table focuses on districtwide dates that affect SPS students and families, including grade-specific opening dates, Family Connections, school closures, conferences, semester changes, breaks, early dismissals, and possible emergency makeup days. TRI days are staff dates. School-level calendars may include additional bell schedules, testing dates, athletics, and campus-specific events.",
+  "allDatesSourceUrl": "https://www.seattleschools.org/wp-content/uploads/2026/04/2026-27-SY-Calendar-for-Webpage.pdf",
+  "allDatesSourceLabel": "SPS 2026–27 school-year calendar PDF",
+  "dateLegendLabelOverrides": {
+    "Holiday": "Schools Closed",
+    "Holidays": "Schools Closed",
+    "No School": "No School",
+    "No school": "No School",
+    "Staff Day": "Staff Date",
+    "Staff Days": "Staff Date",
+    "Make-up Day": "If Needed",
+    "Makeup Day": "If Needed",
+    "Make-Up Day": "If Needed",
+    "Possible Make-up Day": "If Needed",
+    "School Event": "School Milestone",
+    "Academic": "Academic",
+    "Conference": "Family-Teacher Conferences"
+  },
+  "icsDescription": "Download the 2026–27 SPS dates for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download Calendar File",
+  "pdfHeading": "Official SPS School-Year Calendar PDF",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "View or print the official 2026–27 school-year calendar published by Seattle Public Schools.",
+  "sourceReviewSummary": "Dates on this page were checked against the SPS 2026–27 school-year calendar PDF and district calendar page.",
+  "sourceReviewDetails": [
+    "Source note: The SPS school-year dates page provides grade-specific opening dates, conference-day guidance, and early-dismissal details that are not fully shown in the PDF calendar. We use the district webpage for those family-facing details and the PDF for TRI days, term dates, day counts, and emergency makeup dates.",
+    "We verified holidays, Winter Break, Mid-Winter Break, Spring Break, semester dates, conference dates, final student day, and emergency closure makeup days against the official SPS sources.",
+    "The PDF lists January 28 as both the day between semesters and Emergency Closure Make Up Day 1. This page explains that dual role instead of treating the date as a normal attendance day.",
+    "The SPS calendar notes that early release occurs every Wednesday except the first week of school. Families should confirm weekly dismissal times with their school."
+  ],
+  "faqDisplayQuestions": [
+    "When do preschool and kindergarten students start school?",
+    "Are schools closed during the November conference days?",
+    "Is January 28 a regular no-school day or a makeup day?",
+    "Does the downloaded calendar update automatically?"
+  ],
+  "faqSchemaQuestions": [
+    "When do preschool and kindergarten students start school?",
+    "Are schools closed during the November conference days?",
+    "Is January 28 a regular no-school day or a makeup day?",
+    "Does the downloaded calendar update automatically?"
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When do preschool and kindergarten students start school?",
+      "a": "Preschool and kindergarten students start Tuesday, September 8, 2026. Family Connections are scheduled for September 2–4."
+    },
+    {
+      "q": "Are schools closed during the November conference days?",
+      "a": "Most elementary and K–8 schools are closed for family-teacher conferences on November 23–25, but schedules vary by school. Most middle schools remain open, so families should check their school calendar."
+    },
+    {
+      "q": "Is January 28 a regular no-school day or a makeup day?",
+      "a": "January 28 is the scheduled day between semesters, but SPS may use it as the first makeup day after an emergency closure."
+    },
+    {
+      "q": "Does the downloaded calendar update automatically?",
+      "a": "No. The calendar file is a one-time import and does not automatically reflect later SPS revisions."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "sps-2026-2027-family-schedule-notes",
+      "label": "Opening Dates, Early Release, and Conference Days",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "SPS has different opening dates for grades 1–12 and for preschool and kindergarten students. The dates below also highlight schedule changes that may affect dismissal or whether students attend school.",
+      "table": {
+        "columns": ["Date", "What families need to know"],
+        "rows": [
+          ["September 2, 2026", "Students in grades 1–12 start school. September 2 is not an early-release Wednesday."],
+          ["September 2–4, 2026", "Family Connections for preschool and kindergarten families."],
+          ["September 8, 2026", "First day for preschool and kindergarten students."],
+          ["November 23–25, 2026", "Family-teacher conferences. Most elementary and K–8 schools are closed; most middle schools remain open."],
+          ["December 18, 2026", "One-hour early dismissal before Winter Break."],
+          ["June 21, 2027", "Scheduled last day of school with a one-hour early dismissal."]
+        ]
+      }
+    },
+    {
+      "id": "sps-2026-2027-semester-and-grading-dates",
+      "label": "Semesters, Quarters, and Trimesters",
+      "position": "afterCalendarExport",
+      "schemaHasPart": true,
+      "content": "The SPS calendar lists two semesters for the school year, quarters for K–8, middle, and high schools, and trimesters for elementary schools.",
+      "table": {
+        "columns": ["Term or grading period", "Dates"],
+        "rows": [
+          ["Semester 1", "September 2, 2026–January 27, 2027"],
+          ["Semester 2", "January 29–June 21, 2027"],
+          ["Quarter 1 — K–8, middle, and high schools", "September 2–November 6, 2026"],
+          ["Quarter 2 — K–8, middle, and high schools", "November 9, 2026–January 27, 2027"],
+          ["Quarter 3 — K–8, middle, and high schools", "January 29–April 2, 2027"],
+          ["Quarter 4 — K–8, middle, and high schools", "April 5–June 21, 2027"],
+          ["Elementary Trimester 1", "September 2–December 1, 2026"],
+          ["Elementary Trimester 2", "December 2, 2026–March 12, 2027"],
+          ["Elementary Trimester 3", "March 15–June 21, 2027"]
+        ]
+      }
+    },
+    {
+      "id": "sps-2026-2027-tri-and-makeup-days",
+      "label": "TRI Days and Emergency Makeup Days",
+      "position": "afterCalendarExport",
+      "schemaHasPart": true,
+      "content": "TRI days are staff-only workdays; students do not attend school. The calendar also includes three emergency closure makeup days that may be used if school is canceled for weather or another emergency.",
+      "table": {
+        "columns": ["Date", "What families need to know"],
+        "rows": [
+          ["August 27, August 28, August 31, and September 1, 2026", "TRI days for staff before the first student day."],
+          ["October 9, 2026", "State In-Service Day / TRI Day; schools are not in session for students."],
+          ["January 28, 2027", "Day between semesters; also Emergency Closure Make Up Day 1 if SPS needs to make up a closure."],
+          ["June 22–23, 2027", "Emergency Closure Make Up Days 2 and 3 if additional closures occur."]
+        ]
+      }
+    }
+  ],
+  "events": [
+    { "date": "2026-09-02", "name": "First Day for Grades 1–12", "type": "school_start", "description": "Students in grades 1–12 start school. September 2 is not an early-release Wednesday." },
+    { "date": "2026-09-02", "endDate": "2026-09-04", "displayAsRange": true, "name": "Preschool and Kindergarten Family Connections", "type": "conference", "description": "Family Connections are scheduled before the first student day for preschool and kindergarten." },
+    { "date": "2026-09-04", "name": "Preschool and Kindergarten Family Connections End", "type": "conference", "hideFromAllDates": true },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
+    { "date": "2026-09-08", "name": "First Day for Preschool and Kindergarten", "type": "school_start" },
+    { "date": "2026-10-09", "name": "State In-Service Day / TRI Day", "type": "staff_workday", "description": "Schools are not in session for students." },
+    { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday" },
+    { "date": "2026-11-23", "endDate": "2026-11-25", "displayAsRange": true, "name": "Family-Teacher Conferences", "type": "conference", "description": "Most elementary and K–8 schools are closed; schedules vary by school, and most middle schools remain open." },
+    { "date": "2026-11-25", "name": "Family-Teacher Conferences End", "type": "conference", "description": "Most elementary and K–8 schools are closed; schedules vary by school, and most middle schools remain open.", "hideFromAllDates": true },
+    { "date": "2026-11-26", "name": "Thanksgiving and Native American Heritage Day Begin", "type": "break_start" },
+    { "date": "2026-11-27", "name": "Thanksgiving and Native American Heritage Day End", "type": "break_end" },
+    { "date": "2026-12-18", "name": "One-Hour Early Dismissal", "type": "early_release", "description": "One-hour early dismissal before Winter Break." },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "displayAsRange": true, "name": "Winter Break Begins", "type": "break_start", "description": "Winter Break runs December 21, 2026, through January 1, 2027." },
+    { "date": "2027-01-01", "name": "New Year's Day / Winter Break Ends", "type": "break_end", "description": "Students return after Winter Break on January 4, 2027." },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-01-27", "name": "End of Semester 1", "type": "academic" },
+    { "date": "2027-01-28", "name": "Day Between Semesters / Possible Emergency Makeup Day 1", "type": "makeup_day", "description": "Scheduled as the day between semesters; SPS may use it as the first emergency makeup day if needed." },
+    { "date": "2027-01-29", "name": "First Day of Second Semester", "type": "school_return" },
+    { "date": "2027-02-15", "name": "Presidents Day", "type": "holiday", "description": "Combined with Mid-Winter Break, students are out of school February 15–19." },
+    { "date": "2027-02-16", "name": "Mid-Winter Break Begins", "type": "break_start" },
+    { "date": "2027-02-19", "name": "Mid-Winter Break Ends", "type": "break_end" },
+    { "date": "2027-04-12", "name": "Spring Break Begins", "type": "break_start" },
+    { "date": "2027-04-16", "name": "Spring Break Ends", "type": "break_end" },
+    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2027-06-18", "name": "Juneteenth", "type": "holiday" },
+    { "date": "2027-06-21", "name": "Last Day of School", "type": "school_end", "description": "One-hour early dismissal." },
+    { "date": "2027-06-22", "name": "Emergency Closure Make Up Day 2", "type": "makeup_day", "description": "Used only if SPS needs to make up an emergency closure." },
+    { "date": "2027-06-23", "name": "Emergency Closure Make Up Day 3", "type": "makeup_day", "description": "Used only if SPS needs to make up an emergency closure." }
+  ]
+}

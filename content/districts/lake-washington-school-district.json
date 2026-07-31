@@ -1,0 +1,142 @@
+{
+  "institutionId": "lake-washington-school-district",
+  "name": "Lake Washington School District",
+  "shortName": "LWSD",
+  "slug": "lake-washington-school-district-calendar",
+  "state": "Washington",
+  "stateCode": "WA",
+  "city": "Redmond",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.lwsd.org",
+  "calendarPage": "https://www.lwsd.org/calendar",
+  "logo": "https://resources.finalsite.net/images/v1716724042/lwsdorg/v8owllehyyqntjnno1mf/LWSDlogodigitalhighres3.svg",
+  "timezone": "America/Los_Angeles",
+  "county": "King County",
+  "region": "Puget Sound",
+  "metro": "Seattle-Tacoma-Bellevue",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Large Puget Sound District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-07-31",
+    "coverageNote": "Lake Washington School District coverage uses the district calendar page and one-page official calendar PDFs for 2025-2026, 2026-2027, and tentative 2027-2028. Spanish PDF coverage is available for 2026-2027. No 2028-2029 PDF URL was provided."
+  },
+  "contentFreshnessScore": {
+    "overall": 94,
+    "sourceUpdated": "2026-07-31",
+    "lastManualReview": "2026-07-31",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the LWSD calendar page when the district posts a revised one-page calendar, updates school closure make-up days, or publishes a final 2027-2028 calendar."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official LWSD revision, final 2027-2028 calendar, emergency closure change, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "LWSD",
+    "Lake Washington Schools",
+    "Lake Washington School District",
+    "Lake Washington school calendar",
+    "LWSD calendar",
+    "Redmond school calendar",
+    "Kirkland school calendar",
+    "Sammamish school calendar"
+  ],
+  "districtFact": "Lake Washington School District serves Eastside communities in King County, including Redmond, Kirkland, and Sammamish. Its one-page calendars are especially useful for families because they separate grades 1–12 starts, Kindergarten Family Connections, preschool and SNAPS dates, LEAP days, Wednesday early release, half days, and school closure make-up days.",
+  "about": [
+    {
+      "title": "About Lake Washington School District",
+      "content": "Lake Washington School District, commonly called LWSD, serves students in Eastside communities in King County, Washington. The district calendar lists grades 1–12 start dates, kindergarten family-connection windows, preschool and SNAPS dates, LEAP days, Wednesday early release, half days, school breaks, grading deadlines, and possible school closure make-up days."
+    },
+    {
+      "title": "District Calendar and School-Level Schedules",
+      "content": "This page covers districtwide LWSD dates from the one-page school-year calendar. Families should still check their school for bell schedules, transportation, testing, athletics, performances, program-specific preschool details, and closure announcements."
+    }
+  ],
+  "planningTips": {
+    "title": "Lake Washington Calendar Notes",
+    "content": [
+      "Kindergarten does not follow the same opening pattern as grades 1–12 because LWSD schedules Kindergarten Family Connections before the kindergarten first day.",
+      "LWSD uses LEAP dates in two ways: planning days before students return and no-school LEAP Fridays during the student year.",
+      "Wednesday early release is part of the normal weekly schedule after it begins for the year, with different release amounts for elementary and secondary students.",
+      "Preschool and SNAPS dates can differ from the K-12 calendar, so families using those programs should track the separate first and last days."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "What are LEAP days on the LWSD calendar?",
+      "a": "LEAP stands for Learning Enhancement Academic Planning. LWSD may schedule LEAP planning days before students return and separate no-school LEAP Fridays during the student year."
+    },
+    {
+      "q": "Do LWSD kindergarten students start on the same day as grades 1–12?",
+      "a": "No. Students in grades 1–12 and kindergarten may follow different opening dates because LWSD schedules Kindergarten Family Connections before the first kindergarten day."
+    },
+    {
+      "q": "Does LWSD have Wednesday early release?",
+      "a": "Yes. LWSD uses Wednesday early release after the schedule begins for the year, with different early-release amounts for elementary and secondary students."
+    },
+    {
+      "q": "Can the LWSD last day of school change?",
+      "a": "Yes. LWSD identifies school closure make-up days that may be used if weather or another closure extends the school year."
+    },
+    {
+      "q": "Where should families verify LWSD calendar updates?",
+      "a": "Use the official Lake Washington School District calendar page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with LWSD."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Seattle Public Schools",
+      "slug": "seattle-public-schools-calendar",
+      "state": "Washington",
+      "comparisonNote": "View Seattle Public Schools’ opening date, major breaks, weekly early-release schedule, and potential makeup days."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Lake Washington School District official website",
+      "url": "https://www.lwsd.org"
+    },
+    {
+      "label": "Lake Washington School District calendar page",
+      "url": "https://www.lwsd.org/calendar"
+    }
+  ]
+}

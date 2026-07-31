@@ -1,0 +1,293 @@
+{
+  "institutionId": "boston-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Boston Public Schools Calendar 2026–27",
+  "firstDay": "2026-09-08",
+  "lastDay": "2027-06-22",
+  "totalSchoolDays": 180,
+  "sourceUrl": "https://www.bostonpublicschools.org/district-calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1774278396/bostonpublicschoolsorg/uxaqrqu9hkkljhdcm3hq/SY26-27DistrictCalendar.pdf",
+  "sourceCalendarName": "SY26-27 BPS District Calendar",
+  "sourceVersion": "Reviewed March 23, 2026",
+  "sourceVersionLabel": "Official PDF review date",
+  "sourceVersionDisplay": "March 23, 2026",
+  "lastVerifiedAt": "2026-07-31",
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-07-31",
+  "temporalCoverageStart": "2026-09-02",
+  "temporalCoverageEnd": "2027-06-29",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "schemaReviewedBy": "author",
+  "seoTitle": "BPS Calendar 2026–27: Start Dates, Recesses & PDF",
+  "seoDescription": "View the BPS 2026–27 calendar with staggered start dates, recesses, early-release days, the scheduled last day of school, translated calendars, and an ICS download.",
+  "schemaCalendarName": "Boston Public Schools Calendar 2026–27",
+  "schemaDatasetName": "Boston Public Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Boston Public Schools dates for 2026–27, including staggered opening dates, Winter Recess, February Recess, Spring Recess, early-release days, the senior last day, the scheduled last day of school, and translated calendar files.",
+  "schemaCalendarDownloadName": "Boston Public Schools 2026–27 calendar file",
+  "schemaSpatialCoverage": "Boston, Massachusetts",
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hidePdfVersionLabel": true,
+  "hideExtendedShareButtons": true,
+  "hideDateLegend": true,
+  "moveCalendarExportBeforeAllDates": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "whatsDifferent",
+    "nationalTrends",
+    "relatedDistricts",
+    "comparison"
+  ],
+  "heroSummary": "Boston Public Schools uses staggered start dates for the 2026–27 school year. BPS lists September 2 and 3 as opening dates for UP Academy Dorchester. Students in grades 1–12 report on Tuesday, September 8, followed by pre-K and kindergarten students on Thursday, September 10. The scheduled last day of school is Tuesday, June 22, 2027, unless cancellations extend the school year.",
+  "calendarNotes": "The 2026–27 BPS district calendar lists 180 school days and a separate 185th calendar day on June 29. Winter Recess runs December 24 through January 1, with teachers and paraprofessionals returning January 4 and students returning January 5. February Recess runs February 16–19, and Spring Recess runs April 20–23 after Patriots' Day.",
+  "heroFactChips": [
+    "180 school days",
+    "Staggered opening dates",
+    "February Recess: Feb 16–19",
+    "Translated calendar files available"
+  ],
+  "verificationBadgeText": "Last checked July 31, 2026. The official BPS PDF carries a review date of March 23, 2026.",
+  "keyDatesSummaryTitle": "2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Staggered start dates, major recesses, and the scheduled last school day",
+  "keyDateSummaryItems": [
+    {
+      "label": "UP Academy",
+      "name": "UP Academy Dorchester opening dates",
+      "date": "2026-09-02",
+      "endDate": "2026-09-03",
+      "dates": ["2026-09-02", "2026-09-03"],
+      "dateDisplayMode": "list",
+      "dateJoiner": "and",
+      "type": "school_start",
+      "description": "BPS lists September 2 and 3 as opening dates for UP Academy Dorchester."
+    },
+    {
+      "label": "First Day",
+      "name": "Grades 1–12 report",
+      "date": "2026-09-08",
+      "type": "school_start",
+      "schemaDescription": "BPS students in grades 1–12 report on September 8, 2026."
+    },
+    {
+      "label": "First Day",
+      "name": "Pre-K and kindergarten report",
+      "date": "2026-09-10",
+      "type": "school_start",
+      "schemaDescription": "BPS pre-K and kindergarten students report on September 10, 2026."
+    },
+    {
+      "label": "Recess",
+      "name": "Winter Recess",
+      "date": "2026-12-24",
+      "endDate": "2027-01-01",
+      "type": "milestone",
+      "description": "Students return Tuesday, January 5, after teachers and paraprofessionals return on January 4."
+    },
+    {
+      "label": "Recess",
+      "name": "February Recess",
+      "date": "2027-02-16",
+      "endDate": "2027-02-19",
+      "type": "milestone",
+      "description": "Students return Monday, February 22."
+    },
+    {
+      "label": "Recess",
+      "name": "Spring Recess",
+      "date": "2027-04-20",
+      "endDate": "2027-04-23",
+      "type": "milestone",
+      "description": "Students return Monday, April 26."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last day of school",
+      "date": "2027-06-22",
+      "type": "school_end",
+      "schemaDescription": "The scheduled last school day is June 22, 2027, if no days are lost to cancellations."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Start Dates", "id": "bps-2026-2027-opening-dates" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Full Calendar", "id": "all-dates" },
+    { "label": "Recesses", "id": "bps-2026-2027-recess-return-dates" },
+    { "label": "Translations", "id": "other-calendars" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "BPS Calendar Dates — 2026–27",
+  "allDatesCoverageNote": "This table covers districtwide BPS dates that affect students and families, including staggered opening dates, recesses, early releases, school closure dates, senior last day, and the 185th calendar day. Check your school for bell schedules, transportation, testing, athletics, and campus-specific events.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1774278396/bostonpublicschoolsorg/uxaqrqu9hkkljhdcm3hq/SY26-27DistrictCalendar.pdf",
+  "allDatesSourceLabel": "BPS 2026–27 district calendar PDF",
+  "dateLegendLabelOverrides": {
+    "Holiday": "Schools Closed",
+    "Holidays": "Schools Closed",
+    "No School": "School Buildings Closed",
+    "No school": "School Buildings Closed",
+    "Staff Day": "Staff Date",
+    "Staff Days": "Staff Date",
+    "Early Release": "Early Release",
+    "School Event": "School Milestone",
+    "Schools Reopen": "Students Return",
+    "Make-up Day": "185th Calendar Day"
+  },
+  "icsDescription": "Download the 2026–27 BPS dates for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download Calendar File",
+  "pdfHeading": "Official BPS District Calendar PDF",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "View or print the English district calendar published by Boston Public Schools.",
+  "hideAlternateCalendarsNotice": true,
+  "alternateCalendarsTitle": "BPS Calendar Translations",
+  "alternateCalendarsDescription": "BPS lists translated versions of the same 2026–27 district calendar.",
+  "alternateCalendars": [
+    { "type": "spanish", "label": "Español", "buttonLabel": "View Spanish Calendar", "pdfUrl": "https://drive.google.com/file/d/1YYzET0e9ODEy0easAbZA0re1IDxPi1fq/view" },
+    { "type": "arabic", "label": "العربية", "buttonLabel": "View Arabic Calendar", "pdfUrl": "https://drive.google.com/file/d/10m4Cn7-Aa7eoQJsGFwPyanJrIf8s6h1O/view" },
+    { "type": "kabuverdianu", "label": "Kabuverdianu", "buttonLabel": "View Kabuverdianu Calendar", "pdfUrl": "https://drive.google.com/file/d/1UrysVzyRUs2wAvELvQH4Bg8Fpe5ORgNE/view" },
+    { "type": "chinese", "label": "中文", "buttonLabel": "View Chinese Calendar", "pdfUrl": "https://drive.google.com/file/d/1eqYsGQwLLdSTZSdPLv-MU60_3tZYRq9U/view" },
+    { "type": "french", "label": "Français", "buttonLabel": "View French Calendar", "pdfUrl": "https://drive.google.com/file/d/1q3zazxcOHKpsxCuukJaLcUCdg0wJwsi5/view" },
+    { "type": "haitian-creole", "label": "Kreyòl", "buttonLabel": "View Haitian Creole Calendar", "pdfUrl": "https://drive.google.com/file/d/1DRHFFOrSGfRWp-ude3qCcf8s2tcB_IKk/view" },
+    { "type": "portuguese", "label": "Português", "buttonLabel": "View Portuguese Calendar", "pdfUrl": "https://drive.google.com/file/d/17wAC8kQsjygovpSySBQTL_4nfzLjED9B/view" },
+    { "type": "somali", "label": "Afsoomaali", "buttonLabel": "View Somali Calendar", "pdfUrl": "https://drive.google.com/file/d/1IjSigmd2yk0v8kBcYNCCZBx41AGV0c81/view" },
+    { "type": "vietnamese", "label": "Tiếng Việt", "buttonLabel": "View Vietnamese Calendar", "pdfUrl": "https://drive.google.com/file/d/1O_P0ymx6YPCj7mwf3A128d2E2WbOIxEe/view" }
+  ],
+  "sourceReviewSummary": "Dates were checked against the official BPS district calendar PDF and district calendar page.",
+  "sourceReviewDetails": [
+    "We verified staggered opening dates, Winter Recess, February Recess, Spring Recess, early-release dates, senior last day, the scheduled last day of school, and the 185th calendar day against the English district calendar PDF.",
+    "The translated calendar links are listed as BPS 2026–27 district calendar translations. Families should use the official district calendar page for the latest language files.",
+    "School-specific bell schedules, transportation, athletics, assessments, and campus events may be published separately by each school."
+  ],
+  "faqDisplayQuestions": [
+    "Which BPS start date applies to my child?",
+    "Does the downloaded BPS calendar update automatically?",
+    "What does the 185th calendar day mean?",
+    "Where should families check for schedule changes?",
+    "Are BPS translated calendars available?"
+  ],
+  "faqSchemaQuestions": [
+    "Which BPS start date applies to my child?",
+    "Does the downloaded BPS calendar update automatically?",
+    "What does the 185th calendar day mean?",
+    "Where should families check for schedule changes?",
+    "Are BPS translated calendars available?"
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Which BPS start date applies to my child?",
+      "a": "Use the start date that matches your child's school and grade group. BPS lists September 2 and 3 as opening dates for UP Academy Dorchester, September 8 for students in grades 1–12, and September 10 for pre-K and kindergarten students."
+    },
+    {
+      "q": "Does the downloaded BPS calendar update automatically?",
+      "a": "No. The ICS file is a one-time import for calendar apps. If BPS revises the district calendar, download a new file and confirm changes on the official BPS calendar page."
+    },
+    {
+      "q": "What does the 185th calendar day mean?",
+      "a": "BPS lists June 29 as the 185th calendar day. It is not the scheduled last day of school, but it may become relevant if cancellations extend the school year."
+    },
+    {
+      "q": "Where should families check for schedule changes?",
+      "a": "Use the official BPS district calendar page and school announcements for final confirmation. School-specific events, bell schedules, transportation updates, testing dates, and program calendars may be published separately by individual schools."
+    },
+    {
+      "q": "Are BPS translated calendars available?",
+      "a": "Yes. BPS lists 2026–27 district calendar translations in Spanish, Arabic, Kabuverdianu, Chinese, French, Haitian Creole, Portuguese, Somali, and Vietnamese."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "bps-2026-2027-opening-dates",
+      "label": "BPS Staggered Opening Dates",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "BPS lists separate opening dates for UP Academy Dorchester, students in grades 1–12, and pre-K and kindergarten students.",
+      "table": {
+        "columns": ["School or student group", "Opening date"],
+        "rows": [
+          ["UP Academy Dorchester", "Wednesday, September 2, and Thursday, September 3, 2026"],
+          ["Students in grades 1–12, including grade 1 in ELCs and EECs", "Tuesday, September 8, 2026"],
+          ["Pre-K and kindergarten students, including those in EECs, ELCs, and special education programs", "Thursday, September 10, 2026"]
+        ]
+      }
+    },
+    {
+      "id": "bps-2026-2027-recess-return-dates",
+      "label": "Recesses and Student Return Dates",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "The recess date ranges end before students return to class, so the return dates are listed separately below. After Winter Recess, staff return January 4 and students return January 5.",
+      "table": {
+        "columns": ["Recess", "Dates", "Students return"],
+        "rows": [
+          ["Winter Recess", "December 24, 2026–January 1, 2027", "Tuesday, January 5, 2027"],
+          ["February Recess", "February 16–19, 2027", "Monday, February 22, 2027"],
+          ["Spring Recess", "April 20–23, 2027", "Monday, April 26, 2027"]
+        ]
+      }
+    },
+    {
+      "id": "bps-2026-2027-early-release-and-185th-day",
+      "label": "Important End-of-Year Notes",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "June 22 is both an early-release day and the scheduled last day of school, provided no days are lost to cancellations. BPS lists June 29 as the 185th calendar day, which may become relevant if cancellations extend the school year. Check BPS updates near the end of the year."
+    },
+    {
+      "id": "bps-2026-2027-calendar-scope",
+      "label": "What This Calendar Covers",
+      "position": "afterVerification",
+      "schemaHasPart": true,
+      "content": "This page covers districtwide dates published on the BPS 2026–27 calendar. School-specific events, bell schedules, transportation updates, testing dates, and program calendars may be published separately by individual schools."
+    }
+  ],
+  "events": [
+    { "date": "2026-09-02", "name": "UP Academy Dorchester Opening — September 2", "type": "school_start", "description": "BPS lists September 2 and 3 as opening dates for UP Academy Dorchester." },
+    { "date": "2026-09-03", "name": "UP Academy Dorchester Opening — September 3", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
+    { "date": "2026-09-08", "name": "Students in Grades 1–12 Report", "type": "school_start", "description": "Includes grade 1 in ELCs and EECs." },
+    { "date": "2026-09-10", "name": "Pre-K and Kindergarten Students Report", "type": "school_start", "description": "Includes EECs, ELCs, and special education." },
+    { "date": "2026-10-06", "name": "Student Early Release / Educator Professional Development Hours", "type": "early_release" },
+    { "date": "2026-10-12", "name": "Indigenous Peoples Day", "type": "holiday" },
+    { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday" },
+    { "date": "2026-11-25", "name": "Early Release for Students and School Staff", "type": "early_release" },
+    { "date": "2026-11-26", "name": "Thanksgiving Recess Begins", "type": "break_start" },
+    { "date": "2026-11-27", "name": "Thanksgiving Recess Ends", "type": "break_end" },
+    { "date": "2026-12-24", "name": "Winter Recess Begins", "type": "break_start" },
+    { "date": "2027-01-01", "name": "Winter Recess Ends", "type": "break_end" },
+    { "date": "2027-01-04", "name": "Teachers and Paraprofessionals Return from Winter Recess", "type": "teacher_workday", "description": "Students return January 5." },
+    { "date": "2027-01-05", "name": "Students Return from Winter Recess", "type": "school_resume" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-02-02", "name": "Student Early Release / Educator Professional Development Hours", "type": "early_release" },
+    { "date": "2027-02-15", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2027-02-16", "name": "February Recess Begins", "type": "break_start" },
+    { "date": "2027-02-19", "name": "February Recess Ends", "type": "break_end" },
+    { "date": "2027-02-22", "name": "Students Return from February Recess", "type": "school_resume" },
+    { "date": "2027-03-26", "name": "Good Friday", "type": "holiday" },
+    { "date": "2027-04-19", "name": "Patriots' Day", "type": "holiday" },
+    { "date": "2027-04-20", "name": "Spring Recess Begins", "type": "break_start" },
+    { "date": "2027-04-23", "name": "Spring Recess Ends", "type": "break_end" },
+    { "date": "2027-04-26", "name": "Students Return from Spring Recess", "type": "school_resume" },
+    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2027-06-07", "name": "Last Day for Seniors", "type": "milestone", "description": "BPS identifies June 7 as the last day for seniors after 170 school days." },
+    { "date": "2027-06-18", "name": "Juneteenth Observed", "type": "holiday", "description": "Observed for Saturday, June 19." },
+    { "date": "2027-06-21", "name": "Early Release Day for Students", "type": "early_release" },
+    { "date": "2027-06-22", "name": "Last Day of School", "type": "school_end", "description": "Scheduled last day if no days are lost due to cancellations. Early release day for students." },
+    { "date": "2027-06-29", "name": "185th Day Required for Calendar Purposes", "type": "calendar_reserve", "description": "BPS lists June 29 as the 185th calendar day. It is not the scheduled last day of school, but it may become relevant if cancellations extend the school year." }
+  ]
+}

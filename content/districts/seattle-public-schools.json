@@ -1,0 +1,123 @@
+{
+  "institutionId": "seattle-public-schools",
+  "name": "Seattle Public Schools",
+  "shortName": "SPS",
+  "slug": "seattle-public-schools-calendar",
+  "state": "Washington",
+  "stateCode": "WA",
+  "city": "Seattle",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.seattleschools.org/",
+  "calendarPage": "https://www.seattleschools.org/news/school-calendar/",
+  "logo": "https://www.seattleschools.org/wp-content/uploads/2022/09/sps-logo.png",
+  "timezone": "America/Los_Angeles",
+  "county": "King County",
+  "region": "Puget Sound",
+  "metro": "Seattle-Tacoma-Bellevue",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "keyDates",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Large Washington District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-07-31",
+    "coverageNote": "Seattle Public Schools coverage uses the district website, official school calendar page, and official PDF calendars for 2025-2026 and 2026-2027. No 2027-2028 or 2028-2029 PDF URL was provided, so those years were not created."
+  },
+  "contentFreshnessScore": {
+    "overall": 95,
+    "sourceUpdated": "2026-07-31",
+    "lastManualReview": "2026-07-31",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the Seattle Public Schools calendar page when SPS posts a revised school-year calendar PDF, changes emergency closure makeup dates, or publishes future-year PDFs."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official SPS revision, missing future-year PDF, emergency closure change, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Seattle Public Schools",
+    "SPS calendar",
+    "Seattle school calendar",
+    "Seattle Public Schools school calendar",
+    "SPS school year calendar",
+    "Seattle Public Schools PDF calendar"
+  ],
+  "districtFact": "Seattle Public Schools publishes a district school-year calendar with a September start, weekly Wednesday early releases, TRI days for educators, elementary conference days, semester and grading-period dates, and emergency closure makeup days.",
+  "about": [
+    {
+      "title": "About Seattle Public Schools",
+      "content": "Seattle Public Schools serves students across Seattle. Its district calendar is especially useful for families because it separates student attendance days from TRI days, elementary conference days, semester transitions, and emergency closure makeup dates."
+    },
+    {
+      "title": "District Calendar and School-Level Schedules",
+      "content": "This districtwide calendar covers systemwide SPS dates. Families should still check their assigned school for bell schedules, transportation, testing, athletics, performances, graduation details, and campus-specific events."
+    }
+  ],
+  "planningTips": {
+    "title": "Seattle Public Schools Calendar Notes",
+    "content": [
+      "SPS uses TRI days before the student year begins. These are staff dates, not regular student attendance days.",
+      "The 2026-2027 calendar lists January 28 as both the day between semesters and the first emergency closure makeup day if a closure occurs.",
+      "Elementary parent-teacher conference dates can affect elementary and K-8 families differently from middle and high school families.",
+      "SPS notes that early release occurs every Wednesday except the first week of school, so school-level bell schedules should be checked for weekly dismissal times."
+    ]
+  },
+  "sources": [
+    {
+      "label": "Seattle Public Schools official website",
+      "url": "https://www.seattleschools.org/"
+    },
+    {
+      "label": "Seattle Public Schools school calendar page",
+      "url": "https://www.seattleschools.org/news/school-calendar/"
+    }
+  ],
+  "districtFaqs": [
+    {
+      "q": "What are TRI days on the Seattle Public Schools calendar?",
+      "a": "TRI days are staff work and training days. They appear on the SPS calendar but are not regular student attendance days."
+    },
+    {
+      "q": "Does SPS use emergency closure makeup days?",
+      "a": "Yes. Seattle Public Schools identifies potential makeup days that may be used if emergency closures, such as snow days, affect the school year."
+    },
+    {
+      "q": "Where should families verify Seattle Public Schools calendar changes?",
+      "a": "Use the official Seattle Public Schools calendar page and school announcements for final confirmation before making travel, child care, or transportation plans."
+    }
+  ]
+}

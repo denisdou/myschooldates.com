@@ -1,0 +1,124 @@
+{
+  "institutionId": "boston-public-schools",
+  "name": "Boston Public Schools",
+  "shortName": "BPS",
+  "slug": "boston-public-schools-calendar",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "city": "Boston",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.bostonpublicschools.org/",
+  "calendarPage": "https://www.bostonpublicschools.org/district-calendar",
+  "logo": "https://resources.finalsite.net/images/v1728550966/bostonpublicschoolsorg/zazga46gdmxu8f3cctat/BostonPublicSchools.svg",
+  "timezone": "America/New_York",
+  "county": "Suffolk County",
+  "region": "Boston",
+  "metro": "Boston-Cambridge-Newton",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "keyDates",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Large Massachusetts District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-07-31",
+    "coverageNote": "Boston Public Schools coverage uses the district website, official district calendar page, official English PDF calendars for 2025-2026 and 2026-2027, and the listed 2026-2027 translated calendar files. No 2027-2028 or 2028-2029 PDF URL was provided, so those years were not created."
+  },
+  "contentFreshnessScore": {
+    "overall": 95,
+    "sourceUpdated": "2026-07-31",
+    "lastManualReview": "2026-07-31",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the Boston Public Schools district calendar page when BPS posts a revised district calendar, updates translated calendar files, or publishes a future-year PDF."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official BPS revision, missing future-year PDF, translated calendar update, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Boston Public Schools",
+    "BPS calendar",
+    "Boston school calendar",
+    "Boston Public Schools district calendar",
+    "BPS district calendar",
+    "Boston Public Schools PDF calendar",
+    "BPS translated calendar"
+  ],
+  "districtFact": "Boston Public Schools publishes a district calendar with staggered opening dates, UP Academy start dates, early-release professional development hours, February Recess, April Spring Recess, and translated calendar files for multiple BPS communities.",
+  "about": [
+    {
+      "title": "About Boston Public Schools",
+      "content": "Boston Public Schools serves students across Boston. The district calendar is especially important for families because the opening week is staggered by school and grade group, and BPS publishes translated versions of the district calendar for multilingual households."
+    },
+    {
+      "title": "District Calendar and School-Level Schedules",
+      "content": "This districtwide calendar covers systemwide dates. Families should still check their assigned school for bell schedules, transportation, athletics, assessments, program events, and school-specific updates."
+    }
+  ],
+  "planningTips": {
+    "title": "Boston Public Schools Calendar Notes",
+    "content": [
+      "BPS does not start every student on the same date. UP Academy Dorchester, grades 1-12, and pre-K/kindergarten have separate start dates.",
+      "BPS uses February Recess and April Spring Recess language rather than a generic winter break and spring break label.",
+      "January 4, 2027 is a teacher/para return day after Winter Recess; students return January 5.",
+      "BPS translated calendars are useful for confirming the same districtwide dates in Spanish, Arabic, Kabuverdianu, Chinese, French, Haitian Creole, Portuguese, Somali, and Vietnamese."
+    ]
+  },
+  "sources": [
+    {
+      "label": "Boston Public Schools official website",
+      "url": "https://www.bostonpublicschools.org/"
+    },
+    {
+      "label": "Boston Public Schools district calendar page",
+      "url": "https://www.bostonpublicschools.org/district-calendar"
+    }
+  ],
+  "districtFaqs": [
+    {
+      "q": "Why does the BPS calendar show more than one opening date?",
+      "a": "Boston Public Schools uses staggered opening dates. UP Academy Dorchester, students in grades 1-12, and pre-K/kindergarten students may start on different dates, so families should use the date that applies to their school and grade group."
+    },
+    {
+      "q": "Does BPS publish translated district calendars?",
+      "a": "Yes. For 2026-2027, BPS lists translated calendar files in Spanish, Arabic, Kabuverdianu, Chinese, French, Haitian Creole, Portuguese, Somali, and Vietnamese."
+    },
+    {
+      "q": "Where should families verify Boston Public Schools calendar changes?",
+      "a": "Use the official Boston Public Schools district calendar page and school announcements for final confirmation before making travel, childcare, or transportation plans."
+    }
+  ]
+}
