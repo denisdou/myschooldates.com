@@ -114,6 +114,7 @@ export default defineNuxtConfig({
         '/humble-isd-calendar',
         '/judson-isd-calendar',
         '/long-beach-unified-school-district-calendar',
+        '/lake-washington-school-district-calendar',
         '/los-angeles-unified-school-district-calendar',
         '/lewisville-independent-school-district-calendar',
         '/klein-isd-calendar',
@@ -449,6 +450,10 @@ export default defineNuxtConfig({
         '/seminole-county-school-calendar/2025-2026',
         '/seminole-county-school-calendar/2026-2027',
         '/seminole-county-school-calendar/2027-2028',
+
+        '/lake-washington-school-district-calendar/2025-2026',
+        '/lake-washington-school-district-calendar/2026-2027',
+        '/lake-washington-school-district-calendar/2027-2028',
 
         '/seattle-public-schools-calendar/2025-2026',
         '/seattle-public-schools-calendar/2026-2027',
