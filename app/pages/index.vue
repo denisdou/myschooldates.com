@@ -14,7 +14,7 @@ const toStateSlug = (name: string) => name.toLowerCase().replace(/\s+/g, '-')
 // State display order by search volume, not alphabet
 const STATE_ORDER = [
   'California', 'Florida', 'Texas', 'New York',
-  'Illinois', 'Pennsylvania', 'North Carolina', 'Nevada', 'Virginia', 'Kentucky', 'Hawaii', 'Maryland',
+  'Illinois', 'Pennsylvania', 'North Carolina', 'Arizona', 'Nevada', 'Virginia', 'Kentucky', 'Hawaii', 'Maryland',
 ]
 
 const STATE_SUMMARIES: Record<string, string> = {
@@ -25,6 +25,7 @@ const STATE_SUMMARIES: Record<string, string> = {
   Illinois: `Illinois public schools serve approximately 1.8 million students across more than 800 school districts. Chicago Public Schools, the third-largest district in the country, typically starts in late August and runs through mid-June. Illinois requires students to attend a minimum of 180 days. Winter break spans late December through early January. Spring break varies by district but generally falls in late March or early April. The Chicago metro area has some of the most searched school calendar dates in the Midwest.`,
   Pennsylvania: `Pennsylvania school districts approve calendars locally, so first day, last day, professional development days, breaks, and weather make-up plans vary by district. The School District of Philadelphia is the state's largest district and a high-demand calendar for families checking citywide attendance dates, holidays, term dates, and school-year breaks.`,
   'North Carolina': `North Carolina requires 185 instructional days for students — more than the national standard of 180. Most districts start in mid-to-late August. A distinctive feature of the NC school calendar is a fall break in October, typically one week long, in addition to standard Thanksgiving, winter, and spring breaks. Wake County and Charlotte-Mecklenburg Schools are the two largest districts, together serving nearly 300,000 students. Spring break generally falls in mid-March. The school year ends in early June.`,
+  Arizona: `Arizona school calendars are approved locally by district, and many large districts begin in July or early August. Reviewed Arizona pages on MySchoolDates include Mesa Public Schools, Chandler Unified School District, Tucson Unified School District, and Peoria Unified School District, with district-specific details such as intersessions, modified Wednesdays, weekly early release, teacher workdays, and approved calendar PDFs.`,
   Nevada: `Nevada's largest district, Clark County School District (Las Vegas), serves over 300,000 students and is one of the ten largest in the United States. CCSD typically starts school in early August — earlier than most states — and ends in late May. The district observes Nevada Day (last Friday of October) in addition to standard federal holidays. Spring break falls in late March or early April. The Clark County calendar is closely watched by families across the Las Vegas metro area, which includes Henderson, North Las Vegas, and surrounding communities.`,
   Virginia: `Virginia school divisions set their own academic calendars. Most begin in late August and end in mid-June. Fairfax County Public Schools, located in Northern Virginia's DC suburbs, is the tenth-largest school district in the country and consistently ranks among the top academic performers nationally. Virginia school divisions observe all federal holidays plus scheduled teacher workdays throughout the year. The DC metro area — including Fairfax and neighboring districts — tends to have high parental interest in precise calendar dates for childcare and travel planning.`,
   Kentucky: `Kentucky school districts publish local academic calendars with district-specific first days, holidays, breaks, professional development days, and make-up day notes. Families should verify dates with the official district calendar because weather, election days, and staff-only days can affect student attendance schedules.`,
@@ -129,7 +130,7 @@ useHead({
     <main>
       <!-- Hero -->
       <section class="bg-white border-b border-gray-100">
-        <div class="max-w-4xl mx-auto px-4 py-14 text-center">
+        <div class="site-page-shell py-14 text-center">
           <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 leading-tight">
             US School Calendar Platform
           </h1>
@@ -149,7 +150,7 @@ useHead({
 
       <!-- Stats bar -->
       <div class="bg-gray-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 py-4 flex flex-wrap justify-center gap-x-10 gap-y-2 text-sm">
+        <div class="site-page-shell py-4 flex flex-wrap justify-center gap-x-10 gap-y-2 text-sm">
           <span><strong class="text-white">{{ districtCount }}</strong> <span class="text-gray-400">school districts</span></span>
           <span><strong class="text-white">{{ stateCount }}</strong> <span class="text-gray-400">states</span></span>
           <span>
@@ -163,7 +164,7 @@ useHead({
         </div>
       </div>
 
-      <div class="max-w-4xl mx-auto px-4">
+      <div class="site-page-shell">
         <!-- Search -->
         <div class="py-10">
           <div class="relative max-w-xl mx-auto">

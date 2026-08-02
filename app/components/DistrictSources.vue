@@ -10,6 +10,7 @@ const props = defineProps<{
   sourceVersion?: string | null
   sourceVersionLabel?: string | null
   sourceVersionDisplay?: string | null
+  hideSourceVersionDisplay?: boolean
   sourcePdfUrl?: string | null
   reviewSummary?: string | null
   reviewDetails?: string[] | null
@@ -24,10 +25,10 @@ const displayYear = computed(() => {
   return match ? `${match[1]}–${match[2]!.slice(2)}` : props.year
 })
 const sourceVersionInline = computed(() =>
-  Boolean(sourceVersionSourceUrl.value && props.sourceVersion)
+  Boolean(!props.hideSourceVersionDisplay && sourceVersionSourceUrl.value && props.sourceVersion)
 )
 const sourceVersionSourceUrl = computed(() => {
-  if (!props.sourceVersion) return ''
+  if (props.hideSourceVersionDisplay || !props.sourceVersion) return ''
   if (props.sourcePdfUrl && props.sources.some(src => src.url === props.sourcePdfUrl)) {
     return props.sourcePdfUrl
   }
@@ -84,7 +85,7 @@ const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.
       </li>
     </ul>
     <div class="text-xs text-[#7b756d] pt-3 border-t border-[#ddd6cb] space-y-1.5">
-      <p v-if="sourceVersion && !sourceVersionInline">
+      <p v-if="sourceVersion && !sourceVersionInline && !hideSourceVersionDisplay">
         <span class="font-medium text-[#6b645c]">{{ sourceVersionLabel }}:</span>
         <a
           v-if="sourcePdfUrl"

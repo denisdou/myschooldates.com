@@ -118,8 +118,25 @@ const { data: yearOptions } = await useAsyncData(`years:${slug}:${year}`, async 
 const isCurrentYear = district.value.currentSchoolYear === year
 const hubUrl = `https://myschooldates.com/${slug}`
 const canonicalUrl = isCurrentYear ? hubUrl : `${hubUrl}/${year}`
-const availableYears = computed(() => yearOptions.value ?? [])
+const availableYears = computed(() => {
+  const years = [...(yearOptions.value ?? [])]
+  const sortMode = (cal.value as any)?.yearSwitcherSort ?? (cal.value as any)?.meta?.yearSwitcherSort
+  if (sortMode === 'asc') return years.sort()
+  if (sortMode === 'desc') return years.sort().reverse()
+  return years
+})
+const visibleYearSwitcherYears = computed(() => {
+  if ((cal.value as any)?.hideCurrentYearInSwitcher || (cal.value as any)?.meta?.hideCurrentYearInSwitcher) {
+    return availableYears.value.filter(y => y !== year)
+  }
+  return availableYears.value
+})
 const yearLink = (y: string) => y === district.value!.currentSchoolYear ? `/${slug}` : `/${slug}/${y}`
+const yearSwitcherPosition = computed(() =>
+  (cal.value as any)?.yearSwitcherPosition ?? (cal.value as any)?.meta?.yearSwitcherPosition ?? 'default'
+)
+const showYearSwitcherAfterKeyDates = computed(() => yearSwitcherPosition.value === 'afterKeyDates')
+const showYearSwitcherAfterSources = computed(() => yearSwitcherPosition.value === 'afterSources')
 
 function eventSchemaLocation() {
   return {
@@ -234,6 +251,7 @@ const verificationBadgeText = computed(() =>
   (cal.value as any)?.verificationBadgeText ?? (cal.value as any)?.meta?.verificationBadgeText ?? (district.value as any)?.verificationBadgeText ?? (district.value as any)?.meta?.verificationBadgeText ?? null
 )
 const hasCalendarTrackCaution = computed(() => {
+  if ((cal.value as any)?.hideCalendarTrackCaution || (cal.value as any)?.meta?.hideCalendarTrackCaution) return false
   const text = `${(cal.value as any)?.calendarNotes ?? ''} ${(district.value as any)?.districtFact ?? ''}`.toLowerCase()
   return text.includes('track') || text.includes('modified traditional') || text.includes('year-round')
 })
@@ -408,12 +426,16 @@ const dateLegend = computed(() => {
     return name.includes('possible') && (name.includes('make-up') || name.includes('makeup'))
   })
   const items = [
-    ...(hasEventType(['holiday', 'schools_closed', 'schools_offices_closed']) ? [{ label: 'School Closure', dot: 'bg-red-400' }] : []),
+    ...(hasEventType(['schools_offices_closed']) ? [{ label: 'Schools & Offices Closed', dot: 'bg-red-400' }] : []),
+    ...(hasEventType(['schools_closed']) ? [{ label: 'Schools Closed', dot: 'bg-red-300' }] : []),
+    ...(hasEventType(['holiday']) ? [{ label: 'School Closure', dot: 'bg-red-400' }] : []),
     ...(hasEventType(['no_school', 'student_holiday', 'teacher_workday', 'teacher_professional_learning']) ? [{ label: 'No School for Students', dot: 'bg-amber-400' }] : []),
     ...(hasEventType(['partial_closure']) ? [{ label: 'Some Students Off', dot: 'bg-pink-400' }] : []),
     ...(hasEventType(['half_day_high_school', 'half_day_dismissal']) ? [{ label: 'Half-Day Dismissal', dot: 'bg-orange-300' }] : []),
     ...(hasEventType(['early_dismissal', 'early_release']) ? [{ label: 'Early Release', dot: 'bg-orange-400' }] : []),
     ...(hasEventType(['break_start']) || hasPossibleMakeupDay ? [{ label: 'Break', dot: 'bg-purple-400' }] : []),
+    ...(hasEventType(['conference', 'conference_day', 'conference_days']) ? [{ label: 'Conferences', dot: 'bg-blue-400' }] : []),
+    ...(hasEventType(['academic']) ? [{ label: 'Academic', dot: 'bg-slate-400' }] : []),
     ...(hasEventType(['observance']) ? [{ label: 'Observance', dot: 'bg-teal-400' }] : []),
   ]
   const seen = new Set<string>()
@@ -673,6 +695,16 @@ const sourceCalendarEntity = basedOnUrl ? {
   url: basedOnUrl,
   publisher: { '@id': districtAbout['@id'] },
 } : null
+const additionalSourceCalendarEntities = (((cal.value as any)?.schemaAdditionalSourceCalendars ?? (cal.value as any)?.meta?.schemaAdditionalSourceCalendars ?? []) as any[])
+  .filter(source => source?.url && source?.name)
+  .map((source, index) => ({
+    '@type': 'CreativeWork',
+    '@id': source.id ? `${canonicalUrl}#${source.id}` : `${canonicalUrl}#source-calendar-${index + 2}`,
+    name: source.name,
+    ...(source.version ? { version: source.version } : {}),
+    url: source.url,
+    publisher: { '@id': districtAbout['@id'] },
+  }))
 const sourceCalendarPageEntity = sourcePageCitationUrl ? {
   '@type': 'WebPage',
   '@id': `${canonicalUrl}#source-calendar-page`,
@@ -797,13 +829,28 @@ function keyDateListDateParts(event: any) {
   }
   return dates.map((date: string) => ({ date, label: formatShortDate(date), ariaLabel: formatDate(date) }))
 }
-function keyDateSummaryRange(event: any) {
-  return { start: event.date, end: event.endDate ?? event.date }
+function keyDateDateParts(event: any) {
+  const listParts = keyDateListDateParts(event)
+  if (listParts.length) return listParts
+  if (event.endDate && event.endDate !== event.date) {
+    const start = new Date(event.date + 'T00:00:00')
+    const end = new Date(event.endDate + 'T00:00:00')
+    if (start.getFullYear() === end.getFullYear() && start.getMonth() === end.getMonth()) {
+      const month = start.toLocaleDateString('en-US', { month: 'short' })
+      return [
+        { date: event.date, label: `${month} ${start.getDate()}`, ariaLabel: formatDate(event.date) },
+        { date: event.endDate, label: `${end.getDate()}, ${end.getFullYear()}`, ariaLabel: formatDate(event.endDate) },
+      ]
+    }
+    return [
+      { date: event.date, label: formatShortDate(event.date), ariaLabel: formatDate(event.date) },
+      { date: event.endDate, label: formatShortDate(event.endDate), ariaLabel: formatDate(event.endDate) },
+    ]
+  }
+  return [{ date: event.date, label: formatShortDate(event.date), ariaLabel: formatDate(event.date) }]
 }
-function keyDateSummaryDateLabel(event: any) {
-  if (event.endDate && event.dateJoiner) return compactJoinedDate(event.date, event.endDate, event.dateJoiner)
-  if (event.endDate && event.endDate !== event.date) return `${formatShortDate(event.date)} – ${formatShortDate(event.endDate)}`
-  return formatShortDate(event.date)
+function keyDateDateSeparator(event: any) {
+  return keyDateListDates(event).length ? (event.dateJoiner ?? 'and') : (event.dateJoiner ?? '–')
 }
 function keyDateSchemaProperties(event: any) {
   const dates = keyDateListDates(event)
@@ -925,7 +972,12 @@ const webPageEntity = {
       encodingFormat: 'application/pdf',
     },
   } : {}),
-  ...(sourceCitation.length ? { citation: sourceCitation } : {}),
+  ...(additionalSourceCalendarEntities.length ? {
+    citation: [
+      ...sourceCitation,
+      ...additionalSourceCalendarEntities.map(source => ({ '@id': source['@id'] })),
+    ],
+  } : sourceCitation.length ? { citation: sourceCitation } : {}),
   isPartOf: {
     '@id': 'https://myschooldates.com/#website',
   },
@@ -1053,6 +1105,7 @@ useHead({
         siteEntity,
         districtAbout,
         ...(sourceCalendarEntity ? [sourceCalendarEntity] : []),
+        ...additionalSourceCalendarEntities,
         ...(sourceCalendarPageEntity ? [sourceCalendarPageEntity] : []),
         ...(datasetEntity ? [datasetEntity] : []),
         ...(includeArticleSchema ? [articleEntity] : []),
@@ -1261,17 +1314,14 @@ useHead({
               <span class="min-w-0 break-words text-sm text-gray-900">{{ keyDateDisplayName(event) }}</span>
             </div>
             <span class="text-sm text-[#7b756d] tabular-nums ml-4 flex-shrink-0">
-              <template v-if="keyDateListDateParts(event).length">
+              <template v-if="keyDateDateParts(event).length">
                 <template
-                  v-for="(part, index) in keyDateListDateParts(event)"
+                  v-for="(part, index) in keyDateDateParts(event)"
                   :key="part.date"
                 >
-                  <span v-if="index > 0">&nbsp;{{ event.dateJoiner ?? 'and' }}&nbsp;</span>
+                  <span v-if="index > 0">&nbsp;{{ keyDateDateSeparator(event) }}&nbsp;</span>
                   <time :datetime="part.date" :aria-label="part.ariaLabel">{{ part.label }}</time>
                 </template>
-              </template>
-              <template v-else>
-                <time :datetime="keyDateSummaryRange(event).start">{{ keyDateSummaryDateLabel(event) }}</time>
               </template>
             </span>
           </div>
@@ -1279,6 +1329,18 @@ useHead({
       </div>
 
       <!-- Custom Sections: afterKeyDates -->
+      <div v-if="showYearSwitcherAfterKeyDates && visibleYearSwitcherYears.length" class="flex items-center gap-2 flex-wrap">
+        <span class="text-sm text-[#7b756d]">Other school years:</span>
+        <NuxtLink
+          v-for="y in visibleYearSwitcherYears"
+          :key="y"
+          :to="yearLink(y)"
+          class="text-sm px-3 py-1 rounded-lg border transition-colors"
+          :class="y === year ? 'border-[#b8c9c9] bg-[#e6f0ef] text-[#0f5d6b] font-medium' : 'border-[#d9d2c7] text-[#6b645c] hover:border-[#b8c9c9] hover:text-[#0f5d6b]'"
+        >
+          {{ displaySchoolYearLabel(y) }}
+        </NuxtLink>
+      </div>
       <DistrictCustomSections :sections="customSections" position="afterKeyDates" />
 
       <!-- Quick Facts -->
@@ -1367,6 +1429,7 @@ useHead({
         :last-day="cal!.lastDay"
         :coverage-note="(cal as any).allDatesCoverageNote ?? (cal as any).meta?.allDatesCoverageNote"
         :legend-style="(cal as any).dateLegendStyle ?? (cal as any).meta?.dateLegendStyle"
+        :month-notes="(cal as any).allDatesMonthNotes ?? (cal as any).meta?.allDatesMonthNotes"
       />
       <DistrictCustomSections :sections="customSections" position="afterAllDates" />
 
@@ -1414,6 +1477,10 @@ useHead({
         :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
         :description="(cal as any).alternateCalendarsDescription ?? (cal as any).meta?.alternateCalendarsDescription"
         :button-label="(cal as any).alternateCalendarsButtonLabel ?? (cal as any).meta?.alternateCalendarsButtonLabel"
+        :footer-title="(cal as any).alternateCalendarsFooterTitle ?? (cal as any).meta?.alternateCalendarsFooterTitle"
+        :footer-description="(cal as any).alternateCalendarsFooterDescription ?? (cal as any).meta?.alternateCalendarsFooterDescription"
+        :footer-link-label="(cal as any).alternateCalendarsFooterLinkLabel ?? (cal as any).meta?.alternateCalendarsFooterLinkLabel"
+        :footer-link-url="(cal as any).alternateCalendarsFooterLinkUrl ?? (cal as any).meta?.alternateCalendarsFooterLinkUrl"
       />
       <DistrictCustomSections :sections="customSections" position="afterOtherCalendars" />
 
@@ -1432,10 +1499,10 @@ useHead({
       </div>
 
       <!-- Year Switcher -->
-      <div v-if="availableYears.length > 1" class="flex items-center gap-2 flex-wrap">
+      <div v-if="!showYearSwitcherAfterKeyDates && !showYearSwitcherAfterSources && visibleYearSwitcherYears.length" class="flex items-center gap-2 flex-wrap">
         <span class="text-sm text-[#7b756d]">Other school years:</span>
         <NuxtLink
-          v-for="y in availableYears"
+          v-for="y in visibleYearSwitcherYears"
           :key="y"
           :to="yearLink(y)"
           class="text-sm px-3 py-1 rounded-lg border transition-colors"
@@ -1518,10 +1585,24 @@ useHead({
         :source-version="(cal as any).sourceVersion"
         :source-version-label="(cal as any).sourceVersionLabel ?? (cal as any).meta?.sourceVersionLabel"
         :source-version-display="(cal as any).sourceVersionDisplay ?? (cal as any).meta?.sourceVersionDisplay"
+        :hide-source-version-display="(cal as any).hideSourceVersionDisplay ?? (cal as any).meta?.hideSourceVersionDisplay"
         :source-pdf-url="(cal as any).sourcePdfUrl"
         :review-summary="(cal as any).sourceReviewSummary ?? (cal as any).meta?.sourceReviewSummary"
         :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
       />
+
+      <div v-if="showYearSwitcherAfterSources && visibleYearSwitcherYears.length" class="flex items-center gap-2 flex-wrap">
+        <span class="text-sm text-[#7b756d]">Other school years:</span>
+        <NuxtLink
+          v-for="y in visibleYearSwitcherYears"
+          :key="y"
+          :to="yearLink(y)"
+          class="text-sm px-3 py-1 rounded-lg border transition-colors"
+          :class="y === year ? 'border-[#b8c9c9] bg-[#e6f0ef] text-[#0f5d6b] font-medium' : 'border-[#d9d2c7] text-[#6b645c] hover:border-[#b8c9c9] hover:text-[#0f5d6b]'"
+        >
+          {{ displaySchoolYearLabel(y) }}
+        </NuxtLink>
+      </div>
 
       <!-- Data quality notice -->
       <DistrictDataQuality

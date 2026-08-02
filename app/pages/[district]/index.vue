@@ -378,9 +378,18 @@ const keyDateShortcuts = computed(() => {
     .filter(link => link.label && link.href)
 })
 
-const archivedYears = computed(() =>
-  (allCals.value ?? []).filter(y => y.schoolYear !== currentYear).map(y => y.schoolYear)
+const archivedYears = computed(() => {
+  const years = (allCals.value ?? []).filter(y => y.schoolYear !== currentYear).map(y => y.schoolYear)
+  const sortMode = (cal as any)?.yearSwitcherSort ?? (cal as any)?.meta?.yearSwitcherSort
+  if (sortMode === 'asc') return years.sort()
+  if (sortMode === 'desc') return years.sort().reverse()
+  return years
+})
+const yearSwitcherPosition = computed(() =>
+  (cal as any)?.yearSwitcherPosition ?? (cal as any)?.meta?.yearSwitcherPosition ?? 'default'
 )
+const showYearSwitcherAfterKeyDates = computed(() => yearSwitcherPosition.value === 'afterKeyDates')
+const showYearSwitcherAfterSources = computed(() => yearSwitcherPosition.value === 'afterSources')
 const today = new Date(); today.setHours(0, 0, 0, 0)
 const breaks = computed(() => getBreaks(cal?.events ?? []))
 
@@ -947,7 +956,9 @@ const dateLegend = computed(() => {
     return name.includes('possible') && (name.includes('make-up') || name.includes('makeup'))
   })
   const items = [
-    ...(hasEventType(['holiday', 'schools_closed', 'schools_offices_closed']) ? [{ label: 'School Closure', dot: 'bg-red-400' }] : []),
+    ...(hasEventType(['schools_offices_closed']) ? [{ label: 'Schools & Offices Closed', dot: 'bg-red-400' }] : []),
+    ...(hasEventType(['schools_closed']) ? [{ label: 'Schools Closed', dot: 'bg-red-300' }] : []),
+    ...(hasEventType(['holiday']) ? [{ label: 'School Closure', dot: 'bg-red-400' }] : []),
     ...(hasEventType(['no_school', 'student_holiday', 'teacher_workday', 'teacher_professional_learning']) ? [{ label: 'No School for Students', dot: 'bg-amber-400' }] : []),
     ...(hasEventType(['partial_closure']) ? [{ label: 'Some Students Off', dot: 'bg-pink-400' }] : []),
     ...(hasEventType(['half_day_high_school', 'half_day_dismissal']) ? [{ label: 'Half-Day Dismissal', dot: 'bg-orange-300' }] : []),
@@ -1138,6 +1149,16 @@ if (!isStatePage && district.value) {
     url: basedOnUrl,
     publisher: { '@id': districtAbout['@id'] },
   } : null
+  const additionalSourceCalendarEntities = (((cal as any)?.schemaAdditionalSourceCalendars ?? (cal as any)?.meta?.schemaAdditionalSourceCalendars ?? []) as any[])
+    .filter(source => source?.url && source?.name)
+    .map((source, index) => ({
+      '@type': 'CreativeWork',
+      '@id': source.id ? `${canonicalUrl}#${source.id}` : `${canonicalUrl}#source-calendar-${index + 2}`,
+      name: source.name,
+      ...(source.version ? { version: source.version } : {}),
+      url: source.url,
+      publisher: { '@id': districtAbout['@id'] },
+    }))
   const sourceCalendarPageEntity = sourcePageCitationUrl ? {
     '@type': 'WebPage',
     '@id': `${canonicalUrl}#source-calendar-page`,
@@ -1198,9 +1219,8 @@ if (!isStatePage && district.value) {
       } : null,
     ].filter(Boolean),
   }
-  const yearPageLinks = (allCals.value ?? [])
-    .filter(y => y.schoolYear !== currentYear)
-    .map(y => `https://myschooldates.com/${slug}/${y.schoolYear}`)
+  const yearPageLinks = archivedYears.value
+    .map(y => `https://myschooldates.com/${slug}/${y}`)
   const schemaReviewedBySetting = (cal as any)?.schemaReviewedBy ?? (cal as any)?.meta?.schemaReviewedBy ?? (meta.value as any)?.schemaReviewedBy ?? (meta.value as any)?.meta?.schemaReviewedBy
   const schemaReviewedById = schemaReviewedBySetting === 'author' || !schemaReviewedBySetting
     ? 'https://myschooldates.com/author#person'
@@ -1288,7 +1308,12 @@ if (!isStatePage && district.value) {
         encodingFormat: 'application/pdf',
       },
     } : {}),
-    ...(sourceCitation.length ? { citation: sourceCitation } : {}),
+    ...(additionalSourceCalendarEntities.length ? {
+      citation: [
+        ...sourceCitation,
+        ...additionalSourceCalendarEntities.map(source => ({ '@id': source['@id'] })),
+      ],
+    } : sourceCitation.length ? { citation: sourceCitation } : {}),
     isPartOf: {
       '@id': 'https://myschooldates.com/#website',
     },
@@ -1384,6 +1409,7 @@ if (!isStatePage && district.value) {
           siteEntity,
           districtAbout,
           ...(sourceCalendarEntity ? [sourceCalendarEntity] : []),
+          ...additionalSourceCalendarEntities,
           ...(sourceCalendarPageEntity ? [sourceCalendarPageEntity] : []),
           ...(datasetEntity ? [datasetEntity] : []),
           ...(includeArticleSchema ? [articleEntity] : []),
@@ -1409,7 +1435,7 @@ if (!isStatePage && district.value) {
 <template>
   <!-- ── State Page ─────────────────────────────────────────────────────── -->
   <template v-if="isStatePage">
-      <main class="max-w-4xl mx-auto px-4 py-8 space-y-8">
+      <main class="site-page-shell py-8 space-y-8">
 
         <!-- Breadcrumb -->
         <Breadcrumb :items="[{ label: 'Home', href: '/' }, { label: matchedStateName! }]" />
@@ -2105,6 +2131,17 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Custom Sections: afterKeyDates -->
+        <div v-if="showYearSwitcherAfterKeyDates && archivedYears.length" class="flex items-center gap-2 flex-wrap">
+          <span class="text-sm text-[#7b756d]">Other school years:</span>
+          <NuxtLink
+            v-for="y in archivedYears"
+            :key="y"
+            :to="`/${slug}/${y}`"
+            class="text-sm px-3 py-1 rounded-lg border border-gray-300 text-gray-600 hover:border-blue-400 hover:text-blue-600 transition-colors"
+          >
+            {{ displaySchoolYearLabel(y) }}
+          </NuxtLink>
+        </div>
         <DistrictCustomSections :sections="customSections" position="afterKeyDates" />
 
         <!-- Quick Facts (fixed position — moved above Year by Numbers) -->
@@ -2182,6 +2219,7 @@ if (!isStatePage && district.value) {
           :last-day="cal.lastDay"
           :coverage-note="(cal as any).allDatesCoverageNote ?? (cal as any).meta?.allDatesCoverageNote"
           :legend-style="(cal as any).dateLegendStyle ?? (cal as any).meta?.dateLegendStyle"
+          :month-notes="(cal as any).allDatesMonthNotes ?? (cal as any).meta?.allDatesMonthNotes"
         />
         <DistrictCustomSections :sections="customSections" position="afterAllDates" />
 
@@ -2224,6 +2262,10 @@ if (!isStatePage && district.value) {
           :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
           :description="(cal as any).alternateCalendarsDescription ?? (cal as any).meta?.alternateCalendarsDescription"
           :button-label="(cal as any).alternateCalendarsButtonLabel ?? (cal as any).meta?.alternateCalendarsButtonLabel"
+          :footer-title="(cal as any).alternateCalendarsFooterTitle ?? (cal as any).meta?.alternateCalendarsFooterTitle"
+          :footer-description="(cal as any).alternateCalendarsFooterDescription ?? (cal as any).meta?.alternateCalendarsFooterDescription"
+          :footer-link-label="(cal as any).alternateCalendarsFooterLinkLabel ?? (cal as any).meta?.alternateCalendarsFooterLinkLabel"
+          :footer-link-url="(cal as any).alternateCalendarsFooterLinkUrl ?? (cal as any).meta?.alternateCalendarsFooterLinkUrl"
         />
         <DistrictCustomSections :sections="customSections" position="afterOtherCalendars" />
 
@@ -2313,7 +2355,7 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Year Switcher -->
-        <div v-if="archivedYears.length" class="flex items-center gap-2 flex-wrap">
+        <div v-if="!showYearSwitcherAfterKeyDates && !showYearSwitcherAfterSources && archivedYears.length" class="flex items-center gap-2 flex-wrap">
           <span class="text-sm text-[#7b756d]">Other school years:</span>
           <NuxtLink
             v-for="y in archivedYears"
@@ -2392,10 +2434,24 @@ if (!isStatePage && district.value) {
           :source-version="(cal as any).sourceVersion"
           :source-version-label="(cal as any).sourceVersionLabel ?? (cal as any).meta?.sourceVersionLabel"
           :source-version-display="(cal as any).sourceVersionDisplay ?? (cal as any).meta?.sourceVersionDisplay"
+          :hide-source-version-display="(cal as any).hideSourceVersionDisplay ?? (cal as any).meta?.hideSourceVersionDisplay"
           :source-pdf-url="(cal as any).sourcePdfUrl"
           :review-summary="(cal as any).sourceReviewSummary ?? (cal as any).meta?.sourceReviewSummary"
           :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
         />
+
+        <!-- Year Switcher: after Sources -->
+        <div v-if="showYearSwitcherAfterSources && archivedYears.length" class="flex items-center gap-2 flex-wrap">
+          <span class="text-sm text-[#7b756d]">Other school years:</span>
+          <NuxtLink
+            v-for="y in archivedYears"
+            :key="y"
+            :to="`/${slug}/${y}`"
+            class="text-sm px-3 py-1 rounded-lg border border-gray-300 text-gray-600 hover:border-blue-400 hover:text-blue-600 transition-colors"
+          >
+            {{ displaySchoolYearLabel(y) }}
+          </NuxtLink>
+        </div>
 
         <!-- Data quality notice -->
         <DistrictDataQuality

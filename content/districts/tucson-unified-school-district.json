@@ -1,0 +1,152 @@
+{
+  "institutionId": "tucson-unified-school-district",
+  "name": "Tucson Unified School District",
+  "shortName": "TUSD",
+  "slug": "tucson-unified-school-district-calendar",
+  "state": "Arizona",
+  "stateCode": "AZ",
+  "city": "Tucson",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.tusd1.org/",
+  "calendarPage": "https://www.tusd1.org/Calendar",
+  "logo": "https://www.tusd1.org/_theme/images/-new-design/TUSD-web-header.png",
+  "timezone": "America/Phoenix",
+  "county": "Pima County",
+  "region": "Southern Arizona",
+  "metro": "Tucson",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Large Southern Arizona District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-01",
+    "coverageNote": "Tucson Unified School District coverage uses the official district calendar page, official English one-page calendar PDFs for 2025-2026 and 2026-2027, and local PDF copies supplied for manual verification. No 2027-2028 or 2028-2029 PDF URL was provided."
+  },
+  "contentFreshnessScore": {
+    "overall": 94,
+    "sourceUpdated": "2026-08-01",
+    "lastManualReview": "2026-08-01",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the TUSD calendar page when the district posts a revised one-page calendar, publishes a future-year calendar, changes Wednesday early-release rules, or updates conference half-day dates."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official TUSD revision, new 2027-2028 calendar, conference date change, early-release schedule change, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "TUSD",
+    "Tucson Unified",
+    "Tucson Unified School District",
+    "TUSD calendar",
+    "Tucson school calendar",
+    "Tucson Unified calendar",
+    "Tucson AZ school calendar",
+    "Tucson Unified School District calendar"
+  ],
+  "districtFact": "Tucson Unified School District serves students in Tucson and Pima County. Its school-year calendar is especially useful for families because it combines weekly one-hour early-release Wednesdays, parent-teacher conference half days by grade band, grading and planning no-school days, Rodeo Break, and a May graduation and last-day window.",
+  "about": [
+    {
+      "title": "About Tucson Unified School District",
+      "content": "Tucson Unified School District, commonly called TUSD, serves students in Tucson, Arizona. The district's one-page calendar lists the first and last student days, weekly Wednesday early release, parent-teacher conference half days, grading and planning days when students do not attend, professional learning days, Rodeo Break, fall break, winter break, spring break, graduation days, and staff reporting dates."
+    },
+    {
+      "title": "District Calendar and School-Level Schedules",
+      "content": "This page covers districtwide TUSD calendar dates from the official English calendar PDFs. Families should still check their school for bell schedules, transportation, athletics, testing windows, graduation ceremony times, magnet or program calendars, and campus-specific announcements."
+    }
+  ],
+  "planningTips": {
+    "title": "Tucson Unified Calendar Notes",
+    "content": [
+      "TUSD releases students one hour early every Wednesday, so weekly pickup and after-school arrangements can differ from the rest of the week.",
+      "Parent-teacher conference dates are half days, and the K–8 conference windows do not always match the grades 9–12 conference dates.",
+      "Grading and planning days are no-school days for students, not normal attendance days.",
+      "Rodeo Break is a distinct February no-school break on the TUSD calendar and should not be grouped with spring break."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Does Tucson Unified release students early every Wednesday?",
+      "a": "Yes. Students are released one hour early every Wednesday. Families should confirm exact dismissal times with their school."
+    },
+    {
+      "q": "Are TUSD parent-teacher conference dates half-days?",
+      "a": "Yes. TUSD parent-teacher conference dates are half-days. K–8 students have more conference half-days than students in grades 9–12."
+    },
+    {
+      "q": "What is Rodeo Break on the TUSD calendar?",
+      "a": "Rodeo Break is a February no-school break listed on the Tucson Unified calendar. It is separate from winter break and spring break."
+    },
+    {
+      "q": "Where should families verify Tucson Unified calendar updates?",
+      "a": "Use the official Tucson Unified School District calendar page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with TUSD."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Mesa Public Schools",
+      "slug": "mesa-public-schools-calendar",
+      "state": "Arizona",
+      "comparisonNote": "See Mesa Public Schools’ calendar and key dates."
+    },
+    {
+      "name": "Chandler Unified School District",
+      "slug": "chandler-unified-school-district-calendar",
+      "state": "Arizona",
+      "comparisonNote": "See Chandler Unified’s calendar, including intersession dates and early-dismissal days."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Tucson Unified School District official website",
+      "url": "https://www.tusd1.org/"
+    },
+    {
+      "label": "Tucson Unified School District calendar page",
+      "url": "https://www.tusd1.org/Calendar"
+    },
+    {
+      "label": "TUSD 2025–26 calendar PDF — Board approved December 11, 2024",
+      "url": "https://www.tusd1.org/_theme/files/calendar/25-26/25-26%20TUSD%20Calendar%20ENG.pdf"
+    },
+    {
+      "label": "TUSD 2026–27 calendar PDF — Board approved September 16, 2025",
+      "url": "https://www.tusd1.org/_theme/files/calendar/26-27/26-27%20TUSD%20Calendar%20ENG.pdf"
+    }
+  ]
+}

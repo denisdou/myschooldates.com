@@ -1,0 +1,151 @@
+{
+  "institutionId": "gilbert-public-schools",
+  "name": "Gilbert Public Schools",
+  "shortName": "GPS",
+  "slug": "gilbert-public-schools-calendar",
+  "state": "Arizona",
+  "stateCode": "AZ",
+  "city": "Gilbert",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.gilbertschools.net",
+  "calendarPage": "https://www.gilbertschools.net/calendar",
+  "logo": "https://resources.finalsite.net/images/f_auto,q_auto/v1700046154/gilbertschoolsnet/mcvvpstv52kbhkzzgoch/Gilbert_white2.png",
+  "timezone": "America/Phoenix",
+  "county": "Maricopa County",
+  "region": "East Valley",
+  "metro": "Phoenix-Mesa-Chandler",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Phoenix East Valley District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "officialSpreadsheet": false,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-02",
+    "coverageNote": "Gilbert Public Schools coverage uses the official district website, calendar page, and district-published family calendar PDFs for 2025-2026 through 2029-2030."
+  },
+  "contentFreshnessScore": {
+    "overall": 95,
+    "sourceUpdated": "2026-08-02",
+    "lastManualReview": "2026-08-02",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the Gilbert Public Schools calendar page when GPS replaces a family calendar PDF, revises early-release or half-day dates, changes break dates, or publishes another future-year calendar."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official GPS revision, PDF replacement, early-release change, half-day change, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Gilbert Public Schools",
+    "Gilbert Schools calendar",
+    "GPS calendar",
+    "Gilbert Public Schools calendar",
+    "Gilbert AZ school calendar",
+    "Gilbert Public Schools family calendar",
+    "Gilbert schools early release",
+    "Gilbert Public Schools 2026 2027 calendar"
+  ],
+  "districtFact": "Gilbert Public Schools publishes multi-year family calendar PDFs with 180 student days, new-teacher and returning-teacher start dates, one-hour early-release Wednesdays, K–12 half days, K–6 parent-teacher conference half days, grading days, semester day counts, summer school windows, and revised dates printed on the PDF.",
+  "about": [
+    {
+      "title": "About Gilbert Public Schools",
+      "content": "Gilbert Public Schools serves families in the Phoenix East Valley. Its family calendars are useful for planning because the district publishes several approved future years and marks one-hour early releases, K–12 half days, K–6 conference half days, grading days, semester counts, and teacher start dates directly on the PDF."
+    },
+    {
+      "title": "District Calendar and School Schedules",
+      "content": "This page summarizes districtwide Gilbert Public Schools dates. Families should still check their school for bell schedules, transportation notices, testing, athletics, performances, graduation information, summer school registration details, and campus-specific updates."
+    }
+  ],
+  "planningTips": {
+    "title": "Gilbert Public Schools Calendar Notes",
+    "content": [
+      "GPS uses one-hour early-release days throughout the year, often on Wednesdays.",
+      "Some half days apply to all K–12 students, while parent-teacher conference half days are listed specifically for K–6.",
+      "The district publishes semester day counts on its family calendar PDFs, so the first and second semesters do not always contain the same number of student days.",
+      "Summer school dates are listed on the family calendar, but families should confirm registration and program details with Gilbert Public Schools."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Does Gilbert Public Schools publish future-year calendars?",
+      "a": "Yes. Gilbert Public Schools currently publishes family calendar PDFs for multiple future school years, including 2027-2028, 2028-2029, and 2029-2030."
+    },
+    {
+      "q": "What does early release mean on the GPS calendar?",
+      "a": "The GPS family calendar labels many early-release dates as one-hour early releases. Families should still confirm exact dismissal times with their school."
+    },
+    {
+      "q": "Are all Gilbert Public Schools half days the same?",
+      "a": "No. Some half days apply to all K–12 students, while conference half days may apply only to K–6 and some end-of-semester half days apply only to grades 7–12."
+    },
+    {
+      "q": "Where should families verify Gilbert Public Schools calendar updates?",
+      "a": "Use the official Gilbert Public Schools calendar page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with Gilbert Public Schools."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Chandler Unified School District",
+      "slug": "chandler-unified-school-district-calendar",
+      "state": "Arizona",
+      "reason": "Chandler, Arizona"
+    },
+    {
+      "name": "Mesa Public Schools",
+      "slug": "mesa-public-schools-calendar",
+      "state": "Arizona",
+      "reason": "Mesa, Arizona"
+    },
+    {
+      "name": "Peoria Unified School District",
+      "slug": "peoria-unified-school-district-calendar",
+      "state": "Arizona",
+      "reason": "Peoria, Arizona"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Gilbert Public Schools official website",
+      "url": "https://www.gilbertschools.net"
+    },
+    {
+      "label": "Gilbert Public Schools calendar page",
+      "url": "https://www.gilbertschools.net/calendar"
+    }
+  ]
+}

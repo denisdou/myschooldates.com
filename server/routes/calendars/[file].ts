@@ -14,6 +14,9 @@ type CalendarEvent = {
   name: string
   type: string
   description?: string
+  endDate?: string
+  dates?: string[]
+  exportDatesIndividually?: boolean
 }
 
 type CalendarRecord = {
@@ -93,9 +96,15 @@ function getBreaks(events: CalendarEvent[]) {
       return {
         name: start.name,
         start: start.date,
-        end: end?.date ?? start.date,
+        end: explicitEventEnd(start) ?? end?.date ?? start.date,
       }
     })
+}
+
+function explicitEventEnd(event: CalendarEvent) {
+  if (event.endDate) return event.endDate
+  if (event.dates?.length) return [...event.dates].sort().at(-1) ?? event.date
+  return null
 }
 
 function normalizeCalendarName(event: CalendarEvent) {
@@ -118,6 +127,9 @@ function isRangeEndEvent(event: CalendarEvent, events: CalendarEvent[]) {
 }
 
 function rangeEndFor(event: CalendarEvent, events: CalendarEvent[]) {
+  const explicitEnd = explicitEventEnd(event)
+  if (explicitEnd) return explicitEnd
+
   if ((event.type === 'teacher_workday' || event.type === 'teacher_professional_learning') && /\b(begins?|starts?)\b/i.test(event.name)) {
     const normalizedStart = normalizeCalendarName(event).toLowerCase()
     const end = events.find(candidate =>
@@ -229,11 +241,15 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord) {
   ]
 
   const breaks = getBreaks(calendar.events)
-  const eventsForExport = calendar.events.filter(event =>
-    event.type !== 'break_end' &&
-    !isRangeEndEvent(event, calendar.events) &&
-    (event.type === 'observance' || !isCoveredByBreak(event, calendar.events))
-  )
+  const eventsForExport = calendar.events
+    .filter(event =>
+      event.type !== 'break_end' &&
+      !isRangeEndEvent(event, calendar.events) &&
+      (event.type === 'observance' || !isCoveredByBreak(event, calendar.events))
+    )
+    .flatMap(event => event.exportDatesIndividually && event.dates?.length
+      ? event.dates.map(date => ({ ...event, date, endDate: undefined, dates: undefined }))
+      : [event])
 
   for (const event of eventsForExport) {
     const breakRange = event.type === 'break_start'

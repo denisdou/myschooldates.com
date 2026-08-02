@@ -52,7 +52,10 @@ const isExternalLink = (link: { to?: string; url?: string }) => /^https?:\/\//.t
           <div v-if="section.groups?.length" class="space-y-4">
             <div v-for="group in section.groups" :key="group.label">
               <h3 class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
-              <ul class="space-y-1.5">
+              <p v-if="group.items.length === 1" class="text-sm leading-relaxed text-gray-600">
+                {{ group.items[0] }}
+              </p>
+              <ul v-else class="space-y-1.5">
                 <li v-for="item in group.items" :key="item" class="flex items-start gap-2 text-sm text-gray-600">
                   <span class="mt-2 h-1.5 w-1.5 rounded-lg bg-blue-400 flex-shrink-0" />
                   <span>{{ item }}</span>
@@ -154,7 +157,10 @@ const isExternalLink = (link: { to?: string; url?: string }) => /^https?:\/\//.t
           <p v-if="section.content" class="text-sm text-gray-600 leading-relaxed">{{ section.content }}</p>
           <div v-for="group in section.groups" :key="group.label">
             <h3 class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
-            <ul class="space-y-1.5">
+            <p v-if="group.items.length === 1" class="text-sm leading-relaxed text-gray-600">
+              {{ group.items[0] }}
+            </p>
+            <ul v-else class="space-y-1.5">
               <li v-for="item in group.items" :key="item" class="flex items-start gap-2 text-sm text-gray-600">
                 <span class="mt-2 h-1.5 w-1.5 rounded-lg bg-blue-400 flex-shrink-0" />
                 <span>{{ item }}</span>

@@ -1,0 +1,149 @@
+{
+  "institutionId": "northshore-school-district",
+  "name": "Northshore School District",
+  "shortName": "NSD",
+  "slug": "northshore-school-district-calendar",
+  "state": "Washington",
+  "stateCode": "WA",
+  "city": "Bothell",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.nsd.org/",
+  "calendarPage": "https://www.nsd.org/resources/news-events/calendar",
+  "logo": "https://resources.finalsite.net/images/f_auto,q_auto/v1621976269/nsdorg/jjyzkw6zad4ghgmevplt/district-logo.png",
+  "timezone": "America/Los_Angeles",
+  "county": "King and Snohomish counties",
+  "region": "Puget Sound",
+  "metro": "Seattle-Tacoma-Bellevue",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Puget Sound District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "translatedPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-01",
+    "coverageNote": "Northshore School District coverage uses the district calendar page and the official English Family Calendar PDFs for 2025-2026 and 2026-2027. Spanish, Portuguese, Vietnamese, Russian, Arabic, Simplified Chinese, and Ukrainian PDFs are linked for 2026-2027. No 2027-2028 or 2028-2029 PDF URL was provided."
+  },
+  "contentFreshnessScore": {
+    "overall": 94,
+    "sourceUpdated": "2026-08-01",
+    "lastManualReview": "2026-08-01",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the NSD calendar page when the district posts a revised Family Calendar, updates emergency make-up days, or publishes future-year PDFs."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official NSD revision, translated calendar update, emergency closure change, future-year PDF, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "NSD",
+    "Northshore Schools",
+    "Northshore School District",
+    "Northshore school calendar",
+    "NSD calendar",
+    "Bothell school calendar",
+    "Woodinville school calendar",
+    "Kenmore school calendar"
+  ],
+  "districtFact": "Northshore School District publishes a one-page Family Calendar that is especially useful for families because it separates most-grade start dates, elementary-only conference early dismissals, weekly Wednesday early release, teacher grading/non-student days, commencements, grade 9-11 early dismissals near graduation, and emergency make-up days.",
+  "about": [
+    {
+      "title": "About Northshore School District",
+      "content": "Northshore School District, commonly called NSD, serves students in Puget Sound communities including Bothell, Woodinville, Kenmore, and surrounding areas. Its Family Calendar highlights the dates that most affect household planning: first and last school days, weekly early release, elementary conference early dismissals, breaks, graduation dates, and emergency make-up days."
+    },
+    {
+      "title": "District Calendar and School-Level Schedules",
+      "content": "This page covers districtwide NSD dates from the Family Calendar. Families should still check their school for bell schedules, first-day and last-day instructions, half-day schedules, transportation updates, athletics, performances, testing, early childhood calendars, religious and cultural observance calendars, and campus-specific events."
+    }
+  ],
+  "planningTips": {
+    "title": "Northshore Calendar Notes",
+    "content": [
+      "NSD marks the first day, last day, and half day with a note that schools communicate schedules directly to families.",
+      "All Wednesdays beginning in early September are regular early-release Wednesdays unless another note applies.",
+      "Elementary conference early dismissals are elementary-only dates and do not necessarily apply to secondary schools.",
+      "Emergency make-up days are added to the end of the school year if needed, so late-June plans should be checked against district updates."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Does Northshore School District have Wednesday early release?",
+      "a": "Yes. NSD's Family Calendar states that all Wednesdays beginning in early September dismiss 1.5 hours early for students unless noted."
+    },
+    {
+      "q": "Do elementary conference early dismissals apply to all NSD students?",
+      "a": "No. NSD labels those dates as elementary schools only. Secondary families should check school-level calendars for separate schedule changes."
+    },
+    {
+      "q": "Can the Northshore last day of school change?",
+      "a": "Yes. NSD lists emergency make-up days that may be added to the end of the school year if weather or another closure requires additional days."
+    },
+    {
+      "q": "Where can families find translated NSD calendars?",
+      "a": "NSD publishes translated Family Calendar PDFs on its calendar page. MySchoolDates links the available translated versions for reviewed school years when provided."
+    },
+    {
+      "q": "Where should families verify last-minute Northshore changes?",
+      "a": "Use the official Northshore School District calendar page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with NSD."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Lake Washington School District",
+      "slug": "lake-washington-school-district-calendar",
+      "state": "Washington",
+      "comparisonNote": "View the Lake Washington School District 2026–27 calendar."
+    },
+    {
+      "name": "Seattle Public Schools",
+      "slug": "seattle-public-schools-calendar",
+      "state": "Washington",
+      "comparisonNote": "View the Seattle Public Schools 2026–27 calendar."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Northshore School District official website",
+      "url": "https://www.nsd.org/"
+    },
+    {
+      "label": "Northshore School District calendar page",
+      "url": "https://www.nsd.org/resources/news-events/calendar"
+    }
+  ]
+}

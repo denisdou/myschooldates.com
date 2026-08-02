@@ -62,6 +62,7 @@ export default defineNuxtConfig({
         '/hawaii',
         '/maryland',
         '/massachusetts',
+        '/arizona',
         '/new-york',
         '/pennsylvania',
         '/washington',
@@ -81,6 +82,7 @@ export default defineNuxtConfig({
         '/broward-county-school-calendar',
         '/brunswick-county-schools-calendar',
         '/capistrano-unified-school-district-calendar',
+        '/chandler-unified-school-district-calendar',
         '/charlotte-mecklenburg-schools-calendar',
         '/chicago-public-schools-calendar',
         '/clark-county-school-district-calendar',
@@ -105,6 +107,7 @@ export default defineNuxtConfig({
         '/fulton-county-schools-calendar',
         '/garland-independent-school-district-calendar',
         '/garden-grove-unified-school-district-calendar',
+        '/gilbert-public-schools-calendar',
         '/guilford-county-school-calendar',
         '/hampton-city-schools-calendar',
         '/hawaii-state-department-of-education-calendar',
@@ -120,6 +123,7 @@ export default defineNuxtConfig({
         '/klein-isd-calendar',
         '/loudoun-county-school-calendar',
         '/mansfield-isd-calendar',
+        '/mesa-public-schools-calendar',
         '/mesquite-isd-calendar',
         '/miami-dade-school-calendar',
         '/montgomery-county-school-calendar',
@@ -127,6 +131,7 @@ export default defineNuxtConfig({
         '/mckinney-isd-calendar',
         '/newport-news-public-schools-calendar',
         '/new-york-city-public-schools-calendar',
+        '/northshore-school-district-calendar',
         '/north-east-isd-calendar',
         '/northside-independent-school-district-calendar',
         '/orange-county-school-calendar',
@@ -134,6 +139,7 @@ export default defineNuxtConfig({
         '/palm-beach-county-school-calendar',
         '/pasco-county-school-calendar',
         '/pasadena-independent-school-district-calendar',
+        '/peoria-unified-school-district-calendar',
         '/pinellas-county-school-calendar',
         '/pomona-unified-school-district-calendar',
         '/polk-county-school-calendar',
@@ -155,6 +161,7 @@ export default defineNuxtConfig({
         '/school-district-of-philadelphia-calendar',
         '/stockton-unified-school-district-calendar',
         '/sweetwater-union-high-school-district-calendar',
+        '/tucson-unified-school-district-calendar',
         '/oakland-unified-school-district-calendar',
         '/irvine-unified-school-district-calendar',
         '/iredell-statesville-schools-calendar',
@@ -220,6 +227,16 @@ export default defineNuxtConfig({
         '/capistrano-unified-school-district-calendar/2026-2027',
         '/capistrano-unified-school-district-calendar/2027-2028',
         '/capistrano-unified-school-district-calendar/2028-2029',
+
+        '/chandler-unified-school-district-calendar/2026-2027',
+        '/chandler-unified-school-district-calendar/2027-2028',
+        '/chandler-unified-school-district-calendar/2028-2029',
+
+        '/gilbert-public-schools-calendar/2025-2026',
+        '/gilbert-public-schools-calendar/2026-2027',
+        '/gilbert-public-schools-calendar/2027-2028',
+        '/gilbert-public-schools-calendar/2028-2029',
+        '/gilbert-public-schools-calendar/2029-2030',
 
         '/broward-county-school-calendar/2025-2026',
         '/broward-county-school-calendar/2026-2027',
@@ -351,6 +368,17 @@ export default defineNuxtConfig({
         '/lewisville-independent-school-district-calendar/2025-2026',
         '/lewisville-independent-school-district-calendar/2026-2027',
 
+        '/mesa-public-schools-calendar/2026-2027',
+        '/mesa-public-schools-calendar/2027-2028',
+        '/mesa-public-schools-calendar/2028-2029',
+
+        '/peoria-unified-school-district-calendar/2025-2026',
+        '/peoria-unified-school-district-calendar/2026-2027',
+        '/peoria-unified-school-district-calendar/2027-2028',
+
+        '/tucson-unified-school-district-calendar/2025-2026',
+        '/tucson-unified-school-district-calendar/2026-2027',
+
         '/mesquite-isd-calendar/2025-2026',
         '/mesquite-isd-calendar/2026-2027',
 
@@ -454,6 +482,9 @@ export default defineNuxtConfig({
         '/lake-washington-school-district-calendar/2025-2026',
         '/lake-washington-school-district-calendar/2026-2027',
         '/lake-washington-school-district-calendar/2027-2028',
+
+        '/northshore-school-district-calendar/2025-2026',
+        '/northshore-school-district-calendar/2026-2027',
 
         '/seattle-public-schools-calendar/2025-2026',
         '/seattle-public-schools-calendar/2026-2027',

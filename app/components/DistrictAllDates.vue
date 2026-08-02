@@ -13,6 +13,7 @@ type CalendarEvent = {
   displayAsRange?: boolean
   dates?: string[]
   hideFromAllDates?: boolean
+  hideLabel?: boolean
 }
 type LegendItem = { label: string; dot: string }
 
@@ -35,6 +36,7 @@ const props = defineProps<{
   lastDay?: string
   labelOverrides?: Record<string, string>
   legendStyle?: 'dots' | 'text'
+  monthNotes?: Record<string, string>
 }>()
 
 type DisplayEvent = CalendarEvent & {
@@ -42,6 +44,7 @@ type DisplayEvent = CalendarEvent & {
   endDate: string
   displayName: string
   labelType: string
+  hasExplicitEndDate: boolean
 }
 
 function isPossibleMakeupDay(event: CalendarEvent) {
@@ -224,6 +227,7 @@ function nextSchoolDateAfter(date: string) {
 
 function canMerge(prev: DisplayEvent, next: DisplayEvent) {
   if (prev.labelType === 'observance' || next.labelType === 'observance') return false
+  if (prev.hasExplicitEndDate || next.hasExplicitEndDate) return false
   return prev.labelType === next.labelType &&
     prev.displayName === next.displayName &&
     (prev.description ?? '') === (next.description ?? '') &&
@@ -231,7 +235,7 @@ function canMerge(prev: DisplayEvent, next: DisplayEvent) {
 }
 
 function rangeEndFor(event: CalendarEvent) {
-  if (event.endDate && event.displayAsRange) {
+  if (event.endDate) {
     return event.endDate
   }
 
@@ -280,6 +284,7 @@ const mergedEvents = computed(() => {
       endDate: rangeEndFor(event),
       displayName: normalizeName(event),
       labelType: displayLabelType(event),
+      hasExplicitEndDate: Boolean(event.endDate),
     }
     const prev = merged[merged.length - 1]
     if (prev && canMerge(prev, displayEvent)) {
@@ -292,7 +297,7 @@ const mergedEvents = computed(() => {
 })
 
 const monthGroups = computed(() => {
-  const groups: { key: string; label: string; events: DisplayEvent[] }[] = []
+  const groups: { key: string; label: string; events: DisplayEvent[]; note?: string }[] = []
   for (const event of mergedEvents.value) {
     const date = parseDate(event.startDate)
     const key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`
@@ -307,7 +312,18 @@ const monthGroups = computed(() => {
     }
     group.events.push(event)
   }
-  return groups
+  for (const [key, note] of Object.entries(props.monthNotes ?? {})) {
+    if (groups.some(group => group.key === key)) continue
+    const [year, month] = key.split('-')
+    const date = parseDate(`${year}-${month}-01`)
+    groups.push({
+      key,
+      label: date.toLocaleString('en-US', { month: 'long', year: 'numeric' }),
+      events: [],
+      note,
+    })
+  }
+  return groups.sort((a, b) => a.key.localeCompare(b.key))
 })
 
 function monthAnchor(key: string) {
@@ -435,6 +451,9 @@ function formatRangeEnd(event: DisplayEvent) {
           {{ group.label }}
         </div>
         <div class="divide-y divide-[#eee9df]">
+          <p v-if="!group.events.length && group.note" class="px-6 py-4 text-sm text-[#6b645c]">
+            {{ group.note }}
+          </p>
           <div
             v-for="event in group.events"
             :key="event.startDate + event.endDate + event.type + event.displayName"
@@ -459,7 +478,7 @@ function formatRangeEnd(event: DisplayEvent) {
                 {{ event.description }}
               </p>
             </div>
-            <span class="text-xs font-medium px-2.5 py-1 rounded-lg whitespace-normal sm:whitespace-nowrap" :class="eventTypeColor[event.labelType]">
+            <span v-if="!event.hideLabel" class="text-xs font-medium px-2.5 py-1 rounded-lg whitespace-normal sm:whitespace-nowrap" :class="eventTypeColor[event.labelType]">
               {{ displayLabelText(event) }}
             </span>
           </div>

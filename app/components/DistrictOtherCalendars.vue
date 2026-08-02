@@ -2,11 +2,15 @@
 const { formatShortDate } = useDistrictPage()
 
 defineProps<{
-  alternateCalendars: { label: string; type: string; firstDay?: string; pdfUrl?: string; buttonLabel?: string }[]
+  alternateCalendars: { label: string; type: string; firstDay?: string; pdfUrl?: string; buttonLabel?: string; ariaLabel?: string }[]
   districtName: string
   title?: string
   description?: string
   buttonLabel?: string
+  footerTitle?: string
+  footerDescription?: string
+  footerLinkLabel?: string
+  footerLinkUrl?: string
 }>()
 </script>
 
@@ -27,6 +31,7 @@ defineProps<{
         <a
           v-if="alt.pdfUrl"
           :href="alt.pdfUrl"
+          :aria-label="alt.ariaLabel"
           target="_blank"
           rel="noopener"
           class="w-full sm:w-auto sm:flex-shrink-0 inline-flex items-center justify-center gap-1.5 text-center whitespace-normal text-xs font-medium text-blue-600 hover:text-blue-800 border border-blue-200 rounded-lg px-3 py-1.5 hover:bg-blue-50 transition-colors"
@@ -39,5 +44,30 @@ defineProps<{
         </a>
       </li>
     </ul>
+    <div v-if="footerTitle || footerDescription || footerLinkUrl" class="mt-4 border-t border-gray-100 pt-4 text-sm text-gray-600">
+      <p v-if="footerTitle" class="font-medium text-gray-900">{{ footerTitle }}</p>
+      <p v-if="footerDescription" class="mt-1">
+        {{ footerDescription }}
+        <a
+          v-if="footerLinkUrl"
+          :href="footerLinkUrl"
+          target="_blank"
+          rel="noopener"
+          class="underline hover:text-[#0f5d6b] transition-colors"
+        >
+          {{ footerLinkLabel || 'official calendar page' }}.<span class="sr-only">(opens in a new tab)</span>
+        </a>
+      </p>
+      <p v-else-if="footerLinkUrl" class="mt-1">
+        <a
+          :href="footerLinkUrl"
+          target="_blank"
+          rel="noopener"
+          class="underline hover:text-[#0f5d6b] transition-colors"
+        >
+          {{ footerLinkLabel || 'official calendar page' }}<span class="sr-only">(opens in a new tab)</span>
+        </a>
+      </p>
+    </div>
   </div>
 </template>

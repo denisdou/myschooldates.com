@@ -2,11 +2,11 @@
   "stateSlug": "washington",
   "stateName": "Washington",
   "stateCode": "WA",
-  "lastVerifiedAt": "2026-07-31",
+  "lastVerifiedAt": "2026-08-01",
   "seoTitle": "Washington School Calendar 2026-2027: Start Dates, Breaks & District Calendars",
-  "seoDescription": "Find Washington school calendars for 2026-2027, including Seattle Public Schools start dates, TRI days, breaks, conferences, makeup days, PDFs, and downloads.",
+  "seoDescription": "Find Washington school calendars for 2026-2027, including Seattle, Lake Washington, Northshore, start dates, breaks, makeup days, PDFs, and downloads.",
   "heroDescription": "Washington school calendar dates, district schedules, TRI days, emergency makeup days, PDFs, and calendar downloads · Sourced from official district websites",
-  "quickAnswer": "Washington public school calendars are set by local districts, so first day, last day, winter break, mid-winter break, spring break, conference days, TRI staff days, and emergency closure makeup days vary by district. Seattle Public Schools is the current reviewed Washington district on MySchoolDates and includes grade-specific opening dates, Family Connections, term dates, TRI days, and makeup-day rules.",
+  "quickAnswer": "Washington public school calendars are set by local districts, so first day, last day, winter break, mid-winter break, spring break, conference days, TRI or staff days, weekly early release, and emergency closure makeup days vary by district. Reviewed Washington pages on MySchoolDates include Seattle Public Schools, Lake Washington School District, and Northshore School District.",
   "quickAnswerItems": [
     {
       "label": "Calendar authority",
@@ -21,11 +21,11 @@
       "value": "Winter, mid-winter, spring"
     },
     {
-      "label": "Current reviewed district",
-      "value": "Seattle Public Schools"
+      "label": "Reviewed districts",
+      "value": "Seattle, Lake Washington, Northshore"
     }
   ],
-  "about": "Washington public school calendars are approved locally by district. Large districts often begin in late August or early September and end in June, but start dates, conference days, weekly early-release schedules, staff-only dates, and emergency closure plans can differ even within the same metro area.\n\nSeattle Public Schools is the current reviewed Washington district on MySchoolDates. SPS publishes a school-year calendar that separates student attendance days from TRI staff days, semester and grading periods, elementary conference dates, and emergency closure makeup days. The district calendar page also provides family-facing opening-date and early-dismissal guidance that may not be fully visible in the PDF grid.\n\nFamilies should treat the districtwide calendar as the starting point, then check the school calendar for bell schedules, transportation notices, testing, athletics, performances, graduation details, and campus-specific events. Weather and emergency closures can also change the end of the school year or activate makeup days.",
+  "about": "Washington public school calendars are approved locally by district. Large districts often begin in late August or early September and end in June, but start dates, conference days, weekly early-release schedules, staff-only dates, and emergency closure plans can differ even within the same metro area.\n\nReviewed Puget Sound district pages on MySchoolDates include Seattle Public Schools, Lake Washington School District, and Northshore School District. SPS separates student attendance dates from TRI staff days, semester and grading periods, conferences, and emergency makeup days. LWSD highlights kindergarten family connections, LEAP days, preschool and SNAPS dates, and closure make-up days. NSD highlights weekly early release, elementary-only conference dismissals, teacher grading/non-student days, commencements, and emergency make-up days.\n\nFamilies should treat the districtwide calendar as the starting point, then check the school calendar for bell schedules, transportation notices, testing, athletics, performances, graduation details, and campus-specific events. Weather and emergency closures can also change the end of the school year or activate makeup days.",
   "calendarRules": [
     {
       "label": "Local district calendars",
@@ -63,7 +63,7 @@
     },
     {
       "label": "Reviewed District",
-      "value": "Seattle Public Schools"
+      "value": "Seattle, LWSD, NSD"
     }
   ],
   "planningTips": [
@@ -96,6 +96,16 @@
           "label": "Seattle Public Schools Calendar",
           "slug": "seattle-public-schools-calendar",
           "note": "SPS calendar dates for Seattle families, including grade-specific opening dates, Family Connections, TRI days, semester and grading periods, breaks, emergency makeup days, PDF links, and calendar downloads."
+        },
+        {
+          "label": "Lake Washington School District Calendar",
+          "slug": "lake-washington-school-district-calendar",
+          "note": "LWSD calendar dates for Eastside families, including kindergarten family connections, LEAP days, preschool and SNAPS dates, early release, breaks, make-up days, PDFs, and downloads."
+        },
+        {
+          "label": "Northshore School District Calendar",
+          "slug": "northshore-school-district-calendar",
+          "note": "NSD calendar dates for Northshore families, including weekly early release, elementary conference dismissals, teacher grading/non-student day, commencements, make-up days, translated PDFs, and downloads."
         }
       ]
     }
@@ -111,7 +121,12 @@
     {
       "label": "Lake Washington School District Calendar",
       "area": "Redmond, Kirkland, Sammamish, WA",
-      "note": "Planned Puget Sound district page after official calendar data is verified."
+      "note": "Available district page for LWSD first days, kindergarten family connections, LEAP days, preschool and SNAPS dates, breaks, make-up days, official PDFs, and downloads."
+    },
+    {
+      "label": "Northshore School District Calendar",
+      "area": "Bothell, Woodinville, Kenmore, WA",
+      "note": "Available district page for NSD first day, weekly early release, elementary conference dismissals, breaks, teacher grading/non-student day, translated PDFs, and downloads."
     },
     {
       "label": "Tacoma Public Schools Calendar",
@@ -151,7 +166,7 @@
     },
     {
       "q": "What are TRI days on Washington school calendars?",
-      "a": "TRI days are staff work or training days listed by some districts, including Seattle Public Schools. They are not regular student attendance days unless the district says otherwise."
+      "a": "TRI days are staff work or training days listed by some districts, including Seattle Public Schools. Other Washington districts may use different labels, such as LEAP, teacher grading, or non-student days. They are not regular student attendance days unless the district says otherwise."
     },
     {
       "q": "Do Washington schools have mid-winter break?",
@@ -162,8 +177,8 @@
       "a": "Yes. District calendars may include emergency closure makeup days that can extend or alter the school year if snow, weather, or other closures occur."
     },
     {
-      "q": "Where can I find the Seattle Public Schools calendar?",
-      "a": "Use the Seattle Public Schools calendar page on MySchoolDates for SPS first days by grade, Family Connections, TRI days, holidays, breaks, term dates, emergency makeup days, PDF links, and calendar downloads."
+      "q": "Which Washington district calendars are reviewed on MySchoolDates?",
+      "a": "Reviewed Washington district pages include Seattle Public Schools, Lake Washington School District, and Northshore School District. Each page links official sources, PDFs, and a one-time calendar download when available."
     },
     {
       "q": "Can I add a Washington school calendar to Google Calendar?",

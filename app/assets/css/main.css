@@ -26,6 +26,11 @@ body {
   background: hsl(var(--background));
 }
 
+.site-page-shell {
+  width: min(100% - 2rem, 64rem);
+  margin-inline: auto;
+}
+
 .district-page-section {
   width: 100%;
 }

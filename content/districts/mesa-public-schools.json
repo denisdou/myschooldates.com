@@ -1,0 +1,132 @@
+{
+  "institutionId": "mesa-public-schools",
+  "name": "Mesa Public Schools",
+  "shortName": "MPS",
+  "slug": "mesa-public-schools-calendar",
+  "state": "Arizona",
+  "stateCode": "AZ",
+  "city": "Mesa",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.mpsaz.org/",
+  "calendarPage": "https://www.mpsaz.org/o/mpsaz/page/calendars",
+  "logo": "https://cmsv2-assets.apptegy.net/uploads/7983/logo/9270/messa-logo.png",
+  "timezone": "America/Phoenix",
+  "county": "Maricopa County",
+  "region": "East Valley",
+  "metro": "Phoenix-Mesa-Chandler",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Large East Valley District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": false,
+    "officialSpreadsheet": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-01",
+    "coverageNote": "Mesa Public Schools coverage uses the official district calendar page and official Google Sheets school-year calendars for 2026-2027, 2027-2028, and 2028-2029. The 2027-2028 and 2028-2029 local PDF exports were used to verify color-coded event ranges."
+  },
+  "contentFreshnessScore": {
+    "overall": 94,
+    "sourceUpdated": "2026-08-01",
+    "lastManualReview": "2026-08-01",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the Mesa Public Schools calendar page when MPS revises its Google Sheets calendars, publishes a PDF export, changes early-release dates, or updates professional learning days."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official MPS revision, spreadsheet access change, early-release change, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Mesa Public Schools",
+    "Mesa Unified School District",
+    "MPS calendar",
+    "Mesa school calendar",
+    "Mesa AZ school calendar",
+    "Mesa Public Schools calendar",
+    "Mesa Public Schools school year calendar",
+    "Mesa Unified District calendar"
+  ],
+  "districtFact": "Mesa Public Schools publishes a school-year calendar with 180 student days, regular two-hour early-release Wednesdays, K–12 grading-period early releases, high school semester exam early releases, professional learning days, fall break, winter break, spring break, and limited-service closure notes.",
+  "about": [
+    {
+      "title": "About Mesa Public Schools",
+      "content": "Mesa Public Schools serves students in Mesa and the East Valley area of Maricopa County, Arizona. Its school-year calendar is especially useful for families because MPS schedules frequent two-hour early-release Wednesdays and separates professional learning days, semester exam early releases, grading-period end dates, and holiday breaks."
+    },
+    {
+      "title": "District Calendar and School-Level Schedules",
+      "content": "This page summarizes districtwide Mesa Public Schools dates. Families should still check their school for bell schedules, transportation, athletics, testing, performances, graduation ceremony details, program calendars, and emergency updates."
+    }
+  ],
+  "planningTips": {
+    "title": "Mesa Public Schools Calendar Notes",
+    "content": [
+      "Many MPS school years begin in late July or early August, so families should check the selected school year before making travel or child care plans.",
+      "Most Wednesday early-release dates are listed as two-hour early releases, but families should confirm exact bell times with their school.",
+      "High school semester exam dates use early-release schedules that may not affect elementary and junior high students the same way.",
+      "The calendar distinguishes full district office closures from school closures with limited district services."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "How early does Mesa Public Schools start the school year?",
+      "a": "MPS school years often begin in late July or early August. Check the selected school year for the exact first student day."
+    },
+    {
+      "q": "Does Mesa Public Schools have regular early-release days?",
+      "a": "Yes. MPS calendars often list two-hour early-release Wednesdays, plus separate early-release dates for grading periods, parent-teacher conferences, semester exams, and the last day of school."
+    },
+    {
+      "q": "Are Mesa professional learning days student attendance days?",
+      "a": "No. Professional learning days on the MPS calendar are no-school days for students. Families should plan child care or transportation differently on those dates."
+    },
+    {
+      "q": "Where should families verify Mesa Public Schools calendar updates?",
+      "a": "Use the official Mesa Public Schools calendars page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with Mesa Public Schools."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [],
+  "sources": [
+    {
+      "label": "Mesa Public Schools official website",
+      "url": "https://www.mpsaz.org/"
+    },
+    {
+      "label": "Mesa Public Schools calendars page",
+      "url": "https://www.mpsaz.org/o/mpsaz/page/calendars"
+    }
+  ]
+}

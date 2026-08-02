@@ -1,0 +1,154 @@
+{
+  "institutionId": "peoria-unified-school-district",
+  "name": "Peoria Unified School District",
+  "shortName": "PUSD",
+  "slug": "peoria-unified-school-district-calendar",
+  "state": "Arizona",
+  "stateCode": "AZ",
+  "city": "Peoria",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.peoriaunified.org/",
+  "calendarPage": "https://www.peoriaunified.org/o/pusd/page/school-year-calendars",
+  "logo": "https://cmsv2-assets.apptegy.net/uploads/26669/logo/29482/Logo_White_H.png",
+  "timezone": "America/Phoenix",
+  "county": "Maricopa County",
+  "region": "West Valley",
+  "metro": "Phoenix-Mesa-Chandler",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Phoenix West Valley District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "officialSpreadsheet": false,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-01",
+    "coverageNote": "Peoria Unified School District coverage uses the official district website, school-year calendars page, and district-published PDF calendars for 2025-2026, 2026-2027, and 2027-2028. The 2026-2027 page also notes the district's 5-day and 6-day rotation calendar resources."
+  },
+  "contentFreshnessScore": {
+    "overall": 94,
+    "sourceUpdated": "2026-08-01",
+    "lastManualReview": "2026-08-01",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the Peoria Unified school-year calendars page when PUSD revises a PDF, updates rotation calendars, changes early-release dates, or publishes a future-year calendar."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official PUSD revision, PDF replacement, rotation-calendar update, early-release change, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Peoria Unified School District",
+    "Peoria Unified",
+    "PUSD calendar",
+    "Peoria school calendar",
+    "Peoria AZ school calendar",
+    "Peoria Unified School District calendar",
+    "Peoria Unified school year calendar",
+    "Peoria Unified 5 day rotation",
+    "Peoria Unified 6 day rotation"
+  ],
+  "districtFact": "Peoria Unified publishes school-year calendar PDFs with early Arizona start dates, student-day totals, modified Wednesday early releases, grade-band early-release dates, elementary conference dates, high school early-release notes, furlough/no-school dates, teacher workdays, breaks, holidays, and separate 5-day and 6-day rotation calendar resources.",
+  "about": [
+    {
+      "title": "About Peoria Unified School District",
+      "content": "Peoria Unified School District serves families in the Phoenix West Valley. Its calendar is especially important for household planning because the district starts before many out-of-state calendars, marks modified Wednesdays separately from other early-release dates, and identifies elementary conference dates, high school early-release days, furlough/no-school days, and teacher workdays."
+    },
+    {
+      "title": "District Calendar and Campus Schedules",
+      "content": "This page summarizes districtwide Peoria Unified dates. Families should still check their school for bell schedules, bus routes, testing, athletics, performances, graduation ceremony details, rotation-day schedules, and emergency updates."
+    }
+  ],
+  "planningTips": {
+    "title": "Peoria Unified Calendar Notes",
+    "content": [
+      "Peoria Unified often starts before Labor Day, with students starting in late July or early August depending on the year.",
+      "Modified Wednesdays are two-hour early-release days, but not every Wednesday follows the modified schedule.",
+      "Elementary conference dates and high school early-release indicators do not always affect every grade band the same way.",
+      "Use the separate 5-day or 6-day rotation calendar only if your campus or program follows one of those rotation schedules."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Does Peoria Unified start before Labor Day?",
+      "a": "Yes. Peoria Unified often starts before Labor Day. For 2026–27, classes begin on Monday, August 3, 2026."
+    },
+    {
+      "q": "What is a modified Wednesday on the Peoria Unified calendar?",
+      "a": "Modified Wednesdays are two-hour early-release days on the PUSD calendar. Not every Wednesday follows that schedule, so families should confirm exact dismissal times with their school."
+    },
+    {
+      "q": "Are Peoria Unified teacher workdays student attendance days?",
+      "a": "No. Teacher workdays shown on the PUSD calendar are no-school days for students."
+    },
+    {
+      "q": "Where should families verify Peoria Unified calendar updates?",
+      "a": "Use the official Peoria Unified school-year calendars page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with Peoria Unified School District."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Mesa Public Schools",
+      "slug": "mesa-public-schools-calendar",
+      "state": "Arizona",
+      "reason": "Mesa, Arizona"
+    },
+    {
+      "name": "Chandler Unified School District",
+      "slug": "chandler-unified-school-district-calendar",
+      "state": "Arizona",
+      "reason": "Chandler, Arizona"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Peoria Unified School District official website",
+      "url": "https://www.peoriaunified.org/"
+    },
+    {
+      "label": "Peoria Unified school-year calendars page",
+      "url": "https://www.peoriaunified.org/o/pusd/page/school-year-calendars"
+    },
+    {
+      "label": "Peoria Unified School Calendar Update",
+      "url": "https://www.peoriaunified.org/o/pusd/article/2550661"
+    },
+    {
+      "label": "Peoria Unified 2026–27 6-Day Rotation Calendar",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5300/Pusd/e2616e64-d9cb-4c65-8dee-86ea5797f50d/26-27-6-Day-Rotation.pdf?disposition=inline"
+    }
+  ]
+}

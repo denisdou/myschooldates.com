@@ -1,0 +1,143 @@
+{
+  "institutionId": "chandler-unified-school-district",
+  "name": "Chandler Unified School District",
+  "shortName": "CUSD",
+  "slug": "chandler-unified-school-district-calendar",
+  "state": "Arizona",
+  "stateCode": "AZ",
+  "city": "Chandler",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.cusd80.com",
+  "calendarPage": "https://www.cusd80.com/calendar-71",
+  "logo": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1721422548/cusd80com/w77uvjcvlnoarb2dio2y/CUSD.ai",
+  "timezone": "America/Phoenix",
+  "county": "Maricopa County",
+  "region": "East Valley",
+  "metro": "Phoenix-Mesa-Chandler",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "modified_year_round",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Large East Valley District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-01",
+    "coverageNote": "Chandler Unified School District coverage uses the official CUSD calendar page and approved PDF calendars for 2026-2027, 2027-2028, and 2028-2029. No 2025-2026 PDF URL was provided, so that school year was not created."
+  },
+  "contentFreshnessScore": {
+    "overall": 95,
+    "sourceUpdated": "2026-08-01",
+    "lastManualReview": "2026-08-01",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the CUSD calendar page when Chandler Unified revises an approved calendar PDF, changes inservice dates, or updates early-dismissal and intersession details."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official CUSD revision, future PDF replacement, early-dismissal change, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "CUSD",
+    "CUSD80",
+    "Chandler Unified",
+    "Chandler Unified School District",
+    "Chandler school calendar",
+    "Chandler AZ school calendar",
+    "Chandler Unified calendar",
+    "CUSD calendar",
+    "CUSD80 calendar"
+  ],
+  "districtFact": "Chandler Unified School District uses an intersession calendar with a mid-July start. The approved calendars list 180 student days, 190 teacher days, teacher inservice/workdays, grading-period endings, junior high and high school early dismissals, and separate school and district office closure notes.",
+  "about": [
+    {
+      "title": "About Chandler Unified School District",
+      "content": "Chandler Unified School District, often called CUSD or CUSD80, serves students in Chandler and the East Valley area of Maricopa County, Arizona. Its modified year-round calendar starts much earlier than many out-of-state districts and uses intersessions instead of only short holiday breaks."
+    },
+    {
+      "title": "District Calendar and School-Level Schedules",
+      "content": "This page covers districtwide CUSD dates from the approved academic calendar PDFs. Families should still check their school for bell schedules, transportation, testing, athletics, performances, graduation ceremony details, preschool or program calendars, and campus-specific announcements."
+    }
+  ],
+  "planningTips": {
+    "title": "Chandler Unified Calendar Notes",
+    "content": [
+      "CUSD follows a modified year-round calendar, so families moving from other states should not assume an August or post-Labor Day start.",
+      "The calendar uses first, second, and third intersessions as major planning windows instead of only short holiday breaks.",
+      "Junior high early-dismissal dates can apply to different campus groups, so families should match the calendar note to their student's school.",
+      "Teacher inservice/workdays are no-school days for students and often sit immediately before or after intersessions."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Why does Chandler Unified start school so early?",
+      "a": "CUSD follows a modified year-round calendar. Students have two-week intersessions in the fall, winter, and spring while the district retains a longer summer break."
+    },
+    {
+      "q": "What are intersessions on the CUSD calendar?",
+      "a": "Intersessions are longer no-school breaks placed after grading periods. Chandler Unified typically lists a fall intersession, winter intersession, and spring intersession."
+    },
+    {
+      "q": "Are CUSD teacher inservice/workdays student days?",
+      "a": "No. Teacher inservice/workdays on the approved calendar are no-school days for students."
+    },
+    {
+      "q": "Do CUSD early-dismissal dates apply to every grade?",
+      "a": "Not always. Some early dismissals apply to junior high schools, some to junior high and high schools, and some are tied to elementary parent-teacher conferences. Check the school group listed for each date."
+    },
+    {
+      "q": "Where should families verify Chandler Unified calendar updates?",
+      "a": "Use the official Chandler Unified calendar page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with CUSD."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Mesa Public Schools",
+      "slug": "mesa-public-schools-calendar",
+      "state": "Arizona",
+      "comparisonNote": "Compare another East Valley district with an early Arizona start, early releases, professional learning days, and major breaks."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Chandler Unified School District official website",
+      "url": "https://www.cusd80.com"
+    },
+    {
+      "label": "Chandler Unified School District calendar page",
+      "url": "https://www.cusd80.com/calendar-71"
+    }
+  ]
+}

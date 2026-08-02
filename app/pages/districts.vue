@@ -90,7 +90,7 @@ useHead({
 <template>
   <main class="bg-white">
     <section class="border-b border-gray-100">
-      <div class="mx-auto max-w-5xl px-4 py-12">
+      <div class="site-page-shell py-12">
         <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">District Directory</p>
         <div class="mt-3 grid gap-6 md:grid-cols-[1fr_18rem] md:items-end">
           <div>
@@ -107,7 +107,7 @@ useHead({
       </div>
     </section>
 
-    <section class="mx-auto max-w-5xl px-4 py-8">
+    <section class="site-page-shell py-8">
       <div class="grid gap-3 md:grid-cols-[1fr_14rem]">
         <label class="block">
           <span class="mb-1.5 block text-sm font-medium text-gray-700">Search districts</span>

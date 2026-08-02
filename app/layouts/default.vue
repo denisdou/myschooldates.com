@@ -1,43 +1,31 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const statePageNames: Record<string, string> = {
-  california: 'California',
-  florida: 'Florida',
-  texas: 'Texas',
-  'north-carolina': 'North Carolina',
-  virginia: 'Virginia',
-  kentucky: 'Kentucky',
-  illinois: 'Illinois',
-  nevada: 'Nevada',
-  georgia: 'Georgia',
-  hawaii: 'Hawaii',
-  'new-york': 'New York',
-  pennsylvania: 'Pennsylvania',
-  maryland: 'Maryland',
-}
+const stateLinks = [
+  { slug: 'california', name: 'California' },
+  { slug: 'florida', name: 'Florida' },
+  { slug: 'texas', name: 'Texas' },
+  { slug: 'new-york', name: 'New York' },
+  { slug: 'illinois', name: 'Illinois' },
+  { slug: 'pennsylvania', name: 'Pennsylvania' },
+  { slug: 'north-carolina', name: 'North Carolina' },
+  { slug: 'arizona', name: 'Arizona' },
+  { slug: 'washington', name: 'Washington' },
+  { slug: 'massachusetts', name: 'Massachusetts' },
+  { slug: 'maryland', name: 'Maryland' },
+  { slug: 'georgia', name: 'Georgia' },
+  { slug: 'nevada', name: 'Nevada' },
+  { slug: 'virginia', name: 'Virginia' },
+  { slug: 'kentucky', name: 'Kentucky' },
+  { slug: 'hawaii', name: 'Hawaii' },
+]
 
+const statePageNames = Object.fromEntries(stateLinks.map(state => [state.slug, state.name])) as Record<string, string>
 const currentStateSlug = computed(() => route.path.split('/').filter(Boolean)[0] ?? '')
 const currentStateName = computed(() => statePageNames[currentStateSlug.value] ?? '')
 const isStateLandingPage = computed(() => route.path === `/${currentStateSlug.value}` && !!currentStateName.value)
 const mobileMenuOpen = ref(false)
 const activeDesktopMenu = ref<'states' | 'calendar' | null>(null)
-
-const stateLinks = [
-  { slug: 'florida', name: 'Florida' },
-  { slug: 'texas', name: 'Texas' },
-  { slug: 'california', name: 'California' },
-  { slug: 'new-york', name: 'New York' },
-  { slug: 'illinois', name: 'Illinois' },
-  { slug: 'georgia', name: 'Georgia' },
-  { slug: 'nevada', name: 'Nevada' },
-  { slug: 'north-carolina', name: 'North Carolina' },
-  { slug: 'virginia', name: 'Virginia' },
-  { slug: 'kentucky', name: 'Kentucky' },
-  { slug: 'hawaii', name: 'Hawaii' },
-  { slug: 'pennsylvania', name: 'Pennsylvania' },
-  { slug: 'maryland', name: 'Maryland' },
-]
 
 const calendarDataLinks = [
   {
@@ -85,7 +73,7 @@ watch(() => route.fullPath, () => {
   <div class="min-h-screen bg-[hsl(var(--background))] text-[#1f2933] flex flex-col">
     <!-- Shared Header -->
     <header class="bg-rds-surface-panel/95 border-b border-rds-hairline backdrop-blur">
-      <div class="max-w-5xl mx-auto py-4 flex items-center justify-between gap-4">
+      <div class="site-page-shell py-4 flex items-center justify-between gap-4">
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center gap-2.5 flex-shrink-0">
           <img src="/icons/myschooldates-logo.svg" alt="MySchoolDates" class="h-8 w-auto" />
@@ -208,7 +196,7 @@ watch(() => route.fullPath, () => {
         </button>
       </div>
       <nav id="mobile-navigation" v-show="mobileMenuOpen" class="border-t border-[#ebe6dd] bg-[#fbfaf7] px-4 py-3 sm:hidden">
-        <div class="mx-auto max-w-5xl space-y-4">
+        <div class="site-page-shell space-y-4">
           <div class="grid grid-cols-2 gap-2">
             <NuxtLink
               to="/"
@@ -260,7 +248,7 @@ watch(() => route.fullPath, () => {
 
     <!-- Shared Footer -->
     <footer class="bg-[#fbfaf7] border-t border-[#e6e1d8] mt-auto">
-      <div class="max-w-5xl mx-auto px-4 py-10">
+      <div class="site-page-shell py-10">
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-8">
           <div>
             <p class="text-sm font-semibold text-gray-700 mb-3">Popular States</p>
