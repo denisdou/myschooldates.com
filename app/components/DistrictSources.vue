@@ -117,7 +117,7 @@ const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.
       </p>
       <p v-if="verifiedDate">
         <span class="font-medium text-[#6b645c]">Next review:</span>
-        When {{ shortName }} publishes a calendar update or a revised official source.
+        When {{ shortName }} revises the calendar or updates its official calendar page.
       </p>
       <details class="pt-1">
         <summary class="cursor-pointer select-none font-medium text-[#6b645c] hover:text-[#1f2933]">

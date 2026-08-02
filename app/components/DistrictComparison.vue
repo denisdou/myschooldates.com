@@ -23,6 +23,7 @@ export type ComparisonRow = {
   extraSourceLabel?: string
   comparisonLabel?: string
   comparisonValues?: Record<string, string>
+  calendarPath?: string
 }
 
 const props = defineProps<{
@@ -43,6 +44,9 @@ const fmtRange = (start: string, end: string) => {
   const endDate = new Date(end + 'T00:00:00')
   if (startDate.getFullYear() === endDate.getFullYear() && startDate.getMonth() === endDate.getMonth()) {
     return `${startDate.toLocaleString('en-US', { month: 'short' })} ${startDate.getDate()}–${endDate.getDate()}, ${endDate.getFullYear()}`
+  }
+  if (startDate.getFullYear() === endDate.getFullYear()) {
+    return `${startDate.toLocaleString('en-US', { month: 'short' })} ${startDate.getDate()}–${endDate.toLocaleString('en-US', { month: 'short' })} ${endDate.getDate()}, ${endDate.getFullYear()}`
   }
   return `${fmt(start)}–${fmt(end)}`
 }
@@ -199,6 +203,7 @@ const rows = computed((): ComparisonRow[] => {
       extraSourceLabel: props.cal.comparisonExtraSourceLabel ?? props.cal.meta?.comparisonExtraSourceLabel,
       comparisonLabel: props.cal.comparisonLabel ?? props.cal.meta?.comparisonLabel ?? props.district.comparisonLabel ?? props.district.meta?.comparisonLabel,
       comparisonValues: comparisonValueOverridesFor(props.district.slug),
+      calendarPath: `/${props.district.slug}/${props.year}`,
     })
   }
   const configuredComparisonSlugs = ((props.cal as any)?.comparisonDistrictSlugs ??
@@ -245,6 +250,7 @@ const rows = computed((): ComparisonRow[] => {
       extraSourceLabel: c.sourcePdfUrl && c.sourceUrl ? pageSourceLabel(d, relatedDef) : undefined,
       comparisonLabel: relatedDef?.comparisonLabel,
       comparisonValues: comparisonValueOverridesFor(d.slug, relatedDef),
+      calendarPath: c.schoolYear ? `/${d.slug}/${c.schoolYear}` : `/${d.slug}`,
     })
   }
   return result
@@ -482,7 +488,7 @@ const comparisonSourceNote = computed(() =>
               :class="row.isCurrent ? 'text-[#0f5d6b]' : 'text-[#7b756d]'"
             >
               <span v-if="row.isCurrent">{{ displayName(row) }}</span>
-              <NuxtLink v-else :to="`/${row.slug}`" class="hover:text-[#0f5d6b] transition-colors">
+              <NuxtLink v-else :to="row.calendarPath ?? `/${row.slug}`" class="hover:text-[#0f5d6b] transition-colors">
                 {{ displayName(row) }}
               </NuxtLink>
             </th>
@@ -508,7 +514,7 @@ const comparisonSourceNote = computed(() =>
     <div v-if="showComparisonNotes && rows.some(r => !r.isCurrent && r.comparisonNote)" class="px-6 py-4 border-t border-[#ebe6dd] space-y-2">
       <template v-for="row in rows.filter(r => !r.isCurrent && r.comparisonNote)" :key="row.slug">
         <p class="text-sm text-[#6b645c] leading-relaxed">
-          <NuxtLink :to="`/${row.slug}`" class="font-medium text-[#1f2933] hover:text-[#0f5d6b] transition-colors">{{ displayName(row) }}</NuxtLink>: {{ row.comparisonNote }}
+          <NuxtLink :to="row.calendarPath ?? `/${row.slug}`" class="font-medium text-[#1f2933] hover:text-[#0f5d6b] transition-colors">{{ displayName(row) }}</NuxtLink>: {{ row.comparisonNote }}
         </p>
       </template>
     </div>

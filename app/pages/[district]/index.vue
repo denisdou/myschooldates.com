@@ -262,6 +262,12 @@ const { data: relatedCals } = await useAsyncData(`related-cals:${slug}`, async (
     .filter(c => relatedIds.includes(c.institutionId) && c.schoolYear === year)
     .map(toComparisonCalendarSummary)
 })
+const relatedYearAvailableSlugs = computed(() => {
+  const districts = allDistricts.value ?? []
+  return (relatedCals.value ?? [])
+    .map((relatedCal: any) => districts.find((d: any) => d.institutionId === relatedCal.institutionId)?.slug)
+    .filter(Boolean) as string[]
+})
 
 // ── District page logic ────────────────────────────────────────────────────
 const currentYear = district.value?.currentSchoolYear ?? ''
@@ -655,6 +661,9 @@ const hiddenSections = computed(() => new Set<string>([
 const comparisonBeforeFaq = computed(() =>
   Boolean((cal as any)?.comparisonBeforeFaq ?? (cal as any)?.meta?.comparisonBeforeFaq ?? (district.value as any)?.comparisonBeforeFaq ?? (district.value as any)?.meta?.comparisonBeforeFaq)
 )
+const pageSources = computed(() =>
+  ((cal as any)?.sources ?? (cal as any)?.meta?.sources ?? (district.value as any)?.sources ?? []) as any[]
+)
 const displaySchoolYear = computed(() =>
   (cal as any)?.displaySchoolYear ?? (cal as any)?.meta?.displaySchoolYear ?? currentYear
 )
@@ -958,7 +967,7 @@ const dateLegend = computed(() => {
   const items = [
     ...(hasEventType(['schools_offices_closed']) ? [{ label: 'Schools & Offices Closed', dot: 'bg-red-400' }] : []),
     ...(hasEventType(['schools_closed']) ? [{ label: 'Schools Closed', dot: 'bg-red-300' }] : []),
-    ...(hasEventType(['holiday']) ? [{ label: 'School Closure', dot: 'bg-red-400' }] : []),
+    ...(hasEventType(['holiday']) ? [{ label: 'Holiday', dot: 'bg-teal-400' }] : []),
     ...(hasEventType(['no_school', 'student_holiday', 'teacher_workday', 'teacher_professional_learning']) ? [{ label: 'No School for Students', dot: 'bg-amber-400' }] : []),
     ...(hasEventType(['partial_closure']) ? [{ label: 'Some Students Off', dot: 'bg-pink-400' }] : []),
     ...(hasEventType(['half_day_high_school', 'half_day_dismissal']) ? [{ label: 'Half-Day Dismissal', dot: 'bg-orange-300' }] : []),
@@ -2002,7 +2011,7 @@ if (!isStatePage && district.value) {
             <a v-if="importantDatesSectionId" :href="`#${importantDatesSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Important Dates</a>
             <a v-if="earlyDismissalSectionId" :href="`#${earlyDismissalSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Early Dismissal</a>
             <a v-if="!hiddenSections.has('comparison')" href="#comparison" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Comparison</a>
-            <a href="#faq" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">FAQ</a>
+            <a v-if="!hiddenSections.has('faq')" href="#faq" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">FAQ</a>
           </div>
         </nav>
 
@@ -2374,7 +2383,7 @@ if (!isStatePage && district.value) {
         </template>
 
         <!-- FAQ -->
-        <DistrictFaq :cal="cal" :district="district" :faqs="faqs" />
+        <DistrictFaq v-if="!hiddenSections.has('faq')" :cal="cal" :district="district" :faqs="faqs" />
 
         <!-- Custom Sections: afterFaq -->
         <DistrictCustomSections :sections="customSections" position="afterFaq" />
@@ -2425,8 +2434,8 @@ if (!isStatePage && district.value) {
 
         <!-- Sources & Verification -->
         <DistrictSources
-          v-if="!hiddenSections.has('sources') && (district as any).sources?.length"
-          :sources="(district as any).sources"
+          v-if="!hiddenSections.has('sources') && pageSources.length"
+          :sources="pageSources"
           :district-name="district.name"
           :short-name="(district as any).shortName || district.name"
           :year="currentYear"
@@ -2455,7 +2464,7 @@ if (!isStatePage && district.value) {
 
         <!-- Data quality notice -->
         <DistrictDataQuality
-          v-if="!hiddenSections.has('sources') && !(district as any).sources?.length"
+          v-if="!hiddenSections.has('sources') && !pageSources.length"
           :cal="cal"
           :district="district"
           :year="currentYear"
@@ -2466,8 +2475,11 @@ if (!isStatePage && district.value) {
           v-if="!hiddenSections.has('relatedDistricts') && (district as any).relatedDistricts?.length"
           :related-districts="(district as any).relatedDistricts"
           :state-name="district.state"
-          :title="(district as any).relatedDistrictsTitle"
-          :description="(district as any).relatedDistrictsDescription"
+          :title="(cal as any)?.relatedDistrictsTitle ?? (cal as any)?.meta?.relatedDistrictsTitle ?? (district as any).relatedDistrictsTitle"
+          :description="(cal as any)?.relatedDistrictsDescription ?? (cal as any)?.meta?.relatedDistrictsDescription ?? (district as any).relatedDistrictsDescription"
+          :hide-descriptions="Boolean((cal as any)?.hideRelatedDistrictDescriptions ?? (cal as any)?.meta?.hideRelatedDistrictDescriptions ?? (district as any).hideRelatedDistrictDescriptions ?? (district as any).meta?.hideRelatedDistrictDescriptions)"
+          :year="currentYear"
+          :year-available-slugs="relatedYearAvailableSlugs"
         />
 
         <section v-if="!hiddenSections.has('nationalTrends')" class="rounded-lg border border-rds-hairline bg-rds-surface-panel p-6">

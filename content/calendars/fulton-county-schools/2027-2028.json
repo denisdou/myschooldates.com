@@ -1,127 +1,253 @@
 {
   "institutionId": "fulton-county-schools",
   "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Fulton County Schools Calendar 2027–28",
   "firstDay": "2027-08-02",
   "lastDay": "2028-05-25",
   "sourceUrl": "https://www.fultonschools.org/calendar01",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1767748543/fultonschoolsorg/bqmrbdpsge1ttqan8rte/2027-28InstructionalCalendar_Approved121825.pdf",
-  "lastVerifiedAt": "2026-07-28",
+  "sourceCalendarName": "Fulton County Schools 2027–28 approved calendar PDF",
+  "sourceVersion": "Approved December 18, 2025",
+  "schemaReviewedBy": "author",
+  "lastVerifiedAt": "2026-08-02",
   "datePublished": "2026-07-28",
-  "dateModified": "2026-07-28",
+  "dateModified": "2026-08-02",
   "calendarType": "traditional",
   "totalSchoolDays": 180,
-  "yearNumbersMode": "compact",
-  "seoTitle": "Fulton County Schools Calendar 2027-2028: Holidays, Breaks & PDF",
-  "seoDescription": "Fulton County Schools 2027-2028 calendar with Aug 2 first day, May 25 last day, fall break, Thanksgiving, winter break, spring break and PDF.",
-  "heroSummary": "Fulton County Schools begins the 2027-2028 school year on Monday, August 2, 2027. The final student day is Thursday, May 25, 2028. Fall Break runs Sep 27-Oct 1, 2027, Thanksgiving Break runs Nov 22-26, 2027, and Spring Break runs Apr 3-7, 2028.",
-  "calendarNotes": "Fulton County Schools lists 180 instructional days for 2027-2028, with 88 days in the first semester and 92 days in the second semester. Students start on August 2, 2027 and finish on May 25, 2028. Fall Break runs September 27 through October 1, Thanksgiving Break runs November 22-26, December Break runs December 20-31, Winter Break runs February 21-25, and Spring Break runs April 3-7. The official PDF also notes that statewide election days will be remote for students unless otherwise indicated.",
+  "allDatesMode": "all",
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "downloadCta",
+    "todayStatus",
+    "breaks",
+    "about",
+    "planningTips",
+    "nationalTrends",
+    "whatsDifferent",
+    "yearNumbers"
+  ],
+  "seoTitle": "Fulton County Schools 2027–28 Calendar: Key Dates, Breaks and PDF",
+  "seoDescription": "Fulton County Schools starts Aug. 2, 2027. See break dates, student return dates, 180 instructional days, and the official 2027–28 PDF.",
+  "icsHeading": "Add the 2027–28 FCS Dates to Your Calendar",
+  "icsDescription": "Download the key district-published dates included on this page as an ICS file for Google Calendar, Apple Calendar, or Outlook. This is a one-time import and will not update automatically if the district revises its calendar.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "hideIcsButtonSupportText": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideShareCalendar": true,
+  "pdfHeading": "Official 2027–28 Calendar PDF",
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerifiedBadge": true,
+  "hideHeroVerificationProcess": true,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "includeArticleSchema": false,
+  "schemaCalendarName": "Fulton County Schools Calendar 2027–28",
+  "schemaDatasetName": "Fulton County Schools 2027–28 Dataset",
+  "schemaDatasetDescription": "District-published calendar dates for Fulton County Schools in 2027–28, including school-year boundaries, official break ranges, student-off days, election-day remote learning notes, and key academic dates.",
+  "schemaCalendarDownloadName": "Fulton County Schools 2027–28 calendar file",
+  "temporalCoverageStart": "2027-08-02",
+  "temporalCoverageEnd": "2028-05-25",
+  "heroSummary": "Fulton County Schools starts classes on Monday, August 2, 2027, and the final student day is Thursday, May 25, 2028. Fall Break runs September 27 through October 1, and students return Monday, October 4. The approved calendar lists 180 instructional days and says statewide election days will be remote for students unless otherwise indicated.",
+  "heroFactChips": [
+    "180 instructional days: 88 in the first semester and 92 in the second"
+  ],
+  "keyDatesSummaryTitle": "Key Dates at a Glance",
+  "keyDatesSummarySubtitle": "The dates Fulton families are most likely to need first",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2027-08-02",
+      "type": "school_start",
+      "schemaDescription": "Fulton County Schools starts classes on August 2, 2027."
+    },
+    {
+      "label": "Break",
+      "name": "Fall Break — Return Oct. 4",
+      "date": "2027-09-27",
+      "endDate": "2027-10-01",
+      "type": "break_start",
+      "description": "Students return Monday, October 4.",
+      "schemaDescription": "Fall Break runs September 27 through October 1, 2027. Students return October 4."
+    },
+    {
+      "label": "No School",
+      "name": "Students Off",
+      "date": "2027-10-11",
+      "type": "student_holiday",
+      "schemaDescription": "Fulton County Schools lists October 11, 2027 as a student-off day."
+    },
+    {
+      "label": "Return",
+      "name": "Students Return for Second Semester",
+      "date": "2028-01-04",
+      "type": "school_resume",
+      "schemaDescription": "Students return for the second semester on January 4, 2028."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2028-04-03",
+      "endDate": "2028-04-07",
+      "type": "break_start",
+      "schemaDescription": "Spring Break runs April 3–7, 2028."
+    },
+    {
+      "label": "Last Day",
+      "name": "Final Student Day",
+      "date": "2028-05-25",
+      "type": "school_end",
+      "schemaDescription": "The final student day is May 25, 2028."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Return Dates", "id": "fulton-2027-2028-break-return-dates" },
+    { "label": "Dates", "href": "#all-dates" },
+    { "label": "Changes", "id": "fulton-2027-2028-what-changed" },
+    { "label": "Download", "href": "#add-to-calendar" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Compare", "href": "#comparison" },
+    { "label": "Sources", "href": "#sources" }
+  ],
+  "allDatesTitle": "Official District Calendar Dates — 2027–28",
+  "allDatesCoverageNote": "This list follows the district's published calendar labels. Return dates after breaks are summarized separately above. School-specific events, testing dates, staff reporting details, and later schedule changes are not included.",
+  "sourceReviewSummary": "Dates were checked against the official Fulton County Schools calendar page and the approved 2027–28 PDF. We verified break dates, student-off days, semester dates, instructional-day totals, and the election-day remote learning note.",
+  "sourceReviewDetails": [
+    "The PDF was approved on December 18, 2025, and lists 180 instructional days: 88 in the first semester and 92 in the second.",
+    "Return dates are calculated from the published break ranges, intervening weekends and holidays, and the January 3 student-off day after December Break.",
+    "The PDF notes that statewide election days will be remote for students unless otherwise indicated.",
+    "Check the official Fulton calendar page for revisions before making travel, child care, or school-specific plans."
+  ],
+  "sources": [
+    {
+      "label": "Fulton County Schools official website",
+      "url": "https://www.fultonschools.org"
+    },
+    {
+      "label": "Fulton County Schools calendar page",
+      "url": "https://www.fultonschools.org/calendar01"
+    },
+    {
+      "label": "Fulton County Schools 2027–28 approved calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1767748543/fultonschoolsorg/bqmrbdpsge1ttqan8rte/2027-28InstructionalCalendar_Approved121825.pdf"
+    }
+  ],
+  "calendarNotes": "Fulton County Schools lists 180 instructional days for 2027–28: 88 in the first semester and 92 in the second. Students start August 2, 2027 and finish May 25, 2028. The approved PDF lists October 11 and January 3 as student-off days and notes that statewide election days will be remote for students unless otherwise indicated.",
   "calendarFaqs": [
     {
-      "q": "When does Fulton County Schools start in 2027?",
-      "a": "Fulton County Schools starts the 2027-2028 school year on Monday, August 2, 2027."
+      "q": "When do students return after December Break?",
+      "a": "December Break runs December 20–31, 2027. Students are also off Monday, January 3, 2028, and return for the second semester on Tuesday, January 4."
     },
     {
-      "q": "When is Fulton County Schools Fall Break in 2027?",
-      "a": "Fall Break runs Monday, September 27 through Friday, October 1, 2027."
+      "q": "What does the election-day remote learning note mean?",
+      "a": "The approved PDF says statewide election days will be remote for students unless otherwise indicated. Families should check Fulton updates before election days for school-specific instructions."
     },
     {
-      "q": "When is Winter Break for Fulton County Schools in 2027-2028?",
-      "a": "December Break runs December 20-31, 2027. The calendar also lists Winter Break from February 21-25, 2028."
+      "q": "Are October 11 and January 3 student days off?",
+      "a": "Yes. Fulton County Schools lists October 11, 2027 and January 3, 2028 as student-off days on the approved 2027–28 calendar."
     },
     {
-      "q": "When is Fulton County Schools Spring Break in 2028?",
-      "a": "Spring Break runs Monday, April 3 through Friday, April 7, 2028."
-    },
-    {
-      "q": "How many instructional days are in the Fulton 2027-2028 calendar?",
-      "a": "The approved Fulton County Schools 2027-2028 calendar lists 180 instructional days for students."
-    },
-    {
-      "q": "When is the last day of school for Fulton County Schools in 2028?",
-      "a": "The last student day is Thursday, May 25, 2028."
+      "q": "Where should families check for calendar revisions?",
+      "a": "Use the official Fulton County Schools calendar page and the district PDF for final confirmation before making travel, child care, or school-specific plans."
     }
   ],
-  "quickFacts": [
-    {
-      "label": "Calendar Type",
-      "value": "Traditional"
-    },
-    {
-      "label": "Instructional Days",
-      "value": "180"
-    },
-    {
-      "label": "Fall Break",
-      "value": "Sep 27-Oct 1"
-    },
-    {
-      "label": "Winter Break",
-      "value": "Feb 21-25"
-    },
-    {
-      "label": "Spring Break",
-      "value": "Apr 3-7"
-    },
-    {
-      "label": "Election Days",
-      "value": "Remote unless noted"
-    }
+  "faqDisplayQuestions": [
+    "When do students return after December Break?",
+    "What does the election-day remote learning note mean?",
+    "Are October 11 and January 3 student days off?",
+    "Where should families check for calendar revisions?"
   ],
-  "yearNumbers": [
+  "faqLimit": 4,
+  "comparisonDistrictSlugs": [
+    "atlanta-public-schools-calendar",
+    "cobb-county-school-calendar",
+    "gwinnett-county-public-schools-calendar"
+  ],
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "fallBreak",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "comparisonTitle": "How Fulton’s Calendar Compares with Nearby Districts",
+  "comparisonSummary": "Fulton shares its August 2 start date with Atlanta Public Schools and Cobb County. All four districts schedule Spring Break for April 3–7, while their Fall Break dates differ.",
+  "comparisonInsights": [
     {
-      "label": "Instructional Days",
-      "value": "180",
-      "detail": "The official 2027-2028 PDF lists 180 instructional days: 88 in the first semester and 92 in the second semester."
+      "label": "Start date comparison",
+      "items": [
+        "Fulton, Atlanta Public Schools, and Cobb County all begin classes on August 2. Gwinnett begins on August 4."
+      ]
     },
     {
-      "label": "Full-Week Breaks",
-      "value": "4",
-      "detail": "Fall Break, Thanksgiving Break, Winter Break, and Spring Break are full-week planning windows in the official calendar."
-    },
-    {
-      "label": "Election-Day Rule",
-      "value": "Remote",
-      "detail": "The official PDF notes that statewide election days will be remote for students unless otherwise indicated."
+      "label": "Final student day comparison",
+      "items": [
+        "Fulton’s final student day is May 25. Atlanta Public Schools ends May 26, Cobb ends May 17, and Gwinnett ends May 24."
+      ]
     }
   ],
   "customSections": [
     {
-      "id": "fulton-2027-2028-what-changed",
-      "label": "What Changed This Year for Fulton Families",
-      "position": "afterYearDiff",
+      "id": "fulton-2027-2028-break-return-dates",
+      "label": "Breaks and Return Dates",
+      "position": "afterKeyDates",
       "schemaHasPart": true,
-      "content": "The 2027-2028 Fulton calendar returns to 180 instructional days and includes a clear statewide election-day remote learning note. Families should use this year-specific PDF for fall break, winter break, spring break, and election-day planning.",
+      "content": "The date ranges labeled as breaks do not always show the next day students report to school. The table below adds the return dates families usually need for planning.",
       "table": {
-        "columns": ["Change", "Family impact", "Importance", "Action"],
+        "columns": ["Break", "Official dates", "Students return"],
         "rows": [
-          ["Instructional days increase to 180", "This returns Fulton to a 180-day student calendar after the 179-day 2026-2027 calendar.", "High", "Use the current PDF instead of assuming the prior year's instructional-day total."],
-          ["Election-day remote rule is explicit", "Statewide election days may be remote for students unless otherwise indicated.", "High", "Watch official Fulton updates before election days for device and supervision planning."],
-          ["Fall Break spans Sep 27-Oct 1", "The break crosses two calendar months.", "Medium", "Add both September and October dates to family calendars so the full break is visible."]
+          ["Fall Break", "Sep. 27–Oct. 1", "Oct. 4"],
+          ["Thanksgiving Break", "Nov. 22–26", "Nov. 29"],
+          ["December Break", "Dec. 20–31; Jan. 3 is a separate student-off day", "Jan. 4"],
+          ["Winter Break", "Feb. 21–25", "Feb. 28"],
+          ["Spring Break", "Apr. 3–7", "Apr. 10"]
+        ]
+      }
+    },
+    {
+      "id": "fulton-2027-2028-what-changed",
+      "label": "What Changed from 2026–27",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "The 2027–28 calendar returns Fulton to 180 instructional days and uses a full-week Fall Break rather than the shorter 2026–27 Fall Break followed by staff workdays.",
+      "table": {
+        "columns": ["Change", "What it means"],
+        "rows": [
+          ["Instructional days increase from 179 to 180", "The approved 2027–28 calendar lists 88 first-semester days and 92 second-semester days."],
+          ["First student day moves from August 3 to August 2", "Students start one day earlier than in 2026–27."],
+          ["Final student day moves from May 27 to May 25", "The school year ends earlier in May than the 2026–27 calendar."],
+          ["Fall Break is Sep. 27–Oct. 1", "Unlike 2026–27, the break itself covers the full Monday-through-Friday week."]
         ]
       }
     }
   ],
   "events": [
-    { "date": "2027-08-02", "name": "First Day of Semester", "type": "school_start" },
+    { "date": "2027-08-02", "name": "First Day of School", "type": "school_start" },
     { "date": "2027-09-06", "name": "Labor Day", "type": "holiday" },
-    { "date": "2027-09-17", "name": "End of 9 Weeks", "type": "academic" },
-    { "date": "2027-09-27", "name": "Fall Break Begins", "type": "break_start" },
-    { "date": "2027-10-01", "name": "Fall Break Ends", "type": "break_end" },
+    { "date": "2027-09-27", "name": "Fall Break", "type": "break_start" },
+    { "date": "2027-10-01", "name": "Fall Break", "type": "break_end" },
     { "date": "2027-10-08", "name": "End of 9 Weeks", "type": "academic" },
     { "date": "2027-10-11", "name": "Students Off", "type": "student_holiday" },
-    { "date": "2027-11-22", "name": "Thanksgiving Break Begins", "type": "break_start" },
-    { "date": "2027-11-26", "name": "Thanksgiving Break Ends", "type": "break_end" },
+    { "date": "2027-11-22", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2027-11-26", "name": "Thanksgiving Break", "type": "break_end" },
     { "date": "2027-12-17", "name": "Last Day of First Semester", "type": "academic" },
-    { "date": "2027-12-20", "name": "December Break Begins", "type": "break_start" },
-    { "date": "2027-12-31", "name": "December Break Ends", "type": "break_end" },
+    { "date": "2027-12-20", "name": "December Break", "type": "break_start" },
+    { "date": "2027-12-31", "name": "December Break", "type": "break_end" },
     { "date": "2028-01-03", "name": "Students Off", "type": "student_holiday" },
-    { "date": "2028-01-04", "name": "First Day of Semester", "type": "school_resume" },
+    { "date": "2028-01-04", "name": "Students Return for Second Semester", "type": "school_resume" },
     { "date": "2028-01-17", "name": "Martin Luther King Jr. Holiday", "type": "holiday" },
-    { "date": "2028-02-21", "name": "Winter Break Begins", "type": "break_start" },
-    { "date": "2028-02-25", "name": "Winter Break Ends", "type": "break_end" },
+    { "date": "2028-02-21", "name": "Winter Break", "type": "break_start" },
+    { "date": "2028-02-25", "name": "Winter Break", "type": "break_end" },
     { "date": "2028-03-17", "name": "End of 9 Weeks", "type": "academic" },
-    { "date": "2028-04-03", "name": "Spring Break Begins", "type": "break_start" },
-    { "date": "2028-04-07", "name": "Spring Break Ends", "type": "break_end" },
-    { "date": "2028-05-25", "name": "Last Day of the Semester", "type": "school_end" }
+    { "date": "2028-04-03", "name": "Spring Break", "type": "break_start" },
+    { "date": "2028-04-07", "name": "Spring Break", "type": "break_end" },
+    { "date": "2028-05-25", "name": "Final Student Day", "type": "school_end" }
   ]
 }

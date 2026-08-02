@@ -17,6 +17,7 @@ const hideCompatibleCalendars = computed(() => Boolean(props.cal?.hideCompatible
 const hidePdfVersionLabel = computed(() => Boolean(props.cal?.hidePdfVersionLabel ?? props.cal?.meta?.hidePdfVersionLabel))
 const hideExtendedShareButtons = computed(() => Boolean(props.cal?.hideExtendedShareButtons ?? props.cal?.meta?.hideExtendedShareButtons))
 const hideShareCalendar = computed(() => Boolean(props.cal?.hideShareCalendar ?? props.cal?.meta?.hideShareCalendar))
+const hideShareCalendarHeading = computed(() => Boolean(props.cal?.hideShareCalendarHeading ?? props.cal?.meta?.hideShareCalendarHeading))
 const hideIcsButtonSupportText = computed(() => Boolean(props.cal?.hideIcsButtonSupportText ?? props.cal?.meta?.hideIcsButtonSupportText))
 const displayYear = computed(() => props.cal?.displaySchoolYear ?? props.cal?.meta?.displaySchoolYear ?? props.year)
 const pdfHeading = computed(() => {
@@ -184,7 +185,7 @@ const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year
 
     <!-- Share with Parents -->
     <div v-if="!hideShareCalendar" class="p-6">
-      <component :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-[#1f2933] mb-3">Share This Calendar</component>
+      <component v-if="!hideShareCalendarHeading" :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-[#1f2933] mb-3">Share This Calendar</component>
       <div class="flex flex-wrap gap-3">
         <!-- Copy Link -->
         <button

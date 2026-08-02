@@ -417,8 +417,9 @@
       "a": "Yes. MySchoolDates provides ICS calendar files when generated for a school year, which can be imported into Google Calendar, Apple Calendar, or Outlook."
     }
   ],
-  "relatedDistrictsTitle": "Explore Related Georgia School Calendars",
-  "relatedDistrictsDescription": "Use these links as supporting references when comparing Atlanta Public Schools with nearby Metro Atlanta district calendars.",
+  "relatedDistrictsTitle": "More Metro Atlanta School Calendars",
+  "relatedDistrictsDescription": "Nearby district calendars for Metro Atlanta families.",
+  "hideRelatedDistrictDescriptions": true,
   "relatedDistricts": [
     {
       "name": "Fulton County Schools",
@@ -437,6 +438,16 @@
       "slug": "cobb-county-school-calendar",
       "state": "Georgia",
       "comparisonNote": "Metro Atlanta district with student holiday/staff day and break planning information."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Atlanta Public Schools official website",
+      "url": "https://www.atlantapublicschools.us/"
+    },
+    {
+      "label": "Atlanta Public Schools calendar page",
+      "url": "https://www.atlantapublicschools.us/about/calendar"
     }
   ]
 }

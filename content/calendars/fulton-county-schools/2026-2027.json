@@ -1,23 +1,24 @@
 {
   "institutionId": "fulton-county-schools",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Fulton County Schools Calendar 2026–27",
   "firstDay": "2026-08-03",
   "lastDay": "2027-05-27",
   "sourceUrl": "https://www.fultonschools.org/calendar01",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1774551618/fultonschoolsorg/wizm1srool7evoyytyr5/2026-27_SchoolCalendar_Approved_12-19-2024.pdf",
-  "sourceCalendarName": "Fulton County Schools 2026-2027 Calendar PDF",
+  "sourceCalendarName": "Fulton County Schools 2026–27 Calendar PDF",
   "sourceVersion": "Approved December 19, 2024",
   "schemaReviewedBy": "author",
-  "lastVerifiedAt": "2026-07-28",
+  "lastVerifiedAt": "2026-08-02",
   "datePublished": "2026-07-28",
-  "dateModified": "2026-07-28",
+  "dateModified": "2026-08-02",
   "calendarType": "traditional",
   "totalSchoolDays": 179,
   "yearNumbersMode": "customOnly",
   "allDatesMode": "all",
   "hiddenSections": [
     "keyDateCards",
-    "keyDates",
     "quickFacts",
     "downloadCta",
     "todayStatus",
@@ -25,16 +26,16 @@
     "about",
     "planningTips",
     "nationalTrends",
-    "relatedDistricts",
     "whatsDifferent",
     "yearNumbers"
   ],
-  "seoTitle": "Fulton County Schools Calendar 2026-2027: Holidays, Breaks & PDF",
-  "seoDescription": "View the Fulton County Schools 2026–27 calendar with first and last days, breaks, staff workdays, remote learning dates, return dates, and the official PDF.",
-  "icsHeading": "Add the 2026–27 FCS dates to your calendar app",
+  "seoTitle": "Fulton County Schools 2026–27 Calendar: Key Dates, Breaks and PDF",
+  "seoDescription": "Fulton County Schools starts Aug. 3, 2026. See breaks, return dates, remote learning days, staff workdays, and the official 2026–27 PDF.",
+  "icsHeading": "Add the 2026–27 FCS Dates to Your Calendar",
   "icsDescription": "Download the key district-published dates included on this page as an ICS file for Google Calendar, Apple Calendar, or Outlook.",
   "icsButtonLabel": "Download Calendar File (.ics)",
-  "icsButtonSupportText": "One-time import. This calendar does not automatically sync with later district updates.",
+  "icsButtonSupportText": "This is a one-time import and will not update automatically if the district revises its calendar.",
+  "pdfHeading": "Official 2026–27 Calendar PDF",
   "compactDownloadModule": true,
   "hideInstructionalDaysSummary": true,
   "hideSecondSemesterStartSummary": true,
@@ -42,57 +43,128 @@
   "hideHeroVerifiedBadge": true,
   "hideHeroVerificationProcess": true,
   "hideFaqSchema": true,
-  "schemaCalendarName": "Fulton County Schools Calendar 2026-2027",
-  "schemaDatasetName": "Fulton County Schools Calendar 2026-2027 Dataset",
+  "includeArticleSchema": false,
+  "schemaCalendarName": "Fulton County Schools Calendar 2026–27",
+  "schemaDatasetName": "Fulton County Schools 2026–27 Dataset",
+  "schemaCalendarDownloadName": "Fulton County Schools 2026–27 calendar file",
   "schemaDatasetDescription": "District-published calendar dates for Fulton County Schools in 2026–27, including school-year boundaries, official break ranges, holidays, staff workdays, remote learning, and key academic dates.",
   "temporalCoverageStart": "2026-07-27",
   "temporalCoverageEnd": "2027-05-28",
-  "heroSummary": "Fulton County Schools begins the 2026–27 school year on Monday, August 3, 2026, and the last day for students is Thursday, May 27, 2027. Fall Break is September 21–23, Thanksgiving Break is November 23–27, and Spring Break is April 5–9. Students will learn remotely on Election Day, November 3.",
+  "heroSummary": "Fulton County Schools starts classes on Monday, August 3, 2026, and the final student day is Thursday, May 27, 2027. Fall Break runs September 21–23, followed by two staff workdays, so students return Monday, September 28. Election Day, November 3, is a remote learning day.",
   "heroFactChips": [
-    "179 instructional days: 88 in the first semester and 91 in the second",
-    "Students return from December Break on Jan 5, 2027",
-    "Students return from Winter Break on Feb 22, 2027"
+    "179 instructional days: 88 in the first semester and 91 in the second"
+  ],
+  "keyDatesSummaryTitle": "Key Dates at a Glance",
+  "keyDatesSummarySubtitle": "The dates Fulton families are most likely to need first",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-03",
+      "type": "school_start",
+      "schemaDescription": "Fulton County Schools starts classes on August 3, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Fall Break and Staff Workdays — Return Sep. 28",
+      "date": "2026-09-21",
+      "endDate": "2026-09-25",
+      "type": "break_start",
+      "description": "Fall Break is September 21–23, followed by staff workdays September 24–25.",
+      "schemaDescription": "Fall Break runs September 21–23, followed by staff workdays September 24–25. Students return September 28."
+    },
+    {
+      "label": "Remote",
+      "name": "Remote Learning",
+      "date": "2026-11-03",
+      "type": "remote_learning",
+      "schemaDescription": "November 3, 2026 is a remote learning day for Fulton students."
+    },
+    {
+      "label": "Return",
+      "name": "Students Return for Second Semester",
+      "date": "2027-01-05",
+      "type": "school_resume",
+      "schemaDescription": "Students return from December Break on January 5, 2027."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-04-05",
+      "endDate": "2027-04-09",
+      "type": "break_start",
+      "schemaDescription": "Spring Break runs April 5–9, 2027."
+    },
+    {
+      "label": "Last Day",
+      "name": "Final Student Day",
+      "date": "2027-05-27",
+      "type": "school_end",
+      "schemaDescription": "The final student day is May 27, 2027."
+    }
   ],
   "jumpNavigation": [
-    { "label": "Returns", "id": "fulton-2026-2027-break-return-dates" },
-    { "label": "Remote & Staff Days", "id": "fulton-2026-2027-attendance-exceptions" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Return Dates", "id": "fulton-2026-2027-break-return-dates" },
+    { "label": "Remote & Staff Workdays", "id": "fulton-2026-2027-attendance-exceptions" },
     { "label": "Dates", "href": "#all-dates" },
-    { "label": "Download", "href": "#add-to-calendar" },
     { "label": "Changes", "id": "fulton-2026-2027-what-changed" },
+    { "label": "Download", "href": "#add-to-calendar" },
     { "label": "FAQ", "href": "#faq" },
-    { "label": "Compare", "href": "#comparison" }
+    { "label": "Compare", "href": "#comparison" },
+    { "label": "Sources", "href": "#sources" }
   ],
-  "allDatesTitle": "Key Official District Calendar Dates — 2026–27",
+  "allDatesTitle": "Official District Calendar Dates — 2026–27",
   "allDatesCoverageNote": "This list follows the district's published calendar labels. Return dates after breaks are summarized separately above. Holidays before the first staff workday or after the final staff workday are not included. School-specific events, testing dates, and later schedule changes are not included.",
+  "sourceReviewSummary": "Dates were checked against the official Fulton County Schools calendar page and the approved 2026–27 PDF. We verified break dates, remote learning, staff workdays, return dates, and instructional-day totals.",
+  "sourceReviewDetails": [
+    "The PDF was approved on December 19, 2024, and lists 179 instructional days: 88 in the first semester and 91 in the second.",
+    "Return dates are calculated from the published break ranges, intervening weekends and holidays, and any staff workdays immediately following the break.",
+    "Check the official Fulton calendar page for revisions before making travel, child care, or school-specific plans."
+  ],
   "calendarNotes": "Fulton County Schools lists 179 instructional days for 2026–27: 88 in the first semester and 91 in the second. Students start August 3, 2026 and finish May 27, 2027. The official PDF lists November 3 as Remote Learning/Elections, January 4 and February 18–19 as professional development/teacher workdays, and May 28 as a teacher workday after the final student day. Students return from December Break on January 5 and from Winter Break on February 22.",
   "calendarFaqs": [
     {
-      "q": "When does Fulton County Schools start in 2026?",
-      "a": "Fulton County Schools starts the 2026–27 school year on Monday, August 3, 2026."
+      "q": "Is November 3 a remote learning day or a day off?",
+      "a": "November 3 is a remote learning day, not a day off. Students learn from home and should follow instructions from their school."
     },
     {
-      "q": "When is Fulton County Schools Fall Break in 2026?",
-      "a": "Fall Break runs Monday, September 21 through Wednesday, September 23, 2026. September 24–25 are professional development and teacher workdays."
+      "q": "When do students return after Fall Break?",
+      "a": "Fall Break is September 21–23, followed by professional development and teacher workdays on September 24–25. Students return Monday, September 28."
     },
     {
-      "q": "When do students return after December Break?",
-      "a": "Students return from December Break on Tuesday, January 5, 2027, after the January 4 professional development and teacher workday."
+      "q": "When do students return after December and Winter Break?",
+      "a": "Students return from December Break on Tuesday, January 5, 2027, after the January 4 staff workday. Students return from Winter Break on Monday, February 22, after the February 18–19 staff workdays."
     },
     {
-      "q": "Is November 3 a day off or a remote learning day?",
-      "a": "November 3 is a remote learning day, not a day off. Students should follow their school's instructions for assignments and device access."
-    },
-    {
-      "q": "When is Fulton County Schools Spring Break in 2027?",
-      "a": "Spring Break runs Monday, April 5 through Friday, April 9, 2027."
-    },
-    {
-      "q": "Where can I find the latest official Fulton calendar?",
-      "a": "Use the official Fulton County Schools calendar page and the district PDF for final confirmation before making travel, childcare, or school-specific plans."
+      "q": "Where should families check for calendar revisions?",
+      "a": "Use the official Fulton County Schools calendar page and the district PDF for final confirmation before making travel, child care, or school-specific plans."
     }
   ],
-  "faqLimit": 6,
-  "faqSchemaLimit": 6,
+  "faqDisplayQuestions": [
+    "Is November 3 a remote learning day or a day off?",
+    "When do students return after Fall Break?",
+    "When do students return after December and Winter Break?",
+    "Where should families check for calendar revisions?"
+  ],
+  "faqLimit": 4,
+  "faqSchemaLimit": 0,
+  "comparisonTitle": "How Fulton’s Calendar Compares with Nearby Districts",
+  "comparisonSummary": "Fulton shares its August 3 start date with Atlanta Public Schools and Cobb County. Fulton’s Fall Break comes earlier than Atlanta’s and DeKalb’s. Fulton, Atlanta, and Cobb all schedule Spring Break for April 5–9.",
+  "comparisonInsights": [
+    {
+      "label": "Start date comparison",
+      "items": [
+        "Fulton, Atlanta Public Schools, and Cobb County all start on August 3. DeKalb starts on August 7."
+      ]
+    },
+    {
+      "label": "Final student day comparison",
+      "items": [
+        "Fulton and Atlanta Public Schools both list May 27 as the final student day. Cobb’s final student day is May 19, and DeKalb’s is May 26."
+      ]
+    }
+  ],
   "quickFacts": [
     {
       "label": "Calendar Type",
@@ -123,9 +195,9 @@
     {
       "id": "fulton-2026-2027-break-return-dates",
       "label": "Breaks and Return Dates",
-      "position": "afterVerification",
+      "position": "afterKeyDates",
       "schemaHasPart": true,
-      "content": "Some breaks are followed by staff workdays. The table separates the district's official break dates from additional days when students do not attend and shows the next scheduled school day.",
+      "content": "The dates labeled as a break do not always cover the full period when students are away from school. Staff workdays extend the September and February breaks, so the table also shows the next day students report to school.",
       "table": {
         "columns": ["Break", "District break dates", "Additional student days off", "Students return"],
         "rows": [
@@ -140,32 +212,32 @@
     {
       "id": "fulton-2026-2027-attendance-exceptions",
       "label": "Remote Learning and Staff Workdays",
-      "position": "afterVerification",
+      "position": "afterKeyDates",
       "schemaHasPart": true,
-      "content": "On the dates below, students either learn remotely or do not attend while staff work.",
+      "content": "November 3 is a remote learning day. September 24–25, January 4, and February 18–19 are staff workdays when students do not report to school.",
       "table": {
-        "columns": ["Date", "District label", "Student status", "What parents need to know"],
+        "columns": ["Date", "District label", "What students do"],
         "rows": [
-          ["Sep 24–25", "Professional Development / Teacher Workday", "No school for students", "Students return Sep 28."],
-          ["Nov 3", "Remote Learning/Elections", "Learning from home", "Check device access and assignment instructions."],
-          ["Jan 4", "Professional Development / Teacher Workday", "No school for students", "Students return Jan 5."],
-          ["Feb 18–19", "Professional Development / Teacher Workday", "No school for students", "Students return Feb 22."]
+          ["Sep 24–25", "Professional Development / Teacher Workdays", "No school for students; students return Sep 28."],
+          ["Nov 3", "Remote Learning/Elections", "Students learn from home; individual schools may provide separate instructions."],
+          ["Jan 4", "Professional Development / Teacher Workday", "No school for students; students return Jan 5."],
+          ["Feb 18–19", "Professional Development / Teacher Workdays", "No school for students; students return Feb 22."]
         ]
       }
     },
     {
       "id": "fulton-2026-2027-what-changed",
       "label": "What Changed This Year for Fulton Families",
-      "position": "afterYearDiff",
+      "position": "afterAllDates",
       "schemaHasPart": true,
-      "content": "Several dates changed from 2025–26, so do not reuse last year's calendar.",
+      "content": "Compared with 2025–26, the new calendar adds two instructional days, moves Fall Break to September, and designates Election Day as a remote learning day.",
       "table": {
         "columns": ["Change", "What it means"],
         "rows": [
           ["Instructional days increase from 177 to 179", "The 2026–27 calendar has two more instructional days than 2025–26."],
           ["November 3 is Remote Learning/Elections", "Students learn remotely rather than taking the day off."],
           ["Fall Break is Sep 21–23, followed by staff workdays", "Students return Sep 28, not Sep 24."],
-          ["Final student day is May 27", "It falls six days later in May than the final student day in 2025–26."]
+          ["Final student day is May 27", "The final student day moves from May 21 in 2025–26 to May 27 in 2026–27."]
         ]
       }
     }

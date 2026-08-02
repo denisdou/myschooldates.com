@@ -11,7 +11,7 @@
   "sourceVersion": "Approved November 18, 2025",
   "lastVerifiedAt": "2026-07-29",
   "datePublished": "2026-07-29",
-  "dateModified": "2026-07-29",
+  "dateModified": "2026-08-02",
   "calendarType": "traditional",
   "totalSchoolDays": 178,
   "allDatesMode": "keyDates",
@@ -20,51 +20,64 @@
   "schemaDatasetName": "Forsyth County Schools Student Calendar 2027-2028 Dataset",
   "schemaDatasetDescription": "Districtwide student calendar dates for Forsyth County Schools in 2027-2028, including school-year boundaries, major breaks, holidays, online learning and parent conference dates, early-release dates, and professional development days when students do not attend.",
   "schemaCalendarDownloadName": "Forsyth County Schools Student Calendar 2027-2028 calendar file",
-  "seoTitle": "Forsyth County Schools Calendar 2027–28: Key Dates and PDF",
-  "seoDescription": "See Forsyth County Schools' 2027–28 student calendar, including first and last days, major breaks, online learning dates, early-release dates, and the official PDF.",
-  "heroSummary": "Forsyth County Schools students start the 2027–28 school year on Thursday, August 5, 2027, and finish on Thursday, May 25, 2028. Fall Break is September 27 through October 1, Thanksgiving Break is November 22–26, Holiday Break is December 20–31, and Spring Break is April 3–7.",
+  "seoTitle": "Forsyth County Schools Calendar 2027–28 | Key Dates & PDF",
+  "seoDescription": "Forsyth County Schools starts Aug. 5, 2027, and ends May 25, 2028. See major breaks, online-learning days, the official PDF, and an .ics download.",
+  "heroSummary": "Forsyth County Schools starts classes Thursday, August 5, 2027, and the last day is Thursday, May 25, 2028. Fall Break is September 27–October 1, students are off November 22–26 for Thanksgiving week, Holiday Break is December 20–31, and Spring Break is April 3–7.",
   "calendarNotes": "The official Forsyth County Schools 2027–28 student calendar lists 178 student days: 85 in the first semester and 93 in the second semester. K–12 early-release days are September 3, December 17, May 24, and May 25. Online learning and parent conference dates are October 15 and March 17. Professional development days when students do not attend are October 18, January 3, February 22, and March 20.",
   "heroFactChips": [
     "178 student days: 85 in the first semester and 93 in the second",
-    "K–12 early-release days: Sep. 3, Dec. 17, May 24, and May 25"
+    "K–12 early-release days: Sep. 3, Dec. 17, May 24, and May 25",
+    "Students return Jan. 4 after the Jan. 3 professional development day"
   ],
   "jumpNavigation": [
     { "label": "Key Dates", "id": "key-dates" },
-    { "label": "Family Notes", "id": "forsyth-2027-2028-family-notes" },
-    { "label": "Full Calendar", "id": "all-dates" },
+    { "label": "Planning Dates", "id": "forsyth-2027-2028-family-notes" },
+    { "label": "Student Calendar", "id": "all-dates" },
     { "label": "Download", "id": "add-to-calendar" },
     { "label": "Changes", "id": "forsyth-2027-2028-what-changed" },
     { "label": "Comparison", "id": "comparison" },
-    { "label": "FAQ", "id": "faq" }
+    { "label": "Sources", "id": "sources" }
   ],
-  "hiddenSections": ["downloadCta", "todayStatus", "quickFacts", "breaks", "yearNumbers", "planningTips", "about", "whatsDifferent", "nationalTrends", "relatedDistricts"],
+  "hiddenSections": ["downloadCta", "todayStatus", "keyDateCards", "quickFacts", "breaks", "yearNumbers", "planningTips", "about", "whatsDifferent", "nationalTrends", "faq"],
   "comparisonRowsInclude": ["firstDay", "lastDay", "fallBreak", "thanksgivingBreak", "winterBreak", "springBreak"],
   "winterBreakComparisonLabel": "Late-December Break",
-  "compareIntro": "Forsyth starts three calendar days later than Atlanta Public Schools, Cobb County School District, and Fulton County Schools. It shares the same Fall Break dates with Fulton and the same Thanksgiving Break, late-December break, and Spring Break dates with all three districts.",
+  "compareIntro": "Forsyth starts three calendar days later than Atlanta Public Schools, Cobb County School District, and Fulton County Schools. Forsyth shares its Fall Break dates with Fulton and has the same Thanksgiving, late-December, and Spring Break dates as all three districts.",
   "comparisonSourceNote": "Break rows group comparable calendar periods, although districts may use different labels such as Holiday Break, Winter Break, or December Break. Adjacent holidays, staff workdays, and early-release dates are not included unless they fall within the listed range.",
+  "comparisonTitle": "How Forsyth’s Calendar Compares with Nearby Districts",
   "hideComparisonNotes": true,
+  "hideRelatedDistrictDescriptions": true,
   "comparisonDefaultOpen": false,
   "comparisonBeforeFaq": true,
   "keyDatesSummaryTitle": "2027–28 Key Dates and Major Breaks",
   "keyDatesSummarySubtitle": "First and last days of school, plus the district's major break dates",
+  "keyDateSummaryItems": [
+    { "date": "2027-08-05", "name": "First Day of School", "type": "school_start", "label": "First Day" },
+    { "date": "2027-09-27", "endDate": "2027-10-01", "name": "Fall Break", "type": "break_start", "label": "Break" },
+    { "date": "2027-11-22", "endDate": "2027-11-26", "name": "Thanksgiving Break", "type": "break_start", "label": "Break" },
+    { "date": "2027-12-20", "endDate": "2027-12-31", "name": "Holiday Break", "type": "break_start", "label": "Break" },
+    { "date": "2028-04-03", "endDate": "2028-04-07", "name": "Spring Break", "type": "break_start", "label": "Break" },
+    { "date": "2028-05-25", "name": "Last Day and K–12 Early Release", "type": "school_end", "label": "Last Day" }
+  ],
   "keyDateCardsThirdLabel": "Student Days",
   "keyDateCardsThirdValue": "178 days",
-  "allDatesTitle": "FCS Student Calendar Dates for 2027–28",
+  "allDatesTitle": "Full Student Calendar",
   "allDatesSourceLabel": "Forsyth County Schools calendar page",
   "allDatesCoverageNote": "This list includes districtwide dates that affect students. It does not include teacher preplanning or post-planning, open houses, or staff-only dates outside the student school year.",
   "dateLegendLabelOverrides": {
-    "Staff Days": "Professional development"
+    "Staff Days": "Professional development",
+    "Last Day · Early Closing": "Last Day · Early Release"
   },
+  "hideDateLegend": true,
   "heroCtas": [
     { "label": "View Official PDF", "href": "__sourcePdfUrl", "variant": "primary" },
     { "label": "Download Calendar File", "href": "__icsUrl", "variant": "secondary", "download": true, "filename": "__icsFilename" }
   ],
   "verificationBadgeText": "Last checked July 29, 2026, against the official FCS student calendar.",
-  "sourceReviewSummary": "Dates on this page were checked against the official Forsyth County Schools 2027–28 student calendar on July 29, 2026.",
+  "sourceReviewSummary": "This page is based on the official Forsyth County Schools 2027–28 student calendar and the district calendar page.",
   "sourceReviewDetails": [
     "We check this page against the district's published first day, last day, major breaks, holidays, online learning and parent conference dates, early-release dates, and professional development days shown in the official source.",
     "If we find a mismatch, we correct the page and update the review date. Campus-specific bell schedules, testing dates, staff details, and program events may appear only in the official PDF or individual school calendars.",
-    "The downloadable calendar file is a one-time import generated from the calendar records used for this page, and the official district calendar remains the source of record for last-minute changes."
+    "The official district calendar remains the source of record for later changes."
   ],
   "hideHeroReviewedField": true,
   "hideHeroReviewedByField": true,
@@ -72,65 +85,36 @@
   "hideHeroVerificationProcess": true,
   "hideHeroVerificationIcs": true,
   "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
   "compactDownloadModule": true,
   "icsDescription": "Download the 2027–28 student dates for Google Calendar, Apple Calendar, or Outlook.",
   "icsButtonLabel": "Download Calendar File",
-  "calendarFaqs": [
-    {
-      "q": "Do students attend school in person on FCS Online Learning days?",
-      "a": "No. On October 15, 2027, and March 17, 2028, students follow the district's online learning and parent conference schedule rather than a normal in-person school day."
-    },
-    {
-      "q": "Do early-release times vary by school level?",
-      "a": "Yes. Elementary I schools dismiss at 11:50 a.m., Elementary II schools at 12:30 p.m., middle schools at 1:30 p.m., high schools at 12:55 p.m., and Alliance Academy at 12:20 p.m."
-    },
-    {
-      "q": "When do students return after Holiday Break and the February student holiday?",
-      "a": "Students return from Holiday Break on Tuesday, January 4, 2028, after a January 3 professional development day. After the February 18–21 student and staff holiday and the February 22 professional development day, students return Wednesday, February 23."
-    },
-    {
-      "q": "Where should families check for calendar changes?",
-      "a": "Use the official Forsyth County Schools calendar page and the current district PDF before making travel, child care, transportation, or school-specific plans."
-    },
-    {
-      "q": "Will the downloaded calendar update automatically?",
-      "a": "No. The ICS file is a one-time import and will not automatically reflect later changes made by Forsyth County Schools."
-    }
-  ],
-  "faqDisplayQuestions": [
-    "Do students attend school in person on FCS Online Learning days?",
-    "Do early-release times vary by school level?",
-    "When do students return after Holiday Break and the February student holiday?",
-    "Where should families check for calendar changes?",
-    "Will the downloaded calendar update automatically?"
-  ],
-  "faqSchemaQuestions": [
-    "Do students attend school in person on FCS Online Learning days?",
-    "Do early-release times vary by school level?",
-    "When do students return after Holiday Break and the February student holiday?",
-    "Where should families check for calendar changes?",
-    "Will the downloaded calendar update automatically?"
-  ],
+  "pdfHeading": "Official 2027–28 Calendar PDF",
+  "hideFaqSchema": true,
+  "includeArticleSchema": false,
+  "calendarFaqs": [],
+  "faqDisplayQuestions": [],
+  "faqSchemaQuestions": [],
   "customSections": [
     {
       "id": "forsyth-2027-2028-family-notes",
-      "label": "What Forsyth Families Need to Know",
+      "label": "Dates to Plan Around",
       "position": "afterKeyDates",
       "schemaHasPart": true,
-      "content": "Several dates change the normal school-day schedule and may affect child care, transportation, or after-school plans.",
+      "content": "The dates below either shorten the school day, replace in-person classes, or extend a student break.",
       "groups": [
         {
-          "label": "Schedule changes to plan for",
+          "label": "Schedule changes",
           "items": [
-            "Friday, September 3, is a K–12 early-release day before the Labor Day weekend. Schools are closed Monday, September 6.",
-            "Students learn online Friday, October 15, and do not attend school Monday, October 18, because of professional development.",
-            "Students learn online Friday, March 17, and do not attend school Monday, March 20, because of professional development."
+            "Friday, September 3, is a K–12 early-release day before the Labor Day weekend. Monday, September 6, is the Labor Day holiday.",
+            "Friday, October 15, is a K–12 online learning and parent conference day. Monday, October 18, is a student holiday for staff professional development.",
+            "Friday, March 17, is a K–12 online learning and parent conference day. Monday, March 20, is a student holiday for staff professional development."
           ]
         },
         {
           "label": "Break return dates",
           "items": [
-            "Students return from Holiday Break on Tuesday, January 4, after the January 3 professional development day.",
+            "Students return Tuesday, January 4, after the January 3 professional development day.",
             "After the February 18–21 student and staff holiday and the February 22 professional development day, students return Wednesday, February 23."
           ]
         },
@@ -147,14 +131,14 @@
       "label": "Changes from the 2026–27 Calendar",
       "position": "afterYearDiff",
       "schemaHasPart": true,
-      "content": "Compared with 2026–27, four calendar changes stand out for Forsyth families.",
+      "content": "The 2027–28 calendar starts one day earlier, ends two days earlier, adds a fourth K–12 early-release day, and moves Spring Break to April 3–7.",
       "table": {
         "columns": ["What changed", "What it means for families"],
         "rows": [
-          ["School starts August 5 instead of August 6", "The first week has two instructional days, Thursday and Friday, and begins one day earlier than in 2026–27."],
-          ["School ends May 25 instead of May 27", "The last student day falls two days earlier in May and is on a Thursday."],
-          ["K–12 early-release days increase from three to four", "Families have an additional K–12 early-release date on May 24, followed by another early release on the final student day, May 25."],
-          ["Spring Break shifts to April 3–7", "The break starts two days earlier than 2026–27 Spring Break."]
+          ["School starts August 5 instead of August 6", "Classes begin Thursday, August 5, one day earlier than in 2026–27."],
+          ["School ends May 25 instead of May 27", "The school year ends Thursday, May 25, rather than Thursday, May 27."],
+          ["K–12 early-release days increase from three to four", "May 24 is an additional K–12 early-release day, followed by another early release on the final student day, May 25."],
+          ["Spring Break moves to April 3–7", "Spring Break runs April 3–7 instead of April 5–9."]
         ]
       }
     }
@@ -167,7 +151,7 @@
     { "date": "2027-09-06", "name": "Labor Day", "type": "holiday" },
     { "date": "2027-09-27", "name": "Fall Break Begins", "type": "break_start" },
     { "date": "2027-10-01", "name": "Fall Break Ends", "type": "break_end" },
-    { "date": "2027-10-15", "name": "Online Learning and Parent Conferences", "type": "digital_learning", "description": "Students follow the district's online learning and parent conference schedule." },
+    { "date": "2027-10-15", "name": "K–12 Online Learning and Parent Conferences", "type": "digital_learning", "description": "Students follow the district's online learning and parent conference schedule." },
     { "date": "2027-10-18", "name": "Professional Development Day", "type": "teacher_professional_learning", "description": "Students do not attend school." },
     { "date": "2027-11-22", "name": "Thanksgiving Break Begins", "type": "break_start" },
     { "date": "2027-11-26", "name": "Thanksgiving Break Ends", "type": "break_end" },
@@ -179,10 +163,9 @@
     { "date": "2028-01-03", "name": "Professional Development Day", "type": "teacher_professional_learning", "description": "Students do not attend school." },
     { "date": "2028-01-04", "name": "Students Return and Second Semester Begins", "type": "school_resume" },
     { "date": "2028-01-17", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2028-02-18", "name": "Student and Staff Holiday Begins", "type": "break_start" },
-    { "date": "2028-02-21", "name": "Student and Staff Holiday Ends", "type": "break_end" },
+    { "date": "2028-02-18", "endDate": "2028-02-21", "name": "Student and Staff Holiday", "type": "student_holiday", "displayDate": "February 18–21, 2028" },
     { "date": "2028-02-22", "name": "Professional Development Day", "type": "teacher_professional_learning", "description": "Students do not attend school." },
-    { "date": "2028-03-17", "name": "Online Learning and Parent Conferences", "type": "digital_learning", "description": "Students follow the district's online learning and parent conference schedule." },
+    { "date": "2028-03-17", "name": "K–12 Online Learning and Parent Conferences", "type": "digital_learning", "description": "Students follow the district's online learning and parent conference schedule." },
     { "date": "2028-03-20", "name": "Professional Development Day", "type": "teacher_professional_learning", "description": "Students do not attend school." },
     { "date": "2028-04-03", "name": "Spring Break Begins", "type": "break_start" },
     { "date": "2028-04-07", "name": "Spring Break Ends", "type": "break_end" },

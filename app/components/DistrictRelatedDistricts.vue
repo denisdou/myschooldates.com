@@ -4,6 +4,9 @@ const props = defineProps<{
   stateName: string
   title?: string
   description?: string
+  hideDescriptions?: boolean
+  year?: string
+  yearAvailableSlugs?: string[]
 }>()
 
 const allRelatedInState = computed(() => props.relatedDistricts.every(rd => rd.state === props.stateName))
@@ -12,6 +15,9 @@ const description = computed(() => props.description ?? (allRelatedInState.value
   ? `Browse calendars for other ${props.stateName} school districts.`
   : 'Browse calendars for other school districts.'))
 const stateSlug = computed(() => props.stateName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))
+const yearAvailableSlugs = computed(() => new Set(props.yearAvailableSlugs ?? []))
+const relatedDistrictPath = (rd: { slug: string }) =>
+  props.year && yearAvailableSlugs.value.has(rd.slug) ? `/${rd.slug}/${props.year}` : `/${rd.slug}`
 </script>
 
 <template>
@@ -24,12 +30,12 @@ const stateSlug = computed(() => props.stateName.toLowerCase().replace(/[^a-z0-9
       <NuxtLink
         v-for="rd in relatedDistricts"
         :key="rd.slug"
-        :to="`/${rd.slug}`"
+        :to="relatedDistrictPath(rd)"
         class="flex items-center justify-between gap-4 px-6 py-4 hover:bg-[#f3f0e8] transition-colors"
       >
         <div>
           <div class="font-medium text-[#1f2933]">{{ rd.name }}</div>
-          <div class="text-sm text-[#7b756d]">{{ rd.reason || rd.comparisonNote || rd.state }}</div>
+          <div v-if="!hideDescriptions" class="text-sm text-[#7b756d]">{{ rd.reason || rd.comparisonNote || rd.state }}</div>
         </div>
         <svg class="w-5 h-5 flex-shrink-0 text-[#9a938a]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

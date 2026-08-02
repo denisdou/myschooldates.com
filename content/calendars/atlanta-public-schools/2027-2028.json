@@ -7,43 +7,198 @@
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1778601836/atlantapublicschoolsus/eiw3dcdn6fjzetpntbhi/2027-2028_student_calendar.pdf",
   "lastVerifiedAt": "2026-07-28",
   "datePublished": "2026-07-28",
-  "dateModified": "2026-07-28",
+  "dateModified": "2026-08-02",
   "calendarType": "traditional",
   "totalSchoolDays": 180,
   "yearNumbersMode": "compact",
-  "seoTitle": "Atlanta Public Schools Calendar 2027-2028: Holidays, Breaks & PDF",
-  "seoDescription": "Verified Atlanta Public Schools 2027-2028 student calendar with Aug 2 first day, May 26 last day, fall break, winter break, spring break, early release, PDF and ICS.",
-  "heroSummary": "Atlanta Public Schools begins the 2027-2028 school year on Monday, August 2, 2027. The final student day is Friday, May 26, 2028. Fall Break runs Oct 12-15, 2027, Winter Break runs Feb 22-25, 2028, and Spring Break runs Apr 3-7, 2028.",
-  "calendarNotes": "The official APS 2027-2028 student calendar lists 180 instructional days, with 88 days in the first semester and 92 days in the second semester. Students start on August 2, 2027 and finish on May 26, 2028. The calendar includes a PreK-12 Early Release Day on September 20, Teacher Professional Learning Days on October 11, November 2, January 3, February 21, and March 20, plus Fall Break, Thanksgiving Break, December Break, Winter Break, and Spring Break. Families should note that January 3 is a staff-focused return date before students begin the second semester on January 4.",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Atlanta Public Schools Calendar 2027–28",
+  "seoTitle": "Atlanta Public Schools Calendar 2027–28: Key Dates and Downloads",
+  "seoDescription": "See key Atlanta Public Schools 2027–28 dates, including the first and last days, major breaks, the early-release day, the official PDF, and a calendar download.",
+  "heroSummary": "Atlanta Public Schools starts the 2027–28 school year on Monday, August 2, 2027, and ends it on Friday, May 26, 2028. Fall Break runs October 12–15, Thanksgiving Break runs November 22–26, and Spring Break runs April 3–7. APS has one districtwide PreK–12 early-release day, on September 20. After December Break, students return on Tuesday, January 4; January 3 is a teacher professional learning day.",
+  "calendarNotes": "The official APS 2027–28 student calendar lists 180 instructional days: 88 in the first semester and 92 in the second. The calendar includes one PreK–12 Early Release Day on September 20 and teacher professional learning days on October 11, November 2, January 3, February 21, and March 20.",
+  "hideSecondSemesterStartSummary": true,
+  "heroFactChips": ["88 days in the first semester and 92 in the second"],
+  "yearSwitcherPosition": "afterSources",
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Family Notes", "id": "aps-2027-2028-family-notes" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Full Calendar", "id": "all-dates" },
+    { "label": "Changes", "id": "aps-2027-2028-what-changed" },
+    { "label": "Compare", "id": "comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "hiddenSections": ["downloadCta", "todayStatus", "keyDateCards", "quickFacts", "breaks", "yearNumbers", "whatsDifferent", "planningTips", "about", "districtProfile", "livingHere", "nationalTrends", "backToCurrent"],
+  "hiddenCustomSectionIds": [
+    "aps-calendar-interpretation-guide",
+    "aps-family-planning-guide",
+    "aps-local-calendar-factors",
+    "aps-calendar-source-vs-myschooldates"
+  ],
+  "schemaSpatialCoverage": {
+    "@type": "City",
+    "name": "Atlanta, Georgia"
+  },
+  "comparisonDistrictSlugs": ["cobb-county-school-calendar", "fulton-county-schools-calendar"],
+  "comparisonRowsInclude": ["firstDay", "lastDay", "fallBreak", "thanksgivingBreak", "winterBreak", "springBreak"],
+  "comparisonRowLabels": {
+    "thanksgivingBreak": "Thanksgiving Break"
+  },
+  "comparisonInsights": [
+    {
+      "label": "Start date comparison",
+      "items": [
+        "Same first day as Cobb County",
+        "Same first day as Fulton County Schools"
+      ]
+    },
+    {
+      "label": "End date comparison",
+      "items": [
+        "9 calendar days later than Cobb County",
+        "1 calendar day later than Fulton County Schools"
+      ]
+    }
+  ],
+  "comparisonDefaultOpen": false,
+  "comparisonBeforeFaq": true,
+  "compareIntro": "See how APS start, end, and break dates compare with Cobb County School District and Fulton County Schools.",
+  "comparisonSourceNote": "Rows group comparable break periods; break names may differ by district. Adjacent holidays and staff workdays are not included unless they fall within the listed range.",
+  "hideComparisonNotes": true,
+  "keyDatesSummaryTitle": "2027–28 Key Dates and Major Breaks",
+  "keyDatesSummarySubtitle": "First and last days of school, plus the district's major break dates",
+  "keyDateSummaryItems": [
+    {
+      "name": "First Day of School",
+      "date": "2027-08-02",
+      "type": "school_start",
+      "label": "First Day",
+      "schemaDescription": "The first day of classes for APS students in the 2027–28 school year."
+    },
+    {
+      "name": "Fall Break",
+      "date": "2027-10-12",
+      "endDate": "2027-10-15",
+      "type": "break_start",
+      "label": "Break",
+      "schemaDescription": "APS Fall Break runs October 12–15, 2027."
+    },
+    {
+      "name": "Thanksgiving Break",
+      "date": "2027-11-22",
+      "endDate": "2027-11-26",
+      "type": "break_start",
+      "label": "Break",
+      "schemaDescription": "APS Thanksgiving Break runs November 22–26, 2027."
+    },
+    {
+      "name": "December Break",
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "type": "break_start",
+      "label": "Break",
+      "schemaDescription": "APS December Break runs December 20–31, 2027."
+    },
+    {
+      "name": "Winter Break",
+      "date": "2028-02-22",
+      "endDate": "2028-02-25",
+      "type": "break_start",
+      "label": "Break",
+      "schemaDescription": "APS Winter Break runs February 22–25, 2028."
+    },
+    {
+      "name": "Spring Break",
+      "date": "2028-04-03",
+      "endDate": "2028-04-07",
+      "type": "break_start",
+      "label": "Break",
+      "schemaDescription": "APS Spring Break runs April 3–7, 2028."
+    },
+    {
+      "name": "Last Day of School",
+      "date": "2028-05-26",
+      "type": "school_end",
+      "label": "Last Day",
+      "schemaDescription": "The last day of classes for APS students in the 2027–28 school year."
+    }
+  ],
+  "allDatesTitle": "Dates from the Official APS Student Calendar — 2027–28",
+  "allDatesCoverageNote": "This table covers districtwide dates between the first and last student days. Staff-only dates before August 2 or after May 26 are not shown.",
+  "verificationBadgeText": "Last checked July 28, 2026 against the official APS 2027–28 student calendar.",
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "schemaReviewedBy": "author",
+  "comparisonReviewedText": "Comparison sources reviewed July 28, 2026.",
+  "hideDateLegend": true,
+  "moveCalendarExportBeforeAllDates": true,
+  "compactDownloadModule": true,
+  "hideExtendedShareButtons": true,
+  "hideShareCalendarHeading": true,
+  "hideRelatedDistrictDescriptions": true,
+  "relatedDistrictsTitle": "More Metro Atlanta School Calendars",
+  "relatedDistrictsDescription": "Nearby district calendars for Metro Atlanta families.",
+  "icsHeading": "Add APS Dates to Your Calendar",
+  "icsDescription": "Add the APS 2027–28 dates to Google Calendar, Apple Calendar, or Outlook. This MySchoolDates file is a one-time import and will not automatically update if APS revises its calendar.",
+  "hideIcsButtonSupportText": true,
+  "icsButtonLabel": "Download Calendar File",
+  "pdfDescription": "Open or print the official calendar published by Atlanta Public Schools. Check the district calendar page for revisions before booking travel or arranging childcare.",
+  "sourceReviewSummary": "Dates on this page were checked against the official APS calendar page and the 2027–28 student calendar PDF on July 28, 2026.",
+  "sourceReviewDetails": [
+    "The first and last student days, major breaks, teacher professional learning days, the early-release day, and semester day counts were reviewed against the official APS 2027–28 student calendar.",
+    "Nearby district comparison dates were reviewed separately against each district's listed calendar source.",
+    "This page covers districtwide student dates. School testing, athletics, performances, graduation details, and other campus events may follow separate schedules."
+  ],
+  "sources": [
+    {
+      "label": "Atlanta Public Schools official website",
+      "url": "https://www.atlantapublicschools.us/"
+    },
+    {
+      "label": "Atlanta Public Schools calendar page",
+      "url": "https://www.atlantapublicschools.us/about/calendar"
+    },
+    {
+      "label": "APS 2027–28 student calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1778601836/atlantapublicschoolsus/eiw3dcdn6fjzetpntbhi/2027-2028_student_calendar.pdf"
+    }
+  ],
+  "hideFaqSchema": true,
+  "faqOrderLimit": 4,
+  "faqDisplayLimit": 4,
   "calendarFaqs": [
     {
-      "q": "When does Atlanta Public Schools start in 2027?",
-      "a": "Atlanta Public Schools starts the 2027-2028 school year on Monday, August 2, 2027."
+      "q": "When is the APS early-release day in 2027–28?",
+      "a": "APS has one PreK–12 early-release day in 2027–28: Monday, September 20, 2027."
     },
     {
-      "q": "When is APS Fall Break in 2027?",
-      "a": "Fall Break runs Tuesday, October 12 through Friday, October 15, 2027."
+      "q": "Do students attend on teacher professional learning days?",
+      "a": "No. Students are off on October 11, November 2, January 3, February 21, and March 20. These dates are teacher professional learning days rather than named school breaks."
     },
     {
-      "q": "When is Winter Break for Atlanta Public Schools in 2027-2028?",
-      "a": "December Break runs December 20-31, 2027. Students begin the second semester on Tuesday, January 4, 2028 after a Teacher Professional Learning Day on January 3. APS also lists Winter Break from February 22-25, 2028."
+      "q": "When do students return after December Break?",
+      "a": "Students return Tuesday, January 4, 2028. Monday, January 3 is a teacher professional learning day, so students do not attend."
     },
     {
-      "q": "When is Atlanta Public Schools Spring Break in 2028?",
-      "a": "Spring Break runs Monday, April 3 through Friday, April 7, 2028."
-    },
-    {
-      "q": "Does APS have early release in 2027-2028?",
-      "a": "Yes. The official APS calendar lists a PreK-12 Early Release Day on Monday, September 20, 2027."
-    },
-    {
-      "q": "How many instructional days are in the APS 2027-2028 calendar?",
-      "a": "The official APS 2027-2028 calendar lists 180 instructional days."
-    },
-    {
-      "q": "When is the last day of school for Atlanta Public Schools in 2028?",
-      "a": "The last student day is Friday, May 26, 2028."
+      "q": "Will the downloaded calendar update automatically if APS changes a date?",
+      "a": "No. The calendar file is a one-time import and will not update automatically if APS revises its calendar. Check the official APS calendar page for later changes."
     }
+  ],
+  "faqDisplayQuestions": [
+    "When is the APS early-release day in 2027–28?",
+    "Do students attend on teacher professional learning days?",
+    "When do students return after December Break?",
+    "Will the downloaded calendar update automatically if APS changes a date?"
+  ],
+  "faqSchemaQuestions": [
+    "When is the APS early-release day in 2027–28?",
+    "Do students attend on teacher professional learning days?",
+    "When do students return after December Break?",
+    "Will the downloaded calendar update automatically if APS changes a date?"
   ],
   "quickFacts": [
     {
@@ -75,12 +230,12 @@
     {
       "label": "Instructional Days",
       "value": "180",
-      "detail": "The official 2027-2028 APS calendar lists 180 instructional days: 88 in the first semester and 92 in the second semester."
+      "detail": "The official 2027–28 APS calendar lists 180 instructional days: 88 in the first semester and 92 in the second semester."
     },
     {
-      "label": "PreK-12 Early Release Days",
+      "label": "PreK–12 Early Release Days",
       "value": "1",
-      "detail": "September 20, 2027 is listed as a PreK-12 Early Release Day."
+      "detail": "September 20, 2027 is listed as a PreK–12 Early Release Day."
     },
     {
       "label": "Teacher Professional Learning Dates",
@@ -90,17 +245,47 @@
   ],
   "customSections": [
     {
+      "id": "aps-2027-2028-family-notes",
+      "label": "What APS Families Need to Know",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "Pay particular attention to the early-release day, teacher professional learning days, and the January return date.",
+      "groups": [
+        {
+          "label": "Attendance and dismissal changes",
+          "items": [
+            "Students attend school but are dismissed earlier than usual on September 20. Check your school's dismissal, bus, and after-school program schedule.",
+            "Students do not attend on October 11, November 2, January 3, February 21, or March 20. These are teacher professional learning days rather than part of a named school break."
+          ]
+        },
+        {
+          "label": "Break names and return dates",
+          "items": [
+            "APS calls the late-December holiday period \"December Break\" and the February closure \"Winter Break.\" Students return from December Break on Tuesday, January 4."
+          ]
+        },
+        {
+          "label": "School-specific dates",
+          "items": [
+            "This page covers districtwide student dates. Testing, athletics, graduation, performances, and other school events may follow separate schedules."
+          ]
+        }
+      ]
+    },
+    {
       "id": "aps-2027-2028-what-changed",
-      "label": "What Changed This Year for APS Families",
+      "label": "Changes from the 2026–27 Calendar",
       "position": "afterYearDiff",
       "schemaHasPart": true,
-      "content": "The 2027-2028 APS calendar continues the 88/92 semester split and 180 instructional days. Families should note the earlier August 2 start, the January 4 student return, and the March 20 Teacher Professional Learning Day before Spring Break.",
+      "content": "Compared with 2026–27, the new calendar starts on August 2, ends on May 26, and has one PreK–12 early-release day instead of two.",
       "table": {
-        "columns": ["Change", "Family impact", "Importance", "Action"],
+        "columns": ["What changed", "What it means for families"],
         "rows": [
-          ["First student day is August 2", "The school year starts at the beginning of August.", "High", "Set transportation, childcare, and first-week routines before August 2."],
-          ["Students return January 4 after December Break", "January 3 is a Teacher Professional Learning Day before students return.", "High", "Do not assume students return on January 3."],
-          ["March 20 is a Teacher Professional Learning Day", "This creates a staff-focused date between Winter Break and Spring Break.", "Medium", "Verify childcare and school-specific activities for March 20."]
+          ["School starts on August 2, compared with August 3 in 2026–27", "Have transportation and childcare arrangements ready by August 2."],
+          ["The last day is May 26, compared with May 27 in 2026–27", "Summer travel and summer childcare plans can begin one day earlier than in 2026–27."],
+          ["APS lists one PreK–12 early-release day", "Early pickup or after-school arrangements may be needed on September 20."],
+          ["Students return on January 4", "January 3 is a teacher professional learning day, so students do not attend."],
+          ["March 20 is a teacher professional learning day", "Students do not attend on March 20, so families may need childcare or supervision."]
         ]
       }
     }
@@ -111,26 +296,26 @@
     { "date": "2027-07-30", "name": "Teacher Preplanning Ends", "type": "teacher_workday" },
     { "date": "2027-08-02", "name": "First Day of School", "type": "school_start" },
     { "date": "2027-09-06", "name": "Labor Day", "type": "holiday" },
-    { "date": "2027-09-20", "name": "PreK-12 Early Release Day", "type": "early_release" },
-    { "date": "2027-10-11", "name": "Indigenous Peoples' Day / Teacher Professional Learning Day", "type": "teacher_professional_learning" },
+    { "date": "2027-09-20", "name": "PreK–12 Early Release Day", "type": "early_release" },
+    { "date": "2027-10-11", "name": "Indigenous Peoples' Day / Teacher Professional Learning Day", "type": "teacher_professional_learning", "description": "Students do not attend school." },
     { "date": "2027-10-12", "name": "Fall Break Begins", "type": "break_start" },
     { "date": "2027-10-15", "name": "Fall Break Ends", "type": "break_end" },
-    { "date": "2027-11-02", "name": "Election Day / Teacher Professional Learning Day", "type": "teacher_professional_learning" },
+    { "date": "2027-11-02", "name": "Election Day / Teacher Professional Learning Day", "type": "teacher_professional_learning", "description": "Students do not attend school." },
     { "date": "2027-11-22", "name": "Thanksgiving Break Begins", "type": "break_start" },
     { "date": "2027-11-26", "name": "Thanksgiving Break Ends", "type": "break_end" },
     { "date": "2027-12-17", "name": "First Semester Ends", "type": "academic" },
     { "date": "2027-12-20", "name": "December Break Begins", "type": "break_start" },
     { "date": "2027-12-31", "name": "December Break Ends", "type": "break_end" },
-    { "date": "2028-01-03", "name": "Teacher Professional Learning Day", "type": "teacher_professional_learning" },
+    { "date": "2028-01-03", "name": "Teacher Professional Learning Day", "type": "teacher_professional_learning", "description": "Students do not attend school." },
     { "date": "2028-01-04", "name": "Begin 2nd Semester", "type": "school_resume" },
     { "date": "2028-01-17", "name": "Martin Luther King Jr. Birthday", "type": "holiday" },
-    { "date": "2028-02-21", "name": "Presidents' Day / Teacher Professional Learning Day", "type": "teacher_professional_learning" },
+    { "date": "2028-02-21", "name": "Presidents' Day / Teacher Professional Learning Day", "type": "teacher_professional_learning", "description": "Students do not attend school." },
     { "date": "2028-02-22", "name": "Winter Break Begins", "type": "break_start" },
     { "date": "2028-02-25", "name": "Winter Break Ends", "type": "break_end" },
-    { "date": "2028-03-20", "name": "Teacher Professional Learning Day", "type": "teacher_professional_learning" },
+    { "date": "2028-03-20", "name": "Teacher Professional Learning Day", "type": "teacher_professional_learning", "description": "Students do not attend school." },
     { "date": "2028-04-03", "name": "Spring Break Begins", "type": "break_start" },
     { "date": "2028-04-07", "name": "Spring Break Ends", "type": "break_end" },
-    { "date": "2028-05-26", "name": "Last Day of School / Quarter 4 Ends", "type": "school_end" },
+    { "date": "2028-05-26", "name": "Last Day of School", "type": "school_end" },
     { "date": "2028-05-29", "name": "Memorial Day", "type": "holiday" },
     { "date": "2028-05-30", "name": "Teacher Post-Planning Day", "type": "teacher_workday" },
     { "date": "2028-06-19", "name": "Juneteenth", "type": "holiday" }

@@ -105,7 +105,7 @@
     "officialPdf": true,
     "icsGenerated": true,
     "revisionTracking": true,
-    "lastReviewed": "2026-07-28",
+    "lastReviewed": "2026-08-02",
     "coverageNote": "The Fulton County Schools page uses the official district website, official calendar page, and official PDF calendars for 2025-2026, 2026-2027, and 2027-2028. No 2028-2029 PDF was provided or created."
   },
   "pageReadinessScore": {
@@ -120,8 +120,8 @@
   },
   "contentFreshnessScore": {
     "overall": 94,
-    "sourceUpdated": "2026-07-28",
-    "lastManualReview": "2026-07-28",
+    "sourceUpdated": "2026-08-02",
+    "lastManualReview": "2026-08-02",
     "calendarAgeDays": 0,
     "revisionTracking": true,
     "freshnessStatus": "current",
@@ -340,9 +340,9 @@
     "winterBreak",
     "springBreak"
   ],
-  "compareIntro": "Compare Fulton County Schools with Atlanta Public Schools, Cobb County School District, and DeKalb County School District, including the first day, last day, and major breaks.",
-  "relatedDistrictsTitle": "Compare Nearby Metro Atlanta School Calendars",
-  "relatedDistrictsDescription": "Compare Fulton County Schools with nearby Georgia districts when work, childcare, or school activities cross district lines.",
+  "compareIntro": "Compare Fulton County Schools with Atlanta Public Schools, Cobb County School District, and Gwinnett County Public Schools, including the first day, last day, and major breaks.",
+  "relatedDistrictsTitle": "More Georgia School Calendars",
+  "relatedDistrictsDescription": "Browse calendars for other Georgia school districts.",
   "relatedDistricts": [
     {
       "name": "Atlanta Public Schools",
@@ -363,6 +363,16 @@
       "name": "Gwinnett County Public Schools",
       "slug": "gwinnett-county-public-schools-calendar",
       "state": "Georgia"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Fulton County Schools official website",
+      "url": "https://www.fultonschools.org"
+    },
+    {
+      "label": "Fulton County Schools calendar page",
+      "url": "https://www.fultonschools.org/calendar01"
     }
   ]
 }
