@@ -1,0 +1,142 @@
+{
+  "institutionId": "deer-valley-unified-school-district",
+  "name": "Deer Valley Unified School District",
+  "shortName": "DVUSD",
+  "slug": "deer-valley-unified-school-district-calendar",
+  "state": "Arizona",
+  "stateCode": "AZ",
+  "city": "Phoenix",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.dvusd.org/",
+  "calendarPage": "https://www.dvusd.org/calendar",
+  "logo": "https://resources.finalsite.net/images/f_auto,q_auto/v1716448890/dvusdorg/kdgffmbs3hxawqnhoebs/DeerValleyUnifiedSchoolDistrictPrimaryThumbnailImage.png",
+  "timezone": "America/Phoenix",
+  "county": "Maricopa County",
+  "region": "North Phoenix",
+  "metro": "Phoenix-Mesa-Chandler",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "North Phoenix District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-03",
+    "coverageNote": "Deer Valley Unified School District coverage uses the official district website, district calendar page, and official instructional calendar PDFs for 2025-2026 and 2026-2027. Future-year PDFs were not provided for 2027-2028 or 2028-2029."
+  },
+  "contentFreshnessScore": {
+    "overall": 94,
+    "sourceUpdated": "2026-08-03",
+    "lastManualReview": "2026-08-03",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the DVUSD calendar page when the district revises an instructional calendar PDF, changes early-release dates, posts graduation updates, or publishes a future-year calendar."
+  },
+  "districtContentScore": {
+    "visibility": "public",
+    "publishStatus": "publish",
+    "reviewStatus": "approved",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official DVUSD revision, future-year PDF publication, graduation date update, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Deer Valley Unified School District",
+    "DVUSD calendar",
+    "Deer Valley school calendar",
+    "Deer Valley Unified calendar",
+    "DVUSD instructional calendar",
+    "Deer Valley Unified School District calendar",
+    "North Phoenix school calendar",
+    "Deer Valley Arizona school calendar"
+  ],
+  "districtFact": "Deer Valley Unified publishes PreK–12 instructional calendar PDFs with a 180-day student calendar, 185 teacher contract days, Friday 90-minute early releases, parent-teacher conference half days, semester half days, staff development days, school breaks, holidays, graduation notes, and semester day counts.",
+  "about": [
+    {
+      "title": "About Deer Valley Unified School District",
+      "content": "Deer Valley Unified School District serves families in the North Phoenix area of Maricopa County. Its instructional calendar is especially important for family planning because the district uses selected Friday 90-minute early releases, grade-band half days, parent-teacher conference half days, and staff development days when students do not attend."
+    },
+    {
+      "title": "District Calendar and Campus Schedules",
+      "content": "This page summarizes districtwide DVUSD dates. Families should still check their school for bell schedules, bus routes, testing, athletics, performances, graduation ceremony details, and campus-specific updates."
+    }
+  ],
+  "planningTips": {
+    "title": "DVUSD Calendar Notes",
+    "content": [
+      "DVUSD lists 90-minute early-release dates separately from half-day release dates.",
+      "Parent-teacher conference half days may apply to different grade bands depending on the month.",
+      "The district calendar marks half days for grades 9–12 only and grades K–12 separately near the end of first semester.",
+      "Graduation dates and ceremony details may be updated outside the instructional calendar PDF."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Does DVUSD use regular early-release days?",
+      "a": "Yes. The reviewed DVUSD instructional calendars list selected Friday early-release days, usually 90 minutes early, along with separate half-day release dates."
+    },
+    {
+      "q": "Are DVUSD staff development days student attendance days?",
+      "a": "No. Staff development days shown as no-school dates are not student attendance days."
+    },
+    {
+      "q": "Where should families verify DVUSD calendar updates?",
+      "a": "Use the official DVUSD calendar page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with Deer Valley Unified School District."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Peoria Unified School District",
+      "slug": "peoria-unified-school-district-calendar",
+      "state": "Arizona",
+      "reason": "View the 2026–27 calendar, breaks, and early-release dates."
+    },
+    {
+      "name": "Mesa Public Schools",
+      "slug": "mesa-public-schools-calendar",
+      "state": "Arizona",
+      "reason": "View the 2026–27 calendar and recurring early-release dates."
+    },
+    {
+      "name": "Chandler Unified School District",
+      "slug": "chandler-unified-school-district-calendar",
+      "state": "Arizona",
+      "reason": "View the 2026–27 calendar and intersession dates."
+    }
+  ],
+  "sources": [
+    {
+      "label": "DVUSD calendar page",
+      "url": "https://www.dvusd.org/calendar"
+    }
+  ]
+}

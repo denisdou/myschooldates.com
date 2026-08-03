@@ -14,6 +14,7 @@ const props = defineProps<{
   sourcePdfUrl?: string | null
   reviewSummary?: string | null
   reviewDetails?: string[] | null
+  reviewDetailsTitle?: string | null
 }>()
 
 const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' && props.sourcePdfUrl.includes('assets.myschooldates.com'))
@@ -42,7 +43,7 @@ const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.
 
 <template>
   <div id="sources" class="bg-[#f3f0e8] rounded-lg border border-[#e1dbd0] p-5 scroll-mt-24">
-    <h2 class="text-sm font-semibold text-[#4f5b5f] mb-2">Sources and Review Notes</h2>
+    <h2 class="text-lg font-semibold text-[#1f2933] mb-2">Sources and Review Notes</h2>
     <p v-if="reviewSummary" class="text-sm text-[#6b645c] mb-3">
       {{ reviewSummary }}
     </p>
@@ -121,7 +122,7 @@ const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.
       </p>
       <details class="pt-1">
         <summary class="cursor-pointer select-none font-medium text-[#6b645c] hover:text-[#1f2933]">
-          How we verify this calendar
+          {{ reviewDetailsTitle || 'How we verify this calendar' }}
         </summary>
         <div class="mt-2 space-y-1.5">
           <template v-if="reviewDetails?.length">

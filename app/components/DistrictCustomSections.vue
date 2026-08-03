@@ -14,7 +14,7 @@ const props = defineProps<{
     linksDisplay?: 'cards' | 'inline'
     linksLabel?: string
     timeline?: { marker: string; label: string; detail: string }[]
-    table?: { columns?: string[]; headers?: string[]; rows: string[][] }
+    table?: { columns?: string[]; headers?: string[]; rows: string[][]; footnote?: string }
   }[]
   position: string
 }>()
@@ -124,6 +124,9 @@ const isExternalLink = (link: { to?: string; url?: string }) => /^https?:\/\//.t
               </tbody>
             </table>
           </div>
+          <p v-if="section.table?.footnote" class="mt-2 text-xs leading-relaxed text-gray-500">
+            {{ section.table.footnote }}
+          </p>
           <p v-if="section.links?.length && section.linksDisplay === 'inline'" class="mt-4 text-sm text-gray-600">
             <span class="font-medium text-gray-900">{{ section.linksLabel || 'Sources:' }}</span>
             <template v-for="(link, linkIndex) in section.links" :key="linkTarget(link)">
@@ -230,6 +233,9 @@ const isExternalLink = (link: { to?: string; url?: string }) => /^https?:\/\//.t
             </tbody>
           </table>
         </div>
+        <p v-if="section.table?.footnote" class="mt-2 text-xs leading-relaxed text-gray-500">
+          {{ section.table.footnote }}
+        </p>
         <p v-if="section.links?.length && section.linksDisplay === 'inline'" class="mt-4 text-sm text-gray-600">
           <span class="font-medium text-gray-900">{{ section.linksLabel || 'Sources:' }}</span>
           <template v-for="(link, linkIndex) in section.links" :key="linkTarget(link)">

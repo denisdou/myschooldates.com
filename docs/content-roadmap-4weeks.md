@@ -7,7 +7,7 @@
 
 ## 当前进度快照
 
-**已完成学区（54个）**
+**已完成学区（57个）**
 
 | 州 | 已完成 | P1 完成度 | P2 完成度 |
 |----|--------|-----------|-----------|
@@ -18,6 +18,7 @@
 | North Carolina | Wake County, Charlotte-Mecklenburg, Guilford County, Winston-Salem/Forsyth, Cumberland County, Union County, Cabarrus County, Johnston County, Durham Public Schools, New Hanover County | 5/5 ✓ | 5/5 ✓ |
 | Georgia | Gwinnett County Public Schools, Fulton County Schools, Atlanta Public Schools, Forsyth County Schools, Clayton County Public Schools | — | — |
 | Maryland | Montgomery County Public Schools, Prince George's County Public Schools, Baltimore County Public Schools, Anne Arundel County Public Schools, Howard County Public School System, Baltimore City Public Schools | — | — |
+| Arizona | Mesa Public Schools, Peoria Unified School District, Chandler Unified School District, Tucson Unified School District, Gilbert Public Schools, Deer Valley Unified School District, Scottsdale Unified School District, Dysart Unified School District | — | — |
 
 **合计：P1 已完成 27/27 ✓，P2 已完成 14/24，P3 尚未开始。**
 
@@ -40,6 +41,9 @@
 | 2026-08-01 | Arizona | Chandler Unified School District | `/chandler-unified-school-district-calendar` | 2026-2027, 2027-2028, 2028-2029 | 基于官方 CUSD calendar page、官网 logo、三份 approved calendar PDF 和本地 PDF 副本；2025-2026 PDF URL 未提供，暂不创建。 |
 | 2026-08-01 | Arizona | Tucson Unified School District | `/tucson-unified-school-district-calendar` | 2025-2026, 2026-2027 | 基于官方 TUSD calendar page、官网 logo、两份官方 English calendar PDF 和本地 PDF 副本；2027-2028 与 2028-2029 PDF URL 未提供，暂不创建。 |
 | 2026-08-02 | Arizona | Gilbert Public Schools | `/gilbert-public-schools-calendar` | 2025-2026, 2026-2027, 2027-2028, 2028-2029, 2029-2030 | 基于官方 GPS calendar page、官网 logo、五份官方 family calendar PDF 和本地 PDF 副本；页面补充 one-hour early releases、K-12 half days、K-6 conference half days、semester day counts、grading days 和 summer school windows。 |
+| 2026-08-03 | Arizona | Deer Valley Unified School District | `/deer-valley-unified-school-district-calendar` | 2025-2026, 2026-2027 | 基于官方 DVUSD calendar page、官网 logo、两份官方 PreK-12 Instructional Calendar PDF 和本地 PDF 副本；页面补充 Friday 90-minute early releases、K-12 / K-8 conference half days、9-12 / K-12 semester half days、staff development no-school day、semester day counts 和 2025-2026 → 2026-2027 年度变化；2027-2028 与 2028-2029 PDF URL 未提供，暂不创建。 |
+| 2026-08-03 | Arizona | Scottsdale Unified School District | `/scottsdale-unified-school-district-calendar` | 2025-2026, 2026-2027, 2027-2028 | 基于官方 SUSD district calendar page、官网 logo、三份官方 English district calendar PDF、本地 PDF 副本，以及 2026-2027 / 2027-2028 Spanish 扩展日历；页面补充按年级变化的 early release、ES/K-8 和 middle school conference early releases、high school final exam early releases、staff preparation / PD no-student days、180 instructional days 和 PDF school directory bell schedules。 |
+| 2026-08-03 | Arizona | Dysart Unified School District | `/dysart-unified-school-district-calendar` | 2025-2026, 2026-2027, 2027-2028, 2028-2029, 2029-2030 | 基于官方 Dysart school-year calendars page、官网 logo、五份官方 School Calendar PDF 和本地 PDF 副本；页面补充 Monday early dismissal for teacher professional development、K-8 conference half days、high school final exam half days、K-8 quarter counts、high school semester counts、graduation day notes 和 2026-2027 preschool calendar 扩展资源。 |
 
 ---
 
@@ -340,9 +344,9 @@ P3 内容可采用更高度模板化的方式生成（calendarNotes 精简为 4-
 | 100 | Arizona | Tucson Unified School District | Tucson | ✓ 已完成：`tucson-unified-school-district-calendar`（2026-08-01） |
 | 101 | Arizona | Peoria Unified School District | Phoenix | ✓ 已完成：`peoria-unified-school-district-calendar`（2026-08-01） |
 | 102 | Arizona | Gilbert Public Schools | Phoenix | ✓ 已完成：`gilbert-public-schools-calendar`（2026-08-02） |
-| 103 | Arizona | Deer Valley Unified School District | Phoenix | 待创建 |
-| 104 | Arizona | Scottsdale Unified School District | Phoenix | 待创建 |
-| 105 | Arizona | Dysart Unified School District | Phoenix | 待创建 |
+| 103 | Arizona | Deer Valley Unified School District | Phoenix | ✓ 已完成：`deer-valley-unified-school-district-calendar`（2026-08-03） |
+| 104 | Arizona | Scottsdale Unified School District | Phoenix | ✓ 已完成：`scottsdale-unified-school-district-calendar`（2026-08-03） |
+| 105 | Arizona | Dysart Unified School District | Phoenix | ✓ 已完成：`dysart-unified-school-district-calendar`（2026-08-03） |
 | 106 | Arizona | Tempe Union High School District | Phoenix | 待创建 |
 | 107 | Colorado | Denver Public Schools | Denver | 待创建 |
 | 108 | Colorado | Jeffco Public Schools | Denver | 待创建 |

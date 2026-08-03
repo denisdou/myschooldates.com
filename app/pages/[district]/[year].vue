@@ -34,7 +34,7 @@ function toComparisonCalendarSummary(c: any) {
   }
 }
 
-const [{ data: district }, { data: cal }, { data: allDistricts }] = await Promise.all([
+const [{ data: district }, { data: cal }] = await Promise.all([
   useAsyncData(`district:${slug}`, () =>
     queryCollection('districts').where('slug', '=', slug).first()
   ),
@@ -46,10 +46,21 @@ const [{ data: district }, { data: cal }, { data: allDistricts }] = await Promis
       .where('schoolYear', '=', year)
       .first()
   }),
-  useAsyncData('districts-all', async () =>
-    (await queryCollection('districts').order('name', 'ASC').all()).map(toDistrictSummary)
-  ),
 ])
+
+const configuredComparisonSlugs = computed(() => [
+  ...(((district.value as any)?.relatedDistricts ?? []) as { slug: string }[]).map(rd => rd.slug),
+  ...(((cal.value as any)?.comparisonDistrictSlugs ?? (cal.value as any)?.meta?.comparisonDistrictSlugs ?? []) as string[]),
+].filter(Boolean))
+
+const { data: relatedDistricts } = await useAsyncData(`related-districts:${slug}:${year}`, async () => {
+  if (!configuredComparisonSlugs.value.length) return []
+  const relatedSlugs = new Set(configuredComparisonSlugs.value)
+  const districts = await queryCollection('districts').order('name', 'ASC').all()
+  return (districts ?? [])
+    .filter(d => relatedSlugs.has(d.slug))
+    .map(toDistrictSummary)
+})
 
 const { data: relatedCals } = await useAsyncData(`related-cals:${slug}:${year}`, async () => {
   const configuredComparisonSlugs = [
@@ -57,9 +68,7 @@ const { data: relatedCals } = await useAsyncData(`related-cals:${slug}:${year}`,
     ...(((cal.value as any)?.comparisonDistrictSlugs ?? (cal.value as any)?.meta?.comparisonDistrictSlugs ?? []) as string[]),
   ].filter(Boolean)
   if (!configuredComparisonSlugs.length) return []
-  const relatedSlugs = new Set(configuredComparisonSlugs)
-  const relatedIds = (allDistricts.value ?? [])
-    .filter(d => relatedSlugs.has(d.slug))
+  const relatedIds = (relatedDistricts.value ?? [])
     .map(d => d.institutionId)
   if (!relatedIds.length) return []
   const all = await queryCollection('calendars').all()
@@ -68,7 +77,7 @@ const { data: relatedCals } = await useAsyncData(`related-cals:${slug}:${year}`,
     .map(toComparisonCalendarSummary)
 })
 const relatedYearAvailableSlugs = computed(() => {
-  const districts = allDistricts.value ?? []
+  const districts = relatedDistricts.value ?? []
   return (relatedCals.value ?? [])
     .map((relatedCal: any) => districts.find((d: any) => d.institutionId === relatedCal.institutionId)?.slug)
     .filter(Boolean) as string[]
@@ -344,6 +353,10 @@ const customSections = computed(() => {
     ...(((cal.value as any)?.meta?.customSections ?? []) as DistrictCustomSection[]),
   ].filter(section => !hiddenIds.has(section.id))
 })
+const hasYearComparisonContent = computed(() =>
+  !hiddenSections.value.has('whatsDifferent') ||
+  customSections.value.some(section => section.position === 'afterYearDiff')
+)
 const summarySectionId = computed(() => {
   const section = customSections.value.find(s =>
     s.id.toLowerCase().includes('summary') ||
@@ -399,7 +412,16 @@ const earlyDismissalSectionId = computed(() => {
   })
   return section?.id
 })
-const hasBreaksSection = computed(() => breaks.value.length > 0 || customSections.value.some(s => s.position === 'afterBreaks'))
+const hasBreaksSection = computed(() =>
+  !hiddenSections.value.has('breaks') && (breaks.value.length > 0 || customSections.value.some(s => s.position === 'afterBreaks'))
+)
+const nonCurrentYearNotice = computed(() =>
+  (cal.value as any)?.nonCurrentYearNotice ??
+  (cal.value as any)?.futureYearNotice ??
+  (cal.value as any)?.meta?.nonCurrentYearNotice ??
+  (cal.value as any)?.meta?.futureYearNotice ??
+  ''
+)
 const calendarTrackHelpId = computed(() => {
   const section = customSections.value.find(s =>
     s.id.toLowerCase().includes('calendar-track') ||
@@ -442,6 +464,7 @@ const dateLegend = computed(() => {
     ...(hasEventType(['partial_closure']) ? [{ label: 'Some Students Off', dot: 'bg-pink-400' }] : []),
     ...(hasEventType(['half_day_high_school', 'half_day_dismissal']) ? [{ label: 'Half-Day Dismissal', dot: 'bg-orange-300' }] : []),
     ...(hasEventType(['early_dismissal', 'early_release']) ? [{ label: 'Early Release', dot: 'bg-orange-400' }] : []),
+    ...(hasEventType(['makeup_day', 'weather_day', 'inclement_weather_day']) ? [{ label: 'Reserved Weather Day', dot: 'bg-orange-300' }] : []),
     ...(hasEventType(['break_start']) || hasPossibleMakeupDay ? [{ label: 'Break', dot: 'bg-purple-400' }] : []),
     ...(hasEventType(['conference', 'conference_day', 'conference_days']) ? [{ label: 'Conferences', dot: 'bg-blue-400' }] : []),
     ...(hasEventType(['academic']) ? [{ label: 'Academic', dot: 'bg-slate-400' }] : []),
@@ -642,8 +665,19 @@ const authorPersonEntity = {
   '@type': 'Person',
   '@id': 'https://myschooldates.com/author#person',
   name: editorialAuthorName,
+  jobTitle: 'Founder & Education Data Research Lead',
   url: 'https://myschooldates.com/author',
+  image: 'https://myschooldates.com/images/denis-dou.png',
+  sameAs: ['https://www.linkedin.com/in/denis-dou/'],
   worksFor: { '@id': 'https://myschooldates.com/#organization' },
+  knowsAbout: [
+    'school calendar data',
+    'K-12 education data',
+    'district calendar verification',
+    'structured calendar datasets',
+    'official source verification',
+    'parent-facing planning resources',
+  ],
 }
 const siteEntity = {
   '@type': 'WebSite',
@@ -676,6 +710,7 @@ const basedOnUrl = sourcePdfUrl && !sourcePdfIsArchivedCopy ? sourcePdfUrl : sou
 const sourceCalendarName = (cal.value as any).sourceCalendarName ?? (cal.value as any).meta?.sourceCalendarName
   ?? `${district.value.name} ${year} Calendar ${sourcePdfUrl && !sourcePdfIsArchivedCopy ? 'PDF' : 'Source'}`
 const sourceVersion = (cal.value as any).sourceVersion ?? (cal.value as any).meta?.sourceVersion
+const sourcePdfSameAs = (cal.value as any).sourcePdfSameAs ?? (cal.value as any).meta?.sourcePdfSameAs
 const sourcePageCitationUrl = sourceUrl && sourceUrl !== basedOnUrl ? sourceUrl : ''
 const sourceCitation = [
   ...(basedOnUrl ? [{ '@id': `${canonicalUrl}#source-calendar` }] : []),
@@ -690,7 +725,7 @@ const datasetDescription = (cal.value as any)?.schemaDatasetDescription ?? (cal.
   ? `Major ${calendarTypeName} Calendar dates for ${district.value.name} in ${year}, including school-year boundaries, major holidays, break ranges, and school resume dates.`
   : `Major calendar dates for ${district.value.name} in ${year}, including school-year boundaries, major holidays, break ranges, and school resume dates.`)
 const schemaCalendarDownloadName = (cal.value as any)?.schemaCalendarDownloadName ?? (cal.value as any)?.meta?.schemaCalendarDownloadName ?? `${schemaCalendarName} calendar file`
-const schemaCalendarDownloadDescription = (cal.value as any)?.schemaCalendarDownloadDescription ?? (cal.value as any)?.meta?.schemaCalendarDownloadDescription ?? 'Calendar import file generated from district-published dates checked against the official source used for this page.'
+const schemaCalendarDownloadDescription = (cal.value as any)?.schemaCalendarDownloadDescription ?? (cal.value as any)?.meta?.schemaCalendarDownloadDescription ?? 'Calendar import file generated from district-published dates checked against the official sources used for this page.'
 const schemaKeywords = [
   ...(((district.value as any).schemaKeywords ?? (district.value as any).meta?.schemaKeywords ?? []) as string[]),
   ...(((cal.value as any)?.schemaKeywords ?? (cal.value as any)?.meta?.schemaKeywords ?? []) as string[]),
@@ -701,16 +736,19 @@ const sourceCalendarEntity = basedOnUrl ? {
   '@id': `${canonicalUrl}#source-calendar`,
   name: sourceCalendarName,
   ...(sourceVersion ? { version: sourceVersion } : {}),
+  ...(sourcePdfSameAs ? { sameAs: sourcePdfSameAs } : {}),
   url: basedOnUrl,
   publisher: { '@id': districtAbout['@id'] },
 } : null
 const additionalSourceCalendarEntities = (((cal.value as any)?.schemaAdditionalSourceCalendars ?? (cal.value as any)?.meta?.schemaAdditionalSourceCalendars ?? []) as any[])
   .filter(source => source?.url && source?.name)
   .map((source, index) => ({
-    '@type': 'CreativeWork',
+    '@type': source.type ?? 'CreativeWork',
     '@id': source.id ? `${canonicalUrl}#${source.id}` : `${canonicalUrl}#source-calendar-${index + 2}`,
     name: source.name,
     ...(source.version ? { version: source.version } : {}),
+    ...(source.datePublished ? { datePublished: source.datePublished } : {}),
+    ...(source.sameAs ? { sameAs: source.sameAs } : {}),
     url: source.url,
     publisher: { '@id': districtAbout['@id'] },
   }))
@@ -721,6 +759,11 @@ const sourceCalendarPageEntity = sourcePageCitationUrl ? {
   url: sourcePageCitationUrl,
   publisher: { '@id': districtAbout['@id'] },
 } : null
+const sourceBasedOnRefs = [
+  ...(basedOnUrl ? [{ '@id': `${canonicalUrl}#source-calendar` }] : []),
+  ...additionalSourceCalendarEntities.map(source => ({ '@id': source['@id'] })),
+]
+const sourceBasedOnValue = sourceBasedOnRefs.length === 1 ? sourceBasedOnRefs[0] : sourceBasedOnRefs
 const calendarIcsUrl = `https://myschooldates.com/calendars/${district.value.slug}-${cal.value.schoolYear}.ics`
 const hideDatasetSchema = computed(() => Boolean((cal.value as any)?.hideDatasetSchema || (cal.value as any)?.meta?.hideDatasetSchema))
 const spatialCoverageOverride = (cal.value as any)?.schemaSpatialCoverage ?? (cal.value as any)?.meta?.schemaSpatialCoverage ?? (district.value as any)?.schemaSpatialCoverage ?? (district.value as any)?.meta?.schemaSpatialCoverage
@@ -757,7 +800,7 @@ const datasetEntity = hideDatasetSchema.value ? null : {
   },
   creator: { '@id': 'https://myschooldates.com/#organization' },
   publisher: { '@id': 'https://myschooldates.com/#organization' },
-  isBasedOn: basedOnUrl ? { '@id': `${canonicalUrl}#source-calendar` } : undefined,
+  ...(sourceBasedOnRefs.length ? { isBasedOn: sourceBasedOnValue } : {}),
   distribution: [
     {
       '@type': 'DataDownload',
@@ -975,7 +1018,7 @@ const webPageEntity = {
     ] }
     : {}),
   ...(siblingYearLinks.length ? { relatedLink: siblingYearLinks } : {}),
-  ...(basedOnUrl ? { isBasedOn: { '@id': `${canonicalUrl}#source-calendar` } } : {}),
+  ...(sourceBasedOnRefs.length ? { isBasedOn: sourceBasedOnValue } : {}),
   ...(sourcePdfIsArchivedCopy ? {
     associatedMedia: {
       '@type': 'MediaObject',
@@ -1009,7 +1052,7 @@ const articleEntity = {
   about: { '@id': districtAbout['@id'] },
   isPartOf: { '@id': `${canonicalUrl}#webpage` },
   ...(datasetEntity ? { mainEntity: { '@id': `${canonicalUrl}#calendar-dataset` } } : {}),
-  ...(basedOnUrl ? { isBasedOn: { '@id': `${canonicalUrl}#source-calendar` } } : {}),
+  ...(sourceBasedOnRefs.length ? { isBasedOn: sourceBasedOnValue } : {}),
 }
 const faqPageEntity = faqSchemaItems.value.length ? {
   '@type': 'FAQPage',
@@ -1062,7 +1105,7 @@ function keyDateSchemaDescription(event: any) {
 const keyDateItemListEntity = !hideItemListSchema.value && keyDateItemListEvents.value.length ? {
   '@type': 'ItemList',
   '@id': `${canonicalUrl}#key-dates`,
-  name: `${district.value.shortName || district.value.name} ${year} key school calendar dates`,
+  name: `${district.value.shortName || district.value.name} ${displaySchoolYear.value} key school calendar dates`,
   itemListElement: keyDateItemListEvents.value.map((event: any, i: number) => {
     return {
       '@type': 'ListItem',
@@ -1079,7 +1122,7 @@ const keyDateItemListEntity = !hideItemListSchema.value && keyDateItemListEvents
 const comparisonItems = [
   { district: district.value, calendar: cal.value, url: canonicalUrl },
   ...((relatedCals.value ?? []).slice(0, 3).map((relatedCal: any) => {
-    const relatedDistrict = (allDistricts.value ?? []).find((d: any) => d.institutionId === relatedCal.institutionId)
+    const relatedDistrict = (relatedDistricts.value ?? []).find((d: any) => d.institutionId === relatedCal.institutionId)
     return relatedDistrict ? { district: relatedDistrict, calendar: relatedCal, url: `https://myschooldates.com/${relatedDistrict.slug}` } : null
   }).filter(Boolean)),
 ]
@@ -1158,8 +1201,9 @@ useHead({
           <div v-if="!isCurrentYear" class="bg-blue-50 border border-blue-200 rounded-lg p-4 flex items-start gap-3">
             <svg class="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             <p class="text-sm text-blue-700">
-              You're viewing the <strong>{{ isFutureYear ? 'upcoming' : 'archived' }} {{ displaySchoolYearLabel(year) }}</strong> calendar.
-              <NuxtLink :to="`/${slug}`" class="underline font-medium">View the current {{ displaySchoolYearLabel(district!.currentSchoolYear) }} calendar →</NuxtLink>
+              <template v-if="nonCurrentYearNotice">{{ nonCurrentYearNotice }}</template>
+              <template v-else>You're viewing the <strong>{{ isFutureYear ? 'upcoming' : 'archived' }} {{ displaySchoolYearLabel(year) }}</strong> calendar.</template>
+              <NuxtLink :to="`/${slug}`" class="ml-1 inline-flex underline font-medium">View the current {{ displaySchoolYearLabel(district!.currentSchoolYear) }} calendar →</NuxtLink>
             </p>
           </div>
 
@@ -1319,12 +1363,15 @@ useHead({
             :key="event.date + event.name"
             class="flex items-center justify-between py-2.5 first:pt-0 last:pb-0"
           >
-            <div class="flex items-center gap-2.5 min-w-0">
+            <div class="flex items-start gap-2.5 min-w-0">
               <span
-                class="text-xs font-medium px-2 py-0.5 rounded-lg whitespace-nowrap flex-shrink-0"
+                class="mt-0.5 text-xs font-medium px-2 py-0.5 rounded-lg whitespace-nowrap flex-shrink-0"
                 :class="eventTypeColor[event.type]"
               >{{ event.label || 'Key Date' }}</span>
-              <span class="min-w-0 break-words text-sm text-gray-900">{{ keyDateDisplayName(event) }}</span>
+              <span class="min-w-0">
+                <span class="block break-words text-sm text-gray-900">{{ keyDateDisplayName(event) }}</span>
+                <span v-if="event.description" class="mt-0.5 block text-xs leading-relaxed text-gray-500">{{ event.description }}</span>
+              </span>
             </div>
             <span class="text-sm text-[#7b756d] tabular-nums ml-4 flex-shrink-0">
               <template v-if="keyDateDateParts(event).length">
@@ -1362,7 +1409,7 @@ useHead({
         :cal="cal!"
         :district="district!"
         :related-cals="relatedCals ?? []"
-        :all-districts="allDistricts ?? []"
+        :all-districts="relatedDistricts ?? []"
         :prev-cal="prevCal ?? undefined"
       />
       <DistrictCustomSections :sections="customSections" position="afterQuickFacts" />
@@ -1477,8 +1524,8 @@ useHead({
       </template>
 
       <!-- Custom Sections: afterBreaks (year pages render this after the full date list) -->
-      <div v-if="!breaks.length" id="breaks" class="scroll-mt-24">
-        <DistrictCustomSections v-if="!hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
+      <div v-if="!breaks.length && !hiddenSections.has('breaks')" id="breaks" class="scroll-mt-24">
+        <DistrictCustomSections :sections="customSections" position="afterBreaks" />
       </div>
       <DistrictCustomSections v-else-if="!hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
 
@@ -1506,7 +1553,7 @@ useHead({
       <DistrictGradingPeriods :periods="(cal as any).gradingPeriods" />
 
       <!-- What's Different This Year -->
-      <div id="year-comparison" class="scroll-mt-24 space-y-8">
+      <div v-if="hasYearComparisonContent" id="year-comparison" class="scroll-mt-24 space-y-8">
         <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal!" :prev-cal="prevCal ?? undefined" />
         <DistrictCustomSections :sections="customSections" position="afterYearDiff" />
       </div>
@@ -1533,7 +1580,7 @@ useHead({
 
       <!-- Compare with Nearby Districts -->
       <template v-if="comparisonBeforeFaq">
-        <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal!" :district="district!" :related-cals="relatedCals ?? []" :all-districts="allDistricts ?? []" :year="year" />
+        <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal!" :district="district!" :related-cals="relatedCals ?? []" :all-districts="relatedDistricts ?? []" :year="year" />
         <DistrictCustomSections :sections="customSections" position="afterComparison" />
       </template>
 
@@ -1545,7 +1592,7 @@ useHead({
 
       <!-- Compare with Nearby Districts -->
       <template v-if="!comparisonBeforeFaq">
-        <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal!" :district="district!" :related-cals="relatedCals ?? []" :all-districts="allDistricts ?? []" :year="year" />
+        <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal!" :district="district!" :related-cals="relatedCals ?? []" :all-districts="relatedDistricts ?? []" :year="year" />
         <DistrictCustomSections :sections="customSections" position="afterComparison" />
       </template>
 
@@ -1602,6 +1649,7 @@ useHead({
         :source-pdf-url="(cal as any).sourcePdfUrl"
         :review-summary="(cal as any).sourceReviewSummary ?? (cal as any).meta?.sourceReviewSummary"
         :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
+        :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
       />
 
       <div v-if="showYearSwitcherAfterSources && visibleYearSwitcherYears.length" class="flex items-center gap-2 flex-wrap">

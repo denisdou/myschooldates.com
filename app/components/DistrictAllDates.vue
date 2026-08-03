@@ -9,6 +9,7 @@ type CalendarEvent = {
   description?: string
   preserveOfficialName?: boolean
   labelType?: string
+  badgeLabel?: string
   displayDate?: string
   displayAsRange?: boolean
   dates?: string[]
@@ -140,6 +141,7 @@ function displayLabelType(event: CalendarEvent) {
 }
 
 function displayLabelText(event: DisplayEvent) {
+  if (event.badgeLabel) return event.badgeLabel
   let label = ''
   if (event.labelType === 'staff_date') label = 'Teachers'
   else if (event.labelType === 'partial_closure') label = 'Some Students Off'
@@ -462,7 +464,8 @@ function formatRangeEnd(event: DisplayEvent) {
             <div>
               <div class="font-medium text-[#1f2933]">{{ displayEventName(event) }}</div>
               <div class="text-sm text-[#7b756d]">
-                <template v-if="event.dates?.length && event.dates.length > 1">
+                <span v-if="event.displayDate">{{ event.displayDate }}</span>
+                <template v-else-if="event.dates?.length && event.dates.length > 1">
                   <template v-for="(part, index) in formatDateListParts(event.dates)" :key="part.date">
                     <span v-if="index">{{ dateListSeparator(index, event.dates.length) }}</span><time :datetime="part.date">{{ part.label }}</time>
                   </template>

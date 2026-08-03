@@ -2,6 +2,7 @@
   "institutionId": "broward-county",
   "name": "Broward County Public Schools",
   "shortName": "BCPS",
+  "comparisonLabel": "Broward",
   "slug": "broward-county-school-calendar",
   "state": "Florida",
   "stateCode": "FL",
@@ -32,122 +33,102 @@
   "region": "South Florida",
   "metro": "Miami-Fort Lauderdale-Pompano Beach",
   "currentSchoolYear": "2026-2027",
-  "studentCount": 261000,
-  "schoolCount": 240,
-  "founded": 1915,
   "calendarType": "traditional",
-  "districtFact": "Broward County Public Schools is one of the only school districts in the United States that observes both Rosh Hashanah and Yom Kippur as official no-school days — a calendar feature that directly reflects the county's substantial Jewish community and distinguishes BCPS from neighboring Miami-Dade and Palm Beach districts.",
+  "allDatesMode": "keyDates",
+  "contentTier": "enhanced",
+  "contentTierLabel": "South Florida District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-03",
+    "coverageNote": "Broward County coverage uses the district calendar page, official color calendar PDF, calendar synopsis, and accessible calendar for the current school year."
+  },
+  "contentFreshnessScore": {
+    "overall": 95,
+    "sourceUpdated": "2026-08-03",
+    "lastManualReview": "2026-08-03",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the Broward County Public Schools calendar page when BCPS posts a revised color calendar, calendar synopsis, accessible calendar, or severe-weather make-up update."
+  },
+  "districtContentScore": {
+    "visibility": "public",
+    "publishStatus": "publish",
+    "reviewStatus": "approved",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Re-check after an official BCPS revision, changed early-release dates, severe-weather make-up update, deployment mismatch, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideRelatedDistrictDescriptions": true,
+  "searchAliases": [
+    "Broward County Public Schools",
+    "BCPS calendar",
+    "Broward County school calendar",
+    "Broward County Public Schools PDF calendar",
+    "Broward County early release days",
+    "Broward County severe weather make-up days"
+  ],
+  "districtFact": "Broward County Public Schools publishes a districtwide student calendar with the first and last days of school, major breaks, day-off dates, employee planning days when students do not attend, early-release days, and severe-weather make-up dates.",
   "about": [
     {
-      "title": "About Broward County Public Schools",
-      "content": "Broward County Public Schools (BCPS) is the sixth-largest school district in the United States and the second-largest in Florida, serving approximately 261,000 students across more than 240 schools. The district spans all of Broward County — 30+ municipalities stretching from Fort Lauderdale, Hollywood, and Pompano Beach on the Atlantic coast through Plantation, Coral Springs, and Pembroke Pines to the western suburbs bordering the Everglades. Founded in 1915, BCPS operates one of the most demographically diverse student populations in the country, reflecting Broward County's large Latino, Haitian-American, Caribbean, and Jewish communities, as well as steady corporate and professional relocation from the northeastern United States. This diversity directly shapes the academic calendar: BCPS observes both Rosh Hashanah and Yom Kippur as no-school days — a practice uncommon among school districts of this size and tied specifically to the significant Jewish population concentrated in communities like Weston, Boca Del Mar (near the Palm Beach border), Coral Springs, and Tamarac. The district sits geographically between Miami-Dade County to the south and Palm Beach County to the north; each is a separate school system with its own calendar, and families near county lines often need to verify which district their address falls in."
-    },
-    {
-      "title": "School Choice, Magnet Schools, and Career Academies",
-      "content": "BCPS offers one of the most extensive school choice systems in Florida, with hundreds of magnet, specialty, and themed programs across all grade levels. Options include International Baccalaureate (IB) programs at multiple high schools, STEM academies, performing arts schools, Cambridge Advanced International programs, dual-language immersion, and a wide range of Career and Technical Education (CTE) pathways in healthcare, IT, engineering, culinary arts, and business. BCPS also operates numerous charter schools under district oversight. The school choice application window typically opens in October for the following school year, with most competitive programs closing applications in December or early January — earlier than many families expect. IB and STEM academy seats fill quickly via lottery, and waitlists are common. Attend a BCPS school choice fair in October to understand eligibility, transportation availability, and lottery timelines for specific programs. Not all choice programs provide district transportation — confirm bus service before accepting a placement, as transportation eligibility significantly affects the practicality of a magnet placement for many families."
-    },
-    {
-      "title": "Enrollment and Moving to Broward County",
-      "content": "Florida's kindergarten cutoff date is September 1: a child must turn 5 on or before September 1 to enroll in kindergarten for that school year. Kindergarten registration in BCPS typically begins in spring — check the BCPS website for current registration dates. Use the BCPS School Finder at browardschools.com to identify your assigned school by street address; with 30+ municipalities in Broward County, a city name alone does not determine school zone, and homes near the Miami-Dade and Palm Beach county lines may be in a neighboring district. Required enrollment documents include proof of Broward County residence (lease, utility bill, or mortgage statement), the student's birth certificate, Florida-required immunization records (including up-to-date Florida Certificate of Immunization), and prior school records or transcripts. If the student has an IEP or 504 plan, bring a copy — BCPS must honor existing accommodations promptly. Families relocating from out of state should note that Florida has specific vaccine requirements that may differ from their home state's school immunization schedule; a physician visit before enrollment may be needed to update records."
+      "title": "About the BCPS Calendar",
+      "content": "This page summarizes districtwide student dates from Broward County Public Schools calendar sources. Families should still check their assigned school for bell schedules, testing, athletics, performances, transportation notices, and school-specific schedule changes."
     }
   ],
-  "planningTips": {
-    "content": [
-      "Book spring break travel before January. When Broward, Miami-Dade, and Palm Beach share the same spring break window — which happens frequently but not every year — South Florida beach hotels and FLL flights spike to peak pricing simultaneously. Check whether the three districts align that year; when they don't, the prior week can be significantly cheaper.",
-      "If your household spans both Broward and Miami-Dade, verify the end-of-year dates separately each spring. Miami-Dade sometimes runs one week longer than BCPS. Register for summer camps with a start date that accommodates the later of the two last days to avoid a childcare gap.",
-      "Use flexible-cancellation bookings for late-May and early-June travel. Hurricane disruptions can push Broward's last day past the scheduled date — Florida law limits makeup day requirements, but extended storms sometimes exceed the buffer. Refundable rates are worth the modest premium for end-of-year travel.",
-      "Apply for BCPS magnet and school choice programs in October, not December. STEM academies and IB programs at the high school level frequently close applications before the official deadline. Attend a fall choice fair in October and submit immediately — competitive programs fill via lottery and waitlists are common.",
-      "Reserve Port Everglades cruise sailings by late February. Post-school-year sailings during the week after BCPS ends are among the most booked departures in the entire year. Pricing jumps sharply after spring break and peak departure dates often sell out months in advance."
-    ]
-  },
-  "compareIntro": "Broward County Public Schools sits between Miami-Dade to the south and Palm Beach to the north, and its calendar often — but not always — aligns with both. The biggest calendar distinction that sets BCPS apart from its Florida peers: it observes Rosh Hashanah and Yom Kippur as no-school days, which Miami-Dade and Palm Beach typically do not. For families comparing districts across South Florida, the spring break alignment question is the most practically important one — when all three counties share the same week, FLL flights and beach accommodations hit peak pricing simultaneously.",
-  "districtFaqs": [
-    {
-      "q": "Does BCPS observe Jewish holidays as school holidays?",
-      "a": "Yes. Broward County Public Schools officially observes Rosh Hashanah and Yom Kippur as no-school days — a practice that directly reflects the county's substantial Jewish community in cities like Weston, Coral Springs, and Tamarac. This makes BCPS one of the relatively few large school districts in the United States that includes the Jewish High Holidays on its official no-school calendar. Miami-Dade County Public Schools and Palm Beach County School District do not typically observe these holidays as district-wide no-school days, making it a notable difference for families comparing South Florida districts."
-    },
-    {
-      "q": "Does BCPS have a fall break?",
-      "a": "No. Broward County Public Schools does not have a dedicated fall break — there is no week-long October break as some other districts schedule. The fall semester runs continuously from the August start date through Thanksgiving, with only individual holidays (Labor Day, Veterans Day, Rosh Hashanah, Yom Kippur) as no-school days. Thanksgiving break length varies by year; check the specific year's calendar to confirm whether it is the full week or just Thursday and Friday."
-    },
-    {
-      "q": "How does BCPS handle hurricane days and school closures?",
-      "a": "When a hurricane or tropical storm threatens Broward County, BCPS closes schools in coordination with county emergency management. Florida law requires districts to build makeup days into the academic calendar — BCPS includes several contingency days near the end of the school year. If all makeup days are used, the school year end date shifts accordingly. Extended storms can push the last day of school past the originally scheduled date. Use refundable bookings for late May and early June travel — flights from FLL, summer camp start dates, and post-school-year cruise sailings from Port Everglades — to account for possible last-day shifts."
-    },
-    {
-      "q": "When does Broward County school choice enrollment open?",
-      "a": "BCPS opens school choice and magnet program applications in October for the following school year. Most competitive programs — STEM academies, IB schools, performing arts — close applications by December or early January. Attend a BCPS school choice fair in October and apply as early as possible; popular programs fill via lottery and waitlists are long. Not all magnet programs provide district transportation — confirm bus eligibility before accepting a placement."
-    },
-    {
-      "q": "What is Florida's kindergarten cutoff date for BCPS?",
-      "a": "Florida's kindergarten cutoff date is September 1. A child must turn 5 on or before September 1 to enroll in kindergarten for that school year. Children who turn 5 after September 1 must wait until the following school year. Parents relocating from states with a later cutoff (such as October 1 or December 1) should note that Florida's September 1 date may mean a child who was eligible for kindergarten in their previous state does not yet qualify in BCPS."
-    },
-    {
-      "q": "How does the BCPS calendar compare to Miami-Dade and Palm Beach?",
-      "a": "Broward, Miami-Dade, and Palm Beach are three separate school districts with independently set calendars. Their spring break dates sometimes align — creating simultaneous peak demand at South Florida hotels, FLL, and Port Everglades — and sometimes fall one or two weeks apart. BCPS uniquely observes Rosh Hashanah and Yom Kippur as no-school days; Miami-Dade and Palm Beach typically do not. The three districts' first and last days of school are usually within a few days of each other but rarely identical. Check all three calendars separately each year."
-    }
-  ],
-  "livingHere": {
-    "intro": "Broward County stretches from the Atlantic coast to the eastern Everglades, covering Fort Lauderdale and 30 other municipalities. For families relocating to the area, a few local realities shape how the school calendar intersects with daily life.",
-    "highlights": [
-      {
-        "label": "Fort Lauderdale Airport (FLL)",
-        "detail": "One of Florida's busiest airports, with direct service to major US cities, Canada, and the Caribbean. Flights during spring break and the week after school ends sell out weeks in advance."
-      },
-      {
-        "label": "Port Everglades",
-        "detail": "One of the world's largest cruise ports, located in Fort Lauderdale. Post-school-year sailings in late May are among the most booked departures — reserve early."
-      },
-      {
-        "label": "Hurricane Season",
-        "detail": "Runs June–November, with peak risk August–October — the same weeks as back-to-school. Florida law allows districts to bank makeup days, but extended storms can shift the last day of school."
-      },
-      {
-        "label": "Snowbird Season",
-        "detail": "Broward's population swells from October through April as seasonal residents arrive from northern states and Canada. Traffic, restaurant waits, and services increase noticeably during this period."
-      },
-      {
-        "label": "Beach Access",
-        "detail": "17 miles of public Atlantic beaches in Fort Lauderdale, Hollywood, and Pompano Beach. Spring break draws heavy tourist traffic — locals often find weekday mornings the best time to visit."
-      },
-      {
-        "label": "Summer Camps",
-        "detail": "Extensive options across the county, including BCPS-run programs, private camps, and YMCA offerings. Popular programs fill by March — register as soon as the school year calendar is confirmed."
-      }
-    ]
-  },
+  "compareIntro": "Compare Broward County Public Schools with Miami-Dade County Public Schools and Palm Beach County School District. The table focuses on school-year boundaries and major breaks, not school-specific bell schedules or event calendars.",
   "relatedDistricts": [
     {
       "name": "Miami-Dade County Public Schools",
       "slug": "miami-dade-school-calendar",
-      "state": "Florida",
-      "comparisonNote": "Miami-Dade is Florida's largest district (400,000+ students) and Broward's immediate southern neighbor. Their calendars are set independently and may differ by a few days to a week. Miami-Dade does not typically observe Rosh Hashanah or Yom Kippur as no-school days. Families living near the county line — in Miramar, Pembroke Pines, or Hallandale Beach — should verify which district their address falls in."
+      "state": "Florida"
     },
     {
       "name": "Palm Beach County School District",
       "slug": "palm-beach-county-school-calendar",
-      "state": "Florida",
-      "comparisonNote": "Palm Beach County is Broward's immediate northern neighbor. The two districts set calendars independently and spring break dates sometimes align, sometimes differ by a week. Families near Deerfield Beach or Boca Raton (which is in Palm Beach County, not Broward) should verify their district by address."
-    },
-    {
-      "name": "Orange County Public Schools",
-      "slug": "orange-county-school-calendar",
-      "state": "Florida",
-      "comparisonNote": "Orange County (Orlando) is in Central Florida and sets its calendar completely independently from South Florida districts. Its spring break timing is particularly relevant for families planning Disney World trips — when Orange County and Broward share the same spring break week, Walt Disney World is at its absolute busiest. When they don't align, a BCPS spring break trip to Disney during an off week for Orange County locals is significantly less crowded."
+      "state": "Florida"
     }
   ],
   "sources": [
     {
-      "label": "Broward County Public Schools official calendar",
+      "label": "BCPS 2026/27 Color Calendar PDF",
+      "url": "https://www.browardschools.com/fs/resource-manager/view/36d33c79-4c9a-4162-af17-e4a8d28314de"
+    },
+    {
+      "label": "BCPS 2026/27 Calendar Synopsis PDF",
+      "url": "https://www.browardschools.com/fs/resource-manager/view/1c001f72-194c-4e69-b967-e1a19cbbcbaa"
+    },
+    {
+      "label": "BCPS Accessible 2026/27 Calendar",
+      "url": "https://www.browardschools.com/bcps-departments/office-of-communications/accessible-school-year-calendar/202627-school-calendar"
+    },
+    {
+      "label": "BCPS District Calendar Page",
       "url": "https://www.browardschools.com/calendars"
     },
     {
-      "label": "Broward County Public Schools official website",
-      "url": "https://www.browardschools.com"
+      "label": "MySchoolDates data license",
+      "url": "https://myschooldates.com/data-license"
+    }
+  ],
+  "districtFaqs": [
+    {
+      "q": "Which BCPS calendar does this page summarize?",
+      "a": "This page summarizes districtwide student dates from Broward County Public Schools calendar sources. School-specific events, bell schedules, testing, activities, and transportation notices may vary by campus."
     },
     {
-      "label": "Florida Department of Education",
-      "url": "https://www.fldoe.org"
+      "q": "Where should families verify BCPS calendar updates?",
+      "a": "Use the official Broward County Public Schools calendar page and current district PDF before making final travel, child care, transportation, or school-specific plans."
     }
   ]
 }

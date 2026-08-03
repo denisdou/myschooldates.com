@@ -1,0 +1,155 @@
+{
+  "institutionId": "scottsdale-unified-school-district",
+  "name": "Scottsdale Unified School District",
+  "shortName": "SUSD",
+  "slug": "scottsdale-unified-school-district-calendar",
+  "state": "Arizona",
+  "stateCode": "AZ",
+  "city": "Scottsdale",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.susd.org/",
+  "calendarPage": "https://www.susd.org/our-district/district-calendar",
+  "logo": "https://resources.finalsite.net/images/v1785176035/susdorg/yi7owewlhcjmhrk3hv2q/HeaderLogo.svg",
+  "timezone": "America/Phoenix",
+  "county": "Maricopa County",
+  "region": "Scottsdale / Paradise Valley",
+  "metro": "Phoenix-Mesa-Chandler",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Phoenix-area District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "officialSpreadsheet": false,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-03",
+    "coverageNote": "Scottsdale Unified School District coverage uses the official district website, district calendar page, and district-published calendar PDFs for 2025-2026, 2026-2027, and 2027-2028. Spanish calendar PDFs are available for 2026-2027 and 2027-2028."
+  },
+  "contentFreshnessScore": {
+    "overall": 95,
+    "sourceUpdated": "2026-08-03",
+    "lastManualReview": "2026-08-03",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the Scottsdale Unified district calendar page when SUSD replaces a PDF, changes early-release dates, updates school bell schedules, revises a Spanish calendar, or publishes another future-year calendar."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official SUSD revision, PDF replacement, Spanish calendar update, early-release change, bell-schedule change, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Scottsdale Unified School District",
+    "Scottsdale Unified calendar",
+    "SUSD calendar",
+    "Scottsdale school calendar",
+    "Scottsdale AZ school calendar",
+    "Scottsdale Unified School District calendar",
+    "SUSD district calendar",
+    "SUSD early release",
+    "SUSD 2026 2027 calendar"
+  ],
+  "districtFact": "Scottsdale Unified publishes district calendar PDFs with 180 student instructional days, early-release days that vary by grade, elementary and K–8 conference early releases, middle school conference early releases, high school final exam early releases, staff preparation days, board approval dates, Spanish calendar PDFs for some years, and a school directory with campus bell schedules and early-release times.",
+  "about": [
+    {
+      "title": "About Scottsdale Unified School District",
+      "content": "Scottsdale Unified School District serves students in Scottsdale, Paradise Valley, and nearby Phoenix-area communities. Its district calendar matters for family planning because SUSD marks several kinds of shortened days instead of using one generic early-release label."
+    },
+    {
+      "title": "District Calendar and Campus Schedules",
+      "content": "This page summarizes districtwide SUSD dates from the official calendar PDF. Families should still check their school for bell schedules, transportation updates, testing, athletics, performances, graduation details, and campus-specific events."
+    }
+  ],
+  "planningTips": {
+    "title": "Scottsdale Unified Calendar Notes",
+    "content": [
+      "SUSD labels many early-release dates as varying by grade, so the same date may not have the same dismissal time for every student.",
+      "Conference early-release dates are split between elementary/K–8 schools and middle schools.",
+      "High school final exam windows are separate from districtwide all-grade early-release dates.",
+      "The calendar PDF includes school-level bell schedules and early-release times; families should use their own campus schedule for exact dismissal times."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Does Scottsdale Unified publish Spanish district calendars?",
+      "a": "Yes. SUSD publishes Spanish district calendar PDFs for some school years, including 2026-2027 and 2027-2028."
+    },
+    {
+      "q": "Do SUSD early-release days apply the same way to every grade?",
+      "a": "Not always. The SUSD PDF says early release varies by grade, and it separately identifies elementary/K–8 conferences, middle school conferences, and high school final exam early releases."
+    },
+    {
+      "q": "Where should families verify Scottsdale Unified calendar updates?",
+      "a": "Use the official Scottsdale Unified district calendar page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with Scottsdale Unified School District."
+    }
+  ],
+  "customSections": [],
+  "relatedDistrictsTitle": "More Arizona School Calendars",
+  "relatedDistrictsDescription": "Browse calendars for other Arizona school districts.",
+  "relatedDistricts": [
+    {
+      "name": "Gilbert Public Schools",
+      "slug": "gilbert-public-schools-calendar",
+      "state": "Arizona",
+      "reason": "Gilbert, Arizona"
+    },
+    {
+      "name": "Chandler Unified School District",
+      "slug": "chandler-unified-school-district-calendar",
+      "state": "Arizona",
+      "reason": "Chandler, Arizona"
+    },
+    {
+      "name": "Mesa Public Schools",
+      "slug": "mesa-public-schools-calendar",
+      "state": "Arizona",
+      "reason": "Mesa, Arizona"
+    },
+    {
+      "name": "Peoria Unified School District",
+      "slug": "peoria-unified-school-district-calendar",
+      "state": "Arizona",
+      "reason": "Peoria, Arizona"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Scottsdale Unified School District official website",
+      "url": "https://www.susd.org/"
+    },
+    {
+      "label": "Scottsdale Unified district calendar page",
+      "url": "https://www.susd.org/our-district/district-calendar"
+    }
+  ]
+}

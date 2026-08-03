@@ -1,0 +1,131 @@
+{
+  "institutionId": "dysart-unified-school-district",
+  "name": "Dysart Unified School District",
+  "shortName": "Dysart",
+  "slug": "dysart-unified-school-district-calendar",
+  "state": "Arizona",
+  "stateCode": "AZ",
+  "city": "Surprise",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.dysart.org/",
+  "calendarPage": "https://www.dysart.org/mainsite/pages/dysart-schools/861/school-year-calendars",
+  "logo": "https://www.dysart.org/img/dysart.png",
+  "timezone": "America/Phoenix",
+  "county": "Maricopa County",
+  "region": "West Valley",
+  "metro": "Phoenix-Mesa-Chandler",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "West Valley District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-03",
+    "coverageNote": "Dysart Unified School District coverage uses the official district website, school-year calendars page, and official school calendar PDFs for 2025-2026 through 2029-2030. The 2026-2027 preschool calendar link is listed as an additional resource but is not treated as the main K–12 calendar."
+  },
+  "contentFreshnessScore": {
+    "overall": 94,
+    "sourceUpdated": "2026-08-03",
+    "lastManualReview": "2026-08-03",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the Dysart school-year calendars page when the district revises a PDF, updates preschool calendar resources, changes Monday early-release guidance, or posts graduation updates."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official Dysart revision, preschool calendar update, graduation update, future PDF replacement, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Dysart Unified School District",
+    "Dysart Schools",
+    "Dysart calendar",
+    "Dysart school calendar",
+    "Dysart Unified calendar",
+    "Dysart school year calendar",
+    "Surprise AZ school calendar",
+    "Dysart preschool calendar"
+  ],
+  "districtFact": "Dysart Unified publishes multi-year school calendar PDFs with an early-August start, Monday early dismissal for teacher professional development, K–8 parent-teacher conference half days, high school final exam half days, K–8 quarter counts, high school semester counts, graduation day notes, and major breaks.",
+  "about": [
+    {
+      "title": "About Dysart Unified School District",
+      "content": "Dysart Unified School District serves families in the West Valley area of Maricopa County, including Surprise and nearby communities. Its calendar is especially important for household planning because students are dismissed early on Mondays, and because K–8 conferences, high school final exams, and graduation days use separate early-release rules."
+    },
+    {
+      "title": "District Calendar and School-Level Schedules",
+      "content": "This page summarizes districtwide Dysart dates. Families should still check their school for bell schedules, preschool-specific calendars, bus routes, testing, athletics, performances, graduation ceremony details, and campus updates."
+    }
+  ],
+  "planningTips": {
+    "title": "Dysart Calendar Notes",
+    "content": [
+      "Dysart schedules early dismissal on Mondays when school is in session, beginning near the start of the school year, for teacher professional development.",
+      "K–8 parent-teacher conferences are half days and do not apply to high schools the same way.",
+      "High school final exam dates are half days for high school students, while some semester-end dates also affect K–8 students.",
+      "The district publishes preschool calendar resources separately from the main K–12 school calendar."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Does Dysart have early dismissal on Mondays?",
+      "a": "Yes. Dysart schedules early dismissal on Mondays when school is in session for teacher professional development. Check the current school-year calendar for the first applicable Monday."
+    },
+    {
+      "q": "Are Dysart K–8 conference dates half days?",
+      "a": "Yes. Dysart marks K–8 parent-teacher conference dates as half days for K–8 students."
+    },
+    {
+      "q": "Where should families verify Dysart calendar updates?",
+      "a": "Use the official Dysart school-year calendars page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with Dysart Unified School District."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Deer Valley Unified School District",
+      "slug": "deer-valley-unified-school-district-calendar",
+      "state": "Arizona",
+      "reason": "View the current Deer Valley calendar."
+    },
+    {
+      "name": "Peoria Unified School District",
+      "slug": "peoria-unified-school-district-calendar",
+      "state": "Arizona",
+      "reason": "View the current Peoria calendar."
+    },
+    {
+      "name": "Mesa Public Schools",
+      "slug": "mesa-public-schools-calendar",
+      "state": "Arizona",
+      "reason": "View the current Mesa calendar, which includes recurring early-release dates."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Dysart Unified School District official website",
+      "url": "https://www.dysart.org/"
+    },
+    {
+      "label": "Dysart school-year calendars page",
+      "url": "https://www.dysart.org/mainsite/pages/dysart-schools/861/school-year-calendars"
+    }
+  ]
+}

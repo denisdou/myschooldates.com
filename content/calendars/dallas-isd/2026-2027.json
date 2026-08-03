@@ -1,134 +1,322 @@
 {
   "institutionId": "dallas-isd",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Dallas ISD 2026–27 School Calendar",
   "firstDay": "2026-08-11",
   "lastDay": "2027-05-26",
-  "seoTitle": "Dallas ISD Calendar 2026-2027: Holidays, Breaks & PDF",
-  "seoDescription": "Dallas ISD 2026-2027 calendar with Aug 11 first day, May 26 last day, holidays, breaks, intersession dates, PDF and ICS.",
-  "totalSchoolDays": 180,
+  "seoTitle": "Dallas ISD Calendar 2026–27: Key Dates, Breaks & PDF",
+  "seoDescription": "See the Dallas ISD 2026–27 traditional calendar, including the first and last days of school, holidays, major breaks, the official PDF, and an ICS download.",
+  "totalSchoolDays": 175,
   "teacherWorkDays": 187,
   "semesters": 2,
   "sourceUrl": "https://www.dallasisd.org/about/about-dallas-isd/district-calendars",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1781797574/dallasisdorg/gujbdfv7mcxncagtw6bi/District-Calendar.pdf",
-  "lastVerifiedAt": "2026-07-02",
+  "sourceCalendarName": "Dallas ISD 2026–27 Traditional Calendar PDF",
+  "sourceVersion": "2026–27 Traditional Calendar",
+  "sourceReviewSummary": "Dates were checked against the official Dallas ISD district calendars page and the 2026–27 traditional calendar PDF.",
+  "sourceReviewDetails": [
+    "Dallas ISD’s board briefing states that the 2026–27 traditional calendar includes 175 student instructional days.",
+    "The dates on this page are based on Dallas ISD’s traditional calendar.",
+    "Check the official Dallas ISD calendar page for revisions before making travel, child care, or campus-specific plans."
+  ],
+  "schemaReviewedBy": "author",
+  "lastVerifiedAt": "2026-08-03",
+  "datePublished": "2026-07-02",
+  "dateModified": "2026-08-03",
   "calendarType": "traditional",
+  "allDatesMode": "all",
+  "yearSwitcherPosition": "afterKeyDates",
+  "moveCalendarExportBeforeAllDates": true,
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerifiedBadge": true,
+  "hideHeroVerificationProcess": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideExtendedShareButtons": true,
+  "hideShareCalendar": true,
+  "hideIcsButtonSupportText": true,
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "downloadCta",
+    "todayStatus",
+    "breaks",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "whatsDifferent",
+    "yearNumbers",
+    "relatedDistricts"
+  ],
+  "schemaCalendarName": "Dallas ISD Calendar 2026–27",
+  "schemaDatasetName": "Dallas ISD 2026–27 Traditional Calendar Dataset",
+  "schemaCalendarDownloadName": "Dallas ISD 2026–27 calendar file",
+  "schemaDatasetDescription": "Reviewed Dallas ISD traditional-calendar dates for 2026–27, including school-year boundaries, major breaks, holidays, professional development days, early-release dates, inclement weather days, the official PDF, and the one-time ICS download.",
+  "schemaSpatialCoverage": "Dallas Independent School District, Texas",
+  "temporalCoverageStart": "2026-08-11",
+  "temporalCoverageEnd": "2027-05-26",
+  "heroSourceLine": "Traditional calendar dates · Based on the official Dallas ISD calendar",
+  "heroSummary": "Schools on Dallas ISD’s traditional calendar begin Tuesday, August 11, 2026, and end Wednesday, May 26, 2027. Spring break is March 15–19, 2027. This page covers major districtwide student dates. Campus events, testing dates, and bell schedules are not included.",
+  "heroFactChips": [
+    "Traditional calendar",
+    "175 student days",
+    "Fall break: Oct 8–9",
+    "Spring break: Mar 15–19"
+  ],
+  "keyDatesSummaryTitle": "Key Dates",
+  "keyDatesSummarySubtitle": "The dates Dallas ISD families usually need first",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-11",
+      "type": "school_start",
+      "schemaDescription": "Dallas ISD traditional-calendar students start school on August 11, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Fall Break",
+      "date": "2026-10-08",
+      "endDate": "2026-10-09",
+      "type": "break_start",
+      "description": "Classes resume October 13.",
+      "schemaDescription": "Fall Break runs October 8–9, followed by a teacher professional development day on October 12. Students return October 13."
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "schemaDescription": "Thanksgiving Break runs November 23–27, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "type": "break_start",
+      "description": "Classes resume January 6.",
+      "schemaDescription": "Winter Break runs December 21, 2026, through January 4, 2027. January 5 is a professional development day with no school for students, and classes resume January 6."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start",
+      "schemaDescription": "Spring break runs March 15–19, 2027."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-05-26",
+      "type": "school_end",
+      "schemaDescription": "The last day of school on Dallas ISD's traditional calendar is May 26, 2027."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "href": "#key-dates" },
+    { "label": "Dates", "href": "#all-dates" },
+    { "label": "Breaks", "id": "dallas-2026-2027-break-planning" },
+    { "label": "Download", "href": "#add-to-calendar" },
+    { "label": "Compare", "href": "#comparison" },
+    { "label": "Sources", "href": "#sources" }
+  ],
+  "allDatesTitle": "Important Student Calendar Dates — 2026–27",
+  "allDatesCoverageNote": "This list covers districtwide student dates and published student-impacting days from the Dallas ISD traditional calendar. Campus-specific events are not included.",
+  "icsHeading": "Add the 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download an .ics file for Google Calendar, Apple Calendar, or Outlook. This is a one-time import and will not update automatically if Dallas ISD revises its calendar.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "pdfHeading": "Official 2026–27 Calendar PDF",
+  "pdfDescription": "Open the district’s official traditional calendar PDF.",
+  "pdfButtonLabel": "View Official PDF",
+  "alternateCalendarsTitle": "Dallas ISD ADSY Calendar",
+  "alternateCalendarsDescription": "Dallas ISD also publishes an Additional Days School Year (ADSY) calendar for campuses that follow the additional-days schedule. Use the calendar assigned by your school.",
+  "alternateCalendarsNotice": "This page shows the traditional calendar used by most Dallas ISD schools. If your child attends an Additional Days School Year (ADSY) campus, use the separate ADSY calendar linked below.",
   "alternateCalendars": [
     {
       "type": "adsy-calendar",
-      "label": "ADSY Calendar",
+      "label": "2026–27 ADSY Calendar",
       "pdfUrl": "https://resources.finalsite.net/images/v1781797599/dallasisdorg/e7cjqkkw2ezciwkqgygd/ADSY-Calendar.pdf",
       "firstDay": "2026-07-28"
     }
   ],
+  "calendarNotes": "Dallas ISD’s 2026–27 traditional calendar starts August 11, 2026 and ends May 26, 2027. The calendar lists 175 student days, a two-day fall break on October 8–9, teacher professional development days on October 12, November 3, and January 5, winter break from December 21 through January 4, spring break from March 15–19, early-release days in December and May, and inclement weather days on March 29 and April 19.",
   "calendarFaqs": [
     {
-      "q": "Does Dallas Independent School District have a fall break in 2026-2027?",
-      "a": "Yes. Dallas Independent School District has a fall break running from Oct 8, 2026 to Oct 9, 2026, a total of 2 days."
+      "q": "Does every Dallas ISD school follow this calendar?",
+      "a": "No. This page summarizes the traditional districtwide calendar. Dallas ISD also publishes an ADSY calendar, and individual campuses may publish separate events, bell schedules, and program deadlines."
     },
     {
-      "q": "When does school start for Dallas Independent School District in 2026-2027?",
-      "a": "The first day of school for Dallas Independent School District is Tuesday, August 11, 2026. Students and staff are expected to report on this date to begin the new academic year."
+      "q": "Will the downloaded calendar update automatically?",
+      "a": "No. The .ics file is a one-time import, so later Dallas ISD calendar changes will not appear automatically."
     },
     {
-      "q": "When is spring break 2026-2027 for Dallas Independent School District?",
-      "a": "Spring break for Dallas Independent School District runs Mar 15, 2027–Mar 19, 2027, 5 days."
+      "q": "Where should I check for calendar changes?",
+      "a": "Check the official Dallas ISD district calendars page before making travel, child care, or campus-specific plans.",
+      "linkText": "official Dallas ISD district calendars page",
+      "linkUrl": "https://www.dallasisd.org/about/about-dallas-isd/district-calendars"
     }
   ],
-  "yearNumbers": [
+  "faqDisplayQuestions": [
+    "Does every Dallas ISD school follow this calendar?",
+    "Will the downloaded calendar update automatically?",
+    "Where should I check for calendar changes?"
+  ],
+  "faqDisplayLimit": 3,
+  "comparisonTitle": "How the Dallas ISD Calendar Compares With Nearby Districts",
+  "comparisonSummary": "Dallas ISD and Plano ISD start August 11. Garland ISD and Fort Worth ISD start August 10, while Frisco ISD starts August 12. All five districts schedule spring break for March 15–19.",
+  "comparisonDistrictSlugs": [
+    "garland-independent-school-district-calendar",
+    "plano-independent-school-district-calendar",
+    "frisco-independent-school-district-calendar",
+    "fort-worth-independent-school-district-calendar"
+  ],
+  "hideComparisonInsights": true,
+  "hideComparisonNotes": true,
+  "comparisonSourceNote": "Rows compare first and last days, Thanksgiving Break, winter return dates, and Spring Break from reviewed district calendars.",
+  "comparisonCustomRows": [
     {
-      "label": "Starts Earlier",
-      "value": "1 day",
-      "detail": "First day moves from Aug 12 to Aug 11 vs 2025–2026."
+      "key": "firstDay",
+      "label": "First Day",
+      "values": {
+        "dallas-independent-school-district-calendar": "Aug 11, 2026",
+        "garland-independent-school-district-calendar": "Aug 10, 2026",
+        "plano-independent-school-district-calendar": "Aug 11, 2026",
+        "frisco-independent-school-district-calendar": "Aug 12, 2026",
+        "fort-worth-independent-school-district-calendar": "Aug 10, 2026"
+      }
     },
     {
-      "label": "Fall Break",
-      "value": "2 days",
-      "detail": "Oct 8–9 two-day fall break continues as a Dallas ISD-specific feature, shifting one day earlier than last year."
+      "key": "lastDay",
+      "label": "Last Day",
+      "values": {
+        "dallas-independent-school-district-calendar": "May 26, 2027",
+        "garland-independent-school-district-calendar": "May 27, 2027",
+        "plano-independent-school-district-calendar": "May 21, 2027",
+        "frisco-independent-school-district-calendar": "May 14, 2027",
+        "fort-worth-independent-school-district-calendar": "May 21, 2027"
+      }
+    },
+    {
+      "key": "thanksgivingBreak",
+      "label": "Thanksgiving Break",
+      "values": {
+        "dallas-independent-school-district-calendar": "Nov 23–27, 2026",
+        "garland-independent-school-district-calendar": "Nov 23–27, 2026",
+        "plano-independent-school-district-calendar": "Nov 23–27, 2026",
+        "frisco-independent-school-district-calendar": "Nov 23–27, 2026",
+        "fort-worth-independent-school-district-calendar": "Nov 23–27, 2026"
+      }
+    },
+    {
+      "key": "winterReturn",
+      "label": "Students Return After Winter Break",
+      "values": {
+        "dallas-independent-school-district-calendar": "Jan 6, 2027",
+        "garland-independent-school-district-calendar": "Jan 5, 2027",
+        "plano-independent-school-district-calendar": "Jan 5, 2027",
+        "frisco-independent-school-district-calendar": "Jan 5, 2027",
+        "fort-worth-independent-school-district-calendar": "Jan 5, 2027"
+      }
+    },
+    {
+      "key": "springBreak",
+      "label": "Spring Break",
+      "values": {
+        "dallas-independent-school-district-calendar": "Mar 15–19, 2027",
+        "garland-independent-school-district-calendar": "Mar 15–19, 2027",
+        "plano-independent-school-district-calendar": "Mar 15–19, 2027",
+        "frisco-independent-school-district-calendar": "Mar 15–19, 2027",
+        "fort-worth-independent-school-district-calendar": "Mar 15–19, 2027"
+      }
+    }
+  ],
+  "customSections": [
+    {
+      "id": "dallas-2026-2027-break-planning",
+      "label": "Break Planning and Return Dates",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "The table also shows when classes resume.",
+      "table": {
+        "columns": ["Break or no-school period", "Official dates", "Classes resume"],
+        "rows": [
+          ["Fall Break and Teacher Professional Development", "Oct 8–9; Oct 12: teacher professional development", "Oct 13"],
+          ["Thanksgiving Break", "Nov 23–27", "Nov 30"],
+          ["Winter Break and Professional Development", "Dec 21–Jan 4; Jan 5: professional development", "Jan 6"],
+          ["Spring Break", "Mar 15–19", "Mar 22"],
+          ["Student and Staff Holiday", "Mar 26", "Mar 30*"]
+        ],
+        "footnote": "*If Dallas ISD uses March 29 as a weather make-up day, classes will resume March 29 instead."
+      }
+    },
+    {
+      "id": "dallas-2026-2027-what-changed",
+      "label": "What Changed from 2025–26",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "The 2026–27 traditional calendar has 175 student days. The table below highlights the main date changes from 2025–26.",
+      "table": {
+        "columns": ["Change", "What it means"],
+        "rows": [
+          ["First day moves from August 12, 2025, to August 11, 2026", "The school year starts one calendar day earlier than the prior traditional calendar."],
+          ["Final student day moves from May 27, 2026, to May 26, 2027", "The school year also ends one calendar day earlier."],
+          ["Fall break moves from October 9–10 to October 8–9", "October 12 is also a student no-school day for teacher professional development, so classes resume October 13."],
+          ["Spring break moves from March 16–20 to March 15–19", "The break begins and ends one day earlier than in 2025–26."]
+        ]
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Dallas ISD district calendars page",
+      "url": "https://www.dallasisd.org/about/about-dallas-isd/district-calendars"
+    },
+    {
+      "label": "Dallas ISD 2026–27 traditional calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1781797574/dallasisdorg/gujbdfv7mcxncagtw6bi/District-Calendar.pdf"
+    },
+    {
+      "label": "Dallas ISD ADSY calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1781797599/dallasisdorg/e7cjqkkw2ezciwkqgygd/ADSY-Calendar.pdf"
+    },
+    {
+      "label": "Dallas ISD board briefing on 2026–27 calendar",
+      "url": "https://dallasisdtx.new.swagit.com/videos/319561"
     }
   ],
   "events": [
-    {
-      "date": "2026-08-11",
-      "name": "First Day of School",
-      "type": "school_start"
-    },
-    {
-      "date": "2026-09-07",
-      "name": "Labor Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-10-08",
-      "name": "Fall Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2026-10-09",
-      "name": "Fall Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2026-10-12",
-      "name": "No School (Teacher PD)",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-11-03",
-      "name": "No School (Teacher PD)",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-11-23",
-      "name": "Thanksgiving Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2026-12-21",
-      "name": "Winter Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-01-05",
-      "name": "Winter Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-01-18",
-      "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-02-15",
-      "name": "Presidents Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-03-15",
-      "name": "Spring Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-03-19",
-      "name": "Spring Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-03-26",
-      "name": "Student/Staff Holiday",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-05-26",
-      "name": "Last Day of School",
-      "type": "school_end"
-    }
-  ],
-  "calendarNotes": "Dallas ISD begins the 2026–2027 school year on August 11, 2026. Spring Break runs March 15–19, 2027. The school year ends May 26, 2027.",
-  "datePublished": "2026-07-02",
-  "dateModified": "2026-07-02"
+    { "date": "2026-08-11", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
+    { "date": "2026-10-08", "endDate": "2026-10-09", "name": "Fall Break", "type": "break_start" },
+    { "date": "2026-10-09", "name": "Fall Break", "type": "break_end" },
+    { "date": "2026-10-12", "name": "Teacher Professional Development", "type": "no_school", "description": "No school for students." },
+    { "date": "2026-11-03", "name": "Teacher Professional Development", "type": "no_school", "description": "No school for students." },
+    { "date": "2026-11-23", "endDate": "2026-11-27", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2026-11-27", "name": "Thanksgiving Break", "type": "break_end" },
+    { "date": "2026-12-16", "endDate": "2026-12-17", "name": "Early Release — Secondary Schools", "type": "early_release" },
+    { "date": "2026-12-18", "name": "Early Release — All Schools", "type": "early_release" },
+    { "date": "2026-12-21", "endDate": "2027-01-04", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-01-04", "name": "Winter Break", "type": "break_end" },
+    { "date": "2027-01-05", "name": "Professional Development", "type": "no_school", "description": "No school for students." },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-02-15", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2027-03-15", "endDate": "2027-03-19", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-03-19", "name": "Spring Break", "type": "break_end" },
+    { "date": "2027-03-26", "name": "Student and Staff Holiday", "type": "no_school" },
+    { "date": "2027-03-29", "name": "Inclement Weather Day", "type": "inclement_weather_day", "badgeLabel": "Reserved Weather Day" },
+    { "date": "2027-04-19", "name": "Inclement Weather Day", "type": "inclement_weather_day", "badgeLabel": "Reserved Weather Day", "description": "March 29 and April 19 are reserved weather days. Either date may become an instructional day if Dallas ISD needs to make up a closure." },
+    { "date": "2027-05-24", "endDate": "2027-05-25", "name": "Early Release — Secondary Schools", "type": "early_release" },
+    { "date": "2027-05-26", "name": "Last Day of School", "type": "school_end", "description": "Early release for all schools." }
+  ]
 }

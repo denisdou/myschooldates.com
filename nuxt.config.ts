@@ -90,6 +90,7 @@ export default defineNuxtConfig({
         '/collier-county-school-calendar',
         '/cobb-county-school-calendar',
         '/dekalb-county-school-calendar',
+        '/deer-valley-unified-school-district-calendar',
         '/sarasota-county-school-calendar',
         '/gwinnett-county-public-schools-calendar',
         '/chesterfield-county-school-calendar',
@@ -97,6 +98,7 @@ export default defineNuxtConfig({
         '/corona-norco-unified-school-district-calendar',
         '/cumberland-county-school-calendar',
         '/dallas-independent-school-district-calendar',
+        '/dysart-unified-school-district-calendar',
         '/duval-county-school-calendar',
         '/fairfax-county-school-calendar',
         '/fort-bend-independent-school-district-calendar',
@@ -156,6 +158,7 @@ export default defineNuxtConfig({
         '/san-francisco-unified-school-district-calendar',
         '/san-juan-unified-school-district-calendar',
         '/san-jose-unified-school-calendar',
+        '/scottsdale-unified-school-district-calendar',
         '/seminole-county-school-calendar',
         '/seattle-public-schools-calendar',
         '/school-district-of-philadelphia-calendar',
@@ -271,6 +274,9 @@ export default defineNuxtConfig({
         '/dekalb-county-school-calendar/2025-2026',
         '/dekalb-county-school-calendar/2026-2027',
 
+        '/deer-valley-unified-school-district-calendar/2025-2026',
+        '/deer-valley-unified-school-district-calendar/2026-2027',
+
         '/sarasota-county-school-calendar/2025-2026',
         '/sarasota-county-school-calendar/2026-2027',
 
@@ -293,6 +299,12 @@ export default defineNuxtConfig({
 
         '/dallas-independent-school-district-calendar/2025-2026',
         '/dallas-independent-school-district-calendar/2026-2027',
+
+        '/dysart-unified-school-district-calendar/2025-2026',
+        '/dysart-unified-school-district-calendar/2026-2027',
+        '/dysart-unified-school-district-calendar/2027-2028',
+        '/dysart-unified-school-district-calendar/2028-2029',
+        '/dysart-unified-school-district-calendar/2029-2030',
 
         '/duval-county-school-calendar/2025-2026',
         '/duval-county-school-calendar/2026-2027',
@@ -474,6 +486,10 @@ export default defineNuxtConfig({
         '/san-jose-unified-school-calendar/2025-2026',
         '/san-jose-unified-school-calendar/2026-2027',
         '/san-jose-unified-school-calendar/2027-2028',
+
+        '/scottsdale-unified-school-district-calendar/2025-2026',
+        '/scottsdale-unified-school-district-calendar/2026-2027',
+        '/scottsdale-unified-school-district-calendar/2027-2028',
 
         '/seminole-county-school-calendar/2025-2026',
         '/seminole-county-school-calendar/2026-2027',

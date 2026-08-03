@@ -33,32 +33,44 @@ function toComparisonCalendarSummary(c: any) {
   }
 }
 
-// Load all data in parallel (allDistricts needed for state detection)
-const [{ data: allDistricts }, { data: district }, { data: allCals }, { data: statePageData }] = await Promise.all([
-  useAsyncData('districts-all', async () =>
-    (await queryCollection('districts').order('name', 'ASC').all()).map(toDistrictSummary)
-  ),
+function toStateSlug(name: string) {
+  return name.toLowerCase().replace(/\s+/g, '-')
+}
+
+// Load the route target first. State pages and district pages need different
+// supporting data, so avoid serializing the full district index into every page.
+const [{ data: district }, { data: statePageData }] = await Promise.all([
   useAsyncData(`district:${slug}`, () =>
     queryCollection('districts').where('slug', '=', slug).first()
   ),
-  useAsyncData(`cals:${slug}`, async () => {
-    const d = await queryCollection('districts').where('slug', '=', slug).first()
-    if (!d) return []
-    const calendars = await queryCollection('calendars').where('institutionId', '=', d.institutionId).order('schoolYear', 'DESC').all()
-    return (calendars ?? []).map((calendar: any) =>
-      calendar.schoolYear === d.currentSchoolYear ? calendar : toComparisonCalendarSummary(calendar)
-    )
-  }),
   useAsyncData(`state:${slug}`, () => queryCollection('states').where('stateSlug', '=', slug).first()),
 ])
 
-// State detection — derive state slug from state name (e.g. "New York" → "new-york")
-const toStateSlug = (name: string) => name.toLowerCase().replace(/\s+/g, '-')
-const uniqueStates = [...new Set((allDistricts.value ?? []).map(d => d.state))]
-const matchedStateName = uniqueStates.find(s => toStateSlug(s) === slug) ?? null
-const isStatePage = !!matchedStateName
-const stateDistricts = (allDistricts.value ?? [])
-  .filter(d => d.state === matchedStateName)
+const matchedStateName = statePageData.value?.stateName ?? null
+const isStatePage = Boolean(matchedStateName && !district.value)
+
+const { data: stateDistrictsData } = await useAsyncData(`state-districts:${slug}`, async () => {
+  if (!matchedStateName) return []
+  return (await queryCollection('districts').where('state', '=', matchedStateName).order('name', 'ASC').all()).map(toDistrictSummary)
+})
+const stateDistricts = stateDistrictsData.value ?? []
+
+const { data: allCals } = await useAsyncData(`cals:${slug}`, async () => {
+  if (!district.value) return []
+  const calendars = await queryCollection('calendars').where('institutionId', '=', district.value.institutionId).order('schoolYear', 'DESC').all()
+  return (calendars ?? []).map((calendar: any) =>
+    calendar.schoolYear === district.value!.currentSchoolYear ? calendar : toComparisonCalendarSummary(calendar)
+  )
+})
+
+const { data: relatedDistricts } = await useAsyncData(`related-districts:${slug}`, async () => {
+  if (isStatePage || !district.value?.relatedDistricts?.length) return []
+  const relatedSlugs = new Set((district.value.relatedDistricts as { slug: string }[]).map(rd => rd.slug))
+  const districts = await queryCollection('districts').order('name', 'ASC').all()
+  return (districts ?? [])
+    .filter(d => relatedSlugs.has(d.slug))
+    .map(toDistrictSummary)
+})
 
 if (!isStatePage && !district.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found' })
@@ -252,7 +264,7 @@ const stateDistrictStats = computed(() => {
 const { data: relatedCals } = await useAsyncData(`related-cals:${slug}`, async () => {
   if (isStatePage || !district.value?.relatedDistricts?.length) return []
   const relatedSlugs = new Set((district.value.relatedDistricts as { slug: string }[]).map(rd => rd.slug))
-  const relatedIds = (allDistricts.value ?? [])
+  const relatedIds = (relatedDistricts.value ?? [])
     .filter(d => relatedSlugs.has(d.slug))
     .map(d => d.institutionId)
   if (!relatedIds.length) return []
@@ -263,7 +275,7 @@ const { data: relatedCals } = await useAsyncData(`related-cals:${slug}`, async (
     .map(toComparisonCalendarSummary)
 })
 const relatedYearAvailableSlugs = computed(() => {
-  const districts = allDistricts.value ?? []
+  const districts = relatedDistricts.value ?? []
   return (relatedCals.value ?? [])
     .map((relatedCal: any) => districts.find((d: any) => d.institutionId === relatedCal.institutionId)?.slug)
     .filter(Boolean) as string[]
@@ -700,6 +712,10 @@ const customSections = computed(() => {
     ...(((cal as any)?.meta?.customSections ?? []) as DistrictCustomSection[]),
   ].filter(section => !hiddenIds.has(section.id))
 })
+const hasYearComparisonContent = computed(() =>
+  !hiddenSections.value.has('whatsDifferent') ||
+  customSections.value.some(section => section.position === 'afterYearDiff')
+)
 const summarySectionId = computed(() => {
   const section = customSections.value.find(s =>
     s.id.toLowerCase().includes('summary') ||
@@ -972,6 +988,7 @@ const dateLegend = computed(() => {
     ...(hasEventType(['partial_closure']) ? [{ label: 'Some Students Off', dot: 'bg-pink-400' }] : []),
     ...(hasEventType(['half_day_high_school', 'half_day_dismissal']) ? [{ label: 'Half-Day Dismissal', dot: 'bg-orange-300' }] : []),
     ...(hasEventType(['early_dismissal', 'early_release']) ? [{ label: 'Early Release', dot: 'bg-orange-400' }] : []),
+    ...(hasEventType(['makeup_day', 'weather_day', 'inclement_weather_day']) ? [{ label: 'Reserved Weather Day', dot: 'bg-orange-300' }] : []),
     ...(hasEventType(['break_start']) || hasPossibleMakeupDay ? [{ label: 'Break', dot: 'bg-purple-400' }] : []),
     ...(hasEventType(['observance']) ? [{ label: 'Observance', dot: 'bg-teal-400' }] : []),
   ]
@@ -1129,6 +1146,7 @@ if (!isStatePage && district.value) {
   const sourceCalendarName = (cal as any)?.sourceCalendarName ?? (cal as any)?.meta?.sourceCalendarName
     ?? `${meta.value!.name} ${displayYearText} Calendar ${sourcePdfUrl && !sourcePdfIsArchivedCopy ? 'PDF' : 'Source'}`
   const sourceVersion = (cal as any)?.sourceVersion ?? (cal as any)?.meta?.sourceVersion
+  const sourcePdfSameAs = (cal as any)?.sourcePdfSameAs ?? (cal as any)?.meta?.sourcePdfSameAs
   const sourcePageCitationUrl = sourceUrl && sourceUrl !== basedOnUrl ? sourceUrl : ''
   const sourceCitation = [
     ...(basedOnUrl ? [{ '@id': `${canonicalUrl}#source-calendar` }] : []),
@@ -1145,7 +1163,7 @@ if (!isStatePage && district.value) {
     ? `Major ${calendarTypeName} Calendar dates for ${meta.value!.name} in ${displayYearText}, including school-year boundaries, major holidays, break ranges, and school resume dates.`
     : `Major calendar dates for ${meta.value!.name} in ${displayYearText}, including school-year boundaries, major holidays, break ranges, and school resume dates.`)
   const schemaCalendarDownloadName = (cal as any)?.schemaCalendarDownloadName ?? (cal as any)?.meta?.schemaCalendarDownloadName ?? `${schemaCalendarName} calendar file`
-  const schemaCalendarDownloadDescription = (cal as any)?.schemaCalendarDownloadDescription ?? (cal as any)?.meta?.schemaCalendarDownloadDescription ?? 'Calendar import file generated from district-published dates checked against the official source used for this page.'
+  const schemaCalendarDownloadDescription = (cal as any)?.schemaCalendarDownloadDescription ?? (cal as any)?.meta?.schemaCalendarDownloadDescription ?? 'Calendar import file generated from district-published dates checked against the official sources used for this page.'
   const schemaKeywords = [
     ...(((meta.value as any).schemaKeywords ?? (meta.value as any).meta?.schemaKeywords ?? []) as string[]),
     ...(((cal as any)?.schemaKeywords ?? (cal as any)?.meta?.schemaKeywords ?? []) as string[]),
@@ -1155,16 +1173,19 @@ if (!isStatePage && district.value) {
     '@id': `${canonicalUrl}#source-calendar`,
     name: sourceCalendarName,
     ...(sourceVersion ? { version: sourceVersion } : {}),
+    ...(sourcePdfSameAs ? { sameAs: sourcePdfSameAs } : {}),
     url: basedOnUrl,
     publisher: { '@id': districtAbout['@id'] },
   } : null
   const additionalSourceCalendarEntities = (((cal as any)?.schemaAdditionalSourceCalendars ?? (cal as any)?.meta?.schemaAdditionalSourceCalendars ?? []) as any[])
     .filter(source => source?.url && source?.name)
     .map((source, index) => ({
-      '@type': 'CreativeWork',
+      '@type': source.type ?? 'CreativeWork',
       '@id': source.id ? `${canonicalUrl}#${source.id}` : `${canonicalUrl}#source-calendar-${index + 2}`,
       name: source.name,
       ...(source.version ? { version: source.version } : {}),
+      ...(source.datePublished ? { datePublished: source.datePublished } : {}),
+      ...(source.sameAs ? { sameAs: source.sameAs } : {}),
       url: source.url,
       publisher: { '@id': districtAbout['@id'] },
     }))
@@ -1175,6 +1196,11 @@ if (!isStatePage && district.value) {
     url: sourcePageCitationUrl,
     publisher: { '@id': districtAbout['@id'] },
   } : null
+  const sourceBasedOnRefs = [
+    ...(basedOnUrl ? [{ '@id': `${canonicalUrl}#source-calendar` }] : []),
+    ...additionalSourceCalendarEntities.map(source => ({ '@id': source['@id'] })),
+  ]
+  const sourceBasedOnValue = sourceBasedOnRefs.length === 1 ? sourceBasedOnRefs[0] : sourceBasedOnRefs
   const calendarIcsUrl = district.value && cal
     ? `https://myschooldates.com/calendars/${district.value.slug}-${cal.schoolYear}.ics`
     : ''
@@ -1210,7 +1236,7 @@ if (!isStatePage && district.value) {
     },
     creator: { '@id': 'https://myschooldates.com/#organization' },
     publisher: { '@id': 'https://myschooldates.com/#organization' },
-    isBasedOn: basedOnUrl ? { '@id': `${canonicalUrl}#source-calendar` } : undefined,
+    ...(sourceBasedOnRefs.length ? { isBasedOn: sourceBasedOnValue } : {}),
     distribution: [
       calendarIcsUrl ? {
         '@type': 'DataDownload',
@@ -1307,7 +1333,7 @@ if (!isStatePage && district.value) {
     ...(webPageMainEntity ? { mainEntity: webPageMainEntity } : {}),
     ...(webPageParts.length ? { hasPart: webPageParts } : {}),
     ...(yearPageLinks.length ? { relatedLink: yearPageLinks } : {}),
-    ...(basedOnUrl ? { isBasedOn: { '@id': `${canonicalUrl}#source-calendar` } } : {}),
+    ...(sourceBasedOnRefs.length ? { isBasedOn: sourceBasedOnValue } : {}),
     ...(sourcePdfIsArchivedCopy ? {
       associatedMedia: {
         '@type': 'MediaObject',
@@ -1341,7 +1367,7 @@ if (!isStatePage && district.value) {
     about: { '@id': districtAbout['@id'] },
     isPartOf: { '@id': `${canonicalUrl}#webpage` },
     ...(datasetEntity ? { mainEntity: { '@id': `${canonicalUrl}#calendar-dataset` } } : {}),
-    ...(basedOnUrl ? { isBasedOn: { '@id': `${canonicalUrl}#source-calendar` } } : {}),
+    ...(sourceBasedOnRefs.length ? { isBasedOn: sourceBasedOnValue } : {}),
   }
   const faqPageEntity = faqSchemaItems.value.length ? {
     '@type': 'FAQPage',
@@ -1378,7 +1404,7 @@ if (!isStatePage && district.value) {
     ? [
         { district: meta.value!, calendar: cal, url: canonicalUrl },
         ...((relatedCals.value ?? []).slice(0, 3).map((relatedCal: any) => {
-          const relatedDistrict = (allDistricts.value ?? []).find((d: any) => d.institutionId === relatedCal.institutionId)
+          const relatedDistrict = (relatedDistricts.value ?? []).find((d: any) => d.institutionId === relatedCal.institutionId)
           return relatedDistrict ? { district: relatedDistrict, calendar: relatedCal, url: `https://myschooldates.com/${relatedDistrict.slug}` } : null
         }).filter(Boolean)),
       ]
@@ -2073,12 +2099,15 @@ if (!isStatePage && district.value) {
               :key="event.date + event.name"
               class="flex items-center justify-between py-2.5 first:pt-0 last:pb-0"
             >
-              <div class="flex items-center gap-2.5 min-w-0">
+              <div class="flex items-start gap-2.5 min-w-0">
                 <span
-                  class="text-xs font-medium px-2 py-0.5 rounded-lg whitespace-nowrap flex-shrink-0"
+                  class="mt-0.5 text-xs font-medium px-2 py-0.5 rounded-lg whitespace-nowrap flex-shrink-0"
                   :class="eventTypeColor[event.type]"
                 >{{ keyDateLabel(event) }}</span>
-                <span class="min-w-0 break-words text-sm text-gray-900">{{ keyDateDisplayName(event) }}</span>
+                <span class="min-w-0">
+                  <span class="block break-words text-sm text-gray-900">{{ keyDateDisplayName(event) }}</span>
+                  <span v-if="event.description" class="mt-0.5 block text-xs leading-relaxed text-gray-500">{{ event.description }}</span>
+                </span>
               </div>
               <span class="text-sm text-[#7b756d] tabular-nums ml-4 flex-shrink-0">
                 <template v-if="keyDateListDateParts(event).length">
@@ -2159,7 +2188,7 @@ if (!isStatePage && district.value) {
           :cal="cal"
           :district="district"
           :related-cals="relatedCals ?? []"
-          :all-districts="allDistricts ?? []"
+          :all-districts="relatedDistricts ?? []"
           :prev-cal="prevCal ?? undefined"
         />
         <DistrictCustomSections :sections="customSections" position="afterQuickFacts" />
@@ -2358,7 +2387,7 @@ if (!isStatePage && district.value) {
         <DistrictGradingPeriods :periods="(cal as any).gradingPeriods" />
 
         <!-- What's Different This Year -->
-        <div id="year-comparison" class="scroll-mt-24 space-y-8">
+        <div v-if="hasYearComparisonContent" id="year-comparison" class="scroll-mt-24 space-y-8">
           <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal" :prev-cal="prevCal ?? undefined" />
           <DistrictCustomSections :sections="customSections" position="afterYearDiff" />
         </div>
@@ -2378,7 +2407,7 @@ if (!isStatePage && district.value) {
 
         <!-- Compare with Nearby Districts -->
         <template v-if="comparisonBeforeFaq">
-          <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal" :district="district" :related-cals="relatedCals ?? []" :all-districts="allDistricts ?? []" :year="currentYear" />
+          <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal" :district="district" :related-cals="relatedCals ?? []" :all-districts="relatedDistricts ?? []" :year="currentYear" />
           <DistrictCustomSections :sections="customSections" position="afterComparison" />
         </template>
 
@@ -2390,7 +2419,7 @@ if (!isStatePage && district.value) {
 
         <!-- Compare with Nearby Districts -->
         <template v-if="!comparisonBeforeFaq">
-          <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal" :district="district" :related-cals="relatedCals ?? []" :all-districts="allDistricts ?? []" :year="currentYear" />
+          <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal" :district="district" :related-cals="relatedCals ?? []" :all-districts="relatedDistricts ?? []" :year="currentYear" />
           <DistrictCustomSections :sections="customSections" position="afterComparison" />
         </template>
 
@@ -2447,6 +2476,7 @@ if (!isStatePage && district.value) {
           :source-pdf-url="(cal as any).sourcePdfUrl"
           :review-summary="(cal as any).sourceReviewSummary ?? (cal as any).meta?.sourceReviewSummary"
           :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
+          :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
         />
 
         <!-- Year Switcher: after Sources -->
