@@ -57,7 +57,7 @@ useHead({
     <section class="mb-10">
       <h2 class="text-xl font-semibold text-gray-900 mb-3">What We Cover — and What We Don't</h2>
       <p class="text-gray-600 leading-relaxed mb-3">
-        MySchoolDates publishes the <strong>district-wide traditional calendar</strong> that applies to the majority of schools in each district. This includes:
+        MySchoolDates publishes <strong>districtwide calendar dates</strong> from the primary official calendar source identified for each school district. Calendar types and coverage vary by district. This includes:
       </p>
       <ul class="space-y-2 text-gray-600 mb-3">
         <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> First and last day of school</li>
@@ -66,7 +66,7 @@ useHead({
         <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> Teacher workdays and professional development days (no-school days for students)</li>
       </ul>
       <p class="text-gray-600 leading-relaxed">
-        We do not publish individual school schedules, early dismissal times, or program-specific calendars (such as year-round or magnet school tracks) unless the district has published these as a separate official document. Families should always confirm school-specific details directly with their school.
+        We generally do not publish individual-school schedules or program-specific calendars. We may include early-dismissal rules and other planning details when they are clearly stated in an official district source and apply districtwide or to a clearly identified group of schools. Families should always confirm school-specific details directly with their school.
       </p>
     </section>
 

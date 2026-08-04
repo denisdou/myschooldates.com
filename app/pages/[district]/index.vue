@@ -673,6 +673,9 @@ const hiddenSections = computed(() => new Set<string>([
 const comparisonBeforeFaq = computed(() =>
   Boolean((cal as any)?.comparisonBeforeFaq ?? (cal as any)?.meta?.comparisonBeforeFaq ?? (district.value as any)?.comparisonBeforeFaq ?? (district.value as any)?.meta?.comparisonBeforeFaq)
 )
+const sourcesBeforeFaq = computed(() =>
+  Boolean((cal as any)?.sourcesBeforeFaq ?? (cal as any)?.meta?.sourcesBeforeFaq ?? (district.value as any)?.sourcesBeforeFaq ?? (district.value as any)?.meta?.sourcesBeforeFaq)
+)
 const pageSources = computed(() =>
   ((cal as any)?.sources ?? (cal as any)?.meta?.sources ?? (district.value as any)?.sources ?? []) as any[]
 )
@@ -801,6 +804,7 @@ const calendarTrackHelpId = computed(() => {
   return section?.id || (((cal as any)?.alternateCalendars?.length) ? 'other-calendars' : 'sources')
 })
 const hasCalendarTrackCaution = computed(() => {
+  if ((cal as any)?.hideCalendarTrackCaution || (cal as any)?.meta?.hideCalendarTrackCaution) return false
   const text = `${(cal as any)?.calendarNotes ?? ''} ${(district.value as any)?.districtFact ?? ''}`.toLowerCase()
   return text.includes('track') || text.includes('modified traditional') || text.includes('year-round')
 })
@@ -1074,7 +1078,7 @@ if (!isStatePage && district.value) {
   const _districtDesc = (meta.value as any).seoDescription ? _replacePlaceholders((meta.value as any).seoDescription) : undefined
   const _pageTitle = _calTitle ?? _districtTitle ?? `${_dn} Calendar ${displayYearText}${_titleSuffix}`
   const _pageDesc = _calDesc ?? _districtDesc ?? _idxDesc
-  const schemaImageUrl = 'https://myschooldates.com/icons/myschooldates-og-img.png'
+  const schemaLogoUrl = 'https://myschooldates.com/icons/icon-512.png'
   const schemaLicenseUrl = 'https://myschooldates.com/data-license'
   useSeoMeta({
     title: _pageTitle,
@@ -1089,6 +1093,12 @@ if (!isStatePage && district.value) {
     '@id': 'https://myschooldates.com/#organization',
     name: 'MySchoolDates',
     url: 'https://myschooldates.com',
+    logo: {
+      '@type': 'ImageObject',
+      url: schemaLogoUrl,
+      width: 512,
+      height: 512,
+    },
   }
   const reviewTeamEntity = {
     '@type': 'Organization',
@@ -1146,6 +1156,8 @@ if (!isStatePage && district.value) {
   const sourceCalendarName = (cal as any)?.sourceCalendarName ?? (cal as any)?.meta?.sourceCalendarName
     ?? `${meta.value!.name} ${displayYearText} Calendar ${sourcePdfUrl && !sourcePdfIsArchivedCopy ? 'PDF' : 'Source'}`
   const sourceVersion = (cal as any)?.sourceVersion ?? (cal as any)?.meta?.sourceVersion
+  const sourceCalendarDateCreated = (cal as any)?.sourceCalendarDateCreated ?? (cal as any)?.meta?.sourceCalendarDateCreated
+  const sourceCalendarDateModified = (cal as any)?.sourceCalendarDateModified ?? (cal as any)?.meta?.sourceCalendarDateModified
   const sourcePdfSameAs = (cal as any)?.sourcePdfSameAs ?? (cal as any)?.meta?.sourcePdfSameAs
   const sourcePageCitationUrl = sourceUrl && sourceUrl !== basedOnUrl ? sourceUrl : ''
   const sourceCitation = [
@@ -1168,11 +1180,14 @@ if (!isStatePage && district.value) {
     ...(((meta.value as any).schemaKeywords ?? (meta.value as any).meta?.schemaKeywords ?? []) as string[]),
     ...(((cal as any)?.schemaKeywords ?? (cal as any)?.meta?.schemaKeywords ?? []) as string[]),
   ]
+  const schemaIsAccessibleForFree = (cal as any)?.schemaIsAccessibleForFree ?? (cal as any)?.meta?.schemaIsAccessibleForFree ?? (meta.value as any)?.schemaIsAccessibleForFree ?? (meta.value as any)?.meta?.schemaIsAccessibleForFree
   const sourceCalendarEntity = basedOnUrl ? {
     '@type': 'CreativeWork',
     '@id': `${canonicalUrl}#source-calendar`,
     name: sourceCalendarName,
     ...(sourceVersion ? { version: sourceVersion } : {}),
+    ...(sourceCalendarDateCreated ? { dateCreated: sourceCalendarDateCreated } : {}),
+    ...(sourceCalendarDateModified ? { dateModified: sourceCalendarDateModified } : {}),
     ...(sourcePdfSameAs ? { sameAs: sourcePdfSameAs } : {}),
     url: basedOnUrl,
     publisher: { '@id': districtAbout['@id'] },
@@ -1184,6 +1199,8 @@ if (!isStatePage && district.value) {
       '@id': source.id ? `${canonicalUrl}#${source.id}` : `${canonicalUrl}#source-calendar-${index + 2}`,
       name: source.name,
       ...(source.version ? { version: source.version } : {}),
+      ...(source.dateCreated ? { dateCreated: source.dateCreated } : {}),
+      ...(source.dateModified ? { dateModified: source.dateModified } : {}),
       ...(source.datePublished ? { datePublished: source.datePublished } : {}),
       ...(source.sameAs ? { sameAs: source.sameAs } : {}),
       url: source.url,
@@ -1221,6 +1238,7 @@ if (!isStatePage && district.value) {
     description: datasetDescription,
     url: canonicalUrl,
     ...(schemaKeywords.length ? { keywords: schemaKeywords } : {}),
+    ...(typeof schemaIsAccessibleForFree === 'boolean' ? { isAccessibleForFree: schemaIsAccessibleForFree } : {}),
     license: schemaLicenseUrl,
     usageInfo: schemaLicenseUrl,
     inLanguage: 'en-US',
@@ -1278,11 +1296,20 @@ if (!isStatePage && district.value) {
         text.includes('review') ||
         text.includes('update history')
     })
-    .map(section => ({
-      '@type': 'WebPageElement',
-      '@id': `${canonicalUrl}#${section.id}`,
-      name: section.label,
-    }))
+    .map((section) => {
+      const sectionBasedOn = (section as any).schema?.isBasedOn ?? (section as any).isBasedOn
+      const sectionBasedOnId = typeof sectionBasedOn === 'string'
+        ? sectionBasedOn.startsWith('http')
+          ? sectionBasedOn
+          : `${canonicalUrl}#${sectionBasedOn.replace(/^#/, '')}`
+        : ''
+      return {
+        '@type': 'WebPageElement',
+        '@id': `${canonicalUrl}#${section.id}`,
+        name: section.label,
+        ...(sectionBasedOnId ? { isBasedOn: { '@id': sectionBasedOnId } } : {}),
+      }
+    })
   const yearNumbersTitle = (cal as any)?.yearNumbersTitle ?? (cal as any)?.meta?.yearNumbersTitle ?? ''
   const yearNumbersSchemaParts = !hiddenSections.value.has('yearNumbers') && String(yearNumbersTitle).toLowerCase().includes('insights')
     ? [{
@@ -1295,6 +1322,7 @@ if (!isStatePage && district.value) {
   const webPageParts = [
     ...(includeArticleSchema ? [{ '@id': `${canonicalUrl}#calendar-analysis` }] : []),
     ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
+    ...(itemListEvents.value.length ? [{ '@id': `${canonicalUrl}#key-dates` }] : []),
     ...(faqSchemaItems.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
     ...customSectionSchemaParts,
     ...yearNumbersSchemaParts,
@@ -1903,7 +1931,7 @@ if (!isStatePage && district.value) {
           </h1>
           <p class="mt-2 text-sm text-[#7b756d]">
             {{ (cal as any).heroSourceLine ?? (cal as any).meta?.heroSourceLine ?? `${displaySchoolYear} calendar dates · Based on the official ${district.shortName || district.name} calendar` }} ·
-            <a href="#add-to-calendar" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">Download calendar file</a>
+            <a href="#add-to-calendar" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">{{ (cal as any).heroDownloadLabel ?? (cal as any).meta?.heroDownloadLabel ?? (cal as any).icsButtonLabel ?? (cal as any).meta?.icsButtonLabel ?? 'Download calendar file' }}</a>
           </p>
           <p class="mt-2 text-xs text-[#6b645c]">
             MySchoolDates is an independent calendar reference and is not affiliated with {{ district.name }}.
@@ -2411,6 +2439,25 @@ if (!isStatePage && district.value) {
           <DistrictCustomSections :sections="customSections" position="afterComparison" />
         </template>
 
+        <!-- Sources & Verification: optional position before FAQ -->
+        <DistrictSources
+          v-if="sourcesBeforeFaq && !hiddenSections.has('sources') && pageSources.length"
+          :sources="pageSources"
+          :district-name="district.name"
+          :short-name="(district as any).shortName || district.name"
+          :year="currentYear"
+          :verified-date="verifiedDate"
+          :source-version="(cal as any).sourceVersion"
+          :source-version-label="(cal as any).sourceVersionLabel ?? (cal as any).meta?.sourceVersionLabel"
+          :source-version-display="(cal as any).sourceVersionDisplay ?? (cal as any).meta?.sourceVersionDisplay"
+          :hide-source-version-display="(cal as any).hideSourceVersionDisplay ?? (cal as any).meta?.hideSourceVersionDisplay"
+          :source-pdf-url="(cal as any).sourcePdfUrl"
+          :review-summary="(cal as any).sourceReviewSummary ?? (cal as any).meta?.sourceReviewSummary"
+          :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
+          :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
+          :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
+        />
+
         <!-- FAQ -->
         <DistrictFaq v-if="!hiddenSections.has('faq')" :cal="cal" :district="district" :faqs="faqs" />
 
@@ -2463,7 +2510,7 @@ if (!isStatePage && district.value) {
 
         <!-- Sources & Verification -->
         <DistrictSources
-          v-if="!hiddenSections.has('sources') && pageSources.length"
+          v-if="!sourcesBeforeFaq && !hiddenSections.has('sources') && pageSources.length"
           :sources="pageSources"
           :district-name="district.name"
           :short-name="(district as any).shortName || district.name"
@@ -2477,6 +2524,7 @@ if (!isStatePage && district.value) {
           :review-summary="(cal as any).sourceReviewSummary ?? (cal as any).meta?.sourceReviewSummary"
           :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
           :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
+          :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
         />
 
         <!-- Year Switcher: after Sources -->

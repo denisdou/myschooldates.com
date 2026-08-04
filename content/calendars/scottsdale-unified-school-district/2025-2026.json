@@ -16,8 +16,6 @@
   "calendarType": "traditional",
   "allDatesMode": "all",
   "includeArticleSchema": false,
-  "hideFaqSchema": true,
-  "hideDatasetSchema": true,
   "webPageMainEntity": "keyDates",
   "schemaReviewedBy": "author",
   "seoTitle": "Scottsdale Unified Calendar 2025–26: Dates, Breaks and PDF",
@@ -107,7 +105,7 @@
     { "q": "Was the last day of school an early-release day?", "a": "Yes. Friday, May 22, 2026 was the last day of school and was marked as early release for all grades." }
   ],
   "faqDisplayLimit": 4,
-  "faqSchemaLimit": 0,
+  "faqSchemaLimit": 4,
   "customSections": [
     {
       "id": "susd-2025-2026-calendar-works",

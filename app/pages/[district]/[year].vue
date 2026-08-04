@@ -82,6 +82,13 @@ const relatedYearAvailableSlugs = computed(() => {
     .map((relatedCal: any) => districts.find((d: any) => d.institutionId === relatedCal.institutionId)?.slug)
     .filter(Boolean) as string[]
 })
+const visibleRelatedDistricts = computed(() => {
+  const related = ((district.value as any)?.relatedDistricts ?? []) as any[]
+  const sameYearOnly = Boolean((cal.value as any)?.relatedDistrictsSameYearOnly ?? (cal.value as any)?.meta?.relatedDistrictsSameYearOnly)
+  if (!sameYearOnly) return related
+  const available = new Set(relatedYearAvailableSlugs.value)
+  return related.filter(rd => available.has(rd.slug))
+})
 
 if (!district.value || !cal.value) {
   throw createError({ statusCode: 404, statusMessage: 'Calendar not found' })
@@ -252,9 +259,53 @@ const hiddenSections = computed(() => new Set<string>([
 const comparisonBeforeFaq = computed(() =>
   Boolean((cal.value as any)?.comparisonBeforeFaq ?? (cal.value as any)?.meta?.comparisonBeforeFaq ?? (district.value as any)?.comparisonBeforeFaq ?? (district.value as any)?.meta?.comparisonBeforeFaq)
 )
+const sourcesBeforeFaq = computed(() =>
+  Boolean((cal.value as any)?.sourcesBeforeFaq ?? (cal.value as any)?.meta?.sourcesBeforeFaq ?? (district.value as any)?.sourcesBeforeFaq ?? (district.value as any)?.meta?.sourcesBeforeFaq)
+)
 const pageSources = computed(() =>
   ((cal.value as any)?.sources ?? (cal.value as any)?.meta?.sources ?? (district.value as any)?.sources ?? []) as any[]
 )
+const calendarIcsHref = computed(() =>
+  district.value && cal.value
+    ? `/calendars/${district.value.slug}-${cal.value.schoolYear}.ics`
+    : ''
+)
+function resolveCalendarHref(href?: string, url?: string) {
+  const raw = href ?? url ?? ''
+  if (!cal.value) return raw
+  if (raw === '__sourcePdfUrl') return (cal.value as any).sourcePdfUrl ?? (cal.value as any).printablePdfUrl ?? ''
+  if (raw === '__icsUrl') return calendarIcsHref.value
+  return raw
+}
+const heroCtas = computed(() => {
+  if (!cal.value || !district.value) return []
+  const configured = (((cal.value as any).heroCtas ?? (cal.value as any).meta?.heroCtas ?? []) as Array<{
+    label?: string
+    href?: string
+    url?: string
+    variant?: 'primary' | 'secondary'
+    download?: boolean
+    filename?: string
+  }>)
+
+  return configured
+    .map((cta, index) => {
+      const href = resolveCalendarHref(cta.href, cta.url)
+      const filename = cta.filename === '__icsFilename'
+        ? `${district.value!.slug}-${cal.value!.schoolYear}.ics`
+        : cta.filename
+
+      return {
+        key: `${cta.label ?? 'hero-cta'}-${index}`,
+        label: cta.label ?? '',
+        href,
+        variant: cta.variant ?? (index === 0 ? 'primary' : 'secondary'),
+        download: Boolean(cta.download),
+        filename,
+      }
+    })
+    .filter(cta => cta.label && cta.href)
+})
 const displaySchoolYear = computed(() =>
   (cal.value as any)?.displaySchoolYear ?? (cal.value as any)?.meta?.displaySchoolYear ?? year
 )
@@ -291,6 +342,12 @@ const alternateCalendarsNotice = computed(() =>
 )
 const hideAlternateCalendarsNotice = computed(() =>
   Boolean((cal.value as any)?.hideAlternateCalendarsNotice ?? (cal.value as any)?.meta?.hideAlternateCalendarsNotice)
+)
+const showAlternateCalendarsNotice = computed(() =>
+  Boolean((cal.value as any)?.alternateCalendars?.length && !hideAlternateCalendarsNotice.value)
+)
+const alternateCalendarsNoticeBeforeKeyDates = computed(() =>
+  String((cal.value as any)?.alternateCalendarsNoticePosition ?? (cal.value as any)?.meta?.alternateCalendarsNoticePosition ?? '') === 'beforeKeyDates'
 )
 const customJumpNavigation = computed(() =>
   (((cal.value as any)?.jumpNavigation ?? (cal.value as any)?.meta?.jumpNavigation ?? []) as Array<{ label?: string, href?: string, id?: string }>).filter(item => item.label && (item.href || item.id))
@@ -635,7 +692,7 @@ const _districtTitle = (district.value as any).seoTitle ? _replacePlaceholders((
 const _districtDesc = (district.value as any).seoDescription ? _replacePlaceholders((district.value as any).seoDescription) : undefined
 const _pageTitle = (cal.value as any).seoTitle ?? _districtTitle ?? _autoTitle
 const _pageDesc = (cal.value as any).seoDescription ?? _districtDesc ?? _autoDesc
-const schemaImageUrl = 'https://myschooldates.com/icons/myschooldates-og-img.png'
+const schemaLogoUrl = 'https://myschooldates.com/icons/icon-512.png'
 const schemaLicenseUrl = 'https://myschooldates.com/data-license'
 
 useSeoMeta({
@@ -653,6 +710,12 @@ const sitePublisher = {
   '@id': 'https://myschooldates.com/#organization',
   name: 'MySchoolDates',
   url: 'https://myschooldates.com',
+  logo: {
+    '@type': 'ImageObject',
+    url: schemaLogoUrl,
+    width: 512,
+    height: 512,
+  },
 }
 const reviewTeamEntity = {
   '@type': 'Organization',
@@ -710,6 +773,8 @@ const basedOnUrl = sourcePdfUrl && !sourcePdfIsArchivedCopy ? sourcePdfUrl : sou
 const sourceCalendarName = (cal.value as any).sourceCalendarName ?? (cal.value as any).meta?.sourceCalendarName
   ?? `${district.value.name} ${year} Calendar ${sourcePdfUrl && !sourcePdfIsArchivedCopy ? 'PDF' : 'Source'}`
 const sourceVersion = (cal.value as any).sourceVersion ?? (cal.value as any).meta?.sourceVersion
+const sourceCalendarDateCreated = (cal.value as any).sourceCalendarDateCreated ?? (cal.value as any).meta?.sourceCalendarDateCreated
+const sourceCalendarDateModified = (cal.value as any).sourceCalendarDateModified ?? (cal.value as any).meta?.sourceCalendarDateModified
 const sourcePdfSameAs = (cal.value as any).sourcePdfSameAs ?? (cal.value as any).meta?.sourcePdfSameAs
 const sourcePageCitationUrl = sourceUrl && sourceUrl !== basedOnUrl ? sourceUrl : ''
 const sourceCitation = [
@@ -730,12 +795,15 @@ const schemaKeywords = [
   ...(((district.value as any).schemaKeywords ?? (district.value as any).meta?.schemaKeywords ?? []) as string[]),
   ...(((cal.value as any)?.schemaKeywords ?? (cal.value as any)?.meta?.schemaKeywords ?? []) as string[]),
 ]
+const schemaIsAccessibleForFree = (cal.value as any)?.schemaIsAccessibleForFree ?? (cal.value as any)?.meta?.schemaIsAccessibleForFree ?? (district.value as any)?.schemaIsAccessibleForFree ?? (district.value as any)?.meta?.schemaIsAccessibleForFree
 const schemaVariableMeasured = (((cal.value as any)?.schemaVariableMeasured ?? (cal.value as any)?.meta?.schemaVariableMeasured ?? []) as string[])
 const sourceCalendarEntity = basedOnUrl ? {
   '@type': 'CreativeWork',
   '@id': `${canonicalUrl}#source-calendar`,
   name: sourceCalendarName,
   ...(sourceVersion ? { version: sourceVersion } : {}),
+  ...(sourceCalendarDateCreated ? { dateCreated: sourceCalendarDateCreated } : {}),
+  ...(sourceCalendarDateModified ? { dateModified: sourceCalendarDateModified } : {}),
   ...(sourcePdfSameAs ? { sameAs: sourcePdfSameAs } : {}),
   url: basedOnUrl,
   publisher: { '@id': districtAbout['@id'] },
@@ -744,12 +812,14 @@ const additionalSourceCalendarEntities = (((cal.value as any)?.schemaAdditionalS
   .filter(source => source?.url && source?.name)
   .map((source, index) => ({
     '@type': source.type ?? 'CreativeWork',
-    '@id': source.id ? `${canonicalUrl}#${source.id}` : `${canonicalUrl}#source-calendar-${index + 2}`,
-    name: source.name,
-    ...(source.version ? { version: source.version } : {}),
-    ...(source.datePublished ? { datePublished: source.datePublished } : {}),
-    ...(source.sameAs ? { sameAs: source.sameAs } : {}),
-    url: source.url,
+      '@id': source.id ? `${canonicalUrl}#${source.id}` : `${canonicalUrl}#source-calendar-${index + 2}`,
+      name: source.name,
+      ...(source.version ? { version: source.version } : {}),
+      ...(source.dateCreated ? { dateCreated: source.dateCreated } : {}),
+      ...(source.dateModified ? { dateModified: source.dateModified } : {}),
+      ...(source.datePublished ? { datePublished: source.datePublished } : {}),
+      ...(source.sameAs ? { sameAs: source.sameAs } : {}),
+      url: source.url,
     publisher: { '@id': districtAbout['@id'] },
   }))
 const sourceCalendarPageEntity = sourcePageCitationUrl ? {
@@ -784,6 +854,7 @@ const datasetEntity = hideDatasetSchema.value ? null : {
   description: datasetDescription,
   url: canonicalUrl,
   ...(schemaKeywords.length ? { keywords: schemaKeywords } : {}),
+  ...(typeof schemaIsAccessibleForFree === 'boolean' ? { isAccessibleForFree: schemaIsAccessibleForFree } : {}),
   ...(schemaVariableMeasured.length ? { variableMeasured: schemaVariableMeasured } : {}),
   license: schemaLicenseUrl,
   usageInfo: schemaLicenseUrl,
@@ -959,11 +1030,20 @@ const customSectionSchemaParts = computed(() =>
         text.includes('review') ||
         text.includes('update history')
     })
-    .map(section => ({
-      '@type': 'WebPageElement',
-      '@id': `${canonicalUrl}#${section.id}`,
-      name: section.label,
-    }))
+    .map((section) => {
+      const sectionBasedOn = (section as any).schema?.isBasedOn ?? (section as any).isBasedOn
+      const sectionBasedOnId = typeof sectionBasedOn === 'string'
+        ? sectionBasedOn.startsWith('http')
+          ? sectionBasedOn
+          : `${canonicalUrl}#${sectionBasedOn.replace(/^#/, '')}`
+        : ''
+      return {
+        '@type': 'WebPageElement',
+        '@id': `${canonicalUrl}#${section.id}`,
+        name: section.label,
+        ...(sectionBasedOnId ? { isBasedOn: { '@id': sectionBasedOnId } } : {}),
+      }
+    })
 )
 const yearNumbersSchemaParts = computed(() => {
   const title = (cal.value as any)?.yearNumbersTitle ?? (cal.value as any)?.meta?.yearNumbersTitle ?? ''
@@ -1012,6 +1092,7 @@ const webPageEntity = {
     ? { hasPart: [
       ...(includeArticleSchema ? [{ '@id': `${canonicalUrl}#calendar-analysis` }] : []),
       ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
+      ...(keyDateItemListEvents.value.length ? [{ '@id': `${canonicalUrl}#key-dates` }] : []),
       ...(faqSchemaItems.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
       ...customSectionSchemaParts.value,
       ...yearNumbersSchemaParts.value,
@@ -1214,7 +1295,7 @@ useHead({
         </h1>
         <p class="mt-2 text-sm text-[#7b756d]">
           {{ (cal as any).heroSourceLine ?? (cal as any).meta?.heroSourceLine ?? `${displaySchoolYear} calendar dates · Based on the official ${district!.shortName || district!.name} calendar` }} ·
-          <a href="#add-to-calendar" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">Download calendar file</a>
+          <a href="#add-to-calendar" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">{{ (cal as any).heroDownloadLabel ?? (cal as any).meta?.heroDownloadLabel ?? (cal as any).icsButtonLabel ?? (cal as any).meta?.icsButtonLabel ?? 'Download calendar file' }}</a>
         </p>
         <div class="mt-3 text-[hsl(var(--rds-ink-muted)/1)] leading-relaxed space-y-2">
           <p v-if="heroSummary">
@@ -1241,6 +1322,22 @@ useHead({
           <p v-if="heroSummaryFacts.length" class="mt-3 text-sm text-[#7b756d]">
             {{ heroSummaryFacts.join(' · ') }}
           </p>
+          <div v-if="heroCtas.length" class="mt-4 flex flex-wrap gap-2">
+            <a
+              v-for="cta in heroCtas"
+              :key="cta.key"
+              :href="cta.href"
+              :download="cta.download ? (cta.filename || '') : undefined"
+              :target="cta.download ? undefined : '_blank'"
+              :rel="cta.download ? undefined : 'noopener'"
+              class="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold transition-colors"
+              :class="cta.variant === 'primary'
+                ? 'bg-[#0f5d6b] text-white hover:bg-[#0b4c58]'
+                : 'border border-[#d9d2c7] bg-[#fbfaf7] text-[#4f5b5f] hover:bg-[#f3f0e8]'"
+            >
+              {{ cta.label }}
+            </a>
+          </div>
           <p class="mt-2 text-xs text-gray-600">
             MySchoolDates is an independent calendar reference and is not affiliated with {{ district!.name }}.
           </p>
@@ -1344,6 +1441,21 @@ useHead({
         </div>
       </div>
 
+      <!-- Alternate calendars notice -->
+      <div v-if="showAlternateCalendarsNotice && alternateCalendarsNoticeBeforeKeyDates" class="bg-amber-50 border border-amber-200 rounded-lg p-4 flex gap-3">
+        <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <p class="text-sm text-amber-800">
+          <template v-if="alternateCalendarsNotice">{{ alternateCalendarsNotice }}</template>
+          <template v-else>
+            This page shows the <strong>Traditional Calendar</strong>, which applies to most {{ district!.name }} schools.
+            If your child attends a year-round school or specialized program, see
+            <a href="#other-calendars" class="underline font-medium">Other Official Calendars</a> below.
+          </template>
+        </p>
+      </div>
+
       <!-- Key Date Cards -->
       <div v-if="!hiddenSections.has('keyDateCards')" id="key-dates" class="scroll-mt-24">
         <h2 class="text-xl font-bold text-gray-900 mb-4">Key Dates</h2>
@@ -1442,7 +1554,7 @@ useHead({
       <DistrictTodayStatus v-if="!hiddenSections.has('todayStatus')" :cal="cal!" />
 
       <!-- Alternate calendars notice -->
-      <div v-if="(cal as any)?.alternateCalendars?.length && !hideAlternateCalendarsNotice" class="bg-amber-50 border border-amber-200 rounded-lg p-4 flex gap-3">
+      <div v-if="showAlternateCalendarsNotice && !alternateCalendarsNoticeBeforeKeyDates" class="bg-amber-50 border border-amber-200 rounded-lg p-4 flex gap-3">
         <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
@@ -1584,6 +1696,25 @@ useHead({
         <DistrictCustomSections :sections="customSections" position="afterComparison" />
       </template>
 
+      <!-- Sources -->
+      <DistrictSources
+        v-if="sourcesBeforeFaq && !hiddenSections.has('sources') && pageSources.length"
+        :sources="pageSources"
+        :district-name="district!.name"
+        :short-name="district!.shortName || district!.name"
+        :year="year"
+        :verified-date="verifiedDate"
+        :source-version="(cal as any).sourceVersion"
+        :source-version-label="(cal as any).sourceVersionLabel ?? (cal as any).meta?.sourceVersionLabel"
+        :source-version-display="(cal as any).sourceVersionDisplay ?? (cal as any).meta?.sourceVersionDisplay"
+        :hide-source-version-display="(cal as any).hideSourceVersionDisplay ?? (cal as any).meta?.hideSourceVersionDisplay"
+        :source-pdf-url="(cal as any).sourcePdfUrl"
+        :review-summary="(cal as any).sourceReviewSummary ?? (cal as any).meta?.sourceReviewSummary"
+        :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
+        :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
+        :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
+      />
+
       <!-- FAQ -->
       <DistrictFaq v-if="!hiddenSections.has('faq')" :cal="cal!" :district="district!" :faqs="faqs" />
 
@@ -1636,7 +1767,7 @@ useHead({
 
       <!-- Sources -->
       <DistrictSources
-        v-if="!hiddenSections.has('sources') && pageSources.length"
+        v-if="!sourcesBeforeFaq && !hiddenSections.has('sources') && pageSources.length"
         :sources="pageSources"
         :district-name="district!.name"
         :short-name="district!.shortName || district!.name"
@@ -1650,6 +1781,7 @@ useHead({
         :review-summary="(cal as any).sourceReviewSummary ?? (cal as any).meta?.sourceReviewSummary"
         :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
         :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
+        :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
       />
 
       <div v-if="showYearSwitcherAfterSources && visibleYearSwitcherYears.length" class="flex items-center gap-2 flex-wrap">
@@ -1675,8 +1807,8 @@ useHead({
 
       <!-- Related Districts -->
       <DistrictRelatedDistricts
-        v-if="!hiddenSections.has('relatedDistricts') && (district as any).relatedDistricts?.length"
-        :related-districts="(district as any).relatedDistricts"
+        v-if="!hiddenSections.has('relatedDistricts') && visibleRelatedDistricts.length"
+        :related-districts="visibleRelatedDistricts"
         :state-name="district!.state"
         :title="(cal as any)?.relatedDistrictsTitle ?? (cal as any)?.meta?.relatedDistrictsTitle ?? (district as any).relatedDistrictsTitle"
         :description="(cal as any)?.relatedDistrictsDescription ?? (cal as any)?.meta?.relatedDistrictsDescription ?? (district as any).relatedDistrictsDescription"

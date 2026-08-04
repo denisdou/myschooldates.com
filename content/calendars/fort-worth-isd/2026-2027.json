@@ -1,153 +1,308 @@
 {
   "institutionId": "fort-worth-isd",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Fort Worth ISD Calendar 2026–2027",
   "firstDay": "2026-08-10",
   "lastDay": "2027-05-21",
-  "seoTitle": "Fort Worth ISD Calendar 2026-2027: Holidays, Breaks & PDF",
-  "seoDescription": "Fort Worth ISD 2026-2027 calendar with Aug 10 first day, May 21 last day, holidays, breaks, bad weather days, PDF and ICS.",
+  "seoTitle": "Fort Worth ISD Calendar 2026–27: Dates, Breaks & PDF",
+  "seoDescription": "See Fort Worth ISD’s 2026–27 first and last days, holidays, staff days, Thanksgiving, winter and spring breaks, plus the official PDF and an ICS download.",
   "totalSchoolDays": 175,
   "teacherWorkDays": 187,
   "semesters": 2,
   "sourceUrl": "https://www.fwisd.org/calendar",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1778769269/fwisdorg/a6k27q42e9uccau06wnx/2026-2027TraditionalCalendar_Amended_5-11-2026.pdf",
-  "lastVerifiedAt": "2026-07-02",
+  "sourceCalendarName": "Fort Worth ISD 2026–27 Traditional Calendar PDF",
+  "sourceVersion": "Amended May 11, 2026",
+  "sourceVersionLabel": "PDF version",
+  "sourceVersionDisplay": "Amended May 11, 2026",
+  "sourceReviewSummary": "Dates were checked against the official Fort Worth ISD calendar page and the amended 2026–27 traditional calendar PDF.",
+  "sourceReviewDetails": [
+    "We verified the first day, last day, 175 student days, 78,750 instructional minutes, staff days, Fall Break, Thanksgiving Break, the January 4 staff day, winter return date, spring break, Good Friday, and school-resume dates against the reviewed traditional calendar PDF.",
+    "This page covers the traditional calendar. FWISD also publishes separate ADSY, Early College High School at TCC, Alice Carlson ALC, and Jo Kelly calendars.",
+    "The downloadable file includes the districtwide dates listed on this page. It is a one-time import and does not automatically update if FWISD revises its calendar."
+  ],
+  "schemaReviewedBy": "author",
+  "lastVerifiedAt": "2026-08-04",
+  "datePublished": "2026-07-02",
+  "dateModified": "2026-08-04",
   "calendarType": "traditional",
+  "allDatesMode": "all",
+  "yearSwitcherPosition": "afterSources",
+  "moveCalendarExportBeforeAllDates": false,
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerifiedBadge": true,
+  "hideHeroVerificationProcess": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideExtendedShareButtons": true,
+  "hideShareCalendar": true,
+  "hideIcsButtonSupportText": true,
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "downloadCta",
+    "todayStatus",
+    "breaks",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "whatsDifferent",
+    "yearNumbers"
+  ],
+  "schemaCalendarName": "Fort Worth ISD Calendar 2026–27",
+  "schemaDatasetName": "Fort Worth ISD 2026–27 Traditional Calendar Dataset",
+  "schemaCalendarDownloadName": "Fort Worth ISD 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "Calendar import file generated from the reviewed Fort Worth ISD traditional calendar dates used for this page.",
+  "schemaDatasetDescription": "Reviewed Fort Worth ISD traditional-calendar dates for 2026–27, including the first and last days, staff days, major breaks, school-resume dates, 175 student days, 78,750 instructional minutes, the official PDF, and the one-time ICS download.",
+  "schemaSpatialCoverage": "Fort Worth Independent School District, Texas",
+  "temporalCoverageStart": "2026-08-10",
+  "temporalCoverageEnd": "2027-05-21",
+  "heroSourceLine": "Traditional calendar dates · Based on the official Fort Worth ISD calendar",
+  "heroSummary": "Fort Worth ISD’s 2026–27 school year begins Monday, August 10, 2026, and ends Friday, May 21, 2027. Spring break is March 15–19.",
+  "heroFactChips": [
+    "Traditional calendar",
+    "175 student days",
+    "78,750 instructional minutes",
+    "Spring break: Mar 15–19"
+  ],
+  "keyDatesSummaryTitle": "Key Dates",
+  "keyDatesSummarySubtitle": "The Fort Worth ISD dates families usually need first",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-10",
+      "type": "school_start",
+      "schemaDescription": "Fort Worth ISD traditional-calendar students start school on August 10, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Fall Break",
+      "date": "2026-10-09",
+      "type": "break",
+      "description": "Students are also off October 8 for staff development and October 12 for Indigenous Peoples' Day.",
+      "schemaDescription": "Fort Worth ISD lists Fall Break on October 9, 2026. Students are also off October 8 for staff development and October 12 for Indigenous Peoples' Day."
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "schemaDescription": "Thanksgiving Break runs November 23–27, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "January 4 is a staff day; students return January 5.",
+      "schemaDescription": "Winter Break runs December 21, 2026, through January 1, 2027. January 4 is a staff day, and students return January 5."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start",
+      "description": "Students return March 22 and are off again March 26 for Good Friday.",
+      "schemaDescription": "Fort Worth ISD spring break runs March 15–19, 2027. Students return March 22 and are off again March 26 for Good Friday."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-05-21",
+      "type": "school_end",
+      "schemaDescription": "The last day of school on Fort Worth ISD's traditional calendar is May 21, 2027."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "href": "#key-dates" },
+    { "label": "Dates", "href": "#all-dates" },
+    { "label": "Download", "href": "#add-to-calendar" },
+    { "label": "Other Calendars", "href": "#other-calendars" },
+    { "label": "Changes", "id": "fwisd-2026-2027-what-changed" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Compare", "href": "#comparison" },
+    { "label": "Sources", "href": "#sources" }
+  ],
+  "allDatesTitle": "Important Student Calendar Dates — 2026–27",
+  "allDatesCoverageNote": "This list covers districtwide student dates from the FWISD traditional calendar. ADSY, Early College High School, Alice Carlson ALC, Jo Kelly, testing, bell schedules, and campus events may be published separately.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1778769269/fwisdorg/a6k27q42e9uccau06wnx/2026-2027TraditionalCalendar_Amended_5-11-2026.pdf",
+  "allDatesSourceLabel": "Reviewed traditional calendar PDF",
+  "icsHeading": "Add the 2026–27 Dates to Your Calendar",
+  "icsDescription": "Add the reviewed districtwide dates to Google Calendar, Apple Calendar, or Outlook. The ICS file is a one-time import and will not update automatically if FWISD revises its calendar.",
+  "icsButtonLabel": "Download ICS File",
+  "pdfHeading": "Official 2026–27 Calendar PDF",
+  "pdfDescription": "Open the district’s amended 2026–27 traditional calendar PDF.",
+  "pdfButtonLabel": "View Official PDF",
+  "alternateCalendarsTitle": "Other Official FWISD Calendars",
+  "alternateCalendarsDescription": "Use the appropriate calendar below if your child attends one of these schools or programs.",
+  "alternateCalendarsNotice": "This page covers FWISD’s traditional calendar. Students in ADSY, Early College High School, Alice Carlson ALC, or Jo Kelly should use the program-specific calendars below.",
   "alternateCalendars": [
     {
       "type": "adsy",
-      "label": "ADSY Calendar",
+      "label": "Additional Days School Year (ADSY) Calendar",
       "pdfUrl": "https://resources.finalsite.net/images/v1778769318/fwisdorg/s9qdohxcqtiq4ws6gbzf/2026-2027ADSYCalendar_Amended_5-11-2026.pdf",
       "firstDay": "2026-08-10"
     },
     {
       "type": "echs",
-      "label": "Early College High School at TCC (ECHS)",
+      "label": "Early College High School at TCC Calendar",
       "pdfUrl": "https://resources.finalsite.net/images/v1778769383/fwisdorg/ftussn5ohoob4e8wy0jz/2026-2027ECHSCalendar_Amended_5-11-2026.pdf",
       "firstDay": "2026-08-10"
     },
     {
       "type": "intersessional",
-      "label": "Alice Carlson ALC and Jo Kelly",
+      "label": "Alice Carlson ALC and Jo Kelly Calendar",
       "pdfUrl": "https://resources.finalsite.net/images/v1778769420/fwisdorg/pbbxcbefrlhknwtsc1mp/2026-2027IntersessionCalendar_Amended_5-11-2026.pdf",
       "firstDay": "2026-08-10"
     }
   ],
+  "calendarNotes": "Fort Worth ISD’s 2026–27 traditional calendar starts August 10, 2026 and ends May 21, 2027. The amended PDF lists 175 student days, 78,750 instructional minutes, Fall Break on October 9, Thanksgiving Break from November 23–27, Winter Break from December 21 through January 1, a staff development day on January 4, spring break from March 15–19, Good Friday on March 26, and a staff development day on March 29.",
   "calendarFaqs": [
     {
-      "q": "When is spring break 2026-2027 for Fort Worth Independent School District?",
-      "a": "Spring break for Fort Worth Independent School District runs Mar 15, 2027–Mar 19, 2027, 5 days."
+      "q": "When does Fort Worth ISD start and end school in 2026–27?",
+      "a": "Fort Worth ISD’s traditional calendar starts Monday, August 10, 2026, and ends Friday, May 21, 2027."
+    },
+    {
+      "q": "When is Fort Worth ISD spring break?",
+      "a": "Fort Worth ISD’s spring break is March 15–19, 2027. Students return Monday, March 22."
+    },
+    {
+      "q": "Does this page cover every FWISD school?",
+      "a": "No. This page covers the traditional districtwide calendar. FWISD also publishes separate ADSY, Early College High School at TCC, Alice Carlson ALC, and Jo Kelly calendars."
+    },
+    {
+      "q": "Where can I find the official calendar PDF?",
+      "a": "Use the Official 2026–27 Calendar PDF link on this page, or check the Fort Worth ISD calendar page for the latest posted version."
+    },
+    {
+      "q": "Will the downloaded calendar update automatically?",
+      "a": "No. The ICS file is a one-time import, so later FWISD calendar revisions will not appear automatically."
+    },
+    {
+      "q": "What changed from the 2025–26 calendar?",
+      "a": "School starts August 10 instead of August 12. The traditional calendar lists 175 student days instead of 173, and FWISD added Fall Break on October 9."
     }
   ],
-  "yearNumbers": [
+  "faqDisplayQuestions": [
+    "When does Fort Worth ISD start and end school in 2026–27?",
+    "When is Fort Worth ISD spring break?",
+    "Does this page cover every FWISD school?",
+    "Where can I find the official calendar PDF?",
+    "Will the downloaded calendar update automatically?",
+    "What changed from the 2025–26 calendar?"
+  ],
+  "faqDisplayLimit": 6,
+  "comparisonTitle": "How Fort Worth ISD's Calendar Compares",
+  "comparisonSummary": "Fort Worth ISD and Houston ISD start August 10, while Dallas ISD starts August 11. FWISD and Dallas ISD both schedule spring break for March 15–19; Houston ISD schedules spring break for March 8–12.",
+  "comparisonDistrictSlugs": [
+    "dallas-independent-school-district-calendar",
+    "houston-independent-school-district-calendar"
+  ],
+  "hideComparisonInsights": true,
+  "hideComparisonNotes": true,
+  "comparisonFooterText": "The table compares dates from each district’s published 2026–27 districtwide calendar. Program-specific calendars are not included.",
+  "comparisonCaption": "2026–27 districtwide calendar comparison for Fort Worth ISD, Dallas ISD, and Houston ISD",
+  "comparisonCustomRows": [
     {
-      "label": "Starts Earlier",
-      "value": "2 days",
-      "detail": "First day moves from Aug 12 to Aug 10 vs 2025–2026."
+      "key": "firstDay",
+      "label": "First Day",
+      "values": {
+        "fort-worth-independent-school-district-calendar": "Aug 10, 2026",
+        "dallas-independent-school-district-calendar": "Aug 11, 2026",
+        "houston-independent-school-district-calendar": "Aug 10, 2026"
+      }
     },
     {
-      "label": "Days Up",
-      "value": "175 days",
-      "detail": "Instructional days rise from 173 to 175 vs 2025–2026, adding two instructional days to the school year."
+      "key": "lastDay",
+      "label": "Last Day",
+      "values": {
+        "fort-worth-independent-school-district-calendar": "May 21, 2027",
+        "dallas-independent-school-district-calendar": "May 26, 2027",
+        "houston-independent-school-district-calendar": "May 28, 2027"
+      }
     },
     {
-      "label": "Fall Break Added",
-      "value": "Oct 9",
-      "detail": "A one-day fall break on Oct 9 is new for 2026–2027; no mid-fall break appeared in the 2025–2026 calendar."
+      "key": "fallBreak",
+      "label": "Fall Break",
+      "values": {
+        "fort-worth-independent-school-district-calendar": "Oct 9, 2026",
+        "dallas-independent-school-district-calendar": "Oct 8–9, 2026",
+        "houston-independent-school-district-calendar": "No named fall break in reviewed source"
+      }
     },
     {
-      "label": "Good Friday",
-      "value": "Mar 26",
-      "detail": "Good Friday is observed as a school holiday, giving families a long Easter weekend."
+      "key": "thanksgivingBreak",
+      "label": "Thanksgiving Break",
+      "values": {
+        "fort-worth-independent-school-district-calendar": "Nov 23–27, 2026",
+        "dallas-independent-school-district-calendar": "Nov 23–27, 2026",
+        "houston-independent-school-district-calendar": "Nov 23–27, 2026"
+      }
+    },
+    {
+      "key": "winterBreak",
+      "label": "Winter Break",
+      "values": {
+        "fort-worth-independent-school-district-calendar": "Dec 21, 2026–Jan 1, 2027; return Jan 5",
+        "dallas-independent-school-district-calendar": "Dec 21, 2026–Jan 4, 2027",
+        "houston-independent-school-district-calendar": "Dec 21, 2026–Jan 1, 2027"
+      }
+    },
+    {
+      "key": "springBreak",
+      "label": "Spring Break",
+      "values": {
+        "fort-worth-independent-school-district-calendar": "Mar 15–19, 2027",
+        "dallas-independent-school-district-calendar": "Mar 15–19, 2027",
+        "houston-independent-school-district-calendar": "Mar 8–12, 2027"
+      }
+    }
+  ],
+  "customSections": [
+    {
+      "id": "fwisd-2026-2027-what-changed",
+      "label": "What Changed from 2025–26",
+      "position": "afterYearDiff",
+      "content": "FWISD’s amended 2026–27 traditional calendar lists 175 student days and 78,750 instructional minutes. The changes below are the main differences families are likely to notice.",
+      "table": {
+        "columns": ["What changed", "What it means"],
+        "rows": [
+          ["School starts August 10 instead of August 12.", "Back-to-school plans move two days earlier."],
+          ["The calendar has 175 student days, up from 173.", "The calendar includes two more student days and still ends May 21."],
+          ["FWISD added Fall Break on October 9.", "Students are off from Thursday, October 8, through Monday, October 12."]
+        ]
+      }
     }
   ],
   "events": [
-    {
-      "date": "2026-08-10",
-      "name": "First Day of School",
-      "type": "school_start"
-    },
-    {
-      "date": "2026-09-07",
-      "name": "Labor Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-09-21",
-      "name": "Staff Development Day",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-10-08",
-      "name": "Staff Development Day",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-10-09",
-      "name": "Fall Break",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-10-12",
-      "name": "Indigenous Peoples' Day",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-11-23",
-      "name": "Thanksgiving Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2026-12-21",
-      "name": "Winter Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-01-04",
-      "name": "Winter Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-01-18",
-      "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-02-15",
-      "name": "Presidents' Day / Staff Development Day",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-03-15",
-      "name": "Spring Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-03-19",
-      "name": "Spring Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-03-26",
-      "name": "Good Friday",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-03-29",
-      "name": "Staff Development Day",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-05-21",
-      "name": "Last Day of School",
-      "type": "school_end"
-    }
-  ],
-  "calendarNotes": "Fort Worth ISD begins the 2026–2027 school year on August 10, 2026. Spring Break runs March 15–19, 2027, aligned with neighboring Dallas ISD. The school year ends May 21, 2027 — about one week earlier than most Texas peers, reflecting 175 instructional days.",
-  "datePublished": "2026-07-02",
-  "dateModified": "2026-07-02"
+    { "date": "2026-08-10", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
+    { "date": "2026-09-21", "name": "Staff Development Day", "type": "no_school", "description": "No school for students." },
+    { "date": "2026-10-08", "name": "Staff Development Day", "type": "no_school", "description": "No school for students." },
+    { "date": "2026-10-09", "name": "Fall Break", "type": "break", "badgeLabel": "Break" },
+    { "date": "2026-10-12", "name": "Indigenous Peoples' Day", "type": "no_school", "description": "No school for students." },
+    { "date": "2026-11-23", "name": "Thanksgiving Break", "type": "break_start", "endDate": "2026-11-27", "displayDate": "November 23–27, 2026" },
+    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start", "endDate": "2027-01-01", "displayDate": "December 21, 2026–January 1, 2027" },
+    { "date": "2027-01-04", "name": "Staff Development Day", "type": "no_school", "description": "No school for students." },
+    { "date": "2027-01-05", "name": "School Resumes", "type": "academic", "badgeLabel": "Return", "description": "Classes resume after Winter Break." },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-02-15", "name": "Presidents Day / Staff Development Day", "type": "no_school", "description": "No school for students." },
+    { "date": "2027-03-15", "name": "Spring Break", "type": "break_start", "endDate": "2027-03-19", "displayDate": "March 15–19, 2027" },
+    { "date": "2027-03-22", "name": "School Resumes", "type": "academic", "badgeLabel": "Return", "description": "Classes resume after spring break." },
+    { "date": "2027-03-26", "name": "Good Friday", "type": "holiday" },
+    { "date": "2027-03-29", "name": "Staff Development Day", "type": "no_school", "description": "No school for students." },
+    { "date": "2027-05-21", "name": "Last Day of School", "type": "school_end" }
+  ]
 }

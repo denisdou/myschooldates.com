@@ -1,0 +1,140 @@
+{
+  "institutionId": "tempe-union-high-school-district",
+  "name": "Tempe Union High School District",
+  "shortName": "TUHSD",
+  "slug": "tempe-union-high-school-district-calendar",
+  "state": "Arizona",
+  "stateCode": "AZ",
+  "city": "Tempe",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.tempeunion.org",
+  "calendarPage": "https://www.tempeunion.org/calendars-schedules/student-calendars",
+  "logo": "https://resources.finalsite.net/images/f_auto,q_auto/v1703089984/tempeunionorg/lkfyhirobqo0mcnyn9um/TempeUnionHighSchoolDistrictPrimaryLogoImage.png",
+  "timezone": "America/Phoenix",
+  "county": "Maricopa County",
+  "region": "East Valley",
+  "metro": "Phoenix-Mesa-Chandler",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "East Valley High School District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-04",
+    "coverageNote": "Tempe Union High School District coverage uses the official TUHSD student calendars page, the official district logo, and official student calendar PDFs for 2026-2027, 2027-2028, and 2028-2029. No 2025-2026 PDF URL or local PDF was provided, so that school year was not created."
+  },
+  "contentFreshnessScore": {
+    "overall": 95,
+    "sourceUpdated": "2026-08-04",
+    "lastManualReview": "2026-08-04",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the TUHSD student calendars page when the district replaces a Google Drive calendar PDF, changes semester exam dates, updates graduation timing, or publishes a 2025-2026 calendar source."
+  },
+  "districtContentScore": {
+    "visibility": "public",
+    "publishStatus": "publish",
+    "reviewStatus": "approved",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official TUHSD revision, future PDF replacement, graduation date update, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Tempe Union High School District",
+    "TUHSD calendar",
+    "Tempe Union calendar",
+    "Tempe Union High School District calendar",
+    "Tempe high school calendar",
+    "TUHSD student calendar",
+    "Tempe Arizona school calendar",
+    "East Valley high school calendar"
+  ],
+  "districtFact": "Tempe Union High School District is a 9-12 high school district in the East Valley. Its student calendar lists 180 student days, 188 teacher days, 190 new-teacher days, quarter and semester day counts, semester exam windows, district inservice half days, teacher workdays, school breaks, and a graduation date that may fall after the last student day.",
+  "about": [
+    {
+      "title": "About Tempe Union High School District",
+      "content": "Tempe Union High School District, often called TUHSD, serves high school students in Tempe and nearby East Valley communities in Maricopa County. Because TUHSD is a high-school-only district, families often compare this calendar with elementary feeder districts, athletics calendars, dual-enrollment deadlines, exam schedules, and graduation information."
+    },
+    {
+      "title": "District Calendar and Campus Schedules",
+      "content": "This page summarizes districtwide student calendar dates from official TUHSD PDFs. Families should still check their high school for bell schedules, bus routes, testing dates, athletics, fine arts events, senior activities, and campus-specific graduation ceremony details."
+    }
+  ],
+  "planningTips": {
+    "title": "TUHSD Calendar Notes",
+    "content": [
+      "TUHSD publishes a student calendar for grades 9-12, so elementary and middle school siblings may follow a different district calendar.",
+      "Semester exam windows are especially important for high school families because they can affect dismissal times, transportation, athletics, and work schedules.",
+      "The district marks selected district inservice days as half days for students rather than full closures.",
+      "Graduation is listed separately from the last day of school, so seniors should confirm ceremony logistics with their campus."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Is Tempe Union a K-12 district?",
+      "a": "No. Tempe Union High School District is a 9-12 high school district. Younger siblings may be served by a separate elementary district with different dates."
+    },
+    {
+      "q": "Does TUHSD list semester exam dates on the student calendar?",
+      "a": "Yes. The reviewed TUHSD student calendars list semester exam windows near the end of each semester."
+    },
+    {
+      "q": "Are TUHSD district inservice dates always no-school days?",
+      "a": "Not always. The reviewed TUHSD calendars list district inservice dates that are half days for students."
+    },
+    {
+      "q": "Where should families verify TUHSD calendar updates?",
+      "a": "Use the official TUHSD student calendars page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with Tempe Union High School District."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Chandler Unified School District",
+      "slug": "chandler-unified-school-district-calendar",
+      "state": "Arizona",
+      "reason": "Compare another East Valley district with early starts, breaks, and student calendar PDFs."
+    },
+    {
+      "name": "Mesa Public Schools",
+      "slug": "mesa-public-schools-calendar",
+      "state": "Arizona",
+      "reason": "View a nearby East Valley district calendar with family planning dates."
+    },
+    {
+      "name": "Scottsdale Unified School District",
+      "slug": "scottsdale-unified-school-district-calendar",
+      "state": "Arizona",
+      "reason": "Compare another Phoenix-area district calendar with early releases and breaks."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Tempe Union High School District official website",
+      "url": "https://www.tempeunion.org"
+    },
+    {
+      "label": "TUHSD student calendars page",
+      "url": "https://www.tempeunion.org/calendars-schedules/student-calendars"
+    }
+  ]
+}

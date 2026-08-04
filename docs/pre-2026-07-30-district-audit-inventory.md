@@ -18,11 +18,7 @@ Created: 2026-08-03
 
 | Priority | Slug | Audit status |
 | --- | --- | --- |
-| P4 | `/austin-independent-school-district-calendar` | 已审计已达标 |
-| P3 | `/broward-county-school-calendar` | 已审计已达标 |
 | P0 | `/fort-worth-independent-school-district-calendar` | 未审计 |
-| P0 | `/fresno-unified-school-district-calendar` | 未审计 |
-| P0 | `/hillsborough-county-school-calendar` | 未审计 |
 | P0 | `/long-beach-unified-school-district-calendar` | 未审计 |
 | P0 | `/los-angeles-unified-school-district-calendar` | 未审计 |
 | P0 | `/miami-dade-school-calendar` | 未审计 |
@@ -116,16 +112,3 @@ Created: 2026-08-03
 | P1 | `/cobb-county-school-calendar` | 未审计 |
 | P1 | `/dekalb-county-school-calendar` | 未审计 |
 | P1 | `/sarasota-county-school-calendar` | 未审计 |
-| P2 | `/houston-independent-school-district-calendar` | 已审计，需按新标准复核 |
-| P2 | `/alexandria-city-public-schools-calendar` | 已审计，需按新标准复核 |
-| P2 | `/duval-county-school-calendar` | 已审计，需按新标准复核 |
-| P2 | `/irvine-unified-school-district-calendar` | 已审计，需按新标准复核 |
-| P2 | `/pinellas-county-school-calendar` | 已审计，需按新标准复核 |
-| P2 | `/polk-county-school-calendar` | 已审计，需按新标准复核 |
-| P2 | `/spotsylvania-county-public-schools-calendar` | 已审计，需按新标准复核 |
-| P2 | `/stafford-county-public-schools-calendar` | 已审计，需按新标准复核 |
-| P2 | `/collier-county-school-calendar` | 已审计，需按新标准复核 |
-| P3 | `/atlanta-public-schools-calendar` | 已重新审计，需抽查 |
-| P3 | `/fulton-county-schools-calendar` | 已重新审计，需抽查 |
-| P4 | `/forsyth-county-schools-calendar` | 已审计已达标 |
-| P4 | `/dallas-independent-school-district-calendar` | 已审计并达到 9.7+ 发布级，完成 Key Dates 返校说明、What Changed 年度对比、meta 语法、ADSY 全称、175 student days 来源、Winter Break/Jan. 5、inclement weather day、early release、FAQ 链接、ICS 一致性与 comparison 口径收尾，updated/reviewed: 2026-08-03 |

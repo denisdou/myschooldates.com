@@ -17,6 +17,7 @@ type CalendarEvent = {
   endDate?: string
   dates?: string[]
   exportDatesIndividually?: boolean
+  showDuringBreak?: boolean
 }
 
 type CalendarRecord = {
@@ -245,7 +246,7 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord) {
     .filter(event =>
       event.type !== 'break_end' &&
       !isRangeEndEvent(event, calendar.events) &&
-      (event.type === 'observance' || !isCoveredByBreak(event, calendar.events))
+      (event.showDuringBreak || event.type === 'observance' || !isCoveredByBreak(event, calendar.events))
     )
     .flatMap(event => event.exportDatesIndividually && event.dates?.length
       ? event.dates.map(date => ({ ...event, date, endDate: undefined, dates: undefined }))

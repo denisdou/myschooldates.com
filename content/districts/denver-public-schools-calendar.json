@@ -1,0 +1,127 @@
+{
+  "institutionId": "denver-public-schools-calendar",
+  "name": "Denver Public Schools",
+  "shortName": "DPS",
+  "slug": "denver-public-schools-calendar",
+  "state": "Colorado",
+  "stateCode": "CO",
+  "city": "Denver",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["ECE", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.dpsk12.org/",
+  "calendarPage": "https://www.dpsk12.org/page/calendars",
+  "logo": "https://cmsv2-assets.apptegy.net/uploads/18183/logo/19176/DPS_OneLine_White.png",
+  "timezone": "America/Denver",
+  "county": "Denver County",
+  "region": "Denver",
+  "metro": "Denver-Aurora-Lakewood",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Denver District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "officialSpreadsheet": false,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-04",
+    "coverageNote": "Denver Public Schools coverage uses the official DPS calendars page, official district website, and district-published family/student calendar PDFs for 2026-2027, 2027-2028, and 2028-2029. No 2025-2026 PDF URL was provided, so that school year was not created."
+  },
+  "contentFreshnessScore": {
+    "overall": 95,
+    "sourceUpdated": "2026-08-04",
+    "lastManualReview": "2026-08-04",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the DPS calendars page when the district replaces a PDF, updates first-day or last-day markings, changes no-class days, or publishes another future-year calendar."
+  },
+  "districtContentScore": {
+    "visibility": "public",
+    "publishStatus": "publish",
+    "reviewStatus": "approved",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official DPS revision, PDF replacement, school-year calendar update, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideRelatedDistrictDescriptions": true,
+  "hiddenSections": ["districtProfile"],
+  "searchAliases": [
+    "Denver Public Schools",
+    "DPS calendar",
+    "Denver Public Schools calendar",
+    "DPS school calendar",
+    "Denver school calendar",
+    "Denver Public Schools family student calendar",
+    "DPS K-12 first day",
+    "DPS ECE first day"
+  ],
+  "districtFact": "Denver Public Schools publishes family/student calendar PDFs that distinguish the first day for K-12 students from the first day for ECE students. DPS also marks conference/no-class days, vacation or staff-learning/no-class days, planning and professional learning days, other holidays and observances when school remains open, and a last day that is a half-day early release.",
+  "about": [
+    {
+      "title": "About Denver Public Schools Calendar Dates",
+      "content": "This page summarizes districtwide dates from Denver Public Schools family/student calendar PDFs. Families should still check their school for bell schedules, athletics, testing, transportation notices, school-specific events, and any same-day updates from DPS."
+    }
+  ],
+  "planningTips": {
+    "title": "DPS Calendar Notes",
+    "content": [
+      "DPS marks separate first days for K-12 and ECE students, so preschool families should not assume the K-12 start date applies.",
+      "The DPS calendar distinguishes holidays/no classes, conference/no classes, vacation or staff-learning/no classes, and other holidays and observances when school remains open.",
+      "The last day is marked as a half-day early release on the family/student calendars."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Does Denver Public Schools use the same first day for ECE and K-12 students?",
+      "a": "DPS family and student calendars can mark separate first days for K-12 and Early Childhood Education students. Check the school-year page for the exact dates."
+    },
+    {
+      "q": "Are all DPS holidays and observances no-school days?",
+      "a": "No. DPS separates holidays/no classes from other holidays and observances. The PDF notes that school is open on other holidays and observances unless the date is separately marked as no classes."
+    },
+    {
+      "q": "Where should families verify DPS calendar updates?",
+      "a": "Use the official Denver Public Schools calendars page and school communications for final confirmation. MySchoolDates is an independent reference and is not affiliated with DPS."
+    }
+  ],
+  "customSections": [],
+  "relatedDistrictsTitle": "More Colorado School Calendars",
+  "relatedDistrictsDescription": "Browse calendars for other Colorado school districts.",
+  "relatedDistricts": [
+    {
+      "name": "Jeffco Public Schools",
+      "slug": "jeffco-public-schools-calendar",
+      "state": "Colorado"
+    },
+    {
+      "name": "Cherry Creek School District",
+      "slug": "cherry-creek-school-district-calendar",
+      "state": "Colorado"
+    },
+    {
+      "name": "Aurora Public Schools",
+      "slug": "aurora-public-schools-calendar",
+      "state": "Colorado"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Denver Public Schools official website",
+      "url": "https://www.dpsk12.org/"
+    },
+    {
+      "label": "DPS calendars page",
+      "url": "https://www.dpsk12.org/page/calendars"
+    }
+  ]
+}

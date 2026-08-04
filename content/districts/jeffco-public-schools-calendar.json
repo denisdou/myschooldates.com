@@ -1,0 +1,123 @@
+{
+  "institutionId": "jeffco-public-schools-calendar",
+  "name": "Jeffco Public Schools",
+  "shortName": "Jeffco",
+  "slug": "jeffco-public-schools-calendar",
+  "state": "Colorado",
+  "stateCode": "CO",
+  "city": "Golden",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.jeffcopublicschools.org/",
+  "calendarPage": "https://www.jeffcopublicschools.org/calendar",
+  "logo": "https://resources.finalsite.net/images/v1701081478/jeffcopublicschoolsorg/rdqlx5ofyh8upupwq6ih/JeffcoJeffersonCountySchoolDistrict.svg",
+  "timezone": "America/Denver",
+  "county": "Jefferson County",
+  "region": "Denver Metro",
+  "metro": "Denver-Aurora-Lakewood",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Denver-area District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "officialSpreadsheet": false,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-04",
+    "coverageNote": "Jeffco Public Schools coverage uses the official district website, official calendar page, and district-published family calendar PDFs for 2025-2026, 2026-2027, and 2027-2028. Spanish, Vietnamese, and Russian family calendar PDFs are available for 2026-2027 and 2027-2028."
+  },
+  "contentFreshnessScore": {
+    "overall": 95,
+    "sourceUpdated": "2026-08-04",
+    "lastManualReview": "2026-08-04",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the Jeffco calendar page when the district replaces a family calendar PDF, changes potential snow make-up days, updates translated calendars, or publishes another future-year calendar."
+  },
+  "districtContentScore": {
+    "visibility": "public",
+    "publishStatus": "publish",
+    "reviewStatus": "approved",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official Jeffco revision, translated PDF replacement, snow make-up day change, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideRelatedDistrictDescriptions": true,
+  "hiddenSections": ["districtProfile"],
+  "searchAliases": [
+    "Jeffco Public Schools",
+    "Jeffco calendar",
+    "Jefferson County School District calendar",
+    "Jeffco Public Schools calendar",
+    "Jeffco family calendar",
+    "Jeffco snow make up days",
+    "Jeffco last day early dismissal",
+    "Jeffco school calendar"
+  ],
+  "districtFact": "Jeffco Public Schools publishes family calendar PDFs with first and last days, student contact-day counts, teacher workday counts, teacher staff development days, potential snow make-up days, modified contact-day notes, legal holidays, translated family calendars for some years, and a last-day dismissal notice for district-run PK-12 schools.",
+  "about": [
+    {
+      "title": "About Jeffco Calendar Dates",
+      "content": "This page summarizes districtwide dates from Jeffco Public Schools family calendar PDFs. Families should still check their school for bell schedules, charter school details, modified contact days, athletics, testing, transportation notices, and same-day updates from the district."
+    }
+  ],
+  "planningTips": {
+    "title": "Jeffco Calendar Notes",
+    "content": [
+      "Jeffco identifies potential snow make-up days on the family calendar, so those dates should not be treated as guaranteed vacation days until the district confirms the schedule.",
+      "The family calendar notes that additional modified contact days are identified on individual school calendars.",
+      "For years with a last-day dismissal notice, Jeffco says district-run PK-12 schools dismiss 2.5 hours earlier than their regular dismissal time; charter families should check with their school directly."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Which Jeffco calendar source should families use?",
+      "a": "Use Jeffco's official family calendar page for districtwide dates, and check your individual school calendar for modified contact days and school-specific events."
+    },
+    {
+      "q": "Are Jeffco potential snow make-up days guaranteed days off?",
+      "a": "No. Jeffco marks potential snow make-up days separately. Families should check district updates before treating those dates as final no-school days."
+    }
+  ],
+  "customSections": [],
+  "relatedDistrictsTitle": "More Colorado School Calendars",
+  "relatedDistrictsDescription": "Browse calendars for other Colorado school districts.",
+  "relatedDistricts": [
+    {
+      "name": "Denver Public Schools",
+      "slug": "denver-public-schools-calendar",
+      "state": "Colorado"
+    },
+    {
+      "name": "Cherry Creek School District",
+      "slug": "cherry-creek-school-district-calendar",
+      "state": "Colorado"
+    },
+    {
+      "name": "Douglas County School District RE-1",
+      "slug": "douglas-county-school-district-re-1-calendar",
+      "state": "Colorado"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Jeffco Public Schools official website",
+      "url": "https://www.jeffcopublicschools.org/"
+    },
+    {
+      "label": "Jeffco Public Schools calendar page",
+      "url": "https://www.jeffcopublicschools.org/calendar"
+    }
+  ]
+}

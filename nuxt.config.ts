@@ -51,6 +51,7 @@ export default defineNuxtConfig({
 
         // ── State pages ────────────────────────────────────────────────────────
         '/california',
+        '/colorado',
         '/florida',
         '/texas',
         '/north-carolina',
@@ -91,6 +92,7 @@ export default defineNuxtConfig({
         '/cobb-county-school-calendar',
         '/dekalb-county-school-calendar',
         '/deer-valley-unified-school-district-calendar',
+        '/denver-public-schools-calendar',
         '/sarasota-county-school-calendar',
         '/gwinnett-county-public-schools-calendar',
         '/chesterfield-county-school-calendar',
@@ -117,6 +119,7 @@ export default defineNuxtConfig({
         '/houston-independent-school-district-calendar',
         '/howard-county-school-calendar',
         '/humble-isd-calendar',
+        '/jeffco-public-schools-calendar',
         '/judson-isd-calendar',
         '/long-beach-unified-school-district-calendar',
         '/lake-washington-school-district-calendar',
@@ -164,6 +167,7 @@ export default defineNuxtConfig({
         '/school-district-of-philadelphia-calendar',
         '/stockton-unified-school-district-calendar',
         '/sweetwater-union-high-school-district-calendar',
+        '/tempe-union-high-school-district-calendar',
         '/tucson-unified-school-district-calendar',
         '/oakland-unified-school-district-calendar',
         '/irvine-unified-school-district-calendar',
@@ -277,6 +281,10 @@ export default defineNuxtConfig({
         '/deer-valley-unified-school-district-calendar/2025-2026',
         '/deer-valley-unified-school-district-calendar/2026-2027',
 
+        '/denver-public-schools-calendar/2026-2027',
+        '/denver-public-schools-calendar/2027-2028',
+        '/denver-public-schools-calendar/2028-2029',
+
         '/sarasota-county-school-calendar/2025-2026',
         '/sarasota-county-school-calendar/2026-2027',
 
@@ -367,6 +375,10 @@ export default defineNuxtConfig({
         '/howard-county-school-calendar/2025-2026',
         '/howard-county-school-calendar/2026-2027',
 
+        '/jeffco-public-schools-calendar/2025-2026',
+        '/jeffco-public-schools-calendar/2026-2027',
+        '/jeffco-public-schools-calendar/2027-2028',
+
         '/judson-isd-calendar/2025-2026',
         '/judson-isd-calendar/2026-2027',
 
@@ -387,6 +399,10 @@ export default defineNuxtConfig({
         '/peoria-unified-school-district-calendar/2025-2026',
         '/peoria-unified-school-district-calendar/2026-2027',
         '/peoria-unified-school-district-calendar/2027-2028',
+
+        '/tempe-union-high-school-district-calendar/2026-2027',
+        '/tempe-union-high-school-district-calendar/2027-2028',
+        '/tempe-union-high-school-district-calendar/2028-2029',
 
         '/tucson-unified-school-district-calendar/2025-2026',
         '/tucson-unified-school-district-calendar/2026-2027',

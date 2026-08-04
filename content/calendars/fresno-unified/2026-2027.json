@@ -1,6 +1,8 @@
 {
   "institutionId": "fresno-unified",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Fresno Unified School District Calendar 2026–27",
   "firstDay": "2026-08-17",
   "lastDay": "2027-06-10",
   "totalSchoolDays": 180,
@@ -8,130 +10,301 @@
   "semesters": 2,
   "sourceUrl": "https://www.fresnounified.org/about/calendar",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1774907065/fresnouorg/yj03wwdolxph8ybjblxy/FINALV2ACADEMICCALENDAROPTION12026.pdf",
-  "lastVerifiedAt": "2026-07-02",
-  "calendarType": "traditional",
-  "calendarFaqs": [
+  "sourceCalendarName": "Fresno Unified 2026–27 Academic Calendar",
+  "sourceVersion": "Revised/approved March 11, 2026",
+  "sourceVersionDisplay": "Board revised/approved March 11, 2026; originally board approved February 25, 2026",
+  "sourceCalendarDateCreated": "2026-02-25",
+  "sourceCalendarDateModified": "2026-03-11",
+  "lastVerifiedAt": "2026-08-04",
+  "datePublished": "2026-07-02",
+  "dateModified": "2026-08-04",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
+  "sourcesBeforeFaq": true,
+  "yearSwitcherPosition": "afterSources",
+  "webPageMainEntity": "dataset",
+  "schemaReviewedBy": "author",
+  "seoTitle": "Fresno Unified School District Calendar 2026–27: Dates, PDF & ICS",
+  "seoDescription": "See Fresno Unified’s 2026–27 first and last days, holidays, breaks, and early-release Tuesdays. View the official PDF or download an ICS file.",
+  "schemaCalendarName": "Fresno Unified School District Calendar 2026–27",
+  "schemaCalendarDownloadName": "Fresno Unified 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "ICS file containing the districtwide dates shown in the main academic calendar table. Early-release Tuesdays are not included.",
+  "schemaIsAccessibleForFree": true,
+  "schemaKeywords": [
+    "Fresno Unified calendar",
+    "FUSD 2026-27 calendar",
+    "school holidays",
+    "early release dates",
+    "school calendar ICS"
+  ],
+  "schemaAdditionalSourceCalendars": [
     {
-      "q": "How can I add Fresno Unified School District's school calendar to Google Calendar?",
-      "a": "To add the Fresno Unified School District 2026-2027 calendar to Google Calendar, download the .ics file from this page, then open Google Calendar, go to Settings → Import & Export → Import, and upload the file. All school holidays, breaks, and key dates will appear on your calendar automatically."
-    },
-    {
-      "q": "When does school start for Fresno Unified School District in 2026-2027?",
-      "a": "The first day of school for Fresno Unified School District is Monday, August 17, 2026. Students and staff are expected to report on this date to begin the new academic year."
-    },
-    {
-      "q": "When is the last day of school for Fresno Unified School District in 2026-2027?",
-      "a": "The last day of school for Fresno Unified School District is Thursday, June 10, 2027. The school year runs from August through June, covering 180 instructional days."
-    },
-    {
-      "q": "When is spring break 2026-2027 for Fresno Unified School District?",
-      "a": "Spring break for Fresno Unified School District runs Mar 22, 2027–Mar 29, 2027, 8 days."
-    },
-    {
-      "q": "When is winter break 2026-2027 for Fresno Unified School District?",
-      "a": "Winter break for Fresno Unified School District runs Dec 21, 2026–Jan 8, 2027, 19 days. School resumes Jan 11, 2027."
+      "id": "source-accessible-calendar",
+      "name": "Fresno Unified 2026–27 Accessible Academic Calendar",
+      "url": "https://resources.finalsite.net/images/v1775144255/fresnouorg/siuyxbfcg7jt72p7v414/AccessibleAcademicCalendar2026-27.pdf"
     }
   ],
-  "yearNumbers": [
+  "temporalCoverageStart": "2026-08-12",
+  "temporalCoverageEnd": "2027-06-10",
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hidePdfVersionLabel": true,
+  "hideExtendedShareButtons": true,
+  "hideShareCalendar": true,
+  "hideIcsButtonSupportText": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "yearNumbers",
+    "breaks",
+    "whatsDifferent",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "nationalTrends",
+    "comparison"
+  ],
+  "heroSummary": "Fresno Unified students begin the 2026–27 school year on Monday, August 17, 2026. The last day of school is Thursday, June 10, 2027. Thanksgiving Break runs November 23–27, 2026; Winter Break runs December 21, 2026–January 8, 2027; and Spring Break runs March 22–29, 2027. We checked these dates against the district’s official calendar on August 4, 2026.",
+  "heroFactChips": [
+    "180 instructional days",
+    "Students return from Winter Break on January 11, 2027"
+  ],
+  "calendarNotes": "This page summarizes Fresno Unified’s board-approved 2026–27 academic calendar. School-specific testing, athletics, bell schedules, graduation details, transportation notices, and same-day announcements may be published separately.",
+  "keyDatesSummaryTitle": "2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, and student no-school days",
+  "keyDateSummaryItems": [
     {
-      "label": "Spring Break Shifts",
-      "value": "1 week earlier",
-      "detail": "Spring Break moves to March 22-29 from March 30-April 6 in 2025-2026 — one week earlier, while retaining the same 8-day length."
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-17",
+      "type": "school_start",
+      "schemaDescription": "Fresno Unified students begin the 2026–27 school year on August 17, 2026."
     },
     {
-      "label": "Extended Spring Break",
-      "value": "8 days",
-      "detail": "Spring Break remains an 8-day break (March 22-29), longer than the standard 5-day break at most California unified districts."
+      "label": "No School",
+      "name": "District Buyback Day",
+      "date": "2026-10-12",
+      "type": "teacher_workday",
+      "description": "No school for students; staff use the day for professional learning or development."
     },
     {
-      "label": "Lincoln's Birthday",
-      "value": "Feb 8",
-      "detail": "Lincoln's Birthday is observed as a separate school holiday on February 8 — one week before Presidents' Day on Feb 15, giving February two no-school Mondays."
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "schemaDescription": "Thanksgiving Break runs November 23–27, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-08",
+      "type": "break_start",
+      "description": "Students return Monday, January 11."
+    },
+    {
+      "label": "No School",
+      "name": "District Buyback Day",
+      "date": "2027-03-08",
+      "type": "teacher_workday",
+      "description": "No school for students; staff use the day for professional learning or development."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-22",
+      "endDate": "2027-03-29",
+      "type": "break_start",
+      "schemaDescription": "Spring Break runs March 22–29, 2027."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-06-10",
+      "type": "school_end",
+      "schemaDescription": "The last day of school is June 10, 2027."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Early Release", "id": "fresno-2026-2027-early-release" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Accessible Calendar", "id": "other-calendars" },
+    { "label": "Changes", "id": "fresno-2026-2027-year-changes" },
+    { "label": "Sources", "id": "sources" },
+    { "label": "FAQ", "id": "faq" }
+  ],
+  "allDatesTitle": "Fresno Unified 2026–27 Districtwide Academic Calendar Dates",
+  "allDatesCoverageNote": "This list covers districtwide dates from Fresno Unified’s 2026–27 academic calendar. It does not include bell schedules, testing, athletics, transportation notices, school-specific events, or same-day announcements.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1774907065/fresnouorg/yj03wwdolxph8ybjblxy/FINALV2ACADEMICCALENDAROPTION12026.pdf",
+  "allDatesSourceLabel": "Fresno Unified 2026–27 academic calendar PDF",
+  "dateLegendLabelOverrides": {
+    "No School for Students": "Non-Student Day"
+  },
+  "icsHeading": "Add Fresno Unified Dates to Your Calendar",
+  "icsDescription": "Download the .ics file to import the districtwide dates in the main academic calendar into Google Calendar, Apple Calendar, or Outlook. Early-release Tuesdays are listed separately on this page. The file is a snapshot and will not update if Fresno Unified changes the calendar.",
+  "icsButtonLabel": "Download .ics File",
+  "pdfHeading": "Official Fresno Unified Calendar PDF",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "Open the district’s official 2026–27 academic calendar PDF.",
+  "alternateCalendarsTitle": "Accessible Fresno Unified Calendar",
+  "alternateCalendarsDescription": "Fresno Unified also publishes an accessible version of the 2026–27 academic calendar.",
+  "alternateCalendarsButtonLabel": "View Accessible Calendar",
+  "alternateCalendarsNotice": "This page summarizes Fresno Unified’s Traditional School Year calendar. An accessible version of the same district calendar is available below.",
+  "alternateCalendars": [
+    {
+      "type": "accessible",
+      "label": "Accessible Academic Calendar 2026–27",
+      "buttonLabel": "View Accessible Calendar",
+      "pdfUrl": "https://resources.finalsite.net/images/v1775144255/fresnouorg/siuyxbfcg7jt72p7v414/AccessibleAcademicCalendar2026-27.pdf",
+      "ariaLabel": "View the accessible Fresno Unified 2026–27 academic calendar"
+    }
+  ],
+  "sourceReviewSummary": "Verified against Fresno Unified’s official calendar page and revised/approved 2026–27 academic calendar PDF.",
+  "sourceReviewDetails": [
+    "Calendar version: Board revised/approved March 11, 2026; originally board approved February 25, 2026.",
+    "We checked the first day, last day, Thanksgiving Break, Winter Break, Spring Break, student holidays, District Buyback Days, early-release Tuesdays, board approval information, and student instructional-day total.",
+    "The official 2026–27 calendar lists one District Buyback Day on August 12 followed by Teacher Institute Days on August 13–14 before the first student day.",
+    "The official calendar also lists District Buyback Days on October 12 and March 8 during the academic year.",
+    "This page focuses on districtwide calendar dates and does not independently verify school-level events, bell schedules, athletics, testing, transportation notices, or same-day announcements."
+  ],
+  "sources": [
+    {
+      "label": "Fresno Unified official calendar page",
+      "url": "https://www.fresnounified.org/about/calendar"
+    },
+    {
+      "label": "Fresno Unified 2026–27 academic calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1774907065/fresnouorg/yj03wwdolxph8ybjblxy/FINALV2ACADEMICCALENDAROPTION12026.pdf"
+    },
+    {
+      "label": "Fresno Unified 2026–27 accessible academic calendar",
+      "url": "https://resources.finalsite.net/images/v1775144255/fresnouorg/siuyxbfcg7jt72p7v414/AccessibleAcademicCalendar2026-27.pdf"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When does Fresno Unified start school in 2026?",
+      "a": "Fresno Unified students begin the 2026–27 school year on Monday, August 17, 2026."
+    },
+    {
+      "q": "When is the last day of school for Fresno Unified in 2027?",
+      "a": "The last day of school is Thursday, June 10, 2027."
+    },
+    {
+      "q": "When is Winter Break for Fresno Unified in 2026–27?",
+      "a": "Winter Break runs Monday, December 21, 2026, through Friday, January 8, 2027. Students return Monday, January 11."
+    },
+    {
+      "q": "When is Spring Break for Fresno Unified in 2027?",
+      "a": "Spring Break runs Monday, March 22, through Monday, March 29, 2027. Students return Tuesday, March 30."
+    },
+    {
+      "q": "Does Fresno Unified have a fall break in 2026–27?",
+      "a": "Fresno Unified does not list a separate October fall break. Students have no school on the October 12 District Buyback Day, followed by Thanksgiving Break from November 23 through November 27."
+    },
+    {
+      "q": "What is a District Buyback Day?",
+      "a": "A District Buyback Day is a non-student day used for staff training and professional development. Fresno Unified’s 2026–27 calendar lists buyback days on August 12, October 12, and March 8. August 12 falls before the first student day, while October 12 and March 8 are no-school days during the academic year."
+    },
+    {
+      "q": "How do I add the Fresno Unified calendar to Google Calendar?",
+      "a": "Download the .ics file from this page, then import it into Google Calendar, Apple Calendar, or Outlook. The file is a one-time snapshot and will not update automatically if Fresno Unified revises its calendar."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When does Fresno Unified start school in 2026?",
+    "When is the last day of school for Fresno Unified in 2027?",
+    "When is Winter Break for Fresno Unified in 2026–27?",
+    "When is Spring Break for Fresno Unified in 2027?",
+    "Does Fresno Unified have a fall break in 2026–27?",
+    "What is a District Buyback Day?",
+    "How do I add the Fresno Unified calendar to Google Calendar?"
+  ],
+  "faqDisplayLimit": 7,
+  "faqSchemaLimit": 7,
+  "customSections": [
+    {
+      "id": "fresno-2026-2027-early-release",
+      "label": "Fresno Unified Early Release Dates for 2026–27",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "collapsible": true,
+      "defaultOpen": false,
+      "summaryLabel": "View early-release dates by month",
+      "content": "Fresno Unified’s official calendar marks 26 early-release Tuesdays during the 2026–27 school year. Dismissal times vary by school, so check your school’s bell schedule for the exact time.",
+      "schema": {
+        "isBasedOn": "source-accessible-calendar"
+      },
+      "table": {
+        "columns": ["Month", "Early-release Tuesdays"],
+        "rows": [
+          ["August 2026", "18, 25"],
+          ["September 2026", "1, 15, 22, 29"],
+          ["October 2026", "6, 20, 27"],
+          ["December 2026", "1, 8, 15"],
+          ["January 2027", "12, 26"],
+          ["February 2027", "2, 23"],
+          ["March 2027", "2, 16"],
+          ["April 2027", "6, 13, 20, 27"],
+          ["May 2027", "4, 11, 18, 25"]
+        ]
+      },
+      "links": [
+        {
+          "label": "Fresno Unified printable 2026–27 academic calendar",
+          "url": "https://resources.finalsite.net/images/v1774907065/fresnouorg/yj03wwdolxph8ybjblxy/FINALV2ACADEMICCALENDAROPTION12026.pdf"
+        },
+        {
+          "label": "Fresno Unified accessible 2026–27 academic calendar",
+          "url": "https://resources.finalsite.net/images/v1775144255/fresnouorg/siuyxbfcg7jt72p7v414/AccessibleAcademicCalendar2026-27.pdf"
+        }
+      ],
+      "linksDisplay": "inline",
+      "linksLabel": "Sources:"
+    },
+    {
+      "id": "fresno-2026-2027-year-changes",
+      "label": "What Changed from 2025–26",
+      "position": "afterYearDiff",
+      "schemaHasPart": true,
+      "content": "Several key dates fall earlier in 2026–27 than they did in the previous school year.",
+      "table": {
+        "columns": ["Calendar item", "2025–26", "2026–27", "Change"],
+        "rows": [
+          ["First day", "Aug. 18, 2025", "Aug. 17, 2026", "Starts one day earlier in August"],
+          ["Last day", "Jun. 11, 2026", "Jun. 10, 2027", "Ends one day earlier in June"],
+          ["Spring Break", "Mar. 30–Apr. 6, 2026", "Mar. 22–29, 2027", "Starts eight calendar days earlier"]
+        ]
+      }
     }
   ],
   "events": [
-    {
-      "date": "2026-08-17",
-      "name": "First Day of School",
-      "type": "school_start"
-    },
-    {
-      "date": "2026-09-07",
-      "name": "Labor Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-10-12",
-      "name": "District Buyback Day",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-11-11",
-      "name": "Veterans Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-11-23",
-      "name": "Thanksgiving Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2026-12-21",
-      "name": "Winter Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-01-08",
-      "name": "Winter Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-01-18",
-      "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-02-08",
-      "name": "Lincoln's Birthday",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-02-15",
-      "name": "Presidents' Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-03-08",
-      "name": "District Buyback Day",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-03-22",
-      "name": "Spring Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-03-29",
-      "name": "Spring Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-05-31",
-      "name": "Memorial Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-06-10",
-      "name": "Last Day of School",
-      "type": "school_end"
-    }
-  ],
-  "calendarNotes": "Fresno Unified begins the 2026–2027 school year on August 17, 2026 — earlier than most California districts, allowing the year to conclude before June's peak valley heat. Spring Break runs March 22–29, 2027. The school year ends June 10, 2027. Families relocating from districts that start after Labor Day should plan enrollment, childcare, and back-to-school shopping before mid-August.\n\nThe calendar includes California-specific no-school days — Lincoln's Birthday and Cesar Chavez Day — along with District Buyback Days when teachers attend professional development and students do not attend. The major multi-day breaks are Thanksgiving Break, Winter Break, and Spring Break; Fresno Unified does not have a Fall Break.",
-  "datePublished": "2026-07-02",
-  "dateModified": "2026-07-02"
+    { "date": "2026-08-12", "name": "District Buyback Day", "type": "teacher_workday", "badgeLabel": "Non-Student Day", "description": "Staff training or professional development day before the first student day." },
+    { "date": "2026-08-13", "endDate": "2026-08-14", "name": "Teacher Institute Days", "type": "teacher_workday", "badgeLabel": "Non-Student Day", "description": "Non-student staff preparation and professional learning days before the first student day." },
+    { "date": "2026-08-17", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
+    { "date": "2026-10-12", "name": "District Buyback Day", "type": "teacher_workday", "badgeLabel": "Non-Student Day", "description": "No school for students; staff training or professional development day." },
+    { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday" },
+    { "date": "2026-11-23", "endDate": "2026-11-27", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2026-12-21", "endDate": "2027-01-08", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-02-08", "name": "Lincoln's Birthday Observed", "type": "holiday", "description": "Lincoln's Birthday is February 12 and is observed by the district on February 8, 2027." },
+    { "date": "2027-02-15", "name": "Presidents' Day", "type": "holiday" },
+    { "date": "2027-03-08", "name": "District Buyback Day", "type": "teacher_workday", "badgeLabel": "Non-Student Day", "description": "No school for students; staff training or professional development day." },
+    { "date": "2027-03-22", "endDate": "2027-03-29", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2027-06-10", "name": "Last Day of School", "type": "school_end" }
+  ]
 }

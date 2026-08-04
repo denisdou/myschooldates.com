@@ -1,0 +1,278 @@
+{
+  "institutionId": "hillsborough-county",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Hillsborough County Public Schools Calendar 2027–28",
+  "firstDay": "2027-08-10",
+  "lastDay": "2028-05-26",
+  "totalSchoolDays": 180,
+  "teacherWorkDays": 196,
+  "semesters": 2,
+  "sourceUrl": "https://www.hillsboroughschools.org/o/hcps/page/calendar27-28",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5557/Hcps/df38e410-8f41-4ed5-bec3-5d17420f0476/27-28-Student-Academic-Calendar-Board-Approved-7.14.26.pdf",
+  "sourceCalendarName": "HCPS 2027–28 Student Academic Calendar",
+  "sourceVersion": "Board-approved July 14, 2026",
+  "lastVerifiedAt": "2026-08-04",
+  "lastReviewed": "2026-08-04",
+  "datePublished": "2026-08-04",
+  "dateModified": "2026-08-04",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
+  "hideDateLegend": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideExtendedShareButtons": true,
+  "hideShareCalendarHeading": true,
+  "moveCalendarExportBeforeAllDates": true,
+  "hideRelatedDistrictDescriptions": true,
+  "yearSwitcherSort": "asc",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "schoolYearStatus",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "whatsDifferent",
+    "comparison"
+  ],
+  "seoTitle": "Hillsborough County School Calendar 2027–28: Key Dates & PDF",
+  "seoDescription": "View the board-approved HCPS 2027–28 calendar, including the August 10 first day, May 26 last day, major breaks, official PDF, and ICS download.",
+  "schemaCalendarName": "Hillsborough County Public Schools Calendar 2027–28",
+  "schemaDatasetName": "HCPS 2027–28 Student Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Hillsborough County Public Schools dates for 2027–28, including first and last days, Fall Break, Winter Break, Spring Break, non-student days, grading-period dates, return dates, local calendar notes, and source version notes.",
+  "schemaCalendarDownloadName": "HCPS 2027–28 calendar file",
+  "schemaCalendarDownloadDescription": "Calendar import file generated from HCPS district-published dates checked against the official calendar sources used for this page.",
+  "temporalCoverageStart": "2027-08-10",
+  "temporalCoverageEnd": "2028-05-26",
+  "heroSummary": "HCPS students start school on Tuesday, August 10, 2027, and the last day is Friday, May 26, 2028, with a 2.5-hour early release. Fall Break is November 22–26, 2027; Winter Break is December 20–31, 2027; and Spring Break is March 13–17, 2028. Students return Tuesday, March 21, 2028, after the March 20 non-student day.",
+  "calendarNotes": "This page covers the HCPS traditional student academic calendar for 2027–28. School-level bell schedules, testing dates, activities, ceremonies, transportation notices, and emergency schedule changes may be announced separately.",
+  "heroFactChips": [
+    "180 student days",
+    "Winter return: Jan 4",
+    "Spring return: Mar 21",
+    "Aug 16: regular day, no early release"
+  ],
+  "relatedDistrictsSameYearOnly": true,
+  "heroCtas": [
+    {
+      "label": "View Official PDF",
+      "href": "__sourcePdfUrl",
+      "variant": "primary"
+    },
+    {
+      "label": "Download Calendar File",
+      "href": "__icsUrl",
+      "variant": "secondary",
+      "download": true,
+      "filename": "__icsFilename"
+    }
+  ],
+  "verificationBadgeText": "Last checked August 4, 2026 · Official HCPS calendar page and board-approved 2027–28 student academic calendar",
+  "keyDatesSummaryTitle": "2027–28 Key Dates and Major Breaks",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, and return dates families are most likely to need",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School", "date": "2027-08-10", "type": "school_start" },
+    { "label": "Break", "name": "Fall Break (Thanksgiving Week)", "date": "2027-11-22", "endDate": "2027-11-26", "type": "break_start", "displayDate": "Nov 22–26, 2027" },
+    { "label": "Break", "name": "Winter Break", "date": "2027-12-20", "endDate": "2027-12-31", "type": "break_start", "displayDate": "Dec 20–31, 2027" },
+    { "label": "Students Return", "name": "Students Return after Winter Break", "date": "2028-01-04", "type": "school_resume", "schemaDescription": "Students return after Winter Break on January 4, 2028." },
+    { "label": "Break", "name": "Spring Break", "date": "2028-03-13", "endDate": "2028-03-17", "type": "break_start", "displayDate": "Mar 13–17, 2028" },
+    { "label": "Students Return", "name": "Students Return after Spring Break", "date": "2028-03-21", "type": "school_resume", "schemaDescription": "Students return after Spring Break on March 21, 2028." },
+    { "label": "Last Day", "name": "Last Day of School / 2.5-Hour Early Release", "date": "2028-05-26", "type": "school_end", "description": "The last day of school is a 2.5-hour early release." }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Academic Calendar", "id": "all-dates" },
+    { "label": "Local Notes", "id": "hillsborough-2027-2028-local-notes" },
+    { "label": "Breaks", "id": "hillsborough-2027-2028-breaks-return" },
+    { "label": "Changes", "id": "hillsborough-2027-2028-what-changed" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "Complete 2027–28 Academic Calendar",
+  "allDatesCoverageNote": "This table covers districtwide HCPS dates that affect student attendance or academic checkpoints, including first and last days, breaks, non-student days, grading-period dates, semester dates, and return dates. Campus events, bell schedules, testing, activities, and emergency updates may be published separately.",
+  "allDatesSourceUrl": "https://www.hillsboroughschools.org/o/hcps/page/calendar27-28",
+  "allDatesSourceLabel": "HCPS 2027–28 calendar page",
+  "dateLegendLabelOverrides": {
+    "Holiday": "No School",
+    "No School": "No School",
+    "Break": "Break",
+    "Academic": "Academic",
+    "School Resumes": "Students Return",
+    "Last Day": "Last Day"
+  },
+  "icsHeading": "Add HCPS Dates to Your Calendar",
+  "icsDescription": "Add the HCPS 2027–28 dates to Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "pdfHeading": "Official 2027–28 Calendar PDF",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "Open or print the HCPS 2027–28 student academic calendar approved by the School Board on July 14, 2026.",
+  "sourceReviewSummary": "This page is based on the official HCPS 2027–28 student academic calendar and district calendar page.",
+  "sourceReviewDetailsTitle": "Sources and Revision Notes",
+  "sourceReviewDetails": [
+    "We checked first and last days, Fall Break, Winter Break, Spring Break, non-student days, student return dates, grading-period dates, semester dates, and the published local calendar notes against the HCPS calendar sources.",
+    "The 180 student-day total was verified against the board-approved PDF.",
+    "The calendar was approved by the School Board on July 14, 2026.",
+    "HCPS lists Fall Break during Thanksgiving week, November 22–26, 2027. This page uses the parent-friendly phrase Fall Break (Thanksgiving week) to preserve the official label while making the timing clear.",
+    "The 2027–28 calendar also says August 16, 2027, will be a regular student day with no early release."
+  ],
+  "sources": [
+    {
+      "label": "HCPS 2027–28 calendar page",
+      "url": "https://www.hillsboroughschools.org/o/hcps/page/calendar27-28"
+    },
+    {
+      "label": "HCPS 2027–28 student academic calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5557/Hcps/df38e410-8f41-4ed5-bec3-5d17420f0476/27-28-Student-Academic-Calendar-Board-Approved-7.14.26.pdf"
+    },
+    {
+      "label": "HCPS 2026–27 calendar page",
+      "url": "https://www.hillsboroughschools.org/o/hcps/page/calendar26-27"
+    },
+    {
+      "label": "MySchoolDates data license",
+      "url": "https://myschooldates.com/data-license"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When is the first day of school for HCPS in 2027?",
+      "a": "The first day of school is Tuesday, August 10, 2027."
+    },
+    {
+      "q": "When is the last day of school for HCPS in 2028?",
+      "a": "The last day of school is Friday, May 26, 2028, with a 2.5-hour early release. Other student early-release dates have not yet been finalized."
+    },
+    {
+      "q": "When is Fall Break for HCPS in 2027?",
+      "a": "Fall Break is November 22–26, 2027. It falls during Thanksgiving week, and students return Monday, November 29."
+    },
+    {
+      "q": "When is Winter Break, and when do students return?",
+      "a": "Winter Break runs December 20–31, 2027. January 3 is a non-student day, and students return Tuesday, January 4."
+    },
+    {
+      "q": "When is Spring Break, and when do students return?",
+      "a": "Spring Break runs March 13–17, 2028. Students are also off Monday, March 20, so classes resume Tuesday, March 21."
+    },
+    {
+      "q": "Is August 16, 2027, an HCPS early-release day?",
+      "a": "No. The HCPS 2027–28 calendar states that Monday, August 16, 2027, will be a regular student day with no early release."
+    },
+    {
+      "q": "Can HCPS use scheduled days as hurricane make-up days in 2027–28?",
+      "a": "Yes. HCPS identifies November 11, November 22–24, and January 3 as tentative hurricane make-up dates if needed. Check the district calendar before making plans around those dates."
+    },
+    {
+      "q": "Does the ICS file update automatically?",
+      "a": "No. The ICS file is a one-time import and will not automatically sync with later HCPS revisions."
+    },
+    {
+      "q": "Where can families check for 2027–28 calendar updates?",
+      "a": "Use the official HCPS 2027–28 calendar page and school announcements for final confirmation of revisions, emergency schedule changes, and school-specific dates."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When is the first day of school for HCPS in 2027?",
+    "When is the last day of school for HCPS in 2028?",
+    "When is Fall Break for HCPS in 2027?",
+    "When is Winter Break, and when do students return?",
+    "When is Spring Break, and when do students return?",
+    "Is August 16, 2027, an HCPS early-release day?",
+    "Can HCPS use scheduled days as hurricane make-up days in 2027–28?",
+    "Does the ICS file update automatically?",
+    "Where can families check for 2027–28 calendar updates?"
+  ],
+  "faqDisplayLimit": 9,
+  "faqSchemaQuestions": [],
+  "customSections": [
+    {
+      "id": "hillsborough-2027-2028-local-notes",
+      "label": "Local Calendar Notes",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "HCPS has several calendar notes that are easy to miss if you only scan the major breaks.",
+      "table": {
+        "columns": ["Calendar note", "What families should know"],
+        "rows": [
+          ["August 16 regular day", "August 16, 2027, is listed as a regular student day with no early release."],
+          ["Florida State Fair", "February 18, 2028, is listed as a non-student day for the Florida State Fair."],
+          ["Strawberry Festival", "March 6, 2028, is listed as a non-student day for the Strawberry Festival."],
+          ["Tentative hurricane make-up dates", "HCPS identifies November 11, November 22–24, and January 3 as tentative hurricane make-up dates if needed."]
+        ]
+      }
+    },
+    {
+      "id": "hillsborough-2027-2028-breaks-return",
+      "label": "Breaks and Return Dates",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "These are the main continuous student break windows and the first scheduled student day after each break.",
+      "table": {
+        "columns": ["Break", "Student break window", "Students return"],
+        "rows": [
+          ["Fall Break (Thanksgiving week)", "November 22–26, 2027", "Monday, November 29, 2027"],
+          ["Winter Break", "December 20–31, 2027", "Tuesday, January 4, 2028, after the January 3 non-student day"],
+          ["Spring Break", "March 13–17, 2028", "Tuesday, March 21, 2028, after the March 20 non-student day"]
+        ]
+      }
+    },
+    {
+      "id": "hillsborough-2027-2028-what-changed",
+      "label": "What Changed from 2026–27",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "Compared with 2026–27, the 2027–28 first day remains August 10, Fall Break starts one day earlier, and Spring Break shifts from March 22–26 to March 13–17.",
+      "table": {
+        "columns": ["Calendar item", "2026–27", "2027–28"],
+        "rows": [
+          ["First day of school", "August 10", "August 10"],
+          ["Fall Break", "November 23–27", "November 22–26"],
+          ["Winter Break begins", "December 21", "December 20"],
+          ["Spring Break", "March 22–26", "March 13–17"],
+          ["Florida State Fair non-student day", "February 12", "February 18"],
+          ["Strawberry Festival non-student day", "March 8", "March 6"],
+          ["Last day of school", "May 28", "May 26"]
+        ]
+      }
+    }
+  ],
+  "events": [
+    { "date": "2027-08-10", "name": "First Day of School", "type": "school_start" },
+    { "date": "2027-08-16", "name": "Regular Student Day / No Early Release", "type": "academic" },
+    { "date": "2027-09-06", "name": "Labor Day / Non-Student Day", "type": "holiday" },
+    { "date": "2027-10-08", "name": "End of 1st Grading Period", "type": "academic" },
+    { "date": "2027-11-11", "name": "Veterans Day / Non-Student Day", "type": "holiday", "description": "Tentative hurricane make-up day if needed." },
+    { "date": "2027-11-22", "endDate": "2027-11-26", "name": "Fall Break (Thanksgiving Week)", "type": "break_start", "displayDate": "November 22–26, 2027", "description": "November 22–24 are tentative hurricane make-up dates if needed." },
+    { "date": "2027-11-29", "name": "Students Return to School", "type": "school_resume", "description": "Students return after Fall Break." },
+    { "date": "2027-12-17", "name": "End of 2nd Grading Period / 1st Semester", "type": "academic" },
+    { "date": "2027-12-20", "endDate": "2027-12-31", "name": "Winter Break", "type": "break_start", "displayDate": "December 20–31, 2027" },
+    { "date": "2028-01-03", "name": "Non-Student Day", "type": "no_school", "description": "Tentative hurricane make-up day if needed." },
+    { "date": "2028-01-04", "name": "Students Return to School", "type": "school_resume", "description": "Students return after Winter Break." },
+    { "date": "2028-01-17", "name": "Martin Luther King Jr. / Non-Student Day", "type": "holiday" },
+    { "date": "2028-02-18", "name": "Florida State Fair Non-Student Day", "type": "no_school" },
+    { "date": "2028-02-21", "name": "Presidents Day / Non-Student Day", "type": "holiday" },
+    { "date": "2028-03-06", "name": "Strawberry Festival Non-Student Day", "type": "no_school" },
+    { "date": "2028-03-10", "name": "End of 3rd Grading Period", "type": "academic" },
+    { "date": "2028-03-13", "endDate": "2028-03-17", "name": "Spring Break", "type": "break_start", "displayDate": "March 13–17, 2028" },
+    { "date": "2028-03-20", "name": "Non-Student Day", "type": "no_school" },
+    { "date": "2028-03-21", "name": "Students Return to School", "type": "school_resume", "description": "Students return after Spring Break." },
+    { "date": "2028-04-14", "name": "Non-Student Day", "type": "no_school" },
+    { "date": "2028-05-26", "name": "Last Day of School / End of 4th Grading Period / 2nd Semester", "type": "school_end", "description": "The last day of school is a 2.5-hour early release. Other student early-release dates have not yet been finalized." }
+  ]
+}

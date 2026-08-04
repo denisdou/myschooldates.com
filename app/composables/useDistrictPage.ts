@@ -237,7 +237,7 @@ export function useDistrictPage() {
 
   function downloadICS(
     district: { name: string; slug: string },
-    cal: { schoolYear: string; events: Array<{ date: string; name: string; type: string }> }
+    cal: { schoolYear: string; events: Array<{ date: string; name: string; type: string; showDuringBreak?: boolean }> }
   ) {
     const lines = [
       'BEGIN:VCALENDAR',
@@ -249,7 +249,7 @@ export function useDistrictPage() {
     ]
     const eventsForExport = cal.events.filter(event =>
       event.type !== 'break_end' &&
-      (event.type === 'observance' || !isCoveredByBreak(event, cal.events))
+      (event.showDuringBreak || event.type === 'observance' || !isCoveredByBreak(event, cal.events))
     )
     const breaks = getBreaks(cal.events)
     for (const event of eventsForExport) {
@@ -282,7 +282,7 @@ export function useDistrictPage() {
 
   const eventTypeLabel: Record<string, string> = {
     school_start: 'First Day', school_end: 'Last Day', holiday: 'Holiday',
-    break_start: 'Break Starts', break_end: 'Break Ends',
+    break: 'Break', break_start: 'Break Starts', break_end: 'Break Ends',
     no_school: 'No School', student_holiday: 'No School',
     early_release: 'Early Release', early_dismissal: 'Early Dismissal',
     half_day_high_school: 'Half-Day High Schools',
@@ -313,6 +313,7 @@ export function useDistrictPage() {
     school_start: 'bg-[#e7efe5] text-[#315b39]',
     school_end: 'bg-[#f2e7df] text-[#7a3f2c]',
     holiday: 'bg-[#e6f0ef] text-[#0f5d6b]',
+    break: 'bg-[#eee9f3] text-[#5b4b6f]',
     break_start: 'bg-[#eee9f3] text-[#5b4b6f]',
     break_end: 'bg-[#eee9f3] text-[#5b4b6f]',
     no_school: 'bg-[#f3ead7] text-[#74552a]',

@@ -53,6 +53,12 @@ const pdfButtonLabel = computed(() => {
   if (isDrivePdf.value) return 'Download PDF'
   return 'View Official PDF'
 })
+const pdfSupplementalTitle = computed(() => props.cal?.pdfSupplementalTitle ?? props.cal?.meta?.pdfSupplementalTitle ?? '')
+const pdfSupplementalDescription = computed(() => props.cal?.pdfSupplementalDescription ?? props.cal?.meta?.pdfSupplementalDescription ?? '')
+const pdfSupplementalLinks = computed(() =>
+  (((props.cal?.pdfSupplementalLinks ?? props.cal?.meta?.pdfSupplementalLinks ?? []) as Array<{ label?: string; url?: string }>)
+    .filter(link => link.label && link.url))
+)
 
 const copied = ref(false)
 const icsHref = computed(() => `/calendars/${props.district.slug}-${props.cal.schoolYear}.ics`)
@@ -180,6 +186,22 @@ const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year
           Check for Calendar Updates
           <span class="sr-only">(opens in a new tab)</span>
         </a>
+      </div>
+      <div v-if="pdfSupplementalTitle || pdfSupplementalDescription || pdfSupplementalLinks.length" class="mt-4 rounded-lg border border-[#e1dbd0] bg-[#f8f5ee] px-4 py-3">
+        <p v-if="pdfSupplementalTitle" class="text-xs font-semibold uppercase tracking-wide text-[#6b645c]">{{ pdfSupplementalTitle }}</p>
+        <p v-if="pdfSupplementalDescription" class="mt-1 text-xs leading-relaxed text-[#6b645c]">{{ pdfSupplementalDescription }}</p>
+        <p v-if="pdfSupplementalLinks.length" class="mt-2 text-xs">
+          <a
+            v-for="(link, index) in pdfSupplementalLinks"
+            :key="link.url"
+            :href="link.url"
+            target="_blank"
+            rel="noopener"
+            class="font-medium text-[#0f5d6b] underline hover:text-[#0b4c58]"
+          >
+            {{ index ? ' · ' : '' }}{{ link.label }}<span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </p>
       </div>
     </div>
 

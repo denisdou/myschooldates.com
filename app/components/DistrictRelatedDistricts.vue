@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  relatedDistricts: { name: string; slug: string; state: string; reason?: string; comparisonNote?: string }[]
+  relatedDistricts: { name: string; slug: string; state: string; linkLabel?: string; reason?: string; comparisonNote?: string }[]
   stateName: string
   title?: string
   description?: string
@@ -34,7 +34,7 @@ const relatedDistrictPath = (rd: { slug: string }) =>
         class="flex items-center justify-between gap-4 px-6 py-4 hover:bg-[#f3f0e8] transition-colors"
       >
         <div>
-          <div class="font-medium text-[#1f2933]">{{ rd.name }}</div>
+          <div class="font-medium text-[#1f2933]">{{ rd.linkLabel || rd.name }}</div>
           <div v-if="!hideDescriptions" class="text-sm text-[#7b756d]">{{ rd.reason || rd.comparisonNote || rd.state }}</div>
         </div>
         <svg class="w-5 h-5 flex-shrink-0 text-[#9a938a]" fill="none" viewBox="0 0 24 24" stroke="currentColor">

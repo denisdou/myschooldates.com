@@ -7,6 +7,7 @@ const props = defineProps<{
     position?: string
     collapsible?: boolean
     defaultOpen?: boolean
+    summaryLabel?: string
     image?: { src: string; alt: string; caption?: string; width?: number; height?: number }
     groups?: { label: string; items: string[] }[]
     definitions?: { term: string; description: string }[]
@@ -29,6 +30,11 @@ const filtered = computed(() => {
 const tableColumns = (section: (typeof props.sections)[number]) => section.table?.columns ?? section.table?.headers ?? []
 const linkTarget = (link: { to?: string; url?: string }) => link.to ?? link.url ?? ''
 const isExternalLink = (link: { to?: string; url?: string }) => /^https?:\/\//.test(linkTarget(link))
+const contentParagraphs = (content?: string) =>
+  String(content ?? '')
+    .split(/\n{2,}/)
+    .map(paragraph => paragraph.trim())
+    .filter(Boolean)
 </script>
 
 <template>
@@ -39,16 +45,20 @@ const isExternalLink = (link: { to?: string; url?: string }) => /^https?:\/\//.t
       :key="section.id"
       class="bg-white rounded-lg border border-gray-200 scroll-mt-24"
     >
-      <details v-if="section.collapsible" :open="section.defaultOpen" class="group">
-        <summary class="cursor-pointer list-none p-6">
-          <div class="flex items-start justify-between gap-4">
-            <h2 class="text-lg font-semibold text-gray-900">{{ section.label }}</h2>
-            <span class="mt-1 text-sm font-medium text-blue-600 group-open:hidden">Show</span>
-            <span class="mt-1 text-sm font-medium text-blue-600 hidden group-open:inline">Hide</span>
-          </div>
-          <p v-if="section.content" class="mt-2 text-sm text-gray-600 leading-relaxed">{{ section.content }}</p>
+      <div v-if="section.collapsible" class="p-6">
+        <h2 class="text-lg font-semibold text-gray-900">{{ section.label }}</h2>
+        <div v-if="section.content" class="mt-2 space-y-2">
+          <p v-for="paragraph in contentParagraphs(section.content)" :key="paragraph" class="text-sm text-gray-600 leading-relaxed">{{ paragraph }}</p>
+        </div>
+        <details :open="section.defaultOpen" class="group mt-4">
+          <summary class="cursor-pointer list-none">
+            <span class="flex items-center justify-between gap-4 rounded-lg border border-gray-200 bg-gray-50 px-4 py-3">
+              <span class="text-sm font-semibold text-gray-900">{{ section.summaryLabel || 'View details' }}</span>
+              <span class="text-sm font-medium text-blue-600 group-open:hidden">Show</span>
+              <span class="text-sm font-medium text-blue-600 hidden group-open:inline">Hide</span>
+            </span>
         </summary>
-        <div class="px-6 pb-6">
+        <div class="mt-4">
           <div v-if="section.groups?.length" class="space-y-4">
             <div v-for="group in section.groups" :key="group.label">
               <h3 class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
@@ -154,10 +164,13 @@ const isExternalLink = (link: { to?: string; url?: string }) => /^https?:\/\//.t
           </div>
         </div>
       </details>
+      </div>
       <div v-else class="p-6">
         <h2 class="text-lg font-semibold text-gray-900 mb-3">{{ section.label }}</h2>
         <div v-if="section.groups?.length" class="space-y-4">
-          <p v-if="section.content" class="text-sm text-gray-600 leading-relaxed">{{ section.content }}</p>
+          <div v-if="section.content" class="space-y-2">
+            <p v-for="paragraph in contentParagraphs(section.content)" :key="paragraph" class="text-sm text-gray-600 leading-relaxed">{{ paragraph }}</p>
+          </div>
           <div v-for="group in section.groups" :key="group.label">
             <h3 class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
             <p v-if="group.items.length === 1" class="text-sm leading-relaxed text-gray-600">
@@ -171,7 +184,9 @@ const isExternalLink = (link: { to?: string; url?: string }) => /^https?:\/\//.t
             </ul>
           </div>
         </div>
-        <p v-else-if="section.content" class="text-sm text-gray-600 leading-relaxed">{{ section.content }}</p>
+        <div v-else-if="section.content" class="space-y-2">
+          <p v-for="paragraph in contentParagraphs(section.content)" :key="paragraph" class="text-sm text-gray-600 leading-relaxed">{{ paragraph }}</p>
+        </div>
         <dl v-if="section.definitions?.length" class="mt-4 divide-y divide-gray-100">
           <div
             v-for="item in section.definitions"

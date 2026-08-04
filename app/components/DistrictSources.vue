@@ -15,6 +15,7 @@ const props = defineProps<{
   reviewSummary?: string | null
   reviewDetails?: string[] | null
   reviewDetailsTitle?: string | null
+  maintainerText?: string | null
 }>()
 
 const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' && props.sourcePdfUrl.includes('assets.myschooldates.com'))
@@ -103,7 +104,7 @@ const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.
       </p>
       <p v-if="verifiedDate">
         <span class="font-medium text-[#6b645c]">Maintained by:</span>
-        MySchoolDates Calendar Data Team ·
+        {{ maintainerText || 'MySchoolDates Calendar Data Team' }} ·
         <NuxtLink to="/calendar-verification-methodology" class="font-medium text-[#0f5d6b] hover:text-[#0b4c58] underline">
           Verification Methodology
         </NuxtLink>

@@ -1,135 +1,355 @@
 {
   "institutionId": "hillsborough-county",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Hillsborough County Public Schools Calendar 2026–27",
   "firstDay": "2026-08-10",
   "lastDay": "2027-05-28",
   "totalSchoolDays": 180,
   "teacherWorkDays": 196,
   "semesters": 2,
-  "sourceUrl": "https://www.hillsboroughschools.org/events",
+  "sourceUrl": "https://www.hillsboroughschools.org/o/hcps/page/calendar26-27",
   "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5557/Hcps/12db0a70-4a89-41ce-b168-2815e9adbf20/26-27_Student_Academic_Calendar_Board_Approved.pdf",
-  "lastVerifiedAt": "2026-07-02",
+  "sourceCalendarName": "HCPS 2026–27 Student Academic Calendar",
+  "sourceVersion": "Board-approved 2026–27 student academic calendar",
+  "lastVerifiedAt": "2026-08-04",
+  "lastReviewed": "2026-08-04",
+  "datePublished": "2026-07-02",
+  "dateModified": "2026-08-04",
   "calendarType": "traditional",
-  "calendarFaqs": [
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
+  "hideDateLegend": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideExtendedShareButtons": true,
+  "hideShareCalendarHeading": true,
+  "moveCalendarExportBeforeAllDates": true,
+  "hideRelatedDistrictDescriptions": true,
+  "yearSwitcherSort": "asc",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "schoolYearStatus",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "whatsDifferent"
+  ],
+  "seoTitle": "Hillsborough County School Calendar 2026–27: Key Dates & PDF",
+  "seoDescription": "View HCPS 2026–27 calendar dates, including first and last days, major breaks, non-student days, the official PDF, and an ICS download.",
+  "schemaCalendarName": "Hillsborough County Public Schools Calendar 2026–27",
+  "schemaDatasetName": "HCPS 2026–27 Student Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Hillsborough County Public Schools dates for 2026–27, including first and last days, Fall Break, Winter Break, Spring Break, non-student days, grading-period dates, return dates, local calendar notes, and source version notes.",
+  "schemaCalendarDownloadName": "HCPS 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "Calendar import file generated from HCPS district-published dates checked against the official calendar sources used for this page.",
+  "temporalCoverageStart": "2026-08-10",
+  "temporalCoverageEnd": "2027-05-28",
+  "heroSummary": "HCPS students start school on Monday, August 10, 2026, and the last day is Friday, May 28, 2027, with a 2.5-hour early release. Fall Break is November 23–27, 2026, Winter Break is December 21, 2026–January 1, 2027, and Spring Break is March 22–26, 2027. Students return Tuesday, March 30, after an additional non-student day on March 29.",
+  "calendarNotes": "This page covers the HCPS traditional student academic calendar for 2026–27. School-level bell schedules, testing dates, activities, ceremonies, transportation notices, and emergency schedule changes may be announced separately.",
+  "heroFactChips": [
+    "180 student days",
+    "Winter return: Jan 5",
+    "Spring return: Mar 30"
+  ],
+  "heroCtas": [
     {
-      "q": "When does school start for Hillsborough County Public Schools in 2026-2027?",
-      "a": "The first day of school for Hillsborough County Public Schools is Monday, August 10, 2026. Students and staff are expected to report on this date to begin the new academic year."
+      "label": "View Official PDF",
+      "href": "__sourcePdfUrl",
+      "variant": "primary"
     },
     {
-      "q": "When is spring break 2026-2027 for Hillsborough County Public Schools?",
-      "a": "Spring break for Hillsborough County Public Schools runs Mar 22, 2027–Mar 26, 2027, 5 days."
+      "label": "Download Calendar File",
+      "href": "__icsUrl",
+      "variant": "secondary",
+      "download": true,
+      "filename": "__icsFilename"
     }
   ],
-  "yearNumbers": [
+  "verificationBadgeText": "Last checked August 4, 2026 · Official HCPS calendar page and board-approved 2026–27 student academic calendar",
+  "keyDatesSummaryTitle": "2026–27 Key Dates and Major Breaks",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, and return dates families are most likely to need",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School", "date": "2026-08-10", "type": "school_start" },
+    { "label": "Break", "name": "Fall Break (Thanksgiving Week)", "date": "2026-11-23", "endDate": "2026-11-27", "type": "break_start", "displayDate": "Nov 23–27, 2026" },
+    { "label": "Break", "name": "Winter Break", "date": "2026-12-21", "endDate": "2027-01-01", "type": "break_start", "displayDate": "Dec 21, 2026–Jan 1, 2027" },
+    { "label": "Students Return", "name": "Students Return after Winter Break", "date": "2027-01-05", "type": "school_resume" },
+    { "label": "Break", "name": "Spring Break", "date": "2027-03-22", "endDate": "2027-03-26", "type": "break_start", "displayDate": "Mar 22–26, 2027" },
+    { "label": "Students Return", "name": "Students Return after Spring Break", "date": "2027-03-30", "type": "school_resume" },
+    { "label": "Last Day", "name": "Last Day of School / 2.5-Hour Early Release", "date": "2027-05-28", "type": "school_end", "description": "The last day of school is a 2.5-hour early release." }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Academic Calendar", "id": "all-dates" },
+    { "label": "Local Notes", "id": "hillsborough-2026-2027-local-notes" },
+    { "label": "Breaks", "id": "hillsborough-2026-2027-breaks-return" },
+    { "label": "Changes", "id": "hillsborough-2026-2027-what-changed" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "Complete 2026–27 Academic Calendar",
+  "allDatesCoverageNote": "This table covers districtwide HCPS dates that affect student attendance or academic checkpoints, including first and last days, breaks, non-student days, grading-period dates, semester dates, and return dates. Campus events, bell schedules, testing, activities, and emergency updates may be published separately.",
+  "allDatesSourceUrl": "https://www.hillsboroughschools.org/o/hcps/page/calendar26-27",
+  "allDatesSourceLabel": "HCPS 2026–27 calendar page",
+  "dateLegendLabelOverrides": {
+    "Holiday": "No School",
+    "No School": "No School",
+    "Break": "Break",
+    "Academic": "Academic",
+    "School Resumes": "Students Return",
+    "Last Day": "Last Day"
+  },
+  "icsHeading": "Add HCPS Dates to Your Calendar",
+  "icsDescription": "Add the HCPS 2026–27 dates to Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "pdfHeading": "Official 2026–27 Calendar PDF",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "Open or print the board-approved HCPS 2026–27 student academic calendar.",
+  "comparisonDistrictSlugs": [
+    "miami-dade-school-calendar",
+    "broward-county-school-calendar",
+    "palm-beach-county-school-calendar"
+  ],
+  "comparisonTitle": "HCPS Calendar Compared With Selected Florida Districts",
+  "comparisonSummary": "Compare HCPS with selected large Florida districts. The table focuses on school-year boundaries, major break windows, and return dates, not campus-specific bell schedules or event calendars.",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak",
+    "springReturn"
+  ],
+  "comparisonCustomRows": [
     {
-      "label": "No Fall Break",
-      "value": "Removed",
-      "detail": "The Fall Break observed in 2025-2026 (Nov 24-28) is gone; the district returns to a standard Thanksgiving Break structure."
+      "key": "firstDay",
+      "label": "First Day",
+      "values": {
+        "hillsborough-county-school-calendar": "Aug 10, 2026",
+        "miami-dade-school-calendar": "Aug 13, 2026",
+        "broward-county-school-calendar": "Aug 10, 2026",
+        "palm-beach-county-school-calendar": "Aug 10, 2026"
+      }
     },
     {
-      "label": "Florida State Fair Day",
-      "value": "Feb 12",
-      "detail": "A designated no-school day coincides with the Florida State Fair — a Tampa-specific tradition unique to Hillsborough County."
+      "key": "lastDay",
+      "label": "Last Day",
+      "values": {
+        "hillsborough-county-school-calendar": "May 28, 2027",
+        "miami-dade-school-calendar": "Jun 3, 2027",
+        "broward-county-school-calendar": "May 28, 2027",
+        "palm-beach-county-school-calendar": "May 27, 2027"
+      }
     },
     {
-      "label": "Strawberry Festival Day",
-      "value": "Mar 8",
-      "detail": "A no-school day tied to the Plant City Strawberry Festival — a Hillsborough-only observance not found in other Florida district calendars."
+      "key": "thanksgivingBreak",
+      "label": "Thanksgiving-week break",
+      "values": {
+        "hillsborough-county-school-calendar": "Nov 23–27, 2026 (Fall Break)",
+        "miami-dade-school-calendar": "Nov 23–27, 2026",
+        "broward-county-school-calendar": "Nov 23–27, 2026",
+        "palm-beach-county-school-calendar": "Nov 23–27, 2026"
+      }
+    },
+    {
+      "key": "winterBreak",
+      "label": "Winter Break",
+      "values": {
+        "hillsborough-county-school-calendar": "Dec 21, 2026–Jan 1, 2027",
+        "miami-dade-school-calendar": "Dec 21, 2026–Jan 1, 2027",
+        "broward-county-school-calendar": "Dec 21, 2026–Jan 1, 2027",
+        "palm-beach-county-school-calendar": "Dec 21, 2026–Jan 1, 2027"
+      }
+    },
+    {
+      "key": "springBreak",
+      "label": "Spring Break",
+      "values": {
+        "hillsborough-county-school-calendar": "Mar 22–26, 2027",
+        "miami-dade-school-calendar": "Mar 22–26, 2027",
+        "broward-county-school-calendar": "Mar 22–26, 2027",
+        "palm-beach-county-school-calendar": "Mar 22–26, 2027"
+      }
+    },
+    {
+      "key": "springReturn",
+      "label": "Students Return after Spring Break",
+      "values": {
+        "hillsborough-county-school-calendar": "Mar 30, 2027",
+        "miami-dade-school-calendar": "Mar 30, 2027",
+        "broward-county-school-calendar": "Mar 29, 2027",
+        "palm-beach-county-school-calendar": "Mar 30, 2027"
+      }
+    }
+  ],
+  "comparisonSourceNote": "Rows compare equivalent school-year dates and break periods, although districts may use different official labels. Hillsborough labels Thanksgiving week as Fall Break.",
+  "sourceReviewSummary": "This page is based on the official HCPS 2026–27 student academic calendar and district calendar page.",
+  "sourceReviewDetailsTitle": "Sources and Revision Notes",
+  "sourceReviewDetails": [
+    "We checked first and last days, Fall Break, Winter Break, Spring Break, non-student days, student return dates, grading-period dates, semester dates, and the published local calendar notes against the HCPS calendar sources.",
+    "HCPS lists Fall Break during Thanksgiving week, November 23–27, 2026. This page uses the parent-friendly phrase Fall Break (Thanksgiving week) to preserve the official label while making the timing clear.",
+    "HCPS changed the Strawberry Festival non-student day from March 1 to March 8, 2027, to align it with the festival schedule.",
+    "The 2025–26 comparison uses the HCPS 2025–26 student academic calendar. Check the official HCPS calendar page for later revisions or hurricane make-up announcements."
+  ],
+  "sources": [
+    {
+      "label": "HCPS 2026–27 calendar page",
+      "url": "https://www.hillsboroughschools.org/o/hcps/page/calendar26-27"
+    },
+    {
+      "label": "HCPS 2026–27 student academic calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5557/Hcps/12db0a70-4a89-41ce-b168-2815e9adbf20/26-27_Student_Academic_Calendar_Board_Approved.pdf"
+    },
+    {
+      "label": "HCPS 2025–26 student academic calendar PDF",
+      "url": "https://apptegy-production-files-backend-assets-us-east-1.s3.amazonaws.com/documents/asset/uploaded_file/5557/Hcps/2e426d0b-e2d1-4260-a9e4-a45ee480f9e3/A01_25-26_Student_Academic_Calendar__3_.pdf"
+    },
+    {
+      "label": "MySchoolDates data license",
+      "url": "https://myschooldates.com/data-license"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When is the first day of school for HCPS in 2026?",
+      "a": "The first day of school is Monday, August 10, 2026."
+    },
+    {
+      "q": "When is the last day of school for HCPS in 2027?",
+      "a": "The last day of school is Friday, May 28, 2027, with a 2.5-hour early release. Other student early-release dates have not yet been finalized."
+    },
+    {
+      "q": "When is Fall Break for HCPS in 2026?",
+      "a": "Fall Break is November 23–27, 2026. It falls during Thanksgiving week, and students return Monday, November 30."
+    },
+    {
+      "q": "When is Winter Break, and when do students return?",
+      "a": "Winter Break runs December 21, 2026, through January 1, 2027. January 4 is a non-student day, and students return Tuesday, January 5."
+    },
+    {
+      "q": "When is Spring Break, and when do students return?",
+      "a": "Spring Break runs March 22–26, 2027. Students are also off Monday, March 29, so classes resume Tuesday, March 30."
+    },
+    {
+      "q": "Do HCPS students have school on February 12, 2027?",
+      "a": "No. HCPS lists Friday, February 12, 2027, as a non-student day for the Florida State Fair."
+    },
+    {
+      "q": "When is the Strawberry Festival non-student day?",
+      "a": "The Strawberry Festival non-student day is Monday, March 8, 2027. HCPS changed it from March 1 to March 8 to align it with the festival schedule."
+    },
+    {
+      "q": "Can HCPS use scheduled days as hurricane make-up days?",
+      "a": "Yes. HCPS identifies October 12, November 11, November 23–25, and January 4 as tentative hurricane make-up dates if needed. Check the district calendar before making plans around those dates."
+    },
+    {
+      "q": "Does the ICS file update automatically?",
+      "a": "No. The ICS file is a one-time import and will not automatically sync with later HCPS revisions."
+    },
+    {
+      "q": "Where can families check for HCPS calendar revisions?",
+      "a": "Use the official HCPS calendar page and school announcements for final confirmation of revisions, emergency schedule changes, and school-specific dates."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When is the first day of school for HCPS in 2026?",
+    "When is the last day of school for HCPS in 2027?",
+    "When is Fall Break for HCPS in 2026?",
+    "When is Winter Break, and when do students return?",
+    "When is Spring Break, and when do students return?",
+    "Do HCPS students have school on February 12, 2027?",
+    "When is the Strawberry Festival non-student day?",
+    "Can HCPS use scheduled days as hurricane make-up days?",
+    "Does the ICS file update automatically?",
+    "Where can families check for HCPS calendar revisions?"
+  ],
+  "faqDisplayLimit": 10,
+  "faqSchemaQuestions": [],
+  "customSections": [
+    {
+      "id": "hillsborough-2026-2027-local-notes",
+      "label": "Local Calendar Notes",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "HCPS has several calendar notes that are easy to miss if you only scan the major breaks.",
+      "table": {
+        "columns": ["Calendar note", "What families should know"],
+        "rows": [
+          ["Florida State Fair", "February 12, 2027, is listed as a non-student day for the Florida State Fair."],
+          ["Strawberry Festival", "HCPS changed the Strawberry Festival non-student day from March 1 to March 8, 2027, to align it with the festival schedule."],
+          ["Tentative hurricane make-up dates", "HCPS identifies October 12, November 11, November 23–25, and January 4 as tentative hurricane make-up dates if needed."]
+        ]
+      }
+    },
+    {
+      "id": "hillsborough-2026-2027-breaks-return",
+      "label": "Breaks and Return Dates",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "These are the main continuous student break windows and the first scheduled student day after each break.",
+      "table": {
+        "columns": ["Break", "Student break window", "Students return"],
+        "rows": [
+          ["Fall Break (Thanksgiving week)", "November 23–27, 2026", "Monday, November 30, 2026"],
+          ["Winter Break", "December 21, 2026–January 1, 2027", "Tuesday, January 5, 2027, after the January 4 non-student day"],
+          ["Spring Break", "March 22–26, 2027", "Tuesday, March 30, 2027, after the March 29 non-student day"]
+        ]
+      }
+    },
+    {
+      "id": "hillsborough-2026-2027-what-changed",
+      "label": "What Changed from 2025–26",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "Compared with 2025–26, the 2026–27 school year starts one day earlier, Spring Break shifts from March 16–20 to March 22–26, and the Strawberry Festival non-student day moves from March 3 to March 8.",
+      "table": {
+        "columns": ["Calendar item", "2025–26", "2026–27"],
+        "rows": [
+          ["First day of school", "August 11", "August 10"],
+          ["Fall Break", "November 24–28", "November 23–27"],
+          ["Winter Break begins", "December 22", "December 21"],
+          ["Spring Break", "March 16–20", "March 22–26"],
+          ["Strawberry Festival non-student day", "March 3", "March 8"]
+        ]
+      }
     }
   ],
   "events": [
-    {
-      "date": "2026-08-10",
-      "name": "First Day of School",
-      "type": "school_start"
-    },
-    {
-      "date": "2026-09-07",
-      "name": "Labor Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-10-12",
-      "name": "No School (Non-Student Day)",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-11-11",
-      "name": "Veterans Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-11-23",
-      "name": "Thanksgiving Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2026-12-21",
-      "name": "Winter Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-01-01",
-      "name": "Winter Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-01-04",
-      "name": "No School (Non-Student Day)",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-01-18",
-      "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-02-12",
-      "name": "Florida State Fair (Non-Student Day)",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-02-15",
-      "name": "Presidents Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-03-08",
-      "name": "Strawberry Festival (Non-Student Day)",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-03-22",
-      "name": "Spring Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-03-26",
-      "name": "Spring Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-03-29",
-      "name": "No School (Non-Student Day)",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-04-16",
-      "name": "No School (Non-Student Day)",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-05-28",
-      "name": "Last Day of School",
-      "type": "school_end"
-    }
-  ],
-  "calendarNotes": "Hillsborough County Public Schools begins the 2026–2027 school year on August 10, 2026. Spring Break runs March 22–26, 2027 — the same week as Miami-Dade, Broward, and Palm Beach counties. Most of Florida is on spring break simultaneously that week. The school year ends May 28, 2027. The 196 teacher workdays figure is published directly in the official HCPS district calendar and reflects 180 student instructional days plus 16 additional teacher planning and professional development days.",
-  "datePublished": "2026-07-02",
-  "dateModified": "2026-07-02"
+    { "date": "2026-08-10", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
+    { "date": "2026-10-09", "name": "End of 1st Grading Period", "type": "academic" },
+    { "date": "2026-10-12", "name": "Non-Student Day", "type": "no_school", "description": "Tentative hurricane make-up day if needed." },
+    { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday", "description": "Tentative hurricane make-up day if needed." },
+    { "date": "2026-11-23", "endDate": "2026-11-27", "name": "Fall Break (Thanksgiving Week)", "type": "break_start", "displayDate": "November 23–27, 2026", "description": "November 23–25 are tentative hurricane make-up dates if needed." },
+    { "date": "2026-11-30", "name": "Students Return to School", "type": "school_resume", "description": "Students return after Fall Break." },
+    { "date": "2026-12-18", "name": "End of 2nd Grading Period / 1st Semester", "type": "academic" },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "name": "Winter Break", "type": "break_start", "displayDate": "December 21, 2026–January 1, 2027" },
+    { "date": "2027-01-04", "name": "Non-Student Day", "type": "no_school", "description": "Tentative hurricane make-up day if needed." },
+    { "date": "2027-01-05", "name": "Students Return to School", "type": "school_resume", "description": "Students return after Winter Break." },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-02-12", "name": "Florida State Fair Non-Student Day", "type": "no_school" },
+    { "date": "2027-02-15", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2027-03-08", "name": "Strawberry Festival Non-Student Day", "type": "no_school" },
+    { "date": "2027-03-12", "name": "End of 3rd Grading Period", "type": "academic" },
+    { "date": "2027-03-22", "endDate": "2027-03-26", "name": "Spring Break", "type": "break_start", "displayDate": "March 22–26, 2027" },
+    { "date": "2027-03-29", "name": "Non-Student Day", "type": "no_school" },
+    { "date": "2027-03-30", "name": "Students Return to School", "type": "school_resume", "description": "Students return after Spring Break." },
+    { "date": "2027-04-16", "name": "Non-Student Day", "type": "no_school" },
+    { "date": "2027-05-28", "name": "Last Day of School / End of 4th Grading Period / 2nd Semester", "type": "school_end", "description": "The last day of school is a 2.5-hour early release. Other student early-release dates have not yet been finalized." }
+  ]
 }

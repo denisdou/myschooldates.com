@@ -440,6 +440,18 @@ const comparisonSourceNote = computed(() =>
   (props.district as any)?.meta?.comparisonSourceNote ??
   "Rows compare equivalent break periods, although districts may use different labels. Adjacent holidays and staff workdays are not included unless they fall within the listed range."
 )
+const comparisonFooterText = computed(() =>
+  (props.cal as any)?.comparisonFooterText ??
+  (props.cal as any)?.meta?.comparisonFooterText ??
+  (props.district as any)?.comparisonFooterText ??
+  (props.district as any)?.meta?.comparisonFooterText ??
+  ''
+)
+const comparisonCaption = computed(() =>
+  (props.cal as any)?.comparisonCaption ??
+  (props.cal as any)?.meta?.comparisonCaption ??
+  `${displaySchoolYear.value} calendar comparison for ${rows.value.map(row => row.name).join(', ')}`
+)
 </script>
 
 <template>
@@ -473,7 +485,7 @@ const comparisonSourceNote = computed(() =>
     <div class="overflow-x-auto">
       <table class="w-full text-sm">
         <caption class="sr-only">
-          {{ displaySchoolYear }} calendar comparison for {{ rows.map(row => row.name).join(', ') }}
+          {{ comparisonCaption }}
         </caption>
         <thead>
           <tr class="bg-[#f3f0e8] border-b border-[#ebe6dd]">
@@ -522,7 +534,12 @@ const comparisonSourceNote = computed(() =>
     </details>
 
     <div class="px-6 py-3 border-t border-[#ebe6dd] text-xs text-[#6b645c]">
-      <p>
+      <p v-if="comparisonFooterText">
+        {{ comparisonFooterText }}
+        <template v-if="comparisonReviewedText"> {{ comparisonReviewedText }}</template>
+        <template v-else-if="reviewedDate"> Last reviewed {{ reviewedDate }}.</template>
+      </p>
+      <p v-else>
         Dates come from each district's published {{ displaySchoolYear }} calendar. {{ comparisonSourceNote }}
         <template v-if="comparisonReviewedText"> {{ comparisonReviewedText }}</template>
         <template v-else-if="reviewedDate"> Last reviewed {{ reviewedDate }}.</template>

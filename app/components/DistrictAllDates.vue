@@ -14,6 +14,7 @@ type CalendarEvent = {
   displayAsRange?: boolean
   dates?: string[]
   hideFromAllDates?: boolean
+  showDuringBreak?: boolean
   hideLabel?: boolean
 }
 type LegendItem = { label: string; dot: string }
@@ -76,8 +77,8 @@ const visibleEvents = computed(() => props.events.filter(e =>
     ? (!hiddenInKeyDates.has(e.type) || includedDatesInKeyDates.value.has(e.date)) &&
       !isRangeEndEvent(e) &&
       !isHolidayOutsideStudentYear(e) &&
-      (e.type === 'holiday' || !isCoveredByBreak(e, props.events))
-    : e.type !== 'break_end' && !isRangeEndEvent(e) && !isCoveredByBreak(e, props.events))
+      (e.showDuringBreak || e.type === 'holiday' || !isCoveredByBreak(e, props.events))
+    : e.type !== 'break_end' && !isRangeEndEvent(e) && (e.showDuringBreak || !isCoveredByBreak(e, props.events)))
 ))
 
 const coveredBreakDateNames = computed(() => {
@@ -127,7 +128,10 @@ function normalizeName(event: CalendarEvent) {
   }
 
   if (event.type === 'academic' && lower.includes('exam')) {
-    return 'High School Exam Window'
+    if (lower === 'exam' || lower === 'exams' || lower === 'final exams' || lower === 'semester exams') {
+      return 'High School Exam Window'
+    }
+    return name
   }
 
   return name
@@ -353,6 +357,19 @@ function formatDateRange(event: DisplayEvent) {
   return `${startPart} to ${endPart}`
 }
 
+function displayDateRangeParts(event: DisplayEvent) {
+  if (!event.displayDate || event.startDate === event.endDate) return null
+  if (event.displayDate.includes(';')) return null
+  const separator = event.displayDate.includes('–') ? '–' : event.displayDate.includes(' - ') ? ' - ' : ''
+  if (!separator) return null
+  const [startLabel, endLabel] = event.displayDate.split(separator)
+  if (!startLabel?.trim() || !endLabel?.trim()) return null
+  return {
+    startLabel: startLabel.trim(),
+    endLabel: endLabel.trim(),
+  }
+}
+
 function formatDateListParts(dates: string[]) {
   const parsed = dates.map(date => ({ date, parsed: parseDate(date) }))
   const sameYear = parsed.every(item => item.parsed.getFullYear() === parsed[0]!.parsed.getFullYear())
@@ -464,7 +481,12 @@ function formatRangeEnd(event: DisplayEvent) {
             <div>
               <div class="font-medium text-[#1f2933]">{{ displayEventName(event) }}</div>
               <div class="text-sm text-[#7b756d]">
-                <span v-if="event.displayDate">{{ event.displayDate }}</span>
+                <template v-if="displayDateRangeParts(event)">
+                  <time :datetime="event.startDate">{{ displayDateRangeParts(event)!.startLabel }}</time>
+                  <span aria-hidden="true">–</span>
+                  <time :datetime="event.endDate">{{ displayDateRangeParts(event)!.endLabel }}</time>
+                </template>
+                <span v-else-if="event.displayDate">{{ event.displayDate }}</span>
                 <template v-else-if="event.dates?.length && event.dates.length > 1">
                   <template v-for="(part, index) in formatDateListParts(event.dates)" :key="part.date">
                     <span v-if="index">{{ dateListSeparator(index, event.dates.length) }}</span><time :datetime="part.date">{{ part.label }}</time>
