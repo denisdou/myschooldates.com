@@ -430,6 +430,8 @@ const keyDateHighlights = computed(() => {
         dateDisplayMode: item.dateDisplayMode,
         dateJoiner: item.dateJoiner,
         datePropertyLabel: item.datePropertyLabel,
+        schemaAdditionalProperties: item.schemaAdditionalProperties,
+        additionalProperties: item.additionalProperties,
       }))
   }
   const HIGHLIGHT_TYPES = new Set(['school_start', 'school_end', 'break_start'])
@@ -535,23 +537,32 @@ function keyDateRange(event: { date: string; name: string; type: string; endDate
 }
 
 function keyDateSchemaProperties(event: any) {
+  const extraProperties = ((event.schemaAdditionalProperties ?? event.additionalProperties ?? []) as any[])
+    .filter(prop => prop?.name && prop?.value)
+    .map(prop => ({
+      '@type': 'PropertyValue',
+      name: prop.name,
+      value: prop.value,
+    }))
   const dates = keyDateListDates(event)
   if (dates.length) {
     return dates.map((date: string) => ({
       '@type': 'PropertyValue',
       name: event.datePropertyLabel ?? 'Opening date',
       value: date,
-    }))
+    })).concat(extraProperties)
   }
   const range = keyDateRange(event)
   if (range.start === range.end) {
     return [
       { '@type': 'PropertyValue', name: 'Date', value: range.start },
+      ...extraProperties,
     ]
   }
   return [
     { '@type': 'PropertyValue', name: 'Start date', value: range.start },
     { '@type': 'PropertyValue', name: 'End date', value: range.end },
+    ...extraProperties,
   ]
 }
 
@@ -578,6 +589,12 @@ const calendarSummary = computed(() => {
     : ''
   return `${district.value.name}${shortName} begins the ${currentYear} school year on ${formatDate(cal.firstDay)}. The final day is ${formatDate(cal.lastDay)}${lastDayNote}.${springPart}`
 })
+const calendarSummaryParagraphs = computed(() =>
+  calendarSummary.value
+    .split(/\n{2,}/)
+    .map(part => part.trim())
+    .filter(Boolean)
+)
 
 function normalizeFaqQuestion(question: string) {
   return question.trim().toLowerCase().replace(/\s+/g, ' ')
@@ -823,6 +840,12 @@ const calendarSelectorGroups = computed(() =>
 )
 const alternateCalendarsNotice = computed(() =>
   String((cal as any)?.alternateCalendarsNotice ?? (cal as any)?.meta?.alternateCalendarsNotice ?? '')
+)
+const alternateCalendarsNoticeLinkLabel = computed(() =>
+  String((cal as any)?.alternateCalendarsNoticeLinkLabel ?? (cal as any)?.meta?.alternateCalendarsNoticeLinkLabel ?? '')
+)
+const alternateCalendarsNoticeLinkHref = computed(() =>
+  String((cal as any)?.alternateCalendarsNoticeLinkHref ?? (cal as any)?.meta?.alternateCalendarsNoticeLinkHref ?? '#other-calendars')
 )
 const hideAlternateCalendarsNotice = computed(() =>
   Boolean((cal as any)?.hideAlternateCalendarsNotice ?? (cal as any)?.meta?.hideAlternateCalendarsNotice)
@@ -1218,6 +1241,18 @@ if (!isStatePage && district.value) {
     ...additionalSourceCalendarEntities.map(source => ({ '@id': source['@id'] })),
   ]
   const sourceBasedOnValue = sourceBasedOnRefs.length === 1 ? sourceBasedOnRefs[0] : sourceBasedOnRefs
+  const datasetSourceCalendarIds = (((cal as any)?.schemaDatasetSourceCalendarIds ?? (cal as any)?.meta?.schemaDatasetSourceCalendarIds) as string[] | undefined)
+  const datasetBasedOnRefs = Array.isArray(datasetSourceCalendarIds)
+    ? datasetSourceCalendarIds
+        .map(id => {
+          if (id === 'source-calendar' && basedOnUrl) return { '@id': `${canonicalUrl}#source-calendar` }
+          if (id === 'source-calendar-page' && sourcePageCitationUrl) return { '@id': `${canonicalUrl}#source-calendar-page` }
+          if (id && additionalSourceCalendarEntities.some(source => source['@id'] === `${canonicalUrl}#${id}`)) return { '@id': `${canonicalUrl}#${id}` }
+          return null
+        })
+        .filter(Boolean)
+    : sourceBasedOnRefs
+  const datasetBasedOnValue = datasetBasedOnRefs.length === 1 ? datasetBasedOnRefs[0] : datasetBasedOnRefs
   const calendarIcsUrl = district.value && cal
     ? `https://myschooldates.com/calendars/${district.value.slug}-${cal.schoolYear}.ics`
     : ''
@@ -1254,7 +1289,7 @@ if (!isStatePage && district.value) {
     },
     creator: { '@id': 'https://myschooldates.com/#organization' },
     publisher: { '@id': 'https://myschooldates.com/#organization' },
-    ...(sourceBasedOnRefs.length ? { isBasedOn: sourceBasedOnValue } : {}),
+    ...(datasetBasedOnRefs.length ? { isBasedOn: datasetBasedOnValue } : {}),
     distribution: [
       calendarIcsUrl ? {
         '@type': 'DataDownload',
@@ -1282,6 +1317,7 @@ if (!isStatePage && district.value) {
       : String(schemaReviewedBySetting)
   const customSectionSchemaParts = customSections.value
     .filter((section) => {
+      if ((section as any).schemaHasPart === false || (section as any).schema?.hasPart === false) return false
       if ((section as any).schemaHasPart === true || (section as any).schema?.hasPart === true) return true
       const text = `${section.id} ${section.label}`.toLowerCase()
       return text.includes('download') ||
@@ -1411,10 +1447,11 @@ if (!isStatePage && district.value) {
     })),
   } : null
   const hideItemListSchema = Boolean((cal as any)?.hideItemListSchema || (cal as any)?.meta?.hideItemListSchema)
+  const keyDateItemListName = (cal as any)?.schemaKeyDateItemListName ?? (cal as any)?.meta?.schemaKeyDateItemListName ?? `${meta.value!.shortName || meta.value!.name} ${displayYearText} key school calendar dates`
   const keyDateItemListEntity = cal && !hideItemListSchema && itemListEvents.value.length ? {
     '@type': 'ItemList',
     '@id': `${canonicalUrl}#key-dates`,
-    name: `${meta.value!.shortName || meta.value!.name} ${displayYearText} key school calendar dates`,
+    name: keyDateItemListName,
     itemListElement: itemListEvents.value.map((event, i) => {
       return {
         '@type': 'ListItem',
@@ -1937,7 +1974,9 @@ if (!isStatePage && district.value) {
             MySchoolDates is an independent calendar reference and is not affiliated with {{ district.name }}.
           </p>
           <!-- Featured snippet: direct answer for search intent -->
-          <p v-if="calendarSummary" class="mt-5 text-sm text-[hsl(var(--rds-ink-muted)/1)] leading-relaxed">{{ calendarSummary }}</p>
+          <div v-if="calendarSummaryParagraphs.length" class="mt-5 space-y-2 text-sm text-[hsl(var(--rds-ink-muted)/1)] leading-relaxed">
+            <p v-for="(paragraph, i) in calendarSummaryParagraphs" :key="i">{{ paragraph }}</p>
+          </div>
           <div v-if="heroCtas.length" class="mt-4 flex flex-wrap gap-2">
             <a
               v-for="cta in heroCtas"
@@ -2104,7 +2143,14 @@ if (!isStatePage && district.value) {
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <p class="text-sm text-amber-800">
-            <template v-if="alternateCalendarsNotice">{{ alternateCalendarsNotice }}</template>
+            <template v-if="alternateCalendarsNotice">
+              {{ alternateCalendarsNotice }}
+              <a
+                v-if="alternateCalendarsNoticeLinkLabel"
+                :href="alternateCalendarsNoticeLinkHref"
+                class="underline font-medium"
+              >{{ alternateCalendarsNoticeLinkLabel }}</a>
+            </template>
             <template v-else>
               This page shows the <strong>Traditional Calendar</strong>, which applies to most {{ district.name }} schools.
               If your child attends a year-round school or specialized program, see
@@ -2168,7 +2214,7 @@ if (!isStatePage && district.value) {
               href="#add-to-calendar"
               class="inline-flex items-center justify-center rounded-lg bg-[#0f5d6b] px-3 py-2 text-sm font-semibold text-white hover:bg-[#0b4c58] transition-colors"
             >
-              Download ICS Calendar
+              Calendar Downloads
             </a>
             <a
               v-if="(cal as any).sourcePdfUrl || (cal as any).printablePdfUrl"
@@ -2177,7 +2223,7 @@ if (!isStatePage && district.value) {
               rel="noopener"
               class="inline-flex items-center justify-center rounded-lg border border-blue-200 bg-white px-3 py-2 text-sm font-semibold text-blue-700 hover:border-blue-300 hover:bg-blue-50 transition-colors"
             >
-              {{ (cal as any).sourcePdfUrl ? 'Download PDF' : 'Download Printable PDF' }}
+              {{ (cal as any).pdfButtonLabel ?? (cal as any).meta?.pdfButtonLabel ?? ((cal as any).sourcePdfUrl ? 'View Official PDF' : 'Download Printable PDF') }}
               <span class="sr-only">(opens in a new tab)</span>
             </a>
           </div>
@@ -2228,7 +2274,7 @@ if (!isStatePage && district.value) {
               <a
                 :href="calendarIcsHref"
                 :download="district && cal ? `${district.slug}-${cal.schoolYear}.ics` : undefined"
-                :aria-label="district && cal ? `Download ${district.name} ${cal.schoolYear} calendar file` : 'Download calendar file'"
+                :aria-label="(cal as any)?.icsAriaLabel ?? (cal as any)?.meta?.icsAriaLabel ?? (district && cal ? `Download ${district.name} ${cal.schoolYear} calendar file` : 'Download calendar file')"
                 class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#0f5d6b] hover:bg-[#0b4c58] text-white text-sm font-medium rounded-lg transition-colors"
               >
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -2246,7 +2292,7 @@ if (!isStatePage && district.value) {
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10M7 11h10M7 15h6M6 3h8l4 4v14H6V3z" />
                 </svg>
-                {{ (cal as any).sourcePdfUrl ? 'Download PDF' : 'Printable PDF' }}
+                {{ (cal as any).pdfButtonLabel ?? (cal as any).meta?.pdfButtonLabel ?? ((cal as any).sourcePdfUrl ? 'View Official PDF' : 'Printable PDF') }}
                 <span class="sr-only">(opens in a new tab)</span>
               </a>
             </div>
@@ -2322,7 +2368,7 @@ if (!isStatePage && district.value) {
 
         <!-- Other Official Calendars -->
         <DistrictOtherCalendars
-          v-if="(cal as any)?.alternateCalendars?.length"
+          v-if="(cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
           :alternate-calendars="(cal as any).alternateCalendars"
           :district-name="district.name"
           :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
@@ -2456,6 +2502,7 @@ if (!isStatePage && district.value) {
           :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
           :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
           :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
+          :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
         />
 
         <!-- FAQ -->
@@ -2525,6 +2572,7 @@ if (!isStatePage && district.value) {
           :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
           :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
           :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
+          :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
         />
 
         <!-- Year Switcher: after Sources -->

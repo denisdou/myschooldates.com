@@ -8,54 +8,85 @@
   "semesters": 2,
   "sourceUrl": "https://www.lausd.org/apps/pages/index.jsp?uREC_ID=4432518&type=d&pREC_ID=2672183",
   "sourcePdfUrl": "https://media.edlio.net/135dff18/cc2a29d3/f0dbab90/03abacb9bbd44b1c8b86d1828e9ad968?_=2026-27%20Instructional%20Cal_Eng_Month_rev%206.9.26.pdf",
-  "lastVerifiedAt": "2026-07-02",
+  "sourceCalendarName": "LAUSD 2026–27 Instructional Calendar PDF",
+  "lastVerifiedAt": "2026-08-05",
   "calendarType": "traditional",
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideDateLegend": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hidePdfVersionLabel": true,
+  "hideExtendedShareButtons": true,
+  "moveCalendarExportBeforeAllDates": true,
+  "sourcesBeforeFaq": false,
+  "yearSwitcherPosition": "afterSources",
+  "seoTitle": "LAUSD Calendar 2026–27: Dates, Breaks & Official PDF",
+  "seoDescription": "See the verified LAUSD 2026–27 instructional calendar, including districtwide no-school dates, winter and spring recess, the official PDF, and an ICS download.",
+  "schemaCalendarName": "LAUSD Calendar 2026–27",
+  "schemaDatasetName": "LAUSD 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Los Angeles Unified School District dates for 2026–27, including districtwide no-school dates, winter and spring recess, unassigned days, holidays, the January 11 conditional pupil-free note, and the official PDF.",
+  "schemaCalendarDownloadName": "MySchoolDates LAUSD 2026–27 calendar import file",
+  "schemaIsAccessibleForFree": true,
+  "schemaKeywords": [
+    "LAUSD calendar",
+    "Los Angeles Unified School District calendar",
+    "2026-2027 school calendar",
+    "student no-school days",
+    "winter recess",
+    "spring recess"
+  ],
+  "temporalCoverageEnd": "2027-06-07",
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "planningTips",
+    "about",
+    "breaks",
+    "comparison",
+    "yearNumbers",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends"
+  ],
+  "heroSummary": "LAUSD begins the 2026–27 school year on Wednesday, August 12, 2026. The district calendar lists Friday, June 4, 2027, as the last day of instruction. Winter Recess runs December 21 through January 8, and Spring Recess is March 22–26.\n\nThis page covers LAUSD’s districtwide instructional calendar. School-specific events, early-dismissal days, and some charter or program calendars may differ.",
+  "heroFactChips": [
+    "180 instructional days",
+    "Thanksgiving week: Nov 23–27",
+    "Winter Recess: Dec 21–Jan 8",
+    "Spring Recess: Mar 22–26"
+  ],
   "whatsNew": {
     "title": "What's Different in 2026–2027",
     "content": [
-      "School starts two days earlier — Wednesday, August 12 instead of August 14. Summer program and camp end dates that worked in prior years may need to shift.",
-      "Spring Recess moves a full week earlier: March 22–26 instead of March 30–April 3. If you booked spring travel based on the 2025–2026 dates, the new window doesn't overlap.",
-      "The last day of school is June 4 — six days earlier than last year's June 10. Families enrolling in summer programs that begin the Monday after school ends will have more lead time."
+      "School starts two days earlier: Wednesday, August 12 instead of August 14.",
+      "Spring Recess shifts from March 30–April 3 in 2025–26 to March 22–26 in 2026–27.",
+      "The district calendar’s listed last day moves from June 10 to June 4. Schools that use January 11 as a pupil-free day use June 7 as an instructional day."
     ]
   },
   "calendarFaqs": [
     {
-      "q": "When does school start for Los Angeles Unified School District in 2026-2027?",
-      "a": "The first day of school is Wednesday, August 12, 2026. Worth noting: Admission Day on September 4 and Labor Day on September 7 create a four-day break just three weeks into the year — many families are caught off guard by that early September gap when arranging childcare for the first month."
+      "q": "Does every LAUSD school follow this calendar?",
+      "a": "No. This page covers LAUSD’s districtwide instructional calendar. School events, early-dismissal days, affiliated charter calendars, and some program calendars may differ."
     },
     {
-      "q": "When is the last day of school for Los Angeles Unified School District in 2026-2027?",
-      "a": "The last day of school for Los Angeles Unified School District is Friday, June 4, 2027. The school year runs from August through early June, covering 180 instructional days."
+      "q": "Are students off for the full week of Thanksgiving?",
+      "a": "Yes. Students are off November 23–27, 2026. LAUSD designates November 23–25 as unassigned days and November 26–27 as the Thanksgiving Holiday."
     },
     {
-      "q": "When is spring break 2026-2027 for Los Angeles Unified School District?",
-      "a": "LAUSD Spring Recess runs March 22–26, 2027. What families frequently miss: Farm Workers Day falls on March 31, just two school days after break ends. Students return briefly Monday and Tuesday, then have another day off before the final stretch to June."
+      "q": "Are minimum days and early-dismissal days included?",
+      "a": "No. Minimum days, early-dismissal days, conferences, and campus events are usually published by individual schools. Ask your school for its site calendar."
     },
     {
-      "q": "When is winter break 2026-2027 for Los Angeles Unified School District?",
-      "a": "Winter Recess runs December 21, 2026 through January 8, 2027. Because the break ends on a Friday, students don't return until Monday, January 11 — nearly three full weeks away from school. Many families travel during this window, so flights and accommodations near popular destinations tend to fill faster than usual."
-    }
-  ],
-  "yearNumbers": [
-    {
-      "label": "Starts Earlier",
-      "value": "2 days sooner",
-      "detail": "First day is August 12 vs August 14 in 2025-2026 — summer programs and camps that ended the week of August 10 in prior years may now overlap with the school start."
-    },
-    {
-      "label": "Spring Recess Shifts",
-      "value": "1 week earlier",
-      "detail": "Spring Recess moves to Mar 22-26 from Mar 30-Apr 3 — families who booked spring travel based on last year's dates will find the window does not overlap."
-    },
-    {
-      "label": "Ends Earlier",
-      "value": "6 days sooner",
-      "detail": "Last day is June 4 vs June 10 in 2025-2026, giving families more lead time before summer programs that typically start the Monday after school ends."
-    },
-    {
-      "label": "Farm Workers Day",
-      "value": "Mar 31",
-      "detail": "Farm Workers Day falls on March 31 — two days after Spring Recess ends, creating a disjointed return with only Monday-Tuesday in class before a standalone holiday."
+      "q": "Do all students return on January 11?",
+      "a": "January 11 is the district calendar’s second-semester start date. LAUSD notes that a school may use January 11 as a pupil-free day; if it does, June 7 becomes an instructional day."
     }
   ],
   "events": [
@@ -75,19 +106,22 @@
       "type": "holiday"
     },
     {
+      "date": "2026-09-21",
+      "name": "Unassigned Day — No School",
+      "type": "no_school",
+      "description": "LAUSD lists September 21 as an unassigned day with no school."
+    },
+    {
       "date": "2026-11-11",
       "name": "Veterans Day",
       "type": "holiday"
     },
     {
-      "date": "2026-11-26",
-      "name": "Thanksgiving Holiday",
-      "type": "break_start"
-    },
-    {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Holiday End",
-      "type": "break_end"
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Week — No School",
+      "type": "break_start",
+      "description": "LAUSD designates November 23–25 as unassigned days and November 26–27 as the Thanksgiving Holiday."
     },
     {
       "date": "2026-12-21",
@@ -98,6 +132,12 @@
       "date": "2027-01-08",
       "name": "Winter Recess End",
       "type": "break_end"
+    },
+    {
+      "date": "2027-01-11",
+      "name": "Second Semester Begins",
+      "type": "semester_start",
+      "description": "A school may select January 11 as a pupil-free day. If it does, June 7 becomes an instructional day."
     },
     {
       "date": "2027-01-18",
@@ -132,10 +172,67 @@
     {
       "date": "2027-06-04",
       "name": "Last Day of School",
-      "type": "school_end"
+      "type": "school_end",
+      "description": "LAUSD lists June 4 as the last day of instruction. Schools that use January 11 as a pupil-free day use June 7 as an instructional day.",
+      "schemaAdditionalProperties": [{ "name": "Conditional instructional date", "value": "2027-06-07" }]
     }
   ],
-  "calendarNotes": "Families new to LAUSD are often caught off guard by the September rhythm: school opens August 12, but Admission Day on September 4 and Labor Day on September 7 combine to create a four-day break just three weeks in — plan childcare before those routines settle. Winter Recess runs December 21 through January 8; because the break ends on a Friday, students don't return until Monday, January 11, giving families nearly three full weeks away from school. Spring Recess runs March 22–26, 2027, but what many families miss is Farm Workers Day on March 31 — students return briefly for Monday and Tuesday, then have a standalone day off before the final stretch to June 4.",
+  "calendarNotes": "Admission Day and Labor Day create a four-day weekend from September 4–7, three weeks after school begins. Students are also off September 21 for an unassigned day. Thanksgiving week is November 23–27: LAUSD designates November 23–25 as unassigned days and November 26–27 as the Thanksgiving Holiday.",
+  "keyDatesSummaryTitle": "LAUSD 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Selected high-impact dates and major recess periods",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School", "date": "2026-08-12", "type": "school_start" },
+    { "label": "No School", "name": "September Four-Day Weekend", "date": "2026-09-04", "endDate": "2026-09-07", "type": "holiday", "description": "Admission Day falls on Friday, September 4, followed by Labor Day on Monday, September 7." },
+    { "label": "No School", "name": "Unassigned Day — No School", "date": "2026-09-21", "type": "no_school" },
+    { "label": "No School", "name": "Thanksgiving Week — No School", "date": "2026-11-23", "endDate": "2026-11-27", "type": "break_start", "description": "November 23–25 are unassigned days; November 26–27 are the Thanksgiving Holiday." },
+    { "label": "Recess", "name": "Winter Recess", "date": "2026-12-21", "endDate": "2027-01-08", "type": "break_start", "description": "Second semester begins January 11." },
+    { "label": "Semester", "name": "Second Semester Begins", "date": "2027-01-11", "type": "semester_start", "description": "A school may select January 11 as a pupil-free day. If it does, June 7 becomes an instructional day." },
+    { "label": "Recess", "name": "Spring Recess", "date": "2027-03-22", "endDate": "2027-03-26", "type": "break_start" },
+    { "label": "No School", "name": "Farm Workers Day", "date": "2027-03-31", "type": "holiday" },
+    { "label": "Last Day", "name": "Last Day of School", "date": "2027-06-04", "type": "school_end", "description": "LAUSD lists June 4 as the last day of instruction. Schools that use January 11 as a pupil-free day use June 7 as an instructional day.", "schemaAdditionalProperties": [{ "name": "Conditional instructional date", "value": "2027-06-07" }] }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Changes", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "LAUSD 2026–27 Student Calendar Dates",
+  "allDatesCoverageNote": "This list includes districtwide no-school dates, major recess periods, and the January 11 conditional pupil-free note from LAUSD’s 2026–27 instructional calendar. School events, minimum days, early-dismissal days, and some charter or program calendars may differ.",
+  "allDatesSourceUrl": "https://media.edlio.net/135dff18/cc2a29d3/f0dbab90/03abacb9bbd44b1c8b86d1828e9ad968?_=2026-27%20Instructional%20Cal_Eng_Month_rev%206.9.26.pdf",
+  "allDatesSourceLabel": "LAUSD 2026–27 instructional calendar PDF",
+  "icsHeading": "LAUSD Calendar Downloads",
+  "icsDescription": "Download a MySchoolDates .ics file created from the district-published dates on this page.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "pdfHeading": "Official LAUSD 2026–27 Calendar PDF",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "Open the 2026–27 instructional calendar PDF published by Los Angeles Unified School District.",
+  "sourceReviewSummary": "Verified against the LAUSD calendar page and the official 2026–27 instructional calendar PDF.",
+  "sourceReviewDetails": [
+    "Board approved March 11, 2025. The PDF filename includes “rev 6.9.26.”",
+    "Reviewed every date shown in the student calendar table against LAUSD’s official 2026–27 instructional calendar, including the January 11 pupil-free option and the conditional June 7 instructional day.",
+    "Thanksgiving week is modeled as November 23–27 because students are off all week: November 23–25 are unassigned days and November 26–27 are the Thanksgiving Holiday.",
+    "The second semester begins January 11. The official calendar notes that a school may use January 11 as a pupil-free day; if it does, June 7 becomes an instructional day.",
+    "The year-over-year comparison uses LAUSD’s official 2025–26 and 2026–27 instructional calendars.",
+    "Minimum days, early-dismissal days, school events, and some charter or program calendars may be published separately by individual schools."
+  ],
+  "sources": [
+    { "label": "LAUSD official calendar page", "url": "https://www.lausd.org/apps/pages/index.jsp?uREC_ID=4432518&type=d&pREC_ID=2672183" },
+    { "label": "LAUSD 2026–27 instructional calendar PDF", "url": "https://media.edlio.net/135dff18/cc2a29d3/f0dbab90/03abacb9bbd44b1c8b86d1828e9ad968?_=2026-27%20Instructional%20Cal_Eng_Month_rev%206.9.26.pdf" },
+    { "label": "LAUSD 2025–26 instructional calendar PDF", "url": "https://media.edlio.net/135dff18/8fc3b7d4/7659581d/517e3313317f408baf4c01d7f43b5582?_=2025-26%20Instructional%20Cal_Eng_Month.pdf" },
+    { "label": "LAUSD official website", "url": "https://www.lausd.org/" }
+  ],
+  "faqDisplayQuestions": [
+    "Does every LAUSD school follow this calendar?",
+    "Are students off for the full week of Thanksgiving?",
+    "Do all students return on January 11?",
+    "Are minimum days and early-dismissal days included?"
+  ],
+  "faqDisplayLimit": 4,
+  "faqSchemaLimit": 4,
+  "customSections": [],
   "datePublished": "2026-07-02",
-  "dateModified": "2026-07-02"
+  "dateModified": "2026-08-05"
 }

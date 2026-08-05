@@ -1,0 +1,90 @@
+{
+  "institutionId": "douglas-county-school-district-re-1-calendar",
+  "schoolYear": "2029-2030",
+  "displaySchoolYear": "2029-30",
+  "pageHeading": "Douglas County School District Calendar 2029-30",
+  "firstDay": "2029-08-08",
+  "lastDay": "2030-05-23",
+  "temporalCoverageStart": "2029-08-08",
+  "temporalCoverageEnd": "2030-06-19",
+  "totalSchoolDays": 173,
+  "semesters": 2,
+  "sourceUrl": "https://www.dcsdk12.org/schools-academics/academic-calendars",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1782756116/dcsdk12org/oeiqwz829lisd5gw06ye/2029-30CFinal6-9-26.pdf",
+  "sourceCalendarName": "2029-2030 DCSD School Calendar",
+  "sourceVersion": "Approved by the Board of Education: June 9, 2026",
+  "lastVerifiedAt": "2026-08-05",
+  "dateCreated": "2026-08-05",
+  "datePublished": "2026-08-05",
+  "dateModified": "2026-08-05",
+  "calendarType": "traditional",
+  "seoTitle": "Douglas County School District Calendar 2029-2030 | Holidays & PDF",
+  "seoDescription": "View the DCSD 2029-2030 school calendar with the August 8 first day, May 23 last day, 173 student days, breaks, PLC delayed starts, and official PDF.",
+  "heroSummary": "Douglas County School District begins the 2029-30 conventional school year on Wednesday, August 8, 2029, and the last student day is Thursday, May 23, 2030. The calendar lists 173 student days, Fall Break on October 8-12, Winter Break on December 24-January 5, and Spring Break on March 18-22. The PDF separates PLC delayed starts and staff-only dates from full student closures.",
+  "calendarNotes": "The 2029-30 DCSD school calendar lists 173 student days. The first student day is August 8, 2029, and the second semester begins January 8, 2030 after a January 7 teacher work day. Fall Break runs October 8-12. Thanksgiving closure spans November 19-23, with November 21 marked as a compensation day and November 22-23 marked as district holidays. Winter Break runs December 24-January 5, with January 7 reserved for teacher work. Spring Break runs March 18-22, followed by professional development on April 19, a compensation day on April 22, and a teacher work day on May 24.",
+  "yearNumbers": [
+    { "label": "Student Days", "value": "173", "detail": "The official PDF key identifies 173 all-day student sessions." },
+    { "label": "First Semester", "value": "Aug 8-Jan 7", "detail": "The second semester begins January 8 after the January 7 teacher work day." },
+    { "label": "Winter Break", "value": "Dec 24-Jan 5", "detail": "The break covers the end of December and the first week of January." },
+    { "label": "Spring Break", "value": "Mar 18-22", "detail": "The main spring student break is Monday through Friday." }
+  ],
+  "customSections": [
+    {
+      "id": "dcsd-2029-2030-calendar-markers",
+      "label": "Planning Around the 2029-30 DCSD Calendar",
+      "position": "afterKeyDates",
+      "content": "The conventional PDF is designed for a quick visual scan, but its markers have different family consequences. Treat PLC dates as delayed starts, staff dates as no-student days, and the break color as a full student closure unless DCSD publishes a revision.",
+      "table": {
+        "columns": ["PDF marker", "What to confirm"],
+        "rows": [
+          ["PLC Day (Delayed Start)", "Confirm arrival time, bus timing, and before-school care with the campus."],
+          ["No School / Break", "Plan for a full student closure and adjust care or travel arrangements."],
+          ["Compensation Day", "No students; it is not the same visual category as a regular break."],
+          ["Teacher Work / Professional Development", "No students; staff learning or preparation is scheduled."],
+          ["District Holiday", "District offices are closed and students are not scheduled."],
+          ["All-day session", "Regular student attendance day within the 173-day total."]
+        ]
+      }
+    }
+  ],
+  "calendarFaqs": [
+    { "q": "When does Douglas County School District start in 2029?", "a": "The first student day of the DCSD 2029-30 conventional calendar is Wednesday, August 8, 2029." },
+    { "q": "When is DCSD Spring Break in 2030?", "a": "Spring Break runs Monday, March 18 through Friday, March 22, 2030." },
+    { "q": "When is the last day of DCSD school in 2030?", "a": "The last student day is Thursday, May 23, 2030. May 24 is marked as a teacher work day." },
+    { "q": "Does a PLC date mean DCSD students have no school?", "a": "No. PLC Day is labeled as a delayed-start day. Families should check their school's bell schedule rather than treating it as a full closure." },
+    { "q": "How many student days are in the DCSD 2029-30 calendar?", "a": "The official DCSD calendar identifies 173 all-day student sessions." }
+  ],
+  "sources": [
+    { "label": "DCSD academic calendars page", "url": "https://www.dcsdk12.org/schools-academics/academic-calendars" },
+    { "label": "DCSD 2029-30 school calendar PDF", "url": "https://resources.finalsite.net/images/v1782756116/dcsdk12org/oeiqwz829lisd5gw06ye/2029-30CFinal6-9-26.pdf" }
+  ],
+  "events": [
+    { "date": "2029-07-04", "name": "District Holiday", "type": "holiday" },
+    { "date": "2029-08-01", "name": "New Teacher Orientation", "type": "teacher_workday", "description": "No students." },
+    { "date": "2029-08-03", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2029-08-06", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2029-08-07", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2029-08-08", "name": "First Day of School", "type": "school_start" },
+    { "date": "2029-09-03", "name": "Labor Day", "type": "holiday" },
+    { "date": "2029-09-21", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2029-10-08", "endDate": "2029-10-12", "name": "Fall Break", "type": "break_start" },
+    { "date": "2029-11-19", "endDate": "2029-11-23", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2029-11-21", "name": "Compensation Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2029-11-22", "endDate": "2029-11-23", "name": "District Holidays", "type": "holiday" },
+    { "date": "2029-12-24", "endDate": "2030-01-05", "name": "Winter Break", "type": "break_start" },
+    { "date": "2029-12-24", "endDate": "2029-12-25", "name": "District Holidays", "type": "holiday" },
+    { "date": "2030-01-01", "name": "New Year's Day", "type": "holiday" },
+    { "date": "2030-01-07", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students; second semester begins January 8." },
+    { "date": "2030-01-08", "name": "First Day of Second Semester", "type": "school_resume" },
+    { "date": "2030-01-21", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2030-02-15", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2030-02-18", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2030-03-18", "endDate": "2030-03-22", "name": "Spring Break", "type": "break_start" },
+    { "date": "2030-04-19", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2030-04-22", "name": "Compensation Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2030-05-23", "name": "Last Day of School", "type": "school_end" },
+    { "date": "2030-05-24", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2030-05-27", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2030-06-19", "name": "Juneteenth", "type": "holiday" }
+  ]
+}

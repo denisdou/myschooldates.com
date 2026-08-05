@@ -41,7 +41,7 @@ export function useDistrictPage() {
     return count
   }
 
-  function getBreaks(events: Array<{ date: string; name: string; type: string }>) {
+  function getBreaks(events: Array<{ date: string; endDate?: string; name: string; type: string }>) {
     const result: { name: string; start: string; end: string; days: number }[] = []
     const normalizeBreakName = (name: string) => name
       .toLowerCase()
@@ -58,6 +58,15 @@ export function useDistrictPage() {
     for (let i = 0; i < events.length; i++) {
       if (events[i].type === 'break_start') {
         const baseName = events[i].name
+        if (events[i].endDate) {
+          result.push({
+            name: baseName,
+            start: events[i].date,
+            end: events[i].endDate,
+            days: daysBetween(events[i].date, events[i].endDate),
+          })
+          continue
+        }
         const normalizedBase = normalizeBreakName(baseName)
         const endEvent = events.find(
           (e, j) => {
@@ -248,6 +257,7 @@ export function useDistrictPage() {
       `X-WR-CALNAME:${district.name} ${cal.schoolYear}`,
     ]
     const eventsForExport = cal.events.filter(event =>
+      !(event as any).hideFromCalendarExport &&
       event.type !== 'break_end' &&
       (event.showDuringBreak || event.type === 'observance' || !isCoveredByBreak(event, cal.events))
     )

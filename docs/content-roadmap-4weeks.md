@@ -48,6 +48,9 @@
 | 2026-08-04 | Arizona | Tempe Union High School District | `/tempe-union-high-school-district-calendar` | 2026-2027, 2027-2028, 2028-2029 | 基于官方 TUHSD student calendars page、官网 logo、三份官方 Student Calendar PDF 和本地 PDF 副本；页面补充 9-12 high-school-only district 语境、semester exam windows、district inservice half days、quarter / semester day counts、graduation after last student day 和 elementary / middle school sibling calendar 校验提示；2025-2026 PDF URL 未提供，暂不创建。 |
 | 2026-08-04 | Colorado | Denver Public Schools | `/denver-public-schools-calendar` | 2026-2027, 2027-2028, 2028-2029 | 基于官方 DPS calendars page、官网 logo、三份官方 family/student calendar PDF 和本地 PDF 副本；页面补充 K-12 与 ECE 分开开学、174.5 student/instructional days、conference/no-class days、vacation or staff-learning no-class days、observances school-open 说明和 last day half-day early release；2025-2026 PDF URL 未提供，暂不创建。 |
 | 2026-08-04 | Colorado | Jeffco Public Schools | `/jeffco-public-schools-calendar` | 2025-2026, 2026-2027, 2027-2028 | 基于官方 Jeffco calendar page、官网 logo、三份官方 English family calendar PDF、本地 PDF 副本，以及 2026-2027 / 2027-2028 Spanish、Vietnamese、Russian 扩展日历；页面补充 student contact days、teacher workday counts、teacher staff development days、potential snow make-up days、modified contact-day school-level 提示、last-day 2.5-hour early dismissal 和 charter-school exception。 |
+| 2026-08-05 | Colorado | Douglas County School District | `/douglas-county-school-district-re-1-calendar` | 2025-2026, 2026-2027, 2027-2028, 2028-2029, 2029-2030 | 基于官方 DCSD academic calendars page、官网 logo、五份官方 conventional/school calendar PDF 和本地 PDF 副本；页面补充 173 student days、Fall/Thanksgiving/Winter/Spring Break、New Teacher Orientation、Teacher Work Day、Professional Development、Compensation Day、District Holiday、2026-2027 起的 PLC delayed-start 标记和 south-metro Denver 家庭规划语境；未提供扩展日历 PDF，暂不创建。 |
+| 2026-08-05 | Colorado | Cherry Creek School District | `/cherry-creek-school-district-calendar` | 2025-2026, 2026-2027, 2027-2028, 2028-2029 | 基于官方 CCSD calendar page、官网 logo、四份 All Schools calendar PDF 和本地 PDF 副本；页面补充 No School for Students and Staff、K-12 Non-contact、K-8 Non-contact/conferences、开学前 Teacher Work Days，以及 2026-2027 的 15 份 specialty/school calendars（含 preschool、adaptive、Challenge、innovation、pathways 和各高中）；2029-2030 PDF URL 未提供，暂不创建。 |
+| 2026-08-05 | Colorado | Aurora Public Schools | `/aurora-public-schools-calendar` | 2025-2026, 2026-2027 | 基于官方 APS calendars page、官网 logo、两份官方 conventional district calendar PDF 和本地 PDF 副本；页面补充 2026-2027 的 1-12 与 Preschool-K 开学/结束日期差异、Professional Release Day、Educator Workday、Conference Exchange Day、English/Spanish 双语资源和 heritage observance 语境；2027-2028 及以后未提供可核验 PDF，暂不创建。 |
 
 ---
 
@@ -354,9 +357,9 @@ P3 内容可采用更高度模板化的方式生成（calendarNotes 精简为 4-
 | 106 | Arizona | Tempe Union High School District | Phoenix | ✓ 已完成：`tempe-union-high-school-district-calendar`（2026-08-04） |
 | 107 | Colorado | Denver Public Schools | Denver | ✓ 已完成：`denver-public-schools-calendar`（2026-08-04） |
 | 108 | Colorado | Jeffco Public Schools | Denver | ✓ 已完成：`jeffco-public-schools-calendar`（2026-08-04） |
-| 109 | Colorado | Douglas County School District RE-1 | Denver | 待创建 |
-| 110 | Colorado | Cherry Creek School District | Denver | 待创建 |
-| 111 | Colorado | Aurora Public Schools | Denver | 待创建 |
+| 109 | Colorado | Douglas County School District RE-1 | Denver | ✓ 已完成：`douglas-county-school-district-re-1-calendar`（2026-08-05） |
+| 110 | Colorado | Cherry Creek School District | Denver | ✓ 已完成：`cherry-creek-school-district-calendar`（2026-08-05） |
+| 111 | Colorado | Aurora Public Schools | Denver | ✓ 已完成：`aurora-public-schools-calendar`（2026-08-05） |
 | 112 | Colorado | Adams 12 Five Star Schools | Denver | 待创建 |
 | 113 | Colorado | St. Vrain Valley Schools | Boulder-Longmont | 待创建 |
 | 114 | Colorado | Poudre School District | Fort Collins | 待创建 |

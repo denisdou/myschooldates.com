@@ -1,0 +1,87 @@
+{
+  "institutionId": "douglas-county-school-district-re-1-calendar",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027-28",
+  "pageHeading": "Douglas County School District Calendar 2027-28",
+  "firstDay": "2027-08-11",
+  "lastDay": "2028-05-25",
+  "temporalCoverageStart": "2027-08-11",
+  "temporalCoverageEnd": "2028-05-29",
+  "totalSchoolDays": 173,
+  "semesters": 2,
+  "sourceUrl": "https://www.dcsdk12.org/schools-academics/academic-calendars",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1782756030/dcsdk12org/x6tn897sfkqway2vxjwo/2027-28CFinal6-9-26.pdf",
+  "sourceCalendarName": "2027-2028 DCSD School Calendar",
+  "sourceVersion": "Approved by the Board of Education: June 9, 2026",
+  "lastVerifiedAt": "2026-08-05",
+  "dateCreated": "2026-08-05",
+  "datePublished": "2026-08-05",
+  "dateModified": "2026-08-05",
+  "calendarType": "traditional",
+  "seoTitle": "Douglas County School District Calendar 2027-2028 | Holidays & PDF",
+  "seoDescription": "View the DCSD 2027-2028 school calendar with the August 11 first day, May 25 last day, 173 student days, breaks, PLC delayed starts, and official PDF.",
+  "heroSummary": "Douglas County School District begins the 2027-28 conventional school year on Wednesday, August 11, 2027, and the last student day is Thursday, May 25, 2028. The calendar lists 173 student days, Fall Break on October 11-15, Winter Break on December 20-31, and Spring Break on March 20-24. Selected Fridays are marked with a PLC delayed-start symbol, while teacher work, professional development, compensation, and district holiday dates have separate markers.",
+  "calendarNotes": "The 2027-28 DCSD school calendar lists 173 student days. The first student day is August 11, 2027, and the second semester begins January 4, 2028 after a January 3 teacher work day. Fall Break runs October 11-15. Thanksgiving closure spans November 22-26, with November 24 marked as a compensation day and November 25-26 marked as district holidays. Winter Break runs December 20-31. Spring Break runs March 20-24, followed by a compensation day on April 24 and a teacher work day on May 26 after the last student day.",
+  "yearNumbers": [
+    { "label": "Student Days", "value": "173", "detail": "The official PDF key identifies 173 all-day student sessions." },
+    { "label": "First Semester", "value": "Aug 11-Jan 3", "detail": "The second semester begins January 4 after the January 3 teacher work day." },
+    { "label": "Fall Break", "value": "Oct 11-15", "detail": "Five weekday student closure days are marked as a break." },
+    { "label": "Spring Break", "value": "Mar 20-24", "detail": "The main spring student break is Monday through Friday." }
+  ],
+  "customSections": [
+    {
+      "id": "dcsd-2027-2028-calendar-markers",
+      "label": "Reading the 2027-28 DCSD PDF",
+      "position": "afterKeyDates",
+      "content": "DCSD keeps the 173-day conventional schedule but gives operational dates their own markers. The diagonal blue PLC symbol signals a delayed start, while the other colors distinguish student closures from staff-only work and professional learning.",
+      "table": {
+        "columns": ["Marker or date type", "Why it matters"],
+        "rows": [
+          ["PLC Day (Delayed Start)", "Plan for a later student arrival and verify the school-specific bell time."],
+          ["Break (School Closed)", "Students are not scheduled; useful for travel and child-care planning."],
+          ["Compensation Day", "No students and separate from the regular break color."],
+          ["Teacher Work / Professional Development", "Staff-only day; normal student programs may not operate."],
+          ["District Holiday", "District offices are closed and students are not scheduled."],
+          ["First Day of Semester", "The dark-blue marker identifies the opening day for each semester."]
+        ]
+      }
+    }
+  ],
+  "calendarFaqs": [
+    { "q": "When does Douglas County School District start in 2027?", "a": "The first student day of the DCSD 2027-28 conventional calendar is Wednesday, August 11, 2027." },
+    { "q": "When is DCSD Winter Break in 2027-28?", "a": "Winter Break runs December 20 through December 31, 2027. Students return after the January 3 teacher work day, with the second semester beginning January 4." },
+    { "q": "When is the last day of DCSD school in 2028?", "a": "The last student day is Thursday, May 25, 2028. May 26 is marked as a teacher work day." },
+    { "q": "What does the diagonal blue mark mean on the DCSD calendar?", "a": "It identifies a PLC Day (Delayed Start). Confirm the actual start time with the school because the district PDF does not give one universal bell time." },
+    { "q": "How many student days are in the DCSD 2027-28 calendar?", "a": "The official DCSD calendar identifies 173 all-day student sessions." }
+  ],
+  "sources": [
+    { "label": "DCSD academic calendars page", "url": "https://www.dcsdk12.org/schools-academics/academic-calendars" },
+    { "label": "DCSD 2027-28 school calendar PDF", "url": "https://resources.finalsite.net/images/v1782756030/dcsdk12org/x6tn897sfkqway2vxjwo/2027-28CFinal6-9-26.pdf" }
+  ],
+  "events": [
+    { "date": "2027-07-05", "name": "District Holiday", "type": "holiday" },
+    { "date": "2027-08-05", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2027-08-06", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2027-08-09", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2027-08-10", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2027-08-11", "name": "First Day of School", "type": "school_start" },
+    { "date": "2027-09-06", "name": "Labor Day", "type": "holiday" },
+    { "date": "2027-10-11", "endDate": "2027-10-15", "name": "Fall Break", "type": "break_start" },
+    { "date": "2027-11-22", "endDate": "2027-11-26", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2027-11-24", "name": "Compensation Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2027-11-25", "endDate": "2027-11-26", "name": "District Holidays", "type": "holiday" },
+    { "date": "2027-12-20", "endDate": "2027-12-31", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-12-23", "endDate": "2027-12-24", "name": "District Holidays", "type": "holiday" },
+    { "date": "2027-12-31", "name": "District Holiday", "type": "holiday" },
+    { "date": "2028-01-03", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students; second semester begins January 4." },
+    { "date": "2028-01-04", "name": "First Day of Second Semester", "type": "school_resume" },
+    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2028-02-21", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2028-03-20", "endDate": "2028-03-24", "name": "Spring Break", "type": "break_start" },
+    { "date": "2028-04-21", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2028-04-24", "name": "Compensation Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2028-05-25", "name": "Last Day of School", "type": "school_end" },
+    { "date": "2028-05-26", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2028-05-29", "name": "Memorial Day", "type": "holiday" }
+  ]
+}

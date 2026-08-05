@@ -1,0 +1,89 @@
+{
+  "institutionId": "douglas-county-school-district-re-1-calendar",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025-26",
+  "pageHeading": "Douglas County School District Calendar 2025-26",
+  "firstDay": "2025-08-13",
+  "lastDay": "2026-05-29",
+  "temporalCoverageStart": "2025-08-13",
+  "temporalCoverageEnd": "2026-06-19",
+  "totalSchoolDays": 173,
+  "semesters": 2,
+  "sourceUrl": "https://www.dcsdk12.org/schools-academics/academic-calendars",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1749582309/dcsdk12org/buinvcz8qwla84ghbfj2/2025-26DCSDConventionalCalendarColor.pdf",
+  "sourceCalendarName": "2025-2026 DCSD Conventional Academic Calendar",
+  "sourceVersion": "Approved by the Board of Education: June 18, 2024",
+  "lastVerifiedAt": "2026-08-05",
+  "dateCreated": "2026-08-05",
+  "datePublished": "2026-08-05",
+  "dateModified": "2026-08-05",
+  "calendarType": "traditional",
+  "seoTitle": "Douglas County School District Calendar 2025-2026 | Holidays & PDF",
+  "seoDescription": "View the DCSD 2025-2026 school calendar with the August 13 first day, May 29 last day, 173 student days, breaks, teacher days, and official PDF.",
+  "heroSummary": "Douglas County School District begins the 2025-26 conventional school year on Wednesday, August 13, 2025, and the last student day is Friday, May 29, 2026. The PDF lists 173 student days, Fall Break on October 13-17, Winter Break on December 22-January 2, and Spring Break on March 16-20. The color key separately marks teacher work, professional development, compensation, orientation, and district holiday dates.",
+  "calendarNotes": "The 2025-26 DCSD conventional calendar lists 173 student days. The first student day is August 13, 2025, and the last student day is May 29, 2026. Fall Break runs October 13-17. Thanksgiving closure spans November 24-28, with November 26 marked as a compensation day and November 27-28 marked as district holidays. Winter Break runs December 22-January 2, with January 5 reserved for teacher work before the second semester begins January 6. Spring Break runs March 16-20, followed by a professional development day on April 24 and a compensation day on April 27.",
+  "yearNumbers": [
+    { "label": "Student Days", "value": "173", "detail": "The official PDF key identifies 173 all-day student sessions." },
+    { "label": "First Semester", "value": "Aug 13-Jan 5", "detail": "The second semester begins January 6 after the January 5 teacher work day." },
+    { "label": "Fall Break", "value": "Oct 13-17", "detail": "Five weekday student closure days are marked as no school." },
+    { "label": "Spring Break", "value": "Mar 16-20", "detail": "The main spring student break is Monday through Friday." }
+  ],
+  "customSections": [
+    {
+      "id": "dcsd-2025-2026-calendar-markers",
+      "label": "What the DCSD Calendar Markers Mean",
+      "position": "afterKeyDates",
+      "content": "The DCSD PDF uses a color key with more detail than a simple holiday list. Those distinctions matter when families are planning student care, staff schedules, transportation, or a delayed return after a break.",
+      "table": {
+        "columns": ["PDF marker", "Planning meaning"],
+        "rows": [
+          ["All-day session", "Regular student attendance day; the PDF counts 173 student days."],
+          ["Teacher Work Day / Professional Development", "No students; do not assume a normal school or after-school schedule."],
+          ["New Teacher Orientation", "No students before the regular school-year start."],
+          ["Compensation Day", "No students; it is shown separately from the ordinary no-school break color."],
+          ["District Holiday", "District offices are closed and students are not scheduled for attendance."],
+          ["No School", "Student closure dates used for the break windows shown on the PDF."]
+        ]
+      }
+    }
+  ],
+  "calendarFaqs": [
+    { "q": "When does Douglas County School District start in 2025?", "a": "The first student day of the DCSD 2025-26 conventional calendar is Wednesday, August 13, 2025." },
+    { "q": "When is DCSD Winter Break in 2025-26?", "a": "Winter Break runs December 22, 2025 through January 2, 2026. Students return after the January 5 teacher work day, with the second semester beginning January 6." },
+    { "q": "When is the last day of DCSD school in 2026?", "a": "The last student day is Friday, May 29, 2026. June 1 is marked as a teacher work day on the official calendar." },
+    { "q": "How many student days are in the DCSD 2025-26 calendar?", "a": "The official DCSD calendar identifies 173 all-day student sessions." },
+    { "q": "Does the DCSD calendar download update automatically?", "a": "No. The calendar file is a one-time import based on the dates listed here and will not update automatically if DCSD revises the PDF." }
+  ],
+  "sources": [
+    { "label": "DCSD academic calendars page", "url": "https://www.dcsdk12.org/schools-academics/academic-calendars" },
+    { "label": "DCSD 2025-26 conventional calendar PDF", "url": "https://resources.finalsite.net/images/v1749582309/dcsdk12org/buinvcz8qwla84ghbfj2/2025-26DCSDConventionalCalendarColor.pdf" }
+  ],
+  "events": [
+    { "date": "2025-07-04", "name": "District Holiday", "type": "holiday" },
+    { "date": "2025-08-05", "endDate": "2025-08-06", "name": "New Teacher Orientation", "type": "teacher_workday", "description": "No students." },
+    { "date": "2025-08-07", "endDate": "2025-08-08", "name": "Teacher Work Days", "type": "teacher_workday", "description": "No students." },
+    { "date": "2025-08-11", "endDate": "2025-08-12", "name": "Professional Development Days", "type": "teacher_workday", "description": "No students." },
+    { "date": "2025-08-13", "name": "First Day of School", "type": "school_start" },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
+    { "date": "2025-09-22", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2025-10-13", "endDate": "2025-10-17", "name": "Fall Break", "type": "break_start" },
+    { "date": "2025-11-24", "endDate": "2025-11-28", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-11-26", "name": "Compensation Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2025-11-27", "endDate": "2025-11-28", "name": "District Holidays", "type": "holiday" },
+    { "date": "2025-12-22", "endDate": "2026-01-02", "name": "Winter Break", "type": "break_start" },
+    { "date": "2025-12-24", "endDate": "2025-12-25", "name": "District Holidays", "type": "holiday" },
+    { "date": "2026-01-01", "name": "New Year's Day", "type": "holiday" },
+    { "date": "2026-01-05", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students; second semester begins January 6." },
+    { "date": "2026-01-06", "name": "First Day of Second Semester", "type": "school_resume" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2026-02-13", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2026-02-16", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2026-03-16", "endDate": "2026-03-20", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-04-24", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2026-04-27", "name": "Compensation Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2026-05-25", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2026-05-29", "name": "Last Day of School", "type": "school_end" },
+    { "date": "2026-06-01", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2026-06-19", "name": "Juneteenth", "type": "holiday" }
+  ]
+}

@@ -340,6 +340,12 @@ const calendarSelectorGroups = computed(() =>
 const alternateCalendarsNotice = computed(() =>
   String((cal.value as any)?.alternateCalendarsNotice ?? (cal.value as any)?.meta?.alternateCalendarsNotice ?? '')
 )
+const alternateCalendarsNoticeLinkLabel = computed(() =>
+  String((cal.value as any)?.alternateCalendarsNoticeLinkLabel ?? (cal.value as any)?.meta?.alternateCalendarsNoticeLinkLabel ?? '')
+)
+const alternateCalendarsNoticeLinkHref = computed(() =>
+  String((cal.value as any)?.alternateCalendarsNoticeLinkHref ?? (cal.value as any)?.meta?.alternateCalendarsNoticeLinkHref ?? '#other-calendars')
+)
 const hideAlternateCalendarsNotice = computed(() =>
   Boolean((cal.value as any)?.hideAlternateCalendarsNotice ?? (cal.value as any)?.meta?.hideAlternateCalendarsNotice)
 )
@@ -661,6 +667,12 @@ const faqSchemaItems = computed(() => {
 })
 
 const heroSummary = computed(() => (cal.value as any).heroSummary ?? (cal.value as any).meta?.heroSummary ?? '')
+const heroSummaryParagraphs = computed(() =>
+  heroSummary.value
+    .split(/\n{2,}/)
+    .map(part => part.trim())
+    .filter(Boolean)
+)
 const heroQuickDates = computed(() =>
   (((cal.value as any)?.heroQuickDates ?? (cal.value as any)?.meta?.heroQuickDates ?? []) as Array<{ label?: string, value?: string }>).filter(item => item.label && item.value)
 )
@@ -834,6 +846,18 @@ const sourceBasedOnRefs = [
   ...additionalSourceCalendarEntities.map(source => ({ '@id': source['@id'] })),
 ]
 const sourceBasedOnValue = sourceBasedOnRefs.length === 1 ? sourceBasedOnRefs[0] : sourceBasedOnRefs
+const datasetSourceCalendarIds = (((cal.value as any)?.schemaDatasetSourceCalendarIds ?? (cal.value as any)?.meta?.schemaDatasetSourceCalendarIds) as string[] | undefined)
+const datasetBasedOnRefs = Array.isArray(datasetSourceCalendarIds)
+  ? datasetSourceCalendarIds
+      .map(id => {
+        if (id === 'source-calendar' && basedOnUrl) return { '@id': `${canonicalUrl}#source-calendar` }
+        if (id === 'source-calendar-page' && sourcePageCitationUrl) return { '@id': `${canonicalUrl}#source-calendar-page` }
+        if (id && additionalSourceCalendarEntities.some(source => source['@id'] === `${canonicalUrl}#${id}`)) return { '@id': `${canonicalUrl}#${id}` }
+        return null
+      })
+      .filter(Boolean)
+  : sourceBasedOnRefs
+const datasetBasedOnValue = datasetBasedOnRefs.length === 1 ? datasetBasedOnRefs[0] : datasetBasedOnRefs
 const calendarIcsUrl = `https://myschooldates.com/calendars/${district.value.slug}-${cal.value.schoolYear}.ics`
 const hideDatasetSchema = computed(() => Boolean((cal.value as any)?.hideDatasetSchema || (cal.value as any)?.meta?.hideDatasetSchema))
 const spatialCoverageOverride = (cal.value as any)?.schemaSpatialCoverage ?? (cal.value as any)?.meta?.schemaSpatialCoverage ?? (district.value as any)?.schemaSpatialCoverage ?? (district.value as any)?.meta?.schemaSpatialCoverage
@@ -871,7 +895,7 @@ const datasetEntity = hideDatasetSchema.value ? null : {
   },
   creator: { '@id': 'https://myschooldates.com/#organization' },
   publisher: { '@id': 'https://myschooldates.com/#organization' },
-  ...(sourceBasedOnRefs.length ? { isBasedOn: sourceBasedOnValue } : {}),
+  ...(datasetBasedOnRefs.length ? { isBasedOn: datasetBasedOnValue } : {}),
   distribution: [
     {
       '@type': 'DataDownload',
@@ -914,6 +938,8 @@ const configuredKeyDateSummaryItems = computed(() =>
       dateDisplayMode: item.dateDisplayMode,
       dateJoiner: item.dateJoiner,
       datePropertyLabel: item.datePropertyLabel,
+      schemaAdditionalProperties: item.schemaAdditionalProperties,
+      additionalProperties: item.additionalProperties,
     }))
 )
 const keyDatesSummaryTitle = computed(() =>
@@ -980,13 +1006,20 @@ function keyDateDateSeparatorText(event: any) {
   return separator === '–' ? separator : ` ${separator} `
 }
 function keyDateSchemaProperties(event: any) {
+  const extraProperties = ((event.schemaAdditionalProperties ?? event.additionalProperties ?? []) as any[])
+    .filter(prop => prop?.name && prop?.value)
+    .map(prop => ({
+      '@type': 'PropertyValue',
+      name: prop.name,
+      value: prop.value,
+    }))
   const dates = keyDateListDates(event)
   if (dates.length) {
     return dates.map((date: string) => ({
       '@type': 'PropertyValue',
       name: event.datePropertyLabel ?? 'Opening date',
       value: date,
-    }))
+    })).concat(extraProperties)
   }
   const range = event.endDate
     ? { start: event.date, end: event.endDate }
@@ -996,11 +1029,13 @@ function keyDateSchemaProperties(event: any) {
   if (range.start === range.end) {
     return [
       { '@type': 'PropertyValue', name: 'Date', value: range.start },
+      ...extraProperties,
     ]
   }
   return [
     { '@type': 'PropertyValue', name: 'Start date', value: range.start },
     { '@type': 'PropertyValue', name: 'End date', value: range.end },
+    ...extraProperties,
   ]
 }
 const keyDateItemListEvents = computed(() => {
@@ -1016,6 +1051,7 @@ const keyDateItemListEvents = computed(() => {
 const customSectionSchemaParts = computed(() =>
   customSections.value
     .filter((section) => {
+      if ((section as any).schemaHasPart === false || (section as any).schema?.hasPart === false) return false
       if ((section as any).schemaHasPart === true || (section as any).schema?.hasPart === true) return true
       const text = `${section.id} ${section.label}`.toLowerCase()
       return text.includes('download') ||
@@ -1149,6 +1185,9 @@ const faqPageEntity = faqSchemaItems.value.length ? {
   })),
 } : null
 const hideItemListSchema = computed(() => Boolean((cal.value as any)?.hideItemListSchema || (cal.value as any)?.meta?.hideItemListSchema))
+const keyDateItemListName = computed(() =>
+  (cal.value as any)?.schemaKeyDateItemListName ?? (cal.value as any)?.meta?.schemaKeyDateItemListName ?? `${district.value.shortName || district.value.name} ${displaySchoolYear.value} key school calendar dates`
+)
 function keyDateDisplayName(event: { name: string; type: string; displayName?: string }) {
   if (event.displayName) return event.displayName
   if (event.type === 'break_start' || event.type === 'break_end') {
@@ -1186,7 +1225,7 @@ function keyDateSchemaDescription(event: any) {
 const keyDateItemListEntity = !hideItemListSchema.value && keyDateItemListEvents.value.length ? {
   '@type': 'ItemList',
   '@id': `${canonicalUrl}#key-dates`,
-  name: `${district.value.shortName || district.value.name} ${displaySchoolYear.value} key school calendar dates`,
+  name: keyDateItemListName.value,
   itemListElement: keyDateItemListEvents.value.map((event: any, i: number) => {
     return {
       '@type': 'ListItem',
@@ -1298,9 +1337,12 @@ useHead({
           <a href="#add-to-calendar" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">{{ (cal as any).heroDownloadLabel ?? (cal as any).meta?.heroDownloadLabel ?? (cal as any).icsButtonLabel ?? (cal as any).meta?.icsButtonLabel ?? 'Download calendar file' }}</a>
         </p>
         <div class="mt-3 text-[hsl(var(--rds-ink-muted)/1)] leading-relaxed space-y-2">
-          <p v-if="heroSummary">
-            {{ heroSummary }}
-          </p>
+          <template v-if="heroSummaryParagraphs.length">
+            <p v-for="(paragraph, i) in heroSummaryParagraphs" :key="i">
+              {{ paragraph }}
+            </p>
+          </template>
+          <p v-else-if="heroSummary">{{ heroSummary }}</p>
           <p v-else>
             The first day of school for {{ district!.name }}<template v-if="district!.shortName && !district!.name.includes(district!.shortName)">, also known as {{ district!.shortName }},</template> {{ isFutureYear ? 'is' : 'was' }}
             <strong>{{ formatWeekdayDate(cal!.firstDay) }}</strong>.
@@ -1447,7 +1489,14 @@ useHead({
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         <p class="text-sm text-amber-800">
-          <template v-if="alternateCalendarsNotice">{{ alternateCalendarsNotice }}</template>
+          <template v-if="alternateCalendarsNotice">
+            {{ alternateCalendarsNotice }}
+            <a
+              v-if="alternateCalendarsNoticeLinkLabel"
+              :href="alternateCalendarsNoticeLinkHref"
+              class="underline font-medium"
+            >{{ alternateCalendarsNoticeLinkLabel }}</a>
+          </template>
           <template v-else>
             This page shows the <strong>Traditional Calendar</strong>, which applies to most {{ district!.name }} schools.
             If your child attends a year-round school or specialized program, see
@@ -1535,7 +1584,7 @@ useHead({
             href="#add-to-calendar"
             class="inline-flex items-center justify-center rounded-lg bg-[#0f5d6b] px-3 py-2 text-sm font-semibold text-white hover:bg-[#0b4c58] transition-colors"
           >
-            Download ICS Calendar
+            Calendar Downloads
           </a>
           <a
             v-if="(cal as any).sourcePdfUrl || (cal as any).printablePdfUrl"
@@ -1544,7 +1593,7 @@ useHead({
             rel="noopener"
             class="inline-flex items-center justify-center rounded-lg border border-[#d9d2c7] bg-[#fbfaf7] px-3 py-2 text-sm font-semibold text-[#0f5d6b] hover:border-[#b8c9c9] hover:bg-[#e6f0ef] transition-colors"
           >
-            {{ (cal as any).sourcePdfUrl ? 'Download PDF' : 'Download Printable PDF' }}
+            {{ (cal as any).pdfButtonLabel ?? (cal as any).meta?.pdfButtonLabel ?? ((cal as any).sourcePdfUrl ? 'View Official PDF' : 'Download Printable PDF') }}
             <span class="sr-only">(opens in a new tab)</span>
           </a>
         </div>
@@ -1559,7 +1608,14 @@ useHead({
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         <p class="text-sm text-amber-800">
-          <template v-if="alternateCalendarsNotice">{{ alternateCalendarsNotice }}</template>
+          <template v-if="alternateCalendarsNotice">
+            {{ alternateCalendarsNotice }}
+            <a
+              v-if="alternateCalendarsNoticeLinkLabel"
+              :href="alternateCalendarsNoticeLinkHref"
+              class="underline font-medium"
+            >{{ alternateCalendarsNoticeLinkLabel }}</a>
+          </template>
           <template v-else>
             This page shows the <strong>Traditional Calendar</strong>, which applies to most {{ district!.name }} schools.
             If your child attends a year-round school or specialized program, see
@@ -1643,7 +1699,7 @@ useHead({
 
       <!-- Other Official Calendars -->
       <DistrictOtherCalendars
-        v-if="(cal as any)?.alternateCalendars?.length"
+        v-if="(cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
         :alternate-calendars="(cal as any).alternateCalendars"
         :district-name="district!.name"
         :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
@@ -1713,6 +1769,7 @@ useHead({
         :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
         :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
         :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
+        :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
       />
 
       <!-- FAQ -->
@@ -1782,6 +1839,7 @@ useHead({
         :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
         :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
         :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
+        :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
       />
 
       <div v-if="showYearSwitcherAfterSources && visibleYearSwitcherYears.length" class="flex items-center gap-2 flex-wrap">

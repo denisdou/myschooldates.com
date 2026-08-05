@@ -1,0 +1,136 @@
+{
+  "institutionId": "douglas-county-school-district-re-1-calendar",
+  "name": "Douglas County School District",
+  "shortName": "DCSD",
+  "slug": "douglas-county-school-district-re-1-calendar",
+  "state": "Colorado",
+  "stateCode": "CO",
+  "city": "Castle Rock",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.dcsdk12.org/",
+  "calendarPage": "https://www.dcsdk12.org/schools-academics/academic-calendars",
+  "logo": "https://resources.finalsite.net/images/v1714742094/dcsdk12org/ndnoryrxsxngsgwvzzmq/DouglasCountySchoolDistrict1_1.svg",
+  "timezone": "America/Denver",
+  "county": "Douglas County",
+  "region": "South Metro Denver",
+  "metro": "Denver-Aurora-Lakewood",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "conventional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Denver-area District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "officialSpreadsheet": false,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-05",
+    "coverageNote": "Douglas County School District coverage uses the official district website, academic calendars page, the district logo, and official conventional calendar PDFs for 2025-2026 through 2029-2030. No extended calendar PDF was supplied for the reviewed years, so this page covers the conventional district calendar only."
+  },
+  "contentFreshnessScore": {
+    "overall": 96,
+    "sourceUpdated": "2026-08-05",
+    "lastManualReview": "2026-08-05",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the DCSD academic calendars page when the district replaces a PDF, changes the 173-day conventional calendar, updates PLC delayed-start markings, or publishes a separate extended calendar."
+  },
+  "districtContentScore": {
+    "visibility": "public",
+    "publishStatus": "publish",
+    "reviewStatus": "approved",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official DCSD revision, PDF replacement, PLC schedule change, extended calendar publication, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hiddenSections": ["districtProfile"],
+  "searchAliases": [
+    "Douglas County School District",
+    "DCSD calendar",
+    "Douglas County Colorado school calendar",
+    "Douglas County schools calendar",
+    "Douglas County school holidays",
+    "Douglas County school calendar PDF",
+    "Castle Rock school calendar",
+    "Parker Colorado school calendar"
+  ],
+  "districtFact": "DCSD publishes a conventional academic calendar for most district schools. The calendar separates regular student days from teacher work days, professional development days, compensation days, district holidays, and PLC delayed-start dates.",
+  "about": [
+    {
+      "title": "About the DCSD School Calendar",
+      "content": "DCSD publishes a conventional academic calendar for most district schools. Schools may publish campus-specific bell schedules, PLC start times, testing dates, conferences, and events separately."
+    },
+    {
+      "title": "Conventional Calendar Scope",
+      "content": "This page summarizes DCSD’s conventional district calendar. Renaissance Elementary Magnet School, Daniel C. Oakes High School, Eagle Academy, and DCSD charter schools may publish separate calendars."
+    }
+  ],
+  "planningTips": {
+    "title": "DCSD Calendar Notes",
+    "content": [
+      "The PDF color key separates student attendance days from no-student teacher work, professional development, compensation, orientation, and district-office holiday dates.",
+      "On PLC days, check your school’s bell schedule and transportation notice.",
+      "Fall Break, Thanksgiving, Winter Break, and Spring Break are the main multi-day student closures for travel and child-care planning.",
+      "Individual DCSD schools may add testing, conference, activity, graduation, or campus-specific schedule details beyond the conventional district PDF."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "How many student days are in the Douglas County School District calendar?",
+      "a": "DCSD’s conventional calendar lists 173 student days for the reviewed school years."
+    },
+    {
+      "q": "Does DCSD use a conventional school calendar?",
+      "a": "Yes. DCSD publishes conventional academic calendars. Some schools and programs may publish separate schedules."
+    },
+    {
+      "q": "What does PLC Day mean on the DCSD calendar?",
+      "a": "PLC Day is labeled as a delayed-start day in the district PDF key. The calendar identifies the dates, but the school should confirm the actual start time and transportation instructions."
+    },
+    {
+      "q": "Where can families verify Douglas County school calendar changes?",
+      "a": "Use the official DCSD academic calendars page and the current school-year PDF for final confirmation. MySchoolDates is an independent reference and is not affiliated with Douglas County School District."
+    }
+  ],
+  "customSections": [],
+  "relatedDistrictsTitle": "More Colorado School Calendars",
+  "relatedDistrictsDescription": "Compare DCSD dates with other Denver-area school calendars.",
+  "relatedDistricts": [
+    {
+      "name": "Denver Public Schools",
+      "slug": "denver-public-schools-calendar",
+      "state": "Colorado"
+    },
+    {
+      "name": "Jeffco Public Schools",
+      "slug": "jeffco-public-schools-calendar",
+      "state": "Colorado"
+    },
+    {
+      "name": "Cherry Creek School District",
+      "slug": "cherry-creek-school-district-calendar",
+      "state": "Colorado"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Douglas County School District official website",
+      "url": "https://www.dcsdk12.org/"
+    },
+    {
+      "label": "DCSD academic calendars page",
+      "url": "https://www.dcsdk12.org/schools-academics/academic-calendars"
+    }
+  ]
+}

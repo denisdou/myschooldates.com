@@ -1,0 +1,86 @@
+{
+  "institutionId": "aurora-public-schools-calendar",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025-26",
+  "pageHeading": "Aurora Public Schools Calendar 2025-26",
+  "firstDay": "2025-08-14",
+  "lastDay": "2026-05-28",
+  "temporalCoverageStart": "2025-08-08",
+  "temporalCoverageEnd": "2026-05-29",
+  "totalSchoolDays": 176,
+  "semesters": 2,
+  "sourceUrl": "https://aurorak12.org/calendars",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1755099838/auroraschoolsorg/uaq0x0ywbxbfe5w0rvjl/25-26schoolcalendar1.pdf",
+  "sourceCalendarName": "Aurora City School District 2025-2026 School Calendar",
+  "sourceVersion": "Official local PDF copy reviewed 2026-08-05",
+  "lastVerifiedAt": "2026-08-05",
+  "dateCreated": "2026-08-05",
+  "datePublished": "2026-08-05",
+  "dateModified": "2026-08-05",
+  "calendarType": "traditional",
+  "seoTitle": "Aurora Public Schools Calendar 2025-2026 | Holidays & PDF",
+  "seoDescription": "View the Aurora Public Schools 2025-2026 calendar with the August 14 student start, May 28 last day, 176 student days, breaks, professional days, and official PDF.",
+  "heroSummary": "Aurora Public Schools begins the 2025-26 student calendar on Thursday, August 14, 2025, after new-student orientation for grades 6-12 on August 13. The last student day is Thursday, May 28, 2026. The official calendar lists 176 student days, Thanksgiving and winter closures, a March spring break, and separate teacher and professional days.",
+  "calendarNotes": "The source PDF is titled Aurora City School District School Calendar 2025-2026 and separates student attendance dates from staff preparation and records days. New Teacher Orientation is August 8, the teacher professional day is August 11, and the opening staff meeting is August 12. The first semester runs through December 19 with 86 student days; the second semester runs January 5 through May 28 with 90 student days.",
+  "yearNumbers": [
+    { "label": "Student Days", "value": "176", "detail": "The official calendar counts 86 student days in the first semester and 90 in the second." },
+    { "label": "First Day", "value": "Aug 14", "detail": "Grades 6-12 have new-student orientation on August 13; all students begin August 14." },
+    { "label": "Winter Break", "value": "Dec 22-Jan 2", "detail": "Students return after the January 5 teachers record day." },
+    { "label": "Last Day", "value": "May 28", "detail": "Teachers records day follows on May 29." }
+  ],
+  "customSections": [
+    {
+      "id": "aps-2025-2026-calendar-markers",
+      "label": "How to Read the APS Calendar",
+      "position": "afterKeyDates",
+      "content": "The APS source calendar distinguishes family-facing breaks from days reserved for staff work. Those categories matter for childcare, transportation, meal access, and school-office availability.",
+      "table": {
+        "columns": ["Calendar marker", "Planning meaning"],
+        "rows": [
+          ["Vacation / No School", "Student closure windows such as Thanksgiving, winter, and spring breaks."],
+          ["No School for Students / Teacher Work Day", "Students do not attend; staff may be scheduled for professional, records, or planning work."],
+          ["New Student Orientation", "The August 13 orientation is listed for grades 6-12 before the all-student opening."],
+          ["Teachers Record Day", "A staff records day follows each major term boundary and is not a student attendance day."]
+        ]
+      }
+    }
+  ],
+  "calendarFaqs": [
+    { "q": "When does Aurora Public Schools start in 2025?", "a": "The first day for all students on the 2025-26 APS calendar is Thursday, August 14, 2025. Grades 6-12 have new-student orientation on August 13." },
+    { "q": "How many student days are in the APS 2025-26 calendar?", "a": "The official calendar identifies 176 student days: 86 in the first semester and 90 in the second." },
+    { "q": "When is winter break for Aurora Public Schools in 2025-26?", "a": "Winter Break runs December 22, 2025 through January 2, 2026. January 5 is a teachers record day." },
+    { "q": "When is the last day of APS school in 2026?", "a": "The last student day is Thursday, May 28, 2026, followed by a teachers records day on May 29." },
+    { "q": "Where can families verify APS calendar changes?", "a": "Use the APS calendars page and the current district PDF for final confirmation. MySchoolDates is an independent reference and is not affiliated with Aurora Public Schools." }
+  ],
+  "sources": [
+    { "label": "Aurora Public Schools calendars page", "url": "https://aurorak12.org/calendars" },
+    { "label": "APS 2025-26 school calendar PDF", "url": "https://resources.finalsite.net/images/v1755099838/auroraschoolsorg/uaq0x0ywbxbfe5w0rvjl/25-26schoolcalendar1.pdf" }
+  ],
+  "events": [
+    { "date": "2025-08-08", "name": "New Teacher Orientation", "type": "teacher_workday", "description": "No students." },
+    { "date": "2025-08-11", "name": "Teacher Professional Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2025-08-12", "name": "Opening Staff Meeting", "type": "teacher_workday", "description": "No students." },
+    { "date": "2025-08-13", "name": "New Student Orientation - Grades 6-12", "type": "academic" },
+    { "date": "2025-08-14", "name": "First Day of School", "type": "school_start" },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
+    { "date": "2025-10-10", "name": "NEOEA Day", "type": "academic" },
+    { "date": "2025-10-13", "name": "Professional Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2025-10-17", "name": "End of First Nine Weeks", "type": "academic" },
+    { "date": "2025-11-26", "endDate": "2025-12-01", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-12-19", "name": "End of First Semester", "type": "academic" },
+    { "date": "2025-12-22", "endDate": "2026-01-02", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-01-05", "name": "Teachers Record Day", "type": "teacher_workday", "description": "No students; second semester begins." },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2026-02-13", "name": "Professional Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2026-02-16", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2026-03-06", "name": "Professional Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2026-03-23", "endDate": "2026-03-27", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-04-03", "name": "No School", "type": "no_school" },
+    { "date": "2026-04-06", "name": "No School", "type": "no_school" },
+    { "date": "2026-05-01", "name": "No School", "type": "no_school" },
+    { "date": "2026-05-21", "name": "Graduation", "type": "academic" },
+    { "date": "2026-05-25", "name": "Memorial Day", "type": "holiday" },
+    { "date": "2026-05-28", "name": "Last Student Day", "type": "school_end" },
+    { "date": "2026-05-29", "name": "Teachers Records Day", "type": "teacher_workday", "description": "No students." }
+  ]
+}

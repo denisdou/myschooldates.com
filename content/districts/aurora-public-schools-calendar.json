@@ -1,0 +1,141 @@
+{
+  "institutionId": "aurora-public-schools-calendar",
+  "name": "Aurora Public Schools",
+  "shortName": "APS",
+  "slug": "aurora-public-schools-calendar",
+  "state": "Colorado",
+  "stateCode": "CO",
+  "city": "Aurora",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://aurorak12.org",
+  "calendarPage": "https://www.aurorak12.org/calendars/district_school_calendars",
+  "logo": "https://cdnsm5-ss20.sharpschool.com/UserFiles/Servers/Server_3217444/Image/logo/Aurora_Logo_Horizontal_Full_Color_RGB.png",
+  "timezone": "America/Denver",
+  "county": "Arapahoe County",
+  "region": "Aurora and East Metro Denver",
+  "metro": "Denver-Aurora-Lakewood",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "East Metro Denver District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "officialSpreadsheet": false,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-05",
+    "coverageNote": "Aurora Public Schools coverage uses the official APS website, District & School Calendars page, district logo, and conventional district calendar PDFs for 2025–26 and 2026–27. The 2026–27 page also notes the Alternative Late Start Wednesdays calendar for selected schools."
+  },
+  "contentFreshnessScore": {
+    "overall": 95,
+    "sourceUpdated": "2026-08-05",
+    "lastManualReview": "2026-08-05",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the APS calendars page when the district replaces a conventional calendar, updates preschool or kindergarten start or end dates, changes professional release days, revises the Alternative Late Start Wednesdays calendar, or publishes a future-year calendar."
+  },
+  "districtContentScore": {
+    "visibility": "public",
+    "publishStatus": "publish",
+    "reviewStatus": "approved",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official APS revision, PDF replacement, grade-band date change, future calendar publication, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hiddenSections": ["districtProfile"],
+  "searchAliases": [
+    "Aurora Public Schools",
+    "APS calendar",
+    "Aurora Colorado school calendar",
+    "Aurora Public Schools calendar",
+    "Aurora school holidays",
+    "Aurora school calendar PDF",
+    "Aurora City School District calendar",
+    "Aurora Colorado preschool calendar",
+    "Aurora Colorado kindergarten start date"
+  ],
+  "districtFact": "Aurora Public Schools serves families in Aurora and the east metro Denver area. Its conventional calendar separates grades 1–12 and preschool/kindergarten start dates, preschool and grades K–12 last days, professional release days, educator workdays, parent conference exchange days, and English/Spanish calendar resources.",
+  "about": [
+    {
+      "title": "About the Aurora Public Schools Calendar",
+      "content": "APS publishes a conventional district calendar with separate timing for grades 1–12 and preschool/kindergarten in 2026–27. That distinction matters for families with children in different grade bands because the first and last day are not identical across the district."
+    },
+    {
+      "title": "Which Calendar This Page Covers",
+      "content": "This page summarizes the APS conventional district calendar. Families should also check their school for transportation, testing, graduation, school-specific events, child care availability, and alternative schedule details."
+    }
+  ],
+  "planningTips": {
+    "title": "APS Calendar Notes",
+    "content": [
+      "In 2026–27, grades 1–12 start August 6 while preschool and kindergarten start August 10; the last day is May 27 for grades K–12 and May 26 for preschool.",
+      "Professional Release Days and Educator Workdays are no-school dates for students, but they are different staff-planning categories in the official key.",
+      "Parent Conference Exchange Days are no-school dates for students and should be checked separately from major vacation windows.",
+      "APS publishes the 2026–27 conventional calendar in English and Spanish and identifies monthly heritage observances; those observances add context but do not automatically change the class schedule."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "When does Aurora Public Schools start in 2026?",
+      "a": "The 2026–27 APS conventional calendar starts grades 1–12 on August 6, 2026. Preschool and kindergarten start August 10, 2026."
+    },
+    {
+      "q": "Does Aurora Public Schools have different preschool and K–12 dates?",
+      "a": "Yes. APS marks separate first and last days: preschool and kindergarten start August 10 and preschool ends May 26, while grades 1–12 start August 6 and grades K–12 end May 27."
+    },
+    {
+      "q": "What are APS Parent Conference Exchange Days?",
+      "a": "They are no-school dates for students identified separately from professional release and educator workdays. The 2026–27 conventional calendar lists October 30, 2026 and May 3, 2027."
+    },
+    {
+      "q": "Is the Aurora Public Schools calendar available in Spanish?",
+      "a": "Yes. The district’s 2026–27 conventional calendar resource includes English and Spanish versions."
+    },
+    {
+      "q": "Where can families verify APS calendar changes?",
+      "a": "Use the official APS District & School Calendars page and current district calendar resource for final confirmation. MySchoolDates is an independent reference and is not affiliated with Aurora Public Schools."
+    }
+  ],
+  "customSections": [],
+  "relatedDistrictsTitle": "More Colorado School Calendars",
+  "relatedDistrictsDescription": "Compare Aurora Public Schools dates with other Denver-area school calendars.",
+  "relatedDistricts": [
+    {
+      "name": "Denver Public Schools",
+      "slug": "denver-public-schools-calendar",
+      "state": "Colorado"
+    },
+    {
+      "name": "Cherry Creek School District",
+      "slug": "cherry-creek-school-district-calendar",
+      "state": "Colorado"
+    },
+    {
+      "name": "Douglas County School District",
+      "slug": "douglas-county-school-district-re-1-calendar",
+      "state": "Colorado"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Aurora Public Schools official website",
+      "url": "https://aurorak12.org"
+    },
+    {
+      "label": "APS calendars page",
+      "url": "https://www.aurorak12.org/calendars/district_school_calendars"
+    }
+  ]
+}

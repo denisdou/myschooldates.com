@@ -18,6 +18,7 @@ type CalendarEvent = {
   dates?: string[]
   exportDatesIndividually?: boolean
   showDuringBreak?: boolean
+  hideFromCalendarExport?: boolean
 }
 
 type CalendarRecord = {
@@ -244,6 +245,7 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord) {
   const breaks = getBreaks(calendar.events)
   const eventsForExport = calendar.events
     .filter(event =>
+      !event.hideFromCalendarExport &&
       event.type !== 'break_end' &&
       !isRangeEndEvent(event, calendar.events) &&
       (event.showDuringBreak || event.type === 'observance' || !isCoveredByBreak(event, calendar.events))

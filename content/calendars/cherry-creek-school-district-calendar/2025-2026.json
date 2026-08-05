@@ -1,0 +1,78 @@
+{
+  "institutionId": "cherry-creek-school-district-calendar",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025-26",
+  "pageHeading": "Cherry Creek School District Calendar 2025-26",
+  "firstDay": "2025-08-11",
+  "lastDay": "2026-05-22",
+  "temporalCoverageStart": "2025-08-11",
+  "temporalCoverageEnd": "2026-05-25",
+  "sourceUrl": "https://www.cherrycreekschools.org/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1752246760/cherrycreekschoolsorg/faqs5jal4itpe2ctu2oe/25-26_CCSD_Calendar.pdf",
+  "sourceCalendarName": "Cherry Creek School District 2025-2026 School Year Calendar - All Schools",
+  "sourceVersion": "Adopted by the Board of Education: January 8, 2024",
+  "lastVerifiedAt": "2026-08-05",
+  "dateCreated": "2026-08-05",
+  "datePublished": "2026-08-05",
+  "dateModified": "2026-08-05",
+  "calendarType": "traditional",
+  "seoTitle": "Cherry Creek School District Calendar 2025-2026 | Holidays & PDF",
+  "seoDescription": "View the CCSD 2025-2026 All Schools calendar with the August 11 start, May 22 last day, breaks, K-12 non-contact days, K-8 conferences, and official PDF.",
+  "heroSummary": "Cherry Creek School District starts the 2025-26 All Schools calendar on Monday, August 11, 2025, and the last day is Friday, May 22, 2026. Full closures include Fall Break October 13-17, Winter Break December 22-January 2, and Spring Break March 16-20. The PDF also separates K-12 non-contact days from K-8 non-contact/conference dates, which do not affect every grade in the same way.",
+  "calendarNotes": "The 2025-26 CCSD All Schools calendar starts students on August 11, 2025 after teacher work days from August 4-8. Fall Break is October 13-17. K-8 non-contact or conference dates include November 7, March 5-6, and May 1. K-12 non-contact dates include November 26, January 5, and February 17. Winter Break runs December 22-January 2, with the second semester beginning January 6 after the January 5 K-12 non-contact day. Spring Break runs March 16-20, and the last student day is May 22.",
+  "yearNumbers": [
+    { "label": "First Day", "value": "Aug 11", "detail": "Teacher work days run August 4-8 before students start." },
+    { "label": "Last Day", "value": "May 22", "detail": "The PDF marks May 22, 2026 as the last day of school." },
+    { "label": "K-8 Dates", "value": "4 markers", "detail": "K-8 non-contact or conference dates occur in November, March, and May." },
+    { "label": "K-12 Dates", "value": "3 markers", "detail": "K-12 non-contact dates occur in November, January, and February." }
+  ],
+  "customSections": [
+    {
+      "id": "ccsd-2025-2026-calendar-markers",
+      "label": "How to Read the CCSD All Schools Calendar",
+      "position": "afterKeyDates",
+      "content": "Cherry Creek's calendar uses separate colors for districtwide closures, K-12 non-contact days, and K-8 non-contact or conference dates. This distinction is useful for families whose elementary, middle, and high school students may not have the same schedule.",
+      "table": {
+        "columns": ["PDF marker", "Who it affects"],
+        "rows": [
+          ["No School for Students and Staff", "Districtwide student and staff closure, including the major break windows."],
+          ["K-12 Non-contact", "A non-pupil contact day marked for K-12 planning; check school programs before assuming care is available."],
+          ["K-8 Non-contact/conferences", "A non-pupil contact or conference date for elementary and middle grades; high school schedules may continue."],
+          ["Teacher Work Days Prior to Start", "Staff preparation days before the first student day."],
+          ["School Starts / Last Day", "The green and red markers identify the districtwide school-year boundaries."]
+        ]
+      }
+    }
+  ],
+  "calendarFaqs": [
+    { "q": "When does Cherry Creek School District start in 2025?", "a": "The first student day on the 2025-26 All Schools calendar is Monday, August 11, 2025." },
+    { "q": "When is Cherry Creek Winter Break in 2025-26?", "a": "Winter Break runs December 22, 2025 through January 2, 2026. The second semester begins January 6 after the January 5 K-12 non-contact day." },
+    { "q": "What is a K-8 non-contact or conference day?", "a": "It is a non-pupil contact date marked for K-8 students. The 2025-26 PDF lists November 7, March 5-6, and May 1; check the school for conference and program details." },
+    { "q": "When is the last day of Cherry Creek school in 2026?", "a": "The last day of school is Friday, May 22, 2026." },
+    { "q": "Does this calendar include every Cherry Creek school event?", "a": "No. It is the All Schools districtwide calendar. High schools, preschool, programs, and individual campuses may publish additional calendars and events." }
+  ],
+  "sources": [
+    { "label": "CCSD calendar page", "url": "https://www.cherrycreekschools.org/calendar" },
+    { "label": "CCSD 2025-26 All Schools calendar PDF", "url": "https://resources.finalsite.net/images/v1752246760/cherrycreekschoolsorg/faqs5jal4itpe2ctu2oe/25-26_CCSD_Calendar.pdf" }
+  ],
+  "events": [
+    { "date": "2025-08-04", "endDate": "2025-08-08", "name": "Teacher Work Days Prior to Start of School", "type": "teacher_workday", "description": "No students." },
+    { "date": "2025-08-11", "name": "First Day of School", "type": "school_start" },
+    { "date": "2025-09-01", "name": "No School for Students and Staff", "type": "holiday" },
+    { "date": "2025-10-13", "endDate": "2025-10-17", "name": "Fall Break", "type": "break_start" },
+    { "date": "2025-11-07", "name": "K-8 Non-contact / Conferences", "type": "conference", "description": "The All Schools PDF marks this as a K-8 non-contact or conference date." },
+    { "date": "2025-11-26", "name": "K-12 Non-contact Day", "type": "no_school" },
+    { "date": "2025-11-27", "endDate": "2025-11-28", "name": "Thanksgiving Closure", "type": "break_start" },
+    { "date": "2025-12-22", "endDate": "2026-01-02", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-01-05", "name": "K-12 Non-contact Day", "type": "no_school", "description": "The second semester begins January 6." },
+    { "date": "2026-01-06", "name": "First Day of Second Semester", "type": "school_resume" },
+    { "date": "2026-01-19", "name": "No School for Students and Staff", "type": "holiday" },
+    { "date": "2026-02-16", "name": "No School for Students and Staff", "type": "holiday" },
+    { "date": "2026-02-17", "name": "K-12 Non-contact Day", "type": "no_school" },
+    { "date": "2026-03-05", "endDate": "2026-03-06", "name": "K-8 Non-contact / Conferences", "type": "conference" },
+    { "date": "2026-03-16", "endDate": "2026-03-20", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-05-01", "name": "K-8 Non-contact / Conferences", "type": "conference" },
+    { "date": "2026-05-22", "name": "Last Day of School", "type": "school_end" },
+    { "date": "2026-05-25", "name": "No School for Students and Staff", "type": "holiday" }
+  ]
+}

@@ -16,6 +16,7 @@ type CalendarEvent = {
   hideFromAllDates?: boolean
   showDuringBreak?: boolean
   hideLabel?: boolean
+  preventRangeMerge?: boolean
 }
 type LegendItem = { label: string; dot: string }
 
@@ -232,12 +233,19 @@ function nextSchoolDateAfter(date: string) {
 }
 
 function canMerge(prev: DisplayEvent, next: DisplayEvent) {
+  if (prev.preventRangeMerge || next.preventRangeMerge) return false
   if (prev.labelType === 'observance' || next.labelType === 'observance') return false
   if (prev.hasExplicitEndDate || next.hasExplicitEndDate) return false
   return prev.labelType === next.labelType &&
     prev.displayName === next.displayName &&
     (prev.description ?? '') === (next.description ?? '') &&
     next.date === nextSchoolDateAfter(prev.endDate)
+}
+
+function shouldShowDescription(event: DisplayEvent) {
+  if (!event.description) return false
+  if (event.type === 'academic' && /PLC Day \(Delayed Start\)/i.test(event.displayName)) return false
+  return true
 }
 
 function rangeEndFor(event: CalendarEvent) {
@@ -499,7 +507,7 @@ function formatRangeEnd(event: DisplayEvent) {
                   <time :datetime="event.endDate">{{ formatRangeEnd(event) }}</time>
                 </template>
               </div>
-              <p v-if="event.description" class="mt-1 text-sm text-[#6b645c]">
+              <p v-if="shouldShowDescription(event)" class="mt-1 text-sm text-[#6b645c]">
                 {{ event.description }}
               </p>
             </div>
@@ -529,7 +537,7 @@ function formatRangeEnd(event: DisplayEvent) {
           <template v-if="mode === 'keyDates'">{{ coverageNote || "This table lists major districtwide student dates. Check the official PDF and your school's calendar for campus events, dismissal times, testing, and schedule changes." }}</template>
           <template v-else>{{ coverageNote || "This table lists major districtwide student dates. Check the official PDF and your school's calendar for campus events, dismissal times, testing, and schedule changes." }} </template>
           <template v-if="coveredBreakDateNames.length">
-            Dates that fall inside a listed break are included in that break{{ coveredBreakDateNames.length ? ` (${coveredBreakDateNames.join(', ')})` : '' }}.
+            Dates listed within a vacation period are already included in that period and are not listed separately{{ coveredBreakDateNames.length ? ` (${coveredBreakDateNames.join(', ')})` : '' }}.
           </template>
           Based on the
           <a :href="sourceUrl" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">

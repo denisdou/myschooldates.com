@@ -9,7 +9,8 @@ const props = defineProps<{
   yearAvailableSlugs?: string[]
 }>()
 
-const allRelatedInState = computed(() => props.relatedDistricts.every(rd => rd.state === props.stateName))
+const validRelatedDistricts = computed(() => props.relatedDistricts.filter(rd => rd.slug))
+const allRelatedInState = computed(() => validRelatedDistricts.value.every(rd => rd.state === props.stateName))
 const heading = computed(() => props.title ?? (allRelatedInState.value ? `More ${props.stateName} School Calendars` : 'More School Calendars'))
 const description = computed(() => props.description ?? (allRelatedInState.value
   ? `Browse calendars for other ${props.stateName} school districts.`
@@ -21,14 +22,14 @@ const relatedDistrictPath = (rd: { slug: string }) =>
 </script>
 
 <template>
-  <div class="bg-rds-surface-panel rounded-lg border border-rds-hairline overflow-hidden">
+  <div v-if="validRelatedDistricts.length" class="bg-rds-surface-panel rounded-lg border border-rds-hairline overflow-hidden">
     <div class="px-6 py-4 border-b border-[#eee9df]">
       <h2 class="text-lg font-semibold text-[#1f2933]">{{ heading }}</h2>
       <p class="text-sm text-[#7b756d] mt-1">{{ description }}</p>
     </div>
     <div class="divide-y divide-[#eee9df]">
       <NuxtLink
-        v-for="rd in relatedDistricts"
+        v-for="rd in validRelatedDistricts"
         :key="rd.slug"
         :to="relatedDistrictPath(rd)"
         class="flex items-center justify-between gap-4 px-6 py-4 hover:bg-[#f3f0e8] transition-colors"

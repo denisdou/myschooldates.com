@@ -16,6 +16,7 @@ const props = defineProps<{
   reviewDetails?: string[] | null
   reviewDetailsTitle?: string | null
   maintainerText?: string | null
+  nextReviewText?: string | null
 }>()
 
 const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' && props.sourcePdfUrl.includes('assets.myschooldates.com'))
@@ -118,8 +119,11 @@ const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.
         {{ verifiedDate }}, by Denis Dou.
       </p>
       <p v-if="verifiedDate">
-        <span class="font-medium text-[#6b645c]">Next review:</span>
-        When {{ shortName }} revises the calendar or updates its official calendar page.
+        <template v-if="nextReviewText">{{ nextReviewText }}</template>
+        <template v-else>
+          <span class="font-medium text-[#6b645c]">Next review:</span>
+          When {{ shortName }} revises the calendar or updates its official calendar page.
+        </template>
       </p>
       <details class="pt-1">
         <summary class="cursor-pointer select-none font-medium text-[#6b645c] hover:text-[#1f2933]">

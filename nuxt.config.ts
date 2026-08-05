@@ -74,6 +74,7 @@ export default defineNuxtConfig({
         '/anaheim-union-high-school-district-calendar',
         '/atlanta-public-schools-calendar',
         '/arlington-isd-calendar',
+        '/aurora-public-schools-calendar',
         '/austin-independent-school-district-calendar',
         '/bakersfield-city-school-district-calendar',
         '/baltimore-county-school-calendar',
@@ -85,6 +86,7 @@ export default defineNuxtConfig({
         '/capistrano-unified-school-district-calendar',
         '/chandler-unified-school-district-calendar',
         '/charlotte-mecklenburg-schools-calendar',
+        '/cherry-creek-school-district-calendar',
         '/chicago-public-schools-calendar',
         '/clark-county-school-district-calendar',
         '/clayton-county-public-schools-calendar',
@@ -93,6 +95,7 @@ export default defineNuxtConfig({
         '/dekalb-county-school-calendar',
         '/deer-valley-unified-school-district-calendar',
         '/denver-public-schools-calendar',
+        '/douglas-county-school-district-re-1-calendar',
         '/sarasota-county-school-calendar',
         '/gwinnett-county-public-schools-calendar',
         '/chesterfield-county-school-calendar',
@@ -212,6 +215,9 @@ export default defineNuxtConfig({
         '/arlington-isd-calendar/2025-2026',
         '/arlington-isd-calendar/2026-2027',
 
+        '/aurora-public-schools-calendar/2025-2026',
+        '/aurora-public-schools-calendar/2026-2027',
+
         '/austin-independent-school-district-calendar/2025-2026',
         '/austin-independent-school-district-calendar/2026-2027',
 
@@ -257,6 +263,11 @@ export default defineNuxtConfig({
         '/charlotte-mecklenburg-schools-calendar/2026-2027',
         '/charlotte-mecklenburg-schools-calendar/2027-2028',
 
+        '/cherry-creek-school-district-calendar/2025-2026',
+        '/cherry-creek-school-district-calendar/2026-2027',
+        '/cherry-creek-school-district-calendar/2027-2028',
+        '/cherry-creek-school-district-calendar/2028-2029',
+
         '/chicago-public-schools-calendar/2025-2026',
         '/chicago-public-schools-calendar/2026-2027',
         '/chicago-public-schools-calendar/2027-2028',
@@ -284,6 +295,12 @@ export default defineNuxtConfig({
         '/denver-public-schools-calendar/2026-2027',
         '/denver-public-schools-calendar/2027-2028',
         '/denver-public-schools-calendar/2028-2029',
+
+        '/douglas-county-school-district-re-1-calendar/2025-2026',
+        '/douglas-county-school-district-re-1-calendar/2026-2027',
+        '/douglas-county-school-district-re-1-calendar/2027-2028',
+        '/douglas-county-school-district-re-1-calendar/2028-2029',
+        '/douglas-county-school-district-re-1-calendar/2029-2030',
 
         '/sarasota-county-school-calendar/2025-2026',
         '/sarasota-county-school-calendar/2026-2027',

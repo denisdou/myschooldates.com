@@ -1,0 +1,78 @@
+{
+  "institutionId": "cherry-creek-school-district-calendar",
+  "schoolYear": "2028-2029",
+  "displaySchoolYear": "2028-29",
+  "pageHeading": "Cherry Creek School District Calendar 2028-29",
+  "firstDay": "2028-08-14",
+  "lastDay": "2029-05-25",
+  "temporalCoverageStart": "2028-08-14",
+  "temporalCoverageEnd": "2029-05-28",
+  "sourceUrl": "https://www.cherrycreekschools.org/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1765995211/cherrycreekschoolsorg/cherrycreekschoolsorg/gn66r5tbul4gtvbznjqe/FINAL2028-2029All-SchoolsCalendar.pdf",
+  "sourceCalendarName": "Cherry Creek School District 2028-2029 School Year Calendar - All Schools",
+  "sourceVersion": "Adopted by the Board of Education: December 8, 2025",
+  "lastVerifiedAt": "2026-08-05",
+  "dateCreated": "2026-08-05",
+  "datePublished": "2026-08-05",
+  "dateModified": "2026-08-05",
+  "calendarType": "traditional",
+  "seoTitle": "Cherry Creek School District Calendar 2028-2029 | Holidays & PDF",
+  "seoDescription": "See the CCSD 2028-2029 All Schools calendar with the August 14 start, May 25 last day, breaks, K-12 non-contact days, K-8 conferences, and official PDF.",
+  "heroSummary": "Cherry Creek School District starts the 2028-29 All Schools calendar on Monday, August 14, 2028, and the last day is Friday, May 25, 2029. Full closures include Fall Break October 16-20, Winter Break December 22-January 5, and Spring Break March 19-23. K-12 non-contact and K-8 conference dates remain separate from districtwide closures.",
+  "calendarNotes": "The 2028-29 CCSD All Schools calendar starts students on August 14, 2028 after teacher work days from August 7-11. Fall Break is October 16-20. K-8 non-contact or conference dates include November 10, March 1-2, and May 4. K-12 non-contact dates include November 22, January 8, and February 20. Winter Break runs December 22-January 5, with the second semester beginning January 9. Spring Break runs March 19-23, and the last student day is May 25.",
+  "yearNumbers": [
+    { "label": "First Day", "value": "Aug 14", "detail": "Teacher work days run August 7-11 before students start." },
+    { "label": "Last Day", "value": "May 25", "detail": "The PDF marks May 25, 2029 as the last day of school." },
+    { "label": "K-8 Dates", "value": "4 markers", "detail": "K-8 non-contact or conference dates occur in November, March, and May." },
+    { "label": "K-12 Dates", "value": "3 markers", "detail": "K-12 non-contact dates occur in November, January, and February." }
+  ],
+  "customSections": [
+    {
+      "id": "ccsd-2028-2029-calendar-markers",
+      "label": "Planning Around the 2028-29 CCSD Calendar",
+      "position": "afterKeyDates",
+      "content": "The All Schools calendar gives families a reliable districtwide framework, but not every colored date applies to every student. Keep the K-12 non-contact and K-8 conference markers separate when coordinating siblings across grade levels.",
+      "table": {
+        "columns": ["PDF marker", "Planning meaning"],
+        "rows": [
+          ["No School for Students and Staff", "Full districtwide closure, including the major break windows."],
+          ["K-12 Non-contact", "K-12 non-pupil contact day; confirm school and program arrangements."],
+          ["K-8 Non-contact/conferences", "Elementary and middle-school non-contact or conference date."],
+          ["Teacher Work Days Prior to Start", "Staff preparation days before the first student day."],
+          ["School Starts / Last Day", "The green and red markers identify the districtwide school-year boundaries."]
+        ]
+      }
+    }
+  ],
+  "calendarFaqs": [
+    { "q": "When does Cherry Creek School District start in 2028?", "a": "The first student day on the 2028-29 All Schools calendar is Monday, August 14, 2028." },
+    { "q": "When is Cherry Creek Winter Break in 2028-29?", "a": "Winter Break runs December 22, 2028 through January 5, 2029. The second semester begins January 9 after the January 8 K-12 non-contact day." },
+    { "q": "When is the last day of Cherry Creek school in 2029?", "a": "The last day on the All Schools calendar is Friday, May 25, 2029." },
+    { "q": "When are the CCSD K-8 conference dates in 2028-29?", "a": "The PDF marks November 10, March 1-2, and May 4 as K-8 non-contact or conference dates." },
+    { "q": "Does this calendar include school-specific Cherry Creek events?", "a": "No. It is the All Schools calendar. Check the assigned school or program for campus-specific events, testing, exams, and graduation." }
+  ],
+  "sources": [
+    { "label": "CCSD calendar page", "url": "https://www.cherrycreekschools.org/calendar" },
+    { "label": "CCSD 2028-29 All Schools calendar PDF", "url": "https://resources.finalsite.net/images/v1765995211/cherrycreekschoolsorg/cherrycreekschoolsorg/gn66r5tbul4gtvbznjqe/FINAL2028-2029All-SchoolsCalendar.pdf" }
+  ],
+  "events": [
+    { "date": "2028-08-07", "endDate": "2028-08-11", "name": "Teacher Work Days Prior to Start of School", "type": "teacher_workday", "description": "No students." },
+    { "date": "2028-08-14", "name": "First Day of School", "type": "school_start" },
+    { "date": "2028-09-04", "name": "No School for Students and Staff", "type": "holiday" },
+    { "date": "2028-10-16", "endDate": "2028-10-20", "name": "Fall Break", "type": "break_start" },
+    { "date": "2028-11-10", "name": "K-8 Non-contact / Conferences", "type": "conference" },
+    { "date": "2028-11-22", "name": "K-12 Non-contact Day", "type": "no_school" },
+    { "date": "2028-11-23", "endDate": "2028-11-24", "name": "Thanksgiving Closure", "type": "break_start" },
+    { "date": "2028-12-22", "endDate": "2029-01-05", "name": "Winter Break", "type": "break_start" },
+    { "date": "2029-01-08", "name": "K-12 Non-contact Day", "type": "no_school", "description": "The second semester begins January 9." },
+    { "date": "2029-01-09", "name": "First Day of Second Semester", "type": "school_resume" },
+    { "date": "2029-01-15", "name": "No School for Students and Staff", "type": "holiday" },
+    { "date": "2029-02-19", "name": "No School for Students and Staff", "type": "holiday" },
+    { "date": "2029-02-20", "name": "K-12 Non-contact Day", "type": "no_school" },
+    { "date": "2029-03-01", "endDate": "2029-03-02", "name": "K-8 Non-contact / Conferences", "type": "conference" },
+    { "date": "2029-03-19", "endDate": "2029-03-23", "name": "Spring Break", "type": "break_start" },
+    { "date": "2029-05-04", "name": "K-8 Non-contact / Conferences", "type": "conference" },
+    { "date": "2029-05-25", "name": "Last Day of School", "type": "school_end" },
+    { "date": "2029-05-28", "name": "No School for Students and Staff", "type": "holiday" }
+  ]
+}

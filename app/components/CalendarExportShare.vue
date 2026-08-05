@@ -78,7 +78,7 @@ const icsButtonSupportText = computed(() =>
 )
 const compatibleCalendars = ['Apple Calendar', 'Google Calendar', 'Outlook']
 const icsIncludedItems = computed(() => {
-  const events = props.cal?.events ?? []
+  const events = (props.cal?.events ?? []).filter((event: any) => !event.hideFromCalendarExport)
   const hasType = (types: string[]) => events.some((event: any) => types.includes(event.type))
   const items = ['student holidays', 'break ranges']
   if (hasType(['no_school', 'student_holiday'])) items.push('student no-school dates')
@@ -108,7 +108,9 @@ function shareSMS() {
 function printCalendar() {
   window.print()
 }
-const icsAriaLabel = computed(() => `Download ${props.districtName} ${props.year} calendar file for Google Calendar, Apple Calendar, and Outlook`)
+const icsAriaLabel = computed(() =>
+  props.cal?.icsAriaLabel ?? props.cal?.meta?.icsAriaLabel ?? `Download ${props.districtName} ${props.year} calendar file for Google Calendar, Apple Calendar, and Outlook`
+)
 </script>
 
 <template>

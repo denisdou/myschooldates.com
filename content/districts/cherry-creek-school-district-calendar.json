@@ -1,0 +1,137 @@
+{
+  "institutionId": "cherry-creek-school-district-calendar",
+  "name": "Cherry Creek School District",
+  "shortName": "CCSD",
+  "slug": "cherry-creek-school-district-calendar",
+  "state": "Colorado",
+  "stateCode": "CO",
+  "city": "Greenwood Village",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.cherrycreekschools.org/",
+  "calendarPage": "https://www.cherrycreekschools.org/calendar",
+  "logo": "https://resources.finalsite.net/images/f_auto,q_auto/v1727266091/cherrycreekschoolsorg/dpqnhelubvr5jxhqdeuy/district-default-logo.png",
+  "timezone": "America/Denver",
+  "county": "Arapahoe County",
+  "region": "Southeast Denver Metro",
+  "metro": "Denver-Aurora-Lakewood",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": null,
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Denver-area District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "officialSpreadsheet": false,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-05",
+    "coverageNote": "Cherry Creek School District coverage uses the official district website, calendar page, district logo, and All Schools calendar PDFs for 2025-2026 through 2028-2029. The 2026-2027 record also links the official school and program-specific calendars supplied by the district. No 2029-2030 PDF URL was supplied."
+  },
+  "contentFreshnessScore": {
+    "overall": 96,
+    "sourceUpdated": "2026-08-05",
+    "lastManualReview": "2026-08-05",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the CCSD calendar page when the district replaces an All Schools PDF, changes K-12 or K-8 non-contact dates, updates a school-specific calendar, or publishes a 2029-2030 calendar."
+  },
+  "districtContentScore": {
+    "visibility": "public",
+    "publishStatus": "publish",
+    "reviewStatus": "approved",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official CCSD revision, All Schools PDF replacement, specialty-calendar change, 2029-2030 publication, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hiddenSections": ["districtProfile"],
+  "searchAliases": [
+    "Cherry Creek School District",
+    "CCSD calendar",
+    "Cherry Creek schools calendar",
+    "Cherry Creek school holidays",
+    "Cherry Creek school calendar PDF",
+    "Cherry Creek district calendar",
+    "Greenwood Village school calendar",
+    "Centennial Colorado school calendar",
+    "Aurora Colorado school calendar"
+  ],
+  "districtFact": "Cherry Creek School District serves families in the southeast Denver metro area, including Cherry Creek, Centennial, Greenwood Village, Foxfield, and parts of Aurora. Its All Schools calendar distinguishes full student-and-staff closures from K-12 non-contact days, K-8 non-contact/conference dates, and teacher work days before school starts.",
+  "about": [
+    {
+      "title": "About the Cherry Creek School Calendar",
+      "content": "Cherry Creek School District publishes an All Schools calendar for districtwide planning, but the calendar is more detailed than a simple holiday list. It separates full closures from K-12 non-contact days and K-8 non-contact/conference dates, which can affect childcare, meals, transportation, and after-school arrangements differently."
+    },
+    {
+      "title": "All Schools and Specialty Calendars",
+      "content": "The district calendar page also links separate calendars for high schools, preschool and pre-kindergarten, adaptive programs, Challenge School, innovation campuses, and alternative programs. Use the All Schools PDF for districtwide dates, then check the assigned school or program calendar for A/B days, conferences, testing, and campus-specific changes."
+    }
+  ],
+  "planningTips": {
+    "title": "Cherry Creek Calendar Notes",
+    "content": [
+      "Blue full-closure dates apply to students and staff, while yellow K-12 non-contact dates and orange K-8 non-contact/conference dates have different program implications.",
+      "The All Schools PDF marks teacher work days before the first student day; those dates are not regular school days for students.",
+      "High school families should check their campus calendar for A/B schedules, exams, graduation, and program-specific events rather than relying only on the districtwide PDF.",
+      "The 2026-2027 district page lists specialty calendars for adaptive programs, Challenge School, preschool, innovation campuses, pathways, and individual high schools."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "What is the Cherry Creek School District All Schools calendar?",
+      "a": "It is the districtwide calendar for all schools. It shows full closures, school start and end dates, teacher work days, K-12 non-contact days, and K-8 non-contact or conference dates."
+    },
+    {
+      "q": "What is the difference between K-12 and K-8 non-contact days in CCSD?",
+      "a": "K-12 non-contact dates apply across grade levels, while K-8 non-contact/conference dates are specifically marked for elementary and middle-school grades. Families should read the current All Schools PDF and check the campus for program details."
+    },
+    {
+      "q": "Does Cherry Creek have separate school calendars?",
+      "a": "Yes. CCSD publishes specialty and school-specific calendars in addition to the All Schools calendar, including preschool, adaptive programs, Challenge School, innovation campuses, pathways, and high schools."
+    },
+    {
+      "q": "Where can families verify Cherry Creek calendar changes?",
+      "a": "Use the official CCSD calendar page and the current All Schools PDF for final confirmation. MySchoolDates is an independent reference and is not affiliated with Cherry Creek School District."
+    }
+  ],
+  "customSections": [],
+  "relatedDistrictsTitle": "More Colorado School Calendars",
+  "relatedDistrictsDescription": "Compare Cherry Creek dates with other Denver-area school calendars.",
+  "relatedDistricts": [
+    {
+      "name": "Douglas County School District",
+      "slug": "douglas-county-school-district-re-1-calendar",
+      "state": "Colorado"
+    },
+    {
+      "name": "Denver Public Schools",
+      "slug": "denver-public-schools-calendar",
+      "state": "Colorado"
+    },
+    {
+      "name": "Jeffco Public Schools",
+      "slug": "jeffco-public-schools-calendar",
+      "state": "Colorado"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Cherry Creek School District official website",
+      "url": "https://www.cherrycreekschools.org/"
+    },
+    {
+      "label": "CCSD calendar page",
+      "url": "https://www.cherrycreekschools.org/calendar"
+    }
+  ]
+}
