@@ -16,7 +16,7 @@
   "lastVerifiedAt": "2026-08-05",
   "dateCreated": "2026-08-05",
   "datePublished": "2026-08-05",
-  "dateModified": "2026-08-05",
+  "dateModified": "2026-08-06",
   "calendarType": "all_schools",
   "allDatesMode": "all",
   "seoTitle": "Cherry Creek School District Calendar 2026–27: Dates & PDF",
@@ -29,12 +29,12 @@
   "schemaDatasetSourceCalendarIds": ["source-calendar", "source-calendar-page"],
   "webPageMainEntity": "none",
   "hideSecondSemesterStartSummary": true,
-  "icsAriaLabel": "Download a MySchoolDates ICS file based on the Cherry Creek School District 2026–27 All Schools calendar",
+  "icsAriaLabel": "Download a MySchoolDates ICS file based on CCSD’s 2026–27 All Schools calendar and school phase-in information",
   "sourceReviewSummary": "Dates were checked against CCSD’s official 2026–27 All Schools calendar PDF and district calendar page.",
   "sourceReviewDetails": [
     "We verified all color-coded no-school dates, the August 17–19 school phase-in listed on the district calendar page, K–12 and K–8 non-contact dates, teacher work days, school-year boundaries, and separate school/program calendar links against the official CCSD sources. Common holiday names are included for clarity.",
     "This page summarizes the All Schools calendar. High schools, preschool, adaptive programs, Challenge School, innovation campuses, pathways, and alternative programs may publish separate school or program calendars.",
-    "The downloadable file includes the districtwide dates listed on this page. It is a one-time import and does not automatically update if CCSD revises its calendar."
+    "The downloadable file includes the calendar dates and school phase-in information listed on this page. It is a one-time import and does not automatically update if CCSD revises its calendar."
   ],
   "schemaReviewedBy": "author",
   "hideFaqSchema": true,
@@ -76,12 +76,16 @@
   "keyDateSummaryItems": [
     {
       "label": "Start",
-      "name": "School Starts / Phase-In",
+      "name": "School Start and Phase-In",
       "date": "2026-08-17",
-      "endDate": "2026-08-19",
+      "displayDate": "Start date: Aug 17 · Phase-in: Aug 17–19",
       "type": "school_start",
       "description": "The All Schools PDF marks August 17 as the start of school. CCSD’s online calendar lists a school phase-in from August 17–19; check your school for first-day details.",
-      "schemaDescription": "The All Schools PDF marks August 17, 2026, as the start of school. CCSD’s online calendar lists a school phase-in from August 17–19, so families should check their school for details."
+      "schemaDescription": "The All Schools PDF marks August 17, 2026, as the start of school. CCSD’s online calendar lists a school phase-in from August 17–19, so families should check their school for details.",
+      "schemaAdditionalProperties": [
+        { "name": "Official start date", "value": "2026-08-17" },
+        { "name": "School phase-in", "value": "2026-08-17/2026-08-19" }
+      ]
     },
     {
       "label": "Break",
@@ -146,11 +150,15 @@
     { "label": "Sources", "href": "#sources" }
   ],
   "allDatesTitle": "Student and Family Calendar Dates — 2026–27",
-  "allDatesCoverageNote": "This list covers districtwide dates that affect student attendance on CCSD’s All Schools calendar. Testing, A/B schedules, exam schedules, graduations, bell schedules, and campus-specific events may appear only on school or program calendars.",
+  "allDatesCoverageNote": "This list includes dates from CCSD’s All Schools calendar, along with the school phase-in notice published on the district calendar. Testing, A/B schedules, exams, graduations, bell schedules, and campus-specific events may appear only on school or program calendars.",
   "allDatesSourceUrl": "https://resources.finalsite.net/images/v1731599722/cherrycreekschoolsorg/cvfzzayrounv1otba48x/finalsy2026-27ccsdcalendar_0124.pdf",
-  "allDatesSourceLabel": "CCSD 2026–27 All Schools calendar PDF",
+  "allDatesSourceLinks": [
+    { "label": "CCSD 2026–27 All Schools calendar PDF", "url": "https://resources.finalsite.net/images/v1731599722/cherrycreekschoolsorg/cvfzzayrounv1otba48x/finalsy2026-27ccsdcalendar_0124.pdf" },
+    { "label": "CCSD district online calendar", "url": "https://www.cherrycreekschools.org/calendar" }
+  ],
+  "allDatesSourceLabel": "CCSD 2026–27 All Schools calendar PDF and district online calendar",
   "icsHeading": "Add the 2026–27 Dates to Your Calendar",
-  "icsDescription": "Download a MySchoolDates ICS file created from the districtwide dates listed on this page. It is a one-time import and will not update automatically if CCSD changes its calendar.",
+  "icsDescription": "Download a MySchoolDates ICS file based on the districtwide dates and school phase-in information listed on this page. It is a one-time import and will not update automatically if CCSD changes its calendar.",
   "icsButtonLabel": "Download Calendar File (.ics)",
   "pdfHeading": "Official 2026–27 Calendar PDF",
   "pdfDescription": "Open CCSD’s official 2026–27 All Schools calendar PDF.",
@@ -251,7 +259,7 @@
   ],
   "events": [
     { "date": "2026-08-10", "endDate": "2026-08-14", "displayDate": "August 10–14, 2026", "name": "Teacher Work Days Prior to Start of School", "type": "teacher_workday", "preserveOfficialName": true, "description": "Staff report before the first student day; students do not attend." },
-    { "date": "2026-08-17", "endDate": "2026-08-19", "displayDate": "August 17–19, 2026", "name": "School Starts / Phase-In", "type": "school_start", "badgeLabel": "Start", "description": "The All Schools PDF marks August 17 as the start of school. CCSD’s online calendar lists a school phase-in from August 17–19; check your school for first-day details." },
+    { "date": "2026-08-17", "name": "School Start and Phase-In", "type": "school_start", "badgeLabel": "Start", "displayDate": "Start date: August 17 · Phase-in: August 17–19", "phaseInStart": "2026-08-17", "phaseInEnd": "2026-08-19", "description": "The All Schools PDF marks August 17 as the start of school. CCSD’s online calendar lists a school phase-in from August 17–19; check your school for first-day details." },
     { "date": "2026-09-07", "name": "Labor Day", "type": "holiday", "description": "No school for students and staff." },
     { "date": "2026-09-18", "name": "K–12 Non-contact Day", "type": "no_school", "description": "Students in grades K–12 do not attend." },
     { "date": "2026-10-12", "endDate": "2026-10-16", "displayDate": "October 12–16, 2026", "name": "Fall Break", "type": "break_start" },

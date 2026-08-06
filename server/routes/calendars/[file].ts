@@ -16,9 +16,11 @@ type CalendarEvent = {
   description?: string
   endDate?: string
   dates?: string[]
+  preserveOfficialName?: boolean
   exportDatesIndividually?: boolean
   showDuringBreak?: boolean
   hideFromCalendarExport?: boolean
+  status?: 'TENTATIVE' | 'CONFIRMED' | 'CANCELLED'
 }
 
 type CalendarRecord = {
@@ -110,6 +112,7 @@ function explicitEventEnd(event: CalendarEvent) {
 }
 
 function normalizeCalendarName(event: CalendarEvent) {
+  if (event.preserveOfficialName) return event.name.trim()
   return event.name
     .replace(/\b(Begins|Begin|Starts|Start|Ends|End)\b/gi, '')
     .replace(/\s+/g, ' ')
@@ -188,7 +191,13 @@ function buildManifestFromContent(root: string): CalendarManifest | null {
 }
 
 function readManifest() {
-  if (manifestCache) return manifestCache
+  const isDevelopment = process.env.NODE_ENV !== 'production'
+  if (!isDevelopment && manifestCache) return manifestCache
+
+  if (isDevelopment) {
+    const currentContent = buildManifestFromContent(process.cwd())
+    if (currentContent) return currentContent
+  }
 
   const routeDir = dirname(fileURLToPath(import.meta.url))
   const candidates = [
@@ -199,8 +208,9 @@ function readManifest() {
 
   for (const path of candidates) {
     if (!existsSync(path)) continue
-    manifestCache = readJson<CalendarManifest>(path)
-    return manifestCache
+    const manifest = readJson<CalendarManifest>(path)
+    manifestCache = manifest
+    return manifest
   }
 
   const fallback = buildManifestFromContent(process.cwd())
@@ -268,6 +278,9 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord) {
     const summaryName = event.type === 'teacher_workday' || event.type === 'teacher_professional_learning' || event.type === 'break_start'
       ? normalizeCalendarName(event)
       : event.name
+    const eventStatus = event.status && ['TENTATIVE', 'CONFIRMED', 'CANCELLED'].includes(event.status)
+      ? event.status
+      : null
 
     lines.push(
       'BEGIN:VEVENT',
@@ -275,6 +288,7 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord) {
       `DTSTART;VALUE=DATE:${start}`,
       `DTEND;VALUE=DATE:${end}`,
       `SUMMARY:${escapeText(`${summaryName} - ${district.name}`)}`,
+      ...(eventStatus ? [`STATUS:${eventStatus}`] : []),
       ...(event.description ? [`DESCRIPTION:${escapeText(event.description)}`] : []),
       `UID:${start}-${end}-${event.type}-${uidSlug}@myschooldates.com`,
       'END:VEVENT',

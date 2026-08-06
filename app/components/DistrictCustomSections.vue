@@ -15,7 +15,7 @@ const props = defineProps<{
     linksDisplay?: 'cards' | 'inline'
     linksLabel?: string
     timeline?: { marker: string; label: string; detail: string }[]
-    table?: { columns?: string[]; headers?: string[]; rows: string[][]; footnote?: string }
+    table?: { caption?: string; columns?: string[]; headers?: string[]; rows: string[][]; footnote?: string }
   }[]
   position: string
 }>()
@@ -109,6 +109,7 @@ const contentParagraphs = (content?: string) =>
           </ol>
           <div v-if="tableColumns(section).length && section.table?.rows?.length" class="mt-4 overflow-x-auto rounded-lg border border-gray-200">
             <table class="min-w-full divide-y divide-gray-200 text-sm">
+              <caption v-if="section.table.caption" class="sr-only">{{ section.table.caption }}</caption>
               <thead class="bg-gray-50">
                 <tr>
                   <th
@@ -223,6 +224,7 @@ const contentParagraphs = (content?: string) =>
         </ol>
         <div v-if="tableColumns(section).length && section.table?.rows?.length" class="mt-4 overflow-x-auto rounded-lg border border-gray-200">
           <table class="min-w-full divide-y divide-gray-200 text-sm">
+            <caption v-if="section.table.caption" class="sr-only">{{ section.table.caption }}</caption>
             <thead class="bg-gray-50">
               <tr>
                 <th

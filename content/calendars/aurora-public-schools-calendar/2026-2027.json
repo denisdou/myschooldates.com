@@ -178,6 +178,10 @@
     "Break": "School Vacation",
     "Conferences": "Conference Exchange"
   },
+  "dateLegendLabelOverrides": {
+    "Break": "School Vacation",
+    "Conferences": "Conference Exchange"
+  },
   "icsHeading": "Add APS Dates to Your Calendar",
   "icsDescription": "Download the .ics file to import APS conventional calendar dates into Google Calendar, Apple Calendar, or Outlook. The file is a one-time import and does not include the Alternative Late Start Wednesdays schedule.",
   "icsAriaLabel": "Download the 2026–27 conventional calendar file for Aurora Public Schools; alternative late-start Wednesday schedules are not included",
@@ -186,15 +190,19 @@
   "pdfButtonLabel": "Open Conventional Calendar",
   "pdfDescription": "Open the district’s official 2026–27 conventional calendar in English or Spanish.",
   "pdfSupplementalTitle": "Translated and school-specific calendars",
-  "pdfSupplementalDescription": "APS also publishes the conventional and alternative calendars in 12 additional languages, along with school-specific calendars and updated files on its official calendars page.",
+  "pdfSupplementalDescription": "APS also provides both calendars in 12 additional languages. Check the district’s calendar page for translated files, school-specific calendars, and updates.",
   "pdfSupplementalLinks": [
     {
       "label": "Open Alternative Late Start Wednesdays Calendar",
       "url": "https://drive.google.com/file/d/1hwZZRqCBp1WbOkN3DRhh2ztn2Uu1QfgM/view?usp=sharing"
     },
     {
-      "label": "Open additional-language calendar files",
+      "label": "Open conventional calendar files in 12 additional languages",
       "url": "https://drive.google.com/drive/u/0/folders/199VlNizYlziktQ4NyJXsCIxwX6SziJ_B"
+    },
+    {
+      "label": "Open alternative calendar files in 12 additional languages",
+      "url": "https://drive.google.com/drive/folders/1LecWFgAoWx1OKFW7vAHcZz23bCa5NrMp?usp=drive_link"
     },
     {
       "label": "Check the APS calendars page for updates",
@@ -296,7 +304,7 @@
     },
     {
       "q": "Where can families find translated calendars and verify changes?",
-      "a": "Use the official APS District & School Calendars page for English, Spanish, replacement files, and school-specific calendars. MySchoolDates is an independent reference and is not affiliated with Aurora Public Schools."
+      "a": "Use the official APS District & School Calendars page for the conventional and alternative late-start calendars, English and Spanish files, 12 additional languages, school-specific calendars, and future updates. MySchoolDates is an independent reference and is not affiliated with Aurora Public Schools."
     }
   ],
   "faqDisplayQuestions": [

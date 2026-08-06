@@ -1,47 +1,273 @@
 {
   "institutionId": "orange-county-fl",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Orange County Public Schools Calendar 2026–27",
   "firstDay": "2026-08-11",
   "lastDay": "2027-05-26",
-  "totalSchoolDays": 180,
-  "teacherWorkDays": 196,
+  "totalSchoolDays": null,
+  "teacherWorkDays": null,
   "semesters": 2,
   "sourceUrl": "https://www.ocps.net/calendars",
   "sourcePdfUrl": "https://files.smartsites.parentsquare.com/6888/2026-2027_school_calendar.pdf",
-  "lastVerifiedAt": "2026-07-02",
-  "calendarType": "traditional",
-  "calendarFaqs": [
+  "sourceCalendarName": "OCPS 2026–27 School Calendar PDF",
+  "lastVerifiedAt": "2026-08-06",
+  "datePublished": "2026-07-02",
+  "dateModified": "2026-08-06",
+  "seoTitle": "OCPS Calendar 2026–27: Dates, Breaks & Official PDF",
+  "seoDescription": "See the 2026–27 OCPS calendar with the first and last days of school, breaks, student holidays, make-up days, and the official district PDF.",
+  "heroSummary": "Orange County Public Schools (OCPS) begins classes on Tuesday, August 11, 2026, and the last day of school is Wednesday, May 26, 2027. Spring break runs March 15–19, 2027, and students return from winter break on Tuesday, January 5, 2027.\n\nFour currently scheduled no-school dates may be used to recover instructional time after severe weather closures.",
+  "heroSourceLine": "2026–27 districtwide calendar · Based on official OCPS sources",
+  "verificationBadgeText": "Checked against the official OCPS school calendar and severe weather make-up schedule on August 6, 2026.",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideDateLegend": true,
+  "hideExtendedShareButtons": true,
+  "hideFaqSchema": true,
+  "includeArticleSchema": false,
+  "webPageMainEntity": "keyDates",
+  "yearSwitcherPosition": "afterSources",
+  "hideRelatedDistrictDescriptions": true,
+  "dateLegendLabelOverrides": {
+    "Observance": "Holiday"
+  },
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "yearNumbers",
+    "about",
+    "planningTips",
+    "comparison",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends"
+  ],
+  "keyDatesSummaryTitle": "OCPS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "School-year boundaries, major breaks, and return dates",
+  "keyDateSummaryItems": [
     {
-      "q": "When does school start for Orange County Public Schools in 2026-2027?",
-      "a": "The first day of school for Orange County Public Schools (OCPS) is Tuesday, August 11, 2026. Students and staff are expected to report on this date to begin the new academic year."
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-11",
+      "type": "school_start"
     },
     {
-      "q": "When is the last day of school for Orange County Public Schools in 2026-2027?",
-      "a": "The last day of school for Orange County Public Schools is Wednesday, May 26, 2027. The school year runs from August through May, covering 180 instructional days."
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "description": "Students return Monday, November 30. November 23–24 are potential severe weather make-up days."
     },
     {
-      "q": "When is spring break 2026-2027 for Orange County Public Schools?",
-      "a": "Spring break for Orange County Public Schools runs March 15–19, 2027 — one week before Miami-Dade, Broward, and Palm Beach counties (all break March 22–26). A teacher workday on March 12 extends the no-school stretch to 10 consecutive days through March 21."
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "January 4 is a teacher workday; students return Tuesday, January 5."
     },
     {
-      "q": "When is winter break 2026-2027 for Orange County Public Schools?",
-      "a": "Winter break for Orange County Public Schools runs December 21, 2026–January 1, 2027 (12 days). A teacher workday falls on January 4, so students return Tuesday, January 5, 2027."
+      "label": "Return",
+      "name": "Students Return After Winter Break",
+      "date": "2027-01-05",
+      "type": "school_resume",
+      "description": "January 4 is a teacher workday and student holiday."
     },
     {
-      "q": "When is Thanksgiving break 2026-2027 for Orange County Public Schools?",
-      "a": "Thanksgiving break for Orange County Public Schools runs November 23–27, 2026 (Monday through Friday). Thanksgiving Day falls on November 26. School resumes Monday, November 30, 2026."
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start",
+      "description": "March 12 is a teacher workday; students return Monday, March 22."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-05-26",
+      "type": "school_end"
     }
   ],
-  "yearNumbers": [
+  "customSections": [
     {
-      "label": "Earlier Spring Break",
-      "value": "Mar 15–19",
-      "detail": "Spring Break falls a week before South Florida counties (Broward, Miami-Dade, Palm Beach all break Mar 22-26), making Orlando theme parks notably less crowded during OCPS break week."
+      "id": "ocps-severe-weather-makeup-days",
+      "label": "OCPS Severe Weather Make-Up Days",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "OCPS identifies four dates that may be used to recover instructional time after severe weather closures. These dates are currently scheduled as student holidays or other no-school days, but they may be converted to instructional days if OCPS loses class time. The superintendent may waive some make-up days or recover instructional time by extending Wednesday schedules or the school year. If those options are exhausted, OCPS will use the prioritized dates.",
+      "table": {
+        "columns": [
+          "Priority",
+          "Date",
+          "Current use"
+        ],
+        "rows": [
+          ["1", "February 15, 2027", "Presidents’ Day / teacher non-work day"],
+          ["2", "April 23, 2027", "Professional day / student holiday / teacher non-workday"],
+          ["3", "November 23, 2026", "Monday of Thanksgiving Break"],
+          ["4", "November 24, 2026", "Tuesday of Thanksgiving Break"]
+        ]
+      }
     },
     {
-      "label": "10-Day Break Stretch",
-      "value": "Mar 12–21",
-      "detail": "A teacher workday on Mar 12 (Friday before Spring Break) combines with the Mar 15-19 break to create a 10-consecutive-day no-school window through March 21."
+      "id": "ocps-wednesday-early-release",
+      "label": "Wednesday Early Release",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "Unless OCPS announces otherwise, Wednesdays are early-release days. Bus routes generally run one hour earlier, but dismissal times vary by school, so families should check their campus bell schedule. Weekly early-release times are not included in the ICS file."
+    }
+  ],
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Make-Up Days",
+      "id": "ocps-severe-weather-makeup-days"
+    },
+    {
+      "label": "All Student Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "allDatesMode": "all",
+  "allDatesTitle": "OCPS Districtwide Student Calendar Dates",
+  "allDatesCoverageNote": "This list covers districtwide student dates, marking-period transitions, and staff days that affect student attendance. Campus events, bell times, testing, athletics, and emergency changes may appear only in school or district notices. Source:",
+  "allDatesFooterMode": "source_sentence",
+  "allDatesSourceUrl": "https://files.smartsites.parentsquare.com/6888/2026-2027_school_calendar.pdf",
+  "allDatesSourceLabel": "Official OCPS 2026–27 School Calendar PDF",
+  "breaksTitle": "School Breaks and Return Dates",
+  "hideBreakDurationBadges": true,
+  "breakNotes": {
+    "Thanksgiving Break": "Students return Monday, November 30, 2026. November 23–24 are potential severe weather make-up days.",
+    "Winter Break": "Monday, January 4 is a teacher workday. Students return Tuesday, January 5, 2027.",
+    "Spring Break": "Friday, March 12 is a teacher workday before the break. Students return Monday, March 22, 2027."
+  },
+  "compactDownloadModule": true,
+  "icsHeading": "OCPS Calendar Downloads",
+  "icsDescription": "Download a MySchoolDates .ics file created from the district-published dates on this page. Each potential make-up day includes a note explaining that the date may change.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "icsButtonSupportText": "One-time import. This calendar does not automatically sync with later OCPS updates.",
+  "pdfHeading": "Official OCPS 2026–27 Calendar PDF",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "Open the official OCPS school calendar and severe weather make-up schedule.",
+  "whatsNew": {
+    "title": "What's Different From 2025–26",
+    "content": [
+      "Both school years begin on August 11, although the weekday changes from Monday in 2025 to Tuesday in 2026.",
+      "The last day moves from May 27 in 2025–26 to May 26 in 2026–27."
+    ]
+  },
+  "calendarFaqs": [
+    {
+      "q": "When is the first day of school for OCPS in 2026–27?",
+      "a": "Students begin classes on Tuesday, August 11, 2026."
+    },
+    {
+      "q": "When is the last day of school for OCPS?",
+      "a": "The last day of school is Wednesday, May 26, 2027."
+    },
+    {
+      "q": "When is OCPS spring break in 2027?",
+      "a": "Spring break runs Monday, March 15 through Friday, March 19, 2027. March 12 is a teacher workday, and students return Monday, March 22."
+    },
+    {
+      "q": "When do OCPS students return after winter break?",
+      "a": "Winter break runs December 21, 2026 through January 1, 2027. January 4 is a teacher workday, so students return Tuesday, January 5."
+    },
+    {
+      "q": "Which OCPS dates may become severe weather make-up days?",
+      "a": "OCPS lists February 15, April 23, November 23, and November 24 as prioritized make-up days. Their use may change if instructional time is lost."
+    },
+    {
+      "q": "Are Wednesdays early-release days in OCPS?",
+      "a": "Unless otherwise announced, every Wednesday is an early-release day and buses run one hour earlier. Exact dismissal times vary by school."
+    },
+    {
+      "q": "Does the OCPS calendar download update automatically?",
+      "a": "No. The .ics file is a one-time import. Check the official OCPS calendar page for later revisions or make-up-day changes."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When is the first day of school for OCPS in 2026–27?",
+    "When is the last day of school for OCPS?",
+    "When is OCPS spring break in 2027?",
+    "When do OCPS students return after winter break?",
+    "Which OCPS dates may become severe weather make-up days?",
+    "Are Wednesdays early-release days in OCPS?",
+    "Does the OCPS calendar download update automatically?"
+  ],
+  "faqDisplayLimit": 7,
+  "schemaCalendarName": "Orange County Public Schools Calendar 2026–27",
+  "schemaDatasetName": "MySchoolDates OCPS 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed districtwide OCPS dates for 2026–27, including school-year boundaries, marking-period transitions, student holidays, school breaks, return dates, and potential severe weather make-up days.",
+  "schemaCalendarDownloadName": "MySchoolDates OCPS 2026–27 calendar import file",
+  "schemaCalendarDownloadDescription": "One-time ICS import containing the districtwide dates shown on this page, with notes identifying potential severe weather make-up days. Weekly Wednesday early-release times are not included.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-early-release",
+      "type": "WebPage",
+      "name": "OCPS Early Release Days Guidance",
+      "url": "https://www.ocps.net/student-ridership-information"
+    },
+    {
+      "id": "source-previous-calendar",
+      "type": "CreativeWork",
+      "name": "OCPS 2025–26 School Calendar PDF",
+      "url": "https://files.smartsites.parentsquare.com/6888/2025-2026_school_calendar.pdf"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "sourceReviewSummary": "Verified against the official OCPS 2026–27 school calendar, its severe weather make-up schedule, the OCPS calendars page, and the district’s Wednesday early-release guidance. The 2025–26 calendar was reviewed for the year-over-year comparison.",
+  "sourceReviewDetails": [
+    "We checked every date shown in the districtwide calendar table against the official OCPS 2026–27 school calendar PDF.",
+    "The PDF’s second page lists potential severe weather make-up days in this priority order: February 15, April 23, November 23, and November 24.",
+    "OCPS states that the superintendent may waive some make-up days or recover instructional time by extending Wednesday schedules or the school year. If those options are exhausted, OCPS will use the prioritized dates.",
+    "The recurring Wednesday early-release rule comes from OCPS transportation guidance and is not included as a weekly event in the ICS file."
+  ],
+  "sources": [
+    {
+      "label": "OCPS calendars page",
+      "url": "https://www.ocps.net/calendars"
+    },
+    {
+      "label": "OCPS 2026–27 school calendar and severe weather make-up schedule",
+      "url": "https://files.smartsites.parentsquare.com/6888/2026-2027_school_calendar.pdf"
+    },
+    {
+      "label": "OCPS Wednesday early-release guidance",
+      "url": "https://www.ocps.net/student-ridership-information"
+    },
+    {
+      "label": "OCPS 2025–26 school calendar PDF",
+      "url": "https://files.smartsites.parentsquare.com/6888/2025-2026_school_calendar.pdf"
     }
   ],
   "events": [
@@ -52,76 +278,118 @@
     },
     {
       "date": "2026-09-07",
-      "name": "Labor Day",
+      "name": "Labor Day Holiday",
       "type": "holiday"
+    },
+    {
+      "date": "2026-10-09",
+      "name": "End of First Marking Period",
+      "type": "academic"
     },
     {
       "date": "2026-10-12",
-      "name": "No School (Teacher Workday)",
-      "type": "no_school"
+      "name": "Teacher Workday / Student Holiday",
+      "type": "teacher_workday",
+      "description": "No school for students."
+    },
+    {
+      "date": "2026-10-13",
+      "name": "Begin Second Marking Period",
+      "type": "academic"
     },
     {
       "date": "2026-11-23",
+      "endDate": "2026-11-27",
       "name": "Thanksgiving Break",
-      "type": "break_start"
+      "type": "break_start",
+      "description": "Students return November 30. November 23–24 are potential severe weather make-up days."
     },
     {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
+      "date": "2026-11-23",
+      "name": "Potential Severe Weather Make-Up Day — Priority 3",
+      "type": "observance",
+      "description": "Currently the Monday of Thanksgiving Break. OCPS may use this date if instructional time is lost.",
+      "hideFromAllDates": true,
+      "showDuringBreak": true,
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2026-11-24",
+      "name": "Potential Severe Weather Make-Up Day — Priority 4",
+      "type": "observance",
+      "description": "Currently the Tuesday of Thanksgiving Break. OCPS may use this date if instructional time is lost.",
+      "hideFromAllDates": true,
+      "showDuringBreak": true,
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2026-12-18",
+      "name": "End of Second Marking Period",
+      "type": "semester_end"
     },
     {
       "date": "2026-12-21",
+      "endDate": "2027-01-01",
       "name": "Winter Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-01-01",
-      "name": "Winter Break End",
-      "type": "break_end"
+      "type": "break_start",
+      "description": "January 4 is a teacher workday; students return January 5."
     },
     {
       "date": "2027-01-04",
-      "name": "No School (Teacher Workday)",
-      "type": "no_school"
+      "name": "Teacher Workday / Student Holiday",
+      "type": "teacher_workday",
+      "description": "No school for students."
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Begin Third Marking Period and Second Semester",
+      "type": "semester_start"
     },
     {
       "date": "2027-01-18",
-      "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
+      "name": "Martin Luther King Jr. Holiday",
+      "type": "holiday",
+      "description": "Schools and district offices closed."
     },
     {
       "date": "2027-02-15",
-      "name": "Presidents Day",
-      "type": "holiday"
+      "name": "Presidents’ Day / Teacher Non-Work Day",
+      "type": "holiday",
+      "description": "Schools closed and district offices open. This is OCPS’s first-priority severe weather make-up day."
+    },
+    {
+      "date": "2027-03-11",
+      "name": "End of Third Marking Period",
+      "type": "academic"
     },
     {
       "date": "2027-03-12",
-      "name": "No School (Teacher Workday)",
-      "type": "no_school"
+      "name": "Teacher Workday / Student Holiday",
+      "type": "teacher_workday",
+      "description": "No school for students."
     },
     {
       "date": "2027-03-15",
+      "endDate": "2027-03-19",
       "name": "Spring Break",
-      "type": "break_start"
+      "type": "break_start",
+      "description": "Schools closed and district offices open. Students return March 22."
     },
     {
-      "date": "2027-03-19",
-      "name": "Spring Break End",
-      "type": "break_end"
+      "date": "2027-03-22",
+      "name": "Begin Fourth Marking Period",
+      "type": "academic"
     },
     {
       "date": "2027-04-23",
-      "name": "No School (Teacher Professional Day)",
-      "type": "no_school"
+      "name": "Teacher Professional Day / Student Holiday / Teacher Non-Workday",
+      "type": "teacher_workday",
+      "description": "This is OCPS’s second-priority severe weather make-up day."
     },
     {
       "date": "2027-05-26",
-      "name": "Last Day of School",
+      "name": "End of Fourth Marking Period and Last Day of School",
       "type": "school_end"
     }
-  ],
-  "calendarNotes": "Orange County Public Schools (OCPS) begins the 2026–2027 school year on August 11, 2026, and the last day of school is May 26, 2027. Spring Break runs March 15–19, one week before Miami-Dade, Broward, and Palm Beach counties — Orlando theme parks are busy during OCPS break, but crowds typically peak the following week when South Florida schools are on spring break. A teacher workday on March 12 falls the Friday before Spring Break, extending the break to a 10-day stretch through March 21.",
-  "datePublished": "2026-07-02",
-  "dateModified": "2026-07-02"
+  ]
 }

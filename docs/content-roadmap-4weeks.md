@@ -51,6 +51,9 @@
 | 2026-08-05 | Colorado | Douglas County School District | `/douglas-county-school-district-re-1-calendar` | 2025-2026, 2026-2027, 2027-2028, 2028-2029, 2029-2030 | 基于官方 DCSD academic calendars page、官网 logo、五份官方 conventional/school calendar PDF 和本地 PDF 副本；页面补充 173 student days、Fall/Thanksgiving/Winter/Spring Break、New Teacher Orientation、Teacher Work Day、Professional Development、Compensation Day、District Holiday、2026-2027 起的 PLC delayed-start 标记和 south-metro Denver 家庭规划语境；未提供扩展日历 PDF，暂不创建。 |
 | 2026-08-05 | Colorado | Cherry Creek School District | `/cherry-creek-school-district-calendar` | 2025-2026, 2026-2027, 2027-2028, 2028-2029 | 基于官方 CCSD calendar page、官网 logo、四份 All Schools calendar PDF 和本地 PDF 副本；页面补充 No School for Students and Staff、K-12 Non-contact、K-8 Non-contact/conferences、开学前 Teacher Work Days，以及 2026-2027 的 15 份 specialty/school calendars（含 preschool、adaptive、Challenge、innovation、pathways 和各高中）；2029-2030 PDF URL 未提供，暂不创建。 |
 | 2026-08-05 | Colorado | Aurora Public Schools | `/aurora-public-schools-calendar` | 2025-2026, 2026-2027 | 基于官方 APS calendars page、官网 logo、两份官方 conventional district calendar PDF 和本地 PDF 副本；页面补充 2026-2027 的 1-12 与 Preschool-K 开学/结束日期差异、Professional Release Day、Educator Workday、Conference Exchange Day、English/Spanish 双语资源和 heritage observance 语境；2027-2028 及以后未提供可核验 PDF，暂不创建。 |
+| 2026-08-06 | Colorado | Adams 12 Five Star Schools | `/adams-12-five-star-schools-calendar` | 2025-2026, 2026-2027, 2027-2028 | 基于官方 Adams 12 district calendar page、官网 logo、三份官方 English school calendar PDF 和本地 PDF 副本；页面补充 6th / 9th grade orientation、K-8 school exception、quarter endings、Staff Workdays、high school 可另选的 April / May workdays 和 subject-to-revision 校验提示；未提供扩展日历及 2028-2029 以后 PDF，暂不创建。 |
+| 2026-08-06 | Colorado | St. Vrain Valley Schools | `/st-vrain-valley-schools-calendar` | 2025-2026, 2026-2027, 2027-2028 | 基于官方 SVVSD school calendar page、官网 logo、三份官方 English academic calendar PDF、本地 PDF 副本，以及 2026-2027 / 2027-2028 Spanish 扩展日历；页面补充按年级分四批开学、7 个 PLC 2.5-hour late starts、174 student contact days、quarter / semester / trimester counts、full / compensation / split workdays、Life Skills ACE completion、分校 graduation dates 和 makeup-day 规则；2028-2029 以后 PDF 未提供，暂不创建。 |
+| 2026-08-06 | Colorado | Poudre School District | `/poudre-school-district-calendar` | 2025-2026, 2026-2027 | 基于官方 PSD calendars and schedules page、官网 logo、两份官方 student/district calendar PDF 和本地 PDF 副本，以及 2026-2027 Spanish / Arabic 扩展日历；页面补充 6th / 9th grade Transition Day、all-schools first day、Elementary-only no-school dates、parent-teacher conference closures、building / staff / exchange / professional learning days、PreK / Integrated Services 例外和可互换 staff-day 提示；2027-2028 以后 PDF 未提供，暂不创建。 |
 
 ---
 
@@ -360,9 +363,9 @@ P3 内容可采用更高度模板化的方式生成（calendarNotes 精简为 4-
 | 109 | Colorado | Douglas County School District RE-1 | Denver | ✓ 已完成：`douglas-county-school-district-re-1-calendar`（2026-08-05） |
 | 110 | Colorado | Cherry Creek School District | Denver | ✓ 已完成：`cherry-creek-school-district-calendar`（2026-08-05） |
 | 111 | Colorado | Aurora Public Schools | Denver | ✓ 已完成：`aurora-public-schools-calendar`（2026-08-05） |
-| 112 | Colorado | Adams 12 Five Star Schools | Denver | 待创建 |
-| 113 | Colorado | St. Vrain Valley Schools | Boulder-Longmont | 待创建 |
-| 114 | Colorado | Poudre School District | Fort Collins | 待创建 |
+| 112 | Colorado | Adams 12 Five Star Schools | Denver | ✓ 已完成：`adams-12-five-star-schools-calendar`（2026-08-06） |
+| 113 | Colorado | St. Vrain Valley Schools | Boulder-Longmont | ✓ 已完成：`st-vrain-valley-schools-calendar`（2026-08-06） |
+| 114 | Colorado | Poudre School District | Fort Collins | ✓ 已完成：`poudre-school-district-calendar`（2026-08-06） |
 | 115 | Washington | Tacoma Public Schools | Tacoma | 待创建 |
 | 116 | Washington | Kent School District | Seattle | 待创建 |
 | 117 | Washington | Bellevue School District | Seattle | 待创建 |

@@ -19,6 +19,7 @@ type CalendarEvent = {
   preventRangeMerge?: boolean
 }
 type LegendItem = { label: string; dot: string }
+type SourceLink = { label: string; url: string }
 
 const props = defineProps<{
   events: CalendarEvent[]
@@ -31,8 +32,10 @@ const props = defineProps<{
   districtName: string
   verifiedDate: string | null
   legend?: LegendItem[]
+  legendTitle?: string
   mode?: 'all' | 'keyDates'
   footerMode?: 'default' | 'source_sentence'
+  sourceLinks?: SourceLink[]
   coverageNote?: string
   includedDatesInKeyDates?: string[]
   firstDay?: string
@@ -57,6 +60,8 @@ function isPossibleMakeupDay(event: CalendarEvent) {
 
 const hiddenInKeyDates = new Set(['break_end', 'teacher_workday'])
 const includedDatesInKeyDates = computed(() => new Set(props.includedDatesInKeyDates ?? []))
+const sourceLinks = computed(() => (props.sourceLinks ?? []).filter(Boolean))
+const hasSingleSourceLink = computed(() => sourceLinks.value.length === 1)
 function isHolidayOutsideStudentYear(event: CalendarEvent) {
   return Boolean(props.firstDay && props.lastDay) &&
     event.type === 'holiday' &&
@@ -440,7 +445,7 @@ function formatRangeEnd(event: DisplayEvent) {
     <div class="px-6 py-4 border-b border-[#ebe6dd]">
       <h2 class="text-lg font-semibold text-[#1f2933]" :class="legend?.length ? 'mb-3' : ''">{{ title }}</h2>
       <div v-if="legend?.length" class="flex flex-wrap items-center gap-3">
-        <span class="text-xs font-semibold uppercase tracking-wide text-[#8a8176]">Common date types</span>
+        <span class="text-xs font-semibold uppercase tracking-wide text-[#8a8176]">{{ legendTitle || 'Common date types' }}</span>
         <span
           v-for="item in legend"
           :key="item.label"
@@ -492,6 +497,7 @@ function formatRangeEnd(event: DisplayEvent) {
                 <template v-if="displayDateRangeParts(event)">
                   <time :datetime="event.startDate">{{ displayDateRangeParts(event)!.startLabel }}</time>
                   <span aria-hidden="true">–</span>
+                  <span class="sr-only"> through </span>
                   <time :datetime="event.endDate">{{ displayDateRangeParts(event)!.endLabel }}</time>
                 </template>
                 <span v-else-if="event.displayDate">{{ event.displayDate }}</span>
@@ -503,7 +509,8 @@ function formatRangeEnd(event: DisplayEvent) {
                 <time v-else-if="event.startDate === event.endDate" :datetime="event.startDate">{{ formatDateRange(event) }}</time>
                 <template v-else>
                   <time :datetime="event.startDate">{{ formatRangeStart(event) }}</time>
-                  <span> – </span>
+                  <span aria-hidden="true"> – </span>
+                  <span class="sr-only"> through </span>
                   <time :datetime="event.endDate">{{ formatRangeEnd(event) }}</time>
                 </template>
               </div>
@@ -522,9 +529,25 @@ function formatRangeEnd(event: DisplayEvent) {
       <span>
         <template v-if="footerMode === 'source_sentence'">
           {{ coverageNote || "This list includes districtwide student dates." }}
-          <a :href="sourceUrl" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">
-            {{ sourceLabel || `${districtName} official calendar` }}<span class="sr-only">(opens in a new tab)</span>
-          </a><template v-if="sourceSuffix">. {{ sourceSuffix }}.</template><template v-else>.</template>
+          <template v-if="sourceLinks.length">
+            <template v-for="(link, idx) in sourceLinks" :key="link.url">
+              <a :href="link.url" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">
+                {{ link.label }}<span class="sr-only">(opens in a new tab)</span>
+              </a>
+              <template v-if="idx < sourceLinks.length - 1">
+                {{ idx === sourceLinks.length - 2 ? ' and ' : ', ' }}
+              </template>
+              <template v-else>
+                <template v-if="sourceSuffix">. {{ sourceSuffix }}.</template>
+                <template v-else>.</template>
+              </template>
+            </template>
+          </template>
+          <template v-else>
+            <a :href="sourceUrl" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">
+              {{ sourceLabel || `${districtName} official calendar` }}<span class="sr-only">(opens in a new tab)</span>
+            </a><template v-if="sourceSuffix">. {{ sourceSuffix }}.</template><template v-else>.</template>
+          </template>
           <template v-if="correctionSourceUrl">
             Check the
             <a :href="correctionSourceUrl" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">
@@ -540,9 +563,22 @@ function formatRangeEnd(event: DisplayEvent) {
             Dates listed within a vacation period are already included in that period and are not listed separately{{ coveredBreakDateNames.length ? ` (${coveredBreakDateNames.join(', ')})` : '' }}.
           </template>
           Based on the
-          <a :href="sourceUrl" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">
-            {{ sourceLabel || `${districtName} official calendar` }}<span class="sr-only">(opens in a new tab)</span>
-          </a>
+          <template v-if="sourceLinks.length">
+            <template v-for="(link, idx) in sourceLinks" :key="`base-${link.url}`">
+              <a :href="link.url" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">
+                {{ link.label }}<span class="sr-only">(opens in a new tab)</span>
+              </a>
+              <template v-if="idx < sourceLinks.length - 1">
+                {{ idx === sourceLinks.length - 2 ? ' and ' : ', ' }}
+              </template>
+              <template v-else>.</template>
+            </template>
+          </template>
+          <template v-else>
+            <a :href="sourceUrl" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">
+              {{ sourceLabel || `${districtName} official calendar` }}<span class="sr-only">(opens in a new tab)</span>
+            </a>.
+          </template>
         </template>
       </span>
     </div>

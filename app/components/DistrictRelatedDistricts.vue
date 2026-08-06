@@ -7,6 +7,7 @@ const props = defineProps<{
   hideDescriptions?: boolean
   year?: string
   yearAvailableSlugs?: string[]
+  forceYearLinks?: boolean
 }>()
 
 const validRelatedDistricts = computed(() => props.relatedDistricts.filter(rd => rd.slug))
@@ -18,7 +19,7 @@ const description = computed(() => props.description ?? (allRelatedInState.value
 const stateSlug = computed(() => props.stateName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))
 const yearAvailableSlugs = computed(() => new Set(props.yearAvailableSlugs ?? []))
 const relatedDistrictPath = (rd: { slug: string }) =>
-  props.year && yearAvailableSlugs.value.has(rd.slug) ? `/${rd.slug}/${props.year}` : `/${rd.slug}`
+  props.year && (props.forceYearLinks || yearAvailableSlugs.value.has(rd.slug)) ? `/${rd.slug}/${props.year}` : `/${rd.slug}`
 </script>
 
 <template>

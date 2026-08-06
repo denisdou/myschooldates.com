@@ -1,0 +1,400 @@
+{
+  "institutionId": "st-vrain-valley-schools-calendar",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "St. Vrain Valley Schools Calendar 2027–28",
+  "firstDay": "2027-08-17",
+  "lastDay": "2028-05-25",
+  "temporalCoverageStart": "2027-08-17",
+  "temporalCoverageEnd": "2028-05-25",
+  "totalSchoolDays": 174,
+  "semesters": 2,
+  "instructionalDaysLabel": "Student Contact Days",
+  "instructionalDaysDescription": "The official SVVSD calendar lists 174 student contact days.",
+  "sourceUrl": "https://www.svvsd.org/schools/school-calendar/",
+  "sourcePdfUrl": "https://svvsd.org/wp-content/uploads/2025/04/2027-2028-FInal-.pdf",
+  "sourceCalendarName": "St. Vrain Valley Schools 2027–28 Academic Calendar",
+  "lastVerifiedAt": "2026-08-06",
+  "dateCreated": "2026-08-06",
+  "datePublished": "2026-08-06",
+  "dateModified": "2026-08-06",
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerifiedBadge": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideDateLegend": true,
+  "hidePdfVersionLabel": true,
+  "hideCompatibleCalendars": true,
+  "hideExtendedShareButtons": true,
+  "compactDownloadModule": true,
+  "webPageMainEntity": "keyDates",
+  "comparisonBeforeFaq": true,
+  "sourcesBeforeFaq": false,
+  "yearSwitcherPosition": "afterSources",
+  "nonCurrentYearNotice": "This is SVVSD’s upcoming 2027–28 academic calendar. Check the official calendar page for later revisions.",
+  "seoTitle": "St. Vrain Valley Schools Calendar 2027–28: Key Dates & PDF",
+  "seoDescription": "Find SVVSD’s 2027–28 start dates by grade, PLC late starts, school breaks and return dates, the last student day, and official English and Spanish PDFs.",
+  "heroSourceLine": "2027–28 academic calendar · Based on the official SVVSD calendar",
+  "verificationBadgeText": "Last checked August 6, 2026, against the official SVVSD calendar.",
+  "heroSummary": "St. Vrain Valley Schools uses a staggered start for 2027–28. Grades 1–5, 6, and 9 begin August 17; grades 7–8 and 10–12 begin August 18; kindergarten begins August 19; and preschool begins August 23. The last student day is May 25, 2028.\n\nThe calendar includes 174 student contact days and seven PLC late-start days. On PLC days, students attend school but start 2.5 hours later than usual.",
+  "schemaCalendarName": "St. Vrain Valley Schools 2027–28 Academic Calendar",
+  "schemaDatasetName": "MySchoolDates SVVSD 2027–28 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed SVVSD student calendar dates for 2027–28, including start dates by grade, seven PLC late-start days, school breaks, return dates, and the last student day.",
+  "schemaCalendarDownloadName": "MySchoolDates SVVSD 2027–28 calendar import file",
+  "schemaCalendarDownloadDescription": "Calendar import file generated from the reviewed calendar records used for this page.",
+  "schemaIsAccessibleForFree": true,
+  "schemaKeywords": [
+    "St. Vrain Valley Schools calendar",
+    "SVVSD calendar",
+    "2027-2028 school calendar",
+    "PLC late start",
+    "school breaks",
+    "Longmont Colorado"
+  ],
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "breaks",
+    "yearNumbers",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "otherCalendars",
+    "downloadCta",
+    "nationalTrends"
+  ],
+  "keyDatesSummaryTitle": "Key Dates for SVVSD Families",
+  "keyDatesSummarySubtitle": "Start dates by grade, major breaks, return dates, and the last student day",
+  "keyDateSummaryItems": [
+    {
+      "label": "Start Date",
+      "name": "Grades 1–5, 6, and 9 Begin School",
+      "date": "2027-08-17",
+      "type": "school_start",
+      "schemaDescription": "The first day of school for SVVSD students in grades 1–5, grade 6, and grade 9."
+    },
+    {
+      "label": "Start Date",
+      "name": "Grades 7–8 and 10–12 Begin School",
+      "date": "2027-08-18",
+      "type": "school_start",
+      "schemaDescription": "The first day of school for SVVSD students in grades 7–8 and grades 10–12."
+    },
+    {
+      "label": "Start Date",
+      "name": "Kindergarten Begins",
+      "date": "2027-08-19",
+      "type": "school_start",
+      "schemaDescription": "The first day of school for SVVSD kindergarten students."
+    },
+    {
+      "label": "Start Date",
+      "name": "Preschool Begins",
+      "date": "2027-08-23",
+      "type": "school_start",
+      "schemaDescription": "The first day of school for SVVSD preschool students."
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2027-11-22",
+      "endDate": "2027-11-26",
+      "type": "break_start",
+      "description": "Students return Monday, November 29."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "type": "break_start",
+      "description": "January 3 is a non-student contact day; students return Tuesday, January 4."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2028-03-20",
+      "endDate": "2028-03-24",
+      "type": "break_start",
+      "description": "Students return Monday, March 27."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Student Day",
+      "date": "2028-05-25",
+      "type": "school_end"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "svvsd-2027-2028-staggered-opening",
+      "label": "SVVSD 2027–28 Opening Schedule",
+      "position": "afterVerification",
+      "content": "Start dates vary by grade. Check the schedule below before adding your child’s first day to your calendar.",
+      "table": {
+        "columns": ["Date", "Students who begin school"],
+        "rows": [
+          ["Tuesday, August 17", "Grades 1–5, 6, and 9"],
+          ["Wednesday, August 18", "Grades 7–8 and 10–12"],
+          ["Thursday, August 19", "Kindergarten"],
+          ["Monday, August 23", "Preschool"]
+        ]
+      }
+    },
+    {
+      "id": "svvsd-2027-2028-plc-late-starts",
+      "label": "Seven PLC Late-Start Dates",
+      "position": "afterKeyDates",
+      "content": "Students attend school on PLC days, but classes begin 2.5 hours later than usual. Check with your child’s school for exact bell times and transportation information.",
+      "table": {
+        "columns": ["Term", "PLC late-start dates"],
+        "rows": [
+          ["Fall 2027", "September 1, November 3, and December 1"],
+          ["Spring 2028", "February 2, March 1, April 5, and May 3"]
+        ]
+      }
+    },
+    {
+      "id": "svvsd-2027-2028-staff-program-dates",
+      "label": "Staff and Program Dates",
+      "position": "afterAllDates",
+      "content": "These dates apply to district staff or specific programs and are separate from the main student calendar.",
+      "collapsible": true,
+      "summaryLabel": "View staff and program dates",
+      "groups": [
+        {
+          "label": "Before school begins",
+          "items": [
+            "New Teacher Orientation: August 5–6 and August 9, 2027",
+            "Non-student contact days: August 10–16, 2027. August 12 and 13 are split days."
+          ]
+        },
+        {
+          "label": "Program completion and graduation",
+          "items": [
+            "Life Skills ACE completion: May 24, 2028",
+            "LaunchED Virtual Academy graduation: May 26, 2028",
+            "New Meridian, St. Vrain Virtual, and Universal High School graduations: May 27, 2028",
+            "Comprehensive high school graduations: May 27, 2028"
+          ]
+        }
+      ]
+    }
+  ],
+  "whatsNew": {
+    "title": "What's Different From 2026–27",
+    "content": [
+      "The earliest listed student start is one calendar day earlier, moving from August 18 in 2026 to August 17 in 2027.",
+      "Thanksgiving Break moves from November 23–27 in 2026 to November 22–26 in 2027.",
+      "Winter Break moves from December 21–January 1 to December 20–31; students return January 4 after a January 3 non-student contact day.",
+      "Spring Break moves from March 15–19 in 2027 to March 20–24 in 2028.",
+      "The last student day falls two days earlier in May, moving from May 27 in 2027 to May 25 in 2028."
+    ]
+  },
+  "calendarFaqs": [
+    {
+      "q": "When does SVVSD start in 2027?",
+      "a": "SVVSD uses different start dates by grade. Grades 1–5, 6, and 9 begin August 17; grades 7–8 and 10–12 begin August 18; kindergarten begins August 19; and preschool begins August 23."
+    },
+    {
+      "q": "When do SVVSD students return after Thanksgiving Break?",
+      "a": "Thanksgiving Break runs November 22–26, 2027. Students return Monday, November 29."
+    },
+    {
+      "q": "When do SVVSD students return after Winter Break?",
+      "a": "January 3, 2028, is a non-student contact day. Students return Tuesday, January 4."
+    },
+    {
+      "q": "When is SVVSD Spring Break in 2028?",
+      "a": "Spring Break runs March 20–24, 2028. Students return Monday, March 27."
+    },
+    {
+      "q": "What happens on an SVVSD PLC late-start day?",
+      "a": "Students attend school, but classes begin 2.5 hours later than usual. Check with your child’s school for exact bell times and transportation information."
+    },
+    {
+      "q": "When is the last day of school for SVVSD in 2028?",
+      "a": "The last student day is Thursday, May 25, 2028. Graduation dates vary by school and program."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When does SVVSD start in 2027?",
+    "When do SVVSD students return after Thanksgiving Break?",
+    "When do SVVSD students return after Winter Break?",
+    "When is SVVSD Spring Break in 2028?",
+    "What happens on an SVVSD PLC late-start day?",
+    "When is the last day of school for SVVSD in 2028?"
+  ],
+  "faqDisplayLimit": 6,
+  "faqSchemaLimit": 6,
+  "jumpNavigation": [
+    { "label": "Opening Dates", "id": "svvsd-2027-2028-staggered-opening" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "PLC Days", "id": "svvsd-2027-2028-plc-late-starts" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Changes", "id": "year-comparison" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "comparisonDistrictSlugs": [
+    "adams-12-five-star-schools-calendar",
+    "jeffco-public-schools-calendar",
+    "denver-public-schools-calendar"
+  ],
+  "comparisonCustomRows": [
+    {
+      "key": "firstDay",
+      "label": "Earliest Listed Student Start",
+      "values": {
+        "st-vrain-valley-schools-calendar": "Aug 17, 2027",
+        "adams-12-five-star-schools-calendar": "Aug 17, 2027",
+        "jeffco-public-schools-calendar": "Aug 18, 2027",
+        "denver-public-schools-calendar": "Aug 23, 2027"
+      }
+    },
+    {
+      "key": "lastDay",
+      "label": "Last Student Day",
+      "values": {
+        "st-vrain-valley-schools-calendar": "May 25, 2028",
+        "adams-12-five-star-schools-calendar": "May 25, 2028",
+        "jeffco-public-schools-calendar": "May 25, 2028",
+        "denver-public-schools-calendar": "Jun 2, 2028"
+      }
+    },
+    {
+      "key": "thanksgivingBreak",
+      "label": "Thanksgiving Break",
+      "values": {
+        "st-vrain-valley-schools-calendar": "Nov 22–26, 2027",
+        "adams-12-five-star-schools-calendar": "Nov 22–26, 2027",
+        "jeffco-public-schools-calendar": "Nov 22–26, 2027",
+        "denver-public-schools-calendar": "Nov 22–26, 2027"
+      }
+    },
+    {
+      "key": "winterBreak",
+      "label": "Winter Break",
+      "values": {
+        "st-vrain-valley-schools-calendar": "Dec 20–31, 2027",
+        "adams-12-five-star-schools-calendar": "Dec 20–31, 2027",
+        "jeffco-public-schools-calendar": "Dec 20, 2027–Jan 4, 2028",
+        "denver-public-schools-calendar": "Dec 20, 2027–Jan 3, 2028"
+      }
+    },
+    {
+      "key": "springBreak",
+      "label": "Spring Break",
+      "values": {
+        "st-vrain-valley-schools-calendar": "Mar 20–24, 2028",
+        "adams-12-five-star-schools-calendar": "Mar 20–24, 2028",
+        "jeffco-public-schools-calendar": "Mar 20–24, 2028",
+        "denver-public-schools-calendar": "Mar 27–31, 2028"
+      }
+    }
+  ],
+  "comparisonTitle": "How SVVSD’s 2027–28 Calendar Compares With Nearby Districts",
+  "comparisonSummary": "See how SVVSD’s earliest student start, last student day, and major breaks compare with Adams 12 Five Star Schools, Jeffco Public Schools, and Denver Public Schools.",
+  "comparisonInsights": [
+    {
+      "label": "Start date comparison",
+      "items": [
+        "Same earliest listed student start as Adams 12 Five Star Schools",
+        "Earliest listed student start is 1 calendar day earlier than Jeffco Public Schools",
+        "Earliest listed student start is 6 calendar days earlier than Denver Public Schools"
+      ]
+    },
+    {
+      "label": "End date comparison",
+      "items": [
+        "Same last student day as Adams 12 Five Star Schools",
+        "Same last student day as Jeffco Public Schools",
+        "Last student day is 8 calendar days earlier than Denver Public Schools"
+      ]
+    }
+  ],
+  "comparisonFooterText": "Dates are based on each district’s published 2027–28 calendar. Break ranges use the dates labeled as the break period on each district’s published calendar. Separate staff days or return dates may extend the total time students are out of school. Because SVVSD uses staggered grade-level start dates, its row shows the earliest listed student start.",
+  "allDatesTitle": "SVVSD Student Calendar Dates for 2027–28",
+  "allDatesFooterMode": "source_sentence",
+  "allDatesCoverageNote": "This list focuses on student start dates, school closures, breaks, return dates, PLC late starts, and the last student day. Conferences, bell times, testing, and emergency changes may appear only on individual school calendars.",
+  "allDatesSourceUrl": "https://svvsd.org/wp-content/uploads/2025/04/2027-2028-FInal-.pdf",
+  "allDatesSourceLabel": "Source: Official SVVSD 2027–28 Academic Calendar PDF",
+  "icsHeading": "SVVSD Calendar Downloads",
+  "icsDescription": "Download a one-time ICS file containing the student calendar dates shown on this page, including start dates by grade, PLC late starts, breaks, and return dates.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "icsButtonSupportText": "One-time import. This calendar does not automatically sync with later SVVSD updates.",
+  "icsAriaLabel": "Download the SVVSD 2027–28 student calendar file for Google Calendar, Apple Calendar, or Outlook",
+  "pdfHeading": "Official SVVSD 2027–28 Academic Calendar",
+  "pdfButtonLabel": "View Official English PDF",
+  "pdfDescription": "Open the English academic calendar PDF published by St. Vrain Valley Schools.",
+  "pdfSupplementalTitle": "Spanish calendar",
+  "pdfSupplementalDescription": "The district also publishes a Spanish version of its academic calendar.",
+  "pdfSupplementalLinks": [
+    {
+      "label": "View the official 2027–28 calendar in español",
+      "url": "https://svvsd.org/wp-content/uploads/2025/05/SPA-2027-2028-.pdf"
+    }
+  ],
+  "sourceReviewSummary": "Reviewed against the official SVVSD school-calendar page and the district’s English and Spanish 2027–28 academic calendar PDFs.",
+  "sourceReviewDetails": [
+    "We checked the start dates by grade, 174 student contact days, seven PLC late-start dates, school breaks, return dates, and the last student day against the official English calendar.",
+    "Return dates are derived from the next scheduled student attendance day shown on the official calendar.",
+    "PLC dates are attendance days with a 2.5-hour late start. Confirm exact bell times and transportation information with your child’s school; its calendar may also list conferences, testing, and emergency changes.",
+    "The district also publishes a Spanish version of the 2027–28 academic calendar."
+  ],
+  "sources": [
+    { "label": "SVVSD school calendar page", "url": "https://www.svvsd.org/schools/school-calendar/" },
+    { "label": "SVVSD 2027–28 English academic calendar PDF", "url": "https://svvsd.org/wp-content/uploads/2025/04/2027-2028-FInal-.pdf" },
+    { "label": "SVVSD 2027–28 Spanish academic calendar PDF", "url": "https://svvsd.org/wp-content/uploads/2025/05/SPA-2027-2028-.pdf" },
+    { "label": "SVVSD 2026–27 English academic calendar PDF — used for year-over-year comparison", "url": "https://svvsd.org/wp-content/uploads/2026/06/26-27-SVVSD-4_8_26-2.pdf" }
+  ],
+  "events": [
+    { "date": "2027-08-05", "endDate": "2027-08-06", "name": "New Teacher Orientation", "type": "teacher_workday", "description": "Orientation also occurs August 9.", "hideFromAllDates": true, "hideFromCalendarExport": true },
+    { "date": "2027-08-09", "name": "New Teacher Orientation", "type": "teacher_workday", "hideFromAllDates": true, "hideFromCalendarExport": true },
+    { "date": "2027-08-10", "endDate": "2027-08-16", "name": "Non-Student Contact Days", "type": "teacher_workday", "description": "August 12 and 13 are split days.", "hideFromAllDates": true, "hideFromCalendarExport": true },
+    { "date": "2027-08-17", "name": "First Day — Grades 1–5, 6, and 9", "type": "school_start" },
+    { "date": "2027-08-18", "name": "First Day — Grades 7–8 and 10–12", "type": "school_start" },
+    { "date": "2027-08-19", "name": "First Day — Kindergarten", "type": "school_start" },
+    { "date": "2027-08-23", "name": "First Day — Preschool", "type": "school_start" },
+    { "date": "2027-09-01", "name": "PLC Day — 2.5-Hour Late Start", "type": "academic", "badgeLabel": "Late Start" },
+    { "date": "2027-09-06", "name": "Labor Day", "type": "holiday", "description": "No school." },
+    { "date": "2027-10-15", "name": "Non-Student Contact Day", "type": "teacher_workday", "description": "No school for students.", "preventRangeMerge": true },
+    { "date": "2027-10-18", "name": "Non-Student Contact Day", "type": "teacher_workday", "description": "No school for students.", "preventRangeMerge": true },
+    { "date": "2027-11-03", "name": "PLC Day — 2.5-Hour Late Start", "type": "academic", "badgeLabel": "Late Start" },
+    { "date": "2027-11-22", "endDate": "2027-11-26", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2027-11-29", "name": "Students Return After Thanksgiving Break", "type": "school_resume" },
+    { "date": "2027-12-01", "name": "PLC Day — 2.5-Hour Late Start", "type": "academic", "badgeLabel": "Late Start" },
+    { "date": "2027-12-20", "endDate": "2027-12-31", "name": "Winter Break", "type": "break_start" },
+    { "date": "2028-01-03", "name": "Non-Student Contact Day / Split Day", "type": "teacher_workday", "description": "No school for students." },
+    { "date": "2028-01-04", "name": "Students Return After Winter Break", "type": "school_resume" },
+    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day", "type": "holiday", "description": "No school." },
+    { "date": "2028-02-02", "name": "PLC Day — 2.5-Hour Late Start", "type": "academic", "badgeLabel": "Late Start" },
+    { "date": "2028-02-18", "name": "Non-Student Contact Day", "type": "teacher_workday", "description": "No school for students." },
+    { "date": "2028-02-21", "name": "Presidents’ Day", "type": "holiday", "description": "No school." },
+    { "date": "2028-03-01", "name": "PLC Day — 2.5-Hour Late Start", "type": "academic", "badgeLabel": "Late Start" },
+    { "date": "2028-03-20", "endDate": "2028-03-24", "name": "Spring Break", "type": "break_start" },
+    { "date": "2028-03-27", "name": "Students Return After Spring Break", "type": "school_resume" },
+    { "date": "2028-04-05", "name": "PLC Day — 2.5-Hour Late Start", "type": "academic", "badgeLabel": "Late Start" },
+    { "date": "2028-04-24", "endDate": "2028-04-25", "name": "Non-Student Contact Days", "type": "teacher_workday", "description": "No school for students." },
+    { "date": "2028-05-03", "name": "PLC Day — 2.5-Hour Late Start", "type": "academic", "badgeLabel": "Late Start" },
+    { "date": "2028-05-24", "name": "Life Skills ACE Completion", "type": "academic", "hideFromAllDates": true, "hideFromCalendarExport": true },
+    { "date": "2028-05-25", "name": "Last Student Day", "type": "school_end" },
+    { "date": "2028-05-26", "name": "LaunchED Virtual Academy Graduation", "type": "graduation", "hideFromAllDates": true, "hideFromCalendarExport": true },
+    { "date": "2028-05-27", "name": "New Meridian, St. Vrain Virtual, and Universal High School Graduations", "type": "graduation", "hideFromAllDates": true, "hideFromCalendarExport": true },
+    { "date": "2028-05-27", "name": "Comprehensive High School Graduations", "type": "graduation", "description": "Erie, Frederick, Longmont, Lyons, and Mead high schools.", "hideFromAllDates": true, "hideFromCalendarExport": true },
+    { "date": "2028-05-29", "name": "Memorial Day", "type": "holiday", "hideFromAllDates": true, "hideFromCalendarExport": true }
+  ]
+}

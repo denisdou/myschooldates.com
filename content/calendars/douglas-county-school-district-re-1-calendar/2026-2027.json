@@ -37,6 +37,8 @@
   "yearSwitcherPosition": "afterSources",
   "seoTitle": "Douglas County School District Calendar 2026–27 | Key Dates",
   "seoDescription": "View the DCSD 2026–27 calendar, including the August 12 first day, May 27 last day, school breaks, PLC delayed starts, and the official PDF.",
+  "heroSourceLine": "2026–27 calendar dates · Based on official DCSD calendar sources",
+  "verificationBadgeText": "Checked against official DCSD calendar sources on August 5, 2026.",
   "schemaCalendarName": "Douglas County School District 2026–27 Calendar",
   "schemaDatasetName": "DCSD 2026–27 Calendar Dataset",
   "schemaDatasetDescription": "Reviewed Douglas County School District dates for 2026–27, including conventional-calendar school breaks, no-student days, PLC delayed-start dates, the official color PDF, and the official text/list view PDF.",
@@ -63,7 +65,7 @@
     "livingHere",
     "nationalTrends"
   ],
-  "heroSummary": "Douglas County School District students begin the 2026–27 school year on Wednesday, August 12, 2026, and finish on Thursday, May 27, 2027. The conventional calendar includes 173 student days. Fall Break is October 12–16, Thanksgiving Break is November 23–27, Winter Break runs December 21–31, and Spring Break is March 15–19. Students return after Winter Break on Tuesday, January 5, following a teacher work day on January 4.\n\nBeginning in 2026–27, DCSD-operated elementary and middle schools start 45 minutes later every Friday for Professional Learning Community time. High schools continue their existing Friday delayed-start schedules, and school buses also run 45 minutes later. Check your school for its exact bell time; charter schools may follow different schedules.",
+  "heroSummary": "Douglas County School District students begin the 2026–27 school year on Wednesday, August 12, 2026, and finish on Thursday, May 27, 2027. The conventional calendar includes 173 student days. Fall Break is October 12–16, Thanksgiving Break is November 23–27, Winter Break runs December 21–31, and Spring Break is March 15–19. Students return after Winter Break on Tuesday, January 5, following a teacher work day on January 4.\n\nDCSD also uses Friday delayed starts during the 2026–27 school year. District-operated elementary and middle schools begin 45 minutes later; see the full PLC schedule below.",
   "heroFactChips": [
     "173 student days"
   ],
@@ -77,7 +79,7 @@
       "The first student day moves from August 13 in 2025–26 to August 12 in 2026–27.",
       "Spring Break shifts from March 16–20 in 2025–26 to March 15–19 in 2026–27.",
       "The last student day moves from May 29 in 2025–26 to May 27 in 2026–27.",
-      "The 2026–27 color PDF uses recurring PLC delayed-start markers; families should confirm school-specific bell times."
+      "The 2026–27 calendar introduces 45-minute Friday delayed starts for district-operated elementary and middle schools. High schools continue their existing Friday delayed-start schedules."
     ]
   },
   "customSections": [
@@ -216,23 +218,28 @@
     { "label": "Key Dates", "id": "key-dates" },
     { "label": "PLC Days", "id": "dcsd-2026-2027-plc-delayed-starts" },
     { "label": "Exceptions", "id": "dcsd-2026-2027-calendar-exceptions" },
-    { "label": "All Dates", "id": "all-dates" },
     { "label": "Download", "id": "add-to-calendar" },
+    { "label": "All Dates", "id": "all-dates" },
     { "label": "Changes", "id": "year-comparison" },
     { "label": "FAQ", "id": "faq" },
     { "label": "Sources", "id": "sources" }
   ],
   "allDatesTitle": "DCSD 2026–27 Conventional Calendar Dates",
+  "allDatesFooterMode": "source_sentence",
   "allDatesCoverageNote": "Dates are based on DCSD’s conventional calendar sources. PLC Fridays are delayed starts, not days off. School-specific events, testing dates, conferences, and emergency changes may appear only on individual school calendars.",
+  "allDatesSourceLinks": [
+    { "label": "DCSD 2026–27 conventional calendar color PDF", "url": "https://resources.finalsite.net/images/v1776272789/dcsdk12org/iipgszgtojakasjcbkwj/2026-27DCSDConventionalCalendarColor.pdf" },
+    { "label": "DCSD 2026–27 text/list view calendar", "url": "https://www.dcsdk12.org/fs/resource-manager/view/f5bdba56-ba37-4583-a3a4-7bb7ec0d5f9b" }
+  ],
   "allDatesSourceUrl": "https://www.dcsdk12.org/fs/resource-manager/view/f5bdba56-ba37-4583-a3a4-7bb7ec0d5f9b",
-  "allDatesSourceLabel": "DCSD 2026–27 text/list view calendar",
+  "allDatesSourceLabel": "Source: DCSD 2026–27 text/list view calendar",
   "icsHeading": "DCSD Calendar Downloads",
   "icsDescription": "Download a MySchoolDates .ics file created from the district-published dates on this page.",
   "icsButtonLabel": "Download Calendar File (.ics)",
   "pdfHeading": "Official DCSD 2026–27 Calendar PDF",
   "pdfButtonLabel": "View Official PDF",
   "pdfDescription": "Open the 2026–27 conventional calendar PDF published by Douglas County School District.",
-  "sourceReviewSummary": "Verified against the DCSD academic calendars page, the 2026–27 color PDF, and the 2026–27 text/list view PDF.",
+  "sourceReviewSummary": "Verified against DCSD’s academic calendars page, color calendar, list-view calendar, Calendar at a Glance, and Professional Learning Communities guidance. The 2025–26 calendar was also reviewed for the year-over-year comparison.",
   "sourceReviewDetails": [
     "The current color PDF footer says “Approved by the Board of Education: June 18, 2024.” The DCSD academic calendars page currently displays “Approved by the DCSD Board of Education June 9, 2026.” Because the two official DCSD sources show different approval dates, we list both dates here until the district updates or clarifies the record.",
     "We compared the major breaks and no-school dates across DCSD’s calendar landing page, color calendar, Calendar at a Glance, and list-view PDF. Where official sources use different wording, we note the discrepancy rather than silently choosing one label.",

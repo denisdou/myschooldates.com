@@ -237,6 +237,11 @@ const verifiedDate = computed(() => {
   if (!(cal.value as any)?.lastVerifiedAt) return null
   return new Date((cal.value as any).lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 })
+const updatedDate = computed(() => {
+  const date = (cal.value as any)?.dateModified ?? (cal.value as any)?.lastVerifiedAt
+  if (!date) return null
+  return new Date(date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+})
 function formatCompactDateRange(start: string, end: string) {
   const startDate = new Date(start + 'T00:00:00')
   const endDate = new Date(end + 'T00:00:00')
@@ -346,6 +351,11 @@ const alternateCalendarsNoticeLinkLabel = computed(() =>
 const alternateCalendarsNoticeLinkHref = computed(() =>
   String((cal.value as any)?.alternateCalendarsNoticeLinkHref ?? (cal.value as any)?.meta?.alternateCalendarsNoticeLinkHref ?? '#other-calendars')
 )
+const alternateCalendarsNoticeLinks = computed(() =>
+  (((cal.value as any)?.alternateCalendarsNoticeLinks ?? (cal.value as any)?.meta?.alternateCalendarsNoticeLinks ?? []) as Array<{ label?: string; href?: string; url?: string }>)
+    .map(link => ({ label: String(link.label ?? ''), href: String(link.href ?? link.url ?? '') }))
+    .filter(link => link.label && link.href)
+)
 const hideAlternateCalendarsNotice = computed(() =>
   Boolean((cal.value as any)?.hideAlternateCalendarsNotice ?? (cal.value as any)?.meta?.hideAlternateCalendarsNotice)
 )
@@ -357,6 +367,12 @@ const alternateCalendarsNoticeBeforeKeyDates = computed(() =>
 )
 const customJumpNavigation = computed(() =>
   (((cal.value as any)?.jumpNavigation ?? (cal.value as any)?.meta?.jumpNavigation ?? []) as Array<{ label?: string, href?: string, id?: string }>).filter(item => item.label && (item.href || item.id))
+)
+const yearSwitcherLabel = computed(() =>
+  String((cal.value as any)?.yearSwitcherLabel ?? (cal.value as any)?.meta?.yearSwitcherLabel ?? 'Other school years:')
+)
+const otherCalendarsAfterKeyDates = computed(() =>
+  ((cal.value as any)?.otherCalendarsPosition ?? (cal.value as any)?.meta?.otherCalendarsPosition) === 'afterKeyDates'
 )
 
 const instructionalDaysLine = computed(() => {
@@ -402,8 +418,9 @@ type DistrictCustomSection = {
   defaultOpen?: boolean
   image?: { src: string; alt: string; caption?: string; width?: number; height?: number }
   groups?: { label: string; items: string[] }[]
+  definitions?: { term: string; description: string }[]
   links?: { label: string; to: string; description?: string }[]
-  table?: { columns?: string[]; headers?: string[]; rows: string[][] }
+  table?: { caption?: string; columns?: string[]; headers?: string[]; rows: string[][]; footnote?: string }
 }
 const customSections = computed(() => {
   const hiddenIds = new Set([
@@ -497,6 +514,10 @@ const allDatesMode = computed(() => {
   const mode = (cal.value as any)?.allDatesMode ?? (cal.value as any)?.meta?.allDatesMode ?? (district.value as any)?.allDatesMode
   return (mode === 'keyDates' ? 'keyDates' : 'all') as 'all' | 'keyDates'
 })
+const allDatesSourceLinks = computed(() =>
+  (((cal.value as any)?.allDatesSourceLinks ?? (cal.value as any)?.meta?.allDatesSourceLinks ?? []) as { label: string; url: string }[])
+    .filter((source) => source?.label && source?.url)
+)
 const allDatesIncludedDatesInKeyDates = computed(() =>
   (((cal.value as any)?.allDatesIncludedDatesInKeyDates ?? (cal.value as any)?.meta?.allDatesIncludedDatesInKeyDates ?? []) as string[])
 )
@@ -808,6 +829,7 @@ const schemaKeywords = [
   ...(((cal.value as any)?.schemaKeywords ?? (cal.value as any)?.meta?.schemaKeywords ?? []) as string[]),
 ]
 const schemaIsAccessibleForFree = (cal.value as any)?.schemaIsAccessibleForFree ?? (cal.value as any)?.meta?.schemaIsAccessibleForFree ?? (district.value as any)?.schemaIsAccessibleForFree ?? (district.value as any)?.meta?.schemaIsAccessibleForFree
+const schemaDatasetVersion = (cal.value as any)?.schemaDatasetVersion ?? (cal.value as any)?.meta?.schemaDatasetVersion
 const schemaVariableMeasured = (((cal.value as any)?.schemaVariableMeasured ?? (cal.value as any)?.meta?.schemaVariableMeasured ?? []) as string[])
 const sourceCalendarEntity = basedOnUrl ? {
   '@type': 'CreativeWork',
@@ -843,6 +865,7 @@ const sourceCalendarPageEntity = sourcePageCitationUrl ? {
 } : null
 const sourceBasedOnRefs = [
   ...(basedOnUrl ? [{ '@id': `${canonicalUrl}#source-calendar` }] : []),
+  ...(sourcePageCitationUrl ? [{ '@id': `${canonicalUrl}#source-calendar-page` }] : []),
   ...additionalSourceCalendarEntities.map(source => ({ '@id': source['@id'] })),
 ]
 const sourceBasedOnValue = sourceBasedOnRefs.length === 1 ? sourceBasedOnRefs[0] : sourceBasedOnRefs
@@ -861,11 +884,18 @@ const datasetBasedOnValue = datasetBasedOnRefs.length === 1 ? datasetBasedOnRefs
 const calendarIcsUrl = `https://myschooldates.com/calendars/${district.value.slug}-${cal.value.schoolYear}.ics`
 const hideDatasetSchema = computed(() => Boolean((cal.value as any)?.hideDatasetSchema || (cal.value as any)?.meta?.hideDatasetSchema))
 const spatialCoverageOverride = (cal.value as any)?.schemaSpatialCoverage ?? (cal.value as any)?.meta?.schemaSpatialCoverage ?? (district.value as any)?.schemaSpatialCoverage ?? (district.value as any)?.meta?.schemaSpatialCoverage
-const spatialCoverageName = typeof spatialCoverageOverride === 'string'
+const spatialCoverageValue = Array.isArray(spatialCoverageOverride)
   ? spatialCoverageOverride
-  : spatialCoverageOverride?.name
-    ? spatialCoverageOverride.name
-  : [district.value.county, district.value.state].filter(Boolean).join(', ')
+      .map(area => typeof area === 'string' ? { '@type': 'AdministrativeArea', name: area } : area)
+      .filter(area => area?.name)
+  : typeof spatialCoverageOverride === 'string'
+    ? spatialCoverageOverride
+    : spatialCoverageOverride?.name
+      ? spatialCoverageOverride
+      : [district.value.county, district.value.state].filter(Boolean).join(', ')
+const hasSpatialCoverage = Array.isArray(spatialCoverageValue)
+  ? spatialCoverageValue.length > 0
+  : Boolean(spatialCoverageValue)
 const datasetTemporalCoverage = computed(() => {
   const start = (cal.value as any)?.temporalCoverageStart || cal.value.firstDay
   const end = (cal.value as any)?.temporalCoverageEnd || cal.value.lastDay
@@ -879,6 +909,7 @@ const datasetEntity = hideDatasetSchema.value ? null : {
   url: canonicalUrl,
   ...(schemaKeywords.length ? { keywords: schemaKeywords } : {}),
   ...(typeof schemaIsAccessibleForFree === 'boolean' ? { isAccessibleForFree: schemaIsAccessibleForFree } : {}),
+  ...(schemaDatasetVersion ? { version: schemaDatasetVersion } : {}),
   ...(schemaVariableMeasured.length ? { variableMeasured: schemaVariableMeasured } : {}),
   license: schemaLicenseUrl,
   usageInfo: schemaLicenseUrl,
@@ -886,8 +917,8 @@ const datasetEntity = hideDatasetSchema.value ? null : {
   ...(pageDateCreated ? { dateCreated: pageDateCreated } : {}),
   ...(pageDateModified ? { dateModified: pageDateModified } : {}),
   temporalCoverage: datasetTemporalCoverage.value,
-  ...(spatialCoverageName ? {
-    spatialCoverage: spatialCoverageName,
+  ...(hasSpatialCoverage ? {
+    spatialCoverage: spatialCoverageValue,
   } : {}),
   audience: {
     '@type': 'Audience',
@@ -929,6 +960,7 @@ const configuredKeyDateSummaryItems = computed(() =>
       date: item.date ?? item.start,
       endDate: item.endDate ?? item.end,
       name: item.name,
+      displayDate: item.displayDate,
       displayName: item.displayName,
       label: item.label,
       type: item.type ?? 'milestone',
@@ -979,6 +1011,9 @@ function keyDateListDateParts(event: any) {
   return dates.map((date: string) => ({ date, label: formatShortDate(date), ariaLabel: formatDate(date) }))
 }
 function keyDateDateParts(event: any) {
+  if (event.displayDate) {
+    return [{ date: event.date, label: event.displayDate, ariaLabel: event.displayDate }]
+  }
   const listParts = keyDateListDateParts(event)
   if (listParts.length) return listParts
   if (event.endDate && event.endDate !== event.date) {
@@ -1015,11 +1050,17 @@ function keyDateSchemaProperties(event: any) {
     }))
   const dates = keyDateListDates(event)
   if (dates.length) {
+    if (extraProperties.length && !event.datePropertyLabel) {
+      return extraProperties
+    }
     return dates.map((date: string) => ({
       '@type': 'PropertyValue',
       name: event.datePropertyLabel ?? 'Opening date',
       value: date,
     })).concat(extraProperties)
+  }
+  if (extraProperties.length && !event.datePropertyLabel) {
+    return extraProperties
   }
   const range = event.endDate
     ? { start: event.date, end: event.endDate }
@@ -1399,7 +1440,7 @@ useHead({
             </div>
             <div v-if="!((cal as any).hideHeroUpdatedField || (cal as any).meta?.hideHeroUpdatedField)">
               <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Updated</dt>
-              <dd class="ml-1 inline font-medium text-gray-700">{{ verifiedDate }}</dd>
+              <dd class="ml-1 inline font-medium text-gray-700">{{ updatedDate }}</dd>
             </div>
           </dl>
           <div v-if="verifiedDate && !((cal as any).hideHeroVerifiedBadge || (cal as any).meta?.hideHeroVerifiedBadge)" class="mt-5 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg bg-green-50 text-green-700 border border-green-200">
@@ -1491,8 +1532,14 @@ useHead({
         <p class="text-sm text-amber-800">
           <template v-if="alternateCalendarsNotice">
             {{ alternateCalendarsNotice }}
+            <template v-if="alternateCalendarsNoticeLinks.length">
+              <template v-for="(link, index) in alternateCalendarsNoticeLinks" :key="link.href">
+                <template v-if="index"> or </template>
+                <a :href="link.href" target="_blank" rel="noopener" class="underline font-medium">{{ link.label }}<span class="sr-only">(opens in a new tab)</span></a>
+              </template>
+            </template>
             <a
-              v-if="alternateCalendarsNoticeLinkLabel"
+              v-else-if="alternateCalendarsNoticeLinkLabel"
               :href="alternateCalendarsNoticeLinkHref"
               class="underline font-medium"
             >{{ alternateCalendarsNoticeLinkLabel }}</a>
@@ -1551,7 +1598,7 @@ useHead({
 
       <!-- Custom Sections: afterKeyDates -->
       <div v-if="showYearSwitcherAfterKeyDates && visibleYearSwitcherYears.length" class="flex items-center gap-2 flex-wrap">
-        <span class="text-sm text-[#7b756d]">Other school years:</span>
+        <span class="text-sm text-[#7b756d]">{{ yearSwitcherLabel }}</span>
         <NuxtLink
           v-for="y in visibleYearSwitcherYears"
           :key="y"
@@ -1610,8 +1657,14 @@ useHead({
         <p class="text-sm text-amber-800">
           <template v-if="alternateCalendarsNotice">
             {{ alternateCalendarsNotice }}
+            <template v-if="alternateCalendarsNoticeLinks.length">
+              <template v-for="(link, index) in alternateCalendarsNoticeLinks" :key="link.href">
+                <template v-if="index"> or </template>
+                <a :href="link.href" target="_blank" rel="noopener" class="underline font-medium">{{ link.label }}<span class="sr-only">(opens in a new tab)</span></a>
+              </template>
+            </template>
             <a
-              v-if="alternateCalendarsNoticeLinkLabel"
+              v-else-if="alternateCalendarsNoticeLinkLabel"
               :href="alternateCalendarsNoticeLinkHref"
               class="underline font-medium"
             >{{ alternateCalendarsNoticeLinkLabel }}</a>
@@ -1623,6 +1676,16 @@ useHead({
           </template>
         </p>
       </div>
+
+      <DistrictOtherCalendars
+        v-if="otherCalendarsAfterKeyDates && (cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
+        :alternate-calendars="(cal as any).alternateCalendars"
+        :district-name="district!.name"
+        :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
+        :description="(cal as any).alternateCalendarsDescription ?? (cal as any).meta?.alternateCalendarsDescription"
+        :button-label="(cal as any).alternateCalendarsButtonLabel ?? (cal as any).meta?.alternateCalendarsButtonLabel"
+      />
+      <DistrictCustomSections :sections="customSections" position="afterAlternateCalendarsNotice" />
 
       <!-- Add to Calendar + Share (optional early position) -->
       <template v-if="moveCalendarExportBeforeAllDates">
@@ -1644,11 +1707,13 @@ useHead({
         :source-url="(cal as any).allDatesSourceUrl ?? (cal as any).meta?.allDatesSourceUrl ?? cal!.sourceUrl ?? district!.officialWebsite"
         :source-label="(cal as any).allDatesSourceLabel ?? (cal as any).meta?.allDatesSourceLabel"
         :source-suffix="(cal as any).allDatesSourceSuffix ?? (cal as any).meta?.allDatesSourceSuffix"
+        :source-links="allDatesSourceLinks"
         :correction-source-url="(cal as any).allDatesCorrectionSourceUrl ?? (cal as any).meta?.allDatesCorrectionSourceUrl"
         :correction-source-label="(cal as any).allDatesCorrectionSourceLabel ?? (cal as any).meta?.allDatesCorrectionSourceLabel"
         :district-name="district!.name"
         :verified-date="verifiedDate"
         :legend="dateLegend"
+        :legend-title="(cal as any).dateLegendTitle ?? (cal as any).meta?.dateLegendTitle"
         :label-overrides="dateLabelOverrides"
         :mode="allDatesMode"
         :footer-mode="(cal as any).allDatesFooterMode ?? (cal as any).meta?.allDatesFooterMode"
@@ -1679,6 +1744,12 @@ useHead({
         </div>
       </div>
 
+      <!-- Custom Sections: afterBreaks -->
+      <div v-if="!breaks.length && !hiddenSections.has('breaks')" id="breaks" class="scroll-mt-24">
+        <DistrictCustomSections :sections="customSections" position="afterBreaks" />
+      </div>
+      <DistrictCustomSections v-else-if="!hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
+
       <!-- Add to Calendar + Share -->
       <template v-if="!moveCalendarExportBeforeAllDates">
         <CalendarExportShare
@@ -1691,15 +1762,9 @@ useHead({
         <DistrictCustomSections :sections="customSections" position="afterCalendarExport" />
       </template>
 
-      <!-- Custom Sections: afterBreaks (year pages render this after the full date list) -->
-      <div v-if="!breaks.length && !hiddenSections.has('breaks')" id="breaks" class="scroll-mt-24">
-        <DistrictCustomSections :sections="customSections" position="afterBreaks" />
-      </div>
-      <DistrictCustomSections v-else-if="!hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
-
       <!-- Other Official Calendars -->
       <DistrictOtherCalendars
-        v-if="(cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
+        v-if="!otherCalendarsAfterKeyDates && (cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
         :alternate-calendars="(cal as any).alternateCalendars"
         :district-name="district!.name"
         :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
@@ -1728,7 +1793,7 @@ useHead({
 
       <!-- Year Switcher -->
       <div v-if="!showYearSwitcherAfterKeyDates && !showYearSwitcherAfterSources && visibleYearSwitcherYears.length" class="flex items-center gap-2 flex-wrap">
-        <span class="text-sm text-[#7b756d]">Other school years:</span>
+        <span class="text-sm text-[#7b756d]">{{ yearSwitcherLabel }}</span>
         <NuxtLink
           v-for="y in visibleYearSwitcherYears"
           :key="y"
@@ -1770,6 +1835,7 @@ useHead({
         :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
         :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
         :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
+        :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
       />
 
       <!-- FAQ -->
@@ -1840,10 +1906,11 @@ useHead({
         :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
         :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
         :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
+        :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
       />
 
       <div v-if="showYearSwitcherAfterSources && visibleYearSwitcherYears.length" class="flex items-center gap-2 flex-wrap">
-        <span class="text-sm text-[#7b756d]">Other school years:</span>
+        <span class="text-sm text-[#7b756d]">{{ yearSwitcherLabel }}</span>
         <NuxtLink
           v-for="y in visibleYearSwitcherYears"
           :key="y"
@@ -1873,6 +1940,7 @@ useHead({
         :hide-descriptions="Boolean((cal as any)?.hideRelatedDistrictDescriptions ?? (cal as any)?.meta?.hideRelatedDistrictDescriptions ?? (district as any).hideRelatedDistrictDescriptions ?? (district as any).meta?.hideRelatedDistrictDescriptions)"
         :year="year"
         :year-available-slugs="relatedYearAvailableSlugs"
+        :force-year-links="Boolean((cal as any)?.forceRelatedDistrictYearLinks ?? (cal as any)?.meta?.forceRelatedDistrictYearLinks)"
       />
 
       <section v-if="!hiddenSections.has('nationalTrends')" class="rounded-lg border border-rds-hairline bg-rds-surface-panel p-6">

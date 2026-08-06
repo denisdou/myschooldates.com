@@ -6,6 +6,10 @@
     "build": "nuxt build && node scripts/generate-calendar-route-manifest.mjs && node scripts/sanitize-build-paths.mjs",
     "dev": "nuxt dev",
     "generate": "nuxt generate && node scripts/generate-calendar-route-manifest.mjs && node scripts/sanitize-build-paths.mjs",
+    "indexnow": "node scripts/submit-indexnow.mjs",
+    "indexnow:prepare": "node scripts/prepare-indexnow-key.mjs",
+    "prebuild": "node scripts/prepare-indexnow-key.mjs --if-configured",
+    "pregenerate": "node scripts/prepare-indexnow-key.mjs --if-configured",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },

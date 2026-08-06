@@ -1,0 +1,229 @@
+{
+  "institutionId": "adams-12-five-star-schools-calendar",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Adams 12 Five Star Schools Calendar 2027–28",
+  "firstDay": "2027-08-17",
+  "lastDay": "2028-05-25",
+  "temporalCoverageStart": "2027-08-16",
+  "temporalCoverageEnd": "2028-05-25",
+  "semesters": 2,
+  "sourceUrl": "https://www.adams12.org/our-district/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1765826032/adams12org/gxfsdfdwit1dwofnengv/Calendar_27-28_English.pdf",
+  "sourceCalendarName": "Adams 12 Five Star Schools 2027-2028 School Calendar",
+  "sourceVersion": "Subject to revision; PDF dated November 3, 2025",
+  "lastVerifiedAt": "2026-08-06",
+  "dateCreated": "2026-08-06",
+  "datePublished": "2026-08-06",
+  "dateModified": "2026-08-06",
+  "calendarType": "traditional",
+  "seoTitle": "Adams 12 Calendar 2027–28: No-School Days, Breaks & PDF",
+  "seoDescription": "Classes begin August 17, 2027, and end May 25, 2028. See Adams 12 breaks, staff workdays, grade-level exceptions, return dates, and the official PDF.",
+  "futureYearNotice": "You’re viewing Adams 12’s upcoming 2027–28 calendar. The district’s PDF is marked subject to revision, so future-year dates may still change.",
+  "heroSummary": "Classes begin for all Adams 12 students on Tuesday, August 17, 2027. Sixth- and ninth-grade orientation is Monday, August 16. The district notes that sixth-grade orientation does not apply to K–8 schools. The last student day is Thursday, May 25, 2028. Families should also note the staff workdays that extend Labor Day, Presidents Day, and the winter closure.",
+  "calendarNotes": "The district’s 2027–28 calendar PDF is dated November 3, 2025, and marked subject to revision. High schools may move the listed April 10 and May 8 staff workdays to another date in the same month.",
+  "hiddenSections": [
+    "keyDatesSummary",
+    "quickFacts",
+    "todayStatus",
+    "yearNumbers",
+    "about",
+    "planningTips",
+    "downloadCta",
+    "nationalTrends"
+  ],
+  "hideFaqSchema": true,
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideBreakDurationBadges": true,
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "verificationBadgeText": "Verified against the Adams 12 2027–28 calendar on August 6, 2026, by Denis Dou.",
+  "schemaCalendarName": "Adams 12 Five Star Schools Calendar 2027–28",
+  "schemaDatasetName": "Adams 12 Five Star Schools Calendar 2027–28 Dataset",
+  "schemaDatasetDescription": "Student attendance and staff calendar dates from the Adams 12 2027–28 school calendar, including orientation, school-year boundaries, holidays, breaks, staff workdays, and quarter endings.",
+  "schemaCalendarDownloadName": "Adams 12 2027–28 school calendar (.ics)",
+  "schemaCalendarDownloadDescription": "ICS file containing the student attendance, holiday, break, staff-workday, orientation, and quarter-ending dates shown in the Important Dates table.",
+  "schemaDatasetVersion": "2027–28",
+  "schemaIsAccessibleForFree": true,
+  "schemaKeywords": [
+    "Adams 12 calendar",
+    "Adams 12 school calendar 2027–28",
+    "Adams 12 no-school days",
+    "Adams 12 school breaks",
+    "Adams 12 staff workdays"
+  ],
+  "keyDateCardsThirdLabel": "Return After Winter Break",
+  "keyDateCardsThirdValue": "Tuesday, January 4, 2028",
+  "keyDateCardsThirdDate": "2028-01-04",
+  "allDatesTitle": "Adams 12 2027–28 Important Dates",
+  "allDatesCoverageNote": "This list includes student calendar dates, quarter endings, orientation, and staff workdays, including the April and May dates that high schools may move.",
+  "dateLegendLabelOverrides": {
+    "No School for Students": "Staff Day"
+  },
+  "breaksTitle": "Major Breaks and Classes Resume Dates",
+  "breakNotes": {
+    "Fall Break": "Classes resume Monday, October 18, 2027.",
+    "Thanksgiving Break": "Classes resume Monday, November 29, 2027.",
+    "Winter Break": "The official winter break runs December 20 through December 31. Because December 17 and January 3 are staff workdays, students are out from December 17 through January 3 and return Tuesday, January 4.",
+    "Spring Break": "Classes resume Monday, March 27, 2028."
+  },
+  "customSections": [
+    {
+      "id": "adams12-2027-2028-no-school-pattern",
+      "label": "Full No-School Windows and Return Dates",
+      "position": "afterKeyDates",
+      "content": "This planning view adds adjacent weekends and staff workdays to each holiday or break, so families can see the full period when students are out of school.",
+      "table": {
+        "columns": ["Closure", "Dates students are out", "Classes resume"],
+        "rows": [
+          ["Labor Day weekend", "September 4–7, 2027", "Wednesday, September 8, 2027"],
+          ["Fall Break", "October 9–17, 2027", "Monday, October 18, 2027"],
+          ["Thanksgiving Break", "November 20–28, 2027", "Monday, November 29, 2027"],
+          ["Winter closure", "December 17, 2027–January 3, 2028", "Tuesday, January 4, 2028"],
+          ["Presidents Day weekend", "February 19–22, 2028", "Wednesday, February 23, 2028"],
+          ["Spring Break", "March 18–26, 2028", "Monday, March 27, 2028"]
+        ],
+        "footnote": "These are full no-school windows; the district’s official break ranges are listed below."
+      }
+    },
+    {
+      "id": "adams12-2027-2028-family-notes",
+      "label": "What Adams 12 Families Should Know",
+      "position": "afterCalendarExport",
+      "content": "Families should double-check three details before making plans.",
+      "definitions": [
+        {
+          "term": "Grade orientation",
+          "description": "Sixth- and ninth-grade orientation is August 16. The district notes that sixth-grade orientation does not apply to K–8 schools."
+        },
+        {
+          "term": "High school staff workdays",
+          "description": "Each high school may replace the listed April 10 and May 8 staff workdays with another date in the same month."
+        },
+        {
+          "term": "Extended closures",
+          "description": "Staff workdays extend the Labor Day and Presidents Day weekends and keep students out through January 3 after winter break."
+        }
+      ]
+    }
+  ],
+  "calendarFaqs": [
+    { "q": "When is the first day of school in Adams 12?", "a": "Classes begin for all Adams 12 students on Tuesday, August 17, 2027." },
+    { "q": "Do sixth- and ninth-grade students start earlier?", "a": "Sixth- and ninth-grade students attend orientation on Monday, August 16. The district notes that sixth-grade orientation does not apply to K–8 schools." },
+    { "q": "When do Adams 12 students return after winter break?", "a": "Winter break ends Friday, December 31, 2027. Monday, January 3 is a staff workday, so students return Tuesday, January 4." },
+    { "q": "Can Adams 12 high schools choose different staff workdays?", "a": "Yes. Each high school may replace the listed April 10 and May 8 staff workdays with another date in the same month." },
+    { "q": "Where should families check for calendar changes?", "a": "Check the Adams 12 district calendar page, the official 2027–28 PDF, and your school’s calendar. The district PDF is marked subject to revision." }
+  ],
+  "faqDisplayLimit": 5,
+  "faqDisplayQuestions": [
+    "When is the first day of school in Adams 12?",
+    "Do sixth- and ninth-grade students start earlier?",
+    "When do Adams 12 students return after winter break?",
+    "Can Adams 12 high schools choose different staff workdays?",
+    "Where should families check for calendar changes?"
+  ],
+  "compactDownloadModule": true,
+  "hideShareCalendar": true,
+  "hideIcsButtonSupportText": true,
+  "hidePdfVersionLabel": true,
+  "icsHeading": "Download the Adams 12 2027–28 Calendar",
+  "icsDescription": "Download an ICS file to import these dates into Google Calendar, Apple Calendar, or Outlook. This is a one-time import and will not reflect later district changes. Check the official Adams 12 calendar before making plans.",
+  "icsButtonLabel": "Download calendar (.ics)",
+  "pdfHeading": "Official Adams 12 Calendar PDF",
+  "pdfDescription": "Open or print the district’s official 2027–28 calendar PDF. Check the Adams 12 live calendar for revisions and school-specific events.",
+  "pdfButtonLabel": "View Official PDF",
+  "comparisonDistrictSlugs": [
+    "cherry-creek-school-district-calendar",
+    "denver-public-schools-calendar",
+    "jeffco-public-schools-calendar"
+  ],
+  "comparisonRowsInclude": ["firstDay", "lastDay"],
+  "comparisonRowsMode": "sharedValuesOnly",
+  "comparisonTitle": "How Adams 12’s School Year Compares With Nearby Districts",
+  "compareIntro": "The dates below compare Adams 12 with Cherry Creek, Denver Public Schools, and Jeffco using each district’s published 2027–28 calendar.",
+  "comparisonInsights": [
+    {
+      "label": "First day",
+      "items": [
+        "Starts 1 calendar day after Cherry Creek",
+        "Starts 6 calendar days before Denver Public Schools",
+        "Starts 1 calendar day before Jeffco"
+      ]
+    },
+    {
+      "label": "Last day",
+      "items": [
+        "Ends 1 calendar day before Cherry Creek",
+        "Ends 8 calendar days before Denver Public Schools",
+        "Ends on the same day as Jeffco"
+      ]
+    }
+  ],
+  "hideComparisonNotes": true,
+  "comparisonFooterText": "First and last days come from each district’s published 2027–28 calendar.",
+  "comparisonReviewedText": "Comparison dates verified August 6, 2026.",
+  "comparisonBeforeFaq": true,
+  "whatsNew": {
+    "title": "What Changed From 2026–27",
+    "content": [
+      "School starts on August 17, compared with August 11 in 2026–27.",
+      "The last student day is May 25, compared with May 20 in 2026–27.",
+      "Fall, Thanksgiving, and winter breaks begin one day earlier in their respective months than in 2026–27; spring break begins two days earlier."
+    ]
+  },
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "No-School Windows", "id": "adams12-2027-2028-no-school-pattern" },
+    { "label": "Important Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Family Notes", "id": "adams12-2027-2028-family-notes" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "sourceReviewSummary": "This page was checked against the Adams 12 2027–28 school calendar PDF and the district’s live calendar page.",
+  "sourceReviewDetailsTitle": "Review Details",
+  "sourceReviewDetails": [
+    "August 6, 2026 — Verified the first and last days, orientation, quarter endings, holidays, breaks, staff workdays, the April and May staff workdays that high schools may move, and official source links.",
+    "The closure windows and return dates include adjacent weekends and are calculated from the district’s published dates.",
+    "The ICS file is a one-time import and does not update automatically if Adams 12 revises its calendar."
+  ],
+  "sourceMaintainerText": "Denis Dou for MySchoolDates",
+  "sourceNextReviewText": "Next review: When Adams 12 replaces the PDF, changes an orientation or staff-workday date, or updates the live calendar.",
+  "relatedDistrictsTitle": "Related Colorado School Calendars",
+  "relatedDistrictsDescription": "Compare 2027–28 dates for other Denver-area school districts.",
+  "hideRelatedDistrictDescriptions": true,
+  "sources": [
+    { "label": "Adams 12 district calendar page", "url": "https://www.adams12.org/our-district/calendar" },
+    { "label": "Adams 12 2027–28 English calendar PDF", "url": "https://resources.finalsite.net/images/v1765826032/adams12org/gxfsdfdwit1dwofnengv/Calendar_27-28_English.pdf" }
+  ],
+  "events": [
+    { "date": "2027-08-09", "endDate": "2027-08-13", "name": "Staff Workdays", "type": "teacher_workday", "hideFromAllDates": true, "hideFromCalendarExport": true },
+    { "date": "2027-08-16", "name": "Orientation — Sixth and Ninth Grades", "type": "academic", "description": "The district notes that sixth-grade orientation does not apply to K–8 schools." },
+    { "date": "2027-08-17", "name": "First Day of School for All Students", "type": "school_start" },
+    { "date": "2027-09-06", "name": "Labor Day", "type": "holiday" },
+    { "date": "2027-09-07", "name": "Staff Workday", "type": "teacher_workday" },
+    { "date": "2027-09-27", "name": "Staff Workday", "type": "teacher_workday" },
+    { "date": "2027-10-08", "name": "End of Quarter 1", "type": "academic" },
+    { "date": "2027-10-11", "endDate": "2027-10-15", "name": "Fall Break", "type": "break_start" },
+    { "date": "2027-11-01", "name": "Staff Workday", "type": "teacher_workday" },
+    { "date": "2027-11-22", "endDate": "2027-11-26", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2027-12-16", "name": "End of Quarter 2", "type": "academic" },
+    { "date": "2027-12-17", "name": "Staff Workday", "type": "teacher_workday" },
+    { "date": "2027-12-20", "endDate": "2027-12-31", "name": "Winter Break", "type": "break_start" },
+    { "date": "2028-01-03", "name": "Staff Workday", "type": "teacher_workday" },
+    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2028-02-21", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2028-02-22", "name": "Staff Workday", "type": "teacher_workday" },
+    { "date": "2028-03-06", "name": "Staff Workday", "type": "teacher_workday" },
+    { "date": "2028-03-10", "name": "End of Quarter 3", "type": "academic" },
+    { "date": "2028-03-20", "endDate": "2028-03-24", "name": "Spring Break", "type": "break_start" },
+    { "date": "2028-04-10", "name": "Staff Workday", "type": "teacher_workday", "description": "High schools may choose another date in April." },
+    { "date": "2028-05-08", "name": "Staff Workday", "type": "teacher_workday", "description": "High schools may choose another date in May." },
+    { "date": "2028-05-25", "name": "Last Day of School and End of Quarter 4", "type": "school_end" },
+    { "date": "2028-05-26", "name": "Staff Last Day", "type": "teacher_workday", "hideFromAllDates": true, "hideFromCalendarExport": true }
+  ]
+}

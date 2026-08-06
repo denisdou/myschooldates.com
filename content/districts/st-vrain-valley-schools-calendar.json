@@ -1,0 +1,124 @@
+{
+  "institutionId": "st-vrain-valley-schools-calendar",
+  "name": "St. Vrain Valley Schools",
+  "shortName": "SVVSD",
+  "slug": "st-vrain-valley-schools-calendar",
+  "state": "Colorado",
+  "stateCode": "CO",
+  "city": "Longmont",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.svvsd.org/",
+  "calendarPage": "https://www.svvsd.org/schools/school-calendar/",
+  "logo": "https://svvsd.org/wp-content/uploads/2020/09/FINAL-SVVSD-logo-CURVES.png",
+  "timezone": "America/Denver",
+  "county": "Parts of Boulder, Broomfield, Larimer, and Weld Counties",
+  "schemaSpatialCoverage": {
+    "@type": "Place",
+    "name": "Parts of Boulder, Broomfield, Larimer, and Weld Counties, Colorado"
+  },
+  "region": "Boulder-Longmont and Northern Colorado",
+  "metro": "Boulder",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Boulder-Longmont District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "officialSpreadsheet": false,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-06",
+    "coverageNote": "Coverage uses the official St. Vrain Valley Schools website, school-calendar page, district logo, and English academic calendar PDFs for 2025-2026 through 2027-2028. Official Spanish PDFs are linked for 2026-2027 and 2027-2028. No 2028-2029 or later PDF URL was supplied."
+  },
+  "contentFreshnessScore": {
+    "overall": 97,
+    "sourceUpdated": "2026-08-06",
+    "lastManualReview": "2026-08-06",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the SVVSD calendar page when a PDF changes, PLC late-start dates move, grade-band opening dates change, or a future-year calendar is published."
+  },
+  "districtContentScore": {
+    "visibility": "public",
+    "publishStatus": "publish",
+    "reviewStatus": "approved",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official revision, PLC or staggered-start change, new language resource, future calendar publication, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hiddenSections": ["districtProfile"],
+  "searchAliases": [
+    "St. Vrain Valley Schools",
+    "St Vrain Valley Schools",
+    "SVVSD calendar",
+    "St Vrain school calendar",
+    "Longmont school calendar",
+    "St Vrain late start days",
+    "SVVSD school holidays",
+    "St Vrain academic calendar PDF"
+  ],
+  "districtFact": "St. Vrain Valley Schools uses staggered opening dates by grade and seven Professional Learning Community days when students begin 2.5 hours later than usual. The official academic calendar lists 174 student contact days.",
+  "about": [
+    {
+      "title": "About the St. Vrain Academic Calendar",
+      "content": "SVVSD does not use one first day for every student. Grades 1–5, 6, and 9 begin first; grades 7–8 and 10–12 follow the next day; kindergarten and preschool begin later."
+    },
+    {
+      "title": "PLC Late Starts and Contact Days",
+      "content": "The academic calendar lists seven Professional Learning Community late-start days. Students attend school on those dates but begin 2.5 hours later than usual."
+    }
+  ],
+  "planningTips": {
+    "title": "SVVSD Calendar Notes",
+    "content": [
+      "Check the grade-level opening schedule before adding a first day to your calendar.",
+      "PLC dates are attendance days, but classes begin 2.5 hours later than usual.",
+      "Use your child’s school calendar for conferences, bell times, testing, graduation details, and emergency changes."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Does every St. Vrain student start school on the same day?",
+      "a": "No. SVVSD staggers the opening by grade: grades 1-5, 6, and 9 begin first, followed by grades 7-8 and 10-12, then kindergarten and preschool."
+    },
+    {
+      "q": "What is an SVVSD PLC late-start day?",
+      "a": "It is a student attendance day when all schools begin 2.5 hours later than normal while teachers and staff participate in collaborative professional development."
+    },
+    {
+      "q": "How many student contact days are on the St. Vrain calendar?",
+      "a": "SVVSD’s 2025–26, 2026–27, and 2027–28 academic calendars each list 174 student contact days."
+    },
+    {
+      "q": "Are St. Vrain calendars available in Spanish?",
+      "a": "The district also publishes Spanish versions of its academic calendars."
+    },
+    {
+      "q": "Where should families verify school-specific dates?",
+      "a": "Use the official SVVSD school-calendar page and your child’s school calendar for conferences, bell times, graduation details, testing, and emergency changes."
+    }
+  ],
+  "customSections": [],
+  "relatedDistrictsTitle": "More Colorado School Calendars",
+  "relatedDistrictsDescription": "Compare St. Vrain dates with other Front Range school calendars.",
+  "relatedDistricts": [
+    { "name": "Adams 12 Five Star Schools", "slug": "adams-12-five-star-schools-calendar", "state": "Colorado" },
+    { "name": "Jeffco Public Schools", "slug": "jeffco-public-schools-calendar", "state": "Colorado" },
+    { "name": "Denver Public Schools", "slug": "denver-public-schools-calendar", "state": "Colorado" }
+  ],
+  "sources": [
+    { "label": "St. Vrain Valley Schools official website", "url": "https://www.svvsd.org/" },
+    { "label": "SVVSD school calendar page", "url": "https://www.svvsd.org/schools/school-calendar/" }
+  ]
+}

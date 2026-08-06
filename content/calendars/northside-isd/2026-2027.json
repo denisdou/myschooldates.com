@@ -1,160 +1,162 @@
 {
   "institutionId": "northside-isd",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Northside ISD Calendar 2026–2027",
   "firstDay": "2026-08-10",
   "lastDay": "2027-05-26",
-  "totalSchoolDays": 175,
-  "teacherWorkDays": 187,
+  "totalSchoolDays": null,
+  "teacherWorkDays": null,
   "semesters": 2,
+  "temporalCoverageStart": "2026-08-03",
+  "temporalCoverageEnd": "2027-05-27",
   "sourceUrl": "https://www.nisd.net/schools/calendars",
   "sourcePdfUrl": "https://www.nisd.net/sites/default/files/attachments/file/2025/2026-2027-nisd-calendar.pdf",
-  "lastVerifiedAt": "2026-07-02",
+  "sourceCalendarName": "Northside ISD 2026–2027 Academic Calendar",
+  "sourceVersion": "Approved December 9, 2025",
+  "lastVerifiedAt": "2026-08-06",
+  "dateCreated": "2026-07-02",
+  "datePublished": "2026-07-02",
+  "dateModified": "2026-08-06",
   "calendarType": "traditional",
-  "calendarFaqs": [
-    {
-      "q": "When does school start for Northside Independent School District in 2026-2027?",
-      "a": "The first day of school for Northside Independent School District is Monday, August 10, 2026. Students and staff are expected to report on this date to begin the new academic year."
-    },
-    {
-      "q": "When is spring break 2026-2027 for Northside Independent School District?",
-      "a": "Spring break for Northside Independent School District runs Mar 8, 2027–Mar 12, 2027, 5 days."
-    }
+  "seoTitle": "Northside ISD Calendar 2026–2027: Key Dates, Breaks & PDF",
+  "seoDescription": "Northside ISD’s 2026–27 calendar starts August 10, 2026 and ends May 26, 2027. See holidays, breaks, the official PDF, and an importable ICS file.",
+  "schemaCalendarName": "Northside Independent School District Calendar 2026–27",
+  "schemaDatasetName": "Northside ISD 2026–27 Academic Calendar Dataset",
+  "schemaCalendarDownloadName": "Northside ISD 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "Calendar import file generated from the Northside ISD dates listed on this page, including the conditional February 16 bad-weather makeup day.",
+  "schemaDatasetDescription": "Structured Northside ISD calendar data for 2026–27, including school-year boundaries, teacher workdays, holidays, major breaks, the February 16 conditional bad-weather makeup day, the official PDF, and an ICS download.",
+  "schemaSpatialCoverage": [
+    { "@type": "AdministrativeArea", "name": "Bexar County, Texas" },
+    { "@type": "AdministrativeArea", "name": "Medina County, Texas" },
+    { "@type": "AdministrativeArea", "name": "Bandera County, Texas" }
   ],
-  "yearNumbers": [
-    {
-      "label": "Starts Earlier",
-      "value": "1 day",
-      "detail": "First day moves from Aug 11 to Aug 10 vs 2025–2026."
-    },
-    {
-      "label": "Oct Break Expanded",
-      "value": "3 days",
-      "detail": "Oct 9, 12, and 13 are all no-school days vs just Oct 13 in 2025–2026, creating a near-week-long break around Columbus/Indigenous Peoples' Day."
-    },
-    {
-      "label": "Ends Later",
-      "value": "5 days",
-      "detail": "Last day moves from May 21 to May 26 vs 2025–2026."
-    },
-    {
-      "label": "Battle of Flowers",
-      "value": "Apr 23",
-      "detail": "Battle of Flowers / Fiesta holiday continues — a San Antonio tradition unique to Bexar County districts."
-    }
+  "schemaDatasetSourceCalendarIds": ["source-calendar", "source-calendar-page"],
+  "webPageMainEntity": "none",
+  "schemaReviewedBy": "author",
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideExtendedShareButtons": true,
+  "hideShareCalendar": true,
+  "hideIcsButtonSupportText": true,
+  "moveCalendarExportBeforeAllDates": true,
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "downloadCta",
+    "breaks",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "comparison",
+    "yearNumbers"
+  ],
+  "heroSourceLine": "Academic calendar dates · Sources: Northside ISD’s official PDF and calendar page",
+  "heroSummary": "Northside ISD students begin the 2026–27 school year on Monday, August 10, 2026. The last day of school is Wednesday, May 26, 2027. Spring break is March 8–12, followed by a teacher planning day on March 15, so students return Tuesday, March 16. Students are off October 9–13, creating a five-day break including the weekend. February 16 is reserved as a possible bad-weather makeup day and should be confirmed before making plans.",
+  "heroFactChips": [
+    "Five-day student break: Oct 9–13",
+    "Students return from spring break March 16"
+  ],
+  "keyDatesSummaryTitle": "2026–27 Calendar at a Glance",
+  "keyDatesSummarySubtitle": "The dates most Northside ISD families look for first",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School", "date": "2026-08-10", "type": "school_start", "description": "Students begin classes after teacher workdays August 3–7.", "schemaDescription": "Northside ISD students begin school August 10, 2026." },
+    { "label": "Student Break", "name": "October Student Break", "date": "2026-10-09", "endDate": "2026-10-13", "type": "no_school", "description": "Students have no school October 9, 12, or 13; including the weekend, this creates a five-day break.", "schemaDescription": "Northside ISD students have no school October 9–13, 2026, including the weekend." },
+    { "label": "Break", "name": "Thanksgiving Break", "date": "2026-11-23", "endDate": "2026-11-27", "type": "break_start", "description": "Students return Monday, November 30.", "schemaDescription": "Thanksgiving break runs November 23–27, 2026." },
+    { "label": "Break", "name": "Winter Break", "date": "2026-12-21", "endDate": "2027-01-01", "type": "break_start", "description": "January 4 is a teacher planning day; students return January 5.", "schemaDescription": "Winter break runs December 21, 2026–January 1, 2027; students return January 5." },
+    { "label": "Conditional", "name": "Possible Bad-Weather Makeup Day", "date": "2027-02-16", "type": "makeup_day", "description": "If the makeup day is not needed, students are off for staff development. Check district updates before making plans.", "schemaDescription": "February 16, 2027 is reserved as a possible bad-weather makeup day." },
+    { "label": "Break", "name": "Spring Break", "date": "2027-03-08", "endDate": "2027-03-12", "type": "break_start", "description": "March 15 is a teacher planning day; students return March 16.", "schemaDescription": "Spring break runs March 8–12, 2027; students return March 16." },
+    { "label": "Last Day", "name": "Last Day of School", "date": "2027-05-26", "type": "school_end", "description": "The last student day is Wednesday, May 26.", "schemaDescription": "The last day of school is May 26, 2027." }
+  ],
+  "jumpNavigation": [
+    { "label": "At a Glance", "href": "#key-dates" },
+    { "label": "Download", "href": "#add-to-calendar" },
+    { "label": "Dates", "href": "#all-dates" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Sources", "href": "#sources" }
+  ],
+  "allDatesTitle": "Northside ISD Calendar Dates — 2026–27",
+  "allDatesCoverageNote": "This list includes districtwide dates from Northside ISD’s academic calendar. February 16 is conditional and may become an instructional day if the district needs a bad-weather makeup day. Early-release schedules and campus events may vary by school and grade level.",
+  "allDatesSourceUrl": "https://www.nisd.net/sites/default/files/attachments/file/2025/2026-2027-nisd-calendar.pdf",
+  "allDatesSourceLinks": [
+    { "label": "Northside ISD 2026–27 academic calendar PDF", "url": "https://www.nisd.net/sites/default/files/attachments/file/2025/2026-2027-nisd-calendar.pdf" },
+    { "label": "Northside ISD calendar page", "url": "https://www.nisd.net/schools/calendars" }
+  ],
+  "allDatesSourceLabel": "Northside ISD 2026–27 academic calendar PDF and calendar page",
+  "icsHeading": "Add the 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download a MySchoolDates ICS file based on the dates listed on this page. February 16 remains labeled as a possible makeup day. This is a one-time import and will not update automatically if Northside ISD changes its calendar.",
+  "icsAriaLabel": "Download a MySchoolDates ICS file based on the Northside ISD 2026–27 academic calendar",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "pdfHeading": "Official Northside ISD Calendar PDF",
+  "pdfDescription": "Open Northside ISD’s official 2026–27 academic calendar PDF.",
+  "pdfButtonLabel": "View Official PDF",
+  "calendarNotes": "Northside ISD students begin school August 10, 2026, after teacher workdays August 3–7, and finish May 26, 2027. Students have a five-day break October 9–13. Winter break runs December 21–January 1, with a teacher planning day January 4. February 16 is a possible bad-weather makeup day. Spring break runs March 8–12, followed by a teacher planning day March 15. The district also lists a school holiday Friday, April 23.",
+  "whatsNew": {
+    "title": "What Changed from 2025–26",
+    "content": [
+      "The first student day moves from August 11 to August 10.",
+      "Students have no school October 9, 12, and 13, creating a five-day break with the weekend.",
+      "The last student day moves from May 21 to May 26."
+    ]
+  },
+  "calendarFaqs": [
+    { "q": "When is the first day of Northside ISD school in 2026?", "a": "Students’ first day of school is Monday, August 10, 2026. Teachers have scheduled workdays August 3–7." },
+    { "q": "When is Northside ISD spring break, and when do students return?", "a": "Spring break is March 8–12, 2027. Monday, March 15 is a teacher planning day, so students return Tuesday, March 16." },
+    { "q": "Will Northside ISD students have school on February 16, 2027?", "a": "The date is reserved as a possible bad-weather makeup day. Students will attend if Northside ISD uses it to recover lost instructional time; otherwise, it will remain a student holiday and staff development day." },
+    { "q": "Where can I download the official Northside ISD calendar?", "a": "Use the official PDF link above. The separate ICS file is created by MySchoolDates and does not update automatically." },
+    { "q": "Is this Northside ISD in San Antonio or Northwest ISD near Fort Worth?", "a": "This page covers Northside Independent School District in San Antonio, whose official website is nisd.net. Northwest Independent School District serves the Dallas–Fort Worth area and uses nisdtx.org." }
+  ],
+  "faqDisplayQuestions": [
+    "When is the first day of Northside ISD school in 2026?",
+    "When is Northside ISD spring break, and when do students return?",
+    "Will Northside ISD students have school on February 16, 2027?",
+    "Where can I download the official Northside ISD calendar?",
+    "Is this Northside ISD in San Antonio or Northwest ISD near Fort Worth?"
+  ],
+  "faqDisplayLimit": 5,
+  "sourceReviewSummary": "Dates were checked against Northside ISD’s official 2026–27 academic calendar. Where the district PDF uses the generic label “Holiday,” this page may use the corresponding commonly recognized holiday name for clarity.",
+  "sourceReviewDetails": [
+    "We verified all dates and official calendar categories against the district PDF. Common holiday names may be added where the district calendar uses the generic label “Holiday.”",
+    "The year-over-year changes were checked against Northside ISD’s official 2025–26 and 2026–27 academic calendar PDFs.",
+    "The districtwide calendar does not list every campus early-release date or dismissal time. Families should check their school calendar and bell schedule for those details.",
+    "The downloadable ICS file is generated from the dates listed on this page. It is a one-time import and does not automatically update if Northside ISD revises its calendar."
+  ],
+  "sources": [
+    { "label": "Northside ISD 2026–27 academic calendar PDF", "url": "https://www.nisd.net/sites/default/files/attachments/file/2025/2026-2027-nisd-calendar.pdf" },
+    { "label": "Northside ISD 2025–26 academic calendar PDF — used for year-over-year comparison", "url": "https://www.nisd.net/sites/default/files/documents/2025-2026-nisd-calendar.pdf" },
+    { "label": "Northside ISD calendar page", "url": "https://www.nisd.net/schools/calendars" }
   ],
   "events": [
-    {
-      "date": "2026-08-10",
-      "name": "First Day of School",
-      "type": "school_start"
-    },
-    {
-      "date": "2026-09-07",
-      "name": "Labor Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-10-09",
-      "name": "Student Holiday / Teacher Exchange",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-10-12",
-      "name": "Student Holiday / Teacher Exchange",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-10-13",
-      "name": "Student Holiday / Teacher Planning Day",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-11-03",
-      "name": "Student Holiday / Staff Development",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-11-23",
-      "name": "Thanksgiving Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2026-12-21",
-      "name": "Winter Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-01-01",
-      "name": "Winter Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-01-04",
-      "name": "Student Holiday / Teacher Planning Day",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-01-18",
-      "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-02-12",
-      "name": "Holiday",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-02-15",
-      "name": "Presidents' Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-02-16",
-      "name": "Student Holiday / Staff Development",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-03-08",
-      "name": "Spring Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-03-12",
-      "name": "Spring Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-03-15",
-      "name": "Student Holiday / Teacher Planning Day",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-03-26",
-      "name": "Good Friday",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-03-29",
-      "name": "Easter Monday",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-04-23",
-      "name": "Holiday (Battle of Flowers / Fiesta)",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-05-26",
-      "name": "Last Day of School",
-      "type": "school_end"
-    }
-  ],
-  "calendarNotes": "Northside ISD begins the 2026–2027 school year on August 10, 2026, and the last day of school is May 26, 2027. Spring Break runs March 8–12; a teacher planning day on March 15 means students don't return to class until March 16. One calendar date unique to Northside ISD is April 23 — the Battle of Flowers holiday, observed across Bexar County schools and tied to San Antonio's Fiesta celebration.",
-  "datePublished": "2026-07-02",
-  "dateModified": "2026-07-02"
+    { "date": "2026-08-03", "endDate": "2026-08-07", "displayDate": "August 3–7, 2026", "name": "Teacher Work Days", "type": "teacher_workday", "description": "Teachers report; students do not attend." },
+    { "date": "2026-08-10", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
+    { "date": "2026-10-09", "name": "Student Holiday / Teacher Exchange", "type": "no_school", "preventRangeMerge": true },
+    { "date": "2026-10-12", "name": "Student Holiday / Teacher Exchange", "type": "no_school", "preventRangeMerge": true },
+    { "date": "2026-10-13", "name": "Student Holiday / Teacher Planning Day", "type": "no_school" },
+    { "date": "2026-11-03", "name": "Student Holiday / Staff Development", "type": "no_school" },
+    { "date": "2026-11-23", "endDate": "2026-11-27", "displayDate": "November 23–27, 2026", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "displayDate": "December 21, 2026–January 1, 2027", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-01-04", "name": "Student Holiday / Teacher Planning Day", "type": "no_school", "description": "Students return January 5." },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-02-12", "name": "School Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-02-15", "name": "Presidents’ Day", "type": "holiday" },
+    { "date": "2027-02-16", "name": "Possible Bad-Weather Makeup Day / Student Holiday / Staff Development", "type": "makeup_day", "badgeLabel": "Possible Makeup Day", "status": "TENTATIVE", "description": "This date may become an instructional day if Northside ISD needs to make up time lost to bad weather. Check the district calendar before making plans." },
+    { "date": "2027-03-08", "endDate": "2027-03-12", "displayDate": "March 8–12, 2027", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-03-15", "name": "Student Holiday / Teacher Planning Day", "type": "no_school", "description": "Students return March 16." },
+    { "date": "2027-03-26", "name": "Good Friday", "type": "holiday" },
+    { "date": "2027-03-29", "name": "School Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-04-23", "name": "April 23 School Holiday", "type": "holiday", "preserveOfficialName": true, "description": "This Friday holiday creates a three-day weekend for students." },
+    { "date": "2027-05-26", "name": "Last Day of School", "type": "school_end" },
+    { "date": "2027-05-27", "name": "Teacher Work Day", "type": "teacher_workday", "description": "Teachers report; students do not attend." }
+  ]
 }

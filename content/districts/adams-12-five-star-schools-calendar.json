@@ -1,0 +1,118 @@
+{
+  "institutionId": "adams-12-five-star-schools-calendar",
+  "name": "Adams 12 Five Star Schools",
+  "shortName": "Adams 12",
+  "slug": "adams-12-five-star-schools-calendar",
+  "state": "Colorado",
+  "stateCode": "CO",
+  "city": "Thornton",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.adams12.org/",
+  "calendarPage": "https://www.adams12.org/our-district/calendar",
+  "logo": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1780671496/adams12org/qlxgjyy5vzj6tc8ilz4c/Ad12_Logo_Color_RGB.png",
+  "timezone": "America/Denver",
+  "county": "Adams and Broomfield Counties",
+  "region": "North Metro Denver",
+  "metro": "Denver-Aurora-Lakewood",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "North Metro Denver District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "officialSpreadsheet": false,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-06",
+    "coverageNote": "Coverage uses the official Adams 12 website, district calendar page, logo, and English school-calendar PDFs for 2025-2026, 2026-2027, and 2027-2028. No extended calendar or 2028-2029 and later PDF URL was supplied."
+  },
+  "contentFreshnessScore": {
+    "overall": 96,
+    "sourceUpdated": "2026-08-06",
+    "lastManualReview": "2026-08-06",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the official calendar page when Adams 12 revises a PDF, changes grade 6 or 9 orientation, moves a flexible high-school staff workday, or publishes a future-year calendar."
+  },
+  "districtContentScore": {
+    "visibility": "public",
+    "publishStatus": "publish",
+    "reviewStatus": "approved",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official PDF revision, orientation or staff-workday change, future calendar publication, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hiddenSections": ["districtProfile"],
+  "searchAliases": [
+    "Adams 12 Five Star Schools",
+    "Adams 12 calendar",
+    "Five Star Schools calendar",
+    "Adams 12 school holidays",
+    "Adams 12 school calendar PDF",
+    "Thornton Colorado school calendar",
+    "Northglenn school calendar",
+    "Adams 12 first day of school"
+  ],
+  "districtFact": "Adams 12 Five Star Schools uses a quarter-based calendar with a separate orientation day for sixth- and ninth-grade students before classes begin for all students. The PDF notes that sixth-grade orientation does not apply to K–8 schools and that high schools may choose different staff workdays in April and May.",
+  "about": [
+    {
+      "title": "About the Adams 12 Calendar",
+      "content": "The Adams 12 school calendar is organized into four quarters, with major weeklong breaks and staff workdays near holidays and quarter boundaries. Those staff workdays create additional no-school days for students."
+    },
+    {
+      "title": "Grade and School-Type Exceptions",
+      "content": "Sixth- and ninth-grade students attend orientation before classes begin for all students. The district notes that sixth-grade orientation does not apply to K–8 schools. For two spring staff workdays, each high school may choose another date in April or May."
+    }
+  ],
+  "planningTips": {
+    "title": "Adams 12 Calendar Notes",
+    "content": [
+      "Families of sixth graders at K–8 schools should confirm whether the district orientation date applies.",
+      "Families of high school students should confirm the April and May staff workdays selected by their school.",
+      "Staff workdays may follow Labor Day, Presidents Day, and winter break, extending the time students are out of school.",
+      "Each official PDF is marked subject to revision, so verify the district page before booking travel or arranging care."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Do sixth- and ninth-grade students start early in Adams 12?",
+      "a": "They attend orientation one day before classes begin for all students. The district notes that sixth-grade orientation does not apply to K–8 schools."
+    },
+    {
+      "q": "Are all Adams 12 staff workdays fixed districtwide?",
+      "a": "Most listed staff workdays are district dates, but the April and May entries state that high schools may choose a different day in the same month."
+    },
+    {
+      "q": "Does Adams 12 use quarters?",
+      "a": "Yes. The official calendars identify the end of quarters 1 through 4, with the fourth quarter ending on the last student day."
+    },
+    {
+      "q": "Where should families verify calendar changes?",
+      "a": "Use the official Adams 12 calendar page and the current school-year PDF. Families should also check individual high school and K–8 calendars for the exceptions noted by the district."
+    }
+  ],
+  "customSections": [],
+  "relatedDistrictsTitle": "More Colorado School Calendars",
+  "relatedDistrictsDescription": "Compare Adams 12 dates with other Denver-area school calendars.",
+  "relatedDistricts": [
+    { "name": "Denver Public Schools", "slug": "denver-public-schools-calendar", "state": "Colorado", "comparisonLabel": "Denver Public Schools" },
+    { "name": "Jeffco Public Schools", "slug": "jeffco-public-schools-calendar", "state": "Colorado", "comparisonLabel": "Jeffco" },
+    { "name": "Cherry Creek School District", "slug": "cherry-creek-school-district-calendar", "state": "Colorado", "comparisonLabel": "Cherry Creek" }
+  ],
+  "sources": [
+    { "label": "Adams 12 Five Star Schools official website", "url": "https://www.adams12.org/" },
+    { "label": "Adams 12 district calendar page", "url": "https://www.adams12.org/our-district/calendar" }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "institutionId": "poudre-school-district-calendar",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025-26",
+  "pageHeading": "Poudre School District Calendar 2025-26",
+  "firstDay": "2025-08-14",
+  "lastDay": "2026-05-27",
+  "temporalCoverageStart": "2025-08-06",
+  "temporalCoverageEnd": "2026-05-27",
+  "semesters": 2,
+  "sourceUrl": "https://www.psdschools.org/about/calendars-schedules",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1784733865/psdschoolsorg9/nosx4rzsmubykwixj6h8/25-26_DistrictCalendar_ES.pdf",
+  "sourceCalendarName": "Poudre School District 2025-2026 PK-12 District Calendar - Elementary",
+  "sourceVersion": "Revised July 29, 2025",
+  "lastVerifiedAt": "2026-08-06",
+  "dateCreated": "2026-08-06",
+  "datePublished": "2026-08-06",
+  "dateModified": "2026-08-06",
+  "calendarType": "traditional",
+  "seoTitle": "Poudre School District Calendar 2025-2026 | Dates & PDF",
+  "seoDescription": "See the PSD 2025-2026 calendar with the August 13 transition day, August 14 first day, May 27 last day, breaks, conferences, and staff days.",
+  "heroSummary": "Poudre School District schedules a Transition Day for grades 6 and 9 on August 13, 2025, followed by the first day for all schools on August 14. The last day is May 27, 2026. The three-page calendar distinguishes building and staff workdays, district learning, elementary and PK-12 conferences, exchange days, and school breaks.",
+  "calendarNotes": "The supplied 2025-26 PDF is an English three-page PK-12 and elementary calendar even though its file name ends in ES. It states that designated non-student contact and staff days are interchangeable and may be finalized in spring. PreK and Integrated Services Transition Programs may use different calendars.",
+  "yearNumbers": [
+    { "label": "Transition Day", "value": "Aug 13", "detail": "Attendance day for grades 6 and 9 only." },
+    { "label": "All-Schools Start", "value": "Aug 14", "detail": "The first day for all PSD schools." },
+    { "label": "Conference Closures", "value": "Oct 16-17", "detail": "October 16 is elementary-only; October 17 applies PK-12." },
+    { "label": "Last Day", "value": "May 27", "detail": "Also the end of fourth quarter for middle and high school." }
+  ],
+  "customSections": [
+    {
+      "id": "psd-2025-2026-calendar-key",
+      "label": "PSD Dates Do Not All Have the Same Scope",
+      "position": "afterKeyDates",
+      "content": "The PDF key separates staff and conference categories. This matters when siblings attend elementary, middle, and high schools.",
+      "table": {
+        "columns": ["Calendar code", "Planning meaning"],
+        "rows": [
+          ["B/W", "School not in session for a building workday."],
+          ["W", "School not in session for a staff workday."],
+          ["D", "District Professional Learning Day; school is not in session."],
+          ["ES", "Elementary schools are closed for parent-teacher conferences."],
+          ["PK-12", "PK-12 parent-teacher conferences; school is not in session."],
+          ["K12", "School is not in session for a staff exchange day."],
+          ["T", "Transition Day for grades 6 and 9 only."]
+        ]
+      }
+    }
+  ],
+  "calendarFaqs": [
+    { "q": "When does Poudre School District start in 2025?", "a": "Grades 6 and 9 attend Transition Day on August 13, 2025. The first day for all schools is August 14." },
+    { "q": "When are PSD parent-teacher conference closures in 2025?", "a": "Elementary schools have no students October 16, and the PK-12 conference closure is October 17." },
+    { "q": "When is PSD Winter Break in 2025-26?", "a": "The calendar marks school break from December 22, 2025 through January 2, 2026, followed by a January 5 staff workday." },
+    { "q": "When is the last day of Poudre schools in 2026?", "a": "The last day of school is Wednesday, May 27, 2026." },
+    { "q": "Are all 2025-26 PSD staff days final?", "a": "The PDF says designated non-student contact and staff days are interchangeable and were to be determined in spring, so families should verify the current calendar." }
+  ],
+  "sources": [
+    { "label": "PSD calendars and schedules page", "url": "https://www.psdschools.org/about/calendars-schedules" },
+    { "label": "PSD 2025-26 PK-12 district calendar PDF", "url": "https://resources.finalsite.net/images/v1784733865/psdschoolsorg9/nosx4rzsmubykwixj6h8/25-26_DistrictCalendar_ES.pdf" }
+  ],
+  "events": [
+    { "date": "2025-08-06", "name": "Building Work Day", "type": "teacher_workday", "description": "No school." },
+    { "date": "2025-08-07", "name": "Staff Work Day", "type": "teacher_workday", "description": "No school." },
+    { "date": "2025-08-08", "name": "District Professional Learning Day", "type": "teacher_workday", "description": "No school." },
+    { "date": "2025-08-11", "endDate": "2025-08-12", "name": "Building Work Days", "type": "teacher_workday", "description": "No school." },
+    { "date": "2025-08-13", "name": "Transition Day - Grades 6 and 9", "type": "school_start" },
+    { "date": "2025-08-14", "name": "First Day for All Schools", "type": "school_start" },
+    { "date": "2025-09-01", "name": "School Break", "type": "holiday" },
+    { "date": "2025-10-03", "name": "Building Work Day", "type": "teacher_workday", "description": "No school." },
+    { "date": "2025-10-16", "name": "Elementary Parent-Teacher Conferences", "type": "no_school", "description": "Elementary schools are not in session; end of first quarter for middle and high school." },
+    { "date": "2025-10-17", "name": "PK-12 Parent-Teacher Conferences", "type": "no_school", "description": "Schools are not in session." },
+    { "date": "2025-10-20", "name": "Staff Work Day", "type": "teacher_workday", "description": "No school." },
+    { "date": "2025-11-24", "endDate": "2025-11-28", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-12-19", "name": "End of Second Quarter / Semester 1", "type": "semester_end", "description": "Middle and high schools." },
+    { "date": "2025-12-22", "endDate": "2026-01-02", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-01-05", "name": "Staff Work Day", "type": "teacher_workday", "description": "No school." },
+    { "date": "2026-01-19", "name": "School Break", "type": "holiday" },
+    { "date": "2026-02-16", "name": "Building Work Day", "type": "teacher_workday", "description": "No school." },
+    { "date": "2026-03-12", "name": "End of Third Quarter", "type": "quarter_end", "description": "Middle and high schools." },
+    { "date": "2026-03-13", "name": "Staff Work Day", "type": "teacher_workday", "description": "No school." },
+    { "date": "2026-03-16", "endDate": "2026-03-20", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-04-23", "name": "District Professional Learning Day", "type": "teacher_workday", "description": "No school." },
+    { "date": "2026-04-24", "name": "Staff Exchange Day", "type": "teacher_workday", "description": "K-12 schools are not in session; District Classified Development Day." },
+    { "date": "2026-05-15", "name": "Staff Work Day", "type": "teacher_workday", "description": "No school." },
+    { "date": "2026-05-25", "name": "School Break / District Offices Closed", "type": "holiday" },
+    { "date": "2026-05-27", "name": "Last Day of School / End of Fourth Quarter", "type": "school_end" }
+  ]
+}

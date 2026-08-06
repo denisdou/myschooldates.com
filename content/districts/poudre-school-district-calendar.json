@@ -1,0 +1,122 @@
+{
+  "institutionId": "poudre-school-district-calendar",
+  "name": "Poudre School District",
+  "shortName": "PSD",
+  "slug": "poudre-school-district-calendar",
+  "state": "Colorado",
+  "stateCode": "CO",
+  "city": "Fort Collins",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.psdschools.org/",
+  "calendarPage": "https://www.psdschools.org/about/calendars-schedules",
+  "logo": "https://resources.finalsite.net/images/v1778679524/psdschoolsorg9/butwa5tkenv7a9qzhkwj/PoudreSchoolDistrict.svg",
+  "timezone": "America/Denver",
+  "county": "Larimer County",
+  "region": "Fort Collins and Northern Colorado",
+  "metro": "Fort Collins",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": null,
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Northern Colorado District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "officialSpreadsheet": false,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-06",
+    "coverageNote": "Coverage uses the official PSD website, calendars and schedules page, district logo, and official student calendar PDFs for 2025-2026 and 2026-2027. The 2025-2026 file name ends in ES but the supplied three-page document is in English and covers PK-12, elementary dates, and elementary student days off. Spanish and Arabic PDFs are linked for 2026-2027."
+  },
+  "contentFreshnessScore": {
+    "overall": 96,
+    "sourceUpdated": "2026-08-06",
+    "lastManualReview": "2026-08-06",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the PSD calendars page when staff days are finalized, an elementary-only closure changes, a language PDF is replaced, or a future-year calendar is published."
+  },
+  "districtContentScore": {
+    "visibility": "public",
+    "publishStatus": "publish",
+    "reviewStatus": "approved",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official revision, staff-day finalization, grade-scope change, future calendar publication, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hiddenSections": ["districtProfile"],
+  "searchAliases": [
+    "Poudre School District",
+    "PSD calendar",
+    "Poudre schools calendar",
+    "Fort Collins school calendar",
+    "PSD student calendar",
+    "Poudre school holidays",
+    "Poudre transition day",
+    "PSD school calendar PDF"
+  ],
+  "districtFact": "Poudre School District starts sixth- and ninth-grade students with a separate Transition Day before the first day for all schools. Its calendars also distinguish all-grade closures from elementary-only no-school dates and warn that PreK and Integrated Services Transition Programs may follow different calendars.",
+  "about": [
+    {
+      "title": "About the PSD Student Calendar",
+      "content": "PSD uses grade scope carefully. Some dates close every school, while others apply only to elementary students for conferences or exchange days. Families with children in different grade levels should check the color key instead of treating every marked date as a districtwide closure."
+    },
+    {
+      "title": "Transition Day and Program Exceptions",
+      "content": "Sixth- and ninth-grade students have a Transition Day before the first day for all schools. PreK and Integrated Services Transition Programs may use different calendars, so those families should verify dates with the applicable department."
+    }
+  ],
+  "planningTips": {
+    "title": "Poudre Calendar Notes",
+    "content": [
+      "Treat Transition Day as an attendance day only for grades 6 and 9; all other grades begin on the all-schools first day.",
+      "Elementary-only no-school dates do not automatically apply to middle and high school students.",
+      "Parent-teacher conference closures have different elementary and PK-12 scope, so check the assigned school's conference schedule.",
+      "For 2026-27, PSD provides official English, Spanish, and Arabic student calendars."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "What is Poudre School District Transition Day?",
+      "a": "It is the first student attendance day for sixth- and ninth-grade students only, scheduled one day before the first day for all schools."
+    },
+    {
+      "q": "Do PSD no-school dates always apply to all grades?",
+      "a": "No. The calendar separately marks all-grade closures and elementary-only no-school dates. Families should check the grade scope for each date."
+    },
+    {
+      "q": "Do PSD preschool programs follow the same calendar?",
+      "a": "Not necessarily. The district notes that PreK and Integrated Services Transition Programs may have different calendars."
+    },
+    {
+      "q": "Does PSD publish calendars in languages other than English?",
+      "a": "Yes. The supplied 2026-27 resources include official Spanish and Arabic student calendar PDFs."
+    },
+    {
+      "q": "Where should families verify PSD calendar changes?",
+      "a": "Use the official PSD calendars and schedules page, the current student calendar, and the assigned school or program for final confirmation."
+    }
+  ],
+  "customSections": [],
+  "relatedDistrictsTitle": "More Colorado School Calendars",
+  "relatedDistrictsDescription": "Explore other Front Range school calendars.",
+  "relatedDistricts": [
+    { "name": "St. Vrain Valley Schools", "slug": "st-vrain-valley-schools-calendar", "state": "Colorado" },
+    { "name": "Adams 12 Five Star Schools", "slug": "adams-12-five-star-schools-calendar", "state": "Colorado" },
+    { "name": "Denver Public Schools", "slug": "denver-public-schools-calendar", "state": "Colorado" }
+  ],
+  "sources": [
+    { "label": "Poudre School District official website", "url": "https://www.psdschools.org/" },
+    { "label": "PSD calendars and schedules page", "url": "https://www.psdschools.org/about/calendars-schedules" }
+  ]
+}

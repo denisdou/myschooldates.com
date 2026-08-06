@@ -1,0 +1,111 @@
+{
+  "institutionId": "st-vrain-valley-schools-calendar",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025-26",
+  "pageHeading": "St. Vrain Valley Schools Calendar 2025-26",
+  "firstDay": "2025-08-13",
+  "lastDay": "2026-05-21",
+  "temporalCoverageStart": "2025-08-01",
+  "temporalCoverageEnd": "2026-05-25",
+  "totalSchoolDays": 174,
+  "semesters": 2,
+  "sourceUrl": "https://www.svvsd.org/schools/school-calendar/",
+  "sourcePdfUrl": "https://svvsd.org/wp-content/uploads/2023/04/2025-2026-Academic-Calendar-Final-Draft-ENGLISH-1.pdf",
+  "sourceCalendarName": "St. Vrain Valley Schools 2025-2026 Academic Calendar",
+  "sourceVersion": "Official English academic calendar reviewed 2026-08-06",
+  "lastVerifiedAt": "2026-08-06",
+  "dateCreated": "2026-08-06",
+  "datePublished": "2026-08-06",
+  "dateModified": "2026-08-06",
+  "calendarType": "traditional",
+  "seoTitle": "St. Vrain Valley Schools Calendar 2025-2026 | Dates & PDF",
+  "seoDescription": "View the SVVSD 2025-2026 calendar with staggered August start dates, 174 contact days, seven PLC late starts, breaks, non-student days, and graduations.",
+  "heroSummary": "St. Vrain Valley Schools begins grades 1-5, 6, and 9 on August 13, 2025; grades 7-8 and 10-12 on August 14; kindergarten on August 15; and preschool on August 18. The last student day is May 21, 2026. The calendar includes 174 contact days and seven 2.5-hour PLC late starts.",
+  "calendarNotes": "The 2025-26 calendar distinguishes 12 non-student contact days: five teacher full workdays, four compensation days related to evening parent conferences, and three split workdays. Conference dates and times are school-specific. If the calendar must change, the Board may use Saturdays, scheduled breaks, or days after the published calendar as makeup dates.",
+  "yearNumbers": [
+    { "label": "Student Contact Days", "value": "174", "detail": "The PDF lists 85 days in Semester 1 and 89 in Semester 2." },
+    { "label": "PLC Late Starts", "value": "7", "detail": "All students begin 2.5 hours later than normal." },
+    { "label": "Staggered Start", "value": "Aug 13-18", "detail": "Opening dates vary across four grade groups." },
+    { "label": "Last Student Day", "value": "May 21", "detail": "Life Skills ACE completion is May 20; graduations run May 21-23." }
+  ],
+  "customSections": [
+    {
+      "id": "svvsd-2025-2026-staggered-opening",
+      "label": "Which Students Start on Each Date",
+      "position": "afterKeyDates",
+      "content": "SVVSD uses four opening dates rather than a single districtwide first day. Families should match the date to the student's grade and program.",
+      "table": {
+        "columns": ["Date", "Student group"],
+        "rows": [
+          ["August 13", "Grades 1-5, grade 6, and grade 9."],
+          ["August 14", "Grades 7-8 and grades 10-12."],
+          ["August 15", "Kindergarten."],
+          ["August 18", "Preschool."]
+        ]
+      }
+    },
+    {
+      "id": "svvsd-2025-2026-plc-late-starts",
+      "label": "2025-26 PLC Late-Start Dates",
+      "position": "afterKeyDates",
+      "content": "These are attendance days, not closures. All students begin 2.5 hours later while staff participate in collaborative professional development.",
+      "table": {
+        "columns": ["Month", "Late-start date"],
+        "rows": [
+          ["September", "September 3, 2025"],
+          ["November", "November 5, 2025"],
+          ["December", "December 3, 2025"],
+          ["February", "February 4, 2026"],
+          ["March", "March 4, 2026"],
+          ["April", "April 1, 2026"],
+          ["May", "May 6, 2026"]
+        ]
+      }
+    }
+  ],
+  "calendarFaqs": [
+    { "q": "When does St. Vrain Valley Schools start in 2025?", "a": "Grades 1-5, 6, and 9 start August 13; grades 7-8 and 10-12 start August 14; kindergarten starts August 15; and preschool starts August 18." },
+    { "q": "How many student days are in the SVVSD 2025-26 calendar?", "a": "The official calendar lists 174 student contact days: 85 in the first semester and 89 in the second." },
+    { "q": "When is SVVSD Spring Break in 2026?", "a": "Spring Break runs March 16-20, 2026." },
+    { "q": "When is the last day of St. Vrain school in 2026?", "a": "The last student day is Thursday, May 21, 2026. High-school graduation ceremonies run May 21-23." },
+    { "q": "Are PLC days no-school days?", "a": "No. Students attend, but all schools begin 2.5 hours later than normal." }
+  ],
+  "sources": [
+    { "label": "SVVSD school calendar page", "url": "https://www.svvsd.org/schools/school-calendar/" },
+    { "label": "SVVSD 2025-26 English academic calendar PDF", "url": "https://svvsd.org/wp-content/uploads/2023/04/2025-2026-Academic-Calendar-Final-Draft-ENGLISH-1.pdf" }
+  ],
+  "events": [
+    { "date": "2025-08-01", "name": "New Teacher Orientation", "type": "teacher_workday", "description": "Also scheduled August 4 and 5." },
+    { "date": "2025-08-04", "endDate": "2025-08-05", "name": "New Teacher Orientation", "type": "teacher_workday" },
+    { "date": "2025-08-06", "endDate": "2025-08-12", "name": "Non-Student Contact Days", "type": "teacher_workday", "description": "August 7 and 8 are split days." },
+    { "date": "2025-08-13", "name": "First Day - Grades 1-5, 6, and 9", "type": "school_start" },
+    { "date": "2025-08-14", "name": "First Day - Grades 7-8 and 10-12", "type": "school_start" },
+    { "date": "2025-08-15", "name": "First Day - Kindergarten", "type": "school_start" },
+    { "date": "2025-08-18", "name": "First Day - Preschool", "type": "school_start" },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
+    { "date": "2025-09-03", "name": "PLC Day / 2.5-Hour Late Start", "type": "academic", "description": "Students attend and begin 2.5 hours later than normal." },
+    { "date": "2025-10-10", "name": "Non-Student Contact Day", "type": "teacher_workday" },
+    { "date": "2025-10-13", "name": "Non-Student Contact Day", "type": "teacher_workday" },
+    { "date": "2025-11-05", "name": "PLC Day / 2.5-Hour Late Start", "type": "academic", "description": "Students attend and begin 2.5 hours later than normal." },
+    { "date": "2025-11-24", "endDate": "2025-11-28", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-12-03", "name": "PLC Day / 2.5-Hour Late Start", "type": "academic", "description": "Students attend and begin 2.5 hours later than normal." },
+    { "date": "2025-12-22", "endDate": "2026-01-01", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-01-02", "name": "Non-Student Contact Day", "type": "teacher_workday" },
+    { "date": "2026-01-05", "name": "Non-Student Contact Day / Split Day", "type": "teacher_workday" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2026-02-04", "name": "PLC Day / 2.5-Hour Late Start", "type": "academic", "description": "Students attend and begin 2.5 hours later than normal." },
+    { "date": "2026-02-13", "name": "Non-Student Contact Day", "type": "teacher_workday" },
+    { "date": "2026-02-16", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2026-03-04", "name": "PLC Day / 2.5-Hour Late Start", "type": "academic", "description": "Students attend and begin 2.5 hours later than normal." },
+    { "date": "2026-03-16", "endDate": "2026-03-20", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-04-01", "name": "PLC Day / 2.5-Hour Late Start", "type": "academic", "description": "Students attend and begin 2.5 hours later than normal." },
+    { "date": "2026-04-27", "name": "Non-Student Contact Day", "type": "teacher_workday" },
+    { "date": "2026-05-06", "name": "PLC Day / 2.5-Hour Late Start", "type": "academic", "description": "Students attend and begin 2.5 hours later than normal." },
+    { "date": "2026-05-20", "name": "Life Skills ACE Completion", "type": "academic" },
+    { "date": "2026-05-21", "name": "Last Day of School for Students", "type": "school_end" },
+    { "date": "2026-05-21", "name": "LaunchED Virtual Academy Graduation", "type": "academic" },
+    { "date": "2026-05-22", "name": "New Meridian, St. Vrain Virtual, and Universal High School Graduations", "type": "academic" },
+    { "date": "2026-05-23", "name": "Comprehensive High School Graduations", "type": "academic", "description": "Erie, Frederick, Longmont, Lyons, Mead, Niwot, Silver Creek, and Skyline high schools." },
+    { "date": "2026-05-25", "name": "Memorial Day", "type": "holiday" }
+  ]
+}

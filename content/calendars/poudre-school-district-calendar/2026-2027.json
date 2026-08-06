@@ -1,0 +1,235 @@
+{
+  "institutionId": "poudre-school-district-calendar",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Poudre School District Calendar 2026–27",
+  "firstDay": "2026-08-19",
+  "lastDay": "2027-05-28",
+  "totalSchoolDays": null,
+  "teacherWorkDays": null,
+  "semesters": 2,
+  "temporalCoverageStart": "2026-08-18",
+  "temporalCoverageEnd": "2027-05-28",
+  "sourceUrl": "https://www.psdschools.org/about/calendars-schedules",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1784655576/psdschoolsorg9/qvfwmwmxtqewgbdqxnap/2026-2027_StudentCalendar_EN.pdf",
+  "sourceCalendarName": "Poudre School District Student Calendar 2026–2027",
+  "sourceVersion": "Updated January 21, 2026",
+  "lastVerifiedAt": "2026-08-06",
+  "dateCreated": "2026-08-06",
+  "datePublished": "2026-08-06",
+  "dateModified": "2026-08-06",
+  "calendarType": null,
+  "seoTitle": "Poudre School District Calendar 2026-2027: Key Dates & PDF",
+  "seoDescription": "Poudre School District’s 2026-2027 calendar: first and last day, school breaks, elementary-only closures, return dates, and official PDF downloads.",
+  "schemaCalendarName": "Poudre School District Calendar 2026–27",
+  "schemaDatasetName": "Poudre School District 2026–27 Student Calendar Dataset",
+  "schemaDatasetDescription": "Structured PSD student calendar data for 2026–27, including Transition Day, school-year boundaries, all-grade and elementary-only closures, break and return dates, quarter dates, official PDFs, and an ICS download.",
+  "schemaCalendarDownloadName": "Poudre School District 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "Calendar import file generated from the PSD student dates listed and reviewed on this page.",
+  "schemaDatasetSourceCalendarIds": ["source-calendar", "source-calendar-page"],
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "previous-calendar",
+      "name": "Poudre School District 2025-2026 Student Calendar",
+      "url": "https://resources.finalsite.net/images/v1784733865/psdschoolsorg9/nosx4rzsmubykwixj6h8/25-26_DistrictCalendar_ES.pdf"
+    },
+    {
+      "id": "approval-announcement",
+      "type": "WebPage",
+      "name": "Poudre School District 2026-27 Calendar Approval Announcement",
+      "url": "https://www.psdschools.org/community/district-news-details/~board/poudre-school-district-news/post/2026-27-school-calendar-approved",
+      "datePublished": "2025-12-12"
+    }
+  ],
+  "webPageMainEntity": "none",
+  "schemaReviewedBy": "author",
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideAlternateCalendarsNotice": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideExtendedShareButtons": true,
+  "hideShareCalendar": true,
+  "hideIcsButtonSupportText": true,
+  "forceRelatedDistrictYearLinks": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "verificationBadgeText": "Official PSD sources checked August 6, 2026.",
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "downloadCta",
+    "breaks",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "comparison",
+    "yearNumbers"
+  ],
+  "heroSourceLine": "Based on PSD’s official student calendar and Calendars & Schedules page",
+  "heroSummary": "PSD’s 2026–27 school year begins with Transition Day for grades 6 and 9 on Tuesday, August 18, 2026. The first day for all schools is Wednesday, August 19, and the last day of school is Friday, May 28, 2027. Below you’ll find districtwide no-school dates, elementary-only closures, school break and return dates, and official calendar PDFs in English, Spanish, and Arabic.",
+  "heroFactChips": [
+    "Grades 6 and 9: Aug 18",
+    "All schools: Aug 19",
+    "Last day: May 28"
+  ],
+  "keyDatesSummaryTitle": "2026–27 Calendar at a Glance",
+  "keyDatesSummarySubtitle": "Start dates, school breaks, return dates, and the last day",
+  "keyDateSummaryItems": [
+    { "label": "Grades 6 & 9", "name": "Transition Day", "date": "2026-08-18", "type": "school_start", "description": "This attendance day applies only to students in grades 6 and 9.", "schemaDescription": "The first attendance day for students in grades 6 and 9 only." },
+    { "label": "First Day", "name": "First Day for All Schools", "date": "2026-08-19", "type": "school_start", "description": "The first day of school for all PSD schools.", "schemaDescription": "The first day of school for all PSD schools is August 19, 2026." },
+    { "label": "Break", "name": "Fall Break", "date": "2026-11-23", "endDate": "2026-11-27", "type": "break_start", "description": "This break falls during Thanksgiving week; classes resume Monday, November 30.", "schemaDescription": "PSD Fall Break runs November 23–27, 2026; classes resume November 30." },
+    { "label": "Break", "name": "Winter Break", "date": "2026-12-21", "endDate": "2027-01-04", "type": "break_start", "description": "Classes resume Tuesday, January 5.", "schemaDescription": "Winter break runs December 21, 2026–January 4, 2027; classes resume January 5." },
+    { "label": "Break", "name": "Spring Break", "date": "2027-03-15", "endDate": "2027-03-19", "type": "break_start", "description": "Classes resume Monday, March 22.", "schemaDescription": "Spring break runs March 15–19, 2027; classes resume March 22." },
+    { "label": "Last Day", "name": "Last Day of School", "date": "2027-05-28", "type": "school_end", "description": "The last day of school is Friday, May 28.", "schemaDescription": "The last day of school is May 28, 2027." }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "href": "#key-dates" },
+    { "label": "By Grade", "href": "#psd-2026-2027-grade-scope" },
+    { "label": "Dates", "href": "#all-dates" },
+    { "label": "Breaks & Returns", "href": "#psd-2026-2027-break-return-dates" },
+    { "label": "Download", "href": "#add-to-calendar" },
+    { "label": "Quarter Dates", "href": "#psd-2026-2027-quarter-dates" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Sources", "href": "#sources" }
+  ],
+  "allDatesTitle": "Poudre School District Calendar Dates — 2026–27",
+  "allDatesCoverageNote": "This list includes PSD’s Transition Day, first and last days, all-grade closures, elementary-only closures, and major breaks. PreK and Integrated Services Transition Programs may follow different calendars.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1784655576/psdschoolsorg9/qvfwmwmxtqewgbdqxnap/2026-2027_StudentCalendar_EN.pdf",
+  "allDatesSourceLinks": [
+    { "label": "PSD 2026–27 English student calendar PDF", "url": "https://resources.finalsite.net/images/v1784655576/psdschoolsorg9/qvfwmwmxtqewgbdqxnap/2026-2027_StudentCalendar_EN.pdf" },
+    { "label": "PSD calendars and schedules page", "url": "https://www.psdschools.org/about/calendars-schedules" }
+  ],
+  "allDatesSourceLabel": "PSD 2026–27 student calendar PDF and calendars page",
+  "icsHeading": "Download the PSD 2026–27 Calendar",
+  "icsDescription": "Download a MySchoolDates ICS file containing the student dates listed on this page. This is a one-time import and will not update automatically if PSD revises its calendar.",
+  "icsAriaLabel": "Download a MySchoolDates ICS file based on the Poudre School District 2026–27 student calendar",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "pdfHeading": "Official PSD Student Calendar PDF",
+  "pdfDescription": "Open PSD’s official 2026–27 student calendar in English.",
+  "pdfButtonLabel": "Open English PDF",
+  "alternateCalendarsTitle": "Official PSD Calendar PDFs in Spanish and Arabic",
+  "alternateCalendarsDescription": "Open the district’s translated 2026–27 student calendars.",
+  "alternateCalendars": [
+    { "type": "spanish", "label": "Spanish Student Calendar", "buttonLabel": "Open Spanish PDF", "ariaLabel": "Open the official PSD 2026–27 Spanish student calendar PDF", "pdfUrl": "https://resources.finalsite.net/images/v1784655575/psdschoolsorg9/iwdmhbw0lj21c8begt22/2026-2027_StudentCalendar_Spanish.pdf" },
+    { "type": "arabic", "label": "Arabic Student Calendar", "buttonLabel": "Open Arabic PDF", "ariaLabel": "Open the official PSD 2026–27 Arabic student calendar PDF", "pdfUrl": "https://resources.finalsite.net/images/v1784245431/psdschoolsorg9/afdyowvbchzkujxducl1/2026-2027_StudentCalendar_Arabic1.pdf" }
+  ],
+  "customSections": [
+    {
+      "id": "psd-2026-2027-grade-scope",
+      "label": "Which No-School Dates Apply to Your Child?",
+      "position": "afterKeyDates",
+      "content": "The district calendar uses color to show which students are affected by each closure. PSD schedules 175 student contact days for elementary schools and 176 for secondary schools.",
+      "table": {
+        "caption": "PSD 2026–27 no-school dates by student group",
+        "columns": ["Who is affected", "Dates and guidance"],
+        "rows": [
+          ["Elementary students only", "September 28, October 15, and May 17. These dates do not apply to middle and high school students."],
+          ["All grades", "September 7; October 16; November 23–27; December 21–January 4; January 18; February 12 and 15; March 15–19; and April 16."],
+          ["Grades 6 and 9", "Transition Day is August 18. Other grades begin August 19."],
+          ["Program calendars", "PreK and Integrated Services Transition Programs may follow different calendars; confirm dates with the applicable department."]
+        ],
+        "footnote": "Check your school’s calendar for campus-specific changes."
+      }
+    },
+    {
+      "id": "psd-2026-2027-break-return-dates",
+      "label": "Break and Return Dates",
+      "position": "afterAllDates",
+      "content": "Classes resume on the next scheduled student attendance day after each districtwide break.",
+      "table": {
+        "caption": "PSD 2026–27 school breaks and return dates",
+        "columns": ["Break", "No-school dates", "Classes resume"],
+        "rows": [
+          ["Fall Break", "November 23–27, 2026 (Thanksgiving week)", "Monday, November 30"],
+          ["Winter Break", "December 21, 2026–January 4, 2027", "Tuesday, January 5"],
+          ["Spring Break", "March 15–19, 2027", "Monday, March 22"]
+        ]
+      }
+    },
+    {
+      "id": "psd-2026-2027-quarter-dates",
+      "label": "2026–27 Quarter Dates",
+      "position": "afterOtherCalendars",
+      "content": "PSD publishes the following quarter ranges on its calendars and schedules page.",
+      "table": {
+        "caption": "PSD 2026–27 academic quarter dates",
+        "columns": ["Quarter", "Dates"],
+        "rows": [
+          ["Q1", "August 19–October 15, 2026"],
+          ["Q2", "October 19–December 18, 2026"],
+          ["Q3", "January 5–March 12, 2027"],
+          ["Q4", "March 22–May 28, 2027"]
+        ]
+      }
+    }
+  ],
+  "whatsNew": {
+    "title": "What Changed from 2025–26",
+    "content": [
+      "Transition Day moves from August 13 to August 18.",
+      "The first day for all schools moves from August 14 to August 19. PSD said the later start is intended to reduce potential heat-related impacts in early August.",
+      "The last day of school moves from May 27 to May 28."
+    ]
+  },
+  "calendarFaqs": [
+    { "q": "When does Poudre School District start school in 2026?", "a": "Students in grades 6 and 9 attend Transition Day on Tuesday, August 18, 2026. The first day for all PSD schools is Wednesday, August 19." },
+    { "q": "Which PSD no-school dates apply only to elementary students?", "a": "September 28, October 15, and May 17 are elementary-only no-school dates. These dates do not apply to middle and high school students." },
+    { "q": "When are PSD fall, winter, and spring breaks?", "a": "Fall Break is November 23–27, 2026; Winter Break is December 21, 2026–January 4, 2027; and Spring Break is March 15–19, 2027. Classes resume November 30, January 5, and March 22, respectively." },
+    { "q": "Do PSD PreK programs follow the same calendar?", "a": "Not always. PreK and Integrated Services Transition Programs may follow different calendars, so families should confirm dates with the applicable department." },
+    { "q": "Where can families check for PSD calendar changes?", "a": "Check PSD’s official calendars and schedules page, the current student calendar PDF, and your assigned school or program before making final plans." }
+  ],
+  "faqDisplayQuestions": [
+    "When does Poudre School District start school in 2026?",
+    "Which PSD no-school dates apply only to elementary students?",
+    "When are PSD fall, winter, and spring breaks?",
+    "Do PSD PreK programs follow the same calendar?",
+    "Where can families check for PSD calendar changes?"
+  ],
+  "faqDisplayLimit": 5,
+  "sourceReviewSummary": "This page was checked against PSD’s official 2026–27 student calendar and its Calendars & Schedules page on August 6, 2026.",
+  "sourceReviewDetails": [
+    "We verified Transition Day, the all-schools first day, the last day, all-grade closures, elementary-only closures, break and return dates, quarter ranges, program exceptions, and translated PDF links.",
+    "PSD’s calendars page lists 175 elementary student contact days and 176 secondary student contact days.",
+    "The 2025–26 and 2026–27 student calendars were used for the year-over-year comparison.",
+    "Return dates are the next scheduled student attendance days after each districtwide break.",
+    "The downloadable ICS file is generated from the student dates listed on this page and does not update automatically if PSD revises its calendar."
+  ],
+  "sourceMaintainerText": "Denis Dou for MySchoolDates",
+  "sourceNextReviewText": "Next review: When PSD revises the student calendar, changes a grade-scope date, replaces a translated PDF, or publishes a future-year calendar.",
+  "sources": [
+    { "label": "PSD calendars and schedules page", "url": "https://www.psdschools.org/about/calendars-schedules" },
+    { "label": "PSD 2026–27 English student calendar PDF", "url": "https://resources.finalsite.net/images/v1784655576/psdschoolsorg9/qvfwmwmxtqewgbdqxnap/2026-2027_StudentCalendar_EN.pdf" },
+    { "label": "PSD 2026–27 Spanish student calendar PDF", "url": "https://resources.finalsite.net/images/v1784655575/psdschoolsorg9/iwdmhbw0lj21c8begt22/2026-2027_StudentCalendar_Spanish.pdf" },
+    { "label": "PSD 2026–27 Arabic student calendar PDF", "url": "https://resources.finalsite.net/images/v1784245431/psdschoolsorg9/afdyowvbchzkujxducl1/2026-2027_StudentCalendar_Arabic1.pdf" },
+    { "label": "PSD 2025–26 student calendar PDF — used for year-over-year comparison", "url": "https://resources.finalsite.net/images/v1784733865/psdschoolsorg9/nosx4rzsmubykwixj6h8/25-26_DistrictCalendar_ES.pdf" },
+    { "label": "PSD 2026–27 calendar approval announcement", "url": "https://www.psdschools.org/community/district-news-details/~board/poudre-school-district-news/post/2026-27-school-calendar-approved" }
+  ],
+  "events": [
+    { "date": "2026-08-18", "name": "Transition Day — Grades 6 and 9 Only", "type": "school_start", "description": "The first attendance day for students in grades 6 and 9 only." },
+    { "date": "2026-08-19", "name": "First Day for All Schools", "type": "school_start" },
+    { "date": "2026-09-07", "name": "No School — All Grades", "type": "holiday" },
+    { "date": "2026-09-28", "name": "No School — Elementary Students", "type": "no_school", "description": "This date applies to elementary students only." },
+    { "date": "2026-10-15", "name": "No School — Elementary Students", "type": "no_school", "description": "This date applies to elementary students only." },
+    { "date": "2026-10-16", "name": "No School — All Grades", "type": "no_school" },
+    { "date": "2026-11-23", "endDate": "2026-11-27", "displayDate": "November 23–27, 2026", "name": "Fall Break", "type": "break_start", "description": "Thanksgiving week." },
+    { "date": "2026-12-21", "endDate": "2027-01-04", "displayDate": "December 21, 2026–January 4, 2027", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-01-18", "name": "No School — All Grades", "type": "holiday" },
+    { "date": "2027-02-12", "name": "No School — All Grades", "type": "no_school" },
+    { "date": "2027-02-15", "name": "No School — All Grades", "type": "holiday" },
+    { "date": "2027-03-15", "endDate": "2027-03-19", "displayDate": "March 15–19, 2027", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-04-16", "name": "No School — All Grades", "type": "no_school" },
+    { "date": "2027-05-17", "name": "No School — Elementary Students", "type": "no_school", "description": "This date applies to elementary students only." },
+    { "date": "2027-05-28", "name": "Last Day of School", "type": "school_end" }
+  ]
+}

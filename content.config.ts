@@ -18,6 +18,7 @@ const relatedDistrictSchema = z.object({
   name: z.string(),
   slug: z.string(),
   state: z.string(),
+  linkLabel: z.string().optional(),
   comparisonNote: z.string().optional(),
 })
 
@@ -131,6 +132,8 @@ export default defineContentConfig({
         }).optional(),
         livingHere: livingHereSchema.optional(),
         relatedDistricts: z.array(relatedDistrictSchema).optional(),
+        relatedDistrictsTitle: z.string().optional(),
+        relatedDistrictsDescription: z.string().optional(),
         compareIntro: z.string().optional(),  // sentence(s) shown above the calendar comparison table
         sources: z.array(districtSourceSchema).optional(),
         // Section customization

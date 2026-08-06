@@ -1,0 +1,83 @@
+{
+  "institutionId": "adams-12-five-star-schools-calendar",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025-26",
+  "pageHeading": "Adams 12 Five Star Schools Calendar 2025-26",
+  "firstDay": "2025-08-12",
+  "lastDay": "2026-05-21",
+  "temporalCoverageStart": "2025-08-04",
+  "temporalCoverageEnd": "2026-05-22",
+  "semesters": 2,
+  "sourceUrl": "https://www.adams12.org/our-district/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1751387823/adams12org/kroaqtwbwiiujeiw7jz4/Calendar_25-26_Final_ENG.pdf",
+  "sourceCalendarName": "Adams 12 Five Star Schools 2025-2026 School Calendar",
+  "sourceVersion": "Subject to revision; PDF dated January 16, 2025",
+  "lastVerifiedAt": "2026-08-06",
+  "dateCreated": "2026-08-06",
+  "datePublished": "2026-08-06",
+  "dateModified": "2026-08-06",
+  "calendarType": "traditional",
+  "seoTitle": "Adams 12 Five Star Schools Calendar 2025-2026 | Dates & PDF",
+  "seoDescription": "See the Adams 12 2025-2026 calendar with the August 12 first day, May 21 last day, breaks, quarter endings, staff workdays, orientation, and official PDF.",
+  "heroSummary": "Adams 12 Five Star Schools starts all students on Tuesday, August 12, 2025. Sixth- and ninth-grade orientation is August 11, except at K-8 schools. The last student day and end of Quarter 4 are May 21, 2026. The calendar also marks four weeklong breaks and staff workdays throughout the year.",
+  "calendarNotes": "This PDF is dated January 16, 2025 and marked subject to revision. April 13 and May 4 are district staff-workday dates, but high schools may select a different day in the corresponding month. Families should verify those dates with the high school before arranging care or travel.",
+  "yearNumbers": [
+    { "label": "All-Student Start", "value": "Aug 12", "detail": "Sixth- and ninth-grade orientation is August 11, except at K-8 schools." },
+    { "label": "Quarter 1 Ends", "value": "Oct 10", "detail": "Fall Break begins the following Monday." },
+    { "label": "Spring Break", "value": "Mar 23-27", "detail": "A five-weekday no-school period." },
+    { "label": "Last Day", "value": "May 21", "detail": "The staff last day is May 22." }
+  ],
+  "customSections": [
+    {
+      "id": "adams12-2025-2026-school-specific-dates",
+      "label": "Dates That Need a School-Level Check",
+      "position": "afterKeyDates",
+      "content": "Most dates are districtwide, but the PDF includes two important exceptions that should not be generalized across every Adams 12 school.",
+      "table": {
+        "columns": ["Date", "Who should verify"],
+        "rows": [
+          ["August 11 orientation", "Sixth-grade families at K-8 schools; the district says the orientation does not apply there."],
+          ["April 13 staff workday", "High-school families; a high school may choose a different April date."],
+          ["May 4 staff workday", "High-school families; a high school may choose a different May date."]
+        ]
+      }
+    }
+  ],
+  "calendarFaqs": [
+    { "q": "When does Adams 12 start school in 2025?", "a": "All students begin Tuesday, August 12, 2025. Sixth- and ninth-grade orientation is August 11, except at K-8 schools." },
+    { "q": "When is Adams 12 Fall Break in 2025?", "a": "Fall Break runs October 13-17, 2025, after Quarter 1 ends October 10." },
+    { "q": "When is Adams 12 Winter Break in 2025-26?", "a": "Winter Break runs December 22, 2025 through January 2, 2026. January 5 is a student no-school staff workday." },
+    { "q": "When is the last day of Adams 12 school in 2026?", "a": "The last student day and end of Quarter 4 are Thursday, May 21, 2026. The staff last day is May 22." },
+    { "q": "Can an Adams 12 high school use different staff workdays?", "a": "Yes. The PDF says high schools may choose different dates for the listed April 13 and May 4 staff workdays." }
+  ],
+  "sources": [
+    { "label": "Adams 12 district calendar page", "url": "https://www.adams12.org/our-district/calendar" },
+    { "label": "Adams 12 2025-26 English calendar PDF", "url": "https://resources.finalsite.net/images/v1751387823/adams12org/kroaqtwbwiiujeiw7jz4/Calendar_25-26_Final_ENG.pdf" }
+  ],
+  "events": [
+    { "date": "2025-08-04", "endDate": "2025-08-08", "name": "Staff Workdays", "type": "teacher_workday", "description": "No students." },
+    { "date": "2025-08-11", "name": "Orientation - 6th and 9th Graders", "type": "academic", "description": "Does not apply to K-8 schools." },
+    { "date": "2025-08-12", "name": "First Day of School - All Students", "type": "school_start" },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
+    { "date": "2025-09-02", "name": "Staff Workday", "type": "teacher_workday", "description": "No students." },
+    { "date": "2025-09-29", "name": "Staff Workday", "type": "teacher_workday", "description": "No students." },
+    { "date": "2025-10-10", "name": "End of Quarter 1", "type": "academic" },
+    { "date": "2025-10-13", "endDate": "2025-10-17", "name": "Fall Break", "type": "break_start" },
+    { "date": "2025-11-03", "name": "Staff Workday", "type": "teacher_workday", "description": "No students." },
+    { "date": "2025-11-24", "endDate": "2025-11-28", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-12-18", "name": "End of Quarter 2", "type": "academic" },
+    { "date": "2025-12-19", "name": "Staff Workday", "type": "teacher_workday", "description": "No students." },
+    { "date": "2025-12-22", "endDate": "2026-01-02", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-01-05", "name": "Staff Workday", "type": "teacher_workday", "description": "No students." },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2026-02-16", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2026-02-17", "name": "Staff Workday", "type": "teacher_workday", "description": "No students." },
+    { "date": "2026-03-09", "name": "Staff Workday", "type": "teacher_workday", "description": "No students." },
+    { "date": "2026-03-13", "name": "End of Quarter 3", "type": "academic" },
+    { "date": "2026-03-23", "endDate": "2026-03-27", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-04-13", "name": "Staff Workday", "type": "teacher_workday", "description": "No students; high schools may choose a different day in April." },
+    { "date": "2026-05-04", "name": "Staff Workday", "type": "teacher_workday", "description": "No students; high schools may choose a different day in May." },
+    { "date": "2026-05-21", "name": "Last Day of School / End of Quarter 4", "type": "school_end" },
+    { "date": "2026-05-22", "name": "Staff Last Day", "type": "teacher_workday", "description": "No students." }
+  ]
+}

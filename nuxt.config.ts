@@ -69,6 +69,7 @@ export default defineNuxtConfig({
         '/washington',
 
         // ── District index pages ───────────────────────────────────────────────
+        '/adams-12-five-star-schools-calendar',
         '/aldine-independent-school-district-calendar',
         '/anne-arundel-county-school-calendar',
         '/anaheim-union-high-school-district-calendar',
@@ -150,6 +151,7 @@ export default defineNuxtConfig({
         '/peoria-unified-school-district-calendar',
         '/pinellas-county-school-calendar',
         '/pomona-unified-school-district-calendar',
+        '/poudre-school-district-calendar',
         '/polk-county-school-calendar',
         '/poway-unified-school-district-calendar',
         '/prince-georges-county-school-calendar',
@@ -198,10 +200,15 @@ export default defineNuxtConfig({
         '/alexandria-city-public-schools-calendar',
         '/stafford-county-public-schools-calendar',
         '/spotsylvania-county-public-schools-calendar',
+        '/st-vrain-valley-schools-calendar',
         '/cypress-fairbanks-isd-calendar',
         '/elk-grove-unified-school-district-calendar',
 
         // ── District year pages ────────────────────────────────────────────────
+        '/adams-12-five-star-schools-calendar/2025-2026',
+        '/adams-12-five-star-schools-calendar/2026-2027',
+        '/adams-12-five-star-schools-calendar/2027-2028',
+
         '/aldine-independent-school-district-calendar/2025-2026',
         '/aldine-independent-school-district-calendar/2026-2027',
 
@@ -476,6 +483,9 @@ export default defineNuxtConfig({
         '/pomona-unified-school-district-calendar/2025-2026',
         '/pomona-unified-school-district-calendar/2026-2027',
 
+        '/poudre-school-district-calendar/2025-2026',
+        '/poudre-school-district-calendar/2026-2027',
+
         '/polk-county-school-calendar/2025-2026',
         '/polk-county-school-calendar/2026-2027',
         '/polk-county-school-calendar/2027-2028',
@@ -662,6 +672,10 @@ export default defineNuxtConfig({
         '/spotsylvania-county-public-schools-calendar/2025-2026',
         '/spotsylvania-county-public-schools-calendar/2026-2027',
         '/spotsylvania-county-public-schools-calendar/2027-2028',
+
+        '/st-vrain-valley-schools-calendar/2025-2026',
+        '/st-vrain-valley-schools-calendar/2026-2027',
+        '/st-vrain-valley-schools-calendar/2027-2028',
 
         '/cypress-fairbanks-isd-calendar/2025-2026',
         '/cypress-fairbanks-isd-calendar/2026-2027',

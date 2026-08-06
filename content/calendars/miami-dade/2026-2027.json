@@ -8,18 +8,21 @@
   "semesters": 2,
   "sourceUrl": "https://www.dadeschools.net/calendar",
   "sourcePdfUrl": "https://api.dadeschools.net/WMSFiles/392/calendars/25-26/School-Calendars-2026-2027-Elementary.pdf",
+  "sourceCalendarName": "M-DCPS 2026–27 Elementary and Secondary Calendar",
   "lastVerifiedAt": "2026-07-28",
   "calendarType": "traditional",
   "displaySchoolYear": "2026–27",
   "pageHeading": "Miami-Dade School Calendar 2026–27",
   "seoTitle": "Miami-Dade School Calendar 2026–27: Dates, Breaks & PDF",
-  "seoDescription": "See Miami-Dade’s 2026–27 school calendar with the first and last days, teacher planning days, holidays, major breaks, official PDF, and ICS download.",
-  "heroSummary": "Miami-Dade County Public Schools starts classes on Thursday, August 13, 2026, and the last day of school is Thursday, June 3, 2027. Spring break runs March 22–26, 2027. A teacher planning day follows on March 29, so students return Tuesday, March 30.",
+  "seoDescription": "Miami-Dade’s 2026–27 school calendar: first and last days, breaks, teacher planning days, Wednesday early release, grading periods, PDF and ICS.",
+  "heroSummary": "Miami-Dade students following the elementary and secondary calendar begin classes Thursday, August 13, 2026, and finish Thursday, June 3, 2027. Spring break is March 22–26. Because Monday, March 29 is a teacher planning day, students return Tuesday, March 30.",
+  "heroSourceLine": "Dates from the official 2026–27 M-DCPS elementary and secondary calendar",
   "hideSecondSemesterStartSummary": true,
   "heroFactChips": [
     "Students return from winter break on Monday, January 4, 2027"
   ],
-  "alternateCalendarsNotice": "This page covers the traditional elementary and secondary calendar followed by most M-DCPS students. Technical colleges, adult education programs, and juvenile justice programs use separate calendars.",
+  "alternateCalendarsNotice": "This page covers the M-DCPS elementary and secondary calendar. Technical colleges, adult education, and juvenile justice education use separate official calendars listed below.",
+  "otherCalendarsPosition": "afterKeyDates",
   "hiddenSections": [
     "quickFacts",
     "keyDatesSummary",
@@ -33,12 +36,72 @@
     "whatsDifferent",
     "nationalTrends"
   ],
+  "hideFaqSchema": true,
+  "includeArticleSchema": false,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
   "hideHeroVerificationProcess": true,
   "hideHeroVerificationIcs": true,
+  "verificationBadgeText": "Calendar dates last verified July 28, 2026, by Denis Dou · Page updated August 6, 2026",
   "allDatesMode": "all",
-  "allDatesTitle": "Important Districtwide Dates — 2026–27",
-  "schemaDatasetDescription": "Major dates from the traditional M-DCPS calendar, including school-year boundaries, teacher planning days, holidays, break ranges, and school return dates.",
+  "allDatesTitle": "Miami-Dade School Calendar Dates for 2026–27",
+  "allDatesCoverageNote": "This list covers important districtwide student dates on the elementary and secondary calendar. Technical colleges, adult education programs, juvenile justice programs, and individual schools may publish additional dates.",
+  "allDatesFooterMode": "source_sentence",
+  "allDatesSourceUrl": "https://api.dadeschools.net/WMSFiles/392/calendars/25-26/School-Calendars-2026-2027-Elementary.pdf",
+  "allDatesSourceLabel": "official M-DCPS 2026–27 elementary and secondary calendar PDF",
+  "dateLegendTitle": "Legend",
+  "schemaCalendarName": "Miami-Dade County Public Schools Elementary and Secondary Calendar 2026–27",
+  "schemaDatasetName": "Miami-Dade County Public Schools Elementary and Secondary Calendar 2026–27 Dataset",
+  "schemaDatasetDescription": "Important dates from the M-DCPS elementary and secondary calendar, including school-year boundaries, teacher planning days, holidays, break ranges, and school return dates.",
+  "schemaCalendarDownloadName": "M-DCPS 2026–27 Elementary and Secondary Calendar (.ics)",
+  "schemaCalendarDownloadDescription": "ICS file containing the dates shown in the Important Dates table. Grading-period transitions and weekly Wednesday early release are not included.",
+  "schemaDatasetVersion": "2026–27",
+  "schemaIsAccessibleForFree": true,
+  "schemaKeywords": [
+    "Miami-Dade school calendar",
+    "M-DCPS calendar",
+    "2026–27 school calendar",
+    "school holidays",
+    "teacher planning days"
+  ],
   "schemaReviewedBy": "author",
+  "keyDateSummaryItems": [
+    {
+      "date": "2026-08-13",
+      "name": "First Day of School",
+      "type": "school_start",
+      "schemaDescription": "The first day for students following the M-DCPS elementary and secondary calendar."
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-06-03",
+      "name": "Last Day of School",
+      "type": "school_end",
+      "schemaDescription": "The last day for students following the M-DCPS elementary and secondary calendar."
+    }
+  ],
+  "comparisonDistrictSlugs": [
+    "broward-county-school-calendar",
+    "palm-beach-county-school-calendar"
+  ],
   "comparisonRowsInclude": [
     "firstDay",
     "lastDay",
@@ -47,21 +110,48 @@
     "springBreak"
   ],
   "comparisonRowsMode": "sharedValuesOnly",
-  "comparisonTitle": "Compare With Broward and Palm Beach",
+  "comparisonTitle": "How Miami-Dade Compares With Broward and Palm Beach",
   "comparisonDefaultOpen": false,
-  "compareIntro": "Miami-Dade starts later and ends later than Broward and Palm Beach in 2026–27. All three districts list spring break for March 22–26, 2027.",
+  "compareIntro": "Miami-Dade starts three days later than Broward and Palm Beach in 2026–27. All three districts schedule spring break for March 22–26, although staff days around the break may differ.",
+  "comparisonInsights": [
+    {
+      "label": "Start date comparison",
+      "items": [
+        "Starts 3 days after Broward",
+        "Starts 3 days after Palm Beach"
+      ]
+    },
+    {
+      "label": "End date comparison",
+      "items": [
+        "Ends 6 days after Broward",
+        "Ends 7 days after Palm Beach"
+      ]
+    }
+  ],
+  "hideComparisonNotes": true,
+  "comparisonReviewedText": "Comparison dates last verified July 28, 2026.",
+  "hideRelatedDistrictDescriptions": true,
   "jumpNavigation": [
     {
       "label": "Key Dates",
       "id": "key-dates"
     },
     {
-      "label": "Dates",
+      "label": "Early Release",
+      "id": "miami-dade-wednesday-early-release"
+    },
+    {
+      "label": "Important Dates",
       "id": "all-dates"
     },
     {
       "label": "Breaks",
       "id": "breaks"
+    },
+    {
+      "label": "Grading Periods",
+      "id": "miami-dade-grading-periods"
     },
     {
       "label": "Download",
@@ -74,6 +164,10 @@
     {
       "label": "Comparison",
       "id": "comparison"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
     }
   ],
   "breaksTitle": "Major Breaks and Return Dates",
@@ -81,31 +175,29 @@
   "breakNotes": {
     "Thanksgiving Break": "Students return Monday, November 30, 2026.",
     "Winter Break": "Students return from winter break on Monday, January 4, 2027.",
-    "Spring Break": "Monday, March 29 is a teacher planning day. Students return Tuesday, March 30, 2027."
+    "Spring Break": "With the weekend before spring break and the March 29 teacher planning day, students are out of school for 10 consecutive calendar days. Classes resume Tuesday, March 30."
   },
   "compactDownloadModule": true,
-  "icsDescription": "Download a one-time .ics file for Google Calendar, Apple Calendar, or Outlook. It will not update automatically if M-DCPS revises the calendar.",
-  "icsButtonSupportText": "Check the official district calendar for later changes.",
+  "icsDescription": "The .ics file includes the dates in the Important Dates table. It does not include grading-period transitions or weekly Wednesday early release. This is a one-time download, so later M-DCPS changes will not appear automatically.",
+  "icsButtonLabel": "Download calendar (.ics)",
+  "icsButtonSupportText": "This download covers the M-DCPS elementary and secondary calendar only.",
   "pdfHeading": "Official M-DCPS Calendar PDF",
   "pdfDescription": "Open or print the official M-DCPS elementary and secondary calendar PDF. Check the district calendar page for revisions before making travel or childcare plans.",
+  "alternateCalendarsTitle": "Other M-DCPS Calendars",
+  "alternateCalendarsDescription": "M-DCPS publishes separate calendars for technical colleges and adult education, as well as juvenile justice education.",
+  "yearSwitcherPosition": "afterSources",
+  "yearSwitcherLabel": "Previous school year:",
+  "comparisonBeforeFaq": false,
   "faqDisplayLimit": 6,
-  "faqSchemaLimit": 6,
   "faqDisplayQuestions": [
     "Which M-DCPS calendar applies to my student?",
-    "What are teacher planning days in Miami-Dade?",
+    "Do Miami-Dade students get out early on Wednesdays?",
     "When do students return after spring break?",
+    "When does the second semester begin?",
     "How does M-DCPS handle calendar changes after hurricane closures?",
-    "Are M-DCPS calendars available in Spanish or Haitian Creole?",
     "Does the Miami-Dade ICS file update automatically?"
   ],
-  "faqSchemaQuestions": [
-    "Which M-DCPS calendar applies to my student?",
-    "What are teacher planning days in Miami-Dade?",
-    "When do students return after spring break?",
-    "How does M-DCPS handle calendar changes after hurricane closures?",
-    "Are M-DCPS calendars available in Spanish or Haitian Creole?",
-    "Does the Miami-Dade ICS file update automatically?"
-  ],
+  "faqSchemaQuestions": [],
   "alternateCalendars": [
     {
       "type": "technical-colleges",
@@ -122,8 +214,8 @@
   ],
   "calendarFaqs": [
     {
-      "q": "What are teacher planning days in Miami-Dade?",
-      "a": "Teacher planning days in M-DCPS are days when staff work but students do not attend school. They appear on the district calendar separately from state and federal holidays."
+      "q": "Do Miami-Dade students get out early on Wednesdays?",
+      "a": "On Wednesdays when school is in session, students in grades 2–5 at elementary schools and grades 2–8 at K–8 centers are released one hour early. Exact dismissal times vary by school."
     },
     {
       "q": "When do students return after spring break?",
@@ -131,22 +223,52 @@
     },
     {
       "q": "Which M-DCPS calendar applies to my student?",
-      "a": "Most M-DCPS students follow the traditional elementary and secondary calendar shown on this page. Technical colleges, adult education programs, and juvenile justice programs use separate official calendars."
+      "a": "This page covers the M-DCPS elementary and secondary calendar. Technical colleges, adult education programs, and juvenile justice education use separate official calendars."
     },
     {
       "q": "How does M-DCPS handle calendar changes after hurricane closures?",
       "a": "M-DCPS announces school closures and any resulting makeup-day changes through official district notices. Check the district calendar page after a weather-related closure for the latest schedule."
     },
     {
-      "q": "Are M-DCPS calendars available in Spanish or Haitian Creole?",
-      "a": "Yes. M-DCPS publishes official calendar PDFs in English, Spanish, and Haitian Creole. The language versions are available from the district calendar page."
+      "q": "When does the second semester begin?",
+      "a": "The second semester begins Tuesday, January 19, 2027. Friday, January 15 is a teacher planning day, and Monday, January 18 is the Martin Luther King Jr. holiday."
     },
     {
       "q": "Does the Miami-Dade ICS file update automatically?",
       "a": "No. The .ics file is a one-time import for Google Calendar, Apple Calendar, or Outlook. Check the official M-DCPS calendar page for later revisions."
     }
   ],
-  "customSections": [],
+  "customSections": [
+    {
+      "id": "miami-dade-wednesday-early-release",
+      "label": "Wednesday Early Release",
+      "position": "afterAlternateCalendarsNotice",
+      "schemaHasPart": true,
+      "content": "On Wednesdays when school is in session, students in grades 2–5 at elementary schools and grades 2–8 at K–8 centers are dismissed one hour early. Check your school’s bell schedule for the exact time. This recurring schedule is not included in the ICS file."
+    },
+    {
+      "id": "miami-dade-grading-periods",
+      "label": "Grading Periods",
+      "position": "afterBreaks",
+      "schemaHasPart": true,
+      "content": "These are the grading-period dates listed on the official elementary and secondary calendar.",
+      "table": {
+        "columns": [
+          "Calendar item",
+          "Date"
+        ],
+        "rows": [
+          ["First grading period ends", "October 16, 2026"],
+          ["Second grading period begins", "October 19, 2026"],
+          ["First semester and second grading period end", "January 14, 2027"],
+          ["Second semester and third grading period begin", "January 19, 2027"],
+          ["Third grading period ends", "March 19, 2027"],
+          ["Fourth grading period begins", "March 30, 2027"],
+          ["Fourth grading period ends", "June 3, 2027"]
+        ]
+      }
+    }
+  ],
   "yearNumbers": [],
   "events": [
     {
@@ -245,7 +367,20 @@
       "type": "school_end"
     }
   ],
-  "calendarNotes": "The 2026–27 Miami-Dade school year begins Thursday, August 13, 2026, and ends Thursday, June 3, 2027. Spring break runs March 22–26; because March 29 is a teacher planning day, students return Tuesday, March 30. With the weekend before spring break and the planning day after it, students have 10 consecutive calendar days away from school.",
+  "calendarNotes": "The 2026–27 Miami-Dade school year begins Thursday, August 13, 2026, and ends Thursday, June 3, 2027. The district’s official spring recess runs March 22–26. With the weekend before the recess and a teacher planning day on March 29, students have no classes for 10 consecutive calendar days, from Saturday, March 20 through Monday, March 29, and return Tuesday, March 30.",
+  "sourceReviewSummary": "This page uses the official M-DCPS 2026–27 elementary and secondary calendar and the district calendar page. Technical colleges, adult education programs, and juvenile justice education publish separate calendars.",
+  "sourceReviewDetailsTitle": "Review and Revision History",
+  "sourceReviewDetails": [
+    "August 6, 2026 — Added Wednesday early-release information, grading-period dates, and updated South Florida calendar comparison content. Core calendar dates were unchanged.",
+    "July 28, 2026 — Dates were rechecked against the current M-DCPS elementary and secondary calendar PDF; no calendar changes were found.",
+    "We verify the first and last days, teacher planning days, holidays, break ranges, return dates, Wednesday early release, grading-period transitions, and links to alternate official calendars.",
+    "The ICS file is a one-time import of the important dates table and does not include weekly Wednesday early-release times."
+  ],
+  "sourceMaintainerText": "Denis Dou for MySchoolDates",
+  "sourceReviewDateLabel": "Calendar dates last verified",
+  "sourceNextReviewText": "Next review: When M-DCPS replaces the PDF, revises the calendar page, or announces a calendar change.",
+  "relatedDistrictsTitle": "Nearby School District Calendars",
+  "relatedDistrictsDescription": "Compare 2026–27 calendars for other South Florida school districts.",
   "datePublished": "2026-07-02",
-  "dateModified": "2026-07-28"
+  "dateModified": "2026-08-06"
 }

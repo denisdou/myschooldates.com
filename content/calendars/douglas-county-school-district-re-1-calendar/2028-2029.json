@@ -1,91 +1,302 @@
 {
   "institutionId": "douglas-county-school-district-re-1-calendar",
   "schoolYear": "2028-2029",
-  "displaySchoolYear": "2028-29",
-  "pageHeading": "Douglas County School District Calendar 2028-29",
+  "displaySchoolYear": "2028–29",
+  "pageHeading": "Douglas County School District 2028–29 Calendar",
   "firstDay": "2028-08-09",
   "lastDay": "2029-05-24",
-  "temporalCoverageStart": "2028-08-09",
+  "temporalCoverageStart": "2028-07-04",
   "temporalCoverageEnd": "2029-06-19",
   "totalSchoolDays": 173,
+  "teacherWorkDays": null,
   "semesters": 2,
   "sourceUrl": "https://www.dcsdk12.org/schools-academics/academic-calendars",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1782756104/dcsdk12org/ypp4axhldtpjlqhhf8ty/2028-29CFinal6-9-26.pdf",
-  "sourceCalendarName": "2028-2029 DCSD School Calendar",
+  "sourceCalendarName": "DCSD 2028–29 Conventional Calendar PDF",
   "sourceVersion": "Approved by the Board of Education: June 9, 2026",
-  "lastVerifiedAt": "2026-08-05",
+  "lastVerifiedAt": "2026-08-06",
   "dateCreated": "2026-08-05",
   "datePublished": "2026-08-05",
-  "dateModified": "2026-08-05",
-  "calendarType": "traditional",
-  "seoTitle": "Douglas County School District Calendar 2028-2029 | Holidays & PDF",
-  "seoDescription": "See the DCSD 2028-2029 school calendar with the August 9 first day, May 24 last day, 173 student days, breaks, PLC delayed starts, and official PDF.",
-  "heroSummary": "Douglas County School District begins the 2028-29 conventional school year on Wednesday, August 9, 2028, and the last student day is Thursday, May 24, 2029. The calendar lists 173 student days, Fall Break on October 9-13, Winter Break on December 24-January 5, and Spring Break on March 19-23. The PDF also distinguishes PLC delayed starts from teacher work, professional development, compensation, and district holiday dates.",
-  "calendarNotes": "The 2028-29 DCSD school calendar lists 173 student days. The first student day is August 9, 2028, and the second semester begins January 9, 2029 after a January 8 teacher work day. Fall Break runs October 9-13. Thanksgiving closure spans November 20-24, with November 22 marked as a compensation day and November 23-24 marked as district holidays. Winter Break runs December 24-January 5, with January 8 reserved for teacher work. Spring Break runs March 19-23, followed by professional development on April 20, a compensation day on April 23, and a teacher work day on May 25.",
-  "yearNumbers": [
-    { "label": "Student Days", "value": "173", "detail": "The official PDF key identifies 173 all-day student sessions." },
-    { "label": "First Semester", "value": "Aug 9-Jan 8", "detail": "The second semester begins January 9 after the January 8 teacher work day." },
-    { "label": "Winter Break", "value": "Dec 24-Jan 5", "detail": "The break crosses Christmas, New Year's Day, and the first week of January." },
-    { "label": "Spring Break", "value": "Mar 19-23", "detail": "The main spring student break is Monday through Friday." }
+  "dateModified": "2026-08-06",
+  "calendarType": "conventional",
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideDateLegend": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hidePdfVersionLabel": true,
+  "hideExtendedShareButtons": true,
+  "moveCalendarExportBeforeAllDates": true,
+  "webPageMainEntity": "keyDates",
+  "sourcesBeforeFaq": false,
+  "yearSwitcherPosition": "afterSources",
+  "seoTitle": "Douglas County School District Calendar 2028–29 | Key Dates",
+  "seoDescription": "View the DCSD 2028–29 calendar, including the August 9 first day, May 24 last day, school breaks, Friday delayed starts, and the official PDF.",
+  "heroSourceLine": "2028–29 calendar dates · Based on official DCSD calendar sources",
+  "verificationBadgeText": "Checked against official DCSD calendar sources on August 6, 2026.",
+  "schemaCalendarName": "Douglas County School District 2028–29 Calendar",
+  "schemaDatasetName": "DCSD 2028–29 Conventional Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Douglas County School District dates for 2028–29, including conventional-calendar school breaks, no-school days, PLC delayed-start days, and district holidays.",
+  "schemaCalendarDownloadName": "MySchoolDates DCSD 2028–29 calendar import file",
+  "schemaIsAccessibleForFree": true,
+  "schemaKeywords": [
+    "Douglas County School District calendar",
+    "DCSD calendar",
+    "2028-2029 school calendar",
+    "PLC delayed start",
+    "school breaks",
+    "Douglas County Colorado"
   ],
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-list-view",
+      "type": "CreativeWork",
+      "name": "DCSD 2028–29 Text/List View Calendar",
+      "url": "https://www.dcsdk12.org/fs/resource-manager/view/dd466df0-b3a6-4080-a34d-45dc30eb437b"
+    },
+    {
+      "id": "source-at-a-glance",
+      "type": "WebPage",
+      "name": "DCSD Calendar at a Glance",
+      "url": "https://www.dcsdk12.org/schools-academics/academic-calendars/calendar-at-a-glance"
+    },
+    {
+      "id": "source-plc-guidance",
+      "type": "WebPage",
+      "name": "DCSD Professional Learning Communities Guidance",
+      "url": "https://www.dcsdk12.org/schools-academics/professional-learning-communities"
+    },
+    {
+      "id": "source-previous-calendar",
+      "type": "CreativeWork",
+      "name": "DCSD 2027–28 Conventional Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1782756030/dcsdk12org/x6tn897sfkqway2vxjwo/2027-28CFinal6-9-26.pdf"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-list-view",
+    "source-at-a-glance",
+    "source-plc-guidance"
+  ],
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "breaks",
+    "yearNumbers",
+    "about",
+    "planningTips",
+    "comparison",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends"
+  ],
+  "heroSummary": "Douglas County School District students begin the 2028–29 school year on Wednesday, August 9, 2028. DCSD’s color and list-view calendars identify Thursday, May 24, 2029, as the last student day. The conventional calendar includes 173 student days. Fall Break is October 9–13, Thanksgiving Break is November 20–24, Winter Break runs December 25 through January 5, and Spring Break is March 19–23. Students begin the second semester on January 9 after a teacher work day.\n\nDCSD also uses Friday delayed starts during the 2028–29 school year. District-operated elementary and middle schools begin 45 minutes later; see the full PLC schedule below.",
+  "heroFactChips": [
+    "173 student days"
+  ],
+  "dateLegendLabelOverrides": {
+    "Academic": "Delayed Start"
+  },
+  "calendarNotes": "This page covers DCSD’s conventional academic calendar. Most DCSD schools follow the conventional calendar, but Renaissance Elementary Magnet School, Daniel C. Oakes High School, Eagle Academy, and DCSD charter schools may publish separate calendars. PLC Fridays are regular attendance days with a 45-minute delayed start for DCSD-operated elementary and middle schools; high schools continue their existing Friday schedule, and buses run 45 minutes later. Check your school for exact times.",
+  "whatsNew": {
+    "title": "What's Different From 2027–28",
+    "content": [
+      "The first student day moves from August 11 in 2027–28 to August 9 in 2028–29.",
+      "Fall Break shifts from October 11–15 in 2027–28 to October 9–13 in 2028–29.",
+      "Winter Break shifts from December 20–31 in 2027–28 to December 25–January 5 in 2028–29.",
+      "The last student day moves from May 25 in 2027–28 to May 24 in 2028–29.",
+      "Spring Break shifts from March 20–24 in 2027–28 to March 19–23 in 2028–29."
+    ]
+  },
   "customSections": [
     {
-      "id": "dcsd-2028-2029-calendar-markers",
-      "label": "DCSD Planning Details for 2028-29",
+      "id": "dcsd-2028-2029-plc-delayed-starts",
+      "label": "DCSD Friday Delayed Starts",
       "position": "afterKeyDates",
-      "content": "This DCSD PDF places several operational dates next to regular attendance days. Families should read the marker before assuming that a colored date is a full closure: PLC means delayed start, while teacher work and professional development mean no students.",
+      "content": "During the 2028–29 school year, DCSD-operated elementary and middle schools continue to start 45 minutes later every Friday for Professional Learning Community time. High schools continue their existing Friday delayed-start schedules, and school buses also run 45 minutes later. Check your school for its exact bell time and before-school care arrangements. Charter schools may follow different schedules.",
       "table": {
-        "columns": ["Calendar marker", "Family planning use"],
+        "columns": ["Month", "Delayed-start Fridays"],
         "rows": [
-          ["PLC Day (Delayed Start)", "Check the school bell schedule and transportation plan for a later arrival."],
-          ["No School / Break", "Student closure window for travel, care, and activity planning."],
-          ["Compensation Day", "No students; a separate category from the ordinary break marker."],
-          ["Teacher Work / Professional Development", "Staff-only day; student services may have different availability."],
-          ["District Holiday", "District offices are closed and students are not scheduled."],
-          ["First Day of Semester", "The dark-blue marker identifies the first student day of each semester."]
-        ]
+          ["August 2028", "August 18, August 25"],
+          ["September 2028", "September 1, September 8, September 15, September 29"],
+          ["October 2028", "October 6, October 20, October 27"],
+          ["November 2028", "November 3, November 10, November 17"],
+          ["December 2028", "December 1, December 8, December 15"],
+          ["January 2029", "January 12, January 19, January 26"],
+          ["February 2029", "February 2, February 9, February 23"],
+          ["March 2029", "March 2, March 9, March 16, March 30"],
+          ["April 2029", "April 6, April 13, April 27"],
+          ["May 2029", "May 4, May 11, May 18"]
+        ],
+        "footnote": "Dates were transcribed from DCSD’s official Calendar at a Glance. Check your school for its exact Friday bell schedule."
       }
+    },
+    {
+      "id": "dcsd-2028-2029-calendar-exceptions",
+      "label": "Calendar Exceptions",
+      "position": "afterKeyDates",
+      "content": "Most DCSD schools follow this conventional calendar. Renaissance Elementary Magnet School, Daniel C. Oakes High School, Eagle Academy, and DCSD charter schools may publish their own calendars. Families at those schools should confirm dates directly with the school."
     }
   ],
   "calendarFaqs": [
-    { "q": "When does Douglas County School District start in 2028?", "a": "The first student day of the DCSD 2028-29 conventional calendar is Wednesday, August 9, 2028." },
-    { "q": "When is DCSD Winter Break in 2028-29?", "a": "Winter Break runs December 24, 2028 through January 5, 2029. January 8 is a teacher work day, and the second semester begins January 9." },
-    { "q": "When is the last day of DCSD school in 2029?", "a": "The last student day is Thursday, May 24, 2029. May 25 is marked as a teacher work day." },
-    { "q": "Are DCSD PLC days full days off?", "a": "No. PLC Day is labeled as a delayed-start day in the official PDF. Confirm the school-specific start time rather than treating it as a no-school date." },
-    { "q": "How many student days are in the DCSD 2028-29 calendar?", "a": "The official DCSD calendar identifies 173 all-day student sessions." }
+    {
+      "q": "When is the first day of school in DCSD for 2028–29?",
+      "a": "The first student day of the DCSD conventional calendar is Wednesday, August 9, 2028."
+    },
+    {
+      "q": "When is the last day of school?",
+      "a": "DCSD’s color and list-view calendars identify Thursday, May 24, 2029, as the last student day, followed by a teacher work day on May 25. Calendar at a Glance currently lists May 25 as both the last student day and a teacher work day."
+    },
+    {
+      "q": "When are fall, winter, and spring breaks?",
+      "a": "Fall Break is October 9–13, 2028; Winter Break is December 25, 2028–January 5, 2029; and Spring Break is March 19–23, 2029."
+    },
+    {
+      "q": "What is a PLC delayed-start day?",
+      "a": "Students still attend school on PLC Fridays, but DCSD-operated elementary and middle schools start 45 minutes later and buses run 45 minutes later. High schools continue their existing Friday delayed-start schedules; check your school for its exact bell time."
+    },
+    {
+      "q": "How many student days are on the calendar?",
+      "a": "DCSD’s conventional calendar lists 173 student days for 2028–29."
+    },
+    {
+      "q": "Does every DCSD school follow this calendar?",
+      "a": "No. Renaissance Elementary Magnet School, Daniel C. Oakes High School, Eagle Academy, and DCSD charter schools may publish separate calendars."
+    }
+  ],
+  "events": [
+    { "date": "2028-07-04", "name": "Independence Day", "type": "holiday", "description": "District offices closed." },
+    { "date": "2028-08-01", "endDate": "2028-08-02", "name": "New Teacher Orientation", "type": "teacher_workday", "description": "No students." },
+    { "date": "2028-08-03", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2028-08-04", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students.", "preventRangeMerge": true },
+    { "date": "2028-08-07", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students.", "preventRangeMerge": true },
+    { "date": "2028-08-08", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2028-08-09", "name": "First Day of School", "type": "school_start" },
+    { "date": "2028-08-18", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2028-08-25", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2028-09-01", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2028-09-04", "name": "Labor Day", "type": "holiday", "description": "District offices closed." },
+    { "date": "2028-09-08", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2028-09-15", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2028-09-22", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2028-09-29", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2028-10-06", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2028-10-09", "endDate": "2028-10-13", "name": "Fall Break", "type": "break_start", "description": "Schools closed." },
+    { "date": "2028-10-20", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2028-10-27", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2028-11-03", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2028-11-10", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2028-11-17", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2028-11-20", "endDate": "2028-11-24", "name": "Thanksgiving Break", "type": "break_start", "description": "Schools closed." },
+    { "date": "2028-11-22", "name": "Compensation Day", "type": "teacher_workday", "description": "No students.", "showDuringBreak": true },
+    { "date": "2028-11-23", "endDate": "2028-11-24", "name": "Thanksgiving Holiday", "type": "holiday", "description": "District offices closed.", "showDuringBreak": true },
+    { "date": "2028-12-01", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2028-12-08", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2028-12-15", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2028-12-22", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2028-12-25", "endDate": "2029-01-05", "name": "Winter Break", "type": "break_start", "description": "Schools closed." },
+    { "date": "2028-12-25", "name": "Christmas Day", "type": "holiday", "description": "District offices closed.", "showDuringBreak": true },
+    { "date": "2029-01-01", "name": "New Year's Day", "type": "holiday", "description": "District offices closed.", "showDuringBreak": true },
+    { "date": "2029-01-08", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students; second semester begins January 9." },
+    { "date": "2029-01-09", "name": "First Day of Second Semester", "type": "school_resume" },
+    { "date": "2029-01-12", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-01-15", "name": "Martin Luther King Jr. Day", "type": "holiday", "description": "District offices closed." },
+    { "date": "2029-01-19", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-01-26", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-02-02", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-02-09", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-02-16", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2029-02-19", "name": "Presidents Day", "type": "holiday", "description": "District offices closed." },
+    { "date": "2029-02-23", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-03-02", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-03-09", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-03-16", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-03-19", "endDate": "2029-03-23", "name": "Spring Break", "type": "break_start", "description": "Schools closed." },
+    { "date": "2029-03-30", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-04-06", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-04-13", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-04-20", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2029-04-23", "name": "Compensation Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2029-04-27", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-05-04", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-05-11", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-05-18", "name": "PLC Day (Delayed Start)", "type": "academic", "description": "Students attend on a delayed-start schedule. Check your school’s bell schedule and transportation notice." },
+    { "date": "2029-05-24", "name": "Last Day of School", "type": "school_end" },
+    { "date": "2029-05-25", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students." },
+    { "date": "2029-05-28", "name": "Memorial Day", "type": "holiday", "description": "District offices closed." },
+    { "date": "2029-06-19", "name": "Juneteenth", "type": "holiday", "description": "District offices closed." }
+  ],
+  "keyDatesSummaryTitle": "DCSD 2028–29 Key Dates",
+  "keyDatesSummarySubtitle": "Major dates, school breaks, and selected no-school dates",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School", "date": "2028-08-09", "type": "school_start" },
+    { "label": "No Students", "name": "Professional Development Day", "date": "2028-09-22", "type": "teacher_workday" },
+    { "label": "Break", "name": "Fall Break", "date": "2028-10-09", "endDate": "2028-10-13", "type": "break_start" },
+    { "label": "Break", "name": "Thanksgiving Break", "date": "2028-11-20", "endDate": "2028-11-24", "type": "break_start", "description": "November 22 is a compensation day and November 23–24 are holidays." },
+    { "label": "No Students", "name": "Teacher Work Day", "date": "2028-12-22", "type": "teacher_workday" },
+    { "label": "Break", "name": "Winter Break", "date": "2028-12-25", "endDate": "2029-01-05", "type": "break_start", "description": "Students return January 9 after a teacher work day." },
+    { "label": "Return", "name": "First Day of Second Semester", "date": "2029-01-09", "type": "school_resume" },
+    { "label": "Break", "name": "Spring Break", "date": "2029-03-19", "endDate": "2029-03-23", "type": "break_start" },
+    { "label": "Last Day", "name": "Last Day of School", "date": "2029-05-24", "type": "school_end", "description": "The color and list-view calendars identify May 24 as the last student day; Calendar at a Glance currently also labels May 25 as the last student day." }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "PLC Days", "id": "dcsd-2028-2029-plc-delayed-starts" },
+    { "label": "Exceptions", "id": "dcsd-2028-2029-calendar-exceptions" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Changes", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "DCSD 2028–29 Conventional Calendar Dates",
+  "allDatesFooterMode": "source_sentence",
+  "allDatesCoverageNote": "Dates are based on DCSD’s conventional calendar sources. PLC Fridays are delayed starts, not days off. School-specific events, testing dates, conferences, and emergency changes may appear only on individual school calendars. Sources:",
+  "allDatesSourceLinks": [
+    { "label": "DCSD 2028–29 conventional calendar color PDF", "url": "https://resources.finalsite.net/images/v1782756104/dcsdk12org/ypp4axhldtpjlqhhf8ty/2028-29CFinal6-9-26.pdf" },
+    { "label": "DCSD 2028–29 text/list view calendar", "url": "https://www.dcsdk12.org/fs/resource-manager/view/dd466df0-b3a6-4080-a34d-45dc30eb437b" },
+    { "label": "DCSD Calendar at a Glance", "url": "https://www.dcsdk12.org/schools-academics/academic-calendars/calendar-at-a-glance" }
+  ],
+  "allDatesSourceUrl": "https://www.dcsdk12.org/fs/resource-manager/view/dd466df0-b3a6-4080-a34d-45dc30eb437b",
+  "allDatesSourceLabel": "Source: DCSD 2028–29 text/list view calendar",
+  "icsHeading": "DCSD Calendar Downloads",
+  "icsDescription": "Download a MySchoolDates .ics file created from the district-published dates on this page.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "pdfHeading": "Official DCSD 2028–29 Calendar PDF",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "Open the 2028–29 conventional calendar PDF published by Douglas County School District.",
+  "sourceReviewSummary": "Verified against DCSD’s academic calendars page, color calendar, list-view calendar, Calendar at a Glance, and Professional Learning Communities guidance. The 2027–28 calendar was also reviewed for the year-over-year comparison.",
+  "sourceReviewDetails": [
+    "DCSD’s color calendar and list-view calendar identify Thursday, May 24, 2029 as the last student day, followed by a teacher work day on May 25. Calendar at a Glance currently lists May 25 as both the last student day and a teacher work day. Because the color and list-view calendars agree, this page uses May 24 while noting the discrepancy.",
+    "We compared the major breaks and no-school dates across DCSD’s calendar landing page, color calendar, Calendar at a Glance, and list-view calendar. Where official sources use different wording, we note the discrepancy rather than silently choosing one label.",
+    "PLC delayed-start dates were checked against Calendar at a Glance. DCSD’s Professional Learning Communities guidance explains the 45-minute elementary and middle school delay and later bus schedules; families should confirm exact bell times with their school.",
+    "Renaissance Elementary Magnet School, Daniel C. Oakes High School, Eagle Academy, and DCSD charter schools may publish separate calendars."
   ],
   "sources": [
     { "label": "DCSD academic calendars page", "url": "https://www.dcsdk12.org/schools-academics/academic-calendars" },
-    { "label": "DCSD 2028-29 school calendar PDF", "url": "https://resources.finalsite.net/images/v1782756104/dcsdk12org/ypp4axhldtpjlqhhf8ty/2028-29CFinal6-9-26.pdf" }
+    { "label": "DCSD 2028–29 conventional calendar color PDF", "url": "https://resources.finalsite.net/images/v1782756104/dcsdk12org/ypp4axhldtpjlqhhf8ty/2028-29CFinal6-9-26.pdf" },
+    { "label": "DCSD 2028–29 text/list view calendar", "url": "https://www.dcsdk12.org/fs/resource-manager/view/dd466df0-b3a6-4080-a34d-45dc30eb437b" },
+    { "label": "DCSD 2028–29 Calendar at a Glance", "url": "https://www.dcsdk12.org/schools-academics/academic-calendars/calendar-at-a-glance" },
+    { "label": "DCSD Professional Learning Communities page", "url": "https://www.dcsdk12.org/schools-academics/professional-learning-communities" },
+    { "label": "DCSD 2027–28 conventional calendar PDF", "url": "https://resources.finalsite.net/images/v1782756030/dcsdk12org/x6tn897sfkqway2vxjwo/2027-28CFinal6-9-26.pdf" }
   ],
-  "events": [
-    { "date": "2028-07-04", "name": "District Holiday", "type": "holiday" },
-    { "date": "2028-08-01", "name": "New Teacher Orientation", "type": "teacher_workday", "description": "No students." },
-    { "date": "2028-08-03", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students." },
-    { "date": "2028-08-04", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
-    { "date": "2028-08-07", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
-    { "date": "2028-08-08", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students." },
-    { "date": "2028-08-09", "name": "First Day of School", "type": "school_start" },
-    { "date": "2028-09-04", "name": "Labor Day", "type": "holiday" },
-    { "date": "2028-09-22", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
-    { "date": "2028-10-09", "endDate": "2028-10-13", "name": "Fall Break", "type": "break_start" },
-    { "date": "2028-11-20", "endDate": "2028-11-24", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2028-11-22", "name": "Compensation Day", "type": "teacher_workday", "description": "No students." },
-    { "date": "2028-11-23", "endDate": "2028-11-24", "name": "District Holidays", "type": "holiday" },
-    { "date": "2028-12-24", "endDate": "2029-01-05", "name": "Winter Break", "type": "break_start" },
-    { "date": "2028-12-24", "endDate": "2028-12-25", "name": "District Holidays", "type": "holiday" },
-    { "date": "2029-01-01", "name": "New Year's Day", "type": "holiday" },
-    { "date": "2029-01-08", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students; second semester begins January 9." },
-    { "date": "2029-01-09", "name": "First Day of Second Semester", "type": "school_resume" },
-    { "date": "2029-01-15", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2029-02-16", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
-    { "date": "2029-02-19", "name": "Presidents Day", "type": "holiday" },
-    { "date": "2029-03-19", "endDate": "2029-03-23", "name": "Spring Break", "type": "break_start" },
-    { "date": "2029-04-20", "name": "Professional Development Day", "type": "teacher_workday", "description": "No students." },
-    { "date": "2029-04-23", "name": "Compensation Day", "type": "teacher_workday", "description": "No students." },
-    { "date": "2029-05-24", "name": "Last Day of School", "type": "school_end" },
-    { "date": "2029-05-25", "name": "Teacher Work Day", "type": "teacher_workday", "description": "No students." },
-    { "date": "2029-05-28", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2029-06-19", "name": "Juneteenth", "type": "holiday" }
-  ]
+  "faqDisplayQuestions": [
+    "When is the first day of school in DCSD for 2028–29?",
+    "When is the last day of school?",
+    "When are fall, winter, and spring breaks?",
+    "What is a PLC delayed-start day?",
+    "How many student days are on the calendar?",
+    "Does every DCSD school follow this calendar?"
+  ],
+  "faqDisplayLimit": 6,
+  "faqSchemaLimit": 6
 }
