@@ -20,15 +20,17 @@ const responseHints = {
 }
 
 function printHelp() {
-  console.log(`Submit district hub URLs dated on a given day to IndexNow.
+  console.log(`Submit district hub URLs to IndexNow.
 
 Usage:
   pnpm indexnow
   pnpm indexnow -- --date 2026-08-06
   pnpm indexnow -- 2026-08-06 --dry-run
+  pnpm indexnow -- --all
 
 Options:
   --date <YYYY-MM-DD>       Publication date; defaults to the local date
+  --all                     Submit every primary district hub URL
   --dry-run                 Print matching URLs without submitting them
   --site-url <URL>          Canonical site origin (default: ${defaultSiteUrl})
   --key-location <URL>      Public IndexNow key file URL
@@ -49,13 +51,14 @@ function readOption(args, index, name) {
 }
 
 function parseArgs(args) {
-  const options = { dryRun: false }
+  const options = { all: false, dryRun: false }
   let positionalDate
 
   for (let index = 0; index < args.length; index += 1) {
     const arg = args[index]
     if (arg === '--') continue
     else if (arg === '--help' || arg === '-h') options.help = true
+    else if (arg === '--all') options.all = true
     else if (arg === '--dry-run') options.dryRun = true
     else if (arg === '--date') options.date = readOption(args, index++, '--date')
     else if (arg.startsWith('--date=')) options.date = arg.slice('--date='.length)
@@ -74,6 +77,9 @@ function parseArgs(args) {
     throw new Error('Provide the date either positionally or with --date, not both')
   }
   options.date ||= positionalDate
+  if (options.all && options.date) {
+    throw new Error('Use either --all or a publication date, not both')
+  }
   return options
 }
 
@@ -120,11 +126,8 @@ function normalizeSiteUrl(value) {
   return url.origin
 }
 
-function findDistrictsByDate(publicationDate) {
-  if (!existsSync(districtsDir) || !existsSync(calendarsDir)) {
-    throw new Error('Missing content/districts or content/calendars directory')
-  }
-
+function readDistricts() {
+  if (!existsSync(districtsDir)) throw new Error('Missing content/districts directory')
   const districtsByInstitutionId = new Map()
   for (const file of readdirSync(districtsDir)) {
     if (!file.endsWith('.json')) continue
@@ -137,6 +140,17 @@ function findDistrictsByDate(publicationDate) {
       slug: district.slug,
     })
   }
+  return districtsByInstitutionId
+}
+
+function findAllDistricts() {
+  return [...readDistricts().values()].sort((a, b) => a.name.localeCompare(b.name))
+}
+
+function findDistrictsByDate(publicationDate) {
+  if (!existsSync(calendarsDir)) throw new Error('Missing content/calendars directory')
+
+  const districtsByInstitutionId = readDistricts()
 
   const matchingInstitutionIds = new Set()
   for (const institutionDir of readdirSync(calendarsDir)) {
@@ -228,18 +242,20 @@ async function main() {
     return
   }
 
-  const publicationDate = options.date || localIsoDate()
-  validateDate(publicationDate)
+  const publicationDate = options.all ? undefined : options.date || localIsoDate()
+  if (publicationDate) validateDate(publicationDate)
 
   const siteUrl = normalizeSiteUrl(options.siteUrl || process.env.INDEXNOW_SITE_URL || defaultSiteUrl)
-  const districts = findDistrictsByDate(publicationDate)
+  const districts = options.all ? findAllDistricts() : findDistrictsByDate(publicationDate)
   const urls = districts.map(district => `${siteUrl}/${district.slug}`)
 
-  console.log(`Publication date: ${publicationDate}`)
-  console.log(`Calendar source: ${calendarsDir}`)
+  console.log(`Submission scope: ${options.all ? 'all primary district hubs' : `calendars published on ${publicationDate}`}`)
+  if (!options.all) console.log(`Calendar source: ${calendarsDir}`)
   console.log(`District slug source: ${districtsDir}`)
   if (urls.length === 0) {
-    console.log('No district hub URLs found for this date. Nothing to submit.')
+    console.log(options.all
+      ? 'No district hub URLs found. Nothing to submit.'
+      : 'No district hub URLs found for this date. Nothing to submit.')
     return
   }
 

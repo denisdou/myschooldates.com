@@ -26,6 +26,71 @@ body {
   background: hsl(var(--background));
 }
 
+.calendar-print-sheet {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin: 12mm;
+  }
+
+  body.calendar-print-mode {
+    background: #fff !important;
+  }
+
+  body.calendar-print-mode > * {
+    display: none !important;
+  }
+
+  body.calendar-print-mode > .calendar-print-sheet {
+    display: block !important;
+  }
+
+  .calendar-print-sheet,
+  .calendar-print-sheet * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .calendar-print-sheet .calendar-print-target {
+    width: 100% !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .calendar-print-sheet .calendar-print-meta {
+    display: block !important;
+    margin-top: 0.25rem;
+  }
+
+  .calendar-print-sheet .calendar-print-navigation {
+    display: none !important;
+  }
+
+  .calendar-print-sheet .calendar-print-month-header {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .calendar-print-sheet .calendar-print-event {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .calendar-print-sheet a {
+    min-height: auto !important;
+  }
+}
+
 .site-page-shell {
   width: min(100% - 2rem, 64rem);
   margin-inline: auto;

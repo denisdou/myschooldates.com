@@ -441,9 +441,12 @@ function formatRangeEnd(event: DisplayEvent) {
 </script>
 
 <template>
-  <div id="all-dates" class="bg-rds-surface-panel rounded-lg border border-rds-hairline overflow-hidden scroll-mt-24 shadow-[0_1px_0_rgba(31,41,51,0.03)]">
+  <div id="all-dates" class="calendar-print-target bg-rds-surface-panel rounded-lg border border-rds-hairline overflow-hidden scroll-mt-24 shadow-[0_1px_0_rgba(31,41,51,0.03)]">
     <div class="px-6 py-4 border-b border-[#ebe6dd]">
       <h2 class="text-lg font-semibold text-[#1f2933]" :class="legend?.length ? 'mb-3' : ''">{{ title }}</h2>
+      <p class="calendar-print-meta hidden text-xs text-[#6b645c]">
+        Print-friendly calendar from MySchoolDates<span v-if="verifiedDate"> · Dates verified {{ verifiedDate }}</span>
+      </p>
       <div v-if="legend?.length" class="flex flex-wrap items-center gap-3">
         <span class="text-xs font-semibold uppercase tracking-wide text-[#8a8176]">{{ legendTitle || 'Common date types' }}</span>
         <span
@@ -458,7 +461,7 @@ function formatRangeEnd(event: DisplayEvent) {
       <nav
         v-if="monthGroups.length > 1"
         aria-label="Jump to month"
-        class="mt-4 flex gap-2 overflow-x-auto pb-1"
+        class="calendar-print-navigation mt-4 flex gap-2 overflow-x-auto pb-1"
       >
         <a
           v-for="group in monthGroups"
@@ -478,7 +481,7 @@ function formatRangeEnd(event: DisplayEvent) {
       >
         <div
           :id="monthAnchor(group.key)"
-          class="px-6 py-3 bg-[#f3f0e8] text-xs font-semibold text-[#7b756d] uppercase tracking-widest scroll-mt-24"
+          class="calendar-print-month-header px-6 py-3 bg-[#f3f0e8] text-xs font-semibold text-[#7b756d] uppercase tracking-widest scroll-mt-24"
         >
           {{ group.label }}
         </div>
@@ -489,7 +492,7 @@ function formatRangeEnd(event: DisplayEvent) {
           <div
             v-for="event in group.events"
             :key="event.startDate + event.endDate + event.type + event.displayName"
-            class="flex flex-col items-start gap-2 px-6 py-4 hover:bg-[#f6f2ea] transition-colors sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+            class="calendar-print-event flex flex-col items-start gap-2 px-6 py-4 hover:bg-[#f6f2ea] transition-colors sm:flex-row sm:items-center sm:justify-between sm:gap-4"
           >
             <div>
               <div class="font-medium text-[#1f2933]">{{ displayEventName(event) }}</div>

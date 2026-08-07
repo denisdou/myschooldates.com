@@ -15,8 +15,6 @@ const isArchivedPdfCopy = computed(() => pdfUrl.value.includes('assets.myschoold
 const compactDownloadModule = computed(() => Boolean(props.cal?.compactDownloadModule ?? props.cal?.meta?.compactDownloadModule))
 const hideCompatibleCalendars = computed(() => Boolean(props.cal?.hideCompatibleCalendars ?? props.cal?.meta?.hideCompatibleCalendars))
 const hidePdfVersionLabel = computed(() => Boolean(props.cal?.hidePdfVersionLabel ?? props.cal?.meta?.hidePdfVersionLabel))
-const hideExtendedShareButtons = computed(() => Boolean(props.cal?.hideExtendedShareButtons ?? props.cal?.meta?.hideExtendedShareButtons))
-const hideShareCalendar = computed(() => Boolean(props.cal?.hideShareCalendar ?? props.cal?.meta?.hideShareCalendar))
 const hideShareCalendarHeading = computed(() => Boolean(props.cal?.hideShareCalendarHeading ?? props.cal?.meta?.hideShareCalendarHeading))
 const hideIcsButtonSupportText = computed(() => Boolean(props.cal?.hideIcsButtonSupportText ?? props.cal?.meta?.hideIcsButtonSupportText))
 const hideCalendarUpdatesButton = computed(() => Boolean(props.cal?.hideCalendarUpdatesButton ?? props.cal?.meta?.hideCalendarUpdatesButton))
@@ -112,8 +110,37 @@ function shareSMS() {
   const text = encodeURIComponent(`${props.districtName} ${props.year} school calendar: ${window.location.href}`)
   window.open(`sms:?body=${text}`)
 }
+function shareX() {
+  const params = new URLSearchParams({
+    text: `${props.districtName} ${props.year} school calendar`,
+    url: window.location.href,
+  })
+  window.open(`https://x.com/intent/post?${params.toString()}`, '_blank', 'noopener,noreferrer')
+}
+function shareFacebook() {
+  const params = new URLSearchParams({ u: window.location.href })
+  window.open(`https://www.facebook.com/sharer/sharer.php?${params.toString()}`, '_blank', 'noopener,noreferrer')
+}
 function printCalendar() {
-  window.print()
+  const calendar = document.getElementById('all-dates')
+  if (!calendar) return
+
+  const printSheet = document.createElement('div')
+  const calendarClone = calendar.cloneNode(true) as HTMLElement
+  printSheet.className = 'calendar-print-sheet'
+  calendarClone.removeAttribute('id')
+  calendarClone.querySelectorAll('[id]').forEach(element => element.removeAttribute('id'))
+  printSheet.appendChild(calendarClone)
+  document.body.appendChild(printSheet)
+  document.body.classList.add('calendar-print-mode')
+
+  const cleanup = () => {
+    document.body.classList.remove('calendar-print-mode')
+    printSheet.remove()
+  }
+
+  window.addEventListener('afterprint', cleanup, { once: true })
+  window.requestAnimationFrame(() => window.print())
 }
 const icsAriaLabel = computed(() =>
   props.cal?.icsAriaLabel ?? props.cal?.meta?.icsAriaLabel ?? `Download ${props.districtName} ${props.year} calendar file for Google Calendar, Apple Calendar, and Outlook`
@@ -235,7 +262,7 @@ const icsAriaLabel = computed(() =>
     </div>
 
     <!-- Share with Parents -->
-    <div v-if="!hideShareCalendar" class="p-6">
+    <div class="p-6">
       <component v-if="!hideShareCalendarHeading" :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-[#1f2933] mb-3">Share This Calendar</component>
       <div class="flex flex-wrap gap-3">
         <!-- Copy Link -->
@@ -266,7 +293,6 @@ const icsAriaLabel = computed(() =>
         </button>
         <!-- WhatsApp -->
         <button
-          v-if="!hideExtendedShareButtons"
           type="button"
           @click="shareWhatsApp"
           class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#aec2b1] hover:bg-[#e7efe5] text-sm font-medium text-[#4f5b5f] transition-all"
@@ -279,7 +305,6 @@ const icsAriaLabel = computed(() =>
         </button>
         <!-- Text / SMS -->
         <button
-          v-if="!hideExtendedShareButtons"
           type="button"
           @click="shareSMS"
           class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#b8c9c9] hover:bg-[#f3f0e8] text-sm font-medium text-[#4f5b5f] transition-all"
@@ -288,6 +313,28 @@ const icsAriaLabel = computed(() =>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
           </svg>
           Text
+        </button>
+        <!-- Facebook -->
+        <button
+          type="button"
+          @click="shareFacebook"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#9eb7dc] hover:bg-[#eaf1fb] text-sm font-medium text-[#4f5b5f] transition-all"
+        >
+          <svg class="w-4 h-4 text-[#1877f2]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M24 12.073C24 5.405 18.627.032 12 .032S0 5.405 0 12.073c0 6.027 4.388 11.024 10.125 11.93v-8.436H7.078v-3.494h3.047V9.41c0-3.027 1.792-4.7 4.533-4.7 1.312 0 2.686.236 2.686.236v2.972H15.83c-1.491 0-1.956.931-1.956 1.886v2.269h3.328l-.532 3.494h-2.796v8.436C19.612 23.097 24 18.1 24 12.073Z" />
+          </svg>
+          Facebook
+        </button>
+        <!-- X -->
+        <button
+          type="button"
+          @click="shareX"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#9fa3a7] hover:bg-[#eef0f1] text-sm font-medium text-[#4f5b5f] transition-all"
+        >
+          <svg class="w-4 h-4 text-[#1f2933]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" />
+          </svg>
+          X
         </button>
       </div>
     </div>
