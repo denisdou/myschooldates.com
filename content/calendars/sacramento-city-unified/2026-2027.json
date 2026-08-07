@@ -1,132 +1,289 @@
 {
   "institutionId": "sacramento-city-unified",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Sacramento City Unified School District Calendar 2026–27",
   "firstDay": "2026-08-11",
   "lastDay": "2027-05-27",
+  "temporalCoverageStart": "2026-08-11",
+  "temporalCoverageEnd": "2027-05-27",
   "totalSchoolDays": 180,
-  "semesters": 2,
-  "sourceUrl": "https://www.scusd.edu/district-calendar",
+  "instructionalDaysLabel": "Student Attendance Days",
+  "instructionalDaysDescription": "The reviewed Traditional Student Attendance Calendar lists 180 student attendance days.",
+  "sourceUrl": "https://www.scusd.edu/families/academic-calendars",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1768587946/scusdedu/vxeaesh0k3nbyfhx6vrz/2026-27TraditionalAttendanceCalendar.pdf",
-  "lastVerifiedAt": "2026-07-02",
-  "calendarType": "traditional",
-  "calendarFaqs": [
-    {
-      "q": "When does school start for Sacramento City Unified School District in 2026-2027?",
-      "a": "The first day of school for Sacramento City Unified School District is Tuesday, August 11, 2026. Students and staff are expected to report on this date to begin the new academic year."
-    },
-    {
-      "q": "When is the last day of school for Sacramento City Unified School District in 2026-2027?",
-      "a": "The last day of school for Sacramento City Unified School District is Thursday, May 27, 2027. The school year runs from August through May, covering 180 instructional days."
-    },
-    {
-      "q": "When is spring break 2026-2027 for Sacramento City Unified School District?",
-      "a": "Spring break for Sacramento City Unified School District runs Mar 23, 2027–Mar 27, 2027, 5 days."
-    },
-    {
-      "q": "When is winter break 2026-2027 for Sacramento City Unified School District?",
-      "a": "Winter break for Sacramento City Unified School District runs Dec 21, 2026–Jan 4, 2027, 15 days. School resumes Jan 5, 2027."
-    }
+  "sourceCalendarName": "SCUSD 2026–27 Traditional Student Attendance Calendar",
+  "lastVerifiedAt": "2026-08-07",
+  "dateCreated": "2026-07-02",
+  "datePublished": "2026-07-02",
+  "dateModified": "2026-08-07",
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerifiedBadge": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideDateLegend": true,
+  "hidePdfVersionLabel": true,
+  "hideCompatibleCalendars": true,
+  "hideExtendedShareButtons": true,
+  "compactDownloadModule": true,
+  "webPageMainEntity": "keyDates",
+  "comparisonBeforeFaq": true,
+  "sourcesBeforeFaq": false,
+  "yearSwitcherPosition": "afterSources",
+  "seoTitle": "Sacramento City Unified Calendar 2026–27: Dates, Breaks & PDF",
+  "seoDescription": "SCUSD’s 2026–27 Traditional Student Attendance Calendar: first and last days, Fall Break, Winter Break, and Spring Break dates, official PDF, and one-time ICS download.",
+  "heroSourceLine": "Traditional Student Attendance Calendar · Official SCUSD sources · Last checked August 7, 2026",
+  "verificationBadgeText": "Last checked August 7, 2026, against official SCUSD calendar sources.",
+  "heroSummary": "SCUSD’s 2026–27 Traditional Student Attendance Calendar runs from Tuesday, August 11, 2026, through Thursday, May 27, 2027. Fall Break is November 23–27, Winter Break is December 21–January 4, and Spring Break is March 22–29.\n\nSCUSD also publishes separate attendance calendars for dependent charter schools and Adult Education, plus TK–6 and 7–12 academic calendars for term and reporting dates.",
+  "schemaCalendarName": "SCUSD 2026–27 Traditional Student Attendance Calendar",
+  "schemaDatasetName": "MySchoolDates SCUSD 2026–27 Student Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed dates from SCUSD’s 2026–27 Traditional Student Attendance Calendar, including the school-year boundaries, holidays, breaks, and return dates shown on this page.",
+  "schemaCalendarDownloadName": "MySchoolDates SCUSD 2026–27 calendar import file",
+  "schemaCalendarDownloadDescription": "Calendar import file generated from the reviewed student attendance calendar records used for this page.",
+  "schemaIsAccessibleForFree": true,
+  "schemaKeywords": [
+    "SCUSD calendar",
+    "Sacramento City Unified calendar",
+    "2026-2027 school calendar",
+    "SCUSD Spring Break",
+    "school breaks",
+    "Sacramento California"
   ],
-  "yearNumbers": [
-    {
-      "label": "Fewer Instructional Days",
-      "value": "180 days",
-      "detail": "SCUSD drops from 188 instructional days in 2025-2026 to the standard 180 — a reduction of 8 days, with the year ending 15 days earlier (May 27 vs June 11)."
-    },
-    {
-      "label": "Starts Earlier",
-      "value": "7 days sooner",
-      "detail": "First day is August 11 vs August 18 in 2025-2026 — a full week earlier, which will affect summer program and childcare planning."
-    },
-    {
-      "label": "Indigenous Peoples Day",
-      "value": "Oct 12",
-      "detail": "Sacramento City Unified observes Indigenous Peoples Day as a school holiday — not a universal California school holiday, and often missed by families new to the district."
-    },
-    {
-      "label": "César Chávez Day",
-      "value": "Mar 31",
-      "detail": "César Chávez Day on March 31 falls four days after Spring Break ends, creating a second no-school day in the same week that students return from break."
-    }
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "breaks",
+    "yearNumbers",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "otherCalendars",
+    "downloadCta",
+    "nationalTrends"
   ],
-  "events": [
+  "keyDatesSummaryTitle": "Key Dates for SCUSD Families",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, and return dates",
+  "keyDateSummaryItems": [
     {
-      "date": "2026-08-11",
+      "label": "First Day",
       "name": "First Day of School",
+      "date": "2026-08-11",
       "type": "school_start"
     },
     {
-      "date": "2026-09-07",
-      "name": "Labor Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-10-12",
-      "name": "Indigenous Peoples Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-11-11",
-      "name": "Veterans Day",
-      "type": "holiday"
-    },
-    {
+      "label": "Break",
+      "name": "Fall Break",
       "date": "2026-11-23",
-      "name": "Thanksgiving Break",
-      "type": "break_start"
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "description": "Students return Monday, November 30."
     },
     {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2026-12-21",
+      "label": "Break",
       "name": "Winter Break",
-      "type": "break_start"
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "type": "break_start",
+      "description": "Students return Tuesday, January 5."
     },
     {
-      "date": "2027-01-04",
-      "name": "Winter Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-01-18",
-      "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-02-08",
-      "name": "Lincoln's Birthday",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-02-15",
-      "name": "Presidents' Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-03-23",
+      "label": "Break",
       "name": "Spring Break",
-      "type": "break_start"
+      "date": "2027-03-22",
+      "endDate": "2027-03-29",
+      "type": "break_start",
+      "description": "Students return Tuesday, March 30."
     },
     {
-      "date": "2027-03-27",
-      "name": "Spring Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-03-31",
-      "name": "César Chávez Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-05-27",
+      "label": "Last Day",
       "name": "Last Day of School",
+      "date": "2027-05-27",
       "type": "school_end"
     }
   ],
-  "calendarNotes": "Classes begin August 11, 2026, and end May 27, 2027. Winter Break runs December 21–January 4; Spring Break follows on March 23–27. Because César Chávez Day falls on March 31 — four days after Spring Break ends — late March includes two separate no-school periods within the same two-week window. February also includes Lincoln's Birthday on the 8th and Presidents' Day on the 15th, placing two California state holidays one week apart.",
-  "datePublished": "2026-07-02",
-  "dateModified": "2026-07-02"
+  "customSections": [
+    {
+      "id": "scusd-calendar-scope-2026-2027",
+      "label": "Which SCUSD Calendar Applies?",
+      "position": "afterVerification",
+      "content": "This page covers SCUSD’s Traditional Student Attendance Calendar. SCUSD also publishes TK–6 and 7–12 academic calendars for term and reporting dates, plus separate attendance calendars for dependent charter schools and Adult Education. Use the calendar that matches your school or program.",
+      "table": {
+        "columns": ["Calendar need", "Official source to check"],
+        "rows": [
+          ["Traditional student attendance dates", "Traditional Student Attendance Calendar"],
+          ["TK–6 term and reporting dates", "Elementary (TK–6) Academic Calendar"],
+          ["Grades 7–12 term and reporting dates", "Secondary (7–12) Academic Calendar"],
+          ["Dependent charter attendance dates", "School-specific charter calendar"],
+          ["Adult Education attendance dates", "Adult Education Calendar"]
+        ]
+      }
+    }
+  ],
+  "whatsNew": {
+    "title": "What's Different From 2025–26",
+    "content": [
+      "The first day moves from August 18 in 2025 to August 11 in 2026, seven calendar days earlier.",
+      "The Thanksgiving-week break shifts from November 24–28 in 2025 to November 23–27 in 2026.",
+      "Winter Break begins one day earlier and runs through January 4 instead of January 2.",
+      "Spring Break starts eight calendar days earlier, moving from March 30 in 2026 to March 22 in 2027.",
+      "The last day moves from June 11 in 2026 to May 27 in 2027."
+    ]
+  },
+  "calendarFaqs": [
+    {
+      "q": "When does SCUSD start school in 2026–27?",
+      "a": "The first day of school on SCUSD’s Traditional Student Attendance Calendar is Tuesday, August 11, 2026."
+    },
+    {
+      "q": "When is SCUSD Fall Break in 2026?",
+      "a": "Fall Break runs November 23–27, 2026. Students return Monday, November 30."
+    },
+    {
+      "q": "When is SCUSD Winter Break?",
+      "a": "Winter Break runs December 21, 2026–January 4, 2027. Students return Tuesday, January 5."
+    },
+    {
+      "q": "When is SCUSD Spring Break in 2027?",
+      "a": "Spring Break runs March 22–29, 2027. Students return Tuesday, March 30."
+    },
+    {
+      "q": "Does every SCUSD school follow this calendar?",
+      "a": "No. This page covers the Traditional Student Attendance Calendar. SCUSD publishes TK–6 and 7–12 academic calendars for term and reporting dates, plus separate attendance calendars for dependent charter schools and Adult Education."
+    },
+    {
+      "q": "Where can I find the official SCUSD calendar PDF?",
+      "a": "SCUSD publishes the official 2026–27 Traditional Student Attendance Calendar as a PDF on its Academic Calendars page. You can also open that PDF from the downloads section above. Check SCUSD’s Academic Calendars page for the latest version."
+    },
+    {
+      "q": "Will the SCUSD ICS file update automatically?",
+      "a": "No. The ICS file is a one-time import for Google Calendar, Apple Calendar, or Outlook and does not automatically sync with later SCUSD revisions."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When does SCUSD start school in 2026–27?",
+    "When is SCUSD Fall Break in 2026?",
+    "When is SCUSD Winter Break?",
+    "When is SCUSD Spring Break in 2027?",
+    "Does every SCUSD school follow this calendar?",
+    "Where can I find the official SCUSD calendar PDF?",
+    "Will the SCUSD ICS file update automatically?"
+  ],
+  "faqDisplayLimit": 7,
+  "faqSchemaLimit": 7,
+  "jumpNavigation": [
+    { "label": "Calendar Scope", "id": "scusd-calendar-scope-2026-2027" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Changes", "id": "year-comparison" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "comparisonDistrictSlugs": [
+    "elk-grove-unified-school-district-calendar",
+    "san-juan-unified-school-district-calendar"
+  ],
+  "comparisonCustomRows": [
+    {
+      "key": "firstDay",
+      "label": "First Student Day",
+      "values": {
+        "sacramento-city-unified-school-calendar": "Aug 11, 2026",
+        "elk-grove-unified-school-district-calendar": "Aug 13, 2026",
+        "san-juan-unified-school-district-calendar": "Aug 13, 2026"
+      }
+    },
+    {
+      "key": "lastDay",
+      "label": "Last Student Day",
+      "values": {
+        "sacramento-city-unified-school-calendar": "May 27, 2027",
+        "elk-grove-unified-school-district-calendar": "May 27, 2027",
+        "san-juan-unified-school-district-calendar": "Jun 8, 2027"
+      }
+    },
+    {
+      "key": "fallBreak",
+      "label": "Fall / Thanksgiving Break",
+      "values": {
+        "sacramento-city-unified-school-calendar": "Nov 23–27, 2026",
+        "elk-grove-unified-school-district-calendar": "Nov 23–27, 2026",
+        "san-juan-unified-school-district-calendar": "Nov 23–27, 2026"
+      }
+    },
+    {
+      "key": "winterBreak",
+      "label": "Winter Break",
+      "values": {
+        "sacramento-city-unified-school-calendar": "Dec 21, 2026–Jan 4, 2027",
+        "elk-grove-unified-school-district-calendar": "Dec 21, 2026–Jan 4, 2027",
+        "san-juan-unified-school-district-calendar": "Dec 21, 2026–Jan 4, 2027"
+      }
+    },
+    {
+      "key": "springBreak",
+      "label": "Spring Break",
+      "values": {
+        "sacramento-city-unified-school-calendar": "Mar 22–29, 2027",
+        "elk-grove-unified-school-district-calendar": "Mar 15–19, 2027",
+        "san-juan-unified-school-district-calendar": "Mar 22–26, 2027"
+      }
+    }
+  ],
+  "comparisonTitle": "How SCUSD’s 2026–27 Calendar Compares With Nearby Districts",
+  "comparisonSummary": "See how SCUSD’s first and last student days and major breaks compare with Elk Grove Unified’s Traditional Calendar and San Juan Unified’s 2026–27 School Year Calendar.",
+  "comparisonFooterText": "Dates are based on each district’s published 2026–27 student calendar. Break names and boundaries follow the labels used by each district; adjacent staff days may change the total time students are out of school.",
+  "allDatesTitle": "SCUSD Student Attendance Dates for 2026–27",
+  "allDatesFooterMode": "source_sentence",
+  "allDatesCoverageNote": "This list covers the dates shown on SCUSD’s Traditional Student Attendance Calendar. For grading periods, minimum days, bell schedules, charter calendars, testing dates, and later schedule changes, check SCUSD’s Academic Calendars page and your school’s calendar.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1768587946/scusdedu/vxeaesh0k3nbyfhx6vrz/2026-27TraditionalAttendanceCalendar.pdf",
+  "allDatesSourceLabel": "Source: Official SCUSD 2026–27 Traditional Student Attendance Calendar PDF",
+  "icsHeading": "SCUSD Calendar Downloads",
+  "icsDescription": "Download a one-time ICS file containing the student attendance dates shown on this page, including holidays, breaks, and return dates.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "icsButtonSupportText": "One-time import. This calendar does not automatically sync with later SCUSD updates.",
+  "icsAriaLabel": "Download the SCUSD 2026–27 student calendar file for Google Calendar, Apple Calendar, or Outlook",
+  "pdfHeading": "Official SCUSD 2026–27 Calendar",
+  "pdfButtonLabel": "View Official SCUSD PDF",
+  "pdfDescription": "Open the Traditional Student Attendance Calendar PDF published by Sacramento City Unified School District.",
+  "sourceReviewSummary": "Reviewed against SCUSD’s official Academic Calendars page, Traditional Student Attendance Calendar PDF, and 2026–27 calendar announcement.",
+  "sourceReviewDetails": [
+    "We checked the first and last student days, six standalone holidays, Fall Break, Winter Break, Spring Break, and return dates against the official Traditional Student Attendance Calendar.",
+    "Return dates are derived from the next scheduled student attendance day shown on the official calendar.",
+    "This page does not include grade-level academic terms, dependent charter calendars, Adult Education dates, or school-specific events."
+  ],
+  "sources": [
+    { "label": "SCUSD Academic Calendars page", "url": "https://www.scusd.edu/families/academic-calendars" },
+    { "label": "SCUSD 2026–27 Traditional Student Attendance Calendar PDF", "url": "https://resources.finalsite.net/images/v1768587946/scusdedu/vxeaesh0k3nbyfhx6vrz/2026-27TraditionalAttendanceCalendar.pdf" },
+    { "label": "SCUSD 2026–27 academic calendar approval announcement", "url": "https://www.scusd.edu/p/~board/2025-2026/post/2026-27-academic-calendar-approved" },
+    { "label": "SCUSD 2025–26 Traditional Student Attendance Calendar PDF — used for year-over-year comparison", "url": "https://resources.finalsite.net/images/v1751576075/scusdedu/kcysfdg1yhyaude7bz5m/20252026__traditional_student_attendance__calendar-_per_scta_agreement_2202024.pdf" }
+  ],
+  "events": [
+    { "date": "2026-08-11", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday", "description": "No school." },
+    { "date": "2026-10-12", "name": "Indigenous Peoples’ Day", "type": "holiday", "description": "No school." },
+    { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday", "description": "No school." },
+    { "date": "2026-11-23", "endDate": "2026-11-27", "name": "Fall Break", "type": "break_start" },
+    { "date": "2026-11-30", "name": "Students Return After Fall Break", "type": "school_resume" },
+    { "date": "2026-12-21", "endDate": "2027-01-04", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-01-05", "name": "Students Return After Winter Break", "type": "school_resume" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday", "description": "No school." },
+    { "date": "2027-02-08", "name": "Lincoln’s Birthday", "type": "holiday", "description": "No school." },
+    { "date": "2027-02-15", "name": "Presidents’ Day", "type": "holiday", "description": "No school." },
+    { "date": "2027-03-22", "endDate": "2027-03-29", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-03-30", "name": "Students Return After Spring Break", "type": "school_resume" },
+    { "date": "2027-05-27", "name": "Last Day of School", "type": "school_end" }
+  ]
 }

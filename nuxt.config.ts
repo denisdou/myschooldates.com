@@ -80,6 +80,7 @@ export default defineNuxtConfig({
         '/bakersfield-city-school-district-calendar',
         '/baltimore-county-school-calendar',
         '/baltimore-city-public-schools-calendar',
+        '/bellevue-school-district-calendar',
         '/brevard-public-schools-calendar',
         '/boston-public-schools-calendar',
         '/broward-county-school-calendar',
@@ -125,6 +126,7 @@ export default defineNuxtConfig({
         '/humble-isd-calendar',
         '/jeffco-public-schools-calendar',
         '/judson-isd-calendar',
+        '/kent-school-district-calendar',
         '/long-beach-unified-school-district-calendar',
         '/lake-washington-school-district-calendar',
         '/los-angeles-unified-school-district-calendar',
@@ -172,6 +174,7 @@ export default defineNuxtConfig({
         '/school-district-of-philadelphia-calendar',
         '/stockton-unified-school-district-calendar',
         '/sweetwater-union-high-school-district-calendar',
+        '/tacoma-public-schools-calendar',
         '/tempe-union-high-school-district-calendar',
         '/tucson-unified-school-district-calendar',
         '/oakland-unified-school-district-calendar',
@@ -538,6 +541,12 @@ export default defineNuxtConfig({
         '/seminole-county-school-calendar/2026-2027',
         '/seminole-county-school-calendar/2027-2028',
 
+        '/bellevue-school-district-calendar/2025-2026',
+        '/bellevue-school-district-calendar/2026-2027',
+
+        '/kent-school-district-calendar/2025-2026',
+        '/kent-school-district-calendar/2026-2027',
+
         '/lake-washington-school-district-calendar/2025-2026',
         '/lake-washington-school-district-calendar/2026-2027',
         '/lake-washington-school-district-calendar/2027-2028',
@@ -547,6 +556,9 @@ export default defineNuxtConfig({
 
         '/seattle-public-schools-calendar/2025-2026',
         '/seattle-public-schools-calendar/2026-2027',
+
+        '/tacoma-public-schools-calendar/2025-2026',
+        '/tacoma-public-schools-calendar/2026-2027',
 
         '/school-district-of-philadelphia-calendar/2025-2026',
         '/school-district-of-philadelphia-calendar/2026-2027',

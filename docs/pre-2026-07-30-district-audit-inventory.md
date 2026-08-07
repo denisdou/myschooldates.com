@@ -1,6 +1,7 @@
 # 2026-07-30 之前创建的学区审计整改队列
 
 Created: 2026-08-03
+Last updated: 2026-08-07
 
 ## Scope
 
@@ -30,9 +31,9 @@ Created: 2026-08-03
 | P4 | `/miami-dade-school-calendar` | 已完成 Miami-Dade 2026–27 全部审计整改并达到 9.8 发布级：比较模块限定 Broward/Palm Beach，补充 Wednesday Early Release、grading periods 与前置备用日历模块，统一使用官方 Elementary and Secondary Calendar 名称，明确区分 7 月 28 日日期核验与 8 月 6 日页面更新，收紧 Important Dates/ICS/Schema 范围，清理未核验多语言源数据，关闭 Article/FAQPage Schema，并补齐 Dataset 元数据与 revision history；生产构建、双路由 SSR、模块顺序、锚点、JSON-LD、比较表与 ICS 文件级 QA 均通过，updated: 2026-08-06 |
 | P4 | `/northside-independent-school-district-calendar` | 2026–27 已完成最终整改并达到 9.8 发布级；2027–28 已按同一发布级架构完成重构并达到 9.8：February 22 改为带 `STATUS:TENTATIVE` 的条件补课日，补入 August 2–6 与 May 25 教师工作日，拆分 October 8/11/12，移除 175 天统计、无来源节日命名和重复模块，前移 PDF/ICS，补充 2026–27 比较来源、PDF 版本、三县 Dataset 范围及精确的 October Schema 日期，并消除 Related Calendars 的跨学年比较暗示；已完成本地 SSR 与 ICS 文件级验证。updated/reviewed: 2026-08-06 |
 | P4 | `/orange-county-school-calendar` | 已审计并达到 9.8 发布级：补齐四个 Severe Weather Make-Up Days、marking-period transitions、Wednesday Early Release 与返校日期，精简 FAQ 和重复模块；学区主文件已删除旧 About、FAQ、Planning、Living Here、旅游、School Choice、飓风概率和南佛州推荐理由，相关推荐改为 Central Florida 学区；关闭 Article/FAQPage Schema，并同步 ICS 条件提醒、可访问日期范围和官方来源，Dataset 来源范围已与 ICS 内容收紧。待生产部署、重新索引及 ICS 三平台导入验证，reviewed: 2026-08-06 |
-| P0 | `/palm-beach-county-school-calendar` | 未审计 |
-| P0 | `/pasco-county-school-calendar` | 未审计 |
-| P0 | `/sacramento-city-unified-school-calendar` | 未审计 |
+| P4 | `/palm-beach-county-school-calendar` | 已完成 2026–27 审计整改并达到 9.5+ 发布级：改用 2026-07-28 amended official PDF，处理 PDF 与 Key Dates page 的日期、标签及 attendance-day 统计冲突，删除无可靠依据的天数/学期统计，补齐返校日、grading-period、teacher workday、emergency make-up、年度差异、ICS 范围、Schema 与来源优先级说明；官方来源及页面均于 2026-08-07 复核/更新。reviewed: 2026-08-07 |
+| P4 | `/pasco-county-school-calendar` | 已完成 2026–27 审计整改并达到 9.5+ 发布级：明确 February 12 / April 16 条件 school-day 逻辑、October / January / February 三个 early-release days、June 1–4 extended-closure make-up window，以及 Winter / Spring Break 后的实际返校日；同步收紧 ICS、FAQ、重复模块、订阅说明与来源追踪。核心日期保持 2026-07-18 官方复核结果，页面 updated/reviewed: 2026-08-07 |
+| P4 | `/sacramento-city-unified-school-calendar` | 已完成 2026–27 审计整改并达到 9.5+ 发布级：页面范围收紧为 Traditional Student Attendance Calendar，区分 TK–6 / 7–12 academic calendars、dependent charter 与 Adult Education 独立日历，补齐 Fall / Winter / Spring Break 返校日、年度差异、PDF/ICS 范围、FAQ、来源说明与 Schema，并清理无当前官方依据的学区通用文案。updated/reviewed: 2026-08-07 |
 | P0 | `/san-diego-unified-school-district-calendar` | 未审计 |
 | P0 | `/charlotte-mecklenburg-schools-calendar` | 未审计 |
 | P0 | `/chesterfield-county-school-calendar` | 未审计 |

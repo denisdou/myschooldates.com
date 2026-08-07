@@ -1025,6 +1025,10 @@ const keyDatesSummarySubtitle = computed(() =>
 const dateLabelOverrides = computed(() =>
   ((cal as any)?.dateLegendLabelOverrides ?? (cal as any)?.meta?.dateLegendLabelOverrides ?? (district.value as any)?.dateLegendLabelOverrides ?? (district.value as any)?.meta?.dateLegendLabelOverrides ?? {}) as Record<string, string>
 )
+const dateLegendExtraItems = computed(() =>
+  (((cal as any)?.dateLegendExtraItems ?? (cal as any)?.meta?.dateLegendExtraItems ?? []) as Array<{ label?: string, dot?: string }>)
+    .filter(item => item.label && item.dot) as Array<{ label: string, dot: string }>
+)
 const dateLegend = computed(() => {
   if ((cal as any)?.hideDateLegend === true || (cal as any)?.meta?.hideDateLegend === true) return []
   const legendTypes = new Set((cal?.events ?? []).map((event: any) => event.labelType ?? event.type))
@@ -1045,6 +1049,7 @@ const dateLegend = computed(() => {
     ...(hasEventType(['makeup_day', 'weather_day', 'inclement_weather_day']) ? [{ label: 'Reserved Weather Day', dot: 'bg-orange-300' }] : []),
     ...(hasEventType(['break_start']) || hasPossibleMakeupDay ? [{ label: 'Break', dot: 'bg-purple-400' }] : []),
     ...(hasEventType(['observance']) ? [{ label: 'Observance', dot: 'bg-teal-400' }] : []),
+    ...dateLegendExtraItems.value,
   ]
   const seen = new Set<string>()
   return items

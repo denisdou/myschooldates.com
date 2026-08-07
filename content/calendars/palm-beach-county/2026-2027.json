@@ -1,49 +1,287 @@
 {
   "institutionId": "palm-beach-county",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Palm Beach County School District Calendar 2026–2027",
   "firstDay": "2026-08-10",
   "lastDay": "2027-05-27",
-  "totalSchoolDays": 180,
-  "teacherWorkDays": 195,
-  "semesters": 2,
-  "sourceUrl": "https://www.palmbeachschools.org/calendar",
+  "totalSchoolDays": null,
+  "teacherWorkDays": null,
+  "semesters": null,
+  "temporalCoverageStart": "2026-08-10",
+  "temporalCoverageEnd": "2027-05-28",
+  "sourceUrl": "https://www.palmbeachschools.org/studentsparents/school-calendar/2026-2027-key-dates",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1778691019/palmbeachschoolsorg/zo0acyutpogdfkqpkzkq/FY27_SchoolCalendar.pdf",
-  "lastVerifiedAt": "2026-07-02",
+  "sourceCalendarName": "Palm Beach County School District School Calendar 2026–2027",
+  "sourceVersion": "Amended July 28, 2026; School Board Approved April 15, 2026",
+  "lastVerifiedAt": "2026-08-07",
+  "dateCreated": "2026-07-02",
+  "datePublished": "2026-07-02",
+  "dateModified": "2026-08-07",
   "calendarType": "traditional",
+  "seoTitle": "Palm Beach County School Calendar 2026-2027: Key Dates & PDF",
+  "seoDescription": "Palm Beach County School District 2026–2027 calendar: first and last school days, holidays, teacher workdays, major breaks, official PDF, and ICS download.",
+  "schemaCalendarName": "Palm Beach County School District Calendar 2026–2027",
+  "schemaDatasetName": "Palm Beach County School District 2026–2027 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Palm Beach County School District student dates and teacher workdays for 2026–2027, including school-year boundaries, holidays, major breaks, return dates, grading-period information, official sources, and an ICS download.",
+  "schemaCalendarDownloadName": "Palm Beach County School District 2026–2027 calendar file",
+  "schemaCalendarDownloadDescription": "Calendar import file generated from the reviewed PBCSD student dates and teacher workdays listed on this page.",
+  "schemaDatasetSourceCalendarIds": ["source-calendar", "source-calendar-page"],
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "previous-calendar",
+      "name": "Palm Beach County School District 2025–2026 School Calendar",
+      "url": "https://resources.finalsite.net/images/v1728590977/palmbeachschoolsorg/z7qrulfhy1mq5btwtzzs/FY26_SchoolCalendar.pdf"
+    }
+  ],
+  "webPageMainEntity": "none",
+  "schemaReviewedBy": "author",
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "verificationBadgeText": "Official PBCSD sources checked August 7, 2026.",
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "downloadCta",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "yearNumbers"
+  ],
+  "heroSourceLine": "Based on PBCSD’s official 2026–27 calendar and Key Dates page",
+  "heroSummary": "Palm Beach County School District students begin the 2026–27 school year on Monday, August 10, 2026. The last day of school is Thursday, May 27, 2027. Thanksgiving Break is November 23–27, Winter Break is December 21–January 1, and Spring Break is March 22–26. January 4 is a no-school day for students, so classes resume Tuesday, January 5.",
+  "heroFactChips": [
+    "First day: Aug 10",
+    "Back from Winter Break: Jan 5",
+    "Last day: May 27"
+  ],
+  "keyDatesSummaryTitle": "2026–27 Calendar at a Glance",
+  "keyDatesSummarySubtitle": "Start and end dates, major breaks, and student return dates",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-10",
+      "type": "school_start",
+      "description": "Students begin school Monday, August 10.",
+      "schemaDescription": "The first day of school is August 10, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "description": "Classes resume Monday, November 30.",
+      "schemaDescription": "Thanksgiving Break runs November 23–27, 2026; classes resume November 30."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "January 4 is a no-school day for students; classes resume January 5.",
+      "schemaDescription": "Winter Break runs December 21, 2026–January 1, 2027; students return January 5 after a teacher workday."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "type": "break_start",
+      "description": "March 29 is a no-school day for students; classes resume March 30.",
+      "schemaDescription": "Spring Break runs March 22–26, 2027; students return March 30 after a teacher workday."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-05-27",
+      "type": "school_end",
+      "description": "The last student day is Thursday, May 27.",
+      "schemaDescription": "The last day of school is May 27, 2027."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "At a Glance", "href": "#key-dates" },
+    { "label": "Dates", "href": "#all-dates" },
+    { "label": "Breaks", "href": "#breaks" },
+    { "label": "Download", "href": "#add-to-calendar" },
+    { "label": "Calendar Notes", "href": "#pbc-calendar-notes" },
+    { "label": "Comparison", "href": "#comparison" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Sources", "href": "#sources" }
+  ],
+  "allDatesTitle": "Palm Beach County School Calendar Dates — 2026–27",
+  "allDatesCoverageNote": "This list includes districtwide student dates and teacher workdays that affect attendance. May 28 is a staff workday after the last student day. Individual schools may publish additional testing, early-dismissal, event, or program dates.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1778691019/palmbeachschoolsorg/zo0acyutpogdfkqpkzkq/FY27_SchoolCalendar.pdf",
+  "allDatesSourceLinks": [
+    {
+      "label": "PBCSD 2026–27 School Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1778691019/palmbeachschoolsorg/zo0acyutpogdfkqpkzkq/FY27_SchoolCalendar.pdf"
+    },
+    {
+      "label": "PBCSD 2026–27 Key Dates page",
+      "url": "https://www.palmbeachschools.org/studentsparents/school-calendar/2026-2027-key-dates"
+    }
+  ],
+  "allDatesSourceLabel": "PBCSD 2026–27 School Calendar PDF and Key Dates page",
+  "breaksTitle": "Major Breaks and Return Dates",
+  "hideBreakDurationBadges": true,
+  "breakNotes": {
+    "Thanksgiving Break": "Classes resume Monday, November 30, 2026.",
+    "Winter Break": "January 4 is a no-school day for students; classes resume Tuesday, January 5, 2027.",
+    "Spring Break": "March 29 is a no-school day for students; classes resume Tuesday, March 30, 2027."
+  },
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideExtendedShareButtons": true,
+  "hideShareCalendar": true,
+  "hideIcsButtonSupportText": true,
+  "icsHeading": "Download the PBCSD 2026–27 Calendar",
+  "icsDescription": "Download a MySchoolDates ICS file containing the student dates and teacher workdays listed on this page. This is a one-time import and will not update automatically if PBCSD revises its calendar.",
+  "icsAriaLabel": "Download a MySchoolDates ICS file based on the Palm Beach County School District 2026–27 calendar",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "pdfHeading": "Official PBCSD 2026–27 Calendar PDF",
+  "pdfDescription": "Open PBCSD’s current official 2026–27 calendar PDF, amended July 28, 2026.",
+  "pdfButtonLabel": "Open Official PDF",
+  "pdfVersionLabel": "Amended July 28, 2026 · School Board Approved April 15, 2026",
+  "customSections": [
+    {
+      "id": "pbc-calendar-notes",
+      "label": "How PBCSD Organizes the School Year",
+      "position": "afterCalendarExport",
+      "content": "PBCSD uses different grading periods for elementary and secondary schools. Teacher workdays are no-school days for students, and emergency make-up dates are not fixed in advance.",
+      "table": {
+        "caption": "PBCSD 2026–27 grading periods, teacher workdays, and emergency make-up guidance",
+        "columns": ["Calendar item", "What families should know"],
+        "rows": [
+          ["Elementary grading periods", "Elementary schools use three trimesters: August 10–November 2, November 4–February 12, and February 16–May 27."],
+          ["Secondary grading periods", "Secondary schools use four quarters: August 10–October 9, October 13–December 18, January 5–March 19, and March 30–May 27."],
+          ["Secondary semesters", "The first semester runs August 10–December 18. The second runs January 5–May 27."],
+          ["Teacher work days / professional development days", "Students do not attend October 12, November 3, January 4, February 15, March 29, or May 28."],
+          ["Emergency Make-Up Days", "The Superintendent may schedule make-up days when additional instructional time is required under state law. Check official district notices after an emergency closure."]
+        ]
+      }
+    },
+    {
+      "id": "pbc-about-calendar",
+      "label": "About This Calendar",
+      "position": "afterComparison",
+      "content": "The School District of Palm Beach County serves public school students across Palm Beach County, including West Palm Beach, Boca Raton, Wellington, Jupiter, and Belle Glade. This page covers districtwide dates on the current official 2026–27 calendar. Individual schools may publish additional dates for testing, events, early dismissal, or program-specific schedules."
+    }
+  ],
+  "whatsNew": {
+    "title": "What Changed from 2025–26",
+    "content": [
+      "The first student day moves from August 11 to August 10.",
+      "Spring Break moves from March 16–20 to March 22–26.",
+      "The last student day moves from May 29 to May 27."
+    ]
+  },
+  "comparisonBeforeFaq": true,
+  "comparisonDistrictSlugs": [
+    "broward-county-school-calendar",
+    "miami-dade-school-calendar"
+  ],
+  "comparisonTitle": "PBCSD Calendar Compared With Other South Florida Districts",
+  "comparisonSummary": "Compare Palm Beach County with Broward and Miami-Dade for the first day, last day, Thanksgiving Break, Winter Break, and Spring Break.",
+  "comparisonRowsInclude": ["firstDay", "lastDay", "thanksgivingBreak", "winterBreak", "springBreak"],
+  "comparisonRowsMode": "sharedValuesOnly",
+  "hideComparisonInsights": true,
+  "hideComparisonNotes": true,
   "calendarFaqs": [
     {
-      "q": "When does school start for Palm Beach County School District in 2026-2027?",
-      "a": "The first day of school for Palm Beach County School District is Monday, August 10, 2026. Students and staff are expected to report on this date to begin the new academic year."
+      "q": "When does school start in Palm Beach County in 2026–2027?",
+      "a": "The first day of school is Monday, August 10, 2026."
     },
     {
-      "q": "When is the last day of school for Palm Beach County School District in 2026-2027?",
-      "a": "The last day of school for Palm Beach County School District is Thursday, May 27, 2027. The school year runs from August through May, covering 180 instructional days."
+      "q": "When is the last day of school in Palm Beach County in 2027?",
+      "a": "The last student day is Thursday, May 27, 2027. May 28 is a teacher workday when students do not attend."
     },
     {
-      "q": "When is spring break 2026-2027 for Palm Beach County School District?",
-      "a": "Spring break for Palm Beach County School District runs March 22–26, 2027, aligning with Broward County and Miami-Dade — all three major South Florida districts break the same week. A standalone Spring Holiday on March 10 and a teacher workday on March 29 add no-school days immediately before and after the main break."
+      "q": "When is PBCSD Spring Break in 2027?",
+      "a": "Spring Break is March 22–26, 2027. March 29 is a no-school day for students, so classes resume Tuesday, March 30."
     },
     {
-      "q": "When is winter break 2026-2027 for Palm Beach County School District?",
-      "a": "Winter break for Palm Beach County School District runs December 21, 2026–January 1, 2027 (12 days). A teacher workday falls on January 4, so students return Tuesday, January 5, 2027."
+      "q": "When is PBCSD Winter Break in 2026–2027?",
+      "a": "Winter Break is December 21, 2026–January 1, 2027."
     },
     {
-      "q": "When is Thanksgiving break 2026-2027 for Palm Beach County School District?",
-      "a": "Thanksgiving break for Palm Beach County School District runs November 23–27, 2026 (Monday through Friday). Thanksgiving Day falls on November 26. School resumes Monday, November 30, 2026."
+      "q": "When do PBCSD students return after Winter Break?",
+      "a": "January 4 is a no-school day for students, so classes resume Tuesday, January 5, 2027."
+    },
+    {
+      "q": "Are PBCSD teacher workdays school days for students?",
+      "a": "No. Students do not attend on the districtwide teacher workdays listed on this page."
+    },
+    {
+      "q": "Can emergency closures change the PBCSD calendar?",
+      "a": "Yes. PBCSD states that emergency make-up days are scheduled at the Superintendent’s discretion when additional instructional time is required. Check district notices after a closure."
+    },
+    {
+      "q": "Does every PBCSD school follow exactly the same calendar?",
+      "a": "Districtwide dates apply broadly, but individual schools and programs may publish additional testing, early-dismissal, event, or program-specific dates."
     }
   ],
-  "yearNumbers": [
+  "faqDisplayQuestions": [
+    "When does school start in Palm Beach County in 2026–2027?",
+    "When is the last day of school in Palm Beach County in 2027?",
+    "When is PBCSD Spring Break in 2027?",
+    "When is PBCSD Winter Break in 2026–2027?",
+    "When do PBCSD students return after Winter Break?",
+    "Are PBCSD teacher workdays school days for students?",
+    "Can emergency closures change the PBCSD calendar?",
+    "Does every PBCSD school follow exactly the same calendar?"
+  ],
+  "faqDisplayLimit": 8,
+  "sourceReviewSummary": "This page was checked against PBCSD’s current amended 2026–27 calendar PDF and official Key Dates page on August 7, 2026.",
+  "sourceReviewDetailsTitle": "Source notes and verification",
+  "sourceReviewDetails": [
+    "We verified the first and last student days, holidays, teacher workdays, major breaks, return dates, grading periods, and emergency make-up guidance.",
+    "The current amended PDF lists three elementary trimesters and four secondary quarters grouped into two semesters.",
+    "Source precedence: When PBCSD’s Key Dates page conflicts with the current amended calendar PDF, MySchoolDates follows the current amended PDF for calendar dates and labels. At our August 7, 2026 review, PBCSD’s Key Dates page contained several discrepancies in dates, labels, and attendance-day counts. We do not publish attendance-day totals where the official sources disagree.",
+    "PBCSD states that emergency make-up days are scheduled at the Superintendent’s discretion in accordance with state instructional-time requirements.",
+    "The 2025–26 and 2026–27 official calendars were used for the year-over-year comparison.",
+    "The downloadable ICS file is generated from the dates listed on this page and does not update automatically if PBCSD revises its calendar."
+  ],
+  "sourceMaintainerText": "Denis Dou for MySchoolDates",
+  "sourceNextReviewText": "Next review: When PBCSD revises the calendar, publishes an emergency make-up schedule, or replaces the official PDF.",
+  "sources": [
     {
-      "label": "Spring Holiday",
-      "value": "Mar 10",
-      "detail": "A standalone Spring Holiday on March 10 falls 12 days before Spring Break begins — combined with the March 22-26 break and a Mar 29 teacher workday, students have three separate no-school events across a single month."
+      "label": "PBCSD 2026–27 School Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1778691019/palmbeachschoolsorg/zo0acyutpogdfkqpkzkq/FY27_SchoolCalendar.pdf"
     },
     {
-      "label": "South FL Aligned",
-      "value": "Mar 22–26",
-      "detail": "Spring Break aligns with Miami-Dade and Broward County this year — all three major South Florida coastal districts break the same week."
+      "label": "PBCSD 2026–27 Key Dates",
+      "url": "https://www.palmbeachschools.org/studentsparents/school-calendar/2026-2027-key-dates"
+    },
+    {
+      "label": "PBCSD school calendar page",
+      "url": "https://www.palmbeachschools.org/calendar"
+    },
+    {
+      "label": "PBCSD 2025–26 School Calendar PDF — used for year-over-year comparison",
+      "url": "https://resources.finalsite.net/images/v1728590977/palmbeachschoolsorg/z7qrulfhy1mq5btwtzzs/FY26_SchoolCalendar.pdf"
     }
   ],
+  "yearSwitcherPosition": "afterSources",
+  "yearSwitcherLabel": "Other school year:",
+  "relatedDistrictsTitle": "More Florida School Calendars",
+  "relatedDistrictsDescription": "Explore calendars for other Florida school districts.",
+  "hideRelatedDistrictDescriptions": true,
+  "forceRelatedDistrictYearLinks": true,
   "events": [
     {
       "date": "2026-08-10",
@@ -58,17 +296,24 @@
     {
       "date": "2026-09-21",
       "name": "Fall Holiday",
-      "type": "no_school"
+      "type": "holiday",
+      "preserveOfficialName": true
     },
     {
       "date": "2026-10-12",
-      "name": "No School (Teacher Workday)",
-      "type": "no_school"
+      "name": "Teacher Work Day / Professional Development Day",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School for Students",
+      "description": "Students do not attend."
     },
     {
       "date": "2026-11-03",
-      "name": "No School (Teacher Workday)",
-      "type": "no_school"
+      "name": "Teacher Work Day / Professional Development Day",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School for Students",
+      "description": "Students do not attend."
     },
     {
       "date": "2026-11-11",
@@ -77,28 +322,25 @@
     },
     {
       "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "displayDate": "November 23–27, 2026",
       "name": "Thanksgiving Break",
       "type": "break_start"
     },
     {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
-    },
-    {
       "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "displayDate": "December 21, 2026–January 1, 2027",
       "name": "Winter Break",
       "type": "break_start"
     },
     {
-      "date": "2027-01-01",
-      "name": "Winter Break End",
-      "type": "break_end"
-    },
-    {
       "date": "2027-01-04",
-      "name": "No School (Teacher Workday)",
-      "type": "no_school"
+      "name": "Teacher Work Day / Professional Development Day",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School for Students",
+      "description": "Students do not attend; classes resume January 5."
     },
     {
       "date": "2027-01-18",
@@ -107,36 +349,45 @@
     },
     {
       "date": "2027-02-15",
-      "name": "No School (Teacher Workday)",
-      "type": "no_school"
+      "name": "Teacher Work Day / Professional Development Day",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School for Students",
+      "description": "Students do not attend."
     },
     {
       "date": "2027-03-10",
       "name": "Spring Holiday",
-      "type": "no_school"
+      "type": "holiday",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "displayDate": "March 22–26, 2027",
       "name": "Spring Break",
       "type": "break_start"
     },
     {
-      "date": "2027-03-26",
-      "name": "Spring Break End",
-      "type": "break_end"
-    },
-    {
       "date": "2027-03-29",
-      "name": "No School (Teacher Workday)",
-      "type": "no_school"
+      "name": "Teacher Work Day / Professional Development Day",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School for Students",
+      "description": "Students do not attend; classes resume March 30."
     },
     {
       "date": "2027-05-27",
       "name": "Last Day of School",
       "type": "school_end"
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Teacher Work Day",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School for Students",
+      "description": "Teachers report after the last student day; students do not attend."
     }
-  ],
-  "calendarNotes": "The 2026–2027 school year runs from August 10, 2026, through May 27, 2027. Spring Break falls March 22–26 and aligns with Broward County Public Schools and Miami-Dade County Public Schools, making it one of the busiest travel weeks across South Florida. March also includes a standalone Spring Holiday on March 10 and a teacher workday on March 29, giving students two additional no-school days immediately before and after the main break.",
-  "datePublished": "2026-07-02",
-  "dateModified": "2026-07-02"
+  ]
 }

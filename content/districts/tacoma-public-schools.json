@@ -1,0 +1,147 @@
+{
+  "institutionId": "tacoma-public-schools",
+  "name": "Tacoma Public Schools",
+  "shortName": "TPS",
+  "slug": "tacoma-public-schools-calendar",
+  "state": "Washington",
+  "stateCode": "WA",
+  "city": "Tacoma",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.tacomaschools.org/",
+  "calendarPage": "https://www.tacomaschools.org/about/calendar",
+  "logo": "https://resources.finalsite.net/images/v1574387548/tacomak12waus/r6mgfpb21xjzfcjb6nvh/logo-district.svg",
+  "timezone": "America/Los_Angeles",
+  "county": "Pierce County",
+  "region": "Puget Sound",
+  "metro": "Seattle-Tacoma-Bellevue",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Large Pierce County District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-07",
+    "coverageNote": "Tacoma Public Schools coverage uses the district calendar page and official conventional student calendar PDFs for 2025-2026 and 2026-2027. The district also publishes separate 2026-2027 calendars for IDEA, SAMI, and SOTA; Head Start and ECEAP; and ECSE specialized preschool programs. No 2027-2028 or later conventional student calendar PDF URL was provided."
+  },
+  "contentFreshnessScore": {
+    "overall": 96,
+    "sourceUpdated": "2026-08-07",
+    "lastManualReview": "2026-08-07",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the Tacoma Public Schools calendar page when TPS revises the conventional student calendar, activates a snow make-up day, changes a program calendar, or publishes a future school-year PDF."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official TPS revision, snow make-up day activation, program-calendar change, future-year PDF publication, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Tacoma Public Schools",
+    "TPS calendar",
+    "Tacoma school calendar",
+    "Tacoma Public Schools calendar",
+    "Tacoma student calendar",
+    "Tacoma Public Schools PDF calendar"
+  ],
+  "districtFact": "Tacoma Public Schools uses different opening dates for grades 1-12 and kindergarten, schedules a one-hour late start on Wednesdays, and identifies conference early releases and conditional snow make-up days. IDEA, SAMI, SOTA, Head Start, ECEAP, and ECSE programs may use separate official calendars.",
+  "about": [
+    {
+      "title": "About Tacoma Public Schools",
+      "content": "Tacoma Public Schools serves students across Tacoma in Pierce County, Washington. Its conventional student calendar separates the grades 1-12 opening date from kindergarten, marks weekly Wednesday late starts, identifies conference early releases, and reserves dates that may be used to make up weather closures."
+    },
+    {
+      "title": "Conventional and Program Calendars",
+      "content": "This page follows the district's conventional student calendar. TPS publishes separate calendars for IDEA, SAMI, and SOTA; Head Start and ECEAP; and ECSE specialized preschool programs, so families in those programs should use the matching official calendar rather than assuming every conventional-calendar date applies."
+    }
+  ],
+  "planningTips": {
+    "title": "Tacoma Public Schools Calendar Notes",
+    "content": [
+      "Grades 1-12 and kindergarten do not begin on the same day. The 2026-2027 calendar also names Transition to Kindergarten with the kindergarten start date.",
+      "TPS schedules a one-hour late start every Wednesday during the student year, but the first day for grades 1-12 is specifically marked as having no late start.",
+      "Some conference dates are early-release attendance days rather than full no-school days. The affected grade span is stated on the calendar.",
+      "Snow make-up dates are conditional. Confirm with TPS before treating one as an attendance day or assuming the scheduled last day has changed.",
+      "Program calendars can differ from the conventional student calendar, especially for arts-focused high schools and early-learning programs."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Do Tacoma kindergarten students start on the same day as grades 1-12?",
+      "a": "No. TPS lists separate opening dates for grades 1-12 and kindergarten. Check the current school-year calendar for the date that applies to your child."
+    },
+    {
+      "q": "What does late start mean on the Tacoma Public Schools calendar?",
+      "a": "TPS states that schools start one hour late every Wednesday during the student year. Families should confirm exact bell and transportation times with their school."
+    },
+    {
+      "q": "Are TPS conference dates full no-school days?",
+      "a": "Not always. The conventional calendar marks several conference dates as early-release days, including elementary-only and all-grade schedules."
+    },
+    {
+      "q": "Do IDEA, SAMI, SOTA, and Tacoma preschool programs use this calendar?",
+      "a": "Not necessarily. TPS publishes separate calendars for IDEA, SAMI, and SOTA; Head Start and ECEAP; and ECSE specialized preschool programs. Use the program-specific calendar on the official district calendar page."
+    },
+    {
+      "q": "Can the Tacoma Public Schools last day change?",
+      "a": "Yes. TPS lists conditional snow make-up days that may extend or otherwise change the student schedule after a weather closure."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Seattle Public Schools",
+      "slug": "seattle-public-schools-calendar",
+      "state": "Washington",
+      "comparisonNote": "Compare Seattle's grade-specific opening dates, early-release pattern, breaks, and emergency closure make-up dates."
+    },
+    {
+      "name": "Lake Washington School District",
+      "slug": "lake-washington-school-district-calendar",
+      "state": "Washington",
+      "comparisonNote": "View Lake Washington's kindergarten opening schedule, Wednesday early releases, LEAP days, and closure make-up dates."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Tacoma Public Schools official website",
+      "url": "https://www.tacomaschools.org/"
+    },
+    {
+      "label": "Tacoma Public Schools calendar page",
+      "url": "https://www.tacomaschools.org/about/calendar"
+    }
+  ]
+}

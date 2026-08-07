@@ -1,0 +1,515 @@
+{
+  "institutionId": "kent-school-district",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Kent School District Calendar 2026–27",
+  "firstDay": "2026-08-26",
+  "lastDay": "2027-06-17",
+  "totalSchoolDays": 180,
+  "semesters": 2,
+  "temporalCoverageStart": "2026-08-26",
+  "temporalCoverageEnd": "2027-06-17",
+  "sourceUrl": "https://www.kent.k12.wa.us/page/student-calendar",
+  "sourcePdfUrl": "https://www.kent.k12.wa.us/documents/about/district-information/student-calendar/683900",
+  "sourceCalendarName": "KSD Student Calendar 2026-2027",
+  "sourceVersion": "File name includes “FINAL 5.6.26”; PDF footer says “Revised 05.15.2025.”",
+  "lastVerifiedAt": "2026-08-07",
+  "dateCreated": "2026-08-07",
+  "datePublished": "2026-08-07",
+  "dateModified": "2026-08-07",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideDatasetSchema": true,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "keyDates",
+  "schemaReviewedBy": "author",
+  "seoTitle": "Kent School District Calendar 2026–27: Key Dates",
+  "seoDescription": "Kent School District 2026–27 calendar: staggered starts, Wednesday early release, conferences, ECSE exceptions, breaks, snow make-up dates and ICS download.",
+  "schemaCalendarName": "Kent School District Calendar 2026–27",
+  "schemaDatasetName": "Kent School District 2026–27 Student Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Kent School District dates for 2026–27, including grades 1–12, kindergarten and preschool openings, recurring Wednesday early release, elementary and secondary conference dismissals, ECSE exceptions, breaks, teacher workshops, and ordered snow make-up dates.",
+  "schemaCalendarDownloadName": "Kent School District 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "Calendar import file generated from the reviewed KSD dates for grades 1–12, kindergarten, preschool, and ECSE.",
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideDateLegend": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideExtendedShareButtons": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "relatedDistricts",
+    "comparison"
+  ],
+  "heroSourceLine": "Based on KSD’s official 2026–27 Student Calendar · 180 school days",
+  "heroSummary": "Kent School District’s 2026–27 school year begins Wednesday, August 26, 2026, for grades 1–12. Kindergarten starts August 31 and preschool starts September 8. The last day for grades 1–12 is June 17, 2027.",
+  "calendarNotes": "KSD's one-page calendar distinguishes the regular two-hour all-school Wednesday release from three-hour conference dismissals. Elementary conference weeks affect elementary schools, November 24 affects secondary schools, and the final day affects all schools. ECSE has four additional no-school conference dates and an earlier last day. Optional snow dates remain conditional.",
+  "heroFactChips": [
+    "Grades 1–12 start Aug 26",
+    "Kindergarten starts Aug 31",
+    "2-hour early release on Wednesdays",
+    "ECSE ends Jun 10"
+  ],
+  "verificationBadgeText": "Checked August 7, 2026, against KSD’s official 2026–27 Student Calendar and the district's official document listing.",
+  "keyDatesSummaryTitle": "2026–27 Key Dates for Kent Families",
+  "keyDatesSummarySubtitle": "First days, major breaks, ECSE exceptions, and the last day for grades 1–12",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Grades 1–12",
+      "date": "2026-08-26",
+      "type": "school_start",
+      "schemaDescription": "Kent School District students in grades 1–12 start August 26, 2026."
+    },
+    {
+      "label": "First Day",
+      "name": "First Day of Kindergarten",
+      "date": "2026-08-31",
+      "type": "school_start",
+      "schemaDescription": "Kent School District kindergarten students start August 31, 2026."
+    },
+    {
+      "label": "First Day",
+      "name": "First Day of Preschool",
+      "date": "2026-09-08",
+      "type": "school_start",
+      "schemaDescription": "Kent School District preschool starts September 8, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-26",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "description": "Students return Monday, November 30."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "Students return Monday, January 4."
+    },
+    {
+      "label": "Break",
+      "name": "Mid-Winter Break",
+      "date": "2027-02-15",
+      "endDate": "2027-02-19",
+      "type": "break_start",
+      "description": "Students return Monday, February 22."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-04-05",
+      "endDate": "2027-04-09",
+      "type": "break_start",
+      "description": "Students return Monday, April 12."
+    },
+    {
+      "label": "Program Date",
+      "name": "ECSE Last Day of School",
+      "date": "2027-06-10",
+      "type": "academic",
+      "description": "The ECSE last day is one week before the last day for grades 1–12.",
+      "schemaDescription": "The ECSE last day is one week before the last day for grades 1–12."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Grades 1–12",
+      "date": "2027-06-17",
+      "type": "school_end",
+      "description": "Three-hour early release for all schools.",
+      "schemaDescription": "Kent School District's last day for grades 1–12 is June 17, 2027, with a three-hour early release."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Opening", "id": "ksd-2026-2027-opening-schedule" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Early Release", "id": "ksd-2026-2027-release-schedules" },
+    { "label": "ECSE", "id": "ksd-2026-2027-ecse-exceptions" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Snow Make-Up", "id": "ksd-2026-2027-snow-days" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Changes", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "Kent School District Calendar Dates — 2026–27",
+  "allDatesCoverageNote": "Weekly Wednesday early releases are shown once, when the recurring schedule begins, rather than repeated for every Wednesday.",
+  "allDatesSourceUrl": "https://www.kent.k12.wa.us/documents/about/district-information/student-calendar/683900",
+  "allDatesSourceLinks": [
+    {
+      "label": "Official KSD document library — select KSD Student Calendar 2026-2027",
+      "url": "https://www.kent.k12.wa.us/documents/about/district-information/student-calendar/683900"
+    },
+    {
+      "label": "Kent School District Student Calendar page",
+      "url": "https://www.kent.k12.wa.us/page/student-calendar"
+    }
+  ],
+  "allDatesSourceLabel": "Official KSD 2026–27 Student Calendar listing",
+  "dateLegendLabelOverrides": {
+    "Holiday": "No School",
+    "Holidays": "No School",
+    "No School": "No School",
+    "No school": "No School",
+    "Make-up Day": "Optional Snow Day",
+    "Makeup Day": "Optional Snow Day",
+    "Conference": "Conference / Program Schedule",
+    "Early Release": "Early Release",
+    "Academic": "Academic Date",
+    "School Event": "Schedule Change"
+  },
+  "icsHeading": "Download the KSD 2026–27 Student Dates",
+  "icsDescription": "Download a one-time ICS file with the KSD dates listed on this page. It marks when Wednesday early release begins but does not create a separate recurring event for every Wednesday.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "icsButtonSupportText": "One-time import. It does not automatically reflect later KSD revisions or snow-day activation.",
+  "icsAriaLabel": "Download the Kent School District 2026–27 student calendar file",
+  "pdfHeading": "Official KSD 2026–27 Student Calendar",
+  "pdfButtonLabel": "Open Official Document Folder",
+  "pdfDescription": "Open the Kent School District document library and select “KSD Student Calendar 2026-2027.” KSD’s direct PDF link can change, so we link to the district’s permanent document page instead.",
+  "pdfVersionLabel": "File name includes “FINAL 5.6.26”; PDF footer says “Revised 05.15.2025.”",
+  "customSections": [
+    {
+      "id": "ksd-2026-2027-opening-schedule",
+      "label": "KSD 2026–27 Opening Schedule",
+      "position": "afterVerification",
+      "schemaHasPart": true,
+      "content": "KSD has separate first days for grades 1–12, kindergarten, and preschool. The weekly two-hour Wednesday early-release schedule begins September 2.",
+      "table": {
+        "caption": "Kent School District opening dates by student group",
+        "columns": ["Student group or schedule", "Date", "Calendar note"],
+        "rows": [
+          ["Grades 1–12", "Wednesday, August 26, 2026", "First day of school"],
+          ["Kindergarten", "Monday, August 31, 2026", "Separate first day"],
+          ["Two-hour Wednesday early release", "Wednesday, September 2, 2026", "Wednesday early-release schedule begins"],
+          ["Preschool", "Tuesday, September 8, 2026", "Separate first day"]
+        ]
+      }
+    },
+    {
+      "id": "ksd-2026-2027-release-schedules",
+      "label": "Wednesday and Conference Release Schedules",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "KSD uses different early-release schedules during the year. All schools dismiss two hours early on Wednesdays, while conference schedules differ for elementary and secondary schools.",
+      "table": {
+        "caption": "KSD 2026–27 early-release and conference rules",
+        "columns": ["Date or pattern", "Students affected", "Release schedule"],
+        "rows": [
+          ["Wednesdays beginning September 2", "All schools", "Two-hour early release"],
+          ["October 12–16 and February 8–12", "Elementary schools only", "Elementary conferences; three-hour early dismissal"],
+          ["November 24", "Secondary schools only", "Secondary conferences; three-hour early dismissal"],
+          ["June 17", "All schools", "Last day; three-hour early release"]
+        ],
+        "footnote": "Check your school’s bell schedule for exact dismissal and bus times."
+      }
+    },
+    {
+      "id": "ksd-2026-2027-ecse-exceptions",
+      "label": "ECSE Schedule Exceptions",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "ECSE programs do not meet October 15–16 or February 11–12. The ECSE last day is June 10, one week before the last day for grades 1–12.",
+      "table": {
+        "caption": "KSD 2026–27 ECSE schedule exceptions",
+        "columns": ["Dates", "ECSE status", "Grades 1–12 context"],
+        "rows": [
+          ["October 15–16, 2026", "No ECSE programs", "Elementary conference week; elementary schools use three-hour early dismissal"],
+          ["February 11–12, 2027", "No ECSE programs", "Elementary conference week; elementary schools use three-hour early dismissal"],
+          ["June 10, 2027", "ECSE last day", "Grades 1–12 continue through June 17"]
+        ]
+      }
+    },
+    {
+      "id": "ksd-2026-2027-snow-days",
+      "label": "Snow Make-Up Day Order",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "KSD publishes the order in which make-up dates are used. These remain optional unless the district activates them after a school cancellation.",
+      "table": {
+        "caption": "KSD 2026–27 snow make-up sequence",
+        "columns": ["Order", "Date", "Status"],
+        "rows": [
+          ["1", "Friday, April 16, 2027", "Reserved make-up day"],
+          ["2", "Friday, May 21, 2027", "Reserved make-up day"],
+          ["Then, if necessary", "After June 17, 2027", "Additional day or days after the scheduled end of school"]
+        ]
+      }
+    }
+  ],
+  "whatsNew": {
+    "title": "What Changed From 2025–26",
+    "content": [
+      "The first day for grades 1–12 moves one day earlier, from August 27 to August 26. Kindergarten moves from September 2 to August 31.",
+      "Preschool starts one day earlier, on September 8 instead of September 9.",
+      "Elementary conference weeks shift to October 12–16 and February 8–12, and the 2026–27 calendar explicitly adds ECSE no-school dates on the final two days of each conference week.",
+      "The secondary conference date moves from November 25 to November 24.",
+      "The last day for grades 1–12 moves from June 18 to June 17; ECSE moves from June 11 to June 10."
+    ]
+  },
+  "calendarFaqs": [
+    {
+      "q": "Does KSD release students early every Wednesday in 2026–27?",
+      "a": "Yes. All schools dismiss two hours early on Wednesdays beginning September 2. Closures and breaks override the schedule; families should confirm exact bell and bus times with their school."
+    },
+    {
+      "q": "How do KSD conference dismissals work in 2026–27?",
+      "a": "Elementary schools dismiss three hours early October 12–16 and February 8–12. Secondary schools dismiss three hours early for conferences on November 24."
+    },
+    {
+      "q": "Which conference dates are no-school days for ECSE?",
+      "a": "ECSE programs do not meet October 15–16, 2026, or February 11–12, 2027. Those dates fall within the two elementary conference weeks."
+    },
+    {
+      "q": "Are April 16 and May 21 automatic school days?",
+      "a": "No. KSD lists April 16 first and May 21 second as optional snow make-up days. Additional make-up time can occur after June 17 if district cancellations require it."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "Does KSD release students early every Wednesday in 2026–27?",
+    "How do KSD conference dismissals work in 2026–27?",
+    "Which conference dates are no-school days for ECSE?",
+    "Are April 16 and May 21 automatic school days?"
+  ],
+  "faqDisplayLimit": 4,
+  "sourceReviewSummary": "Reviewed August 7, 2026, against the official KSD Student Calendar page, document library, and official 2026–27 Student Calendar PDF.",
+  "sourceReviewDetails": [
+    "Optional snow make-up dates are conditional and used in the published order. The downloadable calendar does not assume KSD will activate them.",
+    "The file name includes “FINAL 5.6.26,” while the PDF footer says “Revised 05.15.2025.” We note the mismatch here."
+  ],
+  "sourceMaintainerText": "Denis Dou for MySchoolDates",
+  "sourceNextReviewText": "Next review: When KSD revises the 2026–27 calendar, activates a snow day, extends the year in June, changes an ECSE exception, or publishes a future school-year PDF.",
+  "sources": [
+    {
+      "label": "Kent School District Student Calendar page",
+      "url": "https://www.kent.k12.wa.us/page/student-calendar"
+    },
+    {
+      "label": "Kent School District Student Calendar document library — select KSD Student Calendar 2026-2027",
+      "url": "https://www.kent.k12.wa.us/documents/about/district-information/student-calendar/683900"
+    },
+    {
+      "label": "KSD 2025–26 Student Calendar PDF — used for year-over-year comparison",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4869/Ksd/41686f7f-6c46-4fde-a7ec-350eb09aa40b/Student_Calendar_2025-2026.pdf?disposition=inline"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-26",
+      "name": "First Day for Grades 1–12",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-08-31",
+      "name": "First Day of Kindergarten",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-02",
+      "name": "Two-Hour Wednesday Early Release Begins",
+      "type": "early_dismissal",
+      "badgeLabel": "Wednesday Early Release",
+      "description": "All schools release two hours early on Wednesdays during the school year. This date marks the start of the recurring schedule.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "type": "holiday",
+      "description": "No school."
+    },
+    {
+      "date": "2026-09-08",
+      "name": "First Day of Preschool",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-10-02",
+      "name": "Teacher Workshop",
+      "type": "teacher_workday",
+      "description": "No school."
+    },
+    {
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "displayDate": "October 12–16, 2026",
+      "name": "Elementary Conferences",
+      "type": "conference",
+      "description": "Three-hour early dismissal for elementary schools only."
+    },
+    {
+      "date": "2026-10-15",
+      "endDate": "2026-10-16",
+      "displayDate": "October 15–16, 2026",
+      "name": "No ECSE Programs",
+      "type": "no_school",
+      "description": "ECSE-specific no-school dates during elementary conferences."
+    },
+    {
+      "date": "2026-10-29",
+      "name": "First Quarter Ends",
+      "type": "academic",
+      "badgeLabel": "Academic Date"
+    },
+    {
+      "date": "2026-11-06",
+      "name": "Teacher Workshop",
+      "type": "teacher_workday",
+      "description": "No school."
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day",
+      "type": "holiday",
+      "description": "No school."
+    },
+    {
+      "date": "2026-11-24",
+      "name": "Secondary Conferences",
+      "type": "conference",
+      "description": "Three-hour early dismissal for secondary schools only."
+    },
+    {
+      "date": "2026-11-26",
+      "endDate": "2026-11-27",
+      "displayDate": "November 26–27, 2026",
+      "name": "Thanksgiving and Native American Heritage Day",
+      "type": "break_start",
+      "description": "No school."
+    },
+    {
+      "date": "2026-11-30",
+      "name": "Students Return After Thanksgiving Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "displayDate": "December 21, 2026–January 1, 2027",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Students Return After Winter Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday",
+      "description": "No school."
+    },
+    {
+      "date": "2027-01-21",
+      "name": "First Semester Ends",
+      "type": "academic",
+      "badgeLabel": "Academic Date"
+    },
+    {
+      "date": "2027-01-22",
+      "name": "No School",
+      "type": "no_school",
+      "description": "Districtwide no-school day after the first semester ends."
+    },
+    {
+      "date": "2027-02-08",
+      "endDate": "2027-02-12",
+      "displayDate": "February 8–12, 2027",
+      "name": "Elementary Conferences",
+      "type": "conference",
+      "description": "Three-hour early dismissal for elementary schools only."
+    },
+    {
+      "date": "2027-02-11",
+      "endDate": "2027-02-12",
+      "displayDate": "February 11–12, 2027",
+      "name": "No ECSE Programs",
+      "type": "no_school",
+      "description": "ECSE-specific no-school dates during elementary conferences."
+    },
+    {
+      "date": "2027-02-15",
+      "endDate": "2027-02-19",
+      "displayDate": "February 15–19, 2027",
+      "name": "Mid-Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-02-22",
+      "name": "Students Return After Mid-Winter Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Teacher Workshop",
+      "type": "teacher_workday",
+      "description": "No school."
+    },
+    {
+      "date": "2027-04-05",
+      "endDate": "2027-04-09",
+      "displayDate": "April 5–9, 2027",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-04-12",
+      "name": "Students Return and Third Quarter Ends",
+      "type": "academic",
+      "badgeLabel": "Academic Date"
+    },
+    {
+      "date": "2027-04-16",
+      "name": "Optional Snow Make-Up Day",
+      "type": "makeup_day",
+      "description": "First reserved make-up date; used only if KSD activates it."
+    },
+    {
+      "date": "2027-05-21",
+      "name": "Optional Snow Make-Up Day",
+      "type": "makeup_day",
+      "description": "Second reserved make-up date; used only if KSD activates it."
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day",
+      "type": "holiday",
+      "description": "No school."
+    },
+    {
+      "date": "2027-06-10",
+      "name": "ECSE Last Day of School",
+      "type": "academic",
+      "badgeLabel": "ECSE",
+      "description": "ECSE program date."
+    },
+    {
+      "date": "2027-06-17",
+      "name": "Last Day for Grades 1–12",
+      "type": "school_end",
+      "description": "Three-hour early release for all schools."
+    }
+  ]
+}

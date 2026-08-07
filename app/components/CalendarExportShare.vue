@@ -19,6 +19,13 @@ const hideExtendedShareButtons = computed(() => Boolean(props.cal?.hideExtendedS
 const hideShareCalendar = computed(() => Boolean(props.cal?.hideShareCalendar ?? props.cal?.meta?.hideShareCalendar))
 const hideShareCalendarHeading = computed(() => Boolean(props.cal?.hideShareCalendarHeading ?? props.cal?.meta?.hideShareCalendarHeading))
 const hideIcsButtonSupportText = computed(() => Boolean(props.cal?.hideIcsButtonSupportText ?? props.cal?.meta?.hideIcsButtonSupportText))
+const hideCalendarUpdatesButton = computed(() => Boolean(props.cal?.hideCalendarUpdatesButton ?? props.cal?.meta?.hideCalendarUpdatesButton))
+const unifiedDownloadTitle = computed(() => props.cal?.unifiedDownloadTitle ?? props.cal?.meta?.unifiedDownloadTitle ?? '')
+const unifiedDownloadDescription = computed(() => props.cal?.unifiedDownloadDescription ?? props.cal?.meta?.unifiedDownloadDescription ?? '')
+const officialSubscriptionTitle = computed(() => props.cal?.officialSubscriptionTitle ?? props.cal?.meta?.officialSubscriptionTitle ?? '')
+const officialSubscriptionDescription = computed(() => props.cal?.officialSubscriptionDescription ?? props.cal?.meta?.officialSubscriptionDescription ?? '')
+const officialSubscriptionButtonLabel = computed(() => props.cal?.officialSubscriptionButtonLabel ?? props.cal?.meta?.officialSubscriptionButtonLabel ?? 'Subscribe to Official Calendar')
+const officialSubscriptionUrl = computed(() => props.cal?.officialSubscriptionUrl ?? props.cal?.meta?.officialSubscriptionUrl ?? '')
 const displayYear = computed(() => props.cal?.displaySchoolYear ?? props.cal?.meta?.displaySchoolYear ?? props.year)
 const pdfHeading = computed(() => {
   const customHeading = props.cal?.pdfHeading ?? props.cal?.meta?.pdfHeading
@@ -115,9 +122,28 @@ const icsAriaLabel = computed(() =>
 
 <template>
   <div id="add-to-calendar" class="bg-rds-surface-panel rounded-lg border border-rds-hairline overflow-hidden scroll-mt-24 shadow-[0_1px_0_rgba(31,41,51,0.03)]">
+    <div v-if="unifiedDownloadTitle" class="p-6 border-b border-[#ebe6dd]">
+      <h2 class="text-lg font-semibold text-[#1f2933] mb-1">{{ unifiedDownloadTitle }}</h2>
+      <p v-if="unifiedDownloadDescription" class="text-sm text-[#6b645c]">{{ unifiedDownloadDescription }}</p>
+    </div>
+
+    <div v-if="officialSubscriptionUrl" class="p-6 border-b border-[#ebe6dd]">
+      <h3 class="text-base font-semibold text-[#1f2933] mb-1">{{ officialSubscriptionTitle }}</h3>
+      <p class="text-sm text-[#6b645c] mb-4">{{ officialSubscriptionDescription }}</p>
+      <a
+        :href="officialSubscriptionUrl"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 px-4 py-2.5 bg-[#315b39] hover:bg-[#284b30] active:scale-[0.99] transition-all text-white text-sm font-semibold rounded-lg shadow-sm"
+      >
+        {{ officialSubscriptionButtonLabel }}
+        <span class="sr-only">(opens in a new tab)</span>
+      </a>
+    </div>
+
     <!-- Add to Calendar -->
     <div class="p-6 border-b border-[#ebe6dd]">
-      <h2 class="text-lg font-semibold text-[#1f2933] mb-1">{{ icsHeading }}</h2>
+      <component :is="unifiedDownloadTitle ? 'h3' : 'h2'" class="text-lg font-semibold text-[#1f2933] mb-1">{{ icsHeading }}</component>
       <p class="text-sm text-[#6b645c] mb-4">
         {{ icsDescription }}
       </p>
@@ -180,6 +206,7 @@ const icsAriaLabel = computed(() =>
           <span class="sr-only">(opens in a new tab)</span>
         </a>
         <a
+          v-if="!hideCalendarUpdatesButton"
           :href="sourceUrl"
           target="_blank"
           rel="noopener"

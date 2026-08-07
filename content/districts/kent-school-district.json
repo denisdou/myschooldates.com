@@ -1,0 +1,161 @@
+{
+  "institutionId": "kent-school-district",
+  "name": "Kent School District",
+  "shortName": "KSD",
+  "slug": "kent-school-district-calendar",
+  "state": "Washington",
+  "stateCode": "WA",
+  "city": "Kent",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.kent.k12.wa.us/",
+  "calendarPage": "https://www.kent.k12.wa.us/page/student-calendar",
+  "logo": "https://cmsv2-assets.apptegy.net/uploads/23712/logo/26525/KentSchoolDistrict__1-logo.png",
+  "timezone": "America/Los_Angeles",
+  "county": "King County",
+  "region": "Puget Sound",
+  "metro": "Seattle-Tacoma-Bellevue",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Large South King County District",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-07",
+    "coverageNote": "Kent School District coverage uses the official Student Calendar page, document library, and one-page Student Calendar PDFs for 2025-2026 and 2026-2027. The calendars distinguish districtwide Wednesday early release, grade-level conference dismissals, ECSE program exceptions, teacher workshops, and ordered snow make-up dates. No 2027-2028 or later PDF URL was provided."
+  },
+  "contentFreshnessScore": {
+    "overall": 96,
+    "sourceUpdated": "2026-08-07",
+    "lastManualReview": "2026-08-07",
+    "calendarAgeDays": 0,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check the KSD Student Calendar page when the district revises a PDF, activates an optional snow day, extends the year into June, changes an ECSE exception, or publishes a future school-year calendar."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official KSD revision, snow-day activation, ECSE schedule change, future-year PDF publication, or stale freshness score."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Kent School District",
+    "KSD calendar",
+    "Kent school calendar",
+    "Kent School District calendar",
+    "Kent student calendar",
+    "Kent WA school calendar",
+    "Kent School District PDF calendar"
+  ],
+  "districtFact": "Kent School District's one-page Student Calendar uses separate dates for the K–12, kindergarten, preschool, and ECSE schedules. It also combines a recurring two-hour Wednesday early release with three-hour conference dismissals for specific grade levels and an ordered sequence of optional snow make-up days.",
+  "about": [
+    {
+      "title": "About Kent School District",
+      "content": "Kent School District serves students in South King County, Washington. Its Student Calendar is designed around a 180-day year and separates the general school opening from kindergarten and preschool starts, while also identifying ECSE program dates that do not apply to every student."
+    },
+    {
+      "title": "Wednesday and Conference Release Schedules",
+      "content": "KSD marks a two-hour early release for all schools on Wednesdays during the student year. Conference weeks add three-hour early dismissals for elementary students, a separate secondary conference day adds a three-hour secondary dismissal, and the final day uses a three-hour early release for all schools. Exact clock times still come from each school's bell schedule."
+    },
+    {
+      "title": "Snow Make-Up Order Matters",
+      "content": "The calendar does not treat every reserved snow date as an automatic attendance day. It names an April date first, a May date second, and then allows additional make-up time after the scheduled end of school in June if closures require it. Families should wait for a KSD announcement before changing plans."
+    }
+  ],
+  "planningTips": {
+    "title": "Kent School District Calendar Notes",
+    "content": [
+      "The general first day, kindergarten first day, and preschool first day are different. Use the date for the student's program.",
+      "Wednesdays use a recurring two-hour early-release schedule for all schools. Confirm exact bell and bus times with the student's school.",
+      "Elementary and secondary conference dismissals are not interchangeable. Conference weeks affect elementary schools, while one November conference date applies to secondary schools.",
+      "ECSE can have extra no-school conference dates and an earlier last day. Do not assume the K–12 last day applies to ECSE programs.",
+      "Optional snow days remain non-school days unless KSD activates them after a cancellation. The district uses the April date first, then the May date, and may extend the year in June.",
+      "The district calendar page points families to school websites and the KSD mobile app for school-specific events that do not appear in the one-page student calendar."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Does Kent School District release students early on Wednesdays?",
+      "a": "Yes. KSD's Student Calendar marks a recurring two-hour early release for all schools on Wednesdays during the school year. Check the school's bell schedule for the exact dismissal and transportation time."
+    },
+    {
+      "q": "Do Kent kindergarten and preschool students start on the first K–12 day?",
+      "a": "No. KSD publishes separate first days for the general student calendar, kindergarten, and preschool. The dates change by school year, so use the opening schedule on the current calendar."
+    },
+    {
+      "q": "How do KSD conference early dismissals work?",
+      "a": "Elementary conference weeks use three-hour early dismissals for elementary schools only. A separate November secondary conference date uses a three-hour early dismissal for secondary schools only."
+    },
+    {
+      "q": "Does ECSE follow every date on the KSD calendar?",
+      "a": "No. The calendar can list extra ECSE no-school conference dates and an ECSE last day that comes before the K–12 last day. Families should follow the ECSE-specific labels."
+    },
+    {
+      "q": "Are Kent's optional snow days automatic school days?",
+      "a": "No. They are reserved make-up dates. KSD lists an April date, then a May date, and may add days after the scheduled June ending if needed. Check district closure updates before treating one as an attendance day."
+    },
+    {
+      "q": "Where should families check for school-specific Kent events?",
+      "a": "Use the individual school's website or the Kent School District mobile app. The one-page Student Calendar focuses on districtwide dates and selected program exceptions."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Seattle Public Schools",
+      "slug": "seattle-public-schools-calendar",
+      "state": "Washington",
+      "comparisonNote": "Compare Seattle's opening dates, weekly early-release schedule, breaks, and possible make-up days."
+    },
+    {
+      "name": "Tacoma Public Schools",
+      "slug": "tacoma-public-schools-calendar",
+      "state": "Washington",
+      "comparisonNote": "View Tacoma's grade-specific openings, Wednesday late starts, conference early releases, and snow make-up dates."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Kent School District official website",
+      "url": "https://www.kent.k12.wa.us/"
+    },
+    {
+      "label": "Kent School District Student Calendar page",
+      "url": "https://www.kent.k12.wa.us/page/student-calendar"
+    },
+    {
+      "label": "Kent School District Student Calendar document library",
+      "url": "https://www.kent.k12.wa.us/documents/about/district-information/student-calendar/683900"
+    }
+  ]
+}

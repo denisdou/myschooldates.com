@@ -531,6 +531,10 @@ const allDatesTitle = computed(() =>
 const dateLabelOverrides = computed(() =>
   ((cal.value as any)?.dateLegendLabelOverrides ?? (cal.value as any)?.meta?.dateLegendLabelOverrides ?? (district.value as any)?.dateLegendLabelOverrides ?? (district.value as any)?.meta?.dateLegendLabelOverrides ?? {}) as Record<string, string>
 )
+const dateLegendExtraItems = computed(() =>
+  (((cal.value as any)?.dateLegendExtraItems ?? (cal.value as any)?.meta?.dateLegendExtraItems ?? []) as Array<{ label?: string, dot?: string }>)
+    .filter(item => item.label && item.dot) as Array<{ label: string, dot: string }>
+)
 const dateLegend = computed(() => {
   if ((cal.value as any)?.hideDateLegend === true || (cal.value as any)?.meta?.hideDateLegend === true) return []
   const legendTypes = new Set((cal.value?.events ?? []).map((event: any) => event.labelType ?? event.type))
@@ -553,6 +557,7 @@ const dateLegend = computed(() => {
     ...(hasEventType(['conference', 'conference_day', 'conference_days']) ? [{ label: 'Conferences', dot: 'bg-blue-400' }] : []),
     ...(hasEventType(['academic']) ? [{ label: 'Academic', dot: 'bg-slate-400' }] : []),
     ...(hasEventType(['observance']) ? [{ label: 'Observance', dot: 'bg-teal-400' }] : []),
+    ...dateLegendExtraItems.value,
   ]
   const seen = new Set<string>()
   return items

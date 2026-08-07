@@ -54,6 +54,9 @@
 | 2026-08-06 | Colorado | Adams 12 Five Star Schools | `/adams-12-five-star-schools-calendar` | 2025-2026, 2026-2027, 2027-2028 | 基于官方 Adams 12 district calendar page、官网 logo、三份官方 English school calendar PDF 和本地 PDF 副本；页面补充 6th / 9th grade orientation、K-8 school exception、quarter endings、Staff Workdays、high school 可另选的 April / May workdays 和 subject-to-revision 校验提示；未提供扩展日历及 2028-2029 以后 PDF，暂不创建。 |
 | 2026-08-06 | Colorado | St. Vrain Valley Schools | `/st-vrain-valley-schools-calendar` | 2025-2026, 2026-2027, 2027-2028 | 基于官方 SVVSD school calendar page、官网 logo、三份官方 English academic calendar PDF、本地 PDF 副本，以及 2026-2027 / 2027-2028 Spanish 扩展日历；页面补充按年级分四批开学、7 个 PLC 2.5-hour late starts、174 student contact days、quarter / semester / trimester counts、full / compensation / split workdays、Life Skills ACE completion、分校 graduation dates 和 makeup-day 规则；2028-2029 以后 PDF 未提供，暂不创建。 |
 | 2026-08-06 | Colorado | Poudre School District | `/poudre-school-district-calendar` | 2025-2026, 2026-2027 | 基于官方 PSD calendars and schedules page、官网 logo、两份官方 student/district calendar PDF 和本地 PDF 副本，以及 2026-2027 Spanish / Arabic 扩展日历；页面补充 6th / 9th grade Transition Day、all-schools first day、Elementary-only no-school dates、parent-teacher conference closures、building / staff / exchange / professional learning days、PreK / Integrated Services 例外和可互换 staff-day 提示；2027-2028 以后 PDF 未提供，暂不创建。 |
+| 2026-08-07 | Washington | Tacoma Public Schools | `/tacoma-public-schools-calendar` | 2025-2026, 2026-2027 | 基于官方 TPS calendar page、官网 logo、两份官方 conventional student calendar PDF 和本地 PDF 副本；页面补充分年级开学、每周三 one-hour late start、conference early release、elementary / secondary 分层停课、conditional snow make-up days，以及 2026-2027 IDEA/SAMI/SOTA、Head Start/ECEAP 和 ECSE 独立项目日历边界；2027-2028 以后 PDF 未提供，暂不创建。 |
+| 2026-08-07 | Washington | Kent School District | `/kent-school-district-calendar` | 2025-2026, 2026-2027 | 基于官方 KSD Student Calendar page、官网 logo、官方 document library、两份 one-page Student Calendar PDF 和本地 PDF 副本；页面补充分开的 K-12 / kindergarten / preschool 开学、每周三全校 two-hour early release、elementary / secondary 分级 conference dismissal、ECSE no-school exceptions 与独立 last day、teacher workshop closures，以及按 April → May → June 顺序启用的 optional snow make-up days；2025-2026 官方页面另有 Persian / Punjabi / Spanish / Ukrainian / Vietnamese 文件；2026-2027 直链为临时签名 URL，页面改用稳定的官方 document library 入口；2027-2028 以后 PDF 未提供，暂不创建。 |
+| 2026-08-07 | Washington | Bellevue School District | `/bellevue-school-district-calendar` | 2025-2026, 2026-2027 | 基于官方 BSD calendar page、官网 logo、两份官方 Staff & District Academic Calendar PDF 和本地 PDF 副本；页面区分 grades 1-12、Kindergarten WA Kids、kindergarten、preschool 与 Evergreen Transition Program 开学日期，补充 elementary conference early release、regular-school-day grading-period endings、staff-only Wednesday structures、带 cutoff 的 conditional emergency make-up days，以及 2025-2026 修订表中的 last-day / make-up-day 变化；官方 PDF 为静态副本，页面提示使用 live calendar subscription 获取更新；2027-2028 以后 PDF 未提供，暂不创建。 |
 
 ---
 
@@ -366,9 +369,9 @@ P3 内容可采用更高度模板化的方式生成（calendarNotes 精简为 4-
 | 112 | Colorado | Adams 12 Five Star Schools | Denver | ✓ 已完成：`adams-12-five-star-schools-calendar`（2026-08-06） |
 | 113 | Colorado | St. Vrain Valley Schools | Boulder-Longmont | ✓ 已完成：`st-vrain-valley-schools-calendar`（2026-08-06） |
 | 114 | Colorado | Poudre School District | Fort Collins | ✓ 已完成：`poudre-school-district-calendar`（2026-08-06） |
-| 115 | Washington | Tacoma Public Schools | Tacoma | 待创建 |
-| 116 | Washington | Kent School District | Seattle | 待创建 |
-| 117 | Washington | Bellevue School District | Seattle | 待创建 |
+| 115 | Washington | Tacoma Public Schools | Tacoma | ✓ 已完成：`tacoma-public-schools-calendar`（2026-08-07） |
+| 116 | Washington | Kent School District | Seattle | ✓ 已完成：`kent-school-district-calendar`（2026-08-07） |
+| 117 | Washington | Bellevue School District | Seattle | ✓ 已完成：`bellevue-school-district-calendar`（2026-08-07） |
 | 118 | Washington | Federal Way Public Schools | Seattle | 待创建 |
 | 119 | Washington | Everett Public Schools | Seattle | 待创建 |
 | 120 | Washington | Edmonds School District | Seattle | 待创建 |

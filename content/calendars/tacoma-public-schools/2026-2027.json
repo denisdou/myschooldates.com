@@ -1,0 +1,480 @@
+{
+  "institutionId": "tacoma-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Tacoma Public Schools Calendar 2026–27",
+  "firstDay": "2026-09-09",
+  "lastDay": "2027-06-23",
+  "semesters": 2,
+  "temporalCoverageStart": "2026-09-09",
+  "temporalCoverageEnd": "2027-06-25",
+  "sourceUrl": "https://www.tacomaschools.org/about/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1785433972/tacomak12waus/vcesryytwyla9gly7cqo/2026-27-11x17_Student-Calendar.pdf",
+  "sourceCalendarName": "Tacoma Public Schools 2026-2027 School Year Student Calendar",
+  "sourceVersion": "Official 11x17 Student Calendar published July 2026",
+  "lastVerifiedAt": "2026-08-07",
+  "dateCreated": "2026-08-07",
+  "datePublished": "2026-08-07",
+  "dateModified": "2026-08-07",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "keyDates",
+  "schemaReviewedBy": "author",
+  "seoTitle": "Tacoma Public Schools Calendar 2026–27: Dates & PDF",
+  "seoDescription": "Tacoma Public Schools 2026–27 calendar: start dates by grade, Wednesday late starts, conference early releases, breaks, snow make-up days, and PDF.",
+  "schemaCalendarName": "Tacoma Public Schools Calendar 2026–27",
+  "schemaDatasetName": "Tacoma Public Schools 2026–27 Student Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed dates from the conventional TPS student calendar for 2026–27, including separate opening dates, weekly late-start guidance, conference early releases, school closures, breaks, return dates, conditional snow make-up days, and the official PDF.",
+  "schemaCalendarDownloadName": "Tacoma Public Schools 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "Calendar import file generated from the reviewed conventional-calendar records used for this page.",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hidePdfVersionLabel": true,
+  "hideExtendedShareButtons": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "relatedDistricts",
+    "comparison"
+  ],
+  "heroSourceLine": "Conventional student calendar · Based on the official TPS calendar",
+  "heroSummary": "Students in grades 1–12 start school Wednesday, September 9, 2026, at the regular time. Kindergarten and Transition to Kindergarten begin Monday, September 14. The weekly Wednesday late-start schedule begins September 16, with schools starting one hour later. The scheduled last day is June 23, 2027, with early release; June 24–25 are snow make-up days if needed.",
+  "calendarNotes": "This page follows the conventional TPS student calendar. IDEA, SAMI, and SOTA; Head Start and ECEAP; and ECSE specialized preschool have separate district calendars. Weekly late starts, conference early releases, and conditional snow make-up days can affect bell times or attendance without creating a full districtwide break.",
+  "heroFactChips": [
+    "Grades 1–12 start Sep 9",
+    "K & Transition to K start Sep 14",
+    "Wednesdays start 1 hour late",
+    "Last scheduled day: Jun 23"
+  ],
+  "verificationBadgeText": "Checked August 7, 2026, against the official TPS calendar page and 2026–27 conventional student calendar PDF.",
+  "keyDatesSummaryTitle": "2026–27 Key Dates for TPS Families",
+  "keyDatesSummarySubtitle": "Opening dates, major breaks, the last scheduled day, and conditional make-up dates",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Grades 1–12",
+      "date": "2026-09-09",
+      "type": "school_start",
+      "description": "The first day is a regular start time, not a Wednesday late start.",
+      "schemaDescription": "Students in grades 1 through 12 start school on September 9, 2026, with no late start."
+    },
+    {
+      "label": "First Day",
+      "name": "Kindergarten and Transition to Kindergarten Begin",
+      "date": "2026-09-14",
+      "type": "school_start",
+      "schemaDescription": "Kindergarten and Transition to Kindergarten students begin school on September 14, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Holiday Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "description": "Students return Monday, November 30."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "School resumes for all grades Monday, January 4."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-04-05",
+      "endDate": "2027-04-09",
+      "type": "break_start",
+      "description": "Students return Monday, April 12."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Scheduled Day of School",
+      "date": "2027-06-23",
+      "type": "school_end",
+      "description": "Early release. The schedule may extend if snow make-up days are used.",
+      "schemaDescription": "The scheduled last day is June 23, 2027, with early release."
+    },
+    {
+      "label": "If Needed",
+      "name": "End-of-Year Snow Make-Up Days",
+      "date": "2027-06-24",
+      "endDate": "2027-06-25",
+      "type": "makeup_day",
+      "description": "Used only if TPS activates one or both dates after a closure."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Opening", "id": "tps-2026-2027-opening-schedule" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Weekly Schedule", "id": "tps-2026-2027-late-starts-and-conferences" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Make-Up Days", "id": "tps-2026-2027-snow-makeup-days" },
+    { "label": "Program Calendars", "id": "tps-2026-2027-program-calendars" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "Tacoma Public Schools Calendar Dates — 2026–27",
+  "allDatesCoverageNote": "This list covers the conventional TPS student calendar: grade-specific opening dates, no-school days, breaks, conference early releases, the start of the weekly late-start routine, school return dates, and conditional snow make-up days. It does not replace the separate IDEA/SAMI/SOTA, Head Start/ECEAP, or ECSE calendars.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1785433972/tacomak12waus/vcesryytwyla9gly7cqo/2026-27-11x17_Student-Calendar.pdf",
+  "allDatesSourceLinks": [
+    {
+      "label": "TPS 2026–27 conventional student calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1785433972/tacomak12waus/vcesryytwyla9gly7cqo/2026-27-11x17_Student-Calendar.pdf"
+    },
+    {
+      "label": "Tacoma Public Schools calendar page",
+      "url": "https://www.tacomaschools.org/about/calendar"
+    }
+  ],
+  "allDatesSourceLabel": "Official TPS 2026–27 conventional student calendar PDF",
+  "dateLegendLabelOverrides": {
+    "Holiday": "No School",
+    "Holidays": "No School",
+    "No School": "No School",
+    "No school": "No School",
+    "No School for Students": "No School",
+    "Teacher Workday": "No School",
+    "Staff Day": "No School",
+    "Make-up Day": "Make-Up Day",
+    "Makeup Day": "Make-Up Day",
+    "Reserved Weather Day": "Make-Up Day",
+    "Conference": "Early Release",
+    "Conference Day": "Early Release",
+    "Early Release": "Early Release",
+    "School Event": "Schedule Change"
+  },
+  "dateLegendExtraItems": [
+    {
+      "label": "Early Release",
+      "dot": "bg-orange-400"
+    },
+    {
+      "label": "Late Start",
+      "dot": "bg-stone-400"
+    }
+  ],
+  "icsHeading": "Download the TPS 2026–27 Calendar",
+  "icsDescription": "Download a one-time ICS file containing the conventional student dates listed on this page. The file marks the beginning of the Wednesday late-start routine but does not create a recurring event for every Wednesday.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "icsButtonSupportText": "One-time import. It will not update automatically if TPS changes the calendar or activates a snow make-up day.",
+  "icsAriaLabel": "Download the Tacoma Public Schools 2026–27 conventional student calendar file",
+  "pdfHeading": "Official TPS 2026–27 Student Calendar",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "Open the 11x17 conventional student calendar published by Tacoma Public Schools.",
+  "customSections": [
+    {
+      "id": "tps-2026-2027-opening-schedule",
+      "label": "TPS 2026–27 Opening Schedule",
+      "position": "afterVerification",
+      "schemaHasPart": true,
+      "content": "Students do not all start on the same day. Grades 1–12 begin September 9 at the regular time; kindergarten and Transition to Kindergarten begin September 14.",
+      "table": {
+        "caption": "Tacoma Public Schools opening dates by student group",
+        "columns": ["Student group", "First day", "Schedule note"],
+        "rows": [
+          ["Grades 1–12", "Wednesday, September 9, 2026", "Regular start time; no late start"],
+          ["Kindergarten and Transition to Kindergarten", "Monday, September 14, 2026", "Separate opening date"]
+        ]
+      }
+    },
+    {
+      "id": "tps-2026-2027-late-starts-and-conferences",
+      "label": "Wednesday Late Starts and Conference Early Releases",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "Wednesday late starts change the morning bell time. Conference days have early release instead.",
+      "table": {
+        "caption": "TPS 2026–27 recurring and conference schedule changes",
+        "columns": ["Date or pattern", "What families need to know"],
+        "rows": [
+          ["Every Wednesday beginning September 16", "School starts one hour late. Confirm exact bell and bus times with your school."],
+          ["October 20", "Elementary conferences; early release for grades K–5."],
+          ["October 22–23", "Conferences with early release."],
+          ["March 11–12", "Conferences with early release."]
+        ]
+      }
+    },
+    {
+      "id": "tps-2026-2027-snow-makeup-days",
+      "label": "Conditional Snow Make-Up Days",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "TPS will use these dates only if make-up days are needed after a closure. Check district updates before making plans around them.",
+      "table": {
+        "caption": "TPS 2026–27 snow make-up dates",
+        "columns": ["Date", "Calendar status"],
+        "rows": [
+          ["Friday, February 12, 2027", "Snow make-up day, if needed"],
+          ["Friday, May 28, 2027", "Snow make-up day, if needed"],
+          ["Thursday–Friday, June 24–25, 2027", "End-of-year snow make-up days, if needed"]
+        ]
+      }
+    },
+    {
+      "id": "tps-2026-2027-program-calendars",
+      "label": "TPS Programs With Separate Calendars",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "The official TPS calendar page publishes separate 2026–27 calendars for the programs below. Families enrolled in one of them should use the program calendar for attendance and conference dates.",
+      "table": {
+        "caption": "Separate Tacoma Public Schools program calendars",
+        "columns": ["Program calendar", "Why it matters"],
+        "rows": [
+          ["IDEA, SAMI, and SOTA", "These schools share a separate 11x17 student calendar."],
+          ["Head Start and ECEAP", "Early-learning attendance dates are published separately."],
+          ["ECSE specialized preschool", "The ECSE calendar includes preschool-specific no-school and conference dates."]
+        ],
+        "footnote": "Open the official TPS calendar page for the current program PDF."
+      }
+    }
+  ],
+  "whatsNew": {
+    "title": "What’s Different in 2026–27",
+    "content": [
+      "Grades 1–12 start six days later this year — September 9 instead of September 3.",
+      "Kindergarten starts September 14, six days later than last year. The 2026–27 calendar also specifically includes Transition to Kindergarten.",
+      "Winter Break begins December 21, one day earlier than last year, while school still resumes January 4.",
+      "The scheduled last day is June 23, compared with June 17 last year. Both are early-release days.",
+      "Elementary schools move from trimesters to semesters in 2026–27. Most students will now share the first-semester break day, and elementary students no longer have a separate day off in December."
+    ]
+  },
+  "calendarFaqs": [
+    {
+      "q": "Is September 9 a late-start Wednesday?",
+      "a": "No. Students in grades 1–12 start at the regular time on September 9. The weekly one-hour Wednesday late-start schedule begins September 16."
+    },
+    {
+      "q": "Are Tacoma conference days no-school days?",
+      "a": "The conventional calendar marks October 20 as an elementary early-release day and October 22–23 and March 11–12 as conference early-release days, not full districtwide closures."
+    },
+    {
+      "q": "Can the last day of school change if snow make-up days are used?",
+      "a": "Yes. June 23 is the scheduled last day, with early release. TPS may use June 24 or 25 as school days if additional make-up time is needed after a closure."
+    },
+    {
+      "q": "Do IDEA, SAMI, SOTA, and preschool programs use the conventional TPS calendar?",
+      "a": "No. TPS publishes separate calendars for IDEA, SAMI, and SOTA; Head Start and ECEAP; and ECSE specialized preschool. Families should use the calendar for their program when checking attendance and conference dates."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "Is September 9 a late-start Wednesday?",
+    "Are Tacoma conference days no-school days?",
+    "Can the last day of school change if snow make-up days are used?",
+    "Do IDEA, SAMI, SOTA, and preschool programs use the conventional TPS calendar?"
+  ],
+  "faqDisplayLimit": 4,
+  "sourceReviewSummary": "Reviewed August 7, 2026, against the official TPS calendar page, the district's 2026–27 conventional student calendar PDF, and its 2026–27 calendar announcement.",
+  "sourceReviewDetails": [
+    "We verified the separate grades 1–12 and kindergarten/Transition to Kindergarten opening dates, the no-late-start exception on September 9, weekly Wednesday late-start guidance, conference early releases, school closures, major breaks, and the scheduled last day.",
+    "November 30 and April 12 are the next scheduled student weekdays after the published Thanksgiving and Spring Break ranges. January 4 is explicitly labeled as the date school resumes for all grades.",
+    "Snow make-up dates are conditional. The downloadable calendar does not predict whether TPS will activate them or automatically update after a district announcement.",
+    "TPS's 2026–27 calendar announcement confirms that elementary schools are moving from three trimesters to two semesters, with most students sharing the first-semester break day and no separate elementary day off in December.",
+    "The official TPS calendar page lists separate IDEA/SAMI/SOTA, Head Start/ECEAP, and ECSE calendars; those program-specific dates are outside this conventional-calendar dataset."
+  ],
+  "sourceMaintainerText": "Denis Dou for MySchoolDates",
+  "sourceNextReviewText": "Next review: When TPS revises the conventional calendar, activates a snow make-up day, changes a program calendar, or publishes a future school-year PDF.",
+  "sources": [
+    {
+      "label": "Tacoma Public Schools calendar page",
+      "url": "https://www.tacomaschools.org/about/calendar"
+    },
+    {
+      "label": "TPS 2026–27 conventional student calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1785433972/tacomak12waus/vcesryytwyla9gly7cqo/2026-27-11x17_Student-Calendar.pdf"
+    },
+    {
+      "label": "TPS 2026–27 calendar announcement — elementary semester schedule change",
+      "url": "https://truman.tacomaschools.org/calendar/news/story-details/~board/2025-2026-school-year/post/2026-27-student-calendar-available-elementary-schools-change-to-semester-schedule"
+    },
+    {
+      "label": "TPS 2025–26 student calendar PDF — used for year-over-year comparison",
+      "url": "https://resources.finalsite.net/images/v1749587483/tacomak12waus/tf60bhpwo7xvfguba8og/25-26StudentCalendar.pdf"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-09-09",
+      "name": "First Day for Grades 1–12",
+      "type": "school_start",
+      "description": "Regular start time; no Wednesday late start."
+    },
+    {
+      "date": "2026-09-14",
+      "name": "First Day for Kindergarten and Transition to Kindergarten",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-16",
+      "name": "Weekly Wednesday Late Starts Begin",
+      "type": "academic",
+      "badgeLabel": "Late Start",
+      "description": "School starts one hour late.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Teacher Work Day",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "No school for all students."
+    },
+    {
+      "date": "2026-10-20",
+      "name": "Elementary Conferences",
+      "type": "conference",
+      "badgeLabel": "Early Release",
+      "description": "Early release for grades K–5."
+    },
+    {
+      "date": "2026-10-22",
+      "endDate": "2026-10-23",
+      "displayDate": "October 22–23, 2026",
+      "name": "Conferences and Early Release",
+      "type": "conference",
+      "badgeLabel": "Early Release",
+      "description": "Conference schedule with early release."
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day",
+      "type": "holiday",
+      "description": "No school for all students."
+    },
+    {
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "displayDate": "November 25–27, 2026",
+      "name": "Thanksgiving Holiday Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-11-30",
+      "name": "School Resumes After Thanksgiving Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "displayDate": "December 21, 2026–January 1, 2027",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "School Resumes for All Grades",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday",
+      "description": "No school for all students."
+    },
+    {
+      "date": "2027-02-01",
+      "name": "Semester Break",
+      "type": "no_school",
+      "description": "No school for all students."
+    },
+    {
+      "date": "2027-02-12",
+      "name": "Potential Snow Make-Up Day",
+      "type": "makeup_day",
+      "badgeLabel": "Make-Up Day",
+      "description": "Used only if needed."
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day",
+      "type": "holiday",
+      "description": "No school for all students."
+    },
+    {
+      "date": "2027-02-16",
+      "name": "Teacher Work Day",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "No school for all students."
+    },
+    {
+      "date": "2027-03-11",
+      "endDate": "2027-03-12",
+      "displayDate": "March 11–12, 2027",
+      "name": "Conferences and Early Release",
+      "type": "conference",
+      "badgeLabel": "Early Release",
+      "description": "Conference schedule with early release."
+    },
+    {
+      "date": "2027-04-05",
+      "endDate": "2027-04-09",
+      "displayDate": "April 5–9, 2027",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-04-12",
+      "name": "School Resumes After Spring Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Potential Snow Make-Up Day",
+      "type": "makeup_day",
+      "badgeLabel": "Make-Up Day",
+      "description": "Used only if needed."
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day",
+      "type": "holiday",
+      "description": "No school for all students."
+    },
+    {
+      "date": "2027-06-18",
+      "name": "Juneteenth Observed",
+      "type": "holiday",
+      "description": "No school for all students."
+    },
+    {
+      "date": "2027-06-23",
+      "name": "Last Scheduled Day of School",
+      "type": "school_end",
+      "description": "Early release."
+    },
+    {
+      "date": "2027-06-24",
+      "endDate": "2027-06-25",
+      "displayDate": "June 24–25, 2027",
+      "name": "Potential End-of-Year Snow Make-Up Days",
+      "type": "makeup_day",
+      "badgeLabel": "Make-Up Day",
+      "description": "Used only if needed."
+    }
+  ]
+}
