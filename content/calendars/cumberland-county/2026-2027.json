@@ -1,132 +1,581 @@
 {
   "institutionId": "cumberland-county",
   "schoolYear": "2026-2027",
-  "firstDay": "2026-08-07",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Cumberland County Schools Calendar 2026-2027",
+  "firstDay": "2026-08-24",
   "lastDay": "2027-05-28",
-  "totalSchoolDays": 182,
-  "semesters": 2,
+  "temporalCoverageStart": "2026-08-24",
+  "temporalCoverageEnd": "2027-05-28",
   "sourceUrl": "https://www.ccs.k12.nc.us/page/districts-board-approved-calendars",
-  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4929/Ccs/7a7ae4d8-0ae9-4aaf-a762-230cf2eb7f0b/2026-2027-Traditional-Calendar.pdf",
-  "lastVerifiedAt": "2026-07-05",
+  "sourcePdfUrl": "https://aptg.co/6s6fFx",
+  "sourceCalendarName": "Cumberland County Schools 2026–27 Traditional Calendar",
+  "lastVerifiedAt": "2026-08-08",
+  "datePublished": "2026-07-05",
+  "dateModified": "2026-08-08",
   "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "hideItemListSchema": true,
+  "webPageMainEntity": "none",
+  "schemaReviewedBy": "author",
+  "seoTitle": "Cumberland County Schools Calendar 2026–27: Dates, Breaks & PDF",
+  "seoDescription": "See Cumberland County Schools' 2026–27 first and last days, student holidays, early-release dates, winter break, spring no-school period, and official PDF.",
+  "schemaCalendarName": "Cumberland County Schools Calendar 2026–27",
+  "schemaDatasetName": "Cumberland County Schools 2026–27 Traditional Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed student dates from the Cumberland County Schools 2026–27 Traditional Calendar, including the first and last day, no-school dates, holidays, early releases, and the conditional make-up day.",
+  "schemaCalendarDownloadName": "Cumberland County Schools 2026–27 traditional calendar file",
+  "schemaCalendarDownloadDescription": "Calendar import file generated from the CCS Traditional Calendar dates reviewed against the current official district PDF.",
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerifiedBadge": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "whatsDifferent",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends"
+  ],
+  "heroSourceLine": "Source: CCS 2026–27 Traditional Calendar · Reviewed Aug. 8, 2026",
+  "heroSummary": "Cumberland County Schools' traditional-calendar students start school on Monday, August 24, 2026, and finish on Friday, May 28, 2027. CCS also publishes separate year-round, early-college, and Cumberland Polytechnic calendars, so confirm which calendar applies to your school before making plans.",
+  "keyDatesSummaryTitle": "CCS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Traditional-calendar dates families most often need for planning",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Students",
+      "date": "2026-08-24",
+      "type": "school_start"
+    },
+    {
+      "label": "No-School Period",
+      "name": "Thanksgiving Week — No School for Students",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "description": "CCS uses several official calendar categories across these five student no-school days."
+    },
+    {
+      "label": "No-School Period",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "Students return Monday, January 4."
+    },
+    {
+      "label": "No-School Period",
+      "name": "Spring No-School Period",
+      "date": "2027-03-25",
+      "endDate": "2027-04-02",
+      "type": "break_start",
+      "description": "The official calendar divides this period among several workday, holiday, and annual-leave categories."
+    },
+    {
+      "label": "Last Day · Early Release",
+      "name": "Last Day for Students",
+      "date": "2027-05-28",
+      "type": "school_end",
+      "description": "Students are released two hours early."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Calendar Tracks", "id": "ccs-2026-2027-calendar-tracks" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Other Calendars", "id": "other-calendars" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "CCS Traditional Calendar Dates — 2026–27",
+  "allDatesCoverageNote": "This list includes dates on the CCS Traditional Calendar that change the student schedule: the first and last day, student holidays, staff workdays when students do not attend, two-hour early releases, and the conditional make-up day. Grading-period dates that do not change attendance are not included.",
+  "allDatesSourceUrl": "https://aptg.co/6s6fFx",
+  "allDatesSourceLabel": "Official CCS 2026–27 Traditional Calendar PDF",
+  "allDatesSourceLinks": [
+    {
+      "label": "CCS 2026–27 Traditional Calendar PDF",
+      "url": "https://aptg.co/6s6fFx"
+    },
+    {
+      "label": "CCS board-approved calendars page",
+      "url": "https://www.ccs.k12.nc.us/page/districts-board-approved-calendars"
+    }
+  ],
+  "dateLegendLabelOverrides": {
+    "Holiday": "No School",
+    "No School for Students": "No School",
+    "Staff Day": "No School",
+    "Early Release": "Two-Hour Early Release",
+    "Reserved Weather Day": "Possible Make-Up Day",
+    "Break": "Possible Make-Up Day",
+    "Make-Up Day": "Possible Make-Up Day",
+    "Make-up Day": "Possible Make-Up Day",
+    "Makeup Day": "Possible Make-Up Day"
+  },
+  "dateLegendExtraItems": [
+    { "label": "Two-Hour Early Release", "dot": "bg-orange-400" },
+    { "label": "Possible Make-Up Day", "dot": "bg-amber-400" }
+  ],
+  "icsHeading": "Download the CCS 2026–27 Traditional Calendar",
+  "icsDescription": "Download a one-time ICS file with the Traditional Calendar student dates listed on this page, including early releases and the possible February 15 make-up day.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "icsButtonSupportText": "One-time import. It will not update automatically if CCS revises the calendar or uses the make-up day.",
+  "icsAriaLabel": "Download the Cumberland County Schools 2026–27 traditional calendar file",
+  "pdfHeading": "Official CCS 2026–27 Traditional Calendar",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "Open the current one-page Traditional Calendar linked from the Cumberland County Schools board-approved calendars page.",
+  "pdfVersionLabel": "Current district-linked file",
   "alternateCalendars": [
     {
       "type": "year-round",
-      "label": "Year-Round Calendar",
-      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4929/Ccs/0d576cac-dc54-401e-8a69-75dde7a29ea5/2025-2026-Year-Round-Calendar.pdf",
-      "firstDay": "2026-07-16"
+      "label": "2026–27 Year-Round Calendar",
+      "pdfUrl": "https://aptg.co/yNTCqd",
+      "firstDay": "2026-07-16",
+      "buttonLabel": "View Year-Round Calendar PDF",
+      "ariaLabel": "View the official CCS 2026–27 Year-Round Calendar PDF"
     },
     {
-      "type": "international",
-      "label": "Cross Creek & Cumberland International Calendar",
-      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4929/Ccs/f61cc8a2-45ac-41bd-97cc-d096e6f9a6ce/2026-2027-Early-Colleges-Calendar.pdf"
+      "type": "early-college",
+      "label": "2026–27 Cross Creek & Cumberland International Calendar",
+      "pdfUrl": "https://aptg.co/_1JxKd",
+      "firstDay": "2026-08-10",
+      "buttonLabel": "View Early-College Calendar PDF",
+      "ariaLabel": "View the official CCS 2026–27 Cross Creek and Cumberland International Calendar PDF"
+    },
+    {
+      "type": "cumberland-polytechnic",
+      "label": "2026–27 Cumberland Polytechnic High School Calendar",
+      "pdfUrl": "https://aptg.co/97xSyt",
+      "firstDay": "2026-08-10",
+      "buttonLabel": "View Cumberland Polytechnic Calendar PDF",
+      "ariaLabel": "View the official CCS 2026–27 Cumberland Polytechnic High School Calendar PDF"
     }
   ],
+  "alternateCalendarsTitle": "Other Official CCS Calendars",
+  "alternateCalendarsDescription": "These calendars have different opening dates and break structures from the Traditional Calendar shown on this page.",
+  "alternateCalendarsFooterTitle": "Confirm your school's calendar",
+  "alternateCalendarsFooterDescription": "CCS maintains the current files on its",
+  "alternateCalendarsFooterLinkLabel": "board-approved calendars page",
+  "alternateCalendarsFooterLinkUrl": "https://www.ccs.k12.nc.us/page/districts-board-approved-calendars",
+  "customSections": [
+    {
+      "id": "ccs-2026-2027-calendar-tracks",
+      "label": "Which CCS Calendar Applies?",
+      "position": "afterVerification",
+      "schemaHasPart": true,
+      "content": "This page follows the 2026–27 Traditional Calendar. CCS publishes three other student calendars, so families should use the file assigned to their school or program.",
+      "table": {
+        "caption": "Cumberland County Schools 2026–27 calendar tracks and first student days",
+        "columns": ["Calendar", "Applies to", "First student day"],
+        "rows": [
+          ["Traditional", "Traditional-calendar schools", "August 24, 2026"],
+          ["Year-Round", "Year-round schools and programs", "July 16, 2026"],
+          ["Cross Creek & Cumberland International", "Schools listed on the early-college calendar", "August 10, 2026"],
+          ["Cumberland Polytechnic", "Cumberland Polytechnic High School", "August 10, 2026"]
+        ]
+      },
+      "linksDisplay": "inline",
+      "linksLabel": "Official source:",
+      "links": [
+        {
+          "label": "CCS board-approved calendars",
+          "url": "https://www.ccs.k12.nc.us/page/districts-board-approved-calendars"
+        }
+      ]
+    },
+    {
+      "id": "ccs-2026-2027-military-calendar-notes",
+      "label": "Calendar Notes for Military-Connected Families",
+      "position": "afterOtherCalendars",
+      "schemaHasPart": true,
+      "content": "Cumberland County Schools serves a large military-connected community near Fort Bragg. Families arriving during the school year should first confirm which CCS calendar applies to their school: the district publishes separate Traditional, Year-Round, Cross Creek and Cumberland International, and Cumberland Polytechnic calendars. Opening dates and breaks differ among those files.\n\nCCS provides transition resources through its Military Connection program and district Military Family and Youth Liaisons. For enrollment, school assignment, IEP, 504, transfer, or Interstate Compact questions, contact CCS directly. Those issues fall outside the scope of this calendar page. The calendar dates here should not be used as a substitute for enrollment or student-services guidance.",
+      "linksDisplay": "inline",
+      "linksLabel": "CCS resources:",
+      "links": [
+        {
+          "label": "Military Connection",
+          "url": "https://www.ccs.k12.nc.us/o/ccs/page/military-connection"
+        },
+        {
+          "label": "Board-approved calendars",
+          "url": "https://www.ccs.k12.nc.us/page/districts-board-approved-calendars"
+        }
+      ]
+    },
+    {
+      "id": "ccs-2026-2027-breaks",
+      "label": "Major Student Breaks and Return Dates",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "These planning ranges group consecutive student no-school dates. CCS uses several official workday, holiday, annual-leave, and telework labels within each range.",
+      "table": {
+        "caption": "Major 2026–27 CCS Traditional Calendar student breaks and return dates",
+        "columns": ["Student no-school period", "Dates", "Students return"],
+        "rows": [
+          ["Thanksgiving Week — no school for students", "November 23–27, 2026", "Monday, November 30"],
+          ["Winter Break", "December 21, 2026–January 1, 2027", "Monday, January 4"],
+          ["Spring no-school period", "March 25–April 2, 2027", "Monday, April 5"]
+        ],
+        "footnote": "The official PDF does not use a single break label for every date in these ranges; the complete date list above preserves the district's individual calendar categories."
+      }
+    }
+  ],
+  "comparisonBeforeFaq": true,
+  "comparisonDistrictSlugs": [
+    "wake-county-school-calendar",
+    "guilford-county-school-calendar",
+    "charlotte-mecklenburg-schools-calendar"
+  ],
+  "comparisonTitle": "CCS Calendar Compared With Other North Carolina Districts",
+  "comparisonSummary": "Compare first and last days and major student break periods across CCS, Wake County, Guilford County, and Charlotte-Mecklenburg Schools.",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "comparisonRowLabels": {
+    "thanksgivingBreak": "Late-November No-School Period",
+    "springBreak": "Spring Break / No-School Period"
+  },
+  "springBreakComparisonLabel": "Spring Break / No-School Period",
+  "comparisonRowsMode": "sharedValuesOnly",
+  "comparisonValueOverrides": {
+    "cumberland-county-school-calendar": {
+      "thanksgivingBreak": "Nov 23–27, 2026",
+      "winterBreak": "Dec 21, 2026–Jan 1, 2027",
+      "springBreak": "Mar 25–Apr 2, 2027"
+    },
+    "wake-county-school-calendar": {
+      "thanksgivingBreak": "Nov 25–27, 2026",
+      "winterBreak": "Dec 21, 2026–Jan 1, 2027",
+      "springBreak": "Mar 29–Apr 2, 2027"
+    },
+    "guilford-county-school-calendar": {
+      "thanksgivingBreak": "Nov 25–27, 2026",
+      "winterBreak": "Dec 21, 2026–Jan 1, 2027",
+      "springBreak": "Mar 22–26, 2027"
+    },
+    "charlotte-mecklenburg-schools-calendar": {
+      "thanksgivingBreak": "Nov 25–27, 2026",
+      "winterBreak": "Dec 21, 2026–Jan 1, 2027",
+      "springBreak": "Mar 29–Apr 2, 2027"
+    }
+  },
+  "comparisonInsights": [
+    {
+      "label": "Opening dates",
+      "items": [
+        "CCS, Wake County, and Guilford County start August 24",
+        "Charlotte-Mecklenburg starts August 25"
+      ]
+    },
+    {
+      "label": "End dates",
+      "items": [
+        "CCS ends May 28",
+        "The three comparison districts end in June"
+      ]
+    }
+  ],
+  "hideComparisonNotes": true,
+  "comparisonSourceNote": "Rows compare the traditional-calendar student schedule published by each district. District labels and adjacent staff workdays may differ.",
   "calendarFaqs": [
     {
-      "q": "Does Cumberland County Schools have a fall break in 2026-2027?",
-      "a": "Yes. Cumberland County Schools has a fall break running from Oct 12, 2026 to Oct 16, 2026, a total of 5 days."
+      "q": "When does Cumberland County Schools start and end in 2026–27?",
+      "a": "Traditional-calendar students start Monday, August 24, 2026. The last student day is Friday, May 28, 2027, with a two-hour early release."
     },
     {
-      "q": "When does school start for Cumberland County Schools in 2026-2027?",
-      "a": "The first day of school for Cumberland County Schools is Friday, August 7, 2026. Students and staff are expected to report on this date to begin the new academic year."
+      "q": "Does every CCS school use the Traditional Calendar?",
+      "a": "No. CCS also publishes separate Year-Round, Cross Creek and Cumberland International, and Cumberland Polytechnic calendars. Confirm the calendar assigned to your school or program."
+    },
+    {
+      "q": "When are the major CCS student breaks?",
+      "a": "Traditional-calendar students are out for Thanksgiving Week on November 23–27, 2026; Winter Break on December 21, 2026–January 1, 2027; and the spring no-school period on March 25–April 2, 2027. These are planning labels; CCS uses several official calendar categories within each period."
+    },
+    {
+      "q": "Does CCS officially call March 25–April 2 Spring Break?",
+      "a": "No. The Traditional Calendar divides those consecutive student no-school dates among a workday, district holiday, annual-leave days, and a telework workday. This page calls it a spring no-school period for planning clarity and explains the official categories in the date list."
+    },
+    {
+      "q": "Does CCS have early-release days in 2026–27?",
+      "a": "Yes. Traditional-calendar students are released two hours early on September 22, October 20, December 18, February 23, March 9, April 20, and May 28, the last day of school."
+    },
+    {
+      "q": "Is February 15, 2027 a regular no-school day?",
+      "a": "It is listed as a student holiday and required staff workday, but CCS also reserves February 15 as a make-up day if needed. Check district updates before making plans."
+    },
+    {
+      "q": "Where is the official CCS 2026–27 calendar PDF?",
+      "a": "Use the Official PDF link on this page or open the CCS board-approved calendars page. The official page also provides the Year-Round, early-college, and Cumberland Polytechnic calendars."
+    },
+    {
+      "q": "Does the downloadable calendar update automatically?",
+      "a": "No. The ICS file is a one-time import and will not update automatically if CCS revises a date or activates February 15 as a make-up day."
     }
   ],
-  "yearNumbers": [
+  "faqOrderLimit": 8,
+  "faqDisplayQuestions": [
+    "When does Cumberland County Schools start and end in 2026–27?",
+    "Does every CCS school use the Traditional Calendar?",
+    "When are the major CCS student breaks?",
+    "Does CCS officially call March 25–April 2 Spring Break?",
+    "Does CCS have early-release days in 2026–27?",
+    "Is February 15, 2027 a regular no-school day?",
+    "Where is the official CCS 2026–27 calendar PDF?",
+    "Does the downloadable calendar update automatically?"
+  ],
+  "faqDisplayLimit": 8,
+  "sourceReviewSummary": "Reviewed August 8, 2026, against the current CCS board-approved calendars page, the linked Traditional Calendar PDF, and the district's 2026–27 back-to-school guide.",
+  "sourceReviewDetails": [
+    "The current Traditional Calendar marks August 24 as the first student day and May 28 as the last student day with a two-hour early release.",
+    "November 23–27 and March 25–April 2 are editorially grouped as student no-school periods. The PDF uses several workday, holiday, annual-leave, and telework labels within those ranges.",
+    "February 15 is both a student holiday/required workday and the calendar's listed make-up day if needed.",
+    "The district calendar page labels the current files as board approved July 1, 2026, while the PDF headers display earlier approval stamps. This page uses the dates in the files currently linked by CCS and records that source-label mismatch rather than resolving it by inference.",
+    "The 2026–27 back-to-school guide confirms July 16 for Year-Round students, August 10 for the two early-college schools and Cumberland Polytechnic, and August 24 for Traditional students."
+  ],
+  "sourceMaintainerText": "Denis Dou for MySchoolDates",
+  "sourceNextReviewText": "Next review: When CCS replaces a calendar file, revises a student date, or announces whether February 15 will be used as a make-up day.",
+  "sources": [
     {
-      "label": "Starts Earlier",
-      "value": "4 days",
-      "detail": "First day moves from Aug 11 to Aug 7 vs 2025–2026 — and uniquely starts on a Friday."
+      "label": "CCS board-approved calendars page",
+      "url": "https://www.ccs.k12.nc.us/page/districts-board-approved-calendars"
     },
     {
-      "label": "Fall Break",
-      "value": "Oct 12–16",
-      "detail": "5-day fall break continues; shifts one day earlier than 2025–2026 (Oct 13–17) due to the calendar alignment."
+      "label": "CCS 2026–27 Traditional Calendar PDF",
+      "url": "https://aptg.co/6s6fFx"
     },
     {
-      "label": "Good Friday",
-      "value": "Mar 26",
-      "detail": "Good Friday shifts from Apr 3 (2025–2026) to Mar 26 — now falls the Friday after Spring Break ends (Mar 19), rather than two weeks later."
+      "label": "CCS 2026–27 Back-to-School Guide",
+      "url": "https://www.ccs.k12.nc.us/o/ccs/page/btsg-back-to-school-guide"
+    },
+    {
+      "label": "CCS 2026–27 Year-Round Calendar PDF",
+      "url": "https://aptg.co/yNTCqd"
+    },
+    {
+      "label": "CCS 2026–27 Cross Creek & Cumberland International Calendar PDF",
+      "url": "https://aptg.co/_1JxKd"
+    },
+    {
+      "label": "CCS 2026–27 Cumberland Polytechnic Calendar PDF",
+      "url": "https://aptg.co/97xSyt"
+    },
+    {
+      "label": "CCS Military Connection",
+      "url": "https://www.ccs.k12.nc.us/o/ccs/page/military-connection"
     }
   ],
   "events": [
     {
-      "date": "2026-08-07",
-      "name": "First Day of School",
-      "type": "school_start"
+      "date": "2026-08-24",
+      "name": "First Day for Students",
+      "type": "school_start",
+      "schemaDescription": "Traditional-calendar students begin school August 24, 2026."
     },
     {
       "date": "2026-09-07",
-      "name": "Labor Day",
-      "type": "holiday"
+      "name": "Student / All-Staff Holiday",
+      "type": "holiday",
+      "badgeLabel": "No School",
+      "preserveOfficialName": true,
+      "description": "Students and staff do not attend."
     },
     {
-      "date": "2026-10-12",
-      "name": "Fall Break",
-      "type": "break_start"
+      "date": "2026-09-22",
+      "name": "Student Two-Hour Early Release",
+      "type": "early_release",
+      "description": "Students are released two hours early for staff professional learning."
     },
     {
-      "date": "2026-10-16",
-      "name": "Fall Break End",
-      "type": "break_end"
+      "date": "2026-10-20",
+      "name": "Student Two-Hour Early Release",
+      "type": "early_release",
+      "description": "Students are released two hours early for staff professional learning."
     },
     {
-      "date": "2026-11-25",
-      "name": "Thanksgiving Break",
-      "type": "break_start"
+      "date": "2026-10-26",
+      "name": "Student Holiday / Required Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "Students do not attend."
     },
     {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
+      "date": "2026-11-03",
+      "name": "Student Holiday / Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "Students do not attend."
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Student / All-Staff Holiday",
+      "type": "holiday",
+      "badgeLabel": "No School",
+      "preserveOfficialName": true,
+      "description": "Students and staff do not attend."
+    },
+    {
+      "date": "2026-11-23",
+      "name": "Student Holiday / All-Staff Telework Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "showDuringBreak": true,
+      "description": "Students do not attend."
+    },
+    {
+      "date": "2026-11-24",
+      "endDate": "2026-11-25",
+      "name": "Student Holidays / Required Annual Leave",
+      "type": "no_school",
+      "badgeLabel": "No School",
+      "showDuringBreak": true,
+      "description": "Students do not attend. The official calendar lists required annual leave for 10-month employees."
+    },
+    {
+      "date": "2026-11-26",
+      "endDate": "2026-11-27",
+      "name": "Student / All-Staff Holidays",
+      "type": "holiday",
+      "badgeLabel": "No School",
+      "showDuringBreak": true,
+      "description": "Students and staff do not attend."
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Student Two-Hour Early Release",
+      "type": "early_release",
+      "description": "Students are released two hours early."
     },
     {
       "date": "2026-12-21",
-      "name": "Winter Break",
-      "type": "break_start"
+      "name": "Student Holiday / All-Staff Telework Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "showDuringBreak": true,
+      "description": "Students do not attend."
+    },
+    {
+      "date": "2026-12-22",
+      "endDate": "2026-12-31",
+      "name": "Winter Holidays / Annual Leave",
+      "type": "no_school",
+      "badgeLabel": "No School",
+      "showDuringBreak": true,
+      "description": "Students do not attend. The official calendar divides these dates among required annual leave and holidays."
     },
     {
       "date": "2027-01-01",
-      "name": "Winter Break End",
-      "type": "break_end"
+      "name": "Student / All-Staff Holiday",
+      "type": "holiday",
+      "badgeLabel": "No School",
+      "preserveOfficialName": true,
+      "showDuringBreak": true,
+      "description": "Students and staff do not attend."
     },
     {
       "date": "2027-01-18",
-      "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
+      "name": "Student / All-Staff Holiday",
+      "type": "holiday",
+      "badgeLabel": "No School",
+      "preserveOfficialName": true,
+      "description": "Students and staff do not attend."
+    },
+    {
+      "date": "2027-01-19",
+      "name": "Student Holiday / Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "Students do not attend."
     },
     {
       "date": "2027-02-15",
-      "name": "Presidents' Day",
-      "type": "holiday"
+      "name": "Student Holiday / Required Workday / Possible Make-Up Day",
+      "type": "makeup_day",
+      "badgeLabel": "No School / Possible Make-Up Day",
+      "status": "TENTATIVE",
+      "description": "Students do not attend unless CCS uses this date to make up a closure. Check district updates before making plans."
     },
     {
-      "date": "2027-03-15",
-      "name": "Spring Break",
-      "type": "break_start"
+      "date": "2027-02-23",
+      "name": "Student Two-Hour Early Release",
+      "type": "early_release",
+      "description": "Students are released two hours early for staff professional learning."
     },
     {
-      "date": "2027-03-19",
-      "name": "Spring Break End",
-      "type": "break_end"
+      "date": "2027-03-09",
+      "name": "Student Two-Hour Early Release",
+      "type": "early_release",
+      "description": "Students are released two hours early for staff professional learning."
+    },
+    {
+      "date": "2027-03-25",
+      "name": "Student Holiday / Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "showDuringBreak": true,
+      "description": "Students do not attend."
     },
     {
       "date": "2027-03-26",
-      "name": "Good Friday",
-      "type": "holiday"
+      "name": "Student / All-Staff Holiday",
+      "type": "holiday",
+      "badgeLabel": "No School",
+      "preserveOfficialName": true,
+      "showDuringBreak": true,
+      "description": "Students and staff do not attend."
+    },
+    {
+      "date": "2027-03-29",
+      "endDate": "2027-04-01",
+      "name": "Student Holidays / Required Annual Leave",
+      "type": "no_school",
+      "badgeLabel": "No School",
+      "showDuringBreak": true,
+      "description": "Students do not attend. The official calendar lists required annual leave for 10-month employees and optional annual leave for 11- and 12-month employees."
+    },
+    {
+      "date": "2027-04-02",
+      "name": "Student Holiday / All-Staff Telework Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "showDuringBreak": true,
+      "description": "Students do not attend."
+    },
+    {
+      "date": "2027-04-20",
+      "name": "Student Two-Hour Early Release",
+      "type": "early_release",
+      "description": "Students are released two hours early for staff professional learning."
     },
     {
       "date": "2027-05-28",
-      "name": "Last Day of School",
-      "type": "school_end"
-    },
-    {
-      "date": "2027-05-31",
-      "name": "Memorial Day",
-      "type": "holiday"
+      "name": "Last Day for Students / Two-Hour Early Release",
+      "type": "school_end",
+      "badgeLabel": "Last Day · Two-Hour Early Release",
+      "description": "The school year ends with students released two hours early.",
+      "schemaDescription": "The last day for traditional-calendar students is May 28, 2027, with a two-hour early release."
     }
-  ],
-  "calendarNotes": "Cumberland County Schools opens the 2026–2027 school year on Friday, August 7, 2026 — four days earlier than 2025–2026 and one of the earliest first days of school in North Carolina. The year begins on a Friday by design: a single-day soft start gives students and staff a transition day before the first full instructional week begins on Monday, August 10. This approach, used when calendar math places the target first day on a Friday, is preferred by some districts over starting mid-week.\n\nThe rationale for CCS's early August start goes beyond scheduling preference. North Carolina's 1,025-hour instructional requirement makes earlier starts strategically valuable: End-of-Grade (EOG) and End-of-Course (EOC) testing windows can be completed before Memorial Day, buffer days are built in for Atlantic hurricane closures that affect eastern NC, and the school year closes before June — when Fort Liberty's PCS peak season intensifies and large numbers of military families begin summer transfers. A school year that runs into June creates enrollment and records-transfer complexity that CCS actively avoids.\n\nThe 5-day Fall Break continues in 2026–2027, running October 12–16 — one day earlier than 2025–2026 due to the calendar alignment. This fall break remains unusual among NC traditional-calendar districts, most of which have no fall break at all. Winter Break runs December 21 – January 1, with classes resuming January 4.\n\nGood Friday shifts to March 26, 2027 — one week after Spring Break ends on March 19, rather than the two-week gap in 2025–2026. The shift reflects the earlier Easter date in 2027 (April 4 vs. April 5 in 2026). Presidents' Day (February 15) is observed as a school holiday this year.\n\nCCS also maintains Board-approved Year-Round and Cross Creek & Cumberland International calendars for families in those programs, each with a distinct break structure from the traditional calendar shown here.",
-  "datePublished": "2026-07-05",
-  "dateModified": "2026-07-05"
+  ]
 }

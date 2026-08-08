@@ -25,6 +25,7 @@ function toComparisonCalendarSummary(c: any) {
     schoolYear: c.schoolYear,
     firstDay: c.firstDay,
     lastDay: c.lastDay,
+    totalSchoolDays: c.totalSchoolDays,
     sourceUrl: c.sourceUrl,
     sourcePdfUrl: c.sourcePdfUrl,
     sourceVersion: c.sourceVersion,
@@ -571,6 +572,10 @@ const dateLegend = computed(() => {
 
 const moveCalendarExportBeforeAllDates = computed(() =>
   (cal.value as any)?.moveCalendarExportBeforeAllDates === true || (cal.value as any)?.meta?.moveCalendarExportBeforeAllDates === true
+)
+
+const breaksBeforeAllDates = computed(() =>
+  (cal.value as any)?.breaksBeforeAllDates === true || (cal.value as any)?.meta?.breaksBeforeAllDates === true
 )
 
 function countWeekdays(start: string, end: string) {
@@ -1138,16 +1143,24 @@ const yearNumbersSchemaParts = computed(() => {
     : []
 })
 const includeArticleSchema = (district.value as any)?.includeArticleSchema !== false && (district.value as any)?.meta?.includeArticleSchema !== false && (cal.value as any)?.includeArticleSchema !== false && (cal.value as any)?.meta?.includeArticleSchema !== false
+const hideItemListSchema = computed(() => Boolean((cal.value as any)?.hideItemListSchema || (cal.value as any)?.meta?.hideItemListSchema))
+const splitCalendarDateItemListSchema = computed(() => Boolean(
+  (cal.value as any)?.splitCalendarDateItemListSchema || (cal.value as any)?.meta?.splitCalendarDateItemListSchema,
+))
+const calendarDateItemListEvents = computed(() => {
+  if (!splitCalendarDateItemListSchema.value) return []
+  return (cal.value?.events ?? []).filter((event: any) => event.type !== 'break_end')
+})
 const webPageMainEntityMode = (cal.value as any)?.webPageMainEntity ?? (cal.value as any)?.meta?.webPageMainEntity ?? (district.value as any)?.webPageMainEntity ?? (district.value as any)?.meta?.webPageMainEntity
 const webPageMainEntity = webPageMainEntityMode === 'none'
   ? null
   : webPageMainEntityMode === 'keyDates'
-    ? (keyDateItemListEvents.value.length ? { '@id': `${canonicalUrl}#key-dates` } : null)
+    ? (!hideItemListSchema.value && keyDateItemListEvents.value.length ? { '@id': `${canonicalUrl}#key-dates` } : null)
     : webPageMainEntityMode === 'dataset'
       ? (datasetEntity ? { '@id': `${canonicalUrl}#calendar-dataset` } : null)
       : datasetEntity
         ? { '@id': `${canonicalUrl}#calendar-dataset` }
-        : keyDateItemListEvents.value.length
+        : !hideItemListSchema.value && keyDateItemListEvents.value.length
           ? { '@id': `${canonicalUrl}#key-dates` }
           : null
 const webPageEntity = {
@@ -1174,7 +1187,8 @@ const webPageEntity = {
     ? { hasPart: [
       ...(includeArticleSchema ? [{ '@id': `${canonicalUrl}#calendar-analysis` }] : []),
       ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
-      ...(keyDateItemListEvents.value.length ? [{ '@id': `${canonicalUrl}#key-dates` }] : []),
+      ...(!hideItemListSchema.value && keyDateItemListEvents.value.length ? [{ '@id': `${canonicalUrl}#key-dates` }] : []),
+      ...(!hideItemListSchema.value && calendarDateItemListEvents.value.length ? [{ '@id': `${canonicalUrl}#calendar-dates` }] : []),
       ...(faqSchemaItems.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
       ...customSectionSchemaParts.value,
       ...yearNumbersSchemaParts.value,
@@ -1230,9 +1244,11 @@ const faqPageEntity = faqSchemaItems.value.length ? {
     },
   })),
 } : null
-const hideItemListSchema = computed(() => Boolean((cal.value as any)?.hideItemListSchema || (cal.value as any)?.meta?.hideItemListSchema))
 const keyDateItemListName = computed(() =>
   (cal.value as any)?.schemaKeyDateItemListName ?? (cal.value as any)?.meta?.schemaKeyDateItemListName ?? `${district.value.shortName || district.value.name} ${displaySchoolYear.value} key school calendar dates`
+)
+const calendarDateItemListName = computed(() =>
+  (cal.value as any)?.schemaCalendarDateItemListName ?? (cal.value as any)?.meta?.schemaCalendarDateItemListName ?? `${district.value.shortName || district.value.name} ${displaySchoolYear.value} student calendar dates`
 )
 function keyDateDisplayName(event: { name: string; type: string; displayName?: string }) {
   if (event.displayName) return event.displayName
@@ -1285,6 +1301,21 @@ const keyDateItemListEntity = !hideItemListSchema.value && keyDateItemListEvents
     }
   }),
 } : null
+const calendarDateItemListEntity = !hideItemListSchema.value && calendarDateItemListEvents.value.length ? {
+  '@type': 'ItemList',
+  '@id': `${canonicalUrl}#calendar-dates`,
+  name: calendarDateItemListName.value,
+  itemListElement: calendarDateItemListEvents.value.map((event: any, i: number) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Thing',
+      name: keyDateDisplayName(event),
+      description: keyDateSchemaDescription(event),
+      additionalProperty: keyDateSchemaProperties(event),
+    },
+  })),
+} : null
 const comparisonItems = [
   { district: district.value, calendar: cal.value, url: canonicalUrl },
   ...((relatedCals.value ?? []).slice(0, 3).map((relatedCal: any) => {
@@ -1333,6 +1364,7 @@ useHead({
         ...(includeArticleSchema ? [articleEntity] : []),
         webPageEntity,
         ...(keyDateItemListEntity ? [keyDateItemListEntity] : []),
+        ...(calendarDateItemListEntity ? [calendarDateItemListEntity] : []),
         ...(comparisonItemListEntity ? [comparisonItemListEntity] : []),
         ...(faqPageEntity ? [faqPageEntity] : []),
         {
@@ -1380,7 +1412,15 @@ useHead({
         </h1>
         <p class="mt-2 text-sm text-[#7b756d]">
           {{ (cal as any).heroSourceLine ?? (cal as any).meta?.heroSourceLine ?? `${displaySchoolYear} calendar dates · Based on the official ${district!.shortName || district!.name} calendar` }} ·
-          <a href="#add-to-calendar" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">{{ (cal as any).heroDownloadLabel ?? (cal as any).meta?.heroDownloadLabel ?? (cal as any).icsButtonLabel ?? (cal as any).meta?.icsButtonLabel ?? 'Download calendar file' }}</a>
+          <a
+            :href="(cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref ?? '#add-to-calendar'"
+            :target="((cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref) ? '_blank' : undefined"
+            :rel="((cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref) ? 'noopener' : undefined"
+            class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors"
+          >
+            {{ (cal as any).heroDownloadLabel ?? (cal as any).meta?.heroDownloadLabel ?? (cal as any).icsButtonLabel ?? (cal as any).meta?.icsButtonLabel ?? 'Download calendar file' }}
+            <span v-if="(cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref" class="sr-only">(opens in a new tab)</span>
+          </a>
         </p>
         <div class="mt-3 text-[hsl(var(--rds-ink-muted)/1)] leading-relaxed space-y-2">
           <template v-if="heroSummaryParagraphs.length">
@@ -1704,6 +1744,30 @@ useHead({
         <DistrictCustomSections :sections="customSections" position="afterCalendarExport" />
       </template>
 
+      <!-- Break Summary (optional early position) -->
+      <template v-if="breaksBeforeAllDates">
+        <div v-if="breaks.length && !hiddenSections.has('breaks')" id="breaks" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
+          <h2 class="text-lg font-semibold text-[#1f2933] mb-4">{{ breaksTitle }}</h2>
+          <div class="space-y-3">
+            <div v-for="b in breaks" :key="b.name" class="flex flex-col items-start gap-2 py-3 border-b border-[#eee9df] last:border-0 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <div class="font-medium text-[#1f2933]">{{ breakDisplayName(b.name) }}</div>
+                <div class="text-sm text-[#7b756d]">{{ formatCompactDateRange(b.start, b.end) }}</div>
+                <p v-if="breakNoteFor(b)" class="mt-1 text-sm text-[#6b645c]">{{ breakNoteFor(b) }}</p>
+                <div v-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-[#5b4b6f] mt-0.5 font-medium">
+                  In progress
+                </div>
+              </div>
+              <div v-if="!hideBreakDurationBadges" class="self-start text-sm font-semibold text-[#5b4b6f] bg-[#eee9f3] px-3 py-1 rounded-lg sm:self-auto">{{ breakDurationLabel(b) }}</div>
+            </div>
+          </div>
+        </div>
+        <div v-if="!breaks.length && !hiddenSections.has('breaks')" id="breaks" class="scroll-mt-24">
+          <DistrictCustomSections :sections="customSections" position="afterBreaks" />
+        </div>
+        <DistrictCustomSections v-else-if="!hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
+      </template>
+
       <!-- All Dates -->
       <div v-if="hiddenSections.has('keyDateCards') && !configuredKeyDateSummaryItems.length" id="key-dates" class="scroll-mt-24" />
       <DistrictAllDates
@@ -1726,13 +1790,14 @@ useHead({
         :first-day="cal!.firstDay"
         :last-day="cal!.lastDay"
         :coverage-note="(cal as any).allDatesCoverageNote ?? (cal as any).meta?.allDatesCoverageNote"
+        :coverage-note-position="(cal as any).allDatesCoverageNotePosition ?? (cal as any).meta?.allDatesCoverageNotePosition"
         :legend-style="(cal as any).dateLegendStyle ?? (cal as any).meta?.dateLegendStyle"
         :month-notes="(cal as any).allDatesMonthNotes ?? (cal as any).meta?.allDatesMonthNotes"
       />
       <DistrictCustomSections :sections="customSections" position="afterAllDates" />
 
       <!-- Break Summary -->
-      <div v-if="breaks.length && !hiddenSections.has('breaks')" id="breaks" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
+      <div v-if="!breaksBeforeAllDates && breaks.length && !hiddenSections.has('breaks')" id="breaks" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
         <h2 class="text-lg font-semibold text-[#1f2933] mb-4">{{ breaksTitle }}</h2>
         <div class="space-y-3">
           <div v-for="b in breaks" :key="b.name" class="flex flex-col items-start gap-2 py-3 border-b border-[#eee9df] last:border-0 sm:flex-row sm:items-center sm:justify-between">
@@ -1750,10 +1815,10 @@ useHead({
       </div>
 
       <!-- Custom Sections: afterBreaks -->
-      <div v-if="!breaks.length && !hiddenSections.has('breaks')" id="breaks" class="scroll-mt-24">
+      <div v-if="!breaksBeforeAllDates && !breaks.length && !hiddenSections.has('breaks')" id="breaks" class="scroll-mt-24">
         <DistrictCustomSections :sections="customSections" position="afterBreaks" />
       </div>
-      <DistrictCustomSections v-else-if="!hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
+      <DistrictCustomSections v-else-if="!breaksBeforeAllDates && !hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
 
       <!-- Add to Calendar + Share -->
       <template v-if="!moveCalendarExportBeforeAllDates">

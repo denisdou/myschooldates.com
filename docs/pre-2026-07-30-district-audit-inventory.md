@@ -1,7 +1,7 @@
 # 2026-07-30 之前创建的学区审计整改队列
 
 Created: 2026-08-03
-Last updated: 2026-08-07
+Last updated: 2026-08-08
 
 ## Scope
 
@@ -34,11 +34,11 @@ Last updated: 2026-08-07
 | P4 | `/palm-beach-county-school-calendar` | 已完成 2026–27 审计整改并达到 9.5+ 发布级：改用 2026-07-28 amended official PDF，处理 PDF 与 Key Dates page 的日期、标签及 attendance-day 统计冲突，删除无可靠依据的天数/学期统计，补齐返校日、grading-period、teacher workday、emergency make-up、年度差异、ICS 范围、Schema 与来源优先级说明；官方来源及页面均于 2026-08-07 复核/更新。reviewed: 2026-08-07 |
 | P4 | `/pasco-county-school-calendar` | 已完成 2026–27 审计整改并达到 9.5+ 发布级：明确 February 12 / April 16 条件 school-day 逻辑、October / January / February 三个 early-release days、June 1–4 extended-closure make-up window，以及 Winter / Spring Break 后的实际返校日；同步收紧 ICS、FAQ、重复模块、订阅说明与来源追踪。核心日期保持 2026-07-18 官方复核结果，页面 updated/reviewed: 2026-08-07 |
 | P4 | `/sacramento-city-unified-school-calendar` | 已完成 2026–27 审计整改并达到 9.5+ 发布级：页面范围收紧为 Traditional Student Attendance Calendar，区分 TK–6 / 7–12 academic calendars、dependent charter 与 Adult Education 独立日历，补齐 Fall / Winter / Spring Break 返校日、年度差异、PDF/ICS 范围、FAQ、来源说明与 Schema，并清理无当前官方依据的学区通用文案。updated/reviewed: 2026-08-07 |
-| P0 | `/san-diego-unified-school-district-calendar` | 未审计 |
-| P0 | `/charlotte-mecklenburg-schools-calendar` | 未审计 |
-| P0 | `/chesterfield-county-school-calendar` | 未审计 |
-| P0 | `/cumberland-county-school-calendar` | 未审计 |
-| P0 | `/fairfax-county-school-calendar` | 未审计 |
+| P4 | `/san-diego-unified-school-district-calendar` | 已完成 SDUSD 2026–27 审计整改并达到 9.75 内容定稿级，正文冻结：删除错误的 Mexico spring-break / Easter 表述及不成立的 César Chávez Day 全州自动停课断言，清理 relocation、magnet demand、购物、biotech/defense、机场价格、wildfire 等无来源扩展内容；页面收敛为 Key Dates、Calendar Dates、带返校日的 Breaks、PDF/ICS、年度差异、5 条日历型 FAQ、SDUSD/LAUSD/LBUSD 的 First/Last Day 与 late-November/Winter/Spring Break 五项完整比较及来源复核，比较行以 `Thanksgiving Week / Fall Break` 保留 LBUSD 官方命名差异，补充 school-specific minimum-day 边界，并移除 Hero 重复的 instructional-day/return-date facts；关闭 Article、FAQPage、key-date ItemList 与 comparison Schema，Dataset 保留为独立数据实体但不再作为 WebPage mainEntity，并清理隐藏 ItemList 后的 `#key-dates` 悬空引用。JSON、事实字段、模块配置、结构化数据开关与审计清单 QA 均通过；本地运行页待 `localhost:3000` 恢复后复核，updated/reviewed: 2026-08-08 |
+| P3 | `/charlotte-mecklenburg-schools-calendar` | 已完成 2026–27 与 2027–28 双学年审计整改：页面限定为 CMS Traditional Calendar，核对 first/last day、1,063 instructional hours、teacher workdays、early release、break windows、grading periods 与条件补课顺序，明确 early college、middle college、Hawthorne Academy 和 A/B schedules 使用独立日历；收紧 FAQ、来源、ICS/PDF 范围与 district master，隐藏重复/生活方式/Comparison 模块并关闭 Article、FAQPage Schema。两个学年均于 2026-08-08 更新和复核，待运行页/ICS 抽查后升 P4。 |
+| P3 | `/chesterfield-county-school-calendar` | 已完成 2026–27 与 2027–28 双学年审计整改：重建 grade-based staggered opening schedule、Pre-K/K assigned attendance days、178 instructional days、holidays/workdays、breaks、返校日期、官方订阅边界、年度差异、FAQ 与来源说明，并清理 district master 中偏离 calendar intent 的内容；2027–28 另记录 live calendar 的 June 2 last day 与 approval announcement 的 June 1 冲突，当前遵循 live student calendar 且设置复核触发条件。两个学年均于 2026-08-08 更新和复核，待运行页/ICS 抽查后升 P4。 |
+| P1 | `/fairfax-county-school-calendar` | 已审计并完成 2027–28 关键事实修正：last day 由 June 15 改为 June 14，移除失效 PDF URL，改用 School Board-approved calendar published July 9, 2026 的来源说明，并删除无来源的 Loudoun alignment 判断，updated/reviewed: 2026-08-08。当前 2026–27 页面仍保留 2026-07-05 旧结构，尚未按 9.5+ 资源页标准完成正文、来源、FAQ、Schema 与模块复核，因此维持 P1。 |
+| P4 | `/edmonds-school-district-calendar` | 已完成 2026–27 多轮审计整改，最新独立内容评分 9.84，达到发布/冻结标准并转向站点级 SEO。页面已对齐 ESD Family Calendar、Key Dates、English/Spanish PDF、live calendar 及 start/end-time 官方资料；处理 grades 1–12/kindergarten/preschool 分阶段开学、精确 Friday early releases、conference/districtwide half days、May 28 与 June 23–25/28 有序 snow make-up dates、年度差异、独立 ICS 和来源视觉复核。Aug 28、Aug 31、Sep 1 已防止误合并，Dataset temporal coverage、Scheduled Last Day、Key Dates 及 ItemList Schema 均与可见页面一致。最终收尾包括精确区分两个 First Day Schema description、修正 What Changed 的同比语义、明确 DataDownload 只包含精选重要日期且不含 recurring Friday early releases，并完成 All Dates coverage、snow make-up、preschool 与 Spanish PDF 文案整理。updated/reviewed: 2026-08-08。 |
 | P0 | `/guilford-county-school-calendar` | 未审计 |
 | P0 | `/loudoun-county-school-calendar` | 未审计 |
 | P0 | `/prince-william-county-school-calendar` | 未审计 |
@@ -72,6 +72,7 @@ Last updated: 2026-08-07
 | P0 | `/san-bernardino-city-unified-school-district-calendar` | 未审计 |
 | P0 | `/santa-ana-unified-school-district-calendar` | 未审计 |
 | P0 | `/stockton-unified-school-district-calendar` | 未审计 |
+| P4 | `/cumberland-county-school-calendar` | 已完成 2026–27 三轮审计整改及最终编辑收尾，内容评分 9.8，主体内容冻结：改用 CCS 当前 Traditional Calendar，将错误的 Aug 7 开学修正为 Aug 24，删除不存在的 October Fall Break，按官方类别重建 Nov 23–27、Dec 21–Jan 1 与 Mar 25–Apr 2 学生无课日期，补齐两小时提前放学日及 Feb 15 条件补课日；修复 Year-Round 旧学年 PDF，补齐 Early-College/Cumberland Polytechnic 日历；清除 Fort Liberty、无来源 PCS/IEP、relocation/lifestyle 与学区优劣判断，收敛军人家庭说明；关闭 Article、FAQPage、key-date ItemList 与 comparison Schema。后续轮次已删除重复 notice/badge，统一自然语言与完整官方 holiday 名称，修正 Guilford slug 并补齐 CCS/Wake/Guilford/CMS 五行比较；将 comparison spring 行统一为 `Spring Break / No-School Period`，图例收敛为实际可见类型，精修 break/military 文案并隐藏 Related Districts 重复描述。最终 polish 将提前放学 FAQ 改为自然英文，将 comparison 行改为 `Late-November No-School Period`，并删除非版本标识的 `CreativeWork.version`。源文件 JSON、Comparison 与静态一致性检查通过。当前公网 canonical URL 仍返回 Aug 7、旧 Fall/Spring Break、Fort Liberty 等旧 HTML，内容源已达标但部署/index freshness 为 P0 外部阻塞；`localhost:3000` 未运行，未执行构建或运行页/ICS 复核。updated/reviewed: 2026-08-08 |
 | P1 | `/hampton-city-schools-calendar` | 未审计 |
 | P1 | `/newport-news-public-schools-calendar` | 已审计，待整改复核 |
 | P1 | `/roanoke-county-public-schools-calendar` | 未审计 |

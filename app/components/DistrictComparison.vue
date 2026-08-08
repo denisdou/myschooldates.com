@@ -211,6 +211,9 @@ const rows = computed((): ComparisonRow[] => {
     (props.district as any)?.comparisonDistrictSlugs ??
     (props.district as any)?.meta?.comparisonDistrictSlugs ??
     []) as string[]
+  const comparisonNotes = ((props.cal as any)?.comparisonNotes ??
+    (props.cal as any)?.meta?.comparisonNotes ??
+    {}) as Record<string, string>
   const relatedCalPool = configuredComparisonSlugs.length
     ? configuredComparisonSlugs
         .map(slug => (props.relatedCals ?? []).find((c: any) => {
@@ -242,12 +245,12 @@ const rows = computed((): ComparisonRow[] => {
       springBreak: sp ? { start: sp.start, end: sp.end } : null,
       winterBreak: winter ? { start: winter.start, end: winter.end } : null,
       thanksgivingBreak: thanksgiving ? { start: thanksgiving.start, end: thanksgiving.end } : null,
-      comparisonNote: relatedDef?.comparisonNote,
-      sourceUrl: c.sourcePdfUrl || c.sourceUrl || d.calendarPage || d.officialWebsite,
-      sourceLabel: c.sourcePdfUrl ? pdfSourceLabel(d, c, relatedDef) : undefined,
+      comparisonNote: comparisonNotes[d.slug] ?? relatedDef?.comparisonNote,
+      sourceUrl: c.comparisonSourceUrl || c.sourcePdfUrl || c.sourceUrl || d.calendarPage || d.officialWebsite,
+      sourceLabel: c.comparisonSourceLabel ?? (c.comparisonSourceUrl ? pageSourceLabel(d, relatedDef) : (c.sourcePdfUrl ? pdfSourceLabel(d, c, relatedDef) : undefined)),
       sourceVersion: c.sourceVersion,
-      extraSourceUrl: c.sourcePdfUrl && c.sourceUrl ? c.sourceUrl : undefined,
-      extraSourceLabel: c.sourcePdfUrl && c.sourceUrl ? pageSourceLabel(d, relatedDef) : undefined,
+      extraSourceUrl: c.comparisonExtraSourceUrl ?? (c.sourcePdfUrl && c.sourceUrl ? c.sourceUrl : undefined),
+      extraSourceLabel: c.comparisonExtraSourceLabel ?? (c.sourcePdfUrl && c.sourceUrl ? pageSourceLabel(d, relatedDef) : undefined),
       comparisonLabel: relatedDef?.comparisonLabel,
       comparisonValues: comparisonValueOverridesFor(d.slug, relatedDef),
       calendarPath: c.schoolYear ? `/${d.slug}/${c.schoolYear}` : `/${d.slug}`,

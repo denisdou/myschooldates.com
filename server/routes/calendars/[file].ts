@@ -24,6 +24,7 @@ type CalendarEvent = {
 }
 
 type CalendarRecord = {
+  institutionId?: string
   schoolYear: string
   firstDay?: string
   lastDay?: string
@@ -190,7 +191,21 @@ function buildManifestFromContent(root: string): CalendarManifest | null {
   return { districts, calendarsByInstitutionYear }
 }
 
-function readManifest() {
+function parseStoredJson<T>(value: unknown): T | null {
+  if (typeof value === 'string') return JSON.parse(value) as T
+  if (value instanceof Uint8Array) return JSON.parse(new TextDecoder().decode(value)) as T
+  if (value && typeof value === 'object') return value as T
+  return null
+}
+
+async function buildManifestFromServerAssets(): Promise<CalendarManifest | null> {
+  const value = await useStorage('assets:server').getItem('calendar-route-manifest.json')
+  const manifest = parseStoredJson<CalendarManifest>(value)
+  if (!manifest?.districts?.length || !Object.keys(manifest.calendarsByInstitutionYear ?? {}).length) return null
+  return manifest
+}
+
+async function readManifest() {
   const isDevelopment = process.env.NODE_ENV !== 'production'
   if (!isDevelopment && manifestCache) return manifestCache
 
@@ -213,6 +228,12 @@ function readManifest() {
     return manifest
   }
 
+  const bundledManifest = await buildManifestFromServerAssets()
+  if (bundledManifest) {
+    manifestCache = bundledManifest
+    return manifestCache
+  }
+
   const fallback = buildManifestFromContent(process.cwd())
   if (fallback) {
     manifestCache = fallback
@@ -222,12 +243,12 @@ function readManifest() {
   throw createError({ statusCode: 500, statusMessage: 'Calendar manifest not available' })
 }
 
-function findCalendar(fileParam: string) {
+async function findCalendar(fileParam: string) {
   const normalizedFileParam = fileParam.replace(/\.(ics|pdf)$/i, '')
   const match = normalizedFileParam.match(/^(.+)-(\d{4}-\d{4})$/)
   if (!match) return null
 
-  const manifest = readManifest()
+  const manifest = await readManifest()
   const [, slug, schoolYear] = match
   const district = manifest.districts.find(item => item.slug === slug)
   if (!district) return null
@@ -382,9 +403,9 @@ function buildPdf(district: DistrictRecord, calendar: CalendarRecord) {
   return Buffer.from(pdf, 'utf8')
 }
 
-export default defineEventHandler((event) => {
+export default defineEventHandler(async (event) => {
   const fileParam = getRouterParam(event, 'file') ?? ''
-  const match = findCalendar(fileParam)
+  const match = await findCalendar(fileParam)
 
   if (!match) {
     throw createError({ statusCode: 404, statusMessage: 'Calendar file not found' })

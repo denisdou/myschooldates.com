@@ -108,6 +108,15 @@ Display rule:
 
 Avoid comparison modules when nearby district data is missing, stale, or not geographically relevant. In those cases, prefer a state hub link or methodology link over a weak comparison table.
 
+Comparison overrides are editorial data, not gap-filling placeholders. Every `comparisonValueOverrides` entry must:
+
+- be scoped to a specific school-year record
+- be supported by an official district calendar or calendar page listed in the page's sources
+- have a current `lastVerifiedAt` review date for that school year
+- preserve the official date range without silently inferring missing dates
+
+When districts use different names for equivalent break periods, use a neutral or combined visible row label and explain the naming difference in the comparison note. Do not relabel a district's official `Fall Break` as `Thanksgiving Break` solely to normalize the table.
+
 Example policy field:
 
 ```json

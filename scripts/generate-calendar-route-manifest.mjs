@@ -4,7 +4,7 @@ import { join } from 'node:path'
 const root = process.cwd()
 const districtsDir = join(root, 'content', 'districts')
 const calendarsDir = join(root, 'content', 'calendars')
-const outputPath = join(root, '.output', 'server', 'calendar-route-manifest.json')
+const outputPath = join(root, 'server', 'assets', 'calendar-route-manifest.json')
 
 function readJson(path) {
   return JSON.parse(readFileSync(path, 'utf8'))
@@ -20,7 +20,13 @@ const calendarsByInstitutionYear = {}
 for (const file of readdirSync(districtsDir)) {
   if (!file.endsWith('.json')) continue
   const district = readJson(join(districtsDir, file))
-  if (district.institutionId && district.slug) districts.push(district)
+  if (!district.institutionId || !district.slug) continue
+  districts.push({
+    institutionId: district.institutionId,
+    name: district.name,
+    shortName: district.shortName,
+    slug: district.slug,
+  })
 }
 
 for (const institutionId of readdirSync(calendarsDir)) {
@@ -31,11 +37,18 @@ for (const institutionId of readdirSync(calendarsDir)) {
     if (!file.endsWith('.json')) continue
     const calendar = readJson(join(institutionDir, file))
     if (!calendar.schoolYear) continue
-    calendarsByInstitutionYear[`${institutionId}:${calendar.schoolYear}`] = calendar
+    calendarsByInstitutionYear[`${institutionId}:${calendar.schoolYear}`] = {
+      institutionId,
+      schoolYear: calendar.schoolYear,
+      firstDay: calendar.firstDay,
+      lastDay: calendar.lastDay,
+      totalSchoolDays: calendar.totalSchoolDays,
+      events: calendar.events ?? [],
+    }
   }
 }
 
-mkdirSync(join(root, '.output', 'server'), { recursive: true })
+mkdirSync(join(root, 'server', 'assets'), { recursive: true })
 writeFileSync(outputPath, JSON.stringify({ districts, calendarsByInstitutionYear }), 'utf8')
 
 console.log(`Generated calendar route manifest with ${districts.length} districts and ${Object.keys(calendarsByInstitutionYear).length} calendars`)

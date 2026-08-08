@@ -1,52 +1,267 @@
 {
   "institutionId": "san-diego-unified",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "San Diego Unified School District Calendar 2026-2027",
   "firstDay": "2026-08-10",
   "lastDay": "2027-05-26",
   "totalSchoolDays": 180,
-  "teacherWorkDays": 187,
-  "semesters": 2,
+  "temporalCoverageStart": "2026-08-10",
+  "temporalCoverageEnd": "2027-05-26",
   "sourceUrl": "https://www.sandiegounified.org/academics/academic_calendars",
   "sourcePdfUrl": "https://cdnsm5-ss18.sharpschool.com/UserFiles/Servers/Server_27732394/File/Academics/Academic%20Calendars/Traditional/2026-27%20Academic%20Calendar%20approved%206-24-2025.pdf",
-  "lastVerifiedAt": "2026-07-02",
+  "sourceCalendarName": "San Diego Unified School District 2026-27 Academic Calendar",
+  "sourceVersion": "Final — adopted June 24, 2025",
+  "lastVerifiedAt": "2026-08-08",
+  "datePublished": "2026-07-02",
+  "dateModified": "2026-08-08",
   "calendarType": "traditional",
-  "calendarFaqs": [
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "hideItemListSchema": true,
+  "webPageMainEntity": "none",
+  "schemaReviewedBy": "author",
+  "seoTitle": "SDUSD Calendar 2026–27: School Dates, Breaks & PDF",
+  "seoDescription": "See the 2026–27 San Diego Unified school calendar, including the August 10 first day of school, Thanksgiving, winter and spring breaks, and the May 26 last day. View the official PDF or download the calendar as an ICS file.",
+  "schemaCalendarName": "San Diego Unified School District Calendar 2026–27",
+  "schemaDatasetName": "SDUSD 2026–27 Academic Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed San Diego Unified districtwide dates for the 2026–27 traditional school year, including the first and last day, holidays, non-instructional days, school breaks, and return dates.",
+  "schemaCalendarDownloadName": "SDUSD 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "Calendar import file generated from the districtwide student dates reviewed against the official SDUSD 2026–27 academic calendar.",
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends"
+  ],
+  "heroSourceLine": "Source: SDUSD 2026–27 Academic Calendar · Final, adopted June 24, 2025 · 180 instructional days",
+  "heroSummary": "San Diego Unified students begin the 2026–27 school year on Monday, August 10, 2026, and the last day of school is Wednesday, May 26, 2027. Thanksgiving Break runs November 23–27, Winter Break runs December 21–January 4, and Spring Recess is March 29–April 2.",
+  "verificationBadgeText": "Dates were checked against SDUSD's official 2026–27 academic calendar on August 8, 2026.",
+  "keyDatesSummaryTitle": "SDUSD 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "The districtwide dates families most often need for school-year planning",
+  "keyDateSummaryItems": [
     {
-      "q": "When does school start for San Diego Unified School District in 2026-2027?",
-      "a": "The first day of school for San Diego Unified School District is Monday, August 10, 2026. Students and staff are expected to report on this date to begin the new academic year — one day earlier than the 2025–2026 start date of August 11."
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-10",
+      "type": "school_start"
     },
     {
-      "q": "When is the last day of school for San Diego Unified School District in 2026-2027?",
-      "a": "The last day of school for San Diego Unified School District is Wednesday, May 26, 2027. The school year runs from August through May, covering 180 instructional days."
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
     },
     {
-      "q": "When is spring break 2026-2027 for San Diego Unified School District?",
-      "a": "Spring Recess for San Diego Unified School District runs March 29–April 2, 2027. This year the break overlaps with Easter weekend (April 1–2), concentrating travel demand across the region. For cross-border families, Mexican public schools typically break in mid-April — two weeks later."
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "type": "break_start"
     },
     {
-      "q": "When is winter break 2026-2027 for San Diego Unified School District?",
-      "a": "Winter break for San Diego Unified School District runs December 21, 2026–January 4, 2027 (15 days) — three days longer than the 12-day winter break in 2025–2026. School resumes Tuesday, January 5, 2027."
+      "label": "Break",
+      "name": "Spring Recess",
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "type": "break_start"
     },
     {
-      "q": "When is Thanksgiving break 2026-2027 for San Diego Unified School District?",
-      "a": "Thanksgiving break for San Diego Unified School District runs November 23–27, 2026 (Monday through Friday). Thanksgiving Day falls on November 26. School resumes Monday, November 30, 2026."
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-05-26",
+      "type": "school_end"
     }
   ],
-  "yearNumbers": [
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Changes", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "San Diego Unified Calendar Dates — 2026–27",
+  "allDatesCoverageNote": "This list includes the districtwide instructional, holiday, and non-instructional dates shown on SDUSD's traditional academic calendar. Individual school minimum days, bell schedules, conferences, and campus events are not included unless they appear on the district calendar.",
+  "allDatesSourceUrl": "https://cdnsm5-ss18.sharpschool.com/UserFiles/Servers/Server_27732394/File/Academics/Academic%20Calendars/Traditional/2026-27%20Academic%20Calendar%20approved%206-24-2025.pdf",
+  "allDatesSourceLabel": "Official SDUSD 2026–27 Academic Calendar PDF",
+  "allDatesSourceLinks": [
     {
-      "label": "Indigenous Peoples Day",
-      "value": "Oct 12",
-      "detail": "San Diego Unified observes Indigenous Peoples' Day as a non-instructional day — a district-specific observance not universally observed across California school districts."
+      "label": "SDUSD 2026–27 Academic Calendar PDF",
+      "url": "https://cdnsm5-ss18.sharpschool.com/UserFiles/Servers/Server_27732394/File/Academics/Academic%20Calendars/Traditional/2026-27%20Academic%20Calendar%20approved%206-24-2025.pdf"
     },
     {
-      "label": "Lincoln's Birthday",
-      "value": "Feb 12",
-      "detail": "A holiday on February 12 (Friday before Presidents' Day on Feb 15) observes Lincoln's Birthday — creating a 4-day weekend that families often discover only after it arrives."
+      "label": "SDUSD academic calendars page",
+      "url": "https://www.sandiegounified.org/academics/academic_calendars"
+    }
+  ],
+  "breaksTitle": "Major School Breaks and Return Dates",
+  "hideBreakDurationBadges": true,
+  "breakNotes": {
+    "Thanksgiving Break": "Students return Monday, November 30, 2026.",
+    "Winter Break": "Students return Tuesday, January 5, 2027.",
+    "Spring Recess": "Students return Monday, April 5, 2027."
+  },
+  "icsHeading": "Download the SDUSD 2026–27 Calendar",
+  "icsDescription": "Download a one-time ICS file containing the districtwide student dates listed on this page. School-specific minimum days and campus events are not included.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "icsButtonSupportText": "One-time import. It will not update automatically if SDUSD revises the calendar.",
+  "icsAriaLabel": "Download the SDUSD 2026–27 calendar file",
+  "pdfHeading": "Official SDUSD 2026–27 Academic Calendar",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "Open the one-page traditional academic calendar adopted by the San Diego Unified Board of Education on June 24, 2025.",
+  "pdfVersionLabel": "Final — adopted June 24, 2025",
+  "customSections": [
+    {
+      "id": "sdusd-2026-2027-planning-notes",
+      "label": "Calendar Planning Notes",
+      "position": "afterYearDiff",
+      "schemaHasPart": false,
+      "content": "The districtwide PDF is the source for the dates on this page. A student's school may publish additional schedule changes.",
+      "groups": [
+        {
+          "label": "Check the school calendar for local schedule changes",
+          "items": [
+            "Minimum days, conferences, bell-time changes, and campus events may appear only on the individual school's calendar."
+          ]
+        },
+        {
+          "label": "Confirm independent charter dates directly",
+          "items": [
+            "Independent charter schools may use calendars that differ from the SDUSD traditional calendar."
+          ]
+        }
+      ]
+    }
+  ],
+  "whatsNew": {
+    "title": "What's Different in 2026–27",
+    "content": [
+      "School starts August 10 in 2026–27, one day earlier on the calendar than the August 11 start in 2025–26.",
+      "Thanksgiving Break remains a full Monday-through-Friday week, moving from November 24–28 in 2025 to November 23–27 in 2026.",
+      "Winter Break runs December 21–January 4, compared with December 22–January 2 in 2025–26. Classes resume January 5 in both school years.",
+      "Spring Recess moves one calendar day earlier, from March 30–April 3 in 2025–26 to March 29–April 2 in 2026–27.",
+      "The school year ends May 26, compared with May 28 in 2025–26."
+    ]
+  },
+  "comparisonBeforeFaq": true,
+  "comparisonDistrictSlugs": [
+    "los-angeles-unified-school-district-calendar",
+    "long-beach-unified-school-district-calendar"
+  ],
+  "comparisonTitle": "SDUSD Calendar Compared With LAUSD and Long Beach Unified",
+  "comparisonSummary": "Compare the first and last days and major school breaks across SDUSD, LAUSD, and Long Beach Unified.",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "comparisonRowLabels": {
+    "thanksgivingBreak": "Thanksgiving Week / Fall Break"
+  },
+  "comparisonRowsMode": "sharedValuesOnly",
+  "comparisonValueOverrides": {
+    "los-angeles-unified-school-district-calendar": {
+      "thanksgivingBreak": "Nov 23–27, 2026",
+      "winterBreak": "Dec 21, 2026–Jan 8, 2027",
+      "springBreak": "Mar 22–26, 2027"
+    },
+    "long-beach-unified-school-district-calendar": {
+      "thanksgivingBreak": "Nov 23–27, 2026",
+      "winterBreak": "Dec 21, 2026–Jan 1, 2027",
+      "springBreak": "Apr 5–9, 2027"
+    }
+  },
+  "comparisonInsights": [
+    {
+      "label": "Start date comparison",
+      "items": [
+        "SDUSD starts 2 days earlier than LAUSD",
+        "SDUSD starts 15 days earlier than Long Beach Unified"
+      ]
     },
     {
-      "label": "Longer Winter Break",
-      "value": "15 days",
-      "detail": "Winter Break runs Dec 21–Jan 4 (15 days) vs 12 days in 2025-2026 — the break starts one day earlier and ends two days later, adding 3 extra days off."
+      "label": "End date comparison",
+      "items": [
+        "SDUSD ends 9 days earlier than LAUSD",
+        "SDUSD ends 15 days earlier than Long Beach Unified"
+      ]
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When does San Diego Unified start and end school in 2026–27?",
+      "a": "The first day of school is Monday, August 10, 2026, and the last day is Wednesday, May 26, 2027."
+    },
+    {
+      "q": "When are SDUSD's major breaks?",
+      "a": "Thanksgiving Break is November 23–27, 2026; Winter Break is December 21, 2026–January 4, 2027; and Spring Recess is March 29–April 2, 2027."
+    },
+    {
+      "q": "Where can families find SDUSD minimum days?",
+      "a": "The districtwide academic calendar does not list every school-specific minimum day. Check the individual school's calendar and bell schedule before planning pickup, transportation, or childcare."
+    },
+    {
+      "q": "Do charter schools follow the SDUSD calendar?",
+      "a": "Not necessarily. Independent charter schools may set their own calendars, so families should confirm dates directly with the school."
+    },
+    {
+      "q": "Does the downloadable calendar update automatically?",
+      "a": "No. The ICS file is a one-time import and will not update automatically if SDUSD revises its calendar. Check the official district calendar page for later changes."
+    }
+  ],
+  "faqOrderLimit": 5,
+  "faqDisplayQuestions": [
+    "When does San Diego Unified start and end school in 2026–27?",
+    "When are SDUSD's major breaks?",
+    "Where can families find SDUSD minimum days?",
+    "Do charter schools follow the SDUSD calendar?",
+    "Does the downloadable calendar update automatically?"
+  ],
+  "faqDisplayLimit": 5,
+  "sourceReviewSummary": "Reviewed August 8, 2026, against the official SDUSD academic calendars page and the final 2026–27 academic calendar PDF adopted June 24, 2025.",
+  "sourceReviewDetails": [
+    "The PDF marks August 10 as the first day, May 26 as the last day, and lists 180 instructional days.",
+    "Holiday and non-instructional labels follow the official H and NI markings. February 12 is described as a district holiday because the PDF does not provide a holiday name.",
+    "Return dates are the next instructional days shown after Thanksgiving Break, Winter Break, and Spring Recess.",
+    "Individual school minimum days, bell schedules, conferences, and campus events are outside the scope of the districtwide PDF and this calendar file."
+  ],
+  "sourceMaintainerText": "Denis Dou for MySchoolDates",
+  "sourceNextReviewText": "Next review: When SDUSD revises the 2026–27 calendar or publishes a new academic calendar.",
+  "sources": [
+    {
+      "label": "San Diego Unified academic calendars page",
+      "url": "https://www.sandiegounified.org/academics/academic_calendars"
+    },
+    {
+      "label": "SDUSD 2026–27 final academic calendar PDF",
+      "url": "https://cdnsm5-ss18.sharpschool.com/UserFiles/Servers/Server_27732394/File/Academics/Academic%20Calendars/Traditional/2026-27%20Academic%20Calendar%20approved%206-24-2025.pdf"
+    },
+    {
+      "label": "SDUSD 2025–26 final academic calendar PDF — used for year-over-year comparison",
+      "url": "https://cdnsm5-ss18.sharpschool.com/UserFiles/Servers/Server_27732394/File/Academics/Academic%20Calendars/Traditional/Final%202025-26%20Academic%20Calendar%202025-26.pdf"
     }
   ],
   "events": [
@@ -62,8 +277,9 @@
     },
     {
       "date": "2026-10-12",
-      "name": "Indigenous Peoples' Day (Non-Instructional Day)",
-      "type": "no_school"
+      "name": "Non-Instructional Day",
+      "type": "no_school",
+      "description": "The official academic calendar marks October 12 as a non-instructional day."
     },
     {
       "date": "2026-11-11",
@@ -81,6 +297,11 @@
       "type": "break_end"
     },
     {
+      "date": "2026-11-30",
+      "name": "Students Return After Thanksgiving Break",
+      "type": "school_resume"
+    },
+    {
       "date": "2026-12-21",
       "name": "Winter Break",
       "type": "break_start"
@@ -91,14 +312,20 @@
       "type": "break_end"
     },
     {
+      "date": "2027-01-05",
+      "name": "Students Return After Winter Break",
+      "type": "school_resume"
+    },
+    {
       "date": "2027-01-18",
       "name": "Martin Luther King Jr. Day",
       "type": "holiday"
     },
     {
       "date": "2027-02-12",
-      "name": "Holiday",
-      "type": "holiday"
+      "name": "District Holiday",
+      "type": "holiday",
+      "description": "The official academic calendar marks February 12 as a holiday."
     },
     {
       "date": "2027-02-15",
@@ -121,12 +348,15 @@
       "type": "break_end"
     },
     {
+      "date": "2027-04-05",
+      "name": "Students Return After Spring Recess",
+      "type": "school_resume"
+    },
+    {
       "date": "2027-05-26",
       "name": "Last Day of School",
       "type": "school_end"
     }
   ],
-  "calendarNotes": "Classes begin August 10, 2026, and end May 26, 2027, with Spring Recess running March 29–April 2 — an especially important break for many cross-border families, since Mexican public schools typically break about two weeks later in mid-April. Indigenous Peoples' Day on October 12 is a non-instructional day, a California-specific school holiday that families arriving from other states sometimes discover only after missing it the first year. February brings two no-school days close together: Lincoln's Birthday on the 12th and Presidents' Day on the 15th — spread far enough apart to trip up childcare planning if you're not watching the calendar. Thanksgiving Break runs November 23–27; Winter Break begins December 21 and ends January 4. San Diego rarely sees the weather events that close schools elsewhere. Published dates rarely change, making it easier to book travel and arrange childcare without leaving much buffer for last-minute changes.",
-  "datePublished": "2026-07-02",
-  "dateModified": "2026-07-02"
+  "calendarNotes": "This page follows SDUSD's districtwide traditional academic calendar. It includes the first and last day, holidays, non-instructional days, major breaks, and the next instructional day after each break. Individual school minimum days and campus events are not included unless they appear on the district calendar."
 }

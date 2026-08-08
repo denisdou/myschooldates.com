@@ -37,6 +37,7 @@ const props = defineProps<{
   footerMode?: 'default' | 'source_sentence'
   sourceLinks?: SourceLink[]
   coverageNote?: string
+  coverageNotePosition?: 'top' | 'bottom' | 'both'
   includedDatesInKeyDates?: string[]
   firstDay?: string
   lastDay?: string
@@ -61,6 +62,14 @@ function isPossibleMakeupDay(event: CalendarEvent) {
 const hiddenInKeyDates = new Set(['break_end', 'teacher_workday'])
 const includedDatesInKeyDates = computed(() => new Set(props.includedDatesInKeyDates ?? []))
 const sourceLinks = computed(() => (props.sourceLinks ?? []).filter(Boolean))
+const coverageNotePosition = computed(() => props.coverageNotePosition ?? 'bottom')
+const showCoverageNoteAbove = computed(() =>
+  Boolean(props.coverageNote) && (coverageNotePosition.value === 'top' || coverageNotePosition.value === 'both')
+)
+const footerCoverageNote = computed(() => {
+  if (coverageNotePosition.value === 'top') return ''
+  return props.coverageNote || 'This table lists major districtwide student dates. Check the official PDF and your school\'s calendar for campus events, dismissal times, testing, and schedule changes.'
+})
 const hasSingleSourceLink = computed(() => sourceLinks.value.length === 1)
 function isHolidayOutsideStudentYear(event: CalendarEvent) {
   return Boolean(props.firstDay && props.lastDay) &&
@@ -443,11 +452,14 @@ function formatRangeEnd(event: DisplayEvent) {
 <template>
   <div id="all-dates" class="calendar-print-target bg-rds-surface-panel rounded-lg border border-rds-hairline overflow-hidden scroll-mt-24 shadow-[0_1px_0_rgba(31,41,51,0.03)]">
     <div class="px-6 py-4 border-b border-[#ebe6dd]">
-      <h2 class="text-lg font-semibold text-[#1f2933]" :class="legend?.length ? 'mb-3' : ''">{{ title }}</h2>
+      <h2 class="text-lg font-semibold text-[#1f2933]" :class="legend?.length && !showCoverageNoteAbove ? 'mb-3' : ''">{{ title }}</h2>
+      <p v-if="showCoverageNoteAbove" class="mt-2 text-sm leading-relaxed text-[#6b645c]">
+        {{ coverageNote }}
+      </p>
       <p class="calendar-print-meta hidden text-xs text-[#6b645c]">
         Print-friendly calendar from MySchoolDates<span v-if="verifiedDate"> · Dates verified {{ verifiedDate }}</span>
       </p>
-      <div v-if="legend?.length" class="flex flex-wrap items-center gap-3">
+      <div v-if="legend?.length" class="flex flex-wrap items-center gap-3" :class="showCoverageNoteAbove ? 'mt-3' : ''">
         <span class="text-xs font-semibold uppercase tracking-wide text-[#8a8176]">{{ legendTitle || 'Common date types' }}</span>
         <span
           v-for="item in legend"
@@ -531,7 +543,8 @@ function formatRangeEnd(event: DisplayEvent) {
     <div class="px-6 py-3 border-t border-[#ebe6dd] flex items-center gap-1.5 text-xs text-[#6b645c]">
       <span>
         <template v-if="footerMode === 'source_sentence'">
-          {{ coverageNote || "This list includes districtwide student dates." }}
+          <template v-if="footerCoverageNote">{{ footerCoverageNote }} </template>
+          <template v-else><span class="font-medium text-[#6b645c]">Sources:</span> </template>
           <template v-if="sourceLinks.length">
             <template v-for="(link, idx) in sourceLinks" :key="link.url">
               <a :href="link.url" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">
@@ -560,8 +573,7 @@ function formatRangeEnd(event: DisplayEvent) {
           </template>
         </template>
         <template v-else>
-          <template v-if="mode === 'keyDates'">{{ coverageNote || "This table lists major districtwide student dates. Check the official PDF and your school's calendar for campus events, dismissal times, testing, and schedule changes." }}</template>
-          <template v-else>{{ coverageNote || "This table lists major districtwide student dates. Check the official PDF and your school's calendar for campus events, dismissal times, testing, and schedule changes." }} </template>
+          <template v-if="footerCoverageNote">{{ footerCoverageNote }} </template>
           <template v-if="coveredBreakDateNames.length">
             Dates listed within a vacation period are already included in that period and are not listed separately{{ coveredBreakDateNames.length ? ` (${coveredBreakDateNames.join(', ')})` : '' }}.
           </template>

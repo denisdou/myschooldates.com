@@ -72,24 +72,28 @@ const schoolWeeks = computed(() => {
 // daysOffCount
 const daysOffCount = computed(() => {
   if (!props.cal) return 0
-  let count = 0
-  const breakRanges: { start: string; end: string }[] = []
-  for (const e of props.cal.events) {
-    if (e.type === 'break_start') {
-      const endEvt = props.cal.events.find((x: any) => x.type === 'break_end' && x.date > e.date)
-      if (endEvt) breakRanges.push({ start: e.date, end: endEvt.date })
-    }
-    if (e.type === 'holiday' || e.type === 'no_school') count++
+  const noSchoolWeekdays = new Set<string>()
+  const addWeekday = (date: string) => {
+    const day = new Date(date + 'T00:00:00').getDay()
+    if (day !== 0 && day !== 6) noSchoolWeekdays.add(date)
   }
-  for (const { start, end } of breakRanges) {
+  for (const event of props.cal.events) {
+    if (['holiday', 'no_school', 'student_holiday'].includes(event.type)) addWeekday(event.date)
+  }
+  for (const { start, end } of breaks.value) {
     let d = new Date(start + 'T00:00:00')
     const endD = new Date(end + 'T00:00:00')
     while (d <= endD) {
-      if (d.getDay() !== 0 && d.getDay() !== 6) count++
+      const date = [
+        d.getFullYear(),
+        String(d.getMonth() + 1).padStart(2, '0'),
+        String(d.getDate()).padStart(2, '0'),
+      ].join('-')
+      addWeekday(date)
       d.setDate(d.getDate() + 1)
     }
   }
-  return count
+  return noSchoolWeekdays.size
 })
 
 // winterBreakDays
@@ -163,8 +167,26 @@ function computeMetricPool(
   yearComparisonVal: string,
 ): MetricPool {
   const events: { date: string; type: string; name: string }[] = cal.events ?? []
-  const holidayCount = events.filter(e => e.type === 'holiday' || e.type === 'no_school').length
-  const noSchoolDayCount = events.filter(e => e.type === 'holiday' || e.type === 'no_school' || e.type === 'student_holiday').length
+  const isWeekday = (date: string) => {
+    const day = new Date(date + 'T00:00:00').getDay()
+    return day !== 0 && day !== 6
+  }
+  const isInsideMajorBreak = (date: string) =>
+    breaksVal.some(range => date >= range.start && date <= range.end)
+  const standaloneHolidayDates = new Set(
+    events
+      .filter(e => e.type === 'holiday' || e.type === 'no_school')
+      .filter(e => isWeekday(e.date) && !isInsideMajorBreak(e.date))
+      .map(e => e.date)
+  )
+  const standaloneNoSchoolDates = new Set(
+    events
+      .filter(e => e.type === 'holiday' || e.type === 'no_school' || e.type === 'student_holiday')
+      .filter(e => isWeekday(e.date) && !isInsideMajorBreak(e.date))
+      .map(e => e.date)
+  )
+  const holidayCount = standaloneHolidayDates.size
+  const noSchoolDayCount = standaloneNoSchoolDates.size
   const semesters = cal.semesters ?? 2
   const extraCards: { label: string; value: string; detail: string }[] = cal.yearNumbers ?? []
   const instructionWeeks = Math.round((cal.totalSchoolDays ?? 180) / 5)

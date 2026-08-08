@@ -17,12 +17,13 @@ export interface YearNumbersPool {
   winterBreakLength: number | null
   winterBreakStart:  string | null
   winterBreakEnd:    string | null
+  winterBreakLabel?: string
   secondSemStart:    string | null
   firstDay:          string
   lastDay:           string
 }
 
-// Fixed layout: Instructional Days · Student No-School Days · Winter Recess
+// Fixed layout: Instructional Days · Student No-School Days · Winter Break/Recess
 // Plus extra cards from the calendar's yearNumbers field (change indicators + district-specific).
 export function scoreYearNumbers(
   pool: YearNumbersPool,
@@ -60,23 +61,25 @@ export function scoreYearNumbers(
     description: `Additional weekdays without classes, excluding listed Thanksgiving, Winter, and Spring Break periods.`,
   })
 
-  // Card 3: Winter Recess
+  // Card 3: Winter break/recess
   if (pool.winterBreakLength !== null && pool.winterBreakStart && pool.winterBreakEnd) {
     const winterWeekdays = weekdaysBetween(pool.winterBreakStart, pool.winterBreakEnd)
+    const winterBreakLabel = pool.winterBreakLabel ?? 'Winter Recess'
     cards.push({
       key: 'winterBreakLength',
-      label: 'Winter Recess',
+      label: winterBreakLabel,
       value: pool.winterBreakLength,
       unit: 'calendar days',
-      description: `Winter recess runs ${fmtShort(pool.winterBreakStart)} – ${fmtShort(pool.winterBreakEnd)} (${winterWeekdays} weekdays without school).`,
+      description: `${winterBreakLabel} runs ${fmtShort(pool.winterBreakStart)} – ${fmtShort(pool.winterBreakEnd)} (${winterWeekdays} weekdays without school).`,
     })
   } else {
+    const winterBreakLabel = pool.winterBreakLabel ?? 'Winter Recess'
     cards.push({
       key: 'winterBreakLength',
-      label: 'Winter Recess',
+      label: winterBreakLabel,
       value: 0,
       unit: 'calendar days',
-      description: `Winter recess dates are listed in the calendar above.`,
+      description: `${winterBreakLabel} dates are listed in the calendar above.`,
     })
   }
 

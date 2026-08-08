@@ -1,0 +1,333 @@
+{
+  "institutionId": "puyallup-school-district",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Puyallup School District Calendar 2026–27",
+  "firstDay": "2026-09-02",
+  "lastDay": "2027-06-16",
+  "totalSchoolDays": 180,
+  "semesters": 2,
+  "temporalCoverageStart": "2026-09-02",
+  "temporalCoverageEnd": "2027-06-21",
+  "sourceUrl": "https://www.puyallupsd.org/about-us/calendars-and-bell-schedules",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1785339121/puyallupk12waus/juk3glvr2mwcdfemlzu4/2026-27SCHOOLCALENDAR-072726.pdf",
+  "sourceCalendarName": "2026-27 Puyallup School District School Calendar",
+  "sourceVersion": "Revised 07/27/26; official page marked updated July 2026",
+  "lastVerifiedAt": "2026-08-08",
+  "dateCreated": "2026-08-08",
+  "datePublished": "2026-08-08",
+  "dateModified": "2026-08-08",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "keyDates",
+  "schemaReviewedBy": "author",
+  "seoTitle": "Puyallup School District Calendar 2026–27",
+  "seoDescription": "Puyallup School District 2026–27 calendar with first days by grade, Monday late starts, Fair Day, early dismissals, breaks, emergency make-up dates, and the June 16 last day.",
+  "schemaCalendarName": "Puyallup School District Calendar 2026–27",
+  "schemaDatasetName": "Puyallup School District 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Puyallup School District dates for 2026–27, including separate grades 1–12 and kindergarten openings, Transition to Kindergarten first and last days, Monday one-hour late starts, Fair Day, early dismissals, breaks, emergency make-up dates, and the scheduled last day.",
+  "schemaCalendarDownloadName": "Puyallup School District 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "MySchoolDates-generated calendar import file with student and family dates from PSD's 2026–27 school calendar and online calendar.",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideRelatedDistrictDescriptions": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "comparison"
+  ],
+  "heroSourceLine": "PSD 2026–27 School Calendar · Revised July 27, 2026 · 180 student days",
+  "heroDownloadHref": "https://resources.finalsite.net/images/v1785339121/puyallupk12waus/juk3glvr2mwcdfemlzu4/2026-27SCHOOLCALENDAR-072726.pdf",
+  "heroDownloadLabel": "View Official PSD PDF",
+  "heroCtas": [
+    {
+      "label": "Add Dates to Calendar",
+      "href": "__icsUrl",
+      "variant": "secondary",
+      "download": true,
+      "filename": "__icsFilename"
+    }
+  ],
+  "heroSummary": "Grades 1–12 start Wednesday, September 2, 2026, while kindergarten starts Tuesday, September 8. Most Mondays when school is in session begin one hour late. Fair Day is September 16, and the scheduled last day is June 16, 2027. PSD's online calendar also lists October 5 as the first day for Transition to Kindergarten.",
+  "calendarNotes": "PSD uses grade-specific first days, recurring Monday late starts, three shortened-day schedules, and an ordered emergency make-up sequence.",
+  "verificationBadgeText": "Checked August 8, 2026, against PSD's revised student calendar, online calendar, and school bell schedules.",
+  "keyDatesSummaryTitle": "2026–27 Key Dates for Puyallup Families",
+  "keyDatesSummarySubtitle": "Grade-specific first days, Fair Day, major breaks, and the scheduled last day",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Grades 1–12",
+      "date": "2026-09-02",
+      "type": "school_start"
+    },
+    {
+      "label": "Kindergarten",
+      "name": "First Day of Kindergarten",
+      "date": "2026-09-08",
+      "type": "school_start"
+    },
+    {
+      "label": "Local Schedule",
+      "name": "Fair Day / 3.25-Hour Early Dismissal",
+      "date": "2026-09-16",
+      "type": "early_dismissal",
+      "description": "All grades; lunch is not served."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "Students return Monday, January 4."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-04-05",
+      "endDate": "2027-04-09",
+      "type": "break_start",
+      "description": "Students return Monday, April 12."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day / 3.25-Hour Early Dismissal",
+      "date": "2027-06-16",
+      "type": "school_end",
+      "description": "All grades; lunch is not served."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Schedule Guide", "id": "psd-2026-2027-schedule-guide" },
+    { "label": "Dates by Month", "id": "all-dates" },
+    { "label": "Make-Up Sequence", "id": "psd-2026-2027-makeup-sequence" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Changes", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "Puyallup School District 2026–27 Dates by Month",
+  "allDatesCoverageNote": "Recurring Monday late starts are summarized in the schedule guide above rather than repeated here.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1785339121/puyallupk12waus/juk3glvr2mwcdfemlzu4/2026-27SCHOOLCALENDAR-072726.pdf",
+  "allDatesSourceLinks": [
+    {
+      "label": "Official PSD 2026–27 revised calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1785339121/puyallupk12waus/juk3glvr2mwcdfemlzu4/2026-27SCHOOLCALENDAR-072726.pdf"
+    },
+    {
+      "label": "PSD calendars and online events",
+      "url": "https://www.puyallupsd.org/about-us/calendars-and-bell-schedules"
+    },
+    {
+      "label": "PSD school bell schedules",
+      "url": "https://www.puyallupsd.org/about-us/calendars-and-bell-schedules/school-bell-schedules"
+    }
+  ],
+  "allDatesSourceLabel": "Source: Puyallup School District",
+  "dateLegendLabelOverrides": {
+    "Holiday": "No School",
+    "No School": "No School",
+    "Conference": "Conference Early Dismissal",
+    "Early Release": "Shortened Attendance Day",
+    "Make-up Day": "Conditional Emergency Day",
+    "Academic": "Semester or Program Date"
+  },
+  "hideDateLegend": true,
+  "icsHeading": "Add PSD 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file with the dates on this page, including all listed Monday late-start reminders. Monday reminders do not include a start time because bell schedules vary by school.",
+  "icsButtonLabel": "Download PSD Calendar File (.ics)",
+  "icsButtonSupportText": "One-time import. Check PSD for revisions or make-up-day announcements.",
+  "icsAriaLabel": "Download the Puyallup School District 2026–27 calendar file",
+  "pdfHeading": "Official Revised PSD 2026–27 School Calendar",
+  "pdfButtonLabel": "View Official Calendar PDF",
+  "pdfDescription": "Open or print the revised one-page school calendar currently linked by Puyallup School District.",
+  "pdfVersionLabel": "Revised 07/27/26 · official page updated July 2026",
+  "customSections": [
+    {
+      "id": "psd-2026-2027-schedule-guide",
+      "label": "PSD Opening, Late-Start, and Early-Dismissal Guide",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "Puyallup uses three different schedule changes during the year: one-hour Monday late starts, 2.5-hour early dismissals, and 3.25-hour early dismissals. Exact start and dismissal times vary by school. PSD's online calendar lists October 5 and June 9 as separate first and last days for Transition to Kindergarten.",
+      "table": {
+        "caption": "Puyallup School District 2026–27 opening and shortened-day patterns",
+        "columns": ["Schedule", "Dates", "Family planning note"],
+        "rows": [
+          ["Grades 1–12 first day", "September 2", "Kindergarten starts separately on September 8."],
+          ["Kindergarten first day", "September 8", "Kindergarten starts the day after Labor Day."],
+          ["Transition to Kindergarten first day", "October 5", "Listed on PSD's online calendar, not on the one-page school-year PDF."],
+          ["Transition to Kindergarten last day", "June 9", "Listed separately on PSD's online calendar."],
+          ["Monday 1-hour late start", "Sep 14, 21, 28; Oct 5, 12, 19, 26; Nov 2, 9, 16, 23, 30; Dec 7, 14; Jan 4, 11, 25; Feb 1, 8, 22; Mar 1, 8, 15, 22, 29; Apr 12, 19, 26; May 3, 10, 17; Jun 7, 14", "Check your school's bell schedule for the exact start time. Holidays and no-school days interrupt the Monday pattern."],
+          ["2.5-hour early dismissal", "Oct 21–23; Nov 6; Jan 15 and 27; Mar 10–12 and 26", "Used for conferences, conference preparation, school improvement, and grading."],
+          ["3.25-hour early dismissal", "Sep 16 and Jun 16", "Fair Day and the last day; lunch is not served."]
+        ]
+      }
+    },
+    {
+      "id": "psd-2026-2027-makeup-sequence",
+      "label": "How the 2026–27 Emergency Make-Up Sequence Works",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "PSD has two reserve make-up dates during the school year: February 12 and May 28. If more days are needed after the scheduled June 16 last day, June 17 comes next, followed by additional days beginning June 21. These dates remain no-school days unless PSD activates them."
+    }
+  ],
+  "whatsNew": {
+    "title": "What Changed From 2025–26",
+    "content": [
+      "The first day for grades 1–12 moves from September 3 in 2025 to September 2 in 2026, while kindergarten remains on September 8.",
+      "Fair Day moves from September 10 to September 16, with the same 3.25-hour early dismissal and no lunch.",
+      "The two in-year emergency make-up dates shift from February 13 and May 22 in the 2025–26 calendar to February 12 and May 28 in 2026–27."
+    ]
+  },
+  "calendarFaqs": [
+    {
+      "q": "When does Puyallup School District start in 2026?",
+      "a": "Grades 1–12 start Wednesday, September 2, 2026. Kindergarten starts Tuesday, September 8 after Labor Day."
+    },
+    {
+      "q": "When is the first Puyallup Monday late start in 2026–27?",
+      "a": "The first listed one-hour late start is Monday, September 14, 2026. The pattern continues on designated instructional Mondays through June 14."
+    },
+    {
+      "q": "When is Puyallup Fair Day in 2026?",
+      "a": "Fair Day is Wednesday, September 16, 2026. All grades dismiss 3.25 hours early, and lunch is not served."
+    },
+    {
+      "q": "When does Transition to Kindergarten start in Puyallup in 2026?",
+      "a": "PSD's online calendar lists Monday, October 5, 2026, as the first day of Transition to Kindergarten. That program date is not printed on the one-page PDF."
+    },
+    {
+      "q": "When is Puyallup Spring Break in 2027?",
+      "a": "Spring Break runs April 5–9, 2027. Students return Monday, April 12 on the one-hour late-start schedule."
+    },
+    {
+      "q": "When is the last day of Puyallup School District in 2027?",
+      "a": "The scheduled last day is Wednesday, June 16, 2027, with a 3.25-hour early dismissal and no lunch. Emergency make-up needs could extend attendance beyond that date."
+    }
+  ],
+  "faqDisplayLimit": 6,
+  "sourceReviewSummary": "Last checked August 8, 2026. We compared PSD's revised 2026–27 student calendar with the district's online calendar and school bell schedules.",
+  "sourceReviewDetails": [
+    "The PDF was rendered and checked visually because its color key separates no-school days, one-hour late starts, 2.5-hour early dismissals, 3.25-hour early dismissals, supplemental days, and conditional emergency make-up dates.",
+    "The printed monthly student-day counts sum to 180; the staff supplemental days before opening are not presented as student attendance days.",
+    "PSD's online calendar confirms the major opening and conference dates and lists October 5 and June 9 as the first and last days of Transition to Kindergarten.",
+    "The revised PDF lists February 12 and May 28 as reserve make-up dates. Neither is shown as a regular school day in the version we reviewed.",
+    "The footer says lunch is served on attendance days except Fair Day and the last day of school.",
+    "PSD's bell page confirms the three schedule lengths but lists different actual times by school, so this page does not assign one clock time to every campus."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "sourceNextReviewText": "Next review: after PSD revises the July 2026 calendar, changes school bell schedules, or activates a reserve make-up date.",
+  "sources": [
+    {
+      "label": "PSD calendars, live events, and bell schedules",
+      "url": "https://www.puyallupsd.org/about-us/calendars-and-bell-schedules"
+    },
+    {
+      "label": "PSD revised 2026–27 school calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1785339121/puyallupk12waus/juk3glvr2mwcdfemlzu4/2026-27SCHOOLCALENDAR-072726.pdf"
+    },
+    {
+      "label": "PSD school bell schedules",
+      "url": "https://www.puyallupsd.org/about-us/calendars-and-bell-schedules/school-bell-schedules"
+    },
+    {
+      "label": "PSD 2025–26 revised calendar PDF — used for year-over-year comparison",
+      "url": "https://resources.finalsite.net/images/v1768601744/puyallupk12waus/puyallupk12waus/iixczo8lowsjsbxroykr/Copyof2025-26SCHOOLCALENDAR-011325.pdf"
+    }
+  ],
+  "events": [
+    { "date": "2026-09-02", "name": "First Day for Grades 1–12", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday", "description": "No school." },
+    { "date": "2026-09-08", "name": "First Day of Kindergarten", "type": "school_start" },
+    {
+      "date": "2026-09-14",
+      "dates": [
+        "2026-09-14",
+        "2026-09-21",
+        "2026-09-28",
+        "2026-10-05",
+        "2026-10-12",
+        "2026-10-19",
+        "2026-10-26",
+        "2026-11-02",
+        "2026-11-09",
+        "2026-11-16",
+        "2026-11-23",
+        "2026-12-07",
+        "2026-12-14",
+        "2027-01-11",
+        "2027-01-25",
+        "2027-02-01",
+        "2027-02-08",
+        "2027-02-22",
+        "2027-03-01",
+        "2027-03-08",
+        "2027-03-15",
+        "2027-03-22",
+        "2027-03-29",
+        "2027-04-19",
+        "2027-04-26",
+        "2027-05-03",
+        "2027-05-10",
+        "2027-05-17",
+        "2027-06-07",
+        "2027-06-14"
+      ],
+      "name": "Monday 1-Hour Late Start",
+      "type": "late_start",
+      "description": "All-day reminder; exact start time varies by school.",
+      "hideFromAllDates": true,
+      "exportDatesIndividually": true
+    },
+    { "date": "2026-09-16", "name": "Fair Day / 3.25-Hour Early Dismissal", "type": "early_dismissal", "description": "All grades; lunch is not served." },
+    { "date": "2026-10-05", "name": "First Day of Transition to Kindergarten", "type": "school_start", "description": "Program date listed on PSD's online calendar." },
+    { "date": "2026-10-21", "name": "Elementary Conferences / Secondary Conference Preparation", "type": "conference", "description": "2.5-hour early dismissal for all grades." },
+    { "date": "2026-10-22", "endDate": "2026-10-23", "displayDate": "October 22–23, 2026", "name": "Conference Early-Dismissal Days", "type": "conference", "description": "2.5-hour early dismissal for all grades." },
+    { "date": "2026-11-06", "name": "School Improvement Early Dismissal", "type": "early_dismissal", "description": "2.5-hour early dismissal for all grades." },
+    { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday", "description": "No school." },
+    { "date": "2026-11-25", "endDate": "2026-11-27", "displayDate": "November 25–27, 2026", "name": "Thanksgiving No-School Days", "type": "break_start", "description": "November 25 is a no-school day; November 26–27 are Thanksgiving holidays." },
+    { "date": "2026-11-30", "name": "School Resumes / Monday Late Start", "type": "school_resume" },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "displayDate": "December 21, 2026 – January 1, 2027", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-01-04", "name": "School Resumes / Monday Late Start", "type": "school_resume" },
+    { "date": "2027-01-15", "name": "Secondary School Improvement / Elementary Grading Day", "type": "early_dismissal", "description": "2.5-hour early dismissal for all grades." },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday", "description": "No school." },
+    { "date": "2027-01-27", "name": "First Semester Ends / Grading Day", "type": "academic", "description": "2.5-hour early dismissal for all grades." },
+    { "date": "2027-02-12", "name": "Conditional Emergency Make-Up Day", "type": "makeup_day", "description": "No school unless PSD activates this reserve date." },
+    { "date": "2027-02-15", "name": "Presidents Day", "type": "holiday", "description": "No school." },
+    { "date": "2027-02-16", "name": "Supplemental Day #6", "type": "teacher_workday", "description": "No school for students." },
+    { "date": "2027-03-10", "name": "Elementary Conference Preparation / Secondary Conferences", "type": "conference", "description": "2.5-hour early dismissal for all grades." },
+    { "date": "2027-03-11", "endDate": "2027-03-12", "displayDate": "March 11–12, 2027", "name": "Conference Early-Dismissal Days", "type": "conference", "description": "2.5-hour early dismissal for all grades." },
+    { "date": "2027-03-26", "name": "School Improvement Early Dismissal", "type": "early_dismissal", "description": "2.5-hour early dismissal for all grades." },
+    { "date": "2027-04-05", "endDate": "2027-04-09", "displayDate": "April 5–9, 2027", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-04-12", "name": "School Resumes / Monday Late Start", "type": "school_resume" },
+    { "date": "2027-05-28", "name": "Conditional Emergency Make-Up Day", "type": "makeup_day", "description": "No school unless PSD activates this reserve date." },
+    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday", "description": "No school." },
+    { "date": "2027-06-09", "name": "Last Day of Transition to Kindergarten", "type": "academic", "badgeLabel": "Program Date", "description": "PSD lists a separate last day for Transition to Kindergarten." },
+    { "date": "2027-06-16", "name": "Last Day / 3.25-Hour Early Dismissal", "type": "school_end", "badgeLabel": "Last Day · Early Dismissal", "description": "Scheduled last day for all grades; lunch is not served." },
+    { "date": "2027-06-17", "name": "Conditional Post-Year Make-Up Day", "type": "makeup_day", "description": "School is held on June 17 only if PSD needs another make-up day." },
+    { "date": "2027-06-18", "name": "Juneteenth Observed", "type": "holiday", "description": "No school." },
+    { "date": "2027-06-21", "name": "Additional Emergency Make-Up Days Begin", "type": "makeup_day", "description": "If more make-up days are still needed, PSD may add school days beginning June 21." }
+  ]
+}

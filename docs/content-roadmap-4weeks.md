@@ -57,6 +57,11 @@
 | 2026-08-07 | Washington | Tacoma Public Schools | `/tacoma-public-schools-calendar` | 2025-2026, 2026-2027 | 基于官方 TPS calendar page、官网 logo、两份官方 conventional student calendar PDF 和本地 PDF 副本；页面补充分年级开学、每周三 one-hour late start、conference early release、elementary / secondary 分层停课、conditional snow make-up days，以及 2026-2027 IDEA/SAMI/SOTA、Head Start/ECEAP 和 ECSE 独立项目日历边界；2027-2028 以后 PDF 未提供，暂不创建。 |
 | 2026-08-07 | Washington | Kent School District | `/kent-school-district-calendar` | 2025-2026, 2026-2027 | 基于官方 KSD Student Calendar page、官网 logo、官方 document library、两份 one-page Student Calendar PDF 和本地 PDF 副本；页面补充分开的 K-12 / kindergarten / preschool 开学、每周三全校 two-hour early release、elementary / secondary 分级 conference dismissal、ECSE no-school exceptions 与独立 last day、teacher workshop closures，以及按 April → May → June 顺序启用的 optional snow make-up days；2025-2026 官方页面另有 Persian / Punjabi / Spanish / Ukrainian / Vietnamese 文件；2026-2027 直链为临时签名 URL，页面改用稳定的官方 document library 入口；2027-2028 以后 PDF 未提供，暂不创建。 |
 | 2026-08-07 | Washington | Bellevue School District | `/bellevue-school-district-calendar` | 2025-2026, 2026-2027 | 基于官方 BSD calendar page、官网 logo、两份官方 Staff & District Academic Calendar PDF 和本地 PDF 副本；页面区分 grades 1-12、Kindergarten WA Kids、kindergarten、preschool 与 Evergreen Transition Program 开学日期，补充 elementary conference early release、regular-school-day grading-period endings、staff-only Wednesday structures、带 cutoff 的 conditional emergency make-up days，以及 2025-2026 修订表中的 last-day / make-up-day 变化；官方 PDF 为静态副本，页面提示使用 live calendar subscription 获取更新；2027-2028 以后 PDF 未提供，暂不创建。 |
+| 2026-08-08 | Washington | Federal Way Public Schools | `/federal-way-public-schools-calendar` | 2025-2026, 2026-2027, 2027-2028, 2028-2029 | 基于官方 FWPS calendar、early-release、district profile 页面、官网 logo、四份 English FWPS Calendar PDF 和本地 PDF 副本，以及 2026-2027 至 2028-2029 的 Dari、Korean、Pashto、Russian、Somali、Spanish、Ukrainian 扩展日历；页面补充 selected-Friday 75-minute early release、Kindergarten Connection 半天会议与 full-day transition、Scholar-Led Conference 停课、Winter Break 后 two-hour late start、Thanksgiving 前 early dismissal、seniors' last day 和 conditional snow make-up dates；2029-2030 PDF URL 未提供，暂不创建。 |
+| 2026-08-08 | Washington | Edmonds School District | `/edmonds-school-district-calendar` | 2025-2026, 2026-2027 | 基于官方 ESD calendar、district profile、start and dismissal times 页面、官网 logo、两份 English Family and Community Calendar PDF 和本地 PDF 副本，以及 2026-2027 Spanish 扩展日历；页面补充分开的 grades 1-12 / Kindergarten Family Connection / kindergarten / Edmonds Preschool 开学安排、每个上课周五 75-minute early release、elementary conference half days、districtwide half days、term endings、live RSS/iCal 订阅和按 May → post-year June 顺序启用的 snow make-up dates；2027-2028 以后 PDF URL 未提供，暂不创建。 |
+| 2026-08-08 | Washington | Puyallup School District | `/puyallup-school-district-calendar` | 2025-2026, 2026-2027 | 基于官方 PSD calendars and bell schedules、school bell schedules、district maps 页面、官网 SVG logo、两份修订版 English school calendar PDF 和本地 PDF 副本；页面补充分开的 grades 1-12 / kindergarten / Transition to Kindergarten 开学、每周一 one-hour late start、Puyallup Fair Day 3.25-hour early dismissal 与 no-lunch 规则、conference / grading / school-improvement 2.5-hour early dismissal、180 student attendance days、2025-2026 emergency closure 实际补课记录，以及按 in-year → post-year 顺序启用的 conditional emergency make-up dates；未提供扩展日历及 2027-2028 以后 PDF，暂不创建。 |
+| 2026-08-08 | Washington | Spokane Public Schools | `/spokane-public-schools-calendar` | 2025-2026, 2026-2027, 2027-2028 | 基于官方 SPS school-year calendar、balanced calendar、first-day、late-start 和 end-of-year 页面、官网 logo、三份 English student calendar PDF 与本地 PDF；页面补充 Launch Conferences、grades 1-12 / kindergarten A-B rotation / all kindergarten / PreK / specialized preschool 分批开学、Monday one-hour late-start collaboration、PLID non-student days、elementary conferences、weather reserves、program-specific last days，以及 2026-2027 与 2027-2028 的 180-day balanced calendar 和 October / February intersessions；用户提供的 2025-2026 文件实为 Board Meeting Calendar，已改用 SPS 学校官网链接的正确学生日历，并记录 2025-2026 PDF 与后续官网公告的 preschool 结束日期差异；未提供扩展日历及 2028-2029 以后 PDF。 |
+| 2026-08-08 | Oregon | Portland Public Schools | `/portland-public-schools-calendar` | 2025-2026, 2026-2027 | 基于官方 PPS calendar、weather、Dual Language 和 furlough 页面、官网 SVG logo、正确的 Oregon 2025-2026 基础日历、2026-2027 三页 District Calendar 与本地 PDF，以及 2026-2027 Pre-K、Spanish、Vietnamese、Chinese、Russian、Somali 扩展日历；页面补充分开的 main opening / comprehensive grades 7-8 and 10-11 / Kindergarten Ramp Up / all kindergarten / Pre-K & Head Start 开学、except-high-schools early release、conference-week closure、quarter grading and planning days、religious and cultural event scheduling guidance 与 conditional snow make-up days；用户提供的 2025-2026 URL 和本地 PDF 实为 Portland, Maine 日历，已排除其 island schools、PATHS、February Break 与 April Break 日期，并依据 Oregon PPS 的 2026 年 4 月最终修订写入 May 1 furlough closure、移除 early release 和 June 5 last student day；2027-2028 以后 PDF 未提供。 |
 
 ---
 
@@ -372,17 +377,17 @@ P3 内容可采用更高度模板化的方式生成（calendarNotes 精简为 4-
 | 115 | Washington | Tacoma Public Schools | Tacoma | ✓ 已完成：`tacoma-public-schools-calendar`（2026-08-07） |
 | 116 | Washington | Kent School District | Seattle | ✓ 已完成：`kent-school-district-calendar`（2026-08-07） |
 | 117 | Washington | Bellevue School District | Seattle | ✓ 已完成：`bellevue-school-district-calendar`（2026-08-07） |
-| 118 | Washington | Federal Way Public Schools | Seattle | 待创建 |
+| 118 | Washington | Federal Way Public Schools | Seattle | ✓ 已完成：`federal-way-public-schools-calendar`（2026-08-08） |
 | 119 | Washington | Everett Public Schools | Seattle | 待创建 |
-| 120 | Washington | Edmonds School District | Seattle | 待创建 |
-| 121 | Washington | Puyallup School District | Tacoma | 待创建 |
-| 122 | Washington | Spokane Public Schools | Spokane | 待创建 |
+| 120 | Washington | Edmonds School District | Seattle | ✓ 已完成：`edmonds-school-district-calendar`（2026-08-08） |
+| 121 | Washington | Puyallup School District | Tacoma | ✓ 已完成：`puyallup-school-district-calendar`（2026-08-08） |
+| 122 | Washington | Spokane Public Schools | Spokane | ✓ 已完成：`spokane-public-schools-calendar`（2026-08-08） |
 
 ### 第 3 周（45个）
 
 | 排名 | 州/地区 | 学区 | 主要都市圈 | 状态 |
 |-----:|---------|------|------------|------|
-| 123 | Oregon | Portland Public Schools | Portland | 待创建 |
+| 123 | Oregon | Portland Public Schools | Portland | ✓ 已完成：`portland-public-schools-calendar`（2026-08-08） |
 | 124 | Oregon | Beaverton School District | Portland | 待创建 |
 | 125 | Oregon | Salem-Keizer Public Schools | Salem | 待创建 |
 | 126 | Oregon | Hillsboro School District | Portland | 待创建 |

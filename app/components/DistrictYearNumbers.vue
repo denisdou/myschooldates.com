@@ -43,12 +43,14 @@ const cards = computed(() => {
     winterBreakLength: winterBreak?.days ?? null,
     winterBreakStart: winterBreak?.start ?? null,
     winterBreakEnd: winterBreak?.end ?? null,
+    winterBreakLabel: props.cal?.yearNumbersWinterBreakLabel ?? props.cal?.meta?.yearNumbersWinterBreakLabel,
     secondSemStart,
     firstDay: props.cal.firstDay,
     lastDay: props.cal.lastDay,
   }
 
-  let cards = scoreYearNumbers(pool, props.schoolYear, formatShortDate)
+  const schoolYearLabel = props.cal?.yearNumbersSchoolYearLabel ?? props.cal?.displaySchoolYear ?? props.schoolYear
+  let cards = scoreYearNumbers(pool, schoolYearLabel, formatShortDate)
   const hasCustomNoSchoolCard = (props.cal.yearNumbers ?? []).some((card: any) =>
     typeof card.label === 'string' && card.label.toLowerCase().includes('no-school')
   )
@@ -67,6 +69,12 @@ const cards = computed(() => {
 const sectionTitle = computed(() =>
   props.cal?.yearNumbersTitle ?? props.cal?.meta?.yearNumbersTitle ?? 'The Year, by the Numbers'
 )
+
+const methodologyNote = computed(() =>
+  props.cal?.yearNumbersMethodologyNote ??
+  props.cal?.meta?.yearNumbersMethodologyNote ??
+  'Additional no-school weekday counts include staff workdays and standalone holidays outside the listed Thanksgiving, Winter, and Spring Break periods. Early-dismissal days are not included.'
+)
 </script>
 
 <template>
@@ -81,6 +89,6 @@ const sectionTitle = computed(() =>
         </p>
       </div>
     </div>
-    <p class="mt-5 text-xs text-gray-600 leading-relaxed">Additional no-school weekday counts include staff workdays and standalone holidays outside the listed Thanksgiving, Winter, and Spring Break periods. Early-dismissal days are not included.</p>
+    <p class="mt-5 text-xs text-gray-600 leading-relaxed">{{ methodologyNote }}</p>
   </section>
 </template>

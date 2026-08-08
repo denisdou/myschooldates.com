@@ -47,6 +47,9 @@ const pdfDescription = computed(() => {
   }
   return `Open or print the official calendar PDF published by ${props.districtName}. Check the district calendar page for revisions before making travel or child care plans.`
 })
+const pdfNoticeText = computed(() => props.cal?.pdfNoticeText ?? props.cal?.meta?.pdfNoticeText ?? '')
+const pdfNoticeLinkLabel = computed(() => props.cal?.pdfNoticeLinkLabel ?? props.cal?.meta?.pdfNoticeLinkLabel ?? '')
+const pdfNoticeHref = computed(() => props.cal?.pdfNoticeHref ?? props.cal?.meta?.pdfNoticeHref ?? '')
 const pdfVersionLabel = computed(() =>
   props.cal?.pdfVersionLabel ?? props.cal?.meta?.pdfVersionLabel ?? props.cal?.sourceVersion ?? ''
 )
@@ -219,6 +222,12 @@ const icsAriaLabel = computed(() =>
       <component :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-[#1f2933] mb-1">{{ pdfHeading }}</component>
       <p v-if="pdfVersionLabel && !hidePdfVersionLabel" class="text-xs font-medium text-[#6b645c] mb-2">{{ pdfVersionLabel }}</p>
       <p class="text-sm text-[#6b645c] mb-4">{{ pdfDescription }}</p>
+      <p v-if="pdfNoticeText || (pdfNoticeLinkLabel && pdfNoticeHref)" class="mb-4 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm leading-relaxed text-amber-900">
+        <span v-if="pdfNoticeText">{{ pdfNoticeText }}</span>
+        <template v-if="pdfNoticeLinkLabel && pdfNoticeHref">
+          {{ pdfNoticeText ? ' ' : '' }}<a :href="pdfNoticeHref" class="font-medium underline hover:text-amber-950">{{ pdfNoticeLinkLabel }}</a>
+        </template>
+      </p>
       <div class="flex flex-wrap gap-3">
         <a
           :href="pdfUrl"

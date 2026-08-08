@@ -24,6 +24,7 @@ function toComparisonCalendarSummary(c: any) {
     schoolYear: c.schoolYear,
     firstDay: c.firstDay,
     lastDay: c.lastDay,
+    totalSchoolDays: c.totalSchoolDays,
     sourceUrl: c.sourceUrl,
     sourcePdfUrl: c.sourcePdfUrl,
     sourceVersion: c.sourceVersion,
@@ -1065,6 +1066,10 @@ const moveCalendarExportBeforeAllDates = computed(() =>
   (cal as any)?.moveCalendarExportBeforeAllDates === true || (cal as any)?.meta?.moveCalendarExportBeforeAllDates === true
 )
 
+const breaksBeforeAllDates = computed(() =>
+  (cal as any)?.breaksBeforeAllDates === true || (cal as any)?.meta?.breaksBeforeAllDates === true
+)
+
 const instructionalDaysLine = computed(() => {
   if ((cal as any)?.hideInstructionalDaysSummary === true || (cal as any)?.meta?.hideInstructionalDaysSummary === true) {
     return ''
@@ -1397,10 +1402,17 @@ if (!isStatePage && district.value) {
     }]
     : []
   const includeArticleSchema = (district.value as any)?.includeArticleSchema !== false && (district.value as any)?.meta?.includeArticleSchema !== false && (cal as any)?.includeArticleSchema !== false && (cal as any)?.meta?.includeArticleSchema !== false
+  const hideItemListSchema = Boolean((cal as any)?.hideItemListSchema || (cal as any)?.meta?.hideItemListSchema)
+  const splitCalendarDateItemListSchema = Boolean(
+    (cal as any)?.splitCalendarDateItemListSchema || (cal as any)?.meta?.splitCalendarDateItemListSchema,
+  )
+  const summaryItemListEvents = splitCalendarDateItemListSchema ? keyDateHighlights.value : itemListEvents.value
+  const calendarDateItemListEvents = splitCalendarDateItemListSchema ? itemListEvents.value : []
   const webPageParts = [
     ...(includeArticleSchema ? [{ '@id': `${canonicalUrl}#calendar-analysis` }] : []),
     ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
-    ...(itemListEvents.value.length ? [{ '@id': `${canonicalUrl}#key-dates` }] : []),
+    ...(!hideItemListSchema && summaryItemListEvents.length ? [{ '@id': `${canonicalUrl}#key-dates` }] : []),
+    ...(!hideItemListSchema && calendarDateItemListEvents.length ? [{ '@id': `${canonicalUrl}#calendar-dates` }] : []),
     ...(faqSchemaItems.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
     ...customSectionSchemaParts,
     ...yearNumbersSchemaParts,
@@ -1409,12 +1421,12 @@ if (!isStatePage && district.value) {
   const webPageMainEntity = webPageMainEntityMode === 'none'
     ? null
     : webPageMainEntityMode === 'keyDates'
-      ? (itemListEvents.value.length ? { '@id': `${canonicalUrl}#key-dates` } : null)
+      ? (!hideItemListSchema && summaryItemListEvents.length ? { '@id': `${canonicalUrl}#key-dates` } : null)
       : webPageMainEntityMode === 'dataset'
         ? (datasetEntity ? { '@id': `${canonicalUrl}#calendar-dataset` } : null)
         : datasetEntity
           ? { '@id': `${canonicalUrl}#calendar-dataset` }
-          : itemListEvents.value.length
+          : !hideItemListSchema && summaryItemListEvents.length
             ? { '@id': `${canonicalUrl}#key-dates` }
             : null
   const webPageEntity = {
@@ -1488,13 +1500,13 @@ if (!isStatePage && district.value) {
       },
     })),
   } : null
-  const hideItemListSchema = Boolean((cal as any)?.hideItemListSchema || (cal as any)?.meta?.hideItemListSchema)
   const keyDateItemListName = (cal as any)?.schemaKeyDateItemListName ?? (cal as any)?.meta?.schemaKeyDateItemListName ?? `${meta.value!.shortName || meta.value!.name} ${displayYearText} key school calendar dates`
-  const keyDateItemListEntity = cal && !hideItemListSchema && itemListEvents.value.length ? {
+  const calendarDateItemListName = (cal as any)?.schemaCalendarDateItemListName ?? (cal as any)?.meta?.schemaCalendarDateItemListName ?? `${meta.value!.shortName || meta.value!.name} ${displayYearText} student calendar dates`
+  const keyDateItemListEntity = cal && !hideItemListSchema && summaryItemListEvents.length ? {
     '@type': 'ItemList',
     '@id': `${canonicalUrl}#key-dates`,
     name: keyDateItemListName,
-    itemListElement: itemListEvents.value.map((event, i) => {
+    itemListElement: summaryItemListEvents.map((event, i) => {
       return {
         '@type': 'ListItem',
         position: i + 1,
@@ -1506,6 +1518,21 @@ if (!isStatePage && district.value) {
         },
       }
     }),
+  } : null
+  const calendarDateItemListEntity = cal && !hideItemListSchema && calendarDateItemListEvents.length ? {
+    '@type': 'ItemList',
+    '@id': `${canonicalUrl}#calendar-dates`,
+    name: calendarDateItemListName,
+    itemListElement: calendarDateItemListEvents.map((event, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Thing',
+        name: keyDateDisplayName(event),
+        description: keyDateSchemaDescription(event),
+        additionalProperty: keyDateSchemaProperties(event),
+      },
+    })),
   } : null
   const comparisonItems = cal && district.value
     ? [
@@ -1557,6 +1584,7 @@ if (!isStatePage && district.value) {
           ...(includeArticleSchema ? [articleEntity] : []),
           webPageEntity,
           ...(keyDateItemListEntity ? [keyDateItemListEntity] : []),
+          ...(calendarDateItemListEntity ? [calendarDateItemListEntity] : []),
           ...(comparisonItemListEntity ? [comparisonItemListEntity] : []),
           ...(faqPageEntity ? [faqPageEntity] : []),
           {
@@ -2010,7 +2038,15 @@ if (!isStatePage && district.value) {
           </h1>
           <p class="mt-2 text-sm text-[#7b756d]">
             {{ (cal as any).heroSourceLine ?? (cal as any).meta?.heroSourceLine ?? `${displaySchoolYear} calendar dates · Based on the official ${district.shortName || district.name} calendar` }} ·
-            <a href="#add-to-calendar" class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors">{{ (cal as any).heroDownloadLabel ?? (cal as any).meta?.heroDownloadLabel ?? (cal as any).icsButtonLabel ?? (cal as any).meta?.icsButtonLabel ?? 'Download calendar file' }}</a>
+            <a
+              :href="(cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref ?? '#add-to-calendar'"
+              :target="((cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref) ? '_blank' : undefined"
+              :rel="((cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref) ? 'noopener' : undefined"
+              class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors"
+            >
+              {{ (cal as any).heroDownloadLabel ?? (cal as any).meta?.heroDownloadLabel ?? (cal as any).icsButtonLabel ?? (cal as any).meta?.icsButtonLabel ?? 'Download calendar file' }}
+              <span v-if="(cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref" class="sr-only">(opens in a new tab)</span>
+            </a>
           </p>
           <p class="mt-2 text-xs text-[#6b645c]">
             MySchoolDates is an independent calendar reference and is not affiliated with {{ district.name }}.
@@ -2369,6 +2405,27 @@ if (!isStatePage && district.value) {
           <DistrictCustomSections :sections="customSections" position="afterCalendarExport" />
         </template>
 
+        <!-- Break Summary (optional early position) -->
+        <template v-if="breaksBeforeAllDates">
+          <div v-if="breaks.length && !hiddenSections.has('breaks')" id="breaks" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
+            <h2 class="text-lg font-semibold text-[#1f2933] mb-4">{{ breaksTitle }}</h2>
+            <div class="space-y-3">
+              <div v-for="b in breaks" :key="b.name" class="flex flex-col items-start gap-2 py-3 border-b border-[#eee9df] last:border-0 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <div class="font-medium text-[#1f2933]">{{ breakDisplayName(b.name) }}</div>
+                  <div class="text-sm text-[#7b756d]">{{ formatCompactDateRange(b.start, b.end) }}</div>
+                  <p v-if="breakNoteFor(b)" class="mt-1 text-sm text-[#6b645c]">{{ breakNoteFor(b) }}</p>
+                  <div v-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-[#5b4b6f] mt-0.5 font-medium">
+                    In progress
+                  </div>
+                </div>
+                <div v-if="!hideBreakDurationBadges" class="self-start text-sm font-semibold text-[#5b4b6f] bg-[#eee9f3] px-3 py-1 rounded-lg sm:self-auto">{{ breakDurationLabel(b) }}</div>
+              </div>
+            </div>
+          </div>
+          <DistrictCustomSections v-if="!hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
+        </template>
+
         <!-- All Dates -->
         <DistrictAllDates
           :events="cal.events"
@@ -2390,13 +2447,14 @@ if (!isStatePage && district.value) {
           :first-day="cal.firstDay"
           :last-day="cal.lastDay"
           :coverage-note="(cal as any).allDatesCoverageNote ?? (cal as any).meta?.allDatesCoverageNote"
+          :coverage-note-position="(cal as any).allDatesCoverageNotePosition ?? (cal as any).meta?.allDatesCoverageNotePosition"
           :legend-style="(cal as any).dateLegendStyle ?? (cal as any).meta?.dateLegendStyle"
           :month-notes="(cal as any).allDatesMonthNotes ?? (cal as any).meta?.allDatesMonthNotes"
         />
         <DistrictCustomSections :sections="customSections" position="afterAllDates" />
 
         <!-- Break Summary -->
-        <div v-if="breaks.length && !hiddenSections.has('breaks')" id="breaks" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
+        <div v-if="!breaksBeforeAllDates && breaks.length && !hiddenSections.has('breaks')" id="breaks" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
           <h2 class="text-lg font-semibold text-[#1f2933] mb-4">{{ breaksTitle }}</h2>
           <div class="space-y-3">
             <div v-for="b in breaks" :key="b.name" class="flex flex-col items-start gap-2 py-3 border-b border-[#eee9df] last:border-0 sm:flex-row sm:items-center sm:justify-between">
@@ -2412,7 +2470,7 @@ if (!isStatePage && district.value) {
             </div>
           </div>
         </div>
-        <DistrictCustomSections v-if="!hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
+        <DistrictCustomSections v-if="!breaksBeforeAllDates && !hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
 
         <!-- Add to Calendar + Share -->
         <template v-if="!moveCalendarExportBeforeAllDates">

@@ -1,104 +1,424 @@
 {
   "institutionId": "charlotte-mecklenburg",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Charlotte-Mecklenburg Schools Calendar 2026–2027",
   "firstDay": "2026-08-25",
   "lastDay": "2027-06-09",
-  "totalSchoolDays": 185,
+  "temporalCoverageStart": "2026-08-25",
+  "temporalCoverageEnd": "2027-06-11",
   "semesters": 2,
-  "sourceUrl": "https://www.cms.k12.nc.us/communications/calendars/Pages/Calendars.aspx",
+  "sourceUrl": "https://www.cmsk12.org/calendar",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1751635545/cmsk12ncus/npmaxkftovi0mmyxf37r/CMS_2026-2027_Traditional_Calendar_with_Early_Release_Days.pdf",
-  "lastVerifiedAt": "2026-07-05",
+  "sourceCalendarName": "CMS 2026–27 Traditional Calendar",
+  "sourceVersion": "Board approved April 8, 2025",
+  "lastVerifiedAt": "2026-08-08",
+  "datePublished": "2026-07-05",
+  "dateModified": "2026-08-08",
   "calendarType": "traditional",
-  "calendarFaqs": [
+  "allDatesMode": "all",
+  "itemListMode": "allImportantDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "schemaReviewedBy": "author",
+  "webPageMainEntity": "keyDates",
+  "seoTitle": "Charlotte-Mecklenburg Schools Calendar 2026–27: Dates, Breaks & PDF",
+  "seoDescription": "CMS 2026–27 Traditional Calendar dates, including teacher workdays, early release days, holidays, winter break and spring break. View the official PDF or add dates to your calendar.",
+  "schemaCalendarName": "Charlotte-Mecklenburg Schools Traditional Calendar 2026–27",
+  "schemaDatasetName": "CMS 2026–27 Traditional Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed dates from the CMS 2026–27 Traditional Calendar, including teacher workdays when students do not attend, early release days, holidays, breaks, and conditional makeup dates.",
+  "schemaKeyDateItemListName": "CMS 2026–27 Traditional Calendar dates",
+  "schemaCalendarDownloadName": "MySchoolDates CMS 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "MySchoolDates-generated calendar import file based on reviewed dates that affect students and families in the official CMS 2026–27 Traditional Calendar.",
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideInstructionalDaysSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "keyDates",
+    "keyDatesSummary",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "comparison"
+  ],
+  "heroSourceLine": "CMS Traditional Calendar · Board approved April 8, 2025 · Minimum 1,063 instructional hours",
+  "heroSummary": "On the CMS 2026–27 Traditional Calendar, the first day of school is Tuesday, August 25, 2026, and the last day is Wednesday, June 9, 2027. Spring Break is March 29–April 2, with Good Friday on March 26 immediately before the break. March 25 is a scheduled teacher workday and CMS's third-listed makeup day.",
+  "calendarNotes": "This page follows the CMS 2026–27 Traditional Calendar and includes dates that change the student schedule. CMS publishes separate calendars for early colleges, middle colleges, Hawthorne Academy of Health Sciences, and A/B day schedules.",
+  "verificationBadgeText": "Checked August 8, 2026, against the official CMS calendar page and 2026–27 Traditional Calendar PDF.",
+  "jumpNavigation": [
+    { "label": "Calendar Scope", "id": "cms-2026-2027-calendar-scope" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Grading Periods", "id": "cms-2026-2027-grading-periods" },
+    { "label": "Break Windows", "id": "cms-2026-2027-break-windows" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "CMS 2026–27 Student Calendar Dates",
+  "allDatesCoverageNote": "First and last days, holidays, breaks, teacher workdays, early release days, and conditional makeup dates from the CMS 2026–27 Traditional Calendar.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1751635545/cmsk12ncus/npmaxkftovi0mmyxf37r/CMS_2026-2027_Traditional_Calendar_with_Early_Release_Days.pdf",
+  "allDatesSourceLinks": [
     {
-      "q": "When does school start for Charlotte-Mecklenburg Schools in 2026-2027?",
-      "a": "The first day of school for Charlotte-Mecklenburg Schools is Tuesday, August 25, 2026. Students and staff are expected to report on this date to begin the new academic year."
+      "label": "Official CMS 2026–27 Traditional Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1751635545/cmsk12ncus/npmaxkftovi0mmyxf37r/CMS_2026-2027_Traditional_Calendar_with_Early_Release_Days.pdf"
     },
     {
-      "q": "When is the last day of school for Charlotte-Mecklenburg Schools in 2026-2027?",
-      "a": "The last day of school for Charlotte-Mecklenburg Schools is Wednesday, June 9, 2027. The school year runs from August through June, covering 185 instructional days."
+      "label": "CMS calendar page and alternate calendars",
+      "url": "https://www.cmsk12.org/calendar"
     }
   ],
-  "yearNumbers": [
+  "allDatesSourceLabel": "Official CMS 2026–27 Traditional Calendar PDF",
+  "dateLegendLabelOverrides": {
+    "Holiday": "No School",
+    "No School for Students": "No School",
+    "Staff Day": "No School",
+    "Reserved Weather Day": "Conditional Makeup Day",
+    "Make-Up Day": "Conditional Makeup Day",
+    "Make-up Day": "Conditional Makeup Day",
+    "Makeup Day": "Conditional Makeup Day"
+  },
+  "icsHeading": "Add CMS 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download a MySchoolDates-generated ICS file with the first and last days of school, holidays, breaks, teacher workdays, early release days, and conditional makeup dates listed on this page.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "icsButtonSupportText": "One-time import. It will not automatically reflect later CMS closure or makeup decisions.",
+  "icsAriaLabel": "Download the MySchoolDates-generated CMS 2026–27 calendar file",
+  "pdfHeading": "Official CMS 2026–27 Traditional Calendar",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "Open the one-page CMS Traditional Calendar with teacher workdays, early release days, holidays, breaks, and the published makeup order.",
+  "pdfVersionLabel": "Board approved April 8, 2025",
+  "customSections": [
     {
-      "label": "Spring Break Shifts Earlier",
-      "value": "1 week",
-      "detail": "Spring Break moves from Apr 6–10 (2025–2026) to Mar 29–Apr 2, pulling the break about one week earlier."
+      "id": "cms-2026-2027-calendar-scope",
+      "label": "Does This Calendar Apply to My School?",
+      "position": "afterVerification",
+      "schemaHasPart": true,
+      "content": "This page follows the CMS Traditional Calendar for 2026–27. CMS also publishes separate calendars for CPCC early colleges and middle colleges, UNC Charlotte early colleges, Hawthorne Academy of Health Sciences, and A/B day schedules. If your student attends one of those programs, use that program's official calendar instead.",
+      "groups": [
+        {
+          "label": "Where to confirm",
+          "items": [
+            "Check the CMS calendar page to confirm which calendar your student's school or program follows."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "CPCC Early Colleges & Middle Colleges — Official PDF",
+          "to": "https://resources.finalsite.net/images/v1751635551/cmsk12ncus/kqgoaieqfj7kx8inq5ao/CMS_2026-2027_CPCC_Calendar.pdf"
+        },
+        {
+          "label": "UNC Charlotte Early Colleges — Official PDF",
+          "to": "https://resources.finalsite.net/images/v1751635561/cmsk12ncus/gimngz4hbn5so3wejpju/CMS_2026-2027_UNCC_Calendar.pdf"
+        },
+        {
+          "label": "Hawthorne Academy — Official PDF",
+          "to": "https://resources.finalsite.net/images/v1779920052/cmsk12ncus/keo49stjia3musdwba9l/CMS2026-2027CalendarHawthorneAcademyofHealthSciencesrev051226.pdf"
+        },
+        {
+          "label": "A/B Day Calendar — Official PDF",
+          "to": "https://resources.finalsite.net/images/v1782318456/cmsk12ncus/wmjyzumaqs0n9w5wjduz/2026-2027A-BDayCalendar62.pdf"
+        }
+      ]
     },
     {
-      "label": "Good Friday",
-      "value": "Mar 26",
-      "detail": "Good Friday (Mar 26) is observed as a school holiday the Friday before Spring Break begins (Mar 29), creating a 6-day break window."
+      "id": "cms-2026-2027-grading-periods",
+      "label": "CMS 2026–27 Grading Period End Dates",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "CMS lists four grading periods on the 2026–27 Traditional Calendar. These are academic milestones, not days off or early release days.",
+      "table": {
+        "caption": "CMS 2026–27 grading period end dates",
+        "columns": ["Grading period", "End date", "Instructional days"],
+        "rows": [
+          ["Quarter 1", "October 30, 2026", "46"],
+          ["Quarter 2", "January 21, 2027", "42"],
+          ["Quarter 3", "March 24, 2027", "42"],
+          ["Quarter 4", "June 9, 2027", "47"]
+        ]
+      }
+    },
+    {
+      "id": "cms-2026-2027-break-windows",
+      "label": "Major Breaks and Long No-School Windows",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "CMS's official break labels do not always show the full stretch of days students are away from school. These windows combine adjacent teacher workdays, holidays, and weekends.",
+      "groups": [
+        {
+          "label": "Thanksgiving",
+          "items": [
+            "Official Thanksgiving Break is November 26–27. Students are also off Wednesday, November 25 for a teacher workday, creating a November 25–29 no-school window including the weekend."
+          ]
+        },
+        {
+          "label": "Winter Break",
+          "items": [
+            "Winter Break runs December 21 through January 1. Students return Monday, January 4, 2027."
+          ]
+        },
+        {
+          "label": "Spring Break",
+          "items": [
+            "Spring Break runs March 29–April 2, with Good Friday on March 26. March 25 is scheduled as a teacher workday but is also CMS's third-listed makeup day. If CMS does not use it as a makeup day, students are scheduled to be out from March 25 through April 4, including the weekends, and return Monday, April 5."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cms-2026-2027-makeup-order",
+      "label": "CMS Makeup Day Order",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "CMS lists five possible makeup days, in this order. A listed date becomes an instructional day only if the district activates it to make up missed school. The superintendent may waive up to four makeup days, and state law also allows remote instruction for certain emergency closures.",
+      "table": {
+        "caption": "CMS 2026–27 makeup day order",
+        "columns": ["Order", "Date", "What it means"],
+        "rows": [
+          ["1", "January 18, 2027", "MLK Jr. Day; no school unless activated as a makeup day"],
+          ["2", "February 15, 2027", "Teacher workday; no school unless activated as a makeup day"],
+          ["3", "March 25, 2027", "Teacher workday; no school unless activated as a makeup day"],
+          ["4", "June 10, 2027", "After the scheduled last day; conditional makeup date"],
+          ["5", "June 11, 2027", "After the scheduled last day; conditional makeup date"]
+        ]
+      }
+    }
+  ],
+  "whatsNew": {
+    "title": "What Changed From 2025–26",
+    "content": [
+      "Spring Break moves from April 6–10 in 2025–26 to March 29–April 2 in 2026–27.",
+      "The scheduled last day moves from June 10 in 2026 to June 9 in 2027."
+    ]
+  },
+  "faqDisplayLimit": 7,
+  "faqDisplayQuestions": [
+    "When does CMS start school in 2026–27?",
+    "When is CMS Spring Break in 2027?",
+    "When is CMS Winter Break in 2026–27?",
+    "When are CMS teacher workdays with no school?",
+    "When are CMS early release days?",
+    "Does every CMS school follow this calendar?",
+    "What happens to the calendar if CMS closes for bad weather?"
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When does CMS start school in 2026–27?",
+      "a": "The first day on the CMS 2026–27 Traditional Calendar is Tuesday, August 25, 2026."
+    },
+    {
+      "q": "When is CMS Spring Break in 2027?",
+      "a": "CMS Spring Break runs March 29–April 2, 2027, with Good Friday on March 26. March 25 is a scheduled teacher workday and the third-listed makeup day. If CMS does not use it as a makeup day, students are scheduled to be out March 25–April 4 and return Monday, April 5."
+    },
+    {
+      "q": "When is CMS Winter Break in 2026–27?",
+      "a": "Winter Break on the CMS Traditional Calendar runs December 21, 2026 through January 1, 2027. Students return Monday, January 4."
+    },
+    {
+      "q": "When are CMS teacher workdays with no school?",
+      "a": "After the first day of school, the CMS Traditional Calendar lists teacher workdays on September 21, October 2, November 2–3, November 25, January 22, February 15, and March 25. February 15 and March 25 are also possible makeup days, so families should check CMS updates after a closure."
+    },
+    {
+      "q": "When are CMS early release days?",
+      "a": "The four districtwide early release days are October 14, December 9, February 24, and April 28. Dismissal times vary by school level, so check the current CMS bell schedule or your school's notice."
+    },
+    {
+      "q": "Does every CMS school follow this calendar?",
+      "a": "No. This page follows the CMS Traditional Calendar. CMS publishes separate 2026–27 calendars for CPCC early colleges and middle colleges, UNC Charlotte early colleges, Hawthorne Academy of Health Sciences, and A/B day schedules."
+    },
+    {
+      "q": "What happens to the calendar if CMS closes for bad weather?",
+      "a": "CMS may close schools, open on a two-hour delay, dismiss early, or use remote learning during severe weather. Check the CMS Inclement Weather page, the district homepage, and ParentSquare for current announcements. The Traditional Calendar lists possible makeup dates in a specific order."
     }
   ],
   "events": [
     {
       "date": "2026-08-25",
       "name": "First Day of School",
-      "type": "school_start"
+      "type": "school_start",
+      "schemaDescription": "The first day of classes on the CMS 2026–27 Traditional Calendar."
     },
     {
       "date": "2026-09-07",
       "name": "Labor Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools are closed."
+    },
+    {
+      "date": "2026-09-21",
+      "name": "Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "Students do not attend."
+    },
+    {
+      "date": "2026-10-02",
+      "name": "Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "Students do not attend."
+    },
+    {
+      "date": "2026-10-14",
+      "name": "Early Release Day",
+      "type": "early_release",
+      "description": "Districtwide early release; dismissal times vary by school level."
+    },
+    {
+      "date": "2026-11-02",
+      "endDate": "2026-11-03",
+      "name": "Teacher Workdays",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "Students do not attend."
     },
     {
       "date": "2026-11-11",
       "name": "Veterans Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools are closed."
+    },
+    {
+      "date": "2026-11-25",
+      "name": "Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "Students do not attend. Thanksgiving Break begins the following day."
     },
     {
       "date": "2026-11-26",
+      "endDate": "2026-11-27",
       "name": "Thanksgiving Break",
-      "type": "break_start"
+      "type": "break_start",
+      "description": "Students return Monday, November 30."
     },
     {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
+      "date": "2026-12-09",
+      "name": "Early Release Day",
+      "type": "early_release",
+      "description": "Districtwide early release; dismissal times vary by school level."
     },
     {
       "date": "2026-12-21",
+      "endDate": "2027-01-01",
       "name": "Winter Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-01-01",
-      "name": "Winter Break End",
-      "type": "break_end"
+      "type": "break_start",
+      "description": "Students return Monday, January 4."
     },
     {
       "date": "2027-01-18",
       "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
+      "type": "holiday",
+      "badgeLabel": "No School / Makeup Day",
+      "description": "Schools are closed unless CMS activates this first-listed makeup date."
+    },
+    {
+      "date": "2027-01-22",
+      "name": "Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "Students do not attend."
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Teacher Workday / Makeup Day",
+      "type": "teacher_workday",
+      "badgeLabel": "No School / Makeup Day",
+      "description": "Students do not attend unless CMS activates this second-listed makeup date."
+    },
+    {
+      "date": "2027-02-24",
+      "name": "Early Release Day",
+      "type": "early_release",
+      "description": "Districtwide early release; dismissal times vary by school level."
+    },
+    {
+      "date": "2027-03-25",
+      "name": "Teacher Workday / Makeup Day",
+      "type": "teacher_workday",
+      "badgeLabel": "No School / Makeup Day",
+      "description": "Students do not attend unless CMS activates this third-listed makeup date."
     },
     {
       "date": "2027-03-26",
       "name": "Good Friday",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2027-03-29",
+      "endDate": "2027-04-02",
       "name": "Spring Break",
-      "type": "break_start"
+      "type": "break_start",
+      "description": "Students return Monday, April 5."
     },
     {
-      "date": "2027-04-02",
-      "name": "Spring Break End",
-      "type": "break_end"
+      "date": "2027-04-28",
+      "name": "Early Release Day",
+      "type": "early_release",
+      "description": "Districtwide early release; dismissal times vary by school level."
     },
     {
       "date": "2027-05-31",
       "name": "Memorial Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2027-06-09",
       "name": "Last Day of School",
-      "type": "school_end"
+      "type": "school_end",
+      "schemaDescription": "The last day of classes on the CMS 2026–27 Traditional Calendar."
+    },
+    {
+      "date": "2027-06-10",
+      "endDate": "2027-06-11",
+      "name": "Teacher Workdays / Conditional Makeup Days",
+      "type": "makeup_day",
+      "badgeLabel": "Conditional Makeup Day",
+      "description": "Scheduled teacher workdays after the last day of school. June 10 and June 11 are also the fourth and fifth dates in CMS's makeup order."
     }
   ],
-  "calendarNotes": "Charlotte-Mecklenburg Schools begins the 2026–2027 school year on August 25, 2026 — the latest start among North Carolina's large districts. Good Friday (March 26) is observed as a school holiday the Friday before Spring Break begins (March 29–April 2). The school year ends June 9, 2027.",
-  "datePublished": "2026-07-05",
-  "dateModified": "2026-07-05"
+  "sourceMaintainerText": "MySchoolDates education research team",
+  "sourceReviewSummary": "Reviewed August 8, 2026, against the official CMS calendar page, the 2026–27 Traditional Calendar PDF, and the 2025–26 comparison calendar.",
+  "sourceReviewDetails": [
+    "Confirmed the 1,063-hour statement, teacher workdays, early release days, breaks, and makeup order from the official PDF.",
+    "Confirmed that CMS publishes separate calendars for early colleges, middle colleges, Hawthorne Academy, and A/B day schedules."
+  ],
+  "sourceNextReviewText": "Review again after any CMS closure announcement or calendar revision.",
+  "sources": [
+    {
+      "label": "CMS 2026–27 Traditional Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1751635545/cmsk12ncus/npmaxkftovi0mmyxf37r/CMS_2026-2027_Traditional_Calendar_with_Early_Release_Days.pdf"
+    },
+    {
+      "label": "CMS 2025–26 Traditional Calendar PDF — used for year-over-year comparison",
+      "url": "https://resources.finalsite.net/images/v1751635542/cmsk12ncus/ozmk6b5bc0yzutstyudw/CMS_2025-2026_Calendar_REV_12925.pdf"
+    },
+    {
+      "label": "CMS calendar page and alternate calendars",
+      "url": "https://www.cmsk12.org/calendar"
+    },
+    {
+      "label": "CMS inclement weather information",
+      "url": "https://www.cmsk12.org/operations/inclement-weather"
+    }
+  ]
 }

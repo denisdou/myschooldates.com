@@ -1,48 +1,334 @@
 {
   "institutionId": "chesterfield-county",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Chesterfield County Public Schools Calendar 2026–27",
   "firstDay": "2026-08-24",
   "lastDay": "2027-06-04",
-  "totalSchoolDays": 180,
+  "totalSchoolDays": 178,
+  "instructionalDaysDescription": "Instructional-day count for the 2026–27 student calendar.",
   "teacherWorkDays": null,
-  "semesters": 4,
+  "semesters": 2,
+  "temporalCoverageStart": "2026-08-24",
+  "temporalCoverageEnd": "2027-06-04",
   "sourceUrl": "https://www.oneccps.org/page/calendars",
   "sourcePdfUrl": "",
-  "lastVerifiedAt": "2026-07-05",
+  "sourceCalendarName": "CCPS 2026–27 Traditional Student Calendar",
+  "sourceVersion": "Approved by the Chesterfield County School Board on June 3, 2025",
+  "lastVerifiedAt": "2026-08-08",
+  "datePublished": "2026-07-05",
+  "dateModified": "2026-08-08",
   "calendarType": "traditional",
-  "calendarFaqs": [
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideDatasetSchema": true,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "keyDates",
+  "seoTitle": "Chesterfield County Public Schools Calendar 2026–27: Key Dates",
+  "seoDescription": "Chesterfield County Public Schools (CCPS) 2026–27 calendar: Aug. 24–25 start, June 4 last day, holidays, early-release dates, breaks, and calendar download.",
+  "schemaCalendarName": "Chesterfield County Public Schools Calendar 2026–27",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideDateLegend": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "breaksBeforeAllDates": true,
+  "yearSwitcherPosition": "afterSources",
+  "yearSwitcherLabel": "Other CCPS school years:",
+  "hiddenSections": [
+    "downloadCta",
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends"
+  ],
+  "heroSourceLine": "Based on CCPS’s approved 2026–27 traditional calendar · 178 instructional days",
+  "heroSummary": "Chesterfield County Public Schools uses a staggered start for 2026–27. Students in grades 1–5, 6, and 9 start Monday, August 24, while grades 7–8 and 10–12 start Tuesday, August 25. Pre-K and kindergarten students follow a separate staggered schedule through August 27, with all Pre-K and kindergarten students attending daily beginning August 28. The last day of school is June 4, 2027.",
+  "verificationBadgeText": "Checked August 8, 2026, against CCPS’s official calendar page and approved-calendar announcement.",
+  "jumpNavigation": [
+    { "label": "Opening", "id": "ccps-opening-schedule" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "By the Numbers", "id": "calendar-insights" },
+    { "label": "Changes", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "keyDatesSummaryTitle": "CCPS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Staggered first days, major breaks, return dates, and the last day of school",
+  "keyDateSummaryItems": [
     {
-      "q": "When is spring break 2026-2027 for Chesterfield County Public Schools?",
-      "a": "Spring break for Chesterfield County Public Schools runs Mar 29, 2027–Apr 2, 2027, 5 days."
+      "label": "First Day",
+      "name": "Grades 1–5, 6, and 9 begin",
+      "date": "2026-08-24",
+      "type": "school_start",
+      "schemaDescription": "CCPS students in grades 1–5, 6, and 9 begin school on August 24, 2026."
+    },
+    {
+      "label": "First Day",
+      "name": "Grades 7–8 and 10–12 begin",
+      "date": "2026-08-25",
+      "type": "school_start",
+      "schemaDescription": "CCPS students in grades 7–8 and 10–12 begin school on August 25, 2026."
+    },
+    {
+      "label": "Pre-K / K",
+      "name": "Pre-K and kindergarten staggered start",
+      "date": "2026-08-24",
+      "endDate": "2026-08-27",
+      "type": "milestone",
+      "description": "Schools assign students to specific attendance days; all Pre-K and kindergarten students attend daily beginning August 28.",
+      "schemaDescription": "CCPS Pre-K and kindergarten students follow assigned staggered attendance days August 24–27, 2026, before all students begin daily attendance August 28."
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "description": "Students return Monday, November 30."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "Students return Monday, January 4."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "type": "break_start",
+      "description": "Students return Monday, April 5."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last day of school",
+      "date": "2027-06-04",
+      "type": "school_end",
+      "description": "Three-hour early release and the end of Quarter 4.",
+      "schemaDescription": "The last day of school for CCPS is June 4, 2027, with a three-hour early release."
     }
   ],
+  "allDatesTitle": "CCPS Calendar Dates — 2026–27",
+  "allDatesCoverageNote": "The list includes the two grade-based first days, Pre-K and kindergarten opening markers, all districtwide no-school dates, major breaks, return dates, grading-period endings, and every published three-hour early-release date.",
+  "allDatesSourceLabel": "Official CCPS calendar page",
+  "allDatesSourceUrl": "https://www.oneccps.org/page/calendars",
+  "allDatesSourceLinks": [
+    {
+      "label": "CCPS Calendars",
+      "url": "https://www.oneccps.org/page/calendars"
+    },
+    {
+      "label": "CCPS approved-calendar announcement",
+      "url": "https://www.oneccps.org/article/2258105"
+    }
+  ],
+  "dateLegendLabelOverrides": {
+    "Holiday": "No School",
+    "No School": "No School",
+    "Early Release": "Three-Hour Early Release",
+    "Academic": "Academic Date",
+    "School Event": "Schedule Change"
+  },
+  "unifiedDownloadTitle": "CCPS Calendar Options",
+  "unifiedDownloadDescription": "Choose the official live CCPS subscription for automatic district updates or download a reviewed MySchoolDates snapshot.",
+  "officialSubscriptionTitle": "Subscribe to the Official CCPS Calendar",
+  "officialSubscriptionDescription": "CCPS offers Google Calendar and iCal subscriptions. Future district changes sync automatically to subscribed calendars.",
+  "officialSubscriptionButtonLabel": "Open Official Subscription Options",
+  "officialSubscriptionUrl": "https://www.oneccps.org/page/calendars",
+  "icsHeading": "Download the MySchoolDates Calendar",
+  "icsDescription": "Download a one-time ICS file with the CCPS dates listed on this page.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "icsButtonSupportText": "Verified snapshot. This one-time import does not automatically sync with later CCPS changes.",
+  "icsAriaLabel": "Download the Chesterfield County Public Schools 2026–27 calendar file",
+  "yearNumbersTitle": "The CCPS Year, by the Numbers",
+  "yearNumbersWinterBreakLabel": "Winter Break",
+  "yearNumbersMethodologyNote": "Counts in this section are calculated from the districtwide dates listed on the published CCPS calendar. Break ranges are counted inclusively; early-release days remain instructional days.",
   "yearNumbers": [
     {
-      "label": "Starts Later",
-      "value": "6 days",
-      "detail": "First day moves from Aug 18 to Aug 24 vs 2025–2026, pushing the entire school year calendar forward."
+      "label": "Pre-K / Kindergarten Opening",
+      "value": "Aug 24–28",
+      "detail": "Assigned staggered attendance days run August 24–27; all Pre-K and kindergarten students attend daily beginning August 28."
+    },
+    {
+      "label": "Three-Hour Early Releases",
+      "value": "7 dates",
+      "detail": "The calendar lists early release on October 30, November 13, January 22, February 5, April 23, June 3, and June 4."
     },
     {
       "label": "Good Friday",
       "value": "Mar 26",
-      "detail": "Good Friday is a full school holiday immediately before Spring Break — not observed in 2025–2026."
+      "detail": "Good Friday is listed separately immediately before Spring Break. In 2025–26, Good Friday fell within the district’s Spring Break."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "ccps-opening-schedule",
+      "label": "How the CCPS Staggered Start Works",
+      "position": "afterVerification",
+      "content": "CCPS uses separate opening schedules for grade groups and for Pre-K and kindergarten. Families should use the date that applies to each child rather than treating August 24 as a districtwide first day.",
+      "table": {
+        "caption": "CCPS 2026–27 opening schedule",
+        "columns": ["Student group", "Date", "What the date means"],
+        "rows": [
+          ["Grades 1–5, 6, and 9", "Monday, August 24, 2026", "First day of school"],
+          ["Grades 7–8 and 10–12", "Tuesday, August 25, 2026", "First day of school"],
+          ["Pre-K and kindergarten", "August 24–27, 2026", "Students attend on assigned staggered days"],
+          ["All Pre-K and kindergarten students", "Friday, August 28, 2026", "Daily attendance begins"]
+        ],
+        "footnote": "Families of Pre-K and kindergarten students should follow the attendance-day assignment provided by their school."
+      }
     },
     {
-      "label": "Eid al-Fitr",
-      "value": "Mar 9",
-      "detail": "School closed for Eid al-Fitr; confirmed holiday (no longer subject to review as in the prior year)."
+      "id": "ccps-family-planning-notes",
+      "label": "Planning Notes for CCPS Families",
+      "position": "afterCalendarExport",
+      "content": "These are the calendar details most likely to affect child care, transportation, or travel plans.",
+      "groups": [
+        {
+          "label": "Mark all seven three-hour early-release dates",
+          "items": [
+            "October 30, November 13, January 22, February 5, April 23, June 3, and June 4 use a three-hour early-release schedule.",
+            "Check your school’s bell and bus schedule for exact dismissal times."
+          ]
+        },
+        {
+          "label": "Mark the return dates after breaks",
+          "items": [
+            "Students return November 30 after Thanksgiving Break, January 4 after Winter Break, and April 5 after Spring Break."
+          ]
+        },
+        {
+          "label": "Use the official subscription for live updates",
+          "items": [
+            "The MySchoolDates ICS file is a one-time snapshot; CCPS’s official Google/iCal subscription automatically receives later district updates."
+          ]
+        }
+      ]
+    }
+  ],
+  "whatsNew": {
+    "title": "What Changed From 2025–26",
+    "content": [
+      "The first day for grades 1–5, 6, and 9 moves from August 18 to August 24. The first day for grades 7–8 and 10–12 moves from August 19 to August 25.",
+      "The scheduled last day moves from May 29 to June 4.",
+      "Spring Break shifts from March 30–April 3 in 2025–26 to March 29–April 2 in 2026–27.",
+      "Good Friday is listed separately on March 26 immediately before Spring Break. In 2025–26, Good Friday fell within Spring Break on April 3.",
+      "The calendar lists seven three-hour early-release dates, with the final two scheduled for June 3 and June 4."
+    ]
+  },
+  "calendarFaqs": [
+    {
+      "q": "When does CCPS start school in 2026–27?",
+      "a": "Students in grades 1–5, 6, and 9 start Monday, August 24, 2026. Students in grades 7–8 and 10–12 start Tuesday, August 25. Pre-K and kindergarten follow a separate staggered schedule."
+    },
+    {
+      "q": "How do CCPS's two grade-based first days work?",
+      "a": "CCPS uses a grade-based staggered opening. Grades 1–5, 6, and 9 begin August 24; grades 7–8 and 10–12 begin August 25. Families with children in different grade groups should plan for separate start dates."
+    },
+    {
+      "q": "When do CCPS Pre-K and kindergarten students start in 2026?",
+      "a": "Pre-K and kindergarten students attend on school-assigned staggered days August 24–27. All Pre-K and kindergarten students begin attending daily Friday, August 28."
+    },
+    {
+      "q": "When is Thanksgiving Break for CCPS in 2026?",
+      "a": "Thanksgiving Break runs Wednesday, November 25, through Friday, November 27, 2026. Students return Monday, November 30."
+    },
+    {
+      "q": "When is CCPS Winter Break, and when do students return?",
+      "a": "Winter Break runs December 21, 2026, through January 1, 2027. Students return Monday, January 4."
+    },
+    {
+      "q": "When is CCPS Spring Break in 2027?",
+      "a": "Spring Break runs Monday, March 29, through Friday, April 2, 2027. Students return Monday, April 5."
+    },
+    {
+      "q": "When are the three-hour early-release days for CCPS in 2026–27?",
+      "a": "CCPS lists three-hour early release on October 30, November 13, January 22, February 5, April 23, June 3, and June 4. Check your school’s bell and bus schedule for exact dismissal times."
+    },
+    {
+      "q": "Can the CCPS calendar change because of weather closures?",
+      "a": "Yes. CCPS may revise calendar dates or schedules after weather closures or other disruptions. Use the official CCPS calendar subscription for automatic updates and check district announcements before making time-sensitive plans."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When does CCPS start school in 2026–27?",
+    "How do CCPS's two grade-based first days work?",
+    "When do CCPS Pre-K and kindergarten students start in 2026?",
+    "When is Thanksgiving Break for CCPS in 2026?",
+    "When is CCPS Winter Break, and when do students return?",
+    "When is CCPS Spring Break in 2027?",
+    "When are the three-hour early-release days for CCPS in 2026–27?",
+    "Can the CCPS calendar change because of weather closures?"
+  ],
+  "faqDisplayLimit": 8,
+  "sourceReviewSummary": "Reviewed August 8, 2026, against the official CCPS calendar page, the School Board’s approved-calendar announcement, and CCPS’s published opening guidance.",
+  "sourceReviewDetails": [
+    "The approved 2026–27 traditional calendar contains 178 instructional days.",
+    "Pre-K and kindergarten students use assigned staggered attendance days August 24–27; all attend daily beginning August 28.",
+    "The official CCPS calendar page offers Google Calendar and iCal subscriptions that automatically sync future district changes.",
+    "Year-over-year comparisons use the 2025–26 Traditional Calendar Dates published on the CCPS Calendars page."
+  ],
+  "sourceMaintainerText": "Denis Dou for MySchoolDates",
+  "sourceNextReviewText": "Next review: When CCPS revises the 2026–27 calendar, changes an opening schedule, or announces a weather-related calendar adjustment.",
+  "sources": [
+    {
+      "label": "CCPS Calendars — official dates and live calendar subscriptions",
+      "url": "https://www.oneccps.org/page/calendars"
+    },
+    {
+      "label": "CCPS calendar approval announcement — 178 instructional days",
+      "url": "https://www.oneccps.org/article/2258105"
+    },
+    {
+      "label": "Official CCPS school calendar page with Pre-K and kindergarten opening notes",
+      "url": "https://ecoffes.oneccps.org/o/cvs/page/calendars"
     }
   ],
   "events": [
     {
       "date": "2026-08-24",
-      "name": "First Day of School (Grades 1-5, 6, 9)",
+      "name": "First Day of School for Grades 1–5, 6, and 9",
       "type": "school_start"
     },
     {
+      "date": "2026-08-24",
+      "endDate": "2026-08-27",
+      "displayDate": "August 24–27, 2026",
+      "name": "Pre-K and Kindergarten Staggered Start",
+      "type": "milestone",
+      "badgeLabel": "Pre-K / K",
+      "description": "Students attend on school-assigned staggered days."
+    },
+    {
       "date": "2026-08-25",
-      "name": "First Day of School (Grades 7-8, 10-12)",
+      "name": "First Day of School for Grades 7–8 and 10–12",
       "type": "school_start"
+    },
+    {
+      "date": "2026-08-28",
+      "name": "All Pre-K and Kindergarten Students Attend Daily",
+      "type": "milestone",
+      "badgeLabel": "Pre-K / K"
     },
     {
       "date": "2026-09-04",
@@ -61,18 +347,21 @@
     },
     {
       "date": "2026-10-30",
-      "name": "End of Quarter 1 / Three-Hour Early Release",
-      "type": "early_release"
+      "name": "End of Quarter 1 and Three-Hour Early Release",
+      "type": "early_release",
+      "badgeLabel": "Academic Date · Early Release"
     },
     {
       "date": "2026-11-02",
-      "name": "Holiday / Parent-Teacher Conferences",
-      "type": "no_school"
+      "name": "Holiday and Parent-Teacher Conferences",
+      "type": "no_school",
+      "description": "Students do not attend."
     },
     {
       "date": "2026-11-03",
       "name": "Holiday",
-      "type": "no_school"
+      "type": "no_school",
+      "description": "Students do not attend."
     },
     {
       "date": "2026-11-13",
@@ -81,38 +370,45 @@
     },
     {
       "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "displayDate": "November 25–27, 2026",
       "name": "Thanksgiving Break",
       "type": "break_start"
     },
     {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
+      "date": "2026-11-30",
+      "name": "Students Return After Thanksgiving Break",
+      "type": "school_resume"
     },
     {
       "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "displayDate": "December 21, 2026–January 1, 2027",
       "name": "Winter Break",
       "type": "break_start"
     },
     {
       "date": "2026-12-24",
-      "name": "Christmas (Winter Break Holiday)",
-      "type": "holiday"
+      "name": "Christmas Eve",
+      "type": "holiday",
+      "description": "Included within Winter Break."
     },
     {
       "date": "2026-12-25",
-      "name": "Christmas (Winter Break Holiday)",
-      "type": "holiday"
+      "name": "Christmas Day",
+      "type": "holiday",
+      "description": "Included within Winter Break."
     },
     {
       "date": "2027-01-01",
-      "name": "New Year's Day (Winter Break Holiday)",
-      "type": "holiday"
+      "name": "New Year’s Day",
+      "type": "holiday",
+      "description": "Included within Winter Break."
     },
     {
-      "date": "2027-01-01",
-      "name": "Winter Break End",
-      "type": "break_end"
+      "date": "2027-01-04",
+      "name": "Students Return After Winter Break",
+      "type": "school_resume"
     },
     {
       "date": "2027-01-18",
@@ -121,8 +417,9 @@
     },
     {
       "date": "2027-01-22",
-      "name": "End of Quarter 2 / Three-Hour Early Release",
-      "type": "early_release"
+      "name": "End of Quarter 2 and Three-Hour Early Release",
+      "type": "early_release",
+      "badgeLabel": "Academic Date · Early Release"
     },
     {
       "date": "2027-02-05",
@@ -131,7 +428,7 @@
     },
     {
       "date": "2027-02-15",
-      "name": "Presidents' Day",
+      "name": "Presidents’ Day",
       "type": "holiday"
     },
     {
@@ -142,22 +439,26 @@
     {
       "date": "2027-03-25",
       "name": "End of Quarter 3",
-      "type": "quarter_end"
+      "type": "quarter_end",
+      "badgeLabel": "Academic Date"
     },
     {
       "date": "2027-03-26",
       "name": "Good Friday",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "No school; falls immediately before Spring Break."
     },
     {
       "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "displayDate": "March 29–April 2, 2027",
       "name": "Spring Break",
       "type": "break_start"
     },
     {
-      "date": "2027-04-02",
-      "name": "Spring Break End",
-      "type": "break_end"
+      "date": "2027-04-05",
+      "name": "Students Return After Spring Break",
+      "type": "school_resume"
     },
     {
       "date": "2027-04-23",
@@ -176,11 +477,10 @@
     },
     {
       "date": "2027-06-04",
-      "name": "End of Quarter 4 / Three-Hour Early Release / Last Day of School",
-      "type": "school_end"
+      "name": "End of Quarter 4, Three-Hour Early Release, and Last Day of School",
+      "type": "school_end",
+      "badgeLabel": "Last Day · Early Release"
     }
   ],
-  "calendarNotes": "Chesterfield County Public Schools uses a staggered first-day schedule in 2026–2027: elementary, 6th-grade, and 9th-grade students begin August 24; 7th–8th-grade and 10th–12th-grade students start August 25. Spring Break runs March 29–April 2, 2027. The school year ends June 4, 2027.",
-  "datePublished": "2026-07-05",
-  "dateModified": "2026-07-05"
+  "calendarNotes": "CCPS uses two grade-based first days and a separate Pre-K and kindergarten staggered opening. The approved traditional calendar contains 178 instructional days, seven three-hour early-release dates, three major break periods, and a June 4 last day."
 }

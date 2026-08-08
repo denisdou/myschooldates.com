@@ -1,176 +1,380 @@
 {
   "institutionId": "guilford-county",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Guilford County Schools Calendar 2026–2027",
   "firstDay": "2026-08-24",
   "lastDay": "2027-06-10",
-  "totalSchoolDays": 185,
+  "temporalCoverageStart": "2026-08-24",
+  "temporalCoverageEnd": "2027-06-10",
   "semesters": 2,
   "sourceUrl": "https://www.gcsnc.com/all-events",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1770133736/gcsnccom/jpobyljsyt8qbaldvnds/TRADITIONAL_2026-27_GCS_Academic_Calendar.pdf",
-  "lastVerifiedAt": "2026-07-05",
+  "sourceCalendarName": "GCS 2026–27 Traditional Academic Calendar",
+  "sourceVersion": "Revised January 13, 2026",
+  "lastVerifiedAt": "2026-08-08",
+  "datePublished": "2026-07-05",
+  "dateModified": "2026-08-08",
   "calendarType": "traditional",
-  "alternateCalendars": [
+  "allDatesMode": "all",
+  "itemListMode": "allImportantDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "schemaReviewedBy": "author",
+  "webPageMainEntity": "dataset",
+  "splitCalendarDateItemListSchema": true,
+  "seoTitle": "Guilford County Schools Calendar 2026–27: Dates, Breaks & PDF",
+  "seoDescription": "Guilford County Schools 2026–27 traditional calendar with first and last days, teacher workdays, holidays, breaks, official PDF, and ICS download.",
+  "schemaCalendarName": "Guilford County Schools Traditional Academic Calendar 2026–27",
+  "schemaDatasetName": "GCS 2026–27 Traditional Academic Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed dates from the GCS 2026–27 Traditional Academic Calendar, including the first and last days of school, holidays, breaks, and seven optional or mandatory teacher workdays when students do not attend.",
+  "schemaKeyDateItemListName": "GCS 2026–27 key dates at a glance",
+  "schemaCalendarDateItemListName": "GCS 2026–27 student calendar dates",
+  "schemaCalendarDownloadName": "MySchoolDates GCS 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "MySchoolDates-generated calendar import file based on reviewed dates that affect students and families in the official GCS 2026–27 Traditional Academic Calendar.",
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideInstructionalDaysSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "relatedDistrictsSameYearOnly": true,
+  "hideRelatedDistrictDescriptions": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "comparison"
+  ],
+  "heroSourceLine": "GCS Traditional Academic Calendar · Revised January 13, 2026",
+  "heroSummary": "Guilford County Schools' traditional 2026–27 school year begins Monday, August 24, 2026, and ends Thursday, June 10, 2027. Spring break runs March 22–26, 2027. This page covers the GCS Traditional Calendar; extended-year and early/middle college programs use separate calendars.",
+  "calendarNotes": "This page covers the GCS 2026–27 Traditional Academic Calendar. GCS publishes separate calendars for extended-year schools and early/middle college programs.",
+  "verificationBadgeText": "Checked August 8, 2026, against the GCS Traditional Academic Calendar revised January 13, 2026.",
+  "keyDatesSummaryTitle": "Key Dates at a Glance",
+  "keyDatesSummarySubtitle": "First day, major breaks, and last day of school",
+  "keyDateSummaryItems": [
     {
-      "type": "extended-year",
-      "label": "Extended Year Academic Calendar 2026-2027",
-      "pdfUrl": "https://resources.finalsite.net/images/v1782329998/gcsnccom/gcsnccom/acz1lcllu7tlur4cjm8w/EY2026-27GCSAcademicCalendar.pdf",
-      "firstDay": "2026-08-04"
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-24",
+      "type": "school_start",
+      "schemaDescription": "The first day of classes on the GCS 2026–27 Traditional Academic Calendar."
     },
     {
-      "type": "early-college",
-      "label": "Early/Middle College and Academies Academic Calendar 2026-2027",
-      "pdfUrl": "https://resources.finalsite.net/images/v1782329976/gcsnccom/gcsnccom/b5swr25debck8ue5qsdi/ECMCA2026-27GCSAcademicCalendar.pdf",
-      "firstDay": "2026-08-06"
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "schemaDescription": "Thanksgiving Break on the GCS 2026–27 Traditional Academic Calendar."
     },
     {
-      "type": "early-college",
-      "label": "ECG, GCMC, UNCG Academic Calendar 2026-2027",
-      "pdfUrl": "https://resources.finalsite.net/images/v1782329949/gcsnccom/gcsnccom/hknklr78fzddsssep6zl/MCGCMCUNCG2026-27GCSAcademicCalendar.pdf",
-      "firstDay": "2026-08-06"
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "schemaDescription": "Winter Break on the GCS 2026–27 Traditional Academic Calendar."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "type": "break_start",
+      "schemaDescription": "Spring Break on the GCS 2026–27 Traditional Academic Calendar."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-06-10",
+      "type": "school_end",
+      "schemaDescription": "The last day of classes on the GCS 2026–27 Traditional Academic Calendar."
     }
+  ],
+  "jumpNavigation": [
+    { "label": "Calendar Scope", "id": "gcs-2026-2027-calendar-scope" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Major Breaks", "id": "gcs-2026-2027-major-breaks" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Changes", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "GCS 2026–27 Student Calendar Dates",
+  "allDatesCoverageNote": "First and last days, holidays, breaks, and the seven optional or mandatory teacher workdays when students do not attend on the GCS 2026–27 Traditional Academic Calendar.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1770133736/gcsnccom/jpobyljsyt8qbaldvnds/TRADITIONAL_2026-27_GCS_Academic_Calendar.pdf",
+  "allDatesSourceLinks": [
+    {
+      "label": "Official GCS 2026–27 Traditional Academic Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1770133736/gcsnccom/jpobyljsyt8qbaldvnds/TRADITIONAL_2026-27_GCS_Academic_Calendar.pdf"
+    },
+    {
+      "label": "GCS calendars and events page",
+      "url": "https://www.gcsnc.com/all-events"
+    }
+  ],
+  "allDatesSourceLabel": "Official GCS 2026–27 Traditional Academic Calendar PDF",
+  "dateLegendLabelOverrides": {
+    "Holiday": "No School",
+    "No School for Students": "No School",
+    "Staff Day": "No School"
+  },
+  "icsHeading": "Add GCS 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download a MySchoolDates-generated ICS file with the first and last days of school, holidays, breaks, and seven teacher workdays listed on this page.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "icsButtonSupportText": "One-time import. It will not automatically reflect later GCS calendar changes.",
+  "icsAriaLabel": "Download the MySchoolDates-generated GCS 2026–27 calendar file",
+  "pdfHeading": "Official GCS 2026–27 Traditional Academic Calendar",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "Open the GCS Traditional Academic Calendar with holidays, breaks, optional and mandatory teacher workdays, and quarter-ending dates.",
+  "pdfVersionLabel": "Revised January 13, 2026",
+  "customSections": [
+    {
+      "id": "gcs-2026-2027-calendar-scope",
+      "label": "Does This Calendar Apply to My School?",
+      "position": "afterVerification",
+      "schemaHasPart": true,
+      "content": "This page covers the GCS Traditional Calendar. GCS also publishes separate calendars for extended-year schools, early/middle colleges, and other designated programs. If your student attends one of those programs, use that program's official calendar instead.",
+      "groups": [
+        {
+          "label": "How to confirm your school's calendar",
+          "items": [
+            "Check the GCS calendars page below to confirm which academic calendar your student's school or program follows."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "View all official GCS calendars",
+          "to": "https://www.gcsnc.com/all-events"
+        },
+        {
+          "label": "Extended Year Academic Calendar — Official PDF",
+          "to": "https://resources.finalsite.net/images/v1782329998/gcsnccom/gcsnccom/acz1lcllu7tlur4cjm8w/EY2026-27GCSAcademicCalendar.pdf"
+        },
+        {
+          "label": "Early/Middle College and Academies Calendar — Official PDF",
+          "to": "https://resources.finalsite.net/images/v1782329976/gcsnccom/gcsnccom/b5swr25debck8ue5qsdi/ECMCA2026-27GCSAcademicCalendar.pdf"
+        },
+        {
+          "label": "ECG, GCMC and UNCG Calendar — Official PDF",
+          "to": "https://resources.finalsite.net/images/v1782329949/gcsnccom/gcsnccom/hknklr78fzddsssep6zl/MCGCMCUNCG2026-27GCSAcademicCalendar.pdf"
+        }
+      ]
+    },
+    {
+      "id": "gcs-2026-2027-major-breaks",
+      "label": "Major Breaks and Return Dates",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "These ranges follow the break labels and adjacent teacher workdays in the GCS Traditional Academic Calendar.",
+      "groups": [
+        {
+          "label": "Thanksgiving Break",
+          "items": [
+            "Thanksgiving Break runs November 25–27, 2026. Students return Monday, November 30."
+          ]
+        },
+        {
+          "label": "Winter Break",
+          "items": [
+            "Winter Break runs December 21, 2026 through January 1, 2027. January 4 is an optional teacher workday, so students return Tuesday, January 5."
+          ]
+        },
+        {
+          "label": "Spring Break",
+          "items": [
+            "Spring Break runs Monday, March 22 through Friday, March 26, 2027. Students return Monday, March 29."
+          ]
+        }
+      ]
+    }
+  ],
+  "whatsNew": {
+    "title": "What Changed From 2025–26",
+    "content": [
+      "The 2026–27 school year starts one day earlier, on August 24 instead of August 25.",
+      "Spring Break moves earlier, from March 30–April 3 in 2025–26 to March 22–26 in 2026–27."
+    ]
+  },
+  "faqDisplayLimit": 6,
+  "faqDisplayQuestions": [
+    "When does GCS start school in 2026–27?",
+    "When is the last day of school for GCS?",
+    "When is GCS Spring Break in 2027?",
+    "When is GCS Winter Break, and when do students return?",
+    "Which GCS teacher workdays are no-school days for students?",
+    "Does every GCS school follow the Traditional Calendar?"
   ],
   "calendarFaqs": [
     {
-      "q": "When does school start for Guilford County Schools in 2026-2027?",
-      "a": "The first day of school for Guilford County Schools is Monday, August 24, 2026. Students and staff are expected to report on this date to begin the new academic year."
+      "q": "When does GCS start school in 2026–27?",
+      "a": "Students begin classes on Monday, August 24, 2026, on the GCS 2026–27 Traditional Academic Calendar."
     },
     {
-      "q": "When is the last day of school for Guilford County Schools in 2026-2027?",
-      "a": "The last day of school for Guilford County Schools is Thursday, June 10, 2027. The school year runs from August through June, covering 185 instructional days."
+      "q": "When is the last day of school for GCS?",
+      "a": "The last day on the GCS 2026–27 Traditional Academic Calendar is Thursday, June 10, 2027."
     },
     {
-      "q": "When is spring break 2026-2027 for Guilford County Schools?",
-      "a": "Spring break for Guilford County Schools runs March 22–26, 2027 — a full week off, one week earlier than the 2025–2026 window. Charlotte-Mecklenburg Schools breaks March 29–April 2, one week after GCS, so there is no common break window between the two districts this year."
+      "q": "When is GCS Spring Break in 2027?",
+      "a": "GCS Spring Break runs Monday, March 22 through Friday, March 26, 2027. Students return Monday, March 29."
     },
     {
-      "q": "When is winter break 2026-2027 for Guilford County Schools?",
-      "a": "Winter break for Guilford County Schools runs December 21, 2026–January 1, 2027, a total of 12 days. A teacher workday falls on January 4, so students return Tuesday, January 5, 2027."
+      "q": "When is GCS Winter Break, and when do students return?",
+      "a": "Winter Break runs December 21, 2026 through January 1, 2027. January 4 is an optional teacher workday, so students return Tuesday, January 5."
     },
     {
-      "q": "When is Thanksgiving break 2026-2027 for Guilford County Schools?",
-      "a": "Thanksgiving break for Guilford County Schools runs November 25–27, 2026 (Wednesday through Friday). Thanksgiving Day falls on November 26. School resumes Monday, November 30, 2026."
-    }
-  ],
-  "yearNumbers": [
-    {
-      "label": "Spring Break Shifts Earlier",
-      "value": "1 week",
-      "detail": "Spring Break moves from Mar 30–Apr 3 (2025–2026) to Mar 22–26, pulling the break about one week earlier. Charlotte-Mecklenburg breaks the week after (Mar 29–Apr 2), so GCS and CMS families have no shared break window."
+      "q": "Which GCS teacher workdays are no-school days for students?",
+      "a": "The Traditional Academic Calendar lists optional teacher workdays on September 21, October 30, and January 4, plus mandatory teacher workdays on November 3, January 25, February 15, and April 5. Students do not attend on these seven dates."
     },
     {
-      "label": "12-Day Winter Break",
-      "value": "Dec 21–Jan 1",
-      "detail": "Winter Break runs December 21–January 1 — 12 days off. A teacher workday falls on January 4, so students return Tuesday, January 5, 2027."
-    },
-    {
-      "label": "7 Teacher Workdays",
-      "value": "7 days",
-      "detail": "GCS schedules 7 teacher workdays in 2026–2027 when students do not attend: Sept 21, Oct 30, Nov 3, Jan 4, Jan 25, Feb 15, and Apr 5. Add these to your personal calendar separately from the main break windows."
-    },
-    {
-      "label": "185 Instructional Days",
-      "value": "185 days",
-      "detail": "Guilford County requires 185 instructional days — 5 more than the North Carolina state minimum of 180, adding a full extra week of school compared to minimum-compliance districts."
+      "q": "Does every GCS school follow the Traditional Calendar?",
+      "a": "No. This page covers the GCS Traditional Calendar. Extended-year schools and some early/middle college programs use separate academic calendars, so confirm the calendar assigned to your student's school or program."
     }
   ],
   "events": [
     {
       "date": "2026-08-24",
       "name": "First Day of School",
-      "type": "school_start"
+      "type": "school_start",
+      "schemaDescription": "The first day of classes on the GCS 2026–27 Traditional Academic Calendar."
     },
     {
       "date": "2026-09-07",
-      "name": "Labor Day",
-      "type": "holiday"
+      "name": "Labor Day Holiday",
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2026-09-21",
-      "name": "Teacher Workday",
-      "type": "no_school"
+      "name": "Optional Teacher Workday (Yom Kippur)",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "Students do not attend."
     },
     {
       "date": "2026-10-30",
-      "name": "Teacher Workday",
-      "type": "no_school"
+      "name": "Optional Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "Students do not attend."
     },
     {
       "date": "2026-11-03",
-      "name": "Election Day / Teacher Workday",
-      "type": "no_school"
+      "name": "Mandatory Teacher Workday (Election Day)",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "Students do not attend."
     },
     {
       "date": "2026-11-11",
-      "name": "Veterans Day",
-      "type": "holiday"
+      "name": "Veterans Day Holiday",
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2026-11-25",
-      "name": "Thanksgiving Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break for Students",
+      "type": "break_start",
+      "description": "Students return Monday, November 30."
     },
     {
       "date": "2026-12-21",
-      "name": "Winter Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-01-01",
-      "name": "Winter Break End",
-      "type": "break_end"
+      "endDate": "2027-01-01",
+      "name": "Winter Break for Students",
+      "type": "break_start",
+      "description": "January 4 is an optional teacher workday. Students return Tuesday, January 5."
     },
     {
       "date": "2027-01-04",
-      "name": "Teacher Workday",
-      "type": "no_school"
+      "name": "Optional Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "Students do not attend."
     },
     {
       "date": "2027-01-18",
-      "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
+      "name": "Martin Luther King Jr. Holiday",
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2027-01-25",
-      "name": "Teacher Workday",
-      "type": "no_school"
+      "name": "Mandatory Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "Students do not attend."
     },
     {
       "date": "2027-02-15",
-      "name": "Teacher Workday",
-      "type": "no_school"
+      "name": "Mandatory Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "Students do not attend."
     },
     {
       "date": "2027-03-22",
+      "endDate": "2027-03-26",
       "name": "Spring Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-03-26",
-      "name": "Spring Break End",
-      "type": "break_end"
+      "type": "break_start",
+      "description": "Students return Monday, March 29."
     },
     {
       "date": "2027-04-05",
-      "name": "Teacher Workday",
-      "type": "no_school"
+      "name": "Mandatory Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "description": "Students do not attend."
     },
     {
       "date": "2027-05-31",
-      "name": "Memorial Day",
-      "type": "holiday"
+      "name": "Memorial Day Holiday",
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2027-06-10",
       "name": "Last Day of School",
-      "type": "school_end"
+      "type": "school_end",
+      "schemaDescription": "The last day of classes on the GCS 2026–27 Traditional Academic Calendar."
     }
   ],
-  "calendarNotes": "Guilford County Schools begins the 2026–2027 school year on August 24, 2026. The calendar includes seven teacher workdays (Sept 21, Oct 30, Nov 3, Jan 4, Jan 25, Feb 15, Apr 5) when students do not attend. Spring Break runs March 22–26, 2027. Charlotte-Mecklenburg Schools breaks March 29–April 2 — one week after GCS — so families coordinating between the two districts have no common break window this year. The school year ends June 10, 2027.",
-  "datePublished": "2026-07-05",
-  "dateModified": "2026-07-05"
+  "sourceMaintainerText": "MySchoolDates education research team",
+  "sourceReviewSummary": "Reviewed August 8, 2026, against the GCS Traditional Academic Calendar revised January 13, 2026.",
+  "sourceReviewDetails": [
+    "Confirmed the first and last days of school, holidays, break dates, and all seven optional or mandatory teacher workdays against the official GCS PDF."
+  ],
+  "sourceNextReviewText": "Next review: after GCS publishes a calendar revision.",
+  "sources": [
+    {
+      "label": "GCS 2026–27 Traditional Academic Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1770133736/gcsnccom/jpobyljsyt8qbaldvnds/TRADITIONAL_2026-27_GCS_Academic_Calendar.pdf"
+    },
+    {
+      "label": "GCS calendars and events page",
+      "url": "https://www.gcsnc.com/all-events"
+    },
+    {
+      "label": "GCS 2025–26 Traditional Academic Calendar PDF — used for year-over-year comparison",
+      "url": "https://resources.finalsite.net/images/v1741024395/gcsnccom/dfom9tgnnogz3bciimz1/TRADITIONAL_2025-26_GCS_Academic_Calendar_Revised_20241112.pdf"
+    }
+  ]
 }

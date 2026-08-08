@@ -106,8 +106,10 @@ export default defineNuxtConfig({
         '/cumberland-county-school-calendar',
         '/dallas-independent-school-district-calendar',
         '/dysart-unified-school-district-calendar',
+        '/edmonds-school-district-calendar',
         '/duval-county-school-calendar',
         '/fairfax-county-school-calendar',
+        '/federal-way-public-schools-calendar',
         '/fort-bend-independent-school-district-calendar',
         '/fontana-unified-school-district-calendar',
         '/fort-worth-independent-school-district-calendar',
@@ -153,7 +155,9 @@ export default defineNuxtConfig({
         '/peoria-unified-school-district-calendar',
         '/pinellas-county-school-calendar',
         '/pomona-unified-school-district-calendar',
+        '/portland-public-schools-calendar',
         '/poudre-school-district-calendar',
+        '/puyallup-school-district-calendar',
         '/polk-county-school-calendar',
         '/poway-unified-school-district-calendar',
         '/prince-georges-county-school-calendar',
@@ -172,6 +176,7 @@ export default defineNuxtConfig({
         '/seminole-county-school-calendar',
         '/seattle-public-schools-calendar',
         '/school-district-of-philadelphia-calendar',
+        '/spokane-public-schools-calendar',
         '/stockton-unified-school-district-calendar',
         '/sweetwater-union-high-school-district-calendar',
         '/tacoma-public-schools-calendar',
@@ -341,12 +346,20 @@ export default defineNuxtConfig({
         '/dysart-unified-school-district-calendar/2028-2029',
         '/dysart-unified-school-district-calendar/2029-2030',
 
+        '/edmonds-school-district-calendar/2025-2026',
+        '/edmonds-school-district-calendar/2026-2027',
+
         '/duval-county-school-calendar/2025-2026',
         '/duval-county-school-calendar/2026-2027',
 
         '/fairfax-county-school-calendar/2025-2026',
         '/fairfax-county-school-calendar/2026-2027',
         '/fairfax-county-school-calendar/2027-2028',
+
+        '/federal-way-public-schools-calendar/2025-2026',
+        '/federal-way-public-schools-calendar/2026-2027',
+        '/federal-way-public-schools-calendar/2027-2028',
+        '/federal-way-public-schools-calendar/2028-2029',
 
         '/fort-bend-independent-school-district-calendar/2025-2026',
         '/fort-bend-independent-school-district-calendar/2026-2027',
@@ -489,6 +502,12 @@ export default defineNuxtConfig({
         '/poudre-school-district-calendar/2025-2026',
         '/poudre-school-district-calendar/2026-2027',
 
+        '/portland-public-schools-calendar/2025-2026',
+        '/portland-public-schools-calendar/2026-2027',
+
+        '/puyallup-school-district-calendar/2025-2026',
+        '/puyallup-school-district-calendar/2026-2027',
+
         '/polk-county-school-calendar/2025-2026',
         '/polk-county-school-calendar/2026-2027',
         '/polk-county-school-calendar/2027-2028',
@@ -556,6 +575,10 @@ export default defineNuxtConfig({
 
         '/seattle-public-schools-calendar/2025-2026',
         '/seattle-public-schools-calendar/2026-2027',
+
+        '/spokane-public-schools-calendar/2025-2026',
+        '/spokane-public-schools-calendar/2026-2027',
+        '/spokane-public-schools-calendar/2027-2028',
 
         '/tacoma-public-schools-calendar/2025-2026',
         '/tacoma-public-schools-calendar/2026-2027',

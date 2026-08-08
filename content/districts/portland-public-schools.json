@@ -1,0 +1,143 @@
+{
+  "institutionId": "portland-public-schools",
+  "name": "Portland Public Schools",
+  "shortName": "PPS",
+  "slug": "portland-public-schools-calendar",
+  "state": "Oregon",
+  "stateCode": "OR",
+  "city": "Portland",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.pps.net/",
+  "calendarPage": "https://www.pps.net/calendar",
+  "logo": "https://resources.finalsite.net/images/v1738072305/ppsnet/pszye46mjvt1uspyfczd/district-logo.svg",
+  "timezone": "America/Los_Angeles",
+  "county": "Multnomah County",
+  "region": "Portland metropolitan area",
+  "metro": "Portland-Vancouver-Hillsboro",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Portland District Calendar",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "translatedPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-08",
+    "coverageNote": "Coverage uses the PPS calendar page, the complete three-page 2026–27 district calendar, its Pre-K companion, and official Spanish, Vietnamese, Chinese, Russian, and Somali editions. The 2025–26 comparison uses Portland, Oregon, sources from pps.net."
+  },
+  "contentFreshnessScore": {
+    "overall": 97,
+    "sourceUpdated": "2026-08-05",
+    "lastManualReview": "2026-08-08",
+    "calendarAgeDays": 3,
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 60,
+    "refreshRule": "Re-check when PPS revises the district or Pre-K calendar, replaces translated editions, uses a snow make-up day, changes early release, or publishes 2027–28 dates."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official PPS revision, translation replacement, Pre-K change, snow make-up activation, or future-year publication."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Portland Public Schools Oregon",
+    "PPS calendar",
+    "Portland Oregon school calendar",
+    "Portland Public Schools calendar",
+    "PPS kindergarten ramp up",
+    "PPS early release calendar",
+    "PPS district calendar PDF"
+  ],
+  "districtFact": "Portland Public Schools does not use one universal opening date. Comprehensive middle and high schools stage the return by grade, kindergarten begins with Ramp Up sessions, and Pre-K/Head Start starts later on a separate calendar. PPS also publishes district calendars in five translated editions and operates Dual Language Immersion pathways in Chinese, Japanese, Russian, Spanish, and Vietnamese.",
+  "about": [
+    {
+      "title": "About Portland Public Schools",
+      "content": "Portland Public Schools is Oregon's public school district centered in Portland and headquartered at 501 N. Dixon Street. Its calendar covers neighborhood elementary schools, K-8 programs, comprehensive middle and high schools, focus programs, kindergarten, and Pre-K/Head Start, but some opening and daily-schedule rules differ by grade span and program."
+    },
+    {
+      "title": "The First Day Is a Sequence, Not One Date",
+      "content": "PPS uses a staged opening. Most students begin first, while grades 7–8 and 10–11 at comprehensive middle and high schools start the following day. Kindergarten follows a Ramp Up period with family connection and smaller-group sessions before all kindergarten students attend, and Pre-K/Head Start starts later still."
+    },
+    {
+      "title": "Early Release Excludes High Schools",
+      "content": "The 2026-2027 district calendar marks eight early release Wednesdays for schools other than high schools. That exception is important: families should not apply an elementary or middle-school dismissal rule to a high-school student. Exact release times come from the student's school bell schedule, not the district year-at-a-glance PDF."
+    },
+    {
+      "title": "Conferences Close Schools Before Fall Break",
+      "content": "PPS schedules districtwide day and evening conferences on the Monday and Tuesday before the late-November break. Students do not attend on those conference dates, even though families may have an appointment. This creates a full no-class week when conference days and Fall Break are considered together."
+    },
+    {
+      "title": "Multilingual and Program-Specific Calendars Matter",
+      "content": "For 2026-2027, PPS links Spanish, Vietnamese, Chinese, Russian, and Somali district-calendar editions and a separate Pre-K calendar. The district also offers Dual Language Immersion in Chinese, Japanese, Russian, Spanish, and Vietnamese. Families should choose the language edition they need, then still compare it with the student's school and program messages."
+    }
+  ],
+  "planningTips": {
+    "title": "Portland Public Schools Calendar Notes",
+    "content": [
+      "Match the first day to the student's grade and school type; grades 7-8 and 10-11 at comprehensive schools can start one day after other students.",
+      "Do not treat Kindergarten Ramp Up as a regular full-day kindergarten opening. The school assigns family connection and smaller-group sessions before the all-kindergarten date.",
+      "Use the separate Pre-K calendar for Pre-K planning; the district calendar's Pre-K/Head Start first-day marker does not replace program details.",
+      "On PPS early release Wednesdays, verify both the school level and bell schedule because the district calendar explicitly excludes high schools.",
+      "Reserve the full Monday-through-Friday week around November conferences and Fall Break for no regular classes, while still watching for a scheduled family conference.",
+      "Treat February and June snow make-up dates as conditional. They do not become attendance days unless PPS announces that they are needed.",
+      "For weather decisions, use PPS alerts and the student's school message; the district may choose snow routes, a two-hour delay, an early dismissal, or a closure."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Do all Portland Public Schools students start on the same day?",
+      "a": "No. PPS stages the opening by grade and program. Comprehensive middle-school grades 7-8 and high-school grades 10-11 may begin one day later, while kindergarten and Pre-K/Head Start have separate later openings."
+    },
+    {
+      "q": "What is PPS Kindergarten Ramp Up?",
+      "a": "Ramp Up is the smaller-group and family-connection period before all kindergarten students attend together. Families receive their assigned session from the school, so the date range is not a promise of full-day attendance on every date."
+    },
+    {
+      "q": "Do PPS high schools have the district early release Wednesdays?",
+      "a": "The 2026-2027 district calendar labels those dates Early Release Day—Except High Schools. Elementary, K-8, and middle-school families should check their school's dismissal time; high-school families should follow the high-school schedule."
+    },
+    {
+      "q": "Are PPS conference days school days?",
+      "a": "No. The district calendar marks day and evening conference dates as schools closed. A student may attend a scheduled family conference, but regular classes are not held."
+    },
+    {
+      "q": "Does Portland Public Schools offer translated calendars?",
+      "a": "Yes. PPS links 2026-2027 district-calendar editions in Spanish, Vietnamese, Chinese, Russian, and Somali. The calendar page notes that some translations may temporarily use the older visual style while remaining accurate."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Seattle Public Schools",
+      "slug": "seattle-public-schools-calendar",
+      "state": "Washington"
+    },
+    {
+      "name": "Spokane Public Schools",
+      "slug": "spokane-public-schools-calendar",
+      "state": "Washington"
+    }
+  ],
+  "sources": [
+    { "label": "Portland Public Schools official website", "url": "https://www.pps.net/" },
+    { "label": "PPS district calendar page", "url": "https://www.pps.net/calendar" },
+    { "label": "PPS weather and emergency guidance", "url": "https://www.pps.net/about/portland-public-schools-information/weather-disasters-school-emergencies" },
+    { "label": "PPS Dual Language programs", "url": "https://www.pps.net/departments/dual-language/current-dli-programs" },
+    { "label": "PPS 2025–26 furlough update", "url": "https://www.pps.net/departments/human-resources/employee-resources/furloughs-2025-26" }
+  ]
+}
