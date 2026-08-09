@@ -196,7 +196,7 @@ const rows = computed((): ComparisonRow[] => {
       springBreak: sp ? { start: sp.start, end: sp.end } : null,
       winterBreak: winter ? { start: winter.start, end: winter.end } : null,
       thanksgivingBreak: thanksgiving ? { start: thanksgiving.start, end: thanksgiving.end } : null,
-      sourceUrl: props.cal.comparisonSourceUrl || props.cal.sourcePdfUrl || props.cal.sourceUrl || props.district.calendarPage || props.district.officialWebsite,
+      sourceUrl: props.cal.comparisonSourceUrl || props.cal.meta?.comparisonSourceUrl || props.cal.sourcePdfUrl || props.cal.sourceUrl || props.district.calendarPage || props.district.officialWebsite,
       sourceLabel: props.cal.comparisonSourceLabel ?? props.cal.meta?.comparisonSourceLabel,
       sourceVersion: props.cal.sourceVersion,
       extraSourceUrl: props.cal.comparisonExtraSourceUrl ?? props.cal.meta?.comparisonExtraSourceUrl,
@@ -246,11 +246,11 @@ const rows = computed((): ComparisonRow[] => {
       winterBreak: winter ? { start: winter.start, end: winter.end } : null,
       thanksgivingBreak: thanksgiving ? { start: thanksgiving.start, end: thanksgiving.end } : null,
       comparisonNote: comparisonNotes[d.slug] ?? relatedDef?.comparisonNote,
-      sourceUrl: c.comparisonSourceUrl || c.sourcePdfUrl || c.sourceUrl || d.calendarPage || d.officialWebsite,
-      sourceLabel: c.comparisonSourceLabel ?? (c.comparisonSourceUrl ? pageSourceLabel(d, relatedDef) : (c.sourcePdfUrl ? pdfSourceLabel(d, c, relatedDef) : undefined)),
+      sourceUrl: c.comparisonSourceUrl || c.meta?.comparisonSourceUrl || c.sourcePdfUrl || c.sourceUrl || d.calendarPage || d.officialWebsite,
+      sourceLabel: c.comparisonSourceLabel ?? c.meta?.comparisonSourceLabel ?? ((c.comparisonSourceUrl || c.meta?.comparisonSourceUrl) ? pageSourceLabel(d, relatedDef) : (c.sourcePdfUrl ? pdfSourceLabel(d, c, relatedDef) : undefined)),
       sourceVersion: c.sourceVersion,
-      extraSourceUrl: c.comparisonExtraSourceUrl ?? (c.sourcePdfUrl && c.sourceUrl ? c.sourceUrl : undefined),
-      extraSourceLabel: c.comparisonExtraSourceLabel ?? (c.sourcePdfUrl && c.sourceUrl ? pageSourceLabel(d, relatedDef) : undefined),
+      extraSourceUrl: c.comparisonExtraSourceUrl ?? c.meta?.comparisonExtraSourceUrl ?? (c.sourcePdfUrl && c.sourceUrl ? c.sourceUrl : undefined),
+      extraSourceLabel: c.comparisonExtraSourceLabel ?? c.meta?.comparisonExtraSourceLabel ?? (c.sourcePdfUrl && c.sourceUrl ? pageSourceLabel(d, relatedDef) : undefined),
       comparisonLabel: relatedDef?.comparisonLabel,
       comparisonValues: comparisonValueOverridesFor(d.slug, relatedDef),
       calendarPath: c.schoolYear ? `/${d.slug}/${c.schoolYear}` : `/${d.slug}`,
@@ -398,7 +398,7 @@ const comparisonRows = computed(() => {
 })
 
 const compareIntro = computed(() => {
-  const intro = (props.cal as any)?.comparisonSummary ?? (props.cal as any)?.meta?.comparisonSummary ?? (props.cal as any)?.compareIntro ?? (props.cal as any)?.meta?.compareIntro ?? (props.district as any).compareIntro ?? ''
+  const intro = (props.cal as any)?.comparisonSummary ?? (props.cal as any)?.meta?.comparisonSummary ?? (props.cal as any)?.compareIntro ?? (props.cal as any)?.meta?.compareIntro ?? (props.district as any)?.comparisonSummary ?? (props.district as any)?.meta?.comparisonSummary ?? (props.district as any)?.compareIntro ?? (props.district as any)?.meta?.compareIntro ?? ''
   const yearPattern = /\b\d{4}-\d{4}\b/
   if (!intro) return dynamicIntro.value
   if (yearPattern.test(intro) && !intro.includes(props.year)) return dynamicIntro.value

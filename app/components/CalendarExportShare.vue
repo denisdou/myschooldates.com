@@ -16,8 +16,11 @@ const compactDownloadModule = computed(() => Boolean(props.cal?.compactDownloadM
 const hideCompatibleCalendars = computed(() => Boolean(props.cal?.hideCompatibleCalendars ?? props.cal?.meta?.hideCompatibleCalendars))
 const hidePdfVersionLabel = computed(() => Boolean(props.cal?.hidePdfVersionLabel ?? props.cal?.meta?.hidePdfVersionLabel))
 const hideShareCalendarHeading = computed(() => Boolean(props.cal?.hideShareCalendarHeading ?? props.cal?.meta?.hideShareCalendarHeading))
+const shareCalendarHeading = computed(() => props.cal?.shareCalendarHeading ?? props.cal?.meta?.shareCalendarHeading ?? 'Share This Calendar')
+const hideSocialShareButtons = computed(() => Boolean(props.cal?.hideSocialShareButtons ?? props.cal?.meta?.hideSocialShareButtons))
 const hideIcsButtonSupportText = computed(() => Boolean(props.cal?.hideIcsButtonSupportText ?? props.cal?.meta?.hideIcsButtonSupportText))
 const hideCalendarUpdatesButton = computed(() => Boolean(props.cal?.hideCalendarUpdatesButton ?? props.cal?.meta?.hideCalendarUpdatesButton))
+const hidePdfDownloadSection = computed(() => Boolean(props.cal?.hidePdfDownloadSection ?? props.cal?.meta?.hidePdfDownloadSection))
 const unifiedDownloadTitle = computed(() => props.cal?.unifiedDownloadTitle ?? props.cal?.meta?.unifiedDownloadTitle ?? '')
 const unifiedDownloadDescription = computed(() => props.cal?.unifiedDownloadDescription ?? props.cal?.meta?.unifiedDownloadDescription ?? '')
 const officialSubscriptionTitle = computed(() => props.cal?.officialSubscriptionTitle ?? props.cal?.meta?.officialSubscriptionTitle ?? '')
@@ -218,7 +221,7 @@ const icsAriaLabel = computed(() =>
     </div>
 
     <!-- PDF Download -->
-    <div v-if="pdfUrl" class="p-6 border-b border-[#ebe6dd]">
+    <div v-if="pdfUrl && !hidePdfDownloadSection" class="p-6 border-b border-[#ebe6dd]">
       <component :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-[#1f2933] mb-1">{{ pdfHeading }}</component>
       <p v-if="pdfVersionLabel && !hidePdfVersionLabel" class="text-xs font-medium text-[#6b645c] mb-2">{{ pdfVersionLabel }}</p>
       <p class="text-sm text-[#6b645c] mb-4">{{ pdfDescription }}</p>
@@ -272,7 +275,7 @@ const icsAriaLabel = computed(() =>
 
     <!-- Share with Parents -->
     <div class="p-6">
-      <component v-if="!hideShareCalendarHeading" :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-[#1f2933] mb-3">Share This Calendar</component>
+      <component v-if="!hideShareCalendarHeading" :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-[#1f2933] mb-3">{{ shareCalendarHeading }}</component>
       <div class="flex flex-wrap gap-3">
         <!-- Copy Link -->
         <button
@@ -300,51 +303,53 @@ const icsAriaLabel = computed(() =>
           </svg>
           Print Calendar
         </button>
-        <!-- WhatsApp -->
-        <button
-          type="button"
-          @click="shareWhatsApp"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#aec2b1] hover:bg-[#e7efe5] text-sm font-medium text-[#4f5b5f] transition-all"
-        >
-          <svg class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.029 18.88a7.947 7.947 0 01-3.794-.964l-4.21 1.104 1.126-4.108a7.934 7.934 0 01-1.062-3.965C4.09 7.148 7.666 3.573 12.03 3.573c2.116 0 4.099.823 5.59 2.317a7.862 7.862 0 012.31 5.587c-.002 4.358-3.579 7.403-7.901 7.403z"/>
-          </svg>
-          WhatsApp
-        </button>
-        <!-- Text / SMS -->
-        <button
-          type="button"
-          @click="shareSMS"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#b8c9c9] hover:bg-[#f3f0e8] text-sm font-medium text-[#4f5b5f] transition-all"
-        >
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-          </svg>
-          Text
-        </button>
-        <!-- Facebook -->
-        <button
-          type="button"
-          @click="shareFacebook"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#9eb7dc] hover:bg-[#eaf1fb] text-sm font-medium text-[#4f5b5f] transition-all"
-        >
-          <svg class="w-4 h-4 text-[#1877f2]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-            <path d="M24 12.073C24 5.405 18.627.032 12 .032S0 5.405 0 12.073c0 6.027 4.388 11.024 10.125 11.93v-8.436H7.078v-3.494h3.047V9.41c0-3.027 1.792-4.7 4.533-4.7 1.312 0 2.686.236 2.686.236v2.972H15.83c-1.491 0-1.956.931-1.956 1.886v2.269h3.328l-.532 3.494h-2.796v8.436C19.612 23.097 24 18.1 24 12.073Z" />
-          </svg>
-          Facebook
-        </button>
-        <!-- X -->
-        <button
-          type="button"
-          @click="shareX"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#9fa3a7] hover:bg-[#eef0f1] text-sm font-medium text-[#4f5b5f] transition-all"
-        >
-          <svg class="w-4 h-4 text-[#1f2933]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" />
-          </svg>
-          X
-        </button>
+        <template v-if="!hideSocialShareButtons">
+          <!-- WhatsApp -->
+          <button
+            type="button"
+            @click="shareWhatsApp"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#aec2b1] hover:bg-[#e7efe5] text-sm font-medium text-[#4f5b5f] transition-all"
+          >
+            <svg class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.029 18.88a7.947 7.947 0 01-3.794-.964l-4.21 1.104 1.126-4.108a7.934 7.934 0 01-1.062-3.965C4.09 7.148 7.666 3.573 12.03 3.573c2.116 0 4.099.823 5.59 2.317a7.862 7.862 0 012.31 5.587c-.002 4.358-3.579 7.403-7.901 7.403z"/>
+            </svg>
+            WhatsApp
+          </button>
+          <!-- Text / SMS -->
+          <button
+            type="button"
+            @click="shareSMS"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#b8c9c9] hover:bg-[#f3f0e8] text-sm font-medium text-[#4f5b5f] transition-all"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+            Text
+          </button>
+          <!-- Facebook -->
+          <button
+            type="button"
+            @click="shareFacebook"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#9eb7dc] hover:bg-[#eaf1fb] text-sm font-medium text-[#4f5b5f] transition-all"
+          >
+            <svg class="w-4 h-4 text-[#1877f2]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M24 12.073C24 5.405 18.627.032 12 .032S0 5.405 0 12.073c0 6.027 4.388 11.024 10.125 11.93v-8.436H7.078v-3.494h3.047V9.41c0-3.027 1.792-4.7 4.533-4.7 1.312 0 2.686.236 2.686.236v2.972H15.83c-1.491 0-1.956.931-1.956 1.886v2.269h3.328l-.532 3.494h-2.796v8.436C19.612 23.097 24 18.1 24 12.073Z" />
+            </svg>
+            Facebook
+          </button>
+          <!-- X -->
+          <button
+            type="button"
+            @click="shareX"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#9fa3a7] hover:bg-[#eef0f1] text-sm font-medium text-[#4f5b5f] transition-all"
+          >
+            <svg class="w-4 h-4 text-[#1f2933]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" />
+            </svg>
+            X
+          </button>
+        </template>
       </div>
     </div>
   </div>

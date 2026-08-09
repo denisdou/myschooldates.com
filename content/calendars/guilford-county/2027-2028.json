@@ -12,9 +12,9 @@
   "sourcePdfUrl": "https://www.gcsnc.com/fs/resource-manager/view/d1756a7b-1892-40a7-b722-72bb2c46ff45",
   "sourceCalendarName": "GCS 2027–28 Traditional School Calendar",
   "sourceVersion": "Last revised January 13, 2026",
-  "lastVerifiedAt": "2026-08-08",
+  "lastVerifiedAt": "2026-08-09",
   "datePublished": "2026-07-14",
-  "dateModified": "2026-08-08",
+  "dateModified": "2026-08-09",
   "calendarType": "traditional",
   "allDatesMode": "all",
   "itemListMode": "allImportantDates",
@@ -26,14 +26,14 @@
   "webPageMainEntity": "dataset",
   "splitCalendarDateItemListSchema": true,
   "seoTitle": "Guilford County Schools Calendar 2027–28: Dates, Breaks & PDF",
-  "seoDescription": "Guilford County Schools 2027–28 traditional calendar with first and last days, teacher workdays, holidays, breaks, official PDF, and ICS download.",
+  "seoDescription": "Guilford County Schools 2027–28 calendar: first day Aug. 23, Spring Break Apr. 10–14, last day June 8, teacher workdays, official PDF, and .ics download.",
   "schemaCalendarName": "Guilford County Schools Traditional School Calendar 2027–28",
   "schemaDatasetName": "GCS 2027–28 Traditional School Calendar Dataset",
-  "schemaDatasetDescription": "Reviewed dates from the GCS 2027–28 Traditional School Calendar, including the first and last days of school, holidays, breaks, and seven optional or mandatory teacher workdays when students do not attend.",
+  "schemaDatasetDescription": "Reviewed dates from the GCS 2027–28 Traditional School Calendar, including the first and last days, holidays, breaks, seven teacher workdays when students do not attend, and four quarter or semester ending dates.",
   "schemaKeyDateItemListName": "GCS 2027–28 key dates at a glance",
   "schemaCalendarDateItemListName": "GCS 2027–28 student calendar dates",
   "schemaCalendarDownloadName": "MySchoolDates GCS 2027–28 calendar file",
-  "schemaCalendarDownloadDescription": "MySchoolDates-generated calendar import file based on reviewed dates that affect students and families in the official GCS 2027–28 Traditional School Calendar.",
+  "schemaCalendarDownloadDescription": "One-time calendar import with selected student and family dates from the official GCS 2027–28 Traditional School Calendar. It is not a live subscription and will not reflect later revisions automatically.",
   "hideSemesterCount": true,
   "hideSecondSemesterStartSummary": true,
   "hideInstructionalDaysSummary": true,
@@ -42,11 +42,13 @@
   "hideHeroUpdatedField": true,
   "hideHeroVerificationProcess": true,
   "hideHeroVerificationIcs": true,
+  "hideHeroDownloadLink": true,
   "hideAlternateCalendarsNotice": true,
   "compactDownloadModule": true,
   "hideCompatibleCalendars": true,
   "relatedDistrictsSameYearOnly": true,
   "hideRelatedDistrictDescriptions": true,
+  "preserveJumpNavigationOrder": true,
   "hiddenSections": [
     "downloadCta",
     "todayStatus",
@@ -61,10 +63,25 @@
     "nationalTrends",
     "comparison"
   ],
+  "nonCurrentYearNotice": "You're viewing the upcoming 2027–28 calendar. The official GCS calendar was last revised January 13, 2026, so check for later revisions before making long-term plans.",
   "heroSourceLine": "GCS Traditional School Calendar · Last revised January 13, 2026",
-  "heroSummary": "Guilford County Schools' traditional 2027–28 school year begins Monday, August 23, 2027, and ends Thursday, June 8, 2028. Spring Break runs April 10–14, 2028. This page covers the GCS Traditional Calendar; extended-year and early/middle college programs use separate calendars.",
-  "calendarNotes": "This page covers the GCS 2027–28 Traditional School Calendar. GCS publishes separate calendars for extended-year schools and early/middle college programs.",
-  "verificationBadgeText": "Checked August 8, 2026, against the GCS Traditional School Calendar last revised January 13, 2026.",
+  "heroSummary": "For students on the GCS Traditional School Calendar, school starts Monday, August 23, 2027, and ends Thursday, June 8, 2028. Spring Break is April 10–14, 2028. Some extended-year and early/middle college programs follow separate calendars.",
+  "calendarNotes": "Most GCS schools follow the Traditional Calendar, but extended-year schools and several early/middle college programs use separate calendars.",
+  "heroCtas": [
+    {
+      "label": "Official PDF",
+      "href": "__sourcePdfUrl",
+      "variant": "primary"
+    },
+    {
+      "label": "Add to Calendar (.ics)",
+      "href": "__icsUrl",
+      "variant": "secondary",
+      "download": true,
+      "filename": "__icsFilename"
+    }
+  ],
+  "verificationBadgeText": "Last checked August 9, 2026, against the official GCS 2027–28 Traditional School Calendar.",
   "keyDatesSummaryTitle": "Key Dates at a Glance",
   "keyDatesSummarySubtitle": "First day, major breaks, and last day of school",
   "keyDateSummaryItems": [
@@ -73,7 +90,7 @@
       "name": "First Day of School",
       "date": "2027-08-23",
       "type": "school_start",
-      "schemaDescription": "The first day of classes on the GCS 2027–28 Traditional School Calendar."
+      "schemaDescription": "The first day of school is August 23, 2027."
     },
     {
       "label": "Break",
@@ -81,7 +98,7 @@
       "date": "2027-11-24",
       "endDate": "2027-11-27",
       "type": "break_start",
-      "schemaDescription": "Thanksgiving Break on the GCS 2027–28 Traditional School Calendar."
+      "schemaDescription": "Thanksgiving Break runs November 24–27, 2027."
     },
     {
       "label": "Break",
@@ -89,7 +106,7 @@
       "date": "2027-12-20",
       "endDate": "2027-12-31",
       "type": "break_start",
-      "schemaDescription": "Winter Break on the GCS 2027–28 Traditional School Calendar."
+      "schemaDescription": "Winter Break runs December 20–31, 2027."
     },
     {
       "label": "Break",
@@ -97,28 +114,30 @@
       "date": "2028-04-10",
       "endDate": "2028-04-14",
       "type": "break_start",
-      "schemaDescription": "Spring Break on the GCS 2027–28 Traditional School Calendar."
+      "schemaDescription": "Spring Break runs April 10–14, 2028."
     },
     {
       "label": "Last Day",
       "name": "Last Day of School",
       "date": "2028-06-08",
       "type": "school_end",
-      "schemaDescription": "The last day of classes on the GCS 2027–28 Traditional School Calendar."
+      "schemaDescription": "The last day of school is June 8, 2028."
     }
   ],
   "jumpNavigation": [
     { "label": "Calendar Scope", "id": "gcs-2027-2028-calendar-scope" },
     { "label": "Key Dates", "id": "key-dates" },
     { "label": "Calendar Dates", "id": "all-dates" },
-    { "label": "Major Breaks", "id": "gcs-2027-2028-major-breaks" },
+    { "label": "Grading Periods", "id": "gcs-2027-2028-grading-periods" },
+    { "label": "Return Dates", "id": "gcs-2027-2028-major-breaks" },
+    { "label": "Revisions & Closings", "id": "gcs-2027-2028-revisions" },
     { "label": "Downloads", "id": "add-to-calendar" },
-    { "label": "Changes", "id": "year-comparison" },
+    { "label": "Year Comparison", "id": "year-comparison" },
     { "label": "FAQ", "id": "faq" },
     { "label": "Sources", "id": "sources" }
   ],
   "allDatesTitle": "GCS 2027–28 Student Calendar Dates",
-  "allDatesCoverageNote": "First and last days, holidays, breaks, and the seven optional or mandatory teacher workdays when students do not attend on the GCS 2027–28 Traditional School Calendar.",
+  "allDatesCoverageNote": "This list includes the first and last days, holidays, breaks, quarter and semester endings, and seven optional or mandatory teacher workdays when students do not attend.",
   "allDatesSourceUrl": "https://www.gcsnc.com/fs/resource-manager/view/d1756a7b-1892-40a7-b722-72bb2c46ff45",
   "allDatesSourceLinks": [
     {
@@ -134,16 +153,24 @@
   "dateLegendLabelOverrides": {
     "Holiday": "No School",
     "No School for Students": "No School",
-    "Staff Day": "No School"
+    "Staff Day": "No School",
+    "Academic": "Grading Period",
+    "End of Semester": "Grading Period"
   },
+  "dateLegendExtraItems": [
+    {
+      "label": "Grading Period",
+      "dot": "bg-slate-400"
+    }
+  ],
   "icsHeading": "Add GCS 2027–28 Dates to Your Calendar",
-  "icsDescription": "Download a MySchoolDates-generated ICS file with the first and last days of school, holidays, breaks, and seven teacher workdays listed on this page.",
-  "icsButtonLabel": "Download Calendar File (.ics)",
-  "icsButtonSupportText": "One-time import. It will not automatically reflect later GCS calendar changes.",
+  "icsDescription": "Download these dates as an .ics file to add them to your calendar.",
+  "icsButtonLabel": "Add to Calendar (.ics)",
+  "icsButtonSupportText": "One-time .ics download. Imported dates will not update automatically if GCS changes the calendar.",
   "icsAriaLabel": "Download the MySchoolDates-generated GCS 2027–28 calendar file",
   "pdfHeading": "Official GCS 2027–28 Traditional School Calendar",
   "pdfButtonLabel": "View Official PDF",
-  "pdfDescription": "Open the GCS Traditional School Calendar with holidays, breaks, optional and mandatory teacher workdays, and quarter-ending dates.",
+  "pdfDescription": "Open the GCS Traditional School Calendar with holidays, breaks, teacher workdays, and grading-period and semester end dates.",
   "pdfVersionLabel": "Last revised January 13, 2026",
   "customSections": [
     {
@@ -151,12 +178,12 @@
       "label": "Does This Calendar Apply to My School?",
       "position": "afterVerification",
       "schemaHasPart": true,
-      "content": "This page covers the GCS Traditional Calendar. GCS also publishes separate calendars for extended-year schools, early/middle colleges, and other designated programs. If your student attends one of those programs, use that program's official calendar instead.",
+      "content": "Most GCS schools follow the Traditional Calendar, but some do not. Extended-year schools and several early/middle college programs use separate calendars. If your student attends one of those programs, use that program's official calendar instead.",
       "groups": [
         {
-          "label": "How to confirm your school's calendar",
+          "label": "Not sure which calendar your school follows?",
           "items": [
-            "Check the GCS calendars page below to confirm which academic calendar your student's school or program follows."
+            "Check GCS's official calendar page before making plans."
           ]
         }
       ],
@@ -180,29 +207,51 @@
       ]
     },
     {
-      "id": "gcs-2027-2028-major-breaks",
-      "label": "Major Breaks and Return Dates",
+      "id": "gcs-2027-2028-grading-periods",
+      "label": "Grading Periods and Semester End Dates",
       "position": "afterAllDates",
       "schemaHasPart": true,
-      "content": "These ranges follow the break labels and adjacent teacher workdays in the GCS Traditional School Calendar.",
-      "groups": [
+      "content": "These dates come directly from the GCS 2027–28 Traditional School Calendar.",
+      "table": {
+        "caption": "GCS 2027–28 grading period and semester ending dates",
+        "columns": ["Academic period", "Ends"],
+        "rows": [
+          ["Quarter 1", "Thursday, October 28, 2027"],
+          ["Quarter 2 / Semester 1", "Friday, January 21, 2028"],
+          ["Quarter 3", "Tuesday, March 28, 2028"],
+          ["Quarter 4 / Semester 2", "Thursday, June 8, 2028"]
+        ]
+      }
+    },
+    {
+      "id": "gcs-2027-2028-major-breaks",
+      "label": "School Breaks and Return Dates",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "Each break below includes the official break dates and the day students return to school. Return dates account for teacher workdays immediately after a break.",
+      "table": {
+        "caption": "GCS 2027–28 breaks and student return dates",
+        "columns": ["Break", "Break dates", "Students return"],
+        "rows": [
+          ["Thanksgiving Break", "November 24–27, 2027", "Monday, November 29"],
+          ["Winter Break", "December 20–31, 2027", "Tuesday, January 4"],
+          ["Spring Break", "April 10–14, 2028", "Monday, April 17"]
+        ],
+        "footnote": "Monday, January 3 is a separate optional teacher workday; students return January 4."
+      }
+    },
+    {
+      "id": "gcs-2027-2028-revisions",
+      "label": "Calendar Revisions and Weather Closings",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "Weather or emergency conditions may change the school schedule. Because 2027–28 is an upcoming school year, check the official GCS calendar and district alerts for revisions before relying on previously downloaded dates.",
+      "linksDisplay": "inline",
+      "linksLabel": "Official guidance:",
+      "links": [
         {
-          "label": "Thanksgiving Break",
-          "items": [
-            "Thanksgiving Break runs November 24–27, 2027. Students return Monday, November 29."
-          ]
-        },
-        {
-          "label": "Winter Break",
-          "items": [
-            "Winter Break runs December 20–31, 2027. January 3 is an optional teacher workday, so students return Tuesday, January 4, 2028."
-          ]
-        },
-        {
-          "label": "Spring Break",
-          "items": [
-            "Spring Break runs Monday, April 10 through Friday, April 14, 2028. Students return Monday, April 17."
-          ]
+          "label": "GCS Inclement Weather and Emergency Closings",
+          "url": "https://www.gcsnc.com/all-events/inclement-weather-and-emergency-closings"
         }
       ]
     }
@@ -214,39 +263,29 @@
       "Spring Break moves later, from March 22–26 in 2026–27 to April 10–14 in 2027–28."
     ]
   },
-  "faqDisplayLimit": 6,
+  "faqDisplayLimit": 4,
   "faqDisplayQuestions": [
-    "When does GCS start school in 2027–28?",
-    "When is the last day of school for GCS?",
-    "When is GCS Spring Break in 2028?",
-    "When is GCS Winter Break, and when do students return?",
+    "Does every GCS school follow the Traditional Calendar?",
     "Which GCS teacher workdays are no-school days for students?",
-    "Does every GCS school follow the Traditional Calendar?"
+    "Is January 3 part of GCS Winter Break?",
+    "Will the downloaded 2027–28 calendar update if GCS revises the schedule?"
   ],
   "calendarFaqs": [
     {
-      "q": "When does GCS start school in 2027–28?",
-      "a": "Students begin classes on Monday, August 23, 2027, on the GCS 2027–28 Traditional School Calendar."
-    },
-    {
-      "q": "When is the last day of school for GCS?",
-      "a": "The last day on the GCS 2027–28 Traditional School Calendar is Thursday, June 8, 2028."
-    },
-    {
-      "q": "When is GCS Spring Break in 2028?",
-      "a": "GCS Spring Break runs Monday, April 10 through Friday, April 14, 2028. Students return Monday, April 17."
-    },
-    {
-      "q": "When is GCS Winter Break, and when do students return?",
-      "a": "Winter Break runs December 20–31, 2027. January 3 is an optional teacher workday, so students return Tuesday, January 4, 2028."
+      "q": "Does every GCS school follow the Traditional Calendar?",
+      "a": "No. Most GCS schools use the Traditional Calendar, but extended-year schools and some early/middle college programs follow separate academic calendars. Confirm the calendar assigned to your student's school or program."
     },
     {
       "q": "Which GCS teacher workdays are no-school days for students?",
-      "a": "The Traditional School Calendar lists optional teacher workdays on October 11, November 5, and January 3, plus mandatory teacher workdays on October 29, January 24, March 7, and March 31. Students do not attend on these seven dates."
+      "a": "Students do not attend on optional teacher workdays October 11, November 5, and January 3, or mandatory teacher workdays October 29, January 24, March 7, and March 31."
     },
     {
-      "q": "Does every GCS school follow the Traditional Calendar?",
-      "a": "No. This page covers the GCS Traditional Calendar. Extended-year schools and some early/middle college programs use separate academic calendars, so confirm the calendar assigned to your student's school or program."
+      "q": "Is January 3 part of GCS Winter Break?",
+      "a": "No. The official Winter Break ends December 31. Monday, January 3 is a separate optional teacher workday, and students return Tuesday, January 4."
+    },
+    {
+      "q": "Will the downloaded 2027–28 calendar update if GCS revises the schedule?",
+      "a": "No. The .ics file is a one-time import, not a live subscription. Check the official GCS calendar for later revisions."
     }
   ],
   "events": [
@@ -254,7 +293,7 @@
       "date": "2027-08-23",
       "name": "First Day of School",
       "type": "school_start",
-      "schemaDescription": "The first day of classes on the GCS 2027–28 Traditional School Calendar."
+      "schemaDescription": "The first day of school is August 23, 2027."
     },
     {
       "date": "2027-09-06",
@@ -268,6 +307,14 @@
       "type": "teacher_workday",
       "badgeLabel": "No School",
       "description": "Students do not attend."
+    },
+    {
+      "date": "2027-10-28",
+      "name": "End of Quarter 1",
+      "type": "academic",
+      "badgeLabel": "Quarter Ends",
+      "description": "The official Traditional School Calendar marks the end of the first grading period.",
+      "hideFromCalendarExport": true
     },
     {
       "date": "2027-10-29",
@@ -317,6 +364,13 @@
       "description": "Schools are closed."
     },
     {
+      "date": "2028-01-21",
+      "name": "End of Quarter 2 / Semester 1",
+      "type": "semester_end",
+      "badgeLabel": "Semester Ends",
+      "hideFromCalendarExport": true
+    },
+    {
       "date": "2028-01-24",
       "name": "Mandatory Teacher Workday",
       "type": "teacher_workday",
@@ -329,6 +383,14 @@
       "type": "teacher_workday",
       "badgeLabel": "No School",
       "description": "Students do not attend."
+    },
+    {
+      "date": "2028-03-28",
+      "name": "End of Quarter 3",
+      "type": "academic",
+      "badgeLabel": "Quarter Ends",
+      "description": "The official Traditional School Calendar marks the end of the third grading period.",
+      "hideFromCalendarExport": true
     },
     {
       "date": "2028-03-31",
@@ -354,15 +416,20 @@
       "date": "2028-06-08",
       "name": "Last Day of School",
       "type": "school_end",
-      "schemaDescription": "The last day of classes on the GCS 2027–28 Traditional School Calendar."
+      "badgeLabel": "Last Day",
+      "description": "Quarter 4 and Semester 2 also end on this date.",
+      "schemaDescription": "The last day of school and the end of Quarter 4 and Semester 2 is June 8, 2028."
     }
   ],
   "sourceMaintainerText": "MySchoolDates education research team",
-  "sourceReviewSummary": "Reviewed August 8, 2026, against the GCS Traditional School Calendar last revised January 13, 2026.",
+  "sourceReviewSummary": "Last checked August 9, 2026, against the GCS Traditional School Calendar last revised January 13, 2026.",
   "sourceReviewDetails": [
-    "Confirmed the first and last days of school, holidays, break dates, and all seven optional or mandatory teacher workdays against the official GCS PDF. Student return dates are derived from the published break and teacher-workday schedule."
+    "Confirmed the first and last days, holidays, break dates, four grading-period endings, and all seven optional or mandatory teacher workdays against the official GCS PDF.",
+    "Return dates use the next student attendance day after each published break and account for the separate January 3 optional teacher workday.",
+    "The official file is a future-year calendar last revised January 13, 2026. Check the GCS calendar page for later revisions before making long-term plans.",
+    "The .ics file is a one-time import, not a live subscription. Previously imported dates do not update automatically."
   ],
-  "sourceNextReviewText": "Next review: after GCS publishes a calendar revision.",
+  "sourceNextReviewText": "We review this page after GCS publishes a 2027–28 calendar revision or announces a weather-related calendar change.",
   "sources": [
     {
       "label": "GCS 2027–28 Traditional School Calendar PDF",
@@ -371,6 +438,10 @@
     {
       "label": "GCS calendars and events page",
       "url": "https://www.gcsnc.com/all-events"
+    },
+    {
+      "label": "GCS inclement weather and emergency closings",
+      "url": "https://www.gcsnc.com/all-events/inclement-weather-and-emergency-closings"
     },
     {
       "label": "GCS 2026–27 Traditional Academic Calendar PDF — used for year-over-year comparison",

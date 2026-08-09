@@ -1,0 +1,270 @@
+{
+  "institutionId": "alpine-school-district",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025–26",
+  "pageHeading": "Alpine School District Calendar 2025–26",
+  "firstDay": "2025-08-13",
+  "lastDay": "2026-05-22",
+  "semesters": 2,
+  "temporalCoverageStart": "2025-08-08",
+  "temporalCoverageEnd": "2026-05-22",
+  "sourceUrl": "https://www.alpineschools.org/page/district-calendars",
+  "sourceCalendarName": "Alpine School District 2025–26 Calendar (archived official PDF reviewed locally)",
+  "sourceVersion": "Board approved April 23, 2024 · Updated February 18, 2025",
+  "lastVerifiedAt": "2026-08-09",
+  "dateCreated": "2026-08-09",
+  "datePublished": "2026-08-09",
+  "dateModified": "2026-08-09",
+  "calendarType": "A/B day calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "keyDates",
+  "schemaReviewedBy": "author",
+  "schemaCalendarName": "Alpine School District Calendar 2025–26",
+  "schemaDatasetName": "Alpine School District 2025–26 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Alpine School District 2025–26 dates from an archived official calendar, including the main opening, kindergarten assessment window and first day, A/B calendar context, student-free staff days, Minimal Days, breaks, term endings, the high-school ACT date, the PreK last day, and the final student day.",
+  "schemaSpatialCoverage": [],
+  "schemaCalendarDownloadName": "MySchoolDates Alpine School District 2025–26 calendar file",
+  "schemaCalendarDownloadDescription": "One-time calendar import with selected Alpine School District openings, student-free days, breaks, Minimal Days, term endings, and last days. Daily A/B labels are not included.",
+  "seoTitle": "Alpine School District Calendar 2025–26: A/B Days",
+  "seoDescription": "See Alpine School District’s 2025–26 calendar with A/B days, kindergarten assessment dates, breaks, Minimal Days, PreK’s last day, and final school day.",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideRelatedDistrictDescriptions": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "comparison"
+  ],
+  "heroSourceLine": "Source: archived Alpine School District 2025–26 Calendar · Updated February 18, 2025",
+  "heroSummary": "Alpine School District students began Wednesday, August 13, 2025. Kindergarten assessment days ran August 13–18, followed by the first regular kindergarten day on August 19. PreK ended May 21, and the final districtwide student day was Friday, May 22, 2026, a Minimal Day. The archived calendar labels each instructional date as an A or B day.",
+  "calendarNotes": "Most Alpine School District students began August 13, while kindergarten used an August 13–18 assessment window before regular attendance began August 19. The archived calendar assigns an A or B label to instructional dates, with March 11 marked for the high-school ACT. Fall Break ended October 17, but students remained out October 20 for teacher professional development. Thanksgiving combined a teacher comp day on November 26 with the November 27–28 break. December 19 and May 22 were Minimal Days, and PreK did not attend either date. Winter Break ended January 2, followed by a staff workday January 5 before students returned January 6. PreK’s last day was May 21, one day before the districtwide last day.",
+  "heroFactChips": [
+    "First day: Aug 13",
+    "Kindergarten: Aug 19",
+    "PreK last day: May 21",
+    "Last day: May 22"
+  ],
+  "verificationBadgeText": "Dates checked August 9, 2026, against a visually rendered copy of ASD’s official archived 2025–26 calendar.",
+  "keyDatesSummaryTitle": "Alpine School District 2025–26 Key Dates",
+  "keyDatesSummarySubtitle": "The main opening, kindergarten schedule, major breaks, Minimal Days, and last days",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "School Begins",
+      "date": "2025-08-13",
+      "type": "school_start",
+      "schemaDescription": "The first day for most Alpine School District students was August 13, 2025."
+    },
+    {
+      "label": "Kindergarten",
+      "name": "Kindergarten Assessment Days",
+      "date": "2025-08-13",
+      "dates": ["2025-08-13", "2025-08-14", "2025-08-15", "2025-08-18"],
+      "dateDisplayMode": "list",
+      "dateJoiner": "and",
+      "type": "academic",
+      "description": "Families followed the assessment schedule assigned by their school.",
+      "schemaDescription": "Alpine School District scheduled kindergarten assessment days on August 13–15 and August 18, 2025."
+    },
+    {
+      "label": "Kindergarten",
+      "name": "First Day of Kindergarten",
+      "date": "2025-08-19",
+      "type": "school_start",
+      "schemaDescription": "Kindergarten began regular school August 19, 2025."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2025-12-22",
+      "endDate": "2026-01-02",
+      "type": "break_start",
+      "schemaDescription": "ASD Winter Break ran December 22, 2025, through January 2, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2026-04-06",
+      "endDate": "2026-04-10",
+      "type": "break_start",
+      "schemaDescription": "ASD Spring Break ran April 6–10, 2026."
+    },
+    {
+      "label": "PreK",
+      "name": "Last Day of PreK",
+      "date": "2026-05-21",
+      "type": "school_end",
+      "schemaDescription": "The last day for Alpine School District PreK was May 21, 2026."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day / Minimal Day",
+      "date": "2026-05-22",
+      "type": "school_end",
+      "description": "Minimal Day; PreK did not attend.",
+      "schemaDescription": "The final districtwide student day was May 22, 2026; it was a Minimal Day and PreK did not attend."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Kindergarten Opening", "id": "asd-2025-2026-kindergarten-opening" },
+    { "label": "A/B Days", "id": "asd-2025-2026-ab-days" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" }
+  ],
+  "allDatesTitle": "Alpine School District 2025–26 Calendar Dates",
+  "allDatesCoverageNote": "This archived list covers student-facing dates and staff days that changed attendance. A/B letters are not repeated as separate events; the archived PDF printed the applicable letter inside each instructional date.",
+  "allDatesSourceUrl": "https://www.alpineschools.org/page/district-calendars",
+  "allDatesSourceLinks": [
+    { "label": "ASD District Calendars page", "url": "https://www.alpineschools.org/page/district-calendars" }
+  ],
+  "allDatesSourceLabel": "Source: archived Alpine School District calendar",
+  "dateLegendLabelOverrides": {
+    "Early Release": "Minimal Day",
+    "Teacher Workday": "No School — Staff Day",
+    "Academic": "Academic / A-B Schedule Date"
+  },
+  "dateLegendExtraItems": [
+    { "label": "End of Term", "dot": "bg-indigo-500" },
+    { "label": "Kindergarten or PreK Date", "dot": "bg-pink-500" }
+  ],
+  "icsHeading": "Add Alpine 2025–26 Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file with openings, student-free staff days, breaks, Minimal Days, term endings, and last days from the archived calendar.",
+  "icsButtonLabel": "Download MySchoolDates Calendar (.ics)",
+  "icsButtonSupportText": "One-time import for an archived school year. Daily A/B letters are not included.",
+  "icsAriaLabel": "Download the Alpine School District 2025–26 calendar file",
+  "customSections": [
+    {
+      "id": "asd-2025-2026-kindergarten-opening",
+      "label": "How the Kindergarten Opening Worked",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "Most students began August 13. Kindergarten used August 13–18 for assessments before regular attendance began August 19. The official calendar did not publish a PreK first day, so this archived page does not infer one.",
+      "table": {
+        "caption": "Alpine School District 2025–26 opening sequence",
+        "columns": ["Date", "Students", "What families should know"],
+        "rows": [
+          ["August 13", "Most district students", "First day of school; the PDF marks it as an A day."],
+          ["August 13–15 and 18", "Kindergarten", "Assessment window; families followed the schedule assigned by their school."],
+          ["August 19", "Kindergarten", "First regular kindergarten day; the PDF marks it as an A day."]
+        ]
+      }
+    },
+    {
+      "id": "asd-2025-2026-ab-days",
+      "label": "How to Read the Archived A/B Calendar",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "The archived official PDF labels instructional dates A or B. The letters identify the school-day rotation; they do not mean school was closed or shortened. Use the student’s school schedule to determine which classes or periods met. ASD’s current live A/B Calendar is not presented here as an archived 2025–26 source."
+    },
+    {
+      "id": "asd-2025-2026-minimal-days",
+      "label": "Minimal Days and Separate PreK Ending",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "December 19 and May 22 were Minimal Days, and PreK did not attend. PreK’s last day was Thursday, May 21; the districtwide last day followed Friday, May 22. The archived PDF did not print school-level dismissal times."
+    }
+  ],
+  "events": [
+    { "date": "2025-08-08", "name": "Teacher Contract Day", "type": "teacher_workday", "description": "Pre-year staff date; students did not attend.", "hideFromCalendarExport": true },
+    { "date": "2025-08-11", "name": "Teacher Professional Development", "type": "teacher_professional_learning", "description": "Pre-year staff date; students did not attend.", "hideFromCalendarExport": true },
+    { "date": "2025-08-12", "name": "Teacher Contract Day", "type": "teacher_workday", "description": "Pre-year staff date; students did not attend.", "hideFromCalendarExport": true },
+    { "date": "2025-08-13", "name": "First Day of School", "type": "school_start", "description": "First day for most students; the PDF marks it as an A day." },
+    { "date": "2025-08-13", "dates": ["2025-08-13", "2025-08-14", "2025-08-15", "2025-08-18"], "displayDate": "August 13–15 and 18, 2025", "name": "Kindergarten Assessment Days", "type": "academic", "badgeLabel": "Kindergarten", "description": "Families followed the assessment schedule assigned by their school; this was not a four-day regular-attendance range.", "hideFromCalendarExport": true },
+    { "date": "2025-08-19", "name": "First Day of Kindergarten", "type": "school_start", "badgeLabel": "Kindergarten" },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday", "description": "No school." },
+    { "date": "2025-09-29", "name": "Teacher / Contracted Employee Workday — No School", "type": "teacher_workday" },
+    { "date": "2025-10-15", "name": "First Term Ends", "type": "quarter_end", "description": "Regular student day unless the school communicated otherwise.", "hideFromCalendarExport": true },
+    { "date": "2025-10-16", "endDate": "2025-10-17", "displayDate": "October 16–17, 2025", "name": "Fall Break", "type": "break_start" },
+    { "date": "2025-10-20", "name": "Teacher Professional Development — No School", "type": "teacher_professional_learning", "description": "Students remained out after Fall Break." },
+    { "date": "2025-10-21", "name": "School Resumes After Fall Break", "type": "school_resume" },
+    { "date": "2025-11-26", "endDate": "2025-11-28", "displayDate": "November 26–28, 2025", "name": "Thanksgiving No-School Period", "type": "break_start", "description": "November 26 was a PTC Teacher Comp Day; November 27–28 were Thanksgiving Break. Students returned December 1." },
+    { "date": "2025-12-01", "name": "School Resumes After Thanksgiving", "type": "school_resume" },
+    { "date": "2025-12-19", "name": "Minimal Day / Second Term Ends", "type": "early_dismissal", "badgeLabel": "Minimal Day", "description": "PreK did not attend. Families confirmed dismissal times with their school." },
+    { "date": "2025-12-22", "endDate": "2026-01-02", "displayDate": "December 22, 2025–January 2, 2026", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-01-05", "name": "Teacher / Contracted Employee Workday — No School", "type": "teacher_workday", "description": "Students returned January 6." },
+    { "date": "2026-01-06", "name": "School Resumes After Winter Break", "type": "school_resume" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday", "description": "No school." },
+    { "date": "2026-02-06", "name": "Teacher / Contracted Employee Workday — No School", "type": "teacher_workday" },
+    { "date": "2026-02-16", "name": "Presidents Day", "type": "holiday", "description": "No school." },
+    { "date": "2026-03-06", "name": "Third Term Ends", "type": "quarter_end", "description": "Regular student day unless the school communicated otherwise.", "hideFromCalendarExport": true },
+    { "date": "2026-03-09", "name": "Teacher Professional Development — No School", "type": "teacher_professional_learning" },
+    { "date": "2026-03-11", "name": "High School ACT Test", "type": "academic", "badgeLabel": "High School", "description": "The archived district calendar marks this as an instructional date, not a districtwide closure.", "hideFromCalendarExport": true },
+    { "date": "2026-03-23", "name": "Teacher / Contracted Employee Workday — No School", "type": "teacher_workday" },
+    { "date": "2026-04-06", "endDate": "2026-04-10", "displayDate": "April 6–10, 2026", "name": "Spring Break", "type": "break_start", "description": "April 6 was also marked as a PTC Teacher Comp Day." },
+    { "date": "2026-04-13", "name": "School Resumes After Spring Break", "type": "school_resume" },
+    { "date": "2026-05-21", "name": "Last Day of PreK", "type": "school_end", "badgeLabel": "PreK" },
+    { "date": "2026-05-22", "name": "Last Day / Minimal Day / Fourth Term Ends", "type": "school_end", "badgeLabel": "Last Day", "description": "PreK did not attend. Families confirmed the Minimal Day dismissal time with their school." }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When did Alpine School District start in 2025?",
+      "a": "Most students started Wednesday, August 13, 2025. Kindergarten assessment days ran August 13–18, and the first regular kindergarten day was Tuesday, August 19."
+    },
+    {
+      "q": "What were A and B days in Alpine School District?",
+      "a": "A and B identified Alpine’s alternating school-day rotation. The archived official PDF printed the applicable letter inside each instructional date."
+    },
+    {
+      "q": "When was Alpine School District Fall Break in 2025?",
+      "a": "Fall Break was October 16–17, 2025. Students also had no school Monday, October 20 for teacher professional development and returned Tuesday, October 21."
+    },
+    {
+      "q": "When was Alpine School District Winter Break in 2025–26?",
+      "a": "Winter Break ran December 22, 2025, through January 2, 2026. Students remained out January 5 for a staff workday and returned Tuesday, January 6."
+    },
+    {
+      "q": "When was Alpine School District Spring Break in 2026?",
+      "a": "Spring Break ran Monday, April 6, through Friday, April 10, 2026. April 6 was also a PTC Teacher Comp Day. Students returned Monday, April 13."
+    },
+    {
+      "q": "When was the last day of school for Alpine in 2026?",
+      "a": "PreK’s last day was Thursday, May 21, 2026. The final districtwide student day was Friday, May 22, a Minimal Day when PreK did not attend."
+    },
+    {
+      "q": "Does the downloadable Alpine calendar update automatically?",
+      "a": "No. The MySchoolDates ICS file is a one-time import for an archived school year and does not include daily A/B labels."
+    }
+  ],
+  "faqDisplayLimit": 7,
+  "sourceReviewSummary": "Reviewed August 9, 2026, against a visually rendered copy of Alpine School District’s complete archived 2025–26 Calendar, board approved April 23, 2024 and updated February 18, 2025.",
+  "sourceReviewDetailsTitle": "How we verified the archived Alpine calendar",
+  "sourceReviewDetails": [
+    "The one-page archived PDF is titled Alpine School District 2025–2026 Calendar, is board approved April 23, 2024, and is marked updated February 18, 2025.",
+    "The PDF was rendered and checked visually because its color legend, A/B letters, Minimal Day corners, term endings, and overlapping staff/break labels carry information that text extraction alone does not preserve.",
+    "The district’s current calendar page does not provide a stable public 2025–26 PDF URL. This page therefore records the reviewed archived source without presenting a fabricated or unverified PDF download.",
+    "Kindergarten assessment days are presented as an assigned planning window, not as four ordinary full-attendance days.",
+    "The archived calendar lists a kindergarten first day but does not publish a PreK opening date. No PreK first day is inferred.",
+    "The .ics file is a one-time import for an archived school year and omits daily A/B labels."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using an archived official Alpine School District calendar.",
+  "sourceNextReviewText": "Archived school year; review again if ASD restores a stable official 2025–26 PDF link or corrects the archived record.",
+  "sources": [
+    { "label": "Alpine School District calendar page", "url": "https://www.alpineschools.org/page/district-calendars" },
+    { "label": "Archived ASD 2025–26 Calendar — board approved April 23, 2024; updated February 18, 2025; reviewed locally because no stable official PDF URL is currently published" }
+  ]
+}

@@ -6,36 +6,51 @@
   "state": "Virginia",
   "stateCode": "VA",
   "city": "Virginia Beach",
+  "localityType": "independent city",
   "country": "US",
   "type": "public_district",
-  "grades": [
-    "PK",
-    "K",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12"
-  ],
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
   "officialWebsite": "https://www.vbschools.com",
   "calendarPage": "https://www.vbschools.com/about/vbcps-calendar",
   "logo": "https://myschooldates.com/logos/virginia-beach-city.png",
   "timezone": "America/New_York",
-  "county": "Virginia Beach",
   "region": "Hampton Roads",
   "metro": "Virginia Beach-Norfolk-Newport News",
   "currentSchoolYear": "2026-2027",
-  "studentCount": 68000,
-  "schoolCount": 86,
-  "founded": 1963,
   "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "VBCPS Calendar",
+  "depthMode": "enhanced",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-09",
+    "coverageNote": "Coverage uses the official VBCPS live calendar, the revised 2026-2027 year-at-a-glance PDF, the School Board calendar policy, and the official Military Families page."
+  },
+  "contentFreshnessScore": {
+    "overall": 98,
+    "lastManualReview": "2026-08-09",
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 45,
+    "refreshRule": "Re-check when VBCPS revises the annual PDF, activates a designated make-up date, changes a grading period, or publishes a newer school year."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official VBCPS calendar revision, make-up-day announcement, or future-year publication."
+  },
   "searchAliases": [
     "VBCPS",
     "VB Schools",
@@ -45,114 +60,77 @@
     "Virginia Beach school calendar",
     "VBCPS calendar"
   ],
-  "districtFact": "Virginia Beach City Public Schools is the largest school division in Hampton Roads and one of the most military-connected school systems in the United States — with three major installations within or adjacent to city limits, VBCPS enrolls hundreds of PCS transfer students mid-year and maintains a dedicated Military Family Liaison for expedited placement. Unlike most Virginia school divisions, VBCPS organizes its academic year into four quarters rather than traditional semesters.",
+  "districtFact": "VBCPS publishes a 180-day calendar with four grading periods. Its 2026-2027 PDF separately identifies districtwide adjusted dismissal on the last student day, high-school adjusted-dismissal dates, and designated make-up dates that are used only if the superintendent activates them after a closure.",
   "about": [
     {
-      "title": "About Virginia Beach City Public Schools",
-      "content": "Virginia Beach City Public Schools (VBCPS) serves approximately 68,000 students across 86 schools and operates on a traditional calendar organized into four academic quarters rather than semesters. Families searching for the VBCPS school calendar should note that quarter-end dates — October 30, January 22, April 8, and June 11 in 2026–2027 — typically include early-release dismissal for parent-teacher conferences or professional development. The 2026–2027 school year begins August 24, 2026 and concludes June 11, 2027, in Virginia Beach, Virginia's most populous city. VBCPS observes Veterans Day (November 11) as a full school holiday, reflecting Virginia Beach's position as one of the most military-concentrated cities in the country."
+      "title": "How to Read the VBCPS Calendar",
+      "content": "The year-at-a-glance PDF distinguishes school holidays, student-free staff days, adjusted-dismissal dates, grading periods, and designated make-up dates. The four grading periods end October 30, January 22, April 8, and June 11 in 2026-2027; only June 11 is identified as a districtwide adjusted-dismissal day."
     },
     {
-      "title": "Military Families and Mid-Year Transfers",
-      "content": "Virginia Beach is home to three major military installations: NAS Oceana, JEB Little Creek-Fort Story, and — in adjacent Norfolk — Naval Station Norfolk. Together these make VBCPS one of the most experienced school systems in the country for mid-year PCS transfers. The district maintains a dedicated Military Family Liaison, and military families who contact the office before their PCS move date are generally able to complete school placement within a few business days. VBCPS is experienced working with families whose official transcripts are in transit — unofficial records are typically accepted on a provisional basis while permanent records follow."
+      "title": "Support for Military-Connected Students",
+      "content": "VBCPS says approximately 25 percent of its students are active-duty military dependents. The division employs two full-time military school counselors who support academic transitions, deployments, military power-of-attorney questions, and post-secondary planning."
     }
   ],
   "planningTips": {
+    "title": "What VBCPS Families Should Confirm",
     "content": [
-      "Military families at NAS Oceana, Naval Station Norfolk, or JEB Little Creek: contact VBCPS Military Family Liaison before your PCS arrival date for expedited enrollment. Families who reach out in advance are generally able to complete placement within a few business days; unofficial records are typically accepted on a provisional basis while official transcripts are in transit.",
-      "VBCPS Spring Break (Mar 29–Apr 2) coincides with peak resort season on the Virginia Beach oceanfront. Expect heavy traffic and significantly elevated hotel rates near the resort strip. Sandbridge and Chic's Beach are less crowded alternatives if you're staying local.",
-      "VBCPS operates on a four-quarter system with early-release dismissal on quarter-end days (Oct 30, Jan 22, Apr 8, Jun 11 in 2026–2027). Check quarterly schedules when planning after-school pickups or childcare for those specific days.",
-      "Neighboring Hampton Roads divisions — Norfolk, Chesapeake, Newport News — have independent calendars that may differ from VBCPS by one to several days. Verify each city's calendar separately if coordinating childcare or family schedules across divisions.",
-      "Schools near NAS Oceana (Oceana, Birdneck Road, and Princess Anne corridors) experience regular low-altitude jet flyovers during weekday training hours. Outdoor activities and recess near the base are occasionally adjusted for aircraft noise.",
-      "Atlantic hurricane season runs August through October — Virginia Beach's oceanfront location makes school closures for storm preparation more common here than in inland Virginia districts. VBCPS builds emergency makeup days into its calendar; if all buffer days are used, the school year may be extended."
+      "Use the full December 21-January 1 Winter Break range when planning childcare; students return Monday, January 4, 2027.",
+      "Treat November 2, January 25, and April 9 as student-free staff days unless VBCPS announces that one will be used as a make-up day.",
+      "Check the live VBCPS calendar and official messages after weather or emergency closures because the superintendent determines make-up days."
     ]
   },
-  "districtFaqs": [
-    {
-      "q": "Does Virginia Beach City Public Schools support military families?",
-      "a": "Yes. Virginia Beach is home to Naval Station Norfolk, NAS Oceana, and Joint Expeditionary Base Little Creek-Fort Story — among the largest military concentrations of any U.S. city. VBCPS is highly experienced with mid-year PCS transfers and maintains a Military Family Liaison to assist with expedited enrollment, records transfers, and school placement. The district typically accepts unofficial records while official transcripts are in transit. Military families should contact the liaison before their move date to begin the process in advance."
-    },
-    {
-      "q": "Is Virginia Beach City Public Schools the same as Norfolk schools?",
-      "a": "No. Virginia Beach City Public Schools and Norfolk City Public Schools are separate, independent school divisions serving two different cities in the Hampton Roads metro area. They have their own school boards, calendars, and school boundaries. Despite sharing a metropolitan area, their holiday and break dates may differ. Always check each division's official calendar."
-    },
-    {
-      "q": "What is the four-quarter system used by VBCPS?",
-      "a": "Virginia Beach City Public Schools organizes its academic year into four quarters rather than two traditional semesters. Quarter-end dates vary by school year and are published in the official VBCPS academic calendar at vbschools.com. Each quarter end typically includes an early-release day for parent conferences or professional development — check the current-year calendar for exact quarter-end and early-release dates."
-    },
-    {
-      "q": "Is Veterans Day a school holiday in Virginia Beach?",
-      "a": "Yes. Veterans Day (November 11) is observed as a school holiday in Virginia Beach City Public Schools — students and staff do not report on that day. Given Virginia Beach's large active-duty military population, Veterans Day holds special community significance in the city."
-    },
-    {
-      "q": "How are hurricane or emergency school closings handled in VBCPS?",
-      "a": "Virginia Beach's oceanfront location makes it more susceptible to Atlantic hurricane impacts than inland Virginia districts. VBCPS builds emergency makeup days into its school calendar. If all buffer days are exhausted due to storm closures or other emergencies, the district may extend the school year beyond the originally scheduled last day. Families should monitor VBCPS communications at the start of hurricane season (June 1) through October."
-    }
+  "districtFaqs": [],
+  "hiddenSections": [
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile"
   ],
-  "livingHere": {
-    "intro": "Virginia Beach is the most populous city in Virginia and one of the largest cities by land area on the East Coast, combining an Atlantic Ocean resort strip with sprawling inland suburban neighborhoods and three major military installations. Military families make up an unusually high share of the school population, creating a community accustomed to frequent moves and mid-year transfers.",
-    "highlights": [
-      {
-        "label": "NAS Oceana Master Jet Base",
-        "detail": "Naval Air Station Oceana, the East Coast's only master jet base for F/A-18 Super Hornets, sits within the city limits. Jet noise is a daily reality in the Oceana and Birdneck Road corridors — and a recognizable part of life for families in those school attendance zones."
-      },
-      {
-        "label": "Military PCS Transfer Culture",
-        "detail": "With three major installations (NAS Oceana, JEB Little Creek-Fort Story, and adjacent Naval Station Norfolk in Norfolk), VBCPS enrolls hundreds of mid-year military transfer students annually. The district's Military Family Liaison handles expedited placement and accepts unofficial records while transcripts are in transit — among the most PCS-ready school systems in the country."
-      },
-      {
-        "label": "Summer Tourist Season",
-        "detail": "The Atlantic Avenue resort strip draws millions of visitors from Memorial Day through Labor Day. Traffic on Shore Drive, Pacific Avenue, and Atlantic Avenue becomes significantly heavier, affecting school-year morning commutes near the oceanfront. Spring Break (late March–early April) also coincides with peak spring break traffic for the resort area."
-      },
-      {
-        "label": "Atlantic Hurricane Season",
-        "detail": "Virginia Beach's oceanfront location puts it on the direct path of Atlantic hurricanes from August through October. School closures for storm preparation are more common here than in inland Virginia districts. If emergency makeup days are exhausted, the school year end date may be extended — a planning consideration unique to coastal Hampton Roads."
-      },
-      {
-        "label": "Chesapeake Bay and Oceanfront Access",
-        "detail": "The city borders both the Atlantic Ocean and Chesapeake Bay, with First Landing State Park, Sandbridge Beach, and Back Bay National Wildlife Refuge offering quieter natural areas distinct from the resort boardwalk corridor — popular destinations for VBCPS families on school breaks and long weekends."
-      },
-      {
-        "label": "NASA Wallops Nearby",
-        "detail": "NASA's Wallops Flight Facility on Virginia's Eastern Shore is visible from Virginia Beach on clear rocket launch nights. VBCPS science teachers regularly incorporate launch-watching into curriculum, and the facility represents a distinctive regional resource that connects classroom STEM learning to real aerospace activity."
-      }
-    ]
-  },
+  "comparisonBeforeFaq": true,
+  "comparisonRowsMode": "sharedValuesOnly",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "comparisonTitle": "VBCPS Calendar Compared With Hampton Roads School Divisions",
+  "comparisonSummary": "Compare the VBCPS calendar with three other reviewed Hampton Roads school divisions. All four start school on August 24, but their spring breaks and last student days differ.",
+  "comparisonSubheading": "Only calendar fields available for every compared division are shown.",
+  "comparisonFooterText": "Dates come from each division’s published 2026–27 calendar. Only fields available for all four divisions are compared.",
   "relatedDistricts": [
     {
-      "name": "Fairfax County Public Schools",
-      "slug": "fairfax-county-school-calendar",
-      "state": "Virginia",
-      "reason": "Virginia's largest school district and a frequent PCS destination for military families leaving Hampton Roads. The Pentagon, Fort Belvoir, and nearby NSA facilities draw many VBCPS families northward — making Fairfax County the most commonly compared Virginia district for military households in transit."
+      "name": "Hampton City Schools",
+      "slug": "hampton-city-schools-calendar",
+      "state": "Virginia"
     },
     {
-      "name": "Prince William County Public Schools",
-      "slug": "prince-william-county-school-calendar",
-      "state": "Virginia",
-      "reason": "Home to Marine Corps Base Quantico — another common PCS destination from Hampton Roads. Families transferring between Virginia Beach and the Quantico–Manassas corridor frequently compare both districts' calendars and school programs."
+      "name": "Newport News Public Schools",
+      "slug": "newport-news-public-schools-calendar",
+      "state": "Virginia"
     },
     {
-      "name": "Chesterfield County Public Schools",
-      "slug": "chesterfield-county-school-calendar",
-      "state": "Virginia",
-      "reason": "One of Virginia's largest suburban school divisions in the Richmond metro. Families relocating within Virginia between Hampton Roads and the Richmond area use both calendars to plan school-year transitions and childcare."
+      "name": "York County School Division",
+      "slug": "york-county-school-division-calendar",
+      "state": "Virginia"
     }
   ],
+  "relatedDistrictsTitle": "Related Hampton Roads School Calendars",
+  "relatedDistrictsDescription": "Other reviewed school calendars in the Virginia Beach-Norfolk-Newport News region.",
   "sources": [
     {
-      "label": "Virginia Beach City Public Schools official calendar",
+      "label": "Virginia Beach City Public Schools calendar",
       "url": "https://www.vbschools.com/about/vbcps-calendar"
     },
     {
-      "label": "Virginia Beach City Public Schools official website",
-      "url": "https://www.vbschools.com"
+      "label": "VBCPS Military Families",
+      "url": "https://www.vbschools.com/families/military"
     },
     {
-      "label": "Virginia Department of Education",
-      "url": "https://www.doe.virginia.gov"
-    },
-    {
-      "label": "Virginia School Quality Profiles",
-      "url": "https://schoolquality.virginia.gov"
+      "label": "Virginia Beach School Board Policy 6-12: School Calendar",
+      "url": "https://schoolboard.vbschools.com/policies/section-6/6-12"
     }
   ]
 }

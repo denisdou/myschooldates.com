@@ -29,6 +29,10 @@ function toComparisonCalendarSummary(c: any) {
     sourceUrl: c.sourceUrl,
     sourcePdfUrl: c.sourcePdfUrl,
     sourceVersion: c.sourceVersion,
+    comparisonSourceUrl: c.comparisonSourceUrl ?? c.meta?.comparisonSourceUrl,
+    comparisonSourceLabel: c.comparisonSourceLabel ?? c.meta?.comparisonSourceLabel,
+    comparisonExtraSourceUrl: c.comparisonExtraSourceUrl ?? c.meta?.comparisonExtraSourceUrl,
+    comparisonExtraSourceLabel: c.comparisonExtraSourceLabel ?? c.meta?.comparisonExtraSourceLabel,
     events: (c.events ?? [])
       .filter((e: any) => e.type === 'break_start' || e.type === 'break_end')
       .map((e: any) => ({ name: e.name, date: e.date, type: e.type })),
@@ -206,6 +210,9 @@ const hideBreakDurationBadges = computed(() =>
 const breakNotes = computed<Record<string, string>>(() =>
   ((cal.value as any)?.breakNotes ?? (cal.value as any)?.meta?.breakNotes ?? {}) as Record<string, string>
 )
+const breakDurationLabels = computed<Record<string, string>>(() =>
+  ((cal.value as any)?.breakDurationLabels ?? (cal.value as any)?.meta?.breakDurationLabels ?? {}) as Record<string, string>
+)
 const winterBreakLabel = computed(() => {
   const isLateDecemberBreak = (schoolBreak: { name: string; start?: string; end?: string }) => {
     const lower = schoolBreak.name.toLowerCase()
@@ -375,6 +382,12 @@ const yearSwitcherLabel = computed(() =>
 const otherCalendarsAfterKeyDates = computed(() =>
   ((cal.value as any)?.otherCalendarsPosition ?? (cal.value as any)?.meta?.otherCalendarsPosition) === 'afterKeyDates'
 )
+const otherCalendarsAfterFaq = computed(() =>
+  ((cal.value as any)?.otherCalendarsPosition ?? (cal.value as any)?.meta?.otherCalendarsPosition) === 'afterFaq'
+)
+const otherCalendarsBeforeCalendarExport = computed(() =>
+  ((cal.value as any)?.otherCalendarsPosition ?? (cal.value as any)?.meta?.otherCalendarsPosition) === 'beforeCalendarExport'
+)
 
 const instructionalDaysLine = computed(() => {
   if ((cal.value as any)?.hideInstructionalDaysSummary === true || (cal.value as any)?.meta?.hideInstructionalDaysSummary === true) {
@@ -536,8 +549,13 @@ const dateLegendExtraItems = computed(() =>
   (((cal.value as any)?.dateLegendExtraItems ?? (cal.value as any)?.meta?.dateLegendExtraItems ?? []) as Array<{ label?: string, dot?: string }>)
     .filter(item => item.label && item.dot) as Array<{ label: string, dot: string }>
 )
+const configuredDateLegendItems = computed(() =>
+  (((cal.value as any)?.dateLegendItems ?? (cal.value as any)?.meta?.dateLegendItems ?? []) as Array<{ label?: string, dot?: string }>)
+    .filter(item => item.label && item.dot) as Array<{ label: string, dot: string }>
+)
 const dateLegend = computed(() => {
   if ((cal.value as any)?.hideDateLegend === true || (cal.value as any)?.meta?.hideDateLegend === true) return []
+  if (configuredDateLegendItems.value.length) return configuredDateLegendItems.value
   const legendTypes = new Set((cal.value?.events ?? []).map((event: any) => event.labelType ?? event.type))
   const hasEventType = (types: string[]) =>
     types.some(type => legendTypes.has(type))
@@ -578,6 +596,31 @@ const breaksBeforeAllDates = computed(() =>
   (cal.value as any)?.breaksBeforeAllDates === true || (cal.value as any)?.meta?.breaksBeforeAllDates === true
 )
 
+const resolvedJumpNavigation = computed(() => {
+  if ((cal.value as any)?.preserveJumpNavigationOrder === true || (cal.value as any)?.meta?.preserveJumpNavigationOrder === true) {
+    return customJumpNavigation.value
+  }
+  const afterAllDatesTargets = customSections.value
+    .filter(section => section.position === 'afterAllDates')
+    .map(section => `#${section.id}`)
+  const targets = [
+    '#key-dates',
+    ...(breaksBeforeAllDates.value ? ['#breaks'] : []),
+    ...(moveCalendarExportBeforeAllDates.value ? ['#add-to-calendar'] : []),
+    '#all-dates',
+    ...afterAllDatesTargets,
+    ...(!breaksBeforeAllDates.value ? ['#breaks'] : []),
+    ...(!moveCalendarExportBeforeAllDates.value ? ['#add-to-calendar'] : []),
+    '#year-comparison',
+    ...(comparisonBeforeFaq.value ? ['#comparison'] : []),
+    ...(sourcesBeforeFaq.value ? ['#sources'] : []),
+    '#faq',
+    ...(!comparisonBeforeFaq.value ? ['#comparison'] : []),
+    ...(!sourcesBeforeFaq.value ? ['#sources'] : []),
+  ]
+  return resolveJumpNavigation(customJumpNavigation.value, targets)
+})
+
 function countWeekdays(start: string, end: string) {
   const cursor = new Date(start + 'T00:00:00')
   const stop = new Date(end + 'T00:00:00')
@@ -591,6 +634,8 @@ function countWeekdays(start: string, end: string) {
 }
 
 function breakDurationLabel(b: { name: string; start: string; end: string; days: number }) {
+  const customLabel = breakDurationLabels.value[b.name] ?? breakDurationLabels.value[breakDisplayName(b.name)] ?? breakDurationLabels.value[b.start]
+  if (customLabel) return customLabel
   const weekdays = countWeekdays(b.start, b.end)
   if (weekdays === b.days) {
     return `${weekdays} weekday${weekdays !== 1 ? 's' : ''} without school`
@@ -864,7 +909,11 @@ const additionalSourceCalendarEntities = (((cal.value as any)?.schemaAdditionalS
       ...(source.datePublished ? { datePublished: source.datePublished } : {}),
       ...(source.sameAs ? { sameAs: source.sameAs } : {}),
       url: source.url,
-    publisher: { '@id': districtAbout['@id'] },
+    publisher: source.publisherName ? {
+      '@type': 'EducationalOrganization',
+      name: source.publisherName,
+      ...(source.publisherUrl ? { url: source.publisherUrl } : {}),
+    } : { '@id': districtAbout['@id'] },
   }))
 const sourceCalendarPageEntity = sourcePageCitationUrl ? {
   '@type': 'WebPage',
@@ -979,6 +1028,7 @@ const configuredKeyDateSummaryItems = computed(() =>
       dates: item.dates,
       dateDisplayMode: item.dateDisplayMode,
       dateJoiner: item.dateJoiner,
+      repeatMonthInDateList: item.repeatMonthInDateList,
       datePropertyLabel: item.datePropertyLabel,
       schemaAdditionalProperties: item.schemaAdditionalProperties,
       additionalProperties: item.additionalProperties,
@@ -1004,6 +1054,9 @@ function keyDateListDates(event: any) {
   if (event.dateDisplayMode === 'list' && event.endDate) return [event.date, event.endDate]
   return []
 }
+function keyDateUsesPlainText(event: any) {
+  return Boolean(event.displayDate && keyDateListDates(event).length > 1)
+}
 function keyDateListDateParts(event: any) {
   const dates = keyDateListDates(event)
   if (!dates.length) return []
@@ -1014,14 +1067,14 @@ function keyDateListDateParts(event: any) {
       const month = start.toLocaleDateString('en-US', { month: 'short' })
       return [
         { date: dates[0], label: `${month} ${start.getDate()}`, ariaLabel: formatDate(dates[0]) },
-        { date: dates[1], label: `${end.getDate()}, ${end.getFullYear()}`, ariaLabel: formatDate(dates[1]) },
+        { date: dates[1], label: `${event.repeatMonthInDateList ? `${month} ` : ''}${end.getDate()}, ${end.getFullYear()}`, ariaLabel: formatDate(dates[1]) },
       ]
     }
   }
   return dates.map((date: string) => ({ date, label: formatShortDate(date), ariaLabel: formatDate(date) }))
 }
 function keyDateDateParts(event: any) {
-  if (event.displayDate) {
+  if (event.displayDate && !event.repeatMonthInDateList) {
     return [{ date: event.date, label: event.displayDate, ariaLabel: event.displayDate }]
   }
   const listParts = keyDateListDateParts(event)
@@ -1411,16 +1464,19 @@ useHead({
           {{ (cal as any).pageHeading || `${district!.name} Calendar ${displaySchoolYear}` }}
         </h1>
         <p class="mt-2 text-sm text-[#7b756d]">
-          {{ (cal as any).heroSourceLine ?? (cal as any).meta?.heroSourceLine ?? `${displaySchoolYear} calendar dates · Based on the official ${district!.shortName || district!.name} calendar` }} ·
-          <a
-            :href="(cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref ?? '#add-to-calendar'"
-            :target="((cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref) ? '_blank' : undefined"
-            :rel="((cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref) ? 'noopener' : undefined"
-            class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors"
-          >
-            {{ (cal as any).heroDownloadLabel ?? (cal as any).meta?.heroDownloadLabel ?? (cal as any).icsButtonLabel ?? (cal as any).meta?.icsButtonLabel ?? 'Download calendar file' }}
-            <span v-if="(cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref" class="sr-only">(opens in a new tab)</span>
-          </a>
+          {{ (cal as any).heroSourceLine ?? (cal as any).meta?.heroSourceLine ?? `${displaySchoolYear} calendar dates · Based on the official ${district!.shortName || district!.name} calendar` }}
+          <template v-if="!((cal as any).hideHeroDownloadLink || (cal as any).meta?.hideHeroDownloadLink)">
+            ·
+            <a
+              :href="(cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref ?? '#add-to-calendar'"
+              :target="((cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref) ? '_blank' : undefined"
+              :rel="((cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref) ? 'noopener' : undefined"
+              class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors"
+            >
+              {{ (cal as any).heroDownloadLabel ?? (cal as any).meta?.heroDownloadLabel ?? (cal as any).icsButtonLabel ?? (cal as any).meta?.icsButtonLabel ?? 'Download calendar file' }}
+              <span v-if="(cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref" class="sr-only">(opens in a new tab)</span>
+            </a>
+          </template>
         </p>
         <div class="mt-3 text-[hsl(var(--rds-ink-muted)/1)] leading-relaxed space-y-2">
           <template v-if="heroSummaryParagraphs.length">
@@ -1516,11 +1572,11 @@ useHead({
         </div>
       </section>
 
-      <nav v-if="customJumpNavigation.length" aria-label="Page sections" class="sticky top-0 z-20 my-8 border-y border-[#ddd7cc] bg-[#f7f5f0]/95 backdrop-blur">
+      <nav v-if="resolvedJumpNavigation.length" aria-label="Page sections" class="sticky top-0 z-20 my-8 border-y border-[#ddd7cc] bg-[#f7f5f0]/95 backdrop-blur">
         <div class="district-page-inner flex items-center gap-7 overflow-x-auto py-4 text-sm">
           <span class="flex-shrink-0 font-semibold text-[#7b756d]">On this page</span>
           <a
-            v-for="item in customJumpNavigation"
+            v-for="item in resolvedJumpNavigation"
             :key="item.label"
             :href="item.href || `#${item.id}`"
             class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors"
@@ -1627,7 +1683,8 @@ useHead({
               </span>
             </div>
             <span class="text-sm text-[#7b756d] tabular-nums ml-4 flex-shrink-0">
-              <template v-if="keyDateDateParts(event).length">
+              <span v-if="keyDateUsesPlainText(event)">{{ event.displayDate }}</span>
+              <template v-else-if="keyDateDateParts(event).length">
                 <template
                   v-for="(part, index) in keyDateDateParts(event)"
                   :key="part.date"
@@ -1729,20 +1786,10 @@ useHead({
         :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
         :description="(cal as any).alternateCalendarsDescription ?? (cal as any).meta?.alternateCalendarsDescription"
         :button-label="(cal as any).alternateCalendarsButtonLabel ?? (cal as any).meta?.alternateCalendarsButtonLabel"
+        :collapsible="(cal as any).alternateCalendarsCollapsible ?? (cal as any).meta?.alternateCalendarsCollapsible"
+        :summary-label="(cal as any).alternateCalendarsSummaryLabel ?? (cal as any).meta?.alternateCalendarsSummaryLabel"
       />
       <DistrictCustomSections :sections="customSections" position="afterAlternateCalendarsNotice" />
-
-      <!-- Add to Calendar + Share (optional early position) -->
-      <template v-if="moveCalendarExportBeforeAllDates">
-        <CalendarExportShare
-          :district-name="district!.name"
-          :year="year"
-          :source-url="cal!.sourceUrl ?? district!.officialWebsite"
-          :district="district!"
-          :cal="cal!"
-        />
-        <DistrictCustomSections :sections="customSections" position="afterCalendarExport" />
-      </template>
 
       <!-- Break Summary (optional early position) -->
       <template v-if="breaksBeforeAllDates">
@@ -1768,6 +1815,18 @@ useHead({
         <DistrictCustomSections v-else-if="!hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
       </template>
 
+      <!-- Add to Calendar + Share (optional early position) -->
+      <template v-if="moveCalendarExportBeforeAllDates">
+        <CalendarExportShare
+          :district-name="district!.name"
+          :year="year"
+          :source-url="cal!.sourceUrl ?? district!.officialWebsite"
+          :district="district!"
+          :cal="cal!"
+        />
+        <DistrictCustomSections :sections="customSections" position="afterCalendarExport" />
+      </template>
+
       <!-- All Dates -->
       <div v-if="hiddenSections.has('keyDateCards') && !configuredKeyDateSummaryItems.length" id="key-dates" class="scroll-mt-24" />
       <DistrictAllDates
@@ -1791,6 +1850,8 @@ useHead({
         :last-day="cal!.lastDay"
         :coverage-note="(cal as any).allDatesCoverageNote ?? (cal as any).meta?.allDatesCoverageNote"
         :coverage-note-position="(cal as any).allDatesCoverageNotePosition ?? (cal as any).meta?.allDatesCoverageNotePosition"
+        :covered-break-dates-note="(cal as any).allDatesCoveredBreakDatesNote ?? (cal as any).meta?.allDatesCoveredBreakDatesNote"
+        :derived-date-note="(cal as any).allDatesDerivedDateNote ?? (cal as any).meta?.allDatesDerivedDateNote"
         :legend-style="(cal as any).dateLegendStyle ?? (cal as any).meta?.dateLegendStyle"
         :month-notes="(cal as any).allDatesMonthNotes ?? (cal as any).meta?.allDatesMonthNotes"
       />
@@ -1820,6 +1881,23 @@ useHead({
       </div>
       <DistrictCustomSections v-else-if="!breaksBeforeAllDates && !hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
 
+      <!-- Other Official Calendars (optional position before the one-time calendar import) -->
+      <DistrictOtherCalendars
+        v-if="otherCalendarsBeforeCalendarExport && (cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
+        :alternate-calendars="(cal as any).alternateCalendars"
+        :district-name="district!.name"
+        :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
+        :description="(cal as any).alternateCalendarsDescription ?? (cal as any).meta?.alternateCalendarsDescription"
+        :button-label="(cal as any).alternateCalendarsButtonLabel ?? (cal as any).meta?.alternateCalendarsButtonLabel"
+        :collapsible="(cal as any).alternateCalendarsCollapsible ?? (cal as any).meta?.alternateCalendarsCollapsible"
+        :summary-label="(cal as any).alternateCalendarsSummaryLabel ?? (cal as any).meta?.alternateCalendarsSummaryLabel"
+        :footer-title="(cal as any).alternateCalendarsFooterTitle ?? (cal as any).meta?.alternateCalendarsFooterTitle"
+        :footer-description="(cal as any).alternateCalendarsFooterDescription ?? (cal as any).meta?.alternateCalendarsFooterDescription"
+        :footer-link-label="(cal as any).alternateCalendarsFooterLinkLabel ?? (cal as any).meta?.alternateCalendarsFooterLinkLabel"
+        :footer-link-url="(cal as any).alternateCalendarsFooterLinkUrl ?? (cal as any).meta?.alternateCalendarsFooterLinkUrl"
+      />
+      <DistrictCustomSections v-if="otherCalendarsBeforeCalendarExport" :sections="customSections" position="afterOtherCalendars" />
+
       <!-- Add to Calendar + Share -->
       <template v-if="!moveCalendarExportBeforeAllDates">
         <CalendarExportShare
@@ -1834,18 +1912,20 @@ useHead({
 
       <!-- Other Official Calendars -->
       <DistrictOtherCalendars
-        v-if="!otherCalendarsAfterKeyDates && (cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
+        v-if="!otherCalendarsAfterKeyDates && !otherCalendarsAfterFaq && !otherCalendarsBeforeCalendarExport && (cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
         :alternate-calendars="(cal as any).alternateCalendars"
         :district-name="district!.name"
         :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
         :description="(cal as any).alternateCalendarsDescription ?? (cal as any).meta?.alternateCalendarsDescription"
         :button-label="(cal as any).alternateCalendarsButtonLabel ?? (cal as any).meta?.alternateCalendarsButtonLabel"
+        :collapsible="(cal as any).alternateCalendarsCollapsible ?? (cal as any).meta?.alternateCalendarsCollapsible"
+        :summary-label="(cal as any).alternateCalendarsSummaryLabel ?? (cal as any).meta?.alternateCalendarsSummaryLabel"
         :footer-title="(cal as any).alternateCalendarsFooterTitle ?? (cal as any).meta?.alternateCalendarsFooterTitle"
         :footer-description="(cal as any).alternateCalendarsFooterDescription ?? (cal as any).meta?.alternateCalendarsFooterDescription"
         :footer-link-label="(cal as any).alternateCalendarsFooterLinkLabel ?? (cal as any).meta?.alternateCalendarsFooterLinkLabel"
         :footer-link-url="(cal as any).alternateCalendarsFooterLinkUrl ?? (cal as any).meta?.alternateCalendarsFooterLinkUrl"
       />
-      <DistrictCustomSections :sections="customSections" position="afterOtherCalendars" />
+      <DistrictCustomSections v-if="!otherCalendarsBeforeCalendarExport" :sections="customSections" position="afterOtherCalendars" />
 
       <!-- Year by the Numbers -->
       <div v-if="!hiddenSections.has('yearNumbers')" id="calendar-insights" class="scroll-mt-24">
@@ -1906,6 +1986,7 @@ useHead({
         :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
         :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
         :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
+        :hide-review-date="Boolean((cal as any).hideSourceReviewDate ?? (cal as any).meta?.hideSourceReviewDate)"
       />
 
       <!-- FAQ -->
@@ -1913,6 +1994,21 @@ useHead({
 
       <!-- Custom Sections: afterFaq -->
       <DistrictCustomSections :sections="customSections" position="afterFaq" />
+
+      <DistrictOtherCalendars
+        v-if="otherCalendarsAfterFaq && (cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
+        :alternate-calendars="(cal as any).alternateCalendars"
+        :district-name="district!.name"
+        :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
+        :description="(cal as any).alternateCalendarsDescription ?? (cal as any).meta?.alternateCalendarsDescription"
+       :button-label="(cal as any).alternateCalendarsButtonLabel ?? (cal as any).meta?.alternateCalendarsButtonLabel"
+        :collapsible="(cal as any).alternateCalendarsCollapsible ?? (cal as any).meta?.alternateCalendarsCollapsible"
+        :summary-label="(cal as any).alternateCalendarsSummaryLabel ?? (cal as any).meta?.alternateCalendarsSummaryLabel"
+       :footer-title="(cal as any).alternateCalendarsFooterTitle ?? (cal as any).meta?.alternateCalendarsFooterTitle"
+        :footer-description="(cal as any).alternateCalendarsFooterDescription ?? (cal as any).meta?.alternateCalendarsFooterDescription"
+        :footer-link-label="(cal as any).alternateCalendarsFooterLinkLabel ?? (cal as any).meta?.alternateCalendarsFooterLinkLabel"
+        :footer-link-url="(cal as any).alternateCalendarsFooterLinkUrl ?? (cal as any).meta?.alternateCalendarsFooterLinkUrl"
+      />
 
       <!-- Compare with Nearby Districts -->
       <template v-if="!comparisonBeforeFaq">
@@ -1977,6 +2073,7 @@ useHead({
         :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
         :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
         :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
+        :hide-review-date="Boolean((cal as any).hideSourceReviewDate ?? (cal as any).meta?.hideSourceReviewDate)"
       />
 
       <div v-if="showYearSwitcherAfterSources && visibleYearSwitcherYears.length" class="flex items-center gap-2 flex-wrap">

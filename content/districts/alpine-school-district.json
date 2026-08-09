@@ -1,0 +1,129 @@
+{
+  "institutionId": "alpine-school-district",
+  "name": "Alpine School District",
+  "shortName": "ASD",
+  "slug": "alpine-school-district-calendar",
+  "state": "Utah",
+  "stateCode": "UT",
+  "city": "American Fork",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.alpineschools.org/",
+  "calendarPage": "https://www.alpineschools.org/page/district-calendars",
+  "logo": "https://cmsv2-assets.apptegy.net/uploads/28320/logo/31133/alpine_utah_logo.png",
+  "timezone": "America/Denver",
+  "county": "Utah County",
+  "region": "Wasatch Front",
+  "metro": "Provo-Orem",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "A/B day calendar",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Alpine A/B Academic Calendar",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "translatedPdf": false,
+    "programCalendar": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-09",
+    "coverageNote": "Coverage uses Alpine School District's official calendar page, live District Events and A/B calendars, the official 2026–27 Academic Calendar PDF, a visually verified archived 2025–26 district calendar, the district's official reorganization guidance, and published 2027–28 calendar pages from Aspen Peaks and Timpanogos."
+  },
+  "contentFreshnessScore": {
+    "overall": 98,
+    "lastManualReview": "2026-08-09",
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 30,
+    "refreshRule": "Re-check when ASD replaces the 2026–27 PDF, changes an A/B or Minimal Day schedule, revises a closure, or a successor district publishes or replaces its official 2027–28 calendar."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "ASD calendar revision, A/B schedule update, emergency closure, Minimal Day change, or successor-district calendar publication or replacement."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Alpine School District calendar",
+    "ASD calendar Utah",
+    "Alpine School District A B calendar",
+    "Alpine school calendar PDF",
+    "Alpine School District first day",
+    "Alpine School District last day",
+    "Alpine kindergarten calendar",
+    "Alpine School District breaks"
+  ],
+  "districtFact": "Alpine School District's 2026–27 calendar labels every instructional date as an A day, B day, or the March ACT A/B day. It also separates the first day for most students from the K and PreK assessment window and full opening, identifies two Minimal Days when PreK does not attend, and serves as Alpine's final school-year calendar before Aspen Peaks, Lake Mountain, and Timpanogos school districts begin operations July 1, 2027.",
+  "about": [
+    {
+      "title": "A/B Labels Are Part of the Official Calendar",
+      "content": "Alpine's one-page academic calendar prints an A or B designation inside each instructional date. The district calendar page also links a live A/B Calendar. Families should use the letter together with their school's bell schedule rather than treating A/B as a closure or shortened-day label."
+    },
+    {
+      "title": "K and PreK Use an Assessment Window",
+      "content": "The 2026–27 calendar starts most students August 19, marks August 19–24 as K and PreK assessment days, and lists August 25 as the first day of K and PreK. Assessment dates are not an ordinary full-attendance sequence; families should follow the assigned schedule from their school."
+    },
+    {
+      "title": "Minimal Day Does Not Include PreK",
+      "content": "December 18 and May 28 are Minimal Days, and the calendar explicitly says there is no PreK on either date. Exact dismissal times are school-specific and are not printed on the district's one-page PDF."
+    },
+    {
+      "title": "Breaks Include Adjacent Staff Days",
+      "content": "Fall Break is October 15–16, followed by a student-free workday October 19. Winter Break ends January 1, followed by a student-free workday January 4. Spring Break is April 5–9, and April 5 also carries the PTC Teacher Comp Day designation."
+    },
+    {
+      "title": "2026–27 Is Alpine's Final Operating Year",
+      "content": "Alpine School District operates schools through June 30, 2027. Aspen Peaks, Lake Mountain, and Timpanogos school districts begin operations July 1. Aspen Peaks and Timpanogos have published official 2027–28 calendar pages; families should confirm which successor district will serve their school."
+    }
+  ],
+  "planningTips": {
+    "title": "Alpine School District Calendar Notes",
+    "content": [
+      "Use the official A/B label together with the student's school schedule to see which classes meet on A days and B days.",
+      "Kindergarten and PreK families should follow their assigned August 19–24 assessment appointment before the August 25 opening.",
+      "Plan for earlier dismissal on December 18 and May 28, but confirm the actual Minimal Day time with the school; PreK does not attend either date.",
+      "Keep October 19 and January 4 student-free even though they sit immediately after Fall and Winter Break.",
+      "Do not assume the March 10 high-school ACT date is a districtwide closure; the official calendar marks it as an A/B instructional date.",
+      "The MySchoolDates ICS file is a one-time import. Use ASD's live District Events and A/B calendars for later changes.",
+      "For 2027–28 planning, identify whether the student's school moves to Aspen Peaks, Lake Mountain, or Timpanogos School District; Alpine School District ends operations June 30, 2027."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "When does Alpine School District start in 2026?",
+      "a": "Most Alpine School District students start Wednesday, August 19, 2026. K and PreK assessment days run August 19–24, and the first regular K and PreK day is Tuesday, August 25."
+    },
+    {
+      "q": "What are A and B days in Alpine School District?",
+      "a": "A and B identify Alpine's alternating school-day rotation. The district prints the letter for each instructional date and provides a live A/B Calendar. Check the student's school schedule to see which classes meet on A days and B days."
+    },
+    {
+      "q": "When is Alpine School District Fall Break in 2026?",
+      "a": "Fall Break is October 15–16, 2026. Students also have no school Monday, October 19 for a staff workday and return Tuesday, October 20."
+    },
+    {
+      "q": "When is Alpine School District Spring Break in 2027?",
+      "a": "Spring Break runs Monday, April 5, through Friday, April 9, 2027. April 5 is also marked as a PTC Teacher Comp Day. Students return Monday, April 12."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [],
+  "relatedDistrictsTitle": "More Utah School Calendars",
+  "sources": [
+    { "label": "Alpine School District official website", "url": "https://www.alpineschools.org/" },
+    { "label": "ASD District Calendars page", "url": "https://www.alpineschools.org/page/district-calendars" },
+    { "label": "ASD transition to three new school districts", "url": "https://www.alpineschools.org/o/asd/page/new-districts" },
+    { "label": "Aspen Peaks 2027–28 Academic Calendar", "url": "https://www.alpineschools.org/o/aspen-peaks-district/page/calendar" },
+    { "label": "Timpanogos 2027–28 Academic Calendar", "url": "https://www.alpineschools.org/o/timpanogos-district/page/calendar" }
+  ]
+}

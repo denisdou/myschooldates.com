@@ -1,103 +1,391 @@
 {
   "institutionId": "virginia-beach-city",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Virginia Beach City Public Schools Calendar 2026–27",
   "firstDay": "2026-08-24",
   "lastDay": "2027-06-11",
   "totalSchoolDays": 180,
-  "teacherWorkDays": null,
-  "semesters": 4,
+  "semesters": 2,
+  "temporalCoverageStart": "2026-08-14",
+  "temporalCoverageEnd": "2027-06-18",
   "sourceUrl": "https://www.vbschools.com/about/vbcps-calendar",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1785961057/vbschoolscom/ygqsdpeopntec9vlc64r/SY2026_27Cal.pdf",
+  "sourceCalendarName": "2026-2027 School Calendar",
   "comparisonSourceUrl": "https://www.vbschools.com/about/vbcps-calendar",
-  "comparisonSourceLabel": "Virginia Beach official calendar page",
+  "comparisonSourceLabel": "VBCPS official calendar page",
   "comparisonExtraSourceUrl": "https://resources.finalsite.net/images/v1785961057/vbschoolscom/ygqsdpeopntec9vlc64r/SY2026_27Cal.pdf",
-  "comparisonExtraSourceLabel": "Virginia Beach 2026–27 calendar PDF (revised July 15, 2026)",
-  "sourceVersion": "Revised July 15, 2026",
-  "lastVerifiedAt": "2026-08-08",
+  "comparisonExtraSourceLabel": "VBCPS 2026–27 calendar PDF",
+  "sourceVersion": "Adopted November 12, 2024; revised July 15, 2026",
+  "lastVerifiedAt": "2026-08-09",
+  "dateCreated": "2026-07-05",
+  "datePublished": "2026-07-05",
+  "dateModified": "2026-08-09",
   "calendarType": "traditional",
-  "calendarFaqs": [
-    {
-      "q": "When does school start for Virginia Beach City Public Schools in 2026-2027?",
-      "a": "The first day of school for Virginia Beach City Public Schools is Monday, August 24, 2026. Students and staff are expected to report on this date to begin the new academic year."
-    }
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "keyDates",
+  "schemaReviewedBy": "author",
+  "seoTitle": "Virginia Beach City Public Schools Calendar 2026–27: Dates & PDF",
+  "seoDescription": "VBCPS 2026–27 calendar: first day Aug. 24, winter break Dec. 21–Jan. 1, spring break Mar. 29–Apr. 2, and last day June 11. View the PDF or download the ICS calendar.",
+  "schemaCalendarName": "Virginia Beach City Public Schools Calendar 2026–27",
+  "schemaDatasetName": "VBCPS 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed VBCPS dates for 2026–27, including 180 instructional days, four grading periods, major breaks, staff days, adjusted-dismissal dates, and designated make-up dates.",
+  "schemaCalendarDownloadName": "MySchoolDates VBCPS 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "One-time calendar import with reviewed VBCPS holidays, breaks, student-free staff days, grading-period endings, adjusted-dismissal dates, and designated make-up dates.",
+  "schemaSpatialCoverage": {
+    "@type": "Place",
+    "name": "Virginia Beach, Virginia"
+  },
+  "hideSemesterCount": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideCalendarTrackCaution": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideRelatedDistrictDescriptions": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "yearNumbers",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile"
   ],
-  "yearNumbers": [
+  "heroSourceLine": "VBCPS 2026–27 School Calendar",
+  "heroDownloadLabel": "View official PDF",
+  "heroDownloadHref": "https://resources.finalsite.net/images/v1785961057/vbschoolscom/ygqsdpeopntec9vlc64r/SY2026_27Cal.pdf",
+  "heroSummary": "VBCPS students start school Monday, August 24, 2026, and the scheduled last day is Friday, June 11, 2027. Winter Break runs December 21 through January 1, with students returning Monday, January 4. The calendar uses four grading periods; June 11 is also a districtwide adjusted-dismissal day. If instructional days are missed because of weather or another emergency, the superintendent determines the make-up dates.",
+  "heroFactChips": [
+    "4 grading periods"
+  ],
+  "verificationBadgeText": "Checked August 9, 2026, against the revised VBCPS year-at-a-glance PDF, live calendar, and School Board calendar policy.",
+  "calendarNotes": "VBCPS schedules 180 instructional days from August 24, 2026, through June 11, 2027. The year uses four grading periods ending October 30, January 22, April 8, and June 11. Only June 11 is identified as a districtwide adjusted-dismissal day, while June 8–10 are adjusted-dismissal days for high school students. Winter Break runs December 21 through January 1, and students return Monday, January 4. Labor Day creates a four-day weekend because schools are closed Friday, September 4, and Monday, September 7. November 2, January 25, and April 9 are student-free staff days and the designated make-up dates for the first three grading periods if VBCPS activates them. Any fourth-grading-period make-up date is designated by the superintendent.",
+  "keyDatesSummaryTitle": "2026–27 Key Dates for VBCPS Families",
+  "keyDatesSummarySubtitle": "The first day, major breaks, scheduled last day, and return dates from the revised VBCPS calendar",
+  "keyDateSummaryItems": [
     {
-      "label": "Spring Break Shifts",
-      "value": "1 week earlier",
-      "detail": "Spring Break moves from Apr 6–10 (2025–2026) to Mar 29–Apr 2, coinciding with Easter weekend."
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-24",
+      "type": "school_start",
+      "schemaDescription": "The first student day for Virginia Beach City Public Schools is August 24, 2026."
     },
     {
-      "label": "4-Day Labor Day",
-      "value": "Sep 4+Sep 7",
-      "detail": "Labor Day extends to a four-day weekend with both the preceding Friday (Sep 4) and Monday (Sep 7) as school holidays — consistent with 2025–2026."
+      "label": "Long Weekend",
+      "name": "Labor Day Holiday",
+      "date": "2026-09-04",
+      "dates": ["2026-09-04", "2026-09-07"],
+      "type": "holiday",
+      "dateJoiner": "and",
+      "displayDate": "Sep 4 and Sep 7, 2026",
+      "repeatMonthInDateList": true,
+      "datePropertyLabel": "Closed date",
+      "description": "Schools are closed Friday, September 4, and Monday, September 7, creating a four-day weekend.",
+      "schemaDescription": "VBCPS schools are closed September 4 and September 7, 2026, for the Labor Day holiday."
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "description": "Students return Monday, November 30.",
+      "schemaDescription": "VBCPS Thanksgiving Break runs November 25–27, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "Students return Monday, January 4.",
+      "schemaDescription": "VBCPS Winter Break runs December 21, 2026, through January 1, 2027."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "type": "break_start",
+      "description": "Students return Monday, April 5.",
+      "schemaDescription": "VBCPS Spring Break runs March 29 through April 2, 2027."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-06-11",
+      "type": "school_end",
+      "description": "Districtwide adjusted dismissal and the end of the fourth grading period.",
+      "schemaDescription": "The scheduled last student day for VBCPS is June 11, 2027, with adjusted dismissal."
     }
   ],
+  "breaksBeforeAllDates": true,
+  "breaksTitle": "Major School Breaks",
+  "breakNotes": {
+    "Thanksgiving Break": "Students return Monday, November 30.",
+    "Winter Break": "Students return Monday, January 4.",
+    "Spring Break": "Students return Monday, April 5."
+  },
+  "allDatesTitle": "VBCPS 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This list covers the revised year-at-a-glance calendar: school openings, holidays, breaks, student-free staff days, grading-period endings, adjusted-dismissal dates, and the staff days VBCPS may activate as make-up dates. School-specific events and A/B day rotations remain on the live district calendar.",
+  "allDatesCoverageNotePosition": "top",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1785961057/vbschoolscom/ygqsdpeopntec9vlc64r/SY2026_27Cal.pdf",
+  "allDatesSourceLinks": [
+    {
+      "label": "Revised VBCPS 2026–27 year-at-a-glance calendar",
+      "url": "https://resources.finalsite.net/images/v1785961057/vbschoolscom/ygqsdpeopntec9vlc64r/SY2026_27Cal.pdf"
+    },
+    {
+      "label": "VBCPS live calendar",
+      "url": "https://www.vbschools.com/about/vbcps-calendar"
+    }
+  ],
+  "allDatesSourceLabel": "Source: Virginia Beach City Public Schools",
+  "allDatesCoveredBreakDatesNote": "Christmas Eve and Christmas Day fall within Winter Break, so they are not listed as separate school closures.",
+  "dateLegendLabelOverrides": {
+    "Holiday": "Schools Closed",
+    "No School for Students": "No Students — Staff Day",
+    "Early Release": "Adjusted Dismissal",
+    "Academic": "Grading Period"
+  },
+  "moveCalendarExportBeforeAllDates": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "href": "#key-dates"
+    },
+    {
+      "label": "Breaks",
+      "href": "#breaks"
+    },
+    {
+      "label": "Download",
+      "href": "#add-to-calendar"
+    },
+    {
+      "label": "Full Calendar",
+      "href": "#all-dates"
+    },
+    {
+      "label": "Compare",
+      "href": "#comparison"
+    },
+    {
+      "label": "FAQ",
+      "href": "#faq"
+    }
+  ],
+  "icsHeading": "Add VBCPS 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file with VBCPS holidays, break ranges, student-free staff days, grading-period endings, adjusted-dismissal dates, and designated make-up dates.",
+  "icsButtonLabel": "Download MySchoolDates Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. After a closure, check VBCPS for the confirmed make-up date before relying on the imported calendar.",
+  "icsAriaLabel": "Download the Virginia Beach City Public Schools 2026–27 calendar file",
+  "pdfHeading": "Official VBCPS 2026–27 School Calendar",
+  "pdfButtonLabel": "View Official VBCPS PDF",
+  "pdfDescription": "Open or print the one-page calendar revised July 15, 2026. The live VBCPS calendar remains the source for later changes and school-specific events.",
+  "pdfVersionLabel": "Official PDF revised July 15, 2026",
+  "yearSwitcherPosition": "afterSources",
+  "comparisonDistrictSlugs": [
+    "hampton-city-schools-calendar",
+    "newport-news-public-schools-calendar",
+    "york-county-school-division-calendar"
+  ],
+  "comparisonBeforeFaq": true,
+  "comparisonRowsMode": "sharedValuesOnly",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "whatsNew": {
+    "title": "What Changed From 2025–26",
+    "content": [
+      "School starts one day earlier: August 24, 2026, compared with August 25 last year.",
+      "The scheduled last student day is one day earlier: June 11, 2027, compared with June 12 last year.",
+      "Spring Break moves earlier, from April 6–10 in 2025–26 to March 29–April 2 in 2026–27.",
+      "The three-weekday Thanksgiving Break remains Wednesday through Friday.",
+      "The four-day Labor Day weekend remains in place, with schools closed on both Friday and Monday."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "vbcps-2026-2027-calendar-insights",
+      "label": "VBCPS Calendar Planning Snapshot",
+      "position": "afterYearDiff",
+      "content": "A quick look at scheduled instructional days and extended weekends in the 2026–27 calendar.",
+      "collapsible": true,
+      "defaultOpen": true,
+      "summaryLabel": "View calendar planning facts",
+      "definitions": [
+        {
+          "term": "Grading-period lengths",
+          "description": "The four grading periods contain 47, 43, 46, and 44 scheduled instructional days, respectively, for a total of 180."
+        },
+        {
+          "term": "Longest and shortest grading periods",
+          "description": "The first grading period is the longest at 47 scheduled instructional days; the second is the shortest at 43."
+        },
+        {
+          "term": "Student-free weekdays outside major breaks",
+          "description": "Between the first and last student days, 12 weekdays are scheduled without classes outside Thanksgiving, Winter, and Spring breaks. Three of those dates—November 2, January 25, and April 9—may be used as make-up days if needed."
+        },
+        {
+          "term": "Four-day student weekends",
+          "description": "The published calendar creates three four-day spans without classes: September 4–7, October 31–November 3, and January 23–26. The latter two could be shortened if November 2 or January 25 is used as a make-up day."
+        }
+      ]
+    },
+    {
+      "id": "vbcps-2026-2027-family-notes",
+      "label": "What VBCPS Families Should Know",
+      "position": "afterYearDiff",
+      "content": "VBCPS lists grading-period dates separately from adjusted-dismissal days. Not every grading-period ending is an early-release day.",
+      "collapsible": true,
+      "defaultOpen": true,
+      "summaryLabel": "View VBCPS calendar rules",
+      "definitions": [
+        {
+          "term": "Four grading periods",
+          "description": "They end October 30, January 22, April 8, and June 11. The calendar identifies June 11—not every grading-period ending—as a districtwide adjusted-dismissal day."
+        },
+        {
+          "term": "High school dismissal",
+          "description": "High school students have adjusted dismissal June 8–10; all students have adjusted dismissal June 11."
+        },
+        {
+          "term": "Designated make-up dates",
+          "description": "November 2, January 25, and April 9 are the designated options for the first three grading periods. A fourth-grading-period date is designated by the superintendent."
+        },
+        {
+          "term": "Calendar changes",
+          "description": "The School Board may revise the calendar during the year, and the superintendent determines student and staff make-up dates after weather or emergency closures."
+        }
+      ]
+    },
+    {
+      "id": "vbcps-2026-2027-military-families",
+      "label": "Moving to VBCPS During the School Year",
+      "position": "afterFaq",
+      "content": "About 25 percent of VBCPS students are active-duty military dependents. Families moving during the school year can contact the district’s two full-time military school counselors for help with academic transitions and other military-connected student needs.",
+      "links": [
+        {
+          "label": "VBCPS Military Families and counselor contacts",
+          "url": "https://www.vbschools.com/families/military",
+          "description": "Official transition resources, program information, and counselor contacts."
+        }
+      ],
+      "linksDisplay": "inline"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When is the first day of school for VBCPS in 2026–27?",
+      "a": "The first student day is Monday, August 24, 2026. The first grading period also begins that day."
+    },
+    {
+      "q": "When is VBCPS Winter Break in 2026–27?",
+      "a": "Winter Break runs Monday, December 21, 2026, through Friday, January 1, 2027. Students return Monday, January 4."
+    },
+    {
+      "q": "When is VBCPS Spring Break in 2027?",
+      "a": "Spring Break runs Monday, March 29, through Friday, April 2, 2027. Students return Monday, April 5."
+    },
+    {
+      "q": "When is the last day of school for VBCPS?",
+      "a": "The scheduled last student day is Friday, June 11, 2027. It is also the end of the fourth grading period and a districtwide adjusted-dismissal day."
+    },
+    {
+      "q": "Are VBCPS students off for Veterans Day?",
+      "a": "Yes. VBCPS schools are closed Wednesday, November 11, 2026, for Veterans Day."
+    },
+    {
+      "q": "Where can I check for VBCPS calendar changes?",
+      "a": "Check the official VBCPS calendar page and district communications. School Board policy allows calendar revisions during the year, and the superintendent determines make-up days after weather or emergency closures."
+    }
+  ],
+  "faqDisplayLimit": 6,
+  "sourceReviewSummary": "Reviewed August 9, 2026, against the complete revised VBCPS PDF, the live district calendar, the official Military Families page, and School Board Policy 6-12.",
+  "sourceReviewDetailsTitle": "How we verified this calendar",
+  "sourceReviewDetails": [
+    "We checked the revised VBCPS year-at-a-glance PDF against the district’s live calendar, including break ranges, grading-period dates, adjusted-dismissal dates, and designated make-up days.",
+    "We also reviewed School Board Policy 6-12 for calendar revisions and emergency make-up days. Military-family information is sourced separately from VBCPS’s official Military Families page."
+  ],
+  "sourceMaintainerText": "MySchoolDates editorial team",
+  "sourceNextReviewText": "Review again after a VBCPS calendar revision, make-up-day announcement, or publication of the next school year.",
   "events": [
     {
       "date": "2026-08-14",
       "name": "Flex Staff Day",
-      "type": "no_school"
+      "type": "no_school",
+      "badgeLabel": "No Students",
+      "description": "School closed for students."
     },
     {
       "date": "2026-08-17",
-      "name": "Staff Day",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-08-18",
-      "name": "Staff Day",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-08-19",
-      "name": "Staff Day",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-08-20",
-      "name": "Staff Day",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-08-21",
-      "name": "Staff Day",
-      "type": "no_school"
+      "endDate": "2026-08-21",
+      "name": "Staff Days",
+      "type": "no_school",
+      "badgeLabel": "No Students",
+      "description": "School closed for students."
     },
     {
       "date": "2026-08-24",
-      "name": "First Day of School",
+      "name": "First Day of School / First Grading Period Begins",
       "type": "school_start"
     },
     {
       "date": "2026-09-04",
-      "name": "Labor Day (Friday)",
-      "type": "holiday"
+      "name": "Labor Day Holiday",
+      "type": "holiday",
+      "description": "Schools are also closed Monday, September 7."
     },
     {
       "date": "2026-09-07",
-      "name": "Labor Day",
+      "name": "Labor Day Holiday",
       "type": "holiday"
     },
     {
       "date": "2026-09-28",
       "name": "Staff Day",
-      "type": "no_school"
+      "type": "no_school",
+      "badgeLabel": "No Students",
+      "description": "School closed for students."
     },
     {
       "date": "2026-10-30",
-      "name": "End of Quarter 1",
-      "type": "quarter_end"
+      "name": "First Grading Period Ends",
+      "type": "academic"
     },
     {
       "date": "2026-11-02",
-      "name": "Staff Day",
-      "type": "no_school"
+      "name": "Staff Day / Designated Q1 Make-Up Date",
+      "type": "no_school",
+      "badgeLabel": "No Students",
+      "description": "School closed for students unless VBCPS activates this date as a make-up day."
     },
     {
       "date": "2026-11-03",
       "name": "Flex Staff Day",
-      "type": "no_school"
+      "type": "no_school",
+      "badgeLabel": "No Students",
+      "description": "School closed for students."
+    },
+    {
+      "date": "2026-11-04",
+      "name": "Second Grading Period Begins",
+      "type": "academic"
     },
     {
       "date": "2026-11-11",
@@ -115,24 +403,35 @@
       "type": "break_end"
     },
     {
+      "date": "2026-11-30",
+      "name": "Students Return After Thanksgiving Break",
+      "type": "school_resume"
+    },
+    {
       "date": "2026-12-21",
       "name": "Winter Break",
       "type": "break_start"
     },
     {
       "date": "2026-12-24",
-      "name": "Christmas (Winter Break Holiday)",
+      "name": "Christmas Eve (During Winter Break)",
       "type": "holiday"
     },
     {
       "date": "2026-12-25",
-      "name": "Christmas (Winter Break Holiday)",
+      "name": "Christmas Day (During Winter Break)",
       "type": "holiday"
     },
     {
       "date": "2027-01-01",
-      "name": "New Year's Day / Winter Break End",
-      "type": "break_end"
+      "name": "Winter Break Ends",
+      "type": "break_end",
+      "description": "New Year's Day. Students return Monday, January 4."
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Students Return After Winter Break",
+      "type": "school_resume"
     },
     {
       "date": "2027-01-18",
@@ -141,22 +440,31 @@
     },
     {
       "date": "2027-01-22",
-      "name": "End of Quarter 2",
-      "type": "quarter_end"
+      "name": "Second Grading Period Ends",
+      "type": "academic"
     },
     {
       "date": "2027-01-25",
-      "name": "Staff Day",
-      "type": "no_school"
+      "name": "Staff Day / Designated Q2 Make-Up Date",
+      "type": "no_school",
+      "badgeLabel": "No Students",
+      "description": "School closed for students unless VBCPS activates this date as a make-up day."
     },
     {
       "date": "2027-01-26",
       "name": "Staff Day",
-      "type": "no_school"
+      "type": "no_school",
+      "badgeLabel": "No Students",
+      "description": "School closed for students."
+    },
+    {
+      "date": "2027-01-27",
+      "name": "Third Grading Period Begins",
+      "type": "academic"
     },
     {
       "date": "2027-02-15",
-      "name": "Presidents' Day",
+      "name": "Presidents Day",
       "type": "holiday"
     },
     {
@@ -170,14 +478,26 @@
       "type": "break_end"
     },
     {
+      "date": "2027-04-05",
+      "name": "Students Return After Spring Break",
+      "type": "school_resume"
+    },
+    {
       "date": "2027-04-08",
-      "name": "End of Quarter 3",
-      "type": "quarter_end"
+      "name": "Third Grading Period Ends",
+      "type": "academic"
     },
     {
       "date": "2027-04-09",
-      "name": "Staff Day",
-      "type": "no_school"
+      "name": "Staff Day / Designated Q3 Make-Up Date",
+      "type": "no_school",
+      "badgeLabel": "No Students",
+      "description": "School closed for students unless VBCPS activates this date as a make-up day."
+    },
+    {
+      "date": "2027-04-12",
+      "name": "Fourth Grading Period Begins",
+      "type": "academic"
     },
     {
       "date": "2027-05-31",
@@ -186,36 +506,32 @@
     },
     {
       "date": "2027-06-08",
-      "name": "Adjusted Dismissal (High School)",
+      "endDate": "2027-06-10",
+      "name": "Adjusted Dismissal — High School Students",
       "type": "early_release"
     },
     {
-      "date": "2027-06-09",
-      "name": "Adjusted Dismissal (High School)",
-      "type": "early_release"
-    },
-    {
-      "date": "2027-06-10",
-      "name": "Adjusted Dismissal (High School)",
-      "type": "early_release"
+      "date": "2027-06-08",
+      "endDate": "2027-06-12",
+      "name": "High School Graduation Window",
+      "type": "graduation"
     },
     {
       "date": "2027-06-11",
-      "name": "Adjusted Dismissal / Last Day of School / End of Quarter 4",
+      "name": "Last Day of School / Adjusted Dismissal / Fourth Grading Period Ends",
       "type": "school_end"
     },
     {
       "date": "2027-06-14",
       "name": "Flex Staff Day",
-      "type": "no_school"
+      "type": "no_school",
+      "badgeLabel": "No Students",
+      "description": "School closed for students. Any Q4 make-up date is designated separately by the superintendent."
     },
     {
       "date": "2027-06-18",
       "name": "Juneteenth (Observed)",
       "type": "holiday"
     }
-  ],
-  "calendarNotes": "Virginia Beach City Public Schools (VBCPS) opens the 2026–2027 school year on August 24, 2026, following staff workdays from August 14–21. Unlike most Virginia districts, VBCPS organizes its academic year into four quarters rather than semesters — quarter-end dates fall on October 30, January 22, April 8, and June 11, and typically include early-release dismissal used for parent conferences or professional development. Labor Day extends to a four-day weekend: both Friday, September 4 and Monday, September 7 are school holidays. Veterans Day (November 11) is observed as a full school holiday, consistent with Virginia Beach's large active-duty military population. Thanksgiving Break runs November 25–27; Winter Break runs December 21 through January 1, with classes resuming January 4. Spring Break is scheduled March 29–April 2, 2027 — coinciding with peak resort season on the Virginia Beach oceanfront, when traffic and hotel rates near Atlantic Avenue are significantly elevated. The school year ends for all students on June 11, 2027.",
-  "datePublished": "2026-07-05",
-  "dateModified": "2026-07-05"
+  ]
 }

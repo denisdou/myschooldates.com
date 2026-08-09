@@ -1,199 +1,478 @@
 {
   "institutionId": "loudoun-county",
   "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Loudoun County Public Schools Calendar 2027–2028",
   "firstDay": "2027-08-19",
   "lastDay": "2028-06-14",
+  "temporalCoverageStart": "2027-08-19",
+  "temporalCoverageEnd": "2028-06-14",
   "totalSchoolDays": 180,
-  "teacherWorkDays": null,
+  "teacherWorkDays": 194,
   "semesters": 2,
   "sourceUrl": "https://www.lcps.org/calendar",
-  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4461/Lcps/33240cf3-0dab-476a-a973-dd2b3e5c84b7/FY28-Calendar---Final.pdf",
-  "lastVerifiedAt": "2026-07-05",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4461/Lcps/33240cf3-0dab-476a-a973-dd2b3e5c84b7/FY28-Calendar---Final.pdf?disposition=inline",
+  "sourceCalendarName": "LCPS 2027–28 Student Calendar",
+  "sourceVersion": "School Board selected Calendar Option One on June 24, 2025",
+  "hideSourceVersionDisplay": true,
+  "lastVerifiedAt": "2026-08-09",
+  "datePublished": "2026-07-05",
+  "dateModified": "2026-08-09",
   "calendarType": "traditional",
-  "calendarFaqs": [
+  "allDatesMode": "all",
+  "itemListMode": "allImportantDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "schemaReviewedBy": "author",
+  "webPageMainEntity": "dataset",
+  "splitCalendarDateItemListSchema": true,
+  "seoTitle": "Loudoun County Public Schools Calendar 2027–28: Dates & PDF",
+  "seoDescription": "LCPS 2027–28 calendar with first and last days, holidays, Thanksgiving, winter and spring breaks, official PDF, and ICS download.",
+  "schemaCalendarName": "Loudoun County Public Schools Student Calendar 2027–28",
+  "schemaDatasetName": "LCPS 2027–28 Student Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed LCPS 2027–28 student dates, including the first and last days of school, holidays, breaks, student holidays, and quarter-ending dates.",
+  "schemaKeyDateItemListName": "LCPS 2027–28 key dates at a glance",
+  "schemaCalendarDateItemListName": "LCPS 2027–28 student calendar dates",
+  "schemaCalendarDownloadName": "MySchoolDates LCPS 2027–28 calendar file",
+  "schemaCalendarDownloadDescription": "MySchoolDates-generated calendar import file based on reviewed dates in the official LCPS 2027–28 student calendar.",
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideInstructionalDaysSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "relatedDistrictsSameYearOnly": true,
+  "hideRelatedDistrictDescriptions": true,
+  "comparisonBeforeFaq": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "otherCalendars",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "faq"
+  ],
+  "heroSourceLine": "LCPS Student Calendar · Calendar Option One selected June 24, 2025 · 180 student days",
+  "heroSummary": "Loudoun County Public Schools begins the 2027–28 school year on Thursday, August 19, 2027, and the last day is Wednesday, June 14, 2028. Winter Break runs December 20–31, 2027, with students returning Monday, January 3. Spring Break runs April 10–14, 2028.",
+  "heroCtas": [
     {
-      "q": "When does school start for Loudoun County Public Schools in 2027-2028?",
-      "a": "The first day of school for Loudoun County Public Schools is Thursday, August 19, 2027. Students and staff are expected to report on this date to begin the new academic year."
+      "label": "Download Calendar (.ics)",
+      "href": "__icsUrl",
+      "variant": "primary",
+      "download": true,
+      "filename": "__icsFilename"
     },
     {
-      "q": "When is the last day of school for Loudoun County Public Schools in 2027-2028?",
-      "a": "The last day of school for Loudoun County Public Schools is Wednesday, June 14, 2028. The school year runs from August through June, covering 180 instructional days."
-    },
-    {
-      "q": "When is spring break 2027-2028 for Loudoun County Public Schools?",
-      "a": "Spring break for Loudoun County Public Schools runs Apr 10, 2028–Apr 14, 2028, 5 days."
+      "label": "View Official LCPS PDF",
+      "href": "__sourcePdfUrl",
+      "variant": "secondary"
     }
   ],
-  "yearNumbers": [
+  "calendarNotes": "This page follows the LCPS 2027–28 student calendar. Staff members and families using a program-specific schedule should confirm the calendar assigned to them.",
+  "verificationBadgeText": "Checked August 9, 2026, against the official LCPS 2027–28 student calendar and the official sources used for the year and district comparisons.",
+  "keyDatesSummaryTitle": "LCPS 2027–28 Key Dates at a Glance",
+  "keyDatesSummarySubtitle": "First day, major breaks, and last day of school",
+  "keyDateSummaryItems": [
     {
-      "label": "Diwali Observed",
-      "value": "Oct 29",
-      "detail": "School closed district-wide for Diwali; date falls nearly two weeks earlier than in 2026–2027 (Nov 9)."
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2027-08-19",
+      "type": "school_start",
+      "schemaDescription": "The first day of classes on the LCPS 2027–28 student calendar."
     },
     {
-      "label": "Lunar New Year",
-      "value": "Jan 26",
-      "detail": "School closed district-wide for Lunar New Year; shifts from Feb 5 in 2026–2027 to late January."
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2027-11-24",
+      "endDate": "2027-11-26",
+      "type": "break_start",
+      "schemaDescription": "Thanksgiving Break on the LCPS 2027–28 student calendar."
     },
     {
-      "label": "Eid al-Fitr",
-      "value": "Feb 25",
-      "detail": "School closed district-wide for Eid al-Fitr; shifts from Mar 9 in 2026–2027 to late February."
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "type": "break_start",
+      "schemaDescription": "Winter Break on the LCPS 2027–28 student calendar."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2028-04-10",
+      "endDate": "2028-04-14",
+      "type": "break_start",
+      "schemaDescription": "Spring Break on the LCPS 2027–28 student calendar."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2028-06-14",
+      "type": "school_end",
+      "schemaDescription": "The last day of classes on the LCPS 2027–28 student calendar."
     }
   ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Major Breaks", "id": "lcps-2027-2028-major-breaks" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "LCPS 2027–28 Student Calendar Dates",
+  "allDatesCoverageNote": "First and last days, holidays, breaks, student holidays, and quarter-ending dates on the LCPS 2027–28 student calendar.",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4461/Lcps/33240cf3-0dab-476a-a973-dd2b3e5c84b7/FY28-Calendar---Final.pdf?disposition=inline",
+  "allDatesSourceLinks": [
+    {
+      "label": "Official LCPS 2027–28 student calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4461/Lcps/33240cf3-0dab-476a-a973-dd2b3e5c84b7/FY28-Calendar---Final.pdf?disposition=inline"
+    },
+    {
+      "label": "LCPS calendar page",
+      "url": "https://www.lcps.org/calendar"
+    }
+  ],
+  "allDatesSourceLabel": "Official LCPS 2027–28 student calendar PDF",
+  "hideDateLegend": true,
+  "icsHeading": "Add LCPS 2027–28 Dates to Your Calendar",
+  "icsDescription": "Download a MySchoolDates-generated ICS file with the first and last days of school, holidays, breaks, student holidays, and quarter-ending dates listed on this page.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "icsButtonSupportText": "One-time import. It will not automatically reflect later LCPS calendar changes.",
+  "icsAriaLabel": "Download the MySchoolDates-generated LCPS 2027–28 calendar file",
+  "pdfHeading": "Official LCPS 2027–28 Student Calendar",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "Open the two-page LCPS file containing the student and teacher calendars, student-day totals, holidays, and quarter-ending dates.",
+  "pdfVersionLabel": "Calendar Option One selected June 24, 2025",
+  "customSections": [
+    {
+      "id": "lcps-2027-2028-calendar-scope",
+      "label": "Which LCPS Calendar Is Shown Here?",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "This page follows the LCPS 2027–28 student calendar. Staff members and families using a program-specific schedule should confirm the calendar assigned to them.",
+      "links": [
+        {
+          "label": "View official LCPS calendar files",
+          "to": "https://www.lcps.org/calendar"
+        }
+      ]
+    },
+    {
+      "id": "lcps-2027-2028-major-breaks",
+      "label": "Major Breaks and Return Dates",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "These ranges and return dates follow the LCPS student calendar.",
+      "groups": [
+        {
+          "label": "Thanksgiving Break",
+          "items": [
+            "Thanksgiving Break runs November 24–26, 2027. Students return Monday, November 29."
+          ]
+        },
+        {
+          "label": "Winter Break",
+          "items": [
+            "Winter Break runs December 20–31, 2027. Students return Monday, January 3, 2028."
+          ]
+        },
+        {
+          "label": "Spring Break",
+          "items": [
+            "Spring Break runs Monday, April 10 through Friday, April 14, 2028. Students return Monday, April 17."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lcps-2027-2028-planning-notes",
+      "label": "LCPS Calendar Notes for Families",
+      "position": "afterYearDiff",
+      "schemaHasPart": true,
+      "groups": [
+        {
+          "label": "Holiday dates",
+          "items": [
+            "The LCPS student calendar marks October 11, October 29, January 26, and February 25 as holidays when schools are closed. This page uses a specific observance name only when an official source supports that label."
+          ]
+        },
+        {
+          "label": "Weather and emergency changes",
+          "items": [
+            "LCPS posts closures, delayed openings, and early dismissals on its website and sends divisionwide notifications. The downloadable calendar on this page is a one-time import and does not update automatically."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "LCPS inclement weather information",
+          "to": "https://www.lcps.org/o/communications/page/inclement-weather-information"
+        }
+      ]
+    }
+  ],
+  "whatsNew": {
+    "title": "What Changed From 2026–27",
+    "content": [
+      "The first day moves from August 17 in 2026–27 to August 19 in 2027–28, two calendar days later.",
+      "Spring Break moves from March 22–26 in 2026–27 to April 10–14 in 2027–28.",
+      "The last day moves from June 11 in 2026–27 to June 14 in 2027–28, three calendar days later."
+    ]
+  },
   "events": [
     {
       "date": "2027-08-19",
       "name": "First Day of School",
-      "type": "school_start"
+      "type": "school_start",
+      "schemaDescription": "The first day of classes on the LCPS 2027–28 student calendar."
     },
     {
       "date": "2027-09-03",
       "name": "Student Holiday",
-      "type": "no_school"
+      "type": "student_holiday",
+      "preserveOfficialName": true,
+      "badgeLabel": "Student Holiday",
+      "description": "Students do not attend."
     },
     {
       "date": "2027-09-06",
       "name": "Labor Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2027-10-11",
-      "name": "Indigenous Peoples' Day / Yom Kippur",
-      "type": "holiday"
+      "name": "Holiday",
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2027-10-27",
       "name": "End of Quarter 1",
-      "type": "quarter_end"
+      "type": "quarter_end",
+      "description": "An academic milestone, not a day off."
     },
     {
       "date": "2027-10-28",
       "name": "Student Holiday",
-      "type": "no_school"
+      "type": "student_holiday",
+      "preserveOfficialName": true,
+      "badgeLabel": "Student Holiday",
+      "description": "Students do not attend."
     },
     {
       "date": "2027-10-29",
-      "name": "Diwali",
-      "type": "holiday"
+      "name": "Holiday",
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2027-11-01",
-      "name": "Student Holiday",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-11-02",
-      "name": "Student Holiday",
-      "type": "no_school"
+      "endDate": "2027-11-02",
+      "name": "Student Holidays",
+      "type": "student_holiday",
+      "preserveOfficialName": true,
+      "badgeLabel": "Student Holidays",
+      "description": "Students do not attend."
     },
     {
       "date": "2027-11-24",
+      "endDate": "2027-11-26",
       "name": "Thanksgiving Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-11-26",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
+      "type": "break_start",
+      "description": "Students return Monday, November 29."
     },
     {
       "date": "2027-12-20",
+      "endDate": "2027-12-31",
       "name": "Winter Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-12-23",
-      "name": "Christmas Eve (Observed)",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-12-24",
-      "name": "Christmas (Observed)",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-12-31",
-      "name": "New Year's Day (Observed) / Winter Break End",
-      "type": "break_end"
+      "type": "break_start",
+      "description": "Students return Monday, January 3."
     },
     {
       "date": "2028-01-17",
       "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2028-01-21",
       "name": "End of Quarter 2",
-      "type": "quarter_end"
+      "type": "quarter_end",
+      "description": "An academic milestone, not a day off."
     },
     {
       "date": "2028-01-24",
-      "name": "Student Holiday",
-      "type": "no_school"
-    },
-    {
-      "date": "2028-01-25",
-      "name": "Student Holiday",
-      "type": "no_school"
+      "endDate": "2028-01-25",
+      "name": "Student Holidays",
+      "type": "student_holiday",
+      "preserveOfficialName": true,
+      "badgeLabel": "Student Holidays",
+      "description": "Students do not attend."
     },
     {
       "date": "2028-01-26",
-      "name": "Lunar New Year",
-      "type": "holiday"
+      "name": "Holiday",
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2028-02-21",
       "name": "Presidents' Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2028-02-25",
-      "name": "Eid al Fitr (Observed)",
-      "type": "holiday"
+      "name": "Holiday",
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2028-03-06",
-      "name": "Student Holiday",
-      "type": "no_school"
-    },
-    {
-      "date": "2028-03-07",
-      "name": "Student Holiday",
-      "type": "no_school"
+      "endDate": "2028-03-07",
+      "name": "Student Holidays",
+      "type": "student_holiday",
+      "preserveOfficialName": true,
+      "badgeLabel": "Student Holidays",
+      "description": "Students do not attend."
     },
     {
       "date": "2028-03-31",
       "name": "End of Quarter 3",
-      "type": "quarter_end"
+      "type": "quarter_end",
+      "description": "An academic milestone, not a day off."
     },
     {
       "date": "2028-04-03",
       "name": "Student Holiday",
-      "type": "no_school"
+      "type": "student_holiday",
+      "preserveOfficialName": true,
+      "badgeLabel": "Student Holiday",
+      "description": "Students do not attend."
     },
     {
       "date": "2028-04-10",
+      "endDate": "2028-04-14",
       "name": "Spring Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2028-04-14",
-      "name": "Spring Break End",
-      "type": "break_end"
+      "type": "break_start",
+      "description": "Students return Monday, April 17."
     },
     {
       "date": "2028-05-29",
       "name": "Memorial Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2028-06-14",
       "name": "Last Day of School / End of Quarter 4",
-      "type": "school_end"
+      "type": "school_end",
+      "schemaDescription": "The last day of classes on the LCPS 2027–28 student calendar."
     }
   ],
-  "calendarNotes": "LCPS starts the 2027–2028 school year on August 19, 2027, about a week before neighboring Fairfax County and Prince William County. Classes end on June 14, 2028, and Spring Break falls April 10–14 — later in the spring than Northern Virginia families typically see — giving more lead time before summer programs begin. Four cultural holidays are district-wide no-school days: Yom Kippur (October 11), Diwali (October 29), Lunar New Year (January 26), and Eid al-Fitr (February 25). Because these holidays follow lunar or lunisolar calendars, their dates change every year.",
-  "datePublished": "2026-07-05",
-  "dateModified": "2026-07-05"
+  "comparisonDistrictSlugs": [
+    "fairfax-county-school-calendar"
+  ],
+  "comparisonTitle": "LCPS 2027–28 Calendar Compared With Fairfax County Public Schools",
+  "comparisonSummary": "This table compares the same 2027–28 school year using each district's published calendar.",
+  "comparisonSubheading": "School-year boundaries and major break ranges",
+  "comparisonCaption": "2027–28 calendar comparison for LCPS and FCPS",
+  "comparisonDefaultOpen": true,
+  "hideComparisonInsights": true,
+  "hideComparisonNotes": true,
+  "comparisonFooterText": "Dates come from each district's published 2027–28 calendar. Matching break ranges do not mean every student holiday or observance is handled the same way.",
+  "comparisonReviewedText": "Reviewed August 9, 2026.",
+  "comparisonCustomRows": [
+    {
+      "key": "firstDay",
+      "label": "First Day",
+      "values": {
+        "loudoun-county-school-calendar": "Aug 19, 2027",
+        "fairfax-county-school-calendar": "Aug 23, 2027"
+      }
+    },
+    {
+      "key": "lastDay",
+      "label": "Last Day",
+      "values": {
+        "loudoun-county-school-calendar": "Jun 14, 2028",
+        "fairfax-county-school-calendar": "Jun 14, 2028"
+      }
+    },
+    {
+      "key": "thanksgivingBreak",
+      "label": "Thanksgiving Break",
+      "values": {
+        "loudoun-county-school-calendar": "Nov 24–26, 2027",
+        "fairfax-county-school-calendar": "Nov 24–26, 2027"
+      }
+    },
+    {
+      "key": "winterBreak",
+      "label": "Winter Break",
+      "values": {
+        "loudoun-county-school-calendar": "Dec 20–31, 2027",
+        "fairfax-county-school-calendar": "Dec 20, 2027–Jan 2, 2028"
+      }
+    },
+    {
+      "key": "springBreak",
+      "label": "Spring Break",
+      "values": {
+        "loudoun-county-school-calendar": "Apr 10–14, 2028",
+        "fairfax-county-school-calendar": "Apr 10–14, 2028"
+      }
+    }
+  ],
+  "sourceMaintainerText": "MySchoolDates education research team",
+  "sourceReviewSummary": "Reviewed August 9, 2026, against the official LCPS 2027–28 student calendar and the official sources used for comparison.",
+  "sourceReviewDetails": [
+    "Confirmed the first and last days, 180-day total, holiday and student-holiday date markers, breaks, and quarter-ending dates against the official LCPS 2027–28 student calendar PDF.",
+    "Confirmed the PDF's holiday and student-holiday date markers. Holiday and break names on this page are normalized labels for those published dates, and student return dates are derived from the calendar sequence.",
+    "Rebuilt the year-over-year comparison from the official LCPS 2026–27 and 2027–28 student calendars.",
+    "Checked the same-year comparison dates against the official FCPS 2027–28 calendar updated July 9, 2026."
+  ],
+  "sourceNextReviewText": "Next review: when LCPS revises the calendar or replaces its official 2027–28 calendar source.",
+  "sources": [
+    {
+      "label": "LCPS 2027–28 student calendar PDF · Calendar Option One selected June 24, 2025",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4461/Lcps/33240cf3-0dab-476a-a973-dd2b3e5c84b7/FY28-Calendar---Final.pdf?disposition=inline"
+    },
+    {
+      "label": "LCPS calendar page",
+      "url": "https://www.lcps.org/calendar"
+    },
+    {
+      "label": "LCPS School Board summary — Calendar Option One selected June 24, 2025",
+      "url": "https://www.lcps.org/article/2284985"
+    },
+    {
+      "label": "LCPS 2026–27 student calendar PDF — used for year-over-year comparison",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4461/Lcps/da4c53d4-c166-456f-9673-b5a8364ac2f4/FY27-Calendars-Board-Approved.pdf"
+    },
+    {
+      "label": "LCPS inclement weather information",
+      "url": "https://www.lcps.org/o/communications/page/inclement-weather-information"
+    },
+    {
+      "label": "FCPS 2027–28 standard school year calendar — used for district comparison",
+      "url": "https://www.fcps.edu/system/files/forms/2025-02/2027-2028-standard-school-year-calendar.pdf"
+    }
+  ]
 }

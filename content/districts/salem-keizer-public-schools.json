@@ -1,0 +1,149 @@
+{
+  "institutionId": "salem-keizer-public-schools",
+  "name": "Salem-Keizer Public Schools",
+  "shortName": "SKPS",
+  "slug": "salem-keizer-public-schools-calendar",
+  "state": "Oregon",
+  "stateCode": "OR",
+  "city": "Salem",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://salkeiz.k12.or.us/",
+  "calendarPage": "https://salkeiz.k12.or.us/about/calendar",
+  "logo": "https://resources.finalsite.net/images/v1686560181/salkeizk12orus/n29ouijtb09cqg1sivlx/skps-district-logo-reverse-275x50.svg",
+  "timezone": "America/Los_Angeles",
+  "county": "Marion and Polk Counties",
+  "region": "Willamette Valley",
+  "metro": "Salem",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Salem-Keizer Family Calendar",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "translatedPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-09",
+    "coverageNote": "Coverage uses the official SKPS calendar page, the complete English 2026-2027 family key-date PDF, and the Arabic, Chuukese, Russian, Spanish, and Swahili editions. School-specific events and staff calendars remain separate from this family calendar resource."
+  },
+  "contentFreshnessScore": {
+    "overall": 98,
+    "lastManualReview": "2026-08-09",
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 60,
+    "refreshRule": "Re-check when SKPS replaces the family calendar, changes a grade-level opening or last day, adds June make-up dates, or publishes 2027-2028 dates."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official SKPS calendar revision, emergency make-up announcement, grade-level opening change, translated-calendar replacement, or future-year publication."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Salem-Keizer Public Schools calendar",
+    "SKPS calendar",
+    "Salem Keizer school calendar",
+    "Salem-Keizer 24J calendar",
+    "Salem-Keizer school holidays",
+    "Salem-Keizer kindergarten transition",
+    "Salem-Keizer first day of school",
+    "Salem-Keizer last day of school"
+  ],
+  "districtFact": "Salem-Keizer Public Schools, Oregon School District 24J, publishes a family key-date calendar with grade-specific first days, a separate kindergarten transition, middle-school trimester markers, a high-school semester marker, and different last days for grades K-5 and 6-11. The 2026-2027 family calendar is available in English plus Arabic, Chuukese, Russian, Spanish, and Swahili.",
+  "about": [
+    {
+      "title": "About the Salem-Keizer Family Calendar",
+      "content": "The SKPS family key-date calendar is a districtwide planning document, not a complete list of every school event. It identifies first days by grade, kindergarten transition, student-free days, conferences, breaks, grading and staff-development dates, graduation dates, and grade-level last days. Individual schools may publish additional dates."
+    },
+    {
+      "title": "The School Year Does Not Have One First Day",
+      "content": "Grades 6 and 9 begin first, followed one day later by grades 1-5, 7-8, and 10-12. Kindergarten then uses two transition dates before all kindergarten students begin together. Families should use the date for each child rather than treating the earliest opening as a districtwide first day."
+    },
+    {
+      "title": "Middle and High Schools Use Different Academic Markers",
+      "content": "The family calendar identifies trimester starts for middle schools and a semester start for high schools. These dates are not interchangeable: middle-school trimester two begins in December and trimester three begins after Spring Break, while high-school semester two begins in February."
+    },
+    {
+      "title": "June Ends Differently by Grade Level",
+      "content": "High school graduations are scheduled June 9-11, grades K-5 finish June 16, and grades 6-11 finish June 17. The calendar also warns that days may be added in June after emergency closures but does not preassign specific make-up dates."
+    },
+    {
+      "title": "Six Family Calendar Language Editions",
+      "content": "SKPS publishes the 2026-2027 family key-date calendar in English, Arabic, Chuukese, Russian, Spanish, and Swahili. These are translations of the same family calendar; separate staff calendars are published elsewhere on the district calendar page."
+    }
+  ],
+  "planningTips": {
+    "title": "Salem-Keizer Public Schools Calendar Notes",
+    "content": [
+      "Match the first day to the student's grade: grades 6 and 9 begin September 8, most other grades begin September 9, and all kindergarten students begin September 16.",
+      "Use the kindergarten transition schedule provided by the school for September 14-15; the district key-date calendar does not describe one universal attendance pattern for those two days.",
+      "Plan for the October 28-30 closure as three consecutive student-free weekdays: two fall-conference days followed by a separate no-school day.",
+      "Treat November 30 as a student-free day. The live calendar calls it a grading day, while the family PDF labels it Professional Development/District Directed.",
+      "Middle-school trimester dates and the high-school semester date apply to different grade levels.",
+      "Expect different June ending dates for elementary and secondary students, and do not assume graduation dates are the last attendance dates for every high school student.",
+      "Keep June plans flexible after an emergency closure because SKPS may add instructional days without listing reserved dates in advance.",
+      "Use the official calendar page and school messages for revisions after importing the one-time MySchoolDates ICS file."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "When does Salem-Keizer Public Schools start in 2026?",
+      "a": "Grades 6 and 9 begin Tuesday, September 8, 2026. Grades 1–5, 7–8, and 10–12 begin September 9. Kindergarten has transition dates September 14–15, and all kindergarten students begin September 16."
+    },
+    {
+      "q": "When does Salem-Keizer kindergarten start in 2026?",
+      "a": "SKPS lists kindergarten transition on September 14–15 and the first day for all kindergarten students on September 16. Families should follow the transition schedule sent by their school."
+    },
+    {
+      "q": "When is Salem-Keizer Spring Break in 2027?",
+      "a": "Spring Break runs March 22–26, 2027. Students are also out March 17 for grading and staff development, March 18 for spring conferences, and March 19 for a separate no-school day."
+    },
+    {
+      "q": "When is the last day of Salem-Keizer Public Schools in 2027?",
+      "a": "Grades K–5 finish Wednesday, June 16, 2027. Grades 6–11 finish Thursday, June 17. The district notes that June days may be added after emergency closures."
+    },
+    {
+      "q": "Does Salem-Keizer publish translated school calendars?",
+      "a": "Yes. The 2026-2027 family key-date calendar is available in English, Arabic, Chuukese, Russian, Spanish, and Swahili."
+    },
+    {
+      "q": "Are Salem-Keizer emergency make-up dates already scheduled?",
+      "a": "No specific dates are reserved on the family calendar. SKPS says days may be added in June after emergency closures, so families should wait for a district announcement before treating any additional June date as a school day."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Portland Public Schools",
+      "slug": "portland-public-schools-calendar",
+      "state": "Oregon",
+      "comparisonNote": "See Portland's calendar, including grade-specific openings and conditional snow make-up dates."
+    },
+    {
+      "name": "Beaverton School District",
+      "slug": "beaverton-school-district-calendar",
+      "state": "Oregon",
+      "comparisonNote": "See Beaverton's calendar, including its main district schedule and separate Pre-K calendar."
+    }
+  ],
+  "relatedDistrictsTitle": "Related Oregon School Calendars",
+  "sources": [
+    { "label": "Salem-Keizer Public Schools official website", "url": "https://salkeiz.k12.or.us/" },
+    { "label": "SKPS calendar page and downloadable family calendars", "url": "https://salkeiz.k12.or.us/about/calendar" },
+    { "label": "SKPS Translation and Interpretation", "url": "https://salkeiz.k12.or.us/students-families/translation-interpretation" },
+    { "label": "SKPS Emergency Closures and Delays", "url": "https://salkeiz.k12.or.us/about/emergency-closures-delays" }
+  ]
+}

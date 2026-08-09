@@ -67,9 +67,12 @@ export default defineNuxtConfig({
         '/new-york',
         '/pennsylvania',
         '/washington',
+        '/oregon',
+        '/utah',
 
         // ── District index pages ───────────────────────────────────────────────
         '/adams-12-five-star-schools-calendar',
+        '/alpine-school-district-calendar',
         '/aldine-independent-school-district-calendar',
         '/anne-arundel-county-school-calendar',
         '/anaheim-union-high-school-district-calendar',
@@ -80,6 +83,7 @@ export default defineNuxtConfig({
         '/bakersfield-city-school-district-calendar',
         '/baltimore-county-school-calendar',
         '/baltimore-city-public-schools-calendar',
+        '/beaverton-school-district-calendar',
         '/bellevue-school-district-calendar',
         '/brevard-public-schools-calendar',
         '/boston-public-schools-calendar',
@@ -123,6 +127,7 @@ export default defineNuxtConfig({
         '/hampton-city-schools-calendar',
         '/hawaii-state-department-of-education-calendar',
         '/hillsborough-county-school-calendar',
+        '/hillsboro-school-district-calendar',
         '/houston-independent-school-district-calendar',
         '/howard-county-school-calendar',
         '/humble-isd-calendar',
@@ -217,6 +222,9 @@ export default defineNuxtConfig({
         '/adams-12-five-star-schools-calendar/2026-2027',
         '/adams-12-five-star-schools-calendar/2027-2028',
 
+        '/alpine-school-district-calendar/2025-2026',
+        '/alpine-school-district-calendar/2026-2027',
+
         '/aldine-independent-school-district-calendar/2025-2026',
         '/aldine-independent-school-district-calendar/2026-2027',
 
@@ -244,6 +252,9 @@ export default defineNuxtConfig({
 
         '/baltimore-city-public-schools-calendar/2025-2026',
         '/baltimore-city-public-schools-calendar/2026-2027',
+
+        '/beaverton-school-district-calendar/2025-2026',
+        '/beaverton-school-district-calendar/2026-2027',
 
         '/brevard-public-schools-calendar/2025-2026',
         '/brevard-public-schools-calendar/2026-2027',
@@ -408,6 +419,10 @@ export default defineNuxtConfig({
 
         '/hillsborough-county-school-calendar/2025-2026',
         '/hillsborough-county-school-calendar/2026-2027',
+
+        '/hillsboro-school-district-calendar/2025-2026',
+        '/hillsboro-school-district-calendar/2026-2027',
+        '/hillsboro-school-district-calendar/2027-2028',
 
         '/houston-independent-school-district-calendar/2025-2026',
         '/houston-independent-school-district-calendar/2026-2027',

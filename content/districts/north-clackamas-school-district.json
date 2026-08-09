@@ -1,0 +1,151 @@
+{
+  "institutionId": "north-clackamas-school-district",
+  "name": "North Clackamas School District",
+  "shortName": "NCSD",
+  "slug": "north-clackamas-school-district-calendar",
+  "state": "Oregon",
+  "stateCode": "OR",
+  "city": "Milwaukie",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.nclack.k12.or.us/",
+  "calendarPage": "https://www.nclack.k12.or.us/about-ncsd/calendar",
+  "logo": "https://resources.finalsite.net/images/v1661936686/nclackk12orus/xxamlqndvybjdjri7fxn/NorthClackamasSchoolDistrict.svg",
+  "timezone": "America/Los_Angeles",
+  "county": "Clackamas County",
+  "region": "Northwest Oregon",
+  "metro": "Portland-Vancouver-Hillsboro",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "school-level calendars",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "North Clackamas School-Level Calendars",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "translatedPdf": true,
+    "programCalendar": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-09",
+    "coverageNote": "Coverage uses the official NCSD calendar page, separate 2026-2027 Elementary, Middle School, and High School student calendar PDFs, and the Spanish, Russian, Vietnamese, and Simplified Chinese editions published for each level."
+  },
+  "contentFreshnessScore": {
+    "overall": 98,
+    "lastManualReview": "2026-08-09",
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 45,
+    "refreshRule": "Re-check when NCSD replaces a school-level calendar, revises a first or last day, uses an emergency make-up date, changes a middle-school late-start date, or publishes a future-year student calendar."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official NCSD calendar revision, emergency make-up activation, school-level schedule change, translation replacement, or future-year publication."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "North Clackamas School District calendar",
+    "NCSD calendar Oregon",
+    "North Clackamas Schools calendar",
+    "North Clackamas elementary calendar",
+    "North Clackamas middle school calendar",
+    "North Clackamas high school calendar",
+    "North Clackamas school holidays",
+    "North Clackamas School District first day",
+    "North Clackamas School District last day"
+  ],
+  "districtFact": "North Clackamas School District publishes three separate 2026-2027 student calendars rather than one interchangeable K-12 file. Elementary, middle, and high school calendars use different first days, last days, emergency make-up windows, and level-specific schedule markings; each is also available in Spanish, Russian, Vietnamese, and Simplified Chinese.",
+  "about": [
+    {
+      "title": "Three Student Calendars, Not One",
+      "content": "NCSD publishes separate Elementary, Middle School, and High School calendars. Districtwide holidays and breaks mostly align, but school openings, last days, grading dates, elementary workdays, middle-school late starts, high-school finals, and emergency make-up windows do not all match. Families should use the calendar for the student's school level."
+    },
+    {
+      "title": "Opening Dates Depend on Grade",
+      "content": "Grades 1-5, grade 6, and grade 9 begin September 8, 2026. Grades 7-8 and 10-12 begin September 9, while kindergarten begins September 14. The staggered sequence is printed across the three official level calendars."
+    },
+    {
+      "title": "Middle School Late Starts Are Calendar-Specific",
+      "content": "The Middle School calendar marks selected Wednesdays as L1 or L2 late-start days. The official one-page file identifies the dates but does not define bell times, so families should use the date list as a planning alert and confirm the actual start time with their school."
+    },
+    {
+      "title": "Last Days and Make-Up Windows Differ",
+      "content": "Elementary students have a scheduled last day of June 17, 2027, followed by possible emergency make-up days June 21-24. Middle and high school students have a scheduled last day of June 21, followed by possible make-up days June 22-25. These conditional dates are not automatic attendance days."
+    },
+    {
+      "title": "Every Level Has Four Translated Editions",
+      "content": "NCSD publishes each Elementary, Middle School, and High School calendar in Spanish, Russian, Vietnamese, and Simplified Chinese. The translated PDFs preserve the school-level differences rather than collapsing them into one generic district calendar."
+    }
+  ],
+  "planningTips": {
+    "title": "North Clackamas Calendar Notes",
+    "content": [
+      "Choose the Elementary, Middle School, or High School calendar assigned to the student before relying on first-day, last-day, grading, or make-up dates.",
+      "Kindergarten starts September 14, after grades 1-5 begin September 8; follow the elementary school's first-week communication for any additional details.",
+      "Middle school families should check the published L1 and L2 late-start dates, then confirm the bell time with their school because the calendar does not define those clock times.",
+      "Elementary students do not attend January 4, April 28, or May 12 even though middle and high school calendars do not mark those dates as student closures.",
+      "Keep the correct June make-up window flexible: June 21-24 for elementary and June 22-25 for middle and high school, only if NCSD activates those dates.",
+      "Use the official PDF in the family's preferred language; every school level has Spanish, Russian, Vietnamese, and Simplified Chinese editions.",
+      "The MySchoolDates ICS file is a one-time import. Check NCSD and the student's school for later revisions, bell times, and make-up-day activation."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "When does North Clackamas School District start in 2026?",
+      "a": "Grades 1–5, grade 6, and grade 9 start Tuesday, September 8, 2026. Grades 7–8 and 10–12 start Wednesday, September 9, and kindergarten starts Monday, September 14."
+    },
+    {
+      "q": "Which North Clackamas calendar should families use?",
+      "a": "Use the official Elementary, Middle School, or High School student calendar that matches the student's school level. The files have different first days, last days, and level-specific schedule markings."
+    },
+    {
+      "q": "When is North Clackamas Winter Break in 2026-27?",
+      "a": "Winter Break runs Monday, December 21, 2026, through Friday, January 1, 2027. Middle and high school students return January 4; elementary students return January 5 after a January 4 staff workday."
+    },
+    {
+      "q": "When is North Clackamas Spring Break in 2027?",
+      "a": "Spring Break runs Monday, March 22, through Friday, March 26, 2027. Students return Monday, March 29."
+    },
+    {
+      "q": "When is the last day of school for North Clackamas in 2027?",
+      "a": "The scheduled last day is June 17 for elementary students and June 21 for middle and high school students. Later June dates are conditional emergency make-up days."
+    },
+    {
+      "q": "Does NCSD publish translated calendars?",
+      "a": "Yes. NCSD publishes the Elementary, Middle School, and High School calendars in Spanish, Russian, Vietnamese, and Simplified Chinese in addition to English."
+    }
+  ],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Portland Public Schools",
+      "slug": "portland-public-schools-calendar",
+      "state": "Oregon"
+    },
+    {
+      "name": "Beaverton School District",
+      "slug": "beaverton-school-district-calendar",
+      "state": "Oregon"
+    },
+    {
+      "name": "Hillsboro School District",
+      "slug": "hillsboro-school-district-calendar",
+      "state": "Oregon"
+    }
+  ],
+  "relatedDistrictsTitle": "More Oregon School Calendars",
+  "sources": [
+    { "label": "North Clackamas School District official website", "url": "https://www.nclack.k12.or.us/" },
+    { "label": "NCSD calendar page and school-level student calendars", "url": "https://www.nclack.k12.or.us/about-ncsd/calendar" }
+  ]
+}

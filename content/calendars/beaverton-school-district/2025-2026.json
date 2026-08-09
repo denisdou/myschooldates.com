@@ -1,0 +1,442 @@
+{
+  "institutionId": "beaverton-school-district",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025–26",
+  "pageHeading": "Beaverton School District Calendar 2025–26",
+  "firstDay": "2025-08-26",
+  "lastDay": "2026-06-11",
+  "totalSchoolDays": 174,
+  "semesters": 2,
+  "temporalCoverageStart": "2025-08-19",
+  "temporalCoverageEnd": "2026-06-19",
+  "sourceUrl": "https://www.beaverton.k12.or.us/about-us/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1767812078/beavertonk12orus/beavertonk12orus/q4fadguk4g2i4m98guzi/SchoolDistrictCalendar2025-2026-English.pdf",
+  "sourceCalendarName": "2025-2026 District Calendar",
+  "sourceVersion": "Official English calendar approved January 21, 2025",
+  "lastVerifiedAt": "2026-08-09",
+  "dateCreated": "2026-08-09",
+  "datePublished": "2026-08-09",
+  "dateModified": "2026-08-09",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "keyDates",
+  "schemaReviewedBy": "author",
+  "seoTitle": "Beaverton School District Calendar 2025–26",
+  "seoDescription": "Beaverton School District 2025–26 calendar: first and last days, breaks, staff and grading days, June make-up dates, senior last day, and official PDF.",
+  "schemaCalendarName": "Beaverton School District Calendar 2025–26",
+  "schemaDatasetName": "Beaverton School District 2025–26 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Beaverton School District dates for 2025–26, including 174 student days, the grade-level first-day caveat, staff and grading days, breaks, semester endings, senior last day, scheduled last day, and potential June make-up days.",
+  "schemaCalendarDownloadName": "MySchoolDates Beaverton 2025–26 calendar file",
+  "schemaCalendarDownloadDescription": "One-time calendar import with reviewed student dates, closures, staff days, breaks, semester endings, senior last day, and conditional June dates from BSD's official calendar.",
+  "instructionalDaysLabel": "Student Days",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideCalendarTrackCaution": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideRelatedDistrictDescriptions": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "comparison"
+  ],
+  "heroSourceLine": "BSD 2025–26 District Calendar",
+  "heroDownloadLabel": "View official PDF",
+  "heroDownloadHref": "https://resources.finalsite.net/images/v1767812078/beavertonk12orus/beavertonk12orus/q4fadguk4g2i4m98guzi/SchoolDistrictCalendar2025-2026-English.pdf",
+  "heroSummary": "Beaverton School District lists Tuesday, August 26, 2025, as the first day for students, with a note that first-day dates may be modified by grade level. The 174-day calendar ends Thursday, June 11, 2026. Seniors finish June 4, and June 15–19 remain potential make-up school days if emergency closures leave BSD short of required instructional hours.",
+  "calendarNotes": "BSD schedules 174 student days in 2025–26, divided into quarters of 45, 41, 42, and 46 days, so the final quarter is the longest. The district calendar marks August 26 as the first day but says grade-level dates may be modified, so families should follow school-specific opening instructions. Fall Break closes schools November 24–28, creating a full Monday-through-Friday break. Winter Break ends January 2 and is followed by a January 5 staff-development day, so students return Tuesday, January 6. Staff-development and grading dates create additional no-student weekdays in September, October, November, January, and April. Seniors finish June 4, all other students finish June 11, and staff have a grading day June 12, so those dates should not be treated as one universal ending. June 15–19 remain potential make-up days unless BSD needs them to recover instructional hours required by the Oregon Department of Education.",
+  "heroFactChips": [
+    "Student days: 174",
+    "First day: Aug 26",
+    "Seniors finish: Jun 4",
+    "Scheduled last day: Jun 11"
+  ],
+  "verificationBadgeText": "Dates checked August 9, 2026, against the complete official BSD 2025–26 English district-calendar PDF.",
+  "keyDatesSummaryTitle": "2025–26 Key Dates for Beaverton Families",
+  "keyDatesSummarySubtitle": "The district opening, major breaks, senior last day, scheduled last day, and conditional June extension",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Students",
+      "date": "2025-08-26",
+      "type": "school_start",
+      "schemaDescription": "BSD lists August 26, 2025, as the first day for students and notes that the date may be modified by grade level."
+    },
+    {
+      "label": "Break",
+      "name": "Fall Break",
+      "date": "2025-11-24",
+      "endDate": "2025-11-28",
+      "type": "break_start",
+      "description": "Students return Monday, December 1.",
+      "schemaDescription": "Beaverton School District Fall Break runs November 24–28, 2025."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2025-12-22",
+      "endDate": "2026-01-02",
+      "type": "break_start",
+      "description": "January 5 is a staff day; students return Tuesday, January 6.",
+      "schemaDescription": "BSD Winter Break runs December 22, 2025, through January 2, 2026, followed by a January 5 staff day."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2026-03-23",
+      "endDate": "2026-03-27",
+      "type": "break_start",
+      "description": "Students return Monday, March 30.",
+      "schemaDescription": "Beaverton School District Spring Break runs March 23–27, 2026."
+    },
+    {
+      "label": "Seniors",
+      "name": "Seniors' Last Day",
+      "date": "2026-06-04",
+      "type": "academic",
+      "schemaDescription": "June 4, 2026, is the last day for BSD seniors."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Students",
+      "date": "2026-06-11",
+      "type": "school_end",
+      "description": "Scheduled last day and end of second semester.",
+      "schemaDescription": "The scheduled last day for Beaverton School District students is June 11, 2026."
+    },
+    {
+      "label": "If Needed",
+      "name": "Potential Make-Up School Days",
+      "date": "2026-06-15",
+      "endDate": "2026-06-19",
+      "type": "makeup_day",
+      "description": "Used only if BSD needs additional instructional hours after an emergency closure.",
+      "schemaDescription": "June 15–19, 2026, are potential BSD make-up school days, not scheduled attendance days unless activated."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Calendar Rules", "id": "bsd-2025-2026-calendar-rules" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "PDF & Calendar", "id": "add-to-calendar" },
+    { "label": "Observances", "id": "bsd-2025-2026-observances" },
+    { "label": "FAQ", "id": "faq" }
+  ],
+  "allDatesTitle": "Beaverton School District 2025–26 Calendar Dates",
+  "allDatesCoverageNote": "This list covers the 174-day district calendar, including staff and grading days, closures, breaks, semester endings, senior last day, the scheduled last day, and potential June make-up days. Cultural and religious observances are explained separately because they are not automatic school closures.",
+  "allDatesCoverageNotePosition": "top",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1767812078/beavertonk12orus/beavertonk12orus/q4fadguk4g2i4m98guzi/SchoolDistrictCalendar2025-2026-English.pdf",
+  "allDatesSourceLinks": [
+    {
+      "label": "Official BSD 2025–26 English district calendar",
+      "url": "https://resources.finalsite.net/images/v1767812078/beavertonk12orus/beavertonk12orus/q4fadguk4g2i4m98guzi/SchoolDistrictCalendar2025-2026-English.pdf"
+    },
+    {
+      "label": "BSD live calendar and current downloadable editions",
+      "url": "https://www.beaverton.k12.or.us/about-us/calendar"
+    }
+  ],
+  "allDatesSourceLabel": "Source: Beaverton School District",
+  "dateLegendLabelOverrides": {
+    "Holiday": "Schools Closed",
+    "No School": "No Students",
+    "Staff Day": "No Students — Staff Day",
+    "Make-up Day": "Potential Make-Up Day",
+    "Academic": "Semester or Senior Date"
+  },
+  "dateLegendExtraItems": [
+    { "label": "No Students — Grading Day", "dot": "bg-amber-400" },
+    { "label": "Potential Make-Up Day", "dot": "bg-pink-500" }
+  ],
+  "icsHeading": "Add BSD 2025–26 Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file with the official district calendar's first day, closures, staff and grading days, breaks, semester endings, senior last day, and conditional June dates.",
+  "icsButtonLabel": "Download MySchoolDates Calendar (.ics)",
+  "icsButtonSupportText": "Historical one-time import. Use BSD's current calendar page for later revisions.",
+  "icsAriaLabel": "Download the Beaverton School District 2025–26 calendar file",
+  "pdfHeading": "Official BSD 2025–26 District Calendar",
+  "pdfButtonLabel": "View English District Calendar",
+  "pdfDescription": "Open or print BSD's one-page 2025–26 English district calendar.",
+  "pdfVersionLabel": "Official English PDF from BSD",
+  "customSections": [
+    {
+      "id": "bsd-2025-2026-calendar-rules",
+      "label": "What the First and Last Dates Mean",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "BSD's one-page calendar gives a districtwide first-day marker but explicitly allows grade-level modifications. It also separates the senior last day, all-student last day, staff grading day, and potential make-up week.",
+      "table": {
+        "caption": "Beaverton School District 2025–26 opening and closing sequence",
+        "columns": ["Calendar marker", "Date", "What families should know"],
+        "rows": [
+          ["District first day", "August 26", "The PDF says first-day dates may be modified by grade level; check the school's opening message."],
+          ["Seniors' last day", "June 4", "This date applies to seniors, not every student."],
+          ["Last day for students", "June 11", "Scheduled last day and end of second semester."],
+          ["Staff grading day", "June 12", "No students are scheduled."],
+          ["Potential make-up week", "June 15–19", "No school unless BSD activates dates after an emergency closure."]
+        ]
+      }
+    },
+    {
+      "id": "bsd-2025-2026-observances",
+      "label": "Major Cultural and Religious Dates",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "These dates are scheduling protections, not a second list of school closures. BSD asks schools to avoid important events and tests, while students observing a religious or cultural holiday may receive an excused absence and time to make up work.",
+      "collapsible": true,
+      "summaryLabel": "View 2025–26 do-not-schedule dates",
+      "table": {
+        "caption": "BSD major cultural and religious dates for 2025–26",
+        "columns": ["Observance", "Date", "Calendar note"],
+        "rows": [
+          ["Rosh Hashanah", "September 22 at sunset–September 24", "Avoid important events and tests."],
+          ["Yom Kippur", "October 1 at sunset–October 2", "Avoid important events and tests."],
+          ["Diwali", "October 20", "Avoid important events and tests."],
+          ["Christmas", "December 25", "Falls within Winter Break."],
+          ["Lunar New Year", "February 17", "Avoid important events and tests."],
+          ["Eid al-Fitr", "Estimated March 19 at sunset–March 20", "Lunar date; confirm closer to the holiday."],
+          ["Easter", "April 5", "Avoid important events and tests."],
+          ["Eid al-Adha", "Estimated May 26 at sunset–May 27", "Lunar date; confirm closer to the holiday."]
+        ],
+        "footnote": "Cultural and religious observances do not automatically close schools. Estimated Islamic dates depend on lunar observation."
+      }
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When did Beaverton School District start in 2025?",
+      "a": "BSD lists Tuesday, August 26, 2025, as the first day for students. The official calendar says first-day dates may be modified by grade level, so families should use archived school messages for grade-specific opening details."
+    },
+    {
+      "q": "When was Beaverton School District Fall Break in 2025?",
+      "a": "Fall Break ran Monday, November 24, through Friday, November 28, 2025. Students returned Monday, December 1."
+    },
+    {
+      "q": "When was Beaverton School District Winter Break in 2025–26?",
+      "a": "Winter Break ran December 22, 2025, through January 2, 2026. January 5 was a staff-development day with no students, so students returned Tuesday, January 6."
+    },
+    {
+      "q": "When was Beaverton School District Spring Break in 2026?",
+      "a": "Spring Break ran Monday, March 23, through Friday, March 27, 2026. Students returned Monday, March 30."
+    },
+    {
+      "q": "What was the last day of Beaverton School District in 2026?",
+      "a": "The scheduled last day for students was Thursday, June 11, 2026. Seniors finished June 4, and June 15–19 were reserved as potential make-up school days."
+    },
+    {
+      "q": "How many student days were on the BSD 2025–26 calendar?",
+      "a": "The official Beaverton School District calendar lists 174 student days: 45 in the first quarter, 41 in the second, 42 in the third, and 46 in the fourth."
+    }
+  ],
+  "faqDisplayLimit": 6,
+  "sourceReviewSummary": "Reviewed August 9, 2026, against the complete one-page official BSD 2025–26 English district calendar and the district's cultural-observances guidance.",
+  "sourceReviewDetailsTitle": "Calendar scope and verification",
+  "sourceReviewDetails": [
+    "The PDF was rendered and checked visually because color and symbols distinguish school closures, no-student staff days, first and last days, semester endings, potential make-up days, and cultural observances.",
+    "The district PDF lists 174 student days and quarter totals of 45, 41, 42, and 46.",
+    "Cultural and religious dates are kept separate from the school-closure list because BSD describes them as dates when schools should avoid important events and tests, not automatic no-school days.",
+    "The district PDF says first-day dates may be modified by grade level, so this page does not generalize one school's kindergarten or orientation schedule to the entire district.",
+    "The ICS file is a historical one-time import and does not update automatically."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Beaverton School District sources.",
+  "sourceNextReviewText": "Re-check only if BSD replaces the archived 2025–26 PDF or publishes a retrospective calendar correction.",
+  "sources": [
+    {
+      "label": "BSD 2025–26 English district calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1767812078/beavertonk12orus/beavertonk12orus/q4fadguk4g2i4m98guzi/SchoolDistrictCalendar2025-2026-English.pdf"
+    },
+    {
+      "label": "BSD district calendar page",
+      "url": "https://www.beaverton.k12.or.us/about-us/calendar"
+    },
+    {
+      "label": "BSD cultural and religious holidays and observances",
+      "url": "https://www.beaverton.k12.or.us/departments/teaching-learning/equity-inclusion/cultural-and-religious-observances"
+    }
+  ],
+  "events": [
+    {
+      "date": "2025-08-19",
+      "dates": ["2025-08-19", "2025-08-20", "2025-08-21", "2025-08-22", "2025-08-25"],
+      "name": "Pre-Service / Staff Development / Workdays",
+      "type": "teacher_workday",
+      "description": "No students."
+    },
+    {
+      "date": "2025-08-26",
+      "name": "First Day for Students",
+      "type": "school_start",
+      "description": "The district calendar notes that first-day dates may be modified by grade level."
+    },
+    {
+      "date": "2025-09-01",
+      "name": "Labor Day",
+      "type": "holiday",
+      "description": "Schools closed."
+    },
+    {
+      "date": "2025-09-22",
+      "name": "Staff Development / Workday",
+      "type": "teacher_workday",
+      "description": "No students."
+    },
+    {
+      "date": "2025-10-10",
+      "name": "Staff Development / Workday",
+      "type": "teacher_workday",
+      "description": "No students."
+    },
+    {
+      "date": "2025-10-31",
+      "name": "Grading Day",
+      "type": "teacher_workday",
+      "description": "No students."
+    },
+    {
+      "date": "2025-11-10",
+      "name": "Staff Development / Workday",
+      "type": "teacher_workday",
+      "description": "No students."
+    },
+    {
+      "date": "2025-11-11",
+      "name": "Veterans Day",
+      "type": "holiday",
+      "description": "Schools closed."
+    },
+    {
+      "date": "2025-11-24",
+      "endDate": "2025-11-28",
+      "displayDate": "November 24–28, 2025",
+      "name": "Fall Break",
+      "type": "break_start",
+      "description": "Schools closed."
+    },
+    {
+      "date": "2025-12-01",
+      "name": "Students Return After Fall Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2025-12-22",
+      "endDate": "2026-01-02",
+      "displayDate": "December 22, 2025–January 2, 2026",
+      "name": "Winter Break",
+      "type": "break_start",
+      "description": "Schools closed."
+    },
+    {
+      "date": "2026-01-05",
+      "name": "Staff Development / Workday",
+      "type": "teacher_workday",
+      "description": "No students."
+    },
+    {
+      "date": "2026-01-06",
+      "name": "Students Return After Winter Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday",
+      "description": "Schools closed."
+    },
+    {
+      "date": "2026-01-23",
+      "name": "First Semester Ends",
+      "type": "academic"
+    },
+    {
+      "date": "2026-01-26",
+      "name": "Grading Day",
+      "type": "teacher_workday",
+      "description": "No students."
+    },
+    {
+      "date": "2026-01-27",
+      "name": "Staff Development / Workday",
+      "type": "teacher_workday",
+      "description": "No students."
+    },
+    {
+      "date": "2026-02-16",
+      "name": "Presidents Day",
+      "type": "holiday",
+      "description": "Schools closed."
+    },
+    {
+      "date": "2026-03-23",
+      "endDate": "2026-03-27",
+      "displayDate": "March 23–27, 2026",
+      "name": "Spring Break",
+      "type": "break_start",
+      "description": "Schools closed."
+    },
+    {
+      "date": "2026-03-30",
+      "name": "Students Return After Spring Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Grading Day",
+      "type": "teacher_workday",
+      "description": "No students."
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Staff Development / Workday",
+      "type": "teacher_workday",
+      "description": "No students."
+    },
+    {
+      "date": "2026-05-25",
+      "name": "Memorial Day",
+      "type": "holiday",
+      "description": "Schools closed."
+    },
+    {
+      "date": "2026-06-04",
+      "name": "Seniors' Last Day",
+      "type": "academic"
+    },
+    {
+      "date": "2026-06-11",
+      "name": "Last Day for Students / Second Semester Ends",
+      "type": "school_end"
+    },
+    {
+      "date": "2026-06-12",
+      "name": "Grading Day",
+      "type": "teacher_workday",
+      "description": "No students."
+    },
+    {
+      "date": "2026-06-15",
+      "endDate": "2026-06-19",
+      "displayDate": "June 15–19, 2026",
+      "name": "Potential Make-Up School Days",
+      "type": "makeup_day",
+      "description": "No school unless BSD uses these dates to recover instructional hours after an emergency closure."
+    }
+  ]
+}

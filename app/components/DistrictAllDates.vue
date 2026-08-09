@@ -17,6 +17,7 @@ type CalendarEvent = {
   showDuringBreak?: boolean
   hideLabel?: boolean
   preventRangeMerge?: boolean
+  derivedFromPublishedBreakDates?: boolean
 }
 type LegendItem = { label: string; dot: string }
 type SourceLink = { label: string; url: string }
@@ -38,6 +39,8 @@ const props = defineProps<{
   sourceLinks?: SourceLink[]
   coverageNote?: string
   coverageNotePosition?: 'top' | 'bottom' | 'both'
+  coveredBreakDatesNote?: string
+  derivedDateNote?: string
   includedDatesInKeyDates?: string[]
   firstDay?: string
   lastDay?: string
@@ -532,6 +535,9 @@ function formatRangeEnd(event: DisplayEvent) {
               <p v-if="shouldShowDescription(event)" class="mt-1 text-sm text-[#6b645c]">
                 {{ event.description }}
               </p>
+              <p v-if="event.derivedFromPublishedBreakDates" class="mt-1 text-xs text-[#7b756d]">
+                {{ derivedDateNote || 'Return date based on the district\'s published no-school schedule.' }}
+              </p>
             </div>
             <span v-if="!event.hideLabel" class="text-xs font-medium px-2.5 py-1 rounded-lg whitespace-normal sm:whitespace-nowrap" :class="eventTypeColor[event.labelType]">
               {{ displayLabelText(event) }}
@@ -575,7 +581,8 @@ function formatRangeEnd(event: DisplayEvent) {
         <template v-else>
           <template v-if="footerCoverageNote">{{ footerCoverageNote }} </template>
           <template v-if="coveredBreakDateNames.length">
-            Dates listed within a vacation period are already included in that period and are not listed separately{{ coveredBreakDateNames.length ? ` (${coveredBreakDateNames.join(', ')})` : '' }}.
+            <template v-if="coveredBreakDatesNote">{{ coveredBreakDatesNote }}</template>
+            <template v-else>Dates listed within a vacation period are already included in that period and are not listed separately{{ coveredBreakDateNames.length ? ` (${coveredBreakDateNames.join(', ')})` : '' }}.</template>
           </template>
           Based on the
           <template v-if="sourceLinks.length">

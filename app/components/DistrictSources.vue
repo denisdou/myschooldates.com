@@ -18,6 +18,7 @@ const props = defineProps<{
   maintainerText?: string | null
   nextReviewText?: string | null
   reviewDateLabel?: string | null
+  hideReviewDate?: boolean
 }>()
 
 const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' && props.sourcePdfUrl.includes('assets.myschooldates.com'))
@@ -115,7 +116,7 @@ const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.
           Editorial Policy
         </NuxtLink>
       </p>
-      <p v-if="verifiedDate">
+      <p v-if="verifiedDate && !hideReviewDate">
         <span class="font-medium text-[#6b645c]">{{ reviewDateLabel || 'Last manual review' }}:</span>
         {{ verifiedDate }}, by Denis Dou.
       </p>

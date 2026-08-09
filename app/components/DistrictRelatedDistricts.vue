@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  relatedDistricts: { name: string; slug: string; state: string; linkLabel?: string; reason?: string; comparisonNote?: string }[]
+  relatedDistricts: { name: string; slug?: string; url?: string; state: string; linkLabel?: string; reason?: string; comparisonNote?: string }[]
   stateName: string
   title?: string
   description?: string
@@ -10,7 +10,7 @@ const props = defineProps<{
   forceYearLinks?: boolean
 }>()
 
-const validRelatedDistricts = computed(() => props.relatedDistricts.filter(rd => rd.slug))
+const validRelatedDistricts = computed(() => props.relatedDistricts.filter(rd => rd.slug || rd.url))
 const allRelatedInState = computed(() => validRelatedDistricts.value.every(rd => rd.state === props.stateName))
 const heading = computed(() => props.title ?? (allRelatedInState.value ? `More ${props.stateName} School Calendars` : 'More School Calendars'))
 const description = computed(() => props.description ?? (allRelatedInState.value
@@ -18,8 +18,12 @@ const description = computed(() => props.description ?? (allRelatedInState.value
   : 'Browse calendars for other school districts.'))
 const stateSlug = computed(() => props.stateName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''))
 const yearAvailableSlugs = computed(() => new Set(props.yearAvailableSlugs ?? []))
-const relatedDistrictPath = (rd: { slug: string }) =>
-  props.year && (props.forceYearLinks || yearAvailableSlugs.value.has(rd.slug)) ? `/${rd.slug}/${props.year}` : `/${rd.slug}`
+const relatedDistrictPath = (rd: { slug?: string; url?: string }) => {
+  if (rd.url) return rd.url
+  return props.year && rd.slug && (props.forceYearLinks || yearAvailableSlugs.value.has(rd.slug))
+    ? `/${rd.slug}/${props.year}`
+    : `/${rd.slug}`
+}
 </script>
 
 <template>
@@ -31,7 +35,7 @@ const relatedDistrictPath = (rd: { slug: string }) =>
     <div class="divide-y divide-[#eee9df]">
       <NuxtLink
         v-for="rd in validRelatedDistricts"
-        :key="rd.slug"
+        :key="rd.slug || rd.url"
         :to="relatedDistrictPath(rd)"
         class="flex items-center justify-between gap-4 px-6 py-4 hover:bg-[#f3f0e8] transition-colors"
       >

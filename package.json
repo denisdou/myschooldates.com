@@ -8,6 +8,7 @@
     "generate": "nuxt generate && node scripts/sanitize-build-paths.mjs",
     "indexnow": "node scripts/submit-indexnow.mjs",
     "indexnow:prepare": "node scripts/prepare-indexnow-key.mjs",
+    "verify:sources": "node scripts/verify-calendar-sources.mjs",
     "prebuild": "node scripts/prepare-indexnow-key.mjs --if-configured && node scripts/generate-calendar-route-manifest.mjs",
     "pregenerate": "node scripts/prepare-indexnow-key.mjs --if-configured && node scripts/generate-calendar-route-manifest.mjs",
     "preview": "nuxt preview",

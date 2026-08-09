@@ -1,113 +1,362 @@
 {
   "institutionId": "loudoun-county",
   "schoolYear": "2025-2026",
-  "firstDay": "2025-09-02",
-  "lastDay": "2026-06-18",
-  "totalSchoolDays": 180,
+  "displaySchoolYear": "2025–26",
+  "pageHeading": "Loudoun County Public Schools Calendar 2025–2026",
+  "firstDay": "2025-08-21",
+  "lastDay": "2026-06-12",
+  "temporalCoverageStart": "2025-08-21",
+  "temporalCoverageEnd": "2026-06-12",
   "semesters": 2,
-  "sourceUrl": "https://www.lcps.org/o/hr/page/school-calendar",
-  "sourcePdfUrl": "",
-  "lastVerifiedAt": "2026-07-05",
+  "sourceUrl": "https://www.lcps.org/calendar",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4461/Lcps/de7327dc-8371-4ec8-9ac5-0b7a7d8c57c9/fy26-calendars-final.pdf?disposition=inline",
+  "sourceCalendarName": "LCPS 2025–26 Student School Calendar",
+  "sourceVersion": "Original calendar plus March 24, 2026 School Board revision",
+  "lastVerifiedAt": "2026-08-09",
+  "datePublished": "2026-07-05",
+  "dateModified": "2026-08-09",
   "calendarType": "traditional",
-  "calendarFaqs": [
+  "allDatesMode": "all",
+  "itemListMode": "allImportantDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "schemaReviewedBy": "author",
+  "webPageMainEntity": "dataset",
+  "splitCalendarDateItemListSchema": true,
+  "seoTitle": "Loudoun County School Calendar 2025–26: Dates & PDF",
+  "seoDescription": "LCPS 2025–26 calendar with the revised first and last days, holidays, winter and spring breaks, official PDF, and downloadable ICS file.",
+  "schemaCalendarName": "Loudoun County Public Schools Student Calendar 2025–26",
+  "schemaDatasetName": "LCPS 2025–26 Student Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed LCPS 2025–26 student dates, including the August 21 first day, holidays, breaks, student holidays, and the revised June 12 last day.",
+  "schemaKeyDateItemListName": "LCPS 2025–26 key dates at a glance",
+  "schemaCalendarDateItemListName": "LCPS 2025–26 student calendar dates",
+  "schemaCalendarDownloadName": "MySchoolDates LCPS 2025–26 calendar file",
+  "schemaCalendarDownloadDescription": "MySchoolDates-generated calendar import file based on the final reviewed LCPS 2025–26 student schedule.",
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideInstructionalDaysSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "relatedDistrictsSameYearOnly": true,
+  "hideRelatedDistrictDescriptions": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "comparison",
+    "whatsDifferent"
+  ],
+  "heroSourceLine": "LCPS Student School Calendar · Final schedule includes the March 24, 2026 revision",
+  "heroSummary": "Loudoun County Public Schools began the 2025–26 school year on Thursday, August 21, 2025. Following a March 2026 School Board revision, the final student day was Friday, June 12, 2026. Winter Break ran December 22 through January 2, and Spring Break ran March 30 through April 3.",
+  "calendarNotes": "This page uses the LCPS 2025–26 student calendar and the School Board's March 24, 2026 revision. The revision added April 21 as a student holiday and moved the last day from June 15 to June 12.",
+  "verificationBadgeText": "Checked August 9, 2026, against the LCPS calendar and the March 24, 2026 School Board revision.",
+  "keyDatesSummaryTitle": "Key Dates at a Glance",
+  "keyDatesSummarySubtitle": "First day, major breaks, and the final revised last day",
+  "keyDateSummaryItems": [
     {
-      "q": "When does school start for Loudoun County Public Schools in 2025-2026?",
-      "a": "The first day of school for Loudoun County Public Schools is Tuesday, September 2, 2025. Students and staff are expected to report on this date to begin the new academic year."
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2025-08-21",
+      "type": "school_start",
+      "schemaDescription": "The first day of classes on the LCPS 2025–26 student calendar."
     },
     {
-      "q": "When is spring break 2025-2026 for Loudoun County Public Schools?",
-      "a": "Spring break for Loudoun County Public Schools runs Apr 6, 2026–Apr 10, 2026, 5 days."
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2025-11-26",
+      "endDate": "2025-11-28",
+      "type": "break_start"
     },
     {
-      "q": "When is winter break 2025-2026 for Loudoun County Public Schools?",
-      "a": "Winter break for Loudoun County Public Schools runs Dec 22, 2025–Jan 2, 2026, 12 days. School resumes Jan 5, 2026."
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2025-12-22",
+      "endDate": "2026-01-02",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2026-03-30",
+      "endDate": "2026-04-03",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2026-06-12",
+      "type": "school_end",
+      "schemaDescription": "The final student day after the March 24, 2026 School Board revision."
     }
   ],
-  "yearNumbers": [
+  "allDatesTitle": "LCPS 2025–26 Student Calendar Dates",
+  "allDatesCoverageNote": "First and last days, holidays, breaks, and student holidays on the LCPS student calendar, including the March 2026 revision.",
+  "allDatesSourceUrl": "https://www.lcps.org/calendar",
+  "allDatesSourceLinks": [
     {
-      "label": "Latest Start in Northern VA",
-      "value": "Sep 2",
-      "detail": "Loudoun County begins September 2, 2025 — after Labor Day and later than Fairfax, Prince William, and Chesterfield counties, which start in late August. Families moving from neighboring districts should plan for the different timing."
+      "label": "LCPS 2025–26 calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4461/Lcps/de7327dc-8371-4ec8-9ac5-0b7a7d8c57c9/fy26-calendars-final.pdf?disposition=inline"
     },
     {
-      "label": "Spring Break Apr 6–10",
-      "value": "Apr 6–10",
-      "detail": "Spring Break falls April 6–10, 2026 — one to two weeks later than most Northern Virginia neighbors. The later window typically means lower travel prices and more availability at popular spring break destinations."
+      "label": "LCPS March 24, 2026 calendar revision",
+      "url": "https://www.lcps.org/o/lcps/article/2786123"
+    }
+  ],
+  "allDatesSourceLabel": "Official LCPS calendar sources",
+  "hideDateLegend": true,
+  "icsHeading": "Add LCPS 2025–26 Dates to Your Calendar",
+  "icsDescription": "Download a MySchoolDates-generated ICS file with the final student dates listed on this page.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "icsButtonSupportText": "One-time import. It will not automatically reflect later LCPS calendar changes.",
+  "icsAriaLabel": "Download the MySchoolDates-generated LCPS 2025–26 calendar file",
+  "pdfHeading": "Official LCPS 2025–26 Calendar PDF",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "The PDF shows the originally published calendar. The School Board later added April 21 as a student holiday and moved the last student day to June 12.",
+  "pdfVersionLabel": "Final dates include the March 24, 2026 revision",
+  "customSections": [
+    {
+      "id": "lcps-2025-2026-major-breaks",
+      "label": "Major Breaks and Return Dates",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "Return dates are derived from the published break ranges and adjacent student holidays.",
+      "groups": [
+        {
+          "label": "Thanksgiving Break",
+          "items": [
+            "Thanksgiving Break ran November 26–28, 2025. Students returned Monday, December 1."
+          ]
+        },
+        {
+          "label": "Winter Break",
+          "items": [
+            "Winter Break ran December 22, 2025 through January 2, 2026. Students returned Monday, January 5."
+          ]
+        },
+        {
+          "label": "Spring Break",
+          "items": [
+            "Spring Break ran March 30 through April 3, 2026. Students returned Monday, April 6."
+          ]
+        }
+      ]
+    }
+  ],
+  "faqDisplayLimit": 5,
+  "faqDisplayQuestions": [
+    "When did LCPS start school in 2025–26?",
+    "What was the final day of school for LCPS in 2025–26?",
+    "When was LCPS Winter Break in 2025–26?",
+    "When was LCPS Spring Break in 2026?",
+    "Did LCPS revise the 2025–26 calendar?"
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When did LCPS start school in 2025–26?",
+      "a": "Students began classes on Thursday, August 21, 2025."
     },
     {
-      "label": "Columbus Day Holiday",
-      "value": "Oct 13",
-      "detail": "Loudoun County observes Columbus Day as a school holiday on October 13 — not all Virginia or Maryland districts do. Families with children in different Northern Virginia districts should verify whether Columbus Day is off for all their kids."
+      "q": "What was the final day of school for LCPS in 2025–26?",
+      "a": "The final student day was Friday, June 12, 2026. The School Board moved it from June 15 as part of a March 2026 calendar revision."
+    },
+    {
+      "q": "When was LCPS Winter Break in 2025–26?",
+      "a": "Winter Break ran December 22, 2025 through January 2, 2026. Students returned Monday, January 5."
+    },
+    {
+      "q": "When was LCPS Spring Break in 2026?",
+      "a": "Spring Break ran Monday, March 30 through Friday, April 3, 2026. Students returned Monday, April 6."
+    },
+    {
+      "q": "Did LCPS revise the 2025–26 calendar?",
+      "a": "Yes. On March 24, 2026, the School Board made April 21 a student holiday and moved the last student day from June 15 to June 12."
     }
   ],
   "events": [
     {
-      "date": "2025-09-02",
+      "date": "2025-08-21",
       "name": "First Day of School",
-      "type": "school_start"
+      "type": "school_start",
+      "schemaDescription": "The first day of classes on the LCPS 2025–26 student calendar."
+    },
+    {
+      "date": "2025-08-29",
+      "name": "Student Holiday",
+      "type": "student_holiday",
+      "description": "Students did not attend."
+    },
+    {
+      "date": "2025-09-01",
+      "name": "Labor Day",
+      "type": "holiday",
+      "description": "Schools were closed."
+    },
+    {
+      "date": "2025-10-02",
+      "name": "Yom Kippur",
+      "type": "holiday",
+      "description": "Schools were closed."
     },
     {
       "date": "2025-10-13",
-      "name": "Columbus Day",
-      "type": "holiday"
+      "name": "Indigenous Peoples' Day",
+      "type": "holiday",
+      "description": "Schools were closed."
     },
     {
-      "date": "2025-11-11",
-      "name": "Veterans Day",
-      "type": "holiday"
+      "date": "2025-10-20",
+      "name": "Diwali",
+      "type": "holiday",
+      "description": "Schools were closed."
+    },
+    {
+      "date": "2025-10-30",
+      "name": "End of Quarter 1",
+      "type": "quarter_end",
+      "description": "An academic milestone, not a day off."
+    },
+    {
+      "date": "2025-10-31",
+      "name": "Student Holiday",
+      "type": "student_holiday",
+      "description": "Students did not attend."
+    },
+    {
+      "date": "2025-11-03",
+      "endDate": "2025-11-04",
+      "name": "Student Holidays",
+      "type": "student_holiday",
+      "description": "Students did not attend."
     },
     {
       "date": "2025-11-26",
+      "endDate": "2025-11-28",
       "name": "Thanksgiving Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2025-11-28",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
+      "type": "break_start",
+      "description": "Students returned Monday, December 1."
     },
     {
       "date": "2025-12-22",
+      "endDate": "2026-01-02",
       "name": "Winter Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2026-01-02",
-      "name": "Winter Break End",
-      "type": "break_end"
+      "type": "break_start",
+      "description": "Students returned Monday, January 5."
     },
     {
       "date": "2026-01-19",
       "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools were closed."
+    },
+    {
+      "date": "2026-01-22",
+      "name": "End of Quarter 2",
+      "type": "quarter_end",
+      "description": "An academic milestone, not a day off."
+    },
+    {
+      "date": "2026-01-23",
+      "name": "Student Holiday",
+      "type": "student_holiday",
+      "description": "Students did not attend."
     },
     {
       "date": "2026-02-16",
-      "name": "Presidents Day",
-      "type": "holiday"
+      "name": "Presidents' Day",
+      "type": "holiday",
+      "description": "Schools were closed."
     },
     {
-      "date": "2026-04-06",
+      "date": "2026-02-17",
+      "name": "Lunar New Year",
+      "type": "holiday",
+      "description": "Schools were closed."
+    },
+    {
+      "date": "2026-03-19",
+      "name": "Student Holiday",
+      "type": "student_holiday",
+      "description": "Students did not attend."
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Eid al-Fitr",
+      "type": "holiday",
+      "description": "Schools were closed."
+    },
+    {
+      "date": "2026-03-30",
+      "endDate": "2026-04-03",
       "name": "Spring Break",
-      "type": "break_start"
+      "type": "break_start",
+      "description": "Students returned Monday, April 6."
+    },
+    {
+      "date": "2026-04-09",
+      "name": "End of Quarter 3",
+      "type": "quarter_end",
+      "description": "An academic milestone, not a day off."
     },
     {
       "date": "2026-04-10",
-      "name": "Spring Break End",
-      "type": "break_end"
+      "name": "Student Holiday",
+      "type": "student_holiday",
+      "description": "Students did not attend."
+    },
+    {
+      "date": "2026-04-21",
+      "name": "Student Holiday",
+      "type": "student_holiday",
+      "description": "Added by the School Board on March 24, 2026, for the statewide special election."
     },
     {
       "date": "2026-05-25",
       "name": "Memorial Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools were closed."
     },
     {
-      "date": "2026-06-18",
+      "date": "2026-06-12",
       "name": "Last Day of School",
-      "type": "school_end"
+      "type": "school_end",
+      "description": "The School Board moved the final student day from June 15 to June 12.",
+      "schemaDescription": "The final student day after the March 24, 2026 School Board revision."
     }
   ],
-  "calendarNotes": "Loudoun County Public Schools begins the 2025–2026 school year on September 2, 2025. Spring Break runs April 6–10, 2026. The school year ends June 18, 2026.",
-  "datePublished": "2026-07-05",
-  "dateModified": "2026-07-05"
+  "sourceMaintainerText": "MySchoolDates education research team",
+  "sourceReviewSummary": "Reviewed August 9, 2026, against the LCPS calendar and the March 24, 2026 School Board revision.",
+  "sourceReviewDetails": [
+    "Confirmed the August 21 first day, holidays, student holidays, break dates, and originally scheduled June 15 last day against the official LCPS calendar PDF.",
+    "Applied the School Board's March 24, 2026 update that added April 21 as a student holiday and changed the last student day to June 12."
+  ],
+  "sourceNextReviewText": "This archived page will be reviewed again if LCPS republishes the final 2025–26 calendar.",
+  "sources": [
+    {
+      "label": "LCPS 2025–26 calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4461/Lcps/de7327dc-8371-4ec8-9ac5-0b7a7d8c57c9/fy26-calendars-final.pdf?disposition=inline"
+    },
+    {
+      "label": "LCPS March 24, 2026 calendar revision",
+      "url": "https://www.lcps.org/o/lcps/article/2786123"
+    },
+    {
+      "label": "LCPS calendar page",
+      "url": "https://www.lcps.org/calendar"
+    }
+  ]
 }

@@ -2,22 +2,25 @@
 const route = useRoute()
 
 const stateLinks = [
-  { slug: 'california', name: 'California' },
-  { slug: 'florida', name: 'Florida' },
-  { slug: 'texas', name: 'Texas' },
-  { slug: 'new-york', name: 'New York' },
-  { slug: 'illinois', name: 'Illinois' },
-  { slug: 'pennsylvania', name: 'Pennsylvania' },
-  { slug: 'north-carolina', name: 'North Carolina' },
   { slug: 'arizona', name: 'Arizona' },
-  { slug: 'washington', name: 'Washington' },
-  { slug: 'massachusetts', name: 'Massachusetts' },
-  { slug: 'maryland', name: 'Maryland' },
+  { slug: 'california', name: 'California' },
+  { slug: 'colorado', name: 'Colorado' },
+  { slug: 'florida', name: 'Florida' },
   { slug: 'georgia', name: 'Georgia' },
-  { slug: 'nevada', name: 'Nevada' },
-  { slug: 'virginia', name: 'Virginia' },
-  { slug: 'kentucky', name: 'Kentucky' },
   { slug: 'hawaii', name: 'Hawaii' },
+  { slug: 'illinois', name: 'Illinois' },
+  { slug: 'kentucky', name: 'Kentucky' },
+  { slug: 'maryland', name: 'Maryland' },
+  { slug: 'massachusetts', name: 'Massachusetts' },
+  { slug: 'nevada', name: 'Nevada' },
+  { slug: 'new-york', name: 'New York' },
+  { slug: 'north-carolina', name: 'North Carolina' },
+  { slug: 'oregon', name: 'Oregon' },
+  { slug: 'pennsylvania', name: 'Pennsylvania' },
+  { slug: 'texas', name: 'Texas' },
+  { slug: 'utah', name: 'Utah' },
+  { slug: 'virginia', name: 'Virginia' },
+  { slug: 'washington', name: 'Washington' },
 ]
 
 const statePageNames = Object.fromEntries(stateLinks.map(state => [state.slug, state.name])) as Record<string, string>
@@ -293,7 +296,7 @@ watch(() => route.fullPath, () => {
               <span class="text-sm font-semibold text-gray-700">MySchoolDates</span>
             </NuxtLink>
             <p class="text-sm text-gray-500 leading-relaxed mb-4">
-              US School Calendar Platform. All data is sourced from official school district websites.
+              US School Calendar Platform. Calendar information is based on official school district sources.
               Districts may revise calendars after publication — always verify with your district before making plans.
             </p>
             <ul class="space-y-2">

@@ -1,0 +1,287 @@
+{
+  "institutionId": "hillsboro-school-district",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025–26",
+  "pageHeading": "Hillsboro School District Calendar 2025–26",
+  "firstDay": "2025-09-03",
+  "lastDay": "2026-06-11",
+  "totalSchoolDays": 173,
+  "semesters": 2,
+  "temporalCoverageStart": "2025-08-27",
+  "temporalCoverageEnd": "2026-06-16",
+  "sourceUrl": "https://www.hsd.k12.or.us/calendar",
+  "sourceCalendarName": "HSD 2025–26 District Calendar",
+  "sourceVersion": "Board adopted January 28, 2025",
+  "lastVerifiedAt": "2026-08-09",
+  "dateCreated": "2026-08-09",
+  "datePublished": "2026-08-09",
+  "dateModified": "2026-08-09",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "dataset",
+  "schemaReviewedBy": "author",
+  "seoTitle": "Hillsboro School District Calendar 2025–26: Dates & Breaks",
+  "seoDescription": "Hillsboro School District 2025–26 calendar with grade-specific first days, conference no-school dates, breaks, 173 student days, K–11 last day, and ICS.",
+  "schemaCalendarName": "Hillsboro School District Calendar 2025–26",
+  "schemaDatasetName": "Hillsboro School District 2025–26 Calendar Dataset",
+  "schemaDatasetDescription": "Hillsboro School District dates for 2025–26, including the two-day grade-level opening, 173 student days, holidays, staff and conference no-school dates, quarter and semester endings, the K–11 early-release last day, and conditional June make-up dates.",
+  "schemaCalendarDownloadName": "Hillsboro School District 2025–26 calendar file",
+  "schemaCalendarDownloadDescription": "MySchoolDates-generated calendar import file with student and family dates from HSD's board-adopted 2025–26 district calendar record.",
+  "hideInstructionalDaysSummary": false,
+  "instructionalDaysLabel": "Student Days",
+  "instructionalDaysDescription": "HSD lists 87 student days in semester 1 and 86 in semester 2.",
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideRelatedDistrictDescriptions": true,
+  "hideDateLegend": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "comparison"
+  ],
+  "heroSourceLine": "HSD 2025–26 District Calendar · Board adopted January 28, 2025 · 173 student days",
+  "heroCtas": [
+    {
+      "label": "Add Dates to Calendar",
+      "href": "__icsUrl",
+      "variant": "secondary",
+      "download": true,
+      "filename": "__icsFilename"
+    }
+  ],
+  "heroSummary": "Hillsboro School District started grades 1–6, 7, and 9 on Wednesday, September 3, 2025. Kindergarten, grade 8, and grades 10–12 began Thursday, September 4. The calendar has 173 student days, Spring Break ran March 23–27, and the scheduled last day for grades K–11 was June 11, 2026, with early release.",
+  "calendarNotes": "HSD used two grade-level opening dates, a multi-part November conference schedule, regular-school-day grading milestones, and conditional June make-up dates.",
+  "verificationBadgeText": "Checked August 9, 2026, against HSD's archived 2025–26 district calendar record adopted January 28, 2025.",
+  "keyDatesSummaryTitle": "HSD 2025–26 Key Dates at a Glance",
+  "keyDatesSummarySubtitle": "Grade-level first days, November conference days, major breaks, and the K–11 last day",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Grades 1–6, 7, and 9",
+      "date": "2025-09-03",
+      "type": "school_start"
+    },
+    {
+      "label": "All Students",
+      "name": "First Day for K, 8, and 10–12",
+      "date": "2025-09-04",
+      "type": "school_start"
+    },
+    {
+      "label": "No School",
+      "name": "November Conference and Thanksgiving Days",
+      "date": "2025-11-24",
+      "endDate": "2025-11-28",
+      "type": "no_school",
+      "description": "Students are off for staff development and conference preparation, Family Conference Connections, Thanksgiving, and a licensed non-contract day."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2025-12-22",
+      "endDate": "2026-01-02",
+      "type": "break_start",
+      "description": "Students return Monday, January 5."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2026-03-23",
+      "endDate": "2026-03-27",
+      "type": "break_start",
+      "description": "Students return Monday, March 30."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Grades K–11",
+      "date": "2026-06-11",
+      "type": "school_end",
+      "description": "Early release; June 15–16 were conditional make-up dates."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Opening Schedule", "id": "hsd-2025-2026-opening" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Grading Periods", "id": "hsd-2025-2026-grading" },
+    { "label": "November & June", "id": "hsd-2025-2026-family-guide" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "Hillsboro School District 2025–26 Student Calendar Dates",
+  "allDatesCoverageNote": "This family-facing list includes grade-specific openings, student no-school dates, quarter and semester endings, return dates, the K–11 last day, and conditional make-up dates. Staff-only in-service dates before opening are not repeated here.",
+  "allDatesSourceUrl": "https://www.hsd.k12.or.us/calendar",
+  "allDatesSourceLinks": [
+    {
+      "label": "HSD calendar page",
+      "url": "https://www.hsd.k12.or.us/calendar"
+    }
+  ],
+  "allDatesSourceLabel": "Source: Hillsboro School District",
+  "icsHeading": "Add HSD 2025–26 Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file with the grade-specific first days, student no-school dates, grading milestones, breaks, the K–11 last day, and conditional make-up dates listed on this page.",
+  "icsButtonLabel": "Download HSD Calendar File (.ics)",
+  "icsButtonSupportText": "One-time import. This archived school year will not update automatically.",
+  "icsAriaLabel": "Download the MySchoolDates-generated Hillsboro School District 2025–26 calendar file",
+  "customSections": [
+    {
+      "id": "hsd-2025-2026-opening",
+      "label": "HSD Used a Two-Day Opening Schedule",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "The first printed student date did not apply to every grade. HSD assigned the opening dates by grade and placed Family Connections and Transitions before students began classes.",
+      "table": {
+        "caption": "Hillsboro School District 2025–26 opening sequence",
+        "columns": ["Calendar marker", "Date", "What families should know"],
+        "rows": [
+          ["Family Connections and Transitions K–12", "August 27", "Pre-opening family and transition date; not the first regular student day."],
+          ["First student day", "September 3", "First day for grades 1–6, 7, and 9."],
+          ["All students", "September 4", "First day for kindergarten, grade 8, and grades 10–12."]
+        ]
+      }
+    },
+    {
+      "id": "hsd-2025-2026-grading",
+      "label": "HSD 2025–26 Grading Period End Dates",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "HSD marked each quarter or semester ending as a regular student day. The following no-school date, when one was listed, appears separately in the full calendar.",
+      "table": {
+        "caption": "HSD 2025–26 grading period end dates and student-day totals",
+        "columns": ["Grading period", "End date", "Student days"],
+        "rows": [
+          ["Quarter 1", "November 7, 2025", "47"],
+          ["Quarter 2 / Semester 1", "January 29, 2026", "41 / 87 semester total"],
+          ["Quarter 3", "April 9, 2026", "42"],
+          ["Quarter 4 / Semester 2", "June 11, 2026", "44 / 86 semester total"]
+        ]
+      }
+    },
+    {
+      "id": "hsd-2025-2026-family-guide",
+      "label": "How to Read HSD's November and June Dates",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "HSD used several official labels rather than treating these periods as one generic break or one fixed end-of-year extension.",
+      "groups": [
+        {
+          "label": "November conference and Thanksgiving days",
+          "items": [
+            "Students did not attend November 24–28. The dates covered staff development and conference preparation, Family Conference Connections, Thanksgiving, and a licensed non-contract day. Students returned Monday, December 1."
+          ]
+        },
+        {
+          "label": "Scheduled end of school",
+          "items": [
+            "June 11 was an early-release last day for grades K–11. June 12 was the last day for licensed staff, not a student attendance day."
+          ]
+        },
+        {
+          "label": "Possible make-up days",
+          "items": [
+            "June 15–16 were reserved as possible school days after an inclement-weather closure. The adopted calendar said graduation dates would not be affected."
+          ]
+        }
+      ]
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When did Hillsboro School District start in 2025?",
+      "a": "Grades 1–6, 7, and 9 started Wednesday, September 3, 2025. Kindergarten, grade 8, and grades 10–12 started Thursday, September 4."
+    },
+    {
+      "q": "How many student days were on the HSD 2025–26 calendar?",
+      "a": "HSD listed 173 student days: 87 in the first semester and 86 in the second semester."
+    },
+    {
+      "q": "When were Hillsboro students off for Thanksgiving in 2025?",
+      "a": "Students did not attend November 24–28 for staff development and conference preparation, Family Conference Connections, Thanksgiving, and a licensed non-contract day. Students returned Monday, December 1."
+    },
+    {
+      "q": "When was Hillsboro School District Winter Break in 2025–26?",
+      "a": "Winter Break and the continuation of the no-school period ran December 22, 2025, through January 2, 2026. Students returned Monday, January 5."
+    },
+    {
+      "q": "When was Hillsboro School District Spring Break in 2026?",
+      "a": "Spring Break ran March 23–27, 2026. Students returned Monday, March 30."
+    },
+    {
+      "q": "When was the last day of Hillsboro School District in 2026?",
+      "a": "The scheduled last day for grades K–11 was Thursday, June 11, 2026, with early release. June 15–16 were listed as possible inclement-weather make-up days."
+    }
+  ],
+  "faqDisplayLimit": 6,
+  "sourceReviewSummary": "Last checked August 9, 2026. We verified this archived school year against HSD's 2025–26 district calendar record adopted January 28, 2025.",
+  "sourceReviewDetails": [
+    "The adopted calendar record lists 87 and 86 student days, for 173 total student days.",
+    "The opening sequence assigns September 3 to grades 1–6, 7, and 9, then September 4 to kindergarten, grade 8, and grades 10–12.",
+    "Quarter and semester endings remain student days; the following grade-preparation or workday is listed separately when students do not attend.",
+    "June 15–16 were possible make-up days, not automatic attendance days, and HSD stated that graduation dates would not be affected.",
+    "HSD's former 2025–26 Finalsite PDF URL currently returns the 2026–27 PDF. To avoid sending families to the wrong calendar, this page does not present that legacy URL as a 2025–26 download."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "sourceNextReviewText": "Archived school year; review again if HSD restores a stable 2025–26 PDF link or corrects the legacy URL.",
+  "sources": [
+    {
+      "label": "HSD calendar page and current downloadable calendars",
+      "url": "https://www.hsd.k12.or.us/calendar"
+    },
+    {
+      "label": "HSD 2025–26 district calendar record — board adopted January 28, 2025; former direct PDF link is no longer reliable"
+    }
+  ],
+  "events": [
+    { "date": "2025-08-27", "name": "Family Connections and Transitions K–12", "type": "academic", "description": "Pre-opening family and transition date listed by HSD; not the first regular student day.", "badgeLabel": "Family Date" },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday", "description": "No school." },
+    { "date": "2025-09-02", "name": "Licensed In-Service Day", "type": "teacher_workday", "description": "Students did not attend." },
+    { "date": "2025-09-03", "name": "First Day for Grades 1–6, 7, and 9", "type": "school_start" },
+    { "date": "2025-09-04", "name": "First Day for K, 8, and 10–12", "type": "school_start" },
+    { "date": "2025-10-09", "name": "Staff Development", "type": "teacher_workday", "description": "Students did not attend." },
+    { "date": "2025-10-10", "name": "Licensed Non-Contract Day", "type": "no_school", "description": "Students did not attend." },
+    { "date": "2025-11-07", "name": "First Quarter Ends", "type": "quarter_end", "description": "Regular student day; 47 student days in the quarter.", "badgeLabel": "Regular School Day" },
+    { "date": "2025-11-10", "name": "Elementary Work Day / Secondary Grade Prep Day", "type": "teacher_workday", "description": "Students did not attend." },
+    { "date": "2025-11-11", "name": "Veterans Day", "type": "holiday", "description": "No school." },
+    { "date": "2025-11-24", "name": "Staff Development / Family Conference Preparation", "type": "teacher_workday", "description": "Students did not attend." },
+    { "date": "2025-11-25", "endDate": "2025-11-26", "displayDate": "November 25–26, 2025", "name": "Family Conference Connections K–12", "type": "no_school", "description": "Students did not attend." },
+    { "date": "2025-11-27", "name": "Thanksgiving Day", "type": "holiday", "description": "No school." },
+    { "date": "2025-11-28", "name": "Licensed Non-Contract Day", "type": "no_school", "description": "Students did not attend." },
+    { "date": "2025-12-01", "name": "Students Return After November No-School Days", "type": "school_resume" },
+    { "date": "2025-12-22", "endDate": "2026-01-02", "displayDate": "December 22, 2025–January 2, 2026", "name": "Winter Break", "type": "break_start", "description": "No school." },
+    { "date": "2026-01-05", "name": "Students Return After Winter Break", "type": "school_resume" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday", "description": "No school." },
+    { "date": "2026-01-29", "name": "First Semester Ends", "type": "semester_end", "description": "Regular student day; 87 student days in the semester.", "badgeLabel": "Regular School Day" },
+    { "date": "2026-01-30", "name": "Teacher Grade Prep Day", "type": "teacher_workday", "description": "Students did not attend." },
+    { "date": "2026-02-02", "name": "Licensed Prep Day", "type": "teacher_workday", "description": "Students did not attend." },
+    { "date": "2026-02-16", "name": "Presidents Day", "type": "holiday", "description": "No school." },
+    { "date": "2026-03-23", "endDate": "2026-03-27", "displayDate": "March 23–27, 2026", "name": "Spring Break", "type": "break_start", "description": "No school." },
+    { "date": "2026-03-30", "name": "Students Return After Spring Break", "type": "school_resume" },
+    { "date": "2026-04-09", "name": "Third Quarter Ends", "type": "quarter_end", "description": "Regular student day; 42 student days in the quarter.", "badgeLabel": "Regular School Day" },
+    { "date": "2026-04-10", "name": "Elementary Work Day / Secondary Grade Prep Day", "type": "teacher_workday", "description": "Students did not attend." },
+    { "date": "2026-05-25", "name": "Memorial Day", "type": "holiday", "description": "No school." },
+    { "date": "2026-05-28", "name": "Licensed Non-Contract Day", "type": "no_school", "description": "Students did not attend." },
+    { "date": "2026-06-11", "name": "Last Day for Grades K–11 / Second Semester Ends", "type": "school_end", "description": "Early release; 86 student days in the second semester.", "badgeLabel": "Last Day · Early Release" },
+    { "date": "2026-06-15", "endDate": "2026-06-16", "displayDate": "June 15–16, 2026", "name": "Possible Inclement-Weather Make-Up Days", "type": "makeup_day", "description": "These dates were conditional, not automatic attendance days.", "badgeLabel": "Conditional" }
+  ]
+}

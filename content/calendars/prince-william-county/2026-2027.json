@@ -1,234 +1,539 @@
 {
   "institutionId": "prince-william-county",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Prince William County Public Schools Calendar 2026–27",
   "firstDay": "2026-08-24",
   "lastDay": "2027-06-17",
   "totalSchoolDays": 180,
   "teacherWorkDays": null,
   "semesters": 2,
-  "sourceUrl": "https://www.pwcs.edu/calendars",
+  "temporalCoverageStart": "2026-08-24",
+  "temporalCoverageEnd": "2027-06-17",
+  "sourceUrl": "https://www.pwcs.edu/calendars/school_calendar/index",
   "sourcePdfUrl": "https://www.pwcs.edu/userfiles/servers/server_340140/file/about-us/2026-27_school_year_month-at-a-glance_calendar.pdf",
-  "lastVerifiedAt": "2026-07-10",
+  "sourceCalendarName": "PWCS 2026–27 School Calendar",
+  "sourceVersion": "Approved December 2025",
+  "sourceVersionLabel": "Calendar version",
+  "lastVerifiedAt": "2026-08-09",
+  "dateCreated": "2026-07-10",
+  "datePublished": "2026-07-10",
+  "dateModified": "2026-08-09",
   "calendarType": "traditional",
-  "calendarFaqs": [
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideDatasetSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "keyDates",
+  "schemaReviewedBy": "author",
+  "seoTitle": "Prince William County Public Schools Calendar 2026–27: Dates & PDF",
+  "seoDescription": "PWCS 2026–27 dates: first day Aug. 24, winter break Dec. 21–Jan. 1, spring break Mar. 22–26, and last day June 17. View official PDFs or download the calendar.",
+  "schemaCalendarName": "Prince William County Public Schools Calendar 2026–27",
+  "schemaCalendarDownloadName": "PWCS 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "One-time calendar import generated from the PWCS dates listed on this 2026–27 resource page.",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideCalendarTrackCaution": true,
+  "hideDateLegend": true,
+  "hideBreakDurationBadges": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "breaks",
+    "comparison"
+  ],
+  "heroSourceLine": "Based on the official PWCS 2026–27 calendar · 180 instructional days",
+  "heroSummary": "Prince William County Public Schools begins the 2026–27 school year for students on Monday, August 24. Winter Break runs December 21 through January 1, Spring Break runs March 22–26, and the scheduled last day of school is Thursday, June 17, 2027.",
+  "heroFactChips": [
+    "First day: Aug 24",
+    "Winter Break: Dec 21–Jan 1",
+    "Spring Break: Mar 22–26",
+    "Last day: Jun 17"
+  ],
+  "heroDownloadLabel": "Calendar Options",
+  "verificationBadgeText": "Updated August 9, 2026, using current Prince William County Public Schools sources.",
+  "keyDatesSummaryTitle": "PWCS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Student start and end dates, major breaks, and return dates",
+  "keyDateSummaryItems": [
     {
-      "q": "When does school start for Prince William County Public Schools in 2026-2027?",
-      "a": "The first day of school for Prince William County Public Schools is Monday, August 24, 2026. Students and staff are expected to report on this date to begin the new academic year."
+      "label": "First Day",
+      "name": "First Day of School for Students",
+      "date": "2026-08-24",
+      "type": "school_start",
+      "description": "The first day of school for PWCS students."
     },
     {
-      "q": "When is spring break 2026-2027 for Prince William County Public Schools?",
-      "a": "Spring break for Prince William County Public Schools runs Mar 22, 2027–Mar 26, 2027, 5 days."
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start"
     },
     {
-      "q": "When is winter break 2026-2027 for Prince William County Public Schools?",
-      "a": "Winter break for Prince William County Public Schools runs Dec 21, 2026–Jan 1, 2027, 12 days. School resumes Jan 4, 2027."
+      "label": "Winter Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "Students return Monday, January 4."
+    },
+    {
+      "label": "Spring Break",
+      "name": "Spring Break",
+      "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "type": "break_start",
+      "description": "A teacher workday follows on March 29; students return March 30."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-06-17",
+      "type": "school_end"
     }
   ],
-  "yearNumbers": [
+  "jumpNavigation": [
     {
-      "label": "Starts Later",
-      "value": "6 days",
-      "detail": "First day moves from Aug 18 to Aug 24 vs 2025–2026."
+      "label": "Key Dates",
+      "id": "key-dates"
     },
     {
-      "label": "Spring Break Shorter",
-      "value": "5 days",
-      "detail": "Spring Break shrinks from 8 days (2025–2026) to 5 days this year, aligning with Fairfax and Loudoun counties."
+      "label": "Dates by Month",
+      "id": "all-dates"
     },
     {
-      "label": "Eid al-Fitr",
-      "value": "Mar 10",
-      "detail": "School closed for Eid al-Fitr — falls just before Spring Break begins (Mar 22), extending the break window to 6 days for many families."
+      "label": "Calendar Options",
+      "id": "add-to-calendar"
     },
     {
-      "label": "Eid al-Adha",
-      "value": "May 17",
-      "detail": "School closed for Eid al-Adha; shifts from May 27 in 2025–2026 due to the Islamic lunar calendar."
+      "label": "Changes",
+      "id": "year-comparison"
+    },
+    {
+      "label": "District Comparison",
+      "id": "comparison"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "allDatesTitle": "PWCS 2026–27 Dates by Month",
+  "allDatesCoverageNote": "Major districtwide dates that affect student attendance are listed below. Staff orientation before August 24 and optional staff work after June 17 are outside the scheduled student year and are not included.",
+  "allDatesCoverageNotePosition": "top",
+  "allDatesSourceLabel": "Source: Prince William County Public Schools",
+  "allDatesSourceUrl": "https://www.pwcs.edu/calendars/school_calendar/index",
+  "allDatesSourceLinks": [
+    {
+      "label": "PWCS School Calendar",
+      "url": "https://www.pwcs.edu/calendars/school_calendar/index"
+    },
+    {
+      "label": "PWCS 2026–27 Month-at-a-Glance Calendar",
+      "url": "https://www.pwcs.edu/userfiles/servers/server_340140/file/about-us/2026-27_school_year_month-at-a-glance_calendar.pdf"
+    },
+    {
+      "label": "PWCS 2026–27 Printable 11×17 Calendar",
+      "url": "https://www.pwcs.edu/userfiles/servers/server_340140/file/about-us/2026-27-school-calendar-print-version.pdf"
+    }
+  ],
+  "unifiedDownloadTitle": "PWCS Calendar Options",
+  "unifiedDownloadDescription": "Subscribe to the official PWCS calendar for automatic district updates, download a reviewed MySchoolDates snapshot, or open either official PDF format.",
+  "officialSubscriptionTitle": "Subscribe to the Official PWCS Calendar",
+  "officialSubscriptionDescription": "PWCS provides an academic-calendar subscription for Google Calendar, Apple Calendar, Outlook, and other calendar apps. Later district updates can sync automatically.",
+  "officialSubscriptionButtonLabel": "Open PWCS Subscription Instructions",
+  "officialSubscriptionUrl": "https://www.pwcs.edu/calendars/school_calendar/subscribe",
+  "icsHeading": "Download the MySchoolDates Calendar",
+  "icsDescription": "Download a one-time ICS file with the PWCS student dates listed on this page.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "icsButtonSupportText": "One-time import. This file will not automatically reflect later PWCS changes.",
+  "icsAriaLabel": "Download the Prince William County Public Schools 2026–27 calendar file",
+  "pdfHeading": "Official PWCS 2026–27 Calendar PDF",
+  "pdfButtonLabel": "View Month-at-a-Glance PDF",
+  "pdfDescription": "Open or print the official PWCS month-at-a-glance calendar.",
+  "pdfVersionLabel": "Official PWCS 2026–27 Month-at-a-Glance Calendar",
+  "pdfSupplementalTitle": "Printable 11×17 Calendar",
+  "pdfSupplementalDescription": "PWCS also publishes a full-size printable version of the 2026–27 school calendar.",
+  "pdfSupplementalLinks": [
+    {
+      "label": "View the Official 11×17 Calendar PDF",
+      "url": "https://www.pwcs.edu/userfiles/servers/server_340140/file/about-us/2026-27-school-calendar-print-version.pdf"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "comparison",
+      "label": "PWCS Calendar Compared With Northern Virginia Districts",
+      "position": "afterComparison",
+      "schemaHasPart": true,
+      "content": "PWCS and Fairfax County begin on the same day, while Loudoun County and Manassas City begin earlier. Manassas City also schedules Spring Break one week later than PWCS, Fairfax County, and Loudoun County.",
+      "table": {
+        "caption": "2026–27 student calendar comparison for PWCS, Fairfax County, Loudoun County, and Manassas City",
+        "columns": [
+          "District",
+          "First day",
+          "Last day",
+          "Thanksgiving",
+          "Winter Break",
+          "Spring Break"
+        ],
+        "rows": [
+          [
+            "PWCS",
+            "Aug. 24, 2026",
+            "Jun. 17, 2027",
+            "Nov. 25–27",
+            "Dec. 21–Jan. 1",
+            "Mar. 22–26"
+          ],
+          [
+            "Fairfax County",
+            "Aug. 24, 2026",
+            "Jun. 16, 2027",
+            "Nov. 25–27",
+            "Dec. 21–Jan. 1",
+            "Mar. 22–26"
+          ],
+          [
+            "Loudoun County",
+            "Aug. 17, 2026",
+            "Jun. 11, 2027",
+            "Nov. 25–27",
+            "Dec. 21–Jan. 1",
+            "Mar. 22–26"
+          ],
+          [
+            "Manassas City",
+            "Aug. 12, 2026",
+            "Jun. 4, 2027",
+            "Nov. 25–27",
+            "Dec. 21–Jan. 1",
+            "Mar. 29–Apr. 2"
+          ]
+        ],
+        "footnote": "Dates were checked against the linked district sources. Fairfax County's current calendar reflects its updated June 16 last student day. Staff workdays adjacent to breaks are excluded."
+      },
+      "linksDisplay": "inline",
+      "linksLabel": "Official sources:",
+      "links": [
+        {
+          "label": "PWCS 2026–27 district comparison",
+          "url": "https://www.pwcs.edu/userfiles/servers/server_340140/file/news/2025-26/school-calendar-comparison-for-2026-27.pdf"
+        },
+        {
+          "label": "Fairfax County calendar",
+          "url": "https://www.fcps.edu/calendars"
+        },
+        {
+          "label": "Loudoun County calendar",
+          "url": "https://www.lcps.org/o/lcps/article/2053337"
+        },
+        {
+          "label": "Manassas City calendar",
+          "url": "https://www.mcpsva.org/page/school-calendars"
+        }
+      ]
+    },
+    {
+      "id": "pwcs-2026-2027-planning-notes",
+      "label": "Planning Notes for PWCS Families",
+      "position": "afterComparison",
+      "schemaHasPart": true,
+      "content": "These dates are the most likely to affect child care, work schedules, or travel plans.",
+      "groups": [
+        {
+          "label": "Plan for the spring return date",
+          "items": [
+            "Spring Break is March 22–26, followed by a teacher workday on Monday, March 29.",
+            "Students return Tuesday, March 30."
+          ]
+        },
+        {
+          "label": "Mark the winter return date",
+          "items": [
+            "Winter Break ends Friday, January 1, and students return Monday, January 4."
+          ]
+        },
+        {
+          "label": "Include districtwide religious-holiday closures",
+          "items": [
+            "PWCS schools and offices are closed for Yom Kippur on September 21, Eid al-Fitr on March 10, and Eid al-Adha on May 17."
+          ]
+        },
+        {
+          "label": "Juneteenth follows the last student day",
+          "items": [
+            "Juneteenth falls on June 18, the day after the scheduled June 17 last student day, so it does not add another closure within the student school year."
+          ]
+        }
+      ]
+    }
+  ],
+  "whatsNew": {
+    "title": "What Changed From 2025–26",
+    "content": [
+      "The first student day moves from August 18 in 2025–26 to August 24 in 2026–27.",
+      "The scheduled last student day moves from June 12 to June 17.",
+      "Thanksgiving Break moves one day earlier, from November 26–28 to November 25–27. Winter Break also moves one day earlier, from December 22–January 2 to December 21–January 1.",
+      "Spring Break remains a five-weekday break but moves from March 30–April 3 to March 22–26. A teacher workday follows the break in both years.",
+      "Eid al-Fitr moves from March 20 to March 10, and Eid al-Adha moves from May 27 to May 17."
+    ]
+  },
+  "comparisonBeforeFaq": true,
+  "calendarFaqs": [
+    {
+      "q": "When is the first day of school for PWCS in 2026?",
+      "a": "The first day of school for PWCS students is Monday, August 24, 2026."
+    },
+    {
+      "q": "When is PWCS Winter Break in 2026–27?",
+      "a": "PWCS Winter Break runs Monday, December 21, 2026, through Friday, January 1, 2027. Students return Monday, January 4."
+    },
+    {
+      "q": "When is PWCS Spring Break in 2027?",
+      "a": "PWCS Spring Break runs Monday, March 22, through Friday, March 26, 2027. A teacher workday follows on March 29, so students return Tuesday, March 30."
+    },
+    {
+      "q": "When is the last day of school for PWCS in 2027?",
+      "a": "The scheduled last day of school for PWCS students is Thursday, June 17, 2027."
+    },
+    {
+      "q": "Does PWCS close for Eid al-Fitr and Eid al-Adha?",
+      "a": "Yes. PWCS schools and offices are closed for Eid al-Fitr on March 10 and Eid al-Adha on May 17. The district also closes for Yom Kippur on September 21."
+    },
+    {
+      "q": "Can families subscribe to the official PWCS calendar?",
+      "a": "PWCS provides an official academic-calendar subscription for Google Calendar, Apple Calendar, Outlook, and other calendar apps. Unlike a one-time calendar download, the subscription can receive later district updates automatically."
+    },
+    {
+      "q": "Is PWCS the same as Manassas City Public Schools?",
+      "a": "No. Prince William County Public Schools, Manassas City Public Schools, and Manassas Park City Schools are separate school divisions with different calendars. Families should confirm their assigned division using their exact address."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When is the first day of school for PWCS in 2026?",
+    "When is PWCS Winter Break in 2026–27?",
+    "When is PWCS Spring Break in 2027?",
+    "When is the last day of school for PWCS in 2027?",
+    "Does PWCS close for Eid al-Fitr and Eid al-Adha?",
+    "Can families subscribe to the official PWCS calendar?",
+    "Is PWCS the same as Manassas City Public Schools?"
+  ],
+  "faqDisplayLimit": 7,
+  "sourceReviewSummary": "Reviewed August 9, 2026, against the current PWCS school-calendar page, both official 2026–27 PDFs, the official subscription instructions, and the district's calendar-approval announcement.",
+  "sourceReviewDetailsTitle": "Review Details",
+  "sourceReviewDetails": [
+    "The first and last student days, districtwide holidays, teacher workdays, and break dates were checked against PWCS sources.",
+    "The 180 instructional-day total is calculated from the scheduled student calendar.",
+    "Thanksgiving, Winter Break, and Spring Break are shown as student break ranges. Adjacent teacher workdays are listed separately and are not added to the break duration.",
+    "The March 29 teacher workday means students return Tuesday, March 30 after Spring Break.",
+    "Yom Kippur, Eid al-Fitr, and Eid al-Adha are districtwide school and office closures. Juneteenth falls after the scheduled last student day.",
+    "The MySchoolDates ICS file is a one-time snapshot. The official PWCS academic-calendar subscription is the better option for receiving later district updates automatically.",
+    "Year-over-year notes compare equivalent student dates and do not treat an adjacent teacher workday as part of Spring Break."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Prince William County Public Schools sources.",
+  "sourceNextReviewText": "Re-check if PWCS revises either 2026–27 PDF, changes the live academic calendar, or publishes an emergency calendar adjustment.",
+  "sources": [
+    {
+      "label": "PWCS School Calendar",
+      "url": "https://www.pwcs.edu/calendars/school_calendar/index"
+    },
+    {
+      "label": "PWCS 2026–27 Month-at-a-Glance Calendar PDF",
+      "url": "https://www.pwcs.edu/userfiles/servers/server_340140/file/about-us/2026-27_school_year_month-at-a-glance_calendar.pdf"
+    },
+    {
+      "label": "PWCS 2026–27 Printable 11×17 Calendar PDF",
+      "url": "https://www.pwcs.edu/userfiles/servers/server_340140/file/about-us/2026-27-school-calendar-print-version.pdf"
+    },
+    {
+      "label": "Subscribe to the PWCS School Calendar",
+      "url": "https://www.pwcs.edu/calendars/school_calendar/subscribe"
+    },
+    {
+      "label": "PWCS approves 2026–27 school calendar",
+      "url": "https://www.pwcs.edu/news/2025/12/2026-27_school_calendar_approved"
     }
   ],
   "events": [
     {
-      "date": "2026-08-13",
-      "name": "New Teacher Orientation (Launching, Learning, Leading Conference)",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-08-14",
-      "name": "New Teacher Orientation (Launching, Learning, Leading Conference)",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-08-17",
-      "name": "Teacher Workday / Professional Development",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-08-18",
-      "name": "Teacher Workday / Professional Development",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-08-19",
-      "name": "Teacher Workday / Professional Development",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-08-20",
-      "name": "Teacher Workday / Professional Development",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-08-21",
-      "name": "Teacher Workday / Professional Development",
-      "type": "no_school"
-    },
-    {
       "date": "2026-08-24",
-      "name": "First Day of School",
-      "type": "school_start"
+      "name": "First Day of School for Students",
+      "type": "school_start",
+      "description": "The first day of school for PWCS students."
     },
     {
       "date": "2026-09-04",
       "name": "Labor Day Weekend Holiday",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools are closed, and offices are closed to the public."
     },
     {
       "date": "2026-09-07",
       "name": "Labor Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools and offices are closed."
     },
     {
       "date": "2026-09-21",
       "name": "Yom Kippur",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools and offices are closed."
     },
     {
       "date": "2026-10-12",
       "name": "Professional Development Day",
-      "type": "no_school"
+      "type": "teacher_professional_learning",
+      "badgeLabel": "No School for Students",
+      "description": "No school for students."
     },
     {
       "date": "2026-11-02",
       "name": "Parent Conferences / Professional Development",
-      "type": "no_school"
+      "type": "teacher_professional_learning",
+      "badgeLabel": "No School for Students",
+      "description": "No school for students."
     },
     {
       "date": "2026-11-03",
       "name": "Teacher Workday",
-      "type": "no_school"
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students",
+      "description": "No school for students."
     },
     {
       "date": "2026-11-11",
       "name": "Veterans Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools and offices are closed."
     },
     {
       "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "displayDate": "November 25–27, 2026",
       "name": "Thanksgiving Break",
       "type": "break_start"
     },
     {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
+      "date": "2026-11-30",
+      "name": "School Resumes",
+      "type": "school_resume",
+      "description": "Students return after Thanksgiving Break."
     },
     {
       "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "displayDate": "December 21, 2026 – January 1, 2027",
       "name": "Winter Break",
       "type": "break_start"
     },
     {
-      "date": "2026-12-24",
-      "name": "Christmas (Winter Break Holiday)",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-12-25",
-      "name": "Christmas (Winter Break Holiday)",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-01-01",
-      "name": "New Year's Day (Winter Break Holiday)",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-01-01",
-      "name": "Winter Break End",
-      "type": "break_end"
+      "date": "2027-01-04",
+      "name": "School Resumes",
+      "type": "school_resume",
+      "description": "Students return after Winter Break."
     },
     {
       "date": "2027-01-18",
       "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools and offices are closed."
     },
     {
       "date": "2027-01-28",
       "name": "Teacher Workday",
-      "type": "no_school"
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students",
+      "description": "No school for students."
     },
     {
       "date": "2027-01-29",
       "name": "Parent Conferences / Professional Development",
-      "type": "no_school"
+      "type": "teacher_professional_learning",
+      "badgeLabel": "No School for Students",
+      "description": "No school for students."
     },
     {
       "date": "2027-02-15",
       "name": "Presidents' Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools and offices are closed."
     },
     {
       "date": "2027-03-10",
       "name": "Eid al-Fitr",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools and offices are closed."
     },
     {
       "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "displayDate": "March 22–26, 2027",
       "name": "Spring Break",
       "type": "break_start"
     },
     {
-      "date": "2027-03-26",
-      "name": "Spring Break End",
-      "type": "break_end"
-    },
-    {
       "date": "2027-03-29",
       "name": "Teacher Workday",
-      "type": "no_school"
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students",
+      "description": "No school for students. Students return March 30."
+    },
+    {
+      "date": "2027-03-30",
+      "name": "School Resumes",
+      "type": "school_resume",
+      "description": "Students return after Spring Break and the March 29 teacher workday."
     },
     {
       "date": "2027-04-16",
       "name": "Teacher Workday",
-      "type": "no_school"
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students",
+      "description": "No school for students."
     },
     {
       "date": "2027-05-17",
       "name": "Eid al-Adha",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools and offices are closed."
     },
     {
       "date": "2027-05-31",
       "name": "Memorial Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools and offices are closed."
     },
     {
       "date": "2027-06-17",
       "name": "Last Day of School",
-      "type": "school_end"
-    },
-    {
-      "date": "2027-06-18",
-      "name": "Juneteenth",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-06-21",
-      "name": "Teacher Workday (Optional)",
-      "type": "no_school"
+      "type": "school_end",
+      "description": "Scheduled last student day."
     }
   ],
-  "calendarNotes": "Prince William County Public Schools begins the 2026–2027 school year on August 24, 2026. Spring Break runs March 22–26, aligning with Fairfax County Public Schools and Loudoun County Public Schools. Unlike many nearby districts, PWCS also closes for Eid al-Fitr on March 10 before Spring Break later that month. The school year ends June 17, 2027.",
+  "calendarNotes": "PWCS students begin school August 24, 2026, and the scheduled last student day is June 17, 2027. Thanksgiving Break runs November 25–27, Winter Break runs December 21–January 1, and Spring Break runs March 22–26. A teacher workday follows Spring Break on March 29, so students return March 30. PWCS schools and offices are closed for Yom Kippur, Eid al-Fitr, and Eid al-Adha. Juneteenth falls after the scheduled student year. Families who want automatic district updates should use the official PWCS calendar subscription rather than the one-time MySchoolDates download.",
   "datePublished": "2026-07-10",
-  "dateModified": "2026-07-10"
+  "dateModified": "2026-08-09"
 }
