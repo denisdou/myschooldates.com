@@ -149,6 +149,7 @@ export default defineNuxtConfig({
         '/mckinney-isd-calendar',
         '/newport-news-public-schools-calendar',
         '/new-york-city-public-schools-calendar',
+        '/north-clackamas-school-district-calendar',
         '/northshore-school-district-calendar',
         '/north-east-isd-calendar',
         '/northside-independent-school-district-calendar',
@@ -172,6 +173,7 @@ export default defineNuxtConfig({
         '/riverside-unified-school-district-calendar',
         '/roanoke-county-public-schools-calendar',
         '/sacramento-city-unified-school-calendar',
+        '/salem-keizer-public-schools-calendar',
         '/santa-ana-unified-school-district-calendar',
         '/san-bernardino-city-unified-school-district-calendar',
         '/san-francisco-unified-school-district-calendar',
@@ -419,6 +421,7 @@ export default defineNuxtConfig({
 
         '/hillsborough-county-school-calendar/2025-2026',
         '/hillsborough-county-school-calendar/2026-2027',
+        '/hillsborough-county-school-calendar/2027-2028',
 
         '/hillsboro-school-district-calendar/2025-2026',
         '/hillsboro-school-district-calendar/2026-2027',
@@ -587,6 +590,10 @@ export default defineNuxtConfig({
 
         '/northshore-school-district-calendar/2025-2026',
         '/northshore-school-district-calendar/2026-2027',
+
+        '/north-clackamas-school-district-calendar/2026-2027',
+
+        '/salem-keizer-public-schools-calendar/2026-2027',
 
         '/seattle-public-schools-calendar/2025-2026',
         '/seattle-public-schools-calendar/2026-2027',
