@@ -4,19 +4,20 @@ import { BarChart } from 'echarts/charts'
 import { GridComponent, TooltipComponent } from 'echarts/components'
 import { use } from 'echarts/core'
 import { CanvasRenderer } from 'echarts/renderers'
+import trendData from '../../data/school-calendar-trends-2026-2027.json'
 
 use([BarChart, GridComponent, TooltipComponent, CanvasRenderer])
 
 const VChart = defineAsyncComponent(() => import('vue-echarts').then(module => module.default))
 
 const reportUrl = 'https://myschooldates.com/school-calendar-trends/2026-2027-report'
-const reportTitle = '2026-2027 School Calendar Trends Report: Start Dates & Breaks From 100 U.S. Districts'
+const reportTitle = '2026-2027 School Calendar Trends Report: Start Dates & Breaks From 150 U.S. Districts'
 const reportSeoTitle = `${reportTitle} | MySchoolDates`
-const reportDescription = 'Find 2026-2027 school calendar dates from 100 U.S. districts. Compare school start dates, winter break, spring break, holidays, and last days of school with data-backed trends.'
+const reportDescription = 'Find 2026-2027 school calendar dates from 150 U.S. districts across 19 states. Compare school start dates, winter break, spring break, holidays, and last days of school.'
 const csvDownloadUrl = '/data/school-calendar-trends-2026-2027.csv'
 const datasetPageUrl = '/datasets/school-calendar-trends'
 const trendsHubUrl = '/school-calendar-trends'
-const citationText = 'Dou, Denis. (2026). 2026-2027 School Calendar Trends Report: Start Dates & Breaks From 100 U.S. Districts. MySchoolDates. https://myschooldates.com/school-calendar-trends/2026-2027-report'
+const citationText = 'Dou, Denis. (2026). 2026-2027 School Calendar Trends Report: Start Dates & Breaks From 150 U.S. Districts. MySchoolDates. https://myschooldates.com/school-calendar-trends/2026-2027-report'
 const authorProfile = {
   name: 'Denis Dou',
   role: 'Founder & Education Data Research Lead',
@@ -28,8 +29,8 @@ const authorProfile = {
 
 const reportMetaRows = [
   ['Published', 'July 27, 2026'],
-  ['Updated', 'July 27, 2026'],
-  ['Reviewed', 'July 27, 2026'],
+  ['Updated', 'August 9, 2026'],
+  ['Reviewed', 'August 9, 2026'],
   ['By', authorProfile.name],
   ['Read time', '16 min'],
 ]
@@ -37,23 +38,23 @@ const reportMetaRows = [
 const faqRows = [
   {
     q: 'When does the 2026-2027 school year start?',
-    a: 'Most reviewed districts in the MySchoolDates sample start in August 2026. In this dataset, 95 of 100 reviewed districts begin in August, with August 12 and August 24 tied as the most common first days.',
+    a: 'Most reviewed districts in the MySchoolDates sample start in August 2026. In this dataset, 131 of 150 reviewed districts begin in August, and August 24 is the most common first day.',
   },
   {
     q: 'When is winter break 2026 for most schools?',
-    a: 'December 21, 2026 is the most common winter break start date in the reviewed dataset, appearing in 89 of 100 district calendar records.',
+    a: 'December 21, 2026 is the most common winter break start date in the reviewed dataset, appearing in 132 of 150 district calendar records.',
   },
   {
     q: 'When is spring break 2027?',
-    a: 'Spring break is more varied than winter break. The most common reviewed spring break starts are March 22, 2027, March 15, 2027, and March 29, 2027.',
+    a: 'Spring break is more varied than winter break. The most common reviewed spring break starts are March 22, 2027, March 15, 2027, and April 5, 2027.',
   },
   {
     q: 'How many school days are in 2026-2027?',
-    a: 'The most common listed instructional count is 180 student days. It appears in 55 of 100 reviewed records and in about 65% of records with an explicit student-day count.',
+    a: 'The most common listed instructional count is 180 student days. It appears in 73 of 150 reviewed records and in about 65% of records with an explicit student-day count.',
   },
   {
     q: 'When does the 2026-2027 school year end?',
-    a: 'May end dates are more common in this sample. Sixty-one reviewed districts end in May, while 39 end in June. May 27, 2027 is the most common last student day.',
+    a: 'May end dates are more common in this sample. Ninety reviewed districts end in May, while 60 end in June. May 27, 2027 is the most common last student day.',
   },
   {
     q: 'Do all U.S. school districts use the same calendar?',
@@ -61,15 +62,15 @@ const faqRows = [
   },
   {
     q: 'Are school calendar PDFs still useful?',
-    a: 'Yes. PDFs remain the main official publishing format for many districts. In this sample, 98 of 100 reviewed pages include an official or source PDF, while MySchoolDates also provides ICS files for calendar app imports.',
+    a: 'Yes. PDFs remain the main official publishing format for many districts. In this sample, 146 of 150 reviewed pages include an official or source PDF, while MySchoolDates also provides ICS files for calendar app imports.',
   },
   {
     q: 'Is this report a national census of every public school district?',
-    a: 'No. This is a reviewed MySchoolDates platform dataset of 100 district calendar records across 13 states as of July 27, 2026. It is intended as a trends report, not a complete national census.',
+    a: 'No. This is a reviewed MySchoolDates platform dataset of 150 district calendar records across 19 states as of August 9, 2026. It is intended as a trends report, not a complete national census.',
   },
   {
     q: 'What month does school usually start in America?',
-    a: 'In the reviewed MySchoolDates 2026-2027 sample, August is the usual school start month. Ninety-five of 100 reviewed U.S. district calendars begin in August 2026.',
+    a: 'In the reviewed MySchoolDates 2026-2027 sample, August is the usual school start month. One hundred thirty-one of 150 reviewed U.S. district calendars begin in August 2026.',
   },
   {
     q: 'How many weeks is summer break in America?',
@@ -101,7 +102,7 @@ useHead({
             headline: reportTitle,
             description: reportDescription,
             datePublished: '2026-07-27',
-            dateModified: '2026-07-27',
+            dateModified: '2026-08-09',
             author: {
               '@type': 'Person',
               name: authorProfile.name,
@@ -136,7 +137,7 @@ useHead({
             '@type': 'Dataset',
             '@id': `${reportUrl}#dataset`,
             name: '2026-2027 School Calendar Dataset',
-            description: 'Reviewed 2026-2027 school calendar records for 100 U.S. districts across 13 states, including first day, last day, winter break, spring break, instructional day counts, source PDF availability, and ICS export availability.',
+            description: 'Reviewed 2026-2027 school calendar records for 150 U.S. districts across 19 states, including first day, last day, winter break, spring break, instructional day counts, source PDF availability, and ICS export availability.',
             creator: {
               '@type': 'Organization',
               name: 'MySchoolDates',
@@ -147,7 +148,7 @@ useHead({
               name: 'MySchoolDates',
               url: 'https://myschooldates.com',
             },
-            dateModified: '2026-07-27',
+            dateModified: '2026-08-09',
             temporalCoverage: '2026-07-01/2027-06-30',
             measurementTechnique: 'Manual review of official district calendar sources and MySchoolDates calendar records',
             variableMeasured: [
@@ -191,81 +192,86 @@ useHead({
 })
 
 const startMonthRows = [
-  ['August', '95 districts', '95% of reviewed 2026-2027 records'],
-  ['July', '4 districts', 'Mostly California early-start, year-round, or track-calendar patterns'],
-  ['September', '1 district', 'New York City Public Schools starts September 10, 2026'],
+  ['August', '131 districts', '87.3% of reviewed 2026-2027 records'],
+  ['September', '12 districts', 'Washington and Oregon additions broaden the later-start sample'],
+  ['July', '7 districts', 'Early-start and intersession calendars remain a small minority'],
 ]
 
 const topFirstDays = [
-  ['August 12, 2026', '21 districts'],
-  ['August 24, 2026', '21 districts'],
-  ['August 10, 2026', '14 districts'],
-  ['August 11, 2026', '10 districts'],
+  ['August 24, 2026', '26 districts'],
+  ['August 12, 2026', '22 districts'],
+  ['August 10, 2026', '20 districts'],
+  ['August 11, 2026', '12 districts'],
   ['August 13, 2026', '9 districts'],
 ]
 
 const lastDayRows = [
-  ['May', '61 districts'],
-  ['June', '39 districts'],
+  ['May', '90 districts'],
+  ['June', '60 districts'],
 ]
 
 const topLastDays = [
-  ['May 27, 2027', '23 districts'],
-  ['May 28, 2027', '14 districts'],
-  ['May 26, 2027', '13 districts'],
-  ['June 4, 2027', '8 districts'],
+  ['May 27, 2027', '35 districts'],
+  ['May 26, 2027', '20 districts'],
+  ['May 28, 2027', '17 districts'],
+  ['June 4, 2027', '9 districts'],
   ['June 9, 2027', '8 districts'],
 ]
 
 const springBreakRows = [
-  ['March 22, 2027', '29 districts'],
-  ['March 15, 2027', '25 districts'],
+  ['March 22, 2027', '41 districts'],
+  ['March 15, 2027', '38 districts'],
+  ['April 5, 2027', '22 districts'],
   ['March 29, 2027', '14 districts'],
-  ['April 5, 2027', '10 districts'],
-  ['March 8, 2027', '9 districts'],
+  ['March 8, 2027', '12 districts'],
 ]
 
 const instructionalDayRows = [
-  ['180 student days', '55 districts', 'Most common count; 55% of all reviewed records and about 65% of records with a listed count'],
-  ['175 student days', '5 districts', 'Second most common listed count'],
-  ['172 student days', '4 districts', 'Common among some Texas and locally structured calendars'],
-  ['No count listed', '16 districts', 'Calendar record has dates but no explicit totalSchoolDays value'],
+  ['180 student days', '73 districts', 'Most common count; 48.7% of all reviewed records and about 65% of records with a listed count'],
+  ['178 student days', '6 districts', 'Second most common listed count'],
+  ['173 or 175 student days', '5 districts each', 'Two other recurring instructional-day totals in the expanded sample'],
+  ['No count listed', '38 districts', 'Calendar record has dates but no explicit totalSchoolDays value'],
 ]
 
 const stateRows = [
   ['California', '26'],
   ['Texas', '25'],
+  ['Florida', '16'],
   ['Virginia', '15'],
   ['North Carolina', '15'],
-  ['Florida', '10'],
-  ['Maryland', '2'],
-  ['Georgia, Hawaii, Illinois, Kentucky, Nevada, New York, Pennsylvania', '1 each'],
+  ['Washington', '10'],
+  ['Arizona', '9'],
+  ['Colorado', '8'],
+  ['Georgia', '7'],
+  ['Maryland', '6'],
+  ['Oregon', '5'],
+  ['Hawaii, Illinois, Kentucky, Massachusetts, Nevada, New York, Pennsylvania, Utah', '1 each'],
 ]
 
 const startMonthChartRows = [
-  ['August', '95 districts', '95%'],
-  ['July', '4 districts', '4%'],
-  ['September', '1 district', '1%'],
+  ['August', '131 districts', '87.3%'],
+  ['September', '12 districts', '8%'],
+  ['July', '7 districts', '4.7%'],
 ]
 
 const endMonthChartRows = [
-  ['May', '61 districts', '61%'],
-  ['June', '39 districts', '39%'],
+  ['May', '90 districts', '60%'],
+  ['June', '60 districts', '40%'],
 ]
 
 const winterBreakChartRows = [
-  ['December 21, 2026', '89 records', '89%'],
-  ['December 23-24, 2026', '8 records', '8%'],
-  ['Other or not listed', '3 records', '3%'],
+  ['December 21, 2026', '132 records', '88%'],
+  ['December 23-24, 2026', '12 records', '8%'],
+  ['Other or not listed', '6 records', '4%'],
 ]
 
 const springBreakChartRows = [
-  ['March 22, 2027', '29 districts', '29%'],
-  ['March 15, 2027', '25 districts', '25%'],
-  ['March 29, 2027', '14 districts', '14%'],
-  ['April 5, 2027', '10 districts', '10%'],
-  ['March 8, 2027', '9 districts', '9%'],
-  ['Other or not listed', '13 districts', '13%'],
+  ['March 22, 2027', '41 districts', '27.3%'],
+  ['March 15, 2027', '38 districts', '25.3%'],
+  ['April 5, 2027', '22 districts', '14.7%'],
+  ['March 29, 2027', '14 districts', '9.3%'],
+  ['March 8, 2027', '12 districts', '8%'],
+  ['Other or not listed', '23 districts', '15.3%'],
 ]
 
 const reportChartCards = [
@@ -277,9 +283,9 @@ const reportChartCards = [
       color: ['#2563eb'],
       tooltip: { trigger: 'axis' },
       grid: { left: 36, right: 12, top: 24, bottom: 32 },
-      xAxis: { type: 'category', data: ['August', 'July', 'September'] },
-      yAxis: { type: 'value', max: 100 },
-      series: [{ type: 'bar', data: [95, 4, 1], barWidth: 28 }],
+      xAxis: { type: 'category', data: ['August', 'September', 'July'] },
+      yAxis: { type: 'value', max: 150 },
+      series: [{ type: 'bar', data: [131, 12, 7], barWidth: 28 }],
     },
   },
   {
@@ -292,7 +298,7 @@ const reportChartCards = [
       grid: { left: 36, right: 12, top: 24, bottom: 32 },
       xAxis: { type: 'category', data: ['May', 'June'] },
       yAxis: { type: 'value', max: 100 },
-      series: [{ type: 'bar', data: [61, 39], barWidth: 34 }],
+      series: [{ type: 'bar', data: [90, 60], barWidth: 34 }],
     },
   },
   {
@@ -308,8 +314,8 @@ const reportChartCards = [
         data: ['Dec 21', 'Dec 23-24', 'Other'],
         axisLabel: { rotate: 20 },
       },
-      yAxis: { type: 'value', max: 100 },
-      series: [{ type: 'bar', data: [89, 8, 3], barWidth: 28 }],
+      yAxis: { type: 'value', max: 150 },
+      series: [{ type: 'bar', data: [132, 12, 6], barWidth: 28 }],
     },
   },
   {
@@ -322,11 +328,11 @@ const reportChartCards = [
       grid: { left: 36, right: 12, top: 24, bottom: 52 },
       xAxis: {
         type: 'category',
-        data: ['Mar 22', 'Mar 15', 'Mar 29', 'Apr 5', 'Mar 8', 'Other'],
+        data: ['Mar 22', 'Mar 15', 'Apr 5', 'Mar 29', 'Mar 8', 'Other'],
         axisLabel: { rotate: 25 },
       },
-      yAxis: { type: 'value', max: 35 },
-      series: [{ type: 'bar', data: [29, 25, 14, 10, 9, 13], barWidth: 22 }],
+      yAxis: { type: 'value', max: 45 },
+      series: [{ type: 'bar', data: [41, 38, 22, 14, 12, 23], barWidth: 22 }],
     },
   },
 ]
@@ -334,20 +340,21 @@ const reportChartCards = [
 const statePatternRows = [
   ['California', '26 reviewed records', 'More calendar variety than most states in the sample, including July starts, year-round or track-calendar signals, and several June end dates.'],
   ['Texas', '25 reviewed records', 'Highly concentrated August starts, frequent May endings, and strong 180-day calendar signals across major metro-area districts.'],
+  ['Florida', '16 reviewed records', 'August starts remain consistent across the expanded sample, with most last days falling in late May.'],
   ['Virginia', '15 reviewed records', 'Late-August starts are common, and June end dates appear more often than in Texas or Florida.'],
   ['North Carolina', '15 reviewed records', 'August 24 is a common first-day signal, with a mix of May and June last-day patterns.'],
-  ['Florida', '10 reviewed records', 'August starts are consistent, while most reviewed districts end in late May or early June.'],
-  ['Northeast and Mid-Atlantic examples', '5 reviewed records', 'New York City, Maryland, and Pennsylvania examples show later end dates and more June school-year endings.'],
+  ['Washington, Arizona, and Colorado', '27 reviewed records', 'The v2.0 release adds more September starts, intersession calendars, and June endings from western states.'],
+  ['Oregon and Utah', '6 reviewed records', 'New district coverage adds grade-specific openings, conditional make-up dates, and locally distinct schedule patterns.'],
 ]
 
 const calendarOverviewRows = [
   ['2026 school holidays overview', 'Labor Day, Veterans Day, Thanksgiving week, and Winter Break are the major 2026 planning anchors in most reviewed calendars. December 21, 2026 is the clearest winter break cluster.'],
-  ['2027 school break dates overview', 'Spring break patterns are more distributed in 2027. The largest clusters begin March 22, March 15, March 29, April 5, and March 8.'],
+  ['2027 school break dates overview', 'Spring break patterns are more distributed in 2027. The largest clusters begin March 22, March 15, April 5, March 29, and March 8.'],
 ]
 
 const quickAnswerRows = [
   ['Most common start month', 'August 2026'],
-  ['Most common first days', 'August 12 and August 24, 2026'],
+  ['Most common first day', 'August 24, 2026'],
   ['Strongest winter break signal', 'December 21, 2026'],
   ['Largest spring break cluster', 'March 22, 2027'],
   ['Most common last student day', 'May 27, 2027'],
@@ -356,8 +363,8 @@ const quickAnswerRows = [
 
 const evidenceRows = [
   ['Claim', 'Most reviewed U.S. districts in this dataset start the 2026-2027 school year in August.'],
-  ['Evidence', '95 of 100 reviewed district calendar records list an August 2026 first student day.'],
-  ['Source', 'MySchoolDates reviewed 2026-2027 school calendar dataset, last verified July 27, 2026.'],
+  ['Evidence', '131 of 150 reviewed district calendar records list an August 2026 first student day.'],
+  ['Source', 'MySchoolDates reviewed 2026-2027 school calendar dataset, last verified August 9, 2026.'],
 ]
 
 const holidayRows = [
@@ -370,21 +377,21 @@ const holidayRows = [
 const infographicCards = [
   {
     title: 'When Does School Start in 2026?',
-    stat: '95%',
+    stat: '87.3%',
     label: 'August starts',
-    detail: '95 of 100 reviewed district calendars begin the 2026-2027 school year in August.',
+    detail: '131 of 150 reviewed district calendars begin the 2026-2027 school year in August.',
     color: 'blue',
   },
   {
     title: 'Winter Break 2026 Distribution',
-    stat: '89',
+    stat: '132',
     label: 'Dec 21 records',
     detail: 'December 21, 2026 is the strongest winter break start-date signal in the dataset.',
     color: 'sky',
   },
   {
     title: 'School Year End Dates 2027',
-    stat: '61%',
+    stat: '60%',
     label: 'May endings',
     detail: 'May endings are more common than June endings among reviewed district records.',
     color: 'emerald',
@@ -407,108 +414,15 @@ const sourceExampleRows = [
   ['Late-start example', 'New York City Public Schools', '/new-york-city-public-schools-calendar', 'https://www.schools.nyc.gov/calendar'],
 ]
 
-const appendixRows = [
-  ['AUHSD', 'California', '/anaheim-union-high-school-district-calendar', 'Aug 12, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['BCSD', 'California', '/bakersfield-city-school-district-calendar', 'Aug 12, 2026', 'May 26, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['Corona-Norco USD', 'California', '/corona-norco-unified-school-district-calendar', 'Jul 6, 2026', 'Jun 24, 2027', 'Dec 21, 2026', 'Not listed'],
-  ['CUSD', 'California', '/capistrano-unified-school-district-calendar', 'Aug 18, 2026', 'Jun 3, 2027', 'Dec 21, 2026', 'Apr 5, 2027'],
-  ['CVESD', 'California', '/chula-vista-elementary-school-district-calendar', 'Jul 22, 2026', 'Jun 4, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['EGUSD', 'California', '/elk-grove-unified-school-district-calendar', 'Aug 13, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['Fontana Unified', 'California', '/fontana-unified-school-district-calendar', 'Aug 6, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['FUSD', 'California', '/fresno-unified-school-district-calendar', 'Aug 17, 2026', 'Jun 10, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['GGUSD', 'California', '/garden-grove-unified-school-district-calendar', 'Aug 17, 2026', 'May 28, 2027', 'Dec 21, 2026', 'Mar 29, 2027'],
-  ['IUSD', 'California', '/irvine-unified-school-district-calendar', 'Aug 18, 2026', 'Jun 4, 2027', 'Dec 21, 2026', 'Mar 29, 2027'],
-  ['LAUSD', 'California', '/los-angeles-unified-school-district-calendar', 'Aug 12, 2026', 'Jun 4, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['LBUSD', 'California', '/long-beach-unified-school-district-calendar', 'Aug 25, 2026', 'Jun 10, 2027', 'Dec 21, 2026', 'Apr 5, 2027'],
-  ['MVUSD', 'California', '/moreno-valley-unified-school-district-calendar', 'Aug 12, 2026', 'Jun 11, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['OUSD', 'California', '/oakland-unified-school-district-calendar', 'Aug 10, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 29, 2027'],
-  ['Poway USD', 'California', '/poway-unified-school-district-calendar', 'Aug 13, 2026', 'Jun 3, 2027', 'Dec 21, 2026', 'Not listed'],
-  ['PUSD', 'California', '/pomona-unified-school-district-calendar', 'Aug 12, 2026', 'May 28, 2027', 'Dec 21, 2026', 'Mar 29, 2027'],
-  ['RUSD', 'California', '/riverside-unified-school-district-calendar', 'Aug 10, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 29, 2027'],
-  ['San Juan Unified', 'California', '/san-juan-unified-school-district-calendar', 'Aug 13, 2026', 'Jun 8, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['SAUSD', 'California', '/santa-ana-unified-school-district-calendar', 'Aug 10, 2026', 'May 26, 2027', 'Dec 21, 2026', 'Apr 5, 2027'],
-  ['SBCUSD', 'California', '/san-bernardino-city-unified-school-district-calendar', 'Aug 3, 2026', 'Jun 3, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['SCUSD', 'California', '/sacramento-city-unified-school-calendar', 'Aug 11, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 23, 2027'],
-  ['SDUSD', 'California', '/san-diego-unified-school-district-calendar', 'Aug 10, 2026', 'May 26, 2027', 'Dec 21, 2026', 'Mar 29, 2027'],
-  ['SFUSD', 'California', '/san-francisco-unified-school-district-calendar', 'Aug 17, 2026', 'Jun 2, 2027', 'Dec 21, 2026', 'Mar 26, 2027'],
-  ['SJUSD', 'California', '/san-jose-unified-school-calendar', 'Aug 6, 2026', 'May 27, 2027', 'Feb 15, 2027', 'Apr 5, 2027'],
-  ['SUSD', 'California', '/stockton-unified-school-district-calendar', 'Jul 30, 2026', 'May 26, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['Sweetwater UHSD', 'California', '/sweetwater-union-high-school-district-calendar', 'Jul 22, 2026', 'Jun 4, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['BCPS', 'Florida', '/broward-county-school-calendar', 'Aug 10, 2026', 'May 28, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['DCPS', 'Florida', '/duval-county-school-calendar', 'Aug 10, 2026', 'May 28, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['HCPS', 'Florida', '/hillsborough-county-school-calendar', 'Aug 10, 2026', 'May 28, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['M-DCPS', 'Florida', '/miami-dade-school-calendar', 'Aug 13, 2026', 'Jun 3, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['OCPS', 'Florida', '/orange-county-school-calendar', 'Aug 11, 2026', 'May 26, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['PBCSD', 'Florida', '/palm-beach-county-school-calendar', 'Aug 10, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 10, 2027'],
-  ['PCPS', 'Florida', '/polk-county-school-calendar', 'Aug 11, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['PCS', 'Florida', '/pasco-county-school-calendar', 'Aug 13, 2026', 'May 28, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['PCS', 'Florida', '/pinellas-county-school-calendar', 'Aug 11, 2026', 'May 27, 2027', 'Dec 19, 2026', 'Mar 13, 2027'],
-  ['SDLC', 'Florida', '/lee-county-school-calendar', 'Aug 11, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['GCPS', 'Georgia', '/gwinnett-county-public-schools-calendar', 'Aug 5, 2026', 'May 26, 2027', 'Dec 21, 2026', 'Apr 5, 2027'],
-  ['HIDOE', 'Hawaii', '/hawaii-state-department-of-education-calendar', 'Aug 3, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['CPS', 'Illinois', '/chicago-public-schools-calendar', 'Aug 24, 2026', 'Jun 11, 2027', 'Dec 21, 2026', 'Not listed'],
-  ['HCS', 'Kentucky', '/henderson-county-schools-ky-calendar', 'Aug 13, 2026', 'May 25, 2027', 'Dec 21, 2026', 'Apr 5, 2027'],
-  ['MCPS', 'Maryland', '/montgomery-county-school-calendar', 'Aug 25, 2026', 'Jun 11, 2027', 'Dec 24, 2026', 'Mar 31, 2027'],
-  ['PGCPS', 'Maryland', '/prince-georges-county-school-calendar', 'Aug 25, 2026', 'Jun 15, 2027', 'Dec 21, 2026', 'Mar 26, 2027'],
-  ['CCSD', 'Nevada', '/clark-county-school-district-calendar', 'Aug 10, 2026', 'May 20, 2027', 'Not listed', 'Not listed'],
-  ['NYCPS', 'New York', '/new-york-city-public-schools-calendar', 'Sep 10, 2026', 'Jun 28, 2027', 'Dec 24, 2026', 'Apr 22, 2027'],
-  ['BCS', 'North Carolina', '/brunswick-county-schools-calendar', 'Aug 24, 2026', 'May 28, 2027', 'Not listed', 'Mar 29, 2027'],
-  ['CCS', 'North Carolina', '/cabarrus-county-school-calendar', 'Aug 12, 2026', 'May 26, 2027', 'Dec 23, 2026', 'Mar 8, 2027'],
-  ['CCS', 'North Carolina', '/catawba-county-schools-calendar', 'Aug 24, 2026', 'May 21, 2027', 'Dec 23, 2026', 'Apr 12, 2027'],
-  ['CCS', 'North Carolina', '/cumberland-county-school-calendar', 'Aug 7, 2026', 'May 28, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['CMS', 'North Carolina', '/charlotte-mecklenburg-schools-calendar', 'Aug 25, 2026', 'Jun 9, 2027', 'Dec 21, 2026', 'Mar 29, 2027'],
-  ['DPS', 'North Carolina', '/durham-public-schools-calendar', 'Aug 24, 2026', 'Jun 9, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['GCS', 'North Carolina', '/guilford-county-school-calendar', 'Aug 24, 2026', 'Jun 10, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['HCPS', 'North Carolina', '/henderson-county-public-schools-calendar', 'Aug 12, 2026', 'May 21, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['I-SS', 'North Carolina', '/iredell-statesville-schools-calendar', 'Aug 12, 2026', 'May 27, 2027', 'Dec 23, 2026', 'Mar 8, 2027'],
-  ['JCPS', 'North Carolina', '/johnston-county-school-calendar', 'Aug 24, 2026', 'May 26, 2027', 'Dec 21, 2026', 'Mar 26, 2027'],
-  ['NHCS', 'North Carolina', '/new-hanover-county-school-calendar', 'Aug 24, 2026', 'Jun 4, 2027', 'Dec 21, 2026', 'Mar 25, 2027'],
-  ['RCSS', 'North Carolina', '/randolph-county-school-system-calendar', 'Aug 24, 2026', 'Jun 9, 2027', 'Dec 21, 2026', 'Not listed'],
-  ['UCPS', 'North Carolina', '/union-county-school-calendar', 'Aug 24, 2026', 'Jun 4, 2027', 'Dec 21, 2026', 'Mar 29, 2027'],
-  ['WCPSS', 'North Carolina', '/wake-county-school-calendar', 'Aug 24, 2026', 'Jun 9, 2027', 'Dec 21, 2026', 'Mar 29, 2027'],
-  ['WSFCS', 'North Carolina', '/winston-salem-forsyth-school-calendar', 'Aug 10, 2026', 'May 21, 2027', 'Dec 21, 2026', 'Mar 26, 2027'],
-  ['SDP', 'Pennsylvania', '/school-district-of-philadelphia-calendar', 'Aug 24, 2026', 'Jun 9, 2027', 'Dec 23, 2026', 'Mar 22, 2027'],
-  ['Aldine ISD', 'Texas', '/aldine-independent-school-district-calendar', 'Aug 12, 2026', 'Jun 3, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['Arlington ISD', 'Texas', '/arlington-isd-calendar', 'Aug 12, 2026', 'May 26, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['Austin ISD', 'Texas', '/austin-independent-school-district-calendar', 'Aug 18, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['CFISD', 'Texas', '/cypress-fairbanks-isd-calendar', 'Aug 12, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['Conroe ISD', 'Texas', '/conroe-independent-school-district-calendar', 'Aug 12, 2026', 'May 27, 2027', 'Not listed', 'Mar 15, 2027'],
-  ['Dallas ISD', 'Texas', '/dallas-independent-school-district-calendar', 'Aug 11, 2026', 'May 26, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['FISD', 'Texas', '/frisco-independent-school-district-calendar', 'Aug 12, 2026', 'May 14, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['Fort Bend ISD', 'Texas', '/fort-bend-independent-school-district-calendar', 'Aug 11, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 8, 2027'],
-  ['Fort Worth ISD', 'Texas', '/fort-worth-independent-school-district-calendar', 'Aug 10, 2026', 'May 21, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['GISD', 'Texas', '/garland-independent-school-district-calendar', 'Aug 10, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['Houston ISD', 'Texas', '/houston-independent-school-district-calendar', 'Aug 10, 2026', 'May 28, 2027', 'Dec 21, 2026', 'Mar 8, 2027'],
-  ['Humble ISD', 'Texas', '/humble-isd-calendar', 'Aug 12, 2026', 'May 28, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['Judson ISD', 'Texas', '/judson-isd-calendar', 'Aug 12, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 8, 2027'],
-  ['Katy ISD', 'Texas', '/katy-independent-school-district-calendar', 'Aug 12, 2026', 'May 26, 2027', 'Dec 21, 2026', 'Mar 8, 2027'],
-  ['Klein ISD', 'Texas', '/klein-isd-calendar', 'Aug 12, 2026', 'May 28, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['LISD', 'Texas', '/lewisville-independent-school-district-calendar', 'Aug 12, 2026', 'May 21, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['Mansfield ISD', 'Texas', '/mansfield-isd-calendar', 'Aug 12, 2026', 'May 20, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['McKinney ISD', 'Texas', '/mckinney-isd-calendar', 'Aug 13, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['Mesquite ISD', 'Texas', '/mesquite-isd-calendar', 'Aug 11, 2026', 'May 28, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['North East ISD', 'Texas', '/north-east-isd-calendar', 'Aug 17, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 8, 2027'],
-  ['Northside ISD', 'Texas', '/northside-independent-school-district-calendar', 'Aug 10, 2026', 'May 26, 2027', 'Dec 21, 2026', 'Mar 8, 2027'],
-  ['Pasadena ISD', 'Texas', '/pasadena-independent-school-district-calendar', 'Aug 13, 2026', 'May 21, 2027', 'Dec 21, 2026', 'Mar 8, 2027'],
-  ['Plano ISD', 'Texas', '/plano-independent-school-district-calendar', 'Aug 11, 2026', 'May 21, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['Round Rock ISD', 'Texas', '/round-rock-independent-school-district-calendar', 'Aug 19, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['Spring ISD', 'Texas', '/spring-isd-calendar', 'Aug 12, 2026', 'May 28, 2027', 'Dec 21, 2026', 'Mar 15, 2027'],
-  ['ACPS', 'Virginia', '/alexandria-city-public-schools-calendar', 'Aug 24, 2026', 'Jun 17, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['APS', 'Virginia', '/arlington-public-schools-calendar', 'Aug 31, 2026', 'Jun 17, 2027', 'Dec 23, 2026', 'Mar 22, 2027'],
-  ['CCPS', 'Virginia', '/chesterfield-county-school-calendar', 'Aug 24, 2026', 'Jun 4, 2027', 'Dec 21, 2026', 'Mar 29, 2027'],
-  ['FCPS', 'Virginia', '/fairfax-county-school-calendar', 'Aug 24, 2026', 'Jun 16, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['HCPS', 'Virginia', '/henrico-county-school-calendar', 'Aug 24, 2026', 'Jun 4, 2027', 'Dec 21, 2026', 'Mar 29, 2027'],
-  ['HCS', 'Virginia', '/hampton-city-schools-calendar', 'Aug 24, 2026', 'Jun 9, 2027', 'Dec 21, 2026', 'Apr 5, 2027'],
-  ['LCPS', 'Virginia', '/loudoun-county-school-calendar', 'Aug 17, 2026', 'Jun 11, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['NNPS', 'Virginia', '/newport-news-public-schools-calendar', 'Aug 24, 2026', 'Jun 8, 2027', 'Dec 21, 2026', 'Apr 5, 2027'],
-  ['PWCS', 'Virginia', '/prince-william-county-school-calendar', 'Aug 24, 2026', 'Jun 17, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['RCPS', 'Virginia', '/roanoke-county-public-schools-calendar', 'Aug 13, 2026', 'May 27, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['SCPS', 'Virginia', '/spotsylvania-county-public-schools-calendar', 'Aug 11, 2026', 'May 28, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['SCPS', 'Virginia', '/stafford-county-public-schools-calendar', 'Aug 12, 2026', 'May 26, 2027', 'Dec 21, 2026', 'Mar 22, 2027'],
-  ['VBCPS', 'Virginia', '/virginia-beach-school-calendar', 'Aug 24, 2026', 'Jun 11, 2027', 'Dec 21, 2026', 'Mar 29, 2027'],
-  ['WJCC Schools', 'Virginia', '/williamsburg-james-city-county-schools-calendar', 'Aug 24, 2026', 'Jun 9, 2027', 'Dec 21, 2026', 'Apr 5, 2027'],
-  ['YCSD', 'Virginia', '/york-county-school-division-calendar', 'Aug 24, 2026', 'Jun 9, 2027', 'Dec 21, 2026', 'Apr 5, 2027'],
-]
+const appendixRows = trendData.records.map(record => [
+  record.district,
+  record.state,
+  new URL(record.page).pathname,
+  record.firstDay,
+  record.lastDay,
+  record.winterBreakSignal,
+  record.springBreakSignal,
+])
 </script>
 
 <template>
@@ -528,7 +442,7 @@ const appendixRows = [
           {{ reportTitle }}
         </h1>
         <p class="mt-4 max-w-3xl text-lg leading-relaxed text-gray-600">
-          Based on 100 reviewed 2026-2027 district calendar records in the current MySchoolDates dataset, the dominant pattern is clear: most districts begin in August, most end in May, winter break usually begins December 21, and 180 student days remains the most common listed instructional count.
+          Based on 150 reviewed 2026-2027 district calendar records in the current MySchoolDates dataset, the dominant pattern is clear: most districts begin in August, most end in May, winter break usually begins December 21, and 180 student days remains the most common listed instructional count.
         </p>
         <dl class="mt-5 grid gap-3 border-y border-gray-100 py-4 text-sm sm:grid-cols-5">
           <div v-for="row in reportMetaRows" :key="row[0]">
@@ -540,8 +454,8 @@ const appendixRows = [
           </div>
         </dl>
         <div class="mt-5 flex flex-wrap gap-2 text-sm text-gray-600">
-          <span class="rounded-lg bg-gray-100 px-3 py-1">100 reviewed 2026-2027 calendars</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">13 states</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">150 reviewed 2026-2027 calendars</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">19 states</span>
           <span class="rounded-lg bg-gray-100 px-3 py-1">Next review January 2027</span>
           <span class="rounded-lg bg-gray-100 px-3 py-1">MySchoolDates dataset</span>
         </div>
@@ -550,7 +464,7 @@ const appendixRows = [
       <section id="quick-answer" class="mt-6 rounded-lg border border-emerald-100 bg-emerald-50 p-6">
         <h2 class="text-xl font-semibold text-gray-900">Quick Answer: When Do Schools Start in 2026?</h2>
         <p class="mt-3 text-sm leading-relaxed text-emerald-950">
-          Most reviewed U.S. school districts start the 2026-2027 school year in August 2026. In this 100-district dataset, August 12 and August 24 are tied as the most common first student days, December 21 is the strongest winter break signal, and May 27 is the most common last student day.
+          Most reviewed U.S. school districts start the 2026-2027 school year in August 2026. In this 150-district dataset, August 24 is the most common first student day, December 21 is the strongest winter break signal, and May 27 is the most common last student day.
         </p>
         <div class="mt-4 overflow-x-auto rounded-lg border border-emerald-100 bg-white">
           <table class="w-full text-sm">
@@ -563,19 +477,19 @@ const appendixRows = [
           </table>
         </div>
         <p class="mt-3 text-xs leading-relaxed text-emerald-800">
-          Calendar availability varies by district approval status. Data last verified July 27, 2026; official district sources remain the record for final family planning.
+          Calendar availability varies by district approval status. Data last verified August 9, 2026; official district sources remain the record for final family planning.
         </p>
       </section>
 
       <section class="mt-6 rounded-lg border border-blue-100 bg-blue-50 p-6">
         <h2 class="text-xl font-semibold text-gray-900">Key Takeaways</h2>
         <ul class="mt-4 grid gap-3 text-sm leading-relaxed text-blue-950 sm:grid-cols-2">
-          <li><strong>95 of 100</strong> reviewed districts start school in August for 2026-2027.</li>
-          <li><strong>61 of 100</strong> reviewed districts end the school year in May, while 39 end in June.</li>
-          <li><strong>December 21, 2026</strong> is the most common winter break start date, appearing in 89 reviewed records.</li>
+          <li><strong>131 of 150</strong> reviewed districts start school in August for 2026-2027.</li>
+          <li><strong>90 of 150</strong> reviewed districts end the school year in May, while 60 end in June.</li>
+          <li><strong>December 21, 2026</strong> is the most common winter break start date, appearing in 132 reviewed records.</li>
           <li><strong>March 22, 2027</strong> is the most common spring break start date, appearing in 29 reviewed records.</li>
           <li><strong>180 student days</strong> is the most common listed instructional count.</li>
-          <li><strong>98 of 100</strong> reviewed pages include an official or source PDF, and all 100 have an ICS calendar export on MySchoolDates.</li>
+          <li><strong>146 of 150</strong> reviewed pages include an official or source PDF, and all 150 have an ICS calendar export on MySchoolDates.</li>
         </ul>
       </section>
 
@@ -584,12 +498,12 @@ const appendixRows = [
           <section id="executive-summary" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Executive Summary</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
-              This report analyzes 100 reviewed 2026-2027 public school district calendar records from the MySchoolDates dataset. The sample is designed to identify calendar-planning patterns, not to act as a complete national census.
+              This report analyzes 150 reviewed 2026-2027 public school district calendar records from the MySchoolDates dataset. The sample is designed to identify calendar-planning patterns, not to act as a complete national census.
             </p>
             <div class="mt-5 grid gap-4 sm:grid-cols-3">
               <div class="rounded-lg border border-gray-100 bg-gray-50 p-4">
                 <div class="text-sm font-semibold text-gray-900">Start dates</div>
-                <p class="mt-2 text-sm leading-relaxed text-gray-600">August is the dominant start month, with 95 reviewed districts beginning in August 2026.</p>
+                <p class="mt-2 text-sm leading-relaxed text-gray-600">August is the dominant start month, with 131 reviewed districts beginning in August 2026.</p>
               </div>
               <div class="rounded-lg border border-gray-100 bg-gray-50 p-4">
                 <div class="text-sm font-semibold text-gray-900">Break patterns</div>
@@ -615,7 +529,7 @@ const appendixRows = [
           <section id="charts" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">School Calendar Trends Charts</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
-              These lightweight charts summarize the strongest signals in the 100-record dataset: start month, end month, winter break timing, and spring break clusters.
+              These lightweight charts summarize the strongest signals in the 150-record dataset: start month, end month, winter break timing, and spring break clusters.
             </p>
             <div class="mt-5 grid gap-4 md:grid-cols-3">
               <div
@@ -666,7 +580,7 @@ const appendixRows = [
           <section class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Methodology and Data Scope</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
-              This report uses the current MySchoolDates calendar dataset as of July 27, 2026. The sample includes 100 reviewed district records for the 2026-2027 school year across 13 states. It is a reviewed platform dataset, not a census of every public school district in the United States.
+              This report uses the current MySchoolDates calendar dataset as of August 9, 2026. The sample includes 150 reviewed district records for the 2026-2027 school year across 19 states. It is a reviewed platform dataset, not a census of every public school district in the United States.
             </p>
             <p class="mt-3 text-gray-600 leading-relaxed">
               The data comes from district calendar JSON records that MySchoolDates builds from official district sources, including public calendar pages, board-approved PDFs, translated PDFs when available, and manually reviewed key dates. See the <NuxtLink to="/calendar-verification-methodology" class="font-medium text-blue-600 hover:underline">Calendar Verification Methodology</NuxtLink> for how official sources are checked.
@@ -722,7 +636,7 @@ const appendixRows = [
               </div>
               <div class="rounded-lg border border-gray-100 bg-gray-50 p-4">
                 <div class="text-xs font-semibold uppercase tracking-wide text-gray-500">Last verified</div>
-                <div class="mt-1 text-sm font-semibold text-gray-900">July 27, 2026</div>
+                <div class="mt-1 text-sm font-semibold text-gray-900">August 9, 2026</div>
               </div>
               <div class="rounded-lg border border-gray-100 bg-gray-50 p-4">
                 <div class="text-xs font-semibold uppercase tracking-wide text-gray-500">Next review</div>
@@ -851,7 +765,7 @@ const appendixRows = [
           <section class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">When Is Summer Break 2027? May End Dates Are More Common Than June</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
-              For many families, summer break 2027 begins after the final student day listed by the district. Sixty-one reviewed districts end the 2026-2027 school year in May, while 39 end in June. The most common last student day is May 27, 2027, followed by May 28 and May 26. June endings remain important in the Northeast, Mid-Atlantic, and some California districts.
+              For many families, summer break 2027 begins after the final student day listed by the district. Ninety reviewed districts end the 2026-2027 school year in May, while 60 end in June. The most common last student day is May 27, 2027, followed by May 26 and May 28. June endings remain important in the Northeast, Mid-Atlantic, West Coast, and some California districts.
             </p>
             <div class="mt-5 grid gap-4 sm:grid-cols-2">
               <div v-for="row in lastDayRows" :key="row[0]" class="rounded-lg border border-gray-100 bg-gray-50 p-4">
@@ -875,7 +789,7 @@ const appendixRows = [
           <section class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Trend 3: Spring Break Clusters Around Three Main Weeks</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
-              Spring break is less uniform than winter break. The largest spring break cluster begins March 22, 2027, followed closely by March 15, 2027. Additional clusters begin March 29, April 5, and March 8. This matters for families comparing neighboring districts, because a one-week difference can affect childcare, travel pricing, shared custody planning, and multi-district households.
+              Spring break is less uniform than winter break. The largest spring break cluster begins March 22, 2027, followed closely by March 15, 2027. Additional clusters begin April 5, March 29, and March 8. This matters for families comparing neighboring districts, because a one-week difference can affect childcare, travel pricing, shared custody planning, and multi-district households.
             </p>
             <div class="mt-5 overflow-x-auto">
               <table class="w-full text-sm">
@@ -898,7 +812,7 @@ const appendixRows = [
           <section class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Trend 4: 180 Student Days Still Anchors the School Year</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
-              Among the reviewed records, 84 calendars include an explicit totalSchoolDays value. Of those, 55 list 180 student days. That makes 180 days the dominant published count in the dataset, even though several districts list shorter or longer counts depending on state law, calendar type, teacher workday treatment, and local board rules.
+              Among the reviewed records, 112 calendars include an explicit totalSchoolDays value. Of those, 73 list 180 student days. That makes 180 days the dominant published count in the dataset, even though several districts list shorter or longer counts depending on state law, calendar type, teacher workday treatment, and local board rules.
             </p>
             <div class="mt-5 overflow-x-auto">
               <table class="w-full text-sm">
@@ -923,7 +837,7 @@ const appendixRows = [
           <section class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Trend 5: Calendar Utility Is Moving Beyond PDFs</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
-              PDFs are still central to school calendar publishing. In this dataset, 98 of 100 reviewed 2026-2027 pages include an official or source PDF. But parent behavior is shifting toward usable calendar files. MySchoolDates generates ICS calendar exports for all 100 reviewed records so families can import dates into Google Calendar, Apple Calendar, or Outlook.
+              PDFs are still central to school calendar publishing. In this dataset, 146 of 150 reviewed 2026-2027 pages include an official or source PDF. But parent behavior is shifting toward usable calendar files. MySchoolDates generates ICS calendar exports for all 150 reviewed records so families can import dates into Google Calendar, Apple Calendar, or Outlook.
             </p>
             <p class="mt-3 text-gray-600 leading-relaxed">
               Translated calendars are also visible but not yet universal. Seven reviewed records include translated or Spanish calendar signals. Fontana Unified, for example, provides a Spanish PDF alongside its English board-approved calendar. These files are useful for household planning, but the official district source remains the record to verify before making fixed plans.
@@ -986,7 +900,7 @@ const appendixRows = [
           <section id="data-appendix" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Data Appendix: Reviewed District Calendar Records</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
-              This appendix lists the 100 reviewed 2026-2027 district records used for the report. Break columns are listed as reviewed winter break and spring break start signals when available in the local calendar record; families should use the linked district page and official source for final planning.
+              This appendix lists the 150 reviewed 2026-2027 district records used for the report. Break columns are listed as reviewed winter break and spring break start signals when available in the local calendar record; families should use the linked district page and official source for final planning.
             </p>
             <div class="mt-4 flex flex-wrap gap-3">
               <a :href="csvDownloadUrl" download class="inline-flex rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
@@ -1027,7 +941,7 @@ const appendixRows = [
               </table>
             </div>
             <details class="mt-5 rounded-lg border border-gray-200 bg-gray-50">
-              <summary class="cursor-pointer px-4 py-3 text-sm font-semibold text-gray-900">Show all 100 reviewed district records</summary>
+              <summary class="cursor-pointer px-4 py-3 text-sm font-semibold text-gray-900">Show all 150 reviewed district records</summary>
               <div class="overflow-x-auto border-t border-gray-200 bg-white">
                 <table class="w-full text-xs">
                   <thead>
@@ -1106,7 +1020,7 @@ const appendixRows = [
               <NuxtLink to="/editorial-policy" class="text-blue-600 hover:underline">Editorial policy</NuxtLink>
             </nav>
             <div class="mt-5 border-t border-gray-100 pt-4 text-xs leading-relaxed text-gray-500">
-              Data scope: 100 reviewed 2026-2027 calendar records, 13 states, current site dataset as of July 27, 2026.
+              Data scope: 150 reviewed 2026-2027 calendar records, 19 states, v2.0 dataset verified August 9, 2026.
             </div>
           </div>
         </aside>
