@@ -1,3 +1,94 @@
+import { readdirSync, readFileSync } from 'node:fs'
+import { join } from 'node:path'
+
+type DistrictRouteRecord = {
+  institutionId?: string
+  slug?: string
+}
+
+type CalendarRouteRecord = {
+  schoolYear?: string
+}
+
+type StateRouteRecord = {
+  stateSlug?: string
+}
+
+function readContentJson<T>(path: string): T {
+  return JSON.parse(readFileSync(path, 'utf8')) as T
+}
+
+function getCalendarPrerenderRoutes() {
+  const root = process.cwd()
+  const districtsDir = join(root, 'content', 'districts')
+  const calendarsDir = join(root, 'content', 'calendars')
+  const slugByInstitutionId = new Map<string, string>()
+  const institutionIdBySlug = new Map<string, string>()
+  const routes = new Set<string>()
+
+  for (const file of readdirSync(districtsDir).filter(file => file.endsWith('.json')).sort()) {
+    const district = readContentJson<DistrictRouteRecord>(join(districtsDir, file))
+    if (!district.institutionId || !district.slug) {
+      throw new Error(`District content is missing institutionId or slug: ${file}`)
+    }
+    if (slugByInstitutionId.has(district.institutionId)) {
+      throw new Error(`Duplicate district institutionId: ${district.institutionId}`)
+    }
+    if (institutionIdBySlug.has(district.slug)) {
+      throw new Error(`Duplicate district slug: ${district.slug}`)
+    }
+
+    slugByInstitutionId.set(district.institutionId, district.slug)
+    institutionIdBySlug.set(district.slug, district.institutionId)
+    routes.add(`/${district.slug}`)
+  }
+
+  const institutionDirectories = readdirSync(calendarsDir, { withFileTypes: true })
+    .filter(entry => entry.isDirectory())
+    .sort((a, b) => a.name.localeCompare(b.name))
+
+  for (const institutionDirectory of institutionDirectories) {
+    const institutionId = institutionDirectory.name
+    const slug = slugByInstitutionId.get(institutionId)
+    if (!slug) {
+      throw new Error(`Calendar directory has no matching district content: ${institutionId}`)
+    }
+
+    const institutionDir = join(calendarsDir, institutionId)
+    for (const file of readdirSync(institutionDir).filter(file => file.endsWith('.json')).sort()) {
+      const calendar = readContentJson<CalendarRouteRecord>(join(institutionDir, file))
+      if (!calendar.schoolYear) {
+        throw new Error(`Calendar content is missing schoolYear: ${institutionId}/${file}`)
+      }
+      routes.add(`/${slug}/${calendar.schoolYear}`)
+    }
+  }
+
+  return [...routes].sort()
+}
+
+const calendarPrerenderRoutes = getCalendarPrerenderRoutes()
+
+function getStatePrerenderRoutes() {
+  const statesDir = join(process.cwd(), 'content', 'states')
+  const stateSlugs = new Set<string>()
+
+  for (const file of readdirSync(statesDir).filter(file => file.endsWith('.json')).sort()) {
+    const state = readContentJson<StateRouteRecord>(join(statesDir, file))
+    if (!state.stateSlug) {
+      throw new Error(`State content is missing stateSlug: ${file}`)
+    }
+    if (stateSlugs.has(state.stateSlug)) {
+      throw new Error(`Duplicate state slug: ${state.stateSlug}`)
+    }
+    stateSlugs.add(state.stateSlug)
+  }
+
+  return [...stateSlugs].sort().map(stateSlug => `/${stateSlug}`)
+}
+
+const statePrerenderRoutes = getStatePrerenderRoutes()
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
@@ -49,696 +140,11 @@ export default defineNuxtConfig({
         '/summer-break-2027',
         '/districts',
 
-        // ── State pages ────────────────────────────────────────────────────────
-        '/california',
-        '/colorado',
-        '/florida',
-        '/texas',
-        '/north-carolina',
-        '/virginia',
-        '/kentucky',
-        '/illinois',
-        '/nevada',
-        '/georgia',
-        '/hawaii',
-        '/maryland',
-        '/massachusetts',
-        '/arizona',
-        '/new-york',
-        '/pennsylvania',
-        '/washington',
-        '/oregon',
-        '/utah',
-
-        // ── District index pages ───────────────────────────────────────────────
-        '/adams-12-five-star-schools-calendar',
-        '/alpine-school-district-calendar',
-        '/aldine-independent-school-district-calendar',
-        '/anne-arundel-county-school-calendar',
-        '/anaheim-union-high-school-district-calendar',
-        '/atlanta-public-schools-calendar',
-        '/arlington-isd-calendar',
-        '/aurora-public-schools-calendar',
-        '/austin-independent-school-district-calendar',
-        '/bakersfield-city-school-district-calendar',
-        '/baltimore-county-school-calendar',
-        '/baltimore-city-public-schools-calendar',
-        '/beaverton-school-district-calendar',
-        '/bellevue-school-district-calendar',
-        '/brevard-public-schools-calendar',
-        '/boston-public-schools-calendar',
-        '/broward-county-school-calendar',
-        '/brunswick-county-schools-calendar',
-        '/capistrano-unified-school-district-calendar',
-        '/chandler-unified-school-district-calendar',
-        '/charlotte-mecklenburg-schools-calendar',
-        '/cherry-creek-school-district-calendar',
-        '/chicago-public-schools-calendar',
-        '/clark-county-school-district-calendar',
-        '/clayton-county-public-schools-calendar',
-        '/collier-county-school-calendar',
-        '/cobb-county-school-calendar',
-        '/dekalb-county-school-calendar',
-        '/deer-valley-unified-school-district-calendar',
-        '/denver-public-schools-calendar',
-        '/douglas-county-school-district-re-1-calendar',
-        '/sarasota-county-school-calendar',
-        '/gwinnett-county-public-schools-calendar',
-        '/chesterfield-county-school-calendar',
-        '/chula-vista-elementary-school-district-calendar',
-        '/corona-norco-unified-school-district-calendar',
-        '/cumberland-county-school-calendar',
-        '/dallas-independent-school-district-calendar',
-        '/dysart-unified-school-district-calendar',
-        '/edmonds-school-district-calendar',
-        '/duval-county-school-calendar',
-        '/fairfax-county-school-calendar',
-        '/federal-way-public-schools-calendar',
-        '/fort-bend-independent-school-district-calendar',
-        '/fontana-unified-school-district-calendar',
-        '/fort-worth-independent-school-district-calendar',
-        '/fresno-unified-school-district-calendar',
-        '/forsyth-county-schools-calendar',
-        '/fulton-county-schools-calendar',
-        '/garland-independent-school-district-calendar',
-        '/garden-grove-unified-school-district-calendar',
-        '/gilbert-public-schools-calendar',
-        '/guilford-county-school-calendar',
-        '/hampton-city-schools-calendar',
-        '/hawaii-state-department-of-education-calendar',
-        '/hillsborough-county-school-calendar',
-        '/hillsboro-school-district-calendar',
-        '/houston-independent-school-district-calendar',
-        '/howard-county-school-calendar',
-        '/humble-isd-calendar',
-        '/jeffco-public-schools-calendar',
-        '/judson-isd-calendar',
-        '/kent-school-district-calendar',
-        '/long-beach-unified-school-district-calendar',
-        '/lake-washington-school-district-calendar',
-        '/los-angeles-unified-school-district-calendar',
-        '/lewisville-independent-school-district-calendar',
-        '/klein-isd-calendar',
-        '/loudoun-county-school-calendar',
-        '/mansfield-isd-calendar',
-        '/mesa-public-schools-calendar',
-        '/mesquite-isd-calendar',
-        '/miami-dade-school-calendar',
-        '/montgomery-county-school-calendar',
-        '/moreno-valley-unified-school-district-calendar',
-        '/mckinney-isd-calendar',
-        '/newport-news-public-schools-calendar',
-        '/new-york-city-public-schools-calendar',
-        '/north-clackamas-school-district-calendar',
-        '/northshore-school-district-calendar',
-        '/north-east-isd-calendar',
-        '/northside-independent-school-district-calendar',
-        '/orange-county-school-calendar',
-        '/osceola-school-district-calendar',
-        '/palm-beach-county-school-calendar',
-        '/pasco-county-school-calendar',
-        '/pasadena-independent-school-district-calendar',
-        '/peoria-unified-school-district-calendar',
-        '/pinellas-county-school-calendar',
-        '/pomona-unified-school-district-calendar',
-        '/portland-public-schools-calendar',
-        '/poudre-school-district-calendar',
-        '/puyallup-school-district-calendar',
-        '/polk-county-school-calendar',
-        '/poway-unified-school-district-calendar',
-        '/prince-georges-county-school-calendar',
-        '/prince-william-county-school-calendar',
-        '/randolph-county-school-system-calendar',
-        '/spring-isd-calendar',
-        '/riverside-unified-school-district-calendar',
-        '/roanoke-county-public-schools-calendar',
-        '/sacramento-city-unified-school-calendar',
-        '/salem-keizer-public-schools-calendar',
-        '/santa-ana-unified-school-district-calendar',
-        '/san-bernardino-city-unified-school-district-calendar',
-        '/san-francisco-unified-school-district-calendar',
-        '/san-juan-unified-school-district-calendar',
-        '/san-jose-unified-school-calendar',
-        '/scottsdale-unified-school-district-calendar',
-        '/seminole-county-school-calendar',
-        '/seattle-public-schools-calendar',
-        '/school-district-of-philadelphia-calendar',
-        '/spokane-public-schools-calendar',
-        '/stockton-unified-school-district-calendar',
-        '/sweetwater-union-high-school-district-calendar',
-        '/tacoma-public-schools-calendar',
-        '/tempe-union-high-school-district-calendar',
-        '/tucson-unified-school-district-calendar',
-        '/oakland-unified-school-district-calendar',
-        '/irvine-unified-school-district-calendar',
-        '/iredell-statesville-schools-calendar',
-        '/lee-county-school-calendar',
-        '/san-diego-unified-school-district-calendar',
-        '/virginia-beach-school-calendar',
-        '/volusia-county-schools-calendar',
-        '/wake-county-school-calendar',
-        '/williamsburg-james-city-county-schools-calendar',
-        '/york-county-school-division-calendar',
-        '/winston-salem-forsyth-school-calendar',
-        '/plano-independent-school-district-calendar',
-        '/henrico-county-school-calendar',
-        '/henderson-county-schools-ky-calendar',
-        '/henderson-county-public-schools-calendar',
-        '/frisco-independent-school-district-calendar',
-        '/union-county-school-calendar',
-        '/cabarrus-county-school-calendar',
-        '/catawba-county-schools-calendar',
-        '/johnston-county-school-calendar',
-        '/durham-public-schools-calendar',
-        '/new-hanover-county-school-calendar',
-        '/arlington-public-schools-calendar',
-        '/alexandria-city-public-schools-calendar',
-        '/stafford-county-public-schools-calendar',
-        '/spotsylvania-county-public-schools-calendar',
-        '/st-vrain-valley-schools-calendar',
-        '/cypress-fairbanks-isd-calendar',
-        '/elk-grove-unified-school-district-calendar',
-
-        // ── District year pages ────────────────────────────────────────────────
-        '/adams-12-five-star-schools-calendar/2025-2026',
-        '/adams-12-five-star-schools-calendar/2026-2027',
-        '/adams-12-five-star-schools-calendar/2027-2028',
-
-        '/alpine-school-district-calendar/2025-2026',
-        '/alpine-school-district-calendar/2026-2027',
-
-        '/aldine-independent-school-district-calendar/2025-2026',
-        '/aldine-independent-school-district-calendar/2026-2027',
-
-        '/anne-arundel-county-school-calendar/2025-2026',
-        '/anne-arundel-county-school-calendar/2026-2027',
-        '/anne-arundel-county-school-calendar/2027-2028',
-
-        '/anaheim-union-high-school-district-calendar/2025-2026',
-        '/anaheim-union-high-school-district-calendar/2026-2027',
-
-        '/arlington-isd-calendar/2025-2026',
-        '/arlington-isd-calendar/2026-2027',
-
-        '/aurora-public-schools-calendar/2025-2026',
-        '/aurora-public-schools-calendar/2026-2027',
-
-        '/austin-independent-school-district-calendar/2025-2026',
-        '/austin-independent-school-district-calendar/2026-2027',
-
-        '/bakersfield-city-school-district-calendar/2025-2026',
-        '/bakersfield-city-school-district-calendar/2026-2027',
-
-        '/baltimore-county-school-calendar/2025-2026',
-        '/baltimore-county-school-calendar/2026-2027',
-
-        '/baltimore-city-public-schools-calendar/2025-2026',
-        '/baltimore-city-public-schools-calendar/2026-2027',
-
-        '/beaverton-school-district-calendar/2025-2026',
-        '/beaverton-school-district-calendar/2026-2027',
-
-        '/brevard-public-schools-calendar/2025-2026',
-        '/brevard-public-schools-calendar/2026-2027',
-
-        '/boston-public-schools-calendar/2025-2026',
-        '/boston-public-schools-calendar/2026-2027',
-
-        '/capistrano-unified-school-district-calendar/2025-2026',
-        '/capistrano-unified-school-district-calendar/2026-2027',
-        '/capistrano-unified-school-district-calendar/2027-2028',
-        '/capistrano-unified-school-district-calendar/2028-2029',
-
-        '/chandler-unified-school-district-calendar/2026-2027',
-        '/chandler-unified-school-district-calendar/2027-2028',
-        '/chandler-unified-school-district-calendar/2028-2029',
-
-        '/gilbert-public-schools-calendar/2025-2026',
-        '/gilbert-public-schools-calendar/2026-2027',
-        '/gilbert-public-schools-calendar/2027-2028',
-        '/gilbert-public-schools-calendar/2028-2029',
-        '/gilbert-public-schools-calendar/2029-2030',
-
-        '/broward-county-school-calendar/2025-2026',
-        '/broward-county-school-calendar/2026-2027',
-        '/broward-county-school-calendar/2027-2028',
-
-        '/brunswick-county-schools-calendar/2025-2026',
-        '/brunswick-county-schools-calendar/2026-2027',
-        '/brunswick-county-schools-calendar/2027-2028',
-
-        '/charlotte-mecklenburg-schools-calendar/2025-2026',
-        '/charlotte-mecklenburg-schools-calendar/2026-2027',
-        '/charlotte-mecklenburg-schools-calendar/2027-2028',
-
-        '/cherry-creek-school-district-calendar/2025-2026',
-        '/cherry-creek-school-district-calendar/2026-2027',
-        '/cherry-creek-school-district-calendar/2027-2028',
-        '/cherry-creek-school-district-calendar/2028-2029',
-
-        '/chicago-public-schools-calendar/2025-2026',
-        '/chicago-public-schools-calendar/2026-2027',
-        '/chicago-public-schools-calendar/2027-2028',
-
-        '/clayton-county-public-schools-calendar/2025-2026',
-        '/clayton-county-public-schools-calendar/2026-2027',
-
-        '/clark-county-school-district-calendar/2025-2026',
-        '/clark-county-school-district-calendar/2026-2027',
-        '/clark-county-school-district-calendar/2027-2028',
-
-        '/collier-county-school-calendar/2025-2026',
-        '/collier-county-school-calendar/2026-2027',
-
-        '/cobb-county-school-calendar/2025-2026',
-        '/cobb-county-school-calendar/2026-2027',
-        '/cobb-county-school-calendar/2027-2028',
-
-        '/dekalb-county-school-calendar/2025-2026',
-        '/dekalb-county-school-calendar/2026-2027',
-
-        '/deer-valley-unified-school-district-calendar/2025-2026',
-        '/deer-valley-unified-school-district-calendar/2026-2027',
-
-        '/denver-public-schools-calendar/2026-2027',
-        '/denver-public-schools-calendar/2027-2028',
-        '/denver-public-schools-calendar/2028-2029',
-
-        '/douglas-county-school-district-re-1-calendar/2025-2026',
-        '/douglas-county-school-district-re-1-calendar/2026-2027',
-        '/douglas-county-school-district-re-1-calendar/2027-2028',
-        '/douglas-county-school-district-re-1-calendar/2028-2029',
-        '/douglas-county-school-district-re-1-calendar/2029-2030',
-
-        '/sarasota-county-school-calendar/2025-2026',
-        '/sarasota-county-school-calendar/2026-2027',
-
-        '/gwinnett-county-public-schools-calendar/2025-2026',
-        '/gwinnett-county-public-schools-calendar/2026-2027',
-        '/gwinnett-county-public-schools-calendar/2027-2028',
-
-        '/chesterfield-county-school-calendar/2025-2026',
-        '/chesterfield-county-school-calendar/2026-2027',
-        '/chesterfield-county-school-calendar/2027-2028',
-
-        '/chula-vista-elementary-school-district-calendar/2025-2026',
-        '/chula-vista-elementary-school-district-calendar/2026-2027',
-
-        '/corona-norco-unified-school-district-calendar/2025-2026',
-        '/corona-norco-unified-school-district-calendar/2026-2027',
-
-        '/cumberland-county-school-calendar/2025-2026',
-        '/cumberland-county-school-calendar/2026-2027',
-
-        '/dallas-independent-school-district-calendar/2025-2026',
-        '/dallas-independent-school-district-calendar/2026-2027',
-
-        '/dysart-unified-school-district-calendar/2025-2026',
-        '/dysart-unified-school-district-calendar/2026-2027',
-        '/dysart-unified-school-district-calendar/2027-2028',
-        '/dysart-unified-school-district-calendar/2028-2029',
-        '/dysart-unified-school-district-calendar/2029-2030',
-
-        '/edmonds-school-district-calendar/2025-2026',
-        '/edmonds-school-district-calendar/2026-2027',
-
-        '/duval-county-school-calendar/2025-2026',
-        '/duval-county-school-calendar/2026-2027',
-
-        '/fairfax-county-school-calendar/2025-2026',
-        '/fairfax-county-school-calendar/2026-2027',
-        '/fairfax-county-school-calendar/2027-2028',
-
-        '/federal-way-public-schools-calendar/2025-2026',
-        '/federal-way-public-schools-calendar/2026-2027',
-        '/federal-way-public-schools-calendar/2027-2028',
-        '/federal-way-public-schools-calendar/2028-2029',
-
-        '/fort-bend-independent-school-district-calendar/2025-2026',
-        '/fort-bend-independent-school-district-calendar/2026-2027',
-
-        '/fontana-unified-school-district-calendar/2025-2026',
-        '/fontana-unified-school-district-calendar/2026-2027',
-        '/fontana-unified-school-district-calendar/2027-2028',
-
-        '/fort-worth-independent-school-district-calendar/2025-2026',
-        '/fort-worth-independent-school-district-calendar/2026-2027',
-
-        '/fresno-unified-school-district-calendar/2025-2026',
-        '/fresno-unified-school-district-calendar/2026-2027',
-        '/fresno-unified-school-district-calendar/2027-2028',
-
-        '/forsyth-county-schools-calendar/2025-2026',
-        '/forsyth-county-schools-calendar/2026-2027',
-        '/forsyth-county-schools-calendar/2027-2028',
-
-        '/fulton-county-schools-calendar/2025-2026',
-        '/fulton-county-schools-calendar/2026-2027',
-        '/fulton-county-schools-calendar/2027-2028',
-
-        '/atlanta-public-schools-calendar/2025-2026',
-        '/atlanta-public-schools-calendar/2026-2027',
-        '/atlanta-public-schools-calendar/2027-2028',
-
-        '/garland-independent-school-district-calendar/2025-2026',
-        '/garland-independent-school-district-calendar/2026-2027',
-        '/garland-independent-school-district-calendar/2027-2028',
-
-        '/garden-grove-unified-school-district-calendar/2025-2026',
-        '/garden-grove-unified-school-district-calendar/2026-2027',
-
-        '/guilford-county-school-calendar/2025-2026',
-        '/guilford-county-school-calendar/2026-2027',
-        '/guilford-county-school-calendar/2027-2028',
-
-        '/hampton-city-schools-calendar/2025-2026',
-        '/hampton-city-schools-calendar/2026-2027',
-
-        '/hawaii-state-department-of-education-calendar/2025-2026',
-        '/hawaii-state-department-of-education-calendar/2026-2027',
-        '/hawaii-state-department-of-education-calendar/2027-2028',
-        '/hawaii-state-department-of-education-calendar/2028-2029',
-
-        '/hillsborough-county-school-calendar/2025-2026',
-        '/hillsborough-county-school-calendar/2026-2027',
-        '/hillsborough-county-school-calendar/2027-2028',
-
-        '/hillsboro-school-district-calendar/2025-2026',
-        '/hillsboro-school-district-calendar/2026-2027',
-        '/hillsboro-school-district-calendar/2027-2028',
-
-        '/houston-independent-school-district-calendar/2025-2026',
-        '/houston-independent-school-district-calendar/2026-2027',
-
-        '/howard-county-school-calendar/2025-2026',
-        '/howard-county-school-calendar/2026-2027',
-
-        '/jeffco-public-schools-calendar/2025-2026',
-        '/jeffco-public-schools-calendar/2026-2027',
-        '/jeffco-public-schools-calendar/2027-2028',
-
-        '/judson-isd-calendar/2025-2026',
-        '/judson-isd-calendar/2026-2027',
-
-        '/long-beach-unified-school-district-calendar/2025-2026',
-        '/long-beach-unified-school-district-calendar/2026-2027',
-
-        '/los-angeles-unified-school-district-calendar/2025-2026',
-        '/los-angeles-unified-school-district-calendar/2026-2027',
-        '/los-angeles-unified-school-district-calendar/2027-2028',
-
-        '/lewisville-independent-school-district-calendar/2025-2026',
-        '/lewisville-independent-school-district-calendar/2026-2027',
-
-        '/mesa-public-schools-calendar/2026-2027',
-        '/mesa-public-schools-calendar/2027-2028',
-        '/mesa-public-schools-calendar/2028-2029',
-
-        '/peoria-unified-school-district-calendar/2025-2026',
-        '/peoria-unified-school-district-calendar/2026-2027',
-        '/peoria-unified-school-district-calendar/2027-2028',
-
-        '/tempe-union-high-school-district-calendar/2026-2027',
-        '/tempe-union-high-school-district-calendar/2027-2028',
-        '/tempe-union-high-school-district-calendar/2028-2029',
-
-        '/tucson-unified-school-district-calendar/2025-2026',
-        '/tucson-unified-school-district-calendar/2026-2027',
-
-        '/mesquite-isd-calendar/2025-2026',
-        '/mesquite-isd-calendar/2026-2027',
-
-        '/loudoun-county-school-calendar/2025-2026',
-        '/loudoun-county-school-calendar/2026-2027',
-        '/loudoun-county-school-calendar/2027-2028',
-
-        '/montgomery-county-school-calendar/2025-2026',
-        '/montgomery-county-school-calendar/2026-2027',
-
-        '/prince-georges-county-school-calendar/2026-2027',
-
-        '/miami-dade-school-calendar/2025-2026',
-        '/miami-dade-school-calendar/2026-2027',
-
-        '/moreno-valley-unified-school-district-calendar/2025-2026',
-        '/moreno-valley-unified-school-district-calendar/2026-2027',
-
-        '/newport-news-public-schools-calendar/2025-2026',
-        '/newport-news-public-schools-calendar/2026-2027',
-
-        '/new-york-city-public-schools-calendar/2025-2026',
-        '/new-york-city-public-schools-calendar/2026-2027',
-
-        '/north-east-isd-calendar/2025-2026',
-        '/north-east-isd-calendar/2026-2027',
-
-        '/northside-independent-school-district-calendar/2025-2026',
-        '/northside-independent-school-district-calendar/2026-2027',
-        '/northside-independent-school-district-calendar/2027-2028',
-
-        '/orange-county-school-calendar/2025-2026',
-        '/orange-county-school-calendar/2026-2027',
-
-        '/osceola-school-district-calendar/2025-2026',
-        '/osceola-school-district-calendar/2026-2027',
-
-        '/palm-beach-county-school-calendar/2025-2026',
-        '/palm-beach-county-school-calendar/2026-2027',
-
-        '/pasco-county-school-calendar/2025-2026',
-        '/pasco-county-school-calendar/2026-2027',
-
-        '/pasadena-independent-school-district-calendar/2025-2026',
-        '/pasadena-independent-school-district-calendar/2026-2027',
-
-        '/pinellas-county-school-calendar/2025-2026',
-        '/pinellas-county-school-calendar/2026-2027',
-
-        '/pomona-unified-school-district-calendar/2025-2026',
-        '/pomona-unified-school-district-calendar/2026-2027',
-
-        '/poudre-school-district-calendar/2025-2026',
-        '/poudre-school-district-calendar/2026-2027',
-
-        '/portland-public-schools-calendar/2025-2026',
-        '/portland-public-schools-calendar/2026-2027',
-
-        '/puyallup-school-district-calendar/2025-2026',
-        '/puyallup-school-district-calendar/2026-2027',
-
-        '/polk-county-school-calendar/2025-2026',
-        '/polk-county-school-calendar/2026-2027',
-        '/polk-county-school-calendar/2027-2028',
-        '/polk-county-school-calendar/2028-2029',
-
-        '/poway-unified-school-district-calendar/2025-2026',
-        '/poway-unified-school-district-calendar/2026-2027',
-
-        '/lee-county-school-calendar/2025-2026',
-        '/lee-county-school-calendar/2026-2027',
-        '/lee-county-school-calendar/2027-2028',
-
-        '/prince-william-county-school-calendar/2025-2026',
-        '/prince-william-county-school-calendar/2026-2027',
-
-        '/riverside-unified-school-district-calendar/2025-2026',
-        '/riverside-unified-school-district-calendar/2026-2027',
-        '/riverside-unified-school-district-calendar/2027-2028',
-        '/riverside-unified-school-district-calendar/2028-2029',
-
-        '/roanoke-county-public-schools-calendar/2025-2026',
-        '/roanoke-county-public-schools-calendar/2026-2027',
-        '/roanoke-county-public-schools-calendar/2027-2028',
-
-        '/sacramento-city-unified-school-calendar/2025-2026',
-        '/sacramento-city-unified-school-calendar/2026-2027',
-
-        '/santa-ana-unified-school-district-calendar/2025-2026',
-        '/santa-ana-unified-school-district-calendar/2026-2027',
-
-        '/san-bernardino-city-unified-school-district-calendar/2025-2026',
-        '/san-bernardino-city-unified-school-district-calendar/2026-2027',
-
-        '/san-francisco-unified-school-district-calendar/2025-2026',
-        '/san-francisco-unified-school-district-calendar/2026-2027',
-        '/san-francisco-unified-school-district-calendar/2027-2028',
-
-        '/san-juan-unified-school-district-calendar/2025-2026',
-        '/san-juan-unified-school-district-calendar/2026-2027',
-
-        '/san-jose-unified-school-calendar/2025-2026',
-        '/san-jose-unified-school-calendar/2026-2027',
-        '/san-jose-unified-school-calendar/2027-2028',
-
-        '/scottsdale-unified-school-district-calendar/2025-2026',
-        '/scottsdale-unified-school-district-calendar/2026-2027',
-        '/scottsdale-unified-school-district-calendar/2027-2028',
-
-        '/seminole-county-school-calendar/2025-2026',
-        '/seminole-county-school-calendar/2026-2027',
-        '/seminole-county-school-calendar/2027-2028',
-
-        '/bellevue-school-district-calendar/2025-2026',
-        '/bellevue-school-district-calendar/2026-2027',
-
-        '/kent-school-district-calendar/2025-2026',
-        '/kent-school-district-calendar/2026-2027',
-
-        '/lake-washington-school-district-calendar/2025-2026',
-        '/lake-washington-school-district-calendar/2026-2027',
-        '/lake-washington-school-district-calendar/2027-2028',
-
-        '/northshore-school-district-calendar/2025-2026',
-        '/northshore-school-district-calendar/2026-2027',
-
-        '/north-clackamas-school-district-calendar/2026-2027',
-
-        '/salem-keizer-public-schools-calendar/2026-2027',
-
-        '/seattle-public-schools-calendar/2025-2026',
-        '/seattle-public-schools-calendar/2026-2027',
-
-        '/spokane-public-schools-calendar/2025-2026',
-        '/spokane-public-schools-calendar/2026-2027',
-        '/spokane-public-schools-calendar/2027-2028',
-
-        '/tacoma-public-schools-calendar/2025-2026',
-        '/tacoma-public-schools-calendar/2026-2027',
-
-        '/school-district-of-philadelphia-calendar/2025-2026',
-        '/school-district-of-philadelphia-calendar/2026-2027',
-
-        '/stockton-unified-school-district-calendar/2025-2026',
-        '/stockton-unified-school-district-calendar/2026-2027',
-
-        '/sweetwater-union-high-school-district-calendar/2025-2026',
-        '/sweetwater-union-high-school-district-calendar/2026-2027',
-
-        '/oakland-unified-school-district-calendar/2025-2026',
-        '/oakland-unified-school-district-calendar/2026-2027',
-        '/oakland-unified-school-district-calendar/2027-2028',
-
-        '/irvine-unified-school-district-calendar/2025-2026',
-        '/irvine-unified-school-district-calendar/2026-2027',
-        '/irvine-unified-school-district-calendar/2027-2028',
-
-        '/iredell-statesville-schools-calendar/2025-2026',
-        '/iredell-statesville-schools-calendar/2026-2027',
-
-        '/san-diego-unified-school-district-calendar/2025-2026',
-        '/san-diego-unified-school-district-calendar/2026-2027',
-
-        '/virginia-beach-school-calendar/2025-2026',
-        '/virginia-beach-school-calendar/2026-2027',
-
-        '/volusia-county-schools-calendar/2025-2026',
-        '/volusia-county-schools-calendar/2026-2027',
-
-        '/wake-county-school-calendar/2025-2026',
-        '/wake-county-school-calendar/2026-2027',
-        '/wake-county-school-calendar/2027-2028',
-
-        '/williamsburg-james-city-county-schools-calendar/2025-2026',
-        '/williamsburg-james-city-county-schools-calendar/2026-2027',
-        '/williamsburg-james-city-county-schools-calendar/2027-2028',
-
-        '/york-county-school-division-calendar/2025-2026',
-        '/york-county-school-division-calendar/2026-2027',
-
-        '/winston-salem-forsyth-school-calendar/2025-2026',
-        '/winston-salem-forsyth-school-calendar/2026-2027',
-
-        '/plano-independent-school-district-calendar/2025-2026',
-        '/plano-independent-school-district-calendar/2026-2027',
-        '/plano-independent-school-district-calendar/2027-2028',
-
-        '/henrico-county-school-calendar/2026-2027',
-        '/henrico-county-school-calendar/2027-2028',
-
-        '/henderson-county-schools-ky-calendar/2025-2026',
-        '/henderson-county-schools-ky-calendar/2026-2027',
-
-        '/henderson-county-public-schools-calendar/2025-2026',
-        '/henderson-county-public-schools-calendar/2026-2027',
-        '/henderson-county-public-schools-calendar/2027-2028',
-
-        '/catawba-county-schools-calendar/2025-2026',
-        '/catawba-county-schools-calendar/2026-2027',
-
-        '/randolph-county-school-system-calendar/2025-2026',
-        '/randolph-county-school-system-calendar/2026-2027',
-        '/randolph-county-school-system-calendar/2027-2028',
-
-        '/frisco-independent-school-district-calendar/2025-2026',
-        '/frisco-independent-school-district-calendar/2026-2027',
-
-        '/mckinney-isd-calendar/2025-2026',
-        '/mckinney-isd-calendar/2026-2027',
-
-        '/klein-isd-calendar/2025-2026',
-        '/klein-isd-calendar/2026-2027',
-
-        '/humble-isd-calendar/2025-2026',
-        '/humble-isd-calendar/2026-2027',
-
-        '/mansfield-isd-calendar/2025-2026',
-        '/mansfield-isd-calendar/2026-2027',
-
-        '/spring-isd-calendar/2025-2026',
-        '/spring-isd-calendar/2026-2027',
-
-        '/round-rock-independent-school-district-calendar',
-        '/round-rock-independent-school-district-calendar/2025-2026',
-        '/round-rock-independent-school-district-calendar/2026-2027',
-
-        '/katy-independent-school-district-calendar',
-        '/katy-independent-school-district-calendar/2025-2026',
-        '/katy-independent-school-district-calendar/2026-2027',
-        '/katy-independent-school-district-calendar/2027-2028',
-
-        '/conroe-independent-school-district-calendar',
-        '/conroe-independent-school-district-calendar/2025-2026',
-        '/conroe-independent-school-district-calendar/2026-2027',
-
-        '/union-county-school-calendar/2026-2027',
-        '/union-county-school-calendar/2025-2026',
-        '/union-county-school-calendar/2027-2028',
-
-        '/cabarrus-county-school-calendar/2026-2027',
-        '/cabarrus-county-school-calendar/2025-2026',
-
-        '/johnston-county-school-calendar/2026-2027',
-        '/johnston-county-school-calendar/2025-2026',
-
-        '/durham-public-schools-calendar/2025-2026',
-        '/durham-public-schools-calendar/2026-2027',
-        '/durham-public-schools-calendar/2027-2028',
-
-        '/new-hanover-county-school-calendar/2025-2026',
-        '/new-hanover-county-school-calendar/2026-2027',
-
-        '/arlington-public-schools-calendar/2025-2026',
-        '/arlington-public-schools-calendar/2026-2027',
-
-        '/alexandria-city-public-schools-calendar/2025-2026',
-        '/alexandria-city-public-schools-calendar/2026-2027',
-
-        '/stafford-county-public-schools-calendar/2025-2026',
-        '/stafford-county-public-schools-calendar/2026-2027',
-
-        '/spotsylvania-county-public-schools-calendar/2025-2026',
-        '/spotsylvania-county-public-schools-calendar/2026-2027',
-        '/spotsylvania-county-public-schools-calendar/2027-2028',
-
-        '/st-vrain-valley-schools-calendar/2025-2026',
-        '/st-vrain-valley-schools-calendar/2026-2027',
-        '/st-vrain-valley-schools-calendar/2027-2028',
-
-        '/cypress-fairbanks-isd-calendar/2025-2026',
-        '/cypress-fairbanks-isd-calendar/2026-2027',
-
-        '/elk-grove-unified-school-district-calendar/2025-2026',
-        '/elk-grove-unified-school-district-calendar/2026-2027',
+        // State routes are generated from verified content files.
+        ...statePrerenderRoutes,
+
+        // District and school-year routes are generated from verified content files.
+        ...calendarPrerenderRoutes,
       ],
     },
   },
