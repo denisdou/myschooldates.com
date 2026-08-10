@@ -1,53 +1,339 @@
 {
   "institutionId": "frisco-isd",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Frisco ISD Calendar 2026–2027",
   "firstDay": "2026-08-12",
   "lastDay": "2027-05-14",
-  "totalSchoolDays": 180,
+  "totalSchoolDays": null,
   "semesters": 2,
+  "temporalCoverageStart": "2026-08-12",
+  "temporalCoverageEnd": "2027-05-14",
   "sourceUrl": "https://www.friscoisd.org/o/fisd/page/calendars",
   "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5799/Fisd/954306d0-ca6d-4c5b-8840-3f5046e88443/2026-2027-Student-Calendar.pdf",
-  "lastVerifiedAt": "2026-07-12",
+  "sourceCalendarName": "Frisco ISD 2026–27 Student Calendar",
+  "sourceVersion": "Board approved November 2025",
+  "lastVerifiedAt": "2026-08-10",
+  "dateCreated": "2026-07-12",
+  "datePublished": "2026-07-12",
+  "dateModified": "2026-08-10",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
   "calendarType": "traditional",
+  "allDatesMode": "all",
+  "itemListMode": "allImportantDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "schemaReviewedBy": "author",
+  "webPageMainEntity": "dataset",
+  "splitCalendarDateItemListSchema": true,
+  "seoTitle": "Frisco ISD Calendar 2026–2027: Key Dates, Breaks & PDF",
+  "seoDescription": "Frisco ISD’s 2026–27 calendar: first and last days of school, Thanksgiving, winter and spring breaks, no-school dates, bad-weather make-up days, PDF and ICS.",
+  "schemaCalendarName": "Frisco ISD Student Calendar 2026–27",
+  "schemaDatasetName": "Frisco ISD 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Frisco ISD dates for 2026–27, including school-year boundaries, no-school dates, major breaks, reporting-period markers, conditional bad-weather make-up days, and calendar downloads.",
+  "schemaKeyDateItemListName": "Frisco ISD 2026–27 key dates at a glance",
+  "schemaCalendarDateItemListName": "Frisco ISD 2026–27 student calendar dates",
+  "schemaCalendarDownloadName": "MySchoolDates Frisco ISD 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "MySchoolDates-generated calendar import file based on the reviewed dates in Frisco ISD’s official 2026–27 student calendar.",
+  "schemaSpatialCoverage": [
+    { "@type": "AdministrativeArea", "name": "Collin County, Texas" },
+    { "@type": "AdministrativeArea", "name": "Denton County, Texas" }
+  ],
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-announcement",
+      "type": "WebPage",
+      "name": "Frisco ISD Board Approves 2026–27 Academic Calendar",
+      "url": "https://www.friscoisd.org/o/flex/article/3034519",
+      "datePublished": "2025-11-17"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-announcement"
+  ],
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "relatedDistrictsSameYearOnly": true,
+  "hideRelatedDistrictDescriptions": true,
+  "comparisonBeforeFaq": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "whatsDifferent",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends"
+  ],
+  "heroSourceLine": "Based on Frisco ISD’s official 2026–27 student calendar · Approved by the Frisco ISD Board in November 2025",
+  "hideHeroDownloadLink": true,
+  "heroSummary": "Frisco ISD’s 2026–27 school year starts Wednesday, August 12, 2026, and ends Friday, May 14, 2027. Thanksgiving Break is November 23–27, Winter Break runs December 21–January 4, and Spring Break is March 15–19. March 26 and April 16 are reserved as bad-weather make-up days; students are off unless the district uses either date to replace a canceled school day.",
+  "heroCtas": [
+    {
+      "label": "Download Calendar (.ics)",
+      "href": "__icsUrl",
+      "variant": "primary",
+      "download": true,
+      "filename": "__icsFilename"
+    },
+    {
+      "label": "View Official FISD PDF",
+      "href": "__sourcePdfUrl",
+      "variant": "secondary"
+    }
+  ],
+  "calendarNotes": "This page covers Frisco ISD’s districtwide 2026–27 student calendar. Campus events, bell schedules, and any later weather-related changes should be confirmed with the district or school.",
+  "verificationBadgeText": "Checked August 10, 2026, against Frisco ISD’s official student calendar PDF and calendar announcement.",
+  "keyDatesSummaryTitle": "Frisco ISD 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, October no-school dates, and conditional make-up days",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-12",
+      "type": "school_start",
+      "schemaDescription": "Frisco ISD students begin school August 12, 2026."
+    },
+    {
+      "label": "No School",
+      "name": "October No-School Days",
+      "date": "2026-10-09",
+      "dates": [
+        "2026-10-09",
+        "2026-10-12",
+        "2026-10-13"
+      ],
+      "displayDate": "Oct 9 & 12–13, 2026",
+      "datePropertyLabel": "Date",
+      "type": "no_school",
+      "description": "With the weekend included, students have five consecutive days without classes.",
+      "schemaDescription": "Frisco ISD students have no school October 9 and October 12–13, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "description": "Students return Monday, November 30.",
+      "schemaDescription": "Thanksgiving Break runs November 23–27, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "type": "break_start",
+      "description": "Students return Tuesday, January 5.",
+      "schemaDescription": "Winter Break runs December 21, 2026–January 4, 2027."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start",
+      "description": "Students return Monday, March 22.",
+      "schemaDescription": "Spring Break runs March 15–19, 2027."
+    },
+    {
+      "label": "If Needed",
+      "name": "Bad-Weather Make-Up Days",
+      "date": "2027-03-26",
+      "dates": [
+        "2027-03-26",
+        "2027-04-16"
+      ],
+      "displayDate": "March 26 and April 16, 2027",
+      "dateDisplayMode": "list",
+      "dateJoiner": "and",
+      "datePropertyLabel": "Date",
+      "type": "makeup_day",
+      "description": "Students are off unless Frisco ISD uses either date to make up a canceled school day.",
+      "schemaDescription": "March 26 and April 16, 2027 are conditional Frisco ISD bad-weather make-up days."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-05-14",
+      "type": "school_end",
+      "description": "Frisco ISD ends one week earlier than normal because of the May 2027 PGA Championship.",
+      "schemaDescription": "The last day of school is May 14, 2027."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "What’s Different", "id": "frisco-2026-2027-whats-different" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Breaks & No-School Days", "id": "frisco-2026-2027-breaks" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "customSections": [
+    {
+      "id": "frisco-2026-2027-whats-different",
+      "label": "What Makes the 2026–27 Frisco ISD Calendar Different?",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "groups": [
+        {
+          "label": "The school year ends early for the PGA Championship",
+          "items": [
+            "Frisco ISD will end school one week earlier than normal because the PGA Championship is expected to bring about 30,000 people per day to Frisco in May 2027. The district coordinated the change with the city and local police and fire departments because of expected transportation and crowding issues."
+          ]
+        },
+        {
+          "label": "Five minutes were added to each school day",
+          "items": [
+            "To accommodate the shorter year and meet state instructional-minute requirements, Frisco ISD added five minutes to the school day at every grade level."
+          ]
+        },
+        {
+          "label": "October has five consecutive days without classes",
+          "items": [
+            "Frisco ISD does not label a Fall Break. Students have no school Friday, October 9, and Monday–Tuesday, October 12–13, creating five consecutive days without classes when the weekend is included."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Read Frisco ISD’s calendar announcement",
+          "to": "https://www.friscoisd.org/o/flex/article/3034519"
+        }
+      ]
+    },
+    {
+      "id": "frisco-2026-2027-breaks",
+      "label": "Breaks and No-School Days",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "A few dates on the 2026–27 calendar need extra context. Major break ranges appear in Key Dates above and in the full calendar.",
+      "groups": [
+        {
+          "label": "October No-School Days",
+          "items": [
+            "Students have no school October 9 and October 12–13. With the weekend, this creates a five-day stretch without classes, although Frisco ISD does not name it Fall Break."
+          ]
+        },
+        {
+          "label": "Conditional Bad-Weather Make-Up Days",
+          "items": [
+            "March 26 and April 16 are reserved as bad-weather make-up days. Students are off unless Frisco ISD uses either date to make up a canceled school day."
+          ]
+        },
+        {
+          "label": "Other No-School Dates",
+          "items": [
+            "Other no-school dates are September 7–8, January 18, February 12 and 15, and April 30. With the weekend, the February dates give students four consecutive days without classes."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frisco-2026-2027-calendar-scope",
+      "label": "About This Frisco ISD Calendar",
+      "position": "afterComparison",
+      "schemaHasPart": true,
+      "content": "This page covers the districtwide student calendar for Frisco Independent School District, which serves communities in Collin and Denton counties. School-specific events, graduation details, bell schedules, and emergency changes may not appear on the districtwide PDF, so families should confirm campus details with their school."
+    }
+  ],
+  "allDatesTitle": "Frisco ISD 2026–27 Student Calendar Dates",
+  "allDatesCoverageNote": "This list includes the first and last days, no-school dates, major breaks, reporting-period markers, and conditional bad-weather make-up days from Frisco ISD’s official student calendar. Campus events and bell schedules may vary.",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5799/Fisd/954306d0-ca6d-4c5b-8840-3f5046e88443/2026-2027-Student-Calendar.pdf",
+  "allDatesSourceLinks": [
+    {
+      "label": "Frisco ISD 2026–27 student calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5799/Fisd/954306d0-ca6d-4c5b-8840-3f5046e88443/2026-2027-Student-Calendar.pdf"
+    },
+    {
+      "label": "Frisco ISD calendar page",
+      "url": "https://www.friscoisd.org/o/fisd/page/calendars"
+    }
+  ],
+  "allDatesSourceLabel": "Official Frisco ISD 2026–27 student calendar PDF",
+  "icsHeading": "Add Frisco ISD 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download a MySchoolDates-generated ICS file with the dates listed on this page. March 26 and April 16 remain labeled as conditional make-up days. This is a one-time import and will not update automatically if Frisco ISD changes the calendar.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "icsButtonSupportText": "One-time import. Check Frisco ISD for any changes to the make-up days or calendar.",
+  "icsAriaLabel": "Download the MySchoolDates-generated Frisco ISD 2026–27 calendar file",
+  "pdfHeading": "Official Frisco ISD 2026–27 Student Calendar",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "Open Frisco ISD’s one-page student calendar showing the first and last days, no-school dates, reporting periods, and conditional bad-weather make-up days.",
+  "pdfVersionLabel": "Board approved November 2025",
   "calendarFaqs": [
     {
-      "q": "When does school start for Frisco ISD in 2026-2027?",
-      "a": "The first day of school for Frisco ISD is Wednesday, August 12, 2026. September 8 is an additional student holiday immediately following Labor Day, creating a four-consecutive-day break at the very start of the school year."
+      "q": "When does Frisco ISD start school in 2026–27?",
+      "a": "The first day of school is Wednesday, August 12, 2026."
     },
     {
-      "q": "When is the last day of school for Frisco ISD in 2026-2027?",
-      "a": "The last day of school for Frisco ISD is Friday, May 14, 2027 — eight days earlier than the 2025–2026 end date of May 22, the earliest end date in recent Frisco ISD history."
+      "q": "When is the last day of school for Frisco ISD in 2026–27?",
+      "a": "The last day of school is Friday, May 14, 2027. Frisco ISD is ending the school year one week earlier than normal because of transportation and crowding concerns related to the May 2027 PGA Championship."
     },
     {
-      "q": "When is spring break 2026-2027 for Frisco ISD?",
-      "a": "Spring break for Frisco ISD runs March 15–19, 2027 — a full week off. This aligns with Plano ISD that same week, making it one of the busiest travel windows across the northern DFW suburbs."
+      "q": "When is Frisco ISD Spring Break in 2027?",
+      "a": "Spring Break runs Monday, March 15 through Friday, March 19, 2027. Students return Monday, March 22."
     },
     {
-      "q": "When is winter break 2026-2027 for Frisco ISD?",
-      "a": "Winter break for Frisco ISD runs December 21, 2026–January 1, 2027 (12 days). A student holiday falls on January 4, so students return Tuesday, January 5, 2027."
+      "q": "When is Frisco ISD Winter Break in 2026–27?",
+      "a": "Winter Break runs December 21, 2026 through January 4, 2027. Students return Tuesday, January 5."
     },
     {
-      "q": "When is Thanksgiving break 2026-2027 for Frisco ISD?",
-      "a": "Thanksgiving break for Frisco ISD runs November 23–27, 2026 (Monday through Friday). Thanksgiving Day falls on November 26. School resumes Monday, November 30, 2026."
+      "q": "When is Frisco ISD Thanksgiving Break in 2026?",
+      "a": "Thanksgiving Break runs November 23–27, 2026. Students return Monday, November 30."
+    },
+    {
+      "q": "Does Frisco ISD have a Fall Break in 2026–27?",
+      "a": "Frisco ISD does not label a Fall Break on its 2026–27 student calendar. Students have no school Friday, October 9, and Monday–Tuesday, October 12–13, creating a five-day stretch without classes when the weekend is included."
+    },
+    {
+      "q": "What are the Frisco ISD bad-weather make-up days in 2026–27?",
+      "a": "March 26 and April 16, 2027 are reserved as bad-weather make-up days. Students are off unless Frisco ISD uses either date to make up a canceled school day."
+    },
+    {
+      "q": "Why does Frisco ISD end school early in 2026–27?",
+      "a": "Frisco ISD moved the last day one week earlier because the PGA Championship is expected to bring significant transportation and crowding issues to Frisco in May 2027. The district added five minutes to each school day to help meet instructional-minute requirements."
+    },
+    {
+      "q": "Where can I download the official Frisco ISD calendar?",
+      "a": "Use the official PDF link above for Frisco ISD’s published calendar. The separate ICS file is generated by MySchoolDates as a one-time import and does not update automatically."
     }
   ],
-  "yearNumbers": [
-    {
-      "label": "Ends Earlier",
-      "value": "8 days",
-      "detail": "Last day moves from May 22 to May 14 vs 2025–2026 — the earliest end date in recent Frisco ISD history."
-    },
-    {
-      "label": "Labor Day Extended",
-      "value": "4-day wknd",
-      "detail": "Sep 8 is a student holiday immediately following Labor Day, creating a four-consecutive-day break at the start of the school year."
-    },
-    {
-      "label": "Spring Break Later",
-      "value": "Mar 15–19",
-      "detail": "Spring Break shifts one week later from Mar 9–13 in 2025–2026, aligning Frisco ISD with Plano ISD that week."
-    }
+  "faqDisplayQuestions": [
+    "When does Frisco ISD start school in 2026–27?",
+    "When is the last day of school for Frisco ISD in 2026–27?",
+    "When is Frisco ISD Spring Break in 2027?",
+    "When is Frisco ISD Winter Break in 2026–27?",
+    "When is Frisco ISD Thanksgiving Break in 2026?",
+    "Does Frisco ISD have a Fall Break in 2026–27?",
+    "What are the Frisco ISD bad-weather make-up days in 2026–27?",
+    "Why does Frisco ISD end school early in 2026–27?",
+    "Where can I download the official Frisco ISD calendar?"
   ],
+  "faqDisplayLimit": 9,
   "events": [
     {
       "date": "2026-08-12",
@@ -56,111 +342,254 @@
     },
     {
       "date": "2026-09-07",
-      "name": "Labor Day",
-      "type": "holiday"
+      "endDate": "2026-09-08",
+      "displayDate": "September 7–8, 2026",
+      "name": "No School",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School",
+      "description": "Students return Wednesday, September 9."
     },
     {
-      "date": "2026-09-08",
-      "name": "Labor Day Holiday",
-      "type": "holiday"
+      "date": "2026-10-08",
+      "name": "Reporting Period Ends",
+      "type": "quarter_end",
+      "description": "An academic marker, not a day off."
     },
     {
       "date": "2026-10-09",
-      "name": "Student Holiday",
-      "type": "student_holiday"
+      "name": "No School",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School",
+      "preventRangeMerge": true
     },
     {
       "date": "2026-10-12",
-      "name": "Student Holiday",
-      "type": "student_holiday"
+      "endDate": "2026-10-13",
+      "displayDate": "October 12–13, 2026",
+      "name": "No School",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School",
+      "preventRangeMerge": true,
+      "description": "Together with October 9 and the weekend, these dates create five consecutive days without classes."
     },
     {
-      "date": "2026-10-13",
-      "name": "Student Holiday",
-      "type": "student_holiday"
+      "date": "2026-10-14",
+      "name": "Reporting Period Begins",
+      "type": "quarter_start",
+      "description": "An academic marker, not a day off."
     },
     {
       "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "displayDate": "November 23–27, 2026",
       "name": "Thanksgiving Break",
-      "type": "break_start"
+      "type": "break_start",
+      "description": "Students return Monday, November 30."
     },
     {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
+      "date": "2026-12-18",
+      "name": "Reporting Period Ends",
+      "type": "quarter_end",
+      "description": "An academic marker, not a day off."
     },
     {
       "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "displayDate": "December 21, 2026–January 4, 2027",
       "name": "Winter Break",
-      "type": "break_start"
+      "type": "break_start",
+      "description": "Students return Tuesday, January 5."
     },
     {
-      "date": "2026-12-25",
-      "name": "Christmas Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-01-01",
-      "name": "New Year's Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-01-01",
-      "name": "Winter Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-01-04",
-      "name": "Student Holiday",
-      "type": "student_holiday"
+      "date": "2027-01-05",
+      "name": "Reporting Period Begins",
+      "type": "quarter_start",
+      "description": "Students return from Winter Break."
     },
     {
       "date": "2027-01-18",
-      "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
+      "name": "No School",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School"
     },
     {
       "date": "2027-02-12",
-      "name": "Student Holiday",
-      "type": "student_holiday"
+      "dates": [
+        "2027-02-12",
+        "2027-02-15"
+      ],
+      "displayDate": "Feb 12 & 15, 2027",
+      "name": "No School",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School",
+      "exportDatesIndividually": true,
+      "datePropertyLabel": "Date",
+      "description": "With the weekend, students have four consecutive days without classes."
     },
     {
-      "date": "2027-02-15",
-      "name": "Presidents Day",
-      "type": "holiday"
+      "date": "2027-03-05",
+      "name": "Reporting Period Ends",
+      "type": "quarter_end",
+      "description": "An academic marker, not a day off."
+    },
+    {
+      "date": "2027-03-08",
+      "name": "Reporting Period Begins",
+      "type": "quarter_start",
+      "description": "An academic marker, not a day off."
     },
     {
       "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "displayDate": "March 15–19, 2027",
       "name": "Spring Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-03-19",
-      "name": "Spring Break End",
-      "type": "break_end"
+      "type": "break_start",
+      "description": "Students return Monday, March 22."
     },
     {
       "date": "2027-03-26",
-      "name": "Bad Weather Make-Up Day",
-      "type": "makeup_day"
+      "name": "Bad-Weather Make-Up Day (if needed)",
+      "type": "makeup_day",
+      "badgeLabel": "Conditional",
+      "status": "TENTATIVE",
+      "description": "Students are off unless Frisco ISD uses this date to make up a canceled school day."
     },
     {
       "date": "2027-04-16",
-      "name": "Bad Weather Make-Up Day",
-      "type": "makeup_day"
+      "name": "Bad-Weather Make-Up Day (if needed)",
+      "type": "makeup_day",
+      "badgeLabel": "Conditional",
+      "status": "TENTATIVE",
+      "description": "Students are off unless Frisco ISD uses this date to make up a canceled school day."
     },
     {
       "date": "2027-04-30",
-      "name": "Student Holiday",
-      "type": "student_holiday"
+      "name": "No School",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School"
     },
     {
       "date": "2027-05-14",
-      "name": "Last Day of School",
+      "name": "Last Day of School / Reporting Period Ends",
       "type": "school_end"
     }
   ],
-  "calendarNotes": "The 2026–2027 school year runs from August 12, 2026, through May 14, 2027. Spring Break falls March 15–19 and aligns with Plano ISD, making it one of the busiest travel weeks across the northern DFW suburbs. Three bad weather make-up days are pre-scheduled on the calendar — March 26, April 16, and April 30 — each a regular school day unless winter weather closures earlier in the year require them for makeup. September 8 is a student holiday immediately following Labor Day, extending that weekend to four consecutive days off.",
-  "datePublished": "2026-07-12",
-  "dateModified": "2026-07-12"
+  "comparisonDistrictSlugs": [
+    "plano-independent-school-district-calendar",
+    "mckinney-isd-calendar",
+    "dallas-independent-school-district-calendar"
+  ],
+  "comparisonTitle": "Frisco ISD 2026–27 Calendar Compared With Nearby Districts",
+  "comparisonSummary": "This table compares the same 2026–27 school year using each district’s published calendar.",
+  "comparisonSubheading": "School-year boundaries, October no-school dates, and major breaks",
+  "comparisonCaption": "2026–27 calendar comparison for Frisco ISD, Plano ISD, McKinney ISD, and Dallas ISD",
+  "comparisonDefaultOpen": true,
+  "hideComparisonInsights": true,
+  "hideComparisonNotes": true,
+  "comparisonFooterText": "Dates come from each district’s published 2026–27 calendar. Districts use different labels for these dates; the October row compares student no-school dates rather than official break names.",
+  "comparisonReviewedText": "Reviewed August 10, 2026.",
+  "comparisonCustomRows": [
+    {
+      "key": "firstDay",
+      "label": "First Day",
+      "values": {
+        "frisco-independent-school-district-calendar": "Aug 12, 2026",
+        "plano-independent-school-district-calendar": "Aug 11, 2026",
+        "mckinney-isd-calendar": "Aug 13, 2026",
+        "dallas-independent-school-district-calendar": "Aug 11, 2026"
+      }
+    },
+    {
+      "key": "lastDay",
+      "label": "Last Day",
+      "values": {
+        "frisco-independent-school-district-calendar": "May 14, 2027",
+        "plano-independent-school-district-calendar": "May 21, 2027",
+        "mckinney-isd-calendar": "May 27, 2027",
+        "dallas-independent-school-district-calendar": "May 26, 2027"
+      }
+    },
+    {
+      "key": "octoberNoSchoolDates",
+      "label": "October No-School Dates",
+      "values": {
+        "frisco-independent-school-district-calendar": "Oct 9 & 12–13",
+        "plano-independent-school-district-calendar": "Oct 12–16",
+        "mckinney-isd-calendar": "Oct 12–13",
+        "dallas-independent-school-district-calendar": "Oct 8–9 & 12"
+      }
+    },
+    {
+      "key": "thanksgivingBreak",
+      "label": "Thanksgiving Break",
+      "values": {
+        "frisco-independent-school-district-calendar": "Nov 23–27, 2026",
+        "plano-independent-school-district-calendar": "Nov 23–27, 2026",
+        "mckinney-isd-calendar": "Nov 23–27, 2026",
+        "dallas-independent-school-district-calendar": "Nov 23–27, 2026"
+      }
+    },
+    {
+      "key": "winterBreak",
+      "label": "Winter Break",
+      "values": {
+        "frisco-independent-school-district-calendar": "Dec 21, 2026–Jan 4, 2027",
+        "plano-independent-school-district-calendar": "Dec 21, 2026–Jan 4, 2027",
+        "mckinney-isd-calendar": "Dec 21, 2026–Jan 1, 2027",
+        "dallas-independent-school-district-calendar": "Dec 21, 2026–Jan 4, 2027"
+      }
+    },
+    {
+      "key": "springBreak",
+      "label": "Spring Break",
+      "values": {
+        "frisco-independent-school-district-calendar": "Mar 15–19, 2027",
+        "plano-independent-school-district-calendar": "Mar 15–19, 2027",
+        "mckinney-isd-calendar": "Mar 15–19, 2027",
+        "dallas-independent-school-district-calendar": "Mar 15–19, 2027"
+      }
+    }
+  ],
+  "sourceMaintainerText": "MySchoolDates education research team",
+  "sourceReviewSummary": "Reviewed August 10, 2026, against Frisco ISD’s official 2026–27 student calendar PDF and calendar announcement.",
+  "sourceReviewDetails": [
+    "We visually checked the PDF color key and month grid. December 21–January 4 is the full Winter Break range; March 26 and April 16 are conditional bad-weather make-up days; April 30 is a separate no-school day.",
+    "We used Frisco ISD’s November 17, 2025 calendar announcement for the PGA Championship explanation, the five-minute extension to each school day, major break names, and student return dates.",
+    "Reporting-period begin and end dates come from the official PDF and are academic markers, not student holidays.",
+    "The nearby-district table uses the published 2026–27 calendar records for Plano ISD, McKinney ISD, and Dallas ISD.",
+    "The downloadable ICS file is generated from the dates listed on this page. It is a one-time import and does not update automatically if Frisco ISD revises the calendar or uses a make-up day."
+  ],
+  "sourceNextReviewText": "Next review: when Frisco ISD revises the calendar, uses a bad-weather make-up day, or replaces its official 2026–27 calendar source.",
+  "sources": [
+    {
+      "label": "Frisco ISD 2026–27 student calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5799/Fisd/954306d0-ca6d-4c5b-8840-3f5046e88443/2026-2027-Student-Calendar.pdf"
+    },
+    {
+      "label": "Frisco ISD calendar announcement — PGA Championship, school hours, breaks, and make-up days",
+      "url": "https://www.friscoisd.org/o/flex/article/3034519"
+    },
+    {
+      "label": "Frisco ISD calendar page",
+      "url": "https://www.friscoisd.org/o/fisd/page/calendars"
+    },
+    {
+      "label": "Plano ISD 2026–27 calendar PDF — used for district comparison",
+      "url": "https://resources.finalsite.net/images/v1754012636/pisdedu/fmrvyekici5t2wmjmcdq/2026-2027_Approved.pdf"
+    },
+    {
+      "label": "McKinney ISD 2026–27 calendar PDF — used for district comparison",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4789/Misd/f17658c1-d841-4b7c-8f93-9effd2e6ac21/26-27-Final-Calendar.pdf?disposition=inline"
+    },
+    {
+      "label": "Dallas ISD district calendars — used for district comparison",
+      "url": "https://www.dallasisd.org/about/about-dallas-isd/district-calendars"
+    }
+  ]
 }

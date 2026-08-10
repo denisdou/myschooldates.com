@@ -1,0 +1,250 @@
+{
+  "institutionId": "jordan-school-district",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025–26",
+  "pageHeading": "Jordan School District Calendar 2025–26",
+  "firstDay": "2025-08-19",
+  "lastDay": "2026-06-04",
+  "semesters": 2,
+  "temporalCoverageStart": "2025-08-08",
+  "temporalCoverageEnd": "2026-06-05",
+  "sourceUrl": "https://planning.jordandistrict.org/calendars/",
+  "sourcePdfUrl": "https://planning.jordandistrict.org/wp-content/uploads/sites/22/2025-26-Calendar-All-Levels.pdf",
+  "sourceCalendarName": "Jordan School District 2025-26 School Year Calendar — All Levels",
+  "sourceVersion": "Official archive PDF · cover updated September 3, 2025",
+  "lastVerifiedAt": "2026-08-10",
+  "dateCreated": "2026-08-10",
+  "datePublished": "2026-08-10",
+  "dateModified": "2026-08-10",
+  "calendarType": "grade-level opening calendar with high-school A/B rotation",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "keyDates",
+  "schemaReviewedBy": "author",
+  "schemaCalendarName": "Jordan School District Calendar 2025–26",
+  "schemaDatasetName": "Jordan School District 2025–26 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Jordan School District 2025–26 dates, including grade-level openings and last days, high-school A/B rotation, level-specific conferences and closures, Health & Wellness Virtual Day, grade-specific testing, breaks, term endings, graduation, and the conditional emergency make-up date.",
+  "schemaCalendarDownloadName": "MySchoolDates Jordan School District 2025–26 calendar file",
+  "schemaCalendarDownloadDescription": "One-time import with selected Jordan openings, grade-level exceptions, student-free dates, breaks, conferences, term endings, testing exceptions, graduation, and last days. Weekly elementary early outs and daily A/B letters are not repeated.",
+  "seoTitle": "Jordan School District Calendar 2025–26: Dates & PDF",
+  "seoDescription": "See Jordan School District’s 2025–26 grade-level start and end dates, breaks, conferences, virtual day, testing exceptions, graduation, and official PDF.",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideRelatedDistrictDescriptions": true,
+  "hiddenSections": ["downloadCta", "todayStatus", "keyDateCards", "quickFacts", "breaks", "yearNumbers", "planningTips", "about", "districtProfile", "livingHere", "nationalTrends", "comparison"],
+  "heroSourceLine": "Source: Jordan School District official 2025–26 all-level calendar · Updated September 3, 2025",
+  "heroSummary": "Jordan high-school students begin Tuesday, August 19, 2025, while seventh graders attend orientation. Elementary students and grades 8–9 begin August 20. Seventh grade ends June 3, one day before the June 4 last day for most students. The calendar includes 180 instructional days across four quarters and a Health & Wellness Virtual Day February 6.",
+  "calendarNotes": "Jordan high-school students begin August 19, the same day seventh graders attend orientation; elementary students and grades 8–9 begin August 20. The official calendar totals 180 days across quarters of 43, 47, 47, and 43 days. Fall secondary conferences occur September 24–25, while elementary conferences occur October 1–2, with level-specific compensation and professional days afterward. February 6 is a Health & Wellness Virtual Day rather than a normal in-person school day. Winter Recess runs December 22–January 2 and Spring Recess runs March 31–April 3 after a March 30 grade-transmittal day. High-school Pre-ACT/college-prep and ACT dates assign different attendance rules by grade and were marked subject to change. Seventh grade ends June 3, high-school graduation is June 2–3, and most students finish June 4.",
+  "heroFactChips": ["High school / grade 7: Aug 19", "K–6 and grades 8–9: Aug 20", "Student days: 180", "Most students end: Jun 4"],
+  "verificationBadgeText": "Dates checked August 10, 2026, against all three pages of the official archived PDF and the supplied local companion calendar.",
+  "keyDatesSummaryTitle": "Jordan School District 2025–26 Key Dates",
+  "keyDatesSummarySubtitle": "Grade-level openings, major breaks, virtual day, and staggered last days",
+  "preserveJumpNavigationOrder": true,
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "High School Begins / 7th Grade Orientation", "date": "2025-08-19", "type": "school_start", "description": "High-school students attend class; seventh graders attend orientation.", "schemaDescription": "Jordan high-school students begin and seventh graders attend orientation August 19, 2025." },
+    { "label": "First Day", "name": "Elementary and Grades 8–9 Begin", "date": "2025-08-20", "type": "school_start", "description": "First day for grades K–6 and middle-school grades 8–9.", "schemaDescription": "Jordan elementary students and grades 8–9 begin August 20, 2025." },
+    { "label": "Break", "name": "Fall Recess", "date": "2025-10-21", "endDate": "2025-10-24", "type": "break_start", "description": "A student-free grade-transmittal day October 20 extends the closure.", "schemaDescription": "Jordan Fall Recess runs October 21–24, 2025, after a no-school grade-transmittal day October 20." },
+    { "label": "Break", "name": "Winter Recess", "date": "2025-12-22", "endDate": "2026-01-02", "type": "break_start", "schemaDescription": "Jordan Winter Recess runs December 22, 2025, through January 2, 2026." },
+    { "label": "Virtual Day", "name": "Health & Wellness Virtual Day", "date": "2026-02-06", "type": "academic", "description": "Students do not attend in person; follow school directions for virtual participation.", "schemaDescription": "Jordan School District schedules a Health and Wellness Virtual Day February 6, 2026." },
+    { "label": "Break", "name": "Spring Recess", "date": "2026-03-31", "endDate": "2026-04-03", "type": "break_start", "description": "A student-free grade-transmittal day March 30 extends the closure.", "schemaDescription": "Jordan Spring Recess runs March 31 through April 3, 2026, after a no-school grade-transmittal day March 30." },
+    { "label": "Last Day", "name": "7th Grade Last Day", "date": "2026-06-03", "type": "school_end", "description": "Seventh grade ends one day before most students.", "schemaDescription": "The last day for Jordan seventh graders is June 3, 2026." },
+    { "label": "Last Day", "name": "Most Students' Last Day / Quarter 4 Ends", "date": "2026-06-04", "type": "school_end", "schemaDescription": "Most Jordan students finish school June 4, 2026." }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Grade Levels", "id": "jsd-2025-2026-grade-levels" },
+    { "label": "Early Out", "id": "jsd-2025-2026-early-out" },
+    { "label": "Conferences", "id": "jsd-2025-2026-conferences" },
+    { "label": "Testing", "id": "jsd-2025-2026-testing" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Day Counts", "id": "jsd-2025-2026-day-counts" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "Jordan School District 2025–26 Calendar Dates",
+  "allDatesCoverageNote": "This list includes districtwide dates and grade-level exceptions that change attendance. Daily high-school A/B labels and recurring elementary early outs are summarized rather than repeated for every week.",
+  "allDatesSourceUrl": "https://planning.jordandistrict.org/wp-content/uploads/sites/22/2025-26-Calendar-All-Levels.pdf",
+  "allDatesSourceLinks": [
+    { "label": "Official Jordan 2025–26 all-level calendar", "url": "https://planning.jordandistrict.org/wp-content/uploads/sites/22/2025-26-Calendar-All-Levels.pdf" },
+    { "label": "Jordan School District calendars page", "url": "https://planning.jordandistrict.org/calendars/" }
+  ],
+  "allDatesSourceLabel": "Source: Jordan School District",
+  "dateLegendLabelOverrides": { "Early Release": "Elementary Early Out", "Teacher Workday": "No School — Staff or Compensation Day", "Academic": "Virtual / Testing / A-B Date" },
+  "dateLegendExtraItems": [{ "label": "Grade-Level Exception", "dot": "bg-emerald-500" }, { "label": "End of Quarter", "dot": "bg-indigo-500" }],
+  "icsHeading": "Add Jordan 2025–26 Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file with staggered openings, student-free days, breaks, conferences, testing exceptions, graduation, and last days.",
+  "icsButtonLabel": "Download MySchoolDates Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. Daily A/B letters and weekly elementary early outs are not repeated; later changes do not sync automatically.",
+  "icsAriaLabel": "Download the Jordan School District 2025–26 calendar file",
+  "pdfHeading": "Official Jordan School District 2025–26 Calendar",
+  "pdfButtonLabel": "View Official All-Levels Calendar",
+  "pdfDescription": "Open the archived three-page district PDF for the complete all-level summary, A/B grid, grade-level exceptions, and legend.",
+  "pdfVersionLabel": "Official archive PDF · cover updated September 3, 2025",
+  "customSections": [
+    {
+      "id": "jsd-2025-2026-grade-levels",
+      "label": "Two Opening Dates and Two Closing Dates",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "Jordan's first and last days cannot be reduced to one date for every student. High school opens first, seventh grade uses that date for orientation, and seventh grade also finishes a day early.",
+      "table": {
+        "caption": "Jordan 2025–26 grade-level opening and closing schedule",
+        "columns": ["Students", "Opening", "Last day"],
+        "rows": [
+          ["High school", "August 19", "June 4"],
+          ["7th grade", "Orientation August 19", "June 3"],
+          ["Grades 8–9", "August 20", "June 4"],
+          ["Grades K–6", "August 20", "June 4"]
+        ]
+      }
+    },
+    {
+      "id": "jsd-2025-2026-early-out",
+      "label": "Elementary Early-Out Pattern",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "The supplied local companion calendar says the last instructional day of each week is an early-out day, with exceptions on September 25, February 5, March 5, and April 16. Because that one-page file was produced by a real-estate advertiser rather than Jordan School District, this recurring pattern is treated as supporting guidance and families should confirm the school's bell time.",
+      "table": {
+        "caption": "Early-out information in the supplied 2025–26 companion calendar",
+        "columns": ["Rule", "Dates singled out", "How it is used here"],
+        "rows": [
+          ["Last instructional day of each week", "Most weeks", "Summarized once; not repeated in the ICS file."],
+          ["No early out", "September 25; February 5; March 5; April 16", "Retained as an exception note, subject to school confirmation."],
+          ["Exact dismissal time", "Not printed", "Use the elementary school's bell schedule."]
+        ]
+      }
+    },
+    {
+      "id": "jsd-2025-2026-conferences",
+      "label": "How Fall Conference Closures Switch by Level",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "Secondary and elementary fall conferences occur in different weeks. On September 26, secondary students have a compensation day while elementary students have professional development; on October 3, those roles reverse. Spring conferences align for all levels.",
+      "table": {
+        "caption": "Jordan 2025–26 conference and closure schedule",
+        "columns": ["Level", "Fall conferences", "Following closure", "Spring conferences"],
+        "rows": [
+          ["Middle and high school", "September 24–25", "September 26 compensation day; October 3 professional day", "February 11–12; compensation day February 13"],
+          ["Elementary", "October 1–2", "September 26 professional day; October 3 compensation day", "February 11–12; compensation day February 13"]
+        ]
+      }
+    },
+    {
+      "id": "jsd-2025-2026-testing",
+      "label": "Virtual Day and Grade-Specific High-School Testing",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "February 6 is a Health & Wellness Virtual Day for all levels, so students do not attend in person. The November and March high-school testing dates were marked subject to change and apply different rules by grade.",
+      "table": {
+        "caption": "Jordan 2025–26 nonstandard attendance dates",
+        "columns": ["Date", "Students", "Attendance rule"],
+        "rows": [
+          ["February 6", "All levels", "Health & Wellness Virtual Day; no in-person attendance."],
+          ["November 12", "High school", "10th and 12th grades attend AM only; 11th grade has no school."],
+          ["March 10", "High school", "11th grade attends ACT testing in the AM; 10th and 12th grades have no school."]
+        ],
+        "footnote": "Both high-school testing dates were printed as subject to change."
+      }
+    },
+    {
+      "id": "jsd-2025-2026-day-counts",
+      "label": "Quarter and Day Counts",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "The four official quarter counts total 180 instructional days. June 5 is a teacher check-out date and potential emergency closure make-up day, not a scheduled student day unless the Board approves its use.",
+      "table": {
+        "caption": "Official Jordan School District 2025–26 day summary",
+        "columns": ["Period", "Dates", "Days"],
+        "rows": [
+          ["Quarter 1", "August 19–October 17", "43"],
+          ["Quarter 2", "October 27–January 16", "47"],
+          ["Quarter 3", "January 21–March 27", "47"],
+          ["Quarter 4", "April 6–June 4", "43"],
+          ["Total", "Four quarters", "180"]
+        ]
+      }
+    }
+  ],
+  "events": [
+    { "date": "2025-08-08", "name": "New Educator Induction", "type": "teacher_professional_learning", "hideFromCalendarExport": true },
+    { "date": "2025-08-11", "endDate": "2025-08-18", "name": "Teacher Contract Days", "type": "teacher_workday", "description": "Pre-year staff dates; students do not attend.", "hideFromCalendarExport": true },
+    { "date": "2025-08-19", "name": "High School First Day / 7th Grade Orientation", "type": "school_start", "description": "High-school students begin class; seventh graders attend orientation." },
+    { "date": "2025-08-20", "name": "Elementary and Grades 8–9 First Day", "type": "school_start", "description": "First day for grades K–6 and middle-school grades 8–9." },
+    { "date": "2025-09-01", "name": "Labor Day Recess", "type": "holiday", "description": "No school." },
+    { "date": "2025-09-24", "endDate": "2025-09-25", "name": "Secondary Parent-Teacher Conferences", "type": "conference", "badgeLabel": "Middle / High", "hideFromCalendarExport": true },
+    { "date": "2025-09-26", "name": "Level-Specific No-School Day", "type": "teacher_workday", "description": "Secondary teacher compensation day and elementary professional development day; no students attend." },
+    { "date": "2025-10-01", "endDate": "2025-10-02", "name": "Elementary Parent-Teacher Conferences", "type": "conference", "badgeLabel": "Elementary", "hideFromCalendarExport": true },
+    { "date": "2025-10-03", "name": "Level-Specific No-School Day", "type": "teacher_workday", "description": "Elementary teacher compensation day and secondary professional development day; no students attend." },
+    { "date": "2025-10-17", "name": "Quarter 1 Ends", "type": "quarter_end", "hideFromCalendarExport": true },
+    { "date": "2025-10-20", "name": "Grade Transmittal Day — No School", "type": "teacher_workday" },
+    { "date": "2025-10-21", "endDate": "2025-10-24", "displayDate": "October 21–24, 2025", "name": "Fall Recess", "type": "break_start" },
+    { "date": "2025-10-27", "name": "Quarter 2 Begins / School Resumes", "type": "school_resume" },
+    { "date": "2025-11-12", "name": "Tentative Pre-ACT / College Prep Half Day", "type": "academic", "badgeLabel": "High School", "description": "10th and 12th grades attend AM only; 11th grade has no school. Date was subject to change." },
+    { "date": "2025-11-26", "endDate": "2025-11-28", "displayDate": "November 26–28, 2025", "name": "Thanksgiving Recess", "type": "break_start" },
+    { "date": "2025-12-22", "endDate": "2026-01-02", "displayDate": "December 22, 2025–January 2, 2026", "name": "Winter Recess", "type": "break_start" },
+    { "date": "2026-01-16", "name": "Quarter 2 Ends", "type": "quarter_end", "hideFromCalendarExport": true },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day Recess", "type": "holiday", "description": "No school." },
+    { "date": "2026-01-20", "name": "Grade Transmittal Day — No School", "type": "teacher_workday" },
+    { "date": "2026-01-21", "name": "Quarter 3 Begins / School Resumes", "type": "school_resume" },
+    { "date": "2026-02-06", "name": "Health & Wellness Virtual Day", "type": "academic", "badgeLabel": "Virtual", "description": "Students do not attend in person; follow school directions for virtual participation." },
+    { "date": "2026-02-11", "endDate": "2026-02-12", "name": "All-Level Parent-Teacher Conferences", "type": "conference", "hideFromCalendarExport": true },
+    { "date": "2026-02-13", "name": "Teacher Compensation Day — No School", "type": "teacher_workday" },
+    { "date": "2026-02-16", "name": "Washington and Lincoln Day Recess", "type": "holiday", "description": "No school." },
+    { "date": "2026-03-06", "name": "Professional Development Day — No School", "type": "teacher_professional_learning" },
+    { "date": "2026-03-10", "name": "Tentative 11th Grade ACT Testing", "type": "academic", "badgeLabel": "High School", "description": "11th grade attends AM testing; 10th and 12th grades have no school. Date was subject to change." },
+    { "date": "2026-03-27", "name": "Quarter 3 Ends", "type": "quarter_end", "hideFromCalendarExport": true },
+    { "date": "2026-03-30", "name": "Grade Transmittal Day — No School", "type": "teacher_workday" },
+    { "date": "2026-03-31", "endDate": "2026-04-03", "displayDate": "March 31–April 3, 2026", "name": "Spring Recess", "type": "break_start" },
+    { "date": "2026-04-06", "name": "Quarter 4 Begins / School Resumes", "type": "school_resume" },
+    { "date": "2026-04-17", "name": "Professional Development Day — No School", "type": "teacher_professional_learning" },
+    { "date": "2026-05-25", "name": "Memorial Day Recess", "type": "holiday", "description": "No school." },
+    { "date": "2026-06-02", "endDate": "2026-06-03", "name": "High School Graduations", "type": "academic", "badgeLabel": "High School", "hideFromCalendarExport": true },
+    { "date": "2026-06-03", "name": "7th Grade Last Day", "type": "school_end", "badgeLabel": "Grade 7" },
+    { "date": "2026-06-04", "name": "Most Students' Last Day / Quarter 4 Ends", "type": "school_end", "badgeLabel": "Most Students" },
+    { "date": "2026-06-05", "name": "Teacher Check-Out / Conditional Emergency Make-Up Day", "type": "academic", "badgeLabel": "Conditional", "description": "Not a scheduled student day unless administration recommends and the Board approves emergency make-up use.", "hideFromCalendarExport": true }
+  ],
+  "calendarFaqs": [
+    { "q": "When did Jordan School District start in 2025?", "a": "High-school students started Tuesday, August 19, 2025, and seventh graders attended orientation. Elementary students and grades 8–9 started Wednesday, August 20." },
+    { "q": "When was Jordan School District Fall Recess in 2025?", "a": "Fall Recess was October 21–24, 2025. Students also had no school October 20 for grade transmittal and returned October 27." },
+    { "q": "When was Jordan School District Winter Recess in 2025–26?", "a": "Winter Recess ran December 22, 2025, through January 2, 2026." },
+    { "q": "What was Jordan's Health & Wellness Virtual Day?", "a": "February 6, 2026 was a virtual day for all levels. Students did not attend in person and followed school directions for virtual participation." },
+    { "q": "When was Jordan School District Spring Recess in 2026?", "a": "Spring Recess was March 31–April 3, 2026, after a no-school grade-transmittal day March 30. Classes resumed April 6." },
+    { "q": "When was the last day in Jordan School District in 2026?", "a": "Seventh grade ended June 3. Elementary, grades 8–9, and high school ended Thursday, June 4, 2026." },
+    { "q": "How many school days were in Jordan's 2025–26 calendar?", "a": "The official quarter counts were 43, 47, 47, and 43 days, totaling 180 instructional days." },
+    { "q": "Was the supplied 2025–26 local PDF an official district PDF?", "a": "No. It displays Jordan dates but was designed for a real-estate advertiser and has Canyon in its file metadata. This page uses the official Jordan all-level PDF discovered in the district upload archive as its primary source." }
+  ],
+  "faqDisplayLimit": 8,
+  "sourceReviewSummary": "Reviewed August 10, 2026, against the complete official three-page Jordan archive PDF and the supplied one-page third-party companion calendar.",
+  "sourceReviewDetailsTitle": "How we verified the archived Jordan calendar",
+  "sourceReviewDetails": [
+    "Although no 2025-2026 URL was supplied, the official three-page all-level calendar remains available in Jordan's own Planning & Enrollment upload archive and is used as the primary source.",
+    "The official PDF identifies grade-level openings, all-level closures, conferences, virtual and testing dates, graduation, staggered last days, quarter counts, and the emergency make-up rule.",
+    "The PDF was visually checked because A/B letters, color-coded exceptions, and calendar legends lose context in plain-text extraction.",
+    "The cover says updated September 3, 2025, while later calendar-grid pages say last updated May 15, 2025; the newer cover date is used for the source version and the internal difference is preserved here.",
+    "The supplied local PDF says Jordan School District but includes Move Utah Real Estate branding and has the metadata title 2025-2026 Canyon school calendar, so it is treated only as a companion check.",
+    "The recurring elementary early-out note comes from that companion calendar and is explicitly labeled as supporting guidance rather than official-PDF content.",
+    "High-school testing dates retain the official subject-to-change wording and grade-specific attendance rules.",
+    "The .ics file is a one-time import and does not update automatically or reproduce every A/B and elementary early-out date."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Jordan School District sources.",
+  "sourceNextReviewText": "Review if Jordan replaces the archived PDF, clarifies the update-date difference, revises a testing date, or records emergency make-up use.",
+  "sources": [
+    { "label": "Official Jordan 2025–26 all-level calendar", "url": "https://planning.jordandistrict.org/wp-content/uploads/sites/22/2025-26-Calendar-All-Levels.pdf" },
+    { "label": "Jordan School District calendars page", "url": "https://planning.jordandistrict.org/calendars/" },
+    { "label": "Jordan district 2025–26 calendar announcement", "url": "https://jordandistrict.org/2025/07/jordan-school-district-2025-26-calendar/" }
+  ]
+}

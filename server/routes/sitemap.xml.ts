@@ -3,8 +3,14 @@ import { join } from 'node:path'
 
 export default defineEventHandler((event) => {
   const baseUrl = 'https://myschooldates.com'
-  const today = new Date().toISOString().slice(0, 10)
   const root = process.cwd()
+
+  interface SitemapUrl {
+    loc: string
+    priority: string
+    changefreq: string
+    lastmod?: string
+  }
 
   // ── Districts ──────────────────────────────────────────────────────────────
   const districtDir = join(root, 'content', 'districts')
@@ -20,7 +26,8 @@ export default defineEventHandler((event) => {
 
   // ── Archived year pages ────────────────────────────────────────────────────
   const calendarsDir = join(root, 'content', 'calendars')
-  const archiveUrls: string[] = []
+  const archiveUrls: SitemapUrl[] = []
+  const currentCalendarLastmodByInstitutionId = new Map<string, string>()
 
   for (const institutionId of readdirSync(calendarsDir)) {
     const distPath = join(calendarsDir, institutionId)
@@ -30,25 +37,38 @@ export default defineEventHandler((event) => {
     for (const file of readdirSync(distPath)) {
       if (!file.endsWith('.json')) continue
       const cal = JSON.parse(readFileSync(join(distPath, file), 'utf-8'))
+      const lastmod = cal.dateModified ?? cal.lastVerifiedAt
+      if (cal.schoolYear === district.currentSchoolYear && lastmod) {
+        currentCalendarLastmodByInstitutionId.set(institutionId, lastmod)
+      }
       if (cal.schoolYear !== district.currentSchoolYear) {
-        archiveUrls.push(`${baseUrl}/${district.slug}/${cal.schoolYear}`)
+        archiveUrls.push({
+          loc: `${baseUrl}/${district.slug}/${cal.schoolYear}`,
+          priority: '0.5',
+          changefreq: 'yearly',
+          ...(lastmod ? { lastmod } : {}),
+        })
       }
     }
   }
 
   // ── States ─────────────────────────────────────────────────────────────────
   const stateDir = join(root, 'content', 'states')
-  const stateSlugs: string[] = []
+  const stateUrls: SitemapUrl[] = []
 
   for (const file of readdirSync(stateDir)) {
     if (!file.endsWith('.json')) continue
     const s = JSON.parse(readFileSync(join(stateDir, file), 'utf-8'))
-    stateSlugs.push(s.stateSlug)
+    const lastmod = s.dateModified ?? s.lastVerifiedAt
+    stateUrls.push({
+      loc: `${baseUrl}/${s.stateSlug}`,
+      priority: '0.8',
+      changefreq: 'monthly',
+      ...(lastmod ? { lastmod } : {}),
+    })
   }
 
   // ── Build URL list ─────────────────────────────────────────────────────────
-  interface SitemapUrl { loc: string; priority: string; changefreq: string }
-
   const urls: SitemapUrl[] = [
     { loc: `${baseUrl}/`, priority: '1.0', changefreq: 'weekly' },
     { loc: `${baseUrl}/blog`, priority: '0.7', changefreq: 'monthly' },
@@ -62,14 +82,21 @@ export default defineEventHandler((event) => {
     { loc: `${baseUrl}/summer-break-2027`, priority: '0.7', changefreq: 'monthly' },
     { loc: `${baseUrl}/districts`, priority: '0.8', changefreq: 'monthly' },
     { loc: `${baseUrl}/calendar-verification-methodology`, priority: '0.6', changefreq: 'monthly' },
-    ...stateSlugs.map(s => ({ loc: `${baseUrl}/${s}`, priority: '0.8', changefreq: 'monthly' })),
-    ...districtData.map(d => ({ loc: `${baseUrl}/${d.slug}`, priority: '0.9', changefreq: 'monthly' })),
-    ...archiveUrls.map(u => ({ loc: u, priority: '0.5', changefreq: 'yearly' })),
+    ...stateUrls,
+    ...districtData.map(d => ({
+      loc: `${baseUrl}/${d.slug}`,
+      priority: '0.9',
+      changefreq: 'monthly',
+      ...(currentCalendarLastmodByInstitutionId.get(d.institutionId)
+        ? { lastmod: currentCalendarLastmodByInstitutionId.get(d.institutionId) }
+        : {}),
+    })),
+    ...archiveUrls,
   ]
 
   // ── Render XML ─────────────────────────────────────────────────────────────
-  const urlNodes = urls.map(({ loc, priority, changefreq }) =>
-    `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`
+  const urlNodes = urls.map(({ loc, priority, changefreq, lastmod }) =>
+    `  <url>\n    <loc>${loc}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`
   ).join('\n')
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlNodes}\n</urlset>`

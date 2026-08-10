@@ -1,103 +1,403 @@
 {
   "institutionId": "henrico-county",
   "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Henrico County Public Schools Calendar 2027–2028",
   "firstDay": "2027-08-23",
   "lastDay": "2028-06-02",
-  "totalSchoolDays": 180,
-  "semesters": 2,
   "sourceUrl": "https://www.henricoschools.us/page/school-calendar",
-  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3486/Hcps/HCPS-School-Calendar_2027-2028_042806.pdf",
-  "lastVerifiedAt": "2026-07-12",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3486/Hcps/2faba7e6-99eb-44c3-92fe-186d9ae4192d/HCPS-School-Calendar_2027-2028_042806.pdf?disposition=inline",
+  "sourceCalendarName": "HCPS 2027–28 Instructional Calendar",
+  "lastVerifiedAt": "2026-08-10",
+  "dateCreated": "2026-07-12",
+  "datePublished": "2026-07-12",
+  "dateModified": "2026-08-10",
   "calendarType": "traditional",
-  "yearNumbers": [
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "keyDates",
+  "schemaReviewedBy": "author",
+  "seoTitle": "Henrico County Public Schools Calendar 2027–28 | Key Dates & PDF",
+  "seoDescription": "See the HCPS 2027–28 school calendar, including the staggered opening, holidays, breaks, half-days, the official PDF, and an ICS calendar download.",
+  "schemaCalendarName": "Henrico County Public Schools Calendar 2027–28",
+  "schemaDatasetDescription": "Verified HCPS 2027–28 student calendar dates, including the published staggered opening, student holidays, half-days, breaks, return dates, and scheduled last day.",
+  "schemaCalendarDownloadName": "Henrico County Public Schools 2027–28 calendar file",
+  "schemaCalendarDownloadDescription": "One-time calendar import with the HCPS staggered opening, student holidays, half-days, breaks, return dates, and scheduled last day.",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideDateLegend": true,
+  "hideBreakDurationBadges": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hidePdfVersionLabel": true,
+  "hideRelatedDistrictDescriptions": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "quickFacts",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "comparison",
+    "whatsDifferent"
+  ],
+  "nonCurrentYearNotice": "As of August 10, 2026, HCPS has published its 2027–28 instructional calendar but has not yet published separate school-specific opening guidance for 2027–28.",
+  "heroSourceLine": "Based on the official HCPS 2027–28 instructional calendar",
+  "heroSummary": "Henrico County Public Schools begins the 2027–28 school year with a staggered opening on August 23–24, 2027. The published calendar lists August 23 as the first day for pre-K, kindergarten, grades 6 and 9, and August 24 as the first day for all grades. Spring Break runs April 3–7, 2028, and the scheduled last day is Friday, June 2, 2028.",
+  "heroCtas": [
     {
-      "label": "Starts Earlier",
-      "value": "1 day",
-      "detail": "First day moves from Aug 24 to Aug 23 vs 2026–2027."
+      "label": "View Staggered Opening",
+      "href": "#hcps-2027-2028-staggered-opening",
+      "variant": "primary"
     },
     {
-      "label": "Spring Break Shifts",
-      "value": "5 days later",
-      "detail": "Spring Break moves from Mar 29–Apr 2 to Apr 3–7 vs 2026–2027."
+      "label": "Downloads",
+      "href": "#add-to-calendar",
+      "variant": "secondary"
+    }
+  ],
+  "verificationBadgeText": "Reviewed August 10, 2026, against the official HCPS 2027–28 instructional calendar PDF.",
+  "calendarNotes": "HCPS uses a two-date staggered opening on August 23–24. The published calendar lists August 23 for pre-K, kindergarten, grades 6 and 9, and August 24 for all grades. March 31 is a student half-day, Spring Break runs April 3–7, April 17 is a separate Wellness Day / Easter Monday closure, and June 2 is the scheduled student half-day and last day of school.",
+  "keyDatesSummaryTitle": "HCPS 2027–28 Key Dates and Holidays",
+  "keyDatesSummarySubtitle": "Published opening dates, major breaks, student half-days, and the scheduled last day",
+  "keyDateCardsFirstLabel": "Staggered Start Begins",
+  "keyDateCardsSecondLabel": "All Grades Attend",
+  "keyDateCardsSecondValue": "Tuesday, August 24, 2027",
+  "keyDateCardsSecondDate": "2027-08-24",
+  "keyDateCardsThirdLabel": "Scheduled Last Day",
+  "keyDateCardsThirdValue": "Friday, June 2, 2028",
+  "keyDateCardsThirdDate": "2028-06-02",
+  "preserveJumpNavigationOrder": true,
+  "keyDateSummaryItems": [
+    {
+      "label": "Staggered Start",
+      "name": "Staggered Start Begins",
+      "date": "2027-08-23",
+      "type": "school_start",
+      "description": "First day for pre-K, kindergarten, grades 6 and 9.",
+      "schemaDescription": "The HCPS 2027–28 calendar lists August 23, 2027, as the first day for pre-K, kindergarten, grades 6 and 9."
     },
     {
-      "label": "Wellness Day",
-      "value": "Feb 21",
-      "detail": "Presidents Day and Wellness Day combined — all schools and central offices closed."
+      "label": "All Grades",
+      "name": "All Grades Attend",
+      "date": "2027-08-24",
+      "type": "school_start",
+      "description": "All grades attend under the published calendar.",
+      "schemaDescription": "The HCPS 2027–28 calendar shows all grades in attendance on August 24, 2027."
     },
     {
-      "label": "Easter Monday",
-      "value": "Apr 17",
-      "detail": "School holiday added for Easter Monday — extends the post-Spring Break closure by one day."
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2027-11-24",
+      "endDate": "2027-11-26",
+      "type": "break_start",
+      "description": "Students return Monday, November 29.",
+      "schemaDescription": "HCPS Thanksgiving Break runs November 24–26, 2027."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "type": "break_start",
+      "description": "New Year's Day is January 1; students return Monday, January 3.",
+      "schemaDescription": "HCPS Winter Break runs December 20–31, 2027, with students returning January 3, 2028."
+    },
+    {
+      "label": "Student Half-Day",
+      "name": "Student Half-Day / Half Clerical Day",
+      "date": "2028-03-31",
+      "type": "early_release",
+      "description": "This is the Friday before Spring Break, not part of the break.",
+      "schemaDescription": "March 31, 2028, is an HCPS student half-day and half clerical day."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2028-04-03",
+      "endDate": "2028-04-07",
+      "type": "break_start",
+      "description": "Students return Monday, April 10.",
+      "schemaDescription": "HCPS Spring Break runs April 3–7, 2028."
+    },
+    {
+      "label": "No School",
+      "name": "Wellness Day / Easter Monday",
+      "date": "2028-04-17",
+      "type": "holiday",
+      "description": "Separate from Spring Break; schools and central offices are closed.",
+      "schemaDescription": "HCPS schools and central offices are closed April 17, 2028, for Wellness Day / Easter Monday."
+    },
+    {
+      "label": "Last Day",
+      "name": "Scheduled Last Day of School",
+      "date": "2028-06-02",
+      "type": "school_end",
+      "description": "Student half-day and end of the fourth quarter.",
+      "schemaDescription": "The scheduled last student day for HCPS in 2027–28 is June 2, 2028, with half-day dismissal."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Staggered Opening", "id": "hcps-2027-2028-staggered-opening" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Dates by Month", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Calendar Notes", "id": "hcps-2027-2028-calendar-notes" },
+    { "label": "What's Different", "id": "hcps-2027-2028-whats-different" },
+    { "label": "Richmond Addresses", "id": "hcps-2027-2028-richmond-address-note" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "Henrico County Public Schools 2027–28 Dates by Month",
+  "allDatesCoverageNote": "This list covers districtwide student dates that affect attendance or the structure of the school year.",
+  "allDatesCoverageNotePosition": "top",
+  "allDatesSourceUrl": "https://www.henricoschools.us/page/school-calendar",
+  "allDatesSourceLinks": [
+    {
+      "label": "Official HCPS 2027–28 instructional calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3486/Hcps/2faba7e6-99eb-44c3-92fe-186d9ae4192d/HCPS-School-Calendar_2027-2028_042806.pdf?disposition=inline"
+    },
+    {
+      "label": "HCPS calendar page",
+      "url": "https://www.henricoschools.us/page/school-calendar"
+    }
+  ],
+  "allDatesSourceLabel": "Sources: Henrico County Public Schools",
+  "allDatesDerivedDateNote": "Return dates are based on the published student calendar.",
+  "breaksTitle": "Major HCPS School Breaks",
+  "breakNotes": {
+    "Thanksgiving Break": "Wednesday through Friday; students return Monday, November 29.",
+    "Winter Break": "The published break ends December 31. New Year's Day is January 1, and students return Monday, January 3.",
+    "Spring Break": "Students return Monday, April 10. The April 17 closure is a separate Wellness Day / Easter Monday."
+  },
+  "icsHeading": "Add HCPS 2027–28 Dates to Your Calendar",
+  "icsDescription": "Download an ICS file with the published staggered opening, student holidays, half-days, breaks, return dates, and scheduled last day listed on this page.",
+  "icsButtonLabel": "Download HCPS Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. Check HCPS for later calendar updates.",
+  "icsAriaLabel": "Download the Henrico County Public Schools 2027–28 calendar file",
+  "pdfHeading": "Official HCPS 2027–28 Instructional Calendar",
+  "pdfButtonLabel": "View Official Calendar PDF",
+  "pdfDescription": "Open or print the instructional calendar published by Henrico County Public Schools. Check HCPS for later updates or school-specific opening guidance.",
+  "shareCalendarHeading": "Save or Share This Calendar",
+  "customSections": [
+    {
+      "id": "hcps-2027-2028-staggered-opening",
+      "label": "HCPS 2027–28 Staggered Opening",
+      "position": "afterVerification",
+      "schemaHasPart": true,
+      "content": "The official instructional calendar shows a two-date opening. It does not include the pre-K and kindergarten group details used in HCPS's separate 2026–27 Back to School guidance, and HCPS has not yet published equivalent school-specific guidance for 2027–28.",
+      "table": {
+        "caption": "HCPS 2027–28 published opening schedule",
+        "columns": ["Date", "Published schedule", "What families should know"],
+        "rows": [
+          ["Monday, August 23", "Pre-K, kindergarten, grades 6 and 9", "First day for these grade groups."],
+          ["Tuesday, August 24", "All grades", "All grades attend under the published calendar."]
+        ]
+      },
+      "links": [
+        {
+          "label": "View the official HCPS 2027–28 calendar PDF",
+          "to": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3486/Hcps/2faba7e6-99eb-44c3-92fe-186d9ae4192d/HCPS-School-Calendar_2027-2028_042806.pdf?disposition=inline",
+          "description": "Confirm the published districtwide opening dates."
+        }
+      ]
+    },
+    {
+      "id": "hcps-2027-2028-calendar-notes",
+      "label": "What Families Should Know About the 2027–28 Calendar",
+      "position": "afterCalendarExport",
+      "schemaHasPart": true,
+      "content": "Five calendar entries deserve a closer look.",
+      "definitions": [
+        {
+          "term": "Staggered opening",
+          "description": "The PDF lists August 23 for pre-K, kindergarten, grades 6 and 9, and August 24 for all grades. It does not publish a third opening day or school-specific pre-K and kindergarten groups."
+        },
+        {
+          "term": "Winter Break return",
+          "description": "Winter Break runs December 20–31. New Year's Day is January 1, and the published calendar shows students returning Monday, January 3."
+        },
+        {
+          "term": "March 31",
+          "description": "This is a student half-day and half clerical day on the Friday before Spring Break. It is not part of the April 3–7 break."
+        },
+        {
+          "term": "April 17",
+          "description": "This is a separate Wellness Day / Easter Monday closure, not an extension of Spring Break. Schools and central offices are closed."
+        },
+        {
+          "term": "June 2",
+          "description": "The scheduled last day is also a student half-day and the end of the fourth quarter."
+        }
+      ]
+    },
+    {
+      "id": "hcps-2027-2028-whats-different",
+      "label": "What's Different from 2026–27",
+      "position": "afterCalendarExport",
+      "schemaHasPart": true,
+      "content": "Four published dates differ in ways that may affect family planning.",
+      "definitions": [
+        {
+          "term": "Opening date",
+          "description": "The first published opening date moves from August 24 in 2026–27 to August 23 in 2027–28."
+        },
+        {
+          "term": "Spring Break",
+          "description": "Spring Break moves to April 3–7, 2028, from March 29–April 2, 2027."
+        },
+        {
+          "term": "April closure",
+          "description": "April 17 is a separate Wellness Day / Easter Monday closure."
+        },
+        {
+          "term": "Scheduled last day",
+          "description": "The published last day is June 2, compared with June 4 in 2026–27; both dates are student half-days."
+        }
+      ]
+    },
+    {
+      "id": "hcps-2027-2028-richmond-address-note",
+      "label": "Confirm Your HCPS School for 2027–28",
+      "position": "afterCalendarExport",
+      "schemaHasPart": true,
+      "content": "Henrico County Public Schools and Richmond Public Schools are separate divisions with different calendars and attendance boundaries. A mailing address that says “Richmond, VA” does not by itself identify the school division. Some attendance boundaries change for 2027–28, including the approved Quioccasin Middle School adjustment, so families affected by rezoning should confirm their assigned school with the HCPS School Locator.",
+      "links": [
+        {
+          "label": "Use the HCPS School Locator",
+          "to": "https://www.henricoschools.us/school-locator",
+          "description": "Confirm the school division and assigned schools for a street address."
+        },
+        {
+          "label": "Review the HCPS boundary adjustment update",
+          "to": "https://www.henricoschools.us/page/redistricting-2025",
+          "description": "See the approved boundary changes and effective school years."
+        }
+      ]
     }
   ],
   "calendarFaqs": [
     {
-      "q": "When does school start for Henrico County in 2027-2028?",
-      "a": "The first day of school for most students is Monday, August 23, 2027. HCPS continues its staggered start for incoming pre-K and kindergarten students — half begin August 23, the remainder join August 24, and all students are together from August 25 onward. Grade 6 and Grade 9 students also begin August 23 alongside returning grades."
+      "q": "When does HCPS begin the 2027–28 school year?",
+      "a": "HCPS begins with a staggered opening on August 23–24, 2027. The published calendar lists August 23 as the first day for pre-K, kindergarten, grades 6 and 9, and August 24 as the first day for all grades."
     },
     {
-      "q": "Is the staggered kindergarten start still used in 2027-2028?",
-      "a": "Yes. The staggered kindergarten and pre-K start introduced in 2026–2027 continues in 2027–2028. Half of incoming pre-K and kindergarten students begin August 23; the remaining students join August 24. All students are in class together starting August 25. Parents will be notified by their assigned school which date their child is scheduled to attend."
+      "q": "How does the HCPS 2027–28 staggered opening work?",
+      "a": "The official calendar shows two opening dates: August 23 for pre-K, kindergarten, grades 6 and 9, followed by August 24 for all grades. HCPS has not yet published separate 2027–28 school-specific opening guidance, so this page does not extend the 2026–27 pre-K and kindergarten group rules into the new school year."
     },
     {
-      "q": "What changed from 2026-2027 to 2027-2028 in Henrico County?",
-      "a": "The 2027–2028 school year begins one day earlier (August 23 vs. August 24) and ends two days earlier (June 2 vs. June 4). Spring Break shifts slightly later, running April 3–7 instead of March 29–April 2. Thanksgiving Break covers November 24–26. Winter Break begins December 20. The staggered kindergarten start, four-quarter structure, and two-semester calendar continue from 2026–2027."
+      "q": "When is HCPS Thanksgiving Break in 2027?",
+      "a": "HCPS Thanksgiving Break is Wednesday through Friday, November 24–26, 2027. Students return Monday, November 29."
     },
     {
-      "q": "When is Spring Break for Henrico County in 2027-2028?",
-      "a": "Spring Break in 2027–2028 runs April 3–7, 2028. Good Friday (which typically falls the Friday before) is observed as a school holiday in HCPS — check the official calendar for the exact Good Friday date. As in prior years, plan spring travel around the full Good Friday through end-of-Spring Break window for the complete no-school window."
+      "q": "When is HCPS Winter Break in 2027–28?",
+      "a": "HCPS Winter Break runs December 20–31, 2027. New Year's Day is January 1, and students return Monday, January 3, 2028."
     },
     {
-      "q": "When is Winter Break for Henrico County in 2027-2028?",
-      "a": "Winter Break in 2027–2028 begins December 20, 2027 and runs through December 31. Schools reopen in early January 2028. The exact return date is listed in the official HCPS calendar above."
+      "q": "When is HCPS Spring Break in 2028?",
+      "a": "HCPS Spring Break runs Monday, April 3, through Friday, April 7, 2028. Students return Monday, April 10."
+    },
+    {
+      "q": "Is March 31, 2028, a full school day in HCPS?",
+      "a": "No. March 31 is a student half-day and half clerical day. It falls immediately before Spring Break but is not part of the April 3–7 break."
+    },
+    {
+      "q": "Is April 17, 2028, part of HCPS Spring Break?",
+      "a": "No. April 17 is a separate Wellness Day / Easter Monday closure. Schools and central offices are closed that day."
+    },
+    {
+      "q": "When is the last day of school for HCPS in 2027–28?",
+      "a": "The scheduled last day is Friday, June 2, 2028. It is also a student half-day and the end of the fourth quarter."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When does HCPS begin the 2027–28 school year?",
+    "How does the HCPS 2027–28 staggered opening work?",
+    "When is HCPS Thanksgiving Break in 2027?",
+    "When is HCPS Winter Break in 2027–28?",
+    "When is HCPS Spring Break in 2028?",
+    "Is March 31, 2028, a full school day in HCPS?",
+    "Is April 17, 2028, part of HCPS Spring Break?",
+    "When is the last day of school for HCPS in 2027–28?"
+  ],
+  "faqDisplayLimit": 8,
+  "sourcePriority": [
+    "The official HCPS 2027–28 instructional calendar PDF for published districtwide opening dates, holidays, student half-days, breaks, quarter endings, and the scheduled last day",
+    "The HCPS calendar page and document directory for the district's published calendar file",
+    "Future HCPS 2027–28 Back to School guidance when the district publishes school-specific opening instructions"
+  ],
+  "sourceReviewSummary": "Last checked August 10, 2026. We verified the dates on this page against the official HCPS 2027–28 instructional calendar and did not carry forward school-specific opening rules from 2026–27.",
+  "sourceReviewDetailsTitle": "How we verified the HCPS 2027–28 calendar",
+  "sourceReviewDetails": [
+    "The official PDF lists August 23 as the first day for pre-K, kindergarten, grades 6 and 9, and August 24 as the first day for all grades.",
+    "HCPS's current Back to School page is labeled 2026–27, so its pre-K and kindergarten group instructions are not used as 2027–28 facts.",
+    "Winter Break is published as December 20–31. The January calendar shows January 3 as the first regular student day after the break and New Year's Day.",
+    "The PDF identifies March 31 as a student half-day, April 3–7 as Spring Break, April 17 as a separate closure, and June 2 as the student half-day and last day.",
+    "Return dates after Thanksgiving, Winter Break, and Spring Break are based on the published student calendar."
+  ],
+  "sourceMaintainerText": "MySchoolDates using official Henrico County Public Schools sources.",
+  "sourceNextReviewText": "Re-check when HCPS publishes 2027–28 Back to School guidance or revises the instructional calendar.",
+  "sources": [
+    {
+      "label": "Official HCPS 2027–28 Instructional Calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3486/Hcps/2faba7e6-99eb-44c3-92fe-186d9ae4192d/HCPS-School-Calendar_2027-2028_042806.pdf?disposition=inline"
+    },
+    {
+      "label": "HCPS school calendar page",
+      "url": "https://www.henricoschools.us/page/school-calendar"
     }
   ],
   "events": [
     {
-      "date": "2027-07-04",
-      "name": "Independence Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-07-05",
-      "name": "Independence Day Observed",
-      "type": "holiday"
-    },
-    {
       "date": "2027-08-23",
-      "name": "First Day of School (Grades Pre-K, Kindergarten, 6 and 9) - Staggered Start",
-      "type": "school_start"
+      "name": "First Day of School for Pre-K, Kindergarten, Grades 6 and 9",
+      "type": "school_start",
+      "badgeLabel": "Staggered Start",
+      "description": "First opening date published on the HCPS instructional calendar."
     },
     {
       "date": "2027-08-24",
-      "name": "First Day of School (All Grades)",
-      "type": "school_start"
+      "name": "First Day of School for All Grades",
+      "type": "school_start",
+      "badgeLabel": "All Grades"
     },
     {
       "date": "2027-09-03",
       "name": "Student Holiday",
-      "type": "student_holiday"
+      "type": "student_holiday",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-09-06",
-      "name": "Labor Day",
-      "type": "holiday"
+      "name": "Labor Day Holiday",
+      "type": "holiday",
+      "description": "No school for students."
     },
     {
       "date": "2027-09-27",
-      "name": "Student Holiday - Teacher Professional Learning (In-person, Division-based, May Be Off-site)",
-      "type": "student_holiday"
-    },
-    {
-      "date": "2027-10-10",
-      "name": "Yom Kippur Begins",
-      "type": "observance"
+      "name": "Student Holiday / Teacher Professional Learning",
+      "type": "student_holiday",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-10-11",
-      "name": "Student Holiday - Yom Kippur",
-      "type": "student_holiday"
+      "name": "Student Holiday / Yom Kippur",
+      "type": "student_holiday",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-10-27",
@@ -106,23 +406,20 @@
     },
     {
       "date": "2027-10-29",
-      "name": "Student and Teacher Holiday - Diwali",
+      "name": "Student and Teacher Holiday / Diwali",
       "type": "holiday"
     },
     {
       "date": "2027-11-01",
-      "name": "Student Holiday - Teacher Professional Learning",
-      "type": "student_holiday"
+      "name": "Student Holiday / Teacher Professional Learning",
+      "type": "student_holiday",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-11-02",
-      "name": "Student Holiday - Clerical Day (Election Day)",
-      "type": "student_holiday"
-    },
-    {
-      "date": "2027-11-11",
-      "name": "Veterans Day",
-      "type": "holiday"
+      "name": "Student Holiday / Clerical Day / Election Day",
+      "type": "student_holiday",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-11-24",
@@ -135,19 +432,14 @@
       "type": "break_end"
     },
     {
+      "date": "2027-11-29",
+      "name": "Schools Reopen Following Thanksgiving Break",
+      "type": "school_resume"
+    },
+    {
       "date": "2027-12-20",
       "name": "Winter Break",
       "type": "break_start"
-    },
-    {
-      "date": "2027-12-24",
-      "name": "Hanukkah Begins",
-      "type": "observance"
-    },
-    {
-      "date": "2027-12-25",
-      "name": "Christmas Day",
-      "type": "holiday"
     },
     {
       "date": "2027-12-31",
@@ -155,14 +447,15 @@
       "type": "break_end"
     },
     {
-      "date": "2028-01-01",
-      "name": "New Year's Day",
-      "type": "holiday"
+      "date": "2028-01-03",
+      "name": "Schools Reopen Following Winter Break",
+      "type": "school_resume"
     },
     {
       "date": "2028-01-17",
       "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2028-01-19",
@@ -171,28 +464,21 @@
     },
     {
       "date": "2028-01-24",
-      "name": "Student Holiday - In-person Clerical Day",
-      "type": "student_holiday"
-    },
-    {
-      "date": "2028-01-27",
-      "name": "Ramadan Begins",
-      "type": "observance"
+      "name": "Student Holiday / In-Person Clerical Day",
+      "type": "student_holiday",
+      "preserveOfficialName": true
     },
     {
       "date": "2028-02-21",
-      "name": "Wellness Day / Presidents Day (Schools and Central Offices Closed)",
-      "type": "holiday"
-    },
-    {
-      "date": "2028-02-26",
-      "name": "Eid al Fitr Begins",
-      "type": "observance"
+      "name": "Wellness Day / Presidents Day",
+      "type": "holiday",
+      "description": "Schools and central offices are closed."
     },
     {
       "date": "2028-02-28",
-      "name": "Student Holiday - Eid al Fitr / Professional Learning Day",
-      "type": "student_holiday"
+      "name": "Student Holiday / Eid al-Fitr / Professional Learning Day",
+      "type": "student_holiday",
+      "preserveOfficialName": true
     },
     {
       "date": "2028-03-24",
@@ -201,7 +487,7 @@
     },
     {
       "date": "2028-03-31",
-      "name": "Student Half Day / Half Clerical Day",
+      "name": "Student Half-Day / Half Clerical Day",
       "type": "early_release"
     },
     {
@@ -215,32 +501,28 @@
       "type": "break_end"
     },
     {
-      "date": "2028-04-16",
-      "name": "Easter",
-      "type": "observance"
+      "date": "2028-04-10",
+      "name": "Schools Reopen Following Spring Break",
+      "type": "school_resume"
     },
     {
       "date": "2028-04-17",
-      "name": "Wellness Day / Easter Monday (Schools and Central Offices Closed)",
-      "type": "holiday"
+      "name": "Wellness Day / Easter Monday",
+      "type": "holiday",
+      "description": "Separate from Spring Break; schools and central offices are closed."
     },
     {
       "date": "2028-05-29",
       "name": "Memorial Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Schools are closed."
     },
     {
       "date": "2028-06-02",
-      "name": "End of Quarter / Student Half Day / Last Day of School",
+      "name": "End of Quarter / Student Half-Day / Scheduled Last Day of School",
       "type": "school_end"
-    },
-    {
-      "date": "2028-06-19",
-      "name": "Juneteenth",
-      "type": "holiday"
     }
   ],
-  "calendarNotes": "Henrico County Public Schools 2027-2028 instructional calendar introduces a staggered start on August 23 for Pre-K, Kindergarten, 6th, and 9th grade students, with all remaining grades joining on August 24. The calendar adds Veterans Day (Nov 11) as a noted holiday, retains Diwali (Oct 29) and Yom Kippur (Oct 11) as student/teacher holidays, and adds Eid al-Fitr (Feb 28) as a student holiday/Professional Learning Day. Spring Break runs April 3-7, 2028, followed by an Easter Monday closure on April 17. The school year ends June 2, 2028, a student half day marking the close of the fourth quarter. Thanksgiving Break is a short three-day closure (Nov 24-26) and Winter Break spans Dec 20 - Jan 1. HCPS continues its four nine-week evaluation periods (quarters) and two-semester structure, with quarter ends on Oct 27, Jan 19, Mar 24, and June 2.",
-  "datePublished": "2026-07-12",
-  "dateModified": "2026-07-12"
+  "yearSwitcherPosition": "afterSources",
+  "yearSwitcherLabel": "Other HCPS school years:"
 }

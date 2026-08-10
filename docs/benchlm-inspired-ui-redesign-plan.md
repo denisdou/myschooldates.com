@@ -1,625 +1,468 @@
-# MySchoolDates UI 整改方案
+# MySchoolDates 纯 UI 视觉整改方案
 
-> 基于 `build-benchlm-ui` skill 制定。目标不是复制 BenchLM，而是把 MySchoolDates 从“卡片化 SEO 内容站”升级为一个可信、紧凑、证据优先的学校日历数据产品。
+> 本方案基于 `build-benchlm-ui` skill，但只吸收其视觉语言，不调整 MySchoolDates 的系统结构、产品结构或内容结构。
 
-保留 MySchoolDates 的品牌、家长用户定位和日历语义，只迁移 BenchLM 最有价值的设计原则：答案优先、来源可见、数据密集但易扫读、细边框代替大阴影、统一状态体系。
+## 一、整改目标
 
-所有 UI 改造必须遵守本文的 SEO Contract。搜索、筛选和响应式组件是用户体验增强，不能取代 SSR 正文、可抓取目录、标准链接、稳定 URL 和现有结构化数据。
+本次整改只解决一个问题：
 
-方案制定时 `http://localhost:3000` 未运行，因此当前评估基于现有 Nuxt 页面、组件和样式源码。
+> 让现有页面看起来更舒服、更统一、更精致，更像可信的学校日历数据产品。
 
-## 一、当前主要问题
+保留现有：
 
-| 问题 | 当前表现 | 整改方向 |
+- URL 和路由
+- 页面模块及其顺序
+- 学区配置和模块显隐逻辑
+- 搜索、筛选和导航功能
+- 数据结构和内容文件
+- SSR、Schema、canonical 和 sitemap
+- 页面正文、标题和 SEO 内容
+- ICS、PDF、Print 和分享功能
+
+允许调整：
+
+- 颜色
+- 字体表现
+- 字号和字重
+- 行高和字距
+- 页面宽度
+- 间距和留白
+- 边框、圆角和阴影
+- 按钮、标签、输入框和卡片外观
+- 表格和日期列表外观
+- Header、Footer 和移动菜单的视觉表现
+- Hover、Focus、Active 和折叠动画
+- 响应式样式
+
+## 二、明确不做的事情
+
+本次不做：
+
+- 不重新规划信息架构
+- 不改变首页模块顺序
+- 不改变学年页模块顺序
+- 不新增全站搜索系统
+- 不新增筛选或分页系统
+- 不调整目录 URL
+- 不拆分或合并内容模块
+- 不重写现有文案
+- 不删除 SEO 正文
+- 不新增 Derived insights
+- 不修改 district JSON schema
+- 不重构日历计算逻辑
+- 不新建暗色模式
+- 不模仿 BenchLM 的 Logo、品牌、字体文件、文案或数据
+
+如为统一视觉而抽取 CSS class 或纯表现组件，必须保证现有 DOM 语义、内容和功能不变。
+
+## 三、当前视觉问题
+
+| 问题 | 当前表现 | 视觉整改方向 |
 | --- | --- | --- |
-| 设计系统不完整 | 只有少量 CSS variables，大量颜色直接写在 Vue 中 | 建立统一语义 tokens |
-| 卡片过度 | 项目内约 414 处 `rounded-lg` | 减少独立卡片，使用连续面板、表格和分隔线 |
-| 颜色混杂 | Teal、Tailwind blue/gray/green/amber、棕色按钮同时存在 | 一个品牌主色 + 少量状态色 |
-| 页面像内容站 | 首页有大段介绍、Why cards、重复信息 | 改成搜索和数据入口优先 |
-| 日期缺少数据感 | 日期、数字和文本使用相同字体体系 | 日期和数字使用等宽字体或 tabular numerals |
-| 验证信息视觉过重 | 绿色验证卡、Sources、Hero metadata 多处重复 | 合并为紧凑证据条和底部核验面板 |
-| CTA 层级不稳定 | ICS、PDF、订阅、更新按钮颜色不同且都抢眼 | 统一主次按钮体系 |
-| 移动导航过长 | 展开后直接展示大量州链接 | 改为搜索、常用入口和分组浏览 |
-| 模块差异靠大量配置维持 | 页面结构灵活，但视觉语言不统一 | 保留模块显隐能力，统一组件表现 |
+| 颜色不统一 | Teal、Tailwind blue/gray、green、amber 和棕色混用 | 收敛到一个品牌色和少量状态色 |
+| 硬编码较多 | Vue 中约有 452 处硬编码颜色 | 使用统一视觉 tokens |
+| 圆角过多 | 约有 414 处 `rounded-lg` | 收敛为 4px、6px、8px 三档 |
+| 卡片感过重 | 大量模块都是白底圆角卡片 | 用暖色层级和细边框替代漂浮卡片 |
+| 阴影不一致 | 输入框、卡片、按钮阴影规则不同 | 默认无阴影，仅 dropdown 使用浅阴影 |
+| 日期不突出 | 日期和说明文字视觉层级接近 | 日期使用 tabular numerals 和更清晰的对齐 |
+| 按钮层级混乱 | Teal、绿色、棕色实心按钮同时存在 | 主按钮统一 teal，其他使用描边或文字按钮 |
+| 状态提示太亮 | Green/blue/amber 大色块较多 | 使用低饱和背景、细边框和短标签 |
+| Header/Footer 偏普通 | 与正文缺少统一的数据产品气质 | 统一暖白表面、细边框和紧凑排版 |
+| 移动端略拥挤 | 多个 badge、按钮和卡片堆叠 | 调整间距、换行和触摸尺寸，不删除内容 |
 
-## 二、目标视觉系统
+## 四、目标视觉语言
+
+整体气质：
+
+- 温暖、安静、可信
+- 数据密集但不拥挤
+- 清晰而非花哨
+- 更像编辑严谨的日历工具，而不是营销型 SaaS
+- 保留 MySchoolDates 自己的品牌识别
 
 ### 1. 色彩
 
-继续使用 MySchoolDates 现有 teal，避免做成 BenchLM 仿站。
+建议 tokens：
 
-- 页面背景：暖灰白 `#f5f4ef`
-- 主面板：暖白 `#fffef9`
-- 次级面板：`#efeee8`
-- 主文字：深墨色 `#151915`
-- 正文文字：`#4a4d48`
-- 弱化文字：`#74766f`
-- 品牌强调：保留 `#0f5d6b`
-- 标准边框：`#d9d7ce`
-- 强边框：`#b9bcb3`
+| 角色 | 建议颜色 | 用途 |
+| --- | --- | --- |
+| Canvas | `#f5f4ef` | 页面背景 |
+| Panel | `#fffef9` | 卡片、Header、输入框 |
+| Panel 2 | `#efeee8` | 模块标题栏、轻强调区域 |
+| Panel 3 | `#e9e8e1` | 选中、嵌套和更强分组 |
+| Ink | `#151915` | 标题和主要正文 |
+| Muted ink | `#4a4d48` | 普通正文 |
+| Dim ink | `#74766f` | metadata 和辅助说明 |
+| Hairline | `#d9d7ce` | 普通边框 |
+| Strong hairline | `#b9bcb3` | 输入框和强调边框 |
+| Brand accent | `#0f5d6b` | 主按钮、链接、Focus、当前状态 |
 
-状态色只用于语义：
+状态色：
 
-- Verified：绿色
-- Conditional / Possible make-up：琥珀色
-- Alert / incorrect：红色
+- Verified：低饱和绿色
+- Conditional / Make-up：低饱和琥珀色
+- Error：低饱和红色
 - Information：蓝灰色
-- Break、No school、Early release 等日历类型使用低饱和色，不铺满整张卡片
+- Break、No school、Early release 保留区分，但降低色彩面积
+
+使用规则：
+
+- 页面中实心强调色面积控制在 10% 以内
+- 不使用大面积渐变
+- 不用颜色替代文字标签
+- 不给每个模块分配不同品牌色
 
 ### 2. 字体
 
-优先采用两层字体职责：
+首轮保持 Inter，不增加三套 Web Font。
 
-- 标题、正文与控件：保留 Inter，通过字重、字距和字号建立层级
-- 日期、年份、数字、统计：Inter + `font-variant-numeric: tabular-nums`
-- Geist Mono 只作为可选增强，并仅加载日期、统计和少量 metadata 所需的最小字体子集
+- H1：32–44px，700，紧凑行高
+- H2：22–28px，700
+- H3：16–18px，600–700
+- 正文：14–15px，行高 1.6
+- UI 标签：12–13px，500–600
+- Metadata：11–12px
+- 日期和数字：Inter + `font-variant-numeric: tabular-nums`
 
-日期应形成明显的数据视觉，例如：
+通过字重、字距、大小和对齐建立层级，而不是依赖多种字体。
 
-- `SEP 08`
-- `2026–27`
-- `12 weekdays`
-- `Reviewed AUG 09, 2026`
+### 3. 圆角、边框和阴影
 
-不需要让正文全部等宽化。
+- Badge：4px
+- 普通按钮和小组件：6px
+- 主面板和搜索框：8px
+- 不再默认使用 12px 以上圆角
+- 所有主要分组使用 1px hairline
+- 卡片默认无阴影
+- Dropdown、popover 可以使用非常浅的 `shadow-sm`
+- 按钮按下状态使用 1px 位移，不使用缩放动画
 
-首轮整改不引入三套完整 Web Font。若现有字体能够通过 tabular numerals 和排版层级实现数据感，就不新增字体请求，避免增加 LCP、FCP 和布局稳定性风险。
+### 4. 页面宽度与留白
 
-### 3. 几何和间距
+- 保留现有内容结构，将主内容最大宽度统一在约 1024–1120px
+- 正文段落控制在 60–68 字符宽度
+- 桌面模块间距：32–48px
+- 模块内部 padding：16–24px
+- 移动端模块间距：24–32px
+- 紧凑组件间距：8–12px
 
-- 内容最大宽度由当前 64rem 调整到约 1120px
-- 默认圆角：6px
-- 小标签：3–4px
-- 搜索框和核心面板：8px
-- 删除大部分阴影
-- 主要依靠暖白层级和 1px hairline border 分组
-- 桌面 section 间距：48–64px
-- 移动端：32–40px
-- 所有移动端控件至少 44px
-
-## 三、全站外壳整改
+## 五、全站公共区域的视觉整改
 
 ### Header
 
-改成约 66px 的紧凑 sticky header：
+保留现有导航内容和交互，只调整视觉：
 
-- 左侧：Logo + MySchoolDates
-- 中部：Home、States、Districts、Calendar Data
-- 右侧：全站搜索入口
-- 当前页面导航使用 2px teal 下划线
-- 不再显示较长的 `US School Calendar Platform`
-- Header 使用暖白半透明背景和细底边
-- Dropdown 使用低圆角、细边框、浅阴影
+- 暖白半透明背景
+- 1px 底边
+- 更紧凑的 Logo 和文字间距
+- 当前链接使用 teal 和细下划线
+- 普通链接使用深灰，不使用 Tailwind 默认蓝色
+- Dropdown 圆角降到 6–8px
+- Dropdown 使用细边框和浅阴影
+- Header 高度和上下 padding 保持一致
+- 移动菜单按钮至少 44px
 
-移动端：
+不调整：
 
-- Logo
-- 搜索按钮
-- Menu 按钮
-- 菜单只展示一级入口、热门州和 “Browse all states”
-- 不再一次展开所有州
+- 导航项目
+- Dropdown 内容
+- 州链接结构
+- 菜单交互逻辑
 
 ### Footer
 
-从长链接列表改成“证据型 Footer”：
+保留现有链接和栏目，只调整：
 
-1. MySchoolDates 简短定位
-2. 当前覆盖的州、学区、学年数量
-3. 最近数据更新时间
-4. Browse / Calendar Data / Methodology / Company 四组链接
-5. Editorial policy、verification methodology、corrections、data license
-6. 法律链接
+- 暖白/浅暖灰背景
+- 标题、链接和辅助文字层级
+- 分组间距
+- 顶部细边框
+- Hover 统一为 teal
+- 移动端列间距和换行
 
-热门学区和热门州不要无限增长。
+不删除 Footer 链接，不改变站点链接图。
 
-Footer 中的时间必须区分：
+## 六、首页视觉整改
 
-- `Dataset refreshed`
-- `Page reviewed`
-- `Official source updated`
-
-不能用构建时间或部署时间伪装内容更新，也不能把不同时间语义合并成泛化的 `Last updated`。
-
-## 四、首页整改
-
-首页应从“介绍网站”转向“快速找到学区日历”。
-
-### 推荐顺序
-
-1. Header
-2. Decision-first Hero
-3. 全站学区搜索
-4. 数据覆盖 metadata strip
-5. 当前学年入口
-6. 热门学区
-7. 按州浏览
-8. 数据方法与可信度
-9. Calendar Data / Trends
-10. Footer
+保持首页当前模块和顺序，只做视觉升级。
 
 ### Hero
 
-H1 建议保持直接：
+- 暖色背景替代纯白块
+- H1 更紧凑、更有品牌感
+- 副标题降低宽度和灰度
+- 绿色 check 改为更克制的细图标或短标签
+- 不增加新文案
 
-> Find Your School District Calendar
+### 数据统计条
 
-副标题只说明：
+- 保留现有统计内容
+- 将纯黑背景调整为深墨绿或暖色 metadata strip
+- 数字使用 tabular numerals
+- 使用细分隔线代替多个卡片
 
-- First and last days
-- Breaks and no-school days
-- Official PDFs
-- Calendar downloads
+### 搜索框
 
-删除首屏五条绿色 check 列表，以及过于营销化的 `Free forever`。
+- 保留现有搜索逻辑
+- 高度统一到 48–52px
+- 圆角 8px
+- 边框使用 strong hairline
+- Focus 使用 teal ring
+- Dropdown 统一 panel、border 和 hover
 
-### Search
+### Current School Years、Popular Districts、Browse by State
 
-搜索是首页唯一主任务：
+- 保留现有内容、顺序和链接
+- 减少蓝色背景卡片
+- 使用连续列表或轻面板视觉
+- 统一行高、边框和箭头样式
+- Hover 只改变背景、文字或边框，不放大卡片
 
-- 宽度约 620px
-- 48–52px 高
-- 支持 district、city、state 搜索
-- 右侧显示 `⌘ K`
-- 搜索结果显示 district name、city/state、可用学年
-- 支持键盘上下选择和 Enter 打开
-- 无结果时提供 “Browse all districts” 或州入口
+### About 与 Why MySchoolDates
 
-搜索只承担用户导航，不承担搜索引擎发现页面的职责。首页必须保留普通 `<a href>` 形式的 `Browse all states` 和 `Browse all districts`，并确保可沿稳定链接访问：
+- 保留现有内容
+- 降低卡片感
+- 统一标题和正文间距
+- 四个 Why 模块使用同一表面层级和边框
+- 不做内容删减或模块移动
 
-```text
-/
-├── /states
-│   ├── /oregon
-│   │   ├── Beaverton
-│   │   └── Portland
-│   └── /california
-└── /districts
-```
+## 七、学区主页面视觉整改
 
-学区搜索建议可以使用客户端交互，但不能成为访问学区页的唯一入口。
+保持现有页面内容和学年入口，只调整：
 
-### 覆盖统计
+- 学区 Logo、名称和官网链接对齐
+- 学年卡片统一高度、边框和文字层级
+- 当前学年使用 teal 细边或轻背景区分
+- 历史学年降低视觉权重
+- 官方来源、地址和辅助信息使用统一 metadata 样式
+- Related districts 使用紧凑列表视觉
 
-当前深色横条改成暖色 metadata strip：
+不调整学年结构、链接地址或页面内容。
 
-| Districts | States | Current years | Last data refresh |
-| --- | --- | --- | --- |
+## 八、学年日历页视觉整改
 
-数字使用等宽字体，不使用纯黑大色块。
-
-### 删除或降权
-
-- `About US School Calendars` 移到底部或拆到独立说明页
-- `Why MySchoolDates` 四张卡压缩成一条可信度说明
-- 州介绍不要在首页全部展开成长段正文
-- 首页只显示热门州，完整目录进入 States 页面
-
-## 五、州页面与 Districts 目录
-
-将其设计成真正的 searchable directory。
-
-### 推荐结构
-
-1. 州名称与一句说明
-2. 搜索学区
-3. 学区数量、学年覆盖、最近更新时间
-4. 学区目录
-5. 州级日历规律或统计
-6. 数据来源与方法
-
-### 学区目录表现
-
-减少独立圆角卡片，改为连续的 ruled list：
-
-| District | Location | Available years | Data status |
-| --- | --- | --- | --- |
-
-状态显示：
-
-- Reviewed
-- PDF available
-- Multiple calendars
-- Translation available
-- Update needed
-
-移动端每行变为紧凑记录卡，但必须保留 district、地点、当前学年和验证状态。
-
-### 搜索、筛选与分页的 SEO 规则
-
-以下 URL 可以作为稳定、可索引的信息架构入口：
-
-```text
-/states
-/oregon
-/districts
-/beaverton-school-district-calendar
-/beaverton-school-district-calendar/2026-2027
-```
-
-以下状态默认只属于 UI，不自动生成 SEO landing page：
-
-```text
-?q=beaverton
-?sort=name
-?status=reviewed
-?pdf=true
-?year=2026
-```
-
-实施要求：
-
-- 搜索、排序和多条件筛选不得制造无限可索引 URL
-- 筛选状态优先保存在组件状态中；需要分享时再定义严格的 URL 白名单
-- 参数 URL 必须有明确的 canonical、robots 和 crawl 策略
-- 不为每种参数组合生成 sitemap URL
-- `Load more` 或无限滚动不能成为访问后续记录的唯一方式
-- 大型目录必须提供 SSR 且可抓取的分页 URL，例如 `/districts?page=2`
-- 州页面规模允许时，可以直接 SSR 完整学区列表
-
-## 六、学区主页面整改
-
-主页面的第一任务是帮助用户选择学年，而不是展示大量学区介绍。
-
-### 推荐顺序
-
-1. Breadcrumb
-2. 学区名称、Logo、官方网站
-3. Current school year 直接入口
-4. Available school years
-5. 当前日历简要状态
-6. Official district resources
-7. Related districts
-8. Sources
-
-学区统计、城市介绍、Living Here 等内容默认隐藏。只有确实对日历选择有帮助时才显示。
-
-## 七、学年日历页整改
-
-这是全站最重要的页面类型。
-
-### 推荐基础顺序
-
-1. Breadcrumb
-2. Hero direct answer
-3. Metadata strip
-4. Sticky “On this page”
-5. 学区特有决策模块
-6. Key Dates
-7. Breaks
-8. Download / Official PDFs
-9. Full Calendar Dates
-10. Year-over-year changes
-11. Derived calendar insights
-12. FAQ
-13. Sources and Review Notes
-14. Related calendars
-
-学区配置仍然可以决定模块显隐和排序。
-
-Hero 后最多允许 1–2 个短小、decision-critical 的学区特色模块进入 Key Dates 之前。其他解释模块必须放在核心日期之后，避免用户需要经过多个特殊说明才能看到日期。
+保留每个学区现有模块、顺序、显隐配置和文案。
 
 ### Hero
 
-Hero 只保留：
+- H1 使用更紧凑的行高和字距
+- Source line、Reviewed、Updated 使用统一 metadata 样式
+- Hero quick dates 继续保留，但改为细边框连续面板
+- Verified badge 改为短小状态标签
+- CTA 统一主次按钮视觉
 
-- H1
-- 直接答案
-- Official source
-- Reviewed date
-- Reviewed by
-- Current / conditional 状态
+### Sticky “On this page”
 
-删除大面积绿色验证卡和重复的 `How verified` 内容。
-
-改为横向 metadata strip：
-
-| Reviewed | Official source | Calendar version | Status |
-| --- | --- | --- | --- |
+- 保留现有导航项目和顺序
+- 暖色半透明背景
+- 当前/hover 状态使用 teal
+- 上下边框统一
+- 移动端优化横向滚动和边缘提示
 
 ### Key Dates
 
-当前多张圆角卡改成连续的 decision panel。
-
-桌面：
-
-| Date | Event | What families should know |
-| --- | --- | --- |
-
-移动端：
-
-- 日期作为短等宽标签
-- 事件标题
-- 一句说明
-- 状态 badge
-
-只有真正需要强调的 5–8 个日期进入 Key Dates。
+- 保留现有数据和组件逻辑
+- 减少每张日期卡片的独立漂浮感
+- 日期使用 tabular numerals
+- Event badge 使用低饱和色
+- 标题、日期和说明建立清晰层级
+- 移动端只调整布局，不删除字段
 
 ### Breaks
 
-改成紧凑列表：
-
-| Break | Dates | Weekdays off | Students return |
-| --- | --- | --- | --- |
-
-避免每个 break 都使用单独彩色卡片。
+- 保留现有 break 数据和 duration badge
+- 使用分隔线组织条目
+- Duration badge 降低饱和度和圆角
+- 当前 break 状态可使用轻 teal 左边线
 
 ### Full Calendar
 
-保留月份导航，但升级成数据产品：
+- 保留现有月份导航、月份分组和事件顺序
+- 月份标题使用 Panel 2 背景
+- 日期列宽和数字对齐统一
+- Badge 颜色和圆角统一
+- 说明文字降低灰度但保持可读性
+- 行 hover 使用轻表面变化
+- Print 样式保持不变
 
-- Month header sticky 或清晰分段
-- 日期列固定宽度
-- 日期使用 tabular/mono
-- Event type badge 统一
-- Attendance status 与 event type 分开
-- Conditional make-up 使用明确文字
-- 当前日期可以使用淡 teal 左边线
-- 默认不为每条事件生成解释性文案
+### Download / PDF / Share
 
-桌面使用语义化列表或表格；移动端使用等价的紧凑记录结构。桌面和移动端必须保持同一信息集合，不能在移动端删除 conditional status、grade caveat、return date 或其他影响决策的字段。
+- 保留所有按钮和功能
+- ICS 使用唯一主按钮样式
+- PDF、官方更新、Print 使用 secondary 按钮
+- 社交分享使用 text/icon button
+- 取消绿色、teal、棕色按钮同时抢视觉
+- Compatible calendars 标签统一为轻边框 badge
 
-优先使用同一份语义化 DOM，通过 CSS 改变布局。只有确有必要时才维护独立的移动展示组件；若采用两套组件，必须加入字段等价测试。
+### FAQ、Sources 和 Verification
 
-### Download / Official PDF
+- 保留所有内容和折叠逻辑
+- `<details>` 标题统一高度、边框和 chevron
+- Sources 使用更安静的 panel
+- URL、日期和版本信息使用 tabular/metadata 样式
+- Warning、discrepancy 使用低饱和提示框
 
-整合为一个 Utility Panel：
+### Custom Sections
 
-1. 官方实时订阅（如存在）
-2. Official PDF
-3. MySchoolDates ICS
-4. Print
-5. Copy link
+- 不改变 custom section 的位置和内容
+- 统一 H2、H3、表格、列表、badge 和折叠组件样式
+- 避免每个 custom section 产生新的独立视觉语言
 
-只保留一个主按钮。推荐优先级：
+## 九、数据页面的视觉整改
 
-- 官方 subscription 存在：官方订阅为主
-- 否则：ICS 为主
-- Official PDF 为次级
-- Print、Copy link 为文字操作
+适用于 Trends、Dataset、Report 和 Comparison。
 
-不要继续让 teal、green、brown 三种实心按钮同时竞争。
+只调整：
 
-### Verification 与 Sources
+- 标题层级
+- 数据表边框和行高
+- 数字对齐
+- Chart 容器表面
+- Download 按钮
+- Source 和 citation metadata
+- 移动端横向滚动提示
 
-页面上层显示简短 evidence metadata；详细过程集中到底部：
+不调整数据内容、筛选逻辑、URL 或页面结构。
 
-- Official calendar page
-- PDF
-- Supplemental calendars
-- Last reviewed
-- Reviewer
-- Known discrepancy
-- Conditional interpretation
-- Revision trigger
-- Correction link
+## 十、组件视觉规范
 
-核验信息应像编辑方法，不像绿色成功提示或 QA 日志。
+建议统一以下视觉组件，但不改变业务逻辑：
 
-### Derived calendar insights
+- Button
+- IconButton
+- StatusBadge
+- CalendarEventBadge
+- Panel
+- PanelHeader
+- MetadataStrip
+- Alert / Notice
+- TextInput / SearchInput
+- Dropdown
+- SectionNavigation
+- Table
+- Details / Accordion
+- EmptyState
 
-计算型洞察可以保留，但必须满足：
+纯表现组件可以复用现有 slot 和 props，不引入新的内容结构。
 
-- 能从明确日期或官方规则确定性推导
-- 能说明计算口径
-- 不把条件日期写成确定事实
-- 不生成旅游、家庭活动或生活方式类泛化建议
-- 删除该洞察后，用户必须会少知道一个真实、可验证的日历事实
-
-典型合格内容包括 break length、student-free weekdays、grading-period length 和 conditional make-up sequence。泛化的 “families have plenty of time” 等内容不进入数据层。
-
-## 八、组件系统整改
-
-建议建立以下统一组件，不再在每个页面重复硬编码颜色和圆角：
-
-- `SiteHeader`
-- `GlobalDistrictSearch`
-- `PageHero`
-- `EvidenceMetadataStrip`
-- `StatusBadge`
-- `CalendarEventBadge`
-- `DecisionPanel`
-- `KeyDatesTable`
-- `CalendarMonthSection`
-- `DownloadUtilityPanel`
-- `OfficialSourceList`
-- `SectionNavigation`
-- `DirectoryList`
-- `EmptyState`
-- `StaleDataNotice`
-- `EvidenceFooter`
-
-状态 badge 必须把日期事实与可信度分开：
-
-- `Reviewed`
-- `Estimated`
-- `Conditional`
-- `Official PDF`
-- `Archived copy`
-- `Updated`
-- `Needs review`
-
-## 九、响应式与无障碍
+## 十一、响应式和交互细节
 
 ### 移动端
 
-- 320px 下不出现横向页面溢出
-- Sticky “On this page” 可横向滚动，但必须显示滚动提示
-- 搜索始终可达
-- Key Dates 和 Calendar Dates 不隐藏关键内容
-- 所有按钮至少 44px
-- 长学区名允许合理换行
-- Dropdown、PDF、ICS 操作不依赖 hover
-- 移动端与桌面端的主要正文、来源、日期说明和结构化数据保持等价
-- 折叠内容在 SSR HTML/DOM 中存在，不在用户首次点击时才从 API 加载
+- 保留全部核心信息
+- 只改变布局、间距和换行
+- 按钮至少 44px
+- 长标题允许换行
+- Badge 可以换行但不覆盖正文
+- 表格保持现有语义和数据
+- 不建立与桌面端不同的数据版本
 
-### 键盘
+### Focus 和 Hover
 
-- 增加 Skip to content
-- 全站搜索支持 `⌘ K / Ctrl K`
-- Escape 关闭菜单和搜索
-- Dropdown 保留正确焦点
-- Calendar filter 更新结果时使用 live region
-- Sortable table 使用 `aria-sort`
+- 所有链接和按钮使用统一 `focus-visible`
+- Hover 只调整背景、边框和文字颜色
+- Active 使用 1px 下压
+- 不使用卡片放大
+- 不使用持续动画或渐变动画
 
-### 动效
+### Reduced motion
 
-只使用约 150ms 的功能性过渡：
+- 尊重 `prefers-reduced-motion`
+- 移除不必要的 smooth scroll 和 transition
 
-- Hover border
-- Active navigation
-- Disclosure
-- Copy/download success
-- Filter result update
+## 十二、安全护栏
 
-删除 `active:scale`，改成最多 1px 下压。支持 `prefers-reduced-motion`。
+虽然本次不进行 SEO 或系统改造，仍需确认视觉迁移没有意外改变：
 
-## 十、SEO Contract 与实施阶段
-
-### Phase 0：SEO Regression Guardrails P0
-
-在任何视觉组件迁移前，为当前重点路由保存基准快照，并建立自动或半自动回归检查。
-
-| 检查项 | 要求 |
-| --- | --- |
-| URL | 不因 UI 重构改变 |
-| canonical | 保持正确且唯一 |
-| robots | 不出现意外 `noindex` |
-| title | 保留或经单独 SEO 审批后修改 |
-| meta description | 保留 |
-| H1 | 保留且 SSR 可见 |
-| 主要正文 | 存在于 SSR HTML |
-| structured data | 类型、实体关系和关键字段不因组件迁移消失 |
-| breadcrumb | 可见并保留 schema |
-| district/year 内链 | 使用可抓取的 `<a href>` / NuxtLink 输出 |
-| sitemap URL | 不丢失、不生成筛选参数组合 |
-| official source links | SSR HTML 中存在 |
-| reviewed date/source | 页面继续可见 |
-| mobile content | 与 desktop 核心信息等价 |
-
-为首页、州页、Districts 目录、学区主页面和学年页保存重构前后的：
-
-- rendered HTML
-- canonical、robots、title、description
-- H1/H2 结构
+- URL
+- canonical
+- title 和 meta description
+- H1
+- SSR 正文
 - JSON-LD
-- 内链数量和目标 URL
-- source/PDF links
-- SSR 正文关键片段
+- Breadcrumb
+- 内部链接 href
+- Official source/PDF links
+- Sitemap
+- 移动端核心内容
 
-回归失败时不得仅凭视觉验收上线。
+这些是回归检查，不是本次改造范围。
 
-### Phase 1：设计系统 P0
+## 十三、实施阶段
 
-- 完整建立颜色、字体、间距、圆角、边框和状态 tokens
-- 替换硬编码颜色
-- 建立按钮、badge、panel、metadata、table primitives
-- 清理 Tailwind 默认 blue/gray 与自定义颜色混用
+### Phase 1：视觉基础
 
-验收：
+- Tokens
+- Typography
+- Button
+- Badge
+- Panel
+- Border、radius、shadow
 
-- 90%以上硬编码颜色被 tokens 替代
-- 圆角收敛为 3 个级别
-- 实心主按钮只使用品牌 teal
-- 状态色不再承担品牌 CTA
-
-### Phase 2：全站外壳与首页 P0
+### Phase 2：全站外壳和首页
 
 - Header
-- Mobile navigation
-- Global search
-- Homepage hero
-- Coverage metadata
+- Mobile menu
 - Footer
+- Homepage
 
-验收：
+### Phase 3：学区和学年页面
 
-- 用户在首屏即可搜索学区
-- 移动菜单不再展示完整州列表
-- 首页不再由 generic SEO cards 主导
-
-### Phase 3：学区与学年页面 P0
-
+- District master page
 - Hero
-- Evidence strip
 - Key Dates
 - Breaks
-- Download utility
 - Full Calendar
+- Download
+- FAQ
 - Sources
+- Custom sections
 
-优先使用三个标杆页验证：
+标杆页面：
 
 - Edmonds
 - Virginia Beach
 - North Clackamas
-- 一个无复杂规则、内容较少的普通学区
+- 一个普通学区
 
-它们分别覆盖早放、复杂 make-up rules、多学段日历和最小内容模板。普通学区用于确认系统不会为了填满页面而强行生成无价值模块。
+### Phase 4：其余页面与 QA
 
-### Phase 4：District / State / Directory P1
+- States / Districts
+- Trends / Dataset / Report / Comparison
+- Responsive
+- Accessibility
+- Visual consistency
+- Build
 
-- States
-- Districts
-- 搜索、排序和筛选 URL 策略
-- 可抓取分页
-- Hub → State → District → Year 内链图
+## 十四、预计工期
 
-目录验收：
+| 阶段 | 预计时间 |
+| --- | ---: |
+| 视觉基线与 tokens | 2–3 天 |
+| Header、Footer、首页 | 2–3 天 |
+| 学区和学年页面 | 4–6 天 |
+| 目录与数据页面 | 2–3 天 |
+| 响应式、无障碍和视觉 QA | 2–3 天 |
+| 缓冲 | 1–2 天 |
 
-- 禁用 JavaScript 后仍能沿普通链接发现所有重要学区页
-- 搜索不是唯一入口
-- 参数组合不进入 sitemap
-- 后续分页可以通过 `<a href>` 抓取
-- 移动端和桌面端目录字段等价
+总计：12–17 个有效工作日，约 2.5–3.5 周。
 
-### Phase 5：Trends / Dataset P1
+## 十五、最终验收标准
 
-- Trends hub
-- Dataset
-- National report
-- Comparison
+- 页面内容、顺序和功能没有改变
+- 页面整体颜色统一
+- 主按钮只有一种品牌视觉
+- 状态色只表达状态
+- 硬编码颜色明显减少
+- 圆角收敛为三档
+- 阴影只用于必要的浮层
+- 日期和数字对齐清晰
+- Header、Footer 和正文属于同一视觉系统
+- 学区特色模块仍正常显示
+- 320px 到宽屏均无明显视觉问题
+- Keyboard focus 清晰
+- Print calendar 正常
+- `pnpm build` 成功
+- SEO、安全和 SSR 回归检查无变化
 
-统一为 searchable directory 和 evidence-first table。
-
-### Phase 6：SEO、CWV、无障碍与响应式 QA P1
-
-检查：
-
-- 320×568
-- 390×844
-- 768×1024
-- 1280×800
-- Wide desktop
-- 200% zoom
-- Keyboard only
-- Reduced motion
-- Print calendar
-- Empty/no-result/stale/error states
-- SSR HTML 与 hydration 后内容对比
-- crawlable links
-- canonical / robots / sitemap
-- JSON-LD 回归
-- Core Web Vitals 与字体加载
-- 筛选参数抓取空间
-
-## 十一、最终验收标准
-
-整改完成后应达到：
-
-- 首页首屏只有一个清晰主任务
-- 学年页首屏直接回答开学、放假和最后一天
-- 所有关键日期均能追溯到来源和审核时间
-- 日期与数字视觉上明显区别于正文
-- 页面主要依赖 hairline 和排版分组，而非大量圆角卡片
-- 同一页面不出现多个相互竞争的实心按钮
-- 学区特色模块仍由数据决定显隐
-- 普通学区页不会为了视觉完整强行填充模块
-- 页面仍然明确属于 MySchoolDates，而不是 BenchLM 仿站
-- 搜索没有取代可抓取目录和内部链接图
-- 移动端没有减少关键日期、条件和来源信息
-- UI 参数不会形成无限可索引 URL
-- URL、canonical、SSR 内容、schema 和 sitemap 通过回归检查
-- 删除的是 generic SEO prose，而不是学区或州特有解释
-- 字体增强不造成明显 LCP、FCP 或 CLS 回退
-
-整体建议是：先统一视觉系统，再整改首页和学年页，不要逐组件零散换颜色。当前真正需要解决的不是“页面不够漂亮”，而是让可信来源、日期决策和下载功能形成一套统一的数据产品界面。
+最终效果应是：页面结构和内容保持原样，但视觉更安静、更精致、更容易阅读，并且仍然明显属于 MySchoolDates。

@@ -46,58 +46,58 @@ const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.
 </script>
 
 <template>
-  <div id="sources" class="bg-[#f3f0e8] rounded-lg border border-[#e1dbd0] p-5 scroll-mt-24">
-    <h2 class="text-lg font-semibold text-[#1f2933] mb-2">Sources and Review Notes</h2>
-    <p v-if="reviewSummary" class="text-sm text-[#6b645c] mb-3">
+  <div id="sources" class="district-source-panel scroll-mt-24 p-6">
+    <h2 class="text-xl font-semibold tracking-tight text-rds-ink mb-2">Sources and Review Notes</h2>
+    <p v-if="reviewSummary" class="text-sm leading-relaxed text-rds-ink-muted mb-4">
       {{ reviewSummary }}
     </p>
-    <p v-else class="text-sm text-[#6b645c] mb-3">
+    <p v-else class="text-sm leading-relaxed text-rds-ink-muted mb-4">
       MySchoolDates is an independent calendar reference and is not affiliated with {{ districtName }}.
       Calendar dates are based on {{ possessiveDistrictName }} official {{ displayYear }} calendar.
       <template v-if="verifiedDate"> We checked the dates against the official district source on {{ verifiedDate }}.</template>
       <template v-else> Not yet checked against the official source.</template>
     </p>
-    <ul class="space-y-2 mb-3">
-      <li v-for="src in sources" :key="src.label" class="flex min-w-0 items-center gap-2 text-xs text-[#7b756d]">
-        <svg class="w-3 h-3 text-[#9a938a] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <ul class="space-y-2.5 mb-4">
+      <li v-for="src in sources" :key="src.label" class="flex min-w-0 items-center gap-2 text-xs text-rds-ink-dim">
+        <svg class="w-3 h-3 text-rds-ink-dim flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
         </svg>
         <span class="flex min-w-0 max-w-full items-center overflow-hidden whitespace-nowrap">
-          <a v-if="src.url" :href="src.url" target="_blank" rel="noopener" class="inline-flex min-w-0 items-center truncate underline hover:text-[#0f5d6b] transition-colors">
+          <a v-if="src.url" :href="src.url" target="_blank" rel="noopener" class="rds-link inline-flex min-w-0 items-center truncate underline">
             {{ src.label }}
             <span class="sr-only">(opens in a new tab)</span>
           </a>
           <span v-else class="truncate">{{ src.label }}</span>
           <span
             v-if="isSourceVersionLink(src) && sourceVersion"
-            class="hidden flex-shrink-0 text-[#8a837a] lg:inline"
+            class="hidden flex-shrink-0 text-rds-ink-dim lg:inline"
           >
             · {{ sourceVersionLabel }}: {{ sourceVersionDisplay }}
           </span>
           <span
             v-if="src.note || src.versionLabel"
-            class="hidden flex-shrink-0 text-[#8a837a] lg:inline"
+            class="hidden flex-shrink-0 text-rds-ink-dim lg:inline"
           >
             · {{ src.note || src.versionLabel }}
           </span>
           <span
             v-if="isSourceVersionLink(src) && isArchivedPdfCopy"
-            class="hidden flex-shrink-0 text-[#8a837a] xl:inline"
+            class="hidden flex-shrink-0 text-rds-ink-dim xl:inline"
           >
             · Archived official PDF copy stored by MySchoolDates
           </span>
         </span>
       </li>
     </ul>
-    <div class="text-xs text-[#7b756d] pt-3 border-t border-[#ddd6cb] space-y-1.5">
+    <div class="district-source-panel__rule space-y-2 pt-4 text-xs leading-relaxed text-rds-ink-dim">
       <p v-if="sourceVersion && !sourceVersionInline && !hideSourceVersionDisplay">
-        <span class="font-medium text-[#6b645c]">{{ sourceVersionLabel }}:</span>
+        <span class="font-medium text-rds-ink-muted">{{ sourceVersionLabel }}:</span>
         <a
           v-if="sourcePdfUrl"
           :href="sourcePdfUrl"
           target="_blank"
           rel="noopener"
-          class="font-medium text-[#0f5d6b] hover:text-[#0b4c58] underline"
+          class="rds-link font-medium underline"
         >
           {{ sourceVersionDisplay }}
           <span class="sr-only">(opens in a new tab)</span>
@@ -106,29 +106,29 @@ const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.
         <template v-if="sourcePdfUrl && isArchivedPdfCopy"> · Archived official PDF copy stored by MySchoolDates</template>
       </p>
       <p v-if="verifiedDate">
-        <span class="font-medium text-[#6b645c]">Maintained by:</span>
+        <span class="font-medium text-rds-ink-muted">Maintained by:</span>
         {{ maintainerText || 'MySchoolDates Calendar Data Team' }} ·
-        <NuxtLink to="/calendar-verification-methodology" class="font-medium text-[#0f5d6b] hover:text-[#0b4c58] underline">
+        <NuxtLink to="/calendar-verification-methodology" class="rds-link font-medium underline">
           Verification Methodology
         </NuxtLink>
         ·
-        <NuxtLink to="/editorial-policy" class="font-medium text-[#0f5d6b] hover:text-[#0b4c58] underline">
+        <NuxtLink to="/editorial-policy" class="rds-link font-medium underline">
           Editorial Policy
         </NuxtLink>
       </p>
       <p v-if="verifiedDate && !hideReviewDate">
-        <span class="font-medium text-[#6b645c]">{{ reviewDateLabel || 'Last manual review' }}:</span>
+        <span class="font-medium text-rds-ink-muted">{{ reviewDateLabel || 'Last manual review' }}:</span>
         {{ verifiedDate }}, by Denis Dou.
       </p>
       <p v-if="verifiedDate">
         <template v-if="nextReviewText">{{ nextReviewText }}</template>
         <template v-else>
-          <span class="font-medium text-[#6b645c]">Next review:</span>
+          <span class="font-medium text-rds-ink-muted">Next review:</span>
           When {{ shortName }} revises the calendar or updates its official calendar page.
         </template>
       </p>
       <details class="pt-1">
-        <summary class="cursor-pointer select-none font-medium text-[#6b645c] hover:text-[#1f2933]">
+        <summary class="cursor-pointer select-none font-medium text-rds-ink-muted hover:text-rds-ink">
           {{ reviewDetailsTitle || 'How we verify this calendar' }}
         </summary>
         <div class="mt-2 space-y-1.5">
@@ -143,15 +143,15 @@ const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.
           <p>
             <a
               href="mailto:hello@myschooldates.com?subject=Calendar%20Correction"
-              class="font-medium text-[#0f5d6b] hover:text-[#0b4c58] underline"
+              class="rds-link font-medium underline"
             >Report a calendar error</a>
             if a date appears incorrect or outdated.
             See our
-            <NuxtLink to="/calendar-verification-methodology" class="font-medium text-[#0f5d6b] hover:text-[#0b4c58] underline">
+            <NuxtLink to="/calendar-verification-methodology" class="rds-link font-medium underline">
               Calendar Verification Methodology
             </NuxtLink>
             and
-            <NuxtLink to="/editorial-policy" class="font-medium text-[#0f5d6b] hover:text-[#0b4c58] underline">
+            <NuxtLink to="/editorial-policy" class="rds-link font-medium underline">
               Editorial Policy
             </NuxtLink>
             for the verification method and corrections process.

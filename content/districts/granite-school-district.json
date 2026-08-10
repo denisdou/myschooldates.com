@@ -1,0 +1,139 @@
+{
+  "institutionId": "granite-school-district",
+  "name": "Granite School District",
+  "shortName": "GSD",
+  "slug": "granite-school-district-calendar",
+  "state": "Utah",
+  "stateCode": "UT",
+  "city": "Salt Lake City",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.graniteschools.org/",
+  "calendarPage": "https://www.graniteschools.org/calendar/",
+  "logo": "https://gsd-wp-departments.s3.us-east-1.amazonaws.com/communications/logos/Granite-Logo.svg",
+  "timezone": "America/Denver",
+  "county": "Salt Lake County",
+  "region": "Wasatch Front",
+  "metro": "Salt Lake City",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "school-level conference calendar with a separate high-school A/B calendar",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Granite School-Level Calendar",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "translatedPdf": false,
+    "programCalendar": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-10",
+    "coverageNote": "Coverage uses Granite School District's official website and live calendar page, the complete official 2026-2027 approved calendar updated June 2, 2026, the official 2026-2027 A/B calendar link, the complete official 2027-2028 approved calendar, and visually verified local PDF copies. The supplied 2025-2026 file is a 199-day counselor employee calendar rather than a student calendar and was excluded. No 2028-2029 or 2029-2030 student calendar URL was provided."
+  },
+  "contentFreshnessScore": {
+    "overall": 98,
+    "lastManualReview": "2026-08-10",
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 45,
+    "refreshRule": "Re-check when GSD replaces an approved PDF, changes a conference or weekly planning schedule, publishes a 2027-2028 A/B resource, or posts another student school-year calendar."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Approved-calendar revision, recurring Friday schedule change, conference change, new A/B calendar, or future calendar publication."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Granite School District calendar",
+    "GSD calendar Utah",
+    "Granite school calendar PDF",
+    "Granite School District A B calendar",
+    "Granite School District first day",
+    "Granite School District last day",
+    "Granite elementary SEP conferences",
+    "Granite School District breaks"
+  ],
+  "districtFact": "Granite School District publishes different parent-teacher conference dates for senior high, junior high, and elementary schools. The elementary meetings are labeled Student Education Plan conferences, and the September and February conference clusters are followed by compensatory no-school days. The approved calendars also mark Friday planning days and publish exact term-day totals.",
+  "about": [
+    {
+      "title": "Conference Dates Depend on School Level",
+      "content": "Granite does not use one districtwide conference window. Senior high, junior high, and elementary SEP conferences occupy overlapping but different dates in September and February. Families should select the row for the student's school level before changing transportation or child-care plans."
+    },
+    {
+      "title": "Conference Compensation Days Close School",
+      "content": "The approved calendars schedule no school on the Friday after the September conference cluster and again after the February cluster. Those compensatory days are separate from the conference appointments and apply districtwide unless Granite publishes a revision."
+    },
+    {
+      "title": "Friday Planning Labels Need a School-Level Check",
+      "content": "Both approved PDFs define the printed P marker as an elementary-only planning day with early dismissal. Granite's live 2026-27 calendar also describes routine Fridays as early-out and planning days for elementary and junior high schools, while selected dates remain elementary only. Because the two official formats are not identical, junior high families should use their school's bell schedule."
+    },
+    {
+      "title": "High Schools Have a Separate 2026-27 A/B Calendar",
+      "content": "Granite's calendar page links a dedicated 2026-27 A/B calendar in addition to the approved school-year calendar. The letter identifies the high-school class rotation, not a closure. The downloadable MySchoolDates file therefore includes major dates but does not attempt to reproduce every A/B day."
+    },
+    {
+      "title": "The Two Approved Years Are Structured Differently",
+      "content": "The 2026-27 calendar contains 176 student days and begins August 12. The 2027-28 calendar contains 179 student days and begins August 16. Term lengths also shift from 45/40/45/46 days to 47/38/46/48 days, so dates should not be projected from one year to the next."
+    }
+  ],
+  "planningTips": {
+    "title": "Granite School District Calendar Notes",
+    "content": [
+      "Choose senior high, junior high, or elementary before using a parent-teacher conference date; the three schedules overlap but do not match.",
+      "Treat the Friday after each fall and winter conference cluster as a separate districtwide no-school compensation day.",
+      "Use the official 2026-27 A/B calendar with the student's high-school class schedule; A and B are rotation labels, not closure labels.",
+      "For routine Friday dismissal, elementary families can follow the P marker, while junior high families should verify the bell schedule because the PDF legend and live calendar use different wording.",
+      "Kindergarten families in 2026-27 should follow school instructions for the August testing and early-out sequence rather than assuming a normal full-day opening.",
+      "Do not use the supplied counselor calendar for student attendance planning; it is a 199-day employee work calendar.",
+      "The MySchoolDates ICS file is a one-time import and does not repeat every Friday planning day or daily high-school A/B rotation."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "When does Granite School District start in 2026?",
+      "a": "The first student day is Wednesday, August 12, 2026. The approved calendar also labels August 12-14 for kindergarten testing and August 17-21 for kindergarten early out, so kindergarten families should use their school's instructions."
+    },
+    {
+      "q": "Does Granite School District use A and B days?",
+      "a": "Granite publishes a separate 2026-27 A/B calendar for high schools. The letters identify the class rotation. They do not mean school is closed or automatically dismissed early."
+    },
+    {
+      "q": "Are Fridays early-out days in Granite School District?",
+      "a": "The approved PDFs label Friday planning days as elementary-only early dismissal. Granite's live 2026-27 calendar also lists routine Friday early out for elementary and junior high, so junior high families should confirm the current bell schedule with their school."
+    }
+  ],
+  "customSections": [],
+  "relatedDistrictsTitle": "More Utah School Calendars",
+  "relatedDistrictsDescription": "Compare Granite dates with other verified Wasatch Front district calendars.",
+  "relatedDistricts": [
+    {
+      "name": "Davis School District",
+      "slug": "davis-school-district-calendar",
+      "state": "Utah",
+      "comparisonLabel": "Davis"
+    },
+    {
+      "name": "Alpine School District",
+      "slug": "alpine-school-district-calendar",
+      "state": "Utah",
+      "comparisonLabel": "Alpine"
+    }
+  ],
+  "sources": [
+    { "label": "Granite School District official website", "url": "https://www.graniteschools.org/" },
+    { "label": "Granite School District calendar page", "url": "https://www.graniteschools.org/calendar/" },
+    { "label": "Official Granite 2026-27 approved calendar", "url": "https://drive.google.com/file/d/1qCdHVjJeEXTcCJy1Tj1NG3C2t__XEEyP/view" },
+    { "label": "Official Granite 2026-27 A/B calendar", "url": "https://drive.google.com/file/d/1eE5cxU60pKWAmN__VMJd024GIaqPa7BG/view" },
+    { "label": "Official Granite 2027-28 approved calendar", "url": "https://drive.google.com/file/d/1Dc8BugIllZX1E35uAD1zlAOaF1hzdhN9/view" }
+  ]
+}

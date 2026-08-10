@@ -7,7 +7,7 @@
 
 ## 当前进度快照
 
-**已完成学区（60个）**
+**已完成学区（61个）**
 
 | 州 | 已完成 | P1 完成度 | P2 完成度 |
 |----|--------|-----------|-----------|
@@ -66,6 +66,11 @@
 | 2026-08-09 | Oregon | Salem-Keizer Public Schools | `/salem-keizer-public-schools-calendar` | 2026-2027 | 基于官方 SKPS calendar page、官网 SVG logo、English Family Key Date Calendar、本地 PDF 副本，以及 Arabic、Chuukese、Russian、Spanish、Swahili 扩展日历；页面补充分年级开学、Kindergarten Transition、连续三天秋季 student-free window、March 17–26 八个 student-free weekdays、middle-school trimester / high-school semester markers、graduation window、K–5 与 6–11 分开结束、live calendar 与 PDF 对 November 30 的措辞差异，以及未预先指定日期的 June emergency make-up rule；2025-2026 与 2027-2028 以后未提供可核验 PDF，暂不创建。 |
 | 2026-08-09 | Oregon | North Clackamas School District | `/north-clackamas-school-district-calendar` | 2026-2027 | 基于官方 NCSD calendar page、官网 SVG logo、分别面向 Elementary、Middle School、High School 的三份 English Student Calendar PDF 与本地 PDF 副本，以及三个学段各自的 Spanish、Russian、Vietnamese、Simplified Chinese 扩展日历；页面补充分年级开学、Elementary / Middle / High 不同 last day 与 emergency make-up window、Elementary-only workday closures、Middle School 的 31 个 L1/L2 late-start Wednesdays、High School finals period sequence、不同 Winter Break return date，以及官网摘要把 Elementary last day 年份写成 2026 而 PDF 写作 2027 的来源差异；用户提供的本地 2025-2026 文件实为 Classified Paraeducator staff calendar，且官网未提供 2025-2026 student PDF URL，因此未创建该学年学生页；2027-2028 以后 PDF 未提供。 |
 | 2026-08-09 | Utah | Alpine School District | `/alpine-school-district-calendar` | 2025-2026, 2026-2027 | 基于官方 ASD District Calendars 页面、官网 logo、2026-2027 board-approved A/B Academic Calendar PDF、本地 2025-2026 与 2026-2027 官方 PDF 副本、live A/B Calendar 和官方学区拆分说明；页面补充逐日 A/B 轮换、K / PreK assessment opening、Minimal Day 与 no-PreK 边界、break 后相邻 staff days、PreK 独立 last day，以及 Alpine 于 2027-06-30 结束运营并由 Aspen Peaks、Lake Mountain、Timpanogos 三个学区接续的说明；2025-2026 官网未提供稳定官方 PDF URL，页面不输出虚构下载链接；官网的 2027-2028 至 2029-2030 文件仅为 recommendations，不作为 adopted student calendars 创建。 |
+| 2026-08-10 | Utah | Davis School District | `/davis-school-district-calendar` | 2025-2026, 2026-2027 | 基于官方 DSD School Year Calendars 页面、官网 logo、2025-2026 adjusted calendar PDF、2026-2027 approved calendar PDF、本地 PDF 副本及官方审批/修订公告；页面区分 secondary A/B rotation、junior high / high school Wednesday late starts、elementary Friday early dismissals、分学段家长会规则、2025-2026 kindergarten testing 与可选测试窗口、174 student days 和 term / semester day counts，并保留 2026-2027 February 12 conditional weather make-up day、May new-IRP conference exception 与 May 25-28 graduation window；未提供扩展日历及 2027-2028 至 2029-2030 官方 PDF URL，暂不创建。 |
+| 2026-08-10 | Utah | Granite School District | `/granite-school-district-calendar` | 2026-2027, 2027-2028 | 基于官方 GSD calendar 页面、官网 SVG logo、2026-2027 updated approved calendar、2027-2028 board-approved calendar、本地 PDF 副本，以及 2026-2027 A/B Calendar 与 2027 Graduation Dates 官方资源；页面补充 senior high / junior high / elementary SEP 分层家长会、会后 compensatory no-school days、176 / 179 student days 和逐 term 天数、break 后相邻 teacher contract days、2026-2027 kindergarten testing / early-out 开学序列，并披露 approved PDF 与 live calendar 对 routine Friday junior-high early out 的表述差异；用户提供的 2025-2026 文件实为 199-day counselor employee calendar，未作为学生日历创建；2027-2028 未提供 A/B 扩展日历，2028-2029 以后 PDF 未提供。 |
+| 2026-08-10 | Utah | Jordan School District | `/jordan-school-district-calendar` | 2025-2026, 2026-2027 | 基于官方 Planning & Enrollment calendar 页面、官方三页 all-level PDF、分学段 family calendar、A/B 资源、本地 PDF 副本及用户提供的第三方单页辅助文件；页面保留 high school / seventh-grade orientation 与 elementary / grades 8-9 分批开学、seventh grade 提前结束、分学段 conference / compensation / professional-day 切换、elementary recurring early out、high-school A/B 与年级化 testing 规则、180 天汇总及 conditional emergency make-up date；2025-2026 以找回的官方三页文件为主源，第三方文件仅承载 early-out 辅助说明；2026-2027 对 Winter Recess 年份笔误及 Q2/Q3 天数互换做可见来源说明，不擅自选择冲突数字；2027-2028 官方源存在但本轮未创建。 |
+| 2026-08-10 | Utah | Canyons School District | `/canyons-school-district-calendar` | 2025-2026, 2026-2027, 2027-2028, 2028-2029 | 基于官方 School Calendars 页面、官网 logo、四份 K-12 PDF、本地 PDF 副本、三份 Brighton High School trimester calendar 及 2026-2027 English / Spanish 扩展资源；页面补充分开的 6th / 9th grade half-day orientation、grades 1-12 与 kindergarten 开学、每个 instructional Friday early out、secondary red A / black B rotation、elementary / middle / high school 分层 conference dates、PTC compensation / grading / professional days、remote-learning emergency make-up 规则，并把 Brighton 从 K-12 quarter track 中独立分流；用户标为 Portuguese 的 URL 实际与 English PDF 相同，未错误发布为葡萄牙语版本；Spanish PDF 将 Spring Break 误译为 Fall Break，页面遵循 English 主历并披露；2028-2029 PDF 将 January 22 标为 MLK recess，页面保留官方停课日期并设置复核提示；2029-2030 URL 未提供。 |
+| 2026-08-10 | Utah | Weber School District | `/weber-school-district-calendar` | 2025-2026, 2026-2027 | 基于官方 WSD calendar document library、官网 logo、两份官方 one-page vertical calendar PDF 及本地 PDF 副本；页面补充 secondary A/B rotation、每周三 elementary / secondary 不同的 early-out 时间、开学首周全周 early out、分学段 parent-teacher conferences、compensation / professional-development no-student days、High School ACT day、Elementary Iron Kid / Math Science or STEM Olympiad，以及四个 quarter 合计 180 天；2026-2027 secondary Wednesday dismissal 从 1:20 调整为 1:15；该年 PDF 图例把 federal holiday 写成 February 16，但网格把 February 15 标为停课、February 16 标为 B day / mid-term，页面采用内部一致的网格日期并公开保留冲突；2027-2028 至 2029-2030 PDF URL 未提供。 |
 
 ---
 
@@ -398,11 +403,11 @@ P3 内容可采用更高度模板化的方式生成（calendarNotes 精简为 4-
 | 127 | Oregon | North Clackamas Schools | Portland | ✓ 已完成：`north-clackamas-school-district-calendar`（2026-08-09） |
 | 128 | Oregon | Eugene School District 4J | Eugene | 待创建 |
 | 129 | Utah | Alpine School District | Provo-Orem | ✓ 已完成：`alpine-school-district-calendar`（2026-08-09） |
-| 130 | Utah | Davis School District | Salt Lake City | 待创建 |
-| 131 | Utah | Granite School District | Salt Lake City | 待创建 |
-| 132 | Utah | Jordan School District | Salt Lake City | 待创建 |
-| 133 | Utah | Canyons School District | Salt Lake City | 待创建 |
-| 134 | Utah | Weber School District | Ogden | 待创建 |
+| 130 | Utah | Davis School District | Salt Lake City | ✓ 已完成：`davis-school-district-calendar`（2026-08-10） |
+| 131 | Utah | Granite School District | Salt Lake City | ✓ 已完成：`granite-school-district-calendar`（2026-08-10） |
+| 132 | Utah | Jordan School District | Salt Lake City | ✓ 已完成：`jordan-school-district-calendar`（2026-08-10） |
+| 133 | Utah | Canyons School District | Salt Lake City | ✓ 已完成：`canyons-school-district-calendar`（2026-08-10） |
+| 134 | Utah | Weber School District | Ogden | ✓ 已完成：`weber-school-district-calendar`（2026-08-10） |
 | 135 | Nevada | Washoe County School District | Reno | 待创建 |
 | 136 | New Mexico | Albuquerque Public Schools | Albuquerque | 待创建 |
 | 137 | New Mexico | Las Cruces Public Schools | Las Cruces | 待创建 |

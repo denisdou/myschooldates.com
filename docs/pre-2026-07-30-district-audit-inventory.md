@@ -1,7 +1,7 @@
 # 2026-07-30 之前创建的学区审计整改队列
 
 Created: 2026-08-03
-Last updated: 2026-08-08
+Last updated: 2026-08-10
 
 ## Scope
 
@@ -39,12 +39,12 @@ Last updated: 2026-08-08
 | P3 | `/chesterfield-county-school-calendar` | 已完成 2026–27 与 2027–28 双学年审计整改：重建 grade-based staggered opening schedule、Pre-K/K assigned attendance days、178 instructional days、holidays/workdays、breaks、返校日期、官方订阅边界、年度差异、FAQ 与来源说明，并清理 district master 中偏离 calendar intent 的内容；2027–28 另记录 live calendar 的 June 2 last day 与 approval announcement 的 June 1 冲突，当前遵循 live student calendar 且设置复核触发条件。两个学年均于 2026-08-08 更新和复核，待运行页/ICS 抽查后升 P4。 |
 | P1 | `/fairfax-county-school-calendar` | 已审计并完成 2027–28 关键事实修正：last day 由 June 15 改为 June 14，移除失效 PDF URL，改用 School Board-approved calendar published July 9, 2026 的来源说明，并删除无来源的 Loudoun alignment 判断，updated/reviewed: 2026-08-08。当前 2026–27 页面仍保留 2026-07-05 旧结构，尚未按 9.5+ 资源页标准完成正文、来源、FAQ、Schema 与模块复核，因此维持 P1。 |
 | P4 | `/edmonds-school-district-calendar` | 已完成 2026–27 多轮审计整改，最新独立内容评分 9.84，达到发布/冻结标准并转向站点级 SEO。页面已对齐 ESD Family Calendar、Key Dates、English/Spanish PDF、live calendar 及 start/end-time 官方资料；处理 grades 1–12/kindergarten/preschool 分阶段开学、精确 Friday early releases、conference/districtwide half days、May 28 与 June 23–25/28 有序 snow make-up dates、年度差异、独立 ICS 和来源视觉复核。Aug 28、Aug 31、Sep 1 已防止误合并，Dataset temporal coverage、Scheduled Last Day、Key Dates 及 ItemList Schema 均与可见页面一致。最终收尾包括精确区分两个 First Day Schema description、修正 What Changed 的同比语义、明确 DataDownload 只包含精选重要日期且不含 recurring Friday early releases，并完成 All Dates coverage、snow make-up、preschool 与 Spanish PDF 文案整理。updated/reviewed: 2026-08-08。 |
-| P0 | `/guilford-county-school-calendar` | 未审计 |
-| P0 | `/loudoun-county-school-calendar` | 未审计 |
-| P0 | `/prince-william-county-school-calendar` | 未审计 |
-| P0 | `/virginia-beach-school-calendar` | 未审计 |
-| P0 | `/wake-county-school-calendar` | 未审计 |
-| P0 | `/winston-salem-forsyth-school-calendar` | 未审计 |
+| P3 | `/guilford-county-school-calendar` | 已重新审计，2026–27 与 2027–28 页面已完成更新和官方来源复核，reviewed: 2026-08-09 |
+| P3 | `/loudoun-county-school-calendar` | 已重新审计，2025–26、2026–27 与 2027–28 页面已完成更新和官方来源复核，reviewed: 2026-08-09 |
+| P3 | `/prince-william-county-school-calendar` | 已重新审计，2026–27 页面已完成更新和官方来源复核，reviewed: 2026-08-09 |
+| P3 | `/virginia-beach-school-calendar` | 已重新审计，2026–27 页面已完成更新和官方来源复核，reviewed: 2026-08-09 |
+| P3 | `/wake-county-school-calendar` | 已重新审计，2026–27 与 2027–28 页面已完成更新和官方来源复核，reviewed: 2026-08-09 |
+| P3 | `/winston-salem-forsyth-school-calendar` | 已完成 2026–27 审计整改：将错误的 Traditional Calendar 定位修正为 Board-adopted Modified Start Student Calendar，补齐 178 个学生日、四个季度/学期节点、Teacher Professional Days、返校日期与条件 snow make-up dates；新增 Student、Spanish、Early/Middle College、Middle/High A/B Day 和 Staff 官方日历分流，重写 Hero、FAQ、年度差异、Planning Notes、Comparison、PDF/ICS 范围与来源说明，并删除 Living Here、泛 District Profile、Wake Forest 错误 FAQ、生活方式推断和重复模板模块。官方 2026–27/2025–26 PDF、Board announcement 与 calendar hub 已完成文件级复核；`localhost:3000` 当前未运行，待 SSR/ICS 抽查后升 P4。updated/reviewed: 2026-08-10 |
 | P0 | `/frisco-independent-school-district-calendar` | 未审计 |
 | P0 | `/henrico-county-school-calendar` | 未审计 |
 | P0 | `/katy-independent-school-district-calendar` | 未审计 |

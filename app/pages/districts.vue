@@ -88,20 +88,20 @@ useHead({
 </script>
 
 <template>
-  <main class="bg-white">
-    <section class="border-b border-gray-100">
+  <main class="directory-page">
+    <section class="directory-hero">
       <div class="site-page-shell py-12">
-        <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">District Directory</p>
+        <p class="directory-kicker font-semibold uppercase">District Directory</p>
         <div class="mt-3 grid gap-6 md:grid-cols-[1fr_18rem] md:items-end">
           <div>
-            <h1 class="text-4xl font-bold tracking-tight text-gray-900">School District Calendars</h1>
-            <p class="mt-4 max-w-2xl text-base leading-relaxed text-gray-600">
+            <h1 class="directory-title">School District Calendars</h1>
+            <p class="directory-lead mt-4 max-w-2xl text-base leading-relaxed">
               Browse verified school calendar pages for U.S. public school districts. Each card links to official-source calendar dates, PDFs, holidays, breaks, and calendar exports when available.
             </p>
           </div>
-          <div class="rounded-lg border border-gray-200 bg-gray-50 p-4">
-            <div class="text-3xl font-bold text-gray-900">{{ allDistricts.length }}</div>
-            <div class="mt-1 text-sm text-gray-500">district calendar pages</div>
+          <div class="directory-count p-4">
+            <div class="rds-data text-3xl font-bold text-rds-ink">{{ allDistricts.length }}</div>
+            <div class="mt-1 text-sm text-rds-ink-dim">district calendar pages</div>
           </div>
         </div>
       </div>
@@ -110,26 +110,26 @@ useHead({
     <section class="site-page-shell py-8">
       <div class="grid gap-3 md:grid-cols-[1fr_14rem]">
         <label class="block">
-          <span class="mb-1.5 block text-sm font-medium text-gray-700">Search districts</span>
+          <span class="mb-1.5 block text-sm font-medium text-rds-ink-muted">Search districts</span>
           <input
             v-model="searchQuery"
             type="search"
             placeholder="Search by district, city, county, or state"
-            class="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100"
+            class="directory-control w-full px-4 py-2.5 text-sm"
           >
         </label>
         <label class="block">
-          <span class="mb-1.5 block text-sm font-medium text-gray-700">State</span>
+          <span class="mb-1.5 block text-sm font-medium text-rds-ink-muted">State</span>
           <select
             v-model="selectedState"
-            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100"
+            class="directory-control w-full px-4 py-2.5 text-sm"
           >
             <option v-for="state in states" :key="state" :value="state">{{ state }}</option>
           </select>
         </label>
       </div>
 
-      <div class="mt-5 flex flex-wrap items-center justify-between gap-3 text-sm text-gray-500">
+      <div class="rds-data mt-5 flex flex-wrap items-center justify-between gap-3 text-sm text-rds-ink-dim">
         <span>
           Showing {{ paginatedDistricts.length }} of {{ filteredDistricts.length }} districts
         </span>
@@ -141,38 +141,38 @@ useHead({
           v-for="district in paginatedDistricts"
           :key="district.slug"
           :to="`/${district.slug}`"
-          class="group flex min-h-44 flex-col rounded-lg border border-gray-200 bg-white p-5 shadow-sm transition hover:border-blue-200 hover:shadow-md"
+          class="directory-card group flex min-h-44 flex-col p-5"
         >
           <div class="flex items-start justify-between gap-3">
             <div>
-              <h2 class="text-base font-semibold leading-snug text-gray-900 group-hover:text-blue-700">
+              <h2 class="text-base font-semibold leading-snug text-rds-ink group-hover:text-rds-accent">
                 {{ district.name }}
               </h2>
-              <p class="mt-1 text-sm text-gray-500">
+              <p class="mt-1 text-sm text-rds-ink-dim">
                 {{ district.city ? `${district.city}, ` : '' }}{{ district.state }}
               </p>
             </div>
-            <span class="rounded-lg bg-gray-100 px-2 py-1 text-xs font-semibold text-gray-600">{{ district.stateCode }}</span>
+            <span class="rounded-rds border border-rds-hairline bg-rds-surface-panel-2 px-2 py-1 text-xs font-semibold text-rds-ink-dim">{{ district.stateCode }}</span>
           </div>
-          <p class="mt-4 line-clamp-3 text-sm leading-relaxed text-gray-600">
+          <p class="mt-4 line-clamp-3 text-sm leading-relaxed text-rds-ink-muted">
             {{ district.districtFact || `${district.name} calendar dates, holidays, breaks, and official calendar source links.` }}
           </p>
-          <div class="mt-auto flex items-center justify-between pt-5 text-sm">
-            <span class="text-gray-500">{{ district.currentSchoolYear || 'Current year' }}</span>
-            <span class="font-semibold text-blue-600 group-hover:text-blue-700">View calendar</span>
+          <div class="rds-data mt-auto flex items-center justify-between pt-5 text-sm">
+            <span class="text-rds-ink-dim">{{ district.currentSchoolYear || 'Current year' }}</span>
+            <span class="font-semibold text-rds-accent">View calendar</span>
           </div>
         </NuxtLink>
       </div>
 
-      <div v-else class="mt-8 rounded-lg border border-gray-200 bg-gray-50 p-8 text-center">
-        <h2 class="text-lg font-semibold text-gray-900">No districts found</h2>
-        <p class="mt-2 text-sm text-gray-500">Try a different search term or state filter.</p>
+      <div v-else class="rds-panel mt-8 p-8 text-center">
+        <h2 class="text-lg font-semibold text-rds-ink">No districts found</h2>
+        <p class="mt-2 text-sm text-rds-ink-dim">Try a different search term or state filter.</p>
       </div>
 
       <nav v-if="totalPages > 1" class="mt-8 flex flex-wrap items-center justify-center gap-2" aria-label="District pagination">
         <button
           type="button"
-          class="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 disabled:cursor-not-allowed disabled:opacity-40"
+          class="directory-page-button px-3 py-2 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-40"
           :disabled="currentPage === 1"
           @click="setPage(currentPage - 1)"
         >
@@ -182,15 +182,15 @@ useHead({
           v-for="page in visiblePages"
           :key="page"
           type="button"
-          class="rounded-lg border px-3 py-2 text-sm font-medium"
-          :class="page === currentPage ? 'border-blue-600 bg-blue-600 text-white' : 'border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-700'"
+          class="directory-page-button px-3 py-2 text-sm font-medium"
+          :class="page === currentPage ? 'directory-page-button--active' : ''"
           @click="setPage(page)"
         >
           {{ page }}
         </button>
         <button
           type="button"
-          class="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-600 hover:border-blue-300 hover:text-blue-700 disabled:cursor-not-allowed disabled:opacity-40"
+          class="directory-page-button px-3 py-2 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-40"
           :disabled="currentPage === totalPages"
           @click="setPage(currentPage + 1)"
         >

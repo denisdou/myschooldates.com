@@ -2,14 +2,14 @@
   "stateSlug": "utah",
   "stateName": "Utah",
   "stateCode": "UT",
-  "lastVerifiedAt": "2026-08-09",
+  "lastVerifiedAt": "2026-08-10",
   "seoTitle": "Utah School Calendars 2026–27: District Dates & Breaks",
   "seoDescription": "Browse Utah school calendars for 2026–27, including district first days, breaks, staff days, A/B schedules, official sources, and calendar downloads.",
   "heroDescription": "Utah district start dates, breaks, staff days, official calendars, and downloads · Checked against state rules and district sources",
   "browseLabel": "Browse reviewed Utah district calendars",
   "officialSourceLabel": "Utah State Board of Education rules and official district sources",
   "quickAnswerTitle": "How Utah School Calendars Work in 2026–27",
-  "quickAnswer": "Utah does not use one statewide first day, spring break, or last day. Each local education agency approves its calendar in an open meeting, while Utah's pupil-accounting rule generally requires at least 180 school days and adequate contingency days. District calendars can still differ in opening dates, breaks, professional-development days, parent-teacher conference schedules, A/B rotations, shortened days, and weather make-up plans. MySchoolDates currently has a reviewed 2026–27 calendar for Alpine School District.",
+  "quickAnswer": "Utah does not use one statewide first day, spring break, or last day. Each local education agency approves its calendar in an open meeting, while Utah's pupil-accounting rule generally requires at least 180 school days and adequate contingency days. District calendars can still differ in opening dates, breaks, professional-development days, parent-teacher conference schedules, A/B rotations, shortened days, and weather make-up plans. MySchoolDates currently has reviewed district resources for Alpine, Davis, Granite, Jordan, Canyons, and Weber.",
   "quickAnswerItems": [
     {
       "label": "Calendar authority",
@@ -24,11 +24,11 @@
       "value": "Open meeting"
     },
     {
-      "label": "Reviewed district",
-      "value": "Alpine"
+      "label": "Reviewed districts",
+      "value": "6 available"
     }
   ],
-  "about": "Utah public school calendars are adopted locally rather than through one uniform statewide schedule. The Utah State Board of Education publishes district and charter calendar resources, but families still need the calendar adopted by their school district or charter school for actual attendance dates.\n\nState pupil-accounting rules provide the common framework. An LEA generally provides educational services over at least 180 school days, approves instructional time and its school calendar in an open meeting, and includes adequate contingency days to reduce the need for a waiver after closures. The rules also distinguish ordinary attendance days from professional-development, parent-teacher conference, emergency, and distance-learning arrangements.\n\nThose statewide rules do not make district calendars interchangeable. Alpine School District, for example, publishes A/B labels for instructional dates, a separate kindergarten and PreK assessment window, Minimal Days when PreK does not attend, and staff days adjacent to major breaks. Families should start with the district page, then check the assigned school for bell times, testing, activities, and campus-specific changes.",
+  "about": "Utah public school calendars are adopted locally rather than through one uniform statewide schedule. The Utah State Board of Education publishes district and charter calendar resources, but families still need the calendar adopted by their school district or charter school for actual attendance dates.\n\nState pupil-accounting rules provide the common framework. An LEA generally provides educational services over at least 180 school days, approves instructional time and its school calendar in an open meeting, and includes adequate contingency days to reduce the need for a waiver after closures. The rules also distinguish ordinary attendance days from professional-development, parent-teacher conference, emergency, and distance-learning arrangements.\n\nThose statewide rules do not make district calendars interchangeable. Alpine publishes A/B labels and a separate K/PreK assessment opening; Davis layers secondary A/B days, Wednesday late starts, and Friday elementary early dismissal; Granite separates grade-band conferences; Jordan staggers openings by level; Canyons excludes Brighton High School from its K-12 quarter calendar in favor of a separate trimester calendar; and Weber combines a daily A/B grid with Wednesday early outs at different elementary and secondary times. Families should start with the district page, then check the assigned school for bell times, testing, activities, and campus-specific changes.",
   "calendarRulesDescription": "Utah combines statewide pupil-accounting requirements with calendars approved by local education agencies. These distinctions help explain why nearby districts can publish different schedules.",
   "calendarRules": [
     {
@@ -108,7 +108,7 @@
   ],
   "commonHolidaysDescription": "These holidays or breaks appear on many Utah district calendars, but the dates, adjacent staff days, and return dates are not uniform statewide.",
   "popularDistrictsHeading": "Utah District Calendar Coverage",
-  "popularDistrictsDescription": "Alpine School District is currently available as a fully reviewed Utah calendar resource. Other Utah districts remain planned until their official calendars receive the same source and date review.",
+  "popularDistrictsDescription": "Six Utah district resources are available after source and date review. Each preserves district-specific tracks, grade-level openings, shortened-day rules, and official calendar boundaries.",
   "popularDistricts": [
     {
       "label": "Alpine School District Calendar",
@@ -118,28 +118,33 @@
     },
     {
       "label": "Davis School District Calendar",
+      "slug": "davis-school-district-calendar",
       "area": "Davis County, UT",
-      "note": "Planned coverage after the 2026–27 attendance dates and district-specific schedule rules are verified."
+      "note": "Available district page covering secondary A/B rotation, Wednesday late starts, elementary Friday early dismissal, grade-band conferences, and conditional weather make-up rules."
     },
     {
       "label": "Granite School District Calendar",
+      "slug": "granite-school-district-calendar",
       "area": "Salt Lake County, UT",
-      "note": "Planned coverage after the official calendar and student attendance exceptions are reviewed."
+      "note": "Available district page covering grade-band SEP conferences, compensatory days, term counts, kindergarten opening rules, and Friday planning-day differences."
     },
     {
       "label": "Jordan School District Calendar",
+      "slug": "jordan-school-district-calendar",
       "area": "Salt Lake County, UT",
-      "note": "Planned coverage after the official calendar and school-year schedule details are reviewed."
+      "note": "Available district page covering staggered grade-level openings and endings, elementary early out, high-school A/B schedules, conference closures, testing exceptions, and official source discrepancies."
     },
     {
       "label": "Canyons School District Calendar",
+      "slug": "canyons-school-district-calendar",
       "area": "Salt Lake County, UT",
-      "note": "Planned coverage after the current official calendar receives a complete source review."
+      "note": "Available district page covering staggered orientation and kindergarten opening, every-Friday early out, K-12 A/B rotation, level-specific conferences, and Brighton's separate trimester calendar."
     },
     {
       "label": "Weber School District Calendar",
+      "slug": "weber-school-district-calendar",
       "area": "Weber County, UT",
-      "note": "Planned coverage after official attendance dates, breaks, and schedule exceptions are verified."
+      "note": "Available district page covering the daily A/B grid, Wednesday elementary and secondary early-out times, opening-week early outs, level-specific conferences, 180-day quarter counts, ACT day, and a disclosed 2026-27 federal-holiday legend conflict."
     }
   ],
   "verificationMethodology": [

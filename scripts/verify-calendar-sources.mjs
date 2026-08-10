@@ -1,4 +1,5 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs'
+import { createHash } from 'node:crypto'
 import { join, relative } from 'node:path'
 
 const root = process.cwd()
@@ -28,6 +29,63 @@ function findResourceUuid(html, linkText) {
     return dataUuid ?? hrefUuid ?? null
   }
   return null
+}
+
+function findDocumentPdfUrl(html, linkText) {
+  const linkIndex = html.indexOf(linkText)
+  if (linkIndex === -1) return null
+
+  const documentPayload = html.slice(linkIndex, linkIndex + 5000)
+  const pdfUrl = documentPayload.match(/https?:\/\/[^"'\\\s<]+\.pdf(?:\?[^"'\\\s<]*)?/i)?.[0]
+  return pdfUrl
+    ?.replace(/\\u0026/gi, '&')
+    .replace(/&amp;/gi, '&')
+    ?? null
+}
+
+async function fetchSource(url) {
+  const response = await fetch(url, {
+    headers: { 'user-agent': 'MySchoolDates source monitor/1.0' },
+    redirect: 'follow',
+  })
+  if (!response.ok) throw new Error(`HTTP ${response.status}`)
+  return response
+}
+
+async function verifyResourceUuid(source, label) {
+  if (!uuidPattern.test(source.expectedResourceUuid ?? '')) {
+    throw new Error(`invalid expectedResourceUuid in ${relative(root, source.path)}`)
+  }
+
+  const actualResourceUuid = findResourceUuid(await (await fetchSource(source.checkUrl)).text(), source.linkText)
+  if (!actualResourceUuid) throw new Error(`could not find “${source.linkText}” at ${source.checkUrl}`)
+  if (actualResourceUuid !== source.expectedResourceUuid) {
+    throw new Error(`resource UUID changed from ${source.expectedResourceUuid} to ${actualResourceUuid}`)
+  }
+
+  console.log(`OK ${label}: resource UUID ${actualResourceUuid}`)
+}
+
+async function verifyDocumentPdf(source, label) {
+  if (!source.expectedPdfUrl || !/^[0-9a-f]{64}$/i.test(source.expectedChecksumSha256 ?? '')) {
+    throw new Error(`invalid document-pdf monitor configuration in ${relative(root, source.path)}`)
+  }
+
+  const actualPdfUrl = findDocumentPdfUrl(await (await fetchSource(source.checkUrl)).text(), source.linkText)
+  if (!actualPdfUrl) throw new Error(`could not find a PDF for “${source.linkText}” at ${source.checkUrl}`)
+  if (actualPdfUrl !== source.expectedPdfUrl) {
+    throw new Error(`PDF URL changed from ${source.expectedPdfUrl} to ${actualPdfUrl}`)
+  }
+
+  const pdfResponse = await fetchSource(actualPdfUrl)
+  const actualChecksum = createHash('sha256')
+    .update(Buffer.from(await pdfResponse.arrayBuffer()))
+    .digest('hex')
+  if (actualChecksum !== source.expectedChecksumSha256) {
+    throw new Error(`PDF checksum changed from ${source.expectedChecksumSha256} to ${actualChecksum}`)
+  }
+
+  console.log(`OK ${label}: document PDF URL and SHA-256 match`)
 }
 
 if (!existsSync(calendarsDir)) {
@@ -61,32 +119,17 @@ if (!monitoredSources.length) {
 let failures = 0
 for (const source of monitoredSources) {
   const label = `${source.institutionId} ${source.schoolYear}`
-  if (!source.checkUrl || !source.linkText || !uuidPattern.test(source.expectedResourceUuid ?? '')) {
+  if (!source.checkUrl || !source.linkText) {
     console.error(`FAIL ${label}: invalid sourceResourceMonitor configuration in ${relative(root, source.path)}`)
     failures += 1
     continue
   }
 
   try {
-    const response = await fetch(source.checkUrl, {
-      headers: { 'user-agent': 'MySchoolDates source monitor/1.0' },
-      redirect: 'follow',
-    })
-    if (!response.ok) throw new Error(`HTTP ${response.status}`)
-
-    const actualResourceUuid = findResourceUuid(await response.text(), source.linkText)
-    if (!actualResourceUuid) {
-      console.error(`FAIL ${label}: could not find “${source.linkText}” at ${source.checkUrl}`)
-      failures += 1
-      continue
-    }
-    if (actualResourceUuid !== source.expectedResourceUuid) {
-      console.error(`FAIL ${label}: resource UUID changed from ${source.expectedResourceUuid} to ${actualResourceUuid}`)
-      failures += 1
-      continue
-    }
-
-    console.log(`OK ${label}: ${actualResourceUuid}`)
+    const monitorType = source.type ?? (source.expectedResourceUuid ? 'resource-uuid' : 'document-pdf')
+    if (monitorType === 'resource-uuid') await verifyResourceUuid(source, label)
+    else if (monitorType === 'document-pdf') await verifyDocumentPdf(source, label)
+    else throw new Error(`unsupported monitor type “${monitorType}”`)
   }
   catch (error) {
     console.error(`FAIL ${label}: ${error instanceof Error ? error.message : String(error)}`)

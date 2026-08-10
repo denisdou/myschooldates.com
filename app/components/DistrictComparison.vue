@@ -430,6 +430,9 @@ const comparisonSubheading = computed(() =>
 const comparisonDefaultOpen = computed(() =>
   Boolean((props.cal as any)?.comparisonDefaultOpen ?? (props.cal as any)?.meta?.comparisonDefaultOpen ?? (props.district as any)?.comparisonDefaultOpen ?? (props.district as any)?.meta?.comparisonDefaultOpen)
 )
+const comparisonAlwaysExpanded = computed(() =>
+  Boolean((props.cal as any)?.comparisonAlwaysExpanded ?? (props.cal as any)?.meta?.comparisonAlwaysExpanded ?? (props.district as any)?.comparisonAlwaysExpanded ?? (props.district as any)?.meta?.comparisonAlwaysExpanded)
+)
 const showComparisonNotes = computed(() =>
   !Boolean((props.cal as any)?.hideComparisonNotes ?? (props.cal as any)?.meta?.hideComparisonNotes)
 )
@@ -472,8 +475,12 @@ const comparisonCaption = computed(() =>
       </div>
     </div>
 
-    <details :open="comparisonDefaultOpen" class="group">
-      <summary class="cursor-pointer list-none px-6 py-3 border-b border-[#ebe6dd]">
+    <component
+      :is="comparisonAlwaysExpanded ? 'div' : 'details'"
+      :open="!comparisonAlwaysExpanded && comparisonDefaultOpen ? true : undefined"
+      class="group"
+    >
+      <summary v-if="!comparisonAlwaysExpanded" class="cursor-pointer list-none px-6 py-3 border-b border-[#ebe6dd]">
         <span class="flex items-center justify-between gap-4">
           <span class="text-sm font-semibold text-[#4f5b5f]">View full comparison table</span>
           <span class="text-sm font-medium text-[#0f5d6b] group-open:hidden">Show</span>
@@ -534,7 +541,7 @@ const comparisonCaption = computed(() =>
       </template>
     </div>
 
-    </details>
+    </component>
 
     <div class="px-6 py-3 border-t border-[#ebe6dd] text-xs text-[#6b645c]">
       <p v-if="comparisonFooterText">

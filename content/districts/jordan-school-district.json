@@ -1,0 +1,147 @@
+{
+  "institutionId": "jordan-school-district",
+  "name": "Jordan School District",
+  "shortName": "JSD",
+  "slug": "jordan-school-district-calendar",
+  "state": "Utah",
+  "stateCode": "UT",
+  "city": "West Jordan",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://jordandistrict.org/",
+  "calendarPage": "https://planning.jordandistrict.org/calendars/",
+  "logo": "https://planning.jordandistrict.org/wp-content/uploads/sites/22/web_planning_logo-3.png",
+  "timezone": "America/Denver",
+  "county": "Salt Lake County",
+  "region": "Wasatch Front",
+  "metro": "Salt Lake City",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "grade-level opening calendar with high school A/B rotation",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Jordan Multi-Level Calendar",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "translatedPdf": false,
+    "programCalendar": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-10",
+    "coverageNote": "Coverage uses Jordan School District's official Planning & Enrollment calendar page, the official 2025-2026 all-level PDF located in the district upload archive, the official 2026-2027 revised all-level PDF, the official 2027-2028 approved all-level PDF, grade-level family and school calendars, high school A/B resources, and visually reviewed PDF pages. A third-party 2025-2026 real-estate calendar was used only as a companion check after the official district PDF was found. No 2028-2029 or 2029-2030 calendar URL was provided."
+  },
+  "contentFreshnessScore": {
+    "overall": 99,
+    "lastManualReview": "2026-08-10",
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 30,
+    "refreshRule": "Re-check when JSD revises an all-level or grade-level PDF, changes a testing date, fills a TBD staff date, approves an emergency make-up day, or posts another school year."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Board revision, grade-level schedule change, testing-date confirmation, TBD staff date, emergency make-up decision, or future calendar publication."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Jordan School District calendar",
+    "JSD calendar Utah",
+    "Jordan school calendar PDF",
+    "Jordan School District A B calendar",
+    "Jordan elementary early out calendar",
+    "Jordan School District first day",
+    "Jordan middle school orientation",
+    "Jordan School District breaks"
+  ],
+  "districtFact": "Jordan School District opens high school one day before elementary school and grades 8–9, while seventh grade uses that first day for orientation and ends one day before most students. The district also publishes separate elementary, middle school, high school, and high school A/B calendars rather than expecting one all-level PDF to answer every attendance question.",
+  "about": [
+    {
+      "title": "The First Day Depends on Grade Level",
+      "content": "High school students begin on the first instructional date. Seventh graders attend orientation that day, while elementary students and grades 8–9 begin the following day. A family with children at multiple levels therefore has two opening dates, not one universal first day."
+    },
+    {
+      "title": "Seventh Grade Has a Separate Last Day",
+      "content": "Jordan's seventh graders finish one day before grades 8–9, elementary students, and high school students. The distinction appears in each verified all-level calendar and should be preserved when planning end-of-year transportation or care."
+    },
+    {
+      "title": "Fall Conference Closures Switch by Level",
+      "content": "Middle and high schools hold fall conferences first, then close for a compensation day while elementary schools use a professional day. Elementary conferences follow the next week, when elementary students have their own compensation day and secondary students use a professional day. Spring conferences align across all levels."
+    },
+    {
+      "title": "High School Uses A/B and Grade-Specific Test Days",
+      "content": "The high school calendar labels each instructional date A or B. Tentative Pre-ACT and ACT dates create different attendance rules for grades 10, 11, and 12, including half days and full no-school exceptions; those dates are not districtwide closures."
+    },
+    {
+      "title": "The Calendar Page Offers Live Subscriptions",
+      "content": "Jordan publishes separate elementary, middle school, high school, and high school A/B subscriptions. The district warns subscribers to turn off event alerts because annual calendar updates can generate many notifications. The MySchoolDates ICS file is instead a one-time import and does not sync later revisions."
+    }
+  ],
+  "planningTips": {
+    "title": "Jordan School District Calendar Notes",
+    "content": [
+      "Check the student's grade before using the opening or closing date: high school and seventh-grade orientation start first, and seventh grade ends one day early.",
+      "Use the elementary, middle school, or high school family calendar for level-specific closures instead of applying the all-level calendar alone.",
+      "Elementary families should use the grade-level calendar for weekly early-out labels and confirm the actual dismissal time with their school.",
+      "High school families should pair each A/B letter with the student's course schedule and read tentative testing days by grade.",
+      "Conference week does not affect every level the same way in fall; compensation and professional days swap between elementary and secondary schools.",
+      "Treat the post-year check-out date only as an emergency make-up day if the administration recommends it and the Board approves it.",
+      "For live district subscriptions, follow Jordan's warning to turn off event alerts; the MySchoolDates ICS download is a separate one-time import."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Do all Jordan School District students start on the same day?",
+      "a": "No. High school students start first, seventh graders attend orientation that same day, and elementary students plus grades 8–9 begin the following day."
+    },
+    {
+      "q": "Does Jordan School District use A and B days?",
+      "a": "Yes. Jordan publishes a high school A/B calendar and live A/B subscription. The letters identify the class rotation, not a closure or early-release rule."
+    },
+    {
+      "q": "Do Jordan elementary schools have Early Out every week?",
+      "a": "Jordan's elementary family calendars label the final instructional day of most weeks as Early Out and mark exceptions as No Early Out. Exact dismissal times remain school-specific."
+    },
+    {
+      "q": "What happens on Jordan's tentative high school testing days?",
+      "a": "The tentative Pre-ACT/college-prep and ACT dates assign half-day attendance to selected grades and no school to another grade. Families should recheck after the tentative dates are confirmed."
+    },
+    {
+      "q": "How are Jordan School District calendars approved?",
+      "a": "The district says a Board-approved committee with parent, teacher, administrator, and education-support representation develops calendars under district policy, and calendars are posted after Board approval."
+    }
+  ],
+  "customSections": [],
+  "relatedDistrictsTitle": "More Utah School Calendars",
+  "relatedDistrictsDescription": "Compare Jordan dates with other verified Wasatch Front district calendars.",
+  "relatedDistricts": [
+    {
+      "name": "Granite School District",
+      "slug": "granite-school-district-calendar",
+      "state": "Utah",
+      "comparisonLabel": "Granite"
+    },
+    {
+      "name": "Davis School District",
+      "slug": "davis-school-district-calendar",
+      "state": "Utah",
+      "comparisonLabel": "Davis"
+    }
+  ],
+  "sources": [
+    { "label": "Jordan Planning & Enrollment website", "url": "https://planning.jordandistrict.org/" },
+    { "label": "Jordan School District calendars page", "url": "https://planning.jordandistrict.org/calendars/" },
+    { "label": "Official Jordan 2025-26 all-level calendar", "url": "https://planning.jordandistrict.org/wp-content/uploads/sites/22/2025-26-Calendar-All-Levels.pdf" },
+    { "label": "Official Jordan 2026-27 all-level calendar", "url": "https://planning.jordandistrict.org/wp-content/uploads/sites/22/2026-27-Calendar-All-Levels.pdf" },
+    { "label": "Official Jordan 2027-28 all-level calendar", "url": "https://planning.jordandistrict.org/wp-content/uploads/sites/22/2027-28-All-Levels.pdf" }
+  ]
+}

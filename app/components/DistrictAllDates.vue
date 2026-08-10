@@ -118,14 +118,14 @@ function normalizeName(event: CalendarEvent) {
 
   if (event.type === 'break_start' || event.type === 'break_end') {
     return name
-      .replace(/\b(Begins|Begin|Starts|Start|Ends|End)\b/gi, '')
+      .replace(/\b(Begins|Begin|Starts|Start|Ends|End)\b(?!-)/gi, '')
       .replace(/\s+/g, ' ')
       .trim()
   }
 
   if (event.type === 'teacher_workday' || event.type === 'teacher_professional_learning') {
     return name
-      .replace(/\b(Begins|Begin|Starts|Start|Ends|End)\b/gi, '')
+      .replace(/\b(Begins|Begin|Starts|Start|Ends|End)\b(?!-)/gi, '')
       .replace(/\s+/g, ' ')
       .trim()
   }
@@ -142,6 +142,8 @@ function normalizeName(event: CalendarEvent) {
   if (event.type === 'holiday') {
     if (lower === 'district holiday') return 'District Holiday'
     if (lower.includes('martin luther king')) return 'Martin Luther King Jr. Day'
+    if (/^(?:students?|staff|teachers?)(?:\s+(?:and|&)\s+(?:students?|staff|teachers?))*\s+holiday$/i.test(name)) return name
+    if (/[—–/-]\s*(?:student|staff|teacher)/i.test(name)) return name
     return name.replace(/\s+Holiday$/i, '')
   }
 
@@ -453,23 +455,23 @@ function formatRangeEnd(event: DisplayEvent) {
 </script>
 
 <template>
-  <div id="all-dates" class="calendar-print-target bg-rds-surface-panel rounded-lg border border-rds-hairline overflow-hidden scroll-mt-24 shadow-[0_1px_0_rgba(31,41,51,0.03)]">
-    <div class="px-6 py-4 border-b border-[#ebe6dd]">
-      <h2 class="text-lg font-semibold text-[#1f2933]" :class="legend?.length && !showCoverageNoteAbove ? 'mb-3' : ''">{{ title }}</h2>
-      <p v-if="showCoverageNoteAbove" class="mt-2 text-sm leading-relaxed text-[#6b645c]">
+  <div id="all-dates" class="calendar-print-target district-calendar-table scroll-mt-24">
+    <div class="district-calendar-table__header px-6 py-5">
+      <h2 class="text-xl font-semibold tracking-tight text-rds-ink" :class="legend?.length && !showCoverageNoteAbove ? 'mb-3' : ''">{{ title }}</h2>
+      <p v-if="showCoverageNoteAbove" class="mt-2 max-w-3xl text-sm leading-relaxed text-rds-ink-muted">
         {{ coverageNote }}
       </p>
-      <p class="calendar-print-meta hidden text-xs text-[#6b645c]">
+      <p class="calendar-print-meta hidden text-xs text-rds-ink-muted">
         Print-friendly calendar from MySchoolDates<span v-if="verifiedDate"> · Dates verified {{ verifiedDate }}</span>
       </p>
       <div v-if="legend?.length" class="flex flex-wrap items-center gap-3" :class="showCoverageNoteAbove ? 'mt-3' : ''">
-        <span class="text-xs font-semibold uppercase tracking-wide text-[#8a8176]">{{ legendTitle || 'Common date types' }}</span>
+        <span class="text-xs font-semibold uppercase tracking-wide text-rds-ink-dim">{{ legendTitle || 'Common date types' }}</span>
         <span
           v-for="item in legend"
           :key="item.label"
-          class="inline-flex items-center gap-1.5 text-xs text-[#7b756d]"
+          class="inline-flex items-center gap-1.5 text-xs text-rds-ink-dim"
         >
-          <span v-if="legendStyle !== 'text'" class="w-2 h-2 rounded-lg flex-shrink-0" :class="item.dot" />
+          <span v-if="legendStyle !== 'text'" class="h-2 w-2 flex-shrink-0 rounded-full" :class="item.dot" />
           {{ item.label }}
         </span>
       </div>
@@ -482,7 +484,7 @@ function formatRangeEnd(event: DisplayEvent) {
           v-for="group in monthGroups"
           :key="group.key"
           :href="`#${monthAnchor(group.key)}`"
-          class="inline-flex flex-shrink-0 items-center rounded-lg border border-[#e1dbd0] bg-[#f3f0e8] px-3 py-1.5 text-xs font-medium text-[#6b645c] transition-colors hover:border-[#b8c9c9] hover:bg-[#e6f0ef] hover:text-[#0f5d6b]"
+          class="district-month-link inline-flex flex-shrink-0 items-center px-3 py-1.5 text-xs font-medium"
         >
           {{ group.label.split(' ')[0] }}
         </a>
@@ -492,26 +494,26 @@ function formatRangeEnd(event: DisplayEvent) {
       <div
         v-for="group in monthGroups"
         :key="group.key"
-        class="border-b border-[#ebe6dd] last:border-b-0"
+        class="last:border-b-0"
       >
         <div
           :id="monthAnchor(group.key)"
-          class="calendar-print-month-header px-6 py-3 bg-[#f3f0e8] text-xs font-semibold text-[#7b756d] uppercase tracking-widest scroll-mt-24"
+          class="calendar-print-month-header district-calendar-table__month scroll-mt-24 px-6 py-3 text-xs font-semibold uppercase"
         >
           {{ group.label }}
         </div>
-        <div class="divide-y divide-[#eee9df]">
-          <p v-if="!group.events.length && group.note" class="px-6 py-4 text-sm text-[#6b645c]">
+        <div class="divide-y divide-rds-hairline">
+          <p v-if="!group.events.length && group.note" class="px-6 py-4 text-sm text-rds-ink-muted">
             {{ group.note }}
           </p>
           <div
             v-for="event in group.events"
             :key="event.startDate + event.endDate + event.type + event.displayName"
-            class="calendar-print-event flex flex-col items-start gap-2 px-6 py-4 hover:bg-[#f6f2ea] transition-colors sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+            class="calendar-print-event district-calendar-table__event flex flex-col items-start gap-2 px-6 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
           >
-            <div>
-              <div class="font-medium text-[#1f2933]">{{ displayEventName(event) }}</div>
-              <div class="text-sm text-[#7b756d]">
+            <div class="min-w-0">
+              <div class="font-medium text-rds-ink">{{ displayEventName(event) }}</div>
+              <div class="district-calendar-table__date mt-0.5 text-sm">
                 <template v-if="displayDateRangeParts(event)">
                   <time :datetime="event.startDate">{{ displayDateRangeParts(event)!.startLabel }}</time>
                   <span aria-hidden="true">–</span>
@@ -532,21 +534,21 @@ function formatRangeEnd(event: DisplayEvent) {
                   <time :datetime="event.endDate">{{ formatRangeEnd(event) }}</time>
                 </template>
               </div>
-              <p v-if="shouldShowDescription(event)" class="mt-1 text-sm text-[#6b645c]">
+              <p v-if="shouldShowDescription(event)" class="district-calendar-table__note mt-1 max-w-3xl text-sm leading-relaxed">
                 {{ event.description }}
               </p>
-              <p v-if="event.derivedFromPublishedBreakDates" class="mt-1 text-xs text-[#7b756d]">
+              <p v-if="event.derivedFromPublishedBreakDates" class="mt-1 text-xs text-rds-ink-dim">
                 {{ derivedDateNote || 'Return date based on the district\'s published no-school schedule.' }}
               </p>
             </div>
-            <span v-if="!event.hideLabel" class="text-xs font-medium px-2.5 py-1 rounded-lg whitespace-normal sm:whitespace-nowrap" :class="eventTypeColor[event.labelType]">
+            <span v-if="!event.hideLabel" class="rounded-rds px-2.5 py-1 text-xs font-medium whitespace-normal sm:whitespace-nowrap" :class="eventTypeColor[event.labelType]">
               {{ displayLabelText(event) }}
             </span>
           </div>
         </div>
       </div>
     </div>
-    <div class="px-6 py-3 border-t border-[#ebe6dd] flex items-center gap-1.5 text-xs text-[#6b645c]">
+    <div class="district-calendar-table__footer flex items-center gap-1.5 px-6 py-3 text-xs leading-relaxed">
       <span>
         <template v-if="footerMode === 'source_sentence'">
           <template v-if="footerCoverageNote">{{ footerCoverageNote }} </template>

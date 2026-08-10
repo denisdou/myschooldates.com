@@ -73,21 +73,21 @@ watch(() => route.fullPath, () => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-[hsl(var(--background))] text-[#1f2933] flex flex-col">
+  <div class="min-h-screen bg-[hsl(var(--background))] text-rds-ink flex flex-col">
     <!-- Shared Header -->
-    <header class="bg-rds-surface-panel/95 border-b border-rds-hairline backdrop-blur">
-      <div class="site-page-shell py-4 flex items-center justify-between gap-4">
+    <header class="site-header">
+      <div class="site-page-shell site-header__row flex items-center justify-between gap-4">
         <!-- Logo -->
-        <NuxtLink to="/" class="flex items-center gap-2.5 flex-shrink-0">
+        <NuxtLink to="/" class="site-brand flex items-center gap-2.5 flex-shrink-0">
           <img src="/icons/myschooldates-logo.svg" alt="MySchoolDates" class="h-8 w-auto" />
-          <span class="text-xl font-semibold tracking-tight text-[#1f2933]">MySchoolDates</span>
-          <span class="text-sm text-[#6b645c] hidden lg:inline">US School Calendar Platform</span>
+          <span class="site-brand__name">MySchoolDates</span>
+          <span class="site-brand__tagline hidden lg:inline">US School Calendar Platform</span>
         </NuxtLink>
         <!-- Main navigation -->
-        <nav class="hidden sm:flex items-center gap-5">
+        <nav class="hidden sm:flex items-center gap-6">
           <NuxtLink
             to="/"
-            class="text-sm text-[#6b645c] hover:text-[#0f5d6b] transition-colors"
+            class="site-nav-link"
           >
             Home
           </NuxtLink>
@@ -101,7 +101,7 @@ watch(() => route.fullPath, () => {
             <button
               type="button"
               id="states-menu-button"
-              class="inline-flex items-center gap-1 text-sm text-[#6b645c] hover:text-[#0f5d6b] transition-colors"
+              class="site-nav-link gap-1"
               :aria-expanded="activeDesktopMenu === 'states'"
               aria-controls="states-menu"
               @click="activeDesktopMenu = 'states'"
@@ -118,12 +118,12 @@ watch(() => route.fullPath, () => {
               v-show="activeDesktopMenu === 'states'"
               class="absolute left-0 top-full z-30 w-[34rem] pt-3"
             >
-              <div class="grid grid-cols-3 gap-1 rounded-lg border border-rds-hairline bg-rds-surface-panel p-2 shadow-sm">
+              <div class="site-menu-panel grid grid-cols-3 gap-1 p-2">
                 <NuxtLink
                   v-for="state in stateLinks"
                   :key="state.slug"
                   :to="`/${state.slug}`"
-                  class="rounded-lg px-3 py-2 text-sm text-[#6b645c] hover:bg-[#f0ede5] hover:text-[#0f5d6b]"
+                  class="site-menu-item px-3 py-2 text-sm"
                   @click="closeDesktopMenu"
                 >
                   {{ state.name }}
@@ -133,7 +133,7 @@ watch(() => route.fullPath, () => {
           </div>
           <NuxtLink
             to="/districts"
-            class="text-sm text-[#6b645c] hover:text-[#0f5d6b] transition-colors"
+            class="site-nav-link"
           >
             Districts
           </NuxtLink>
@@ -147,7 +147,7 @@ watch(() => route.fullPath, () => {
             <button
               type="button"
               id="calendar-data-menu-button"
-              class="inline-flex items-center gap-1 text-sm text-[#6b645c] hover:text-[#0f5d6b] transition-colors"
+              class="site-nav-link gap-1"
               :aria-expanded="activeDesktopMenu === 'calendar'"
               aria-controls="calendar-data-menu"
               @click="activeDesktopMenu = 'calendar'"
@@ -164,16 +164,16 @@ watch(() => route.fullPath, () => {
               v-show="activeDesktopMenu === 'calendar'"
               class="absolute right-0 top-full z-30 w-72 pt-3"
             >
-              <div class="rounded-lg border border-rds-hairline bg-rds-surface-panel p-2 shadow-sm">
+              <div class="site-menu-panel p-2">
                 <NuxtLink
                   v-for="link in calendarDataLinks"
                   :key="link.to"
                   :to="link.to"
-                  class="block rounded-lg px-3 py-2.5 hover:bg-[#f0ede5]"
+                  class="site-menu-item block px-3 py-2.5"
                   @click.prevent="navigateCalendarData(link.to)"
                 >
-                  <span class="block text-sm font-semibold text-[#2f3a3f]">{{ link.name }}</span>
-                  <span class="block text-xs text-[#7b756d]">{{ link.description }}</span>
+                  <span class="site-menu-item__title block text-sm font-semibold">{{ link.name }}</span>
+                  <span class="site-menu-item__description block text-xs">{{ link.description }}</span>
                 </NuxtLink>
               </div>
             </div>
@@ -181,7 +181,7 @@ watch(() => route.fullPath, () => {
         </nav>
         <button
           type="button"
-          class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[#d9d2c7] text-[#6b645c] hover:border-[#9fb8bb] hover:text-[#0f5d6b] sm:hidden"
+          class="rds-icon-button sm:hidden"
           :aria-expanded="mobileMenuOpen"
           aria-controls="mobile-navigation"
           aria-label="Open navigation menu"
@@ -198,45 +198,45 @@ watch(() => route.fullPath, () => {
           </svg>
         </button>
       </div>
-      <nav id="mobile-navigation" v-show="mobileMenuOpen" class="border-t border-[#ebe6dd] bg-[#fbfaf7] px-4 py-3 sm:hidden">
+      <nav id="mobile-navigation" v-show="mobileMenuOpen" class="site-mobile-nav px-4 py-3 sm:hidden">
         <div class="site-page-shell space-y-4">
           <div class="grid grid-cols-2 gap-2">
             <NuxtLink
               to="/"
-              class="rounded-lg px-3 py-2 text-sm font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+              class="site-menu-item px-3 py-2 text-sm font-medium"
             >
               Home
             </NuxtLink>
             <NuxtLink
               to="/districts"
-              class="rounded-lg px-3 py-2 text-sm font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+              class="site-menu-item px-3 py-2 text-sm font-medium"
             >
               Districts
             </NuxtLink>
           </div>
           <div>
-            <p class="px-3 pb-1 text-xs font-semibold uppercase tracking-wide text-gray-600">Calendar Data</p>
+            <p class="site-mobile-nav__label px-3 pb-1 text-xs font-semibold uppercase tracking-wide">Calendar Data</p>
             <div class="grid grid-cols-1 gap-2">
               <NuxtLink
                 v-for="link in calendarDataLinks"
                 :key="link.to"
                 :to="link.to"
-                class="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-700"
+                class="site-menu-item px-3 py-2 text-sm font-medium"
                 @click.prevent="navigateCalendarData(link.to)"
               >
                 <span class="block">{{ link.name }}</span>
-                <span class="block text-xs font-normal text-gray-500">{{ link.description }}</span>
+                <span class="site-menu-item__description block text-xs font-normal">{{ link.description }}</span>
               </NuxtLink>
             </div>
           </div>
           <div>
-            <p class="px-3 pb-1 text-xs font-semibold uppercase tracking-wide text-gray-600">States</p>
+            <p class="site-mobile-nav__label px-3 pb-1 text-xs font-semibold uppercase tracking-wide">States</p>
             <div class="grid grid-cols-2 gap-2">
               <NuxtLink
                 v-for="state in stateLinks"
                 :key="state.slug"
                 :to="`/${state.slug}`"
-                class="rounded-lg px-3 py-2 text-sm font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+                class="site-menu-item px-3 py-2 text-sm font-medium"
               >
                 {{ state.name }}
               </NuxtLink>
@@ -250,11 +250,11 @@ watch(() => route.fullPath, () => {
     <slot />
 
     <!-- Shared Footer -->
-    <footer class="bg-[#fbfaf7] border-t border-[#e6e1d8] mt-auto">
+    <footer class="site-footer">
       <div class="site-page-shell py-10">
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-8">
           <div>
-            <p class="text-sm font-semibold text-gray-700 mb-3">Popular States</p>
+            <p class="site-footer__heading text-sm font-semibold mb-3">Popular States</p>
             <ul class="space-y-2">
               <li><NuxtLink to="/california" class="text-sm text-gray-500 hover:text-blue-600">California School Calendars</NuxtLink></li>
               <li><NuxtLink to="/florida" class="text-sm text-gray-500 hover:text-blue-600">Florida School Calendars</NuxtLink></li>
@@ -272,7 +272,7 @@ watch(() => route.fullPath, () => {
             </ul>
           </div>
           <div v-if="!isStateLandingPage">
-            <p class="text-sm font-semibold text-gray-700 mb-3">Popular Districts</p>
+            <p class="site-footer__heading text-sm font-semibold mb-3">Popular Districts</p>
             <ul class="space-y-2">
               <li><NuxtLink to="/los-angeles-unified-school-district-calendar" class="text-sm text-gray-500 hover:text-blue-600">Los Angeles Unified</NuxtLink></li>
               <li><NuxtLink to="/miami-dade-school-calendar" class="text-sm text-gray-500 hover:text-blue-600">Miami-Dade School Calendar</NuxtLink></li>
@@ -282,7 +282,7 @@ watch(() => route.fullPath, () => {
             </ul>
           </div>
           <div v-else>
-            <p class="text-sm font-semibold text-gray-700 mb-3">{{ currentStateName }} Resources</p>
+            <p class="site-footer__heading text-sm font-semibold mb-3">{{ currentStateName }} Resources</p>
             <ul class="space-y-2">
               <li><NuxtLink :to="`/${currentStateSlug}`" class="text-sm text-gray-500 hover:text-blue-600">{{ currentStateName }} District Calendars</NuxtLink></li>
               <li><NuxtLink to="/calendar-verification-methodology" class="text-sm text-gray-500 hover:text-blue-600">Verification Methodology</NuxtLink></li>
@@ -293,9 +293,9 @@ watch(() => route.fullPath, () => {
           <div class="col-span-2 sm:col-span-1">
             <NuxtLink to="/" class="flex items-center gap-2 mb-3">
               <img src="/icons/myschooldates-logo.svg" alt="MySchoolDates" class="h-7 w-auto" />
-              <span class="text-sm font-semibold text-gray-700">MySchoolDates</span>
+              <span class="site-footer__brand text-sm font-semibold">MySchoolDates</span>
             </NuxtLink>
-            <p class="text-sm text-gray-500 leading-relaxed mb-4">
+            <p class="site-footer__copy text-sm leading-relaxed mb-4">
               US School Calendar Platform. Calendar information is based on official school district sources.
               Districts may revise calendars after publication — always verify with your district before making plans.
             </p>
@@ -312,7 +312,7 @@ watch(() => route.fullPath, () => {
             </ul>
           </div>
         </div>
-        <div class="pt-6 border-t border-gray-100 text-center text-xs text-gray-600">
+        <div class="site-footer__bottom pt-6 text-center text-xs">
           <p>&copy; {{ new Date().getFullYear() }} MySchoolDates &mdash; US School Calendar Platform</p>
         </div>
       </div>

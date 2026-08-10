@@ -1,0 +1,326 @@
+{
+  "institutionId": "davis-school-district",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025–26",
+  "pageHeading": "Davis School District Calendar 2025–26",
+  "firstDay": "2025-08-18",
+  "lastDay": "2026-05-22",
+  "semesters": 2,
+  "temporalCoverageStart": "2025-08-11",
+  "temporalCoverageEnd": "2026-05-22",
+  "sourceUrl": "https://www.davis.k12.ut.us/o/dsd/page/school-year-calendars",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4672/Dsd/ef748f79-423d-45c6-af03-a41903899b54/2025-2026_adjusted_calendar__Jan._2025_.pdf?disposition=inline",
+  "sourceCalendarName": "Davis School District 2025-2026 Adjusted Calendar",
+  "sourceVersion": "Board approved December 5, 2024 · adjusted January 2025",
+  "lastVerifiedAt": "2026-08-10",
+  "dateCreated": "2026-08-10",
+  "datePublished": "2026-08-10",
+  "dateModified": "2026-08-10",
+  "calendarType": "A/B secondary calendar with grade-band schedule changes",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "keyDates",
+  "schemaReviewedBy": "author",
+  "schemaCalendarName": "Davis School District Calendar 2025–26",
+  "schemaDatasetName": "Davis School District 2025–26 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Davis School District 2025–26 dates, including the main opening, kindergarten testing and first day, secondary A/B rotation, weekly grade-band schedule changes, parent-teacher conference options, holidays, breaks, term endings, staff days, ACT date, and final early-out day.",
+  "schemaCalendarDownloadName": "MySchoolDates Davis School District 2025–26 calendar file",
+  "schemaCalendarDownloadDescription": "One-time calendar import with selected Davis School District openings, no-school days, breaks, term endings, conferences, and the last day. Weekly Wednesday and Friday schedules and daily A/B letters are not repeated.",
+  "seoTitle": "Davis School District Calendar 2025–26: A/B & Breaks",
+  "seoDescription": "See Davis School District’s 2025–26 calendar, including kindergarten testing, A/B days, weekly schedule changes, breaks, conferences, and the last day.",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideRelatedDistrictDescriptions": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "comparison"
+  ],
+  "heroSourceLine": "Source: Davis School District 2025–26 adjusted calendar · January 2025",
+  "heroSummary": "Most Davis School District students began Monday, August 18, 2025, on an elementary early-out schedule. Kindergarten students used August 18–19 for individually scheduled testing and began regular classes Wednesday, August 20. Secondary schools followed an A/B rotation with Wednesday late starts, while elementary schools dismissed early on Fridays. The final student day was Friday, May 22, 2026, with district-published early-out times.",
+  "calendarNotes": "Most Davis students began August 18, while kindergarten used August 18–19 for individually scheduled testing before regular classes began August 20. Secondary schools followed the printed A/B rotation, with March 24 marked A/B for the ACT. Junior high and high schools used late-start Wednesdays, while elementary schools used early-dismissal Fridays. Fall Break ran October 16–17, followed by an all-school early-out day when Quarter 2 began October 20. Thanksgiving combined a November 26 teacher compensation day with the November 27–28 break. Winter Break ran December 22–January 2, and a January 5 professional day kept students out until January 6. Spring Break ran March 30–April 3, and the May 22 last day used the all-school early-out schedule.",
+  "heroFactChips": [
+    "First day: Aug 18",
+    "Kindergarten: Aug 20",
+    "Student days: 174",
+    "Last day: May 22"
+  ],
+  "verificationBadgeText": "Dates checked August 10, 2026, against the official calendar page and a complete visual rendering of the adjusted PDF.",
+  "keyDatesSummaryTitle": "Davis School District 2025–26 Key Dates",
+  "keyDatesSummarySubtitle": "The main opening, kindergarten schedule, major breaks, and final early-out day",
+  "preserveJumpNavigationOrder": true,
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "School Begins for Most Students",
+      "date": "2025-08-18",
+      "type": "school_start",
+      "description": "Elementary schools used the early-out schedule.",
+      "schemaDescription": "The first day for most Davis School District students was August 18, 2025."
+    },
+    {
+      "label": "Kindergarten",
+      "name": "Kindergarten Testing",
+      "date": "2025-08-18",
+      "dates": ["2025-08-18", "2025-08-19"],
+      "dateDisplayMode": "list",
+      "dateJoiner": "and",
+      "type": "academic",
+      "description": "No regularly scheduled kindergarten; students attended assigned testing appointments.",
+      "schemaDescription": "Davis School District scheduled individual kindergarten testing appointments August 18–19, 2025."
+    },
+    {
+      "label": "Kindergarten",
+      "name": "First Regular Kindergarten Day",
+      "date": "2025-08-20",
+      "type": "school_start",
+      "schemaDescription": "The first regular school day for all Davis kindergarten students was August 20, 2025."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2025-12-22",
+      "endDate": "2026-01-02",
+      "type": "break_start",
+      "description": "A professional day January 5 extended the student closure; classes resumed January 6.",
+      "schemaDescription": "Davis School District Winter Break ran December 22, 2025, through January 2, 2026, followed by a student-free professional day January 5."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2026-03-30",
+      "endDate": "2026-04-03",
+      "type": "break_start",
+      "schemaDescription": "Davis School District Spring Break ran March 30 through April 3, 2026."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day / Early Out / Quarter 4 Ends",
+      "date": "2026-05-22",
+      "type": "school_end",
+      "description": "High school 12:20, junior high 1:00, elementary 1:30 on the district PDF.",
+      "schemaDescription": "The final student day was May 22, 2026, on the district's all-school early-out schedule."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Kindergarten Opening", "id": "dsd-2025-2026-kindergarten-opening" },
+    { "label": "Weekly Schedules", "id": "dsd-2025-2026-weekly-schedules" },
+    { "label": "Conferences", "id": "dsd-2025-2026-conferences" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Day Counts", "id": "dsd-2025-2026-day-counts" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "Davis School District 2025–26 Calendar Dates",
+  "allDatesCoverageNote": "This list includes student-facing dates and staff days that changed attendance. Daily A/B letters and recurring Wednesday late starts or Friday early dismissals are explained once rather than repeated as separate events for every school day.",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4672/Dsd/ef748f79-423d-45c6-af03-a41903899b54/2025-2026_adjusted_calendar__Jan._2025_.pdf?disposition=inline",
+  "allDatesSourceLinks": [
+    { "label": "Official DSD 2025–26 adjusted calendar PDF", "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4672/Dsd/ef748f79-423d-45c6-af03-a41903899b54/2025-2026_adjusted_calendar__Jan._2025_.pdf?disposition=inline" },
+    { "label": "DSD School Year Calendars page", "url": "https://www.davis.k12.ut.us/o/dsd/page/school-year-calendars" }
+  ],
+  "allDatesSourceLabel": "Source: Davis School District",
+  "dateLegendLabelOverrides": {
+    "Early Release": "Early Out / Early Dismissal",
+    "Teacher Workday": "No School — Staff Day",
+    "Academic": "Academic / A-B Schedule Date"
+  },
+  "dateLegendExtraItems": [
+    { "label": "End of Quarter", "dot": "bg-indigo-500" },
+    { "label": "Grade-Band Date", "dot": "bg-pink-500" }
+  ],
+  "icsHeading": "Add Davis 2025–26 Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file with openings, student-free staff days, breaks, term endings, conferences, and the final day from the adjusted calendar.",
+  "icsButtonLabel": "Download MySchoolDates Calendar (.ics)",
+  "icsButtonSupportText": "One-time import for an archived school year. Weekly schedule changes and daily A/B letters are not repeated.",
+  "icsAriaLabel": "Download the Davis School District 2025–26 calendar file",
+  "pdfHeading": "Official Davis School District 2025–26 Calendar",
+  "pdfButtonLabel": "View Official Adjusted Calendar",
+  "pdfDescription": "Open the district's adjusted one-page calendar to see every A/B label, recurring grade-band rule, conference marker, and calendar key.",
+  "pdfVersionLabel": "Board approved December 5, 2024 · adjusted January 2025",
+  "customSections": [
+    {
+      "id": "dsd-2025-2026-kindergarten-opening",
+      "label": "How the Kindergarten Opening Worked",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "Most students began August 18. Kindergarten students did not follow a regular class schedule August 18–19; they attended individually assigned testing appointments and began regular school August 20. With school-director approval, a school could instead hold two testing days during August 11–14 and move its kindergarten teachers' professional and contract days to August 18–19.",
+      "table": {
+        "caption": "Davis School District 2025–26 opening sequence",
+        "columns": ["Date", "Students", "What families needed to know"],
+        "rows": [
+          ["August 18", "Most district students", "First day; elementary schools used the early-out schedule."],
+          ["August 18–19", "Kindergarten", "No regular schedule; students attended individually assigned testing appointments."],
+          ["August 20", "Kindergarten", "First regular school day for all kindergarten students."],
+          ["August 11–14 option", "Approved kindergarten schools", "A school could move its two testing days into this window with school-director approval."]
+        ]
+      }
+    },
+    {
+      "id": "dsd-2025-2026-weekly-schedules",
+      "label": "Three Schedules Share the Same Calendar",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "The district PDF layers grade-band schedule rules onto the same instructional calendar. A/B letters apply to secondary students, Wednesday late starts apply to junior high and high school, and Friday early dismissals apply to elementary school. The PDF does not publish one districtwide weekly bell time.",
+      "table": {
+        "caption": "Recurring Davis School District schedules in 2025–26",
+        "columns": ["Students", "Recurring rule", "What the PDF provides"],
+        "rows": [
+          ["Junior high and high school", "Late start each Wednesday", "Use the school bell schedule for the actual start time."],
+          ["Elementary school", "Early dismissal each Friday", "Use the school bell schedule for the actual dismissal time."],
+          ["Secondary school", "A/B rotation on instructional dates", "The letter appears inside each date on the official PDF."],
+          ["All schools on selected dates", "Special early-out schedule", "The PDF lists high school 12:20, junior high 1:00, and elementary 1:30 for October 20, December 19, and May 22."]
+        ]
+      }
+    },
+    {
+      "id": "dsd-2025-2026-conferences",
+      "label": "Parent-Teacher Conference Options",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "Secondary conference weeks use different days by school level: high schools hold conferences Monday and Tuesday, junior high schools Wednesday and Thursday, and each school determines its schedule. Elementary schools choose two of three options and dismiss early Wednesday through Friday during each selected option, so an elementary family should not assume all three windows apply.",
+      "table": {
+        "caption": "DSD 2025–26 parent-teacher conference windows",
+        "columns": ["School level", "Dates", "Attendance impact"],
+        "rows": [
+          ["Secondary", "September 15–18; November 17–20; February 2–5; April 20–23", "School-specific conference schedule; high school Monday–Tuesday and junior high Wednesday–Thursday."],
+          ["Elementary option 1", "October 1–3", "Early dismissal Wednesday–Friday if the school selected this option."],
+          ["Elementary option 2", "November 5–7", "Early dismissal Wednesday–Friday if the school selected this option."],
+          ["Elementary option 3", "February 11–13", "Early dismissal Wednesday–Friday if the school selected this option."]
+        ],
+        "footnote": "Each elementary school selected two of the three options."
+      }
+    },
+    {
+      "id": "dsd-2025-2026-day-counts",
+      "label": "Terms, Semesters, and Contract-Day Counts",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "The district calendar lists 174 student days and 185 total contract-calendar days. The second semester contains six more student days than the first.",
+      "table": {
+        "caption": "Official Davis School District 2025–26 day summary",
+        "columns": ["Period or category", "Days"],
+        "rows": [
+          ["Quarter 1", "42"],
+          ["Quarter 2", "42"],
+          ["Quarter 3", "42"],
+          ["Quarter 4", "48"],
+          ["First semester", "84"],
+          ["Second semester", "90"],
+          ["Student school days", "174"],
+          ["Professional / contract days", "9"],
+          ["Teacher compensation days", "2"],
+          ["Total contract-calendar days", "185"]
+        ]
+      }
+    }
+  ],
+  "events": [
+    { "date": "2025-08-11", "endDate": "2025-08-14", "name": "Professional Development Days", "type": "teacher_professional_learning", "description": "Pre-year staff dates; students did not attend.", "hideFromCalendarExport": true },
+    { "date": "2025-08-15", "name": "Contract Day — No School for Students", "type": "teacher_workday", "description": "Pre-year staff date; students did not attend.", "hideFromCalendarExport": true },
+    { "date": "2025-08-18", "name": "First Day of School / Elementary Early Out", "type": "school_start", "description": "First day for most students; elementary schools used the early-out schedule and secondary schools used an A day." },
+    { "date": "2025-08-18", "dates": ["2025-08-18", "2025-08-19"], "displayDate": "August 18–19, 2025", "name": "Kindergarten Testing Appointments", "type": "academic", "badgeLabel": "Kindergarten", "description": "No regularly scheduled kindergarten. Students attended individually assigned testing appointments; approved schools could use an alternate two-day testing window during August 11–14.", "hideFromCalendarExport": true },
+    { "date": "2025-08-20", "name": "First Regular Day for Kindergarten", "type": "school_start", "badgeLabel": "Kindergarten" },
+    { "date": "2025-08-20", "name": "Weekly Secondary Wednesday Late Starts Begin", "type": "academic", "badgeLabel": "Secondary", "description": "Junior high and high schools use a late-start schedule each Wednesday when school is in session; confirm the bell time with the school.", "hideFromCalendarExport": true },
+    { "date": "2025-08-22", "name": "Weekly Elementary Friday Early Dismissals Begin", "type": "early_dismissal", "badgeLabel": "Elementary", "description": "Elementary schools dismiss early each Friday when school is in session; confirm the bell time with the school.", "hideFromCalendarExport": true },
+    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday", "description": "No school." },
+    { "date": "2025-09-15", "endDate": "2025-09-18", "name": "Secondary Parent-Teacher Conferences", "type": "conference", "description": "High schools use Monday–Tuesday and junior high schools Wednesday–Thursday; schools determine the schedule.", "hideFromCalendarExport": true },
+    { "date": "2025-10-01", "endDate": "2025-10-03", "name": "Elementary Conference Option 1 — Early Dismissal", "type": "conference", "description": "Applies only if the elementary school selected this option; schools chose two of three conference windows.", "hideFromCalendarExport": true },
+    { "date": "2025-10-15", "name": "Quarter 1 Ends / Grade-Band Schedule Changes", "type": "quarter_end", "description": "Elementary schools used early out and secondary schools used their Wednesday late-start schedule.", "hideFromCalendarExport": true },
+    { "date": "2025-10-16", "endDate": "2025-10-17", "displayDate": "October 16–17, 2025", "name": "Fall Break", "type": "break_start" },
+    { "date": "2025-10-20", "name": "Quarter 2 Begins / All-Schools Early Out", "type": "school_resume", "description": "Students returned on the district early-out schedule: high school 12:20, junior high 1:00, elementary 1:30." },
+    { "date": "2025-11-05", "endDate": "2025-11-07", "name": "Elementary Conference Option 2 — Early Dismissal", "type": "conference", "description": "Applies only if the elementary school selected this option; schools chose two of three conference windows.", "hideFromCalendarExport": true },
+    { "date": "2025-11-17", "endDate": "2025-11-20", "name": "Secondary Parent-Teacher Conferences", "type": "conference", "description": "High schools use Monday–Tuesday and junior high schools Wednesday–Thursday; schools determine the schedule.", "hideFromCalendarExport": true },
+    { "date": "2025-11-26", "name": "Teacher Compensation Day — No School", "type": "teacher_workday" },
+    { "date": "2025-11-27", "endDate": "2025-11-28", "displayDate": "November 27–28, 2025", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-12-01", "name": "School Resumes After Thanksgiving", "type": "school_resume" },
+    { "date": "2025-12-19", "name": "Quarter 2 Ends / All-Schools Early Out", "type": "early_dismissal", "description": "High school 12:20, junior high 1:00, elementary 1:30." },
+    { "date": "2025-12-22", "endDate": "2026-01-02", "displayDate": "December 22, 2025–January 2, 2026", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-01-05", "name": "Professional Development — No School", "type": "teacher_professional_learning", "description": "Students returned January 6." },
+    { "date": "2026-01-06", "name": "Quarter 3 Begins / School Resumes", "type": "school_resume" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday", "description": "No school." },
+    { "date": "2026-02-02", "endDate": "2026-02-05", "name": "Secondary Parent-Teacher Conferences", "type": "conference", "description": "High schools use Monday–Tuesday and junior high schools Wednesday–Thursday; schools determine the schedule.", "hideFromCalendarExport": true },
+    { "date": "2026-02-11", "endDate": "2026-02-13", "name": "Elementary Conference Option 3 — Early Dismissal", "type": "conference", "description": "Applies only if the elementary school selected this option; schools chose two of three conference windows.", "hideFromCalendarExport": true },
+    { "date": "2026-02-16", "name": "Presidents Day", "type": "holiday", "description": "No school." },
+    { "date": "2026-03-06", "name": "Quarter 3 Ends", "type": "quarter_end", "description": "Elementary schools also followed the recurring Friday early-dismissal schedule.", "hideFromCalendarExport": true },
+    { "date": "2026-03-09", "name": "Professional Development — No School", "type": "teacher_professional_learning" },
+    { "date": "2026-03-10", "name": "Quarter 4 Begins", "type": "school_resume", "hideFromCalendarExport": true },
+    { "date": "2026-03-24", "name": "Secondary ACT", "type": "academic", "badgeLabel": "Secondary", "description": "The PDF marks the date A/B; it is not a districtwide closure.", "hideFromCalendarExport": true },
+    { "date": "2026-03-30", "endDate": "2026-04-03", "displayDate": "March 30–April 3, 2026", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-04-06", "name": "School Resumes After Spring Break", "type": "school_resume" },
+    { "date": "2026-04-20", "endDate": "2026-04-23", "name": "Secondary Parent-Teacher Conferences", "type": "conference", "description": "High schools use Monday–Tuesday and junior high schools Wednesday–Thursday; schools determine the schedule.", "hideFromCalendarExport": true },
+    { "date": "2026-04-24", "name": "Teacher Compensation Day — No School", "type": "teacher_workday" },
+    { "date": "2026-05-22", "name": "Last Day / All-Schools Early Out / Quarter 4 Ends", "type": "school_end", "badgeLabel": "Last Day", "description": "High school 12:20, junior high 1:00, elementary 1:30." }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When did Davis School District start in 2025?",
+      "a": "Most students started Monday, August 18, 2025. Kindergarten students attended assigned testing appointments August 18–19 and began regular classes Wednesday, August 20."
+    },
+    {
+      "q": "When was Davis School District Fall Break in 2025?",
+      "a": "Fall Break was October 16–17, 2025. Students returned Monday, October 20 on an all-school early-out schedule: high school 12:20, junior high 1:00, and elementary 1:30."
+    },
+    {
+      "q": "When was Davis School District Winter Break in 2025–26?",
+      "a": "Winter Break ran December 22, 2025, through January 2, 2026. Students remained out January 5 for professional development and returned Tuesday, January 6."
+    },
+    {
+      "q": "When was Davis School District Spring Break in 2026?",
+      "a": "Spring Break ran Monday, March 30, through Friday, April 3, 2026. Students returned Monday, April 6."
+    },
+    {
+      "q": "Did every Davis elementary school use all three conference options?",
+      "a": "No. Elementary schools selected two of three options: October 1–3, November 5–7, or February 11–13. Families needed their school's selected dates."
+    },
+    {
+      "q": "When was the last day of school in Davis School District?",
+      "a": "The last day was Friday, May 22, 2026. It was an all-school early-out day and the end of Quarter 4."
+    },
+    {
+      "q": "Does the downloadable Davis calendar include every A/B day?",
+      "a": "No. The MySchoolDates ICS file is a one-time import of selected dates. It does not repeat daily A/B letters, Wednesday secondary late starts, or Friday elementary early dismissals."
+    }
+  ],
+  "faqDisplayLimit": 7,
+  "sourceReviewSummary": "Reviewed August 10, 2026, against Davis School District's calendar page, approval notice, and a visually rendered copy of the complete official 2025–26 adjusted calendar.",
+  "sourceReviewDetailsTitle": "How we verified the adjusted Davis calendar",
+  "sourceReviewDetails": [
+    "The one-page PDF was rendered and checked visually because A/B letters, grade-band rows, early-out markers, conference labels, term boundaries, and color-coded staff days carry information that text extraction alone does not preserve.",
+    "The district's December 5, 2024 notice says the calendar was board-approved and could receive slight changes after negotiations; the reviewed official file is labeled as the January 2025 adjusted calendar.",
+    "Kindergarten testing is presented as individually scheduled appointments, not as two ordinary attendance days, and the school-level alternate testing option is preserved.",
+    "Elementary conference windows are marked as options because each school selected two of the three published choices.",
+    "Recurring Wednesday, Friday, and A/B schedules are summarized rather than exported as dozens of standalone events.",
+    "The .ics file is a one-time import and does not update automatically if DSD corrects an archived date."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Davis School District sources.",
+  "sourceNextReviewText": "Archived school year; review again if DSD replaces the adjusted PDF or corrects the official record.",
+  "sources": [
+    { "label": "Davis School District School Year Calendars page", "url": "https://www.davis.k12.ut.us/o/dsd/page/school-year-calendars" },
+    { "label": "Official DSD 2025–26 adjusted calendar PDF", "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4672/Dsd/ef748f79-423d-45c6-af03-a41903899b54/2025-2026_adjusted_calendar__Jan._2025_.pdf?disposition=inline" },
+    { "label": "DSD Board approval notice for the 2025–26 calendar", "url": "https://www.davis.k12.ut.us/article/1909837" }
+  ]
+}

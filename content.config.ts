@@ -12,6 +12,7 @@ const eventSchema = z.object({
     'makeup_day', 'quarter_start', 'quarter_end', 'semester_end', 'graduation',
   ]),
   description: z.string().optional(),
+  preserveOfficialName: z.boolean().optional(),
 })
 
 const relatedDistrictSchema = z.object({
@@ -114,6 +115,9 @@ export default defineContentConfig({
         currentSchoolYear: z.string(),
         allDatesMode: z.enum(['all', 'keyDates']).optional(),
         studentCount: z.number().optional(),
+        studentCountAsOf: z.string().optional(),
+        studentCountSourceLabel: z.string().optional(),
+        studentCountSourceUrl: z.string().optional(),
         schoolCount: z.number().optional(),
         founded: z.number().optional(),
         calendarType: z.string().optional(),
@@ -200,12 +204,30 @@ export default defineContentConfig({
         teacherWorkDays: z.number().optional(),
         semesters: z.number().optional(),
         sourceUrl: z.string().optional(),      // alias: sourcePageUrl (stable hub, district-level)
+        sourceDocumentPage: z.string().optional(), // stable official record for the current source document
         sourcePdfUrl: z.string().optional(),   // direct official PDF for this school year (changes annually)
+        lastCheckedPdfUrl: z.string().optional(), // direct PDF resolved from the official document record at last check
+        sourceCheckedAt: z.string().optional(),
+        sourceChecksumSha256: z.string().optional(),
+        sourceResourceMonitor: z.object({
+          type: z.enum(['resource-uuid', 'document-pdf']).optional(),
+          checkUrl: z.string(),
+          linkText: z.string(),
+          expectedResourceUuid: z.string().optional(),
+          expectedPdfUrl: z.string().optional(),
+          expectedChecksumSha256: z.string().optional(),
+        }).optional(),
         printablePdfUrl: z.string().optional(), // MySchoolDates-generated printable PDF for this school year
         lastVerifiedAt: z.string().optional(), // ISO date: when data was last verified against official source
         dateCreated: z.string().optional(),
         datePublished: z.string().optional(),
         dateModified: z.string().optional(),
+        contentStatus: z.enum(['draft', 'in_review', 'production_ready', 'needs_update']).optional(),
+        contentReviewTriggers: z.array(z.enum([
+          'official_calendar_revision',
+          'makeup_day_activation',
+          'confirmed_data_error',
+        ])).optional(),
         sourceVersion: z.string().optional(),
         hideSemesterCount: z.boolean().optional(),
         quickFacts: z.array(z.object({
@@ -231,7 +253,7 @@ export default defineContentConfig({
         gradingPeriods: z.array(gradingPeriodSchema).optional(),
         heroSummary: z.string().optional(),
         calendarNotes: z.string().optional(),  // year-specific narrative (moved from districts/)
-        calendarType: z.enum(['traditional', 'year-round', 'magnet', 'international', 'early-college', 'alternative']).optional(),
+        calendarType: z.enum(['traditional', 'modified-start', 'year-round', 'magnet', 'international', 'early-college', 'alternative']).optional(),
         alternateCalendars: z.array(z.object({
           type: z.string(),
           label: z.string(),

@@ -1,6 +1,9 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   studentCount?: number
+  studentCountAsOf?: string
+  studentCountSourceLabel?: string
+  studentCountSourceUrl?: string
   schoolCount?: number
   calendarType?: string
   grades?: string[]
@@ -10,6 +13,15 @@ defineProps<{
   districtFact?: string
   title?: string
 }>()
+
+const formattedStudentCountAsOf = computed(() => {
+  if (!props.studentCountAsOf) return ''
+  return new Date(`${props.studentCountAsOf}T00:00:00`).toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  })
+})
 </script>
 
 <template>
@@ -18,7 +30,9 @@ defineProps<{
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-4">
       <div v-if="studentCount">
         <div class="text-2xl font-bold text-gray-900">{{ studentCount.toLocaleString('en-US') }}</div>
-        <div class="text-xs text-gray-600 mt-0.5">students enrolled</div>
+        <div class="text-xs text-gray-600 mt-0.5">
+          students enrolled<span v-if="formattedStudentCountAsOf"> · as of {{ formattedStudentCountAsOf }}</span>
+        </div>
       </div>
       <div v-if="schoolCount">
         <div class="text-2xl font-bold text-gray-900">{{ schoolCount }}+</div>
@@ -48,6 +62,15 @@ defineProps<{
       </div>
     </div>
     <p v-if="districtFact" class="mt-4 pt-4 border-t border-gray-100 text-sm text-gray-500 leading-relaxed">{{ districtFact }}</p>
-    <p class="mt-3 text-xs text-gray-600">District profile figures are approximate and sourced from public district information. Enrollment counts, school totals, and program details may change by school year.</p>
+    <p class="mt-3 text-xs text-gray-600">
+      District profile figures are approximate and sourced from public district information. Enrollment counts, school totals, and program details may change by school year.
+      <a
+        v-if="studentCountSourceUrl"
+        :href="studentCountSourceUrl"
+        target="_blank"
+        rel="noopener"
+        class="ml-1 underline hover:text-gray-900"
+      >{{ studentCountSourceLabel || 'Enrollment source' }}<span class="sr-only"> (opens in a new tab)</span></a>
+    </p>
   </div>
 </template>

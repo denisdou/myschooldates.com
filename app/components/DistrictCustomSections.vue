@@ -38,7 +38,7 @@ const contentParagraphs = (content?: string) =>
 </script>
 
 <template>
-  <div v-if="filtered.length" class="district-custom-sections space-y-8">
+  <div v-if="filtered.length" class="district-custom-sections grid gap-8">
     <div
       v-for="section in filtered"
       :id="section.id"

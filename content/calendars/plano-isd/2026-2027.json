@@ -1,85 +1,299 @@
 {
   "institutionId": "plano-isd",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Plano ISD Calendar 2026–2027",
   "firstDay": "2026-08-11",
   "lastDay": "2027-05-21",
-  "seoTitle": "Plano ISD Calendar 2026-2027: Holidays, Breaks & PDF",
-  "seoDescription": "Plano ISD 2026-2027 calendar with Aug 11 first day, May 21 last day, fall break, Thanksgiving, winter break, spring break, PDF and ICS.",
+  "seoTitle": "Plano ISD Calendar 2026–2027: Key Dates, Breaks & Official PDF",
+  "seoDescription": "Plano ISD’s 2026–27 calendar starts Aug. 11 and ends May 21. See student days off, early releases, Spring Break, ICS download, and the official PDF.",
   "totalSchoolDays": 171,
   "semesters": 2,
   "sourceUrl": "https://www.pisd.edu/about-our-district/calendar#fs-panel-242082",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1754012636/pisdedu/fmrvyekici5t2wmjmcdq/2026-2027_Approved.pdf",
-  "lastVerifiedAt": "2026-07-12",
-  "calendarType": "traditional",
-  "calendarFaqs": [
+  "sourceCalendarId": "source-calendar-graphic",
+  "sourceCalendarName": "Plano ISD 2026–27 approved graphic calendar",
+  "sourceVersion": "Approved 2026–27 graphic calendar",
+  "schemaAdditionalSourceCalendars": [
     {
-      "q": "When does school start for Plano ISD in 2026-2027?",
-      "a": "The first day of school for Plano ISD is Tuesday, August 11, 2026. Students and staff are expected to report on this date to begin the new academic year — one day earlier than the 2025–2026 start date of August 12."
-    },
-    {
-      "q": "When is the last day of school for Plano ISD in 2026-2027?",
-      "a": "The last day of school for Plano ISD is Friday, May 21, 2027. The school year runs from August through May, covering 171 instructional days."
-    },
-    {
-      "q": "When is fall break 2026-2027 for Plano ISD?",
-      "a": "Fall break for Plano ISD runs October 12–16, 2026 — a full week off. Dallas ISD and most other DFW neighbors remain in session that week, so this is a distinctly Plano break that often catches families by surprise when coordinating childcare."
-    },
-    {
-      "q": "When is spring break 2026-2027 for Plano ISD?",
-      "a": "Spring break for Plano ISD runs March 15–19, 2027, aligning with Dallas ISD and Fort Worth ISD. Two additional no-school days follow: a student/teacher holiday on March 26 and a staff day on March 29."
-    },
-    {
-      "q": "When is winter break 2026-2027 for Plano ISD?",
-      "a": "Winter break for Plano ISD runs December 21, 2026–January 4, 2027 (15 days). January 4 is a staff day; second semester begins Tuesday, January 5, 2027."
+      "id": "source-calendar-text",
+      "name": "Plano ISD 2026–27 text-format academic calendar",
+      "url": "https://www.pisd.edu/fs/resource-manager/view/9f41d754-431f-444a-9145-f5f7583fefd5",
+      "version": "Dated April 20, 2026",
+      "dateModified": "2026-04-20"
     }
   ],
-  "yearNumbers": [
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar-graphic",
+    "source-calendar-text",
+    "source-calendar-page"
+  ],
+  "lastVerifiedAt": "2026-08-10",
+  "datePublished": "2026-07-12",
+  "dateModified": "2026-08-10",
+  "calendarType": "traditional",
+  "schemaCalendarName": "Plano Independent School District 2026–27 School Calendar",
+  "schemaDatasetName": "Plano Independent School District 2026–27 School Calendar Dataset",
+  "schemaDatasetDescription": "Districtwide calendar dates for Plano Independent School District in 2026–27, including school-year boundaries, student holidays, break ranges, early-release dates, and school resume dates.",
+  "schemaCalendarDownloadName": "Plano Independent School District 2026–27 calendar file",
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hiddenSections": [
+    "downloadCta",
+    "keyDatesSummary",
+    "quickFacts",
+    "todayStatus",
+    "yearNumbers",
+    "about",
+    "whatsDifferent",
+    "planningTips",
+    "livingHere",
+    "districtProfile"
+  ],
+  "heroSourceLine": "Plano ISD 2026–27 Academic Calendar",
+  "heroDownloadLabel": "View official PDF",
+  "heroDownloadHref": "https://resources.finalsite.net/images/v1754012636/pisdedu/fmrvyekici5t2wmjmcdq/2026-2027_Approved.pdf",
+  "heroSummary": "Plano ISD students start the 2026–27 school year on Tuesday, August 11, 2026. The last day of classes is Friday, May 21, 2027, with early release. Spring Break runs March 15–19. Students also have no classes October 12–16, although Plano ISD uses different official labels for those five days.\n\nWinter Break runs December 21–January 1. January 4 is a separate student holiday and staff day, and classes resume Tuesday, January 5.",
+  "verificationBadgeText": "Checked August 10, 2026, against the official Plano ISD 2026–27 graphic and text-format calendars.",
+  "heroVerificationSourceText": "Official district sources checked",
+  "heroVerificationComparisonText": "Key dates compared across both sources",
+  "keyDateCardsVariant": "compact",
+  "keyDateCardsThirdLabel": "Spring Break",
+  "keyDateCardsThirdValue": "March 15–19, 2027",
+  "keyDateCardsThirdDate": "2027-03-15",
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Dates", "id": "all-dates" },
+    { "label": "Need to Know", "id": "plano-calendar-details-easy-to-miss" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "FAQ", "id": "faq" }
+  ],
+  "moveCalendarExportBeforeAllDates": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideSocialShareButtons": true,
+  "icsHeading": "Add Plano ISD 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file with student holidays, break ranges, early-release dates, grading-period endings, and school resume dates from the reviewed Plano ISD source calendars.",
+  "icsButtonLabel": "Download Plano ISD Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. Check Plano ISD for later calendar revisions.",
+  "pdfHeading": "Official Plano ISD 2026–27 Calendar PDF",
+  "pdfButtonLabel": "View Official Plano ISD PDF",
+  "pdfDescription": "Open or print the district's approved graphic calendar. The official calendar page remains the source for later revisions.",
+  "pdfVersionLabel": "Official approved 2026–27 calendar",
+  "allDatesTitle": "All Important Plano ISD Dates — 2026–27",
+  "allDatesCoverageNote": "This list is based on Plano ISD's official text-format and graphic calendars. The two calendars agree on student attendance dates but use different labels for several staff workdays. Where labels differ, we note the distinction below. Campus events and later changes remain on the district calendar.",
+  "allDatesCoverageNotePosition": "top",
+  "allDatesSourceUrl": "https://www.pisd.edu/fs/resource-manager/view/9f41d754-431f-444a-9145-f5f7583fefd5",
+  "allDatesSourceLabel": "Plano ISD 2026–27 text-format academic calendar",
+  "allDatesSourceLinks": [
     {
-      "label": "Starts Earlier",
-      "value": "1 day",
-      "detail": "First day moves from Aug 12 to Aug 11 vs 2025–2026."
+      "label": "Plano ISD 2026–27 text-format academic calendar",
+      "url": "https://www.pisd.edu/fs/resource-manager/view/9f41d754-431f-444a-9145-f5f7583fefd5"
     },
     {
-      "label": "Fall Break",
-      "value": "5 days",
-      "detail": "Oct 12–16 full-week fall break continues — a Plano ISD hallmark that neighboring districts including Dallas ISD do not offer."
+      "label": "Plano ISD 2026–27 approved graphic calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1754012636/pisdedu/fmrvyekici5t2wmjmcdq/2026-2027_Approved.pdf"
+    }
+  ],
+  "breaksTitle": "Major School Breaks",
+  "breakNotes": {
+    "October Student Break": "On Plano ISD's graphic calendar, October 12–14 are student/teacher holidays, October 15 is a staff day/student holiday, and October 16 is a Campus PLC day/student holiday. “October Student Break” is our student-facing label for the five-day no-school window.",
+    "Thanksgiving Break": "Students have no classes all five weekdays. Plano ISD's text-format calendar labels November 23–27 as Thanksgiving Break, while the graphic calendar lists November 23–24 as Professional Learning Trade Days and November 25–27 as Thanksgiving Break. Classes resume Monday, November 30.",
+    "Winter Break": "The official Winter Break ends January 1. January 4 is a separate student holiday and staff day; classes resume Tuesday, January 5.",
+    "Spring Break": "Classes resume Monday, March 22. Additional student days off follow on March 26 and March 29."
+  },
+  "breakDurationLabels": {
+    "October Student Break": "5 weekdays without school",
+    "Winter Break": "Official break: Dec. 21–Jan. 1"
+  },
+  "comparisonBeforeFaq": true,
+  "comparisonTitle": "Plano ISD Start and End Dates Compared with Nearby Districts",
+  "comparisonSummary": "Compare Plano ISD's 2026–27 first and last student days with Dallas ISD's traditional calendar and Frisco ISD.",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay"
+  ],
+  "comparisonRowsMode": "sharedValuesOnly",
+  "comparisonAlwaysExpanded": true,
+  "comparisonFooterText": "Dates come from each district's published 2026–27 calendar.",
+  "comparisonInsights": [
+    {
+      "label": "Start date comparison",
+      "items": [
+        "1 calendar day earlier than Frisco ISD",
+        "Same first day as Dallas ISD's traditional calendar"
+      ]
     },
     {
-      "label": "Good Friday Dropped",
-      "value": "Removed",
-      "detail": "Good Friday is no longer on the calendar; instead Mar 26 (Student/Teacher Holiday) and Mar 29 (Staff Day) replace the single-day April observance."
+      "label": "End date comparison",
+      "items": [
+        "7 calendar days later than Frisco ISD",
+        "5 calendar days earlier than Dallas ISD's traditional calendar"
+      ]
+    }
+  ],
+  "dateLegendLabelOverrides": {
+    "End of Quarter": "End of Grading Period"
+  },
+  "faqDisplayQuestions": [
+    "When does Plano ISD start school in 2026–27?",
+    "When is the last day of school for Plano ISD in 2026–27?",
+    "When is Plano ISD Spring Break in 2027?",
+    "When is Plano ISD Winter Break in 2026–27?",
+    "Are Plano ISD students off October 12–16, 2026?",
+    "When do Plano ISD students return after Winter Break?",
+    "Is May 21, 2027 an early-release day in Plano ISD?"
+  ],
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "calendarFaqs": [
+    {
+      "q": "When does Plano ISD start school in 2026–27?",
+      "a": "The first day of classes is Tuesday, August 11, 2026."
+    },
+    {
+      "q": "When is the last day of school for Plano ISD in 2026–27?",
+      "a": "The last day of classes is Friday, May 21, 2027. It is also an early-release day and the end of the fourth grading period."
+    },
+    {
+      "q": "When is Plano ISD Spring Break in 2027?",
+      "a": "Spring Break runs Monday, March 15, through Friday, March 19, 2027. Classes resume Monday, March 22."
+    },
+    {
+      "q": "When is Plano ISD Winter Break in 2026–27?",
+      "a": "Plano ISD officially lists Winter Break from Monday, December 21, 2026, through Friday, January 1, 2027. January 4 is a separate student holiday and staff day."
+    },
+    {
+      "q": "Are Plano ISD students off October 12–16, 2026?",
+      "a": "Yes. Students have no classes from Monday, October 12, through Friday, October 16. Plano ISD's graphic calendar labels October 12–14 as student/teacher holidays, October 15 as a staff day/student holiday, and October 16 as a Campus PLC day/student holiday."
+    },
+    {
+      "q": "When do Plano ISD students return after Winter Break?",
+      "a": "Classes resume Tuesday, January 5, 2027, which is also the start of the second semester."
+    },
+    {
+      "q": "Is May 21, 2027 an early-release day in Plano ISD?",
+      "a": "Yes. Friday, May 21 is the last day of classes, an early-release day, and the end of the fourth grading period."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "plano-calendar-details-easy-to-miss",
+      "label": "Calendar Details That Are Easy to Miss",
+      "position": "afterAllDates",
+      "content": "Plano ISD publishes both a graphic calendar and a text-format academic calendar. They agree on when students attend school, but a few staff-day labels differ. The notes below explain the student-facing schedule and flag those differences where relevant.",
+      "definitions": [
+        {
+          "term": "October 12–16",
+          "description": "Students have no classes for five weekdays. Both calendars list October 12–14 as student/teacher holidays. The text-format calendar groups October 15–16 as student holidays with staff development/work days; the graphic calendar labels October 15 a staff day and October 16 a Campus PLC day."
+        },
+        {
+          "term": "December 18",
+          "description": "This is an early-release day, the last day of the first semester, and the end of the second grading period."
+        },
+        {
+          "term": "January 4",
+          "description": "Students remain off, but Plano ISD lists this as a student holiday and staff development/work day rather than part of Winter Break. Classes resume January 5."
+        },
+        {
+          "term": "February 15–16",
+          "description": "Students have two consecutive weekdays without classes. The text-format calendar groups February 15–16 as student holidays with staff development/work days; the graphic calendar labels February 15 a staff day and February 16 a Campus PLC day."
+        },
+        {
+          "term": "March 26 and March 29",
+          "description": "These are additional student days off after Spring Break: March 26 is a student/teacher holiday, and March 29 is a student holiday and staff day."
+        }
+      ]
+    },
+    {
+      "id": "plano-early-release-semester-dates",
+      "label": "Early Release, Semesters, and Grading Periods",
+      "position": "afterBreaks",
+      "content": "Plano ISD's text-format calendar also provides semester totals, grading-period dates, and published dismissal times.",
+      "definitions": [
+        {
+          "term": "Districtwide early release",
+          "description": "December 18 and May 21 are early-release days. December 18 closes the first semester; May 21 is the last day of classes."
+        },
+        {
+          "term": "Semester totals",
+          "description": "The first semester has 82 instructional days and the second has 89, for 171 total instructional days."
+        },
+        {
+          "term": "Grading-period endings",
+          "description": "The four grading periods end October 9, December 18, March 12, and May 21 and contain 43, 39, 46, and 43 instructional days."
+        },
+        {
+          "term": "Published dismissal times",
+          "description": "The calendar lists 1:10 p.m. exam dismissal for high and senior high schools, 1:30 p.m. for Academy High School, and 12:40 p.m. for middle schools on the last exam day only. Elementary early release is noon; early childhood early release is 11:55 a.m."
+        }
+      ]
+    }
+  ],
+  "sourceReviewSummary": "Reviewed August 10, 2026, against Plano ISD's official approved graphic calendar and the district's text-format 2026–27 academic calendar.",
+  "sourceReviewDetailsTitle": "How we verified this calendar",
+  "sourceReviewDetails": [
+    "We reconciled every student-impact date across the official text-format and graphic calendars. They agree on student attendance, while staff-day labels differ on October 15–16, November 23–24, and February 15–16.",
+    "We also checked semester totals, grading-period lengths, early-release dates, and the dismissal times printed on the text-format calendar."
+  ],
+  "sourceMaintainerText": "MySchoolDates editorial team",
+  "sourceNextReviewText": "Review again after a Plano ISD calendar revision or district schedule announcement.",
+  "sources": [
+    {
+      "label": "Plano ISD 2026–27 text-format academic calendar",
+      "url": "https://www.pisd.edu/fs/resource-manager/view/9f41d754-431f-444a-9145-f5f7583fefd5"
+    },
+    {
+      "label": "Plano ISD 2026–27 approved graphic calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1754012636/pisdedu/fmrvyekici5t2wmjmcdq/2026-2027_Approved.pdf"
+    },
+    {
+      "label": "Plano ISD official calendar page",
+      "url": "https://www.pisd.edu/about-our-district/calendar#fs-panel-242082"
     }
   ],
   "events": [
     {
       "date": "2026-08-11",
-      "name": "First Day of School",
+      "name": "First Day of Classes for Students",
       "type": "school_start"
     },
     {
       "date": "2026-09-07",
-      "name": "Labor Day",
+      "name": "Labor Day — Student and Teacher Holiday",
       "type": "holiday"
     },
     {
+      "date": "2026-10-09",
+      "name": "End of First Grading Period",
+      "type": "quarter_end",
+      "description": "The first grading period contains 43 instructional days."
+    },
+    {
       "date": "2026-10-12",
-      "name": "Fall Break",
-      "type": "break_start"
+      "name": "October Student Break",
+      "type": "break_start",
+      "description": "On the graphic calendar, October 12–14 are student/teacher holidays; October 15 is a staff day/student holiday; October 16 is a Campus PLC day/student holiday.",
+      "schemaDescription": "Students have no classes October 12–16, 2026. Plano ISD's official calendars use different staff-day labels for October 15–16."
     },
     {
       "date": "2026-10-16",
-      "name": "Fall Break End",
+      "name": "October Student Break End",
       "type": "break_end"
     },
     {
       "date": "2026-11-03",
-      "name": "No School (Staff Day)",
-      "type": "no_school"
+      "name": "Student Holiday / Staff Development / Work Day",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2026-11-23",
       "name": "Thanksgiving Break",
-      "type": "break_start"
+      "type": "break_start",
+      "schemaDescription": "Students have no classes November 23–27, 2026. Plano ISD's text-format calendar labels the full period Thanksgiving Break; the graphic calendar separates November 23–24 as Professional Learning Trade Days."
     },
     {
       "date": "2026-11-27",
@@ -87,29 +301,55 @@
       "type": "break_end"
     },
     {
+      "date": "2026-12-18",
+      "name": "Last Day of First Semester / Early Release",
+      "type": "early_release",
+      "description": "End of the second grading period after 39 instructional days."
+    },
+    {
       "date": "2026-12-21",
       "name": "Winter Break",
       "type": "break_start"
     },
     {
-      "date": "2027-01-04",
+      "date": "2027-01-01",
       "name": "Winter Break End",
       "type": "break_end"
     },
     {
+      "date": "2027-01-04",
+      "name": "Student Holiday / Staff Development / Work Day",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "description": "This date is separate from the district's official Winter Break."
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Classes Resume / Start of Second Semester",
+      "type": "school_resume"
+    },
+    {
       "date": "2027-01-18",
-      "name": "Martin Luther King Jr. Day",
+      "name": "Martin Luther King Jr. Day — Student and Teacher Holiday",
       "type": "holiday"
     },
     {
       "date": "2027-02-15",
-      "name": "No School (Staff Day)",
-      "type": "no_school"
+      "name": "Staff Day / Student Holiday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-02-16",
-      "name": "No School (Campus PLC Day)",
-      "type": "no_school"
+      "name": "Campus PLC Day / Student Holiday",
+      "type": "no_school",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-03-12",
+      "name": "End of Third Grading Period",
+      "type": "quarter_end",
+      "description": "The third grading period contains 46 instructional days."
     },
     {
       "date": "2027-03-15",
@@ -122,22 +362,27 @@
       "type": "break_end"
     },
     {
+      "date": "2027-03-22",
+      "name": "Classes Resume After Spring Break",
+      "type": "school_resume"
+    },
+    {
       "date": "2027-03-26",
-      "name": "No School (Student/Teacher Holiday)",
-      "type": "no_school"
+      "name": "Student and Teacher Holiday",
+      "type": "holiday"
     },
     {
       "date": "2027-03-29",
-      "name": "No School (Staff Day)",
-      "type": "no_school"
+      "name": "Student Holiday / Staff Development / Work Day",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-05-21",
-      "name": "Last Day of School",
-      "type": "school_end"
+      "name": "Last Day of Classes / Early Release",
+      "type": "school_end",
+      "badgeLabel": "Last Day · Early Release",
+      "description": "End of the fourth grading period after 43 instructional days."
     }
-  ],
-  "calendarNotes": "Plano ISD begins the 2026–2027 school year on August 11, 2026, and the year ends May 21, 2027. Unlike many Dallas-area districts, PISD schedules a full five-day Fall Break from October 12–16 — neighboring districts including Dallas ISD remain in session that week, which makes PISD's Fall Break one of the less congested travel windows on the Texas school calendar. An additional no-school day falls on November 3 (Staff Day), followed by Thanksgiving Break running November 23–27; the first two days are Professional Learning Trade Days, extending what would otherwise be a two-day holiday into a full five-day closure. Winter Break begins December 21 — December 18 is an early-release day — with January 4 as a Staff Day and January 5 as the first day of second semester. Spring Break runs March 15–19, aligning with Dallas ISD and Fort Worth ISD; all three districts releasing the same week concentrates demand at DFW International Airport and pushes hotel and flight prices across the state. Two no-school days follow in late March: the 26th (Student/Teacher Holiday) and the 29th (Staff Day). For most PISD households, October Fall Break and the post–Spring Break stretch in late March are the two periods most likely to fall outside standard planning assumptions.",
-  "datePublished": "2026-07-12",
-  "dateModified": "2026-07-12"
+  ]
 }

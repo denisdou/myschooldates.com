@@ -1,0 +1,140 @@
+{
+  "institutionId": "davis-school-district",
+  "name": "Davis School District",
+  "shortName": "DSD",
+  "slug": "davis-school-district-calendar",
+  "state": "Utah",
+  "stateCode": "UT",
+  "city": "Farmington",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.davis.k12.ut.us/",
+  "calendarPage": "https://www.davis.k12.ut.us/o/dsd/page/school-year-calendars",
+  "logo": "https://cmsv2-assets.apptegy.net/uploads/21917/file/3233095/811e1c23-26d8-42bf-9ce9-4a5d00fdec5d.png",
+  "timezone": "America/Denver",
+  "county": "Davis County",
+  "region": "Wasatch Front",
+  "metro": "Salt Lake City",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "A/B secondary calendar with grade-band schedule changes",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Davis Grade-Band Calendar",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "translatedPdf": false,
+    "programCalendar": false,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-10",
+    "coverageNote": "Coverage uses Davis School District's official website, School Year Calendars page, official 2025-2026 adjusted calendar PDF, official 2026-2027 approved calendar PDF updated July 21, 2026, and the district's calendar approval and revision notices. No extended-calendar URL or official 2027-2028 through 2029-2030 PDF URL was provided, so only the two verified school years were created."
+  },
+  "contentFreshnessScore": {
+    "overall": 98,
+    "lastManualReview": "2026-08-10",
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 60,
+    "refreshRule": "Re-check when DSD replaces either PDF, changes a weekly late-start or early-dismissal rule, activates the February 12 make-up day, or publishes another approved school-year calendar."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Official revision, recurring-schedule change, weather make-up activation, new translated resource, or future calendar publication."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Davis School District calendar",
+    "DSD calendar Utah",
+    "Davis school calendar PDF",
+    "Davis School District A B calendar",
+    "Davis School District late start Wednesday",
+    "Davis elementary early dismissal Friday",
+    "Davis School District first day",
+    "Davis School District breaks"
+  ],
+  "districtFact": "Davis School District publishes one calendar with three overlapping schedules: A/B day labels for secondary schools, late-start Wednesdays for junior high and high schools, and early-dismissal Fridays for elementary schools. Both verified calendars list 174 student days, but their term balance and opening dates differ.",
+  "about": [
+    {
+      "title": "Elementary and Secondary Schedules Are Different",
+      "content": "The DSD calendar cannot be read as one bell schedule for every student. Junior high and high schools start late each Wednesday and follow the printed A/B rotation, while elementary schools dismiss early each Friday. School-level bell times remain the source for the actual start or dismissal time."
+    },
+    {
+      "title": "Kindergarten Has a Separate 2025-26 Opening",
+      "content": "Most students began August 18, 2025, but kindergarten students used August 18-19 for individually scheduled testing and began regular classes August 20. The PDF also permits an approved school to move testing to two days during August 11-14, so kindergarten families needed their school's assigned plan."
+    },
+    {
+      "title": "Conference Dates Depend on Grade Band",
+      "content": "Secondary parent-teacher conferences place high schools on Monday and Tuesday and junior high schools on Wednesday and Thursday, with each school setting the schedule. In 2025-26, elementary schools selected two of three conference options; the 2026-27 calendar instead identifies conference weeks and says the May conferences are only for students needing a new IRP."
+    },
+    {
+      "title": "The 2026-27 Calendar Has a Conditional Make-Up Day",
+      "content": "February 12, 2027 is scheduled as a teacher compensation day with no school. If inclement weather closes school earlier in the year, DSD may hold school on February 12 and reschedule the compensation day. Families should not treat that date as permanently student-free after a closure occurs."
+    },
+    {
+      "title": "The Same 174 Days Are Distributed Differently",
+      "content": "Both PDFs list 174 school days. The 2025-26 calendar divides them 84 in the first semester and 90 in the second; 2026-27 shifts to 80 and 94 after moving the first day from August 18 to August 20. The later calendar also schedules graduation ceremonies May 25-28, before Memorial Day."
+    }
+  ],
+  "planningTips": {
+    "title": "Davis School District Calendar Notes",
+    "content": [
+      "Use the student's grade band before applying any weekly schedule rule: Wednesday late starts are for junior high and high school, while Friday early dismissals are for elementary school.",
+      "Secondary families should pair the district's A/B letter with the student's class schedule; an A or B is an instructional rotation, not a closure label.",
+      "Confirm exact bell times with the school because the PDFs do not publish one districtwide time for recurring Wednesday and Friday schedules.",
+      "For 2025-26 elementary conferences, identify which two of the three district options the school selected before arranging transportation or child care.",
+      "For 2026-27, keep February 12 flexible until the district confirms whether an inclement-weather closure requires the make-up day.",
+      "The MySchoolDates ICS file is a one-time import and does not create weekly recurring events or update after a district revision.",
+      "Check the official School Year Calendars page before travel because the district has previously adjusted an approved calendar after negotiations and community feedback."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "How many school days are in the Davis School District calendar?",
+      "a": "Both the official 2025-26 and 2026-27 calendars list 174 student school days. Each also lists nine professional or contract days, two teacher compensation days, and 185 total contract-calendar days."
+    },
+    {
+      "q": "Are Wednesdays late-start days in Davis School District?",
+      "a": "Wednesdays are late-start days for Davis junior high and high schools. The district PDF does not publish one universal start time, so families should use their school's bell schedule."
+    },
+    {
+      "q": "Do Davis elementary schools dismiss early every Friday?",
+      "a": "Yes. The district calendar states that Fridays are early-dismissal days for elementary schools when school is in session. Exact dismissal times should be confirmed with the elementary school."
+    },
+    {
+      "q": "What do A and B mean on the Davis school calendar?",
+      "a": "A and B identify the secondary school schedule rotation. They are instructional-day labels, not school-closure or early-dismissal codes. Students should use the letter with their own junior high or high school class schedule."
+    },
+    {
+      "q": "Could Davis students attend school on February 12, 2027?",
+      "a": "Possibly. February 12 is scheduled as a compensation day, but the approved calendar says DSD may use it as a make-up day after an inclement-weather closure and then reschedule the compensation day."
+    }
+  ],
+  "customSections": [],
+  "relatedDistrictsTitle": "More Utah School Calendars",
+  "relatedDistrictsDescription": "Compare Davis dates with another verified Wasatch Front district calendar.",
+  "relatedDistricts": [
+    {
+      "name": "Alpine School District",
+      "slug": "alpine-school-district-calendar",
+      "state": "Utah",
+      "comparisonLabel": "Alpine"
+    }
+  ],
+  "sources": [
+    { "label": "Davis School District official website", "url": "https://www.davis.k12.ut.us/" },
+    { "label": "DSD School Year Calendars page", "url": "https://www.davis.k12.ut.us/o/dsd/page/school-year-calendars" },
+    { "label": "DSD 2025-26 calendar approval notice", "url": "https://www.davis.k12.ut.us/article/1909837" },
+    { "label": "DSD 2026-27 calendar revision notice", "url": "https://www.davis.k12.ut.us/o/bes/article/2560460" }
+  ]
+}

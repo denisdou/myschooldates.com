@@ -312,6 +312,7 @@ const heroCtas = computed(() => {
         key: `${cta.label ?? 'hero-cta'}-${index}`,
         label: cta.label ?? '',
         href,
+        isExternal: /^(?:https?:)?\/\//.test(href),
         variant: cta.variant ?? (index === 0 ? 'primary' : 'secondary'),
         download: Boolean(cta.download),
         filename,
@@ -600,22 +601,33 @@ const resolvedJumpNavigation = computed(() => {
   if ((cal.value as any)?.preserveJumpNavigationOrder === true || (cal.value as any)?.meta?.preserveJumpNavigationOrder === true) {
     return customJumpNavigation.value
   }
-  const afterAllDatesTargets = customSections.value
-    .filter(section => section.position === 'afterAllDates')
+  const customTargets = (position: string) => customSections.value
+    .filter(section => section.position === position || (position === 'afterAbout' && !section.position))
     .map(section => `#${section.id}`)
   const targets = [
+    ...customTargets('afterVerification'),
     '#key-dates',
-    ...(breaksBeforeAllDates.value ? ['#breaks'] : []),
-    ...(moveCalendarExportBeforeAllDates.value ? ['#add-to-calendar'] : []),
+    ...customTargets('afterKeyDates'),
+    ...customTargets('afterQuickFacts'),
+    ...customTargets('afterAlternateCalendarsNotice'),
+    ...(breaksBeforeAllDates.value ? ['#breaks', ...customTargets('afterBreaks')] : []),
+    ...(moveCalendarExportBeforeAllDates.value ? ['#add-to-calendar', ...customTargets('afterCalendarExport')] : []),
     '#all-dates',
-    ...afterAllDatesTargets,
-    ...(!breaksBeforeAllDates.value ? ['#breaks'] : []),
-    ...(!moveCalendarExportBeforeAllDates.value ? ['#add-to-calendar'] : []),
+    ...customTargets('afterAllDates'),
+    ...(!breaksBeforeAllDates.value ? ['#breaks', ...customTargets('afterBreaks')] : []),
+    ...(otherCalendarsBeforeCalendarExport.value ? customTargets('afterOtherCalendars') : []),
+    ...(!moveCalendarExportBeforeAllDates.value ? ['#add-to-calendar', ...customTargets('afterCalendarExport')] : []),
+    ...(!otherCalendarsBeforeCalendarExport.value ? customTargets('afterOtherCalendars') : []),
     '#year-comparison',
-    ...(comparisonBeforeFaq.value ? ['#comparison'] : []),
+    ...customTargets('afterYearDiff'),
+    ...customTargets('afterAbout'),
+    ...(comparisonBeforeFaq.value ? ['#comparison', ...customTargets('afterComparison')] : []),
     ...(sourcesBeforeFaq.value ? ['#sources'] : []),
     '#faq',
-    ...(!comparisonBeforeFaq.value ? ['#comparison'] : []),
+    ...customTargets('afterFaq'),
+    ...(!comparisonBeforeFaq.value ? ['#comparison', ...customTargets('afterComparison')] : []),
+    ...customTargets('afterPlanningTips'),
+    ...customTargets('beforeSources'),
     ...(!sourcesBeforeFaq.value ? ['#sources'] : []),
   ]
   return resolveJumpNavigation(customJumpNavigation.value, targets)
@@ -861,12 +873,13 @@ const basedOnUrl = sourcePdfUrl && !sourcePdfIsArchivedCopy ? sourcePdfUrl : sou
 const sourceCalendarName = (cal.value as any).sourceCalendarName ?? (cal.value as any).meta?.sourceCalendarName
   ?? `${district.value.name} ${year} Calendar ${sourcePdfUrl && !sourcePdfIsArchivedCopy ? 'PDF' : 'Source'}`
 const sourceVersion = (cal.value as any).sourceVersion ?? (cal.value as any).meta?.sourceVersion
+const sourceCalendarId = String((cal.value as any).sourceCalendarId ?? (cal.value as any).meta?.sourceCalendarId ?? 'source-calendar').replace(/^#/, '')
 const sourceCalendarDateCreated = (cal.value as any).sourceCalendarDateCreated ?? (cal.value as any).meta?.sourceCalendarDateCreated
 const sourceCalendarDateModified = (cal.value as any).sourceCalendarDateModified ?? (cal.value as any).meta?.sourceCalendarDateModified
 const sourcePdfSameAs = (cal.value as any).sourcePdfSameAs ?? (cal.value as any).meta?.sourcePdfSameAs
 const sourcePageCitationUrl = sourceUrl && sourceUrl !== basedOnUrl ? sourceUrl : ''
 const sourceCitation = [
-  ...(basedOnUrl ? [{ '@id': `${canonicalUrl}#source-calendar` }] : []),
+  ...(basedOnUrl ? [{ '@id': `${canonicalUrl}#${sourceCalendarId}` }] : []),
   ...(sourcePageCitationUrl ? [{ '@id': `${canonicalUrl}#source-calendar-page` }] : []),
 ]
 const calendarTypeName = String((cal.value as any)?.calendarType ?? '').replace(/[_-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
@@ -888,7 +901,7 @@ const schemaDatasetVersion = (cal.value as any)?.schemaDatasetVersion ?? (cal.va
 const schemaVariableMeasured = (((cal.value as any)?.schemaVariableMeasured ?? (cal.value as any)?.meta?.schemaVariableMeasured ?? []) as string[])
 const sourceCalendarEntity = basedOnUrl ? {
   '@type': 'CreativeWork',
-  '@id': `${canonicalUrl}#source-calendar`,
+  '@id': `${canonicalUrl}#${sourceCalendarId}`,
   name: sourceCalendarName,
   ...(sourceVersion ? { version: sourceVersion } : {}),
   ...(sourceCalendarDateCreated ? { dateCreated: sourceCalendarDateCreated } : {}),
@@ -923,7 +936,7 @@ const sourceCalendarPageEntity = sourcePageCitationUrl ? {
   publisher: { '@id': districtAbout['@id'] },
 } : null
 const sourceBasedOnRefs = [
-  ...(basedOnUrl ? [{ '@id': `${canonicalUrl}#source-calendar` }] : []),
+  ...(basedOnUrl ? [{ '@id': `${canonicalUrl}#${sourceCalendarId}` }] : []),
   ...(sourcePageCitationUrl ? [{ '@id': `${canonicalUrl}#source-calendar-page` }] : []),
   ...additionalSourceCalendarEntities.map(source => ({ '@id': source['@id'] })),
 ]
@@ -932,7 +945,7 @@ const datasetSourceCalendarIds = (((cal.value as any)?.schemaDatasetSourceCalend
 const datasetBasedOnRefs = Array.isArray(datasetSourceCalendarIds)
   ? datasetSourceCalendarIds
       .map(id => {
-        if (id === 'source-calendar' && basedOnUrl) return { '@id': `${canonicalUrl}#source-calendar` }
+        if ((id === 'source-calendar' || id === sourceCalendarId) && basedOnUrl) return { '@id': `${canonicalUrl}#${sourceCalendarId}` }
         if (id === 'source-calendar-page' && sourcePageCitationUrl) return { '@id': `${canonicalUrl}#source-calendar-page` }
         if (id && additionalSourceCalendarEntities.some(source => source['@id'] === `${canonicalUrl}#${id}`)) return { '@id': `${canonicalUrl}#${id}` }
         return null
@@ -1204,6 +1217,9 @@ const calendarDateItemListEvents = computed(() => {
   if (!splitCalendarDateItemListSchema.value) return []
   return (cal.value?.events ?? []).filter((event: any) => event.type !== 'break_end')
 })
+if (datasetEntity && !hideItemListSchema.value && calendarDateItemListEvents.value.length) {
+  Object.assign(datasetEntity, { mainEntity: { '@id': `${canonicalUrl}#student-calendar-dates` } })
+}
 const webPageMainEntityMode = (cal.value as any)?.webPageMainEntity ?? (cal.value as any)?.meta?.webPageMainEntity ?? (district.value as any)?.webPageMainEntity ?? (district.value as any)?.meta?.webPageMainEntity
 const webPageMainEntity = webPageMainEntityMode === 'none'
   ? null
@@ -1241,7 +1257,7 @@ const webPageEntity = {
       ...(includeArticleSchema ? [{ '@id': `${canonicalUrl}#calendar-analysis` }] : []),
       ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
       ...(!hideItemListSchema.value && keyDateItemListEvents.value.length ? [{ '@id': `${canonicalUrl}#key-dates` }] : []),
-      ...(!hideItemListSchema.value && calendarDateItemListEvents.value.length ? [{ '@id': `${canonicalUrl}#calendar-dates` }] : []),
+      ...(!hideItemListSchema.value && calendarDateItemListEvents.value.length ? [{ '@id': `${canonicalUrl}#student-calendar-dates` }] : []),
       ...(faqSchemaItems.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
       ...customSectionSchemaParts.value,
       ...yearNumbersSchemaParts.value,
@@ -1356,7 +1372,7 @@ const keyDateItemListEntity = !hideItemListSchema.value && keyDateItemListEvents
 } : null
 const calendarDateItemListEntity = !hideItemListSchema.value && calendarDateItemListEvents.value.length ? {
   '@type': 'ItemList',
-  '@id': `${canonicalUrl}#calendar-dates`,
+  '@id': `${canonicalUrl}#student-calendar-dates`,
   name: calendarDateItemListName.value,
   itemListElement: calendarDateItemListEvents.value.map((event: any, i: number) => ({
     '@type': 'ListItem',
@@ -1436,9 +1452,9 @@ useHead({
 </script>
 
 <template>
-  <main class="py-8">
+  <main class="district-calendar-page py-8">
 
-      <section class="district-page-section">
+      <section class="district-page-section district-hero">
         <div class="district-page-inner space-y-8">
           <!-- Breadcrumb -->
           <Breadcrumb :items="[
@@ -1449,9 +1465,9 @@ useHead({
           ]" />
 
           <!-- Notice for non-current year (past or future) -->
-          <div v-if="!isCurrentYear" class="bg-blue-50 border border-blue-200 rounded-lg p-4 flex items-start gap-3">
-            <svg class="w-5 h-5 text-blue-700 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            <p class="text-sm text-blue-700">
+          <div v-if="!isCurrentYear" class="district-year-notice flex items-start gap-3 p-4">
+            <svg class="w-5 h-5 text-rds-accent mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <p class="text-sm">
               <template v-if="nonCurrentYearNotice">{{ nonCurrentYearNotice }}</template>
               <template v-else>You're viewing the <strong>{{ isFutureYear ? 'upcoming' : 'archived' }} {{ displaySchoolYearLabel(year) }}</strong> calendar.</template>
               <NuxtLink :to="`/${slug}`" class="ml-1 inline-flex underline font-medium">View the current {{ displaySchoolYearLabel(district!.currentSchoolYear) }} calendar →</NuxtLink>
@@ -1460,10 +1476,10 @@ useHead({
 
           <!-- Title -->
           <div>
-        <h1 class="text-3xl font-bold text-gray-900">
+        <h1 class="district-hero__title">
           {{ (cal as any).pageHeading || `${district!.name} Calendar ${displaySchoolYear}` }}
         </h1>
-        <p class="mt-2 text-sm text-[#7b756d]">
+        <p class="district-hero__source mt-3 text-sm">
           {{ (cal as any).heroSourceLine ?? (cal as any).meta?.heroSourceLine ?? `${displaySchoolYear} calendar dates · Based on the official ${district!.shortName || district!.name} calendar` }}
           <template v-if="!((cal as any).hideHeroDownloadLink || (cal as any).meta?.hideHeroDownloadLink)">
             ·
@@ -1471,14 +1487,14 @@ useHead({
               :href="(cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref ?? '#add-to-calendar'"
               :target="((cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref) ? '_blank' : undefined"
               :rel="((cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref) ? 'noopener' : undefined"
-              class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors"
+              class="rds-link inline-flex min-h-11 items-center underline"
             >
               {{ (cal as any).heroDownloadLabel ?? (cal as any).meta?.heroDownloadLabel ?? (cal as any).icsButtonLabel ?? (cal as any).meta?.icsButtonLabel ?? 'Download calendar file' }}
               <span v-if="(cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref" class="sr-only">(opens in a new tab)</span>
             </a>
           </template>
         </p>
-        <div class="mt-3 text-[hsl(var(--rds-ink-muted)/1)] leading-relaxed space-y-2">
+        <div class="district-hero__lead mt-3 space-y-2">
           <template v-if="heroSummaryParagraphs.length">
             <p v-for="(paragraph, i) in heroSummaryParagraphs" :key="i">
               {{ paragraph }}
@@ -1495,15 +1511,15 @@ useHead({
               {{ formatShortDate(springBreak.start) }}–{{ formatShortDate(springBreak.end) }}<template v-if="springBreakReturnDate">, with students returning {{ formatShortDate(springBreakReturnDate) }}</template>.
             </span>
           </p>
-          <div v-if="heroQuickDates.length" class="mt-4 rounded-lg border border-rds-hairline bg-rds-surface-panel p-4">
-            <p class="text-sm font-semibold text-gray-900">{{ displaySchoolYear }} Dates at a Glance</p>
-            <ul class="mt-2 grid gap-1.5 text-sm text-gray-700 sm:grid-cols-2">
+          <div v-if="heroQuickDates.length" class="district-hero__quick-dates mt-4 p-4">
+            <p class="text-sm font-semibold text-rds-ink">{{ displaySchoolYear }} Dates at a Glance</p>
+            <ul class="mt-2 grid gap-1.5 text-sm text-rds-ink-muted sm:grid-cols-2">
               <li v-for="item in heroQuickDates" :key="`${item.label}-${item.value}`">
                 <strong>{{ item.label }}:</strong> {{ item.value }}
               </li>
             </ul>
           </div>
-          <p v-if="heroSummaryFacts.length" class="mt-3 text-sm text-[#7b756d]">
+          <p v-if="heroSummaryFacts.length" class="district-hero__meta rds-data mt-3 text-sm">
             {{ heroSummaryFacts.join(' · ') }}
           </p>
           <div v-if="heroCtas.length" class="mt-4 flex flex-wrap gap-2">
@@ -1512,22 +1528,23 @@ useHead({
               :key="cta.key"
               :href="cta.href"
               :download="cta.download ? (cta.filename || '') : undefined"
-              :target="cta.download ? undefined : '_blank'"
-              :rel="cta.download ? undefined : 'noopener'"
-              class="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold transition-colors"
+              :target="!cta.download && cta.isExternal ? '_blank' : undefined"
+              :rel="!cta.download && cta.isExternal ? 'noopener' : undefined"
+              class="inline-flex min-h-11 items-center justify-center px-4 py-2 text-sm font-semibold"
               :class="cta.variant === 'primary'
-                ? 'bg-[#0f5d6b] text-white hover:bg-[#0b4c58]'
-                : 'border border-[#d9d2c7] bg-[#fbfaf7] text-[#4f5b5f] hover:bg-[#f3f0e8]'"
+                ? 'rds-button-primary'
+                : 'rds-button-secondary'"
             >
               {{ cta.label }}
+              <span v-if="!cta.download && cta.isExternal" class="sr-only">(opens in a new tab)</span>
             </a>
           </div>
-          <p class="mt-2 text-xs text-gray-600">
+          <p class="district-hero__independence mt-3 text-xs">
             MySchoolDates is an independent calendar reference and is not affiliated with {{ district!.name }}.
           </p>
           <dl
             v-if="verifiedDate && (!((cal as any).hideHeroReviewedField || (cal as any).meta?.hideHeroReviewedField) || !((cal as any).hideHeroReviewedByField || (cal as any).meta?.hideHeroReviewedByField) || !((cal as any).hideHeroUpdatedField || (cal as any).meta?.hideHeroUpdatedField))"
-            class="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-xs text-gray-500"
+            class="district-hero__meta rds-data mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs"
           >
             <div v-if="!((cal as any).hideHeroReviewedField || (cal as any).meta?.hideHeroReviewedField)">
               <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Reviewed</dt>
@@ -1544,22 +1561,22 @@ useHead({
               <dd class="ml-1 inline font-medium text-gray-700">{{ updatedDate }}</dd>
             </div>
           </dl>
-          <div v-if="verifiedDate && !((cal as any).hideHeroVerifiedBadge || (cal as any).meta?.hideHeroVerifiedBadge)" class="mt-5 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg bg-green-50 text-green-700 border border-green-200">
+          <div v-if="verifiedDate && !((cal as any).hideHeroVerifiedBadge || (cal as any).meta?.hideHeroVerifiedBadge)" class="district-hero__verification mt-5 inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium">
             <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
             </svg>
             <span>{{ verificationBadgeText || `Checked against the official ${district.shortName || district.name} calendar on ${verifiedDate}.` }}</span>
           </div>
-          <details v-if="verifiedDate && !hideHeroVerificationProcess" class="mt-5 rounded-lg border border-rds-hairline bg-rds-surface-panel p-3">
-            <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-gray-500">How verified</summary>
-            <ul class="mt-2 grid gap-1.5 text-xs text-gray-600 sm:grid-cols-3">
+          <details v-if="verifiedDate && !hideHeroVerificationProcess" class="district-hero__verification-details mt-5 p-3">
+            <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-rds-ink-dim">How verified</summary>
+            <ul class="mt-2 grid gap-1.5 text-xs text-rds-ink-muted sm:grid-cols-3">
               <li class="flex items-start gap-1.5">
                 <span class="mt-0.5 text-green-700">✓</span>
-                <span>Official district source checked</span>
+                <span>{{ (cal as any).heroVerificationSourceText ?? (cal as any).meta?.heroVerificationSourceText ?? 'Official district source checked' }}</span>
               </li>
               <li class="flex items-start gap-1.5">
                 <span class="mt-0.5 text-green-700">✓</span>
-                <span>Key dates compared against source</span>
+                <span>{{ (cal as any).heroVerificationComparisonText ?? (cal as any).meta?.heroVerificationComparisonText ?? 'Key dates compared against source' }}</span>
               </li>
               <li v-if="!((cal as any).hideHeroVerificationIcs || (cal as any).meta?.hideHeroVerificationIcs)" class="flex items-start gap-1.5">
                 <span class="mt-0.5 text-green-700">✓</span>
@@ -1572,9 +1589,9 @@ useHead({
         </div>
       </section>
 
-      <nav v-if="resolvedJumpNavigation.length" aria-label="Page sections" class="sticky top-0 z-20 my-8 border-y border-[#ddd7cc] bg-[#f7f5f0]/95 backdrop-blur">
+      <nav v-if="resolvedJumpNavigation.length" aria-label="Page sections" class="district-jump-nav sticky top-0 z-20 my-8">
         <div class="district-page-inner flex items-center gap-7 overflow-x-auto py-4 text-sm">
-          <span class="flex-shrink-0 font-semibold text-[#7b756d]">On this page</span>
+          <span class="district-jump-nav__label flex-shrink-0 font-semibold">On this page</span>
           <a
             v-for="item in resolvedJumpNavigation"
             :key="item.label"
@@ -1583,9 +1600,9 @@ useHead({
           >{{ item.label }}</a>
         </div>
       </nav>
-      <nav v-else aria-label="Page sections" class="sticky top-0 z-20 my-8 border-y border-[#ddd7cc] bg-[#f7f5f0]/95 backdrop-blur">
+      <nav v-else aria-label="Page sections" class="district-jump-nav sticky top-0 z-20 my-8">
         <div class="district-page-inner flex items-center gap-7 overflow-x-auto py-4 text-sm">
-          <span class="flex-shrink-0 font-semibold text-[#7b756d]">On this page</span>
+          <span class="district-jump-nav__label flex-shrink-0 font-semibold">On this page</span>
           <a v-if="!hiddenSections.has('keyDateCards')" href="#key-dates" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Key Dates</a>
           <a v-if="summarySectionId" :href="`#${summarySectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Summary</a>
           <a v-if="overviewSectionId" :href="`#${overviewSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Overview</a>
@@ -1674,7 +1691,7 @@ useHead({
           >
             <div class="flex items-start gap-2.5 min-w-0">
               <span
-                class="mt-0.5 text-xs font-medium px-2 py-0.5 rounded-lg whitespace-nowrap flex-shrink-0"
+                class="mt-0.5 inline-flex flex-shrink-0 justify-center rounded-lg px-2 py-0.5 text-center text-xs font-medium whitespace-nowrap sm:w-36"
                 :class="eventTypeColor[event.type]"
               >{{ event.label || 'Key Date' }}</span>
               <span class="min-w-0">
@@ -2041,6 +2058,9 @@ useHead({
       <DistrictProfile
         v-if="!hiddenSections.has('districtProfile') && ((district as any).studentCount || (district as any).schoolCount)"
         :student-count="(district as any).studentCount"
+        :student-count-as-of="(district as any).studentCountAsOf"
+        :student-count-source-label="(district as any).studentCountSourceLabel"
+        :student-count-source-url="(district as any).studentCountSourceUrl"
         :school-count="(district as any).schoolCount"
         :calendar-type="(district as any).calendarType"
         :grades="district!.grades"

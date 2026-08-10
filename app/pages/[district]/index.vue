@@ -361,6 +361,7 @@ const heroCtas = computed(() => {
         key: `${cta.label ?? 'hero-cta'}-${index}`,
         label: cta.label ?? '',
         href,
+        isExternal: /^(?:https?:)?\/\//.test(href),
         variant: cta.variant ?? (index === 0 ? 'primary' : 'secondary'),
         download: Boolean(cta.download),
         filename,
@@ -1102,22 +1103,34 @@ const resolvedJumpNavigation = computed(() => {
   if ((cal as any)?.preserveJumpNavigationOrder === true || (cal as any)?.meta?.preserveJumpNavigationOrder === true) {
     return customJumpNavigation.value
   }
-  const afterAllDatesTargets = customSections.value
-    .filter(section => section.position === 'afterAllDates')
+  const customTargets = (position: string) => customSections.value
+    .filter(section => section.position === position || (position === 'afterAbout' && !section.position))
     .map(section => `#${section.id}`)
   const targets = [
+    ...customTargets('afterVerification'),
+    ...(hiddenSections.value.has('keyDateCards') ? customTargets('afterAlternateCalendarsNotice') : []),
     '#key-dates',
-    ...(breaksBeforeAllDates.value ? ['#breaks'] : []),
-    ...(moveCalendarExportBeforeAllDates.value ? ['#add-to-calendar'] : []),
+    ...(!hiddenSections.value.has('keyDateCards') ? customTargets('afterAlternateCalendarsNotice') : []),
+    ...customTargets('afterKeyDates'),
+    ...customTargets('afterQuickFacts'),
+    ...(breaksBeforeAllDates.value ? ['#breaks', ...customTargets('afterBreaks')] : []),
+    ...(moveCalendarExportBeforeAllDates.value ? ['#add-to-calendar', ...customTargets('afterCalendarExport')] : []),
     '#all-dates',
-    ...afterAllDatesTargets,
-    ...(!breaksBeforeAllDates.value ? ['#breaks'] : []),
-    ...(!moveCalendarExportBeforeAllDates.value ? ['#add-to-calendar'] : []),
+    ...customTargets('afterAllDates'),
+    ...(!breaksBeforeAllDates.value ? ['#breaks', ...customTargets('afterBreaks')] : []),
+    ...(otherCalendarsBeforeCalendarExport.value ? customTargets('afterOtherCalendars') : []),
+    ...(!moveCalendarExportBeforeAllDates.value ? ['#add-to-calendar', ...customTargets('afterCalendarExport')] : []),
+    ...(!otherCalendarsBeforeCalendarExport.value ? customTargets('afterOtherCalendars') : []),
+    ...customTargets('afterAbout'),
     '#year-comparison',
-    ...(comparisonBeforeFaq.value ? ['#comparison'] : []),
+    ...customTargets('afterYearDiff'),
+    ...(comparisonBeforeFaq.value ? ['#comparison', ...customTargets('afterComparison')] : []),
     ...(sourcesBeforeFaq.value ? ['#sources'] : []),
     '#faq',
-    ...(!comparisonBeforeFaq.value ? ['#comparison'] : []),
+    ...customTargets('afterFaq'),
+    ...(!comparisonBeforeFaq.value ? ['#comparison', ...customTargets('afterComparison')] : []),
+    ...customTargets('afterPlanningTips'),
+    ...customTargets('beforeSources'),
     ...(!sourcesBeforeFaq.value ? ['#sources'] : []),
   ]
   return resolveJumpNavigation(customJumpNavigation.value, targets)
@@ -1269,12 +1282,13 @@ if (!isStatePage && district.value) {
   const sourceCalendarName = (cal as any)?.sourceCalendarName ?? (cal as any)?.meta?.sourceCalendarName
     ?? `${meta.value!.name} ${displayYearText} Calendar ${sourcePdfUrl && !sourcePdfIsArchivedCopy ? 'PDF' : 'Source'}`
   const sourceVersion = (cal as any)?.sourceVersion ?? (cal as any)?.meta?.sourceVersion
+  const sourceCalendarId = String((cal as any)?.sourceCalendarId ?? (cal as any)?.meta?.sourceCalendarId ?? 'source-calendar').replace(/^#/, '')
   const sourceCalendarDateCreated = (cal as any)?.sourceCalendarDateCreated ?? (cal as any)?.meta?.sourceCalendarDateCreated
   const sourceCalendarDateModified = (cal as any)?.sourceCalendarDateModified ?? (cal as any)?.meta?.sourceCalendarDateModified
   const sourcePdfSameAs = (cal as any)?.sourcePdfSameAs ?? (cal as any)?.meta?.sourcePdfSameAs
   const sourcePageCitationUrl = sourceUrl && sourceUrl !== basedOnUrl ? sourceUrl : ''
   const sourceCitation = [
-    ...(basedOnUrl ? [{ '@id': `${canonicalUrl}#source-calendar` }] : []),
+    ...(basedOnUrl ? [{ '@id': `${canonicalUrl}#${sourceCalendarId}` }] : []),
     ...(sourcePageCitationUrl ? [{ '@id': `${canonicalUrl}#source-calendar-page` }] : []),
   ]
   const calendarTypeName = cal
@@ -1297,7 +1311,7 @@ if (!isStatePage && district.value) {
   const schemaDatasetVersion = (cal as any)?.schemaDatasetVersion ?? (cal as any)?.meta?.schemaDatasetVersion
   const sourceCalendarEntity = basedOnUrl ? {
     '@type': 'CreativeWork',
-    '@id': `${canonicalUrl}#source-calendar`,
+    '@id': `${canonicalUrl}#${sourceCalendarId}`,
     name: sourceCalendarName,
     ...(sourceVersion ? { version: sourceVersion } : {}),
     ...(sourceCalendarDateCreated ? { dateCreated: sourceCalendarDateCreated } : {}),
@@ -1332,7 +1346,7 @@ if (!isStatePage && district.value) {
     publisher: { '@id': districtAbout['@id'] },
   } : null
   const sourceBasedOnRefs = [
-    ...(basedOnUrl ? [{ '@id': `${canonicalUrl}#source-calendar` }] : []),
+    ...(basedOnUrl ? [{ '@id': `${canonicalUrl}#${sourceCalendarId}` }] : []),
     ...(sourcePageCitationUrl ? [{ '@id': `${canonicalUrl}#source-calendar-page` }] : []),
     ...additionalSourceCalendarEntities.map(source => ({ '@id': source['@id'] })),
   ]
@@ -1341,7 +1355,7 @@ if (!isStatePage && district.value) {
   const datasetBasedOnRefs = Array.isArray(datasetSourceCalendarIds)
     ? datasetSourceCalendarIds
         .map(id => {
-          if (id === 'source-calendar' && basedOnUrl) return { '@id': `${canonicalUrl}#source-calendar` }
+          if ((id === 'source-calendar' || id === sourceCalendarId) && basedOnUrl) return { '@id': `${canonicalUrl}#${sourceCalendarId}` }
           if (id === 'source-calendar-page' && sourcePageCitationUrl) return { '@id': `${canonicalUrl}#source-calendar-page` }
           if (id && additionalSourceCalendarEntities.some(source => source['@id'] === `${canonicalUrl}#${id}`)) return { '@id': `${canonicalUrl}#${id}` }
           return null
@@ -1465,11 +1479,14 @@ if (!isStatePage && district.value) {
   )
   const summaryItemListEvents = splitCalendarDateItemListSchema ? keyDateHighlights.value : itemListEvents.value
   const calendarDateItemListEvents = splitCalendarDateItemListSchema ? itemListEvents.value : []
+  if (datasetEntity && !hideItemListSchema && calendarDateItemListEvents.length) {
+    Object.assign(datasetEntity, { mainEntity: { '@id': `${canonicalUrl}#student-calendar-dates` } })
+  }
   const webPageParts = [
     ...(includeArticleSchema ? [{ '@id': `${canonicalUrl}#calendar-analysis` }] : []),
     ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
     ...(!hideItemListSchema && summaryItemListEvents.length ? [{ '@id': `${canonicalUrl}#key-dates` }] : []),
-    ...(!hideItemListSchema && calendarDateItemListEvents.length ? [{ '@id': `${canonicalUrl}#calendar-dates` }] : []),
+    ...(!hideItemListSchema && calendarDateItemListEvents.length ? [{ '@id': `${canonicalUrl}#student-calendar-dates` }] : []),
     ...(faqSchemaItems.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
     ...customSectionSchemaParts,
     ...yearNumbersSchemaParts,
@@ -1578,7 +1595,7 @@ if (!isStatePage && district.value) {
   } : null
   const calendarDateItemListEntity = cal && !hideItemListSchema && calendarDateItemListEvents.length ? {
     '@type': 'ItemList',
-    '@id': `${canonicalUrl}#calendar-dates`,
+    '@id': `${canonicalUrl}#student-calendar-dates`,
     name: calendarDateItemListName,
     itemListElement: calendarDateItemListEvents.map((event, i) => ({
       '@type': 'ListItem',
@@ -1662,17 +1679,17 @@ if (!isStatePage && district.value) {
 <template>
   <!-- ── State Page ─────────────────────────────────────────────────────── -->
   <template v-if="isStatePage">
-      <main class="site-page-shell py-8 space-y-8">
+      <main class="state-calendar-page site-page-shell py-8 space-y-8">
 
         <!-- Breadcrumb -->
         <Breadcrumb :items="[{ label: 'Home', href: '/' }, { label: matchedStateName! }]" />
 
         <!-- Hero -->
-        <div>
-          <h1 class="text-3xl font-semibold tracking-tight text-[#1f2933]">
+        <div class="state-hero">
+          <h1 class="state-hero__title">
             {{ matchedStateName }} School Calendar {{ stateCurrentYear }}
           </h1>
-          <p class="mt-2 text-sm text-[#7b756d]">
+          <p class="state-hero__lead mt-3 max-w-4xl text-sm leading-relaxed">
             <template v-if="statePageData">
               {{ statePageData.heroDescription || `${stateCurrentYear} school calendar dates, holidays, breaks, district schedules, PDFs, and calendar downloads · Sourced from official district websites` }}
             </template>
@@ -1680,7 +1697,7 @@ if (!isStatePage && district.value) {
               {{ stateCurrentYear }} school calendar dates · {{ stateDistricts.length }} public school district{{ stateDistricts.length !== 1 ? 's' : '' }} · Sourced from official district websites
             </template>
           </p>
-          <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+          <div class="state-hero__proof mt-5 flex flex-wrap gap-x-6 gap-y-2">
             <span class="flex items-center gap-1.5 text-sm text-gray-700">
               <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
               <template v-if="statePageData">{{ statePageData.browseLabel || 'Browse district calendars' }}</template>
@@ -1710,7 +1727,7 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Jump navigation -->
-        <nav v-if="statePageData" class="sticky top-2 z-10 -mx-1 overflow-x-auto rounded-lg border border-gray-200 bg-white/95 px-3 py-2 text-xs shadow-sm backdrop-blur">
+        <nav v-if="statePageData" class="district-jump-nav sticky top-2 z-10 -mx-1 overflow-x-auto rounded-rds-lg px-3 py-2 text-xs">
           <div class="flex min-w-max gap-2">
             <a href="#state-quick-answer" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">2026 Dates</a>
             <a href="#state-districts" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">{{ statePageData.collectionNavLabel || 'Districts' }}</a>
@@ -1722,9 +1739,9 @@ if (!isStatePage && district.value) {
         </nav>
 
         <!-- Quick Answer -->
-        <div v-if="statePageData" id="state-quick-answer" class="bg-blue-50 border border-blue-200 rounded-lg p-6 scroll-mt-24">
-          <h2 class="text-lg font-semibold text-gray-900 mb-2">{{ statePageData.quickAnswerTitle ?? `Quick Answer: ${matchedStateName} School Calendar ${stateCurrentYear}` }}</h2>
-          <p class="text-sm leading-relaxed text-gray-700">
+        <div v-if="statePageData" id="state-quick-answer" class="state-panel state-panel--accent p-6 scroll-mt-24">
+          <h2 class="text-lg font-semibold mb-2">{{ statePageData.quickAnswerTitle ?? `Quick Answer: ${matchedStateName} School Calendar ${stateCurrentYear}` }}</h2>
+          <p class="text-sm leading-relaxed text-rds-ink-muted">
             {{ statePageData.quickAnswer ?? `${matchedStateName} public school calendars are set by local districts, so first day of school, holidays, winter break, spring break, staff-only days, and make-up days vary by district. Families can use this page to find ${matchedStateName} district calendar links, compare key dates when available, and verify schedules against official school sources.` }}
           </p>
           <div v-if="statePageData.quickAnswerItems?.length" class="mt-4 overflow-x-auto rounded-lg border border-blue-100 bg-white">
@@ -1878,7 +1895,7 @@ if (!isStatePage && district.value) {
               v-for="d in stateDistricts"
               :key="d.slug"
               :to="`/${d.slug}`"
-              class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-5 hover:border-blue-300 hover:shadow-sm transition-all"
+              class="state-directory-card p-5"
             >
               <div class="font-semibold text-gray-900 leading-snug">{{ d.name }}</div>
               <div class="text-xs text-gray-600 mt-0.5">{{ d.city ? `${d.city}, ` : '' }}{{ (d as any).stateCode ?? d.state }}</div>
@@ -2077,9 +2094,9 @@ if (!isStatePage && district.value) {
 
   <!-- ── District Page ──────────────────────────────────────────────────── -->
   <template v-else-if="district && cal">
-      <main class="py-8">
+      <main class="district-calendar-page py-8">
 
-        <section class="district-page-section">
+        <section class="district-page-section district-hero">
           <div class="district-page-inner space-y-8">
             <!-- Breadcrumb -->
             <Breadcrumb :items="[
@@ -2090,10 +2107,10 @@ if (!isStatePage && district.value) {
 
             <!-- Title -->
             <div>
-          <h1 class="text-3xl font-bold text-gray-900">
+          <h1 class="district-hero__title">
             {{ (cal as any).pageHeading || `${district.name} Calendar ${displaySchoolYear}` }}
           </h1>
-          <p class="mt-2 text-sm text-[#7b756d]">
+          <p class="district-hero__source mt-3 text-sm">
             {{ (cal as any).heroSourceLine ?? (cal as any).meta?.heroSourceLine ?? `${displaySchoolYear} calendar dates · Based on the official ${district.shortName || district.name} calendar` }}
             <template v-if="!((cal as any).hideHeroDownloadLink || (cal as any).meta?.hideHeroDownloadLink)">
               ·
@@ -2101,18 +2118,18 @@ if (!isStatePage && district.value) {
                 :href="(cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref ?? '#add-to-calendar'"
                 :target="((cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref) ? '_blank' : undefined"
                 :rel="((cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref) ? 'noopener' : undefined"
-                class="inline-flex min-h-11 items-center underline hover:text-[#0f5d6b] transition-colors"
+                class="rds-link inline-flex min-h-11 items-center underline"
               >
                 {{ (cal as any).heroDownloadLabel ?? (cal as any).meta?.heroDownloadLabel ?? (cal as any).icsButtonLabel ?? (cal as any).meta?.icsButtonLabel ?? 'Download calendar file' }}
                 <span v-if="(cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref" class="sr-only">(opens in a new tab)</span>
               </a>
             </template>
           </p>
-          <p class="mt-2 text-xs text-[#6b645c]">
+          <p class="district-hero__independence mt-3 text-xs">
             MySchoolDates is an independent calendar reference and is not affiliated with {{ district.name }}.
           </p>
           <!-- Featured snippet: direct answer for search intent -->
-          <div v-if="calendarSummaryParagraphs.length" class="mt-5 space-y-2 text-sm text-[hsl(var(--rds-ink-muted)/1)] leading-relaxed">
+          <div v-if="calendarSummaryParagraphs.length" class="district-hero__lead mt-5 space-y-2">
             <p v-for="(paragraph, i) in calendarSummaryParagraphs" :key="i">{{ paragraph }}</p>
           </div>
           <div v-if="heroCtas.length" class="mt-4 flex flex-wrap gap-2">
@@ -2121,14 +2138,15 @@ if (!isStatePage && district.value) {
               :key="cta.key"
               :href="cta.href"
               :download="cta.download ? (cta.filename || '') : undefined"
-              :target="cta.download ? undefined : '_blank'"
-              :rel="cta.download ? undefined : 'noopener'"
-              class="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold transition-colors"
+              :target="!cta.download && cta.isExternal ? '_blank' : undefined"
+              :rel="!cta.download && cta.isExternal ? 'noopener' : undefined"
+              class="inline-flex min-h-11 items-center justify-center px-4 py-2 text-sm font-semibold"
               :class="cta.variant === 'primary'
-                ? 'bg-[#0f5d6b] text-white hover:bg-[#0b4c58]'
-                : 'border border-[#d9d2c7] bg-[#fbfaf7] text-[#4f5b5f] hover:bg-[#f3f0e8]'"
+                ? 'rds-button-primary'
+                : 'rds-button-secondary'"
             >
               {{ cta.label }}
+              <span v-if="!cta.download && cta.isExternal" class="sr-only">(opens in a new tab)</span>
             </a>
           </div>
           <div v-if="heroLinks.length" class="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm">
@@ -2138,26 +2156,26 @@ if (!isStatePage && district.value) {
               :href="link.href"
               :target="link.isExternal ? '_blank' : undefined"
               :rel="link.isExternal ? 'noopener' : undefined"
-              class="font-medium text-[#0f5d6b] hover:underline"
+              class="rds-link font-medium"
             >
               {{ link.label }}
               <span v-if="link.isExternal" class="sr-only">(opens in a new tab)</span>
             </a>
           </div>
-          <div v-if="heroQuickDates.length" id="quick-answer" class="mt-4 rounded-lg border border-rds-hairline bg-rds-surface-panel p-4 scroll-mt-24">
-            <p class="text-sm font-semibold text-[#1f2933]">{{ displaySchoolYear }} Dates at a Glance</p>
-            <ul class="mt-2 grid gap-1.5 text-sm text-[#4f5b5f] sm:grid-cols-2">
+          <div v-if="heroQuickDates.length" id="quick-answer" class="district-hero__quick-dates mt-4 scroll-mt-24 p-4">
+            <p class="text-sm font-semibold text-rds-ink">{{ displaySchoolYear }} Dates at a Glance</p>
+            <ul class="mt-2 grid gap-1.5 text-sm text-rds-ink-muted sm:grid-cols-2">
               <li v-for="item in heroQuickDates" :key="`${item.label}-${item.value}`">
                 <strong>{{ item.label }}:</strong> {{ item.value }}
               </li>
             </ul>
           </div>
-          <p v-if="heroSummaryFacts.length" class="mt-3 text-sm text-[#7b756d]">
+          <p v-if="heroSummaryFacts.length" class="district-hero__meta rds-data mt-3 text-sm">
             {{ heroSummaryFacts.join(' · ') }}
           </p>
           <dl
             v-if="!isEstimated && verifiedDate && (!((cal as any).hideHeroReviewedField || (cal as any).meta?.hideHeroReviewedField) || !((cal as any).hideHeroReviewedByField || (cal as any).meta?.hideHeroReviewedByField) || !((cal as any).hideHeroUpdatedField || (cal as any).meta?.hideHeroUpdatedField))"
-            class="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-xs text-[#7b756d]"
+            class="district-hero__meta rds-data mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs"
           >
             <div v-if="!((cal as any).hideHeroReviewedField || (cal as any).meta?.hideHeroReviewedField)">
               <dt class="inline font-semibold uppercase tracking-wide text-[#6b645c]">Reviewed</dt>
@@ -2177,7 +2195,7 @@ if (!isStatePage && district.value) {
           <!-- Verification badge -->
           <div
             v-if="!((cal as any).hideHeroVerifiedBadge || (cal as any).meta?.hideHeroVerifiedBadge)"
-            class="mt-5 inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg"
+            class="district-hero__verification mt-5 inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium"
             :class="isEstimated
               ? 'bg-[#f3ead7] text-[#74552a] border border-[#e5d5b8]'
               : 'bg-[#e7efe5] text-[#315b39] border border-[#cfdfcc]'"
@@ -2191,16 +2209,16 @@ if (!isStatePage && district.value) {
             <span v-if="!isEstimated">{{ verificationBadgeText || `Checked against the official ${district.shortName || meta.name} calendar on ${verifiedDate}.` }}</span>
             <span v-else>Based on official district website · Not yet human-verified</span>
           </div>
-          <details v-if="!isEstimated && verifiedDate && !hideHeroVerificationProcess" class="mt-5 rounded-lg border border-rds-hairline bg-rds-surface-panel p-3">
-            <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-[#7b756d]">How verified</summary>
-            <ul class="mt-2 grid gap-1.5 text-xs text-[#6b645c] sm:grid-cols-3">
+          <details v-if="!isEstimated && verifiedDate && !hideHeroVerificationProcess" class="district-hero__verification-details mt-5 p-3">
+            <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-rds-ink-dim">How verified</summary>
+            <ul class="mt-2 grid gap-1.5 text-xs text-rds-ink-muted sm:grid-cols-3">
               <li class="flex items-start gap-1.5">
                 <span class="mt-0.5 text-[#315b39]">✓</span>
-                <span>Official district source checked</span>
+                <span>{{ (cal as any).heroVerificationSourceText ?? (cal as any).meta?.heroVerificationSourceText ?? 'Official district source checked' }}</span>
               </li>
               <li class="flex items-start gap-1.5">
                 <span class="mt-0.5 text-[#315b39]">✓</span>
-                <span>Key dates compared against source</span>
+                <span>{{ (cal as any).heroVerificationComparisonText ?? (cal as any).meta?.heroVerificationComparisonText ?? 'Key dates compared against source' }}</span>
               </li>
               <li v-if="!((cal as any).hideHeroVerificationIcs || (cal as any).meta?.hideHeroVerificationIcs)" class="flex items-start gap-1.5">
                 <span class="mt-0.5 text-[#315b39]">✓</span>
@@ -2212,9 +2230,9 @@ if (!isStatePage && district.value) {
           </div>
         </section>
 
-        <nav v-if="resolvedJumpNavigation.length" aria-label="Page sections" class="sticky top-0 z-20 my-8 border-y border-[#ddd7cc] bg-[#f7f5f0]/95 backdrop-blur">
+        <nav v-if="resolvedJumpNavigation.length" aria-label="Page sections" class="district-jump-nav sticky top-0 z-20 my-8">
           <div class="district-page-inner flex items-center gap-7 overflow-x-auto py-4 text-sm">
-            <span class="flex-shrink-0 font-semibold text-[#7b756d]">On this page</span>
+            <span class="district-jump-nav__label flex-shrink-0 font-semibold">On this page</span>
             <a
               v-for="item in resolvedJumpNavigation"
               :key="item.label"
@@ -2223,9 +2241,9 @@ if (!isStatePage && district.value) {
             >{{ item.label }}</a>
           </div>
         </nav>
-        <nav v-else aria-label="Page sections" class="sticky top-0 z-20 my-8 border-y border-[#ddd7cc] bg-[#f7f5f0]/95 backdrop-blur">
+        <nav v-else aria-label="Page sections" class="district-jump-nav sticky top-0 z-20 my-8">
           <div class="district-page-inner flex items-center gap-7 overflow-x-auto py-4 text-sm">
-            <span class="flex-shrink-0 font-semibold text-[#7b756d]">On this page</span>
+            <span class="district-jump-nav__label flex-shrink-0 font-semibold">On this page</span>
             <a v-if="!hiddenSections.has('keyDateCards')" href="#key-dates" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Key Dates</a>
             <a v-if="heroQuickDates.length" href="#quick-answer" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Quick Answer</a>
             <a v-if="summarySectionId" :href="`#${summarySectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Summary</a>
@@ -2331,7 +2349,7 @@ if (!isStatePage && district.value) {
             >
               <div class="flex items-start gap-2.5 min-w-0">
                 <span
-                  class="mt-0.5 text-xs font-medium px-2 py-0.5 rounded-lg whitespace-nowrap flex-shrink-0"
+                  class="mt-0.5 inline-flex flex-shrink-0 justify-center rounded-lg px-2 py-0.5 text-center text-xs font-medium whitespace-nowrap sm:w-36"
                   :class="eventTypeColor[event.type]"
                 >{{ keyDateLabel(event) }}</span>
                 <span class="min-w-0">
@@ -2753,6 +2771,9 @@ if (!isStatePage && district.value) {
         <DistrictProfile
           v-if="!hiddenSections.has('districtProfile') && ((district as any).studentCount || (district as any).schoolCount)"
           :student-count="(district as any).studentCount"
+          :student-count-as-of="(district as any).studentCountAsOf"
+          :student-count-source-label="(district as any).studentCountSourceLabel"
+          :student-count-source-url="(district as any).studentCountSourceUrl"
           :school-count="(district as any).schoolCount"
           :calendar-type="(district as any).calendarType"
           :grades="district.grades"

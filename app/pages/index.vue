@@ -129,38 +129,38 @@ useHead({
   <div>
     <main>
       <!-- Hero -->
-      <section class="bg-white border-b border-gray-100">
+      <section class="home-hero">
         <div class="site-page-shell py-14 text-center">
-          <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+          <h1 class="home-hero__title mb-4">
             US School Calendar Platform
           </h1>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+          <p class="home-hero__lead max-w-2xl mx-auto mb-8">
             Browse official school calendars for America's largest public school districts.
             Find school start dates, holidays, and spring break — then add them to Google Calendar.
           </p>
-          <div class="flex flex-wrap justify-center gap-x-8 gap-y-2.5 text-sm text-gray-600">
-            <span class="flex items-center gap-1.5"><span class="text-green-500 font-bold">✓</span> School start &amp; end dates</span>
-            <span class="flex items-center gap-1.5"><span class="text-green-500 font-bold">✓</span> Holidays &amp; breaks</span>
-            <span class="flex items-center gap-1.5"><span class="text-green-500 font-bold">✓</span> Add to Google Calendar</span>
-            <span class="flex items-center gap-1.5"><span class="text-green-500 font-bold">✓</span> Official district sources</span>
-            <span class="flex items-center gap-1.5"><span class="text-green-500 font-bold">✓</span> Free forever</span>
+          <div class="home-proof-list flex flex-wrap justify-center gap-x-7 gap-y-2.5 text-sm">
+            <span class="flex items-center gap-1.5"><span class="home-proof-mark">✓</span> School start &amp; end dates</span>
+            <span class="flex items-center gap-1.5"><span class="home-proof-mark">✓</span> Holidays &amp; breaks</span>
+            <span class="flex items-center gap-1.5"><span class="home-proof-mark">✓</span> Add to Google Calendar</span>
+            <span class="flex items-center gap-1.5"><span class="home-proof-mark">✓</span> Official district sources</span>
+            <span class="flex items-center gap-1.5"><span class="home-proof-mark">✓</span> Free forever</span>
           </div>
         </div>
       </section>
 
       <!-- Stats bar -->
-      <div class="bg-gray-900 text-white">
-        <div class="site-page-shell py-4 flex flex-wrap justify-center gap-x-10 gap-y-2 text-sm">
-          <span><strong class="text-white">{{ districtCount }}</strong> <span class="text-gray-400">school districts</span></span>
-          <span><strong class="text-white">{{ stateCount }}</strong> <span class="text-gray-400">states</span></span>
+      <div class="home-stats">
+        <div class="site-page-shell home-stats__inner py-4 flex flex-wrap justify-center gap-x-10 gap-y-2 text-sm">
+          <span><strong>{{ districtCount }}</strong> <span class="home-stats__label">school districts</span></span>
+          <span><strong>{{ stateCount }}</strong> <span class="home-stats__label">states</span></span>
           <span>
-            <strong class="text-white">2027–2028</strong>
-            <span class="text-gray-400"> &amp; </span>
-            <strong class="text-white">2026–2027</strong>
-            <span v-if="supportingYears.includes('2025-2026')" class="text-gray-400"> · 2025–2026 available</span>
+            <strong>2027–2028</strong>
+            <span class="home-stats__label"> &amp; </span>
+            <strong>2026–2027</strong>
+            <span v-if="supportingYears.includes('2025-2026')" class="home-stats__label"> · 2025–2026 available</span>
           </span>
-          <span><strong class="text-white">Official</strong> <span class="text-gray-400">district sources</span></span>
-          <span><strong class="text-white">Free</strong> <span class="text-gray-400">calendar downloads</span></span>
+          <span><strong>Official</strong> <span class="home-stats__label">district sources</span></span>
+          <span><strong>Free</strong> <span class="home-stats__label">calendar downloads</span></span>
         </div>
       </div>
 
@@ -168,11 +168,11 @@ useHead({
         <!-- Search -->
         <div class="py-10">
           <div class="relative max-w-xl mx-auto">
-            <label for="district-search" class="block text-sm font-medium text-gray-700 mb-2 text-center">
+            <label for="district-search" class="home-search-label block text-sm font-medium mb-2 text-center">
               Search your school district
             </label>
             <div class="relative">
-              <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-rds-ink-dim pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
               <input
@@ -181,48 +181,48 @@ useHead({
                 type="text"
                 placeholder="e.g. Miami-Dade, Houston ISD, LAUSD…"
                 autocomplete="off"
-                class="w-full pl-12 pr-4 py-4 text-base rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                class="home-search-input pl-12 pr-4 py-3 text-base"
                 @focus="onSearchFocus"
                 @blur="onSearchBlur"
               >
               <!-- Results dropdown -->
               <div
                 v-if="showDropdown && searchResults.length"
-                class="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden"
+                class="home-search-menu absolute z-10 w-full mt-1"
               >
                 <NuxtLink
                   v-for="d in searchResults"
                   :key="d.slug"
                   :to="`/${d.slug}`"
-                  class="flex items-center justify-between px-5 py-3.5 hover:bg-gray-50 transition-colors"
+                  class="home-directory-row flex items-center justify-between px-5 py-3.5 border-b border-rds-hairline last:border-b-0"
                 >
                   <div>
-                    <div class="font-medium text-gray-900 text-sm">{{ d.name }}</div>
-                    <div class="text-xs text-gray-400 mt-0.5">{{ d.city ? `${d.city}, ` : '' }}{{ d.state }}</div>
+                    <div class="home-directory-row__title font-medium text-sm">{{ d.name }}</div>
+                    <div class="home-directory-row__meta text-xs mt-0.5">{{ d.city ? `${d.city}, ` : '' }}{{ d.state }}</div>
                   </div>
-                  <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg class="w-4 h-4 text-rds-ink-dim flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
                 </NuxtLink>
-                <div v-if="searchResults.length === 8" class="px-5 py-2 text-xs text-gray-400 border-t border-gray-100">
+                <div v-if="searchResults.length === 8" class="px-5 py-2 text-xs text-rds-ink-dim border-t border-rds-hairline bg-rds-surface-panel-2">
                   Showing top results — type more to narrow down
                 </div>
               </div>
               <div
                 v-else-if="showDropdown && searchQuery.length >= 2 && !searchResults.length"
-                class="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-sm px-5 py-3.5 text-sm text-gray-500"
+                class="home-search-menu absolute z-10 w-full mt-1 px-5 py-3.5 text-sm text-rds-ink-muted"
               >
                 No districts found matching "{{ searchQuery }}"
               </div>
             </div>
             <!-- Popular searches -->
             <div class="mt-3 flex flex-wrap justify-center gap-2">
-              <span class="text-xs text-gray-400 self-center">Popular:</span>
+              <span class="text-xs text-rds-ink-dim self-center">Popular:</span>
               <NuxtLink
                 v-for="d in popularSearches"
                 :key="d.slug"
                 :to="`/${d.slug}`"
-                class="text-xs px-3 py-1.5 rounded-lg bg-white border border-gray-200 text-gray-600 hover:border-blue-300 hover:text-blue-600 transition-colors"
+                class="home-chip text-xs px-3 py-1.5"
               >
                 {{ d.shortName ?? d.name.split(' ').slice(0, 2).join(' ') }}
               </NuxtLink>
@@ -232,23 +232,23 @@ useHead({
 
         <!-- About (before district listing for SEO weight) -->
         <section class="mb-12">
-          <h2 class="text-xl font-semibold text-gray-900 mb-4">Current School Years</h2>
+          <h2 class="rds-section-title">Current School Years</h2>
           <div class="grid gap-3 sm:grid-cols-3">
-            <div class="rounded-lg border border-blue-200 bg-blue-50 p-5">
-              <div class="text-lg font-semibold text-blue-950">2027-2028</div>
-              <p class="mt-1 text-sm text-blue-800">
+            <div class="home-year-card home-year-card--current p-5">
+              <div class="rds-data text-lg font-semibold text-rds-ink">2027-2028</div>
+              <p class="mt-1 text-sm text-rds-ink-muted">
                 Newest school year pages available for {{ yearCoverage.get('2027-2028') ?? 0 }} districts.
               </p>
             </div>
-            <div class="rounded-lg border border-blue-200 bg-blue-50 p-5">
-              <div class="text-lg font-semibold text-blue-950">2026-2027</div>
-              <p class="mt-1 text-sm text-blue-800">
+            <div class="home-year-card home-year-card--current p-5">
+              <div class="rds-data text-lg font-semibold text-rds-ink">2026-2027</div>
+              <p class="mt-1 text-sm text-rds-ink-muted">
                 Primary planning year with {{ yearCoverage.get('2026-2027') ?? 0 }} district calendars.
               </p>
             </div>
-            <div class="rounded-lg border border-gray-200 bg-white p-5">
-              <div class="text-lg font-semibold text-gray-900">2025-2026</div>
-              <p class="mt-1 text-sm text-gray-500">
+            <div class="home-year-card p-5">
+              <div class="rds-data text-lg font-semibold text-rds-ink">2025-2026</div>
+              <p class="mt-1 text-sm text-rds-ink-dim">
                 Archive year available for {{ yearCoverage.get('2025-2026') ?? 0 }} districts.
               </p>
             </div>
@@ -256,9 +256,9 @@ useHead({
         </section>
 
         <section class="mb-12">
-          <div class="bg-white rounded-lg border border-gray-200 p-8">
-            <h2 class="text-xl font-semibold text-gray-900 mb-5">About US School Calendars</h2>
-            <div class="text-sm text-gray-600 space-y-4 leading-relaxed">
+          <div class="rds-panel p-8">
+            <h2 class="rds-section-title mb-5">About US School Calendars</h2>
+            <div class="home-about-copy text-sm space-y-4 leading-relaxed">
               <p>
                 American public school calendars vary significantly by state, county, and district. While most schools follow a traditional academic year — starting in August or September and ending in May or June — the exact dates for the first day of school, winter break, spring break, and graduation differ from one district to the next.
               </p>
@@ -277,19 +277,19 @@ useHead({
 
         <!-- Popular Districts -->
         <section class="mb-12">
-          <h2 class="text-xl font-semibold text-gray-900 mb-4">Popular School Districts</h2>
+          <h2 class="rds-section-title">Popular School Districts</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <NuxtLink
               v-for="d in popularDistricts"
               :key="d.slug"
               :to="`/${d.slug}`"
-              class="flex items-center justify-between bg-white rounded-lg border border-gray-200 px-5 py-4 hover:border-blue-300 hover:shadow-sm transition-all"
+              class="rds-panel home-directory-row flex items-center justify-between px-5 py-4"
             >
               <div>
-                <div class="font-medium text-gray-900 text-sm">{{ d.name }}</div>
-                <div class="text-xs text-gray-400 mt-0.5">{{ d.city ? `${d.city}, ` : '' }}{{ d.state }}</div>
+                <div class="home-directory-row__title font-medium text-sm">{{ d.name }}</div>
+                <div class="home-directory-row__meta text-xs mt-0.5">{{ d.city ? `${d.city}, ` : '' }}{{ d.state }}</div>
               </div>
-              <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-4 h-4 text-rds-ink-dim flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             </NuxtLink>
@@ -298,34 +298,34 @@ useHead({
 
         <!-- Browse by State -->
         <section class="mb-16">
-          <h2 class="text-xl font-semibold text-gray-900 mb-6">Browse by State</h2>
+          <h2 class="rds-section-title mb-6">Browse by State</h2>
           <div class="space-y-10">
             <div v-for="{ state, districts: stateDistricts } in byState" :key="state">
               <div class="flex items-baseline justify-between mb-1.5">
-                <h3 class="text-base font-semibold text-gray-900">{{ state }}</h3>
+                <h3 class="text-base font-semibold text-rds-ink">{{ state }}</h3>
                 <NuxtLink
                   :to="`/${toStateSlug(state)}`"
-                  class="text-sm text-blue-600 hover:text-blue-700 font-medium flex-shrink-0 ml-4"
+                  class="rds-link text-sm flex-shrink-0 ml-4"
                 >
                   All {{ state }} districts →
                 </NuxtLink>
               </div>
-              <p v-if="STATE_SUMMARIES[state]" class="text-sm text-gray-500 mb-3 leading-relaxed">
+              <p v-if="STATE_SUMMARIES[state]" class="text-sm text-rds-ink-muted mb-3 leading-relaxed">
                 {{ STATE_SUMMARIES[state] }}
               </p>
-              <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-                <div class="divide-y divide-gray-50">
+              <div class="rds-panel overflow-hidden">
+                <div class="divide-y divide-rds-hairline">
                   <NuxtLink
                     v-for="d in stateDistricts"
                     :key="d.slug"
                     :to="`/${d.slug}`"
-                    class="flex items-center justify-between px-5 py-3.5 hover:bg-gray-50 transition-colors"
+                    class="home-directory-row flex items-center justify-between px-5 py-3.5"
                   >
                     <div>
-                      <div class="font-medium text-gray-900 text-sm">{{ d.name }}</div>
-                      <div class="text-xs text-gray-400 mt-0.5">{{ d.city ? `${d.city}, ` : '' }}{{ d.state }}</div>
+                      <div class="home-directory-row__title font-medium text-sm">{{ d.name }}</div>
+                      <div class="home-directory-row__meta text-xs mt-0.5">{{ d.city ? `${d.city}, ` : '' }}{{ d.state }}</div>
                     </div>
-                    <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="w-4 h-4 text-rds-ink-dim flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                     </svg>
                   </NuxtLink>
@@ -337,29 +337,29 @@ useHead({
 
         <!-- Why MySchoolDates -->
         <section class="mb-16">
-          <h2 class="text-xl font-semibold text-gray-900 mb-5">Why MySchoolDates</h2>
+          <h2 class="rds-section-title mb-5">Why MySchoolDates</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="bg-white rounded-lg border border-gray-200 p-5">
-              <h3 class="font-semibold text-gray-900 mb-2">Easier than official PDFs</h3>
-              <p class="text-sm text-gray-500 leading-relaxed">
+            <div class="home-feature-card p-5">
+              <h3 class="font-semibold mb-2">Easier than official PDFs</h3>
+              <p class="text-sm leading-relaxed">
                 District calendar PDFs are designed for printing, not for parents on mobile. MySchoolDates presents the same data in a fast, readable format — searchable, linkable, and importable to any calendar app.
               </p>
             </div>
-            <div class="bg-white rounded-lg border border-gray-200 p-5">
-              <h3 class="font-semibold text-gray-900 mb-2">Add to Google or Apple Calendar</h3>
-              <p class="text-sm text-gray-500 leading-relaxed">
+            <div class="home-feature-card p-5">
+              <h3 class="font-semibold mb-2">Add to Google or Apple Calendar</h3>
+              <p class="text-sm leading-relaxed">
                 Download any district calendar as an ICS file and import it into Google Calendar, Apple Calendar, or Outlook. The file includes key dates such as the first day, holidays, and breaks.
               </p>
             </div>
-            <div class="bg-white rounded-lg border border-gray-200 p-5">
-              <h3 class="font-semibold text-gray-900 mb-2">Verified from official sources</h3>
-              <p class="text-sm text-gray-500 leading-relaxed">
+            <div class="home-feature-card p-5">
+              <h3 class="font-semibold mb-2">Verified from official sources</h3>
+              <p class="text-sm leading-relaxed">
                 All calendar data is sourced from official school district websites and board-approved calendars. Each district page links directly to the official source so you can always cross-check.
               </p>
             </div>
-            <div class="bg-white rounded-lg border border-gray-200 p-5">
-              <h3 class="font-semibold text-gray-900 mb-2">Built for parents, not administrators</h3>
-              <p class="text-sm text-gray-500 leading-relaxed">
+            <div class="home-feature-card p-5">
+              <h3 class="font-semibold mb-2">Built for parents, not administrators</h3>
+              <p class="text-sm leading-relaxed">
                 See the first day of school, last day, spring break, and all holidays in plain language — no navigating confusing district websites or downloading 20-page PDFs to find a single date.
               </p>
             </div>
@@ -367,7 +367,7 @@ useHead({
         </section>
 
         <!-- Trust signals -->
-        <div class="mb-10 flex flex-wrap justify-center gap-5 text-xs text-gray-400">
+        <div class="home-trust mb-10 flex flex-wrap justify-center gap-5 text-xs">
           <span>Official district sources</span>
           <span>&middot;</span>
           <span>Updated for 2027–2028 &amp; 2026–2027</span>

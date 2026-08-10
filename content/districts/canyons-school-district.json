@@ -1,0 +1,139 @@
+{
+  "institutionId": "canyons-school-district",
+  "name": "Canyons School District",
+  "shortName": "CSD",
+  "slug": "canyons-school-district-calendar",
+  "state": "Utah",
+  "stateCode": "UT",
+  "city": "Sandy",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.canyonsdistrict.org/",
+  "calendarPage": "https://www.canyonsdistrict.org/calendars/school-calendars/",
+  "logo": "https://www.canyonsdistrict.org/wp-content/uploads/2022/05/CanyonsLogoWhiteLong.png",
+  "timezone": "America/Denver",
+  "county": "Salt Lake County",
+  "region": "Wasatch Front",
+  "metro": "Salt Lake City",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "K-12 A/B calendar with separate Brighton High School trimester calendar",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Canyons K-12 and Brighton Calendar",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "translatedPdf": true,
+    "programCalendar": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-10",
+    "coverageNote": "Coverage uses Canyons School District's official website and School Calendars page, the revised 2025-2026 K-12 PDF, the 2026-2027 through 2028-2029 K-12 PDFs, three separate Brighton High School calendars, and the official 2026-2027 Spanish K-12 and Brighton files. No 2029-2030 calendar URL was provided."
+  },
+  "contentFreshnessScore": {
+    "overall": 98,
+    "lastManualReview": "2026-08-10",
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check when CSD revises a K-12 or Brighton calendar, changes the Friday early-out rule, publishes another translation, or posts a 2029-2030 calendar."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "K-12 or Brighton revision, emergency-closure announcement, recurring early-out change, translation correction, or future calendar publication."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Canyons School District calendar",
+    "CSD calendar Utah",
+    "Canyons school calendar PDF",
+    "Canyons A B calendar",
+    "Canyons Friday early out",
+    "Brighton High School calendar Utah",
+    "Canyons first day of school",
+    "Canyons school breaks"
+  ],
+  "districtFact": "Canyons publishes a district K-12 A/B calendar but excludes Brighton High School, which follows its own trimester calendar. Both tracks use Friday early-out schedules, while grade-level orientation, kindergarten opening, conference days, grading days, and trimester or quarter boundaries require track-specific reading.",
+  "about": [
+    {
+      "title": "Brighton High School Uses a Separate Calendar",
+      "content": "The district K-12 PDFs explicitly say they are not for Brighton students. Brighton starts and ends with the district in the verified future years, but its trimester endings, grading days, parent-teacher conferences, and several professional days differ from the K-12 quarter calendar."
+    },
+    {
+      "title": "Friday Is an Early-Out Pattern, Not One Bell Time",
+      "content": "Every verified Canyons K-12 and Brighton PDF says each Friday is an early-out day. The PDFs do not provide one districtwide dismissal time, so families must use the assigned school's bell schedule for transportation and child-care planning."
+    },
+    {
+      "title": "Opening Week Is Staggered",
+      "content": "Sixth- and ninth-graders attend half-day orientation before grades 1–12 start. Kindergarten starts two days later. Brighton's separate calendar lists only ninth-grade orientation because it is a high-school-specific schedule."
+    },
+    {
+      "title": "Conference Weeks Create Different Dates by Level",
+      "content": "Elementary, middle, and high schools use overlapping but different fall and winter conference dates. The sequence leads into a districtwide early-out day, a compensatory no-student day, and then a professional day in most K-12 years; Brighton follows its own conference and compensation pattern."
+    },
+    {
+      "title": "Emergency Closures Become Remote Learning Days",
+      "content": "Each reviewed PDF says school emergency closure days will be made up by scheduling remote-learning days. The calendars do not preassign a fixed make-up date, so an emergency closure should not be converted into a specific attendance date without a later district announcement."
+    }
+  ],
+  "planningTips": {
+    "title": "Canyons School District Calendar Notes",
+    "content": [
+      "Choose the K-12 calendar for most schools, but use the separate Brighton High School calendar for Brighton students.",
+      "Pair red A-day and black B-day labels with the student's secondary class schedule; the letters do not mean closure or early dismissal.",
+      "Treat each instructional Friday as early out and confirm the actual dismissal time with the school.",
+      "Check the student's school level before using parent-teacher conference dates because elementary, middle, high school, and Brighton schedules differ.",
+      "Kindergarten begins two days after grades 1-12; the preceding orientation date applies only to sixth and ninth grades on the K-12 track.",
+      "Do not assign a fixed weather make-up date: the official calendars say emergency closures will be recovered with later remote-learning days.",
+      "The MySchoolDates ICS file is a one-time import and does not repeat every Friday early out or daily A/B letter."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Does Brighton High School use the Canyons K-12 calendar?",
+      "a": "No. Each verified K-12 PDF says it is not for Brighton students. Brighton has a separate calendar with trimester endings, grading days, conferences, and some professional days that do not align with the K-12 calendar."
+    },
+    {
+      "q": "Are Fridays early-out days in Canyons School District?",
+      "a": "Yes. The reviewed K-12 and Brighton calendars state that every instructional Friday is an early-out day. Families should use the school's bell schedule for the exact dismissal time."
+    },
+    {
+      "q": "Do Canyons kindergarten students start with grades 1-12?",
+      "a": "No. In each reviewed year, grades 1–12 start first and kindergarten begins two days later. Sixth- and ninth-graders also attend half-day orientation before grades 1–12 start."
+    },
+    {
+      "q": "What do the red and black dates mean on the Canyons calendar?",
+      "a": "Red dates are A days and black dates are B days for the secondary rotation. Students should pair the letter with their class schedule rather than treating it as an attendance exception."
+    },
+    {
+      "q": "How does Canyons make up emergency closure days?",
+      "a": "The official PDFs say emergency closure days will be made up by scheduling remote-learning days. No fixed make-up date is printed in advance."
+    }
+  ],
+  "customSections": [],
+  "relatedDistrictsTitle": "More Utah School Calendars",
+  "relatedDistrictsDescription": "Compare Canyons dates with other reviewed Wasatch Front district calendars.",
+  "relatedDistricts": [
+    { "name": "Jordan School District", "slug": "jordan-school-district-calendar", "state": "Utah", "comparisonLabel": "Jordan" },
+    { "name": "Granite School District", "slug": "granite-school-district-calendar", "state": "Utah", "comparisonLabel": "Granite" },
+    { "name": "Davis School District", "slug": "davis-school-district-calendar", "state": "Utah", "comparisonLabel": "Davis" }
+  ],
+  "sources": [
+    { "label": "Canyons School District official website", "url": "https://www.canyonsdistrict.org/" },
+    { "label": "Canyons School Calendars page", "url": "https://www.canyonsdistrict.org/calendars/school-calendars/" },
+    { "label": "Official Canyons 2025-26 revised K-12 calendar", "url": "https://www.canyonsdistrict.org/download/1576/2025-26/222708/2025-26-k-12-school-calendars-2025-04-02-revised.pdf" },
+    { "label": "Official Canyons 2026-27 K-12 calendar", "url": "https://www.canyonsdistrict.org/download/1669/2026-27/227071/2026-27-k-12-calendar-2025-11-12.pdf" },
+    { "label": "Official Canyons 2027-28 K-12 calendar", "url": "https://www.canyonsdistrict.org/download/1670/2027-28/227069/2027-28-k-12-calendar-2025-11-12.pdf" },
+    { "label": "Official Canyons 2028-29 K-12 calendar", "url": "https://www.canyonsdistrict.org/download/1788/2028-29/227067/2028-29-k-12-calendar-2025-11-12.pdf" }
+  ]
+}

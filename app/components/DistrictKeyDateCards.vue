@@ -29,11 +29,11 @@ const daysUntilStart = computed(() => daysUntil(props.cal.firstDay))
 const isCompact = computed(() => props.cal.keyDateCardsVariant === 'compact')
 const cardClass = computed(() =>
   isCompact.value
-    ? 'rounded-lg border border-rds-hairline bg-rds-surface-panel p-3'
-    : 'p-5'
+    ? 'district-key-date-card rounded-rds-lg border border-rds-hairline p-4'
+    : 'district-key-date-card p-5'
 )
 const valueClass = computed(() =>
-  isCompact.value ? 'block text-base font-semibold text-[#1f2933]' : 'block text-lg font-semibold tracking-tight text-[#1f2933]'
+  isCompact.value ? 'district-key-date-card__value block text-base font-semibold' : 'district-key-date-card__value block text-xl font-semibold'
 )
 const isTrackCalendar = computed(() => String(props.cal.calendarType ?? '').toLowerCase() === 'track')
 const cardSetting = (key: string) => (props.cal as any)[key] ?? props.cal.meta?.[key]
@@ -54,29 +54,29 @@ const thirdCardDate = computed(() => cardSetting('keyDateCardsThirdDate'))
   <div
     :class="isCompact
       ? 'grid grid-cols-1 gap-4 sm:grid-cols-3'
-      : 'grid grid-cols-1 overflow-hidden rounded-lg border border-rds-hairline bg-rds-surface-panel shadow-[0_1px_0_rgba(31,41,51,0.03)] sm:grid-cols-3'"
+      : 'district-key-dates grid grid-cols-1 sm:grid-cols-3'"
   >
     <div :class="cardClass">
-      <div class="text-xs font-semibold text-[#7b756d] uppercase tracking-wide mb-1">{{ cardSetting('keyDateCardsFirstLabel') ?? 'First Day of School' }}</div>
+      <div class="district-key-date-card__label mb-2 font-semibold uppercase">{{ cardSetting('keyDateCardsFirstLabel') ?? 'First Day of School' }}</div>
       <time :datetime="cal.firstDay" :class="valueClass">{{ formatDate(cal.firstDay) }}</time>
       <ClientOnly>
-        <div v-if="daysUntilStart > 0" class="mt-2 inline-flex text-sm font-medium text-[#0f5d6b] bg-[#e6f0ef] px-2.5 py-1 rounded-lg">
+        <div v-if="daysUntilStart > 0" class="mt-3 inline-flex rounded-rds bg-[hsl(var(--rds-accent-soft))] px-2.5 py-1 text-sm font-medium text-rds-accent">
           {{ daysUntilStart }} days away
         </div>
-        <div v-else-if="daysUntilStart === 0" class="mt-2 text-sm font-medium text-[#3f6f48]">Today!</div>
-        <div v-else class="mt-2 text-sm text-[#3f6f48]">School is in session</div>
+        <div v-else-if="daysUntilStart === 0" class="mt-3 text-sm font-medium text-rds-positive">Today!</div>
+        <div v-else class="mt-3 text-sm text-rds-positive">School is in session</div>
       </ClientOnly>
     </div>
     <div :class="[cardClass, !isCompact ? 'border-t border-rds-hairline sm:border-l sm:border-t-0' : '']">
-      <div class="text-xs font-semibold text-[#7b756d] uppercase tracking-wide mb-1">{{ secondCardLabel }}</div>
+      <div class="district-key-date-card__label mb-2 font-semibold uppercase">{{ secondCardLabel }}</div>
       <time :datetime="secondCardDate" :class="valueClass">{{ secondCardValue }}</time>
     </div>
     <div :class="[cardClass, !isCompact ? 'border-t border-rds-hairline sm:border-l sm:border-t-0' : '']">
-      <div class="text-xs font-semibold text-[#7b756d] uppercase tracking-wide mb-1">
+      <div class="district-key-date-card__label mb-2 font-semibold uppercase">
         {{ thirdCardLabel }}
       </div>
       <time v-if="thirdCardDate" :datetime="thirdCardDate" :class="valueClass">{{ thirdCardValue }}</time>
-      <div v-else :class="isCompact ? 'text-base font-semibold text-[#1f2933]' : 'text-lg font-semibold tracking-tight text-[#1f2933]'">{{ thirdCardValue }}</div>
+      <div v-else :class="['district-key-date-card__value font-semibold', isCompact ? 'text-base' : 'text-xl']">{{ thirdCardValue }}</div>
     </div>
   </div>
 </template>

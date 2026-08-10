@@ -154,20 +154,20 @@ const icsAriaLabel = computed(() =>
 </script>
 
 <template>
-  <div id="add-to-calendar" class="bg-rds-surface-panel rounded-lg border border-rds-hairline overflow-hidden scroll-mt-24 shadow-[0_1px_0_rgba(31,41,51,0.03)]">
-    <div v-if="unifiedDownloadTitle" class="p-6 border-b border-[#ebe6dd]">
-      <h2 class="text-lg font-semibold text-[#1f2933] mb-1">{{ unifiedDownloadTitle }}</h2>
-      <p v-if="unifiedDownloadDescription" class="text-sm text-[#6b645c]">{{ unifiedDownloadDescription }}</p>
+  <div id="add-to-calendar" class="district-utility-panel scroll-mt-24">
+    <div v-if="unifiedDownloadTitle" class="district-utility-panel__header p-6">
+      <h2 class="text-xl font-semibold tracking-tight text-rds-ink mb-1">{{ unifiedDownloadTitle }}</h2>
+      <p v-if="unifiedDownloadDescription" class="text-sm text-rds-ink-muted">{{ unifiedDownloadDescription }}</p>
     </div>
 
-    <div v-if="officialSubscriptionUrl" class="p-6 border-b border-[#ebe6dd]">
-      <h3 class="text-base font-semibold text-[#1f2933] mb-1">{{ officialSubscriptionTitle }}</h3>
-      <p class="text-sm text-[#6b645c] mb-4">{{ officialSubscriptionDescription }}</p>
+    <div v-if="officialSubscriptionUrl" class="district-utility-panel__section p-6">
+      <h3 class="text-base font-semibold text-rds-ink mb-1">{{ officialSubscriptionTitle }}</h3>
+      <p class="text-sm text-rds-ink-muted mb-4">{{ officialSubscriptionDescription }}</p>
       <a
         :href="officialSubscriptionUrl"
         target="_blank"
         rel="noopener"
-        class="inline-flex items-center gap-2 px-4 py-2.5 bg-[#315b39] hover:bg-[#284b30] active:scale-[0.99] transition-all text-white text-sm font-semibold rounded-lg shadow-sm"
+        class="rds-button-primary inline-flex min-h-11 items-center gap-2 px-4 py-2.5 text-sm font-semibold"
       >
         {{ officialSubscriptionButtonLabel }}
         <span class="sr-only">(opens in a new tab)</span>
@@ -175,9 +175,9 @@ const icsAriaLabel = computed(() =>
     </div>
 
     <!-- Add to Calendar -->
-    <div class="p-6 border-b border-[#ebe6dd]">
-      <component :is="unifiedDownloadTitle ? 'h3' : 'h2'" class="text-lg font-semibold text-[#1f2933] mb-1">{{ icsHeading }}</component>
-      <p class="text-sm text-[#6b645c] mb-4">
+    <div class="district-utility-panel__section p-6">
+      <component :is="unifiedDownloadTitle ? 'h3' : 'h2'" class="text-lg font-semibold text-rds-ink mb-1">{{ icsHeading }}</component>
+      <p class="text-sm text-rds-ink-muted mb-4">
         {{ icsDescription }}
       </p>
       <!-- Primary CTA -->
@@ -185,23 +185,23 @@ const icsAriaLabel = computed(() =>
         :href="icsHref"
         :download="icsFilename"
         :aria-label="icsAriaLabel"
-        class="w-full flex items-center justify-center gap-2.5 px-4 py-3 mb-3 rounded-lg bg-[#0f5d6b] hover:bg-[#0b4c58] active:scale-[0.99] transition-all text-white font-semibold text-sm shadow-sm"
+        class="rds-button-primary mb-3 flex min-h-12 w-full items-center justify-center gap-2.5 px-4 py-3 text-sm font-semibold"
       >
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
         </svg>
         {{ icsButtonLabel }}
       </a>
-      <p v-if="!hideIcsButtonSupportText" class="mb-3 text-center text-xs font-medium text-[#6b645c]">
+      <p v-if="!hideIcsButtonSupportText" class="mb-3 text-center text-xs font-medium text-rds-ink-muted">
         {{ icsButtonSupportText }}
       </p>
-      <div v-if="!hideCompatibleCalendars" class="rounded-lg border border-[#e1dbd0] bg-[#f3f0e8] px-4 py-3">
-        <p class="text-xs font-medium text-[#7b756d] mb-2">Compatible with</p>
+      <div v-if="!hideCompatibleCalendars" class="district-utility-panel__compatibility px-4 py-3">
+        <p class="text-xs font-medium text-rds-ink-dim mb-2">Compatible with</p>
         <ul class="flex flex-wrap gap-2" aria-label="Compatible calendar apps">
           <li
             v-for="calendarName in compatibleCalendars"
             :key="calendarName"
-            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#fbfaf7] border border-[#e1dbd0] text-xs font-medium text-[#4f5b5f]"
+            class="inline-flex items-center gap-1.5 rounded-rds border border-rds-hairline bg-rds-surface-panel px-2.5 py-1 text-xs font-medium text-rds-ink-muted"
           >
             <svg class="w-3.5 h-3.5 text-[#8f8a82]" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
               <rect x="3" y="4" width="18" height="18" rx="2" stroke-width="1.5"/>
@@ -212,19 +212,19 @@ const icsAriaLabel = computed(() =>
           </li>
         </ul>
       </div>
-      <p v-if="!compactDownloadModule" class="text-xs text-[#6b645c] mt-3">
+      <p v-if="!compactDownloadModule" class="text-xs text-rds-ink-muted mt-3">
         The .ics file is generated from the reviewed calendar records used for this page. After downloading, import the file into your preferred calendar app.
       </p>
-      <p v-if="!compactDownloadModule" class="text-xs text-[#6b645c] mt-2">
+      <p v-if="!compactDownloadModule" class="text-xs text-rds-ink-muted mt-2">
         This calendar import file is generated from verified {{ year }} {{ districtName }} district calendar data. It is an independent one-time import from MySchoolDates and will not automatically update if the district revises its calendar, so always verify schedule changes with the district.
       </p>
     </div>
 
     <!-- PDF Download -->
-    <div v-if="pdfUrl && !hidePdfDownloadSection" class="p-6 border-b border-[#ebe6dd]">
-      <component :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-[#1f2933] mb-1">{{ pdfHeading }}</component>
-      <p v-if="pdfVersionLabel && !hidePdfVersionLabel" class="text-xs font-medium text-[#6b645c] mb-2">{{ pdfVersionLabel }}</p>
-      <p class="text-sm text-[#6b645c] mb-4">{{ pdfDescription }}</p>
+    <div v-if="pdfUrl && !hidePdfDownloadSection" class="district-utility-panel__section p-6">
+      <component :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-rds-ink mb-1">{{ pdfHeading }}</component>
+      <p v-if="pdfVersionLabel && !hidePdfVersionLabel" class="text-xs font-medium text-rds-ink-muted mb-2">{{ pdfVersionLabel }}</p>
+      <p class="text-sm text-rds-ink-muted mb-4">{{ pdfDescription }}</p>
       <p v-if="pdfNoticeText || (pdfNoticeLinkLabel && pdfNoticeHref)" class="mb-4 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm leading-relaxed text-amber-900">
         <span v-if="pdfNoticeText">{{ pdfNoticeText }}</span>
         <template v-if="pdfNoticeLinkLabel && pdfNoticeHref">
@@ -236,7 +236,7 @@ const icsAriaLabel = computed(() =>
           :href="pdfUrl"
           target="_blank"
           rel="noopener"
-          class="inline-flex items-center gap-2 px-4 py-2.5 bg-[#8a4b3a] hover:bg-[#743c2f] active:scale-[0.99] transition-all text-white text-sm font-semibold rounded-lg shadow-sm"
+          class="rds-button-primary inline-flex min-h-11 items-center gap-2 px-4 py-2.5 text-sm font-semibold"
         >
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -249,15 +249,15 @@ const icsAriaLabel = computed(() =>
           :href="sourceUrl"
           target="_blank"
           rel="noopener"
-          class="inline-flex items-center gap-2 px-4 py-2.5 border border-[#d9d2c7] hover:border-[#b8c9c9] hover:bg-[#f3f0e8] active:scale-[0.99] transition-all text-[#4f5b5f] text-sm font-semibold rounded-lg"
+          class="rds-button-secondary inline-flex min-h-11 items-center gap-2 px-4 py-2.5 text-sm font-semibold"
         >
           Check for Calendar Updates
           <span class="sr-only">(opens in a new tab)</span>
         </a>
       </div>
-      <div v-if="pdfSupplementalTitle || pdfSupplementalDescription || pdfSupplementalLinks.length" class="mt-4 rounded-lg border border-[#e1dbd0] bg-[#f8f5ee] px-4 py-3">
-        <p v-if="pdfSupplementalTitle" class="text-xs font-semibold uppercase tracking-wide text-[#6b645c]">{{ pdfSupplementalTitle }}</p>
-        <p v-if="pdfSupplementalDescription" class="mt-1 text-xs leading-relaxed text-[#6b645c]">{{ pdfSupplementalDescription }}</p>
+      <div v-if="pdfSupplementalTitle || pdfSupplementalDescription || pdfSupplementalLinks.length" class="district-utility-panel__supplement mt-4 px-4 py-3">
+        <p v-if="pdfSupplementalTitle" class="text-xs font-semibold uppercase tracking-wide text-rds-ink-muted">{{ pdfSupplementalTitle }}</p>
+        <p v-if="pdfSupplementalDescription" class="mt-1 text-xs leading-relaxed text-rds-ink-muted">{{ pdfSupplementalDescription }}</p>
         <p v-if="pdfSupplementalLinks.length" class="mt-2 text-xs">
           <a
             v-for="(link, index) in pdfSupplementalLinks"
@@ -265,7 +265,7 @@ const icsAriaLabel = computed(() =>
             :href="link.url"
             target="_blank"
             rel="noopener"
-            class="font-medium text-[#0f5d6b] underline hover:text-[#0b4c58]"
+            class="rds-link font-medium underline"
           >
             {{ index ? ' · ' : '' }}{{ link.label }}<span class="sr-only">(opens in a new tab)</span>
           </a>
@@ -274,14 +274,14 @@ const icsAriaLabel = computed(() =>
     </div>
 
     <!-- Share with Parents -->
-    <div class="p-6">
-      <component v-if="!hideShareCalendarHeading" :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-[#1f2933] mb-3">{{ shareCalendarHeading }}</component>
+    <div class="district-utility-panel__section p-6">
+      <component v-if="!hideShareCalendarHeading" :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-rds-ink mb-3">{{ shareCalendarHeading }}</component>
       <div class="flex flex-wrap gap-3">
         <!-- Copy Link -->
         <button
           type="button"
           @click="copyLink"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#b8c9c9] text-sm font-medium text-[#4f5b5f] hover:bg-[#f3f0e8] active:scale-[0.99] transition-all"
+          class="rds-button-secondary inline-flex min-h-11 items-center gap-2 px-4 py-2 text-sm font-medium"
         >
           <svg v-if="!copied" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -296,7 +296,7 @@ const icsAriaLabel = computed(() =>
         <button
           type="button"
           @click="printCalendar"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#b8c9c9] hover:bg-[#e6f0ef] text-sm font-medium text-[#4f5b5f] transition-all"
+          class="rds-button-secondary inline-flex min-h-11 items-center gap-2 px-4 py-2 text-sm font-medium"
         >
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9V4h12v5M6 18H5a2 2 0 01-2-2v-5a2 2 0 012-2h14a2 2 0 012 2v5a2 2 0 01-2 2h-1M6 14h12v6H6v-6z" />
@@ -308,7 +308,7 @@ const icsAriaLabel = computed(() =>
           <button
             type="button"
             @click="shareWhatsApp"
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#aec2b1] hover:bg-[#e7efe5] text-sm font-medium text-[#4f5b5f] transition-all"
+            class="rds-button-secondary inline-flex min-h-11 items-center gap-2 px-4 py-2 text-sm font-medium"
           >
             <svg class="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
@@ -320,7 +320,7 @@ const icsAriaLabel = computed(() =>
           <button
             type="button"
             @click="shareSMS"
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#b8c9c9] hover:bg-[#f3f0e8] text-sm font-medium text-[#4f5b5f] transition-all"
+            class="rds-button-secondary inline-flex min-h-11 items-center gap-2 px-4 py-2 text-sm font-medium"
           >
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
@@ -331,7 +331,7 @@ const icsAriaLabel = computed(() =>
           <button
             type="button"
             @click="shareFacebook"
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#9eb7dc] hover:bg-[#eaf1fb] text-sm font-medium text-[#4f5b5f] transition-all"
+            class="rds-button-secondary inline-flex min-h-11 items-center gap-2 px-4 py-2 text-sm font-medium"
           >
             <svg class="w-4 h-4 text-[#1877f2]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
               <path d="M24 12.073C24 5.405 18.627.032 12 .032S0 5.405 0 12.073c0 6.027 4.388 11.024 10.125 11.93v-8.436H7.078v-3.494h3.047V9.41c0-3.027 1.792-4.7 4.533-4.7 1.312 0 2.686.236 2.686.236v2.972H15.83c-1.491 0-1.956.931-1.956 1.886v2.269h3.328l-.532 3.494h-2.796v8.436C19.612 23.097 24 18.1 24 12.073Z" />
@@ -342,7 +342,7 @@ const icsAriaLabel = computed(() =>
           <button
             type="button"
             @click="shareX"
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#d9d2c7] hover:border-[#9fa3a7] hover:bg-[#eef0f1] text-sm font-medium text-[#4f5b5f] transition-all"
+            class="rds-button-secondary inline-flex min-h-11 items-center gap-2 px-4 py-2 text-sm font-medium"
           >
             <svg class="w-4 h-4 text-[#1f2933]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" />

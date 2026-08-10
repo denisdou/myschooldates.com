@@ -1,0 +1,134 @@
+{
+  "institutionId": "weber-school-district",
+  "name": "Weber School District",
+  "shortName": "WSD",
+  "slug": "weber-school-district-calendar",
+  "state": "Utah",
+  "stateCode": "UT",
+  "city": "Ogden",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.wsd.net/",
+  "calendarPage": "https://www.wsd.net/documents/calendar/16300655",
+  "logo": "https://cmsv2-assets.apptegy.net/uploads/24978/logo/27791/WSD_Logo_4c_notag.png",
+  "timezone": "America/Denver",
+  "county": "Weber County",
+  "region": "Northern Wasatch Front",
+  "metro": "Ogden-Clearfield",
+  "currentSchoolYear": "2026-2027",
+  "calendarType": "A/B calendar with weekly early-out Wednesdays",
+  "allDatesMode": "all",
+  "contentTier": "enhanced",
+  "contentTierLabel": "Weber A/B and Early-Out Calendar",
+  "depthMode": "enhanced",
+  "sourceCoverage": {
+    "officialWebsite": true,
+    "calendarPage": true,
+    "officialPdf": true,
+    "icsGenerated": true,
+    "revisionTracking": true,
+    "lastReviewed": "2026-08-10",
+    "coverageNote": "Coverage uses Weber School District's official website, official calendar document library, and the district's one-page 2025-2026 and 2026-2027 PDFs. No alternate-program calendar or official 2027-2028 through 2029-2030 PDF URL was provided."
+  },
+  "contentFreshnessScore": {
+    "overall": 97,
+    "lastManualReview": "2026-08-10",
+    "revisionTracking": true,
+    "freshnessStatus": "current",
+    "staleAfterDays": 90,
+    "refreshRule": "Re-check when WSD replaces either PDF, changes Wednesday dismissal times, publishes an alternate calendar, or posts a 2027-2028 calendar."
+  },
+  "districtContentScore": {
+    "visibility": "internal",
+    "publishStatus": "publish",
+    "reviewStatus": "ready-enhanced",
+    "qualityBand": "A",
+    "minimumPublishScore": 80,
+    "minimumEnhancedScore": 85,
+    "manualReviewRequired": false,
+    "nextReviewTrigger": "Calendar revision, emergency-closure announcement, recurring early-out change, or future-year publication."
+  },
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Weber School District calendar",
+    "WSD calendar Utah",
+    "Weber school calendar PDF",
+    "Weber A B calendar",
+    "Weber Wednesday early out",
+    "Weber School District first day",
+    "Weber County school breaks"
+  ],
+  "districtFact": "Weber's one-page calendar combines a daily A/B rotation with an early-out schedule every Wednesday. Opening week and several quarter-ending dates add other early-out days, while elementary and secondary parent-teacher conferences use separate dates and dismissal rules.",
+  "about": [
+    {
+      "title": "Wednesday Early Out Has Two Bell Times",
+      "content": "Every instructional Wednesday is early out. The elementary time remains 12:20 in both reviewed years, while the secondary time changes from 1:20 in 2025-2026 to 1:15 in 2026-2027. Families should not carry one year's secondary time into the next."
+    },
+    {
+      "title": "Opening Week Uses an Expanded Early-Out Schedule",
+      "content": "The first student day is early out, and the remaining instructional days of opening week are also listed as early out. This creates a full shortened opening week rather than a single first-day exception."
+    },
+    {
+      "title": "A/B Letters Are Instructional Markers",
+      "content": "The date grid prints A or B on instructional days. Those letters describe the secondary class rotation; they are not closure labels. The one-time MySchoolDates download therefore does not create a separate event for every A or B day."
+    },
+    {
+      "title": "Conference Dates Depend on School Level",
+      "content": "Elementary parent-teacher conference dates use published early-out instructions, while secondary conferences occur on different dates. Compensation days are separate no-school dates and should not be inferred from the conference date alone."
+    },
+    {
+      "title": "The Calendar Accounts for 180 Days",
+      "content": "Both reviewed PDFs divide the year into four quarters totaling 180 days. The quarter lengths shift from 47/44/49/40 in 2025-2026 to 43/43/49/45 in 2026-2027, so families should use the relevant year's quarter boundaries."
+    }
+  ],
+  "planningTips": {
+    "title": "Weber School District Calendar Notes",
+    "content": [
+      "Use the A/B letter in the official PDF with the student's secondary timetable; the letters are not repeated in the ICS file.",
+      "Plan for early out every instructional Wednesday: elementary dismissal is 12:20, while the published secondary time is year-specific.",
+      "Treat the first student week as an early-out week, not only the first day.",
+      "Check whether a parent-teacher conference is elementary or secondary before changing transportation or child-care plans.",
+      "Compensation and professional-development days are no-student days even when they sit next to a break or conference date.",
+      "High school ACT day and the elementary Iron Kid/Math Olympiad dates are program markers, not districtwide closures.",
+      "The MySchoolDates ICS file is a one-time import and will not update automatically if WSD revises its calendar."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Are Wednesdays early-out days in Weber School District?",
+      "a": "Yes. Both reviewed district PDFs say every instructional Wednesday is early out. Elementary dismissal is 12:20; secondary dismissal is 1:20 in 2025-2026 and 1:15 in 2026-2027."
+    },
+    {
+      "q": "What do A and B mean on the Weber calendar?",
+      "a": "A and B identify the alternating secondary class schedule on instructional days. They do not indicate a closure or an early-out day."
+    },
+    {
+      "q": "Is the first week of school early out in Weber?",
+      "a": "Yes. The first student day and the remaining instructional days of opening week are listed as early-out days in both reviewed years."
+    },
+    {
+      "q": "Do elementary and secondary schools use the same conference dates?",
+      "a": "No. The official calendars list separate elementary and secondary parent-teacher conference dates. Elementary dates also carry specific early-out instructions."
+    },
+    {
+      "q": "How many school days are on the Weber calendar?",
+      "a": "The four published quarter counts total 180 days in both 2025-2026 and 2026-2027."
+    }
+  ],
+  "customSections": [],
+  "relatedDistrictsTitle": "More Utah School Calendars",
+  "relatedDistrictsDescription": "Compare Weber dates and recurring schedules with other reviewed Wasatch Front districts.",
+  "relatedDistricts": [
+    { "name": "Davis School District", "slug": "davis-school-district-calendar", "state": "Utah", "comparisonLabel": "Davis" },
+    { "name": "Canyons School District", "slug": "canyons-school-district-calendar", "state": "Utah", "comparisonLabel": "Canyons" },
+    { "name": "Jordan School District", "slug": "jordan-school-district-calendar", "state": "Utah", "comparisonLabel": "Jordan" }
+  ],
+  "sources": [
+    { "label": "Weber School District official website", "url": "https://www.wsd.net/" },
+    { "label": "Weber School District calendar document library", "url": "https://www.wsd.net/documents/calendar/16300655" },
+    { "label": "Official Weber 2025-26 calendar", "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5017/Wsd/1919f3da-4791-43f9-b5de-e1cd7532ea1f/Calendar-25-26-Vertical---Sheet1-%283%29.pdf?disposition=inline" },
+    { "label": "Official Weber 2026-27 calendar", "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5017/Wsd/307486d2-42fc-4710-94ec-ffb377b30b27/WSD-Calendar-26-27.pdf?disposition=inline" }
+  ]
+}
