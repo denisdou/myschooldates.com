@@ -198,6 +198,7 @@ export default defineContentConfig({
         clustersHeading: z.string().optional(),
         clustersDescription: z.string().optional(),
         districtClusters: z.array(stateDistrictClusterSchema).optional(),
+        verificationMethodology: z.array(z.string()).optional(),
         faqs: z.array(stateFaqSchema),
         relatedStates: z.array(relatedStateSchema),
       }),
