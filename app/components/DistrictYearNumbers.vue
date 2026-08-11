@@ -85,7 +85,7 @@ const methodologyNote = computed(() =>
         <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">{{ card.label }}</h3>
         <p class="text-sm text-gray-700 leading-relaxed">
           <strong class="text-gray-900">{{ card.displayValue ?? `${card.value}\u00a0${card.unit}` }}</strong>
-          — {{ card.description }}
+          <template v-if="card.description"> — {{ card.description }}</template>
         </p>
       </div>
     </div>

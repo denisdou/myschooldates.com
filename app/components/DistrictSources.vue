@@ -17,6 +17,7 @@ const props = defineProps<{
   reviewDetailsTitle?: string | null
   maintainerText?: string | null
   nextReviewText?: string | null
+  hideNextReview?: boolean
   reviewDateLabel?: string | null
   hideReviewDate?: boolean
 }>()
@@ -120,7 +121,7 @@ const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.
         <span class="font-medium text-rds-ink-muted">{{ reviewDateLabel || 'Last manual review' }}:</span>
         {{ verifiedDate }}, by Denis Dou.
       </p>
-      <p v-if="verifiedDate">
+      <p v-if="verifiedDate && !hideNextReview">
         <template v-if="nextReviewText">{{ nextReviewText }}</template>
         <template v-else>
           <span class="font-medium text-rds-ink-muted">Next review:</span>

@@ -1,11 +1,15 @@
 # 2026-07-30 之前创建的学区审计整改队列
 
 Created: 2026-08-03
-Last updated: 2026-08-10
+Last updated: 2026-08-11
 
 ## Scope
 
 本队列只列出 `2026-07-30` 之前创建的学区 slug、审计状态和整改优先级。创建日期按各学区学年文件中最早的 `datePublished` 判断；`2026-07-30` 当天及之后创建的学区不在本清单内。
+
+2026-08-10 审计批次共完成 10 个学区。其中 Frisco、Henrico、Katy、Plano 和 Winston-Salem/Forsyth 属于本清单并已更新为 P4；Canyons、Davis、Granite、Jordan 和 Weber 的最早 `datePublished` 均为 2026-08-10，按上述 Scope 不加入本队列。
+
+2026-08-11 审计批次共完成 10 个学区。其中 Round Rock、Conroe、Cabarrus、Johnston 和 Union County 属于本清单并已更新为 P4；Albuquerque、Boise、Las Cruces、Washoe 和 West Ada 的最早 `datePublished` 均为 2026-08-11，按上述 Scope 不加入本队列。
 
 ## Priority
 
@@ -44,16 +48,16 @@ Last updated: 2026-08-10
 | P3 | `/prince-william-county-school-calendar` | 已重新审计，2026–27 页面已完成更新和官方来源复核，reviewed: 2026-08-09 |
 | P3 | `/virginia-beach-school-calendar` | 已重新审计，2026–27 页面已完成更新和官方来源复核，reviewed: 2026-08-09 |
 | P3 | `/wake-county-school-calendar` | 已重新审计，2026–27 与 2027–28 页面已完成更新和官方来源复核，reviewed: 2026-08-09 |
-| P3 | `/winston-salem-forsyth-school-calendar` | 已完成 2026–27 审计整改：将错误的 Traditional Calendar 定位修正为 Board-adopted Modified Start Student Calendar，补齐 178 个学生日、四个季度/学期节点、Teacher Professional Days、返校日期与条件 snow make-up dates；新增 Student、Spanish、Early/Middle College、Middle/High A/B Day 和 Staff 官方日历分流，重写 Hero、FAQ、年度差异、Planning Notes、Comparison、PDF/ICS 范围与来源说明，并删除 Living Here、泛 District Profile、Wake Forest 错误 FAQ、生活方式推断和重复模板模块。官方 2026–27/2025–26 PDF、Board announcement 与 calendar hub 已完成文件级复核；`localhost:3000` 当前未运行，待 SSR/ICS 抽查后升 P4。updated/reviewed: 2026-08-10 |
-| P0 | `/frisco-independent-school-district-calendar` | 未审计 |
-| P0 | `/henrico-county-school-calendar` | 未审计 |
-| P0 | `/katy-independent-school-district-calendar` | 未审计 |
-| P0 | `/plano-independent-school-district-calendar` | 未审计 |
-| P0 | `/round-rock-independent-school-district-calendar` | 未审计 |
-| P0 | `/conroe-independent-school-district-calendar` | 未审计 |
-| P0 | `/cabarrus-county-school-calendar` | 未审计 |
-| P0 | `/johnston-county-school-calendar` | 未审计 |
-| P0 | `/union-county-school-calendar` | 未审计 |
+| P4 | `/winston-salem-forsyth-school-calendar` | 已完成 2026–27 审计整改并达到发布级：将错误的 Traditional Calendar 定位修正为 Board-adopted Modified Start Student Calendar，补齐 178 个学生日、四个季度/学期节点、Teacher Professional Days、返校日期与条件 snow make-up dates；新增 Student、Spanish、Early/Middle College、Middle/High A/B Day 和 Staff 官方日历分流，重写 Hero、FAQ、年度差异、Planning Notes、Comparison、PDF/ICS 范围与来源说明，并删除 Living Here、泛 District Profile、Wake Forest 错误 FAQ、生活方式推断和重复模板模块。官方 2026–27/2025–26 PDF、Board announcement 与 calendar hub 已完成复核。updated/reviewed: 2026-08-10 |
+| P4 | `/frisco-independent-school-district-calendar` | 已完成 2026–27 多轮审计整改并达到 9.9 发布级，正文冻结：校正 October no-school dates、February 非连续日期、Winter Break、bad-weather make-up days 与 April 30 分类；补齐 PGA Championship 提前结束学年、每日增加 5 分钟、官方 PDF、MySchoolDates ICS、同年 nearby comparison、FAQ、来源与 Dataset 语义，并建立 `production_ready`、重审触发条件和 enrollment provenance。updated/reviewed: 2026-08-10 |
+| P4 | `/henrico-county-school-calendar` | 已完成 2026–27 与 2027–28 双学年审计整改并达到发布级：核对 staggered opening、Pre-K/K school-specific schedules、all-student attendance day、breaks、return dates 与 scheduled last day；同步收紧官方来源、PDF/ICS、FAQ、Schema、年度差异与页面模块范围。updated/reviewed: 2026-08-10 |
+| P4 | `/katy-independent-school-district-calendar` | 已完成 2026–27 与 2027–28 双学年审计整改并达到发布级：核对 first/last day、Fall Break、Spring Break、early dismissal、teacher preparation days 与容易遗漏的学生无课日期；完成官方来源、PDF/ICS、FAQ、Schema、年度差异和模块去模板化整改。updated/reviewed: 2026-08-10 |
+| P4 | `/plano-independent-school-district-calendar` | 已完成 2026–27 与 2027–28 双学年审计整改并达到发布级：按官方标签处理 October 连续无课日期，明确 Winter Break 后的独立 student holidays/staff work days 与返校日，并核对 first/last day、early release、semesters、grading periods、PDF/ICS、FAQ、Schema 与年度差异。updated/reviewed: 2026-08-10 |
+| P4 | `/round-rock-independent-school-district-calendar` | 已完成 2026–27 审计整改并达到发布级：核对 first/last day、170 instructional days / 440-minute day、Fall/Winter/Spring Break 与 January 5 返校日，保留 Yom Kippur、Indigenous Peoples’ Day / Columbus Day、YOU Days 和 Eid al-Fitr 等官方标签；补齐 PDF 版本、年度差异、Austin ISD 同年比较、ICS、Schema、来源与衍生返校日期说明，并清理重复和泛化模块。updated/reviewed: 2026-08-11 |
+| P4 | `/conroe-independent-school-district-calendar` | 已完成 2026–27 多轮审计整改并达到 9.9 发布级，正文冻结：校正 March 26 Holiday、March 29 条件恶劣天气补课日、173 instructional days、December 18 / May 27 early release 及教师日叠加关系；页面收敛为 Key Dates、完整日期、Calendar Notes、PDF/ICS、年度变化、同年附近学区比较、Calendar Profile 与来源复核，并完成 derived return dates、Dataset/ItemList provenance 和 review triggers 整改。updated/reviewed: 2026-08-11 |
+| P4 | `/cabarrus-county-school-calendar` | 已完成 2026–27 审计整改并达到发布级：明确页面以 Traditional Academic Calendar 为主，并为 Early College 与 Restart schools 提供独立官方日历分流；核对 first/last day、breaks、student no-school workdays、early dismissals、exam windows、graduation 及官方教学日/小时统计，同步收紧 PDF/ICS、FAQ、Schema、来源和页面模块范围。updated/reviewed: 2026-08-11 |
+| P4 | `/johnston-county-school-calendar` | 已完成 2026–27 审计整改并达到发布级：限定为 JCPS Traditional Student Calendar，核对 first/last day、breaks、January return、early dismissals、quarter endings 与 student no-school dates；补充 kindergarten August 26–27 staggered entry 和 August 28 all-kindergarten start，并将 ECA/CTLA 独立日历与主页面、PDF/ICS、FAQ、Comparison、Schema 和来源说明清楚分离。updated/reviewed: 2026-08-11 |
+| P4 | `/union-county-school-calendar` | 已完成 2026–27 与 2027–28 双学年审计整改并达到发布级：两个页面均限定为 UCPS Traditional Calendar，核对 175 instructional days、semester totals、first/last day、teacher workdays、annual-leave/holiday 分类、major no-school periods 与官方 PDF/ICS；2026–27 分流 Early College 和 Wolfe School，2027–28 按当前官方发布情况仅明确 Wolfe School 独立日历，并同步完成年度差异、附近学区比较、Schema、来源与更新边界整改。updated/reviewed: 2026-08-11 |
 | P0 | `/arlington-public-schools-calendar` | 未审计 |
 | P0 | `/cypress-fairbanks-isd-calendar` | 未审计 |
 | P0 | `/durham-public-schools-calendar` | 未审计 |

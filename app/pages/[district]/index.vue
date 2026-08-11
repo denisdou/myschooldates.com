@@ -1043,6 +1043,9 @@ const allDatesTitle = computed(() =>
 const keyDatesSummaryTitle = computed(() =>
   (cal as any)?.keyDatesSummaryTitle ?? (cal as any)?.meta?.keyDatesSummaryTitle ?? `${displaySchoolYear.value} Key Dates & Holidays`
 )
+const keyDatesHeading = computed(() =>
+  (cal as any)?.keyDatesHeading ?? (cal as any)?.meta?.keyDatesHeading ?? 'Key Dates'
+)
 const keyDatesSummarySubtitle = computed(() =>
   (cal as any)?.keyDatesSummarySubtitle ?? (cal as any)?.meta?.keyDatesSummarySubtitle ?? 'First day, last day, school holidays, and major break ranges'
 )
@@ -1477,16 +1480,19 @@ if (!isStatePage && district.value) {
   const splitCalendarDateItemListSchema = Boolean(
     (cal as any)?.splitCalendarDateItemListSchema || (cal as any)?.meta?.splitCalendarDateItemListSchema,
   )
+  const calendarDateItemListId = String(
+    (cal as any)?.schemaCalendarDateItemListId ?? (cal as any)?.meta?.schemaCalendarDateItemListId ?? 'student-calendar-dates',
+  ).replace(/^#/, '')
   const summaryItemListEvents = splitCalendarDateItemListSchema ? keyDateHighlights.value : itemListEvents.value
   const calendarDateItemListEvents = splitCalendarDateItemListSchema ? itemListEvents.value : []
   if (datasetEntity && !hideItemListSchema && calendarDateItemListEvents.length) {
-    Object.assign(datasetEntity, { mainEntity: { '@id': `${canonicalUrl}#student-calendar-dates` } })
+    Object.assign(datasetEntity, { mainEntity: { '@id': `${canonicalUrl}#${calendarDateItemListId}` } })
   }
   const webPageParts = [
     ...(includeArticleSchema ? [{ '@id': `${canonicalUrl}#calendar-analysis` }] : []),
     ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
     ...(!hideItemListSchema && summaryItemListEvents.length ? [{ '@id': `${canonicalUrl}#key-dates` }] : []),
-    ...(!hideItemListSchema && calendarDateItemListEvents.length ? [{ '@id': `${canonicalUrl}#student-calendar-dates` }] : []),
+    ...(!hideItemListSchema && calendarDateItemListEvents.length ? [{ '@id': `${canonicalUrl}#${calendarDateItemListId}` }] : []),
     ...(faqSchemaItems.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
     ...customSectionSchemaParts,
     ...yearNumbersSchemaParts,
@@ -1595,7 +1601,7 @@ if (!isStatePage && district.value) {
   } : null
   const calendarDateItemListEntity = cal && !hideItemListSchema && calendarDateItemListEvents.length ? {
     '@type': 'ItemList',
-    '@id': `${canonicalUrl}#student-calendar-dates`,
+    '@id': `${canonicalUrl}#${calendarDateItemListId}`,
     name: calendarDateItemListName,
     itemListElement: calendarDateItemListEvents.map((event, i) => ({
       '@type': 'ListItem',
@@ -2210,7 +2216,7 @@ if (!isStatePage && district.value) {
             <span v-else>Based on official district website · Not yet human-verified</span>
           </div>
           <details v-if="!isEstimated && verifiedDate && !hideHeroVerificationProcess" class="district-hero__verification-details mt-5 p-3">
-            <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-rds-ink-dim">How verified</summary>
+            <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-rds-ink-dim">How we reviewed this calendar</summary>
             <ul class="mt-2 grid gap-1.5 text-xs text-rds-ink-muted sm:grid-cols-3">
               <li class="flex items-start gap-1.5">
                 <span class="mt-0.5 text-[#315b39]">✓</span>
@@ -2289,7 +2295,7 @@ if (!isStatePage && district.value) {
 
         <!-- Key Date Cards -->
         <div v-if="!hiddenSections.has('keyDateCards')" id="key-dates" class="scroll-mt-24">
-          <h2 class="text-xl font-bold text-gray-900 mb-4">Key Dates</h2>
+          <h2 class="text-xl font-bold text-gray-900 mb-4">{{ keyDatesHeading }}</h2>
           <DistrictKeyDateCards :cal="cal" />
         </div>
 
@@ -2530,6 +2536,7 @@ if (!isStatePage && district.value) {
           :coverage-note="(cal as any).allDatesCoverageNote ?? (cal as any).meta?.allDatesCoverageNote"
           :coverage-note-position="(cal as any).allDatesCoverageNotePosition ?? (cal as any).meta?.allDatesCoverageNotePosition"
           :covered-break-dates-note="(cal as any).allDatesCoveredBreakDatesNote ?? (cal as any).meta?.allDatesCoveredBreakDatesNote"
+          :hide-covered-break-dates-note="(cal as any).hideCoveredBreakDatesNote ?? (cal as any).meta?.hideCoveredBreakDatesNote"
           :derived-date-note="(cal as any).allDatesDerivedDateNote ?? (cal as any).meta?.allDatesDerivedDateNote"
           :legend-style="(cal as any).dateLegendStyle ?? (cal as any).meta?.dateLegendStyle"
           :month-notes="(cal as any).allDatesMonthNotes ?? (cal as any).meta?.allDatesMonthNotes"
@@ -2678,7 +2685,13 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Grading Periods -->
-        <DistrictGradingPeriods :periods="(cal as any).gradingPeriods" />
+        <DistrictGradingPeriods
+          :periods="(cal as any).gradingPeriods"
+          :title="(cal as any).gradingPeriodsTitle ?? (cal as any).meta?.gradingPeriodsTitle"
+          :description="(cal as any).gradingPeriodsDescription ?? (cal as any).meta?.gradingPeriodsDescription"
+          :days-label="(cal as any).gradingPeriodsDaysLabel ?? (cal as any).meta?.gradingPeriodsDaysLabel"
+          :footer-note="(cal as any).gradingPeriodsFooterNote ?? (cal as any).meta?.gradingPeriodsFooterNote"
+        />
 
         <!-- What's Different This Year -->
         <div v-if="hasYearComparisonContent" id="year-comparison" class="scroll-mt-24 space-y-8">
@@ -2723,6 +2736,7 @@ if (!isStatePage && district.value) {
           :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
           :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
           :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
+          :hide-next-review="Boolean((cal as any).hideSourceNextReview ?? (cal as any).meta?.hideSourceNextReview)"
           :hide-review-date="Boolean((cal as any).hideSourceReviewDate ?? (cal as any).meta?.hideSourceReviewDate)"
           :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
         />
@@ -2774,14 +2788,18 @@ if (!isStatePage && district.value) {
           :student-count-as-of="(district as any).studentCountAsOf"
           :student-count-source-label="(district as any).studentCountSourceLabel"
           :student-count-source-url="(district as any).studentCountSourceUrl"
+          :student-count-approximate="Boolean((district as any).profileStudentCountApproximate)"
           :school-count="(district as any).schoolCount"
+          :school-count-exact="Boolean((district as any).profileSchoolCountExact)"
           :calendar-type="(district as any).calendarType"
+          :hide-calendar-type="Boolean((district as any).hideProfileCalendarType)"
           :grades="district.grades"
           :founded="(district as any).founded"
           :county="(district as any).county"
           :metro="(district as any).metro"
           :district-fact="(district as any).districtFact"
           :title="(district as any).profileTitle ?? (district as any).meta?.profileTitle"
+          :disclaimer="(district as any).profileDisclaimer"
         />
 
         <!-- Living Here -->
@@ -2813,6 +2831,7 @@ if (!isStatePage && district.value) {
           :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
           :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
           :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
+          :hide-next-review="Boolean((cal as any).hideSourceNextReview ?? (cal as any).meta?.hideSourceNextReview)"
           :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
           :hide-review-date="Boolean((cal as any).hideSourceReviewDate ?? (cal as any).meta?.hideSourceReviewDate)"
         />

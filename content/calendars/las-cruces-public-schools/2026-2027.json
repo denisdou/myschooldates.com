@@ -1,0 +1,483 @@
+{
+  "institutionId": "las-cruces-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Las Cruces Public Schools Calendar 2026–27",
+  "firstDay": "2026-07-24",
+  "lastDay": "2027-05-21",
+  "temporalCoverageStart": "2026-07-20",
+  "temporalCoverageEnd": "2027-05-22",
+  "totalSchoolDays": 183,
+  "instructionalDaysLabel": "Student Days",
+  "instructionalDaysDescription": "The official LCPS calendar lists 183 student days and 190 teacher days.",
+  "sourceUrl": "https://www.lcps.net/page/calendars-handbooks-school-hours",
+  "sourceDocumentPage": "https://www.lcps.net/page/calendars-handbooks-school-hours",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/efc29787-3ac2-4539-b53a-e9c56fea343f/2026-27-FINAL_corrected_3.31.26.pdf?disposition=inline",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/efc29787-3ac2-4539-b53a-e9c56fea343f/2026-27-FINAL_corrected_3.31.26.pdf?disposition=inline",
+  "sourceCheckedAt": "2026-08-11",
+  "sourceChecksumSha256": "f1d9b09452a890ff74dedc947dff6d4d9431216cda5a83b0a7574fac0ebd0a59",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.lcps.net/page/calendars-handbooks-school-hours",
+    "linkText": "2026-27 Instructional Calendar (English)",
+    "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/efc29787-3ac2-4539-b53a-e9c56fea343f/2026-27-FINAL_corrected_3.31.26.pdf?disposition=inline",
+    "expectedChecksumSha256": "f1d9b09452a890ff74dedc947dff6d4d9431216cda5a83b0a7574fac0ebd0a59"
+  },
+  "lastVerifiedAt": "2026-08-11",
+  "dateCreated": "2026-08-11",
+  "datePublished": "2026-08-11",
+  "dateModified": "2026-08-11",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "emergency_closure", "program_calendar_change", "confirmed_data_error"],
+  "sourceVersion": "LCPS 2026–2027 Instructional Calendar, revised July 27, 2026",
+  "calendarType": "Main K–12 instructional calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideDatasetSchema": true,
+  "seoTitle": "Las Cruces Public Schools Calendar 2026–27 | Dates & PDF",
+  "seoDescription": "Find LCPS 2026–27 first days by grade, school breaks, remote-learning dates, last days, graduation times, and official English and Spanish calendar PDFs.",
+  "heroSummary": "Las Cruces Public Schools begins 2026–27 with a transition day for kindergarten, sixth grade, and ninth grade on Friday, July 24, 2026. Grades 1–5, 7–8, and 10–12 begin Monday, July 27. Fall Break is October 5–9, Winter Break is December 21–January 1, and Spring Break is March 15–19. K, 6, and 9 finish May 20; grades 1–5, 7–8, and 10–11 finish May 21.",
+  "calendarNotes": "LCPS does not have one first day or last day for every student. Kindergarten, grade 6, and grade 9 begin July 24 and finish May 20; most other non-senior grades begin July 27 and finish May 21. Seniors follow graduation and campus instructions. Educator Planning dates include remote learning activities, while August 28 and February 12 are no-school conference and planning dates. Cultural Awareness Week is an observance while school remains in session. APECHS and Early Childhood students have separate official calendars.",
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "heroFactChips": [
+    "183 student days",
+    "K, 6 & 9 start Jul 24",
+    "Most other grades start Jul 27",
+    "K–12 resumes Jan 6",
+    "Separate APECHS & Early Childhood calendars"
+  ],
+  "verificationBadgeText": "Reviewed Aug. 11, 2026, against the official LCPS calendar revised July 27, 2026.",
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "keyDatesSummaryTitle": "LCPS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Grade-specific first days, major breaks, and last days",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "Transition Day for Kindergarten, Grade 6, and Grade 9",
+      "date": "2026-07-24",
+      "type": "school_start",
+      "schemaDescription": "LCPS kindergarten, sixth-grade, and ninth-grade students begin on July 24, 2026."
+    },
+    {
+      "label": "First Day",
+      "name": "First Day for Grades 1–5, 7–8, and 10–12",
+      "date": "2026-07-27",
+      "type": "school_start",
+      "schemaDescription": "Most remaining LCPS grades begin on July 27, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Fall Break",
+      "date": "2026-10-05",
+      "endDate": "2026-10-09",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Grades 1–5, 7–8, and 10–11",
+      "date": "2027-05-21",
+      "type": "school_end",
+      "description": "K, 6, and 9 finish one day earlier on May 20."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Choose Calendar", "id": "lcps-2026-2027-calendar-chooser" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Grade Schedule", "id": "lcps-2026-2027-staggered-year" },
+    { "label": "Remote Days", "id": "lcps-2026-2027-planning-days" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Graduation", "id": "lcps-2026-2027-graduation" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "moveCalendarExportBeforeAllDates": false,
+  "yearSwitcherPosition": "afterSources",
+  "allDatesTitle": "Las Cruces Public Schools 2026–27 Dates",
+  "allDatesCoverageNote": "This list covers the main LCPS K–12 instructional calendar: staff days that affect attendance, grade-specific starts and endings, remote learning activities, no-school conference days, district breaks, quarter endings, holidays and closures during the student instructional year, the in-session Cultural Awareness Week, and graduation ceremonies. It does not substitute for the separate Arrowhead Park ECHS or Early Childhood calendars, school bell times, transportation notices, athletics, testing, or campus events.",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/efc29787-3ac2-4539-b53a-e9c56fea343f/2026-27-FINAL_corrected_3.31.26.pdf?disposition=inline",
+  "allDatesSourceLabel": "LCPS 2026–27 Instructional Calendar (English)",
+  "dateLegendLabelOverrides": {
+    "Holiday": "No School",
+    "School Closure": "No School",
+    "Staff Day": "No School for Students",
+    "Teacher Workday": "No School for Students",
+    "Academic": "Remote Learning / Academic Date",
+    "Observance": "School in Session"
+  },
+  "compactDownloadModule": true,
+  "heroDownloadLabel": "Add Dates to Calendar",
+  "icsHeading": "Add LCPS 2026–27 Dates to Your Calendar",
+  "icsDescription": "This is a one-time calendar import and does not update automatically. It includes the main LCPS K–12 calendar only; APECHS, Early Childhood, bell times, and school-specific events are not included.",
+  "icsButtonLabel": "Download LCPS .ics File",
+  "icsAriaLabel": "Download the MySchoolDates LCPS 2026–27 .ics calendar import file",
+  "hideIcsButtonSupportText": true,
+  "pdfHeading": "Official LCPS 2026–27 Instructional Calendar",
+  "pdfDescription": "Open the official one-page English calendar revised July 27, 2026. The calendar chooser above links to Spanish and program-specific PDFs.",
+  "pdfButtonLabel": "View Official English PDF",
+  "pdfVersionLabel": "LCPS 2026–2027 Instructional Calendar — revised July 27, 2026",
+  "alternateCalendarsTitle": "Official Spanish and Program-Specific LCPS Calendars",
+  "alternateCalendarsDescription": "Choose your student’s program first, then select English or Spanish. Arrowhead Park ECHS and Early Childhood follow schedules separate from the main K–12 calendar.",
+  "alternateCalendarsButtonLabel": "View Official PDF",
+  "alternateCalendarsCollapsible": true,
+  "alternateCalendarsSummaryLabel": "View 5 additional official calendars",
+  "hideAlternateCalendarsNotice": true,
+  "alternateCalendars": [
+    {
+      "type": "calendar-es",
+      "label": "2026–27 Main Instructional Calendar — Spanish",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/b2e810ef-0a8d-4567-8adb-6ca07dc1b4a3/26-27_FINAL__SPAN_%281%29.pdf?disposition=inline"
+    },
+    {
+      "type": "program-calendar-en",
+      "label": "2026–27 Arrowhead Park ECHS Calendar — English",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/bc41d946-7420-4f4f-86a1-60d2c47ecd21/2026-2027-Arrowhead-Park-ECHS-Instructional-Calendar-%28English%29.pdf?disposition=inline"
+    },
+    {
+      "type": "program-calendar-es",
+      "label": "2026–27 Arrowhead Park ECHS Calendar — Spanish",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/6fe6ecc9-9456-4cb3-a825-511c418fb44c/2026-2027-Arrowhead-Park-ECHS-Instructional-Calendar-%28SPANISH%29.pdf?disposition=inline"
+    },
+    {
+      "type": "early-childhood-en",
+      "label": "2026–27 Early Childhood Calendar — English",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/cb24c3fd-8ad4-4910-b83a-c698c5793135/26.27-EC-Calendars-English.pdf?disposition=inline"
+    },
+    {
+      "type": "early-childhood-es",
+      "label": "2026–27 Early Childhood Calendar — Spanish",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/4a490158-fc44-402b-8f1d-3a3eda4ec568/26.27-EC-Calendars-Spanish.pdf?disposition=inline"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "lcps-2026-2027-calendar-chooser",
+      "label": "Which LCPS Calendar Should You Use?",
+      "position": "afterVerification",
+      "content": "This page covers the main LCPS K–12 instructional calendar. Arrowhead Park ECHS and Early Childhood use separate calendars.",
+      "table": {
+        "columns": ["Students", "Calendar to use", "Use it for"],
+        "rows": [
+          ["Most K–12 students", "Main LCPS Instructional Calendar", "Grade-specific starts and endings, district breaks, remote learning dates, and graduation."],
+          ["Arrowhead Park ECHS students", "APECHS Instructional Calendar", "APECHS instructional dates and program-specific schedule information."],
+          ["Early Childhood students", "LCPS Early Childhood Calendar", "Early Childhood, Head Start, and NM PreK calendar dates."]
+        ]
+      },
+      "links": [
+        {
+          "label": "Main K–12 calendar — English",
+          "to": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/efc29787-3ac2-4539-b53a-e9c56fea343f/2026-27-FINAL_corrected_3.31.26.pdf?disposition=inline"
+        },
+        {
+          "label": "Main K–12 calendar — Spanish",
+          "to": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/b2e810ef-0a8d-4567-8adb-6ca07dc1b4a3/26-27_FINAL__SPAN_%281%29.pdf?disposition=inline"
+        },
+        {
+          "label": "APECHS calendar — English",
+          "to": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/bc41d946-7420-4f4f-86a1-60d2c47ecd21/2026-2027-Arrowhead-Park-ECHS-Instructional-Calendar-%28English%29.pdf?disposition=inline"
+        },
+        {
+          "label": "APECHS calendar — Spanish",
+          "to": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/6fe6ecc9-9456-4cb3-a825-511c418fb44c/2026-2027-Arrowhead-Park-ECHS-Instructional-Calendar-%28SPANISH%29.pdf?disposition=inline"
+        },
+        {
+          "label": "Early Childhood calendar — English",
+          "to": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/cb24c3fd-8ad4-4910-b83a-c698c5793135/26.27-EC-Calendars-English.pdf?disposition=inline"
+        },
+        {
+          "label": "Early Childhood calendar — Spanish",
+          "to": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/4a490158-fc44-402b-8f1d-3a3eda4ec568/26.27-EC-Calendars-Spanish.pdf?disposition=inline"
+        }
+      ]
+    },
+    {
+      "id": "lcps-2026-2027-staggered-year",
+      "label": "Start and End Dates by Grade",
+      "position": "afterKeyDates",
+      "content": "LCPS does not have one first day or last day for every student. Kindergarten, grade 6, and grade 9 start first and finish one day earlier.",
+      "table": {
+        "columns": ["Students", "First day", "Last day shown on main calendar"],
+        "rows": [
+          ["Kindergarten, grade 6, and grade 9", "Friday, July 24, 2026", "Thursday, May 20, 2027"],
+          ["Grades 1–5, 7–8, and 10–11", "Monday, July 27, 2026", "Friday, May 21, 2027"],
+          ["Grade 12", "Monday, July 27, 2026", "Follow senior and graduation instructions from the high school"]
+        ]
+      }
+    },
+    {
+      "id": "lcps-2026-2027-planning-days",
+      "label": "Remote Learning Days vs. No-School Conference Days",
+      "position": "afterKeyDates",
+      "content": "LCPS treats these dates differently. Educator Planning dates include remote learning activities; the conference and Next Step Planning dates are no-school days.",
+      "table": {
+        "columns": ["Dates", "Official calendar meaning", "What families should know"],
+        "rows": [
+          ["August 27, October 12, February 11, and March 29", "Educator Planning / remote learning activities", "Plan for assignments, device access, and supervision away from the normal campus schedule."],
+          ["August 28", "Parent/Teacher Conferences — no school", "Confirm the student's conference time and arrange full-day care if needed."],
+          ["February 12", "Next Step Planning / Parent-Teacher Conferences — no school K–12", "This is a no-school day immediately before Presidents Day weekend."]
+        ]
+      }
+    },
+    {
+      "id": "lcps-2026-2027-graduation",
+      "label": "LCPS 2027 Graduation Schedule",
+      "position": "afterAllDates",
+      "content": "The district calendar lists six graduation ceremonies on May 21–22. Venue, admission, and senior reporting instructions remain school-specific.",
+      "table": {
+        "columns": ["Date", "Time", "School"],
+        "rows": [
+          ["Friday, May 21", "9:00 a.m.", "Organ Mountain High School"],
+          ["Friday, May 21", "1:30 p.m.", "Arrowhead Park ECHS"],
+          ["Friday, May 21", "6:00 p.m.", "Mayfield High School"],
+          ["Saturday, May 22", "9:00 a.m.", "Las Cruces High School"],
+          ["Saturday, May 22", "1:30 p.m.", "Rio Grande Preparatory Institute"],
+          ["Saturday, May 22", "6:00 p.m.", "Centennial High School"]
+        ]
+      }
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-07-20",
+      "endDate": "2026-07-23",
+      "name": "Teacher Professional Learning, Safety Training, and Work Days",
+      "type": "teacher_workday",
+      "description": "Teachers report before students. LCPS lists site and district professional learning, mandatory safety training, and a teacher work day across these four dates."
+    },
+    {
+      "date": "2026-07-24",
+      "name": "First Day for Kindergarten, Grade 6, and Grade 9",
+      "type": "school_start",
+      "description": "LCPS transition day for three entry grades."
+    },
+    {
+      "date": "2026-07-27",
+      "name": "First Day for Grades 1–5, 7–8, and 10–12",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-08-27",
+      "name": "Educator Planning / Remote Learning Activities",
+      "type": "academic",
+      "description": "Students may have remote learning activities rather than a regular campus day."
+    },
+    {
+      "date": "2026-08-28",
+      "name": "Parent-Teacher Conferences — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-10-02",
+      "name": "Quarter 1 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-10-05",
+      "endDate": "2026-10-09",
+      "name": "Fall Break — No School",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Educator Planning / Remote Learning Activities",
+      "type": "academic",
+      "description": "Students may have remote learning activities rather than a regular campus day."
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Election Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break — No School",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-07",
+      "endDate": "2026-12-11",
+      "name": "Cultural Awareness Week — School in Session",
+      "type": "observance",
+      "description": "The official calendar states that school remains in session."
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Quarter 2 and Fall Semester End — Full Day",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break — No School",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "endDate": "2027-01-05",
+      "name": "Professional Learning and Teacher Work Days — No School for Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2027-01-06",
+      "name": "Spring Semester Begins for K–12",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-11",
+      "name": "Educator Planning / Remote Learning Activities",
+      "type": "academic",
+      "description": "Students may have remote learning activities rather than a regular campus day."
+    },
+    {
+      "date": "2027-02-12",
+      "name": "Next Step Planning / Parent-Teacher Conferences — No School K–12",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Quarter 3 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break — No School",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Spring Holiday — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-29",
+      "name": "Educator Planning / Remote Learning Activities",
+      "type": "academic",
+      "description": "Students may have remote learning activities rather than a regular campus day."
+    },
+    {
+      "date": "2027-05-20",
+      "name": "Last Day for Kindergarten, Grade 6, and Grade 9 / Quarter 4 Ends",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-05-21",
+      "name": "Last Day for Grades 1–5, 7–8, and 10–11 / Quarter 4 Ends — Full Day",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-05-21",
+      "endDate": "2027-05-22",
+      "name": "LCPS Graduation Ceremonies",
+      "type": "graduation",
+      "description": "Six ceremonies are scheduled across May 21–22; see the graduation table for school-specific times."
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Are LCPS Educator Planning days days off?",
+      "a": "Not ordinary days off. LCPS labels August 27, October 12, February 11, and March 29 as Educator Planning dates with remote learning activities."
+    },
+    {
+      "q": "Which calendar should APECHS students use?",
+      "a": "Use the separate Arrowhead Park ECHS instructional calendar in English or Spanish, along with school communications for exact program dates."
+    },
+    {
+      "q": "Which calendar should LCPS Early Childhood families use?",
+      "a": "Use the separate LCPS Early Childhood calendar in English or Spanish for Early Childhood, Head Start, and NM PreK dates."
+    },
+    {
+      "q": "When is the last day of school for each LCPS grade group?",
+      "a": "Kindergarten, sixth grade, and ninth grade finish May 20. Grades 1–5, 7–8, and 10–11 finish May 21. Seniors should follow their high school's graduation instructions."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "Do all Las Cruces Public Schools students start on the same day?",
+    "Are LCPS Educator Planning days days off?",
+    "Which calendar should APECHS students use?",
+    "Which calendar should LCPS Early Childhood families use?",
+    "When is the last day of school for each LCPS grade group?"
+  ],
+  "faqDisplayLimit": 5,
+  "hideFaqSchema": true,
+  "hiddenCustomSectionIds": [
+    "las-cruces-calendar-chooser",
+    "las-cruces-official-resources"
+  ],
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "whatsDifferent",
+    "comparison",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars"
+  ],
+  "sourceReviewSummary": "Reviewed August 11, 2026, against the official LCPS calendar page and the one-page English instructional calendar revised July 27, 2026.",
+  "sourceReviewDetails": [
+    "The main calendar was checked visually because color coding and compact grade labels can be lost or flattened during text extraction.",
+    "The printed totals are 183 student days and 190 teacher days.",
+    "Both first and last instructional dates were recorded by grade group instead of collapsing the transition schedule into one districtwide date.",
+    "Educator Planning dates are listed as remote-learning days. August 28 and February 12 are listed separately as no-school days.",
+    "Cultural Awareness Week is listed as an in-session observance because the official calendar says school remains in session.",
+    "APECHS and Early Childhood calendars are linked separately and are not combined with the main K–12 date list.",
+    "The source PDF says it was approved by the LCPS Board on February 18, 2025, and revised July 27, 2026."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Las Cruces Public Schools sources.",
+  "sourceNextReviewText": "Next review: when LCPS publishes a revised district or program calendar, or after an emergency schedule change.",
+  "sources": [
+    {
+      "label": "LCPS Calendars, Handbooks & School Hours",
+      "url": "https://www.lcps.net/page/calendars-handbooks-school-hours"
+    },
+    {
+      "label": "Official LCPS 2026–27 Instructional Calendar — English",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/efc29787-3ac2-4539-b53a-e9c56fea343f/2026-27-FINAL_corrected_3.31.26.pdf?disposition=inline"
+    },
+    {
+      "label": "LCPS Board calendar approval article",
+      "url": "https://www.lcps.net/article/2050215"
+    }
+  ]
+}

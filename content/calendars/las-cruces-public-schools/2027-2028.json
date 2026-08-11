@@ -1,0 +1,470 @@
+{
+  "institutionId": "las-cruces-public-schools",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Las Cruces Public Schools Calendar 2027–28",
+  "firstDay": "2027-07-23",
+  "lastDay": "2028-05-19",
+  "temporalCoverageStart": "2027-07-19",
+  "temporalCoverageEnd": "2028-05-20",
+  "totalSchoolDays": 183,
+  "instructionalDaysLabel": "Student Days",
+  "instructionalDaysDescription": "The official LCPS calendar lists 183 student days and 190 teacher days.",
+  "sourceUrl": "https://www.lcps.net/page/calendars-handbooks-school-hours",
+  "sourceDocumentPage": "https://www.lcps.net/page/calendars-handbooks-school-hours",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/5f84b508-91da-43aa-abdc-42fb826acef5/27-28_FINAL_ENGLISH.pdf?disposition=inline",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/5f84b508-91da-43aa-abdc-42fb826acef5/27-28_FINAL_ENGLISH.pdf?disposition=inline",
+  "sourceCheckedAt": "2026-08-11",
+  "sourceChecksumSha256": "4224c520bb86dd3ae6b08276db873b6f05ac9a2c9343c31fbc1960ec3300bec1",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.lcps.net/page/calendars-handbooks-school-hours",
+    "linkText": "2027-28 Instructional Calendar (English)",
+    "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/5f84b508-91da-43aa-abdc-42fb826acef5/27-28_FINAL_ENGLISH.pdf?disposition=inline",
+    "expectedChecksumSha256": "4224c520bb86dd3ae6b08276db873b6f05ac9a2c9343c31fbc1960ec3300bec1"
+  },
+  "lastVerifiedAt": "2026-08-11",
+  "dateCreated": "2026-08-11",
+  "datePublished": "2026-08-11",
+  "dateModified": "2026-08-11",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "emergency_closure", "source_label_correction", "confirmed_data_error"],
+  "sourceVersion": "LCPS 2027–2028 Instructional Calendar, revised July 27, 2026",
+  "calendarType": "Main K–12 instructional calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideDatasetSchema": true,
+  "seoTitle": "Las Cruces Public Schools Calendar 2027–28 | Dates & PDF",
+  "seoDescription": "Find LCPS 2027–28 first days by grade, school breaks, remote-learning dates, last days, graduation times, and official English and Spanish calendar PDFs.",
+  "heroSummary": "Las Cruces Public Schools begins 2027–28 with a transition day for kindergarten, sixth grade, and ninth grade on Friday, July 23, 2027. Grades 1–5, 7–8, and 10–12 begin Monday, July 26. Fall Break is October 4–8, Winter Break is December 20–31, and Spring Break is March 13–17. K, 6, and 9 finish May 18; grades 1–5, 7–8, and 10–11 finish May 19.",
+  "calendarNotes": "LCPS does not have one first day or last day for every student. Kindergarten, grade 6, and grade 9 begin July 23 and finish May 18; grades 1–5, 7–8, and 10–11 begin July 26 and finish May 19. Seniors follow graduation and campus instructions. Educator Planning dates include remote learning activities, while August 27 and February 18 are no-school conference and planning dates. Cultural Awareness Week is an observance while school remains in session. LCPS publishes the main 2027–28 calendar in English and Spanish.",
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "heroFactChips": [
+    "183 student days",
+    "K, 6 & 9 start Jul 23",
+    "Most other grades start Jul 26",
+    "K–12 resumes Jan 5",
+    "English & Spanish official PDFs"
+  ],
+  "verificationBadgeText": "Reviewed Aug. 11, 2026, against the official LCPS calendar revised July 27, 2026.",
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "nonCurrentYearNotice": "This is LCPS's approved upcoming 2027–28 instructional calendar. Recheck the official calendar hub for revisions before making fixed plans.",
+  "keyDatesSummaryTitle": "LCPS 2027–28 Key Dates",
+  "keyDatesSummarySubtitle": "Grade-specific first days, major breaks, and last days",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "Transition Day for Kindergarten, Grade 6, and Grade 9",
+      "date": "2027-07-23",
+      "type": "school_start",
+      "schemaDescription": "LCPS kindergarten, sixth-grade, and ninth-grade students begin on July 23, 2027."
+    },
+    {
+      "label": "First Day",
+      "name": "First Day for Grades 1–5, 7–8, and 10–12",
+      "date": "2027-07-26",
+      "type": "school_start",
+      "schemaDescription": "Most remaining LCPS grades begin on July 26, 2027."
+    },
+    {
+      "label": "Break",
+      "name": "Fall Break",
+      "date": "2027-10-04",
+      "endDate": "2027-10-08",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Grades 1–5, 7–8, and 10–11",
+      "date": "2028-05-19",
+      "type": "school_end",
+      "description": "K, 6, and 9 finish one day earlier on May 18."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Changes", "id": "lcps-2027-2028-year-changes" },
+    { "label": "Grade Schedule", "id": "lcps-2027-2028-staggered-year" },
+    { "label": "Remote Days", "id": "lcps-2027-2028-planning-days" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Graduation", "id": "lcps-2027-2028-graduation" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "moveCalendarExportBeforeAllDates": false,
+  "otherCalendarsPosition": "beforeCalendarExport",
+  "yearSwitcherPosition": "afterSources",
+  "allDatesTitle": "Las Cruces Public Schools 2027–28 Dates",
+  "allDatesCoverageNote": "This list covers the main LCPS K–12 instructional calendar from pre-year staff days through student endings and graduation: grade-specific starts, remote learning activities, no-school conference days, district breaks, quarter endings, holidays and closures during the student instructional year, and the in-session Cultural Awareness Week. It intentionally stops before the PDF's post-student-year holiday labels. School bell times, transportation notices, athletics, testing, and campus events may differ.",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/5f84b508-91da-43aa-abdc-42fb826acef5/27-28_FINAL_ENGLISH.pdf?disposition=inline",
+  "allDatesSourceLabel": "LCPS 2027–28 Instructional Calendar (English)",
+  "dateLegendLabelOverrides": {
+    "Holiday": "No School",
+    "School Closure": "No School",
+    "Staff Day": "No School for Students",
+    "Teacher Workday": "No School for Students",
+    "Academic": "Remote Learning / Academic Date",
+    "Observance": "School in Session"
+  },
+  "compactDownloadModule": true,
+  "heroDownloadLabel": "Add Dates to Calendar",
+  "icsHeading": "Add LCPS 2027–28 Dates to Your Calendar",
+  "icsDescription": "This is a one-time calendar import and does not update automatically. It includes the main LCPS K–12 calendar only; program calendars, bell times, and school-specific events are not included.",
+  "icsButtonLabel": "Download LCPS .ics File",
+  "icsAriaLabel": "Download the MySchoolDates LCPS 2027–28 .ics calendar import file",
+  "hideIcsButtonSupportText": true,
+  "pdfHeading": "Official LCPS 2027–28 Instructional Calendars",
+  "pdfDescription": "LCPS currently lists the main 2027–28 instructional calendar in English and Spanish on its calendar hub. The English PDF was revised July 27, 2026.",
+  "pdfButtonLabel": "View Official English PDF",
+  "pdfVersionLabel": "LCPS 2027–2028 Instructional Calendar — revised July 27, 2026",
+  "pdfSupplementalTitle": "Spanish edition",
+  "pdfSupplementalDescription": "Open the official Spanish version of the main LCPS 2027–28 instructional calendar.",
+  "pdfSupplementalLinks": [
+    {
+      "label": "View Official Spanish PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/d7dd9f63-430b-413d-b24d-238f92f9e001/27-28_FINAL__SPAN_.pdf?disposition=inline"
+    }
+  ],
+  "alternateCalendarsTitle": "Official LCPS 2027–28 Spanish Calendar",
+  "alternateCalendarsDescription": "LCPS publishes the main 2027–28 instructional calendar in Spanish. No separate 2027–28 Arrowhead Park ECHS or Early Childhood PDF was supplied for this page.",
+  "alternateCalendarsButtonLabel": "View Official PDF",
+  "hideAlternateCalendarsNotice": true,
+  "alternateCalendars": [
+    {
+      "type": "calendar-es",
+      "label": "2027–28 Instructional Calendar — Spanish",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/d7dd9f63-430b-413d-b24d-238f92f9e001/27-28_FINAL__SPAN_.pdf?disposition=inline"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "lcps-2027-2028-year-changes",
+      "label": "What's Different From 2026–27",
+      "position": "afterKeyDates",
+      "content": "LCPS has approved both instructional calendars. These are the main date changes for families.",
+      "table": {
+        "columns": ["Calendar item", "2026–27", "2027–28"],
+        "rows": [
+          ["Transition day for K, 6, and 9", "July 24", "July 23"],
+          ["First day for most other grades", "July 27", "July 26"],
+          ["Fall Break", "October 5–9", "October 4–8"],
+          ["Thanksgiving Break", "November 23–27", "November 22–26"],
+          ["Spring semester begins", "January 6", "January 5"],
+          ["Spring Break", "March 15–19", "March 13–17"],
+          ["Grade-specific last days", "May 20–21", "May 18–19"],
+          ["Student days", "183", "183"]
+        ]
+      }
+    },
+    {
+      "id": "lcps-2027-2028-staggered-year",
+      "label": "Start and End Dates by Grade",
+      "position": "afterKeyDates",
+      "content": "LCPS does not have one first day or last day for every student. Kindergarten, grade 6, and grade 9 start first and finish one day earlier.",
+      "table": {
+        "columns": ["Students", "First day", "Last day shown on main calendar"],
+        "rows": [
+          ["Kindergarten, grade 6, and grade 9", "Friday, July 23, 2027", "Thursday, May 18, 2028"],
+          ["Grades 1–5, 7–8, and 10–11", "Monday, July 26, 2027", "Friday, May 19, 2028"],
+          ["Grade 12", "Monday, July 26, 2027", "Follow senior and graduation instructions from the high school"]
+        ]
+      }
+    },
+    {
+      "id": "lcps-2027-2028-planning-days",
+      "label": "Remote Learning Days vs. No-School Conference Days",
+      "position": "afterKeyDates",
+      "content": "LCPS treats these dates differently. Educator Planning dates include remote learning activities; the conference and Next Step Planning dates are no-school days.",
+      "table": {
+        "columns": ["Dates", "Official calendar meaning", "What families should know"],
+        "rows": [
+          ["August 26, October 11, February 17, and April 17", "Educator Planning / remote learning activities", "Plan for assignments, device access, and supervision away from the normal campus schedule."],
+          ["August 27", "Parent/Teacher Conferences — no school", "Confirm the student's conference time and arrange full-day care if needed."],
+          ["February 18", "Next Step Planning / Parent-Teacher Conferences — no school K–12", "This creates a four-day student break through Presidents Day."]
+        ]
+      }
+    },
+    {
+      "id": "lcps-2027-2028-graduation",
+      "label": "LCPS 2028 Graduation Schedule",
+      "position": "afterAllDates",
+      "content": "The district calendar lists six graduation ceremonies on May 19–20. Venue, admission, and senior reporting instructions remain school-specific.",
+      "table": {
+        "columns": ["Date", "Time", "School"],
+        "rows": [
+          ["Friday, May 19", "9:00 a.m.", "Centennial High School"],
+          ["Friday, May 19", "1:30 p.m.", "Arrowhead Park ECHS"],
+          ["Friday, May 19", "6:00 p.m.", "Organ Mountain High School"],
+          ["Saturday, May 20", "9:00 a.m.", "Mayfield High School"],
+          ["Saturday, May 20", "1:30 p.m.", "Rio Grande Preparatory Institute"],
+          ["Saturday, May 20", "6:00 p.m.", "Las Cruces High School"]
+        ]
+      }
+    },
+    {
+      "id": "lcps-2027-2028-source-discrepancy",
+      "label": "Source Note: Post-Year Memorial Day Label",
+      "position": "afterFaq",
+      "content": "The official LCPS PDF labels May 22, 2028, as Memorial Day, while the U.S. Office of Personnel Management lists Memorial Day on Monday, May 29. Regular student schedules end by May 19 and graduations conclude May 20, so this page flags the discrepancy without treating May 22 as a student closure. Families or staff with post-year obligations should confirm the date with LCPS.",
+      "links": [
+        {
+          "label": "U.S. OPM 2028 federal holiday schedule",
+          "to": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "date": "2027-07-19",
+      "endDate": "2027-07-22",
+      "name": "Teacher Professional Learning, Safety Training, and Work Days",
+      "type": "teacher_workday",
+      "description": "Teachers report before students. LCPS lists site and district professional learning, mandatory safety training, and a teacher work day across these four dates."
+    },
+    {
+      "date": "2027-07-23",
+      "name": "First Day for Kindergarten, Grade 6, and Grade 9",
+      "type": "school_start",
+      "description": "LCPS transition day for three entry grades."
+    },
+    {
+      "date": "2027-07-26",
+      "name": "First Day for Grades 1–5, 7–8, and 10–12",
+      "type": "school_start"
+    },
+    {
+      "date": "2027-08-26",
+      "name": "Educator Planning / Remote Learning Activities",
+      "type": "academic",
+      "description": "Students may have remote learning activities rather than a regular campus day."
+    },
+    {
+      "date": "2027-08-27",
+      "name": "Parent-Teacher Conferences — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-09-06",
+      "name": "Labor Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-10-01",
+      "name": "Quarter 1 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-10-04",
+      "endDate": "2027-10-08",
+      "name": "Fall Break — No School",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-10-11",
+      "name": "Educator Planning / Remote Learning Activities",
+      "type": "academic",
+      "description": "Students may have remote learning activities rather than a regular campus day."
+    },
+    {
+      "date": "2027-11-02",
+      "name": "Election Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-11-22",
+      "endDate": "2027-11-26",
+      "name": "Thanksgiving Break — No School",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-12-06",
+      "endDate": "2027-12-10",
+      "name": "Cultural Awareness Week — School in Session",
+      "type": "observance",
+      "description": "The official calendar states that school remains in session."
+    },
+    {
+      "date": "2027-12-17",
+      "name": "Quarter 2 and Fall Semester End — Full Day",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "name": "Winter Break — No School",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-01-03",
+      "endDate": "2028-01-04",
+      "name": "Professional Learning and Teacher Work Days — No School for Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2028-01-05",
+      "name": "Spring Semester Begins for K–12",
+      "type": "school_resume"
+    },
+    {
+      "date": "2028-01-17",
+      "name": "Martin Luther King Jr. Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-02-17",
+      "name": "Educator Planning / Remote Learning Activities",
+      "type": "academic",
+      "description": "Students may have remote learning activities rather than a regular campus day."
+    },
+    {
+      "date": "2028-02-18",
+      "name": "Next Step Planning / Parent-Teacher Conferences — No School K–12",
+      "type": "no_school"
+    },
+    {
+      "date": "2028-02-21",
+      "name": "Presidents Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-03-10",
+      "name": "Quarter 3 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "name": "Spring Break — No School",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-04-14",
+      "name": "Spring Holiday — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-04-17",
+      "name": "Educator Planning / Remote Learning Activities",
+      "type": "academic",
+      "description": "Students may have remote learning activities rather than a regular campus day."
+    },
+    {
+      "date": "2028-05-18",
+      "name": "Last Day for Kindergarten, Grade 6, and Grade 9 / Quarter 4 Ends",
+      "type": "school_end"
+    },
+    {
+      "date": "2028-05-19",
+      "name": "Last Day for Grades 1–5, 7–8, and 10–11 / Quarter 4 Ends — Full Day",
+      "type": "school_end"
+    },
+    {
+      "date": "2028-05-19",
+      "endDate": "2028-05-20",
+      "name": "LCPS Graduation Ceremonies",
+      "type": "graduation",
+      "description": "Six ceremonies are scheduled across May 19–20; see the graduation table for school-specific times."
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Do all LCPS students start on the same day in 2027–28?",
+      "a": "Kindergarten, sixth grade, and ninth grade start Friday, July 23, 2027. Grades 1–5, 7–8, and 10–12 start Monday, July 26."
+    },
+    {
+      "q": "Are LCPS Educator Planning days days off?",
+      "a": "Not ordinary days off. LCPS labels August 26, October 11, February 17, and April 17 as Educator Planning dates with remote learning activities."
+    },
+    {
+      "q": "When do LCPS students return after Winter Break?",
+      "a": "Winter Break runs December 20–31, 2027. January 3–4 are staff days, and K–12 students begin the spring semester January 5."
+    },
+    {
+      "q": "When is the last day of school for each LCPS grade group?",
+      "a": "Kindergarten, sixth grade, and ninth grade finish May 18. Grades 1–5, 7–8, and 10–11 finish May 19. Seniors should follow their high school's graduation instructions."
+    },
+    {
+      "q": "Is the LCPS 2027–28 calendar available in Spanish?",
+      "a": "Yes. LCPS publishes an official Spanish 2027–28 instructional calendar linked on this page."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "Do all LCPS students start on the same day in 2027–28?",
+    "Are LCPS Educator Planning days days off?",
+    "When do LCPS students return after Winter Break?",
+    "When is the last day of school for each LCPS grade group?",
+    "Is the LCPS 2027–28 calendar available in Spanish?"
+  ],
+  "faqDisplayLimit": 5,
+  "hideFaqSchema": true,
+  "hiddenCustomSectionIds": [
+    "las-cruces-calendar-chooser",
+    "las-cruces-official-resources"
+  ],
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "comparison",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars",
+    "backToCurrent"
+  ],
+  "sourceReviewSummary": "Reviewed August 11, 2026, against the official LCPS calendar page and the one-page English instructional calendar revised July 27, 2026.",
+  "sourceReviewDetails": [
+    "The main calendar was checked visually because color coding and compact grade labels can be lost or flattened during text extraction.",
+    "The printed totals are 183 student days and 190 teacher days.",
+    "Both first and last instructional dates were recorded by grade group instead of collapsing the transition schedule into one districtwide date.",
+    "Educator Planning dates are listed as remote-learning days. August 27 and February 18 are listed separately as no-school days.",
+    "Cultural Awareness Week is listed as an in-session observance because the official calendar says school remains in session.",
+    "The PDF's May 22 Memorial Day label conflicts with OPM's May 29, 2028 federal holiday schedule. Because the label follows the last student day and graduation weekend, this page discloses the discrepancy without treating May 22 as a student closure.",
+    "The source PDF says it was approved by the LCPS Board on February 18, 2025, and revised July 27, 2026."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Las Cruces Public Schools sources.",
+  "sourceNextReviewText": "Next review: when LCPS publishes a revised district or program calendar, clarifies the post-year Memorial Day label, or announces an emergency schedule change.",
+  "sources": [
+    {
+      "label": "LCPS Calendars, Handbooks & School Hours",
+      "url": "https://www.lcps.net/page/calendars-handbooks-school-hours"
+    },
+    {
+      "label": "Official LCPS 2027–28 Instructional Calendar — English",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/2256/Lcps/5f84b508-91da-43aa-abdc-42fb826acef5/27-28_FINAL_ENGLISH.pdf?disposition=inline"
+    },
+    {
+      "label": "LCPS Board calendar approval article",
+      "url": "https://www.lcps.net/article/2050215"
+    },
+    {
+      "label": "U.S. OPM 2028 Federal Holiday Schedule",
+      "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+    }
+  ]
+}

@@ -2,6 +2,10 @@
 const { formatShortDate } = useDistrictPage()
 
 const props = defineProps<{
+  title?: string
+  description?: string
+  daysLabel?: string
+  footerNote?: string
   periods?: {
     label: string
     start?: string
@@ -19,8 +23,8 @@ const showReportsIssued = computed(() => props.periods?.some(period => period.re
 <template>
   <section v-if="props.periods?.length" id="grading-periods" class="bg-white rounded-lg border border-gray-200 overflow-hidden scroll-mt-24">
     <div class="px-6 py-4 border-b border-gray-100">
-      <h2 class="text-lg font-semibold text-gray-900">Grading Periods</h2>
-      <p class="text-sm text-gray-500 mt-1">Marking-period dates and report-card timing from the published student calendar.</p>
+      <h2 class="text-lg font-semibold text-gray-900">{{ title || 'Grading Periods' }}</h2>
+      <p class="text-sm text-gray-500 mt-1">{{ description || 'Marking-period dates and report-card timing from the published student calendar.' }}</p>
     </div>
     <div class="overflow-x-auto">
       <table class="w-full text-sm">
@@ -29,7 +33,7 @@ const showReportsIssued = computed(() => props.periods?.some(period => period.re
             <th scope="col" class="text-left px-6 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">Grading Period</th>
             <th v-if="showStart" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">Start</th>
             <th scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">End</th>
-            <th v-if="showStudentDays" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">Student Days</th>
+            <th v-if="showStudentDays" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">{{ daysLabel || 'Student Days' }}</th>
             <th v-if="showReportsIssued" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">Reports Issued</th>
           </tr>
         </thead>
@@ -54,5 +58,6 @@ const showReportsIssued = computed(() => props.periods?.some(period => period.re
         </tbody>
       </table>
     </div>
+    <p v-if="footerNote" class="border-t border-gray-100 px-6 py-4 text-xs leading-relaxed text-gray-600">{{ footerNote }}</p>
   </section>
 </template>

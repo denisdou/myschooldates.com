@@ -1,58 +1,213 @@
 {
   "institutionId": "johnston-county",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Johnston County Public Schools Calendar 2026–27",
   "firstDay": "2026-08-24",
   "lastDay": "2027-05-26",
   "totalSchoolDays": 169,
   "semesters": 2,
   "sourceUrl": "https://www.johnston.k12.nc.us/o/jcps/page/calendars",
   "sourcePdfUrl": "https://drive.google.com/file/d/1ZM_SQCU573HSCY_Dj8h97zUQEMW835Rv/view?usp=drive_link",
-  "seoTitle": "Johnston County Schools Calendar 2026-2027: Dates, Holidays & PDF",
-  "seoDescription": "View the Johnston County Public Schools 2026-2027 calendar with the first and last day, holidays, breaks, early dismissal dates, no-school days, and printable PDF.",
-  "lastVerifiedAt": "2026-07-15",
+  "sourceCalendarName": "Johnston County Public Schools 2026–27 Traditional Student Calendar",
+  "sourceVersion": "Adopted December 9, 2025",
+  "seoTitle": "Johnston County Public Schools Calendar 2026–27 | JCPS Dates & PDF",
+  "seoDescription": "JCPS 2026–27 traditional calendar: most students start Aug. 24 and the school year ends May 26. See major breaks, early dismissal dates, kindergarten entry dates, the official PDF and ICS download.",
+  "lastVerifiedAt": "2026-08-11",
   "datePublished": "2026-07-15",
-  "dateModified": "2026-07-15",
+  "dateModified": "2026-08-11",
   "calendarType": "traditional",
+  "allDatesMode": "keyDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "keyDates",
+  "schemaReviewedBy": "author",
+  "schemaCalendarName": "Johnston County Public Schools Traditional Student Calendar 2026–27",
+  "schemaDatasetName": "JCPS 2026–27 Traditional Student Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed JCPS traditional-calendar student dates for 2026–27, including opening dates, breaks, no-school days, early dismissals, and the last day of school.",
+  "schemaCalendarDownloadName": "MySchoolDates JCPS 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "One-time import with selected JCPS traditional-calendar opening dates, breaks, no-school days, early dismissals, and the last day of school. It does not update automatically after district revisions.",
+  "hideInstructionalDaysSummary": true,
   "hideSemesterCount": true,
-  "yearNumbersMode": "compact",
-  "calendarNotes": "This page covers the traditional JCPS student calendar. Routine staff-only labels are simplified unless they affect student attendance.",
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideIcsButtonSupportText": true,
+  "comparisonBeforeFaq": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "relatedDistricts"
+  ],
+  "heroSourceLine": "Source: Johnston County Public Schools 2026–27 traditional student calendar · Adopted December 9, 2025",
+  "heroSummary": "Most Johnston County Public Schools students start the 2026–27 school year on Monday, August 24, 2026. The last day of school is Wednesday, May 26, 2027, with early dismissal. Thanksgiving Break is Nov. 25–27, Winter Break is Dec. 21–Jan. 1, and Spring Break is Mar. 26–Apr. 5.",
+  "calendarNotes": "Dates below focus on student attendance. Staff-only workdays are included only when students are out of school.",
+  "verificationBadgeText": "Reviewed against official JCPS calendar sources on August 11, 2026.",
+  "keyDatesSummaryTitle": "JCPS 2026–27 At a Glance",
+  "keyDatesSummarySubtitle": "First and last day, major breaks, and early dismissal dates",
+  "preserveJumpNavigationOrder": true,
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-24",
+      "type": "school_start",
+      "schemaDescription": "The JCPS traditional calendar lists August 24, 2026, as the first day for most students."
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "schemaDescription": "JCPS Thanksgiving Break runs November 25–27, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "schemaDescription": "JCPS Winter Break runs December 21, 2026, through January 1, 2027."
+    },
+    {
+      "label": "Early Dismissal",
+      "name": "Early Dismissal Days",
+      "date": "2026-12-18",
+      "dates": [
+        "2026-12-18",
+        "2027-03-12",
+        "2027-05-26"
+      ],
+      "displayDate": "Dec 18, 2026; Mar 12, 2027; and May 26, 2027",
+      "dateJoiner": "and",
+      "datePropertyLabel": "Date",
+      "type": "early_dismissal",
+      "schemaDescription": "JCPS schedules early dismissal December 18, 2026, March 12, 2027, and May 26, 2027."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-26",
+      "endDate": "2027-04-05",
+      "type": "break_start",
+      "schemaDescription": "JCPS Spring Break runs March 26 through April 5, 2027."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School — Early Dismissal",
+      "date": "2027-05-26",
+      "type": "school_end",
+      "schemaDescription": "The last day of school for JCPS is May 26, 2027, with early dismissal."
+    }
+  ],
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Calendar Scope",
+      "id": "jcps-2026-2027-calendar-scope"
+    },
+    {
+      "label": "Calendar Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "ECA / CTLA",
+      "id": "other-calendars"
+    },
+    {
+      "label": "Changes",
+      "id": "year-comparison"
+    },
+    {
+      "label": "Comparison",
+      "id": "comparison"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "allDatesTitle": "Major JCPS Student Calendar Dates — 2026–27",
+  "allDatesCoverageNote": "Dates below focus on student attendance. Break ranges appear once rather than repeating holidays that fall within the same no-school period.",
+  "allDatesSourceLinks": [
+    {
+      "label": "official JCPS 2026–27 traditional student calendar",
+      "url": "https://drive.google.com/file/d/1ZM_SQCU573HSCY_Dj8h97zUQEMW835Rv/view?usp=drive_link"
+    },
+    {
+      "label": "official JCPS events calendar",
+      "url": "https://www.johnston.k12.nc.us/o/jcps/events"
+    }
+  ],
+  "dateLegendLabelOverrides": {
+    "Early Release": "Early Dismissal",
+    "Academic": "End of Quarter"
+  },
+  "icsHeading": "Add JCPS 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download an ICS file for Google Calendar, Apple Calendar, or Outlook. This is a one-time import based on the dates reviewed for this page and won’t update automatically if JCPS revises the calendar.",
+  "icsButtonLabel": "Download JCPS Calendar (.ics)",
+  "icsAriaLabel": "Download the JCPS 2026–27 traditional student calendar file",
+  "pdfHeading": "Official JCPS 2026–27 Traditional Calendar PDF",
+  "pdfButtonLabel": "View Official JCPS PDF",
+  "pdfDescription": "Open the district’s adopted traditional student calendar.",
+  "pdfVersionLabel": "Adopted December 9, 2025",
+  "alternateCalendarsTitle": "ECA and CTLA Calendar",
+  "alternateCalendarsDescription": "Students at Johnston County Early College Academy and Career & Technical Leadership Academy follow a separate student calendar.",
+  "alternateCalendarsButtonLabel": "Open Official Calendar",
   "alternateCalendars": [
     {
       "type": "early-college",
-      "label": "2026-2027 ECA and CTLA Student Calendar",
+      "label": "2026–27 ECA and CTLA Student Calendar",
       "pdfUrl": "https://drive.google.com/file/d/1jwnmqqqBrUajBfVf7T73Z1jNvnayCNiN/view?usp=sharing"
     }
   ],
-  "calendarFaqs": [
+  "customSections": [
     {
-      "q": "Does JCPS have early dismissal days in 2026-2027?",
-      "a": "Yes. The 2026-2027 Johnston County Public Schools traditional calendar lists early dismissal for students on December 18, 2026, March 12, 2027, and May 26, 2027."
-    }
-  ],
-  "yearNumbers": [
-    {
-      "label": "Quarter Breakdown",
-      "value": "38 / 39 / 47 / 45 days",
-      "detail": "Q1 through Q4 total 169 instructional days on the adopted student calendar."
-    },
-    {
-      "label": "Additional No-School Weekdays",
-      "value": "9",
-      "detail": "Includes Labor Day, September 25, October 19, November 3, Veterans Day, January 4, Martin Luther King Jr. Day, Presidents Day, and March 15. Break periods and early-dismissal days are excluded."
-    },
-    {
-      "label": "Student Half Days",
-      "value": "3",
-      "detail": "The adopted calendar marks early dismissal for students on December 18, March 12, and May 26."
+      "id": "jcps-2026-2027-calendar-scope",
+      "label": "Which JCPS Calendar Should You Use?",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "Most JCPS students follow the traditional calendar shown on this page. ECA and CTLA students use a separate calendar."
     }
   ],
   "whatsNew": {
-    "title": "What's New for 2026-2027",
+    "title": "What Changed from 2025–26",
     "content": [
-      "Comparison uses the traditional student calendar for both school years.",
-      "The first day moves from August 4 in 2025-2026 to August 24 in 2026-2027.",
-      "The last day moves from May 18 in 2025-2026 to May 26 in 2026-2027.",
-      "Spring Break runs March 26-April 5, 2027 and includes Good Friday on April 2."
+      "The traditional calendar starts August 24 in 2026–27, 20 calendar days later than August 4 in 2025–26.",
+      "The last day of school is May 26, eight calendar days later than May 18 in 2025–26. Students will be dismissed early on May 26.",
+      "The 2026–27 traditional calendar does not include a multi-day October Fall Break; the 2025–26 calendar included an October 13–17 Fall Break."
     ]
   },
   "events": [
@@ -60,6 +215,20 @@
       "date": "2026-08-24",
       "name": "First Day of School",
       "type": "school_start"
+    },
+    {
+      "date": "2026-08-26",
+      "endDate": "2026-08-27",
+      "name": "Kindergarten Staggered Entry",
+      "type": "milestone",
+      "badgeLabel": "Kindergarten",
+      "description": "Check with your child’s school to confirm their assigned staggered-entry day."
+    },
+    {
+      "date": "2026-08-28",
+      "name": "First Day for All Kindergarten Students",
+      "type": "milestone",
+      "badgeLabel": "Kindergarten"
     },
     {
       "date": "2026-09-07",
@@ -73,8 +242,9 @@
     },
     {
       "date": "2026-10-16",
-      "name": "End of Quarter",
-      "type": "academic"
+      "name": "Quarter 1 Ends",
+      "type": "academic",
+      "hideFromCalendarExport": true
     },
     {
       "date": "2026-10-19",
@@ -93,43 +263,26 @@
     },
     {
       "date": "2026-11-25",
+      "endDate": "2026-11-27",
       "name": "Thanksgiving Break",
       "type": "break_start"
     },
     {
-      "date": "2026-11-26",
-      "name": "Thanksgiving Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
-    },
-    {
       "date": "2026-12-18",
-      "name": "End of Quarter Early Dismissal",
+      "name": "Early Dismissal — End of Quarter",
       "type": "early_dismissal"
     },
     {
       "date": "2026-12-21",
+      "endDate": "2027-01-01",
       "name": "Winter Break",
       "type": "break_start"
     },
     {
-      "date": "2027-01-01",
-      "name": "New Year's Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-01-01",
-      "name": "Winter Break End",
-      "type": "break_end"
-    },
-    {
       "date": "2027-01-04",
-      "name": "No School (Teacher Workday)",
-      "type": "no_school"
+      "name": "No School — Staff Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-01-05",
@@ -148,7 +301,7 @@
     },
     {
       "date": "2027-03-12",
-      "name": "End of Quarter Early Dismissal",
+      "name": "Early Dismissal — End of Quarter",
       "type": "early_dismissal"
     },
     {
@@ -158,24 +311,89 @@
     },
     {
       "date": "2027-03-26",
+      "endDate": "2027-04-05",
       "name": "Spring Break",
       "type": "break_start"
     },
     {
-      "date": "2027-04-02",
-      "name": "Good Friday",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-04-05",
-      "name": "Spring Break End",
-      "type": "break_end"
-    },
-    {
       "date": "2027-05-26",
       "name": "Last Day of School — Early Dismissal",
-      "type": "school_end"
+      "type": "school_end",
+      "badgeLabel": "Last Day · Early Dismissal"
     }
   ],
-  "sourceVersion": "2026-2027 student calendar shown as adopted December 9, 2025"
+  "comparisonDistrictSlugs": [
+    "wake-county-school-calendar",
+    "cumberland-county-school-calendar"
+  ],
+  "comparisonTitle": "JCPS Calendar Compared With Nearby and Regional Districts",
+  "comparisonSummary": "Compare JCPS with Wake County and Cumberland County on the first day, last day, Thanksgiving Break, Winter Break, and Spring Break.",
+  "comparisonSourceNote": "The comparison focuses on break ranges rather than standalone holidays or staff workdays.",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "comparisonRowsMode": "sharedValuesOnly",
+  "comparisonValueOverrides": {
+    "cumberland-county-school-calendar": {
+      "thanksgivingBreak": "Nov 23–27, 2026",
+      "winterBreak": "Dec 21, 2026–Jan 1, 2027",
+      "springBreak": "Mar 25–Apr 2, 2027"
+    }
+  },
+  "faqDisplayQuestions": [
+    "Do all JCPS kindergarten students start on August 24?",
+    "Can the JCPS calendar change after it’s approved?",
+    "How does JCPS handle inclement weather makeup days?"
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Do all JCPS kindergarten students start on August 24?",
+      "a": "No. The traditional calendar lists August 24 as the first day for most students, but kindergarten uses staggered entry on August 26–27. All kindergarten students attend on August 28. Families should check with their child’s school for their assigned staggered-entry day."
+    }
+  ],
+  "faqSchemaQuestions": [],
+  "sourceReviewSummary": "Reviewed August 11, 2026 using Johnston County Public Schools’ adopted 2026–27 traditional student calendar, official kindergarten event listings, and the separate ECA and CTLA calendar.",
+  "sourceReviewDetailsTitle": "How we reviewed this calendar",
+  "sourceReviewDetails": [
+    "Checked the first and last day, break ranges, no-school days, early dismissals, quarter endings, and January return date against the adopted JCPS traditional student calendar.",
+    "Confirmed kindergarten staggered entry on August 26–27 and the August 28 start for all kindergarten students in the official JCPS events calendar.",
+    "Kept the ECA and CTLA calendar separate because those students do not follow every date on the traditional calendar.",
+    "Thanksgiving Day, New Year’s Day, and Good Friday fall within published break ranges and are not repeated as separate calendar rows."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Johnston County Public Schools sources.",
+  "sourceNextReviewText": "We recheck this page after JCPS publishes a calendar revision or announces a weather-related schedule change.",
+  "sources": [
+    {
+      "label": "Johnston County Public Schools calendars page",
+      "url": "https://www.johnston.k12.nc.us/o/jcps/page/calendars"
+    },
+    {
+      "label": "Official JCPS 2026–27 traditional student calendar",
+      "url": "https://drive.google.com/file/d/1ZM_SQCU573HSCY_Dj8h97zUQEMW835Rv/view?usp=drive_link"
+    },
+    {
+      "label": "Official JCPS kindergarten staggered-entry event",
+      "url": "https://www.johnston.k12.nc.us/o/jcps/events?id=60913544"
+    },
+    {
+      "label": "Official JCPS all-kindergarten start event",
+      "url": "https://www.johnston.k12.nc.us/o/jcps/events?id=60913627"
+    },
+    {
+      "label": "Official JCPS 2026–27 ECA and CTLA student calendar",
+      "url": "https://drive.google.com/file/d/1jwnmqqqBrUajBfVf7T73Z1jNvnayCNiN/view?usp=sharing"
+    }
+  ],
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-jcps-events",
+      "type": "WebPage",
+      "name": "JCPS 2026–27 District Events Calendar",
+      "url": "https://www.johnston.k12.nc.us/o/jcps/events"
+    }
+  ]
 }

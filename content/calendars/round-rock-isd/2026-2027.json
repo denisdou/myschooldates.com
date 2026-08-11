@@ -1,162 +1,461 @@
 {
   "institutionId": "round-rock-isd",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Round Rock ISD Calendar 2026–2027",
   "firstDay": "2026-08-19",
   "lastDay": "2027-05-27",
-  "seoTitle": "Round Rock ISD Calendar 2026-2027: Holidays, Breaks & PDF",
-  "seoDescription": "Round Rock ISD 2026-2027 calendar with Aug 19 first day, May 27 last day, holidays, breaks, student holidays, PDF and ICS.",
+  "temporalCoverageStart": "2026-08-19",
+  "temporalCoverageEnd": "2027-05-27",
+  "seoTitle": "Round Rock ISD Calendar 2026–2027: Key Dates, Breaks & PDF",
+  "seoDescription": "Round Rock ISD's 2026–27 calendar with first and last days, fall, winter and spring breaks, student holidays, return dates, the official PDF and an ICS download.",
   "totalSchoolDays": 170,
-  "teacherWorkDays": 187,
   "semesters": 2,
   "sourceUrl": "https://www.roundrockisd.org/o/rrisd/page/calendars",
   "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5378/Rrisd/43b9aa8a-9785-4f21-8d18-71208e9c4084/2026-2027_RRISD_District_Calendars.pdf",
-  "lastVerifiedAt": "2026-07-12",
+  "sourceCalendarName": "Round Rock ISD 2026–27 District Calendar",
+  "sourceVersion": "Updated February 4, 2026",
+  "sourceCalendarDateModified": "2026-02-04",
+  "lastVerifiedAt": "2026-08-11",
+  "datePublished": "2026-07-12",
+  "dateModified": "2026-08-11",
   "calendarType": "traditional",
+  "allDatesMode": "all",
+  "itemListMode": "allImportantDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "schemaCalendarName": "Round Rock ISD 2026–27 District Calendar",
+  "schemaDatasetName": "Round Rock ISD 2026–27 School Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Round Rock ISD dates for 2026–27, including first and last days, official student-holiday labels, major breaks, clearly identified derived class-resume dates, semester boundaries, and calendar downloads.",
+  "schemaCalendarDownloadName": "MySchoolDates Round Rock ISD 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "Calendar import file generated from the reviewed calendar records used for this page.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-2025-2026",
+      "name": "Round Rock ISD 2025–26 District Calendar",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5378/Rrisd/98b418ff-e1c5-4560-918f-fdb35413d66a/25-26_District_Calendar_Final.pdf",
+      "version": "Official 2025–26 district calendar"
+    },
+    {
+      "id": "source-you-day-background",
+      "type": "Article",
+      "name": "Round Rock ISD — YOU Day background",
+      "url": "https://www.roundrockisd.org/article/2422554"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "hiddenSections": [
+    "downloadCta",
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "yearNumbers",
+    "whatsDifferent",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile"
+  ],
+  "heroSummary": "Round Rock ISD students start school Wednesday, August 19, 2026, and the last day of classes is Thursday, May 27, 2027. Fall Break is November 23–27, Winter Break is December 21–January 1, and Spring Break is March 15–19. Students have no classes through Monday, January 4, and classes resume Tuesday, January 5.\n\nThe district calendar lists 170 instructional days, based on a 440-minute school day. Dates on this page were checked against Round Rock ISD's official 2026–27 calendar.",
+  "heroSourceLine": "Source: Round Rock ISD official 2026–27 district calendar",
+  "heroDownloadLabel": "View official PDF",
+  "heroDownloadHref": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5378/Rrisd/43b9aa8a-9785-4f21-8d18-71208e9c4084/2026-2027_RRISD_District_Calendars.pdf",
+  "heroFactChips": [
+    "First day: Aug. 19",
+    "Last day: May 27",
+    "170 instructional days",
+    "Classes resume: Jan. 5"
+  ],
+  "heroCtas": [
+    {
+      "label": "Add RRISD Dates to Your Calendar (.ics)",
+      "href": "__icsUrl",
+      "variant": "primary",
+      "download": true,
+      "filename": "__icsFilename"
+    }
+  ],
+  "verificationBadgeText": "Checked August 11, 2026, against Round Rock ISD's official 2026–27 calendar page and PDF.",
+  "keyDatesSummaryTitle": "Round Rock ISD 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, and when classes resume in January",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-19",
+      "type": "school_start"
+    },
+    {
+      "label": "Break",
+      "name": "Fall Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "Published Winter Break runs December 21–January 1; January 4 is a separate student holiday."
+    },
+    {
+      "label": "Return",
+      "name": "Classes Resume / Second Semester Begins",
+      "date": "2027-01-05",
+      "type": "school_resume",
+      "description": "First regular school day after the January 4 student holiday.",
+      "calendarExportDescription": "Planning date derived from the published Round Rock ISD calendar; not a separately named event in the official PDF.",
+      "isDerivedPlanningDate": true,
+      "schemaDescription": "First regular school day after the January 4 student holiday on the published Round Rock ISD calendar."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-05-27",
+      "type": "school_end"
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Need to Know", "id": "rrisd-2026-2027-need-to-know" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "What Changed", "id": "rrisd-2026-2027-changes" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "customSections": [
+    {
+      "id": "rrisd-2026-2027-need-to-know",
+      "label": "What Round Rock ISD Families Should Know",
+      "position": "afterKeyDates",
+      "content": "RRISD uses several district-specific labels that are easy to miss on the PDF. September 21 includes Yom Kippur, October 19 and February 15 are labeled YOU Days, and March 10 includes Eid al-Fitr. RRISD uses YOU Days as district closure days under its YOU well-being program. October 12 also includes elementary conferences; families should check their elementary school's calendar for conference details."
+    },
+    {
+      "id": "rrisd-2026-2027-changes",
+      "label": "What Changed from 2025–26",
+      "position": "afterCalendarExport",
+      "content": "The 2026–27 calendar starts and ends later than the prior school year and lists one fewer instructional day.",
+      "groups": [
+        {
+          "label": "First and last days",
+          "items": [
+            "School starts August 19, one week later than in 2025–26. The last day moves from May 21 to May 27."
+          ]
+        },
+        {
+          "label": "Instructional-day total",
+          "items": [
+            "The official total changes from 171 instructional days in 2025–26 to 170 in 2026–27."
+          ]
+        },
+        {
+          "label": "Diwali",
+          "items": [
+            "Diwali was listed as a student and staff holiday in 2025–26. It does not appear on the official 2026–27 calendar; October 19 is labeled Student & Staff Holiday / YOU Day."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rrisd-school-assignment",
+      "label": "School Assignment and Attendance Boundaries",
+      "position": "afterComparison",
+      "content": "Round Rock ISD serves parts of Round Rock, Austin, and Cedar Park across Williamson and Travis counties. City names and ZIP codes do not always match district boundaries, so families should use Round Rock ISD's official boundary map to confirm their assigned elementary, middle, and high schools before enrollment or a move.",
+      "linksDisplay": "inline",
+      "linksLabel": "Boundary lookup:",
+      "links": [
+        {
+          "label": "Round Rock ISD official boundary map",
+          "to": "https://www.roundrockisd.org/page/round-rock-isd-feeder-chart"
+        }
+      ]
+    }
+  ],
+  "allDatesTitle": "Round Rock ISD 2026–27 Student Calendar Dates",
+  "allDatesCoverageNote": "This list preserves district-specific labels from Round Rock ISD's official calendar, including religious observances, YOU Days, staff-development dates and break ranges. Clearly marked class-resume dates are derived from the district's published calendar. Campus events and later calendar changes should be confirmed with the district.",
+  "allDatesCoverageNotePosition": "top",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5378/Rrisd/43b9aa8a-9785-4f21-8d18-71208e9c4084/2026-2027_RRISD_District_Calendars.pdf",
+  "allDatesSourceLabel": "Official Round Rock ISD 2026–27 district calendar PDF",
+  "allDatesSourceLinks": [
+    {
+      "label": "Round Rock ISD 2026–27 district calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5378/Rrisd/43b9aa8a-9785-4f21-8d18-71208e9c4084/2026-2027_RRISD_District_Calendars.pdf"
+    },
+    {
+      "label": "Round Rock ISD calendar page",
+      "url": "https://www.roundrockisd.org/o/rrisd/page/calendars"
+    }
+  ],
+  "breaksTitle": "Major Breaks and Student Return Dates",
+  "breakNotes": {
+    "Fall Break": "With the weekends on either side, students are off for nine straight days. Classes resume Monday, November 30.",
+    "Winter Break": "Official Winter Break runs December 21–January 1. Students are also off December 18 and January 4, so they have no classes from December 18 through January 4. Classes resume Tuesday, January 5.",
+    "Spring Break": "With the weekends on either side, students are off for nine straight days. Classes resume Monday, March 22."
+  },
+  "breakDurationLabels": {
+    "Fall Break": "Official break: Nov. 23–27",
+    "Winter Break": "Official break: Dec. 21–Jan. 1",
+    "Spring Break": "Official break: Mar. 15–19"
+  },
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "icsHeading": "Add Round Rock ISD 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file with the first and last days, official student holidays, major breaks, semester boundaries, and clearly marked class-resume dates derived from the published district calendar.",
+  "icsButtonLabel": "Add RRISD Dates to Your Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. Check Round Rock ISD for later calendar revisions.",
+  "pdfHeading": "Official Round Rock ISD 2026–27 Calendar",
+  "pdfButtonLabel": "View Official RRISD PDF",
+  "pdfDescription": "Open the district's official calendar showing student holidays, staff-development dates, YOU Days, religious observances, breaks, and semester dates.",
+  "pdfVersionLabel": "District PDF · updated Feb. 4, 2026 · reviewed Aug. 11, 2026",
+  "comparisonBeforeFaq": true,
+  "comparisonTitle": "Round Rock ISD vs. Austin ISD: 2026–27 Start and End Dates",
+  "comparisonSummary": "Round Rock ISD starts one day later than Austin ISD in 2026–27. Both districts are scheduled to end the school year on May 27, 2027.",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay"
+  ],
+  "comparisonRowsMode": "sharedValuesOnly",
+  "comparisonAlwaysExpanded": true,
+  "comparisonFooterText": "Dates come from each district's published 2026–27 calendar. This comparison covers the first and last days of school only.",
   "calendarFaqs": [
     {
-      "q": "Does Round Rock Independent School District have a fall break in 2026-2027?",
-      "a": "Yes. Round Rock Independent School District has a fall break running from Nov 23, 2026 to Nov 27, 2026, a total of 5 days."
+      "q": "When does Round Rock ISD start school in 2026–27?",
+      "a": "The first day of school for Round Rock ISD students is Wednesday, August 19, 2026. Staff development and preparation days begin before students return."
     },
     {
-      "q": "When does school start for Round Rock Independent School District in 2026-2027?",
-      "a": "The first day of school for Round Rock Independent School District is Wednesday, August 19, 2026. Students and staff are expected to report on this date to begin the new academic year."
+      "q": "When is the last day of school for Round Rock ISD in 2026–27?",
+      "a": "The last day of classes is Thursday, May 27, 2027. The second semester also ends that day."
+    },
+    {
+      "q": "When is Round Rock ISD Winter Break in 2026–27?",
+      "a": "Official Winter Break runs December 21, 2026, through January 1, 2027. Students are also off December 18 for a teacher work day and January 4 for staff development, so they return Tuesday, January 5."
+    },
+    {
+      "q": "When is Round Rock ISD Spring Break in 2027?",
+      "a": "Spring Break runs Monday, March 15, through Friday, March 19, 2027. Students return Monday, March 22."
+    },
+    {
+      "q": "Does Round Rock ISD have a Fall Break in 2026–27?",
+      "a": "Yes. Fall Break runs Monday, November 23, through Friday, November 27, 2026. Students return Monday, November 30."
+    },
+    {
+      "q": "How many instructional days are in the Round Rock ISD 2026–27 calendar?",
+      "a": "Round Rock ISD lists 170 instructional days for 2026–27, based on a 440-minute school day."
     }
   ],
-  "yearNumbers": [
-    {
-      "label": "Starts Later",
-      "value": "7 days",
-      "detail": "First day moves from Aug 12 to Aug 19 — one of the largest year-over-year start date shifts among major Texas districts."
-    },
-    {
-      "label": "Days Down",
-      "value": "170 days",
-      "detail": "Instructional days drop from 171 to 170 vs 2025–2026, the lowest among the districts in this comparison."
-    },
-    {
-      "label": "Ends Later",
-      "value": "6 days",
-      "detail": "Last day moves from May 21 to May 27 vs 2025–2026, reflecting the later start."
-    },
-    {
-      "label": "Diwali Removed",
-      "value": "No longer",
-      "detail": "Diwali was a formal student and staff holiday in 2025–2026; it does not appear on the 2026–2027 calendar."
-    }
+  "faqDisplayQuestions": [
+    "When does Round Rock ISD start school in 2026–27?",
+    "When is the last day of school for Round Rock ISD in 2026–27?",
+    "When is Round Rock ISD Winter Break in 2026–27?",
+    "When is Round Rock ISD Spring Break in 2027?",
+    "Does Round Rock ISD have a Fall Break in 2026–27?",
+    "How many instructional days are in the Round Rock ISD 2026–27 calendar?"
   ],
+  "faqDisplayLimit": 6,
   "events": [
     {
       "date": "2026-08-19",
       "name": "First Day of School",
-      "type": "school_start"
+      "type": "school_start",
+      "description": "First day for students."
     },
     {
       "date": "2026-09-07",
       "name": "Labor Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Student and staff holiday."
     },
     {
       "date": "2026-09-21",
-      "name": "Student Holiday",
-      "type": "student_holiday"
+      "name": "Student Holiday / Staff Development / Yom Kippur",
+      "type": "student_holiday",
+      "preserveOfficialName": true,
+      "description": "No school for students."
     },
     {
       "date": "2026-10-09",
-      "name": "Student Holiday",
-      "type": "student_holiday"
+      "name": "Student Holiday / Staff Development",
+      "type": "student_holiday",
+      "preserveOfficialName": true,
+      "description": "No school for students."
     },
     {
       "date": "2026-10-12",
-      "name": "Indigenous Peoples' Day",
-      "type": "holiday"
+      "name": "Student Holiday / Staff Development / Elementary Conferences / Indigenous Peoples' Day / Columbus Day",
+      "type": "student_holiday",
+      "preserveOfficialName": true,
+      "description": "No school for students; families should check their elementary school's calendar for conference details."
     },
     {
       "date": "2026-10-19",
-      "name": "Student and Staff Holiday",
-      "type": "holiday"
+      "name": "Student & Staff Holiday / YOU Day",
+      "type": "holiday",
+      "preserveOfficialName": true,
+      "description": "No school."
     },
     {
       "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "displayDate": "November 23–27, 2026",
       "name": "Fall Break",
-      "type": "break_start"
+      "type": "break_start",
+      "description": "Published break runs November 23–27."
     },
     {
-      "date": "2026-11-27",
-      "name": "Fall Break End",
-      "type": "break_end"
+      "date": "2026-11-30",
+      "name": "Classes Resume",
+      "type": "school_resume",
+      "description": "First regular school day after Fall Break.",
+      "calendarExportDescription": "Planning date derived from the published Round Rock ISD calendar; not a separately named event in the official PDF.",
+      "isDerivedPlanningDate": true,
+      "schemaDescription": "First regular school day after the published Round Rock ISD Fall Break."
     },
     {
       "date": "2026-12-17",
-      "name": "Last Day of Classes / First Semester Ends",
-      "type": "semester_end"
+      "name": "First Semester Ends",
+      "type": "semester_end",
+      "description": "Last instructional day before the December 18 student holiday."
     },
     {
       "date": "2026-12-18",
-      "name": "Student Holiday",
-      "type": "student_holiday"
+      "name": "Student Holiday / Teacher Work Day",
+      "type": "student_holiday",
+      "preserveOfficialName": true,
+      "description": "No school for students."
     },
     {
       "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "displayDate": "December 21, 2026–January 1, 2027",
       "name": "Winter Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-01-01",
-      "name": "Winter Break End",
-      "type": "break_end"
+      "type": "break_start",
+      "description": "January 4 is a separate student holiday."
     },
     {
       "date": "2027-01-04",
-      "name": "Student Holiday",
-      "type": "student_holiday"
+      "name": "Student Holiday / Staff Development",
+      "type": "student_holiday",
+      "preserveOfficialName": true,
+      "description": "No school for students."
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Classes Resume / Second Semester Begins",
+      "type": "school_resume",
+      "description": "First regular school day after the January 4 student holiday.",
+      "calendarExportDescription": "Planning date derived from the published Round Rock ISD calendar; not a separately named event in the official PDF.",
+      "isDerivedPlanningDate": true,
+      "schemaDescription": "First regular school day after the January 4 student holiday on the published Round Rock ISD calendar."
     },
     {
       "date": "2027-01-18",
       "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Student and staff holiday."
     },
     {
       "date": "2027-02-12",
-      "name": "Student Holiday",
-      "type": "student_holiday"
+      "name": "Student Holiday / Staff Development",
+      "type": "student_holiday",
+      "preserveOfficialName": true,
+      "description": "No school for students."
     },
     {
       "date": "2027-02-15",
-      "name": "Presidents' Day",
-      "type": "holiday"
+      "name": "Student & Staff Holiday / YOU Day / Presidents' Day",
+      "type": "holiday",
+      "preserveOfficialName": true,
+      "description": "No school."
     },
     {
       "date": "2027-03-10",
-      "name": "Student Holiday",
-      "type": "student_holiday"
+      "name": "Student Holiday / Staff Development / Eid al-Fitr",
+      "type": "student_holiday",
+      "preserveOfficialName": true,
+      "description": "No school for students."
     },
     {
       "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "displayDate": "March 15–19, 2027",
       "name": "Spring Break",
-      "type": "break_start"
+      "type": "break_start",
+      "description": "Published break runs March 15–19."
     },
     {
-      "date": "2027-03-19",
-      "name": "Spring Break End",
-      "type": "break_end"
+      "date": "2027-03-22",
+      "name": "Classes Resume",
+      "type": "school_resume",
+      "description": "First regular school day after Spring Break.",
+      "calendarExportDescription": "Planning date derived from the published Round Rock ISD calendar; not a separately named event in the official PDF.",
+      "isDerivedPlanningDate": true,
+      "schemaDescription": "First regular school day after the published Round Rock ISD Spring Break."
     },
     {
       "date": "2027-03-26",
       "name": "Good Friday",
-      "type": "holiday"
+      "type": "holiday",
+      "description": "Student and staff holiday."
     },
     {
       "date": "2027-05-27",
       "name": "Last Day of School / Second Semester Ends",
       "type": "school_end"
-    },
-    {
-      "date": "2027-05-31",
-      "name": "Memorial Day",
-      "type": "holiday"
     }
   ],
-  "calendarNotes": "Round Rock ISD begins the 2026–2027 school year on August 19, 2026 — one of the later start dates among major Texas districts — and finishes May 27, 2027. First semester wraps up December 17 before Winter Break begins, so students returning January 5 start second semester immediately, without the mid-semester transition that most Texas districts schedule after the holidays. Spring Break runs March 15–19, one week later than most San Antonio-area districts. Like other recent RRISD calendars, the district logs 170 instructional days using longer school days rather than the 175–180 day schedule most Texas districts follow.",
-  "datePublished": "2026-07-12",
-  "dateModified": "2026-07-12"
+  "calendarNotes": "This page covers Round Rock ISD's districtwide 2026–27 calendar. It preserves the official labels that affect student attendance and explains the difference between the published Winter Break and the additional student days off. Campus events, bell schedules, and later district changes should be confirmed with RRISD.",
+  "allDatesDerivedDateNote": "Planning date derived from the published district calendar; it is not a separately named event in the PDF's event list.",
+  "sourceReviewSummary": "Reviewed August 11, 2026, against Round Rock ISD's official calendar page and 2026–27 district calendar PDF, updated February 4, 2026.",
+  "sourceReviewDetails": [
+    "The PDF footer identifies the source version as Updated 02-04-2026.",
+    "The official PDF lists August 19, 2026, as the first day for students and May 27, 2027, as the last day.",
+    "The calendar lists 170 instructional days based on a 440-minute school day.",
+    "Official event labels were retained for Yom Kippur, Indigenous Peoples' Day / Columbus Day, YOU Days, and Eid al-Fitr rather than being reduced to generic no-school labels.",
+    "The published Winter Break is December 21–January 1. Separate student holidays on December 18 and January 4 mean students have no classes through January 4, with classes resuming January 5."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Round Rock ISD sources.",
+  "sourceNextReviewText": "We re-check this page when RRISD replaces the official calendar, changes a student holiday or break, or publishes a revised school-year calendar.",
+  "sources": [
+    {
+      "label": "Round Rock ISD calendar page",
+      "url": "https://www.roundrockisd.org/o/rrisd/page/calendars"
+    },
+    {
+      "label": "Official Round Rock ISD 2026–27 district calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5378/Rrisd/43b9aa8a-9785-4f21-8d18-71208e9c4084/2026-2027_RRISD_District_Calendars.pdf"
+    },
+    {
+      "label": "Round Rock ISD — YOU Day background",
+      "url": "https://www.roundrockisd.org/article/2422554"
+    },
+    {
+      "label": "Round Rock ISD 2025–26 district calendar PDF — year-over-year comparison source",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5378/Rrisd/98b418ff-e1c5-4560-918f-fdb35413d66a/25-26_District_Calendar_Final.pdf"
+    }
+  ]
 }

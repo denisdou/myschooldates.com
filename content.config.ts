@@ -2,6 +2,9 @@ import { defineContentConfig, defineCollection, z } from '@nuxt/content'
 
 const eventSchema = z.object({
   date: z.string(),
+  endDate: z.string().optional(),
+  dates: z.array(z.string()).optional(),
+  displayDate: z.string().optional(),
   name: z.string(),
   type: z.enum([
     'school_start', 'school_end', 'school_resume', 'school_reopen',
@@ -12,6 +15,12 @@ const eventSchema = z.object({
     'makeup_day', 'quarter_start', 'quarter_end', 'semester_end', 'graduation',
   ]),
   description: z.string().optional(),
+  schemaDescription: z.string().optional(),
+  calendarExportDescription: z.string().optional(),
+  exportDatesIndividually: z.boolean().optional(),
+  showDuringBreak: z.boolean().optional(),
+  badgeLabel: z.string().optional(),
+  isDerivedPlanningDate: z.boolean().optional(),
   preserveOfficialName: z.boolean().optional(),
 })
 
@@ -60,6 +69,7 @@ const gradingPeriodSchema = z.object({
   label: z.string(),
   start: z.string(),
   end: z.string(),
+  studentDays: z.number().optional(),
 })
 
 const livingHereHighlightSchema = z.object({ label: z.string(), detail: z.string() })
@@ -118,10 +128,14 @@ export default defineContentConfig({
         studentCountAsOf: z.string().optional(),
         studentCountSourceLabel: z.string().optional(),
         studentCountSourceUrl: z.string().optional(),
+        profileStudentCountApproximate: z.boolean().optional(),
         schoolCount: z.number().optional(),
+        profileSchoolCountExact: z.boolean().optional(),
         founded: z.number().optional(),
         calendarType: z.string().optional(),
+        hideProfileCalendarType: z.boolean().optional(),
         districtFact: z.string().optional(),
+        profileDisclaimer: z.string().optional(),
         about: z.array(districtAboutCardSchema).optional(),
         calendarNotes: z.string().optional(),
         county: z.string().optional(),
@@ -243,6 +257,7 @@ export default defineContentConfig({
         faqSchemaExclude: z.array(z.string()).optional(),
         hiddenSections: z.array(z.string()).optional(),
         hideInstructionalDaysSummary: z.boolean().optional(),
+        hideCoveredBreakDatesNote: z.boolean().optional(),
         keyDateCardsVariant: z.enum(['compact']).optional(),
         keyDateCardsFirstLabel: z.string().optional(),
         keyDateCardsThirdLabel: z.string().optional(),
@@ -253,10 +268,11 @@ export default defineContentConfig({
         gradingPeriods: z.array(gradingPeriodSchema).optional(),
         heroSummary: z.string().optional(),
         calendarNotes: z.string().optional(),  // year-specific narrative (moved from districts/)
-        calendarType: z.enum(['traditional', 'modified-start', 'year-round', 'magnet', 'international', 'early-college', 'alternative']).optional(),
+        calendarType: z.enum(['traditional', 'balanced', 'modified-start', 'year-round', 'magnet', 'international', 'early-college', 'alternative']).optional(),
         alternateCalendars: z.array(z.object({
           type: z.string(),
           label: z.string(),
+          group: z.string().optional(),
           pdfUrl: z.string().optional(),
           firstDay: z.string().optional(),
         })).optional(),

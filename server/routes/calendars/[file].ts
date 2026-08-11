@@ -14,6 +14,7 @@ type CalendarEvent = {
   name: string
   type: string
   description?: string
+  calendarExportDescription?: string
   endDate?: string
   dates?: string[]
   preserveOfficialName?: boolean
@@ -302,6 +303,7 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord) {
     const eventStatus = event.status && ['TENTATIVE', 'CONFIRMED', 'CANCELLED'].includes(event.status)
       ? event.status
       : null
+    const eventDescription = event.calendarExportDescription ?? event.description
 
     lines.push(
       'BEGIN:VEVENT',
@@ -310,7 +312,7 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord) {
       `DTEND;VALUE=DATE:${end}`,
       `SUMMARY:${escapeText(`${summaryName} - ${district.name}`)}`,
       ...(eventStatus ? [`STATUS:${eventStatus}`] : []),
-      ...(event.description ? [`DESCRIPTION:${escapeText(event.description)}`] : []),
+      ...(eventDescription ? [`DESCRIPTION:${escapeText(eventDescription)}`] : []),
       `UID:${start}-${end}-${event.type}-${uidSlug}@myschooldates.com`,
       'END:VEVENT',
     )

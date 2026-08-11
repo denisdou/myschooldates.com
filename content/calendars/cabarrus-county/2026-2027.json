@@ -1,16 +1,120 @@
 {
   "institutionId": "cabarrus-county",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Cabarrus County Schools Calendar 2026–2027",
   "firstDay": "2026-08-12",
   "lastDay": "2027-05-26",
   "totalSchoolDays": 174,
   "semesters": 2,
   "sourceUrl": "https://www.cabarrus.k12.nc.us/1508_4",
   "sourcePdfUrl": "https://files.smartsites.parentsquare.com/3048/2026-2027_ccs_academic_calendar_approved_10132025.pdf",
-  "seoDescription": "View the Cabarrus County Schools 2026-2027 calendar, including the first day, last day, holidays, breaks, workdays and early dismissals. Download the official CCS PDF.",
-  "lastVerifiedAt": "2026-07-15",
+  "sourceCalendarName": "Cabarrus County Schools 2026–27 Traditional Academic Calendar",
+  "sourceVersion": "Approved October 13, 2025",
+  "seoTitle": "Cabarrus County Schools Calendar 2026-2027: Dates & PDF",
+  "seoDescription": "Cabarrus County Schools 2026–27 calendar: first and last days, breaks, workdays, exams and early dismissals, plus Traditional, Early College and Restart PDFs.",
+  "lastVerifiedAt": "2026-08-11",
+  "dateCreated": "2026-07-15",
+  "datePublished": "2026-07-15",
+  "dateModified": "2026-08-11",
   "calendarType": "traditional",
-  "yearNumbersMode": "compact",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "keyDates",
+  "schemaReviewedBy": "author",
+  "schemaCalendarName": "Cabarrus County Schools Calendar 2026–27",
+  "schemaDatasetDescription": "Verified major Cabarrus County Schools 2026–27 Traditional Calendar dates, including student holidays, workdays, early dismissals, breaks, exam windows, graduation, and alternate-calendar guidance.",
+  "temporalCoverageEnd": "2027-05-28",
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "compactDownloadModule": true,
+  "hiddenSections": ["downloadCta", "todayStatus", "about", "otherCalendars", "keyDatesSummary"],
+  "hiddenCustomSectionIds": ["verification-and-editorial-process"],
+  "heroSourceLine": "Based on the official CCS 2026–27 Traditional Academic Calendar · Approved October 13, 2025",
+  "heroSummary": "CCS students start school Wednesday, August 12, 2026. Traditional Calendar students have their last day Wednesday, May 26, 2027, with Spring Break March 8–12.",
+  "verificationBadgeText": "Verified August 11, 2026, against the official CCS calendar and alternate-calendar PDFs.",
+  "keyDatesHeading": "Key Dates — Traditional Calendar",
+  "keyDateCardsThirdLabel": "Instructional Days",
+  "keyDateCardsThirdValue": "174 days",
+  "schemaKeyDateItemListName": "CCS 2026–27 Traditional Calendar key dates",
+  "keyDateSummaryItems": [
+    {
+      "date": "2026-08-12",
+      "name": "First Day of School",
+      "type": "school_start",
+      "schemaDescription": "The first day of school on the CCS 2026–27 Traditional Calendar."
+    },
+    {
+      "date": "2027-05-26",
+      "name": "Last Day of School",
+      "type": "school_end",
+      "schemaDescription": "The last day of school for CCS Traditional Calendar students."
+    },
+    {
+      "date": "2026-08-12",
+      "endDate": "2027-05-26",
+      "name": "Instructional Days",
+      "type": "academic",
+      "schemaDescription": "The CCS 2026–27 Traditional Calendar schedules 174 instructional days.",
+      "schemaAdditionalProperties": [
+        { "name": "Instructional days", "value": "174" }
+      ]
+    }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Choose a Calendar", "id": "ccs-2026-2027-calendar-selector" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Calendar Notes", "id": "ccs-2026-2027-calendar-notes" },
+    { "label": "Changes", "id": "year-comparison" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "comparisonBeforeFaq": true,
+  "yearSwitcherPosition": "afterSources",
+  "yearSwitcherLabel": "Other CCS school years:",
+  "allDatesTitle": "CCS 2026–27 Traditional Calendar Dates",
+  "allDatesCoverageNote": "This list covers major Traditional Calendar dates, including student attendance dates, high school exam windows, and graduation. Early College and Restart dates may differ; use the calendar selector above.",
+  "allDatesCoveredBreakDatesNote": "Some holidays fall within the break periods shown above.",
+  "dateLegendLabelOverrides": {
+    "Early Release": "Early Dismissal"
+  },
+  "allDatesSourceUrl": "https://www.cabarrus.k12.nc.us/1508_4",
+  "allDatesSourceLinks": [
+    { "label": "Official CCS 2026–27 Traditional Calendar PDF", "url": "https://files.smartsites.parentsquare.com/3048/2026-2027_ccs_academic_calendar_approved_10132025.pdf" },
+    { "label": "CCS Academic Calendars", "url": "https://www.cabarrus.k12.nc.us/1508_4" }
+  ],
+  "allDatesSourceLabel": "Sources: Cabarrus County Schools",
+  "icsHeading": "Add the CCS Traditional Calendar to Your Calendar",
+  "icsDescription": "Download the verified Traditional Calendar dates as an .ics file for Google Calendar, Apple Calendar, or Outlook. This is a one-time import and won’t automatically reflect later district changes.",
+  "icsButtonLabel": "Download Traditional Calendar (.ics)",
+  "heroDownloadLabel": "Download Traditional Calendar (.ics)",
+  "icsButtonSupportText": "For the latest revisions, check the official CCS calendar.",
+  "icsAriaLabel": "Download the Cabarrus County Schools 2026–27 Traditional Calendar file",
+  "schemaCalendarDownloadName": "Cabarrus County Schools 2026–27 Traditional Calendar file",
+  "schemaCalendarDownloadDescription": "One-time calendar import file generated from the verified Traditional Calendar dates shown on this page.",
+  "pdfHeading": "Official CCS 2026–27 Traditional Calendar",
+  "pdfButtonLabel": "View Official CCS Calendar PDF",
+  "pdfDescription": "Open or print the Traditional Academic Calendar published by Cabarrus County Schools.",
+  "pdfVersionLabel": "Approved October 13, 2025",
+  "shareCalendarHeading": "Save or Share This Calendar",
+  "yearNumbersMode": "customOnly",
+  "yearNumbersTitle": "Instructional Time",
+  "yearNumbersMethodologyNote": "Figures are from the published Traditional Calendar.",
   "alternateCalendars": [
     {
       "type": "early-college",
@@ -25,23 +129,155 @@
       "firstDay": "2026-08-12"
     }
   ],
-  "calendarFaqs": [],
+  "calendarFaqs": [
+    {
+      "q": "When do CCS students return after Winter Break?",
+      "a": "Traditional and Restart students return Tuesday, January 5, 2027. Early College students return Wednesday, January 6, after capped workdays on January 4–5."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "How does CCS handle inclement weather?",
+    "Can CCS calendar dates change after approval?",
+    "When do CCS students return after Winter Break?"
+  ],
+  "faqDisplayLimit": 3,
+  "comparisonRowsInclude": ["firstDay", "lastDay", "thanksgivingBreak", "winterBreak", "springBreak"],
+  "comparisonRowsMode": "sharedValuesOnly",
+  "comparisonInsights": [
+    {
+      "label": "Start date comparison",
+      "items": [
+        "13 calendar days earlier than CMS",
+        "12 calendar days earlier than UCPS"
+      ]
+    },
+    {
+      "label": "End date comparison",
+      "items": [
+        "14 calendar days earlier than CMS",
+        "9 calendar days earlier than UCPS"
+      ]
+    }
+  ],
+  "hideComparisonNotes": true,
+  "comparisonCustomRows": [
+    {
+      "key": "firstDay",
+      "label": "First Day",
+      "values": {
+        "cabarrus-county-school-calendar": "Aug 12, 2026",
+        "charlotte-mecklenburg-schools-calendar": "Aug 25, 2026",
+        "union-county-school-calendar": "Aug 24, 2026"
+      }
+    },
+    {
+      "key": "lastDay",
+      "label": "Last Day",
+      "values": {
+        "cabarrus-county-school-calendar": "May 26, 2027",
+        "charlotte-mecklenburg-schools-calendar": "Jun 9, 2027",
+        "union-county-school-calendar": "Jun 4, 2027"
+      }
+    },
+    {
+      "key": "thanksgivingBreak",
+      "label": "Thanksgiving",
+      "values": {
+        "cabarrus-county-school-calendar": "Nov 25–27, 2026",
+        "charlotte-mecklenburg-schools-calendar": "Nov 26–27, 2026",
+        "union-county-school-calendar": "Nov 25–27, 2026"
+      }
+    },
+    {
+      "key": "winterBreak",
+      "label": "Winter Break",
+      "values": {
+        "cabarrus-county-school-calendar": "Dec 23, 2026–Jan 1, 2027",
+        "charlotte-mecklenburg-schools-calendar": "Dec 21, 2026–Jan 1, 2027",
+        "union-county-school-calendar": "Dec 21, 2026–Jan 1, 2027"
+      }
+    },
+    {
+      "key": "springBreak",
+      "label": "Spring Break",
+      "values": {
+        "cabarrus-county-school-calendar": "Mar 8–12, 2027",
+        "charlotte-mecklenburg-schools-calendar": "Mar 29–Apr 2, 2027",
+        "union-county-school-calendar": "Mar 29–Apr 2, 2027"
+      }
+    }
+  ],
   "yearNumbers": [
     {
       "label": "Instructional Hours",
-      "value": "1045.76",
-      "detail": "The traditional calendar lists 1045.76 hours of instruction, above North Carolina's 1,025-hour requirement. These additional hours may provide scheduling flexibility after disruptions, subject to district decisions and North Carolina requirements."
+      "value": "1,045.76 hours",
+      "detail": ""
     },
     {
       "label": "Semester 1",
       "value": "84 days",
-      "detail": "The first semester runs from the August start through the December exam and winter break window."
+      "detail": ""
     },
     {
       "label": "Semester 2",
       "value": "90 days",
-      "detail": "The second semester includes spring break, Good Friday, exams, graduation, and the May closeout."
+      "detail": ""
     }
+  ],
+  "instructionalDaysDescription": "CCS schedules 174 instructional days for students.",
+  "customSections": [
+    {
+      "id": "ccs-2026-2027-calendar-selector",
+      "label": "Which CCS Calendar Should You Use?",
+      "position": "afterVerification",
+      "schemaHasPart": true,
+      "content": "Most CCS students follow the Traditional Calendar. Early College programs and the district’s Restart schools use separate calendars, so confirm the student’s school or program before planning around these dates.",
+      "definitions": [
+        { "term": "Most CCS schools", "description": "Use the Traditional Academic Calendar shown on this page." },
+        { "term": "Early College students", "description": "The Early College calendar starts August 12, ends May 13, and schedules graduation May 15 at West Cabarrus High School." },
+        { "term": "Restart schools", "description": "Concord Middle School, Rocky River Elementary, Royal Oaks, W.M. Irvin Elementary, and Winecoff Elementary use the Restart Calendar, which adds early dismissals on September 4, February 5, and March 5." }
+      ],
+      "links": [
+        { "label": "Traditional Calendar PDF", "to": "https://files.smartsites.parentsquare.com/3048/2026-2027_ccs_academic_calendar_approved_10132025.pdf", "description": "For most Cabarrus County Schools students." },
+        { "label": "Early College Calendar PDF", "to": "https://files.smartsites.parentsquare.com/3048/2026-2027_ccs_early_college_calendar_approved_10132025.pdf", "description": "Check its earlier last day, exam dates, workdays, and graduation schedule." },
+        { "label": "Restart Calendar PDF", "to": "https://files.smartsites.parentsquare.com/3048/2026-2027_ccs_restart_academic_calendar.pdf", "description": "Check the three additional Restart early-dismissal dates." }
+      ]
+    },
+    {
+      "id": "ccs-2026-2027-calendar-notes",
+      "label": "CCS Calendar Notes",
+      "position": "afterCalendarExport",
+      "schemaHasPart": true,
+      "definitions": [
+        { "term": "Capped and uncapped workdays", "description": "Students do not attend on either type of workday; the distinction applies to staff scheduling." },
+        { "term": "Early dismissal", "description": "The Traditional Calendar schedules early dismissal at the end of each quarter. High school exams fall within separate December and May exam windows. Restart schools also have three additional early-dismissal dates." },
+        { "term": "High school exams", "description": "High school exams are scheduled for December 14–18, May 20–21, and May 24–26. The May dates are not one continuous range." },
+        { "term": "Graduation", "description": "Traditional high school graduations are May 26–28 at Cabarrus Arena & Events Center. Individual schools publish ceremony times and senior instructions." }
+      ]
+    }
+  ],
+  "whatsNew": {
+    "title": "What Changed from 2025–26",
+    "content": [
+      "School starts one day later than in 2025–26 — August 12 instead of August 11.",
+      "The last day falls six days later — May 26 instead of May 20.",
+      "The Traditional Calendar schedules 174 instructional days, one fewer than in 2025–26."
+    ]
+  },
+  "sourceReviewSummary": "Sources include the official Traditional, Early College, and Restart calendars published by Cabarrus County Schools.",
+  "sourceReviewDetailsTitle": "How we reviewed the CCS calendars",
+  "sourceReviewDetails": [
+    "The Traditional Calendar was checked for the first and last day, breaks, student no-school workdays, early dismissals, exam windows, graduation, and its published instructional-day and hour totals.",
+    "The separate Early College and Restart PDFs were reviewed so this page does not apply Traditional Calendar dates to every CCS student.",
+    "The downloadable .ics file includes the verified Traditional Calendar dates shown on this page and does not update automatically after import."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Cabarrus County Schools sources.",
+  "sourceNextReviewText": "Next review: when CCS revises a 2026–27 calendar or publishes another relevant calendar update.",
+  "sources": [
+    { "label": "CCS Academic Calendars", "url": "https://www.cabarrus.k12.nc.us/1508_4" },
+    { "label": "Official CCS 2026–27 Traditional Calendar PDF", "url": "https://files.smartsites.parentsquare.com/3048/2026-2027_ccs_academic_calendar_approved_10132025.pdf" },
+    { "label": "Official CCS 2026–27 Early College Calendar PDF", "url": "https://files.smartsites.parentsquare.com/3048/2026-2027_ccs_early_college_calendar_approved_10132025.pdf" },
+    { "label": "Official CCS 2026–27 Restart Calendar PDF", "url": "https://files.smartsites.parentsquare.com/3048/2026-2027_ccs_restart_academic_calendar.pdf" }
   ],
   "events": [
     {
@@ -56,8 +292,9 @@
     },
     {
       "date": "2026-09-25",
-      "name": "No School (Capped Workday)",
-      "type": "no_school"
+      "name": "Capped Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2026-10-09",
@@ -66,18 +303,21 @@
     },
     {
       "date": "2026-10-12",
-      "name": "No School (Uncapped Workday)",
-      "type": "no_school"
+      "name": "Uncapped Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2026-10-13",
-      "name": "No School (Capped Workday)",
-      "type": "no_school"
+      "name": "Capped Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2026-11-03",
-      "name": "No School (Uncapped Workday)",
-      "type": "no_school"
+      "name": "Uncapped Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2026-11-11",
@@ -101,7 +341,11 @@
     },
     {
       "date": "2026-12-14",
-      "name": "High School Exam Window Begins",
+      "endDate": "2026-12-18",
+      "displayDate": "December 14–18, 2026",
+      "dates": ["2026-12-14", "2026-12-15", "2026-12-16", "2026-12-17", "2026-12-18"],
+      "exportDatesIndividually": true,
+      "name": "High School Exams",
       "type": "academic"
     },
     {
@@ -111,13 +355,15 @@
     },
     {
       "date": "2026-12-21",
-      "name": "No School (Uncapped Workday)",
-      "type": "no_school"
+      "name": "Uncapped Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2026-12-22",
-      "name": "No School (Uncapped Workday)",
-      "type": "no_school"
+      "name": "Uncapped Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2026-12-23",
@@ -136,8 +382,9 @@
     },
     {
       "date": "2027-01-04",
-      "name": "No School (Capped Workday)",
-      "type": "no_school"
+      "name": "Capped Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-01-18",
@@ -146,13 +393,15 @@
     },
     {
       "date": "2027-02-15",
-      "name": "No School (Uncapped Workday)",
-      "type": "no_school"
+      "name": "Uncapped Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-02-16",
-      "name": "No School (Capped Workday)",
-      "type": "no_school"
+      "name": "Capped Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-03-08",
@@ -176,23 +425,30 @@
     },
     {
       "date": "2027-03-29",
-      "name": "No School (Uncapped Workday)",
-      "type": "no_school"
+      "name": "Uncapped Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-04-16",
-      "name": "No School (Uncapped Workday)",
-      "type": "no_school"
+      "name": "Uncapped Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-04-19",
-      "name": "No School (Capped Workday)",
-      "type": "no_school"
+      "name": "Capped Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-05-20",
-      "name": "High School Exam Window Begins",
-      "type": "academic"
+      "name": "High School Exams",
+      "type": "academic",
+      "endDate": "2027-05-26",
+      "displayDate": "May 20–21 and May 24–26, 2027",
+      "dates": ["2027-05-20", "2027-05-21", "2027-05-24", "2027-05-25", "2027-05-26"],
+      "exportDatesIndividually": true
     },
     {
       "date": "2027-05-26",
@@ -206,11 +462,11 @@
     },
     {
       "date": "2027-05-26",
-      "name": "Graduation Window Begins",
-      "type": "graduation"
+      "endDate": "2027-05-28",
+      "displayDate": "May 26–28, 2027",
+      "name": "Traditional High School Graduations",
+      "type": "graduation",
+      "description": "Ceremonies are scheduled at Cabarrus Arena & Events Center; individual schools publish times and senior instructions."
     }
-  ],
-  "calendarNotes": "The CCS traditional calendar includes separate student no-school weekdays, quarter-end early dismissals, December and May high school exam windows, and a graduation window that is finalized by individual high schools. Families should also confirm whether their student follows the traditional, Early College, or Restart calendar before using dates for travel, childcare, or transportation planning.",
-  "datePublished": "2026-07-15",
-  "dateModified": "2026-07-15"
+  ]
 }

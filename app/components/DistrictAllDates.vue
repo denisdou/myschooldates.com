@@ -18,6 +18,7 @@ type CalendarEvent = {
   hideLabel?: boolean
   preventRangeMerge?: boolean
   derivedFromPublishedBreakDates?: boolean
+  isDerivedPlanningDate?: boolean
 }
 type LegendItem = { label: string; dot: string }
 type SourceLink = { label: string; url: string }
@@ -40,6 +41,7 @@ const props = defineProps<{
   coverageNote?: string
   coverageNotePosition?: 'top' | 'bottom' | 'both'
   coveredBreakDatesNote?: string
+  hideCoveredBreakDatesNote?: boolean
   derivedDateNote?: string
   includedDatesInKeyDates?: string[]
   firstDay?: string
@@ -100,6 +102,7 @@ const visibleEvents = computed(() => props.events.filter(e =>
 ))
 
 const coveredBreakDateNames = computed(() => {
+  if (props.hideCoveredBreakDatesNote) return []
   const names = props.events
     .filter(e => isCoveredByBreak(e, props.events))
     .map(e => normalizeName(e))
@@ -389,7 +392,9 @@ function displayDateRangeParts(event: DisplayEvent) {
   if (event.displayDate.includes(';')) return null
   const separator = event.displayDate.includes('–') ? '–' : event.displayDate.includes(' - ') ? ' - ' : ''
   if (!separator) return null
-  const [startLabel, endLabel] = event.displayDate.split(separator)
+  const parts = event.displayDate.split(separator)
+  if (parts.length !== 2) return null
+  const [startLabel, endLabel] = parts
   if (!startLabel?.trim() || !endLabel?.trim()) return null
   return {
     startLabel: startLabel.trim(),
@@ -537,7 +542,7 @@ function formatRangeEnd(event: DisplayEvent) {
               <p v-if="shouldShowDescription(event)" class="district-calendar-table__note mt-1 max-w-3xl text-sm leading-relaxed">
                 {{ event.description }}
               </p>
-              <p v-if="event.derivedFromPublishedBreakDates" class="mt-1 text-xs text-rds-ink-dim">
+              <p v-if="event.isDerivedPlanningDate || event.derivedFromPublishedBreakDates" class="mt-1 text-xs text-rds-ink-dim">
                 {{ derivedDateNote || 'Return date based on the district\'s published no-school schedule.' }}
               </p>
             </div>

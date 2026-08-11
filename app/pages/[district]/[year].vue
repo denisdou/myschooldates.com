@@ -941,9 +941,8 @@ const sourceBasedOnRefs = [
   ...additionalSourceCalendarEntities.map(source => ({ '@id': source['@id'] })),
 ]
 const sourceBasedOnValue = sourceBasedOnRefs.length === 1 ? sourceBasedOnRefs[0] : sourceBasedOnRefs
-const datasetSourceCalendarIds = (((cal.value as any)?.schemaDatasetSourceCalendarIds ?? (cal.value as any)?.meta?.schemaDatasetSourceCalendarIds) as string[] | undefined)
-const datasetBasedOnRefs = Array.isArray(datasetSourceCalendarIds)
-  ? datasetSourceCalendarIds
+const selectSourceRefs = (sourceIds: string[] | undefined) => Array.isArray(sourceIds)
+  ? sourceIds
       .map(id => {
         if ((id === 'source-calendar' || id === sourceCalendarId) && basedOnUrl) return { '@id': `${canonicalUrl}#${sourceCalendarId}` }
         if (id === 'source-calendar-page' && sourcePageCitationUrl) return { '@id': `${canonicalUrl}#source-calendar-page` }
@@ -952,7 +951,12 @@ const datasetBasedOnRefs = Array.isArray(datasetSourceCalendarIds)
       })
       .filter(Boolean)
   : sourceBasedOnRefs
+const datasetSourceCalendarIds = (((cal.value as any)?.schemaDatasetSourceCalendarIds ?? (cal.value as any)?.meta?.schemaDatasetSourceCalendarIds) as string[] | undefined)
+const datasetBasedOnRefs = selectSourceRefs(datasetSourceCalendarIds)
 const datasetBasedOnValue = datasetBasedOnRefs.length === 1 ? datasetBasedOnRefs[0] : datasetBasedOnRefs
+const webPageIsBasedOnSourceIds = (((cal.value as any)?.schemaWebPageIsBasedOnSourceIds ?? (cal.value as any)?.meta?.schemaWebPageIsBasedOnSourceIds) as string[] | undefined)
+const webPageBasedOnRefs = selectSourceRefs(webPageIsBasedOnSourceIds)
+const webPageBasedOnValue = webPageBasedOnRefs.length === 1 ? webPageBasedOnRefs[0] : webPageBasedOnRefs
 const calendarIcsUrl = `https://myschooldates.com/calendars/${district.value.slug}-${cal.value.schoolYear}.ics`
 const hideDatasetSchema = computed(() => Boolean((cal.value as any)?.hideDatasetSchema || (cal.value as any)?.meta?.hideDatasetSchema))
 const spatialCoverageOverride = (cal.value as any)?.schemaSpatialCoverage ?? (cal.value as any)?.meta?.schemaSpatialCoverage ?? (district.value as any)?.schemaSpatialCoverage ?? (district.value as any)?.meta?.schemaSpatialCoverage
@@ -1049,6 +1053,9 @@ const configuredKeyDateSummaryItems = computed(() =>
 )
 const keyDatesSummaryTitle = computed(() =>
   (cal.value as any)?.keyDatesSummaryTitle ?? (cal.value as any)?.meta?.keyDatesSummaryTitle ?? `${displaySchoolYear.value} Key Dates & Holidays`
+)
+const keyDatesHeading = computed(() =>
+  (cal.value as any)?.keyDatesHeading ?? (cal.value as any)?.meta?.keyDatesHeading ?? 'Key Dates'
 )
 const keyDatesSummarySubtitle = computed(() =>
   (cal.value as any)?.keyDatesSummarySubtitle ?? (cal.value as any)?.meta?.keyDatesSummarySubtitle ?? 'First day, last day, school holidays, and major break ranges'
@@ -1213,12 +1220,15 @@ const hideItemListSchema = computed(() => Boolean((cal.value as any)?.hideItemLi
 const splitCalendarDateItemListSchema = computed(() => Boolean(
   (cal.value as any)?.splitCalendarDateItemListSchema || (cal.value as any)?.meta?.splitCalendarDateItemListSchema,
 ))
+const calendarDateItemListId = computed(() => String(
+  (cal.value as any)?.schemaCalendarDateItemListId ?? (cal.value as any)?.meta?.schemaCalendarDateItemListId ?? 'student-calendar-dates',
+).replace(/^#/, ''))
 const calendarDateItemListEvents = computed(() => {
   if (!splitCalendarDateItemListSchema.value) return []
   return (cal.value?.events ?? []).filter((event: any) => event.type !== 'break_end')
 })
 if (datasetEntity && !hideItemListSchema.value && calendarDateItemListEvents.value.length) {
-  Object.assign(datasetEntity, { mainEntity: { '@id': `${canonicalUrl}#student-calendar-dates` } })
+  Object.assign(datasetEntity, { mainEntity: { '@id': `${canonicalUrl}#${calendarDateItemListId.value}` } })
 }
 const webPageMainEntityMode = (cal.value as any)?.webPageMainEntity ?? (cal.value as any)?.meta?.webPageMainEntity ?? (district.value as any)?.webPageMainEntity ?? (district.value as any)?.meta?.webPageMainEntity
 const webPageMainEntity = webPageMainEntityMode === 'none'
@@ -1257,14 +1267,14 @@ const webPageEntity = {
       ...(includeArticleSchema ? [{ '@id': `${canonicalUrl}#calendar-analysis` }] : []),
       ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
       ...(!hideItemListSchema.value && keyDateItemListEvents.value.length ? [{ '@id': `${canonicalUrl}#key-dates` }] : []),
-      ...(!hideItemListSchema.value && calendarDateItemListEvents.value.length ? [{ '@id': `${canonicalUrl}#student-calendar-dates` }] : []),
+      ...(!hideItemListSchema.value && calendarDateItemListEvents.value.length ? [{ '@id': `${canonicalUrl}#${calendarDateItemListId.value}` }] : []),
       ...(faqSchemaItems.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
       ...customSectionSchemaParts.value,
       ...yearNumbersSchemaParts.value,
     ] }
     : {}),
   ...(siblingYearLinks.length ? { relatedLink: siblingYearLinks } : {}),
-  ...(sourceBasedOnRefs.length ? { isBasedOn: sourceBasedOnValue } : {}),
+  ...(webPageBasedOnRefs.length ? { isBasedOn: webPageBasedOnValue } : {}),
   ...(sourcePdfIsArchivedCopy ? {
     associatedMedia: {
       '@type': 'MediaObject',
@@ -1372,7 +1382,7 @@ const keyDateItemListEntity = !hideItemListSchema.value && keyDateItemListEvents
 } : null
 const calendarDateItemListEntity = !hideItemListSchema.value && calendarDateItemListEvents.value.length ? {
   '@type': 'ItemList',
-  '@id': `${canonicalUrl}#student-calendar-dates`,
+  '@id': `${canonicalUrl}#${calendarDateItemListId.value}`,
   name: calendarDateItemListName.value,
   itemListElement: calendarDateItemListEvents.value.map((event: any, i: number) => ({
     '@type': 'ListItem',
@@ -1568,7 +1578,7 @@ useHead({
             <span>{{ verificationBadgeText || `Checked against the official ${district.shortName || district.name} calendar on ${verifiedDate}.` }}</span>
           </div>
           <details v-if="verifiedDate && !hideHeroVerificationProcess" class="district-hero__verification-details mt-5 p-3">
-            <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-rds-ink-dim">How verified</summary>
+            <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-rds-ink-dim">How we reviewed this calendar</summary>
             <ul class="mt-2 grid gap-1.5 text-xs text-rds-ink-muted sm:grid-cols-3">
               <li class="flex items-start gap-1.5">
                 <span class="mt-0.5 text-green-700">✓</span>
@@ -1672,7 +1682,7 @@ useHead({
 
       <!-- Key Date Cards -->
       <div v-if="!hiddenSections.has('keyDateCards')" id="key-dates" class="scroll-mt-24">
-        <h2 class="text-xl font-bold text-gray-900 mb-4">Key Dates</h2>
+        <h2 class="text-xl font-bold text-gray-900 mb-4">{{ keyDatesHeading }}</h2>
         <DistrictKeyDateCards :cal="cal!" />
       </div>
 
@@ -1868,6 +1878,7 @@ useHead({
         :coverage-note="(cal as any).allDatesCoverageNote ?? (cal as any).meta?.allDatesCoverageNote"
         :coverage-note-position="(cal as any).allDatesCoverageNotePosition ?? (cal as any).meta?.allDatesCoverageNotePosition"
         :covered-break-dates-note="(cal as any).allDatesCoveredBreakDatesNote ?? (cal as any).meta?.allDatesCoveredBreakDatesNote"
+        :hide-covered-break-dates-note="(cal as any).hideCoveredBreakDatesNote ?? (cal as any).meta?.hideCoveredBreakDatesNote"
         :derived-date-note="(cal as any).allDatesDerivedDateNote ?? (cal as any).meta?.allDatesDerivedDateNote"
         :legend-style="(cal as any).dateLegendStyle ?? (cal as any).meta?.dateLegendStyle"
         :month-notes="(cal as any).allDatesMonthNotes ?? (cal as any).meta?.allDatesMonthNotes"
@@ -1950,7 +1961,13 @@ useHead({
       </div>
 
       <!-- Grading Periods -->
-      <DistrictGradingPeriods :periods="(cal as any).gradingPeriods" />
+      <DistrictGradingPeriods
+        :periods="(cal as any).gradingPeriods"
+        :title="(cal as any).gradingPeriodsTitle ?? (cal as any).meta?.gradingPeriodsTitle"
+        :description="(cal as any).gradingPeriodsDescription ?? (cal as any).meta?.gradingPeriodsDescription"
+        :days-label="(cal as any).gradingPeriodsDaysLabel ?? (cal as any).meta?.gradingPeriodsDaysLabel"
+        :footer-note="(cal as any).gradingPeriodsFooterNote ?? (cal as any).meta?.gradingPeriodsFooterNote"
+      />
 
       <!-- What's Different This Year -->
       <div v-if="hasYearComparisonContent" id="year-comparison" class="scroll-mt-24 space-y-8">
@@ -2002,6 +2019,7 @@ useHead({
         :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
         :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
         :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
+        :hide-next-review="Boolean((cal as any).hideSourceNextReview ?? (cal as any).meta?.hideSourceNextReview)"
         :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
         :hide-review-date="Boolean((cal as any).hideSourceReviewDate ?? (cal as any).meta?.hideSourceReviewDate)"
       />
@@ -2061,14 +2079,18 @@ useHead({
         :student-count-as-of="(district as any).studentCountAsOf"
         :student-count-source-label="(district as any).studentCountSourceLabel"
         :student-count-source-url="(district as any).studentCountSourceUrl"
+        :student-count-approximate="Boolean((district as any).profileStudentCountApproximate)"
         :school-count="(district as any).schoolCount"
+        :school-count-exact="Boolean((district as any).profileSchoolCountExact)"
         :calendar-type="(district as any).calendarType"
+        :hide-calendar-type="Boolean((district as any).hideProfileCalendarType)"
         :grades="district!.grades"
         :founded="(district as any).founded"
         :county="(district as any).county"
         :metro="(district as any).metro"
         :district-fact="(district as any).districtFact"
         :title="(district as any).profileTitle ?? (district as any).meta?.profileTitle"
+        :disclaimer="(district as any).profileDisclaimer"
       />
 
       <!-- Custom Sections: beforeSources -->
@@ -2092,6 +2114,7 @@ useHead({
         :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
         :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
         :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
+        :hide-next-review="Boolean((cal as any).hideSourceNextReview ?? (cal as any).meta?.hideSourceNextReview)"
         :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
         :hide-review-date="Boolean((cal as any).hideSourceReviewDate ?? (cal as any).meta?.hideSourceReviewDate)"
       />

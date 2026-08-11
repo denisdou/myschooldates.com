@@ -1,0 +1,502 @@
+{
+  "institutionId": "albuquerque-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Albuquerque Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-07",
+  "lastDay": "2027-05-27",
+  "temporalCoverageStart": "2026-08-03",
+  "temporalCoverageEnd": "2027-05-28",
+  "sourceUrl": "https://www.aps.edu/schools/school-calendars-and-grading-periods",
+  "sourceDocumentPage": "https://www.aps.edu/schools/school-calendars-and-grading-periods/school-calendars-2026-2027-1/2026-2027-school-calendar-english",
+  "sourcePdfUrl": "https://www.aps.edu/schools/school-calendars-and-grading-periods/school-calendars-2026-2027-1/2026-2027-school-calendar-english",
+  "lastCheckedPdfUrl": "https://www.aps.edu/schools/school-calendars-and-grading-periods/school-calendars-2026-2027-1/2026-2027-school-calendar-english",
+  "sourceCheckedAt": "2026-08-11",
+  "sourceChecksumSha256": "4034c3102b2b656c715f59b1d046a7c0380b89d1270210901e85585cf3ce6891",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.aps.edu/schools/school-calendars-and-grading-periods",
+    "linkText": "2026-2027 Calendar - English (PDF)",
+    "expectedPdfUrl": "https://www.aps.edu/schools/school-calendars-and-grading-periods/school-calendars-2026-2027-1/2026-2027-school-calendar-english",
+    "expectedChecksumSha256": "4034c3102b2b656c715f59b1d046a7c0380b89d1270210901e85585cf3ce6891"
+  },
+  "lastVerifiedAt": "2026-08-11",
+  "dateCreated": "2026-08-11",
+  "datePublished": "2026-08-11",
+  "dateModified": "2026-08-11",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "makeup_day_activation", "confirmed_data_error"],
+  "sourceVersion": "APS 2026-2027 Printable Calendar - English",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideDatasetSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "hiddenCustomSectionIds": [
+    "albuquerque-aps-calendar-applies",
+    "albuquerque-aps-official-calendar-resources"
+  ],
+  "seoTitle": "Albuquerque Public Schools Calendar 2026–27 | Key Dates",
+  "seoDescription": "See Albuquerque Public Schools' 2026–27 first days, holidays, breaks, virtual learning days, grading dates, official PDF, and calendar download.",
+  "heroSummary": "For 2026–27, APS students in grades 1–12 start Friday, August 7, while Pre-K and kindergarten students start Tuesday, August 11. Fall Break is Friday, October 9. Winter Break runs December 21 through January 1, and Spring Break runs March 22–25, followed by the Vernal Holiday on March 26. The last day for students is Thursday, May 27, 2027.",
+  "calendarNotes": "Most APS schools, including traditional and Transformational Opportunity Pilot Schools, follow the main district calendar. Grades 1–12 start August 7; Pre-K and kindergarten start August 11. The November 23–24 and March 29–30 parent-teacher conference dates use virtual sync/asynchronous learning. APS publishes quarter dates for K–8, middle, and high schools and trimester dates for K–5 elementary schools. College & Career High School follows a separate CNM-aligned calendar. APS also publishes the printable calendar in English and seven translated editions.",
+  "heroFactChips": [
+    "Grades 1-12 start Aug 7",
+    "Pre-K and K start Aug 11",
+    "Virtual learning Nov 23–24 and Mar 29–30",
+    "Students return Jan 5",
+    "Last day May 27"
+  ],
+  "verificationBadgeText": "Reviewed August 11, 2026, against the official APS calendar page and English printable PDF.",
+  "keyDatesSummaryTitle": "APS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Grade-specific openings, major breaks, and the last day for students",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Grades 1-12",
+      "date": "2026-08-07",
+      "type": "school_start",
+      "schemaDescription": "Albuquerque Public Schools students in grades 1-12 begin the 2026-27 school year on August 7, 2026."
+    },
+    {
+      "label": "First Day",
+      "name": "First Day for Pre-K and Kindergarten",
+      "date": "2026-08-11",
+      "type": "school_start",
+      "schemaDescription": "APS Pre-K and kindergarten students begin on August 11, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "schemaDescription": "APS schools are closed for Thanksgiving Break from November 25-27, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "schemaDescription": "APS Winter Break runs from December 21, 2026, through January 1, 2027."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break and Vernal Holiday",
+      "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "type": "break_start",
+      "description": "Spring Break is March 22-25; the Vernal Holiday follows on March 26.",
+      "schemaDescription": "APS students are out March 22-26, 2027, for Spring Break followed by the Vernal Holiday."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Students",
+      "date": "2027-05-27",
+      "type": "school_end",
+      "schemaDescription": "The scheduled last day for Albuquerque Public Schools students is May 27, 2027."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Grading", "id": "aps-2026-2027-grading-cycles" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "moveCalendarExportBeforeAllDates": true,
+  "allDatesTitle": "Albuquerque Public Schools 2026–27 Dates",
+  "allDatesCoverageNote": "This list covers districtwide student dates, grade-specific opening dates, school closures, virtual learning/conference days, grading-period endings, graduation week, and staff days that affect student attendance. Virtual learning days are kept separate from no-school days. Bell times, testing, athletics, performances, transportation notices, graduation ceremony times, and school-specific events may be published separately.",
+  "allDatesSourceUrl": "https://www.aps.edu/schools/school-calendars-and-grading-periods/school-calendars-2026-2027-1/2026-2027-school-calendar-english",
+  "allDatesSourceLinks": [
+    {
+      "label": "APS School Calendars and Grading Periods page",
+      "url": "https://www.aps.edu/schools/school-calendars-and-grading-periods"
+    },
+    {
+      "label": "APS 2026–27 English printable calendar",
+      "url": "https://www.aps.edu/schools/school-calendars-and-grading-periods/school-calendars-2026-2027-1/2026-2027-school-calendar-english"
+    }
+  ],
+  "dateLegendLabelOverrides": {
+    "Holiday": "Schools Closed",
+    "Holidays": "Schools Closed",
+    "School Closure": "Schools Closed",
+    "Break": "Break",
+    "Staff Day": "No School for Students",
+    "Teacher Workday": "No School for Students",
+    "Academic": "Academic Date"
+  },
+  "dateLegendItems": [
+    { "label": "First Day", "dot": "bg-green-500" },
+    { "label": "Schools Closed", "dot": "bg-red-400" },
+    { "label": "Break", "dot": "bg-purple-400" },
+    { "label": "No School for Students", "dot": "bg-gray-400" },
+    { "label": "Virtual Learning", "dot": "bg-blue-400" },
+    { "label": "Grading Date", "dot": "bg-slate-400" },
+    { "label": "Graduation", "dot": "bg-yellow-500" },
+    { "label": "Last Day", "dot": "bg-rose-500" }
+  ],
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideSocialShareButtons": true,
+  "unifiedDownloadTitle": "APS 2026–27 Calendar Resources",
+  "unifiedDownloadDescription": "Use APS's official calendar options, open the district's printable PDF, or download the MySchoolDates .ics file for a one-time calendar import.",
+  "officialSubscriptionTitle": "Official APS Calendar Options",
+  "officialSubscriptionDescription": "APS provides its own Google Calendar and .ics import links from the district calendar page.",
+  "officialSubscriptionButtonLabel": "Open Official APS Calendar Options",
+  "officialSubscriptionUrl": "https://www.aps.edu/schools/school-calendars-and-grading-periods",
+  "icsHeading": "MySchoolDates APS Dates (.ics)",
+  "icsDescription": "Download APS start dates, school closures, breaks, virtual learning days, grading dates, and the last day for students for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download APS Dates (.ics)",
+  "icsButtonSupportText": "One-time import. Later APS revisions and school-specific events do not update automatically.",
+  "pdfHeading": "Official APS 2026–27 Printable Calendar",
+  "pdfDescription": "Open the official one-page Albuquerque Public Schools calendar in English. Seven translated editions are listed below.",
+  "pdfButtonLabel": "View Official English PDF",
+  "pdfVersionLabel": "APS 2026-2027 Printable Calendar - English",
+  "alternateCalendarsTitle": "Official APS Calendars in Seven Additional Languages",
+  "alternateCalendarsDescription": "APS publishes the same 2026–27 printable calendar in Spanish, Arabic, Simplified Chinese, Dari, Farsi, Swahili, and Vietnamese. The English PDF appears in the download section above.",
+  "alternateCalendarsButtonLabel": "View Official PDF",
+  "alternateCalendarsCollapsible": true,
+  "alternateCalendarsSummaryLabel": "View 7 translated APS calendars",
+  "alternateCalendars": [
+    {
+      "type": "calendar-es",
+      "label": "2026–27 Calendar - Español / Spanish",
+      "pdfUrl": "https://www.aps.edu/schools/school-calendars-and-grading-periods/school-calendars-2026-2027-1/aps-26_27-printable-calendar_spanish-pdf"
+    },
+    {
+      "type": "calendar-ar",
+      "label": "2026–27 Calendar - العربية / Arabic",
+      "pdfUrl": "https://www.aps.edu/schools/school-calendars-and-grading-periods/school-calendars-2026-2027-1/aps-26_27-printable-calendar_arabic-pdf"
+    },
+    {
+      "type": "calendar-zh-hans",
+      "label": "2026–27 Calendar - 简体中文 / Simplified Chinese",
+      "pdfUrl": "https://www.aps.edu/schools/school-calendars-and-grading-periods/school-calendars-2026-2027-1/aps-26_27-printable-calendar_simplified-chinese-pdf"
+    },
+    {
+      "type": "calendar-prs-dari",
+      "label": "2026–27 Calendar - دری / Dari",
+      "pdfUrl": "https://www.aps.edu/schools/school-calendars-and-grading-periods/school-calendars-2026-2027-1/aps-26_27-printable-calendar_dari-pdf"
+    },
+    {
+      "type": "calendar-fa",
+      "label": "2026–27 Calendar - فارسی / Farsi",
+      "pdfUrl": "https://www.aps.edu/schools/school-calendars-and-grading-periods/school-calendars-2026-2027-1/aps-26_27-printable-calendar_farsi-pdf"
+    },
+    {
+      "type": "calendar-sw",
+      "label": "2026–27 Calendar - Kiswahili / Swahili",
+      "pdfUrl": "https://www.aps.edu/schools/school-calendars-and-grading-periods/school-calendars-2026-2027-1/aps-26_27-printable-calendar_swahili-pdf"
+    },
+    {
+      "type": "calendar-vi",
+      "label": "2026–27 Calendar - Tiếng Việt / Vietnamese",
+      "pdfUrl": "https://www.aps.edu/schools/school-calendars-and-grading-periods/school-calendars-2026-2027-1/aps-26_27-printable-calendar_vietnamese-pdf"
+    }
+  ],
+  "sourceReviewSummary": "Main district dates were checked against the APS School Calendars and Grading Periods page and English printable calendar on August 11, 2026. College & Career High School dates were checked against APS's separate 2026–27 CCHS calendar.",
+  "sourceReviewDetails": [
+    "We verified grade-specific first days, school closures, breaks, virtual learning/conference days, grading-term endings, graduation week, and the last day for students against the official APS calendar page, and cross-checked the English printable PDF where those dates are listed.",
+    "The APS webpage names Labor Day, Indigenous Peoples' Day, Election Day, Veterans Day, Martin Luther King Jr. Day, Presidents Day, and the Vernal Holiday, while the compact PDF sometimes uses the generic label Holiday. The event list uses the more specific official webpage labels.",
+    "The conference dates are represented as virtual learning dates, not school closures, because APS describes them as virtual sync/asynchronous learning days.",
+    "College & Career High School follows the CNM academic calendar with differences; school-specific bell schedules, testing, transportation, athletics, performances, and graduation ceremony details are outside this districtwide list.",
+    "APS lists English plus seven translated printable calendars. Each translated link below points to the official APS file supplied for that language."
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When does Albuquerque Public Schools start in 2026?",
+      "a": "APS students in grades 1-12 start Friday, August 7, 2026. Pre-K and kindergarten students start Tuesday, August 11, 2026."
+    },
+    {
+      "q": "When is APS Fall Break in 2026?",
+      "a": "Albuquerque Public Schools has a one-day Fall Break on Friday, October 9, 2026. Schools are also closed Monday, October 12 for Indigenous Peoples' Day."
+    },
+    {
+      "q": "When is APS Winter Break in 2026-27?",
+      "a": "APS Winter Break runs Monday, December 21, 2026, through Friday, January 1, 2027. January 4 is a staff professional development day with no school for students; students return January 5."
+    },
+    {
+      "q": "When is APS Spring Break in 2027?",
+      "a": "APS Spring Break runs Monday, March 22, through Thursday, March 25, 2027. Schools are also closed Friday, March 26 for the Vernal Holiday."
+    },
+    {
+      "q": "Are the APS parent-teacher conference dates school holidays?",
+      "a": "No. APS identifies November 23-24 and March 29-30 as K-12 parent-teacher conference and virtual sync/asynchronous learning days. Students may have remote work rather than a regular campus day."
+    },
+    {
+      "q": "Does College & Career High School follow this APS calendar?",
+      "a": "Not exactly. APS says College & Career High School follows the CNM academic calendar with some differences. Students should use that school's calendar and announcements."
+    },
+    {
+      "q": "Is the Albuquerque APS calendar available in other languages?",
+      "a": "Yes. APS publishes 2026-27 printable calendars in English, Spanish, Arabic, Simplified Chinese, Dari, Farsi, Swahili, and Vietnamese."
+    },
+    {
+      "q": "Does the downloaded APS calendar update automatically?",
+      "a": "No. The file is a one-time import and will not automatically reflect later APS revisions, weather closures, or school-specific events."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When does Albuquerque Public Schools start in 2026?",
+    "When is APS Winter Break in 2026-27?",
+    "Are APS parent-teacher conference dates days off?",
+    "Does College & Career High School use the main APS calendar?",
+    "Do all APS schools use quarters?",
+    "Where should families verify Albuquerque Public Schools calendar changes?"
+  ],
+  "faqDisplayLimit": 6,
+  "hideFaqSchema": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "whatsDifferent",
+    "comparison",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends"
+  ],
+  "customSections": [
+    {
+      "id": "aps-2026-2027-calendar-applies",
+      "label": "Which APS Calendar Applies?",
+      "position": "afterVerification",
+      "content": "Most APS schools, including traditional and Transformational Opportunity Pilot Schools (TOPs), follow this calendar. College & Career High School follows a separate CNM-aligned calendar with some differences.",
+      "links": [
+        {
+          "label": "View the official College & Career High School calendar",
+          "to": "https://www.aps.edu/schools/school-calendars-and-grading-periods/college-and-career-high-school-calendar-2026-2027",
+          "description": "CCHS starts August 17, 2026, and its last day is April 30, 2027."
+        }
+      ]
+    },
+    {
+      "id": "aps-2026-2027-grade-starts",
+      "label": "The Main APS Calendar Has Two Student Start Dates",
+      "position": "afterKeyDates",
+      "content": "The first day depends on grade level, which is especially important for families with children in different grades.",
+      "table": {
+        "columns": ["Students", "First day", "What families need to know"],
+        "rows": [
+          ["Grades 1-12", "Friday, August 7, 2026", "Staff professional development runs August 3–6 before students return."],
+          ["Pre-K and kindergarten", "Tuesday, August 11, 2026", "Four calendar days later than grades 1-12; confirm orientation and arrival instructions with the school."]
+        ]
+      }
+    },
+    {
+      "id": "aps-2026-2027-virtual-conference-days",
+      "label": "Parent-Teacher Conference Days Are Virtual Learning Days",
+      "position": "afterKeyDates",
+      "content": "APS lists November 23–24 and March 29–30 as K–12 parent-teacher conference days with virtual sync/asynchronous learning. Students may have online assignments instead of a regular on-campus day.",
+      "table": {
+        "columns": ["Dates", "Schedule type", "What families need to know"],
+        "rows": [
+          ["November 23–24, 2026", "K–12 parent-teacher conferences / virtual learning days", "Students may have online assignments before Thanksgiving Break begins November 25."],
+          ["March 29–30, 2027", "K–12 parent-teacher conferences / virtual learning days", "Students return to virtual work after Spring Break and the Vernal Holiday rather than to a regular campus day."]
+        ]
+      }
+    },
+    {
+      "id": "aps-2026-2027-grading-cycles",
+      "label": "APS Quarter and Trimester End Dates",
+      "position": "afterAllDates",
+      "content": "APS publishes quarter end dates for K–8, middle, and high schools and trimester end dates for K–5 elementary schools. Both schedules end May 27.",
+      "table": {
+        "columns": ["Grading system", "Term", "End date"],
+        "rows": [
+          ["Quarter - K-8, middle, and high schools", "Quarter 1", "October 8, 2026"],
+          ["Quarter - K-8, middle, and high schools", "Quarter 2", "December 18, 2026"],
+          ["Quarter - K-8, middle, and high schools", "Quarter 3", "March 12, 2027"],
+          ["Quarter - K-8, middle, and high schools", "Quarter 4", "May 27, 2027"],
+          ["Trimester - K-5 elementary schools", "Trimester 1", "November 6, 2026"],
+          ["Trimester - K-5 elementary schools", "Trimester 2", "February 26, 2027"],
+          ["Trimester - K-5 elementary schools", "Trimester 3", "May 27, 2027"]
+        ]
+      }
+    },
+    {
+      "id": "aps-2026-2027-scope",
+      "label": "What the Districtwide APS Calendar Does Not Replace",
+      "position": "beforeSources",
+      "content": "APS states that school bell schedules vary to support bus transportation. Families should also use school communications for testing, athletics, performances, graduation ceremony times, campus events, and emergency updates.",
+      "links": [
+        {
+          "label": "APS Bell Schedules",
+          "to": "https://www.aps.edu/schools/bell-schedules",
+          "description": "Check school-level start and dismissal times."
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-03",
+      "endDate": "2026-08-06",
+      "name": "Staff Professional Development - No School for Students",
+      "type": "teacher_workday",
+      "description": "Teachers and staff return August 3; APS lists professional development August 3-6."
+    },
+    {
+      "date": "2026-08-07",
+      "name": "First Day for Grades 1-12",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-08-11",
+      "name": "First Day for Pre-K and Kindergarten",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-10-08",
+      "name": "Quarter 1 Ends",
+      "type": "quarter_end",
+      "badgeLabel": "Grading Date",
+      "description": "For K-8, middle, and high schools."
+    },
+    {
+      "date": "2026-10-09",
+      "name": "Fall Break - Schools Closed",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Indigenous Peoples' Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Election Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-06",
+      "name": "Trimester 1 Ends",
+      "type": "academic",
+      "badgeLabel": "Grading Date",
+      "description": "For elementary schools serving only grades K-5."
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-24",
+      "name": "K-12 Parent-Teacher Conferences / Virtual Learning Days",
+      "type": "academic",
+      "badgeLabel": "Virtual Learning",
+      "description": "APS describes these as virtual sync/asynchronous learning days, not school holidays."
+    },
+    {
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break - Schools Closed",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Quarter 2 Ends",
+      "type": "quarter_end",
+      "badgeLabel": "Grading Date",
+      "description": "For K-8, middle, and high schools."
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break - Schools Closed",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Staff Professional Development - No School for Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2027-01-05",
+      "name": "First Day of Second Semester for Students",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-26",
+      "name": "Trimester 2 Ends",
+      "type": "academic",
+      "badgeLabel": "Grading Date",
+      "description": "For elementary schools serving only grades K-5."
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Quarter 3 Ends",
+      "type": "quarter_end",
+      "badgeLabel": "Grading Date",
+      "description": "For K-8, middle, and high schools."
+    },
+    {
+      "date": "2027-03-22",
+      "endDate": "2027-03-25",
+      "name": "Spring Break - Schools Closed",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Vernal Holiday",
+      "type": "holiday",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-03-29",
+      "endDate": "2027-03-30",
+      "name": "K-12 Parent-Teacher Conferences / Virtual Learning Days",
+      "type": "academic",
+      "badgeLabel": "Virtual Learning",
+      "description": "APS describes these as virtual sync/asynchronous learning days, not school holidays."
+    },
+    {
+      "date": "2027-05-17",
+      "endDate": "2027-05-21",
+      "name": "Graduation Week",
+      "type": "graduation",
+      "description": "Ceremony dates and times may be school-specific."
+    },
+    {
+      "date": "2027-05-27",
+      "name": "Last Day for Students / All Grading Terms End",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Staff Professional Development - No School for Students",
+      "type": "teacher_workday"
+    }
+  ]
+}

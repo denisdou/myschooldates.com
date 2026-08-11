@@ -1,162 +1,242 @@
 {
   "institutionId": "union-county",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Union County Public Schools Calendar 2026–27",
   "firstDay": "2026-08-24",
   "lastDay": "2027-06-04",
   "totalSchoolDays": 175,
+  "semesters": 2,
+  "temporalCoverageStart": "2026-08-24",
+  "temporalCoverageEnd": "2027-06-04",
   "sourceUrl": "https://www.ucpsnc.org/calendars",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1782927101/unioncountyps/enmrljgzu4skyc7zdovr/2026-2027-Academic-Traditional-Calendar.pdf",
-  "lastVerifiedAt": "2026-07-15",
+  "sourceCalendarName": "UCPS 2026–27 Traditional Schools Academic Calendar",
+  "sourceVersion": "Board approved November 6, 2025",
+  "lastVerifiedAt": "2026-08-11",
   "datePublished": "2026-07-15",
-  "dateModified": "2026-07-15",
-  "sourceVersion": "2026-2027 Traditional Schools Academic Calendar PDF",
-  "hideSemesterCount": true,
-  "yearNumbersMode": "compact",
+  "dateModified": "2026-08-11",
   "calendarType": "traditional",
-  "seoTitle": "Union County Public Schools Calendar 2026-2027: Dates, Holidays & PDF",
-  "seoDescription": "View the Union County Public Schools 2026-2027 calendar with the first and last day, holidays, breaks, no-school dates, official PDF, and ICS download for Google Calendar, Apple Calendar, and Outlook.",
+  "allDatesMode": "all",
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "keyDates",
+  "schemaReviewedBy": "author",
+  "schemaCalendarName": "Union County Public Schools Traditional Calendar 2026–27",
+  "schemaDatasetName": "Union County Public Schools 2026–27 Traditional Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed UCPS traditional calendar dates for 2026–27, including 175 instructional days, 12 additional weekdays off, Thanksgiving and winter no-school dates, spring break, and the January 4 return date.",
+  "schemaCalendarDownloadName": "Union County Public Schools 2026–27 traditional calendar file",
+  "schemaCalendarDownloadDescription": "One-time ICS import with the school dates shown on this page, including multi-day breaks, other days when students are off, the first and last day of school, and the January 4 return date. It does not update automatically after UCPS calendar revisions.",
+  "schemaSpatialCoverage": "Union County Public Schools, North Carolina",
+  "seoTitle": "Union County Public Schools Calendar 2026–27: Dates, Breaks & PDF",
+  "seoDescription": "See the UCPS 2026–27 traditional calendar, including the Aug. 24 first day of school, June 4 last day, breaks, teacher workdays, and official district PDF.",
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideAlternateCalendarsNotice": true,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideIcsButtonSupportText": true,
+  "hideSocialShareButtons": true,
+  "comparisonBeforeFaq": true,
+  "comparisonTitle": "UCPS 2026–27 Calendar Compared with Nearby Districts",
+  "comparisonSummary": "Compare first and last days, Thanksgiving student no-school dates, winter no-school dates, and spring break weeks for UCPS, Cabarrus County Schools, and Charlotte-Mecklenburg Schools.",
+  "comparisonCustomRows": [
+    {
+      "key": "firstDay",
+      "label": "First Day",
+      "values": {
+        "union-county-school-calendar": "Aug 24, 2026",
+        "cabarrus-county-school-calendar": "Aug 12, 2026",
+        "charlotte-mecklenburg-schools-calendar": "Aug 25, 2026"
+      }
+    },
+    {
+      "key": "lastDay",
+      "label": "Last Day",
+      "values": {
+        "union-county-school-calendar": "Jun 4, 2027",
+        "cabarrus-county-school-calendar": "May 26, 2027",
+        "charlotte-mecklenburg-schools-calendar": "Jun 9, 2027"
+      }
+    },
+    {
+      "key": "thanksgivingNoSchool",
+      "label": "Thanksgiving No-School Days",
+      "values": {
+        "union-county-school-calendar": "Nov 25–27, 2026",
+        "cabarrus-county-school-calendar": "Nov 25–27, 2026",
+        "charlotte-mecklenburg-schools-calendar": "Nov 25–27, 2026"
+      }
+    },
+    {
+      "key": "winterNoSchool",
+      "label": "Winter No-School Period",
+      "values": {
+        "union-county-school-calendar": "Dec 21, 2026–Jan 1, 2027",
+        "cabarrus-county-school-calendar": "Dec 21, 2026–Jan 4, 2027",
+        "charlotte-mecklenburg-schools-calendar": "Dec 21, 2026–Jan 1, 2027"
+      }
+    },
+    {
+      "key": "springBreakWeek",
+      "label": "Spring Break Week",
+      "values": {
+        "union-county-school-calendar": "Mar 29–Apr 2, 2027",
+        "cabarrus-county-school-calendar": "Mar 8–12, 2027",
+        "charlotte-mecklenburg-schools-calendar": "Mar 29–Apr 2, 2027"
+      }
+    }
+  ],
+  "comparisonFooterText": "All three columns use dates when students are not scheduled to attend. The winter row includes adjacent staff workdays when students are also off; the spring row shows each district’s published break week and excludes adjacent holidays or staff days.",
+  "hiddenSections": ["downloadCta", "todayStatus", "keyDateCards", "quickFacts", "breaks", "yearNumbers", "planningTips", "about", "districtProfile", "livingHere", "otherCalendars", "whatsDifferent"],
+  "heroSourceLine": "Source: UCPS 2026–27 Traditional Schools Academic Calendar · Board approved November 6, 2025",
+  "heroSummary": "For students on the UCPS traditional calendar, the 2026–27 school year starts Monday, August 24, 2026, and ends Friday, June 4, 2027. Spring break is March 29–April 2, 2027.",
+  "verificationBadgeText": "Checked against the official UCPS 2026–27 traditional calendar.",
+  "calendarNotes": "These dates are for students on the UCPS traditional calendar. Students do not attend on annual leave days, holidays, or teacher workdays. Union County Early College and Wolfe School follow separate official calendars.",
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Which Calendar?", "id": "ucps-2026-2027-applicability" },
+    { "label": "At a Glance", "id": "key-dates" },
+    { "label": "Family Planning", "id": "ucps-2026-2027-planning" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Changes", "id": "ucps-2026-2027-changes" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "keyDatesSummaryTitle": "UCPS 2026–27 at a Glance",
+  "keyDatesSummarySubtitle": "Traditional-calendar dates families most often need for planning",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School", "date": "2026-08-24", "type": "school_start", "schemaDescription": "Students on the UCPS traditional calendar begin August 24, 2026." },
+    { "label": "No School", "name": "Thanksgiving", "date": "2026-11-25", "endDate": "2026-11-27", "type": "break_start", "description": "November 25 is a teacher workday; November 26–27 are holidays.", "schemaDescription": "Students on the UCPS traditional calendar have no school November 25–27, 2026." },
+    { "label": "No School", "name": "Winter", "date": "2026-12-21", "endDate": "2027-01-01", "type": "break_start", "description": "The official calendar combines a teacher workday, annual leave days, and holidays. Students return January 4.", "schemaDescription": "Students on the UCPS traditional calendar have no school December 21, 2026, through January 1, 2027." },
+    { "label": "Break", "name": "Spring Break", "date": "2027-03-29", "endDate": "2027-04-02", "type": "break_start", "description": "Students are also off Friday, March 26, immediately before the break.", "schemaDescription": "UCPS Spring Break runs March 29 through April 2, 2027, with an additional student holiday March 26." },
+    { "label": "Last Day", "name": "Last Day of School", "date": "2027-06-04", "type": "school_end", "schemaDescription": "The last day on the UCPS traditional calendar is June 4, 2027." }
+  ],
+  "allDatesTitle": "UCPS 2026–27 Traditional Calendar Dates",
+  "allDatesCoverageNote": "This table includes every districtwide date on the traditional calendar that changes student attendance. Parent-friendly no-school ranges are grouped together, while the descriptions preserve UCPS’s teacher-workday, annual-leave, and holiday categories.",
+  "allDatesCoverageNotePosition": "top",
+  "allDatesFooterMode": "source_sentence",
+  "allDatesSourceLinks": [
+    { "label": "official UCPS 2026–27 traditional calendar", "url": "https://resources.finalsite.net/images/v1782927101/unioncountyps/enmrljgzu4skyc7zdovr/2026-2027-Academic-Traditional-Calendar.pdf" },
+    { "label": "UCPS calendar page", "url": "https://www.ucpsnc.org/calendars" }
+  ],
+  "allDatesSourceLabel": "Source: Union County Public Schools",
+  "hideDateLegend": true,
+  "dateLegendLabelOverrides": {
+    "Holiday": "Holiday — No School",
+    "Break": "No School"
+  },
+  "icsHeading": "Add UCPS 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file with the school dates shown on this page, including multi-day breaks, other days when students are off, and the first and last day of school. It will not update automatically if UCPS revises the calendar.",
+  "icsButtonLabel": "Download UCPS Calendar (.ics)",
+  "icsAriaLabel": "Download the Union County Public Schools 2026–27 traditional calendar file",
+  "pdfHeading": "Official UCPS 2026–27 Traditional Calendar",
+  "pdfButtonLabel": "View Official UCPS PDF",
+  "pdfDescription": "Open UCPS’s original one-page calendar to see the color-coded teacher workdays, annual leave days, holidays, grading periods, and district notes.",
+  "pdfVersionLabel": "Board approved November 6, 2025",
   "alternateCalendars": [
     {
       "type": "early-college",
-      "label": "2026-2027 Union County Early College Academic Calendar",
+      "label": "2026–27 Union County Early College Academic Calendar",
       "pdfUrl": "https://resources.finalsite.net/images/v1781696213/unioncountyps/nwctleqmxhz4yv2sl0k4/2026-2027-Union-County-Early-College-Academic-Calendar.pdf",
       "firstDay": "2026-08-03"
     },
     {
       "type": "year-round",
-      "label": "2026-2027 Wolfe School Year-Round Academic Calendar",
+      "label": "2026–27 Wolfe School Year-Round Academic Calendar",
       "pdfUrl": "https://resources.finalsite.net/images/v1768397495/unioncountyps/ozfy5rij983bnoyimrfs/2026-2027-Wolfe-School-Year-Round-Academic-Calendar.pdf",
       "firstDay": "2026-07-15"
     }
   ],
-  "calendarFaqs": [
+  "customSections": [
     {
-      "q": "When does school start for Union County Public Schools in 2026-2027?",
-      "a": "The first day of school is Monday, August 24, 2026."
+      "id": "ucps-2026-2027-applicability",
+      "label": "Which UCPS Calendar Should You Use?",
+      "position": "afterVerification",
+      "schemaHasPart": true,
+      "content": "This page covers the UCPS traditional calendar. Union County Early College and Wolfe School use separate 2026–27 calendars, so families at those schools should use the official files below.",
+      "links": [
+        { "label": "Union County Early College calendar", "url": "https://resources.finalsite.net/images/v1781696213/unioncountyps/nwctleqmxhz4yv2sl0k4/2026-2027-Union-County-Early-College-Academic-Calendar.pdf", "description": "Official 2026–27 Early College academic calendar" },
+        { "label": "Wolfe School calendar", "url": "https://resources.finalsite.net/images/v1768397495/unioncountyps/ozfy5rij983bnoyimrfs/2026-2027-Wolfe-School-Year-Round-Academic-Calendar.pdf", "description": "Official 2026–27 Wolfe School year-round academic calendar" }
+      ]
     },
     {
-      "q": "When is the last day of school for Union County Public Schools in 2026-2027?",
-      "a": "The last day of school is Friday, June 4, 2027."
-    }
-  ],
-  "yearNumbers": [
+      "id": "ucps-2026-2027-planning",
+      "label": "Family Planning: Breaks and Other No-School Days",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "Outside the three longer no-school periods below, UCPS lists 12 additional weekdays off for students on the traditional calendar: September 7 and 21; October 19; November 3 and 11; January 15 and 18; February 15; March 2 and 26; April 30; and May 31.",
+      "definitions": [
+        { "term": "Thanksgiving", "description": "Students are out Wednesday through Friday, November 25–27. UCPS marks November 25 as an optional teacher workday and November 26–27 as holidays." },
+        { "term": "Winter", "description": "Students are out December 21–January 1. UCPS marks December 21 as an optional teacher workday; December 22–23 and 29–31 as annual leave; and December 24–25, December 28, and January 1 as holidays. Students return January 4." },
+        { "term": "Spring", "description": "UCPS marks Friday, March 26 as a holiday, followed by annual leave March 29–April 2. Students therefore have six consecutive weekdays without school from March 26 through April 2." }
+      ]
+    },
     {
-      "label": "Additional Student No-School Weekdays",
-      "value": "10",
-      "detail": "Includes Labor Day, September 21, October 19, Veterans Day, January 15, Martin Luther King Jr. Day, February 15 Staff Workday, Good Friday / Staff Workday, April 30, and Memorial Day. Thanksgiving, Winter, and Spring Break weekdays are counted in the break ranges instead."
+      "id": "ucps-2026-2027-changes",
+      "label": "What’s New for 2026–27",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "content": "Changes families may notice from the UCPS 2025–26 traditional calendar previously reviewed by MySchoolDates.",
+      "definitions": [
+        { "term": "First day", "description": "School starts August 24, one day earlier than in 2025–26." },
+        { "term": "Last day", "description": "School ends June 4, one day earlier than in 2025–26." },
+        { "term": "Spring break", "description": "The annual-leave week moves from April 6–10 in 2025–26 to March 29–April 2 in 2026–27. Students are also off March 26, immediately before the annual-leave week." },
+        { "term": "Thanksgiving", "description": "Students remain out for three weekdays, Wednesday through Friday." }
+      ],
+      "linksDisplay": "inline",
+      "linksLabel": "Comparison source:",
+      "links": [
+        { "label": "UCPS 2025–26 calendar page", "to": "/union-county-school-calendar/2025-2026", "description": "The prior-year page preserves the dates and source-review history used for this comparison." }
+      ]
     }
   ],
   "events": [
-    {
-      "date": "2026-08-24",
-      "name": "First Day of School",
-      "type": "school_start"
-    },
-    {
-      "date": "2026-09-07",
-      "name": "Labor Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-09-21",
-      "name": "No School (Teacher Workday)",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-10-19",
-      "name": "No School (Teacher Workday)",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-11-11",
-      "name": "Veterans Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-11-25",
-      "name": "Thanksgiving Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2026-11-26",
-      "name": "Thanksgiving Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2026-12-21",
-      "name": "Winter Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2026-12-25",
-      "name": "Christmas Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-01-01",
-      "name": "New Year's Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-01-01",
-      "name": "Winter Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-01-04",
-      "name": "Students Return",
-      "type": "school_resume"
-    },
-    {
-      "date": "2027-01-15",
-      "name": "No School (Teacher Workday)",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-01-18",
-      "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-02-15",
-      "name": "No School (Teacher Workday)",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-03-26",
-      "name": "Good Friday / Staff Workday",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-03-29",
-      "name": "Spring Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-04-02",
-      "name": "Spring Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-04-30",
-      "name": "No School (Teacher Workday)",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-05-31",
-      "name": "Memorial Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-06-04",
-      "name": "Last Day of School",
-      "type": "school_end"
-    }
+    { "date": "2026-08-24", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day — No School", "type": "holiday" },
+    { "date": "2026-09-21", "name": "Optional Teacher Workday — No School", "type": "teacher_workday" },
+    { "date": "2026-10-19", "name": "Required Teacher Workday — No School", "type": "teacher_workday" },
+    { "date": "2026-11-03", "name": "District Professional Development / Teacher Workday — No School", "type": "teacher_professional_learning" },
+    { "date": "2026-11-11", "name": "Veterans Day — No School", "type": "holiday" },
+    { "date": "2026-11-25", "endDate": "2026-11-27", "name": "Thanksgiving", "type": "break_start", "description": "UCPS marks November 25 as an optional teacher workday and November 26–27 as holidays." },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "name": "Winter", "type": "break_start", "description": "UCPS combines an optional teacher workday, annual leave days, and holidays across these student days off." },
+    { "date": "2027-01-04", "name": "Students Return", "type": "school_resume" },
+    { "date": "2027-01-15", "name": "Required Teacher Workday — No School", "type": "teacher_workday" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day — No School", "type": "holiday" },
+    { "date": "2027-02-15", "name": "Optional Teacher Workday — No School", "type": "teacher_workday" },
+    { "date": "2027-03-02", "name": "District Professional Development / Teacher Workday — No School", "type": "teacher_professional_learning" },
+    { "date": "2027-03-26", "name": "Holiday — No School", "type": "holiday", "description": "Students are also off immediately before the March 29–April 2 annual-leave week." },
+    { "date": "2027-03-29", "endDate": "2027-04-02", "name": "Spring Break", "type": "break_start", "description": "UCPS marks all five weekdays as annual leave days." },
+    { "date": "2027-04-30", "name": "Optional Teacher Workday — No School", "type": "teacher_workday" },
+    { "date": "2027-05-31", "name": "Memorial Day — No School", "type": "holiday" },
+    { "date": "2027-06-04", "name": "Last Day of School", "type": "school_end" }
   ],
-  "calendarNotes": "This page covers the UCPS Traditional Schools Academic Calendar. Staff-only labels are included only when they affect student attendance, and holidays that fall inside a listed break are treated as part of that break rather than separate top-level student events."
+  "calendarFaqs": [],
+  "faqDisplayQuestions": [
+    "Is Union County Public Schools part of Charlotte-Mecklenburg Schools?",
+    "Which UCPS calendar should families use?",
+    "Are teacher workdays included on this page?",
+    "Can UCPS calendar dates change because of weather?"
+  ],
+  "sourceReviewSummary": "Reviewed August 11, 2026 using the official UCPS 2026–27 Traditional Schools Academic Calendar and district calendar page.",
+  "sourceReviewDetailsTitle": "How we checked these dates",
+  "sourceReviewDetails": [
+    "Confirmed 175 instructional days, with 86 student days in the first semester and 89 in the second.",
+    "Checked every color-coded student no-school date in the official PDF, including the November 3 and March 2 district professional-development teacher workdays.",
+    "Grouped Thanksgiving, winter, and spring dates into parent-friendly no-school periods while preserving the official teacher-workday, annual-leave, and holiday categories in the descriptions.",
+    "We also checked the Early College and Wolfe School calendars to confirm that those schools follow separate schedules; their dates are not included in this page’s traditional calendar table or ICS file.",
+    "The ICS file uses the same reviewed traditional calendar dates shown on this page and does not update automatically after district revisions."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Union County Public Schools sources.",
+  "sourceNextReviewText": "We recheck this page after UCPS publishes a revised traditional calendar or announces a weather-related calendar change.",
+  "sources": [
+    { "label": "UCPS District Calendars", "url": "https://www.ucpsnc.org/calendars" },
+    { "label": "Official UCPS 2026–27 Traditional Schools Academic Calendar", "url": "https://resources.finalsite.net/images/v1782927101/unioncountyps/enmrljgzu4skyc7zdovr/2026-2027-Academic-Traditional-Calendar.pdf" },
+    { "label": "Official Union County Early College 2026–27 Calendar", "url": "https://resources.finalsite.net/images/v1781696213/unioncountyps/nwctleqmxhz4yv2sl0k4/2026-2027-Union-County-Early-College-Academic-Calendar.pdf" },
+    { "label": "Official Wolfe School 2026–27 Year-Round Calendar", "url": "https://resources.finalsite.net/images/v1768397495/unioncountyps/ozfy5rij983bnoyimrfs/2026-2027-Wolfe-School-Year-Round-Academic-Calendar.pdf" }
+  ]
 }

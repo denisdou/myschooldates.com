@@ -1,0 +1,281 @@
+{
+  "institutionId": "boise-school-district",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Boise School District Calendar 2026–27",
+  "firstDay": "2026-08-12",
+  "lastDay": "2027-05-21",
+  "temporalCoverageStart": "2026-08-12",
+  "temporalCoverageEnd": "2027-07-23",
+  "totalSchoolDays": 176,
+  "instructionalDaysLabel": "Instructional Days",
+  "instructionalDaysDescription": "The official Boise student calendar lists 176 regular-year instructional days in reporting periods of 42, 43, 47, and 44 days.",
+  "sourceUrl": "https://www.boiseschools.org/205185_3",
+  "sourceDocumentPage": "https://drive.google.com/file/d/1yXnZLt0QHcDpTz5euseJ9RSC9hshs6k9/view",
+  "sourcePdfUrl": "https://drive.google.com/file/d/1yXnZLt0QHcDpTz5euseJ9RSC9hshs6k9/view",
+  "lastCheckedPdfUrl": "https://drive.google.com/file/d/1yXnZLt0QHcDpTz5euseJ9RSC9hshs6k9/view",
+  "sourceCheckedAt": "2026-08-11",
+  "sourceChecksumSha256": "230e9a05e9bc509616129b6308c07757f0bec6b4051982ee31c27d3886b80a87",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.boiseschools.org/205185_3",
+    "linkText": "2026-2027 Student Calendar",
+    "expectedPdfUrl": "https://drive.google.com/file/d/1yXnZLt0QHcDpTz5euseJ9RSC9hshs6k9/view",
+    "expectedChecksumSha256": "230e9a05e9bc509616129b6308c07757f0bec6b4051982ee31c27d3886b80a87"
+  },
+  "lastVerifiedAt": "2026-08-11",
+  "dateCreated": "2026-08-11",
+  "datePublished": "2026-08-11",
+  "dateModified": "2026-08-11",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "graduation_date_publication", "reporting_period_correction", "emergency_closure", "confirmed_data_error"],
+  "sourceVersion": "Approved 2026–2027 Student Calendar, revised May 11, 2026",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideDatasetSchema": true,
+  "seoTitle": "Boise School District Calendar 2026–27: Key Dates & Breaks",
+  "seoDescription": "Find Boise School District’s 2026–27 first and last days, breaks, Pre-K and ECSE dates, early-release times, conferences, and official calendar sources.",
+  "heroSummary": "Boise School District K–12 students begin Wednesday, August 12, 2026, on an early-release schedule. Pre-K and Early Childhood Special Education begin August 17. Autumn Break is November 23–27, Winter Break is December 21–January 1, and Spring Break is March 15–19. Seniors, Pre-K, and ECSE finish May 14; K–11 students finish May 21, also on an early-release schedule.",
+  "calendarNotes": "The firstDay field follows the broad K–12 calendar, while the lastDay field follows the K–11 calendar because seniors finish earlier; both dates are early release. Pre-K and ECSE begin August 17 and finish May 14. Seniors also finish May 14, while K–11 students continue through May 21. October 14 is no school for Pre-K, and October 15 is a daytime no-class date for Pre-K through grade 6; secondary conferences are held in the evening. October 16, November 3, and May 18 are districtwide no-school days. The regular calendar contains 176 instructional days. Two 18-day Secondary Summer School sessions continue after the regular last day.",
+  "heroFactChips": [
+    "K–12 starts Aug 12 — early release",
+    "Pre-K & ECSE start Aug 17",
+    "K–11 last day May 21 — early release"
+  ],
+  "heroSourceLine": "Source: Boise School District 2026–27 Student Calendar · revised May 11, 2026",
+  "hideHeroDownloadLink": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerifiedBadge": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "verificationBadgeText": "Checked against Boise School District’s revised 2026–27 Student Calendar.",
+  "keyDatesSummaryTitle": "Boise Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, and early-release dates",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "K–12 First Day — Early Release",
+      "date": "2026-08-12",
+      "type": "school_start",
+      "schemaDescription": "The first day of classes for Boise Schools K–12 students in the 2026–27 school year."
+    },
+    {
+      "label": "First Day",
+      "name": "Pre-K and ECSE First Day",
+      "date": "2026-08-17",
+      "type": "school_start",
+      "schemaDescription": "The first day of classes for Boise Schools Pre-K and ECSE students in the 2026–27 school year."
+    },
+    {
+      "label": "Break",
+      "name": "Autumn Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Seniors, Pre-K, and ECSE",
+      "date": "2027-05-14",
+      "type": "school_end",
+      "schemaDescription": "The last day of classes for Boise Schools seniors, Pre-K students, and ECSE students in the 2026–27 school year."
+    },
+    {
+      "label": "Last Day",
+      "name": "K–11 Last Day — Early Release",
+      "date": "2027-05-21",
+      "type": "school_end",
+      "schemaDescription": "The last day of classes for Boise Schools K–11 students in the 2026–27 school year."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Student Groups", "id": "boise-2026-2027-program-dates" },
+    { "label": "Early Release", "id": "boise-2026-2027-release-times" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "moveCalendarExportBeforeAllDates": false,
+  "allDatesTitle": "Boise School District 2026–27 Dates",
+  "allDatesCoverageNote": "This list focuses on dates families may need to plan around, including program-specific first and last days, conference closures, early releases, breaks, registration, and secondary summer school. Teacher-only schedules, exact school bell variations, and TBD graduation ceremonies are not included. The two summer-school sessions fall outside the 176-day regular school year.",
+  "allDatesSourceUrl": "https://drive.google.com/file/d/1yXnZLt0QHcDpTz5euseJ9RSC9hshs6k9/view",
+  "allDatesSourceLabel": "Boise School District 2026–27 Student Calendar",
+  "dateLegendLabelOverrides": {
+    "Staff Day": "No School for Students",
+    "Teacher Workday": "No School for Students",
+    "School Closure": "No School"
+  },
+  "icsHeading": "Add Boise School District Dates to Your Calendar",
+  "icsDescription": "Download Boise K–12, Pre-K, and ECSE dates, breaks, closures, early releases, and secondary summer-school sessions for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download Boise Calendar File",
+  "icsButtonSupportText": "One-time import; this file will not update automatically if Boise revises its calendar.",
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideIcsButtonSupportText": false,
+  "hideSocialShareButtons": true,
+  "hideShareCalendarHeading": true,
+  "pdfHeading": "Official Boise 2026–27 Student Calendar",
+  "pdfDescription": "Open the official one-page calendar approved November 10, 2025, and revised May 11, 2026.",
+  "pdfButtonLabel": "View Official Revised PDF",
+  "pdfVersionLabel": "Approved 2026–2027 Student Calendar — revised May 11, 2026",
+  "customSections": [
+    {
+      "id": "boise-2026-2027-program-dates",
+      "label": "Dates by Student Group",
+      "position": "afterKeyDates",
+      "content": "Not every Boise student has the same first and last day. Pre-K and ECSE start later, and both programs—along with seniors—finish before K–11 students do.",
+      "table": {
+        "columns": ["Students", "First day", "Last day", "Schedule note"],
+        "rows": [
+          ["K–11", "August 12, 2026", "May 21, 2027", "Both use an early-release schedule."],
+          ["Grade 12", "August 12, 2026", "May 14, 2027", "Graduation dates were still TBD in the revised PDF."],
+          ["Pre-K and ECSE", "August 17, 2026", "May 14, 2027", "Pre-K also has additional no-school days during the year."]
+        ]
+      }
+    },
+    {
+      "id": "boise-2026-2027-release-times",
+      "label": "Early-Release Times",
+      "position": "afterKeyDates",
+      "content": "Early-release times vary by school level in Boise. Check your school for any campus-specific bell-time update.",
+      "table": {
+        "columns": ["Schedule", "Early release", "Lunch"],
+        "rows": [
+          ["Standard elementary", "1:15 p.m.", "Served"],
+          ["Listed late-start elementary campuses", "1:45 p.m.", "Served"],
+          ["Junior high (when elementary schools also release early)", "12:00 p.m.", "Not served"],
+          ["Senior high", "12:30 p.m.", "Not served"]
+        ],
+        "footnote": "Note: Boise’s calendar page says ten schools use the late-start schedule but currently lists eleven campus names: Amity, Dallas Harris, Hawthorne, Hillcrest, Lincoln Early Learning Center, Lowell, Morley Nelson, Owyhee, Riverside, Shadow Hills, and Whittier. This page follows the published campus list."
+      }
+    },
+    {
+      "id": "boise-2026-2027-conferences",
+      "label": "Fall Conferences by School Level",
+      "position": "afterCalendarExport",
+      "content": "Conference schedules differ by grade level. Pre-K has an additional closure, Pre-K through grade 6 have no classes October 15, and secondary conferences take place in the evening before the districtwide closure October 16.",
+      "table": {
+        "columns": ["Students", "Conference schedule", "Student schedule"],
+        "rows": [
+          ["Pre-K", "Wednesday, October 14", "No school; Pre-K is also included in the October 15 Pre-K–6 closure."],
+          ["Elementary / Pre-K–6", "Evenings October 14–15, until 7:30 p.m.", "No Pre-K–6 classes October 15."],
+          ["Junior high", "October 14–15, 4:00–7:00 p.m.", "The calendar does not list a daytime school closure on October 14–15."],
+          ["High school", "October 13–14, 4:00–7:00 p.m.", "The calendar does not list a daytime school closure on October 13–14."],
+          ["Pre-K–12", "Friday, October 16", "No school districtwide."]
+        ]
+      }
+    },
+    {
+      "id": "boise-2026-2027-reporting-periods",
+      "label": "Reporting Periods and the 176-Day School Year",
+      "position": "afterCalendarExport",
+      "content": "Boise lists 176 instructional days across four reporting periods. The PDF prints January 4 as the start of the third period, but also marks that day as no school for students. Students return January 5; Boise’s published total for the period remains 47 days.",
+      "table": {
+        "columns": ["Period", "Range printed on PDF", "Instructional days", "Attendance note"],
+        "rows": [
+          ["1", "August 12–October 9", "42", "October 9 is a no-school teacher day and quarter marker."],
+          ["2", "October 12–December 18", "43", "December 18 is early release K–12; no school Pre-K."],
+          ["3", "January 4–March 12", "47", "January 4 is no school; students resume January 5."],
+          ["4", "March 22–May 21", "44", "May 21 is the K–11 early-release last day."],
+          ["Total", "Regular school year", "176", "Summer school is not part of this total."]
+        ]
+      }
+    }
+  ],
+  "whatsNew": {
+    "title": "What's Different From 2025–26",
+    "content": [
+      "The K–12 first day remains August 12 and remains early release, while the Pre-K/ECSE start moves from August 18 to August 17.",
+      "Boise retains 176 instructional days with the same 42/43/47/44 period distribution.",
+      "The fall conference sequence moves one day earlier: Pre-K is out October 14, Pre-K–6 are out October 15, and the districtwide closure is October 16.",
+      "Autumn Break, Winter Break, and Spring Break each shift one calendar day earlier.",
+      "The senior, Pre-K, and ECSE last day remains May 14; the K–11 last day shifts from May 22 to May 21.",
+      "The 2026–27 source is a revised calendar dated May 11, 2026, rather than the original Board-approved version."
+    ]
+  },
+  "events": [
+    { "date": "2026-08-12", "name": "K–12 First Day — Early Release", "type": "school_start", "description": "Use the school-level early-release time rather than the normal dismissal time." },
+    { "date": "2026-08-17", "name": "Pre-K and ECSE First Day", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day — No School Pre-K–12", "type": "holiday" },
+    { "date": "2026-10-09", "name": "Quarter 1 Ends / Teacher Directed Day and Professional Development — No School Pre-K–12", "type": "teacher_workday" },
+    { "date": "2026-10-14", "name": "No School Pre-K", "type": "no_school", "badgeLabel": "Pre-K" },
+    { "date": "2026-10-15", "name": "Elementary Parent Conferences — No Classes Pre-K–6", "type": "conference", "badgeLabel": "Pre-K–6", "description": "The calendar does not list a daytime closure for secondary students on October 15; junior high conferences are held that evening." },
+    { "date": "2026-10-16", "name": "No School Pre-K–12", "type": "no_school" },
+    { "date": "2026-11-03", "name": "Districtwide No School", "type": "no_school", "description": "The official PDF does not name a reason." },
+    { "date": "2026-11-23", "endDate": "2026-11-27", "name": "Autumn Break — No School Pre-K–12", "type": "break_start" },
+    { "date": "2026-12-18", "name": "Semester 1 Ends — Early Release K–12 / No School Pre-K", "type": "early_release", "description": "K–12 releases early for report-card work; Pre-K does not attend." },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "name": "Winter Break — No School Pre-K–12", "type": "break_start" },
+    { "date": "2027-01-04", "name": "Teacher Directed Day and Professional Development — No School Pre-K–12", "type": "teacher_workday" },
+    { "date": "2027-01-05", "name": "School Resumes", "type": "school_resume" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day — No School Pre-K–12", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-02-15", "name": "Presidents' Day — No School Pre-K–12", "type": "holiday" },
+    { "date": "2027-03-04", "name": "Kindergarten Registration", "type": "academic", "badgeLabel": "Registration", "description": "Scheduled from 3:45–5:30 p.m.; this is not a districtwide student closure.", "hideFromCalendarExport": true },
+    { "date": "2027-03-12", "name": "Quarter 3 Ends — Early Release K–6 / No School Pre-K", "type": "early_release", "description": "Grades K–6 release early for report-card work; Pre-K does not attend." },
+    { "date": "2027-03-15", "endDate": "2027-03-19", "name": "Spring Break — No School Pre-K–12", "type": "break_start" },
+    { "date": "2027-05-14", "name": "Last Day for Seniors, Pre-K, and ECSE", "type": "school_end" },
+    { "date": "2027-05-18", "name": "Teacher Directed Day and Professional Development — No School Pre-K–12", "type": "teacher_workday" },
+    { "date": "2027-05-21", "name": "K–11 Last Day — Early Release", "type": "school_end", "badgeLabel": "Last Day · Early Release" },
+    { "date": "2027-06-02", "endDate": "2027-06-25", "name": "Secondary Summer School — Semester 1", "type": "academic", "badgeLabel": "18 days" },
+    { "date": "2027-06-30", "endDate": "2027-07-23", "name": "Secondary Summer School — Semester 2", "type": "academic", "badgeLabel": "18 days", "description": "No summer school July 5." },
+    { "date": "2027-07-05", "name": "Independence Day Observed — No Summer School", "type": "holiday" }
+  ],
+  "calendarFaqs": [
+    { "q": "When does Boise School District start in 2026?", "a": "K–12 starts Wednesday, August 12, 2026, with early release. Pre-K and ECSE programs start Monday, August 17." },
+    { "q": "When is Boise Winter Break in 2026–27?", "a": "Winter Break runs December 21, 2026, through January 1, 2027. January 4 is a no-school professional-development day, and school resumes January 5." },
+    { "q": "Which Boise students have no school during fall conferences?", "a": "Pre-K has no school October 14, and Pre-K through grade 6 have no classes October 15. Secondary conferences are evening sessions. All Pre-K–12 students have no school October 16." },
+    { "q": "What time is early release in Boise schools?", "a": "Standard elementary schools dismiss at 1:15 p.m., and campuses on Boise’s late-start list dismiss at 1:45 p.m. Junior highs dismiss at noon when elementary schools also release early, while senior highs dismiss at 12:30 p.m. Check your school for any bell-time update." },
+    { "q": "When is the last day of school for Boise School District in 2027?", "a": "Seniors, Pre-K, and ECSE finish May 14. K–11 students finish Friday, May 21, on an early-release schedule." }
+  ],
+  "faqDisplayQuestions": [
+    "When does Boise School District start in 2026?",
+    "When is Boise Winter Break in 2026–27?",
+    "Which Boise students have no school during fall conferences?",
+    "What time is early release in Boise schools?",
+    "When is the last day of school for Boise School District in 2027?"
+  ],
+  "faqDisplayLimit": 5,
+  "hideFaqSchema": true,
+  "hiddenCustomSectionIds": [
+    "boise-calendar-layers",
+    "boise-late-start-source-note",
+    "boise-official-calendar-resources"
+  ],
+  "hiddenSections": ["downloadCta", "todayStatus", "keyDateCards", "quickFacts", "breaks", "yearNumbers", "planningTips", "about", "comparison", "districtProfile", "livingHere", "otherCalendars", "nationalTrends"],
+  "hideSourceReviewDate": true,
+  "hideSourceVersionDisplay": true,
+  "hideSourceNextReview": true,
+  "sourceReviewSummary": "Reviewed August 11, 2026, using Boise School District’s revised 2026–27 Student Calendar and official school-hours information.",
+  "sourceReviewDetails": [
+    "Confirmed the program-specific first and last days, conference closures, early releases, breaks, and two secondary summer-school sessions.",
+    "Matched school-level early-release times to Boise’s school-hours information and followed the published list of late-start campuses.",
+    "The four reporting-period counts total 176 days. Because January 4 is also labeled no school, the event list follows the PDF’s January 5 student return date.",
+    "The six high-school graduation entries remain TBD, so no ceremony dates were added.",
+    "Summer school remains outside the 176-day regular-year total, and the calendar may change after publication."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Boise School District sources.",
+  "sourceNextReviewText": "Review if Boise replaces the May 11 revision, corrects the third reporting-period range, publishes graduation dates, changes early-release schedules, or revises summer-school sessions.",
+  "sources": [
+    { "label": "Boise School District Calendars", "url": "https://www.boiseschools.org/205185_3" },
+    { "label": "Official Boise 2026–27 Student Calendar — revised May 11, 2026", "url": "https://drive.google.com/file/d/1yXnZLt0QHcDpTz5euseJ9RSC9hshs6k9/view" },
+    { "label": "Boise 2026–27 School Year Information", "url": "https://www.boiseschools.org/schoolyearinformation2026-2027" }
+  ]
+}
