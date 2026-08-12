@@ -433,6 +433,7 @@ const keyDateHighlights = computed(() => {
         type: item.type ?? 'milestone',
         description: item.description,
         schemaDescription: item.schemaDescription,
+        hideSchemaDescription: item.hideSchemaDescription,
         dates: item.dates,
         dateDisplayMode: item.dateDisplayMode,
         dateJoiner: item.dateJoiner,
@@ -472,6 +473,7 @@ function keyDateDisplayName(event: { name: string; type: string; displayName?: s
   return event.name
 }
 function keyDateSchemaDescription(event: any) {
+  if (event.hideSchemaDescription) return undefined
   if (event.schemaDescription) return event.schemaDescription
   if (event.description) return event.description
   const districtLabel = meta.value!.shortName || meta.value!.name
@@ -703,10 +705,15 @@ const faqSchemaItems = computed(() => {
     .slice(0, limit)
 })
 
-const hiddenSections = computed(() => new Set<string>([
-  ...(((district.value as any).hiddenSections ?? []) as string[]),
-  ...(((cal as any)?.hiddenSections ?? (cal as any)?.meta?.hiddenSections ?? []) as string[]),
-]))
+const hiddenSections = computed(() => {
+  const hidden = new Set<string>([
+    ...(((district.value as any).hiddenSections ?? []) as string[]),
+    ...(((cal as any)?.hiddenSections ?? (cal as any)?.meta?.hiddenSections ?? []) as string[]),
+  ])
+  const visible = ((cal as any)?.visibleSections ?? (cal as any)?.meta?.visibleSections ?? []) as string[]
+  visible.forEach(section => hidden.delete(section))
+  return hidden
+})
 const comparisonBeforeFaq = computed(() =>
   Boolean((cal as any)?.comparisonBeforeFaq ?? (cal as any)?.meta?.comparisonBeforeFaq ?? (district.value as any)?.comparisonBeforeFaq ?? (district.value as any)?.meta?.comparisonBeforeFaq)
 )
@@ -729,6 +736,12 @@ const hideHeroVerificationProcess = computed(() =>
 const verificationBadgeText = computed(() =>
   (cal as any)?.verificationBadgeText ?? (cal as any)?.meta?.verificationBadgeText ?? (district.value as any)?.verificationBadgeText ?? (district.value as any)?.meta?.verificationBadgeText ?? null
 )
+const verificationBadgeReviewerName = computed(() =>
+  String((cal as any)?.verificationBadgeReviewerName ?? (cal as any)?.meta?.verificationBadgeReviewerName ?? '')
+)
+const verificationBadgeReviewerHref = computed(() =>
+  String((cal as any)?.verificationBadgeReviewerHref ?? (cal as any)?.meta?.verificationBadgeReviewerHref ?? '/author')
+)
 type DistrictCustomSection = {
   id: string
   label: string
@@ -738,6 +751,7 @@ type DistrictCustomSection = {
   defaultOpen?: boolean
   image?: { src: string; alt: string; caption?: string; width?: number; height?: number }
   groups?: { label: string; items: string[] }[]
+  hideGroupLabels?: boolean
   definitions?: { term: string; description: string }[]
   links?: { label: string; to: string; description?: string }[]
   table?: { caption?: string; columns?: string[]; headers?: string[]; rows: string[][]; footnote?: string }
@@ -876,6 +890,9 @@ const alternateCalendarsNoticeLinks = computed(() =>
 const hideAlternateCalendarsNotice = computed(() =>
   Boolean((cal as any)?.hideAlternateCalendarsNotice ?? (cal as any)?.meta?.hideAlternateCalendarsNotice)
 )
+const alternateCalendarsNoticeBeforeKeyDates = computed(() =>
+  String((cal as any)?.alternateCalendarsNoticePosition ?? (cal as any)?.meta?.alternateCalendarsNoticePosition ?? '') === 'beforeKeyDates'
+)
 const customJumpNavigation = computed(() =>
   (((cal as any)?.jumpNavigation ?? (cal as any)?.meta?.jumpNavigation ?? []) as Array<{ label?: string, href?: string, id?: string }>).filter(item => item.label && (item.href || item.id))
 )
@@ -916,6 +933,13 @@ const breakNotes = computed<Record<string, string>>(() =>
 const breakDurationLabels = computed<Record<string, string>>(() =>
   ((cal as any)?.breakDurationLabels ?? (cal as any)?.meta?.breakDurationLabels ?? {}) as Record<string, string>
 )
+const breakSummaryOverrides = computed<Record<string, { name?: string; start?: string; end?: string; note?: string; durationLabel?: string }>>(() =>
+  ((cal as any)?.breakSummaryOverrides ?? (cal as any)?.meta?.breakSummaryOverrides ?? {}) as Record<string, { name?: string; start?: string; end?: string; note?: string; durationLabel?: string }>
+)
+const summaryBreaks = computed(() => breaks.value.map((schoolBreak: any) => {
+  const override = breakSummaryOverrides.value[schoolBreak.name] ?? breakSummaryOverrides.value[schoolBreak.start]
+  return override ? { ...schoolBreak, ...override } : schoolBreak
+}))
 const winterBreakLabel = computed(() => {
   const isLateDecemberBreak = (schoolBreak: { name: string; start?: string; end?: string }) => {
     const lower = schoolBreak.name.toLowerCase()
@@ -947,7 +971,8 @@ function countWeekdays(start: string, end: string) {
   return count
 }
 
-function breakDurationLabel(b: { name: string; start: string; end: string; days: number }) {
+function breakDurationLabel(b: { name: string; start: string; end: string; days: number; durationLabel?: string }) {
+  if (b.durationLabel) return b.durationLabel
   const customLabel = breakDurationLabels.value[b.name] ?? breakDurationLabels.value[breakDisplayName(b.name)] ?? breakDurationLabels.value[b.start]
   if (customLabel) return customLabel
   const weekdays = countWeekdays(b.start, b.end)
@@ -964,7 +989,8 @@ function breakDisplayName(name: string) {
     .replace(/\s+/g, ' ')
     .trim()
 }
-function breakNoteFor(b: { name: string; start: string; end: string }) {
+function breakNoteFor(b: { name: string; start: string; end: string; note?: string }) {
+  if (b.note) return b.note
   return breakNotes.value[b.name] ?? breakNotes.value[breakDisplayName(b.name)] ?? breakNotes.value[b.start] ?? ''
 }
 
@@ -1097,9 +1123,15 @@ const dateLegend = computed(() => {
 const moveCalendarExportBeforeAllDates = computed(() =>
   (cal as any)?.moveCalendarExportBeforeAllDates === true || (cal as any)?.meta?.moveCalendarExportBeforeAllDates === true
 )
-
+const yearComparisonAfterAllDates = computed(() =>
+  ((cal as any)?.yearComparisonPosition ?? (cal as any)?.meta?.yearComparisonPosition) === 'afterAllDates'
+)
 const breaksBeforeAllDates = computed(() =>
   (cal as any)?.breaksBeforeAllDates === true || (cal as any)?.meta?.breaksBeforeAllDates === true
+)
+
+const gradingPeriodsBeforeCalendarExport = computed(() =>
+  ((cal as any)?.gradingPeriodsPosition ?? (cal as any)?.meta?.gradingPeriodsPosition) === 'beforeCalendarExport'
 )
 
 const resolvedJumpNavigation = computed(() => {
@@ -1121,6 +1153,7 @@ const resolvedJumpNavigation = computed(() => {
     '#all-dates',
     ...customTargets('afterAllDates'),
     ...(!breaksBeforeAllDates.value ? ['#breaks', ...customTargets('afterBreaks')] : []),
+    ...(gradingPeriodsBeforeCalendarExport.value ? customTargets('afterGradingPeriodsBeforeCalendarExport') : []),
     ...(otherCalendarsBeforeCalendarExport.value ? customTargets('afterOtherCalendars') : []),
     ...(!moveCalendarExportBeforeAllDates.value ? ['#add-to-calendar', ...customTargets('afterCalendarExport')] : []),
     ...(!otherCalendarsBeforeCalendarExport.value ? customTargets('afterOtherCalendars') : []),
@@ -1312,6 +1345,7 @@ if (!isStatePage && district.value) {
   ]
   const schemaIsAccessibleForFree = (cal as any)?.schemaIsAccessibleForFree ?? (cal as any)?.meta?.schemaIsAccessibleForFree ?? (meta.value as any)?.schemaIsAccessibleForFree ?? (meta.value as any)?.meta?.schemaIsAccessibleForFree
   const schemaDatasetVersion = (cal as any)?.schemaDatasetVersion ?? (cal as any)?.meta?.schemaDatasetVersion
+  const schemaDatasetDateModified = (cal as any)?.schemaDatasetDateModified ?? (cal as any)?.meta?.schemaDatasetDateModified ?? pageDateModified
   const sourceCalendarEntity = basedOnUrl ? {
     '@type': 'CreativeWork',
     '@id': `${canonicalUrl}#${sourceCalendarId}`,
@@ -1369,6 +1403,7 @@ if (!isStatePage && district.value) {
   const calendarIcsUrl = district.value && cal
     ? `https://myschooldates.com/calendars/${district.value.slug}-${cal.schoolYear}.ics`
     : ''
+  const hideIcsFromDatasetDistribution = Boolean((cal as any)?.hideIcsFromDatasetDistribution || (cal as any)?.meta?.hideIcsFromDatasetDistribution)
   const hideDatasetSchema = Boolean((cal as any)?.hideDatasetSchema || (cal as any)?.meta?.hideDatasetSchema)
   const spatialCoverageOverride = (cal as any)?.schemaSpatialCoverage ?? (cal as any)?.meta?.schemaSpatialCoverage ?? (meta.value as any)?.schemaSpatialCoverage ?? (meta.value as any)?.meta?.schemaSpatialCoverage
   const spatialCoverageValue = Array.isArray(spatialCoverageOverride)
@@ -1399,7 +1434,7 @@ if (!isStatePage && district.value) {
     usageInfo: schemaLicenseUrl,
     inLanguage: 'en-US',
     ...(pageDateCreated ? { dateCreated: pageDateCreated } : {}),
-    ...(pageDateModified ? { dateModified: pageDateModified } : {}),
+    ...(schemaDatasetDateModified ? { dateModified: schemaDatasetDateModified } : {}),
     temporalCoverage: datasetTemporalCoverage,
     ...(hasSpatialCoverage ? {
       spatialCoverage: spatialCoverageValue,
@@ -1411,22 +1446,24 @@ if (!isStatePage && district.value) {
     creator: { '@id': 'https://myschooldates.com/#organization' },
     publisher: { '@id': 'https://myschooldates.com/#organization' },
     ...(datasetBasedOnRefs.length ? { isBasedOn: datasetBasedOnValue } : {}),
-    distribution: [
-      calendarIcsUrl ? {
-        '@type': 'DataDownload',
-        name: schemaCalendarDownloadName,
-        description: schemaCalendarDownloadDescription,
-        encodingFormat: 'text/calendar',
-        contentUrl: calendarIcsUrl,
-      } : null,
-      includePrintablePdfInDatasetDistribution ? {
-        '@type': 'DataDownload',
-        name: `${schemaCalendarName} printable PDF`,
-        description: `Printable PDF generated from ${meta.value!.shortName ?? meta.value!.name} dates checked against the public official district source used for this page.`,
-        encodingFormat: 'application/pdf',
-        contentUrl: printablePdfUrl,
-      } : null,
-    ].filter(Boolean),
+    ...(!hideIcsFromDatasetDistribution || includePrintablePdfInDatasetDistribution ? {
+      distribution: [
+        calendarIcsUrl && !hideIcsFromDatasetDistribution ? {
+          '@type': 'DataDownload',
+          name: schemaCalendarDownloadName,
+          description: schemaCalendarDownloadDescription,
+          encodingFormat: 'text/calendar',
+          contentUrl: calendarIcsUrl,
+        } : null,
+        includePrintablePdfInDatasetDistribution ? {
+          '@type': 'DataDownload',
+          name: `${schemaCalendarName} printable PDF`,
+          description: `Printable PDF generated from ${meta.value!.shortName ?? meta.value!.name} dates checked against the public official district source used for this page.`,
+          encodingFormat: 'application/pdf',
+          contentUrl: printablePdfUrl,
+        } : null,
+      ].filter(Boolean),
+    } : {}),
   }
   const yearPageLinks = archivedYears.value
     .map(y => `https://myschooldates.com/${slug}/${y}`)
@@ -2117,7 +2154,16 @@ if (!isStatePage && district.value) {
             {{ (cal as any).pageHeading || `${district.name} Calendar ${displaySchoolYear}` }}
           </h1>
           <p class="district-hero__source mt-3 text-sm">
-            {{ (cal as any).heroSourceLine ?? (cal as any).meta?.heroSourceLine ?? `${displaySchoolYear} calendar dates · Based on the official ${district.shortName || district.name} calendar` }}
+            <template v-if="(cal as any).heroSourceUrl ?? (cal as any).meta?.heroSourceUrl">
+              Source:
+              <a
+                :href="(cal as any).heroSourceUrl ?? (cal as any).meta?.heroSourceUrl"
+                target="_blank"
+                rel="noopener"
+                class="rds-link underline"
+              >{{ (cal as any).heroSourceLabel ?? (cal as any).meta?.heroSourceLabel ?? `${district.shortName || district.name} ${displaySchoolYear} calendar` }}</a>{{ (cal as any).heroSourceSuffix ?? (cal as any).meta?.heroSourceSuffix ?? '' }}
+            </template>
+            <template v-else>{{ (cal as any).heroSourceLine ?? (cal as any).meta?.heroSourceLine ?? `${displaySchoolYear} calendar dates · Based on the official ${district.shortName || district.name} calendar` }}</template>
             <template v-if="!((cal as any).hideHeroDownloadLink || (cal as any).meta?.hideHeroDownloadLink)">
               ·
               <a
@@ -2213,7 +2259,11 @@ if (!isStatePage && district.value) {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
             </svg>
             <span v-if="!isEstimated">{{ verificationBadgeText || `Checked against the official ${district.shortName || meta.name} calendar on ${verifiedDate}.` }}</span>
-            <span v-else>Based on official district website · Not yet human-verified</span>
+            <template v-if="!isEstimated && verificationBadgeReviewerName">
+              <span aria-hidden="true">·</span>
+              <span>Reviewed by <NuxtLink :to="verificationBadgeReviewerHref" class="font-semibold underline hover:no-underline">{{ verificationBadgeReviewerName }}</NuxtLink></span>
+            </template>
+            <span v-if="isEstimated">Based on official district website · Not yet human-verified</span>
           </div>
           <details v-if="!isEstimated && verifiedDate && !hideHeroVerificationProcess" class="district-hero__verification-details mt-5 p-3">
             <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-rds-ink-dim">How we reviewed this calendar</summary>
@@ -2293,6 +2343,34 @@ if (!isStatePage && district.value) {
           </div>
         </div>
 
+        <!-- Alternate calendars notice before key dates -->
+        <div v-if="(cal as any)?.alternateCalendars?.length && !hideAlternateCalendarsNotice && alternateCalendarsNoticeBeforeKeyDates" class="bg-amber-50 border border-amber-200 rounded-lg p-4 flex gap-3">
+          <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <p class="text-sm text-amber-800">
+            <template v-if="alternateCalendarsNotice">
+              {{ alternateCalendarsNotice }}
+              <template v-if="alternateCalendarsNoticeLinks.length">
+                <template v-for="(link, index) in alternateCalendarsNoticeLinks" :key="link.href">
+                  <template v-if="index"> or </template>
+                  <a :href="link.href" target="_blank" rel="noopener" class="underline font-medium">{{ link.label }}<span class="sr-only">(opens in a new tab)</span></a>
+                </template>
+              </template>
+              <a
+                v-else-if="alternateCalendarsNoticeLinkLabel"
+                :href="alternateCalendarsNoticeLinkHref"
+                class="underline font-medium"
+              >{{ alternateCalendarsNoticeLinkLabel }}</a>
+            </template>
+            <template v-else>
+              This page shows the <strong>Traditional Calendar</strong>, which applies to most {{ district.name }} schools.
+              If your child attends a year-round school or specialized program, see
+              <a href="#other-calendars" class="underline font-medium">Other Official Calendars</a> below.
+            </template>
+          </p>
+        </div>
+
         <!-- Key Date Cards -->
         <div v-if="!hiddenSections.has('keyDateCards')" id="key-dates" class="scroll-mt-24">
           <h2 class="text-xl font-bold text-gray-900 mb-4">{{ keyDatesHeading }}</h2>
@@ -2300,7 +2378,7 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Alternate calendars notice -->
-        <div v-if="(cal as any)?.alternateCalendars?.length && !hideAlternateCalendarsNotice" class="bg-amber-50 border border-amber-200 rounded-lg p-4 flex gap-3">
+        <div v-if="(cal as any)?.alternateCalendars?.length && !hideAlternateCalendarsNotice && !alternateCalendarsNoticeBeforeKeyDates" class="bg-amber-50 border border-amber-200 rounded-lg p-4 flex gap-3">
           <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
@@ -2485,7 +2563,7 @@ if (!isStatePage && district.value) {
           <div v-if="breaks.length && !hiddenSections.has('breaks')" id="breaks" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
             <h2 class="text-lg font-semibold text-[#1f2933] mb-4">{{ breaksTitle }}</h2>
             <div class="space-y-3">
-              <div v-for="b in breaks" :key="b.name" class="flex flex-col items-start gap-2 py-3 border-b border-[#eee9df] last:border-0 sm:flex-row sm:items-center sm:justify-between">
+              <div v-for="b in summaryBreaks" :key="b.name" class="flex flex-col items-start gap-2 py-3 border-b border-[#eee9df] last:border-0 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <div class="font-medium text-[#1f2933]">{{ breakDisplayName(b.name) }}</div>
                   <div class="text-sm text-[#7b756d]">{{ formatCompactDateRange(b.start, b.end) }}</div>
@@ -2543,11 +2621,16 @@ if (!isStatePage && district.value) {
         />
         <DistrictCustomSections :sections="customSections" position="afterAllDates" />
 
+        <div v-if="yearComparisonAfterAllDates && hasYearComparisonContent" id="year-comparison" class="scroll-mt-24 space-y-8">
+          <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal" :prev-cal="prevCal ?? undefined" />
+          <DistrictCustomSections :sections="customSections" position="afterYearDiff" />
+        </div>
+
         <!-- Break Summary -->
         <div v-if="!breaksBeforeAllDates && breaks.length && !hiddenSections.has('breaks')" id="breaks" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
           <h2 class="text-lg font-semibold text-[#1f2933] mb-4">{{ breaksTitle }}</h2>
           <div class="space-y-3">
-            <div v-for="b in breaks" :key="b.name" class="flex flex-col items-start gap-2 py-3 border-b border-[#eee9df] last:border-0 sm:flex-row sm:items-center sm:justify-between">
+            <div v-for="b in summaryBreaks" :key="b.name" class="flex flex-col items-start gap-2 py-3 border-b border-[#eee9df] last:border-0 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <div class="font-medium text-[#1f2933]">{{ breakDisplayName(b.name) }}</div>
                 <div class="text-sm text-[#7b756d]">{{ formatCompactDateRange(b.start, b.end) }}</div>
@@ -2561,6 +2644,21 @@ if (!isStatePage && district.value) {
           </div>
         </div>
         <DistrictCustomSections v-if="!breaksBeforeAllDates && !hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
+
+        <DistrictGradingPeriods
+          v-if="gradingPeriodsBeforeCalendarExport"
+          :periods="(cal as any).gradingPeriods"
+          :title="(cal as any).gradingPeriodsTitle ?? (cal as any).meta?.gradingPeriodsTitle"
+          :description="(cal as any).gradingPeriodsDescription ?? (cal as any).meta?.gradingPeriodsDescription"
+          :days-label="(cal as any).gradingPeriodsDaysLabel ?? (cal as any).meta?.gradingPeriodsDaysLabel"
+          :next-date-label="(cal as any).gradingPeriodsNextDateLabel ?? (cal as any).meta?.gradingPeriodsNextDateLabel"
+          :footer-note="(cal as any).gradingPeriodsFooterNote ?? (cal as any).meta?.gradingPeriodsFooterNote"
+        />
+        <DistrictCustomSections
+          v-if="gradingPeriodsBeforeCalendarExport"
+          :sections="customSections"
+          position="afterGradingPeriodsBeforeCalendarExport"
+        />
 
         <!-- Other Official Calendars (optional position before the one-time calendar import) -->
         <DistrictOtherCalendars
@@ -2686,15 +2784,17 @@ if (!isStatePage && district.value) {
 
         <!-- Grading Periods -->
         <DistrictGradingPeriods
+          v-if="!gradingPeriodsBeforeCalendarExport"
           :periods="(cal as any).gradingPeriods"
           :title="(cal as any).gradingPeriodsTitle ?? (cal as any).meta?.gradingPeriodsTitle"
           :description="(cal as any).gradingPeriodsDescription ?? (cal as any).meta?.gradingPeriodsDescription"
           :days-label="(cal as any).gradingPeriodsDaysLabel ?? (cal as any).meta?.gradingPeriodsDaysLabel"
+          :next-date-label="(cal as any).gradingPeriodsNextDateLabel ?? (cal as any).meta?.gradingPeriodsNextDateLabel"
           :footer-note="(cal as any).gradingPeriodsFooterNote ?? (cal as any).meta?.gradingPeriodsFooterNote"
         />
 
         <!-- What's Different This Year -->
-        <div v-if="hasYearComparisonContent" id="year-comparison" class="scroll-mt-24 space-y-8">
+        <div v-if="!yearComparisonAfterAllDates && hasYearComparisonContent" id="year-comparison" class="scroll-mt-24 space-y-8">
           <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal" :prev-cal="prevCal ?? undefined" />
           <DistrictCustomSections :sections="customSections" position="afterYearDiff" />
         </div>
@@ -2871,7 +2971,7 @@ if (!isStatePage && district.value) {
         />
 
         <section v-if="!hiddenSections.has('nationalTrends')" class="rounded-lg border border-rds-hairline bg-rds-surface-panel p-6">
-          <h2 class="text-lg font-semibold text-gray-900 mb-2">{{ district.shortName || district.name }} in National Calendar Trends</h2>
+          <h2 class="text-lg font-semibold text-gray-900 mb-2">{{ (cal as any)?.nationalTrendsTitle ?? (cal as any)?.meta?.nationalTrendsTitle ?? `${district.shortName || district.name} in National Calendar Trends` }}</h2>
           <p class="text-sm leading-relaxed text-gray-600">
             To compare this district calendar with broader U.S. start-date, break, and end-date patterns, see the
             <NuxtLink to="/school-calendar-trends/2026-2027-report" class="font-semibold text-blue-600 hover:underline">

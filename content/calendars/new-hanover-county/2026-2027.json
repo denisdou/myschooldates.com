@@ -1,259 +1,376 @@
 {
   "institutionId": "new-hanover-county",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "New Hanover County Schools Calendar 2026–27",
   "firstDay": "2026-08-24",
   "lastDay": "2027-06-04",
-  "totalSchoolDays": 178,
+  "temporalCoverageStart": "2026-07-03",
+  "temporalCoverageEnd": "2027-06-16",
   "sourceUrl": "https://www.nhcs.net/about-us/calendar/print-calendars",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1765232664/nhcsk12ncus/nfdz4faolcqknofvmdzt/TraditionalCalendar11-5-25.pdf",
-  "seoTitle": "New Hanover County Schools Calendar 2026-2027: Key Dates & PDF",
-  "seoDescription": "View the New Hanover County Schools 2026-2027 calendar from official records with Aug 24 first day, Jun 4 last day, holidays, breaks, PDF and ICS download.",
-  "lastVerifiedAt": "2026-07-16",
+  "sourceVersion": "Traditional Calendar approved November 5, 2025",
+  "lastVerifiedAt": "2026-08-12",
   "datePublished": "2026-07-16",
-  "dateModified": "2026-07-16",
+  "dateModified": "2026-08-12",
   "calendarType": "traditional",
+  "allDatesMode": "all",
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "includeComparisonSchema": false,
   "hideSemesterCount": true,
-  "yearNumbersMode": "compact",
-  "calendarNotes": "This page covers the NHCS traditional student calendar. Routine staff-only labels are simplified unless they affect student attendance.",
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerifiedBadge": true,
+  "hideHeroDownloadLink": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideCalendarTrackCaution": true,
+  "seoTitle": "New Hanover County Schools Calendar 2026-2027: Key Dates & PDF",
+  "seoDescription": "See the 2026–27 NHCS traditional calendar with the Aug. 24 first day, March 29–April 2 Spring Break, June 4 last day, official PDFs, and calendar downloads.",
+  "heroSummary": "The NHCS traditional calendar lists Monday, August 24, 2026 as the first day of school, with staggered enrollment August 24–26. The last day for students is Friday, June 4, 2027, and it is a half day. Official Spring Break runs March 29–April 2. With a teacher workday on March 25 and the Good Friday holiday on March 26, students are off from March 25 through April 2 and return Monday, April 5.",
+  "heroFactChips": [
+    "First day Aug 24",
+    "Official Spring Break Mar 29–Apr 2",
+    "Last day Jun 4 — half day"
+  ],
+  "heroSourceLine": "Source: NHCS 2026–27 Traditional Calendar · approved November 5, 2025",
+  "heroSourceLabel": "NHCS 2026–27 Traditional Calendar",
+  "heroSourceUrl": "https://resources.finalsite.net/images/v1765232664/nhcsk12ncus/nfdz4faolcqknofvmdzt/TraditionalCalendar11-5-25.pdf",
+  "heroSourceSuffix": " · approved November 5, 2025",
+  "calendarNotes": "This page covers the 2026–27 NHCS traditional calendar. The official event list preserves the district’s workday, vacation-day, and holiday labels; the family-facing summaries separately show when students are not scheduled to attend.",
+  "verificationBadgeText": "Checked against the official NHCS 2026–27 Traditional Calendar.",
+  "schemaCalendarName": "New Hanover County Schools Traditional Calendar 2026–27",
+  "schemaDatasetName": "New Hanover County Schools 2026–27 Traditional Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed NHCS traditional-calendar dates for 2026–27, including official workday, vacation-day, holiday, and Spring Break labels plus family-facing student no-school periods.",
+  "schemaCalendarDownloadName": "New Hanover County Schools 2026–27 student calendar file",
+  "schemaCalendarDownloadDescription": "One-time ICS import of the NHCS traditional-calendar student dates shown on this page. It does not update automatically after district revisions.",
+  "hideIcsFromDatasetDistribution": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "planningTips",
+    "about",
+    "yearNumbers",
+    "districtProfile",
+    "livingHere"
+  ],
+  "hiddenCustomSectionIds": [
+    "why-use-myschooldates-nhcs",
+    "identify-nhcs-calendar-track",
+    "nhcs-verification-method",
+    "nhcs-parent-date-questions-2026-2027",
+    "nhcs-calendar-planning-guide-2026-2027"
+  ],
+  "keyDatesSummaryTitle": "NHCS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, major student no-school periods, and the official Spring Break week",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-24",
+      "type": "school_start",
+      "schemaDescription": "The first day for students on the NHCS 2026–27 traditional calendar. Staggered enrollment runs August 24–26."
+    },
+    {
+      "label": "No School",
+      "name": "Thanksgiving No-School Period",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "no_school",
+      "hideSchemaDescription": true
+    },
+    {
+      "label": "No School",
+      "name": "Winter No-School Period",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "no_school",
+      "hideSchemaDescription": true
+    },
+    {
+      "label": "Break",
+      "name": "Official Spring Break",
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "type": "break_start",
+      "description": "Students are also off March 25 for a designated teacher workday and March 26 for Good Friday."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School — Half Day",
+      "date": "2027-06-04",
+      "type": "school_end",
+      "schemaDescription": "The last day for students on the NHCS 2026–27 traditional calendar; the district marks it as a half day."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Which Calendar?", "id": "nhcs-2026-2027-calendar-choice" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "No-School Periods", "id": "nhcs-2026-2027-no-school-periods" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Other Calendars", "id": "other-calendars" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "customSections": [
+    {
+      "id": "nhcs-2026-2027-calendar-choice",
+      "label": "Which NHCS Calendar Applies to My Student?",
+      "position": "afterVerification",
+      "content": "This page covers the NHCS traditional calendar. NHCS also publishes separate calendars for year-round, restart year-round, early college, technical high school, and Pre-K programs.",
+      "groups": [
+        {
+          "label": "Before making plans",
+          "items": [
+            "Use the traditional calendar shown here only if your student’s school or program follows it.",
+            "Use the official program PDFs below for year-round, restart, early college, technical high school, or Pre-K schedules.",
+            "Check school announcements for campus events, testing, transportation changes, and emergency updates."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nhcs-2026-2027-no-school-periods",
+      "label": "Major Student No-School Periods",
+      "position": "afterKeyDates",
+      "content": "These ranges highlight the main extended periods when students on the traditional calendar are not scheduled to attend. Standalone holidays and teacher workdays appear in the complete calendar below.",
+      "table": {
+        "columns": ["Period", "Dates students are off", "Official NHCS labels"],
+        "rows": [
+          ["Thanksgiving", "November 25–27, 2026", "November 25 is an undesignated teacher workday; November 26–27 are Thanksgiving holidays."],
+          ["Winter", "December 21, 2026–January 1, 2027", "December 21 is an undesignated teacher workday; December 22–23 and 29–31 are vacation days; December 24–28 are Christmas holidays; January 1 is the New Year’s Day holiday."],
+          ["Spring", "March 25–April 2, 2027", "March 25 is a designated teacher workday; March 26 is the Good Friday holiday; March 29–April 2 is the official Spring Break."]
+        ],
+        "footnote": "Students return Monday, January 4 after the winter period and Monday, April 5 after the spring period."
+      }
+    }
+  ],
+  "allDatesTitle": "NHCS 2026–27 Traditional Calendar — All Dates",
+  "allDatesCoverageNote": "This table follows the labels printed on the official Traditional Calendar, including teacher workdays, vacation days, holidays, reporting dates, staggered enrollment, and the last-day half day. School-specific events and dates from separate program calendars are not included.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1765232664/nhcsk12ncus/nfdz4faolcqknofvmdzt/TraditionalCalendar11-5-25.pdf",
+  "allDatesSourceLabel": "NHCS 2026–27 Traditional Calendar PDF",
+  "dateLabelOverrides": {
+    "No School for Students": "Teacher Workday",
+    "School Closure": "No School"
+  },
+  "otherCalendarsPosition": "beforeCalendarExport",
+  "alternateCalendarsTitle": "Other Official NHCS Calendars",
+  "alternateCalendarsDescription": "Use the calendar published for your student’s school or program; its dates may differ from the traditional calendar on this page.",
+  "alternateCalendarsButtonLabel": "View Official PDF",
+  "alternateCalendarsFooterDescription": "NHCS may add or revise program calendars during the year. Check the",
+  "alternateCalendarsFooterLinkLabel": "official printable calendars page",
+  "alternateCalendarsFooterLinkUrl": "https://www.nhcs.net/about-us/calendar/print-calendars",
   "alternateCalendars": [
     {
       "type": "year-round",
-      "label": "2026-2027 Year-Round Schools",
+      "group": "Year-round programs",
+      "label": "2026–27 Year-Round Schools",
       "pdfUrl": "https://resources.finalsite.net/images/v1765232664/nhcsk12ncus/bpak2heableyqornyzjs/Year-Round11-14-25Final.pdf"
     },
     {
       "type": "restart-year-round",
-      "label": "2026-2027 Restart Year-Round (Freeman and Snipes)",
+      "group": "Year-round programs",
+      "label": "2026–27 Restart Year-Round — Freeman and Snipes",
       "pdfUrl": "https://resources.finalsite.net/images/v1765232664/nhcsk12ncus/s3xvkfcendevx8o71laf/RestartWorkingCalendar2026-2027.pdf"
     },
     {
-      "type": "early-college",
-      "label": "2026-2027 Isaac Bear Early College High School",
+      "type": "early-college-isaac-bear",
+      "group": "Early college and technical high schools",
+      "label": "2026–27 Isaac Bear Early College High School",
       "pdfUrl": "https://resources.finalsite.net/images/v1765232664/nhcsk12ncus/yakxef5osrx3hvzxbcsv/IsaacBearWorkingCalendar2026-2027.pdf"
     },
     {
-      "type": "early-college",
-      "label": "2026-2027 Wilmington Early College High School and Southeast Area Technical High School",
+      "type": "early-college-wec-sea-tech",
+      "group": "Early college and technical high schools",
+      "label": "2026–27 Wilmington Early College and Southeast Area Technical High School",
       "pdfUrl": "https://resources.finalsite.net/images/v1765232664/nhcsk12ncus/b33uft3un4dei5epbi2i/SEA-TechWilmingtonEarlyCalendar2026-2027.pdf"
     },
     {
       "type": "pre-k",
-      "label": "2026-2027 Pre-K Traditional Schools",
+      "group": "Pre-K",
+      "label": "2026–27 Pre-K Traditional Schools",
       "pdfUrl": "https://resources.finalsite.net/images/v1765232664/nhcsk12ncus/qeaszxscu9nvuvoejg1k/Pre-k11-5-25Pre-KCalendarFINAL.pdf"
     }
   ],
-  "calendarFaqs": [
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideIcsButtonSupportText": true,
+  "hideSocialShareButtons": true,
+  "hideShareCalendarHeading": true,
+  "hidePdfVersionLabel": true,
+  "unifiedDownloadTitle": "Calendar Downloads",
+  "unifiedDownloadDescription": "Use the official live calendar for district updates, or download a one-time student calendar file from this page.",
+  "officialSubscriptionTitle": "Official NHCS Live Calendar",
+  "officialSubscriptionDescription": "Best if you want district updates. NHCS provides Google Calendar and iCal options from its official calendar page.",
+  "officialSubscriptionButtonLabel": "View NHCS Calendar Options",
+  "officialSubscriptionUrl": "https://www.nhcs.net/about-us/calendar/print-calendars",
+  "icsHeading": "MySchoolDates Student Calendar File",
+  "icsDescription": "Download a one-time ICS snapshot of the traditional-calendar student dates shown on this page for Google Calendar, Apple Calendar, or Outlook. It will not update automatically if NHCS revises its calendar.",
+  "icsButtonLabel": "Download Student Dates (.ics)",
+  "pdfHeading": "Official NHCS 2026–27 Traditional Calendar",
+  "pdfDescription": "Open the one-page calendar approved November 5, 2025, with the district’s original labels and color key.",
+  "pdfButtonLabel": "View Official English PDF",
+  "pdfSupplementalTitle": "Calendar in Spanish",
+  "pdfSupplementalDescription": "NHCS also publishes the 2026–27 traditional calendar in Spanish.",
+  "pdfSupplementalLinks": [
     {
-      "q": "When does NHCS start school in 2026?",
-      "a": "New Hanover County Schools traditional-calendar students start school on Monday, August 24, 2026."
-    },
-    {
-      "q": "When is NHCS Spring Break in 2027?",
-      "a": "Spring Break on the NHCS 2026-2027 traditional calendar runs Thursday, March 25 through Friday, April 2, 2027. Students return Monday, April 5, 2027."
-    },
-    {
-      "q": "Does NHCS have a half day in 2026-2027?",
-      "a": "Yes. The 2026-2027 New Hanover County Schools traditional calendar lists June 4, 2027 as the last day and a half day for students."
+      "label": "View Official Spanish PDF",
+      "url": "https://www.nhcs.net/fs/resource-manager/view/dead973e-6c40-4342-ba4f-019451110770"
     }
   ],
-  "customSections": [
-    {
-      "id": "nhcs-parent-date-questions-2026-2027",
-      "label": "Important NHCS Dates Parents Search For",
-      "content": "These are the traditional-calendar dates most families check first when planning the 2026-2027 school year.",
-      "position": "afterAbout",
-      "groups": [
-        {
-          "label": "Quick answers",
-          "items": [
-            "First day of school: Monday, August 24, 2026.",
-            "Winter Break ends Friday, January 1, 2027, and students return Monday, January 4, 2027.",
-            "Spring Break runs Thursday, March 25 through Friday, April 2, 2027.",
-            "The final student day is Friday, June 4, 2027, and the traditional calendar marks it as a half day."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "nhcs-calendar-planning-guide-2026-2027",
-      "label": "Planning Your Year Around NHCS Breaks",
-      "content": "Use the traditional calendar dates below as planning anchors, then confirm any travel, childcare, or appointment plans against the official NHCS source before committing.",
-      "position": "afterPlanningTips",
-      "groups": [
-        {
-          "label": "Family planning notes",
-          "items": [
-            "Thanksgiving Break is a short midweek-to-weekend window, so families should check teacher workdays before assuming a full week away from school.",
-            "Winter Break runs through Friday, January 1, 2027, with students returning Monday, January 4, 2027.",
-            "Spring Break runs Thursday, March 25 through Friday, April 2, 2027, creating the longest spring travel window on the traditional calendar.",
-            "The final student day is Friday, June 4, 2027, and the traditional calendar marks it as a half day."
-          ]
-        }
-      ]
-    }
-  ],
-  "yearNumbers": [
-    {
-      "label": "Additional No-School Weekdays",
-      "value": "7",
-      "detail": "Includes Labor Day, October 26 Designated Teacher Workday, November 3 Election Day / Undesignated Teacher Workday, Martin Luther King Jr. Day, January 19 Designated Teacher Workday, February 15 Undesignated Teacher Workday, and Memorial Day. Break periods and the last-day half day are excluded."
-    },
-    {
-      "label": "Student Half Days",
-      "value": "1",
-      "detail": "The traditional calendar marks June 4 as the last day and a half day for students."
-    }
-  ],
+  "nationalTrendsTitle": "Related Resource: 2026–27 School Calendar Trends",
   "whatsNew": {
-    "title": "Changes from the 2025-2026 Calendar",
+    "title": "Changes from the 2025–26 Calendar",
     "content": [
-      "The first day moves from August 26 in 2025-2026 to August 24 in 2026-2027.",
-      "The last day moves from June 5 in 2025-2026 to June 4 in 2026-2027.",
-      "Spring Break moves from April 3-10 in 2025-2026 to March 25-April 2 in 2026-2027.",
-      "The traditional calendar lists June 4 as the last day and a half day for students."
+      "The first day moves from August 26 in 2025–26 to August 24 in 2026–27.",
+      "The last day moves from June 5 in 2025–26 to June 4 in 2026–27; both calendars mark the last day as a half day for students.",
+      "The official Spring Break week moves from April 6–10, 2026 to March 29–April 2, 2027.",
+      "In 2026–27, a designated teacher workday and the Good Friday holiday extend the spring student no-school period to March 25–April 2."
     ]
   },
-  "events": [
+  "comparisonBeforeFaq": true,
+  "comparisonDistrictSlugs": [
+    "brunswick-county-schools-calendar"
+  ],
+  "comparisonTitle": "NHCS 2026–27 Calendar Compared With Brunswick County Schools",
+  "comparisonSummary": "NHCS and Brunswick County both start August 24 and share the March 29–April 2 Spring Break week, but Brunswick County ends May 28, one week before NHCS ends June 4.",
+  "comparisonCustomRows": [
     {
-      "date": "2026-08-24",
-      "name": "First Day of School",
-      "type": "school_start"
+      "key": "firstDay",
+      "label": "First Day",
+      "values": {
+        "new-hanover-county-school-calendar": "Aug 24, 2026",
+        "brunswick-county-schools-calendar": "Aug 24, 2026"
+      }
     },
     {
-      "date": "2026-09-07",
-      "name": "Labor Day",
-      "type": "holiday"
+      "key": "lastDay",
+      "label": "Last Day",
+      "values": {
+        "new-hanover-county-school-calendar": "Jun 4, 2027",
+        "brunswick-county-schools-calendar": "May 28, 2027"
+      }
     },
     {
-      "date": "2026-09-23",
-      "name": "Interim Reports",
-      "type": "academic"
+      "key": "thanksgivingNoSchool",
+      "label": "Thanksgiving Student Days Off",
+      "values": {
+        "new-hanover-county-school-calendar": "Nov 25–27, 2026",
+        "brunswick-county-schools-calendar": "Nov 25–27, 2026"
+      }
     },
     {
-      "date": "2026-10-23",
-      "name": "End of Grading Period",
-      "type": "academic"
+      "key": "winterNoSchool",
+      "label": "Winter Student Days Off",
+      "values": {
+        "new-hanover-county-school-calendar": "Dec 21, 2026–Jan 1, 2027",
+        "brunswick-county-schools-calendar": "Dec 21, 2026–Jan 5, 2027"
+      }
     },
     {
-      "date": "2026-10-26",
-      "name": "No School (Designated Teacher Workday)",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-10-29",
-      "name": "Report Cards",
-      "type": "academic"
-    },
-    {
-      "date": "2026-11-03",
-      "name": "No School (Election Day / Undesignated Teacher Workday)",
-      "type": "no_school"
-    },
-    {
-      "date": "2026-11-11",
-      "name": "Veterans Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-11-25",
-      "name": "Thanksgiving Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2026-12-03",
-      "name": "Interim Reports",
-      "type": "academic"
-    },
-    {
-      "date": "2026-12-21",
-      "name": "Winter Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-01-01",
-      "name": "Winter Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-01-04",
-      "name": "Students Return",
-      "type": "school_resume"
-    },
-    {
-      "date": "2027-01-15",
-      "name": "End of Grading Period",
-      "type": "academic"
-    },
-    {
-      "date": "2027-01-18",
-      "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-01-19",
-      "name": "No School (Designated Teacher Workday)",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-01-25",
-      "name": "Report Cards",
-      "type": "academic"
-    },
-    {
-      "date": "2027-02-15",
-      "name": "No School (Undesignated Teacher Workday)",
-      "type": "no_school"
-    },
-    {
-      "date": "2027-02-22",
-      "name": "Interim Reports",
-      "type": "academic"
-    },
-    {
-      "date": "2027-03-23",
-      "name": "End of Grading Period",
-      "type": "academic"
-    },
-    {
-      "date": "2027-03-25",
-      "name": "Spring Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-04-02",
-      "name": "Spring Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-04-05",
-      "name": "Students Return",
-      "type": "school_resume"
-    },
-    {
-      "date": "2027-04-07",
-      "name": "Report Cards",
-      "type": "academic"
-    },
-    {
-      "date": "2027-05-03",
-      "name": "Interim Reports",
-      "type": "academic"
-    },
-    {
-      "date": "2027-05-31",
-      "name": "Memorial Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-06-04",
-      "name": "Last Day of School — Half Day",
-      "type": "school_end"
+      "key": "springBreakWeek",
+      "label": "Official Spring Break Week",
+      "values": {
+        "new-hanover-county-school-calendar": "Mar 29–Apr 2, 2027",
+        "brunswick-county-schools-calendar": "Mar 29–Apr 2, 2027"
+      }
     }
   ],
-  "sourceVersion": "2026-2027 Traditional Calendar approved November 5, 2025"
+  "comparisonFooterText": "Thanksgiving and winter rows show weekdays when students are not scheduled to attend. The spring row preserves each district’s official Spring Break week and excludes adjacent holidays or workdays.",
+  "hideComparisonInsights": true,
+  "calendarFaqs": [
+    {
+      "q": "Why are NHCS students off before Spring Break begins?",
+      "a": "Students are also off Thursday, March 25 for a designated teacher workday and Friday, March 26 for the Good Friday holiday. Together with the official break week, that creates a continuous student no-school period from March 25 through April 2."
+    },
+    {
+      "q": "Can NHCS change the calendar after it is approved?",
+      "a": "Yes. Weather, board action, or instructional-time needs may change the calendar. Use the official NHCS live calendar and school announcements before booking travel or arranging child care."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "Why are NHCS students off before Spring Break begins?",
+    "Can NHCS change the calendar after it is approved?"
+  ],
+  "faqDisplayLimit": 2,
+  "hideSourceReviewDate": true,
+  "hideSourceVersionDisplay": true,
+  "hideSourceNextReview": true,
+  "sourceReviewSummary": "Reviewed August 12, 2026, using the official NHCS 2026–27 Traditional Calendar and printable calendars page.",
+  "sourceReviewDetails": [
+    "Matched the first and last days, staggered enrollment, grading dates, workdays, vacation days, holidays, Spring Break, graduation, and the last-day half day to the official PDF.",
+    "Preserved the district’s event labels and meaning in the complete date table, with separate notes explaining when students do not attend.",
+    "Checked the district’s alternate English calendars, Spanish traditional calendar, and official Google Calendar/iCal options.",
+    "Compared the first day, last day, and major student no-school dates with Brunswick County Schools using each district’s published 2026–27 calendar."
+  ],
+  "sourceMaintainerText": "Denis Dou using official New Hanover County Schools sources.",
+  "sources": [
+    {
+      "label": "NHCS printable calendars and live calendar options",
+      "url": "https://www.nhcs.net/about-us/calendar/print-calendars"
+    },
+    {
+      "label": "Official NHCS 2026–27 Traditional Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1765232664/nhcsk12ncus/nfdz4faolcqknofvmdzt/TraditionalCalendar11-5-25.pdf"
+    },
+    {
+      "label": "Official NHCS 2026–27 Traditional Calendar in Spanish",
+      "url": "https://www.nhcs.net/fs/resource-manager/view/dead973e-6c40-4342-ba4f-019451110770"
+    },
+    {
+      "label": "Brunswick County Schools printable calendars",
+      "url": "https://www.bcswan.net/calendar/printable-calendars"
+    }
+  ],
+  "events": [
+    { "date": "2026-07-03", "name": "July 4th Holiday", "type": "holiday", "description": "Observed Friday, July 3.", "preserveOfficialName": true, "hideFromCalendarExport": true },
+    { "date": "2026-08-13", "endDate": "2026-08-14", "name": "Undesignated Teacher Workdays", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2026-08-17", "endDate": "2026-08-21", "name": "Designated Teacher Workdays", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2026-08-18", "endDate": "2026-08-19", "name": "Professional Development", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-08-24", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-08-24", "endDate": "2026-08-26", "name": "Staggered Enrollment", "type": "academic", "description": "The district prints staggered enrollment alongside the August 24 first day.", "hideFromCalendarExport": true },
+    { "date": "2026-09-07", "name": "Labor Day Holiday", "type": "holiday" },
+    { "date": "2026-09-23", "name": "Interim Reports", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-10-23", "name": "End of Grading Period", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-10-26", "name": "Designated Teacher Workday", "type": "teacher_workday", "description": "No school for students.", "preserveOfficialName": true },
+    { "date": "2026-10-29", "name": "Report Cards", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-11-03", "name": "Election Day/Undesignated Teacher Workday", "type": "teacher_workday", "description": "No school for students.", "preserveOfficialName": true },
+    { "date": "2026-11-11", "name": "Veterans Day Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2026-11-25", "name": "Undesignated Teacher Workday", "type": "teacher_workday", "description": "No school for students.", "preserveOfficialName": true },
+    { "date": "2026-11-26", "endDate": "2026-11-27", "name": "Thanksgiving Holidays", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2026-12-03", "name": "Interim Reports", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-12-21", "name": "Undesignated Teacher Workday", "type": "teacher_workday", "description": "No school for students.", "preserveOfficialName": true },
+    { "date": "2026-12-22", "endDate": "2026-12-23", "name": "Vacation Days", "type": "no_school" },
+    { "date": "2026-12-24", "endDate": "2026-12-28", "name": "Christmas Holidays", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2026-12-29", "endDate": "2026-12-31", "name": "Vacation Days", "type": "no_school" },
+    { "date": "2027-01-01", "name": "New Year’s Day Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-01-04", "name": "Students Return", "type": "school_resume" },
+    { "date": "2027-01-15", "name": "End of Grading Period", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-01-18", "name": "Martin Luther King, Jr. Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-01-19", "name": "Designated Teacher Workday", "type": "teacher_workday", "description": "No school for students.", "preserveOfficialName": true },
+    { "date": "2027-01-25", "name": "Report Cards", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-02-15", "name": "Undesignated Teacher Workday", "type": "teacher_workday", "description": "No school for students.", "preserveOfficialName": true },
+    { "date": "2027-02-22", "name": "Interim Reports", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-03-23", "name": "End of Grading Period", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-03-25", "name": "Designated Teacher Workday", "type": "teacher_workday", "description": "No school for students.", "preserveOfficialName": true },
+    { "date": "2027-03-26", "name": "Good Friday Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-03-29", "endDate": "2027-04-02", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-04-05", "name": "Students Return", "type": "school_resume" },
+    { "date": "2027-04-07", "name": "Report Cards", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-05-03", "name": "Interim Reports", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-05-31", "name": "Memorial Day Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-06-04", "name": "Last Day and Half Day for Students / End of Grading Period", "type": "school_end", "badgeLabel": "Last Day · Half Day" },
+    { "date": "2027-06-05", "name": "Traditional High School Graduation", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-06-07", "endDate": "2027-06-08", "name": "Designated Teacher Workdays", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2027-06-09", "name": "Undesignated Teacher Workdays", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2027-06-16", "name": "Report Cards Mailed", "type": "academic", "hideFromCalendarExport": true }
+  ]
 }

@@ -38,7 +38,8 @@
     "planningTips",
     "districtProfile",
     "livingHere",
-    "relatedDistricts"
+    "relatedDistricts",
+    "nationalTrends"
   ],
   "calendarType": "traditional",
   "districtFact": "Cypress-Fairbanks Independent School District serves northwest Harris County communities in the Greater Houston area, including Cypress, Jersey Village, and nearby Houston-area neighborhoods.",
@@ -51,25 +52,18 @@
       "Check the official CFISD calendar page after weather closures because some teacher workdays are also listed as school closure make-up or inclement weather days."
     ]
   },
-  "compareIntro": "Compare the traditional calendars for CFISD, Houston ISD, and Katy ISD. Dates shown include the first day, last day, and spring break.",
-  "districtFaqs": [
-    {
-      "q": "Which Cy-Fair ISD calendar should families use?",
-      "a": "Most families should use the CFISD district calendar shown on this page for first and last day dates, student holidays, professional days, teacher workdays, inclement weather days, and grading periods."
-    },
-    {
-      "q": "Can Cy-Fair ISD calendar dates change after approval?",
-      "a": "Yes. Weather closures, board decisions, or school closure make-up needs can affect the calendar. Families should check the official CFISD calendar page and district announcements before making critical plans."
-    },
-    {
-      "q": "Are CFISD professional days and teacher workdays no-school days for students?",
-      "a": "This page shows professional days, teacher workdays, and student holidays as currently scheduled student no-school dates. When CFISD designates a date as a possible school-closure or inclement-weather make-up day, the date is labeled as conditional because it may become an instructional day."
-    },
-    {
-      "q": "Where should families verify last-minute CFISD calendar changes?",
-      "a": "Use the official Cypress-Fairbanks ISD calendar page and district announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with CFISD."
-    }
+  "comparisonTitle": "How the CFISD Calendar Compares With Nearby Districts",
+  "compareIntro": "Compare CFISD with Houston ISD and Katy ISD for the first day, last day, fall break, Thanksgiving break, winter break, and spring break in 2026–27.",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "fallBreak",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
   ],
+  "comparisonRowsMode": "sharedValuesOnly",
+  "districtFaqs": [],
   "customSections": [],
   "relatedDistricts": [
     {

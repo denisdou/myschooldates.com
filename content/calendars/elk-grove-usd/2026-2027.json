@@ -1,118 +1,294 @@
 {
   "institutionId": "elk-grove-usd",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Elk Grove Unified School District Calendar 2026–27",
   "firstDay": "2026-08-13",
   "lastDay": "2027-05-27",
-  "totalSchoolDays": 180,
+  "temporalCoverageStart": "2026-08-13",
+  "temporalCoverageEnd": "2027-05-27",
   "sourceUrl": "https://www.egusd.net/StudentsFamilies/FormsQuick-Links/Calendars/",
+  "sourceDocumentPage": "https://d16k74nzx9emoe.cloudfront.net/9ab7b9f7-d798-4217-ab08-23ae04000a6a.pdf",
   "sourcePdfUrl": "https://d16k74nzx9emoe.cloudfront.net/9ab7b9f7-d798-4217-ab08-23ae04000a6a.pdf",
-  "seoTitle": "Elk Grove Unified School District Calendar 2026-2027: Dates, Holidays & PDF",
-  "seoDescription": "View the EGUSD Traditional Calendar for 2026-2027, including the August 13 first day, May 27 last day, major holidays, official PDF, and ICS download.",
-  "lastVerifiedAt": "2026-07-16",
+  "sourceCalendarName": "Elk Grove Unified School District 2026–27 School Year Calendar",
+  "sourceVersion": "Board approved November 19, 2024",
+  "lastVerifiedAt": "2026-08-12",
   "datePublished": "2026-07-16",
-  "dateModified": "2026-07-16",
+  "dateModified": "2026-08-12",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "confirmed_data_error"],
   "calendarType": "traditional",
+  "allDatesMode": "all",
+  "seoTitle": "Elk Grove Unified School District Calendar 2026–27: Dates, Tracks & PDF",
+  "seoDescription": "EGUSD’s Traditional Calendar runs from August 13, 2026, through May 27, 2027. See breaks, other calendar tracks, the official PDF, and an ICS download.",
+  "heroSummary": "On EGUSD’s Traditional Calendar, the 2026–27 school year begins Thursday, August 13, 2026, and ends Thursday, May 27, 2027. Thanksgiving Break runs November 23–27, students are off December 21–January 4 for the winter recess period, and Spring Break runs March 15–19. EGUSD also uses Modified Traditional and Tracks A, B, C, and D, which have different dates.",
+  "heroSourceLine": "Primary source: EGUSD 2026–27 School Year Calendar · Board approved November 19, 2024",
+  "heroDownloadHref": "https://d16k74nzx9emoe.cloudfront.net/9ab7b9f7-d798-4217-ab08-23ae04000a6a.pdf",
+  "heroDownloadLabel": "View official PDF",
+  "verificationBadgeText": "Reviewed against EGUSD’s official calendars on August 12, 2026.",
+  "heroVerificationSourceText": "Official district calendars checked",
+  "calendarNotes": "The main date list and downloadable calendar on this page follow EGUSD’s Traditional Calendar. Modified Traditional and Tracks A, B, C, and D have different schedules; use the calendar selector above to identify the file and track that apply to your student.",
+  "hideInstructionalDaysSummary": true,
   "hideSemesterCount": true,
-  "yearNumbersMode": "compact",
-  "calendarNotes": "This page covers the EGUSD Traditional Calendar only. Modified Traditional and A/B/C/D track dates are listed separately in the official PDF and may differ.",
-  "alternateCalendars": [],
+  "hideSecondSemesterStartSummary": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaQuestions": [],
+  "includeComparisonSchema": false,
+  "webPageMainEntity": "dataset",
+  "schemaReviewedBy": "author",
+  "schemaCalendarName": "EGUSD 2026–27 Traditional Calendar",
+  "schemaDatasetName": "EGUSD 2026–27 Traditional Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed dates from EGUSD’s 2026–27 Traditional Calendar, including the first and last days, major breaks, student holidays, school-resume dates, and the December 21–January 4 winter no-school period documented across two official calendar files.",
+  "schemaCalendarDownloadName": "MySchoolDates EGUSD 2026–27 Traditional Calendar file",
+  "schemaCalendarDownloadDescription": "One-time ICS import of the reviewed Traditional Calendar dates shown on this page. It records December 21, 2026–January 4, 2027 as the student no-school period. It does not include Modified Traditional or Tracks A, B, C, and D and will not update automatically after district revisions.",
+  "schemaKeyDateItemListName": "EGUSD 2026–27 Traditional Calendar key dates",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-traditional-calendar",
+      "name": "EGUSD 2026–27 Traditional Calendar",
+      "url": "https://d16k74nzx9emoe.cloudfront.net/e275bd00-beca-4b09-b7fd-a48966c90319/2026-27-Traditional-Calendar.pdf"
+    },
+    {
+      "id": "source-modified-traditional-calendar",
+      "name": "EGUSD 2026–27 Modified Traditional Calendar",
+      "url": "https://d16k74nzx9emoe.cloudfront.net/a50f7400-4d24-4846-a3c2-08c7ed518ac3/2026-27-Modified-Traditional-Calendar.pdf"
+    },
+    {
+      "id": "source-track-a-calendar",
+      "name": "EGUSD 2026–27 Track A Calendar",
+      "url": "https://d16k74nzx9emoe.cloudfront.net/49c60bca-dbbe-4bfc-8798-ff6798870801/2026-27-Track-A-Calendar.pdf"
+    },
+    {
+      "id": "source-track-b-calendar",
+      "name": "EGUSD 2026–27 Track B Calendar",
+      "url": "https://d16k74nzx9emoe.cloudfront.net/f8eea91f-6900-4177-a93d-d583129ac9fe/2026-27-Track-B-Calendar.pdf"
+    },
+    {
+      "id": "source-track-c-calendar",
+      "name": "EGUSD 2026–27 Track C Calendar",
+      "url": "https://d16k74nzx9emoe.cloudfront.net/4b2ae107-03c6-4410-a982-37a77a7cbea1/2026-27-Track-C-Calendar.pdf"
+    },
+    {
+      "id": "source-track-d-calendar",
+      "name": "EGUSD 2026–27 Track D Calendar",
+      "url": "https://d16k74nzx9emoe.cloudfront.net/9ee263c1-2656-476e-8e67-dd5d471873e3/2026-27-Track-D-Calendar.pdf"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": ["source-calendar", "source-calendar-page", "source-traditional-calendar"],
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "yearNumbers",
+    "about",
+    "comparison",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "nationalTrends",
+    "otherCalendars",
+    "relatedDistricts",
+    "whatsDifferent"
+  ],
+  "hiddenCustomSectionIds": ["identify-egusd-calendar-track"],
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideIcsButtonSupportText": true,
+  "hideSocialShareButtons": true,
+  "hideCalendarUpdatesButton": true,
+  "preserveJumpNavigationOrder": true,
+  "yearSwitcherPosition": "afterSources",
+  "jumpNavigation": [
+    { "label": "Which Calendar?", "id": "egusd-2026-2027-calendar-selector" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Changes", "id": "egusd-2026-2027-year-changes" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "keyDatesSummaryTitle": "EGUSD 2026–27 Traditional Calendar Key Dates",
+  "keyDatesSummarySubtitle": "Traditional Calendar dates; other EGUSD tracks differ",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School — Traditional Calendar",
+      "date": "2026-08-13",
+      "type": "school_start",
+      "schemaDescription": "EGUSD’s 2026–27 Traditional Calendar begins August 13, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "schemaDescription": "Thanksgiving Break on EGUSD’s Traditional Calendar runs November 23–27, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Recess",
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "type": "break_start",
+      "description": "EGUSD’s combined calendar labels Dec. 21–Jan. 4 as Traditional Winter Break. The separate Traditional Calendar labels Dec. 23–Jan. 1 as Winter Break; Dec. 21–22 are also non-school days, and Jan. 4 is an inservice day.",
+      "schemaDescription": "Traditional Calendar students are off December 21, 2026, through January 4, 2027. EGUSD’s combined calendar and separate Traditional Calendar label the period differently."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start",
+      "schemaDescription": "Spring Break on EGUSD’s Traditional Calendar runs March 15–19, 2027."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School — Traditional Calendar",
+      "date": "2027-05-27",
+      "type": "school_end",
+      "schemaDescription": "EGUSD’s 2026–27 Traditional Calendar ends May 27, 2027."
+    }
+  ],
+  "allDatesTitle": "EGUSD 2026–27 Traditional Calendar Dates",
+  "allDatesCoverageNote": "This list covers major student dates on EGUSD’s Traditional Calendar. Modified Traditional and Tracks A, B, C, and D use different schedules shown in EGUSD’s official calendars.",
+  "allDatesSourceLinks": [
+    { "label": "official EGUSD 2026–27 calendar PDF", "url": "https://d16k74nzx9emoe.cloudfront.net/9ab7b9f7-d798-4217-ab08-23ae04000a6a.pdf" },
+    { "label": "EGUSD calendars page", "url": "https://www.egusd.net/StudentsFamilies/FormsQuick-Links/Calendars/" }
+  ],
+  "hideCoveredBreakDatesNote": true,
+  "breaksTitle": "EGUSD Traditional Calendar Breaks and Return Dates",
+  "hideBreakDurationBadges": true,
+  "breakNotes": {
+    "Thanksgiving Break": "No school November 23–27; classes resume Monday, November 30.",
+    "Winter Recess": "Students are off December 21–January 4 and return Tuesday, January 5.",
+    "Spring Break": "No school March 15–19; students return Monday, March 22."
+  },
+  "unifiedDownloadTitle": "EGUSD Calendar Downloads",
+  "unifiedDownloadDescription": "Download the reviewed Traditional Calendar dates or open EGUSD’s official multi-track PDF.",
+  "icsHeading": "Download Traditional Calendar Dates (.ics)",
+  "icsDescription": "The .ics file records December 21–January 4 as the student no-school period. It is a one-time import of the Traditional Calendar dates reviewed for this page, does not include Modified Traditional or Tracks A, B, C, and D, and will not update automatically if EGUSD changes the calendar.",
+  "icsButtonLabel": "Download Calendar (.ics)",
+  "pdfHeading": "Official EGUSD 2026–27 Calendar PDF",
+  "pdfDescription": "Open EGUSD’s published calendar with Traditional, Modified Traditional, and Tracks A, B, C, and D.",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfVersionLabel": "Board approved November 19, 2024",
+  "customSections": [
+    {
+      "id": "egusd-2026-2027-calendar-selector",
+      "label": "Which EGUSD Calendar Applies to Your Student?",
+      "content": "The dates and calendar download on this page follow the Traditional Calendar. Confirm your student’s assigned calendar before making plans. The district separately publishes calendars for Modified Traditional and Tracks A, B, C, and D.",
+      "position": "afterVerification",
+      "schemaHasPart": true,
+      "table": {
+        "columns": ["Calendar", "First day", "March schedule", "Last day"],
+        "rows": [
+          ["Traditional", "Aug. 13, 2026", "Spring Break: Mar. 15–19", "May 27, 2027"],
+          ["Modified Traditional", "Aug. 13, 2026", "Spring Break: Mar. 15–26", "June 11, 2027"],
+          ["Track A", "Aug. 17, 2026", "See the official Track A calendar", "June 25, 2027"],
+          ["Track B", "July 15, 2026", "See the official Track B calendar", "June 25, 2027"],
+          ["Track C", "July 15, 2026", "See the official Track C calendar", "June 25, 2027"],
+          ["Track D", "July 15, 2026", "See the official Track D calendar", "May 27, 2027"]
+        ],
+        "footnote": "Not sure which calendar applies? Check your school’s website, enrollment materials, or office communications before relying on the dates below."
+      },
+      "linksLabel": "Official calendars:",
+      "linksDisplay": "inline",
+      "links": [
+        { "label": "Traditional", "to": "https://d16k74nzx9emoe.cloudfront.net/e275bd00-beca-4b09-b7fd-a48966c90319/2026-27-Traditional-Calendar.pdf" },
+        { "label": "Modified Traditional", "to": "https://d16k74nzx9emoe.cloudfront.net/a50f7400-4d24-4846-a3c2-08c7ed518ac3/2026-27-Modified-Traditional-Calendar.pdf" },
+        { "label": "Track A", "to": "https://d16k74nzx9emoe.cloudfront.net/49c60bca-dbbe-4bfc-8798-ff6798870801/2026-27-Track-A-Calendar.pdf" },
+        { "label": "Track B", "to": "https://d16k74nzx9emoe.cloudfront.net/f8eea91f-6900-4177-a93d-d583129ac9fe/2026-27-Track-B-Calendar.pdf" },
+        { "label": "Track C", "to": "https://d16k74nzx9emoe.cloudfront.net/4b2ae107-03c6-4410-a982-37a77a7cbea1/2026-27-Track-C-Calendar.pdf" },
+        { "label": "Track D", "to": "https://d16k74nzx9emoe.cloudfront.net/9ee263c1-2656-476e-8e67-dd5d471873e3/2026-27-Track-D-Calendar.pdf" },
+        { "label": "Combined calendar", "to": "https://d16k74nzx9emoe.cloudfront.net/9ab7b9f7-d798-4217-ab08-23ae04000a6a.pdf" }
+      ]
+    },
+    {
+      "id": "egusd-2026-2027-year-changes",
+      "label": "What Changed on the Traditional Calendar for 2026–27",
+      "content": "This section compares EGUSD’s 2025–26 and 2026–27 Traditional Calendars.",
+      "position": "afterBreaks",
+      "schemaHasPart": true,
+      "groups": [
+        {
+          "label": "Traditional Calendar changes",
+          "items": [
+            "The first day moves one day earlier, from August 14 to August 13.",
+            "Thanksgiving Break moves to November 23–27, one day earlier than in 2025–26.",
+            "Spring Break moves to March 15–19, one day earlier than in 2025–26.",
+            "The last day moves two days earlier, from May 29 to May 27."
+          ]
+        }
+      ]
+    }
+  ],
+  "events": [
+    { "date": "2026-08-13", "name": "First Day of School — Traditional Calendar", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
+    { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday" },
+    { "date": "2026-11-23", "endDate": "2026-11-27", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2026-12-21", "endDate": "2027-01-04", "name": "Winter Recess", "type": "break_start", "description": "Students are off Dec. 21–Jan. 4. See the Winter Recess note in Key Dates for details on EGUSD’s differing labels." },
+    { "date": "2027-01-05", "name": "Students Return from Winter Break", "type": "school_resume" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-02-08", "name": "Lincoln’s Birthday", "type": "holiday" },
+    { "date": "2027-02-15", "name": "Presidents Day", "type": "holiday" },
+    { "date": "2027-03-15", "endDate": "2027-03-19", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-03-22", "name": "Students Return from Spring Break", "type": "school_resume" },
+    { "date": "2027-05-27", "name": "Last Day of School — Traditional Calendar", "type": "school_end" }
+  ],
+  "faqDisplayQuestions": [
+    "When does EGUSD’s Traditional Calendar start in 2026?",
+    "When is EGUSD Spring Break on the Traditional Calendar in 2027?",
+    "Does every EGUSD school follow the Traditional Calendar?",
+    "When is the last day on EGUSD’s Traditional Calendar?",
+    "Will the downloaded EGUSD calendar update automatically?"
+  ],
   "calendarFaqs": [
     {
-      "q": "Is the EGUSD calendar download an official subscription?",
-      "a": "No. The .ics file is an unofficial one-time import generated by MySchoolDates from the reviewed Traditional Calendar dates on this page. It will not automatically update if EGUSD revises the calendar, so always verify changes on the official EGUSD calendars page."
+      "q": "When does EGUSD’s Traditional Calendar start in 2026?",
+      "a": "The first day on EGUSD’s Traditional Calendar is Thursday, August 13, 2026. Tracks B, C, and D begin July 15; Track A begins August 17; and Modified Traditional also begins August 13."
+    },
+    {
+      "q": "When is EGUSD Spring Break on the Traditional Calendar in 2027?",
+      "a": "Spring Break on the Traditional Calendar runs March 15–19, 2027. Students return Monday, March 22. Modified Traditional has a longer March 15–26 break."
+    },
+    {
+      "q": "Does every EGUSD school follow the Traditional Calendar?",
+      "a": "No. EGUSD also uses Modified Traditional and Tracks A, B, C, and D. Check your school’s website, enrollment materials, or office communications to confirm the calendar assigned to your student."
+    },
+    {
+      "q": "When is the last day on EGUSD’s Traditional Calendar?",
+      "a": "The last day on the Traditional Calendar is Thursday, May 27, 2027. Modified Traditional and Tracks A, B, and C end later."
+    },
+    {
+      "q": "Will the downloaded EGUSD calendar update automatically?",
+      "a": "No. The .ics file is a one-time import of the Traditional Calendar dates shown on this page. Later EGUSD revisions will not appear automatically."
     }
   ],
-  "yearNumbers": [
-    {
-      "label": "Calendar Tracks",
-      "value": "Multiple",
-      "detail": "The official EGUSD PDF includes Traditional, Modified Traditional, and A/B/C/D track calendars. This page summarizes the Traditional Calendar."
-    }
+  "sourceReviewSummary": "Reviewed August 12, 2026 using EGUSD’s official calendar page, board-approved combined calendar, and separately published Traditional and track calendars.",
+  "sourceReviewDetailsTitle": "How we reviewed this calendar",
+  "sourceReviewDetails": [
+    "Checked the Traditional Calendar’s first and last days, Thanksgiving Break, winter no-school period, Spring Break, student return dates, and district-observed holidays against the combined and separate Traditional calendar files.",
+    "The combined calendar labels Dec. 21–Jan. 4 as Traditional Winter Break. The separate Traditional Calendar labels Dec. 23–Jan. 1 as Winter Break, while also showing Dec. 21–22 as non-school days and Jan. 4 as an inservice day. This page documents both labels and records the full student no-school period.",
+    "Reviewed EGUSD’s separately published Modified Traditional and Track A, B, C, and D calendars to confirm their first and last days and to avoid presenting Traditional Calendar dates as districtwide dates.",
+    "The ICS file contains only the reviewed Traditional Calendar dates shown in the main date list and does not update automatically."
   ],
-  "whatsNew": {
-    "title": "Changes from the 2025-2026 Calendar",
-    "content": [
-      "The first day moves from August 14 in 2025-2026 to August 13 in 2026-2027.",
-      "The last day moves from May 29 in 2025-2026 to May 27 in 2026-2027.",
-      "Spring Break moves from March 16-20 in 2025-2026 to March 15-19 in 2026-2027."
-    ]
-  },
-  "events": [
-    {
-      "date": "2026-08-13",
-      "name": "First Day of School",
-      "type": "school_start"
-    },
-    {
-      "date": "2026-09-07",
-      "name": "Labor Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-11-11",
-      "name": "Veterans Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2026-11-23",
-      "name": "Thanksgiving Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2026-11-27",
-      "name": "Thanksgiving Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2026-12-21",
-      "name": "Winter Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-01-04",
-      "name": "Winter Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-01-05",
-      "name": "Students Return",
-      "type": "school_resume"
-    },
-    {
-      "date": "2027-01-18",
-      "name": "Martin Luther King Jr. Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-02-08",
-      "name": "Lincoln's Birthday",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-02-15",
-      "name": "Presidents Day",
-      "type": "holiday"
-    },
-    {
-      "date": "2027-03-15",
-      "name": "Spring Break",
-      "type": "break_start"
-    },
-    {
-      "date": "2027-03-19",
-      "name": "Spring Break End",
-      "type": "break_end"
-    },
-    {
-      "date": "2027-03-22",
-      "name": "Students Return",
-      "type": "school_resume"
-    },
-    {
-      "date": "2027-05-27",
-      "name": "Last Day of School",
-      "type": "school_end"
-    }
-  ],
-  "sourceVersion": "2026-2027 School Calendar board approval November 19, 2024"
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official EGUSD sources.",
+  "sourceNextReviewText": "We recheck this page after EGUSD revises the calendar PDF or updates its calendars page.",
+  "sources": [
+    { "label": "EGUSD official calendars page", "url": "https://www.egusd.net/StudentsFamilies/FormsQuick-Links/Calendars/" },
+    { "label": "EGUSD 2026–27 combined School Year Calendar PDF", "url": "https://d16k74nzx9emoe.cloudfront.net/9ab7b9f7-d798-4217-ab08-23ae04000a6a.pdf" },
+    { "label": "EGUSD 2026–27 Traditional Calendar PDF", "url": "https://d16k74nzx9emoe.cloudfront.net/e275bd00-beca-4b09-b7fd-a48966c90319/2026-27-Traditional-Calendar.pdf" },
+    { "label": "EGUSD 2026–27 Modified Traditional Calendar PDF", "url": "https://d16k74nzx9emoe.cloudfront.net/a50f7400-4d24-4846-a3c2-08c7ed518ac3/2026-27-Modified-Traditional-Calendar.pdf" },
+    { "label": "EGUSD 2026–27 Track A Calendar PDF", "url": "https://d16k74nzx9emoe.cloudfront.net/49c60bca-dbbe-4bfc-8798-ff6798870801/2026-27-Track-A-Calendar.pdf" },
+    { "label": "EGUSD 2026–27 Track B Calendar PDF", "url": "https://d16k74nzx9emoe.cloudfront.net/f8eea91f-6900-4177-a93d-d583129ac9fe/2026-27-Track-B-Calendar.pdf" },
+    { "label": "EGUSD 2026–27 Track C Calendar PDF", "url": "https://d16k74nzx9emoe.cloudfront.net/4b2ae107-03c6-4410-a982-37a77a7cbea1/2026-27-Track-C-Calendar.pdf" },
+    { "label": "EGUSD 2026–27 Track D Calendar PDF", "url": "https://d16k74nzx9emoe.cloudfront.net/9ee263c1-2656-476e-8e67-dd5d471873e3/2026-27-Track-D-Calendar.pdf" }
+  ]
 }

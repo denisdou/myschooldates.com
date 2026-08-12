@@ -1,59 +1,233 @@
 {
   "institutionId": "durham-public-schools",
   "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Durham Public Schools Calendar 2027–28",
   "firstDay": "2027-08-23",
   "lastDay": "2028-06-07",
   "totalSchoolDays": 175,
-  "sourceUrl": "https://www.dpsnc.net/o/dps/page/district-calendars",
+  "sourceUrl": "https://www.dpsnc.net/o/dps/page/2027-2028-district-calendars",
   "sourcePdfUrl": "https://assets.myschooldates.com/pdfs/durham-public-schools-2027-2028-traditional-calendar.pdf",
   "comparisonSourceUrl": "https://www.dpsnc.net/o/dps/page/2027-2028-district-calendars",
   "comparisonSourceLabel": "DPS 2027–28 official calendar page",
   "comparisonExtraSourceUrl": "https://assets.myschooldates.com/pdfs/durham-public-schools-2027-2028-traditional-calendar.pdf",
   "comparisonExtraSourceLabel": "Archived copy of DPS 2027–28 calendar PDF",
-  "seoTitle": "Durham Public Schools Calendar 2027-2028: Dates, Holidays & PDF",
-  "seoDescription": "View the Durham Public Schools 2027-2028 calendar with the first and last day, holidays, breaks, early release dates, student no-school dates, official PDF, and ICS download.",
-  "lastVerifiedAt": "2026-07-16",
+  "seoTitle": "Durham Public Schools Calendar 2027-2028: Key Dates & PDF",
+  "seoDescription": "Durham Public Schools 2027–28 traditional calendar with first and last day, holidays, breaks, early release dates, official PDF, and calendar download.",
+  "lastVerifiedAt": "2026-08-12",
   "datePublished": "2026-07-16",
-  "dateModified": "2026-07-16",
+  "dateModified": "2026-08-12",
+  "lastReviewedAt": "2026-08-12",
+  "schemaDatasetDateModified": "2026-08-12",
   "calendarType": "traditional",
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
   "hideSemesterCount": true,
-  "yearNumbersMode": "compact",
-  "calendarNotes": "This page covers the DPS traditional student calendar. Routine staff-only labels are simplified unless they affect student attendance.",
+  "hideSecondSemesterStartSummary": true,
+  "heroSourceLine": "Based on the official DPS 2027–28 Traditional Calendar",
+  "heroDownloadLabel": "Calendar Tools & Downloads",
+  "heroSummary": "Durham Public Schools begins the 2027–28 school year on Monday, August 23, 2027. The last day of school is Wednesday, June 7, 2028, with early release. Spring break runs March 20–24, and students return Monday, March 27.",
+  "verificationBadgeText": "Verified against the official DPS traditional calendar on August 12, 2026.",
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideCalendarTrackCaution": true,
+  "calendarNotes": "This page covers the DPS traditional student calendar. Year-round schools use a separate calendar.",
+  "alternateCalendarsNoticePosition": "beforeKeyDates",
+  "alternateCalendarsNotice": "Most DPS students follow the traditional calendar shown on this page. Students at year-round schools or programs assigned a different calendar should use that calendar.",
+  "alternateCalendarsNoticeLinkLabel": "See Other Official Calendars below.",
+  "alternateCalendarsNoticeLinkHref": "#dps-2027-2028-other-calendars",
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Other Calendars", "id": "dps-2027-2028-other-calendars" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Changes", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "DPS 2027–28 Traditional Calendar Dates",
+  "allDatesCoverageNote": "This list covers major traditional-calendar dates that affect student attendance, including no-school days, early release days, marking-period endings, and school breaks. Break labels summarize consecutive student no-school days for family planning; DPS may classify the underlying dates as teacher workdays, annual leave, or holidays. Year-round schools and programs assigned another calendar should use that calendar.",
+  "breaksTitle": "Major School Breaks",
+  "hideBreakDurationBadges": true,
+  "breakNotes": {
+    "2027-11-22": "Students are off all week.",
+    "2027-12-20": "Students return Monday, January 3.",
+    "2028-03-20": "Students return Monday, March 27."
+  },
   "alternateCalendars": [
     {
       "type": "year-round",
-      "label": "2027-2028 Year-Round Calendar",
+      "label": "2027–28 Year-Round Calendar",
       "pdfUrl": "https://assets.myschooldates.com/pdfs/durham-public-schools-2027-2028-year-round-calendar.pdf"
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Calendar Tools & Downloads",
+  "unifiedDownloadDescription": "Choose the official DPS digital calendar, the reviewed MySchoolDates import, or the archived traditional-calendar PDF.",
+  "officialSubscriptionTitle": "Official DPS Digital Calendar",
+  "officialSubscriptionDescription": "Prefer automatic updates? DPS offers official 2027–28 digital calendars for traditional and year-round schools.",
+  "officialSubscriptionButtonLabel": "View Official Digital Calendar Options",
+  "officialSubscriptionUrl": "https://www.dpsnc.net/o/dps/page/2027-2028-district-calendars",
+  "icsHeading": "Add DPS 2027–28 Dates to Your Calendar",
+  "icsDescription": "Download the reviewed traditional-calendar dates as an .ics file for Google Calendar, Apple Calendar, or Outlook. This is a one-time import and will not automatically reflect later DPS calendar changes.",
+  "icsButtonLabel": "Download DPS .ics File",
+  "icsAriaLabel": "Download the MySchoolDates DPS 2027–28 traditional-calendar .ics import file",
+  "icsButtonSupportText": "For the latest revisions, check the official DPS calendar.",
+  "pdfHeading": "Official 2027–28 Calendar PDF",
+  "pdfDescription": "Archived copy of the DPS traditional calendar approved January 15, 2026. Check the official district calendar page for later revisions.",
+  "pdfButtonLabel": "View Archived Copy",
+  "hidePdfVersionLabel": true,
+  "customSections": [
+    {
+      "id": "dps-2027-2028-other-calendars",
+      "label": "Other Official DPS Calendars",
+      "position": "afterAllDates",
+      "content": "Most students use the traditional calendar above. Students at year-round schools or programs assigned a different calendar should use the calendar assigned to them.",
+      "links": [
+        {
+          "label": "View Archived 2027–28 Year-Round Calendar PDF",
+          "to": "https://assets.myschooldates.com/pdfs/durham-public-schools-2027-2028-year-round-calendar.pdf"
+        }
+      ]
     }
   ],
   "calendarFaqs": [
     {
-      "q": "Does DPS have early release days in 2027-2028?",
-      "a": "Yes. The 2027-2028 Durham Public Schools traditional calendar lists early release days on October 20, 2027, December 8, 2027, February 23, 2028, May 10, 2028, and June 7, 2028."
-    }
-  ],
-  "yearNumbers": [
-    {
-      "label": "Additional No-School Weekdays",
-      "value": "14",
-      "detail": "Includes Labor Day, September 29 Required Teacher Workday, October 11 Teacher Workday, November 1-2 Required Teacher Workdays, Veterans Day, Martin Luther King Jr. Day, January 18 Required Teacher Workday, February 9 Required Teacher Workday, March 7 Required Teacher Workday, April 3 Required Teacher Workday, Good Friday, April 26 Required Teacher Workday, and Memorial Day. Break periods and early-release days are excluded."
+      "q": "Which Durham Public Schools calendar should families use?",
+      "a": "Most DPS students follow the traditional calendar shown on this page. Students at year-round schools use a separate calendar, so those families should use the matching official calendar."
     },
     {
-      "label": "Student Half Days",
-      "value": "5",
-      "detail": "The traditional calendar marks early release for students on October 20, December 8, February 23, May 10, and June 7."
+      "q": "Does DPS have early release days in 2027–28?",
+      "a": "Yes. The DPS traditional calendar lists early release days on October 20 and December 8, 2027, and February 23, May 10, and June 7, 2028."
+    },
+    {
+      "q": "Are teacher workdays no-school days for DPS students?",
+      "a": "Yes. Teacher workdays and required teacher workdays listed on the traditional student calendar are no-school days for students."
+    },
+    {
+      "q": "Where can I check for last-minute DPS calendar changes?",
+      "a": "Check the official DPS 2027–28 calendar page and announcements from your student's school. MySchoolDates is an independent reference and does not automatically receive district changes."
     }
   ],
+  "faqOrderLimit": 5,
+  "faqDisplayQuestions": [
+    "Which Durham Public Schools calendar should families use?",
+    "Can Durham Public Schools calendar dates change after approval?",
+    "Are teacher workdays no-school days for DPS students?",
+    "Where can I check for last-minute DPS calendar changes?",
+    "Does DPS have early release days in 2027–28?"
+  ],
+  "faqDisplayLimit": 5,
+  "comparisonDistrictSlugs": [
+    "wake-county-school-calendar"
+  ],
+  "comparisonTitle": "DPS 2027–28 Calendar Compared With Wake County",
+  "compareIntro": "Families coordinating childcare or activities across district lines may need to compare DPS dates with the Wake County traditional calendar.",
+  "comparisonInsights": [
+    {
+      "label": "First day",
+      "items": [
+        "DPS and Wake County both start school on August 23, 2027."
+      ]
+    },
+    {
+      "label": "Last day",
+      "items": [
+        "DPS ends school on June 7, one day before Wake County's June 8 last day."
+      ]
+    }
+  ],
+  "comparisonCustomRows": [
+    {
+      "key": "firstDay",
+      "label": "First Day",
+      "values": {
+        "durham-public-schools-calendar": "Aug 23, 2027",
+        "wake-county-school-calendar": "Aug 23, 2027"
+      }
+    },
+    {
+      "key": "lastDay",
+      "label": "Last Day",
+      "values": {
+        "durham-public-schools-calendar": "Jun 7, 2028",
+        "wake-county-school-calendar": "Jun 8, 2028"
+      }
+    },
+    {
+      "key": "thanksgivingBreak",
+      "label": "Thanksgiving Break",
+      "values": {
+        "durham-public-schools-calendar": "Nov 22–26, 2027",
+        "wake-county-school-calendar": "Nov 24–26, 2027"
+      }
+    },
+    {
+      "key": "winterBreak",
+      "label": "Winter Break",
+      "values": {
+        "durham-public-schools-calendar": "Dec 20–31, 2027",
+        "wake-county-school-calendar": "Dec 20, 2027–Jan 3, 2028"
+      }
+    },
+    {
+      "key": "springBreak",
+      "label": "Spring Break",
+      "values": {
+        "durham-public-schools-calendar": "Mar 20–24, 2028",
+        "wake-county-school-calendar": "Mar 27–31, 2028"
+      }
+    }
+  ],
+  "hideComparisonNotes": true,
   "whatsNew": {
-    "title": "What's New for 2027-2028",
+    "title": "What Changed from 2026–27",
     "content": [
-      "Comparison uses the DPS traditional calendar for both school years.",
-      "The first day moves from August 24 in 2026-2027 to August 23 in 2027-2028.",
-      "The last day moves from June 9 in 2026-2027 to June 7 in 2027-2028.",
-      "Spring Break moves from March 22-26 in 2026-2027 to March 20-24 in 2027-2028.",
-      "The traditional calendar lists five student early release days in 2027-2028."
+      "School starts one day earlier, on August 23 instead of August 24.",
+      "The last day moves two days earlier, from June 9 to June 7.",
+      "Spring break is two days earlier, moving from March 22–26 to March 20–24.",
+      "The traditional calendar includes five student early release days."
     ]
   },
+  "yearComparisonDefaultOpen": true,
+  "sourceReviewSummary": "Reviewed August 12, 2026, against the approved DPS traditional calendar and the district's official 2027–28 calendar page.",
+  "sourceReviewDetails": [
+    "The first and last day, school breaks, no-school dates, marking-period endings, early release dates, and teacher workdays were checked against the traditional calendar.",
+    "The archived PDF is the DPS traditional calendar approved January 15, 2026.",
+    "The year-round calendar is linked separately and is not combined with the traditional-calendar date list.",
+    "The MySchoolDates .ics file does not sync with later revisions; families should use the official DPS calendar page for updates."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Durham Public Schools sources",
+  "sourceNextReviewText": "Next review: if DPS publishes a revised 2027–28 calendar.",
+  "sources": [
+    {
+      "label": "DPS 2027–28 official calendar page",
+      "url": "https://www.dpsnc.net/o/dps/page/2027-2028-district-calendars"
+    },
+    {
+      "label": "Archived copy of the approved DPS Traditional Calendar PDF",
+      "url": "https://assets.myschooldates.com/pdfs/durham-public-schools-2027-2028-traditional-calendar.pdf"
+    }
+  ],
+  "yearSwitcherPosition": "afterSources",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDatesSummary",
+    "quickFacts",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "otherCalendars",
+    "nationalTrends",
+    "backToCurrent"
+  ],
   "events": [
     {
       "date": "2027-08-23",
@@ -67,13 +241,15 @@
     },
     {
       "date": "2027-09-29",
-      "name": "No School (Required Teacher Workday)",
-      "type": "no_school"
+      "name": "Required Teacher Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-10-11",
-      "name": "No School (Teacher Workday)",
-      "type": "no_school"
+      "name": "Teacher Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-10-20",
@@ -87,13 +263,15 @@
     },
     {
       "date": "2027-11-01",
-      "name": "No School (Required Teacher Workday)",
-      "type": "no_school"
+      "name": "Required Teacher Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-11-02",
-      "name": "No School (Required Teacher Workday)",
-      "type": "no_school"
+      "name": "Required Teacher Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2027-11-11",
@@ -142,13 +320,15 @@
     },
     {
       "date": "2028-01-18",
-      "name": "No School (Required Teacher Workday)",
-      "type": "no_school"
+      "name": "Required Teacher Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2028-02-09",
-      "name": "No School (Required Teacher Workday)",
-      "type": "no_school"
+      "name": "Required Teacher Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2028-02-23",
@@ -157,8 +337,9 @@
     },
     {
       "date": "2028-03-07",
-      "name": "No School (Required Teacher Workday)",
-      "type": "no_school"
+      "name": "Required Teacher Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2028-03-20",
@@ -181,9 +362,10 @@
       "type": "academic"
     },
     {
-      "date": "2028-04-03",
-      "name": "No School (Required Teacher Workday)",
-      "type": "no_school"
+      "date": "2028-04-05",
+      "name": "Required Teacher Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2028-04-14",
@@ -192,8 +374,9 @@
     },
     {
       "date": "2028-04-26",
-      "name": "No School (Required Teacher Workday)",
-      "type": "no_school"
+      "name": "Required Teacher Workday",
+      "type": "no_school",
+      "preserveOfficialName": true
     },
     {
       "date": "2028-05-10",
@@ -208,7 +391,8 @@
     {
       "date": "2028-06-07",
       "name": "Last Day of School — Early Release",
-      "type": "school_end"
+      "type": "school_end",
+      "badgeLabel": "Last Day · Early Release"
     }
   ],
   "sourceVersion": "2027-2028 Traditional Calendar approved January 15, 2026"

@@ -19,6 +19,7 @@ const hideShareCalendarHeading = computed(() => Boolean(props.cal?.hideShareCale
 const shareCalendarHeading = computed(() => props.cal?.shareCalendarHeading ?? props.cal?.meta?.shareCalendarHeading ?? 'Share This Calendar')
 const hideSocialShareButtons = computed(() => Boolean(props.cal?.hideSocialShareButtons ?? props.cal?.meta?.hideSocialShareButtons))
 const hideIcsButtonSupportText = computed(() => Boolean(props.cal?.hideIcsButtonSupportText ?? props.cal?.meta?.hideIcsButtonSupportText))
+const hideIcsImportDisclaimer = computed(() => Boolean(props.cal?.hideIcsImportDisclaimer ?? props.cal?.meta?.hideIcsImportDisclaimer))
 const hideCalendarUpdatesButton = computed(() => Boolean(props.cal?.hideCalendarUpdatesButton ?? props.cal?.meta?.hideCalendarUpdatesButton))
 const hidePdfDownloadSection = computed(() => Boolean(props.cal?.hidePdfDownloadSection ?? props.cal?.meta?.hidePdfDownloadSection))
 const unifiedDownloadTitle = computed(() => props.cal?.unifiedDownloadTitle ?? props.cal?.meta?.unifiedDownloadTitle ?? '')
@@ -86,6 +87,9 @@ const icsButtonLabel = computed(() => {
 })
 const icsButtonSupportText = computed(() =>
   props.cal?.icsButtonSupportText ?? props.cal?.meta?.icsButtonSupportText ?? 'One-time import. This calendar does not automatically sync with later district updates.'
+)
+const icsSourceNote = computed(() =>
+  props.cal?.icsSourceNote ?? props.cal?.meta?.icsSourceNote ?? 'The .ics file is generated from the reviewed calendar records used for this page. After downloading, import the file into your preferred calendar app.'
 )
 const compatibleCalendars = ['Apple Calendar', 'Google Calendar', 'Outlook']
 const icsIncludedItems = computed(() => {
@@ -212,10 +216,10 @@ const icsAriaLabel = computed(() =>
           </li>
         </ul>
       </div>
-      <p v-if="!compactDownloadModule" class="text-xs text-rds-ink-muted mt-3">
-        The .ics file is generated from the reviewed calendar records used for this page. After downloading, import the file into your preferred calendar app.
+      <p v-if="!compactDownloadModule && icsSourceNote" class="text-xs text-rds-ink-muted mt-3">
+        {{ icsSourceNote }}
       </p>
-      <p v-if="!compactDownloadModule" class="text-xs text-rds-ink-muted mt-2">
+      <p v-if="!compactDownloadModule && !hideIcsImportDisclaimer" class="text-xs text-rds-ink-muted mt-2">
         This calendar import file is generated from verified {{ year }} {{ districtName }} district calendar data. It is an independent one-time import from MySchoolDates and will not automatically update if the district revises its calendar, so always verify schedule changes with the district.
       </p>
     </div>

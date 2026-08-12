@@ -1,0 +1,172 @@
+{
+  "institutionId": "minneapolis-public-schools",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025–26",
+  "pageHeading": "Minneapolis Public Schools Calendar 2025–26",
+  "firstDay": "2025-09-02",
+  "lastDay": "2026-06-10",
+  "temporalCoverageStart": "2025-09-01",
+  "temporalCoverageEnd": "2026-07-30",
+  "totalSchoolDays": 168,
+  "instructionalDaysLabel": "Instructional Days",
+  "instructionalDaysDescription": "The official MPS student calendar lists 168 instructional days.",
+  "sourceUrl": "https://www.mpschools.org/about-mps/calendars",
+  "sourceCalendarName": "MPS 2025–2026 Student School Year Calendar — official original PDF reviewed locally",
+  "sourceCheckedAt": "2026-08-12",
+  "sourceChecksumSha256": "93f6cf4528ea2d0aa7ae582d7ae721f422b8c24d213f55c4f1de927170a7bc96",
+  "lastVerifiedAt": "2026-08-12",
+  "dateCreated": "2026-08-12",
+  "datePublished": "2026-08-12",
+  "dateModified": "2026-08-12",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "severe_weather_change", "archived_pdf_url_publication", "confirmed_data_error"],
+  "sourceVersion": "MPS 2025–2026 Student School Year Calendar dated January 21, 2025",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideDatasetSchema": true,
+  "nonCurrentYearNotice": "This archived 2025–26 MPS calendar is retained for reference. The regular school year ended June 10, 2026; the printed summer-school window continued through July 30.",
+  "seoTitle": "Minneapolis Public Schools Calendar 2025–26 | MPS Dates",
+  "seoDescription": "See MPS 2025–26 grade-specific starts, conferences, MEA and seasonal breaks, religious closures, 168 days, and locally reviewed official PDF data.",
+  "heroSummary": "Minneapolis Public Schools grades 1–12 began Tuesday, September 2, 2025; Pre-K and kindergarten began Thursday, September 4. Grades 10–12 were directed to check their school for a later first-day start during freshman orientation. MEA Break was October 16–17, Winter Break was December 22–January 2, Spring Break was March 30–April 3, and the last day was June 10, 2026.",
+  "calendarNotes": "The earliest firstDay field is September 2 for grades 1–12, while Pre-K and kindergarten begin September 4. Grades 10–12 should use their school's first-day arrival instructions because of freshman orientation. The calendar contains 168 instructional days. October's family-teacher conference and two-day MEA Break create three consecutive non-school weekdays. MPS prints Rosh Hashanah, Yom Kippur, Eid al-Fitr, and Eid al-Adha as non-school days in this school year. Record-keeping and professional-development days are separate from seasonal breaks. The 2025–26 page is based on a locally reviewed MPS original PDF because no stable official PDF URL was supplied; the official calendar hub remains the public verification page.",
+  "heroFactChips": [
+    "Grades 1–12 start Sep 2",
+    "Pre-K & K start Sep 4",
+    "168 instructional days",
+    "Last day Jun 10"
+  ],
+  "verificationBadgeText": "Reviewed August 12, 2026, from the complete official MPS original PDF retained locally and the official MPS calendar hub.",
+  "keyDatesSummaryTitle": "MPS 2025–26 Key Dates",
+  "keyDatesSummarySubtitle": "Grade-specific openings, major breaks, religious-observance closures, and the last day",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day for Grades 1–12", "date": "2025-09-02", "type": "school_start" },
+    { "label": "First Day", "name": "First Day for Pre-K and Kindergarten", "date": "2025-09-04", "type": "school_start" },
+    { "label": "Break", "name": "MEA Break", "date": "2025-10-16", "endDate": "2025-10-17", "type": "break_start" },
+    { "label": "Break", "name": "Winter Break", "date": "2025-12-22", "endDate": "2026-01-02", "type": "break_start" },
+    { "label": "Break", "name": "Spring Break", "date": "2026-03-30", "endDate": "2026-04-03", "type": "break_start" },
+    { "label": "Last Day", "name": "Last Day of School", "date": "2026-06-10", "type": "school_end" }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Opening", "id": "mps-2025-2026-opening" },
+    { "label": "October Break", "id": "mps-2025-2026-fall-sequence" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Religious Days", "id": "mps-2025-2026-religious-closures" },
+    { "label": "Source", "id": "mps-2025-2026-pdf-source" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "moveCalendarExportBeforeAllDates": true,
+  "allDatesTitle": "Minneapolis Public Schools 2025–26 Dates",
+  "allDatesCoverageNote": "This list covers the official one-page student calendar: grade-specific openings, districtwide non-school days, conferences, breaks, record-keeping and professional-development dates, religious-observance closures, the last day, and the printed summer-school window. Campus bell times, first-day arrival times for grades 10–12, assessments, athletics, and school events require separate MPS resources.",
+  "allDatesSourceUrl": "https://www.mpschools.org/about-mps/calendars",
+  "allDatesSourceLabel": "MPS calendar hub and locally reviewed official 2025–26 original PDF",
+  "dateLegendLabelOverrides": {
+    "Holiday": "No School",
+    "School Closure": "No School",
+    "Teacher Workday": "No School — Staff Date",
+    "Conference Day": "No School — Conference"
+  },
+  "icsHeading": "Add MPS 2025–26 Dates to Your Calendar",
+  "icsDescription": "Download the reviewed MPS openings, conferences, non-school days, breaks, religious closures, last day, and summer-school window.",
+  "icsButtonLabel": "Download MPS Calendar File",
+  "icsButtonSupportText": "This is a one-time import for an archived year. Bell times, high-school first-day arrival times, and school-specific events are not included.",
+  "customSections": [
+    {
+      "id": "mps-2025-2026-opening",
+      "label": "The MPS Opening Has Three Practical Layers",
+      "position": "afterKeyDates",
+      "content": "The district calendar publishes two dates, but high-school arrival instructions create a third planning layer.",
+      "table": {
+        "columns": ["Students", "Date", "What to verify"],
+        "rows": [
+          ["Grades 1–9", "Tuesday, September 2", "Regular first-day instructions from the school."],
+          ["Grades 10–12", "Tuesday, September 2", "Check the school for a late start while ninth-grade orientation occurs."],
+          ["Pre-K and kindergarten", "Thursday, September 4", "Program arrival, transportation, and dismissal instructions."]
+        ]
+      }
+    },
+    {
+      "id": "mps-2025-2026-fall-sequence",
+      "label": "Conference Day Flows Directly into MEA Break",
+      "position": "afterKeyDates",
+      "content": "Wednesday, October 15 is the fall family-teacher conference day. MEA Break follows Thursday and Friday, creating three consecutive student-free weekdays before the weekend."
+    },
+    {
+      "id": "mps-2025-2026-religious-closures",
+      "label": "Four Religious-Observance Closures",
+      "position": "afterAllDates",
+      "content": "This year's official PDF lists four religious observances as non-school days. These are attendance closures, not merely informational observances.",
+      "table": {
+        "columns": ["Date", "Observance"],
+        "rows": [
+          ["September 23, 2025", "Rosh Hashanah"],
+          ["October 2, 2025", "Yom Kippur"],
+          ["March 20, 2026", "Eid al-Fitr"],
+          ["May 27, 2026", "Eid al-Adha"]
+        ]
+      }
+    },
+    {
+      "id": "mps-2025-2026-pdf-source",
+      "label": "Why There Is No Official PDF Button for 2025–26",
+      "position": "beforeSources",
+      "content": "The supplied local file is the official MPS original PDF: it carries the district logo, 168-day label, MPS calendar URL, district contact information, and January 21, 2025 version date. No stable official PDF URL was supplied, so this page does not publish the unrelated third-party URL or invent a download link. The current MPS calendar hub remains the public source for archived-year verification."
+    }
+  ],
+  "events": [
+    { "date": "2025-09-01", "name": "Labor Day — No School", "type": "holiday" },
+    { "date": "2025-09-02", "name": "First Day for Grades 1–12", "type": "school_start", "description": "Grades 10–12 should check with their school for a possible late start during freshman orientation." },
+    { "date": "2025-09-04", "name": "First Day for Pre-K and Kindergarten", "type": "school_start" },
+    { "date": "2025-09-23", "name": "Rosh Hashanah — No School", "type": "holiday" },
+    { "date": "2025-10-02", "name": "Yom Kippur — No School", "type": "holiday" },
+    { "date": "2025-10-15", "name": "Family-Teacher Conferences — No School", "type": "conference" },
+    { "date": "2025-10-16", "endDate": "2025-10-17", "name": "MEA Break — No School", "type": "break_start" },
+    { "date": "2025-11-04", "name": "Record-Keeping Day — No School", "type": "teacher_workday" },
+    { "date": "2025-11-26", "endDate": "2025-11-28", "name": "Thanksgiving Break — No School", "type": "break_start" },
+    { "date": "2025-12-22", "endDate": "2026-01-02", "name": "Winter Break — No School", "type": "break_start" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day — No School", "type": "holiday" },
+    { "date": "2026-01-23", "name": "Record-Keeping Day — No School", "type": "teacher_workday" },
+    { "date": "2026-02-13", "name": "Family-Teacher Conferences — No School", "type": "conference" },
+    { "date": "2026-02-16", "name": "Presidents' Day — No School", "type": "holiday" },
+    { "date": "2026-02-17", "name": "Professional Development — No School", "type": "teacher_professional_learning" },
+    { "date": "2026-03-20", "name": "Eid al-Fitr — No School", "type": "holiday" },
+    { "date": "2026-03-27", "name": "Record-Keeping Day — No School", "type": "teacher_workday" },
+    { "date": "2026-03-30", "endDate": "2026-04-03", "name": "Spring Break — No School", "type": "break_start" },
+    { "date": "2026-05-25", "name": "Memorial Day — No School", "type": "holiday" },
+    { "date": "2026-05-26", "name": "Professional Development — No School", "type": "teacher_professional_learning" },
+    { "date": "2026-05-27", "name": "Eid al-Adha — No School", "type": "holiday" },
+    { "date": "2026-06-10", "name": "Last Day of School", "type": "school_end" },
+    { "date": "2026-06-22", "endDate": "2026-07-30", "name": "MPS Summer School Window", "type": "academic", "description": "Program schedules and eligibility are published separately by MPS Summer Programs." }
+  ],
+  "calendarFaqs": [
+    { "q": "When did Minneapolis Public Schools start in 2025?", "a": "Grades 1–12 began Tuesday, September 2, 2025. Pre-K and kindergarten began Thursday, September 4. Grades 10–12 were told to check their high school for a possible late first-day start." },
+    { "q": "When was MPS MEA Break in 2025?", "a": "MEA Break was October 16–17, 2025. The family-teacher conference day immediately before it, October 15, was also a non-school day." },
+    { "q": "When was MPS Winter Break in 2025–26?", "a": "Winter Break ran December 22, 2025, through January 2, 2026." },
+    { "q": "When was MPS Spring Break in 2026?", "a": "Spring Break ran Monday, March 30, through Friday, April 3, 2026." },
+    { "q": "Which religious holidays closed MPS in 2025–26?", "a": "The official calendar lists Rosh Hashanah on September 23, Yom Kippur on October 2, Eid al-Fitr on March 20, and Eid al-Adha on May 27 as non-school days." },
+    { "q": "When was the last day of Minneapolis Public Schools in 2026?", "a": "The last day of the regular MPS school year was Wednesday, June 10, 2026." },
+    { "q": "Why is there no 2025–26 MPS PDF download link here?", "a": "The dates were verified from a local official MPS original PDF, but no stable official PDF URL was supplied. MySchoolDates does not publish an unrelated third-party URL or fabricate a district download link." }
+  ],
+  "faqDisplayLimit": 7,
+  "hideFaqSchema": true,
+  "hiddenSections": ["downloadCta", "todayStatus", "keyDateCards", "quickFacts", "breaks", "yearNumbers", "planningTips", "about", "whatsDifferent", "comparison", "districtProfile", "livingHere", "otherCalendars", "nationalTrends"],
+  "sourceReviewSummary": "Reviewed August 12, 2026, against the official MPS calendar hub and a visually rendered copy of the complete official 2025–26 original PDF retained locally.",
+  "sourceReviewDetails": [
+    "The one-page file uses Minneapolis Public Schools branding and includes the official MPS calendar URL, district phone/email, 168 instructional-day total, and January 21, 2025 version date.",
+    "The page was rendered visually because circled first/last days and shaded non-school dates are structural information that plain-text extraction can flatten.",
+    "The local file is an official original PDF, but no stable official public PDF URL was supplied. This record cites the official MPS calendar hub and intentionally omits a fabricated PDF download.",
+    "Grade-specific first days and the grades 10–12 late-start caution were transcribed separately.",
+    "All four printed religious-observance closures were retained as non-school events.",
+    "The June 22–July 30 summer-school window is outside the 168-day regular school year and points families to MPS Summer Programs for details."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Minneapolis Public Schools sources.",
+  "sourceNextReviewText": "Review if MPS republishes a stable archived PDF URL, changes its prior-year record, or issues a severe-weather/calendar correction.",
+  "sources": [
+    { "label": "MPS Calendars and School Bell Times", "url": "https://www.mpschools.org/about-mps/calendars" },
+    { "label": "Official MPS 2025–26 Student School Year Calendar — original PDF reviewed locally; dated January 21, 2025" }
+  ]
+}

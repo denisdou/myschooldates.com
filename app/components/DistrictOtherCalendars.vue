@@ -2,7 +2,7 @@
 const { formatShortDate } = useDistrictPage()
 
 const props = defineProps<{
-  alternateCalendars: { label: string; type: string; group?: string; firstDay?: string; pdfUrl?: string; buttonLabel?: string; ariaLabel?: string }[]
+  alternateCalendars: { label: string; type: string; description?: string; group?: string; firstDay?: string; pdfUrl?: string; buttonLabel?: string; ariaLabel?: string }[]
   districtName: string
   title?: string
   description?: string
@@ -51,7 +51,8 @@ const calendarGroups = computed(() => {
             >
               <div class="min-w-0">
                 <div class="text-sm font-medium text-gray-900">{{ alt.label }}</div>
-                <div v-if="alt.firstDay" class="text-xs text-gray-500 mt-0.5">First day: {{ formatShortDate(alt.firstDay) }}</div>
+                <div v-if="alt.description" class="text-xs text-gray-500 mt-0.5">{{ alt.description }}</div>
+                <div v-else-if="alt.firstDay" class="text-xs text-gray-500 mt-0.5">First day: {{ formatShortDate(alt.firstDay) }}</div>
               </div>
               <a
                 v-if="alt.pdfUrl"

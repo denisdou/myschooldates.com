@@ -16,12 +16,15 @@ const eventSchema = z.object({
   ]),
   description: z.string().optional(),
   schemaDescription: z.string().optional(),
+  hideSchemaDescription: z.boolean().optional(),
   calendarExportDescription: z.string().optional(),
   exportDatesIndividually: z.boolean().optional(),
   showDuringBreak: z.boolean().optional(),
   badgeLabel: z.string().optional(),
   isDerivedPlanningDate: z.boolean().optional(),
   preserveOfficialName: z.boolean().optional(),
+  hideFromAllDates: z.boolean().optional(),
+  hideFromCalendarExport: z.boolean().optional(),
 })
 
 const relatedDistrictSchema = z.object({
@@ -61,15 +64,20 @@ const customSectionSchema = z.object({
   label: z.string(),
   content: z.string(),
   position: z.string().optional(), // 'afterAbout' | 'afterFaq' | 'afterPlanningTips' | 'beforeSources'
+  hideGroupLabels: z.boolean().optional(),
   groups: z.array(customSectionGroupSchema).optional(),
   links: z.array(customSectionLinkSchema).optional(),
   table: customSectionTableSchema.optional(),
 })
 const gradingPeriodSchema = z.object({
   label: z.string(),
-  start: z.string(),
+  start: z.string().optional(),
   end: z.string(),
+  nextStudentDate: z.string().optional(),
   studentDays: z.number().optional(),
+  reportsIssued: z.string().optional(),
+  secondaryReportDate: z.string().optional(),
+  elementaryReportDate: z.string().optional(),
 })
 
 const livingHereHighlightSchema = z.object({ label: z.string(), detail: z.string() })
@@ -258,21 +266,35 @@ export default defineContentConfig({
         faqSchemaExclude: z.array(z.string()).optional(),
         hiddenSections: z.array(z.string()).optional(),
         hideInstructionalDaysSummary: z.boolean().optional(),
+        hideHeroVerificationIcs: z.boolean().optional(),
+        hidePdfDownloadSection: z.boolean().optional(),
         hideCoveredBreakDatesNote: z.boolean().optional(),
         keyDateCardsVariant: z.enum(['compact']).optional(),
         keyDateCardsFirstLabel: z.string().optional(),
         keyDateCardsThirdLabel: z.string().optional(),
         keyDateCardsThirdValue: z.string().optional(),
+        keyDateCardsThirdNote: z.string().optional(),
         includeComparisonSchema: z.boolean().optional(),
         hideDatasetSchema: z.boolean().optional(),
         itemListMode: z.enum(['keyDates', 'allImportantDates']).optional(),
+        gradingPeriodsPosition: z.enum(['beforeCalendarExport']).optional(),
+        gradingPeriodsTitle: z.string().optional(),
+        gradingPeriodsDescription: z.string().optional(),
         gradingPeriods: z.array(gradingPeriodSchema).optional(),
+        breakSummaryOverrides: z.record(z.string(), z.object({
+          name: z.string().optional(),
+          start: z.string().optional(),
+          end: z.string().optional(),
+          note: z.string().optional(),
+          durationLabel: z.string().optional(),
+        })).optional(),
         heroSummary: z.string().optional(),
         calendarNotes: z.string().optional(),  // year-specific narrative (moved from districts/)
         calendarType: z.enum(['traditional', 'balanced', 'modified-start', 'year-round', 'magnet', 'international', 'early-college', 'alternative']).optional(),
         alternateCalendars: z.array(z.object({
           type: z.string(),
           label: z.string(),
+          description: z.string().optional(),
           group: z.string().optional(),
           pdfUrl: z.string().optional(),
           firstDay: z.string().optional(),

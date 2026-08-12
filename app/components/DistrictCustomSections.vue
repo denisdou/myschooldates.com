@@ -10,6 +10,7 @@ const props = defineProps<{
     summaryLabel?: string
     image?: { src: string; alt: string; caption?: string; width?: number; height?: number }
     groups?: { label: string; items: string[] }[]
+    hideGroupLabels?: boolean
     definitions?: { term: string; description: string }[]
     links?: { label: string; to?: string; url?: string; description?: string }[]
     linksDisplay?: 'cards' | 'inline'
@@ -61,7 +62,7 @@ const contentParagraphs = (content?: string) =>
         <div class="mt-4">
           <div v-if="section.groups?.length" class="space-y-4">
             <div v-for="group in section.groups" :key="group.label">
-              <h3 class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
+              <h3 v-if="!section.hideGroupLabels" class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
               <p v-if="group.items.length === 1" class="text-sm leading-relaxed text-gray-600">
                 {{ group.items[0] }}
               </p>
@@ -173,7 +174,7 @@ const contentParagraphs = (content?: string) =>
             <p v-for="paragraph in contentParagraphs(section.content)" :key="paragraph" class="text-sm text-gray-600 leading-relaxed">{{ paragraph }}</p>
           </div>
           <div v-for="group in section.groups" :key="group.label">
-            <h3 class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
+            <h3 v-if="!section.hideGroupLabels" class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
             <p v-if="group.items.length === 1" class="text-sm leading-relaxed text-gray-600">
               {{ group.items[0] }}
             </p>

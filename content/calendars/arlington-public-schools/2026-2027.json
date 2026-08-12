@@ -6,46 +6,309 @@
   "totalSchoolDays": 180,
   "sourceUrl": "https://www.apsva.us/aps-calendar/",
   "sourcePdfUrl": "https://www.apsva.us/wp-content/uploads/sites/57/2026/06/2026-27-Calendar.pdf",
-  "seoTitle": "Arlington Public Schools Calendar 2026-2027: Key Dates & PDF",
-  "seoDescription": "Arlington Public Schools 2026-2027 calendar with first and last days, holidays, breaks, early releases, official PDF, and ICS download.",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Arlington Public Schools Calendar 2026–27",
+  "seoTitle": "Arlington Public Schools (APS) Calendar 2026–27",
+  "seoDescription": "APS 2026–27 dates: breaks, early releases, grading periods and ParentVUE posting dates, plus the official district PDF and an ICS download.",
   "lastVerifiedAt": "2026-07-16",
   "datePublished": "2026-07-16",
-  "dateModified": "2026-07-16",
+  "dateModified": "2026-08-12",
   "calendarType": "traditional",
+  "allDatesMode": "all",
+  "hideCalendarTrackCaution": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroDownloadLink": true,
+  "hideFaqSchema": true,
+  "includeArticleSchema": false,
+  "hideBreakDurationBadges": true,
+  "moveCalendarExportBeforeAllDates": true,
   "hideSemesterCount": true,
-  "yearNumbersMode": "compact",
-  "calendarNotes": "This page covers the APS school year calendar for districtwide K-12 dates, with the separate PreK and VPI start date shown where the official calendar lists it. Early release labels keep the grade-level scope from the APS PDF, including elementary-only, districtwide, and high school early release periods. High school block schedule details may appear in a separate APS file, and school-level events or weather updates should be confirmed through APS and individual school announcements.",
-  "alternateCalendars": [],
-  "calendarFaqs": [
-    {
-      "q": "When do APS PreK and VPI students start in 2026?",
-      "a": "The APS calendar lists the first day for PreK and VPI students as Tuesday, September 1, 2026. K-12 students start one day earlier on Monday, August 31, 2026."
-    }
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hiddenSections": [
+    "keyDateCards",
+    "downloadCta",
+    "quickFacts",
+    "todayStatus",
+    "yearNumbers",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "relatedDistricts",
+    "nationalTrends"
   ],
-  "yearNumbers": [
+  "heroSourceLine": "2026–27 calendar dates · Based on APS's published school year calendar",
+  "heroSummary": "APS starts the 2026–27 school year for K–12 students on Monday, August 31, 2026. PreK and VPI students start Tuesday, September 1. The last day of school is Thursday, June 17, 2027, with early release. Spring Break runs March 22–26, and students return Monday, March 29.",
+  "heroFactChips": [
+    "180 student days"
+  ],
+  "heroCtas": [
     {
-      "label": "Additional No-School Weekdays",
-      "value": "13",
-      "detail": "Includes the two Labor Day closure weekdays (September 4 and September 7), Yom Kippur, October 12, November 3, Veterans Day, Martin Luther King Jr. Day, January 29, Presidents Day, Eid al-Fitr, April 19, Eid al-Adha, and Memorial Day. Thanksgiving, Winter Break, Spring Break, and early-release days are excluded."
+      "label": "View Official APS Calendar PDF",
+      "href": "__sourcePdfUrl",
+      "variant": "secondary"
     },
     {
-      "label": "Scheduled Early-Release Periods",
-      "value": "11 events",
-      "detail": "APS lists 11 scheduled early-release events covering 18 scheduled school days, including the early-release last day of school. The events include districtwide early release, elementary parent-teacher conference early release, elementary early release, and high school early release dates."
+      "label": "Add APS Dates to Your Calendar (.ics)",
+      "href": "__icsUrl",
+      "variant": "primary",
+      "download": true,
+      "filename": "__icsFilename"
     }
   ],
+  "verificationBadgeText": "Checked against APS's published 2026–27 calendar on July 16, 2026.",
+  "schemaCalendarName": "Arlington Public Schools 2026–27 School Year Calendar",
+  "schemaDatasetName": "Arlington Public Schools 2026–27 Student Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed APS student calendar records for 2026–27, including grade-specific opening dates, holidays, breaks, no-school days, early releases, selected academic dates, and the last day of school.",
+  "schemaKeyDateItemListName": "Arlington Public Schools 2026–27 key dates",
+  "schemaCalendarDateItemListName": "Arlington Public Schools 2026–27 calendar dates",
+  "schemaCalendarDownloadName": "MySchoolDates APS 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "ICS file containing the reviewed APS student calendar records represented by this Dataset. Back-to-School Nights and ParentVUE posting dates are not included.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-narrative",
+      "name": "Arlington Public Schools 2026–27 Calendar Narrative",
+      "url": "https://www.apsva.us/wp-content/uploads/sites/57/2026/04/2026-27-SCHOOL-CALENDAR-NARRATIVE.pdf",
+      "version": "APS 2026–27 Calendar Narrative"
+    },
+    {
+      "id": "source-holiday-calendar",
+      "name": "Arlington Public Schools 2026–27 Holiday Calendar",
+      "url": "https://www.apsva.us/wp-content/uploads/sites/57/2026/04/2026-2027-Holiday-Calendar.pdf",
+      "version": "APS 2026–27 Holiday Calendar"
+    },
+    {
+      "id": "source-calendar-2025-2026",
+      "name": "Arlington Public Schools 2025–26 School Year Calendar",
+      "url": "https://www.apsva.us/wp-content/uploads/sites/57/2026/03/2025-26-Calendar-Update032726.pdf",
+      "version": "APS 2025–26 calendar update dated March 27, 2026"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-narrative",
+    "source-holiday-calendar"
+  ],
+  "calendarNotes": "The APS school year calendar includes grade-specific opening and early-release dates. High school block schedules and school-level events may be published separately.",
+  "alternateCalendars": [],
+  "keyDatesSummaryTitle": "APS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Opening dates, major breaks, and the last day of school",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School K–12",
+      "date": "2026-08-31",
+      "type": "school_start",
+      "schemaDescription": "The first day of school for APS K–12 students is August 31, 2026."
+    },
+    {
+      "label": "PreK/VPI",
+      "name": "First Day of School PreK and VPI",
+      "date": "2026-09-01",
+      "type": "academic",
+      "schemaDescription": "APS PreK and VPI students start September 1, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-23",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "Students return Monday, January 4."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "type": "break_start",
+      "description": "Students return Monday, March 29."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School — Early Release",
+      "date": "2027-06-17",
+      "type": "school_end",
+      "schemaDescription": "The last day of school for APS students is June 17, 2027, with early release."
+    }
+  ],
+  "allDatesTitle": "APS 2026–27 Student Calendar Dates",
+  "allDatesCoverageNote": "This table lists major student calendar dates published by APS. Some dates apply only to specific grade levels.",
+  "allDatesCoverageNotePosition": "top",
+  "hideCoveredBreakDatesNote": true,
+  "dateLegendLabelOverrides": {
+    "Early Dismissal": "Early Release",
+    "Last Day · Early Closing": "Last Day · Early Release"
+  },
+  "breaksTitle": "APS Breaks and When Students Return",
+  "breakNotes": {
+    "Labor Day Weekend": "Students return Tuesday, September 8. The Friday and Monday closures create a four-day weekend.",
+    "Thanksgiving Break": "Students return Monday, November 30.",
+    "Winter Break": "Students return Monday, January 4.",
+    "Spring Break": "Students return Monday, March 29."
+  },
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "icsHeading": "Add APS 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download the student calendar dates in the main APS date list as a one-time ICS file, including grade-specific early releases. Back-to-School Nights and ParentVUE posting dates are not included.",
+  "icsButtonLabel": "Add APS Dates to Your Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. The file does not update automatically if APS changes its calendar.",
+  "pdfHeading": "Official APS 2026–27 School Year Calendar",
+  "pdfButtonLabel": "View Official APS Calendar PDF",
+  "pdfDescription": "Open APS's published calendar with student holidays, breaks, early releases, testing dates, and grade-level schedule notes.",
+  "pdfVersionLabel": "APS calendar PDF · reviewed July 16, 2026",
+  "calendarFaqs": [
+    {
+      "q": "When does Arlington Public Schools start school in 2026?",
+      "a": "APS K–12 students start Monday, August 31, 2026. PreK and VPI students start Tuesday, September 1."
+    },
+    {
+      "q": "When is APS Spring Break in 2027?",
+      "a": "APS Spring Break runs Monday, March 22, through Friday, March 26, 2027. Students return Monday, March 29."
+    },
+    {
+      "q": "Do all APS early-release days apply to every grade level?",
+      "a": "No. Some APS early releases apply only to elementary students, some only to high school students, and others to elementary, middle, and high school students. The full calendar keeps those grade-level labels."
+    },
+    {
+      "q": "How does APS handle snow days and emergency closures?",
+      "a": "APS says approximately the first 10 days lost to weather or other emergencies do not need to be made up because the calendar includes instructional time above Virginia's 990-hour minimum. APS also tracks time lost to delayed openings, early closings, and full-day closures. If additional make-up time is needed, the superintendent may submit a plan to the School Board."
+    }
+  ],
+  "faqOrderLimit": 4,
+  "gradingPeriods": [
+    {
+      "label": "Quarter 1",
+      "start": "2026-08-31",
+      "end": "2026-11-02",
+      "studentDays": 45,
+      "secondaryReportDate": "2026-11-12",
+      "elementaryReportDate": "2026-11-17"
+    },
+    {
+      "label": "Quarter 2",
+      "start": "2026-11-04",
+      "end": "2027-01-28",
+      "studentDays": 47,
+      "secondaryReportDate": "2027-02-09",
+      "elementaryReportDate": "2027-02-17"
+    },
+    {
+      "label": "Quarter 3",
+      "start": "2027-02-01",
+      "end": "2027-04-16",
+      "studentDays": 43,
+      "secondaryReportDate": "2027-04-27",
+      "elementaryReportDate": "2027-04-27"
+    },
+    {
+      "label": "Quarter 4",
+      "start": "2027-04-20",
+      "end": "2027-06-17",
+      "studentDays": 45,
+      "secondaryReportDate": "2027-06-25",
+      "elementaryReportDate": "2027-06-17"
+    }
+  ],
+  "gradingPeriodsTitle": "APS Grading Periods and Report Card Dates",
+  "gradingPeriodsDescription": "Quarter dates, student-day counts, and report-card posting dates from APS's 2026–27 Calendar Narrative.",
+  "gradingPeriodsDaysLabel": "Student Days",
+  "gradingPeriodsFooterNote": "APS publishes different ParentVUE posting dates for elementary and secondary report cards in some quarters.",
+  "customSections": [
+    {
+      "id": "aps-2026-2027-need-to-know",
+      "label": "What APS Families Should Know",
+      "position": "afterKeyDates",
+      "content": "",
+      "groups": [
+        {
+          "label": "PreK and VPI start one day later",
+          "items": [
+            "K–12 students start Monday, August 31. PreK and VPI students start Tuesday, September 1."
+          ]
+        },
+        {
+          "label": "Early-release dates are grade-specific",
+          "items": [
+            "APS schedules some early releases for elementary students only, some for high school students, and others for elementary, middle, and high school students. Check the grade-level label in the full calendar before arranging pickup or childcare."
+          ]
+        },
+        {
+          "label": "Labor Day creates a four-day weekend",
+          "items": [
+            "Students are off Friday, September 4, through Monday, September 7, and return Tuesday, September 8."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aps-2026-2027-back-to-school-nights",
+      "label": "APS 2026–27 Back-to-School Nights",
+      "position": "afterBreaks",
+      "content": "APS publishes separate Back-to-School Night dates by school level and program. Families should confirm the start time with their school.",
+      "table": {
+        "columns": [
+          "School level or program",
+          "Date"
+        ],
+        "rows": [
+          ["H-B Woodlawn", "September 16, 2026"],
+          ["Elementary schools", "September 17, 2026"],
+          ["Grace Hopper Center", "September 23, 2026"],
+          ["Middle schools", "September 24, 2026"],
+          ["High schools", "September 30, 2026"],
+          ["Arlington Community High School", "October 7, 2026"]
+        ]
+      }
+    }
+  ],
+  "comparisonBeforeFaq": true,
+  "comparisonTitle": "APS Calendar Compared With Nearby Northern Virginia Districts",
+  "comparisonSummary": "Compare APS's first day, last day, and published student-day total with Fairfax County and Prince William County for 2026–27.",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "instructionalDays"
+  ],
+  "comparisonRowsMode": "sharedValuesOnly",
+  "comparisonRowLabels": {
+    "instructionalDays": "Student Days"
+  },
+  "hideComparisonInsights": true,
+  "hideComparisonNotes": true,
+  "comparisonFooterText": "Dates come from each district's published 2026–27 calendar.",
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Back-to-School", "id": "aps-2026-2027-back-to-school-nights" },
+    { "label": "Grading", "id": "grading-periods" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "FAQ", "id": "faq" }
+  ],
   "whatsNew": {
-    "title": "What's New for 2026-2027",
+    "title": "What Changed from 2025–26",
     "content": [
-      "The first day moves from August 25 in 2025-2026 to August 31 in 2026-2027, six calendar days later.",
-      "The last day moves from June 18 in 2025-2026 to June 17 in 2026-2027, one calendar day earlier.",
-      "Spring Break moves from March 30-April 3 in 2025-2026 to March 22-26 in 2026-2027, starting eight calendar days earlier."
+      "School starts later this year. APS opens on August 31, six days later than the August 25 start in 2025–26.",
+      "The last day moves up by one day. School ends June 17, compared with June 18 last year.",
+      "Spring Break comes earlier. The 2026–27 break runs March 22–26; last year's break ran March 30–April 3."
     ]
   },
   "events": [
     {
       "date": "2026-08-31",
-      "name": "First Day of School K-12",
+      "name": "First Day of School K–12",
       "type": "school_start"
     },
     {
@@ -245,23 +508,15 @@
     },
     {
       "date": "2027-06-11",
+      "dates": [
+        "2027-06-11",
+        "2027-06-14",
+        "2027-06-15",
+        "2027-06-16"
+      ],
       "name": "High School Early Release",
-      "type": "early_dismissal"
-    },
-    {
-      "date": "2027-06-14",
-      "name": "High School Early Release",
-      "type": "early_dismissal"
-    },
-    {
-      "date": "2027-06-15",
-      "name": "High School Early Release",
-      "type": "early_dismissal"
-    },
-    {
-      "date": "2027-06-16",
-      "name": "High School Early Release",
-      "type": "early_dismissal"
+      "type": "early_dismissal",
+      "exportDatesIndividually": true
     },
     {
       "date": "2027-06-17",
@@ -269,5 +524,35 @@
       "type": "school_end"
     }
   ],
-  "sourceVersion": "2026-27 Calendar PDF (APS, June 2026)"
+  "sourceCalendarName": "Arlington Public Schools 2026–27 School Year Calendar PDF",
+  "sourceVersion": "APS 2026–27 School Year Calendar PDF (June 2026)",
+  "sourceReviewSummary": "Reviewed July 16, 2026, against APS's 2026–27 School Year Calendar, Calendar Narrative, and Holiday Calendar.",
+  "sourceReviewDetails": [
+    "The APS school year calendar supplies the opening dates, student holidays, breaks, testing dates, early releases, Back-to-School Nights, and last day shown on this page.",
+    "The APS Calendar Narrative supplies quarter dates, student-day counts, ParentVUE posting dates, and the district's published approach to weather and emergency closures."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Arlington Public Schools sources",
+  "sourceNextReviewText": "We re-check this page when APS revises the school year calendar, changes an early-release or closure date, or publishes a new calendar version.",
+  "sources": [
+    {
+      "label": "Arlington Public Schools — official calendar page",
+      "url": "https://www.apsva.us/aps-calendar/"
+    },
+    {
+      "label": "Arlington Public Schools — 2026–27 School Year Calendar PDF",
+      "url": "https://www.apsva.us/wp-content/uploads/sites/57/2026/06/2026-27-Calendar.pdf"
+    },
+    {
+      "label": "Arlington Public Schools — 2026–27 Calendar Narrative",
+      "url": "https://www.apsva.us/wp-content/uploads/sites/57/2026/04/2026-27-SCHOOL-CALENDAR-NARRATIVE.pdf"
+    },
+    {
+      "label": "Arlington Public Schools — 2026–27 Holiday Calendar",
+      "url": "https://www.apsva.us/wp-content/uploads/sites/57/2026/04/2026-2027-Holiday-Calendar.pdf"
+    },
+    {
+      "label": "Arlington Public Schools — updated 2025–26 calendar used for comparison",
+      "url": "https://www.apsva.us/wp-content/uploads/sites/57/2026/03/2025-26-Calendar-Update032726.pdf"
+    }
+  ]
 }

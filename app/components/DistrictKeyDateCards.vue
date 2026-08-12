@@ -14,6 +14,7 @@ const props = defineProps<{
     keyDateCardsThirdLabel?: string
     keyDateCardsThirdValue?: string
     keyDateCardsThirdDate?: string
+    keyDateCardsThirdNote?: string
     hideInstructionalDaysSummary?: boolean
     calendarType?: string
     meta?: Record<string, any>
@@ -48,6 +49,7 @@ const thirdCardValue = computed(() =>
   cardSetting('keyDateCardsThirdValue') ?? (props.cal.totalSchoolDays ? `${props.cal.totalSchoolDays} days` : isTrackCalendar.value ? 'Vary by track' : `${breaks.value.length} breaks`)
 )
 const thirdCardDate = computed(() => cardSetting('keyDateCardsThirdDate'))
+const thirdCardNote = computed(() => cardSetting('keyDateCardsThirdNote'))
 </script>
 
 <template>
@@ -77,6 +79,7 @@ const thirdCardDate = computed(() => cardSetting('keyDateCardsThirdDate'))
       </div>
       <time v-if="thirdCardDate" :datetime="thirdCardDate" :class="valueClass">{{ thirdCardValue }}</time>
       <div v-else :class="['district-key-date-card__value font-semibold', isCompact ? 'text-base' : 'text-xl']">{{ thirdCardValue }}</div>
+      <p v-if="thirdCardNote" class="mt-2 text-xs leading-relaxed text-rds-ink-muted">{{ thirdCardNote }}</p>
     </div>
   </div>
 </template>

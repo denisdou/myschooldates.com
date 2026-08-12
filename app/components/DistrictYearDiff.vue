@@ -62,6 +62,9 @@ const items = computed(() => {
 })
 
 const title = computed(() => props.cal?.whatsNew?.title)
+const defaultOpen = computed(() => Boolean(
+  props.cal?.yearComparisonDefaultOpen ?? props.cal?.meta?.yearComparisonDefaultOpen
+))
 const displayPrevYear = computed(() => {
   const match = prevYear.value.match(/^(\d{4})-(\d{4})$/)
   return match ? `${match[1]}–${match[2]!.slice(2)}` : prevYear.value
@@ -69,7 +72,7 @@ const displayPrevYear = computed(() => {
 </script>
 
 <template>
-  <details v-if="items.length" class="bg-white rounded-lg border border-gray-200 p-6 group">
+  <details v-if="items.length" :open="defaultOpen" class="bg-white rounded-lg border border-gray-200 p-6 group">
     <summary class="cursor-pointer list-none">
       <div class="flex items-start justify-between gap-4">
         <div>

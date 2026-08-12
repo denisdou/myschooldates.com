@@ -5,19 +5,26 @@ const props = defineProps<{
   title?: string
   description?: string
   daysLabel?: string
+  nextDateLabel?: string
   footerNote?: string
   periods?: {
     label: string
     start?: string
     end: string
+    nextStudentDate?: string
     studentDays?: number
     reportsIssued?: string
+    secondaryReportDate?: string
+    elementaryReportDate?: string
   }[]
 }>()
 
 const showStart = computed(() => props.periods?.some(period => period.start))
 const showStudentDays = computed(() => props.periods?.some(period => typeof period.studentDays === 'number'))
+const showNextStudentDate = computed(() => props.periods?.some(period => period.nextStudentDate))
 const showReportsIssued = computed(() => props.periods?.some(period => period.reportsIssued))
+const showSecondaryReportDate = computed(() => props.periods?.some(period => period.secondaryReportDate))
+const showElementaryReportDate = computed(() => props.periods?.some(period => period.elementaryReportDate))
 </script>
 
 <template>
@@ -33,8 +40,11 @@ const showReportsIssued = computed(() => props.periods?.some(period => period.re
             <th scope="col" class="text-left px-6 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">Grading Period</th>
             <th v-if="showStart" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">Start</th>
             <th scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">End</th>
+            <th v-if="showNextStudentDate" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">{{ nextDateLabel || 'Next Student Day' }}</th>
             <th v-if="showStudentDays" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">{{ daysLabel || 'Student Days' }}</th>
             <th v-if="showReportsIssued" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">Reports Issued</th>
+            <th v-if="showSecondaryReportDate" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">Middle &amp; High ParentVUE</th>
+            <th v-if="showElementaryReportDate" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">Elementary K–5 ParentVUE</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-gray-100">
@@ -47,11 +57,23 @@ const showReportsIssued = computed(() => props.periods?.some(period => period.re
             <td class="px-4 py-3 text-gray-600 whitespace-nowrap">
               <time :datetime="period.end">{{ formatShortDate(period.end) }}</time>
             </td>
+            <td v-if="showNextStudentDate" class="px-4 py-3 text-gray-600 whitespace-nowrap">
+              <time v-if="period.nextStudentDate" :datetime="period.nextStudentDate">{{ formatShortDate(period.nextStudentDate) }}</time>
+              <span v-else aria-hidden="true">—</span>
+            </td>
             <td v-if="showStudentDays" class="px-4 py-3 text-gray-600 whitespace-nowrap">
               {{ period.studentDays ?? '—' }}
             </td>
             <td v-if="showReportsIssued" class="px-4 py-3 text-gray-600 whitespace-nowrap">
               <time v-if="period.reportsIssued" :datetime="period.reportsIssued">{{ formatShortDate(period.reportsIssued) }}</time>
+              <span v-else aria-hidden="true">—</span>
+            </td>
+            <td v-if="showSecondaryReportDate" class="px-4 py-3 text-gray-600 whitespace-nowrap">
+              <time v-if="period.secondaryReportDate" :datetime="period.secondaryReportDate">{{ formatShortDate(period.secondaryReportDate) }}</time>
+              <span v-else aria-hidden="true">—</span>
+            </td>
+            <td v-if="showElementaryReportDate" class="px-4 py-3 text-gray-600 whitespace-nowrap">
+              <time v-if="period.elementaryReportDate" :datetime="period.elementaryReportDate">{{ formatShortDate(period.elementaryReportDate) }}</time>
               <span v-else aria-hidden="true">—</span>
             </td>
           </tr>

@@ -281,6 +281,7 @@ watch(() => route.fullPath, () => {
               <li><NuxtLink to="/houston-independent-school-district-calendar" class="text-sm text-gray-500 hover:text-blue-600">Houston ISD</NuxtLink></li>
               <li><NuxtLink to="/wake-county-school-calendar" class="text-sm text-gray-500 hover:text-blue-600">Wake County</NuxtLink></li>
               <li><NuxtLink to="/fairfax-county-school-calendar" class="text-sm text-gray-500 hover:text-blue-600">Fairfax County</NuxtLink></li>
+              <li><NuxtLink to="/rosemount-apple-valley-eagan-public-schools-calendar" class="text-sm text-gray-500 hover:text-blue-600">District 196 Calendar</NuxtLink></li>
             </ul>
           </div>
           <div v-else>

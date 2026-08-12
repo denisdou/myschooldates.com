@@ -1,0 +1,280 @@
+{
+  "institutionId": "rosemount-apple-valley-eagan-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "District 196 Calendar 2026–27",
+  "firstDay": "2026-08-31",
+  "lastDay": "2027-06-09",
+  "temporalCoverageStart": "2026-08-17",
+  "temporalCoverageEnd": "2027-06-18",
+  "sourceUrl": "https://www.district196.org/about/calendar",
+  "sourceDocumentPage": "https://www.district196.org/about/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1765820761/district196org/district196org/mjxmmgacxom8zozlxm89/2026-27DISTRICTCALENDAR.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1765820761/district196org/district196org/mjxmmgacxom8zozlxm89/2026-27DISTRICTCALENDAR.pdf",
+  "sourceCheckedAt": "2026-08-12",
+  "sourceChecksumSha256": "6d866550ae18b5ffca986b242e2938f356a6a79d765319f15a0d65c55bce14b1",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.district196.org/about/calendar",
+    "linkText": "2026-27 District Calendar",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1765820761/district196org/district196org/mjxmmgacxom8zozlxm89/2026-27DISTRICTCALENDAR.pdf",
+    "expectedChecksumSha256": "6d866550ae18b5ffca986b242e2938f356a6a79d765319f15a0d65c55bce14b1"
+  },
+  "lastVerifiedAt": "2026-08-12",
+  "dateCreated": "2026-08-12",
+  "datePublished": "2026-08-12",
+  "dateModified": "2026-08-12",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "makeup_day_activation", "confirmed_data_error"],
+  "sourceVersion": "District 196 approved 2026-27 calendar; PDF created December 16, 2025",
+  "hideSemesterCount": true,
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerifiedBadge": true,
+  "hideHeroDownloadLink": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideCalendarTrackCaution": true,
+  "hideIcsFromDatasetDistribution": true,
+  "sourcesBeforeFaq": true,
+  "seoTitle": "District 196 Calendar 2026–27: Key Dates & Breaks",
+  "seoDescription": "See the District 196 2026–27 school calendar, including the Aug. 31 first day, grade-specific conference days, breaks, EVHS quarter dates, and official PDFs.",
+  "heroSummary": "All District 196 students start Monday, August 31, 2026. There is no school Friday, September 4 or Monday, September 7, creating a four-day Labor Day weekend. MEA Break is October 15–16, Winter Break runs December 23–January 1, Spring Break runs March 29–April 2, and the last student day is June 9, 2027. Most schools use trimesters; Eastview High School uses quarters.",
+  "heroFactChips": [
+    "First day Aug 31",
+    "Spring Break Mar 29–Apr 2",
+    "Last student day Jun 9"
+  ],
+  "heroSourceLine": "Source: District 196 approved 2026–27 calendar · PDF created December 16, 2025",
+  "heroSourceLabel": "District 196 approved 2026–27 calendar",
+  "heroSourceUrl": "https://resources.finalsite.net/images/v1765820761/district196org/district196org/mjxmmgacxom8zozlxm89/2026-27DISTRICTCALENDAR.pdf",
+  "heroSourceSuffix": " · PDF created December 16, 2025",
+  "calendarNotes": "This page covers District 196’s districtwide 2026–27 academic calendar. No-school dates may be districtwide or apply only to K–8 or grades 9–12, so families should check the scope printed for each date. Most schools use trimesters; Eastview High School uses quarters. School-specific events, activities, and fine-arts dates are maintained on each school’s calendar.",
+  "schemaCalendarName": "District 196 Academic Calendar 2026–27",
+  "schemaDatasetName": "District 196 2026–27 Academic Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed District 196 academic-calendar data for 2026–27, including staff dates printed before and after the student year, grade-specific no-school dates, breaks, trimesters, and Eastview High School quarter dates.",
+  "keyDatesSummaryTitle": "District 196 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, and key no-school dates",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School — All Students", "date": "2026-08-31", "type": "school_start" },
+    { "label": "No School", "name": "Labor Day Weekend", "date": "2026-09-04", "endDate": "2026-09-07", "dates": ["2026-09-04", "2026-09-07"], "dateJoiner": "and", "datePropertyLabel": "No-school date", "type": "no_school", "description": "No school Friday or Monday; classes resume Tuesday, September 8." },
+    { "label": "Break", "name": "MEA Break", "date": "2026-10-15", "endDate": "2026-10-16", "type": "break_start" },
+    { "label": "No School", "name": "Thanksgiving Week", "date": "2026-11-25", "endDate": "2026-11-27", "type": "no_school", "description": "No school Wednesday; Fall Break is Thursday and Friday." },
+    { "label": "Break", "name": "Winter Break", "date": "2026-12-23", "endDate": "2027-01-01", "type": "break_start" },
+    { "label": "Break", "name": "Spring Break", "date": "2027-03-29", "endDate": "2027-04-02", "type": "break_start" },
+    { "label": "Last Day", "name": "Last Student Day", "date": "2027-06-09", "type": "school_end" }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Conferences", "id": "district-196-2026-2027-conference-scope" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Grading", "id": "grading-periods" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "allDatesTitle": "District 196 2026–27 Academic Calendar — All Dates",
+  "allDatesCoverageNote": "This table includes the districtwide academic-calendar dates, including staff dates printed before and after the student year. It preserves the approved PDF’s K–12, K–8, and 9–12 scope labels; the live district page uses K–12+ for districtwide closures.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1765820761/district196org/district196org/mjxmmgacxom8zozlxm89/2026-27DISTRICTCALENDAR.pdf",
+  "allDatesSourceLabel": "District 196 approved 2026–27 calendar",
+  "icsHeading": "Add District 196 Student Dates to Your Calendar",
+  "icsDescription": "Download the student dates shown on this page for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download District 196 Calendar File",
+  "icsButtonSupportText": "One-time import; this file will not update automatically if District 196 revises its calendar.",
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideSocialShareButtons": true,
+  "hideShareCalendarHeading": true,
+  "pdfHeading": "Official District 196 2026–27 Academic Calendar",
+  "pdfDescription": "Open the approved district calendar with grade-specific no-school dates, grading periods, staff dates, and breaks.",
+  "pdfButtonLabel": "View Official District Calendar",
+  "alternateCalendarsTitle": "Official Calendar Translations",
+  "alternateCalendarsDescription": "District 196 provides Spanish and Somali versions of the 2026–27 calendar. A translation difference identified during review is explained below.",
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "gradingPeriodsTitle": "District 196 Trimester Dates",
+  "gradingPeriodsDescription": "Trimester dates from the approved District 196 calendar. Eastview High School quarter dates are listed below.",
+  "breakSummaryOverrides": {
+    "Fall Break - No School K-12": {
+      "name": "Thanksgiving Week",
+      "start": "2026-11-25",
+      "end": "2026-11-27",
+      "note": "No school Wednesday for teacher planning and grading; Fall Break is Thursday and Friday.",
+      "durationLabel": "3 consecutive weekdays without school"
+    }
+  },
+  "gradingPeriods": [
+    { "label": "Trimester 1", "start": "2026-08-31", "end": "2026-11-24" },
+    { "label": "Trimester 2", "start": "2026-11-30", "end": "2027-03-04" },
+    { "label": "Trimester 3", "start": "2027-03-08", "end": "2027-06-09" }
+  ],
+  "alternateCalendars": [
+    { "type": "calendar-es", "label": "2026-27 Distrito Calendario - Spanish", "group": "Spanish and Somali PDFs", "pdfUrl": "https://resources.finalsite.net/images/v1785175584/district196org/lmm7wmhvbxdfuerd35oo/2026-27Spanish.pdf" },
+    { "type": "calendar-so", "label": "2026-27 District Kalandarka - Somali", "group": "Spanish and Somali PDFs", "pdfUrl": "https://resources.finalsite.net/images/v1785175637/district196org/ddj0zjhokecgbln0vxym/2026-27Somali.pdf" }
+  ],
+  "customSections": [
+    {
+      "id": "district-196-2026-2027-conference-scope",
+      "label": "Conference Days Affect Different Grade Levels",
+      "content": "District 196 uses districtwide, K–8, and 9–12 no-school scopes. Check the grade range before arranging child care or appointments. The live district calendar page labels districtwide closures K–12+, while the approved PDF prints K–12. This table uses “districtwide” for clarity; the All Dates table preserves the PDF’s scope labels.",
+      "position": "afterKeyDates",
+      "table": {
+        "columns": ["Date", "Students out", "Students attending"],
+        "rows": [
+          ["October 9", "Grades 9–12 — high school conferences", "Grades K–8"],
+          ["November 5", "Grades K–8 — elementary and middle school conferences", "Grades 9–12"],
+          ["November 6", "Districtwide — high school staff planning and learning", "None — districtwide no-school day"],
+          ["January 22", "Districtwide — staff planning and learning (with high school conferences)", "None — districtwide no-school day"],
+          ["February 4", "Grades K–8 — elementary and middle school conferences", "Grades 9–12"],
+          ["February 5", "Districtwide — high school staff planning and learning", "None — districtwide no-school day"]
+        ]
+      }
+    },
+    {
+      "id": "district-196-2026-2027-evhs-quarters",
+      "label": "Eastview High School Quarter Dates",
+      "content": "Most District 196 schools use trimesters. Eastview High School uses quarters instead, so Eastview families should use these dates for grading-period planning.",
+      "position": "afterGradingPeriodsBeforeCalendarExport",
+      "table": {
+        "columns": ["EVHS quarter", "Start", "End"],
+        "rows": [
+          ["Quarter 1", "August 31, 2026", "November 5, 2026"],
+          ["Quarter 2", "November 9, 2026", "January 21, 2027"],
+          ["Quarter 3", "January 25, 2027", "April 9, 2027"],
+          ["Quarter 4", "April 12, 2027", "June 9, 2027"]
+        ]
+      }
+    },
+    {
+      "id": "district-196-2026-2027-read-act",
+      "label": "What Changed for 2026–27",
+      "content": "Two changes stand out in the 2026–27 calendar.",
+      "position": "afterGradingPeriodsBeforeCalendarExport",
+      "hideGroupLabels": true,
+      "groups": [
+        {
+          "label": "Changes families may notice",
+          "items": [
+            "All students start together August 31. District 196 removed the two elementary assessment days previously used during opening week.",
+            "Students have three additional school days because the district completed required READ Act training ahead of schedule."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "district-196-2026-2027-translation-review",
+      "label": "Translation Note: Differences in the Somali Calendar",
+      "content": "The approved English calendar and Spanish translation list Trimester 2 as November 30–March 4 and January 22 as a K–12 no-school day. The Somali PDF lists the trimester start as 11/20 and labels January 22 as 9–12. When the translated PDFs differ, this page uses the approved English calendar as the source of record.",
+      "position": "afterOtherCalendars"
+    },
+    {
+      "id": "district-196-2026-2027-planning-notes",
+      "label": "Planning Notes for District 196 Families",
+      "content": "",
+      "position": "afterOtherCalendars",
+      "hideGroupLabels": true,
+      "groups": [
+        {
+          "label": "Before making plans",
+          "items": [
+            "Check whether a no-school date is districtwide, K–8 only, or grades 9–12 only before arranging child care or appointments.",
+            "Eastview High School families should use the quarter dates; most other District 196 schools use trimesters.",
+            "Use each school’s own calendar for open houses, activities, arts, athletics, and other campus events."
+          ]
+        }
+      ]
+    }
+  ],
+  "events": [
+    { "date": "2026-08-17", "endDate": "2026-08-19", "name": "New Educator Workshops", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2026-08-24", "endDate": "2026-08-28", "name": "Staff Workshops / Teacher Planning and Grading", "type": "teacher_workday", "description": "August 28 is a half day for staff.", "hideFromCalendarExport": true },
+    { "date": "2026-08-31", "name": "First Day of School - All Students", "type": "school_start" },
+    { "date": "2026-09-04", "endDate": "2026-09-07", "dates": ["2026-09-04", "2026-09-07"], "name": "Labor Day Student Closures - No School K-12", "type": "holiday", "description": "Friday and Monday closures with the weekend between them.", "exportDatesIndividually": true },
+    { "date": "2026-09-25", "name": "Staff Data Analysis - No School K-12", "type": "teacher_workday" },
+    { "date": "2026-10-09", "name": "High School Conferences - No School Grades 9-12", "type": "no_school", "description": "Grades K-8 are in session." },
+    { "date": "2026-10-15", "endDate": "2026-10-16", "name": "MEA Break - No School K-12", "type": "break_start" },
+    { "date": "2026-11-05", "name": "Elementary and Middle School Conferences - No School K-8", "type": "no_school", "description": "Grades 9-12 are in session." },
+    { "date": "2026-11-05", "name": "EVHS Quarter 1 Ends", "type": "academic" },
+    { "date": "2026-11-06", "name": "High School Staff Planning and Learning - No School K-12", "type": "teacher_workday" },
+    { "date": "2026-11-24", "name": "Trimester 1 Ends", "type": "academic" },
+    { "date": "2026-11-25", "name": "Teacher Planning and Grading - No School K-12", "type": "teacher_workday" },
+    { "date": "2026-11-26", "endDate": "2026-11-27", "name": "Fall Break - No School K-12", "type": "break_start" },
+    { "date": "2026-12-23", "endDate": "2027-01-01", "name": "Winter Break - No School K-12", "type": "break_start" },
+    { "date": "2027-01-08", "name": "Staff Data Analysis - No School K-12", "type": "teacher_workday" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day - No School K-12", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-01-21", "name": "EVHS Quarter 2 Ends", "type": "academic" },
+    { "date": "2027-01-22", "name": "High School Conferences / Staff Planning and Learning - No School K-12", "type": "teacher_workday" },
+    { "date": "2027-02-04", "name": "Elementary and Middle School Conferences - No School K-8", "type": "no_school", "description": "Grades 9-12 are in session." },
+    { "date": "2027-02-05", "name": "High School Staff Planning and Learning - No School K-12", "type": "teacher_workday" },
+    { "date": "2027-02-15", "name": "Presidents Day - No School K-12", "type": "holiday" },
+    { "date": "2027-03-04", "name": "Trimester 2 Ends", "type": "academic" },
+    { "date": "2027-03-05", "name": "Teacher Planning and Grading - No School K-12", "type": "teacher_workday" },
+    { "date": "2027-03-10", "name": "Staff Data Analysis - No School K-12", "type": "teacher_workday" },
+    { "date": "2027-03-29", "endDate": "2027-04-02", "name": "Spring Break - No School K-12", "type": "break_start" },
+    { "date": "2027-04-09", "name": "EVHS Quarter 3 Ends", "type": "academic" },
+    { "date": "2027-04-23", "name": "No School K-12", "type": "no_school", "description": "The approved calendar does not print a reason." },
+    { "date": "2027-05-31", "name": "Memorial Day - No School K-12", "type": "holiday" },
+    { "date": "2027-06-09", "name": "Last School Day / Trimester 3 and EVHS Quarter 4 End", "type": "school_end" },
+    { "date": "2027-06-10", "name": "Teacher Grading Day - No School K-12", "type": "teacher_workday", "description": "Teacher workday after the last student day.", "hideFromCalendarExport": true },
+    { "date": "2027-06-18", "name": "Juneteenth Day - No School K-12", "type": "holiday", "description": "This date falls after the last student day.", "hideFromCalendarExport": true }
+  ],
+  "calendarFaqs": [
+    { "q": "When does District 196 start school in 2026?", "a": "All students start Monday, August 31, 2026. The approved calendar does not print separate first days by grade." },
+    { "q": "When is District 196 MEA break in 2026?", "a": "MEA Break is a districtwide no-school period on Thursday and Friday, October 15–16, 2026." },
+    { "q": "When is District 196 Winter Break in 2026-27?", "a": "Winter Break runs December 23, 2026, through January 1, 2027." },
+    { "q": "When is District 196 Spring Break in 2027?", "a": "Spring Break runs March 29 through April 2, 2027." },
+    { "q": "Which District 196 conference days are no-school days?", "a": "October 9 applies to grades 9–12. November 5 and February 4 apply to K–8. November 6, January 22, and February 5 are districtwide no-school days." },
+    { "q": "When is the last day of District 196 school in 2027?", "a": "The last student day is Wednesday, June 9, 2027. June 10 is a teacher grading day after the last student day." },
+    { "q": "Does Eastview High School use District 196 trimesters?", "a": "No. Eastview High School uses four quarters with dates printed separately from the district's three general trimesters." }
+  ],
+  "faqDisplayQuestions": [
+    "When does District 196 start school in 2026?",
+    "When is District 196 MEA break in 2026?",
+    "When is District 196 Winter Break in 2026-27?",
+    "When is District 196 Spring Break in 2027?",
+    "Which District 196 conference days are no-school days?",
+    "When is the last day of District 196 school in 2027?",
+    "Does Eastview High School use District 196 trimesters?"
+  ],
+  "faqDisplayLimit": 7,
+  "hiddenCustomSectionIds": [
+    "district-196-three-attendance-scopes",
+    "district-196-grading-tracks",
+    "district-196-official-resources"
+  ],
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "comparison",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends"
+  ],
+  "sourceReviewSummary": "Reviewed August 12, 2026, using District 196’s approved 2026–27 calendar, official calendar page, and Spanish and Somali translations.",
+  "sourceReviewDetails": [
+    "Confirmed the districtwide first and last days, breaks, approved-PDF K–12/K–8/9–12 no-school labels, and the live page’s K–12+ terminology, plus trimesters and Eastview High School quarter dates.",
+    "Checked the official calendar-page explanation for the common opening date and three additional student days tied to completed READ Act training.",
+    "Compared the English, Spanish, and Somali calendar files. Where translated dates differ, the approved English calendar is used as the source of record.",
+    "The calendar may change after publication; school-specific events remain on each school’s calendar."
+  ],
+  "sourceMaintainerText": "Denis Dou using official District 196 sources.",
+  "hideSourceReviewDate": true,
+  "hideSourceVersionDisplay": true,
+  "hideSourceNextReview": true,
+  "sources": [
+    { "label": "District 196 Academic Calendar", "url": "https://www.district196.org/about/calendar" },
+    { "label": "Approved District 196 2026–27 Calendar", "url": "https://resources.finalsite.net/images/v1765820761/district196org/district196org/mjxmmgacxom8zozlxm89/2026-27DISTRICTCALENDAR.pdf" },
+    { "label": "Official District 196 2026–27 Spanish Calendar", "url": "https://resources.finalsite.net/images/v1785175584/district196org/lmm7wmhvbxdfuerd35oo/2026-27Spanish.pdf" },
+    { "label": "Official District 196 2026–27 Somali Calendar", "url": "https://resources.finalsite.net/images/v1785175637/district196org/ddj0zjhokecgbln0vxym/2026-27Somali.pdf" }
+  ]
+}

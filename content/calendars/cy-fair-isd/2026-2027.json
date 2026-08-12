@@ -1,21 +1,184 @@
 {
   "institutionId": "cy-fair-isd",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Cy-Fair ISD Calendar 2026–2027",
   "firstDay": "2026-08-12",
   "lastDay": "2027-05-27",
-  "totalSchoolDays": 173,
   "sourceUrl": "https://www.cfisd.net/calendar",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1762825381/cfisdnet/d3lxf3jlmr8lbbismnu7/DistrictCalendar2026-27-V1.pdf",
-  "seoTitle": "Cy-Fair ISD Calendar 2026-2027: Holidays, Breaks & PDF",
-  "seoDescription": "See the Cy-Fair ISD 2026-2027 calendar, including the first and last day, holidays, school breaks, student no-school days, official PDF and calendar download.",
-  "lastVerifiedAt": "2026-07-16",
+  "sourceCalendarName": "Cypress-Fairbanks ISD 2026–27 District Calendar",
+  "sourceVersion": "2026–2027 District Calendar V1",
+  "lastVerifiedAt": "2026-08-12",
   "datePublished": "2026-07-16",
-  "dateModified": "2026-07-16",
+  "dateModified": "2026-08-12",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
   "calendarType": "traditional",
+  "seoTitle": "Cy-Fair ISD Calendar 2026–2027: Key Dates, Breaks & PDF",
+  "seoDescription": "CFISD students start Aug. 12, 2026, and the last day of school is May 27, 2027. See fall, Thanksgiving, winter and spring breaks, no-school days, and the official district PDF.",
+  "schemaDatasetDescription": "Major dates from the Cypress-Fairbanks ISD traditional 2026–27 calendar, including school-year boundaries, holidays, break ranges, and student return dates derived from the published schedule.",
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
   "hideSemesterCount": true,
-  "yearNumbersMode": "compact",
-  "instructionalDaysLabel": "Calculated Student Attendance Days",
-  "instructionalDaysDescription": "MySchoolDates calculation. Calculated from weekdays between August 12, 2026 and May 27, 2027, excluding the published breaks, holidays, and student no-school days. The scheduled total may increase if CFISD activates designated make-up days.",
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "compactDownloadModule": true,
+  "hideIcsButtonSupportText": true,
+  "hideCompatibleCalendars": true,
+  "hidePdfVersionLabel": true,
+  "hideSocialShareButtons": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "yearNumbers",
+    "whatsDifferent",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "relatedDistricts"
+  ],
+  "heroSummary": "Cy-Fair ISD students start the 2026–27 school year on Wednesday, August 12, 2026, and the last day of school is Thursday, May 27, 2027. Fall break runs October 12–16, Thanksgiving break is November 23–27, winter break is December 21–January 1, and spring break is March 15–19.",
+  "verificationBadgeText": "Verified against CFISD’s official 2026–27 calendar and approval announcement · Last checked August 12, 2026 · Reviewed by Denis Dou",
+  "keyDatesSummaryTitle": "CFISD 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, and the winter return date",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-12",
+      "type": "school_start",
+      "schemaDescription": "CFISD students begin the 2026–27 school year on August 12, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Fall Break",
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "type": "break_start",
+      "schemaDescription": "CFISD Fall Break runs October 12–16, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "schemaDescription": "CFISD Thanksgiving Break runs November 23–27, 2026."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "Monday, January 4 is a professional day. Students return Tuesday, January 5.",
+      "schemaDescription": "CFISD Winter Break runs December 21, 2026 through January 1, 2027; students return January 5 after a professional day."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start",
+      "schemaDescription": "CFISD Spring Break runs March 15–19, 2027."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-05-27",
+      "type": "school_end",
+      "schemaDescription": "The last day of school for CFISD students is May 27, 2027."
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "What’s New", "id": "cfisd-2026-2027-whats-new" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Grading", "id": "grading-periods" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "allDatesTitle": "CFISD 2026–27 Student Calendar Dates",
+  "allDatesCoverageNote": "This list covers major districtwide student calendar dates, including holidays, breaks, no-school days, grading-period endings, and the first school day after each major break. For convenience, we include student return dates based on CFISD’s published break dates and adjacent no-school days. The official PDF does not list those dates as separate events. Check CFISD for campus events and later revisions.",
+  "allDatesCoverageNotePosition": "top",
+  "dateLegendLabelOverrides": {
+    "Reserved Weather Day": "Conditional Make-up Day"
+  },
+  "allDatesSourceLinks": [
+    { "label": "CFISD 2026–27 district calendar PDF", "url": "https://resources.finalsite.net/images/v1762825381/cfisdnet/d3lxf3jlmr8lbbismnu7/DistrictCalendar2026-27-V1.pdf" },
+    { "label": "CFISD calendar page", "url": "https://www.cfisd.net/calendar" }
+  ],
+  "breaksTitle": "Planning Around CFISD Breaks",
+  "hideBreakDurationBadges": true,
+  "breakNotes": {
+    "Fall Break": "October 9 is currently a student holiday and possible inclement-weather make-up day. If CFISD does not activate it, students are out October 9–18 and return Monday, October 19.",
+    "Thanksgiving Break": "Students return Monday, November 30.",
+    "Winter Break": "Monday, January 4 is a professional day, so students return Tuesday, January 5.",
+    "Spring Break": "March 12 is currently a student holiday and possible inclement-weather make-up day before the break. Students return Monday, March 22."
+  },
+  "icsHeading": "Download CFISD 2026–27 Dates",
+  "icsDescription": "Download the dates shown on this page as an .ics file for Google Calendar, Apple Calendar, or Outlook. This is a one-time import and will not update automatically if CFISD changes the calendar.",
+  "icsButtonLabel": "Download CFISD Dates (.ics)",
+  "pdfHeading": "Official CFISD 2026–27 Calendar PDF",
+  "pdfDescription": "Open or print the official one-page calendar published by CFISD. Check the district calendar page for later revisions or make-up day decisions.",
+  "pdfButtonLabel": "View Official CFISD PDF",
+  "gradingPeriodsTitle": "CFISD Grading Periods",
+  "gradingPeriodsDescription": "Start and end dates for CFISD’s four grading periods.",
+  "comparisonBeforeFaq": true,
+  "comparisonRowsInclude": ["firstDay", "lastDay", "fallBreak", "thanksgivingBreak", "winterBreak", "springBreak"],
+  "comparisonRowsMode": "anyValues",
+  "comparisonValueOverrides": {
+    "houston-independent-school-district-calendar": {
+      "fallBreak": "No separate fall break listed"
+    }
+  },
+  "comparisonTitle": "How the CFISD Calendar Compares with Nearby Districts",
+  "comparisonSummary": "Compare CFISD with Houston ISD and Katy ISD for the first and last days of school, fall break, and the major holiday breaks in 2026–27.",
+  "comparisonInsights": [
+    {
+      "label": "Planning takeaway",
+      "items": [
+        "The biggest difference is spring break: CFISD’s March 15–19 break falls one week later than both Houston ISD and Katy ISD."
+      ]
+    }
+  ],
+  "hideComparisonNotes": true,
+  "comparisonFooterText": "Dates are based on each district’s published 2026–27 calendar. Adjacent staff days may differ.",
+  "comparisonReviewedText": "Comparison dates reviewed August 12, 2026.",
+  "calendarNotes": "CFISD lists October 9 and March 12 as teacher work days, student holidays, and possible inclement-weather make-up days. November 3 is a teacher work day, student holiday, and possible school-closure make-up day. Any of these dates should be rechecked after a district closure.",
+  "customSections": [
+    {
+      "id": "cfisd-2026-2027-whats-new",
+      "label": "What’s New for 2026–27",
+      "position": "afterKeyDates",
+      "content": "The biggest calendar change is October. CFISD students have a full fall break from October 12–16, replacing the two-day October 13–14 break on the 2025–26 calendar. The first and last days of school also move one day earlier.\n\nThe Board approved the calendar on November 10, 2025, after the Districtwide Educational Improvement Council developed options and the district received more than 15,000 community survey responses. October 9 and March 12 are currently student holidays and teacher work days, but CFISD may use either date as an inclement-weather make-up day. CFISD’s District of Innovation status allows the school year to begin before the fourth Monday in August.",
+      "links": [
+        {
+          "label": "CFISD Board approval announcement",
+          "to": "https://www.cfisd.net/cfisd-news-details/~board/2025-2026-cfisd-district-news/post/board-approves-2026-27-instructional-calendar"
+        }
+      ],
+      "linksDisplay": "inline",
+      "linksLabel": "Source:"
+    }
+  ],
   "gradingPeriods": [
     {
       "label": "Grading Period 1",
@@ -38,29 +201,53 @@
       "end": "2027-05-27"
     }
   ],
-  "calendarNotes": "This page covers the CFISD district calendar. Professional days and teacher workdays are shown as no-school dates for students when the official calendar marks them as student holidays.\n\nSome student holidays are also listed by CFISD as school closure make-up or inclement-weather make-up days. Those dates may become instructional days if the district uses them to make up a closure; confirm the official CFISD calendar and district announcements after weather or emergency closures.",
   "alternateCalendars": [],
   "calendarFaqs": [
     {
-      "q": "Does CFISD list professional days in 2026-2027?",
-      "a": "Yes. The 2026-2027 CFISD district calendar lists pre-service professional days on August 3-11, in-year professional days on January 4, February 15, and April 26, and a post-school-year professional day on May 28. In-year professional days are shown as no-school dates for students. Some student holidays are also listed as school closure make-up or inclement-weather make-up days, so families should re-check CFISD announcements after closures."
-    }
-  ],
-  "yearNumbers": [
+      "q": "When does Cy-Fair ISD start school in 2026?",
+      "a": "The first day of school for CFISD students is Wednesday, August 12, 2026."
+    },
     {
-      "label": "Currently Scheduled Additional No-School Weekdays",
-      "value": "9",
-      "detail": "Includes Labor Day, October 9 Student Holiday / Possible Weather Make-up Day, November 3 Student Holiday / Possible School Closure Make-up Day, January 4 Professional Day, Martin Luther King Jr. Day, February 15 Professional Day, March 12 Student Holiday / Possible Weather Make-up Day, March 26 Student/Staff Holiday, and April 26 Professional Day. Break periods are excluded. This count may decrease if CFISD activates one or more designated make-up days."
+      "q": "Does CFISD have a fall break in 2026?",
+      "a": "Yes. CFISD Fall Break runs Monday, October 12 through Friday, October 16, 2026. October 9 is currently a student holiday and possible inclement-weather make-up day, so check district announcements before planning around the longer October closure."
+    },
+    {
+      "q": "When do CFISD students return after winter break?",
+      "a": "Winter Break ends Friday, January 1, 2027. Monday, January 4 is a professional day, so students return Tuesday, January 5."
+    },
+    {
+      "q": "Which CFISD student holidays are designated as possible make-up days?",
+      "a": "October 9, 2026 and March 12, 2027 are designated as possible inclement-weather make-up days. November 3, 2026 is listed as a possible school-closure make-up day. Check CFISD announcements after any closure."
+    },
+    {
+      "q": "Where can I download the official 2026–27 CFISD calendar?",
+      "a": "CFISD publishes the official 2026–27 calendar PDF on its district calendar page. The MySchoolDates .ics download is a separate one-time calendar import based on the dates reviewed for this page."
     }
   ],
-  "whatsNew": {
-    "title": "What's New for 2026-2027",
-    "content": [
-      "The first day moves from August 13 in 2025-2026 to August 12 in 2026-2027.",
-      "The last day moves from May 28 in 2025-2026 to May 27 in 2026-2027.",
-      "Spring Break moves from March 9-13 in 2025-2026 to March 15-19 in 2026-2027."
-    ]
-  },
+  "faqDisplayLimit": 5,
+  "faqDisplayQuestions": [
+    "When does Cy-Fair ISD start school in 2026?",
+    "Does CFISD have a fall break in 2026?",
+    "When do CFISD students return after winter break?",
+    "Which CFISD student holidays are designated as possible make-up days?",
+    "Where can I download the official 2026–27 CFISD calendar?"
+  ],
+  "sourceReviewSummary": "Reviewed August 12, 2026, against CFISD’s official 2026–27 district calendar PDF, calendar page, and Board approval announcement.",
+  "sourceReviewDetailsTitle": "How we verified the CFISD calendar",
+  "sourceReviewDetails": [
+    "We checked CFISD’s official one-page calendar for the first and last days of school, holidays, professional days, teacher work days, make-up day designations, breaks, and grading-period dates.",
+    "The Board announcement confirms the November 10, 2025 approval date, the DEIC process, more than 15,000 completed surveys, and the conditional status of October 9 and March 12.",
+    "For convenience, we show when students return after each major break. Those dates are based on CFISD’s published break endings and adjacent professional days; they are not listed as separate events on the official PDF.",
+    "The .ics download uses the same calendar dates reviewed for this page."
+  ],
+  "sourceMaintainerText": "Denis Dou for MySchoolDates",
+  "sourceNextReviewText": "We’ll review this page again if CFISD replaces the calendar PDF, revises the schedule, or activates one of the designated make-up days.",
+  "sources": [
+    { "label": "CFISD calendar page", "url": "https://www.cfisd.net/calendar" },
+    { "label": "CFISD 2026–27 district calendar PDF", "url": "https://resources.finalsite.net/images/v1762825381/cfisdnet/d3lxf3jlmr8lbbismnu7/DistrictCalendar2026-27-V1.pdf" },
+    { "label": "CFISD Board approval announcement", "url": "https://www.cfisd.net/cfisd-news-details/~board/2025-2026-cfisd-district-news/post/board-approves-2026-27-instructional-calendar" },
+    { "label": "CFISD 2025–26 district calendar PDF", "url": "https://resources.finalsite.net/images/v1731431383/cfisdnet/smkta35l4o8ttkbumxry/CFISD25-26Calendar.pdf" }
+  ],
   "events": [
     {
       "date": "2026-08-12",
@@ -75,13 +262,16 @@
     {
       "date": "2026-10-08",
       "name": "End of Grading Period",
-      "type": "academic"
+      "type": "academic",
+      "badgeLabel": "Grading Date"
     },
     {
       "date": "2026-10-09",
       "name": "Student Holiday / Possible Weather Make-up Day",
-      "type": "no_school",
-      "description": "CFISD labels this date as Teacher Work Day / School Closure Make-up Day / Student Holiday / Inclement Weather Day. It may become an instructional day if the district uses it to make up a closure."
+      "type": "makeup_day",
+      "badgeLabel": "Conditional",
+      "description": "CFISD lists this as a teacher work day and student holiday, and reserves it as a possible school-closure or inclement-weather make-up day. It may become a school day if needed to make up a closure.",
+      "calendarExportDescription": "Currently a student holiday and teacher work day; CFISD may use it as an inclement-weather make-up day."
     },
     {
       "date": "2026-10-12",
@@ -96,13 +286,17 @@
     {
       "date": "2026-10-19",
       "name": "Students Return",
-      "type": "school_resume"
+      "type": "school_resume",
+      "schemaDescription": "Derived from the published Fall Break end date; students return Monday, October 19.",
+      "calendarExportDescription": "Derived student return date after CFISD Fall Break."
     },
     {
       "date": "2026-11-03",
       "name": "Student Holiday / Possible School Closure Make-up Day",
-      "type": "no_school",
-      "description": "CFISD labels this date as Teacher Work Day / School Closure Make-up Day / Student Holiday. It may become an instructional day if the district uses it to make up a closure."
+      "type": "makeup_day",
+      "badgeLabel": "Conditional",
+      "description": "CFISD lists November 3 as a teacher work day and student holiday and may use it as a school-closure make-up day.",
+      "calendarExportDescription": "Currently a student holiday and teacher work day; CFISD may use it as a school-closure make-up day."
     },
     {
       "date": "2026-11-23",
@@ -115,9 +309,17 @@
       "type": "break_end"
     },
     {
+      "date": "2026-11-30",
+      "name": "Students Return",
+      "type": "school_resume",
+      "schemaDescription": "Derived from the published Thanksgiving Break end date; students return Monday, November 30.",
+      "calendarExportDescription": "Derived student return date after CFISD Thanksgiving Break."
+    },
+    {
       "date": "2026-12-18",
       "name": "End of Grading Period",
-      "type": "academic"
+      "type": "academic",
+      "badgeLabel": "Grading Date"
     },
     {
       "date": "2026-12-21",
@@ -131,13 +333,17 @@
     },
     {
       "date": "2027-01-04",
-      "name": "No School (Professional Day)",
-      "type": "no_school"
+      "name": "Professional Day — No School for Students",
+      "type": "no_school",
+      "badgeLabel": "No School"
     },
     {
       "date": "2027-01-05",
       "name": "Students Return",
-      "type": "school_resume"
+      "type": "school_resume",
+      "description": "Students return after Winter Break and the January 4 professional day.",
+      "schemaDescription": "Derived from the published Winter Break end date and January 4 professional day; students return Tuesday, January 5.",
+      "calendarExportDescription": "Derived student return date after CFISD Winter Break and the January 4 professional day."
     },
     {
       "date": "2027-01-18",
@@ -146,19 +352,23 @@
     },
     {
       "date": "2027-02-15",
-      "name": "No School (Professional Day)",
-      "type": "no_school"
+      "name": "Professional Day — No School for Students",
+      "type": "no_school",
+      "badgeLabel": "No School"
     },
     {
       "date": "2027-03-11",
       "name": "End of Grading Period",
-      "type": "academic"
+      "type": "academic",
+      "badgeLabel": "Grading Date"
     },
     {
       "date": "2027-03-12",
       "name": "Student Holiday / Possible Weather Make-up Day",
-      "type": "no_school",
-      "description": "CFISD labels this date as Teacher Work Day / School Closure Make-up Day / Student Holiday / Inclement Weather Day. It may become an instructional day if the district uses it to make up a closure."
+      "type": "makeup_day",
+      "badgeLabel": "Conditional",
+      "description": "CFISD lists this as a teacher work day and student holiday, and reserves it as a possible school-closure or inclement-weather make-up day. It may become a school day if needed to make up a closure.",
+      "calendarExportDescription": "Currently a student holiday and teacher work day; CFISD may use it as an inclement-weather make-up day."
     },
     {
       "date": "2027-03-15",
@@ -173,7 +383,9 @@
     {
       "date": "2027-03-22",
       "name": "Students Return",
-      "type": "school_resume"
+      "type": "school_resume",
+      "schemaDescription": "Derived from the published Spring Break end date; students return Monday, March 22.",
+      "calendarExportDescription": "Derived student return date after CFISD Spring Break."
     },
     {
       "date": "2027-03-26",
@@ -182,14 +394,14 @@
     },
     {
       "date": "2027-04-26",
-      "name": "No School (Professional Day)",
-      "type": "no_school"
+      "name": "Professional Day — No School for Students",
+      "type": "no_school",
+      "badgeLabel": "No School"
     },
     {
       "date": "2027-05-27",
       "name": "Last Day of School",
       "type": "school_end"
     }
-  ],
-  "sourceVersion": "2026-2027 District Calendar V1"
+  ]
 }

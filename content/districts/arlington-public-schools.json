@@ -35,10 +35,14 @@
   "allDatesMode": "keyDates",
   "hiddenSections": [
     "quickFacts",
+    "todayStatus",
+    "about",
+    "yearNumbers",
     "planningTips",
     "districtProfile",
     "livingHere",
-    "relatedDistricts"
+    "relatedDistricts",
+    "nationalTrends"
   ],
   "calendarType": "traditional",
   "districtFact": "Arlington Public Schools serves students in Arlington County, Virginia, with calendars that are closely watched by Northern Virginia and Washington, DC-area families.",
@@ -51,25 +55,8 @@
       "Use the separate high school block schedule file when APS publishes block-specific dates, and confirm school-level activities through the assigned school."
     ]
   },
-  "compareIntro": "Compare the APS school year calendar with nearby Northern Virginia district calendars currently available on MySchoolDates. Dates shown include the first day, last day, and spring break.",
-  "districtFaqs": [
-    {
-      "q": "Which Arlington Public Schools calendar should families use?",
-      "a": "Most families should use the APS school year calendar shown on this page for districtwide holidays, no-school days, early release days, quarter dates, and the PreK/VPI start date. High school block schedule details may be published in a separate APS calendar."
-    },
-    {
-      "q": "Can Arlington Public Schools calendar dates change after approval?",
-      "a": "Yes. Weather, school board decisions, or operational needs can affect the calendar. Families should check the official APS calendar page and school announcements before making critical plans."
-    },
-    {
-      "q": "Do APS early release days apply to every grade level?",
-      "a": "Not always. APS identifies some early release dates as districtwide, some as elementary-only, some as elementary/middle, and some as high school early release. The event names on this page keep those grade-level distinctions when the official calendar lists them."
-    },
-    {
-      "q": "Where should families verify last-minute APS changes?",
-      "a": "Use the official Arlington Public Schools calendar page and school-level announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with APS."
-    }
-  ],
+  "compareIntro": "Compare APS with nearby Northern Virginia districts using school-year dates available from reviewed district records.",
+  "districtFaqs": [],
   "customSections": [],
   "relatedDistricts": [
     {
