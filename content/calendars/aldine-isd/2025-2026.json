@@ -1,77 +1,66 @@
 {
   "institutionId": "aldine-isd",
   "schoolYear": "2025-2026",
-  "firstDay": "2025-07-24",
-  "lastDay": "2026-06-18",
-  "semesters": 2,
-  "sourceUrl": "https://www.aldineisd.org/calendar/",
-  "lastVerifiedAt": "2026-07-19",
-  "datePublished": "2026-07-19",
-  "dateModified": "2026-07-19",
-  "calendarType": "traditional",
-  "yearNumbersMode": "compact",
+  "displaySchoolYear": "2025–26",
   "pageHeading": "Aldine Independent School District Calendar 2025-2026",
-  "seoTitle": "Aldine ISD Calendar 2025-2026: Key Dates & Holidays",
-  "seoDescription": "Aldine ISD 2025-2026 calendar summary with July 24 first day, June 18 last day, Thanksgiving, Midwinter Break, Spring Break, and key holidays.",
-  "calendarNotes": "Aldine ISD did not provide an official 2025-2026 PDF URL with this source package. This summary uses the official Aldine ISD calendar page together with a local reference PDF generated from district calendar information. Families should verify campus-specific changes through Aldine ISD, especially if their school follows a specialized or additional-days schedule.",
+  "firstDay": "2025-08-11",
+  "lastDay": "2026-05-28",
+  "calendarType": "traditional",
+  "calendarTrackId": "traditional",
+  "sourceUrl": "https://www.aldineisd.org/2025/01/16/aldine-isd-trustees-approve-academic-calendars-for-2025-2026-school-year/",
+  "sourceDocumentPage": "https://www.aldineisd.org/2025/01/16/aldine-isd-trustees-approve-academic-calendars-for-2025-2026-school-year/",
+  "lastVerifiedAt": "2026-08-13",
+  "datePublished": "2026-07-19",
+  "dateModified": "2026-08-13",
+  "contentStatus": "production_ready",
+  "manualReviewRequired": true,
+  "contentReviewTriggers": ["official_calendar_revision", "confirmed_data_error"],
+  "sourceVersion": "Aldine ISD 2025–26 calendar approval announcement · published January 16, 2025",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideFaqSchema": true,
+  "seoTitle": "Aldine ISD Calendar 2025–26: Key Dates & Breaks",
+  "seoDescription": "See Aldine ISD’s 2025–26 districtwide calendar, including the Aug. 11 first day, student holidays, major breaks, and May 28 last day.",
+  "heroSummary": "The 2025–26 Aldine ISD districtwide school year began Monday, August 11, 2025, and ended Thursday, May 28, 2026. Aldine’s separate Additional Days School Year calendar ran from July 24, 2025, through June 18, 2026.",
+  "calendarNotes": "This archived page covers Aldine ISD’s districtwide 2025–26 calendar. Aldine’s January 2025 approval announcement confirms an August 11 first day and May 28 last day for the districtwide calendar. The July 24–June 18 dates belong to the separate Additional Days School Year calendar and are not used as this record’s school-year boundaries. The formerly linked printable PDFs are no longer available at their original URLs.",
+  "keyDatesSummaryTitle": "Aldine ISD 2025–26 Key Dates",
+  "keyDatesSummarySubtitle": "Districtwide first and last days, student holidays, and major breaks",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of Classes", "date": "2025-08-11", "type": "school_start" },
+    { "label": "Student Holiday", "name": "October Student Holiday Week", "date": "2025-10-06", "endDate": "2025-10-10", "type": "student_holiday" },
+    { "label": "Break", "name": "Thanksgiving Break", "date": "2025-11-24", "endDate": "2025-11-28", "type": "break_start" },
+    { "label": "Break", "name": "Midwinter Break", "date": "2025-12-19", "endDate": "2026-01-06", "type": "break_start" },
+    { "label": "Student Holiday", "name": "February Student Holiday Week", "date": "2026-02-09", "endDate": "2026-02-13", "type": "student_holiday" },
+    { "label": "Break", "name": "Spring Break", "date": "2026-03-16", "endDate": "2026-03-20", "type": "break_start" },
+    { "label": "Last Day", "name": "Last Day of Classes", "date": "2026-05-28", "type": "school_end" }
+  ],
   "calendarFaqs": [
     {
-      "q": "When does Aldine ISD start school in 2025?",
-      "a": "The local 2025-2026 reference calendar lists Thursday, July 24, 2025 as the first day of classes."
+      "q": "When did Aldine ISD start school in 2025?",
+      "a": "Students on Aldine ISD’s districtwide calendar started Monday, August 11, 2025. The separate Additional Days School Year calendar started July 24."
     },
     {
-      "q": "Is there an official Aldine ISD 2025-2026 PDF link?",
-      "a": "No official 2025-2026 PDF URL was provided. MySchoolDates summarizes the official calendar page and a local reference PDF generated from district calendar information."
+      "q": "When was Aldine ISD Spring Break in 2026?",
+      "a": "Spring Break ran Monday, March 16 through Friday, March 20, 2026."
     },
     {
-      "q": "When is Aldine ISD Spring Break in 2026?",
-      "a": "Spring Break is listed from Monday, March 16 through Friday, March 20, 2026."
-    },
-    {
-      "q": "When is the last day of school for Aldine ISD in 2026?",
-      "a": "The local reference calendar lists Thursday, June 18, 2026 as the last day of classes and the last day for teachers."
-    }
-  ],
-  "yearNumbers": [
-    {
-      "label": "First Day",
-      "value": "Jul 24",
-      "detail": "The local reference calendar lists July 24, 2025 as the first day of classes."
-    },
-    {
-      "label": "Spring Break",
-      "value": "Mar 16-20",
-      "detail": "Spring Break is listed for March 16-20, 2026."
-    },
-    {
-      "label": "Official PDF URL",
-      "value": "Not listed",
-      "detail": "No official Aldine ISD 2025-2026 PDF URL was provided with the source information."
+      "q": "When was the last day of school for Aldine ISD in 2026?",
+      "a": "The districtwide calendar ended Thursday, May 28, 2026. The separate Additional Days School Year calendar ended June 18."
     }
   ],
   "events": [
-    { "date": "2025-07-21", "name": "Teachers Report to Work", "type": "teacher_workday" },
-    { "date": "2025-07-21", "name": "Staff Development Begins", "type": "teacher_workday" },
-    { "date": "2025-07-23", "name": "Staff Development Ends", "type": "teacher_workday" },
-    { "date": "2025-07-24", "name": "First Day of Classes", "type": "school_start" },
-    { "date": "2025-08-08", "name": "Staff Development", "type": "teacher_workday" },
+    { "date": "2025-08-11", "name": "First Day of Classes", "type": "school_start" },
     { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
-    { "date": "2025-10-06", "name": "Staff Development", "type": "teacher_workday" },
-    { "date": "2025-10-07", "name": "Student Holiday", "type": "student_holiday" },
-    { "date": "2025-10-10", "name": "Student Holiday End", "type": "student_holiday" },
-    { "date": "2025-11-25", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2025-11-28", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2025-12-22", "name": "Midwinter Break", "type": "break_start" },
-    { "date": "2026-01-02", "name": "Midwinter Break End", "type": "break_end" },
-    { "date": "2026-01-06", "name": "Classes Resume", "type": "school_resume" },
+    { "date": "2025-10-06", "endDate": "2025-10-10", "name": "October Student Holiday Week", "type": "break_start", "badgeLabel": "Student Holiday" },
+    { "date": "2025-11-24", "endDate": "2025-11-28", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2025-12-19", "endDate": "2026-01-06", "name": "Midwinter Break", "type": "break_start", "description": "Classes resumed January 7." },
+    { "date": "2026-01-07", "name": "Classes Resume", "type": "school_resume" },
     { "date": "2026-01-19", "name": "Martin Luther King Jr. Holiday", "type": "holiday" },
-    { "date": "2026-02-09", "name": "Staff Development", "type": "teacher_workday" },
-    { "date": "2026-02-10", "name": "Student Holiday", "type": "student_holiday" },
-    { "date": "2026-02-13", "name": "Student Holiday End", "type": "student_holiday" },
-    { "date": "2026-03-16", "name": "Spring Break", "type": "break_start" },
-    { "date": "2026-03-20", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2026-04-03", "name": "Student Holiday", "type": "student_holiday" },
+    { "date": "2026-02-09", "endDate": "2026-02-13", "name": "February Student Holiday Week", "type": "break_start", "badgeLabel": "Student Holiday" },
+    { "date": "2026-03-16", "endDate": "2026-03-20", "name": "Spring Break", "type": "break_start" },
+    { "date": "2026-04-03", "name": "Student Holiday", "type": "student_holiday", "badgeLabel": "Student Holiday", "preserveOfficialName": true },
     { "date": "2026-05-25", "name": "Memorial Day Holiday", "type": "holiday" },
-    { "date": "2026-06-18", "name": "Last Day of Classes/Last Day for Teachers", "type": "school_end" }
+    { "date": "2026-05-28", "name": "Last Day of Classes", "type": "school_end" }
   ]
 }

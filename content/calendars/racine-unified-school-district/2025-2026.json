@@ -1,0 +1,168 @@
+{
+  "institutionId": "racine-unified-school-district",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025–26",
+  "pageHeading": "Racine Unified School District Calendar 2025–26",
+  "firstDay": "2025-09-02",
+  "lastDay": "2026-06-11",
+  "temporalCoverageStart": "2025-08-28",
+  "temporalCoverageEnd": "2026-06-12",
+  "sourceUrl": "https://www.rusd.org/page/district-calendar",
+  "sourceDocumentPage": "https://www.rusd.org/page/district-calendar",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/176e0dcd-30d2-40b6-92ad-3c87e4b838a8/2025-2026-RUSD-Calendar-English-04152025.pdf?disposition=inline",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/176e0dcd-30d2-40b6-92ad-3c87e4b838a8/2025-2026-RUSD-Calendar-English-04152025.pdf?disposition=inline",
+  "sourceCheckedAt": "2026-08-13",
+  "sourceUpdatedAt": "2025-04-15",
+  "sourceChecksumSha256": "730e2888e1ac87ce4b141e3115ee17036593f8a4eb8b52bfa6c9deb6ee0fdb52",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.rusd.org/page/district-calendar",
+    "linkText": "2025-2026 School Year Calendar",
+    "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/176e0dcd-30d2-40b6-92ad-3c87e4b838a8/2025-2026-RUSD-Calendar-English-04152025.pdf?disposition=inline",
+    "expectedChecksumSha256": "730e2888e1ac87ce4b141e3115ee17036593f8a4eb8b52bfa6c9deb6ee0fdb52"
+  },
+  "lastVerifiedAt": "2026-08-13",
+  "dateCreated": "2026-08-13",
+  "datePublished": "2026-08-13",
+  "dateModified": "2026-08-13",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "makeup_day_activation", "confirmed_data_error"],
+  "sourceVersion": "RUSD 2025-2026 School Year Calendar English, created April 15, 2025",
+  "hideSemesterCount": true,
+  "calendarType": "traditional",
+  "seoTitle": "Racine Unified Calendar 2025–26: RUSD Dates & PDF",
+  "seoDescription": "See RUSD 2025–26 dates, including the 5K staggered start, K-5-only closures, grade 11 ACT day, quarters, weather contingencies, breaks, and official PDF.",
+  "heroSummary": "RUSD grades 1-12 begin Tuesday, September 2, 2025. The 5K opening runs September 2-5: orientation, A-L cohort, M-Z cohort, then all 5K. Winter Recess is December 22-January 2, Spring Recess is April 3-10, and the printed last day is June 11, 2026, subject to weather adjustment.",
+  "calendarNotes": "Grades 1-12 begin September 2, but 5K uses orientation and surname cohorts through September 5. October 2, November 6, and February 12-13 close school only for K-5, while grades 6-12 remain in session. March 10 is the grade 11 ACT day; K-10 and grade 12 do not attend. February 16, March 20, May 15, June 11, and June 12 carry asterisks because RUSD may adjust them after inclement weather. March 20 is printed as a no-school Spring Break Day even though the longer Spring Recess starts April 3. April 1 has afternoon K-12 conferences but is not printed as a full no-school day; April 2 is the districtwide conference closure. The main PDF explicitly excludes 3K, 4K, and BEE Center families, who should use the separate Early Learning calendar.",
+  "quickFacts": [
+    { "label": "Grades 1-12 Start", "value": "September 2, 2025" },
+    { "label": "All 5K Attend", "value": "September 5, 2025" },
+    { "label": "Spring Recess", "value": "April 3-10, 2026" },
+    { "label": "Printed Last Day", "value": "June 11, 2026" }
+  ],
+  "yearNumbersMode": "compact",
+  "yearNumbers": [
+    { "label": "5K opening", "value": "4 days", "detail": "Orientation, A-L cohort, M-Z cohort, then all students" },
+    { "label": "K-5-only closures", "value": "4 dates", "detail": "October 2, November 6, and February 12-13" },
+    { "label": "Grade 11-only attendance", "value": "March 10", "detail": "Juniors take the ACT; K-10 and grade 12 do not attend" },
+    { "label": "Grading cycle", "value": "4 quarters", "detail": "Quarter 2 and Quarter 4 also end the two semesters" }
+  ],
+  "gradingPeriodsTitle": "RUSD 2025–26 Quarter and Semester Endings",
+  "gradingPeriodsDescription": "The official PDF prints the end date for each quarter. It does not publish quarter start dates or report-card issue dates, so those fields are not inferred.",
+  "gradingPeriods": [
+    { "label": "Quarter 1", "end": "2025-10-31" },
+    { "label": "Quarter 2 / Semester 1", "end": "2026-01-23" },
+    { "label": "Quarter 3", "end": "2026-03-27" },
+    { "label": "Quarter 4 / Semester 2", "end": "2026-06-11" }
+  ],
+  "breakSummaryOverrides": {
+    "2025-12-22": { "name": "Winter Recess", "note": "Students return Monday, January 5, 2026." },
+    "2026-04-03": { "name": "Spring Recess", "note": "Students return Monday, April 13, 2026." }
+  },
+  "alternateCalendars": [],
+  "customSections": [
+    {
+      "id": "rusd-2025-2026-5k-start",
+      "label": "5K Staggered Start by Family and Surname",
+      "content": "September 2 is the district first day for grades 1-12, but it is an orientation day rather than regular attendance for 5K. RUSD then divides 5K attendance by surname before bringing the full class together Friday.",
+      "position": "afterKeyDates",
+      "table": {
+        "columns": ["Date", "5K group", "Plan"],
+        "rows": [
+          ["September 2", "Families", "Parent Orientation informational session"],
+          ["September 3", "Last names A-L", "Half of students attend"],
+          ["September 4", "Last names M-Z", "Other half attends"],
+          ["September 5", "All 5K", "First day with the full class"]
+        ]
+      }
+    },
+    {
+      "id": "rusd-2025-2026-grade-rules",
+      "label": "Green Dates and the Blue ACT Day",
+      "content": "The PDF symbols prevent two common planning errors: treating K-5 closures as districtwide, or assuming the ACT day closes high school for everyone.",
+      "position": "afterKeyDates",
+      "table": {
+        "columns": ["Date", "Students out", "Students attending"],
+        "rows": [
+          ["October 2", "K-5", "Grades 6-12"],
+          ["November 6", "K-5", "Grades 6-12; K-12 conferences occur in the afternoon"],
+          ["February 12-13", "K-5", "Grades 6-12"],
+          ["March 10", "K-10 and grade 12", "Grade 11 for ACT testing"]
+        ]
+      }
+    },
+    {
+      "id": "rusd-2025-2026-weather-sequence",
+      "label": "Asterisks Mark Dates RUSD May Adjust",
+      "content": "RUSD prints February 16, March 20, May 15, June 11, and June 12 with an asterisk. They are shown here with their currently published labels, but families should recheck after a weather closure because the district says asterisked dates may be adjusted.",
+      "position": "afterBreaks"
+    },
+    {
+      "id": "rusd-2025-2026-early-learning-boundary",
+      "label": "3K, 4K and BEE Center Use Another Calendar",
+      "content": "The K-12 source PDF explicitly redirects these families to the Early Learning calendar. No 2025-26 Early Learning URL was supplied for this page, so its extra program dates are not reconstructed from the main calendar.",
+      "position": "beforeSources",
+      "links": [
+        { "label": "RUSD District Calendar Hub", "to": "https://www.rusd.org/page/district-calendar" }
+      ]
+    }
+  ],
+  "events": [
+    { "date": "2025-08-28", "name": "Elementary and K-8 Open House", "type": "academic", "description": "School-level times are not printed on the district calendar." },
+    { "date": "2025-09-02", "name": "First Day of School - Grades 1-12", "type": "school_start" },
+    { "date": "2025-09-02", "name": "5K Parent Orientation Day", "type": "academic", "description": "Families attend an informational session; this is not a normal full-class 5K attendance day." },
+    { "date": "2025-09-03", "name": "5K Staggered Start - Last Names A-L", "type": "school_start", "description": "Half of 5K students attend." },
+    { "date": "2025-09-04", "name": "5K Staggered Start - Last Names M-Z", "type": "school_start", "description": "The other half of 5K students attend." },
+    { "date": "2025-09-05", "name": "All 5K Students Attend", "type": "school_start" },
+    { "date": "2025-10-02", "name": "Professional Learning Day - No School K-5", "type": "no_school", "description": "Grades 6-12 remain in session." },
+    { "date": "2025-10-03", "name": "Professional Learning Day - No School K-12", "type": "teacher_workday" },
+    { "date": "2025-10-31", "name": "Quarter 1 Ends", "type": "quarter_end" },
+    { "date": "2025-11-06", "name": "Parent-Teacher Conferences - No School K-5", "type": "no_school", "description": "Grades 6-12 remain in session; the PDF also lists afternoon conferences for K-12." },
+    { "date": "2025-11-07", "name": "Parent-Teacher Conferences - No School K-12", "type": "no_school" },
+    { "date": "2025-11-26", "endDate": "2025-11-28", "name": "Thanksgiving Recess - No School K-12", "type": "break_start" },
+    { "date": "2025-12-12", "name": "Professional Learning Day - No School K-12", "type": "teacher_workday" },
+    { "date": "2025-12-22", "endDate": "2026-01-02", "name": "Winter Recess - No School K-12", "type": "break_start" },
+    { "date": "2026-01-19", "name": "Dr. Martin Luther King Jr. Day - No School K-12", "type": "holiday" },
+    { "date": "2026-01-23", "name": "Professional Learning Day - No School K-12", "type": "teacher_workday" },
+    { "date": "2026-01-23", "name": "Semester 1 / Quarter 2 Ends", "type": "semester_end" },
+    { "date": "2026-02-12", "endDate": "2026-02-13", "name": "Professional Learning Days - No School K-5", "type": "no_school", "description": "Grades 6-12 remain in session." },
+    { "date": "2026-02-16", "name": "Winter Break Day / Contingent Weather Day - No School K-12", "type": "no_school", "description": "Currently printed as no school; the asterisk says it may be adjusted due to inclement weather." },
+    { "date": "2026-03-10", "name": "Grade 11 ACT Day / Professional Learning", "type": "academic", "description": "Grade 11 attends for ACT testing; K-10 and grade 12 do not attend." },
+    { "date": "2026-03-20", "name": "Spring Break Day / Contingent Weather Day - No School K-12", "type": "no_school", "description": "Currently printed as no school; the asterisk says it may be adjusted due to inclement weather." },
+    { "date": "2026-03-27", "name": "Quarter 3 Ends", "type": "quarter_end" },
+    { "date": "2026-04-01", "name": "Afternoon Parent-Teacher Conferences K-12", "type": "academic", "description": "The PDF does not label April 1 as a full no-school day." },
+    { "date": "2026-04-02", "name": "Parent-Teacher Conferences - No School K-12", "type": "no_school" },
+    { "date": "2026-04-03", "endDate": "2026-04-10", "name": "Spring Recess - No School K-12", "type": "break_start" },
+    { "date": "2026-05-15", "name": "Professional Learning / Contingent Weather Day - No School K-12", "type": "teacher_workday", "description": "Currently printed as no school; the asterisk says it may be adjusted due to inclement weather." },
+    { "date": "2026-05-25", "name": "Memorial Day - No School K-12", "type": "holiday" },
+    { "date": "2026-06-11", "name": "Last Day of School / Semester 2 / Quarter 4 Ends", "type": "school_end", "description": "The asterisk says the date may be adjusted due to inclement weather." },
+    { "date": "2026-06-12", "name": "Records Day / Contingent Weather Day", "type": "makeup_day", "description": "Student attendance only if activated after weather disruption; otherwise this is a records day.", "hideFromCalendarExport": true }
+  ],
+  "calendarFaqs": [
+    { "q": "When does RUSD start school in 2025?", "a": "Grades 1-12 begin Tuesday, September 2, 2025. For 5K, September 2 is family orientation, A-L attends September 3, M-Z attends September 4, and all 5K students attend September 5." },
+    { "q": "Which RUSD students are off October 2, 2025?", "a": "Only K-5 students have no school for professional learning. Grades 6-12 remain in session." },
+    { "q": "When is RUSD Winter Recess in 2025-26?", "a": "Winter Recess runs Monday, December 22, 2025, through Friday, January 2, 2026. Students return Monday, January 5." },
+    { "q": "Who attends RUSD on March 10, 2026?", "a": "Grade 11 attends for ACT testing. Students in K-10 and grade 12 do not attend because of professional learning." },
+    { "q": "When is RUSD Spring Recess in 2026?", "a": "The main Spring Recess runs Friday, April 3, through Friday, April 10, 2026. March 20 is separately labeled as a Spring Break Day and contingent weather date." },
+    { "q": "When is the last day of RUSD in 2026?", "a": "The printed last day is Thursday, June 11, 2026. It carries an asterisk and may be adjusted due to inclement weather; June 12 is a records or contingent-weather day." },
+    { "q": "Do 3K and 4K use this RUSD calendar?", "a": "No. The PDF says 3K, 4K, and BEE Center families should use the Early Learning calendar." }
+  ],
+  "hiddenCustomSectionIds": ["rusd-calendar-track-selector", "rusd-calendar-symbol-guide", "rusd-local-school-models"],
+  "hiddenSections": ["comparison", "whatsDifferent", "nationalTrends"],
+  "sourceReviewSummary": "Sources used for this review:",
+  "sourceReviewDetails": [
+    "Both source pages were rendered and visually checked, including the calendar legend, 5K sequence, grade-band symbols, asterisks, and district contact page.",
+    "The downloaded local PDF and current official PDF have the same SHA-256 checksum.",
+    "Asterisked dates are kept with the PDF's current labels but marked as weather-sensitive; contingent dates are excluded from calendar exports.",
+    "No 2025-26 Early Learning source URL was supplied, so its program-specific dates were not inferred from the K-12 PDF.",
+    "The MySchoolDates .ics file is a one-time import and does not sync with later RUSD revisions."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Racine Unified School District sources",
+  "sourceNextReviewText": "Next review: if RUSD revises the archived calendar or confirms a weather adjustment.",
+  "sources": [
+    { "label": "RUSD District Calendar", "url": "https://www.rusd.org/page/district-calendar" },
+    { "label": "Official RUSD 2025-2026 School Year Calendar - English PDF", "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/176e0dcd-30d2-40b6-92ad-3c87e4b838a8/2025-2026-RUSD-Calendar-English-04152025.pdf?disposition=inline" }
+  ]
+}

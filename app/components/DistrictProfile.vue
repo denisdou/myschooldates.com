@@ -7,6 +7,7 @@ const props = defineProps<{
   studentCountApproximate?: boolean
   schoolCount?: number
   schoolCountExact?: boolean
+  schoolCountApproximate?: boolean
   calendarType?: string
   hideCalendarType?: boolean
   grades?: string[]
@@ -39,7 +40,7 @@ const formattedStudentCountAsOf = computed(() => {
         </div>
       </div>
       <div v-if="schoolCount">
-        <div class="text-2xl font-bold text-gray-900">{{ schoolCount }}{{ schoolCountExact ? '' : '+' }}</div>
+        <div class="text-2xl font-bold text-gray-900">{{ schoolCountApproximate ? '~' : '' }}{{ schoolCount }}{{ !schoolCountApproximate && !schoolCountExact ? '+' : '' }}</div>
         <div class="text-xs text-gray-600 mt-0.5">{{ schoolCountExact ? 'campuses' : 'schools & campuses' }}</div>
       </div>
       <div v-if="calendarType && !hideCalendarType">
@@ -49,7 +50,7 @@ const formattedStudentCountAsOf = computed(() => {
         <div class="text-xs text-gray-600 mt-0.5">calendar type</div>
       </div>
       <div v-if="grades?.length">
-        <div class="text-sm font-semibold text-gray-900 mt-1">{{ grades[0] }} – {{ grades[grades.length - 1] }}</div>
+        <div class="text-sm font-semibold text-gray-900 mt-1">{{ grades[0] }}–{{ grades[grades.length - 1] }}</div>
         <div class="text-xs text-gray-600 mt-0.5">grades served</div>
       </div>
       <div v-if="founded">

@@ -6,35 +6,150 @@
   "totalSchoolDays": 181,
   "sourceUrl": "https://www.sjusd.org/events",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1765577326/sjusdorg/vfzr04svkypcrnn0yure/2027-2028SJUSDStudentCalendar.pdf",
-  "seoTitle": "San José Unified School District Calendar 2027-2028: Key Dates & PDF",
-  "seoDescription": "View the SJUSD 2027-2028 Student Calendar with Aug 5 first day, May 26 last day, major recesses, official PDF and ICS download.",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "San José Unified School District Calendar 2027–2028",
+  "seoTitle": "San José Unified School District Calendar 2027–28: Key Dates & PDF",
+  "seoDescription": "San José Unified’s 2027–28 student calendar, including the first and last day, school recesses, early-release dates, official PDF, and an ICS download.",
   "lastVerifiedAt": "2026-07-17",
   "datePublished": "2026-07-17",
-  "dateModified": "2026-07-17",
+  "dateModified": "2026-08-13",
   "calendarType": "student",
+  "allDatesMode": "all",
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroDownloadLink": true,
+  "hideFaqSchema": true,
+  "includeArticleSchema": false,
+  "webPageMainEntity": "none",
+  "hideBreakDurationBadges": true,
   "hideSemesterCount": true,
-  "yearNumbersMode": "compact",
-  "calendarNotes": "This page summarizes major student dates from the official SJUSD Student Calendar. It may not include every community calendar item, school-specific event, or optional extended school year detail.",
-  "calendarFaqs": [
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "heroReviewedLabel": "Calendar reviewed",
+  "heroUpdatedLabel": "Page updated",
+  "hiddenSections": [
+    "keyDateCards",
+    "downloadCta",
+    "quickFacts",
+    "todayStatus",
+    "about",
+    "comparison",
+    "planningTips",
+    "livingHere",
+    "relatedDistricts",
+    "faq",
+    "nationalTrends"
+  ],
+  "heroSourceLine": "2027–28 student calendar dates · Based on SJUSD's published Student Calendar",
+  "heroSummary": "San José Unified students start the 2027–28 school year on Thursday, August 5, 2027. The last day of school is Friday, May 26, 2028. Spring recess runs April 3–7, with students returning Monday, April 10.",
+  "verificationBadgeText": "Checked against SJUSD's published 2027–28 Student Calendar on July 17, 2026.",
+  "schemaCalendarName": "San José Unified School District 2027–28 Student Calendar",
+  "schemaDatasetName": "San José Unified 2027–28 Student Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed SJUSD student calendar records for 2027–28, including school opening and closing dates, holidays, recesses, return dates, and grade-level early-release periods.",
+  "schemaKeyDateItemListName": "San José Unified 2027–28 key student dates",
+  "schemaCalendarDateItemListName": "San José Unified 2027–28 student calendar dates",
+  "schemaCalendarDownloadName": "MySchoolDates SJUSD 2027–28 student calendar file",
+  "schemaCalendarDownloadDescription": "ICS file containing the reviewed SJUSD student calendar records shown in the main date list.",
+  "schemaAdditionalSourceCalendars": [
     {
-      "q": "When does San José Unified start school in 2027?",
-      "a": "San José Unified students start the 2027-2028 regular school year on Thursday, August 5, 2027."
-    },
-    {
-      "q": "When is SJUSD Spring Break in 2028?",
-      "a": "Spring recess on the SJUSD 2027-2028 Student Calendar runs Monday, April 3 through Friday, April 7, 2028."
-    },
-    {
-      "q": "Does the SJUSD 2027-2028 calendar include shortened days?",
-      "a": "Yes. The SJUSD Student Calendar lists separate elementary, secondary, and all-school shortened-day windows. Families should check the official PDF for school-level details."
+      "id": "source-calendar-2026-2027",
+      "name": "San José Unified 2026–27 Student Calendar",
+      "url": "https://resources.finalsite.net/images/v1752527482/sjusdorg/aiso1sbnfr5n1sdq46dn/2026-2027SJUSDStudentCalendar.pdf",
+      "version": "SJUSD 2026–27 Student Calendar PDF"
     }
   ],
-  "yearNumbers": [
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "yearNumbersMode": "compact",
+  "instructionalDaysLabel": "Instructional Days",
+  "instructionalDaysDescription": "MySchoolDates calculated this total from the published SJUSD Student Calendar by excluding listed recesses and student holidays between August 5, 2027 and May 26, 2028.",
+  "yearNumbersTitle": "SJUSD 2027–28 by the Numbers",
+  "yearNumbersMethodologyNote": "Shortened days remain scheduled instructional days.",
+  "calendarNotes": "This page pulls major student dates into one place, including recesses, return dates, early-release periods, and SJUSD's official Student Calendar.",
+  "keyDatesSummaryTitle": "SJUSD 2027–28 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days and major recesses",
+  "keyDateSummaryItems": [
     {
-      "label": "Student Days",
-      "value": "181",
-      "detail": "MySchoolDates calculation from the published SJUSD Student Calendar, excluding listed recesses and student holidays between August 5, 2027 and May 26, 2028."
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2027-08-05",
+      "type": "school_start",
+      "schemaDescription": "San José Unified students start the 2027–28 school year on August 5, 2027."
     },
+    {
+      "label": "Recess",
+      "name": "Fall Recess",
+      "date": "2027-09-27",
+      "endDate": "2027-10-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Recess",
+      "name": "Thanksgiving Recess",
+      "date": "2027-11-24",
+      "endDate": "2027-11-26",
+      "type": "break_start"
+    },
+    {
+      "label": "Recess",
+      "name": "New Year Recess",
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "type": "break_start"
+    },
+    {
+      "label": "Recess",
+      "name": "Winter Recess",
+      "date": "2028-02-14",
+      "endDate": "2028-02-18",
+      "type": "break_start"
+    },
+    {
+      "label": "Recess",
+      "name": "Spring Recess",
+      "date": "2028-04-03",
+      "endDate": "2028-04-07",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School — Early Release",
+      "date": "2028-05-26",
+      "type": "school_end",
+      "schemaDescription": "The last day of school for SJUSD students is May 26, 2028, with early release at all schools."
+    }
+  ],
+  "allDatesTitle": "SJUSD 2027–28 Student Calendar Dates",
+  "allDatesCoverageNote": "This table lists major student dates from SJUSD's published Student Calendar. Early-release labels show whether a date applies to elementary schools, secondary schools, or all schools.",
+  "allDatesCoverageNotePosition": "top",
+  "hideCoveredBreakDatesNote": true,
+  "dateLegendLabelOverrides": {
+    "Early Dismissal": "Early Release",
+    "Last Day · Early Closing": "Last Day · Early Release"
+  },
+  "breaksTitle": "SJUSD Breaks and When Students Return",
+  "breakNotes": {
+    "Fall Recess": "Students return Monday, October 4.",
+    "Thanksgiving Recess": "Students return Monday, November 29.",
+    "New Year Recess": "Students return Monday, January 3.",
+    "Winter Recess": "Students return Monday, February 21.",
+    "Spring Recess": "Students return Monday, April 10."
+  },
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideSocialShareButtons": true,
+  "icsHeading": "Add SJUSD 2027–28 Dates to Your Calendar",
+  "icsDescription": "Download the dates above as an ICS file for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Add SJUSD Dates to Your Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. The file will not reflect later changes made by SJUSD.",
+  "pdfHeading": "Official SJUSD 2027–28 Student Calendar",
+  "pdfDescription": "Open SJUSD's published Student Calendar to view attendance dates, recesses, shortened days, graduation windows, and optional extended-school-year dates.",
+  "pdfButtonLabel": "View Official SJUSD Student Calendar PDF",
+  "pdfVersionLabel": "SJUSD 2027–28 Student Calendar · reviewed July 17, 2026",
+  "yearNumbers": [
     {
       "label": "Shortened-Day Windows",
       "value": "6",
@@ -42,14 +157,53 @@
     }
   ],
   "whatsNew": {
-    "title": "Changes from the 2026-2027 Calendar",
+    "title": "What Changed From 2026–27?",
     "content": [
-      "The first day moves from August 6 in 2026-2027 to August 5 in 2027-2028.",
-      "The last day moves from May 27 in 2026-2027 to May 26 in 2027-2028.",
-      "Fall recess moves from September 28-October 2 in 2026-2027 to September 27-October 1 in 2027-2028.",
-      "Spring recess moves from April 5-9 in 2026-2027 to April 3-7 in 2027-2028."
+      "School starts one day earlier, on August 5; the 2026–27 school year began August 6.",
+      "The last day is one calendar day earlier, moving from May 27 to May 26.",
+      "Fall Recess runs September 27–October 1 instead of September 28–October 2, while Spring Recess runs April 3–7 instead of April 5–9."
     ]
   },
+  "yearComparisonPosition": "afterAllDates",
+  "yearComparisonDefaultOpen": true,
+  "customSections": [
+    {
+      "id": "sjusd-2027-2028-family-notes",
+      "label": "What SJUSD Families Should Know",
+      "content": "",
+      "position": "afterAllDates",
+      "groups": [
+        {
+          "label": "Early-release dates vary by school level",
+          "items": [
+            "SJUSD lists separate shortened-day periods for elementary schools, secondary schools, and all schools."
+          ]
+        },
+        {
+          "label": "May 26 is both the last day and an early-release day",
+          "items": [
+            "All schools are scheduled to dismiss two hours early on Friday, May 26."
+          ]
+        },
+        {
+          "label": "Graduation and secondary early-release dates overlap in the final week",
+          "items": [
+            "High school graduation ceremonies run May 24–25, while the secondary early-release window runs May 23–25."
+          ]
+        }
+      ]
+    }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Dates", "id": "all-dates" },
+    { "label": "Need to Know", "id": "sjusd-2027-2028-family-notes" },
+    { "label": "What Changed", "id": "year-comparison" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Sources", "id": "sources" }
+  ],
   "events": [
     {
       "date": "2027-08-05",
@@ -78,12 +232,8 @@
     },
     {
       "date": "2027-10-25",
+      "endDate": "2027-10-29",
       "name": "Elementary Schools Out 2 Hours Early",
-      "type": "early_release"
-    },
-    {
-      "date": "2027-10-29",
-      "name": "Elementary Early-Release Window Ends",
       "type": "early_release"
     },
     {
@@ -108,12 +258,8 @@
     },
     {
       "date": "2027-12-13",
+      "endDate": "2027-12-16",
       "name": "Secondary Schools Out 2 Hours Early",
-      "type": "early_release"
-    },
-    {
-      "date": "2027-12-16",
-      "name": "Secondary Early-Release Window Ends",
       "type": "early_release"
     },
     {
@@ -158,12 +304,8 @@
     },
     {
       "date": "2028-03-09",
+      "endDate": "2028-03-10",
       "name": "Elementary Schools Out 2 Hours Early",
-      "type": "early_release"
-    },
-    {
-      "date": "2028-03-10",
-      "name": "Elementary Early-Release Window Ends",
       "type": "early_release"
     },
     {
@@ -183,22 +325,14 @@
     },
     {
       "date": "2028-05-23",
+      "endDate": "2028-05-25",
       "name": "Secondary Schools Out 2 Hours Early",
       "type": "early_release"
     },
     {
       "date": "2028-05-24",
+      "endDate": "2028-05-25",
       "name": "High School Graduation Ceremonies",
-      "type": "graduation"
-    },
-    {
-      "date": "2028-05-25",
-      "name": "Secondary Early-Release Window Ends",
-      "type": "early_release"
-    },
-    {
-      "date": "2028-05-25",
-      "name": "High School Graduation Ceremonies End",
       "type": "graduation"
     },
     {
@@ -212,5 +346,31 @@
       "type": "school_end"
     }
   ],
-  "sourceVersion": "2027-2028 SJUSD Student Calendar PDF"
+  "sourceCalendarName": "San José Unified 2027–28 Student Calendar PDF",
+  "sourceVersion": "SJUSD 2027–28 Student Calendar PDF",
+  "sourceReviewSummary": "Reviewed July 17, 2026, against SJUSD's official events page and published 2027–28 Student Calendar PDF.",
+  "sourceReviewDetails": [
+    "The Student Calendar supplies the attendance dates, recesses, return dates, shortened-day windows, graduation dates, and last day shown on this page.",
+    "The 2026–27 Student Calendar was reviewed for the year-over-year comparison."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official San José Unified sources",
+  "sourceNextReviewText": "We re-check this page when SJUSD revises the Student Calendar or publishes a newer official file.",
+  "sources": [
+    {
+      "label": "San José Unified — district profile and history",
+      "url": "https://www.sjusd.org/about"
+    },
+    {
+      "label": "San José Unified — official events and calendars page",
+      "url": "https://www.sjusd.org/events"
+    },
+    {
+      "label": "San José Unified — 2027–28 Student Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1765577326/sjusdorg/vfzr04svkypcrnn0yure/2027-2028SJUSDStudentCalendar.pdf"
+    },
+    {
+      "label": "San José Unified — 2026–27 Student Calendar used for comparison",
+      "url": "https://resources.finalsite.net/images/v1752527482/sjusdorg/aiso1sbnfr5n1sdq46dn/2026-2027SJUSDStudentCalendar.pdf"
+    }
+  ]
 }

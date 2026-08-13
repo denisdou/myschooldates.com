@@ -23,6 +23,8 @@ function toComparisonCalendarSummary(c: any) {
   return {
     institutionId: c.institutionId,
     schoolYear: c.schoolYear,
+    calendarType: c.calendarType,
+    calendarTrackId: c.calendarTrackId ?? c.meta?.calendarTrackId,
     firstDay: c.firstDay,
     lastDay: c.lastDay,
     totalSchoolDays: c.totalSchoolDays,
@@ -401,6 +403,9 @@ const yearSwitcherLabel = computed(() =>
 const otherCalendarsAfterKeyDates = computed(() =>
   ((cal.value as any)?.otherCalendarsPosition ?? (cal.value as any)?.meta?.otherCalendarsPosition) === 'afterKeyDates'
 )
+const otherCalendarsBeforeKeyDates = computed(() =>
+  ((cal.value as any)?.otherCalendarsPosition ?? (cal.value as any)?.meta?.otherCalendarsPosition) === 'beforeKeyDates'
+)
 const otherCalendarsAfterFaq = computed(() =>
   ((cal.value as any)?.otherCalendarsPosition ?? (cal.value as any)?.meta?.otherCalendarsPosition) === 'afterFaq'
 )
@@ -632,7 +637,9 @@ const resolvedJumpNavigation = computed(() => {
     .map(section => `#${section.id}`)
   const targets = [
     ...customTargets('afterVerification'),
+    ...(otherCalendarsBeforeKeyDates.value ? ['#other-calendars', ...customTargets('afterOtherCalendars')] : []),
     '#key-dates',
+    ...(otherCalendarsAfterKeyDates.value ? ['#other-calendars', ...customTargets('afterOtherCalendars')] : []),
     ...customTargets('afterKeyDates'),
     ...customTargets('afterQuickFacts'),
     ...customTargets('afterAlternateCalendarsNotice'),
@@ -641,13 +648,14 @@ const resolvedJumpNavigation = computed(() => {
     '#all-dates',
     ...customTargets('afterAllDates'),
     ...(!breaksBeforeAllDates.value ? ['#breaks', ...customTargets('afterBreaks')] : []),
-    ...(gradingPeriodsBeforeCalendarExport.value ? customTargets('afterGradingPeriodsBeforeCalendarExport') : []),
+    ...(gradingPeriodsBeforeCalendarExport.value ? ['#grading-periods', ...customTargets('afterGradingPeriodsBeforeCalendarExport')] : []),
     ...(otherCalendarsBeforeCalendarExport.value ? customTargets('afterOtherCalendars') : []),
     ...(!moveCalendarExportBeforeAllDates.value ? ['#add-to-calendar', ...customTargets('afterCalendarExport')] : []),
     ...(!otherCalendarsBeforeCalendarExport.value ? customTargets('afterOtherCalendars') : []),
     '#year-comparison',
     ...customTargets('afterYearDiff'),
     ...customTargets('afterAbout'),
+    ...(!gradingPeriodsBeforeCalendarExport.value ? ['#grading-periods', ...customTargets('afterGradingPeriods')] : []),
     ...(comparisonBeforeFaq.value ? ['#comparison', ...customTargets('afterComparison')] : []),
     ...(sourcesBeforeFaq.value ? ['#sources'] : []),
     '#faq',
@@ -989,6 +997,17 @@ const webPageBasedOnRefs = selectSourceRefs(webPageIsBasedOnSourceIds)
 const webPageBasedOnValue = webPageBasedOnRefs.length === 1 ? webPageBasedOnRefs[0] : webPageBasedOnRefs
 const calendarIcsUrl = `https://myschooldates.com/calendars/${district.value.slug}-${cal.value.schoolYear}.ics`
 const hideIcsFromDatasetDistribution = computed(() => Boolean((cal.value as any)?.hideIcsFromDatasetDistribution || (cal.value as any)?.meta?.hideIcsFromDatasetDistribution))
+const calendarTrackDistributions = computed(() => hideIcsFromDatasetDistribution.value
+  ? []
+  : (((cal.value as any)?.calendarTrackDownloads ?? (cal.value as any)?.meta?.calendarTrackDownloads ?? []) as Array<{ id?: string; label?: string; description?: string }>)
+      .filter(track => track.id && track.label)
+      .map(track => ({
+        '@type': 'DataDownload',
+        name: String(track.label).replace(/\s+—\s+\.ics$/, ''),
+        description: track.description || `One-time calendar import for the ${track.label}.`,
+        encodingFormat: 'text/calendar',
+        contentUrl: `https://myschooldates.com/calendars/${district.value.slug}-${cal.value.schoolYear}-${track.id}.ics`,
+      })))
 const hideDatasetSchema = computed(() => Boolean((cal.value as any)?.hideDatasetSchema || (cal.value as any)?.meta?.hideDatasetSchema))
 const spatialCoverageOverride = (cal.value as any)?.schemaSpatialCoverage ?? (cal.value as any)?.meta?.schemaSpatialCoverage ?? (district.value as any)?.schemaSpatialCoverage ?? (district.value as any)?.meta?.schemaSpatialCoverage
 const spatialCoverageValue = Array.isArray(spatialCoverageOverride)
@@ -1036,6 +1055,7 @@ const datasetEntity = hideDatasetSchema.value ? null : {
   ...(datasetBasedOnRefs.length ? { isBasedOn: datasetBasedOnValue } : {}),
   ...(!hideIcsFromDatasetDistribution.value || includePrintablePdfInDatasetDistribution ? {
     distribution: [
+      ...calendarTrackDistributions.value,
       !hideIcsFromDatasetDistribution.value ? {
         '@type': 'DataDownload',
         name: schemaCalendarDownloadName,
@@ -1251,6 +1271,9 @@ const yearNumbersSchemaParts = computed(() => {
 })
 const includeArticleSchema = (district.value as any)?.includeArticleSchema !== false && (district.value as any)?.meta?.includeArticleSchema !== false && (cal.value as any)?.includeArticleSchema !== false && (cal.value as any)?.meta?.includeArticleSchema !== false
 const hideItemListSchema = computed(() => Boolean((cal.value as any)?.hideItemListSchema || (cal.value as any)?.meta?.hideItemListSchema))
+const keyDateItemListId = computed(() => String(
+  (cal.value as any)?.schemaKeyDateItemListId ?? (cal.value as any)?.meta?.schemaKeyDateItemListId ?? 'key-dates',
+).replace(/^#/, ''))
 const splitCalendarDateItemListSchema = computed(() => Boolean(
   (cal.value as any)?.splitCalendarDateItemListSchema || (cal.value as any)?.meta?.splitCalendarDateItemListSchema,
 ))
@@ -1268,13 +1291,13 @@ const webPageMainEntityMode = (cal.value as any)?.webPageMainEntity ?? (cal.valu
 const webPageMainEntity = webPageMainEntityMode === 'none'
   ? null
   : webPageMainEntityMode === 'keyDates'
-    ? (!hideItemListSchema.value && keyDateItemListEvents.value.length ? { '@id': `${canonicalUrl}#key-dates` } : null)
+    ? (!hideItemListSchema.value && keyDateItemListEvents.value.length ? { '@id': `${canonicalUrl}#${keyDateItemListId.value}` } : null)
     : webPageMainEntityMode === 'dataset'
       ? (datasetEntity ? { '@id': `${canonicalUrl}#calendar-dataset` } : null)
       : datasetEntity
         ? { '@id': `${canonicalUrl}#calendar-dataset` }
         : !hideItemListSchema.value && keyDateItemListEvents.value.length
-          ? { '@id': `${canonicalUrl}#key-dates` }
+          ? { '@id': `${canonicalUrl}#${keyDateItemListId.value}` }
           : null
 const webPageEntity = {
   '@type': 'WebPage',
@@ -1300,7 +1323,7 @@ const webPageEntity = {
     ? { hasPart: [
       ...(includeArticleSchema ? [{ '@id': `${canonicalUrl}#calendar-analysis` }] : []),
       ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
-      ...(!hideItemListSchema.value && keyDateItemListEvents.value.length ? [{ '@id': `${canonicalUrl}#key-dates` }] : []),
+      ...(!hideItemListSchema.value && keyDateItemListEvents.value.length ? [{ '@id': `${canonicalUrl}#${keyDateItemListId.value}` }] : []),
       ...(!hideItemListSchema.value && calendarDateItemListEvents.value.length ? [{ '@id': `${canonicalUrl}#${calendarDateItemListId.value}` }] : []),
       ...(faqSchemaItems.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
       ...customSectionSchemaParts.value,
@@ -1400,7 +1423,7 @@ function keyDateSchemaDescription(event: any) {
 }
 const keyDateItemListEntity = !hideItemListSchema.value && keyDateItemListEvents.value.length ? {
   '@type': 'ItemList',
-  '@id': `${canonicalUrl}#key-dates`,
+  '@id': `${canonicalUrl}#${keyDateItemListId.value}`,
   name: keyDateItemListName.value,
   itemListElement: keyDateItemListEvents.value.map((event: any, i: number) => {
     return {
@@ -1601,7 +1624,7 @@ useHead({
             class="district-hero__meta rds-data mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs"
           >
             <div v-if="!((cal as any).hideHeroReviewedField || (cal as any).meta?.hideHeroReviewedField)">
-              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Reviewed</dt>
+              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">{{ (cal as any).heroReviewedLabel ?? (cal as any).meta?.heroReviewedLabel ?? 'Reviewed' }}</dt>
               <dd class="ml-1 inline font-medium text-gray-700">{{ verifiedDate }}</dd>
             </div>
             <div v-if="!((cal as any).hideHeroReviewedByField || (cal as any).meta?.hideHeroReviewedByField)">
@@ -1611,7 +1634,7 @@ useHead({
               </dd>
             </div>
             <div v-if="!((cal as any).hideHeroUpdatedField || (cal as any).meta?.hideHeroUpdatedField)">
-              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Updated</dt>
+              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">{{ (cal as any).heroUpdatedLabel ?? (cal as any).meta?.heroUpdatedLabel ?? 'Updated' }}</dt>
               <dd class="ml-1 inline font-medium text-gray-700">{{ updatedDate }}</dd>
             </div>
           </dl>
@@ -1626,7 +1649,7 @@ useHead({
             </template>
           </div>
           <details v-if="verifiedDate && !hideHeroVerificationProcess" class="district-hero__verification-details mt-5 p-3">
-            <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-rds-ink-dim">How we reviewed this calendar</summary>
+            <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-rds-ink-dim">{{ (cal as any).heroVerificationHeading ?? (cal as any).meta?.heroVerificationHeading ?? 'How we reviewed this calendar' }}</summary>
             <ul class="mt-2 grid gap-1.5 text-xs text-rds-ink-muted sm:grid-cols-3">
               <li class="flex items-start gap-1.5">
                 <span class="mt-0.5 text-green-700">✓</span>
@@ -1638,7 +1661,7 @@ useHead({
               </li>
               <li v-if="!((cal as any).hideHeroVerificationIcs || (cal as any).meta?.hideHeroVerificationIcs)" class="flex items-start gap-1.5">
                 <span class="mt-0.5 text-green-700">✓</span>
-                <span>ICS file generated from the dates reviewed for this page</span>
+                <span>{{ (cal as any).heroVerificationIcsText ?? (cal as any).meta?.heroVerificationIcsText ?? 'ICS file generated from the dates reviewed for this page' }}</span>
               </li>
             </ul>
           </details>
@@ -1727,6 +1750,18 @@ useHead({
           </template>
         </p>
       </div>
+
+      <DistrictOtherCalendars
+        v-if="otherCalendarsBeforeKeyDates && (cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
+        :alternate-calendars="(cal as any).alternateCalendars"
+        :district-name="district!.name"
+        :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
+        :description="(cal as any).alternateCalendarsDescription ?? (cal as any).meta?.alternateCalendarsDescription"
+        :button-label="(cal as any).alternateCalendarsButtonLabel ?? (cal as any).meta?.alternateCalendarsButtonLabel"
+        :collapsible="(cal as any).alternateCalendarsCollapsible ?? (cal as any).meta?.alternateCalendarsCollapsible"
+        :summary-label="(cal as any).alternateCalendarsSummaryLabel ?? (cal as any).meta?.alternateCalendarsSummaryLabel"
+      />
+      <DistrictCustomSections v-if="otherCalendarsBeforeKeyDates" :sections="customSections" position="afterOtherCalendars" />
 
       <!-- Key Date Cards -->
       <div v-if="!hiddenSections.has('keyDateCards')" id="key-dates" class="scroll-mt-24">
@@ -2008,7 +2043,7 @@ useHead({
 
       <!-- Other Official Calendars -->
       <DistrictOtherCalendars
-        v-if="!otherCalendarsAfterKeyDates && !otherCalendarsAfterFaq && !otherCalendarsBeforeCalendarExport && (cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
+        v-if="!otherCalendarsBeforeKeyDates && !otherCalendarsAfterKeyDates && !otherCalendarsAfterFaq && !otherCalendarsBeforeCalendarExport && (cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
         :alternate-calendars="(cal as any).alternateCalendars"
         :district-name="district!.name"
         :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
@@ -2021,7 +2056,7 @@ useHead({
         :footer-link-label="(cal as any).alternateCalendarsFooterLinkLabel ?? (cal as any).meta?.alternateCalendarsFooterLinkLabel"
         :footer-link-url="(cal as any).alternateCalendarsFooterLinkUrl ?? (cal as any).meta?.alternateCalendarsFooterLinkUrl"
       />
-      <DistrictCustomSections v-if="!otherCalendarsBeforeCalendarExport" :sections="customSections" position="afterOtherCalendars" />
+      <DistrictCustomSections v-if="!otherCalendarsBeforeKeyDates && !otherCalendarsBeforeCalendarExport" :sections="customSections" position="afterOtherCalendars" />
 
       <!-- Year by the Numbers -->
       <div v-if="!hiddenSections.has('yearNumbers')" id="calendar-insights" class="scroll-mt-24">
@@ -2037,6 +2072,11 @@ useHead({
         :days-label="(cal as any).gradingPeriodsDaysLabel ?? (cal as any).meta?.gradingPeriodsDaysLabel"
         :next-date-label="(cal as any).gradingPeriodsNextDateLabel ?? (cal as any).meta?.gradingPeriodsNextDateLabel"
         :footer-note="(cal as any).gradingPeriodsFooterNote ?? (cal as any).meta?.gradingPeriodsFooterNote"
+      />
+      <DistrictCustomSections
+        v-if="!gradingPeriodsBeforeCalendarExport"
+        :sections="customSections"
+        position="afterGradingPeriods"
       />
 
       <!-- What's Different This Year -->
@@ -2152,6 +2192,7 @@ useHead({
         :student-count-approximate="Boolean((district as any).profileStudentCountApproximate)"
         :school-count="(district as any).schoolCount"
         :school-count-exact="Boolean((district as any).profileSchoolCountExact)"
+        :school-count-approximate="Boolean((district as any).profileSchoolCountApproximate ?? (district as any).meta?.profileSchoolCountApproximate)"
         :calendar-type="(district as any).calendarType"
         :hide-calendar-type="Boolean((district as any).hideProfileCalendarType)"
         :grades="district!.grades"

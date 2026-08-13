@@ -1,176 +1,284 @@
 {
   "institutionId": "aldine-isd",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Aldine Independent School District Calendar 2026-2027",
   "firstDay": "2026-08-12",
   "lastDay": "2027-06-03",
+  "temporalCoverageStart": "2026-08-03",
+  "temporalCoverageEnd": "2027-06-11",
   "semesters": 2,
   "sourceUrl": "https://www.aldineisd.org/calendar/",
-  "sourcePdfUrl": "https://www.aldineisd.org/wp-content/uploads/2026/02/District-Calendar-2026-2027-v5.pdf",
-  "lastVerifiedAt": "2026-07-19",
+  "sourceDocumentPage": "https://www.aldineisd.org/calendar/",
+  "sourcePdfUrl": "https://www.aldineisd.org/wp-content/uploads/2023/10/Calendar-2026-2027-District-v6.pdf",
+  "previousSourcePdfUrl": "https://www.aldineisd.org/wp-content/uploads/2026/02/District-Calendar-2026-2027-v5.pdf",
+  "lastCheckedPdfUrl": "https://www.aldineisd.org/wp-content/uploads/2023/10/Calendar-2026-2027-District-v6.pdf",
+  "sourceCheckedAt": "2026-08-13",
+  "sourceUpdatedAt": "2026-07-22",
+  "sourceChecksumSha256": "21e0b0deebc38d2ef02590a2b8138cb87075cf925fc80b82daa704e01173f773",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The current ADSY v61 PDF is labeled for Ermel, Harris, and Vines, while Aldine ISD’s 2026–27 calendar approval announcement also identifies Smith Elementary as an ADSY campus.",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.aldineisd.org/calendar/",
+    "linkText": "2026-2027 Instructional Calendar",
+    "expectedPdfUrl": "https://www.aldineisd.org/wp-content/uploads/2023/10/Calendar-2026-2027-District-v6.pdf",
+    "expectedChecksumSha256": "21e0b0deebc38d2ef02590a2b8138cb87075cf925fc80b82daa704e01173f773"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.aldineisd.org/calendar/",
+      "linkText": "2026-2027 ADSY Calendar",
+      "expectedPdfUrl": "https://www.aldineisd.org/wp-content/uploads/2023/10/Calendar-2026-2027-ADSY-v61.pdf",
+      "expectedChecksumSha256": "982ab5e2e2a2aa46c9ae4157c0dce086709f93cbfe68ab080a97547f26d79244"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-13",
+  "dateCreated": "2026-07-19",
   "datePublished": "2026-07-19",
-  "dateModified": "2026-07-19",
-  "sourceVersion": "Updated on January 28, 2026",
+  "dateModified": "2026-08-13",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_source_conflict", "makeup_day_activation", "confirmed_data_error"],
+  "sourceVersion": "Aldine ISD 2026–27 Instructional Calendar v6 · English page updated July 22, 2026",
   "calendarType": "traditional",
-  "yearNumbersMode": "compact",
-  "faqSchemaLimit": 15,
-  "seoTitle": "Aldine ISD Calendar 2026-2027: Holidays, Breaks, First Day & PDF",
-  "seoDescription": "View the Aldine ISD Calendar 2026-2027 with first day of school, holidays, Midwinter Break, Spring Break, half day dates, PDF and calendar download.",
-  "heroSummary": "Aldine ISD calendar 2026-2027 starts Wednesday, August 12, 2026 and ends Thursday, June 3, 2027. The calendar includes student holidays, Thanksgiving Break, Midwinter Break, Spring Break, a student half day, grading periods, PDF download, and calendar import options.",
-  "calendarNotes": "Aldine ISD starts the 2026-2027 school year on August 12, 2026 and lists June 3, 2027 as the last day of classes. Student holidays run October 12-16 and February 8-12, Thanksgiving Break runs November 23-27, Midwinter Break runs December 21-January 5, and Spring Break runs March 15-19. The official PDF notes that some Aldine ISD schools may have calendar adjustments for specific class schedules, and Ermel, Harris, and Vines have a separate ADSY calendar that families should verify if their student attends one of those campuses.",
+  "calendarTrackId": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": true,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerifiedBadge": true,
+  "hideHeroDownloadLink": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideCalendarTrackCaution": true,
+  "hideIcsFromDatasetDistribution": true,
+  "sourcesBeforeFaq": false,
+  "seoTitle": "Aldine ISD 2026–27 Calendar: Key Dates, Breaks & PDF",
+  "seoDescription": "See Aldine ISD’s 2026–27 first and last days, October and February student holidays, Thanksgiving Break, Midwinter Break, Spring Break, grading periods, and official calendar PDF.",
+  "heroSummary": "The 2026–27 Aldine ISD school year begins Wednesday, August 12, 2026, and ends Thursday, June 3, 2027. Students are off October 12–16 and February 8–12. Thanksgiving Break is November 23–27, Midwinter Break runs December 21–January 5, and Spring Break is March 15–19. December 18 is a half day for students.",
+  "heroFactChips": [
+    "First day Aug 12",
+    "Spring Break Mar 15–19",
+    "Last day Jun 3"
+  ],
+  "heroSourceLine": "Source: Aldine ISD 2026–27 Instructional Calendar v6 · updated July 22, 2026",
+  "heroSourceLabel": "Aldine ISD 2026–27 Instructional Calendar v6",
+  "heroSourceUrl": "https://www.aldineisd.org/wp-content/uploads/2023/10/Calendar-2026-2027-District-v6.pdf",
+  "heroSourceSuffix": " · updated July 22, 2026",
+  "calendarNotes": "This page covers Aldine ISD’s districtwide 2026–27 instructional calendar. The current ADSY PDF is labeled for Ermel, Harris, and Vines, while the district’s calendar approval announcement also identifies Smith Elementary as an ADSY campus. Families at Smith should confirm the applicable calendar directly with the school or district. Aldine also notes that some schools may adjust dates for specific class schedules.",
+  "schemaCalendarName": "Aldine ISD 2026–27 Instructional Calendar",
+  "schemaDatasetName": "Aldine ISD 2026–27 Instructional Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Aldine ISD instructional-calendar data for 2026–27, including staff dates, student holidays, breaks, grading periods, report-card dates, the December student half day, and an official-source discrepancy about whether Smith Elementary is included with the ADSY campuses named in the current PDF.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-adsy-calendar",
+      "type": "CreativeWork",
+      "name": "Aldine ISD 2026–27 ADSY Calendar v61",
+      "url": "https://www.aldineisd.org/wp-content/uploads/2023/10/Calendar-2026-2027-ADSY-v61.pdf",
+      "version": "v61 · updated June 3, 2026"
+    },
+    {
+      "id": "source-calendar-approval-article",
+      "type": "WebPage",
+      "name": "Aldine ISD 2026–27 Calendar Approval Announcement",
+      "url": "https://www.aldineisd.org/2026/01/14/aldine-isd-trustees-approve-academic-calendars-for-2026-2027-school-year/",
+      "datePublished": "2026-01-14"
+    }
+  ],
+  "keyDatesSummaryTitle": "Aldine ISD 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, student holiday weeks, and the December half day",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of Classes", "date": "2026-08-12", "type": "school_start" },
+    { "label": "Student Holiday", "name": "October Student Holiday Week", "date": "2026-10-12", "endDate": "2026-10-16", "type": "student_holiday" },
+    { "label": "Break", "name": "Thanksgiving Break", "date": "2026-11-23", "endDate": "2026-11-27", "type": "break_start" },
+    { "label": "Half Day", "name": "Half Day for Students", "date": "2026-12-18", "type": "early_release" },
+    { "label": "Break", "name": "Midwinter Break", "date": "2026-12-21", "endDate": "2027-01-05", "type": "break_start", "description": "Classes resume Wednesday, January 6." },
+    { "label": "Student Holiday", "name": "February Student Holiday Week", "date": "2027-02-08", "endDate": "2027-02-12", "type": "student_holiday" },
+    { "label": "Break", "name": "Spring Break", "date": "2027-03-15", "endDate": "2027-03-19", "type": "break_start" },
+    { "label": "Last Day", "name": "Last Day of Classes", "date": "2027-06-03", "type": "school_end" }
+  ],
+  "jumpNavigation": [
+    { "label": "ADSY", "id": "other-calendars" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Grading", "id": "grading-periods" },
+    { "label": "Highlights", "id": "aldine-family-calendar-notes-2026-2027" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "otherCalendarsPosition": "beforeKeyDates",
+  "alternateCalendarsTitle": "Traditional and Additional Days School Year (ADSY) Calendars",
+  "alternateCalendarsDescription": "Most campuses use the districtwide instructional calendar summarized on this page. Aldine’s current ADSY PDF is labeled for Ermel, Harris, and Vines. The district’s 2026–27 calendar approval announcement also identifies Smith Elementary as an ADSY campus, so Smith families should confirm their calendar directly with the school or district.",
+  "alternateCalendarsButtonLabel": "View Official ADSY PDF",
   "alternateCalendars": [
     {
       "type": "ADSY",
-      "label": "2026-2027 ADSY Calendar for Ermel, Harris, and Vines",
-      "pdfUrl": "https://www.aldineisd.org/wp-content/uploads/2023/10/Calendar-2026-2027-ADSY-v6.pdf"
+      "label": "Current 2026–27 ADSY PDF — Ermel, Harris, and Vines",
+      "description": "The ADSY calendar runs from July 27, 2026, through June 17, 2027. Aldine’s approval announcement also names Smith Elementary, which is not listed in the current PDF title.",
+      "pdfUrl": "https://www.aldineisd.org/wp-content/uploads/2023/10/Calendar-2026-2027-ADSY-v61.pdf",
+      "firstDay": "2026-07-27"
     }
   ],
-  "calendarFaqs": [
-    {
-      "q": "When does Aldine ISD start school in 2026?",
-      "a": "Aldine ISD starts the 2026-2027 school year on Wednesday, August 12, 2026."
+  "moveCalendarExportBeforeAllDates": true,
+  "icsHeading": "Add Aldine ISD Student Dates to Your Calendar",
+  "icsDescription": "Download the districtwide student dates shown on this page for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download Aldine ISD Calendar File",
+  "icsButtonSupportText": "One-time import; this file will not update automatically if Aldine ISD revises its calendar.",
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideSocialShareButtons": true,
+  "hideShareCalendarHeading": true,
+  "pdfHeading": "Official Aldine ISD 2026–27 Instructional Calendar",
+  "pdfDescription": "Open Aldine ISD’s current v6 calendar with student holidays, grading periods, staff development dates, breaks, and the December half day.",
+  "pdfButtonLabel": "View Official v6 Calendar",
+  "allDatesTitle": "Aldine ISD 2026–27 Instructional Calendar — All Dates",
+  "allDatesCoverageNote": "This table follows Aldine ISD’s current v6 districtwide instructional calendar. The district notes that some schools may adjust dates for specific class schedules.",
+  "allDatesSourceUrl": "https://www.aldineisd.org/wp-content/uploads/2023/10/Calendar-2026-2027-District-v6.pdf",
+  "allDatesSourceLabel": "Aldine ISD 2026–27 Instructional Calendar v6",
+  "allDatesCoveredBreakDatesNote": "Staff development dates that fall within a student holiday or break are noted within that date range rather than listed as separate rows.",
+  "breaksTitle": "Breaks and Student Holiday Weeks",
+  "breakSummaryOverrides": {
+    "October Student Holiday Week": {
+      "note": "Students are off October 12–16; staff development is scheduled October 12.",
+      "durationLabel": "5 weekdays without school"
     },
-    {
-      "q": "Does Aldine ISD have Fall Break in 2026?",
-      "a": "The district calendar lists student holidays from Monday, October 12 through Friday, October 16, 2026, with staff development on October 12."
+    "February Student Holiday Week": {
+      "note": "Students are off February 8–12; staff development is scheduled February 8.",
+      "durationLabel": "5 weekdays without school"
     },
-    {
-      "q": "When is Aldine ISD Spring Break in 2027?",
-      "a": "Spring Break runs Monday, March 15 through Friday, March 19, 2027."
-    },
-    {
-      "q": "When is Aldine ISD Winter Break 2026?",
-      "a": "Aldine ISD Midwinter Break runs from Monday, December 21, 2026 through Tuesday, January 5, 2027. Classes resume on Wednesday, January 6, 2027."
-    },
-    {
-      "q": "When is the last day of school for Aldine ISD in 2027?",
-      "a": "The last day of classes is Thursday, June 3, 2027. The last day for teachers is Friday, June 4, 2027."
-    },
-    {
-      "q": "Where can I download the Aldine ISD calendar PDF?",
-      "a": "The official Aldine ISD 2026-2027 calendar PDF is linked on this page. MySchoolDates also provides a searchable date list and a one-time calendar file for Google Calendar, Apple Calendar, and Outlook."
-    },
-    {
-      "q": "How many school days are in Aldine ISD 2026-2027?",
-      "a": "Aldine ISD lists a traditional 2026-2027 academic calendar with a full school-year schedule. Families should use the official district calendar for final instructional-day requirements and campus-specific adjustments."
-    },
-    {
-      "q": "Does Aldine ISD have early release days?",
-      "a": "Yes. The 2026-2027 Aldine ISD calendar lists a half day for students on Friday, December 18, 2026."
-    },
-    {
-      "q": "Is Aldine ISD closed today?",
-      "a": "This page lists planned Aldine ISD calendar dates for the 2026-2027 school year. For weather closures, emergency closures, or same-day updates, families should check official Aldine ISD announcements and campus notifications."
-    },
-    {
-      "q": "Where can I find the Aldine ISD teacher calendar?",
-      "a": "Teacher workdays, staff development dates, and the last teacher day appear in the full date list when they are included in the official Aldine ISD calendar source. Staff should still confirm work schedules through Aldine ISD and their campus."
-    },
-    {
-      "q": "Does Aldine ISD follow a traditional calendar?",
-      "a": "Yes. This page summarizes the Aldine ISD traditional 2026-2027 academic calendar. The district also lists a separate ADSY calendar for Ermel, Harris, and Vines, so families at those campuses should verify the ADSY PDF."
-    },
-    {
-      "q": "Are Aldine ISD calendars different for all schools?",
-      "a": "Most students follow the districtwide Aldine ISD academic calendar, but the official PDF notes that some schools may have calendar adjustments for specific class schedules. Ermel, Harris, and Vines also have an ADSY calendar, so families should confirm campus-specific dates with their assigned school."
-    },
-    {
-      "q": "Where is Aldine ISD located?",
-      "a": "Aldine ISD is located in the north Houston area of Harris County, Texas. The district serves families across north Houston and nearby unincorporated Harris County communities."
-    },
-    {
-      "q": "Which Aldine ISD schools have an ADSY calendar?",
-      "a": "Aldine ISD lists a 2026-2027 ADSY calendar for Ermel, Harris, and Vines. Families at those campuses should verify dates against the ADSY PDF."
-    },
-    {
-      "q": "Can I add the Aldine ISD calendar to Google Calendar?",
-      "a": "Yes. MySchoolDates provides a one-time .ics calendar file generated from the reviewed Aldine ISD calendar records. It can be imported into Google Calendar, Apple Calendar, and Outlook, but it will not automatically update if Aldine ISD revises the official calendar."
+    "Midwinter Break": {
+      "note": "Staff development is scheduled January 4–5; classes resume January 6.",
+      "durationLabel": "12 weekdays without school"
     }
-  ],
-  "customSections": [
-    {
-      "id": "aldine-calendar-highlights-2026-2027",
-      "label": "Aldine ISD 2026-2027 Calendar Highlights",
-      "content": "This section explains the Aldine ISD dates families are most likely to plan around, instead of repeating the full date table. The most important planning windows are the October student holiday week, Thanksgiving Break, Midwinter Break, Spring Break, the December half day, and the final student day.",
-      "position": "afterAbout",
-      "groups": [
-        {
-          "label": "Calendar snapshot",
-          "items": [
-            "First Student Day: August 12, 2026.",
-            "Last Student Day: June 3, 2027.",
-            "Thanksgiving Break: November 23-27, 2026.",
-            "Midwinter Break: December 21, 2026-January 5, 2027.",
-            "Spring Break: March 15-19, 2027.",
-            "Student Half Day: December 18, 2026."
-          ]
-        },
-        {
-          "label": "Important planning dates",
-          "items": [
-            "The October 12-16 student holiday week creates a full weekday planning window before the second grading period resumes.",
-            "The February 8-12 student holiday week creates another midyear planning window before Spring Break.",
-            "The December 18 half day may require adjusted pickup, transportation, and after-school care plans.",
-            "Midwinter Break is the longest scheduled student break and is the main winter travel window before classes resume on January 6, 2027.",
-            "Spring Break occurs in mid-March, making it the main extended student break before the final grading period of the school year."
-          ]
-        }
-      ]
-    }
-  ],
-  "yearNumbers": [
-    {
-      "label": "First Day",
-      "value": "Aug 12",
-      "detail": "The first day of classes is Wednesday, August 12, 2026."
-    },
-    {
-      "label": "Spring Break",
-      "value": "Mar 15-19",
-      "detail": "Spring Break runs March 15-19, 2027."
-    },
-    {
-      "label": "Half Day",
-      "value": "Dec 18",
-      "detail": "A half day for students is listed on December 18, 2026."
-    }
-  ],
+  },
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "gradingPeriodsTitle": "Aldine ISD Grading Periods",
+  "gradingPeriodsDescription": "Four grading periods from the current Aldine ISD instructional calendar. Report-card dates appear in the complete date table above.",
   "gradingPeriods": [
     { "label": "Grading Period 1", "start": "2026-08-12", "end": "2026-10-09" },
     { "label": "Grading Period 2", "start": "2026-10-19", "end": "2026-12-18" },
     { "label": "Grading Period 3", "start": "2027-01-06", "end": "2027-03-12" },
     { "label": "Grading Period 4", "start": "2027-03-22", "end": "2027-06-03" }
   ],
+  "customSections": [
+    {
+      "id": "aldine-family-calendar-notes-2026-2027",
+      "label": "What Aldine Families Should Know About 2026–27",
+      "content": "",
+      "position": "afterGradingPeriodsBeforeCalendarExport",
+      "hideGroupLabels": true,
+      "groups": [
+        {
+          "label": "Calendar details",
+          "items": [
+            "In addition to Thanksgiving, Midwinter, and Spring Break, students are also off for a full week October 12–16 and February 8–12. Staff development is scheduled on the first day of each period.",
+            "December 18 is a half day for students and may require earlier pickup, transportation, or child care arrangements.",
+            "The current ADSY PDF names Ermel, Harris, and Vines, with classes running July 27 through June 17.",
+            "Aldine’s instructional calendar says some schools may adjust dates for specific class schedules, so families should confirm campus-specific changes with their school."
+          ]
+        }
+      ]
+    }
+  ],
   "events": [
-    { "date": "2026-08-03", "name": "Teachers Report to Work/Staff Development Begins", "type": "teacher_workday" },
-    { "date": "2026-08-11", "name": "Staff Development Ends", "type": "teacher_workday" },
+    { "date": "2026-08-03", "endDate": "2026-08-11", "name": "Staff Development", "type": "teacher_workday", "description": "Teachers report to work August 3; staff development ends August 11.", "hideFromCalendarExport": true },
     { "date": "2026-08-12", "name": "First Day of Classes", "type": "school_start" },
     { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
     { "date": "2026-10-09", "name": "Grading Period 1 Ends", "type": "academic" },
-    { "date": "2026-10-12", "name": "Staff Development/Student Holiday Begins", "type": "student_holiday" },
-    { "date": "2026-10-16", "name": "Student Holiday End", "type": "student_holiday" },
-    { "date": "2026-10-19", "name": "Grading Period 2 Begins", "type": "school_resume" },
+    { "date": "2026-10-12", "name": "Staff Development", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2026-10-12", "endDate": "2026-10-16", "name": "October Student Holiday Week", "type": "break_start", "badgeLabel": "Student Holiday", "description": "No school for students; staff development is scheduled October 12." },
+    { "date": "2026-10-19", "name": "Classes Resume / Grading Period 2 Begins", "type": "school_resume" },
     { "date": "2026-10-23", "name": "Report Card", "type": "academic" },
-    { "date": "2026-11-03", "name": "Election Day", "type": "student_holiday" },
-    { "date": "2026-11-23", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2026-12-18", "name": "Half Day for Students/Staff Development/Grading Period 2 Ends", "type": "early_release" },
-    { "date": "2026-12-21", "name": "Midwinter Break", "type": "break_start" },
-    { "date": "2027-01-04", "name": "Staff Development", "type": "teacher_workday" },
-    { "date": "2027-01-05", "name": "Midwinter Break End/Staff Development", "type": "break_end" },
-    { "date": "2027-01-06", "name": "Classes Resume/Grading Period 3 Begins", "type": "school_resume" },
+    { "date": "2026-11-03", "name": "Election Day — Student Holiday", "type": "student_holiday" },
+    { "date": "2026-11-23", "endDate": "2026-11-27", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2026-12-18", "name": "Half Day for Students / Staff Development / Grading Period 2 Ends", "type": "early_release" },
+    { "date": "2026-12-21", "endDate": "2027-01-05", "name": "Midwinter Break", "type": "break_start", "description": "Staff development is scheduled January 4–5; classes resume January 6." },
+    { "date": "2027-01-04", "endDate": "2027-01-05", "name": "Staff Development", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2027-01-06", "name": "Classes Resume / Grading Period 3 Begins", "type": "school_resume" },
     { "date": "2027-01-11", "name": "Report Card", "type": "academic" },
     { "date": "2027-01-18", "name": "Martin Luther King Jr. Holiday", "type": "holiday" },
-    { "date": "2027-02-08", "name": "Staff Development/Student Holiday Begins", "type": "student_holiday" },
-    { "date": "2027-02-12", "name": "Student Holiday End", "type": "student_holiday" },
+    { "date": "2027-02-08", "name": "Staff Development", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2027-02-08", "endDate": "2027-02-12", "name": "February Student Holiday Week", "type": "break_start", "badgeLabel": "Student Holiday", "description": "No school for students; staff development is scheduled February 8." },
     { "date": "2027-03-12", "name": "Grading Period 3 Ends", "type": "academic" },
-    { "date": "2027-03-15", "name": "Spring Break", "type": "break_start" },
-    { "date": "2027-03-19", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2027-03-22", "name": "Grading Period 4 Begins", "type": "school_resume" },
-    { "date": "2027-03-26", "name": "Student Holiday", "type": "student_holiday" },
+    { "date": "2027-03-15", "endDate": "2027-03-19", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-03-22", "name": "Classes Resume / Grading Period 4 Begins", "type": "school_resume" },
+    { "date": "2027-03-26", "name": "Student Holiday", "type": "student_holiday", "badgeLabel": "Student Holiday", "preserveOfficialName": true },
     { "date": "2027-03-29", "name": "Report Card", "type": "academic" },
     { "date": "2027-05-31", "name": "Memorial Day Holiday", "type": "holiday" },
-    { "date": "2027-06-03", "name": "Last Day of Classes/Final Report Card for EC/PK/K and ES", "type": "school_end" },
-    { "date": "2027-06-04", "name": "Last Day for Teachers/Staff Development", "type": "teacher_workday" },
-    { "date": "2027-06-11", "name": "Final Report Card for MS and HS", "type": "academic" }
-  ]
+    { "date": "2027-06-03", "name": "Last Day of Classes / Final Report Card for EC, PK, K, and Elementary Schools", "type": "school_end" },
+    { "date": "2027-06-04", "name": "Last Day for Teachers / Staff Development", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2027-06-11", "name": "Final Report Card for Middle and High Schools", "type": "academic" }
+  ],
+  "calendarFaqs": [
+    { "q": "When does Aldine ISD start school in 2026?", "a": "The districtwide instructional calendar begins Wednesday, August 12, 2026. ADSY campuses begin July 27. See the ADSY section above for details about Smith Elementary." },
+    { "q": "When is the last day of school for Aldine ISD in 2027?", "a": "The last day of classes on the districtwide calendar is Thursday, June 3, 2027. ADSY campuses finish June 17. See the ADSY section above for details about Smith Elementary." },
+    { "q": "When is Aldine ISD Spring Break in 2027?", "a": "Spring Break runs Monday, March 15 through Friday, March 19, 2027. The fourth grading period begins Monday, March 22." },
+    { "q": "When is Aldine ISD Midwinter Break in 2026–27?", "a": "Midwinter Break runs December 21, 2026, through January 5, 2027. Staff development is scheduled January 4–5, and classes resume January 6." },
+    { "q": "Does Aldine ISD have Fall Break in 2026?", "a": "The district does not label October 12–16 as Fall Break. Its official calendar lists those dates as a student holiday week, with staff development on October 12. Classes resume October 19." },
+    { "q": "Does Aldine ISD have an early-release day?", "a": "The district calendar lists one student half day on Friday, December 18, 2026. It is also a staff development day and the end of the second grading period." },
+    { "q": "Which Aldine ISD schools use the ADSY calendar?", "a": "Aldine’s current ADSY PDF is labeled for Ermel, Harris, and Vines. The district’s 2026–27 calendar approval announcement also identifies Smith Elementary as an ADSY campus. Families at Smith should confirm the applicable calendar directly with the school or district." },
+    { "q": "Where can I get the official Aldine ISD 2026–27 calendar PDF?", "a": "This page links Aldine ISD’s current v6 instructional calendar and the separate ADSY v61 calendar. The districtwide v6 English page was updated July 22, 2026." }
+  ],
+  "faqDisplayQuestions": [
+    "When does Aldine ISD start school in 2026?",
+    "When is the last day of school for Aldine ISD in 2027?",
+    "When is Aldine ISD Spring Break in 2027?",
+    "When is Aldine ISD Midwinter Break in 2026–27?",
+    "Does Aldine ISD have Fall Break in 2026?",
+    "Does Aldine ISD have an early-release day?",
+    "Which Aldine ISD schools use the ADSY calendar?",
+    "Where can I get the official Aldine ISD 2026–27 calendar PDF?"
+  ],
+  "faqDisplayLimit": 8,
+  "hiddenCustomSectionIds": [
+    "aldine-parent-planning-guide",
+    "aldine-district-profile-calendar-planning",
+    "aldine-closed-today-guide",
+    "aldine-calendar-download-guide",
+    "aldine-verification-methodology"
+  ],
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "whatsDifferent",
+    "comparison"
+  ],
+  "hideRelatedDistrictDescriptions": true,
+  "relatedDistrictsTitle": "More Houston-Area School Calendars",
+  "relatedDistrictsDescription": "Browse 2026–27 calendar pages for other Houston-area school districts.",
+  "sourceReviewSummary": "Reviewed August 13, 2026, using Aldine ISD’s current v6 instructional calendar, ADSY v61 calendar, official calendar page, and 2026–27 calendar approval announcement.",
+  "sourceReviewDetails": [
+    "Replaced the former district v5 and ADSY v6 links after both began returning 404. The official calendar page now links district v6 and ADSY v61.",
+    "Confirmed the August 12 first day, June 3 last day, student holiday weeks, major breaks, December half day, grading periods, report-card dates, and staff dates against the current district v6 PDF.",
+    "The current ADSY v61 PDF is labeled for Ermel, Harris, and Vines and runs July 27, 2026, through June 17, 2027. Aldine’s calendar approval announcement also identifies Smith Elementary as an ADSY campus; the source conflict remains open for manual review.",
+    "The English page of the district v6 calendar was updated on July 22, 2026. No instructional-day total is published on the reviewed PDF, so this page does not display one."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Aldine ISD sources.",
+  "sourceNextReviewText": "Review when Aldine resolves the Smith Elementary ADSY discrepancy, replaces the district v6 or ADSY v61 PDF, changes the calendar-page links, or announces a districtwide schedule revision.",
+  "hideSourceReviewDate": true,
+  "hideSourceVersionDisplay": true,
+  "hideSourceNextReview": true,
+  "sources": [
+    { "label": "Aldine ISD Calendar Page", "url": "https://www.aldineisd.org/calendar/" },
+    { "label": "Aldine ISD 2026–27 Instructional Calendar v6", "url": "https://www.aldineisd.org/wp-content/uploads/2023/10/Calendar-2026-2027-District-v6.pdf" },
+    { "label": "Aldine ISD 2026–27 ADSY Calendar v61", "url": "https://www.aldineisd.org/wp-content/uploads/2023/10/Calendar-2026-2027-ADSY-v61.pdf" },
+    { "label": "Aldine ISD Calendar Approval Article", "url": "https://www.aldineisd.org/2026/01/14/aldine-isd-trustees-approve-academic-calendars-for-2026-2027-school-year/" }
+  ],
+  "nationalTrendsTitle": "Related Resource: 2026–27 School Calendar Trends"
 }

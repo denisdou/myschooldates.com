@@ -1,0 +1,346 @@
+{
+  "institutionId": "racine-unified-school-district",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Racine Unified School District Calendar 2026–27",
+  "firstDay": "2026-09-01",
+  "lastDay": "2027-06-10",
+  "temporalCoverageStart": "2026-08-27",
+  "temporalCoverageEnd": "2027-06-11",
+  "sourceUrl": "https://www.rusd.org/page/district-calendar",
+  "sourceDocumentPage": "https://www.rusd.org/page/district-calendar",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/6991a0e6-face-4cea-9a57-d84e2cbb686d/2026-2027-RUSD-Calendar-ENGLISH-02262026.pdf?disposition=inline",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/6991a0e6-face-4cea-9a57-d84e2cbb686d/2026-2027-RUSD-Calendar-ENGLISH-02262026.pdf?disposition=inline",
+  "sourceCheckedAt": "2026-08-13",
+  "sourceUpdatedAt": "2026-02-26",
+  "sourceChecksumSha256": "8e9c40487c92a3e004b14723c0814add3c25d9223d4c2a69902ae2f41ccc2828",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.rusd.org/page/district-calendar",
+    "linkText": "2026-2027 School Year Calendar",
+    "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/6991a0e6-face-4cea-9a57-d84e2cbb686d/2026-2027-RUSD-Calendar-ENGLISH-02262026.pdf?disposition=inline",
+    "expectedChecksumSha256": "8e9c40487c92a3e004b14723c0814add3c25d9223d4c2a69902ae2f41ccc2828"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.rusd.org/page/district-calendar",
+      "linkText": "Calendario Escolar 2026-2027",
+      "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/d3bad76b-a2fc-4669-b7f1-b5474bc61122/2026-2027-RUSD-Calendar-SPANISH-02262026.pdf?disposition=inline",
+      "expectedChecksumSha256": "bbed9e860a04ec5b949191fd9327ca4e74c6235721823c878b249299332c4fe6"
+    },
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.rusd.org/page/district-calendar",
+      "linkText": "2026-2027 Early Learning Calendar",
+      "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/05f29f8f-55fb-422e-86c8-cbf2e409d024/2026-2027-RUSD-Early-Learning-Calendar-ENGLISH-03242026.pdf?disposition=inline",
+      "expectedChecksumSha256": "537273dbcede412150c300cf66c3141ab87d0e8f223f47b681815e9cc4a1c8e6"
+    },
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.rusd.org/page/district-calendar",
+      "linkText": "Calendario Aprendizaje Temprano 2026-2027",
+      "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/8d8ece2d-987c-431b-a34a-c8f3351b57e5/2026-2027-RUSD-Early-Learning-Calendar-SPANISH-08012026.pdf?disposition=inline",
+      "expectedChecksumSha256": "314a40c8a180676b6cc2cf405c6ed4feeb80aedefca63761a11e94f247b421ee"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-13",
+  "dateCreated": "2026-08-13",
+  "datePublished": "2026-08-13",
+  "dateModified": "2026-08-13",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "makeup_day_activation", "confirmed_data_error"],
+  "sourceCalendarId": "source-k12-calendar",
+  "sourceCalendarName": "RUSD 2026–27 K–12 School Year Calendar",
+  "sourceVersion": "English PDF created February 26, 2026",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-early-learning-calendar",
+      "name": "RUSD 2026–27 Early Learning Calendar",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/05f29f8f-55fb-422e-86c8-cbf2e409d024/2026-2027-RUSD-Early-Learning-Calendar-ENGLISH-03242026.pdf?disposition=inline",
+      "version": "English PDF created March 24, 2026"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-k12-calendar",
+    "source-calendar-page"
+  ],
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "faqSchemaLimit": 0,
+  "webPageMainEntity": "keyDates",
+  "schemaReviewedBy": "author",
+  "schemaCalendarName": "Racine Unified School District Calendar 2026–27",
+  "schemaDatasetName": "Racine Unified School District 2026–27 Student Calendar Dataset",
+  "schemaDatasetDescription": "Major RUSD student calendar dates for 2026–27, including the staggered 5K opening, grade-specific no-school dates, early-release Wednesdays, breaks, grading-period endings, and weather-sensitive dates.",
+  "schemaCalendarDownloadName": "MySchoolDates RUSD 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "One-time calendar import generated from the RUSD student dates reviewed for this page.",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "calendarType": "traditional",
+  "seoTitle": "RUSD Calendar 2026–27 | Racine Unified School District",
+  "seoDescription": "RUSD’s 2026–27 school year starts September 1 for grades 1–12, with a staggered 5K opening. See breaks, early-release Wednesdays, Early Learning dates, and official PDFs.",
+  "heroSummary": "RUSD students in grades 1–12 begin school Tuesday, September 1, 2026. The district uses a staggered September 1–4 start for 5K. For 2026–27, RUSD also has 25 one-hour early-release Wednesdays. Winter Recess runs December 23–January 1, Spring Recess runs March 26–April 2, and the published last day is June 10, subject to weather-related changes.",
+  "verificationBadgeText": "Checked against official RUSD sources on August 13, 2026.",
+  "heroVerificationSourceText": "Official district sources checked",
+  "calendarNotes": "Grades 1-12 begin September 1, while 5K uses orientation and surname cohorts through September 4. RUSD introduced one-hour early release on 25 selected Wednesdays and added six minutes to regular school days to offset the lost instructional time. October 2, October 29, November 13, and February 5 close school only for K-5, while grades 6-12 remain in session. March 10 is the grade 11 ACT day; K-10 and grade 12 do not attend. The Early Learning track includes extra Family Engagement closures on September 18, February 19, March 5, and April 23, and it treats some K-5-only dates as closures for all students on that track. Goodland Montessori follows the K-12 district calendar rather than the Early Learning PDF. February 15, May 14, June 10, and June 11 carry asterisks because RUSD may adjust them after inclement weather.",
+  "gradingPeriodsTitle": "RUSD 2026–27 Quarter and Semester Endings",
+  "gradingPeriodsDescription": "The official PDF prints the end date for each quarter. It does not publish quarter start dates or report-card issue dates, so those fields are not inferred.",
+  "gradingPeriods": [
+    { "label": "Quarter 1", "end": "2026-10-29" },
+    { "label": "Quarter 2 / Semester 1", "end": "2027-01-21" },
+    { "label": "Quarter 3", "end": "2027-03-24" },
+    { "label": "Quarter 4 / Semester 2", "end": "2027-06-10" }
+  ],
+  "breakSummaryOverrides": {
+    "2026-12-23": { "name": "Winter Recess", "note": "Students return Monday, January 4, 2027." },
+    "2027-03-26": { "name": "Spring Recess", "note": "Students return Monday, April 5, 2027." }
+  },
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "keyDatesSummaryTitle": "RUSD 2026–27 Key Dates and Holidays",
+  "keyDatesSummarySubtitle": "First day, major recesses, and the published last day",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day for Grades 1–12", "date": "2026-09-01", "type": "school_start", "schemaDescription": "RUSD students in grades 1–12 begin school September 1, 2026." },
+    { "label": "5K Start", "name": "All 5K Students Attend", "date": "2026-09-04", "type": "school_start", "description": "All 5K students attend together after orientation and two last-name-group days.", "schemaDescription": "The first day all 5K students attend together after the staggered opening." },
+    { "label": "Recess", "name": "Thanksgiving Recess", "date": "2026-11-25", "endDate": "2026-11-27", "type": "break_start", "schemaDescription": "RUSD Thanksgiving Recess runs November 25–27, 2026." },
+    { "label": "Recess", "name": "Winter Recess", "date": "2026-12-23", "endDate": "2027-01-01", "type": "break_start", "description": "Students return Monday, January 4.", "schemaDescription": "RUSD Winter Recess runs December 23, 2026, through January 1, 2027." },
+    { "label": "Recess", "name": "Spring Recess", "date": "2027-03-26", "endDate": "2027-04-02", "type": "break_start", "description": "Students return Monday, April 5.", "schemaDescription": "RUSD Spring Recess runs March 26 through April 2, 2027." },
+    { "label": "Last Day", "name": "Published Last Day of School", "date": "2027-06-10", "type": "school_end", "description": "This date may change after weather closures.", "schemaDescription": "RUSD's published last day is June 10, 2027, subject to weather-related changes." }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Calendar Guide", "id": "rusd-2026-2027-calendar-selector" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Early Release", "id": "rusd-2026-2027-early-release" },
+    { "label": "Student Dates", "id": "all-dates" },
+    { "label": "Early Learning", "id": "rusd-2026-2027-track-differences" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "Important Student Calendar Dates — 2026–27",
+  "allDatesCoverageNote": "This table covers major districtwide student dates and attendance changes. School Choice dates, school-level events, and exact early-release dismissal times are published separately by RUSD.",
+  "breaksTitle": "Major School Breaks",
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Add RUSD 2026–27 Dates to Your Calendar",
+  "unifiedDownloadDescription": "Download a one-time .ics file with the student dates reviewed for this page.",
+  "icsHeading": "Download the .ics File",
+  "icsDescription": "The .ics file is a one-time import based on the student dates reviewed for this page. It will not update automatically if RUSD revises its calendar.",
+  "icsButtonLabel": "Download Calendar File (.ics)",
+  "icsAriaLabel": "Download the MySchoolDates RUSD 2026–27 calendar file",
+  "icsButtonSupportText": "Check RUSD’s official calendar for later changes and school-specific events.",
+  "hidePdfDownloadSection": true,
+  "pdfHeading": "Official RUSD 2026–27 Calendar",
+  "pdfDescription": "Open RUSD’s original K–12 calendar for the complete date grid, symbols, and source notes.",
+  "pdfButtonLabel": "View Official English PDF",
+  "hidePdfVersionLabel": true,
+  "alternateCalendarsTitle": "Official RUSD Calendars and PDFs",
+  "alternateCalendarsDescription": "RUSD publishes its K–12 and Early Learning calendars in English and Spanish.",
+  "otherCalendarsPosition": "beforeCalendarExport",
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "alternateCalendars": [
+    {
+      "type": "calendar-en",
+      "label": "2026-2027 School Year Calendar — English",
+      "description": "Official English K–12 school-year calendar.",
+      "group": "K–12 Calendars",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/6991a0e6-face-4cea-9a57-d84e2cbb686d/2026-2027-RUSD-Calendar-ENGLISH-02262026.pdf?disposition=inline"
+    },
+    {
+      "type": "calendar-es",
+      "label": "Calendario Escolar 2026-2027",
+      "description": "Official Spanish translation of the main K–12 school-year calendar.",
+      "group": "K–12 Calendars",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/d3bad76b-a2fc-4669-b7f1-b5474bc61122/2026-2027-RUSD-Calendar-SPANISH-02262026.pdf?disposition=inline"
+    },
+    {
+      "type": "early-learning",
+      "label": "2026-2027 Early Learning Calendar",
+      "description": "For 3K, 4K, PCOC, Early Childhood, and BEE Center; Goodland Montessori follows the K-12 calendar.",
+      "group": "Early Learning Calendars",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/05f29f8f-55fb-422e-86c8-cbf2e409d024/2026-2027-RUSD-Early-Learning-Calendar-ENGLISH-03242026.pdf?disposition=inline",
+      "firstDay": "2026-09-02"
+    },
+    {
+      "type": "early-learning-es",
+      "label": "Calendario Aprendizaje Temprano 2026-2027",
+      "description": "Official Spanish edition of the separate Early Learning calendar.",
+      "group": "Early Learning Calendars",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/8d8ece2d-987c-431b-a34a-c8f3351b57e5/2026-2027-RUSD-Early-Learning-Calendar-SPANISH-08012026.pdf?disposition=inline",
+      "firstDay": "2026-09-02"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "rusd-2026-2027-calendar-selector",
+      "label": "Which RUSD Calendar Applies to Your Child?",
+      "content": "Choose the calendar by grade and program before using the dates below. Most students use the K–12 School Year Calendar, while several early-childhood programs follow a separate Early Learning calendar.",
+      "position": "afterVerification",
+      "table": {
+        "columns": ["Student or program", "Use this calendar", "Important note"],
+        "rows": [
+          ["Grades 1–12 and district 5K", "K–12 School Year Calendar", "5K follows the staggered September 1–4 opening below"],
+          ["3K, 4K, PCOC, Early Childhood, and BEE Center", "Early Learning Calendar", "Includes additional Family Engagement no-school dates"],
+          ["Goodland Montessori 3K/4K", "K–12 School Year Calendar", "The Early Learning PDF lists this exception"]
+        ]
+      }
+    },
+    {
+      "id": "rusd-2026-2027-at-a-glance",
+      "label": "RUSD 2026–27 Calendar at a Glance",
+      "content": "These figures summarize the RUSD-specific schedule changes and attendance patterns documented in the official calendar and transition announcement.",
+      "position": "afterKeyDates",
+      "table": {
+        "columns": ["Calendar feature", "Count or change", "Details"],
+        "rows": [
+          ["Early-release Wednesdays", "25 dates", "Schools release one hour early on the listed Wednesdays"],
+          ["Regular school days", "+6 minutes", "RUSD added six minutes to offset early-release time"],
+          ["K–5-only closures", "4 dates", "October 2 and 29, November 13, and February 5"],
+          ["Grading cycle", "4 quarters", "Quarter 2 and Quarter 4 also end the semesters"],
+          ["Weather-marked dates", "4 dates", "February 15, May 14, June 10, and June 11"]
+        ]
+      }
+    },
+    {
+      "id": "rusd-2026-2027-5k-start",
+      "label": "5K Staggered Start: Orientation and Last-Name Groups",
+      "content": "September 1 is the first day of school for grades 1–12, but for 5K it is an orientation day rather than a regular attendance day. Students attend in two last-name groups on Wednesday and Thursday, and all 5K students attend Friday.",
+      "position": "afterKeyDates",
+      "table": {
+        "columns": ["Date", "5K group", "Plan"],
+        "rows": [
+          ["September 1", "Families", "Family orientation session"],
+          ["September 2", "Last names A–L", "Students with last names A–L attend"],
+          ["September 3", "Last names M–Z", "Students with last names M–Z attend"],
+          ["September 4", "All 5K", "First day with the full class"]
+        ]
+      }
+    },
+    {
+      "id": "rusd-2026-2027-early-release",
+      "label": "One-Hour Early Release on 25 Wednesdays",
+      "content": "The Wednesday early-release schedule is new for 2026–27. RUSD says the weekly collaboration time supports educator professional learning communities. Regular school days are six minutes longer, buses continue to take students home, and after-school arrangements differ for K–5 and middle school.",
+      "position": "afterKeyDates",
+      "groups": [
+        { "label": "Fall 2026", "items": ["September 16 and 23", "October 7, 21, and 28", "November 4 and 18", "December 2, 9, and 16"] },
+        { "label": "Winter 2027", "items": ["January 6, 13, and 27", "February 10 and 24", "March 3, 17, and 24"] },
+        { "label": "Spring 2027", "items": ["April 7, 14, 21, and 28", "May 5, 19, and 26"] }
+      ],
+      "links": [
+        { "label": "RUSD Early-Release Transition Details", "to": "https://www.rusd.org/article/2785772" },
+        { "label": "School-Specific Start and End Times", "to": "https://www.rusd.org/page/startend-times" }
+      ]
+    },
+    {
+      "id": "rusd-2026-2027-track-differences",
+      "label": "How the Early Learning Calendar Differs",
+      "content": "RUSD publishes a separate Early Learning calendar for 3K, 4K, PCOC, Early Childhood, and the BEE Center. Goodland Montessori follows the K–12 calendar instead.",
+      "position": "afterBreaks",
+      "table": {
+        "columns": ["Date", "K–12 main calendar", "Early Learning calendar"],
+        "rows": [
+          ["September 18", "Regular school day", "No school - Family Engagement"],
+          ["October 29", "No school K–5; grades 6–12 attend", "No school for the Early Learning track"],
+          ["November 13", "No school K–5; grades 6–12 attend", "No school for the Early Learning track"],
+          ["February 5", "No school K–5; grades 6–12 attend", "No school for the Early Learning track"],
+          ["February 19", "Regular school day", "No school - Family Engagement"],
+          ["March 5", "Regular school day", "No school - Family Engagement"],
+          ["April 23", "Regular school day", "No school - Family Engagement"]
+        ]
+      }
+    },
+    {
+      "id": "rusd-2026-2027-weather-sequence",
+      "label": "Dates That May Change After Weather Closures",
+      "content": "RUSD marks February 15, May 14, June 10, and June 11 with asterisks. These dates may change if weather closures affect the school calendar. June 11 is normally a records day but can become a student attendance day if needed.",
+      "position": "afterGradingPeriodsBeforeCalendarExport"
+    }
+  ],
+  "events": [
+    { "date": "2026-08-27", "name": "K–8 Open House", "type": "academic", "description": "School-level times are not printed on the district calendar." },
+    { "date": "2026-09-01", "name": "First Day of School - Grades 1–12", "type": "school_start" },
+    { "date": "2026-09-01", "name": "5K Parent Orientation Day", "type": "academic", "description": "Families attend an informational session; this is not a normal full-class 5K attendance day." },
+    { "date": "2026-09-02", "name": "5K Staggered Start - Last Names A–L", "type": "school_start", "description": "Students with last names A–L attend." },
+    { "date": "2026-09-03", "name": "5K Staggered Start - Last Names M–Z", "type": "school_start", "description": "Students with last names M–Z attend." },
+    { "date": "2026-09-04", "name": "All 5K Students Attend", "type": "school_start", "description": "All 5K students attend together after the staggered opening.", "schemaDescription": "The first day all 5K students attend together after the staggered opening." },
+    { "date": "2026-09-07", "name": "Labor Day - No School K–12", "type": "holiday" },
+    { "date": "2026-09-16", "dates": ["2026-09-16", "2026-09-23"], "name": "September Early-Release Wednesdays", "type": "early_release", "description": "Schools release one hour early; use the school-specific dismissal time.", "exportDatesIndividually": true },
+    { "date": "2026-10-02", "name": "Professional Learning Day - No School K–5", "type": "no_school", "description": "Grades 6–12 remain in session." },
+    { "date": "2026-10-07", "dates": ["2026-10-07", "2026-10-21", "2026-10-28"], "name": "October Early-Release Wednesdays", "type": "early_release", "description": "Schools release one hour early; use the school-specific dismissal time.", "exportDatesIndividually": true },
+    { "date": "2026-10-12", "name": "Fall Break Day - No School K–12", "type": "no_school" },
+    { "date": "2026-10-16", "name": "Professional Learning Day - No School K–12", "type": "teacher_workday" },
+    { "date": "2026-10-29", "name": "Parent-Teacher Conferences - No School K–5", "type": "no_school", "description": "Grades 6–12 remain in session; K–5 conferences are in the morning and K–12 conferences occur in the afternoon." },
+    { "date": "2026-10-29", "name": "Quarter 1 Ends", "type": "quarter_end" },
+    { "date": "2026-10-30", "name": "Parent-Teacher Conferences - No School K–12", "type": "no_school" },
+    { "date": "2026-11-04", "dates": ["2026-11-04", "2026-11-18"], "name": "November Early-Release Wednesdays", "type": "early_release", "description": "Schools release one hour early; use the school-specific dismissal time.", "exportDatesIndividually": true },
+    { "date": "2026-11-13", "name": "Professional Learning Day - No School K–5", "type": "no_school", "description": "Grades 6–12 remain in session." },
+    { "date": "2026-11-25", "endDate": "2026-11-27", "name": "Thanksgiving Recess - No School K–12", "type": "break_start" },
+    { "date": "2026-12-02", "dates": ["2026-12-02", "2026-12-09", "2026-12-16"], "name": "December Early-Release Wednesdays", "type": "early_release", "description": "Schools release one hour early; use the school-specific dismissal time.", "exportDatesIndividually": true },
+    { "date": "2026-12-23", "endDate": "2027-01-01", "name": "Winter Recess - No School K–12", "type": "break_start" },
+    { "date": "2027-01-06", "dates": ["2027-01-06", "2027-01-13", "2027-01-27"], "name": "January Early-Release Wednesdays", "type": "early_release", "description": "Schools release one hour early; use the school-specific dismissal time.", "exportDatesIndividually": true },
+    { "date": "2027-01-18", "name": "Dr. Martin Luther King Jr. Day - No School K–12", "type": "holiday" },
+    { "date": "2027-01-21", "name": "Semester 1 / Quarter 2 Ends", "type": "semester_end" },
+    { "date": "2027-01-22", "name": "Professional Learning Day - No School K–12", "type": "teacher_workday" },
+    { "date": "2027-02-05", "name": "Professional Learning Day - No School K–5", "type": "no_school", "description": "Grades 6–12 remain in session." },
+    { "date": "2027-02-10", "dates": ["2027-02-10", "2027-02-24"], "name": "February Early-Release Wednesdays", "type": "early_release", "description": "Schools release one hour early; use the school-specific dismissal time.", "exportDatesIndividually": true },
+    { "date": "2027-02-15", "name": "Winter Break Day / Contingent Weather Day - No School K–12", "type": "no_school", "description": "Currently printed as no school; the asterisk says it may be adjusted due to inclement weather." },
+    { "date": "2027-03-03", "dates": ["2027-03-03", "2027-03-17", "2027-03-24"], "name": "March Early-Release Wednesdays", "type": "early_release", "description": "Schools release one hour early; use the school-specific dismissal time.", "exportDatesIndividually": true },
+    { "date": "2027-03-10", "name": "Grade 11 ACT Day / Professional Learning", "type": "academic", "description": "Grade 11 attends for ACT testing; K–10 and grade 12 do not attend." },
+    { "date": "2027-03-24", "name": "Afternoon Parent-Teacher Conferences K–12", "type": "academic", "description": "This is also an early-release Wednesday and the end of Quarter 3." },
+    { "date": "2027-03-24", "name": "Quarter 3 Ends", "type": "quarter_end" },
+    { "date": "2027-03-25", "name": "Parent-Teacher Conferences - No School K–12", "type": "no_school" },
+    { "date": "2027-03-26", "endDate": "2027-04-02", "name": "Spring Recess - No School K–12", "type": "break_start" },
+    { "date": "2027-04-07", "dates": ["2027-04-07", "2027-04-14", "2027-04-21", "2027-04-28"], "name": "April Early-Release Wednesdays", "type": "early_release", "description": "Schools release one hour early; use the school-specific dismissal time.", "exportDatesIndividually": true },
+    { "date": "2027-05-05", "dates": ["2027-05-05", "2027-05-19", "2027-05-26"], "name": "May Early-Release Wednesdays", "type": "early_release", "description": "Schools release one hour early; use the school-specific dismissal time.", "exportDatesIndividually": true },
+    { "date": "2027-05-14", "name": "Professional Learning / Contingent Weather Day - No School K–12", "type": "teacher_workday", "description": "Currently printed as no school; the asterisk says it may be adjusted due to inclement weather." },
+    { "date": "2027-05-31", "name": "Memorial Day - No School K–12", "type": "holiday" },
+    { "date": "2027-06-10", "name": "Last Day of School / Semester 2 / Quarter 4 Ends", "type": "school_end", "description": "The asterisk says the date may be adjusted due to inclement weather." },
+    { "date": "2027-06-11", "name": "Records Day / Contingent Weather Day", "type": "makeup_day", "badgeLabel": "Contingent Day", "description": "Student attendance only if activated after weather disruption; otherwise this is a records day.", "hideFromCalendarExport": true }
+  ],
+  "calendarFaqs": [
+    { "q": "When does RUSD start school in 2026?", "a": "Grades 1–12 begin Tuesday, September 1, 2026. For 5K, September 1 is family orientation. Students with last names A–L attend September 2, students with last names M–Z attend September 3, and all 5K students attend September 4." },
+    { "q": "Which Wednesdays are early release in RUSD for 2026–27?", "a": "RUSD lists 25 Wednesdays from September 16, 2026, through May 26, 2027. Schools release one hour early, but exact dismissal times vary by school and program." },
+    { "q": "When is RUSD Winter Recess in 2026–27?", "a": "Winter Recess runs Wednesday, December 23, 2026, through Friday, January 1, 2027. Students return Monday, January 4." },
+    { "q": "Which RUSD students attend school on March 10, 2027?", "a": "Grade 11 attends for ACT testing. Students in K–10 and grade 12 do not attend because of professional learning." },
+    { "q": "When is RUSD Spring Recess in 2027?", "a": "Spring Recess runs Friday, March 26, through Friday, April 2, 2027. Students return Monday, April 5." },
+    { "q": "When is the last day of school in RUSD for 2027?", "a": "The printed last day is Thursday, June 10, 2027. It carries an asterisk and may be adjusted due to inclement weather; June 11 is a records or contingent-weather day." },
+    { "q": "Does RUSD Early Learning follow every K–12 date?", "a": "No. The Early Learning track adds Family Engagement closures and treats several K–5-only dates as closures for its students. Goodland Montessori follows the K–12 calendar instead." },
+    { "q": "Which RUSD dates are no-school days for K–5 only?", "a": "Students in K–5 do not attend on October 2, October 29, November 13, and February 5. Students in grades 6–12 remain in session on those dates." }
+  ],
+  "faqDisplayQuestions": [
+    "When does RUSD start school in 2026?",
+    "Which Wednesdays are early release in RUSD for 2026–27?",
+    "When is RUSD Winter Recess in 2026–27?",
+    "When is RUSD Spring Recess in 2027?",
+    "When is the last day of school in RUSD for 2027?",
+    "Which RUSD students use the Early Learning calendar?",
+    "Which RUSD students attend school on March 10, 2027?",
+    "Which RUSD dates are no-school days for K–5 only?"
+  ],
+  "relatedDistrictsTitle": "More Reviewed Wisconsin School Calendars",
+  "hideRelatedDistrictDescriptions": true,
+  "hiddenCustomSectionIds": ["rusd-calendar-track-selector", "rusd-calendar-symbol-guide", "rusd-local-school-models"],
+  "hiddenSections": ["downloadCta", "todayStatus", "keyDateCards", "quickFacts", "yearNumbers", "planningTips", "about", "districtProfile", "livingHere", "comparison", "whatsDifferent", "nationalTrends"],
+  "sourceReviewSummary": "Reviewed against RUSD’s official K–12 and Early Learning calendars, early-release announcement, and school start/end times.",
+  "sourceReviewDetails": [
+    "The English and Spanish K-12 PDFs and both Early Learning PDFs were rendered and visually checked in full.",
+    "The downloaded local English PDF and current official English PDF have the same SHA-256 checksum.",
+    "The 25-date early-release list, one-hour change, six-minute regular-day adjustment, busing, and after-school details were checked against RUSD's transition announcement and start/end-times page.",
+    "Early Learning differences and the Goodland Montessori exception were checked against the separate English and Spanish program PDFs.",
+    "Asterisked dates remain weather-sensitive; contingent dates are excluded from the one-time MySchoolDates .ics export."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Racine Unified School District sources",
+  "sourceNextReviewText": "Next review: if RUSD revises the calendar, changes early-release dates, or activates a weather-contingency date.",
+  "sources": [
+    { "label": "RUSD District Calendar", "url": "https://www.rusd.org/page/district-calendar" },
+    { "label": "Official RUSD 2026-2027 School Year Calendar - English PDF", "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/6991a0e6-face-4cea-9a57-d84e2cbb686d/2026-2027-RUSD-Calendar-ENGLISH-02262026.pdf?disposition=inline" },
+    { "label": "RUSD 2026-2027 Early Learning Calendar - English PDF", "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4795/Rusd/05f29f8f-55fb-422e-86c8-cbf2e409d024/2026-2027-RUSD-Early-Learning-Calendar-ENGLISH-03242026.pdf?disposition=inline" },
+    { "label": "RUSD 2026-27 early-release transition details", "url": "https://www.rusd.org/article/2785772" },
+    { "label": "RUSD school start and end times", "url": "https://www.rusd.org/page/startend-times" }
+  ]
+}

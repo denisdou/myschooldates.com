@@ -21,6 +21,7 @@ type CalendarEvent = {
   exportDatesIndividually?: boolean
   showDuringBreak?: boolean
   hideFromCalendarExport?: boolean
+  calendarExportTracks?: string[]
   status?: 'TENTATIVE' | 'CONFIRMED' | 'CANCELLED'
 }
 
@@ -30,6 +31,7 @@ type CalendarRecord = {
   firstDay?: string
   lastDay?: string
   totalSchoolDays?: number
+  calendarTrackDownloads?: Array<{ id: string; label: string }>
   events: CalendarEvent[]
 }
 
@@ -246,38 +248,44 @@ async function readManifest() {
 
 async function findCalendar(fileParam: string) {
   const normalizedFileParam = fileParam.replace(/\.(ics|pdf)$/i, '')
-  const match = normalizedFileParam.match(/^(.+)-(\d{4}-\d{4})$/)
+  const match = normalizedFileParam.match(/^(.+)-(\d{4}-\d{4})(?:-([a-z0-9-]+))?$/)
   if (!match) return null
 
   const manifest = await readManifest()
-  const [, slug, schoolYear] = match
+  const [, slug, schoolYear, requestedTrack] = match
   const district = manifest.districts.find(item => item.slug === slug)
   if (!district) return null
 
   const calendar = manifest.calendarsByInstitutionYear[`${district.institutionId}:${schoolYear}`]
   if (!calendar) return null
+  const track = requestedTrack
+    ? calendar.calendarTrackDownloads?.find(item => item.id === requestedTrack)
+    : undefined
+  if (requestedTrack && !track) return null
 
   return {
     district,
     calendar,
     schoolYear,
+    track,
   }
 }
 
-function buildIcs(district: DistrictRecord, calendar: CalendarRecord) {
+function buildIcs(district: DistrictRecord, calendar: CalendarRecord, track?: { id: string; label: string }) {
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
     'PRODID:-//MySchoolDates//School Calendar//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
-    `X-WR-CALNAME:${escapeText(`${district.name} ${calendar.schoolYear}`)}`,
+    `X-WR-CALNAME:${escapeText(`${district.name} ${calendar.schoolYear}${track ? ` — ${track.label}` : ''}`)}`,
   ]
 
   const breaks = getBreaks(calendar.events)
   const eventsForExport = calendar.events
     .filter(event =>
       !event.hideFromCalendarExport &&
+      (!track || !event.calendarExportTracks?.length || event.calendarExportTracks.includes(track.id)) &&
       event.type !== 'break_end' &&
       !isRangeEndEvent(event, calendar.events) &&
       (event.showDuringBreak || event.type === 'observance' || !isCoveredByBreak(event, calendar.events))
@@ -313,7 +321,7 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord) {
       `SUMMARY:${escapeText(`${summaryName} - ${district.name}`)}`,
       ...(eventStatus ? [`STATUS:${eventStatus}`] : []),
       ...(eventDescription ? [`DESCRIPTION:${escapeText(eventDescription)}`] : []),
-      `UID:${start}-${end}-${event.type}-${uidSlug}@myschooldates.com`,
+      `UID:${start}-${end}-${event.type}${track ? `-${track.id}` : ''}-${uidSlug}@myschooldates.com`,
       'END:VEVENT',
     )
   }
@@ -414,7 +422,8 @@ export default defineEventHandler(async (event) => {
   }
 
   const isPdfRequest = fileParam.toLowerCase().endsWith('.pdf')
-  const filename = `${match.district.slug}-${match.schoolYear}.${isPdfRequest ? 'pdf' : 'ics'}`
+  const trackSuffix = match.track ? `-${match.track.id}` : ''
+  const filename = `${match.district.slug}-${match.schoolYear}${trackSuffix}.${isPdfRequest ? 'pdf' : 'ics'}`
 
   if (isPdfRequest) {
     const body = buildPdf(match.district, match.calendar)
@@ -425,7 +434,7 @@ export default defineEventHandler(async (event) => {
     return body
   }
 
-  const body = buildIcs(match.district, match.calendar)
+  const body = buildIcs(match.district, match.calendar, match.track)
   setHeader(event, 'Content-Type', 'text/calendar; charset=utf-8')
   setHeader(event, 'Content-Disposition', `attachment; filename="${filename}"`)
   setHeader(event, 'X-Robots-Tag', 'noindex')

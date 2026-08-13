@@ -8,6 +8,14 @@ const props = defineProps<{
 
 function computeYearDiff(curCal: any, prevCalData: any, prevYearStr: string): string[] {
   if (!prevCalData) return []
+  const currentTrack = curCal.calendarTrackId ?? curCal.meta?.calendarTrackId
+  const previousTrack = prevCalData.calendarTrackId ?? prevCalData.meta?.calendarTrackId
+
+  // Calendar-track identity is part of the comparison key. Preserve legacy
+  // behavior only when neither record declares a track; never compare a
+  // track-aware record with a missing or different track.
+  if ((currentTrack || previousTrack) && (!currentTrack || !previousTrack || currentTrack !== previousTrack)) return []
+
   const items: string[] = []
 
   const mmddDiff = (a: string, b: string) =>

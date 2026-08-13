@@ -1,0 +1,216 @@
+{
+  "institutionId": "milwaukee-public-schools",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Milwaukee Public Schools Calendar 2027–28",
+  "firstDay": "2027-09-01",
+  "lastDay": "2028-06-08",
+  "temporalCoverageStart": "2027-08-25",
+  "temporalCoverageEnd": "2028-06-13",
+  "totalSchoolDays": 176,
+  "teacherWorkDays": 191,
+  "sourceUrl": "https://www.milwaukeepublicschools.org/about/calendar",
+  "sourceDocumentPage": "https://www.milwaukeepublicschools.org/about/calendar",
+  "sourcePdfUrl": "https://www.milwaukeepublicschools.org/fs/resource-manager/view/8becb9d2-fa8d-447f-9468-951ad7ebd56e",
+  "lastCheckedPdfUrl": "https://www.milwaukeepublicschools.org/fs/resource-manager/view/8becb9d2-fa8d-447f-9468-951ad7ebd56e",
+  "sourceCheckedAt": "2026-08-13",
+  "sourceUpdatedAt": "2025-12-10",
+  "sourceChecksumSha256": "5c4dceef85f08f9183ae7c66ba31433fcfa6651241555f113ce5a0c26d3af2c4",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.milwaukeepublicschools.org/about/calendar",
+    "linkText": "MPS 2027-28 District Calendar (PDF - All languages)",
+    "expectedPdfUrl": "https://www.milwaukeepublicschools.org/fs/resource-manager/view/8becb9d2-fa8d-447f-9468-951ad7ebd56e",
+    "expectedChecksumSha256": "5c4dceef85f08f9183ae7c66ba31433fcfa6651241555f113ce5a0c26d3af2c4"
+  },
+  "lastVerifiedAt": "2026-08-13",
+  "dateCreated": "2026-08-13",
+  "datePublished": "2026-08-13",
+  "dateModified": "2026-08-13",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_schedule_change", "makeup_day_activation", "confirmed_data_error"],
+  "sourceVersion": "MPS 2027–28 district calendar PDF, revised December 10, 2025",
+  "sourceVersionDisplay": "MPS 2027–28 district calendar PDF · revised December 10, 2025 · reviewed August 13, 2026",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideHeroDownloadLink": true,
+  "hideHeroVerificationProcess": true,
+  "heroReviewedLabel": "Calendar reviewed",
+  "heroUpdatedLabel": "Page updated",
+  "seoTitle": "Milwaukee Public Schools Calendar 2027–28: MPS Dates & PDF",
+  "seoDescription": "Milwaukee Public Schools starts Sept. 1, 2027 and ends June 8, 2028. See MPS breaks, staff days, makeup dates, the official PDF, and an ICS download.",
+  "heroSummary": "The first day of school for Milwaukee Public Schools is Wednesday, September 1, 2027, and the last day is Thursday, June 8, 2028. MPS lists 176 student days and 191 staff days. Winter Break runs December 22–31, and Spring Break runs April 3–7. June 12–13 are reserved as emergency makeup days only if needed.",
+  "keyDatesHeading": "MPS 2027–28 Key Dates",
+  "keyDatesSummaryTitle": "MPS 2027–28 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, school breaks, and major student no-school dates",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School", "date": "2027-09-01", "type": "school_start" },
+    { "label": "October Break", "name": "October Break — No School", "date": "2027-10-25", "type": "no_school" },
+    { "label": "Thanksgiving", "name": "Thanksgiving Break", "date": "2027-11-24", "endDate": "2027-11-26", "type": "break_start" },
+    { "label": "Winter", "name": "Winter Break", "date": "2027-12-22", "endDate": "2027-12-31", "type": "break_start" },
+    { "label": "Spring", "name": "Spring Break", "date": "2028-04-03", "endDate": "2028-04-07", "type": "break_start" },
+    { "label": "Last Day", "name": "Last Day of School", "date": "2028-06-08", "type": "school_end" }
+  ],
+  "allDatesTitle": "MPS 2027–28 District Calendar Dates",
+  "allDatesCoverageNote": "This table lists districtwide attendance dates, student no-school days, staff workdays, and the two conditional emergency makeup dates published by MPS. Individual schools may add non-attendance days.",
+  "allDatesCoverageNotePosition": "top",
+  "hideCoveredBreakDatesNote": true,
+  "dateLegendLabelOverrides": {
+    "Reserved Weather Day": "Emergency Makeup Day",
+    "Make-Up Day": "Makeup Day"
+  },
+  "breaksTitle": "MPS Breaks and When Students Return",
+  "hideBreakDurationBadges": true,
+  "breakSummaryOverrides": {
+    "2027-11-24": {
+      "name": "Thanksgiving Break",
+      "note": "Students are also off Tuesday, November 23. Classes resume Monday, November 29."
+    },
+    "2027-12-22": {
+      "name": "Winter Break",
+      "note": "Classes resume Monday, January 3, 2028."
+    },
+    "2028-04-03": {
+      "name": "Spring Break",
+      "note": "Classes resume Monday, April 10, 2028."
+    }
+  },
+  "alternateCalendars": [],
+  "customSections": [
+    {
+      "id": "milwaukee-mps-2027-2028-family-notes",
+      "label": "What MPS Families Should Know",
+      "content": "",
+      "position": "afterAllDates",
+      "groups": [
+        {
+          "label": "No February Break on the 2027–28 calendar",
+          "items": ["The 2027–28 MPS calendar does not list a February Break. Students are instead off Friday, February 25 for a professional-development day, when most staff report. The previous 2026–27 calendar had a one-day February Break on February 22."]
+        },
+        {
+          "label": "Students and staff are off on conference days",
+          "items": ["MPS lists October 22 and March 24 as Parent-Teacher Conference Days when both students and staff do not report."]
+        },
+        {
+          "label": "Students are off November 23–26",
+          "items": ["November 23 is a professional-development day when most staff report. November 24–26 are Thanksgiving Break, when students and school staff do not report."]
+        },
+        {
+          "label": "June 12–13 are reserve dates only",
+          "items": ["The two emergency makeup days apply only if MPS activates them. They remain visible for planning but are excluded from the ICS download."]
+        }
+      ]
+    },
+    {
+      "id": "milwaukee-mps-2027-2028-summer-academy",
+      "label": "Summer Academy Is Separate from the Regular School Year",
+      "content": "The 2027–28 PDF lists 20 Summer Academy days from July 5–29, followed by a Summer Academy staff record day on July 30. MPS's calendar webpage summarizes Summer Academy as July 5–30. This page follows the PDF for the distinction between student program days and the July 30 staff record day. Summer Academy is separate from the regular 176-day student calendar.",
+      "position": "afterBreaks"
+    },
+    {
+      "id": "milwaukee-mps-2027-2028-translation-proofing",
+      "label": "Minor Typo in the Hmong Calendar Grid",
+      "content": "The Hmong page appears to show “0” where April 10 should appear in the April 2028 calendar grid. The English page shows April 10 correctly, and no closure is marked for that date. Dates on this page therefore follow the English calendar page when the translated grid differs.",
+      "position": "beforeSources"
+    }
+  ],
+  "events": [
+    { "date": "2027-08-25", "dates": ["2027-08-25", "2027-08-26", "2027-08-27", "2027-08-30", "2027-08-31"], "displayDate": "August 25–27 & 30–31, 2027", "name": "Professional Development / Organizational Days — No School", "type": "teacher_workday", "description": "Five staff days before students begin; August 28–29 are the weekend.", "exportDatesIndividually": true },
+    { "date": "2027-09-01", "name": "First Day of School", "type": "school_start" },
+    { "date": "2027-09-06", "name": "Labor Day — No School", "type": "holiday" },
+    { "date": "2027-10-22", "name": "Parent-Teacher Conference Day — No School", "type": "no_school", "description": "Staff and students do not report." },
+    { "date": "2027-10-25", "name": "October Break — No School", "type": "no_school" },
+    { "date": "2027-11-23", "name": "Professional Development Day — No School", "type": "teacher_workday" },
+    { "date": "2027-11-24", "endDate": "2027-11-26", "name": "Thanksgiving Break — No School", "type": "break_start" },
+    { "date": "2027-12-22", "endDate": "2027-12-31", "name": "Winter Break — No School", "type": "break_start" },
+    { "date": "2028-01-03", "name": "Classes Resume", "type": "school_resume" },
+    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day — No School", "type": "holiday" },
+    { "date": "2028-01-21", "name": "Professional Development Day — No School", "type": "teacher_workday" },
+    { "date": "2028-02-25", "name": "Professional Development Day — No School", "type": "teacher_workday" },
+    { "date": "2028-03-24", "name": "Parent-Teacher Conference Day — No School", "type": "no_school", "description": "Staff and students do not report." },
+    { "date": "2028-04-03", "endDate": "2028-04-07", "name": "Spring Break — No School", "type": "break_start" },
+    { "date": "2028-04-14", "name": "Professional Development Day — No School", "type": "teacher_workday" },
+    { "date": "2028-05-29", "name": "Memorial Day — No School", "type": "holiday" },
+    { "date": "2028-06-08", "name": "Last Day of School", "type": "school_end" },
+    { "date": "2028-06-09", "name": "Record Day — No School", "type": "teacher_workday" },
+    { "date": "2028-06-12", "endDate": "2028-06-13", "name": "Emergency Makeup Days (If Needed)", "type": "makeup_day", "description": "Conditional reserve dates only; MPS has not confirmed them as attendance days.", "hideFromCalendarExport": true }
+  ],
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideSocialShareButtons": true,
+  "hideIcsImportDisclaimer": true,
+  "hideCalendarUpdatesButton": true,
+  "icsHeading": "Add MPS 2027–28 Dates to Your Calendar",
+  "icsDescription": "Download the dates above as an ICS file for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Add MPS Dates to Your Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. The file will not reflect later changes made by MPS.",
+  "pdfHeading": "Official MPS 2027–28 District Calendar",
+  "pdfDescription": "Open MPS's published calendar to view attendance dates, staff days, breaks, Summer Academy, and conditional emergency makeup dates.",
+  "pdfButtonLabel": "View Official MPS Calendar PDF",
+  "pdfVersionLabel": "MPS 2027–28 district calendar · revised December 10, 2025 · reviewed August 13, 2026",
+  "pdfSupplementalTitle": "Nine-language PDF",
+  "pdfSupplementalDescription": "The district combines English, Arabic, Burmese, Hmong, Karen, Rohingya, Somali, Spanish, and Swahili in one PDF. The district's attendance, break, and staff-workday dates match across the nine language pages. The Hmong April grid contains the minor April 10 typo noted below.",
+  "pdfSupplementalLinks": [
+    { "label": "MPS calendar page and bell schedules", "url": "https://www.milwaukeepublicschools.org/about/calendar" }
+  ],
+  "yearNumbersMode": "customOnly",
+  "yearNumbersTitle": "MPS 2027–28 by the Numbers",
+  "yearNumbers": [
+    { "label": "Student days", "value": "176", "detail": "Regular districtwide attendance days printed by MPS" },
+    { "label": "Staff days", "value": "191", "detail": "Includes organizational, professional-development, and record workdays" },
+    { "label": "Summer Academy", "value": "20 days", "detail": "July 5–29, separate from the regular student calendar" },
+    { "label": "Makeup reserve", "value": "2 days", "detail": "June 12–13 only if MPS activates them" }
+  ],
+  "yearNumbersMethodologyNote": "June 12–13 are not scheduled student attendance days unless MPS activates them.",
+  "calendarFaqs": [
+    { "q": "Is this the Milwaukee or Minneapolis MPS calendar?", "a": "This page covers Milwaukee Public Schools in Wisconsin. Minneapolis Public Schools has a separate calendar page.", "linkText": "Minneapolis Public Schools", "linkUrl": "/minneapolis-public-schools-calendar/2027-2028" },
+    { "q": "When does Milwaukee MPS start school in 2027?", "a": "The first day for students is Wednesday, September 1, 2027. August 25–27 and August 30–31 are staff workdays, not student attendance days." },
+    { "q": "When is Milwaukee MPS Winter Break in 2027–28?", "a": "Winter Break runs December 22 through December 31, 2027. Classes resume Monday, January 3, 2028." },
+    { "q": "When is Milwaukee MPS Spring Break in 2028?", "a": "Spring Break runs April 3 through April 7, 2028. Classes resume Monday, April 10." },
+    { "q": "Does Milwaukee MPS have a February Break in 2028?", "a": "No. The 2027–28 PDF does not list a February Break. Students instead have no school Friday, February 25, for professional development." },
+    { "q": "When is the last day of Milwaukee MPS in 2028?", "a": "The last day of school is Thursday, June 8, 2028. June 9 is a staff record day." },
+    { "q": "Are June 12–13 confirmed Milwaukee MPS school days?", "a": "No. MPS reserves June 12–13 as emergency makeup days only if needed. They are excluded from this site's ICS download unless MPS activates them." }
+  ],
+  "faqDisplayLimit": 7,
+  "hideFaqSchema": true,
+  "includeArticleSchema": false,
+  "includeCustomSectionSchema": false,
+  "webPageMainEntity": "none",
+  "schemaCalendarName": "Milwaukee Public Schools 2027–28 District Calendar",
+  "schemaDatasetName": "Milwaukee Public Schools 2027–28 District Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed MPS district calendar records for 2027–28, including attendance dates, holidays, breaks, student no-school days, staff workdays, resume dates, and the last day of school.",
+  "schemaSpatialCoverage": "Milwaukee, Wisconsin",
+  "schemaCalendarDownloadName": "MySchoolDates MPS 2027–28 calendar file",
+  "schemaCalendarDownloadDescription": "ICS file generated from the reviewed MPS dates listed on this page. Conditional emergency makeup dates are not included.",
+  "schemaKeyDateItemListName": "MPS 2027–28 key student calendar dates",
+  "hiddenSections": ["comparison", "whatsDifferent", "nationalTrends", "quickFacts", "todayStatus", "about", "planningTips", "livingHere", "keyDateCards", "downloadCta", "districtProfile", "relatedDistricts"],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Dates", "id": "all-dates" },
+    { "label": "Need to Know", "id": "milwaukee-mps-2027-2028-family-notes" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "PDF Note", "id": "milwaukee-mps-2027-2028-translation-proofing" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "sourceReviewSummary": "Reviewed August 13, 2026, against MPS's District Calendar page and published nine-language 2027–28 PDF.",
+  "sourceReviewDetails": [
+    "The English page of the PDF was checked for student dates, staff days, breaks, Summer Academy, and conditional emergency makeup dates. The other eight language pages were reviewed for matching event dates and labels; the minor Hmong April grid typo is disclosed above.",
+    "Version note: MPS's calendar webpage summarizes Summer Academy as July 5–30. The PDF lists 20 student program days on July 5–29 and July 30 as a Summer Academy staff record day. This page follows the PDF for that attendance distinction.",
+    "The calendar webpage and PDF both identify the revision as December 10, 2025."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Milwaukee Public Schools sources",
+  "sourceNextReviewText": "Next review: if MPS revises the district calendar, announces a schedule change, or activates emergency makeup days.",
+  "sourceReviewDateLabel": "Calendar reviewed",
+  "sources": [
+    { "label": "MPS District Calendar", "url": "https://www.milwaukeepublicschools.org/about/calendar" },
+    { "label": "Official MPS 2027–28 District Calendar (all languages)", "url": "https://www.milwaukeepublicschools.org/fs/resource-manager/view/8becb9d2-fa8d-447f-9468-951ad7ebd56e" }
+  ]
+}

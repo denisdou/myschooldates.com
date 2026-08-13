@@ -75,6 +75,15 @@ const pdfSupplementalLinks = computed(() =>
 const copied = ref(false)
 const icsHref = computed(() => `/calendars/${props.district.slug}-${props.cal.schoolYear}.ics`)
 const icsFilename = computed(() => `${props.district.slug}-${props.cal.schoolYear}.ics`)
+const calendarTrackDownloads = computed(() =>
+  (((props.cal?.calendarTrackDownloads ?? props.cal?.meta?.calendarTrackDownloads ?? []) as Array<{ id?: string; label?: string; description?: string; ariaLabel?: string }>)
+    .filter(track => track.id && track.label))
+)
+const combinedIcsButtonLabel = computed(() =>
+  props.cal?.combinedIcsButtonLabel ?? props.cal?.meta?.combinedIcsButtonLabel ?? 'Download All Dates — Combined Reference'
+)
+const trackIcsHref = (trackId: string) => `/calendars/${props.district.slug}-${props.cal.schoolYear}-${trackId}.ics`
+const trackIcsFilename = (trackId: string) => `${props.district.slug}-${props.cal.schoolYear}-${trackId}.ics`
 const calendarShortName = computed(() => props.district?.shortName || props.districtName)
 const icsHeading = computed(() =>
   props.cal?.icsHeading ?? props.cal?.meta?.icsHeading ?? `Download the ${displayYear.value} Calendar`
@@ -184,8 +193,30 @@ const icsAriaLabel = computed(() =>
       <p class="text-sm text-rds-ink-muted mb-4">
         {{ icsDescription }}
       </p>
-      <!-- Primary CTA -->
+      <div v-if="calendarTrackDownloads.length" class="mb-3 grid gap-3 sm:grid-cols-2">
+        <a
+          v-for="track in calendarTrackDownloads"
+          :key="track.id"
+          :href="trackIcsHref(track.id!)"
+          :download="trackIcsFilename(track.id!)"
+          :aria-label="track.ariaLabel || `Download ${track.label} calendar file`"
+          class="rds-button-primary flex min-h-12 flex-col items-start justify-center px-4 py-3 text-left text-sm font-semibold"
+        >
+          <span>{{ track.label }}</span>
+          <span v-if="track.description" class="mt-1 text-xs font-normal opacity-90">{{ track.description }}</span>
+        </a>
+      </div>
       <a
+        v-if="calendarTrackDownloads.length"
+        :href="icsHref"
+        :download="icsFilename"
+        :aria-label="icsAriaLabel"
+        class="rds-button-secondary mb-3 flex min-h-11 w-full items-center justify-center px-4 py-2.5 text-sm font-semibold"
+      >
+        {{ combinedIcsButtonLabel }}
+      </a>
+      <a
+        v-else
         :href="icsHref"
         :download="icsFilename"
         :aria-label="icsAriaLabel"
@@ -279,7 +310,7 @@ const icsAriaLabel = computed(() =>
 
     <!-- Share with Parents -->
     <div class="district-utility-panel__section p-6">
-      <component v-if="!hideShareCalendarHeading" :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-rds-ink mb-3">{{ shareCalendarHeading }}</component>
+      <component v-if="!hideShareCalendarHeading" :is="unifiedDownloadTitle || compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-rds-ink mb-3">{{ shareCalendarHeading }}</component>
       <div class="flex flex-wrap gap-3">
         <!-- Copy Link -->
         <button

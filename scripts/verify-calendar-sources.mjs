@@ -31,6 +31,15 @@ function findResourceUuid(html, linkText) {
   return null
 }
 
+function findLinkHref(html, linkText) {
+  const anchors = html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)
+  for (const match of anchors) {
+    if (normalizeLinkText(match[2] ?? '') !== linkText) continue
+    return (match[1] ?? '').match(/href=["']([^"']+)["']/i)?.[1]?.replace(/&amp;/gi, '&') ?? null
+  }
+  return null
+}
+
 function findDocumentPdfUrl(html, linkText) {
   const linkIndex = html.indexOf(linkText)
   if (linkIndex === -1) return null
@@ -88,6 +97,41 @@ async function verifyDocumentPdf(source, label) {
   console.log(`OK ${label}: document PDF URL and SHA-256 match`)
 }
 
+async function verifyWebPage(source, label) {
+  const html = await (await fetchSource(source.checkUrl)).text()
+  const text = normalizeLinkText(html)
+
+  if (source.expectedDocumentUrl) {
+    const actualUrl = findLinkHref(html, source.linkText)
+    if (!actualUrl) throw new Error(`could not find “${source.linkText}” at ${source.checkUrl}`)
+    const resolvedUrl = new URL(actualUrl, source.checkUrl).toString()
+    const canonicalUrl = (await fetchSource(resolvedUrl)).url
+    if (canonicalUrl !== source.expectedDocumentUrl) {
+      throw new Error(`document URL changed from ${source.expectedDocumentUrl} to ${canonicalUrl}`)
+    }
+  }
+
+  for (const expectedText of source.expectedText ?? []) {
+    if (!text.includes(expectedText)) throw new Error(`expected text missing: “${expectedText}”`)
+  }
+
+  for (const assertion of source.contentAssertions ?? []) {
+    const startIndex = text.lastIndexOf(assertion.startText)
+    if (startIndex === -1) throw new Error(`section start missing: “${assertion.startText}”`)
+    const endIndex = assertion.endText ? text.indexOf(assertion.endText, startIndex + assertion.startText.length) : -1
+    if (assertion.endText && endIndex === -1) throw new Error(`section end missing: “${assertion.endText}”`)
+    const section = text.slice(startIndex, endIndex === -1 ? text.length : endIndex)
+    for (const expectedText of assertion.expectedText ?? []) {
+      if (!section.includes(expectedText)) throw new Error(`expected text missing after “${assertion.startText}”: “${expectedText}”`)
+    }
+    for (const forbiddenText of assertion.forbiddenText ?? []) {
+      if (section.includes(forbiddenText)) throw new Error(`unexpected text found after “${assertion.startText}”: “${forbiddenText}”`)
+    }
+  }
+
+  console.log(`OK ${label}: monitored web-page content matches`)
+}
+
 if (!existsSync(calendarsDir)) {
   throw new Error('Missing content/calendars directory')
 }
@@ -101,13 +145,19 @@ for (const institutionId of readdirSync(calendarsDir)) {
     if (!file.endsWith('.json')) continue
     const path = join(institutionDir, file)
     const calendar = readJson(path)
-    if (!calendar.sourceResourceMonitor) continue
-    monitoredSources.push({
-      path,
-      schoolYear: calendar.schoolYear,
-      institutionId,
-      ...calendar.sourceResourceMonitor,
-    })
+    const sourceMonitors = [
+      calendar.sourceResourceMonitor,
+      ...(calendar.additionalSourceResourceMonitors ?? []),
+    ].filter(Boolean)
+
+    for (const sourceMonitor of sourceMonitors) {
+      monitoredSources.push({
+        path,
+        schoolYear: calendar.schoolYear,
+        institutionId,
+        ...sourceMonitor,
+      })
+    }
   }
 }
 
@@ -118,7 +168,7 @@ if (!monitoredSources.length) {
 
 let failures = 0
 for (const source of monitoredSources) {
-  const label = `${source.institutionId} ${source.schoolYear}`
+  const label = `${source.institutionId} ${source.schoolYear} — ${source.linkText}`
   if (!source.checkUrl || !source.linkText) {
     console.error(`FAIL ${label}: invalid sourceResourceMonitor configuration in ${relative(root, source.path)}`)
     failures += 1
@@ -129,6 +179,7 @@ for (const source of monitoredSources) {
     const monitorType = source.type ?? (source.expectedResourceUuid ? 'resource-uuid' : 'document-pdf')
     if (monitorType === 'resource-uuid') await verifyResourceUuid(source, label)
     else if (monitorType === 'document-pdf') await verifyDocumentPdf(source, label)
+    else if (monitorType === 'web-page') await verifyWebPage(source, label)
     else throw new Error(`unsupported monitor type “${monitorType}”`)
   }
   catch (error) {

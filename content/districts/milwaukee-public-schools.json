@@ -1,0 +1,53 @@
+{
+  "institutionId": "milwaukee-public-schools",
+  "name": "Milwaukee Public Schools",
+  "shortName": "MPS",
+  "slug": "milwaukee-public-schools-calendar",
+  "state": "Wisconsin",
+  "stateCode": "WI",
+  "city": "Milwaukee",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["K3", "K4", "K5", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.milwaukeepublicschools.org/",
+  "calendarPage": "https://www.milwaukeepublicschools.org/about/calendar",
+  "logo": "https://resources.finalsite.net/images/v1765283177/mpsmilwaukeek12wius/mpsmilwaukeek12wius/ovfnkyqhxosnwvmjcbf1/logo-mps-horizontal.svg",
+  "timezone": "America/Chicago",
+  "county": "Milwaukee County",
+  "region": "Southeastern Wisconsin",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "studentCount": 65000,
+  "studentCountAsOf": "2026-08-13",
+  "studentCountSourceLabel": "MPS About page",
+  "studentCountSourceUrl": "https://www.milwaukeepublicschools.org/about",
+  "profileStudentCountApproximate": true,
+  "hideProfileCalendarType": true,
+  "seoTitle": "Milwaukee Public Schools Calendar: MPS Dates & PDFs",
+  "seoDescription": "Reviewed Milwaukee Public Schools calendars with student dates, staff days, breaks, official PDFs, and calendar downloads.",
+  "districtFact": "Milwaukee Public Schools serves about 65,000 students in grades K3–12. Individual schools may publish additional non-attendance days beyond the districtwide calendar.",
+  "profileDisclaimer": "Enrollment is approximate and comes from Milwaukee Public Schools. District and school schedules may change.",
+  "relatedDistrictsTitle": "More Reviewed Upper Midwest City Calendars",
+  "relatedDistrictsDescription": "Explore reviewed calendars from other large city school systems, including the other district commonly abbreviated MPS.",
+  "relatedDistricts": [
+    {
+      "name": "Minneapolis Public Schools",
+      "slug": "minneapolis-public-schools-calendar",
+      "state": "Minnesota",
+      "comparisonNote": "Minneapolis also uses MPS, but it publishes a separate attendance calendar."
+    },
+    {
+      "name": "Chicago Public Schools",
+      "slug": "chicago-public-schools-calendar",
+      "state": "Illinois",
+      "comparisonNote": "Chicago provides another reviewed large-city calendar in the Lake Michigan region."
+    }
+  ],
+  "hiddenSections": ["comparison", "whatsDifferent", "nationalTrends", "planningTips", "livingHere", "about"],
+  "includeComparisonSchema": false,
+  "sources": [
+    { "label": "Milwaukee Public Schools official website", "url": "https://www.milwaukeepublicschools.org/" },
+    { "label": "MPS District Calendar", "url": "https://www.milwaukeepublicschools.org/about/calendar" },
+    { "label": "About Milwaukee Public Schools", "url": "https://www.milwaukeepublicschools.org/about" }
+  ]
+}

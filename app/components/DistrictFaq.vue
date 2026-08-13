@@ -24,6 +24,10 @@ function answerParts(faq: FaqItem) {
     after: faq.a.slice(index + faq.linkText.length),
   }
 }
+
+function isInternalLink(faq: FaqItem) {
+  return faq.linkUrl?.startsWith('/') ?? false
+}
 </script>
 
 <template>
@@ -34,7 +38,12 @@ function answerParts(faq: FaqItem) {
         <h3 class="font-medium text-gray-900">{{ faq.q }}</h3>
         <p class="text-gray-600 mt-1.5">
           <template v-if="answerParts(faq).link">
-            {{ answerParts(faq).before }}<a
+            {{ answerParts(faq).before }}<NuxtLink
+              v-if="isInternalLink(faq)"
+              :to="faq.linkUrl"
+              class="font-medium text-[#0f5d6b] underline hover:text-[#0b4c58]"
+            >{{ answerParts(faq).link }}</NuxtLink><a
+              v-else
               :href="faq.linkUrl"
               target="_blank"
               rel="noopener"

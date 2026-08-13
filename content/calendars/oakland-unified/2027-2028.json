@@ -1,81 +1,390 @@
 {
   "institutionId": "oakland-unified",
   "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Oakland Unified School District Calendar 2027–28",
   "firstDay": "2027-08-09",
   "lastDay": "2028-05-24",
   "totalSchoolDays": 180,
   "sourceUrl": "https://www.ousd.org/about-us/districtcalendar",
   "sourcePdfUrl": "https://drive.google.com/file/d/1dqtem-6H9n0gHo1_PtqFHZ0Z0GSltU0P/view",
-  "lastVerifiedAt": "2026-07-18",
+  "lastVerifiedAt": "2026-08-13",
+  "lastReviewedAt": "2026-08-13",
   "datePublished": "2026-07-18",
-  "dateModified": "2026-07-18",
+  "dateModified": "2026-08-13",
+  "schemaDatasetDateModified": "2026-08-13",
   "calendarType": "traditional",
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
   "hideSemesterCount": true,
-  "instructionalDaysDescription": "MySchoolDates calculated this count from the published OUSD calendar by excluding listed weekday holidays, professional development days, collaboration/work days, teacher work days, and breaks between August 9, 2027 and May 24, 2028.",
-  "seoTitle": "Oakland Unified School District Calendar 2027-2028 (OUSD) | Holidays, PDF & ICS",
-  "seoDescription": "View the OUSD 2027-2028 calendar verified against the official district PDF, with Aug 9 first day, May 24 last day, holidays, breaks, printable PDF and ICS download.",
-  "calendarNotes": "OUSD starts the 2027-2028 school year on August 9, 2027 and ends instruction on May 24, 2028. Thanksgiving Break runs November 22-26, Winter Break runs December 20-31, and Spring Break runs April 3-7. January 3 is a professional development day before students begin the spring semester on January 4.",
-  "calendarFaqs": [
+  "hideSecondSemesterStartSummary": true,
+  "hideInstructionalDaysSummary": true,
+  "schemaCalendarName": "Oakland Unified School District Calendar 2027–28",
+  "schemaDatasetName": "Oakland Unified School District 2027–28 Calendar Dataset",
+  "schemaDatasetDescription": "Major Oakland Unified School District calendar dates for 2027–28, including the first and last day, districtwide no-school dates, professional development days, break ranges, and the spring semester start.",
+  "schemaCalendarDownloadName": "OUSD 2027–28 calendar import",
+  "schemaCalendarDownloadDescription": "One-time .ics calendar import containing the OUSD dates shown on this page.",
+  "schemaSpatialCoverage": "Oakland, California",
+  "schemaAdditionalSourceCalendars": [
     {
-      "q": "When does Oakland Unified start school in 2027?",
-      "a": "Oakland Unified students start school on Monday, August 9, 2027."
+      "id": "source-calendar-2025-2026-board-approval",
+      "name": "OUSD Board approval announcement for the 2025–26, 2026–27, and 2027–28 calendars",
+      "datePublished": "2025-01-24",
+      "url": "https://www.ousd.org/communications-public-affairs/newsroom/news/~board/ousd-news/post/ousd-board-of-education-approves-academic-calendars-for-the-next-three-years"
     },
     {
-      "q": "When is OUSD Spring Break in 2028?",
-      "a": "Spring Break on the OUSD 2027-2028 calendar runs Monday, April 3 through Friday, April 7, 2028."
+      "id": "source-calendar-2026-2027",
+      "name": "OUSD 2026–27 English school year calendar",
+      "url": "https://resources.finalsite.net/images/v1782757441/ousdorg/f6utnrwbugohv0jjxre4/ENGLISH-OUSD-Calendar-2026-272.pdf"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "sourceCalendarName": "Oakland Unified School District 2027–28 Calendar Source",
+  "seoTitle": "Oakland Unified (OUSD) Calendar 2027–28: Dates & Breaks",
+  "seoDescription": "See OUSD’s 2027–28 first and last days, no-school days, Thanksgiving, winter and spring breaks, plus the official PDF and an .ics calendar download.",
+  "futureYearNotice": "You’re viewing OUSD’s upcoming 2027–28 calendar. OUSD has published the official calendar, but future-year dates may still be revised.",
+  "heroSourceLine": "Based on the official OUSD 2027–28 district calendar",
+  "heroSummary": "OUSD students are scheduled to start the 2027–28 school year on Monday, August 9, 2027, and the last day of instruction is Wednesday, May 24, 2028. Thanksgiving Break is November 22–26, Winter Break is December 20–31, and Spring Break is April 3–7. January 3 is a professional development day, so students begin the spring semester January 4.",
+  "verificationBadgeText": "Verified against the official OUSD 2027–28 calendar on August 13, 2026.",
+  "verificationBadgeReviewerName": "Denis Dou",
+  "verificationBadgeReviewerHref": "/author",
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "href": "#key-dates"
+    },
+    {
+      "label": "Dates",
+      "href": "#all-dates"
+    },
+    {
+      "label": "Breaks",
+      "href": "#breaks"
+    },
+    {
+      "label": "Download",
+      "href": "#add-to-calendar"
+    },
+    {
+      "label": "Comparison",
+      "href": "#comparison"
+    },
+    {
+      "label": "FAQ",
+      "href": "#faq"
+    }
+  ],
+  "keyDatesHeading": "OUSD 2027–28 Key Dates",
+  "keyDateCardsFirstLabel": "First Day of School",
+  "keyDateCardsSecondLabel": "Last Day of Instruction",
+  "keyDateCardsThirdLabel": "Spring Break",
+  "keyDateCardsThirdValue": "April 3–7, 2028",
+  "keyDateCardsThirdDate": "2028-04-03",
+  "allDatesMode": "all",
+  "allDatesTitle": "OUSD 2027–28 Student Calendar Dates",
+  "allDatesCoverageNote": "This table includes the districtwide dates that affect regular student attendance. School-specific bell schedules, minimum days, events, and program changes may appear only in school or program communications.",
+  "breaksTitle": "Major School Breaks",
+  "hideBreakDurationBadges": true,
+  "breakNotes": {
+    "2027-11-22": "Students return Monday, November 29.",
+    "2027-12-20": "January 3 is a professional development day; students return Tuesday, January 4.",
+    "2028-04-03": "Students return Monday, April 10."
+  },
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Calendar Tools & Downloads",
+  "unifiedDownloadDescription": "Download the OUSD calendar file, open the official district PDF, or share this page.",
+  "icsHeading": "Add OUSD 2027–28 Dates to Your Calendar",
+  "icsDescription": "Download the OUSD dates on this page as an .ics file for Google Calendar, Apple Calendar, or Outlook. This is a one-time import and will not automatically reflect later district changes.",
+  "icsButtonLabel": "Download OUSD .ics File",
+  "icsAriaLabel": "Download the MySchoolDates OUSD 2027–28 .ics calendar import",
+  "icsButtonSupportText": "For later revisions, check the official OUSD district calendar.",
+  "pdfHeading": "Official OUSD 2027–28 Calendar PDF",
+  "pdfDescription": "Open the English district calendar published by Oakland Unified. Check the official calendar page for revisions before making fixed plans.",
+  "pdfButtonLabel": "View Official PDF",
+  "hidePdfVersionLabel": true,
+  "yearComparisonDefaultOpen": true,
+  "yearSwitcherPosition": "afterSources",
+  "comparisonBeforeFaq": true,
+  "comparisonDistrictSlugs": [
+    "san-francisco-unified-school-district-calendar",
+    "san-jose-unified-school-calendar"
+  ],
+  "comparisonTitle": "OUSD 2027–28 Calendar Compared With SFUSD and SJUSD",
+  "compareIntro": "This table compares school-year boundaries and equivalent fall and spring recess periods. The three districts use different names for some breaks.",
+  "comparisonInsights": [
+    {
+      "label": "First day",
+      "items": [
+        "SJUSD starts August 5, OUSD starts August 9, and SFUSD starts August 16."
+      ]
+    },
+    {
+      "label": "Last day",
+      "items": [
+        "OUSD ends May 24, SJUSD ends May 26, and SFUSD ends June 1."
+      ]
+    }
+  ],
+  "comparisonCustomRows": [
+    {
+      "key": "firstDay",
+      "label": "First Day",
+      "values": {
+        "oakland-unified-school-district-calendar": "Aug 9, 2027",
+        "san-francisco-unified-school-district-calendar": "Aug 16, 2027",
+        "san-jose-unified-school-calendar": "Aug 5, 2027"
+      }
+    },
+    {
+      "key": "lastDay",
+      "label": "Last Day",
+      "values": {
+        "oakland-unified-school-district-calendar": "May 24, 2028",
+        "san-francisco-unified-school-district-calendar": "Jun 1, 2028",
+        "san-jose-unified-school-calendar": "May 26, 2028"
+      }
+    },
+    {
+      "key": "fallRecess",
+      "label": "Thanksgiving / Fall Recess",
+      "values": {
+        "oakland-unified-school-district-calendar": "Nov 22–26, 2027",
+        "san-francisco-unified-school-district-calendar": "Nov 22–26, 2027",
+        "san-jose-unified-school-calendar": "Nov 24–26, 2027"
+      }
+    },
+    {
+      "key": "springBreak",
+      "label": "Spring Break / Recess",
+      "values": {
+        "oakland-unified-school-district-calendar": "Apr 3–7, 2028",
+        "san-francisco-unified-school-district-calendar": "Mar 24–31, 2028",
+        "san-jose-unified-school-calendar": "Apr 3–7, 2028"
+      }
+    }
+  ],
+  "comparisonSourceNote": "Rows compare equivalent student recess periods. OUSD calls the November period Thanksgiving Break, SFUSD calls it Fall Recess, and SJUSD calls it Thanksgiving Recess.",
+  "hideComparisonNotes": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDatesSummary",
+    "quickFacts",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "livingHere",
+    "otherCalendars",
+    "relatedDistricts",
+    "nationalTrends"
+  ],
+  "hiddenCustomSectionIds": [
+    "ousd-calendar-planning-numbers-2027-2028",
+    "ousd-program-calendar-guide",
+    "ousd-parent-resource-calendar",
+    "ousd-local-planning-context",
+    "ousd-local-parent-resources",
+    "planning-around-oakland",
+    "ousd-calendar-history"
+  ],
+  "customSections": [
+    {
+      "id": "ousd-no-school-days-families-may-miss-2027-2028",
+      "label": "No-School Days Families May Miss",
+      "content": "These single-day closures are easier to overlook than a full school break.",
+      "position": "afterKeyDates",
+      "groups": [
+        {
+          "label": "Add these dates to family calendars",
+          "items": [
+            "September 17, 2027 — Professional Development Day; no school for students.",
+            "January 3, 2028 — Professional Development Day; no school for students. Students begin the spring semester January 4.",
+            "March 31, 2028 — Cesar Chavez Day; no school for students, followed by Spring Break April 3–7."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ousd-family-planning-notes-2027-2028",
+      "label": "OUSD Family Planning Notes",
+      "content": "Some OUSD schedules and deadlines fall outside the main student calendar.",
+      "position": "afterCalendarExport",
+      "groups": [
+        {
+          "label": "Schedules outside the district calendar",
+          "items": [
+            "As of August 13, 2026, OUSD’s transportation page does not list a separate 2027–28 registration deadline. Check the official page before relying on a prior-year deadline.",
+            "Bell schedules, minimum days, orientations, and school events should be checked on the individual school site or in ParentSquare.",
+            "Summer Learning and Expanded Learning programs publish schedules separately from the regular district calendar.",
+            "Enrollment deadlines and school assignments are separate from the academic calendar."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "OUSD Transportation",
+          "to": "https://www.ousd.org/transportation"
+        },
+        {
+          "label": "OUSD School Directory",
+          "to": "https://www.ousd.org/our-schools/school-directory"
+        },
+        {
+          "label": "OUSD Summer Learning",
+          "to": "https://www.ousd.org/summer-learning"
+        },
+        {
+          "label": "OUSD Expanded Learning",
+          "to": "https://www.ousd.org/expanded-learning"
+        }
+      ]
+    },
+    {
+      "id": "ousd-calendar-types-and-programs-2027-2028",
+      "label": "OUSD Calendar Types and Programs",
+      "content": "Most OUSD students follow the district calendar, but some schools and programs use different schedules.",
+      "position": "afterCalendarExport",
+      "groups": [
+        {
+          "label": "When to check another calendar",
+          "items": [
+            "Alternative education high schools may use different grading calendars.",
+            "Child Development Centers and early childhood programs may use different hours or remain open during some district breaks.",
+            "Independent study and adult education students should confirm program-specific dates.",
+            "Charter and independently operated schools in Oakland may publish calendars that do not follow OUSD district dates."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ousd-calendar-history-2027-2028",
+      "label": "Three-Year OUSD Calendar History",
+      "content": "Recent OUSD calendars show why families should verify each school year rather than reusing prior-year dates. The 2025–26 dates use OUSD’s January 2025 board announcement; the 2026–27 and 2027–28 dates use official calendars linked from OUSD’s current district calendar page.",
+      "position": "afterYearDiff",
+      "groups": [
+        {
+          "label": "2025–26 through 2027–28",
+          "items": [
+            "2025–26: August 11, 2025 to May 28, 2026; Spring Break is April 6–10.",
+            "2026–27: August 10, 2026 to May 27, 2027; Spring Break is March 29–April 2.",
+            "2027–28: August 9, 2027 to May 24, 2028; Spring Break is April 3–7."
+          ]
+        }
+      ],
+      "linksDisplay": "inline",
+      "linksLabel": "Official sources:",
+      "links": [
+        {
+          "label": "OUSD board approval and 2025–26 key dates",
+          "to": "https://www.ousd.org/communications-public-affairs/newsroom/news/~board/ousd-news/post/ousd-board-of-education-approves-academic-calendars-for-the-next-three-years"
+        },
+        {
+          "label": "OUSD 2026–27 English calendar",
+          "to": "https://resources.finalsite.net/images/v1782757441/ousdorg/f6utnrwbugohv0jjxre4/ENGLISH-OUSD-Calendar-2026-272.pdf"
+        },
+        {
+          "label": "OUSD 2027–28 calendar page and downloads",
+          "to": "https://www.ousd.org/about-us/districtcalendar"
+        },
+        {
+          "label": "OUSD 2027–28 English calendar",
+          "to": "https://drive.google.com/file/d/1dqtem-6H9n0gHo1_PtqFHZ0Z0GSltU0P/view"
+        }
+      ]
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When does OUSD start school in 2027?",
+      "a": "OUSD students are scheduled to start the 2027–28 school year on Monday, August 9, 2027."
     },
     {
       "q": "When is the last day of school for OUSD in 2028?",
       "a": "The last day of instruction for Oakland Unified is Wednesday, May 24, 2028."
     },
     {
-      "q": "When is OUSD Winter Break in 2027-2028?",
-      "a": "Winter Break runs Monday, December 20 through Friday, December 31, 2027. January 3 is a professional development day, and students begin the spring semester on January 4."
+      "q": "When is OUSD Spring Break in 2028?",
+      "a": "OUSD Spring Break runs Monday, April 3 through Friday, April 7, 2028. Students return Monday, April 10."
+    },
+    {
+      "q": "When is OUSD Winter Break, and when do students return?",
+      "a": "Winter Break runs December 20–31, 2027. January 3 is a professional development day with no school for students, so classes resume Tuesday, January 4."
+    },
+    {
+      "q": "Which OUSD professional development days are no-school days in 2027–28?",
+      "a": "September 17, 2027 and January 3, 2028 are professional development days with no school for students. The spring semester begins January 4."
+    },
+    {
+      "q": "Does the OUSD calendar apply to charter schools?",
+      "a": "Not necessarily. Charter and independently operated schools in Oakland may publish their own calendars, so families should check the individual school calendar."
+    },
+    {
+      "q": "Do all OUSD programs follow the same calendar?",
+      "a": "No. Alternative education, Child Development Centers, independent study, adult education, and other programs may use different schedules. Families should confirm dates directly with their school or program."
+    },
+    {
+      "q": "Can the OUSD 2027–28 calendar change?",
+      "a": "Yes. Check the official OUSD district calendar page and school communications before making fixed travel, childcare, or transportation plans."
     }
   ],
-  "yearNumbers": [
-    {
-      "label": "Instructional Days",
-      "value": "180",
-      "detail": "Calculated from the official OUSD calendar after excluding listed weekday no-school days and breaks."
-    },
-    {
-      "label": "Earlier Last Day",
-      "value": "May 24",
-      "detail": "The 2027-2028 school year ends three calendar days earlier than the prior year."
-    },
-    {
-      "label": "Spring Break",
-      "value": "Apr 3-7",
-      "detail": "OUSD's 2028 Spring Break returns to an early-April week."
-    }
+  "faqOrderLimit": 8,
+  "faqDisplayLimit": 8,
+  "faqDisplayQuestions": [
+    "When does OUSD start school in 2027?",
+    "When is the last day of school for OUSD in 2028?",
+    "When is OUSD Spring Break in 2028?",
+    "When is OUSD Winter Break, and when do students return?",
+    "Which OUSD professional development days are no-school days in 2027–28?",
+    "Does the OUSD calendar apply to charter schools?",
+    "Do all OUSD programs follow the same calendar?",
+    "Can the OUSD 2027–28 calendar change?"
   ],
   "whatsNew": {
-    "title": "Changes from the 2026-2027 Calendar",
+    "title": "What Changed from 2026–27",
     "content": [
-      "The first day moves from August 10 in 2026 to August 9 in 2027.",
-      "The last day moves from May 27 in 2027 to May 24 in 2028.",
-      "Spring Break moves from March 29-April 2 in 2027 to April 3-7 in 2028."
+      "The school year starts August 9, one day earlier than in 2026–27.",
+      "The last day is May 24, three days earlier than in 2026–27.",
+      "Spring Break moves to April 3–7.",
+      "Cesar Chavez Day falls on March 31, immediately before Spring Break."
     ]
   },
-  "customSections": [
+  "sourceReviewSummary": "The 2027–28 calendar and adjacent-year sources were reviewed against official OUSD materials on August 13, 2026.",
+  "sourceReviewDateLabel": "Calendar review",
+  "sourceReviewDetails": [
+    "The first and last day, districtwide no-school dates, professional development days, holidays, semester dates, and break ranges were checked against the official OUSD calendar.",
+    "The nearby-district table compares only equivalent school-year boundaries and fall or spring recess periods.",
+    "The MySchoolDates .ics file is a one-time import and does not sync with later OUSD revisions."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Oakland Unified School District sources",
+  "sourceNextReviewText": "Next review: if OUSD publishes a revised 2027–28 calendar or adds a separate transportation deadline for this school year.",
+  "sources": [
     {
-      "id": "ousd-calendar-planning-numbers-2027-2028",
-      "label": "OUSD Calendar Planning Numbers",
-      "content": "These 2027-2028 figures add context to the Oakland Unified calendar without repeating the main date cards. They are meant for family logistics, not as a substitute for the official PDF.",
-      "position": "afterAbout",
-      "groups": [
-        {
-          "label": "2027-2028 planning numbers",
-          "items": [
-            "2 semester start dates: August 9, 2027 for the fall term and January 4, 2028 after Winter Break and a professional development day.",
-            "3 long recess windows: Thanksgiving Break, Winter Break, and Spring Break create the largest childcare and travel planning blocks.",
-            "3 standalone no-school weekdays before Spring Break: Professional Development Day, Indigenous Peoples' Day, and Veterans Day appear outside the major break periods.",
-            "1 transportation checkpoint to confirm before school starts: the reviewed OUSD transportation source did not list a separate 2027-2028 registration deadline, so families should check the official transportation page before relying on prior-year dates.",
-            "80+ schools and programs: districtwide dates are a starting point, but school-level calendars still matter for bell schedules, orientations, athletics, and ceremonies."
-          ]
-        }
-      ]
+      "label": "OUSD official district calendar page",
+      "url": "https://www.ousd.org/about-us/districtcalendar"
+    },
+    {
+      "label": "OUSD 2027–28 English school year calendar",
+      "url": "https://drive.google.com/file/d/1dqtem-6H9n0gHo1_PtqFHZ0Z0GSltU0P/view"
+    },
+    {
+      "label": "OUSD 2026–27 English district calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1782757441/ousdorg/f6utnrwbugohv0jjxre4/ENGLISH-OUSD-Calendar-2026-272.pdf"
+    },
+    {
+      "label": "OUSD board approval announcement with 2025–26 key dates",
+      "url": "https://www.ousd.org/communications-public-affairs/newsroom/news/~board/ousd-news/post/ousd-board-of-education-approves-academic-calendars-for-the-next-three-years"
+    },
+    {
+      "label": "OUSD transportation information",
+      "url": "https://www.ousd.org/transportation"
     }
   ],
   "events": [
@@ -93,7 +402,9 @@
       "date": "2027-09-17",
       "name": "Professional Development Day",
       "type": "teacher_workday",
-      "description": "No school for students."
+      "description": "No school for students.",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School"
     },
     {
       "date": "2027-10-11",
@@ -135,7 +446,9 @@
       "date": "2028-01-03",
       "name": "Professional Development Day",
       "type": "teacher_workday",
-      "description": "No school for students."
+      "description": "No school for students.",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School"
     },
     {
       "date": "2028-01-04",

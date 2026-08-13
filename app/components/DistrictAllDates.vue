@@ -206,6 +206,7 @@ function displayLabelText(event: DisplayEvent) {
 }
 
 function displayEventName(event: DisplayEvent) {
+  if (event.preserveOfficialName) return event.displayName
   if (event.type === 'teacher_professional_learning' && event.startDate !== event.endDate) {
     return 'Teacher Professional Learning Days'
   }

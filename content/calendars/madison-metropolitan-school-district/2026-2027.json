@@ -1,0 +1,259 @@
+{
+  "institutionId": "madison-metropolitan-school-district",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Madison Metropolitan School District Calendar 2026–27",
+  "firstDay": "2026-09-01",
+  "lastDay": "2027-06-10",
+  "temporalCoverageStart": "2026-08-19",
+  "temporalCoverageEnd": "2027-06-12",
+  "sourceUrl": "https://www.madison.k12.wi.us/about/calendar-of-events/2026-2027-school-year-calendar",
+  "sourceCalendarName": "MMSD 2026–2027 School Year Calendar",
+  "sourceDocumentPage": "https://www.madison.k12.wi.us/about/calendar-of-events/2026-2027-school-year-calendar",
+  "sourceCheckedAt": "2026-08-13",
+  "sourceChecksumSha256": "97f631e03ce6d7e26c0226fa223049b89a6472f5ef452367a648befe9e400e0f",
+  "sourceResourceMonitor": {
+    "type": "web-page",
+    "checkUrl": "https://www.madison.k12.wi.us/families/calendars",
+    "linkText": "2026-27 School Year Calendar - click to view",
+    "expectedDocumentUrl": "https://www.madison.k12.wi.us/about/calendar-of-events/2026-2027-school-year-calendar"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "web-page",
+      "checkUrl": "https://www.madison.k12.wi.us/families/start-and-dismissal-times",
+      "linkText": "MMSD Start and Dismissal Times",
+      "expectedText": ["Start/Dismissal Times by School"],
+      "contentAssertions": [
+        {
+          "startText": "Anana Elementary Start:",
+          "endText": "Chávez Elementary",
+          "expectedText": ["Monday Early Release Dismissal"]
+        },
+        {
+          "startText": "Black Hawk Middle Start:",
+          "endText": "Cherokee Heights Middle",
+          "expectedText": ["Dismissal: 4:00 PM"],
+          "forbiddenText": ["Monday Early Release Dismissal"]
+        }
+      ]
+    }
+  ],
+  "lastVerifiedAt": "2026-08-13",
+  "dateCreated": "2026-08-13",
+  "datePublished": "2026-08-13",
+  "dateModified": "2026-08-13",
+  "contentStatus": "production_ready",
+  "sourceConflict": true,
+  "sourceConflictNote": "The districtwide 2026–27 start and dismissal table and the announced schedule change show regular daily dismissal for middle schools. The MMSD calendar hub and some school-level pages still display the prior middle-school Monday early-release schedule. This page follows the current districtwide table because it is the more specific source for 2026–27 dismissal times.",
+  "contentReviewTriggers": ["official_calendar_revision", "start_dismissal_schedule_change", "snow_day_conversion", "graduation_date_change", "confirmed_data_error"],
+  "sourceVersion": "MMSD 2026–2027 School Year Calendar",
+  "sourceVersionLabel": "Official calendar",
+  "sourceVersionDisplay": "MMSD 2026–2027 School Year Calendar",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideDatasetSchema": true,
+  "seoTitle": "MMSD 2026–27 School Calendar: Key Dates & Breaks",
+  "seoDescription": "MMSD 2026–27 calendar with staggered start dates, school breaks, conference days, Monday early release for elementary schools, the last day of school, and graduation dates.",
+  "heroSummary": "MMSD students in 4K, kindergarten, grades 6 and 9, and Early Childhood start school Tuesday, September 1, 2026. All students attend on their regular schedule Wednesday, September 2. Fall Break is November 25–27, Winter Break runs December 21–January 1, Spring Break is March 22–26, and the last day of school is Thursday, June 10, 2027.",
+  "calendarNotes": "Not every student starts school on September 1. Conference evenings and no-school conference days also vary across elementary, middle, and high schools. Elementary schools release early on Mondays; current middle and high school schedules use regular daily dismissal times.",
+  "heroFactChips": ["Transition grades start Sep 1", "All students attend Sep 2", "Last day Jun 10 (full day)", "4 quarters / 2 semesters"],
+  "hideInstructionalDaysSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "verificationBadgeText": "Verified against MMSD’s official 2026–27 calendar on August 13, 2026.",
+  "keyDatesSummaryTitle": "MMSD 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First days by student group, major breaks, and the last day of school",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day for 4K, K, Grades 6 and 9, and EC", "date": "2026-09-01", "type": "school_start", "schemaDescription": "First attendance day for MMSD students in 4K, kindergarten, grades 6 and 9, and Early Childhood." },
+    { "label": "All Students", "name": "All Students Attend Regular Schedule", "date": "2026-09-02", "type": "school_start", "schemaDescription": "All MMSD students attend their regular schedule beginning September 2." },
+    { "label": "Break", "name": "Fall Break", "date": "2026-11-25", "endDate": "2026-11-27", "type": "break_start" },
+    { "label": "Break", "name": "Winter Break", "date": "2026-12-21", "endDate": "2027-01-01", "type": "break_start" },
+    { "label": "Break", "name": "Spring Break", "date": "2027-03-22", "endDate": "2027-03-26", "type": "break_start" },
+    { "label": "Last Day", "name": "Last Day of School — Full Day", "date": "2027-06-10", "type": "school_end" }
+  ],
+  "gradingPeriods": [
+    { "label": "Quarter 1", "start": "2026-09-01", "end": "2026-11-04" },
+    { "label": "Quarter 2 / Semester 1", "start": "2026-11-05", "end": "2027-01-28" },
+    { "label": "Quarter 3", "start": "2027-02-01", "end": "2027-04-08" },
+    { "label": "Quarter 4 / Semester 2", "start": "2027-04-12", "end": "2027-06-10" }
+  ],
+  "gradingPeriodsDescription": "Quarter and semester ranges based on MMSD’s published calendar dates.",
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Opening", "id": "mmsd-2026-2027-opening" },
+    { "label": "Conferences", "id": "mmsd-2026-2027-conferences" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Monday Schedule", "id": "mmsd-2026-2027-mondays" },
+    { "label": "Grading", "id": "grading-periods" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "moveCalendarExportBeforeAllDates": true,
+  "allDatesTitle": "MMSD 2026–27 School Year Dates",
+  "allDatesCoverageNote": "This list follows MMSD’s official annual calendar, including pre-year staff dates, the two first days, conference evenings and no-school days by grade level, districtwide breaks, grading dates, the last day of school, and graduations. Weekly elementary Monday early release and religious observances are explained separately because they are not districtwide school closures.",
+  "allDatesSourceUrl": "https://www.madison.k12.wi.us/about/calendar-of-events/2026-2027-school-year-calendar",
+  "allDatesSourceLabel": "MMSD 2026–2027 School Year Calendar",
+  "dateLegendLabelOverrides": { "Holiday": "No School", "School Closure": "No School", "Teacher Workday": "No School — Staff Date" },
+  "dateLegendItems": [
+    { "label": "No School", "dot": "bg-teal-400" },
+    { "label": "No School — Staff Date", "dot": "bg-amber-400" },
+    { "label": "Staff Date", "dot": "bg-amber-300" },
+    { "label": "Conference", "dot": "bg-pink-400" },
+    { "label": "Break", "dot": "bg-purple-400" },
+    { "label": "Grading Period", "dot": "bg-gray-400" },
+    { "label": "Graduation", "dot": "bg-green-400" }
+  ],
+  "unifiedDownloadTitle": "MMSD Calendar Options",
+  "unifiedDownloadDescription": "Subscribe to official MMSD updates or download a one-time MySchoolDates calendar file.",
+  "icsHeading": "Add MMSD 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download the main 2026–27 MMSD dates, including both first days, school-level no-school dates, breaks, grading dates, the last day of school, and graduations.",
+  "icsButtonLabel": "Download MMSD Calendar File",
+  "icsButtonSupportText": "This is a one-time import. Weekly elementary Monday early release, school-specific events, religious observances, and later snow-day changes are not included.",
+  "icsSourceNote": "This .ics file is based on the dates reviewed for this page and will not update automatically if MMSD revises its calendar.",
+  "hideIcsImportDisclaimer": true,
+  "officialSubscriptionTitle": "Want automatic updates?",
+  "officialSubscriptionDescription": "MMSD also offers an official calendar subscription that can sync later district updates.",
+  "officialSubscriptionButtonLabel": "Open MMSD Calendar Subscription Options",
+  "officialSubscriptionUrl": "https://www.madison.k12.wi.us/cf_calendar/cms_calendar_feeds.cfm?calendar_ids=407%2C406&element_id=25489&team_ids=undefined",
+  "customSections": [
+    {
+      "id": "mmsd-2026-2027-opening",
+      "label": "MMSD Starts School in Two Stages",
+      "position": "afterKeyDates",
+      "content": "Not every student starts school on September 1. 4K, kindergarten, grades 6 and 9, and Early Childhood start September 1; all other students begin September 2.",
+      "table": {
+        "columns": ["Student group", "First attendance date", "Schedule note"],
+        "rows": [
+          ["4K, kindergarten, grades 6 and 9, and Early Childhood", "Tuesday, September 1", "First day of school"],
+          ["Grades 1–5, 7–8, and 10–12", "Wednesday, September 2", "First day of school"],
+          ["All students", "Wednesday, September 2", "Regular schedules begin"]
+        ]
+      }
+    },
+    {
+      "id": "mmsd-2026-2027-conferences",
+      "label": "Conference Days Off Vary by School Level",
+      "position": "afterKeyDates",
+      "content": "Conference schedules and no-school dates vary by school level. Check both columns before making plans.",
+      "table": {
+        "columns": ["Level", "Evening conferences", "No-school dates"],
+        "rows": [
+          ["Elementary", "November 2 and April 5", "November 2–3 and April 5–6"],
+          ["Middle school", "November 19 and February 17", "November 20 and February 18"],
+          ["High school", "November 5 and March 4", "November 6 and March 5"]
+        ],
+        "footnote": "MMSD specifically lists 4K and Early Childhood as out on November 2 and April 5."
+      }
+    },
+    {
+      "id": "mmsd-2026-2027-mondays",
+      "label": "Monday Early Release: Elementary Schools Only",
+      "position": "afterAllDates",
+      "content": "Elementary schools release early on Mondays. For 2026–27, MMSD middle schools use a regular daily dismissal schedule, and high schools also follow their regular schedules. Check the school-by-school start and dismissal table for exact dismissal times."
+    },
+    {
+      "id": "mmsd-2026-2027-calendar-guide",
+      "label": "Which MMSD Calendar Should Families Use?",
+      "position": "afterGradingPeriods",
+      "content": "The district calendar does not include every bell time, school event, or religious observance. Use the annual calendar for district dates, the start and dismissal table for school hours, the religious calendar for observance guidance, and the individual school calendar for campus events.",
+      "linksDisplay": "inline",
+      "linksLabel": "Official resources:",
+      "links": [
+        { "label": "MMSD calendars", "to": "https://www.madison.k12.wi.us/families/calendars" },
+        { "label": "start and dismissal times", "to": "https://www.madison.k12.wi.us/families/start-and-dismissal-times" },
+        { "label": "religious holiday calendar", "to": "https://www.madison.k12.wi.us/about/calendar-of-events/religious-holiday-calendar" }
+      ]
+    },
+    {
+      "id": "mmsd-2026-2027-weather-rule",
+      "label": "What Happens If MMSD Uses All Its Snow Days?",
+      "position": "afterGradingPeriods",
+      "content": "MMSD says snow days are built into the calendar. If all of them are used, the district may hold school on a scheduled Staff Only Day. Wait for an MMSD announcement before treating any Staff Only Day as a make-up school day."
+    }
+  ],
+  "events": [
+    { "date": "2026-08-19", "endDate": "2026-08-21", "name": "New Educator Days", "type": "teacher_professional_learning", "preserveOfficialName": true, "hideFromCalendarExport": true },
+    { "date": "2026-08-25", "endDate": "2026-08-28", "name": "Staff Welcome Back/Professional Development Days", "type": "teacher_professional_learning", "preserveOfficialName": true, "hideFromCalendarExport": true },
+    { "date": "2026-08-31", "name": "Staff Voluntary Day", "type": "staff_date", "badgeLabel": "Staff Date", "hideFromCalendarExport": true },
+    { "date": "2026-09-01", "name": "First Day for 4K, Kindergarten, Grades 6 and 9, and Early Childhood", "type": "school_start" },
+    { "date": "2026-09-02", "name": "All Students Attend Regular Schedule", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day — No School", "type": "holiday" },
+    { "date": "2026-09-28", "name": "High School Staff Professional Learning Day — No High School", "type": "teacher_professional_learning", "badgeLabel": "No High School", "description": "Elementary and middle school students attend as scheduled." },
+    { "date": "2026-10-15", "name": "Staff-Only Day — No Elementary or High School", "type": "teacher_workday", "badgeLabel": "No Elementary or High School", "description": "Middle school students attend as scheduled." },
+    { "date": "2026-10-16", "name": "Mid-Fall Break — No School", "type": "break_start" },
+    { "date": "2026-11-02", "name": "No Elementary School / No 4K or EC — Conferences (Evening)", "type": "conference", "badgeLabel": "No Elementary School / No 4K or EC", "description": "Elementary students, 4K, and Early Childhood do not attend school. Evening elementary conferences are scheduled." },
+    { "date": "2026-11-03", "name": "Elementary Family-Teacher Conferences — No Elementary School", "type": "conference", "badgeLabel": "No Elementary School" },
+    { "date": "2026-11-04", "name": "End of Quarter 1", "type": "grading_period_end", "hideFromCalendarExport": true },
+    { "date": "2026-11-05", "name": "High School Conferences — Evening", "type": "conference", "badgeLabel": "Evening Conference", "hideFromCalendarExport": true },
+    { "date": "2026-11-06", "name": "High School Family-Teacher Conferences — No High School", "type": "conference", "badgeLabel": "No High School" },
+    { "date": "2026-11-09", "name": "High School Staff Professional Learning Day — No High School", "type": "teacher_professional_learning", "badgeLabel": "No High School" },
+    { "date": "2026-11-19", "name": "Middle School Conferences — Evening", "type": "conference", "badgeLabel": "Evening Conference", "hideFromCalendarExport": true },
+    { "date": "2026-11-20", "name": "Middle School Family-Teacher Conferences — No Middle School", "type": "conference", "badgeLabel": "No Middle School" },
+    { "date": "2026-11-25", "endDate": "2026-11-27", "name": "Fall Break — No School", "type": "break_start" },
+    { "date": "2026-11-30", "name": "Staff Only Day — No School", "type": "teacher_workday", "badgeLabel": "No School" },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "name": "Winter Break — No School", "type": "break_start" },
+    { "date": "2027-01-04", "name": "School Resumes After Winter Break", "type": "school_return" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day — No School", "type": "holiday" },
+    { "date": "2027-01-28", "name": "End of Quarter 2 and Semester 1", "type": "grading_period_end", "hideFromCalendarExport": true },
+    { "date": "2027-01-29", "name": "Staff Grading Day — No School", "type": "teacher_workday", "badgeLabel": "No School" },
+    { "date": "2027-02-01", "name": "Beginning of Quarter 3 and Semester 2", "type": "grading_period_start", "hideFromCalendarExport": true },
+    { "date": "2027-02-17", "name": "Middle School Conferences — Evening", "type": "conference", "badgeLabel": "Evening Conference", "hideFromCalendarExport": true },
+    { "date": "2027-02-18", "name": "Middle School Family-Teacher Conferences — No Middle School", "type": "conference", "badgeLabel": "No Middle School" },
+    { "date": "2027-02-19", "name": "Staff Only Day — No School", "type": "teacher_workday", "badgeLabel": "No School" },
+    { "date": "2027-03-04", "name": "High School Conferences — Evening", "type": "conference", "badgeLabel": "Evening Conference", "hideFromCalendarExport": true },
+    { "date": "2027-03-05", "name": "High School Family-Teacher Conferences — No High School", "type": "conference", "badgeLabel": "No High School" },
+    { "date": "2027-03-08", "name": "High School Staff Professional Learning Day — No High School", "type": "teacher_professional_learning", "badgeLabel": "No High School" },
+    { "date": "2027-03-22", "endDate": "2027-03-26", "name": "Spring Break — No School", "type": "break_start" },
+    { "date": "2027-04-05", "name": "No Elementary School / No 4K or EC — Conferences (Evening)", "type": "conference", "badgeLabel": "No Elementary School / No 4K or EC", "description": "Elementary students, 4K, and Early Childhood do not attend school. Evening elementary conferences are scheduled." },
+    { "date": "2027-04-06", "name": "Elementary Family-Teacher Conferences — No Elementary School", "type": "conference", "badgeLabel": "No Elementary School" },
+    { "date": "2027-04-08", "name": "End of Quarter 3", "type": "grading_period_end", "hideFromCalendarExport": true },
+    { "date": "2027-04-09", "name": "Staff Only Day — No School", "type": "teacher_workday", "badgeLabel": "No School" },
+    { "date": "2027-04-12", "name": "Beginning of Quarter 4", "type": "grading_period_start", "hideFromCalendarExport": true },
+    { "date": "2027-05-14", "name": "Staff-Only Day — No Elementary or High School", "type": "teacher_workday", "badgeLabel": "No Elementary or High School", "description": "Middle school students attend as scheduled." },
+    { "date": "2027-05-31", "name": "Memorial Day — No School", "type": "holiday" },
+    { "date": "2027-06-09", "name": "Graduation — Shabazz, Innovative, and Capital High Schools", "type": "academic", "status": "TENTATIVE", "badgeLabel": "Tentative" },
+    { "date": "2027-06-10", "name": "Last Day of School (Full Day) / End of Quarter 4 and Semester 2", "type": "school_end" },
+    { "date": "2027-06-11", "name": "Staff Only Day — No School / East and La Follette Graduations", "type": "academic", "description": "The student year ended June 10; June 11 includes staff work and the named graduation ceremonies." },
+    { "date": "2027-06-12", "name": "Graduation — Memorial and West High Schools", "type": "academic" }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Who has early release on Mondays in Madison schools?",
+      "a": "Elementary school students. MMSD’s current 2026–27 schedules show regular daily dismissal times for middle and high schools."
+    }
+  ],
+  "faqOrderLimit": 5,
+  "faqDisplayQuestions": [
+    "Do all MMSD students start school on the same day?",
+    "Are MMSD family-teacher conference days districtwide closures?",
+    "Who has early release on Mondays in Madison schools?",
+    "Does MMSD close for every religious holiday on its calendar?",
+    "Can an MMSD Staff Only Day become a school day?"
+  ],
+  "faqDisplayLimit": 5,
+  "hideFaqSchema": true,
+  "hiddenSections": ["downloadCta", "todayStatus", "keyDateCards", "quickFacts", "yearNumbers", "breaks", "planningTips", "about", "whatsDifferent", "comparison", "districtProfile", "livingHere", "nationalTrends", "otherCalendars", "pdfDownload", "relatedDistricts"],
+  "hiddenCustomSectionIds": ["mmsd-calendar-layers", "mmsd-weather-rule", "mmsd-official-resources", "mmsd-2026-2027-no-pdf"],
+  "sourceReviewSummary": "Sources checked include MMSD’s official calendar hub, complete 2026–27 school-year calendar, and current school-by-school start and dismissal information. The calendar hub still describes an earlier elementary-and-middle Monday rule; for 2026–27, this page follows the current districtwide start and dismissal table, which lists Monday early release only for elementary schools.",
+  "sourceReviewDetails": [
+    "The first student date and the all-student regular-schedule date were transcribed separately.",
+    "Evening conferences and no-school conference days were labeled separately for elementary, middle, and high schools.",
+    "Elementary Monday early release is treated as weekly schedule guidance rather than repeated as individual calendar events.",
+    "Religious observances were not converted into holidays because MMSD treats them as accommodation and scheduling dates.",
+    "The June 9 graduation group remains tentative on the official page."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Madison Metropolitan School District sources.",
+  "sourceNextReviewText": "Review when MMSD revises the annual calendar or start and dismissal table, activates a Staff Only Day after snow closures, or confirms tentative graduation information.",
+  "sources": [
+    { "label": "MMSD Calendars", "url": "https://www.madison.k12.wi.us/families/calendars" },
+    { "label": "Official MMSD 2026–2027 School Year Calendar", "url": "https://www.madison.k12.wi.us/about/calendar-of-events/2026-2027-school-year-calendar" },
+    { "label": "MMSD Start and Dismissal Times", "url": "https://www.madison.k12.wi.us/families/start-and-dismissal-times" },
+    { "label": "MMSD Religious Holiday Calendar", "url": "https://www.madison.k12.wi.us/about/calendar-of-events/religious-holiday-calendar" }
+  ]
+}
