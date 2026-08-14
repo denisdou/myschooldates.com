@@ -89,6 +89,24 @@ function getStatePrerenderRoutes() {
 
 const statePrerenderRoutes = getStatePrerenderRoutes()
 
+const googleAnalyticsScripts = process.env.NODE_ENV === 'production'
+  ? [
+      {
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-X3KKMXLR1B',
+        async: true,
+        tagPosition: 'bodyClose' as const,
+      },
+      {
+        innerHTML: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-X3KKMXLR1B');`,
+        tagPosition: 'bodyClose' as const,
+      },
+    ]
+  : []
+
+const googleAdsenseMeta = process.env.NODE_ENV === 'production'
+  ? [{ name: 'google-adsense-account', content: 'ca-pub-3343469861997938' }]
+  : []
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
@@ -152,17 +170,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      script: [
-        {
-          src: 'https://www.googletagmanager.com/gtag/js?id=G-X3KKMXLR1B',
-          async: true,
-          tagPosition: 'bodyClose',
-        },
-        {
-          innerHTML: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-X3KKMXLR1B');`,
-          tagPosition: 'bodyClose',
-        },
-      ],
+      script: googleAnalyticsScripts,
       link: [
         // Favicon — SVG first (modern browsers), then PNG fallbacks
         { rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon.svg' },
@@ -175,6 +183,7 @@ export default defineNuxtConfig({
         { rel: 'manifest', href: '/manifest.json' },
       ],
       meta: [
+        ...googleAdsenseMeta,
         { name: 'google-site-verification', content: 'kQNKHnW5SBoo5rpzlwnTxGzfeDdeLgG5c5zGN5IoepU' },
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
