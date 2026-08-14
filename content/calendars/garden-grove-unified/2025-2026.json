@@ -1,69 +1,103 @@
 {
   "institutionId": "garden-grove-unified",
   "schoolYear": "2025-2026",
-  "firstDay": "2025-08-18",
-  "lastDay": "2026-05-29",
+  "displaySchoolYear": "2025–26",
+  "pageHeading": "Garden Grove Unified School District Calendar 2025–26",
+  "firstDay": "2025-08-11",
+  "lastDay": "2026-05-27",
+  "temporalCoverageStart": "2025-08-11",
+  "temporalCoverageEnd": "2026-05-27",
   "sourceUrl": "https://www.ggusd.us/schools/calendar",
-  "lastVerifiedAt": "2026-07-19",
+  "sourceDocumentPage": "https://www.ggusd.us/schools/calendar",
+  "sourceCheckedAt": "2026-08-14",
+  "sourceStatus": "current",
+  "sourceResourceMonitor": {
+    "type": "web-page",
+    "checkUrl": "https://www.ggusd.us/schools/calendar",
+    "linkText": "2025-2026 School Year Calendar",
+    "expectedDocumentUrl": "https://www.ggusd.us/schools/calendar",
+    "expectedText": [
+      "First Day of School",
+      "August 11, 2025",
+      "Spring Recess",
+      "March 16 through March 20, 2026",
+      "Last Day of School",
+      "May 27, 2026"
+    ]
+  },
+  "lastVerifiedAt": "2026-08-14",
+  "dateCreated": "2026-07-19",
   "datePublished": "2026-07-19",
-  "dateModified": "2026-07-19",
-  "calendarType": "traditional",
-  "yearNumbersMode": "compact",
+  "dateModified": "2026-08-14",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_archive_change", "confirmed_data_error"],
+  "sourceVersion": "GGUSD 2025–26 online school-year calendar reviewed August 14, 2026",
+  "calendarType": "district-wide",
   "hideDatasetSchema": true,
-  "pageHeading": "Garden Grove Unified School Calendar 2025-2026",
-  "seoTitle": "Garden Grove Unified Calendar 2025-2026: Holidays & Breaks",
-  "seoDescription": "Garden Grove Unified 2025-2026 calendar with Aug 18 first day, May 29 last day, holidays, Thanksgiving recess, winter recess, and spring recess.",
-  "calendarNotes": "Garden Grove Unified publishes the 2025-2026 calendar as an official online list rather than a PDF download. The school year starts August 18, 2025 and ends May 29, 2026. Families should use the GGUSD calendar page for the official online source and check school-level communications for site-specific events.",
-  "calendarFaqs": [
-    {
-      "q": "When does Garden Grove Unified start school in 2025?",
-      "a": "Garden Grove Unified starts the 2025-2026 school year on Monday, August 18, 2025."
-    },
-    {
-      "q": "When is Garden Grove Unified Spring Recess in 2026?",
-      "a": "Spring Recess runs Monday, April 6 through Friday, April 10, 2026."
-    },
-    {
-      "q": "When is the last day of school for Garden Grove Unified in 2026?",
-      "a": "The last day of school is Friday, May 29, 2026."
-    },
-    {
-      "q": "Why is there no PDF link for the GGUSD 2025-2026 calendar?",
-      "a": "The reviewed GGUSD source is an official online calendar list. No PDF download link was provided for this school year."
-    }
+  "hideFaqSchema": true,
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideHeroDownloadLink": true,
+  "hideHeroVerificationProcess": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "seoTitle": "Garden Grove Unified Calendar 2025–26: Key Dates",
+  "seoDescription": "GGUSD’s 2025–26 calendar with the August 11 first day, non-student days, school recesses, holidays, and May 27 last day.",
+  "heroSummary": "GGUSD’s 2025–26 school year began Monday, August 11, 2025, and ended Wednesday, May 27, 2026. Thanksgiving Recess ran November 24–28, Winter Recess ran December 22–January 2, and Spring Recess ran March 16–20.",
+  "keyDatesSummaryTitle": "GGUSD 2025–26 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, recesses, holidays, and districtwide non-student days",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School", "date": "2025-08-11", "type": "school_start" },
+    { "label": "No School", "name": "Non-Student Day", "date": "2025-11-10", "type": "no_school" },
+    { "label": "Thanksgiving", "name": "Thanksgiving Recess", "date": "2025-11-24", "endDate": "2025-11-28", "type": "break_start" },
+    { "label": "Winter", "name": "Winter Recess", "date": "2025-12-22", "endDate": "2026-01-02", "type": "break_start" },
+    { "label": "No School", "name": "Non-Student Day", "date": "2026-01-05", "type": "no_school" },
+    { "label": "Spring", "name": "Spring Recess", "date": "2026-03-16", "endDate": "2026-03-20", "type": "break_start" },
+    { "label": "Last Day", "name": "Last Day of School", "date": "2026-05-27", "type": "school_end" }
   ],
-  "yearNumbers": [
-    {
-      "label": "Official Source",
-      "value": "Online",
-      "detail": "The source is the official GGUSD calendar webpage, not a PDF."
-    },
-    {
-      "label": "First Day",
-      "value": "Aug 18",
-      "detail": "The first day of school is August 18, 2025."
-    },
-    {
-      "label": "Spring Recess",
-      "value": "Apr 6-10",
-      "detail": "Spring Recess runs April 6-10, 2026."
-    }
-  ],
+  "allDatesTitle": "GGUSD 2025–26 District Calendar Dates",
+  "allDatesCoverageNote": "This table lists the districtwide dates published on GGUSD’s official calendar webpage. Minimum days and campus events may vary by school.",
+  "allDatesCoverageNotePosition": "top",
+  "hideCoveredBreakDatesNote": true,
+  "breaksTitle": "GGUSD Breaks and Non-Student Days",
+  "hideBreakDurationBadges": true,
+  "breakSummaryOverrides": {
+    "2025-11-24": { "name": "Thanksgiving Recess", "note": "Students returned Monday, December 1." },
+    "2025-12-22": { "name": "Winter Recess", "note": "January 5 was a separate non-student day; students returned Tuesday, January 6." },
+    "2026-03-16": { "name": "Spring Recess", "note": "Students returned Monday, March 23." }
+  },
   "events": [
-    { "date": "2025-08-18", "name": "First Day of School", "type": "school_start" },
-    { "date": "2025-09-01", "name": "Labor Day", "type": "holiday" },
-    { "date": "2025-11-11", "name": "Veterans Day", "type": "holiday" },
-    { "date": "2025-11-24", "name": "Thanksgiving Recess", "type": "break_start" },
-    { "date": "2025-11-28", "name": "Thanksgiving Recess End", "type": "break_end" },
-    { "date": "2025-12-22", "name": "Winter Recess", "type": "break_start" },
-    { "date": "2026-01-02", "name": "Winter Recess End", "type": "break_end" },
-    { "date": "2026-01-05", "name": "Classes Resume", "type": "school_resume" },
-    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2026-02-09", "name": "Lincoln Day", "type": "holiday" },
-    { "date": "2026-02-16", "name": "Presidents' Day", "type": "holiday" },
-    { "date": "2026-04-06", "name": "Spring Recess", "type": "break_start" },
-    { "date": "2026-04-10", "name": "Spring Recess End", "type": "break_end" },
-    { "date": "2026-05-25", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2026-05-29", "name": "Last Day of School", "type": "school_end" }
+    { "date": "2025-08-11", "name": "First Day of School", "type": "school_start" },
+    { "date": "2025-09-01", "name": "Labor Day — No School", "type": "holiday" },
+    { "date": "2025-11-10", "name": "Non-Student Day", "type": "no_school" },
+    { "date": "2025-11-11", "name": "Veterans Day — No School", "type": "holiday" },
+    { "date": "2025-11-24", "endDate": "2025-11-28", "name": "Thanksgiving Recess", "type": "break_start" },
+    { "date": "2025-12-22", "endDate": "2026-01-02", "name": "Winter Recess", "type": "break_start" },
+    { "date": "2026-01-05", "name": "Non-Student Day", "type": "no_school" },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day — No School", "type": "holiday" },
+    { "date": "2026-02-13", "name": "Lincoln’s Birthday — No School", "type": "holiday" },
+    { "date": "2026-02-16", "name": "Presidents Day — No School", "type": "holiday" },
+    { "date": "2026-03-16", "endDate": "2026-03-20", "name": "Spring Recess", "type": "break_start" },
+    { "date": "2026-05-25", "name": "Memorial Day — No School", "type": "holiday" },
+    { "date": "2026-05-27", "name": "Last Day of School", "type": "school_end" }
+  ],
+  "calendarFaqs": [
+    { "q": "When did GGUSD start school in 2025?", "a": "The first day of school was Monday, August 11, 2025." },
+    { "q": "When was GGUSD Spring Recess in 2026?", "a": "Spring Recess ran March 16 through March 20, 2026." },
+    { "q": "When was the last day of GGUSD in 2026?", "a": "The last day of school was Wednesday, May 27, 2026." }
+  ],
+  "faqDisplayLimit": 5,
+  "hiddenSections": ["quickFacts", "todayStatus", "about", "planningTips", "yearNumbers", "whatsDifferent", "comparison", "keyDateCards", "downloadCta", "districtProfile", "nationalTrends", "otherCalendars"],
+  "sourceReviewSummary": "Reviewed August 14, 2026, against GGUSD’s official 2025–26 online school-year calendar list.",
+  "sourceReviewDetails": [
+    "The official webpage was checked for the first and last day, holidays, recesses, and both districtwide non-student days."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Garden Grove Unified sources",
+  "sourceNextReviewText": "This archived page is rechecked if GGUSD changes its published 2025–26 calendar record.",
+  "sourceReviewDateLabel": "Calendar reviewed",
+  "sources": [
+    { "label": "Garden Grove Unified — Official School Calendar", "url": "https://www.ggusd.us/schools/calendar" }
   ]
 }

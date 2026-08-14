@@ -15,8 +15,14 @@ const toStateSlug = (name: string) => name.toLowerCase().replace(/\s+/g, '-')
 const STATE_ORDER = [
   'California', 'Florida', 'Texas', 'New York',
   'Illinois', 'Pennsylvania', 'North Carolina', 'Arizona', 'Nevada', 'Virginia', 'Kentucky', 'Hawaii', 'Maryland',
-  'New Mexico', 'Idaho',
+  'Colorado', 'Georgia', 'Massachusetts', 'Michigan', 'Minnesota', 'New Mexico', 'Idaho', 'Ohio', 'Oregon', 'Utah', 'Washington', 'Wisconsin',
 ]
+
+const STATE_HUBS = new Set([
+  'California', 'Florida', 'Texas', 'New York', 'Illinois', 'Pennsylvania', 'North Carolina', 'Arizona', 'Nevada',
+  'Virginia', 'Kentucky', 'Hawaii', 'Maryland', 'Colorado', 'Georgia', 'Massachusetts', 'Michigan', 'Minnesota',
+  'New Mexico', 'Idaho', 'Oregon', 'Utah', 'Washington',
+])
 
 const STATE_SUMMARIES: Record<string, string> = {
   California: `California's public school system is the largest in the nation, serving more than 6 million K–12 students across over 1,000 school districts. Unlike most states, California has no uniform start date — districts set their own calendars independently. Los Angeles Unified, the second-largest district in the country, typically begins in early September. Many Central Valley districts, including Fresno Unified, start in early August. The school year generally runs through June, with winter break in late December and spring break in March or April. California requires a minimum of 180 instructional days.`,
@@ -30,6 +36,8 @@ const STATE_SUMMARIES: Record<string, string> = {
   Nevada: `Nevada districts publish their own calendars. Reviewed pages currently cover Clark County School District and Washoe County School District, including Nevada Day, staff days, multiple Washoe calendar tracks, and district-specific contingency rules. Both reviewed 2026–27 calendars start August 10, but Clark County ends May 20 while Washoe's Balanced Calendar ends June 4.`,
   'New Mexico': `New Mexico district calendars can use grade-specific opening dates, virtual or remote-learning conference days, and different return dates after breaks. Reviewed pages currently cover Albuquerque Public Schools and Las Cruces Public Schools. Their 2026–27 student openings range from July 24 to August 11, depending on district and grade.`,
   Idaho: `Idaho districts publish local calendars with school- and grade-level schedule details. Reviewed pages currently cover Boise School District and West Ada School District. Both begin K–12 classes August 12, 2026, but Boise uses an early-release opening while West Ada identifies a late-start day.`,
+  Ohio: `Ohio school calendars are approved locally. The current MySchoolDates collection includes a reviewed calendar for Columbus City Schools, with districtwide dates, attendance notes, official sources, and calendar downloads.`,
+  Wisconsin: `Wisconsin districts publish their own school calendars. Reviewed pages currently cover Kenosha, Madison, Milwaukee, and Racine, including district-specific breaks, staff days, schedule exceptions, official sources, and calendar downloads.`,
   Virginia: `Virginia school divisions set their own academic calendars. Most begin in late August and end in mid-June. Fairfax County Public Schools, located in Northern Virginia's DC suburbs, is the tenth-largest school district in the country and consistently ranks among the top academic performers nationally. Virginia school divisions observe all federal holidays plus scheduled teacher workdays throughout the year. The DC metro area — including Fairfax and neighboring districts — tends to have high parental interest in precise calendar dates for childcare and travel planning.`,
   Kentucky: `Kentucky school districts publish local academic calendars with district-specific first days, holidays, breaks, professional development days, and make-up day notes. Families should verify dates with the official district calendar because weather, election days, and staff-only days can affect student attendance schedules.`,
   Hawaii: `Hawaii public schools are served statewide by the Hawaii State Department of Education. Most families use the HIDOE calendar for student work year dates, teacher workdays, fall break, winter break, spring break, state holidays, institute day notes, and last-day planning, while confirming school-specific events directly with their campus.`,
@@ -106,7 +114,7 @@ function onSearchBlur() { setTimeout(() => { showDropdown.value = false }, 150) 
 
 useSeoMeta({
   title: 'US School Calendars 2026-2027 & 2027-2028 | Holidays, Breaks & Key Dates | MySchoolDates',
-  description: 'School calendars for 70+ US public school districts. Find school start dates, spring break, winter break, holidays, PDFs, and calendar downloads for 2027-2028 and 2026-2027.',
+  description: 'School calendars for 175 US public school districts. Find school start dates, spring break, winter break, holidays, PDFs, and calendar downloads for 2027-2028 and 2026-2027.',
 })
 
 useHead({
@@ -307,11 +315,15 @@ useHead({
               <div class="flex items-baseline justify-between mb-1.5">
                 <h3 class="text-base font-semibold text-rds-ink">{{ state }}</h3>
                 <NuxtLink
+                  v-if="STATE_HUBS.has(state)"
                   :to="`/${toStateSlug(state)}`"
                   class="rds-link text-sm flex-shrink-0 ml-4"
                 >
                   All {{ state }} districts →
                 </NuxtLink>
+                <span v-else class="text-sm text-rds-ink-dim flex-shrink-0 ml-4">
+                  {{ stateDistricts.length }} {{ stateDistricts.length === 1 ? 'district' : 'districts' }}
+                </span>
               </div>
               <p v-if="STATE_SUMMARIES[state]" class="text-sm text-rds-ink-muted mb-3 leading-relaxed">
                 {{ STATE_SUMMARIES[state] }}
@@ -377,7 +389,7 @@ useHead({
           <span>&middot;</span>
           <span>{{ districtCount }} districts, {{ stateCount }} states</span>
           <span>&middot;</span>
-          <span>Last updated July 2026</span>
+          <span>Last updated August 2026</span>
         </div>
       </div>
     </main>

@@ -159,8 +159,8 @@ for (const institutionId of fs.readdirSync(calendarsDir)) {
 records.sort((first, second) => first[1].localeCompare(second[1]) || first[0].localeCompare(second[0]))
 
 const uniquePages = new Set(records.map(row => row[2]))
-if (records.length !== 150 || uniquePages.size !== records.length) {
-  throw new Error(`Expected 150 unique 2026-2027 records; found ${records.length} rows and ${uniquePages.size} unique pages.`)
+if (records.length !== 175 || uniquePages.size !== records.length) {
+  throw new Error(`Expected 175 unique 2026-2027 records; found ${records.length} rows and ${uniquePages.size} unique pages.`)
 }
 
 const headers = ['district', 'state', 'myschooldates_page', 'first_day', 'last_day', 'winter_break_signal', 'spring_break_signal']
@@ -193,10 +193,10 @@ const summary = {
 }
 
 const generatedData = {
-  version: 'v2.0',
+  version: 'v3.0',
   datePublished: '2026-07-27',
-  dateModified: '2026-08-09',
-  reviewedThrough: '2026-08-09',
+  dateModified: '2026-08-14',
+  reviewedThrough: '2026-08-14',
   nextReview: '2027-01-01',
   records: records.map(row => ({
     district: row[0],

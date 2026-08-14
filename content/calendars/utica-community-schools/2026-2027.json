@@ -1,0 +1,245 @@
+{
+  "institutionId": "utica-community-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Utica Community Schools Calendar 2026–27",
+  "firstDay": "2026-08-31",
+  "lastDay": "2027-06-15",
+  "temporalCoverageStart": "2026-08-31",
+  "temporalCoverageEnd": "2027-06-15",
+  "sourceUrl": "https://www.uticak12.org/calendar",
+  "sourceDocumentPage": "https://www.uticak12.org/fs/resource-manager/view/311311e4-8f6b-477a-8b78-57e87503e917",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1771517900/uticak12org/zik2mfsrtaruvksswoq7/2026-2027CalendarOverview.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1771517900/uticak12org/zik2mfsrtaruvksswoq7/2026-2027CalendarOverview.pdf",
+  "sourceCheckedAt": "2026-08-14",
+  "sourceChecksumSha256": "f77ec127eaf2660793028466e6cdb09c52f73bffbcff1ebca4c6807933971c19",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceResourceMonitor": {
+    "type": "resource-uuid",
+    "checkUrl": "https://www.uticak12.org/calendar",
+    "linkText": "2026-2027 Utica Community Schools Calendar (pdf)",
+    "expectedResourceUuid": "311311e4-8f6b-477a-8b78-57e87503e917",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1771517900/uticak12org/zik2mfsrtaruvksswoq7/2026-2027CalendarOverview.pdf",
+    "expectedChecksumSha256": "f77ec127eaf2660793028466e6cdb09c52f73bffbcff1ebca4c6807933971c19"
+  },
+  "lastVerifiedAt": "2026-08-14",
+  "dateCreated": "2026-08-14",
+  "datePublished": "2026-08-14",
+  "dateModified": "2026-08-14",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_schedule_change", "confirmed_data_error"],
+  "allDatesMode": "all",
+  "calendarType": "traditional",
+  "includeComparisonSchema": false,
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "seoTitle": "Utica Community Schools Calendar 2026–27: Key Dates & PDF",
+  "seoDescription": "Utica Community Schools starts Aug. 31, 2026, and ends June 15, 2027. See breaks, half days, conferences, exams, official PDF, and ICS download.",
+  "schemaDatasetDescription": "Districtwide 2026–27 calendar dates for Utica Community Schools, including the first and last day, breaks, holidays, no-school days, half days, conferences, exams, and marking-period endings.",
+  "schemaDatasetName": "Utica Community Schools 2026–27 Calendar Dataset",
+  "schemaCalendarDownloadName": "Utica Community Schools 2026–27 Calendar File",
+  "heroSummary": "Utica Community Schools starts Monday, August 31, 2026. Elementary students have a half day on the first day; the district overview does not list a half day for secondary students. The last day is Tuesday, June 15, 2027, with a half day for all K-12 students. Winter Break runs December 21–January 1, Mid-Winter Break February 15–19, and Spring Break March 29–April 2. Good Friday is also a no-school day on March 26.",
+  "verificationBadgeText": "Verified against the official UCS 2026–27 District Calendar · Reviewed August 14, 2026 by Denis Dou",
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "keyDatesSummaryTitle": "UCS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First day, major breaks, and last day",
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Half-Day Times", "id": "ucs-2026-2027-half-day-times" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "2027 Changes", "id": "ucs-2026-2027-grade-boundary" },
+    { "label": "FAQ", "id": "faq" }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day for K-12; Elementary Half Day", "displayName": "First Day for K-12 Students; Elementary Half Day", "date": "2026-08-31", "type": "school_start" },
+    { "label": "Break", "name": "Thanksgiving Break", "date": "2026-11-25", "endDate": "2026-11-27", "type": "break_start" },
+    { "label": "Break", "name": "Winter Break", "date": "2026-12-21", "endDate": "2027-01-01", "type": "break_start" },
+    { "label": "Break", "name": "Mid-Winter Break", "date": "2027-02-15", "endDate": "2027-02-19", "type": "break_start" },
+    { "label": "Break", "name": "Spring Break", "date": "2027-03-29", "endDate": "2027-04-02", "type": "break_start" },
+    { "label": "Last Day", "name": "Last Day for K-12; All-Student Half Day", "displayName": "Last Day of School; Half Day for All K-12 Students", "date": "2027-06-15", "type": "school_end" }
+  ],
+  "allDatesTitle": "UCS 2026–27 District Calendar Dates",
+  "allDatesCoverageNote": "This list follows every date printed on the one-page UCS overview. Conference evenings are retained as academic events, not closures. Elementary, secondary, and all-student half days remain separate because they affect different schedules.",
+  "allDatesSourceLabel": "UCS 2026-2027 District Calendar Overview",
+  "dateLegendItems": [
+    { "label": "No school / holiday", "dot": "bg-amber-400" },
+    { "label": "District break", "dot": "bg-purple-400" },
+    { "label": "Half day", "dot": "bg-sky-400" },
+    { "label": "Evening conference / academic", "dot": "bg-slate-400" }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Calendar Downloads",
+  "unifiedDownloadDescription": "Download a one-time calendar file or open the official UCS district calendar PDF.",
+  "hideCompatibleCalendars": true,
+  "hideShareCalendarHeading": true,
+  "hideSocialShareButtons": true,
+  "hideCalendarUpdatesButton": true,
+  "icsHeading": "Add UCS 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download the dates above as an ICS file for Google Calendar, Apple Calendar, or Outlook. Event descriptions identify the student group for each half day and distinguish evening conferences from closures.",
+  "icsButtonLabel": "Download UCS Dates (.ics)",
+  "icsButtonSupportText": "One-time import. The file will not reflect later changes made by UCS.",
+  "icsSourceNote": "",
+  "hideIcsImportDisclaimer": true,
+  "pdfHeading": "Official UCS 2026–27 District Calendar",
+  "pdfDescription": "Open the official one-page overview used to verify the district dates and grade-level attendance labels.",
+  "pdfButtonLabel": "View Official UCS PDF",
+  "pdfVersionLabel": "UCS 2026-2027 District Calendar Overview",
+  "customSections": [
+    {
+      "id": "ucs-2026-2027-calendar-differences",
+      "label": "How to Read the UCS Calendar",
+      "content": "Not every UCS half day or conference date applies to every student. The district uses separate elementary, secondary, and all-student schedules, so families should check the grade-level label on each date.",
+      "position": "afterKeyDates",
+      "groups": [
+        {
+          "label": "Half days apply to different student groups",
+          "items": [
+            "August 31 is a half day for elementary students, not a districtwide half day.",
+            "October 1 is a secondary half day, October 14 is an elementary half day, and January 15 and June 14–15 are half days for all students."
+          ]
+        },
+        {
+          "label": "Conference schedules vary by school level",
+          "items": [
+            "October 6, October 13, February 24, and March 3 are evening conference dates; the overview does not label them as half days or closures.",
+            "March 10 is an elementary half day, but the overview does not state a reason."
+          ]
+        },
+        {
+          "label": "Secondary exam half days in January and June",
+          "items": [
+            "January 13–14 and June 11 are secondary-only exam half days.",
+            "January 15 is a half day for all students and still includes secondary exams; June 14–15 are also all-student half days."
+          ]
+        },
+        {
+          "label": "Teacher DPPD No-School Days",
+          "items": [
+            "UCS lists four Teacher Full Day DPPD dates when K-12 students do not attend: September 16, October 21, November 3, and January 27."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ucs-2026-2027-half-day-times",
+      "label": "Half-Day Dismissal Times Vary by School Level",
+      "content": "These are the school hours currently published for 2025–26. UCS may update them for 2026–27, so confirm the current schedule before arranging pickup.",
+      "position": "afterBreaks",
+      "table": {
+        "columns": ["School or program group", "2025–26 full day", "2025–26 half day ends"],
+        "rows": [
+          ["Early elementary", "8:30 a.m.–3:20 p.m.", "11:34 a.m."],
+          ["Late elementary", "9:05 a.m.–3:55 p.m.", "12:09 p.m."],
+          ["Junior high", "7:55 a.m.–2:46 p.m.", "10:57 a.m."],
+          ["Senior high / GLK-UAIS / MADE / HHS", "7:15 a.m.–2:09 p.m.", "10:17 a.m."],
+          ["Alternative Learning Center", "7:30 a.m.–2:13 p.m.", "10:32 a.m."],
+          ["CSI / MST", "Separate morning and afternoon sessions", "Use the center schedule"]
+        ],
+        "footnote": "Check the UCS calendar page or the student’s school page for current hours."
+      }
+    },
+    {
+      "id": "ucs-2026-2027-grade-boundary",
+      "label": "Grade Levels Change in Fall 2027",
+      "content": "The 2026–27 school year still uses UCS’s mixed feeder configurations. Beginning in fall 2027, every school will use K-5 elementary, grades 6-8 middle school, and grades 9-12 high school groupings.",
+      "position": "afterCalendarExport",
+      "table": {
+        "columns": ["Feeder pattern", "Before fall 2027", "Beginning fall 2027"],
+        "rows": [
+          ["Utica, Eisenhower, and Stevenson feeders", "K-6 / 7-9 / 10-12", "K-5 / 6-8 / 9-12"],
+          ["Henry Ford II feeder", "K-6 / 7-8 / 9-12", "K-5 / 6-8 / 9-12"]
+        ]
+      },
+      "links": [
+        { "label": "UCS K-12 Grade Configuration Questions and Answers", "to": "https://www.uticak12.org/about-ucs/bond-issue-updates/building-for-the-future/k-12-grade-configurations" }
+      ]
+    }
+  ],
+  "events": [
+    { "date": "2026-08-31", "name": "First Day of School for K-12 Students", "type": "school_start", "description": "Elementary students attend a half day; the overview does not list a half day for secondary students." },
+    { "date": "2026-09-04", "name": "No School for K-12 Students", "type": "no_school" },
+    { "date": "2026-09-07", "name": "Labor Day - No School for K-12 Students", "type": "holiday" },
+    { "date": "2026-09-16", "name": "Teacher Full Day DPPD - No School for K-12 Students", "type": "teacher_workday" },
+    { "date": "2026-10-01", "name": "Secondary Student Half Day - Parent-Teacher Conferences", "type": "early_dismissal" },
+    { "date": "2026-10-06", "name": "Junior High School Only Evening Conferences", "displayName": "Junior High Evening Conferences", "type": "academic", "badgeLabel": "Evening Conference", "description": "The overview does not label this as a half day or no-school date." },
+    { "date": "2026-10-13", "name": "Elementary Evening Conferences", "type": "academic", "badgeLabel": "Evening Conference", "description": "The overview does not label this as a half day or no-school date." },
+    { "date": "2026-10-14", "name": "Elementary Student Half Day - Parent-Teacher Conferences", "type": "early_dismissal" },
+    { "date": "2026-10-21", "name": "Teacher Full Day DPPD - No School for K-12 Students", "type": "teacher_workday" },
+    { "date": "2026-10-30", "name": "Elementary Half Day - End of Marking Period", "type": "early_dismissal" },
+    { "date": "2026-10-30", "name": "Marking Period Ends", "type": "quarter_end", "badgeLabel": "Marking Period" },
+    { "date": "2026-11-03", "name": "Election Day / Teacher Full Day DPPD - No School for K-12 Students", "type": "teacher_workday" },
+    { "date": "2026-11-25", "endDate": "2026-11-27", "name": "Thanksgiving Break - No School for K-12 Students", "type": "break_start" },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "name": "Winter Break - No School for K-12 Students", "type": "break_start" },
+    { "date": "2027-01-13", "name": "Secondary Half Day - Exams", "type": "early_dismissal" },
+    { "date": "2027-01-14", "name": "Secondary Half Day - Exams", "type": "early_dismissal" },
+    { "date": "2027-01-15", "name": "All Students Half Day - Secondary Exams / End of Marking Period", "type": "early_dismissal" },
+    { "date": "2027-01-15", "name": "Marking Period Ends", "type": "quarter_end", "badgeLabel": "Marking Period" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day - No School for K-12 Students", "displayName": "Martin Luther King Jr. Day - No School for K-12 Students", "type": "holiday" },
+    { "date": "2027-01-27", "name": "Teacher Full Day DPPD - No School for K-12 Students", "type": "teacher_workday" },
+    { "date": "2027-02-15", "endDate": "2027-02-19", "name": "Mid-Winter Break - No School for K-12 Students", "type": "break_start" },
+    { "date": "2027-02-24", "name": "High School Only Evening Conferences", "displayName": "High School Evening Conferences", "type": "academic", "badgeLabel": "Evening Conference", "description": "The overview does not label this as a half day or no-school date." },
+    { "date": "2027-03-03", "name": "Junior High Only Evening Conferences", "displayName": "Junior High Evening Conferences", "type": "academic", "badgeLabel": "Evening Conference", "description": "The overview does not label this as a half day or no-school date." },
+    { "date": "2027-03-10", "name": "Elementary Student Half Day", "type": "early_dismissal", "description": "The overview does not state a reason for this half day." },
+    { "date": "2027-03-25", "name": "Elementary Student Half Day - End of Marking Period", "type": "early_dismissal" },
+    { "date": "2027-03-25", "name": "Marking Period Ends", "type": "quarter_end", "badgeLabel": "Marking Period" },
+    { "date": "2027-03-26", "name": "Good Friday - No School", "type": "holiday", "description": "The overview prints 'No School - Good Friday' without repeating the K-12 qualifier." },
+    { "date": "2027-03-29", "endDate": "2027-04-02", "name": "Spring Break - No School for K-12 Students", "type": "break_start" },
+    { "date": "2027-05-31", "name": "Memorial Day - No School for K-12 Students", "type": "holiday" },
+    { "date": "2027-06-11", "name": "Secondary Student Half Day - Exams", "type": "early_dismissal" },
+    { "date": "2027-06-14", "name": "All Students K-12 Half Day", "displayName": "Half Day for All K-12 Students", "type": "early_dismissal" },
+    { "date": "2027-06-15", "name": "Last Day of School - All Students K-12 Half Day", "displayName": "Last Day of School - Half Day for All K-12 Students", "type": "school_end" }
+  ],
+  "faqDisplayQuestions": [
+    "What does “Teacher Full Day DPPD” mean on the UCS calendar?",
+    "Do students have school on UCS evening conference days?",
+    "Does the UCS district overview include every school event?"
+  ],
+  "faqDisplayLimit": 3,
+  "hiddenSections": [
+    "instructionalDays",
+    "comparison",
+    "whatsDifferent",
+    "nationalTrends",
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "about",
+    "yearNumbers",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "downloadCta"
+  ],
+  "hiddenCustomSectionIds": [
+    "ucs-half-day-clock-guide",
+    "ucs-2027-grade-transition",
+    "ucs-calendar-scope"
+  ],
+  "hideRelatedDistrictDescriptions": true,
+  "relatedDistrictsTitle": "Another Michigan School Calendar",
+  "relatedDistrictsDescription": "View another reviewed Michigan district calendar.",
+  "sourceReviewSummary": "Reviewed August 14, 2026, against the official UCS calendar page and 2026-2027 District Calendar overview.",
+  "sourceReviewDetails": [
+    "The copy reviewed for this page matches the current district PDF and has the same SHA-256 checksum.",
+    "We checked all 29 printed calendar entries against the official district PDF.",
+    "Evening conferences were kept distinct from student half days and closures.",
+    "We did not assign a reason to the March 10 elementary half day because the district overview does not provide one."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Utica Community Schools sources.",
+  "sourceNextReviewText": "Next review: if UCS revises the overview, school hours, or the fall 2027 transition plan.",
+  "sources": [
+    { "label": "UCS calendar and school hours", "url": "https://www.uticak12.org/calendar" },
+    { "label": "Official UCS 2026-2027 District Calendar Overview PDF", "url": "https://resources.finalsite.net/images/v1771517900/uticak12org/zik2mfsrtaruvksswoq7/2026-2027CalendarOverview.pdf" },
+    { "label": "UCS 2026-2027 calendar resource record", "url": "https://www.uticak12.org/fs/resource-manager/view/311311e4-8f6b-477a-8b78-57e87503e917" },
+    { "label": "UCS fall 2027 grade configuration plan", "url": "https://www.uticak12.org/about-ucs/bond-issue-updates/building-for-the-future/k-12-grade-configurations" }
+  ]
+}

@@ -5,6 +5,7 @@ type CalendarEvent = {
   date: string
   endDate?: string
   name: string
+  displayName?: string
   type: string
   description?: string
   preserveOfficialName?: boolean
@@ -114,6 +115,8 @@ const sortedEvents = computed(() =>
 )
 
 function normalizeName(event: CalendarEvent) {
+  if (event.displayName?.trim()) return event.displayName.trim()
+
   const name = event.name.trim()
   const lower = name.toLowerCase()
 
@@ -272,6 +275,10 @@ function shouldShowDescription(event: DisplayEvent) {
 }
 
 function rangeEndFor(event: CalendarEvent) {
+  if (event.displayAsRange === false) {
+    return event.date
+  }
+
   if (event.endDate) {
     return event.endDate
   }

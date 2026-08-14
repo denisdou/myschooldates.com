@@ -1,0 +1,332 @@
+{
+  "institutionId": "ann-arbor-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Ann Arbor Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-31",
+  "lastDay": "2027-06-16",
+  "temporalCoverageStart": "2026-08-31",
+  "temporalCoverageEnd": "2027-06-16",
+  "sourceUrl": "https://www.a2schools.org/about-aaps/calendars",
+  "sourceDocumentPage": "https://www.a2schools.org/fs/resource-manager/view/829b4fcb-e59a-4b69-a763-63313a0df6e1",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1783435853/a2schoolsorg/ryqbf2qmktmocbwwonik/2026-27AAPSSchoolYearCalendarJuly6.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1783435853/a2schoolsorg/ryqbf2qmktmocbwwonik/2026-27AAPSSchoolYearCalendarJuly6.pdf",
+  "sourceCheckedAt": "2026-08-14",
+  "sourceUpdatedAt": "2026-07-06",
+  "sourceChecksumSha256": "56da91608b76da31e2b603bb68452a2515a3e3bde60c474a52ddcb23423fa5bd",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "AAPS's July 6 PDF and August 11 text calendar differ on the October PSAT/NMSQT date and the June high school final exam schedule. The PDF also prints April 14 in its chronology and month grid but April 16 in its bottom exam table. This page discloses all three differences and directs families to confirm testing and final exam dates with their high school.",
+  "sourceResourceMonitor": {
+    "type": "resource-uuid",
+    "checkUrl": "https://www.a2schools.org/about-aaps/calendars",
+    "linkText": "Click here for printable PDF version",
+    "expectedResourceUuid": "829b4fcb-e59a-4b69-a763-63313a0df6e1",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1783435853/a2schoolsorg/ryqbf2qmktmocbwwonik/2026-27AAPSSchoolYearCalendarJuly6.pdf",
+    "expectedChecksumSha256": "56da91608b76da31e2b603bb68452a2515a3e3bde60c474a52ddcb23423fa5bd"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "web-page",
+      "checkUrl": "https://www.a2schools.org/about-aaps/calendars/2026-27-text-calendar",
+      "linkText": "2026-27 Text Calendar",
+      "expectedText": [
+        "Last Updated: 8/11/26",
+        "Wednesday, Oct. 7",
+        "11th PSAT/NMSQT",
+        "Wednesday, April 14",
+        "June 11, 12, 14 - 16"
+      ]
+    }
+  ],
+  "lastVerifiedAt": "2026-08-14",
+  "dateCreated": "2026-08-14",
+  "datePublished": "2026-08-14",
+  "dateModified": "2026-08-14",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_source_conflict", "official_schedule_change", "confirmed_data_error"],
+  "sourceVersion": "AAPS 2026-2027 School Calendar dated July 6, 2026",
+  "calendarType": "district-wide",
+  "allDatesMode": "all",
+  "includeComparisonSchema": false,
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "schemaCalendarName": "Ann Arbor Public Schools Districtwide Calendar 2026–27",
+  "schemaDatasetName": "Ann Arbor Public Schools 2026–27 Student Calendar Dataset",
+  "schemaDatasetDescription": "Major AAPS student calendar dates for 2026–27, including school-year boundaries, holidays, no-school dates, half days, testing dates, school-specific exam schedules, and break ranges.",
+  "schemaCalendarDownloadName": "AAPS 2026–27 reviewed calendar file",
+  "schemaCalendarDownloadDescription": "One-time calendar import of reviewed AAPS dates. The unresolved October PSAT/NMSQT date and June final exam dates are excluded.",
+  "sourceCalendarId": "source-printable-calendar",
+  "sourceCalendarName": "AAPS 2026–27 Printable School Calendar",
+  "sourceCalendarDateModified": "2026-07-06",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-text-calendar",
+      "type": "WebPage",
+      "name": "AAPS 2026–27 Text Calendar",
+      "url": "https://www.a2schools.org/about-aaps/calendars/2026-27-text-calendar",
+      "dateModified": "2026-08-11"
+    }
+  ],
+  "seoTitle": "Ann Arbor Public Schools Calendar 2026–27 | AAPS Dates",
+  "seoDescription": "AAPS starts Aug. 31, 2026, and ends June 16, 2027. See school breaks, half days, exam schedules, release times, translations, and official sources.",
+  "heroSummary": "AAPS students start Monday, August 31, 2026, and finish Wednesday, June 16, 2027; both are half days. Release times vary by school level, and high school exam dates depend on the school.",
+  "calendarNotes": "This page covers the districtwide 2026–27 AAPS calendar. Preschool and A2Virtual use separate calendars, and individual schools may publish additional events and schedule updates.",
+  "heroSourceLine": "2026–27 calendar dates · Reviewed against official AAPS calendar sources",
+  "heroFactChips": ["First day: Aug 31 (half day)", "6 translated PDFs", "Last day: Jun 16 (half day)"],
+  "verificationBadgeText": "Reviewed August 14, 2026 · Source: Ann Arbor Public Schools",
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Source Differences", "id": "aaps-2026-2027-source-differences" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Half-Day Times", "id": "aaps-2026-2027-bell-schedules" },
+    { "label": "Exam Schedules", "id": "aaps-2026-2027-exam-tracks" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "keyDatesSummaryTitle": "2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day for Students — Half Day", "date": "2026-08-31", "type": "school_start" },
+    { "label": "Break", "name": "Labor Day Holiday Break", "date": "2026-09-04", "endDate": "2026-09-07", "type": "break_start" },
+    { "label": "Break", "name": "Thanksgiving Break (Late Fall Break in the July PDF)", "date": "2026-11-25", "endDate": "2026-11-27", "type": "break_start" },
+    { "label": "Break", "name": "Winter Break", "date": "2026-12-21", "endDate": "2027-01-01", "type": "break_start" },
+    { "label": "Break", "name": "Spring Break", "date": "2027-03-26", "endDate": "2027-04-02", "type": "break_start" },
+    { "label": "Last Day", "name": "Last Day for All Students — Half Day", "date": "2027-06-16", "type": "school_end" }
+  ],
+  "allDatesTitle": "2026–27 School Calendar Dates",
+  "allDatesCoverageNote": "The October PSAT/NMSQT date remains unresolved: the July 6 PDF says October 8, while the later August 11 text calendar says October 7. April 14 is used for SAT grade 11 / PSAT grade 10 because the PDF chronology, month grid, and text calendar agree, while the PDF's bottom exam table says April 16. June final exam dates must be confirmed with the high school. Preschool, A2Virtual, individual-school events, athletics, commencement, and emergency changes are outside this overview. Reviewed against the",
+  "allDatesFooterMode": "source_sentence",
+  "allDatesSourceLinks": [
+    { "label": "July 6 printable PDF", "url": "https://resources.finalsite.net/images/v1783435853/a2schoolsorg/ryqbf2qmktmocbwwonik/2026-27AAPSSchoolYearCalendarJuly6.pdf" },
+    { "label": "August 11 text calendar", "url": "https://www.a2schools.org/about-aaps/calendars/2026-27-text-calendar" }
+  ],
+  "dateLegendItems": [
+    { "label": "No School / Holiday", "dot": "bg-amber-400" },
+    { "label": "District Break", "dot": "bg-purple-400" },
+    { "label": "Half Day / Late Start", "dot": "bg-sky-400" },
+    { "label": "Exam / Count / Transition", "dot": "bg-slate-400" }
+  ],
+  "alternateCalendarsTitle": "Other AAPS Calendars and Translations",
+  "alternateCalendarsDescription": "Choose the translated district calendar your family prefers. Preschool and A2Virtual use separate calendars, and school-specific updates may appear outside the district overview.",
+  "alternateCalendarsButtonLabel": "View Translated PDF",
+  "alternateCalendars": [
+    {
+      "type": "calendar-ar",
+      "label": "2026–27 District Calendar — Arabic",
+      "pdfUrl": "https://resources.finalsite.net/images/v1786382671/a2schoolsorg/aj7gjf3txd0mt2znekcl/ArabicPDF.pdf"
+    },
+    {
+      "type": "calendar-zh",
+      "label": "2026–27 District Calendar — Chinese",
+      "pdfUrl": "https://resources.finalsite.net/images/v1786382671/a2schoolsorg/d3hashp5wj3j1h5jg74o/Chinese_2026-27AAPSSchoolYearCalendarxlsx-26-27SYCALENDAR.pdf"
+    },
+    {
+      "type": "calendar-fa-af",
+      "label": "2026–27 District Calendar — Dari",
+      "pdfUrl": "https://resources.finalsite.net/images/v1786382671/a2schoolsorg/ynfnplisbdn9hylm61g9/Dari_26-27Calendar.pdf"
+    },
+    {
+      "type": "calendar-ja",
+      "label": "2026–27 District Calendar — Japanese",
+      "pdfUrl": "https://resources.finalsite.net/images/v1786382692/a2schoolsorg/u27r7zcexdg0ikeypqia/Japanese_26-27AAPSSchoolCalendar.pdf"
+    },
+    {
+      "type": "calendar-ko",
+      "label": "2026–27 District Calendar — Korean",
+      "pdfUrl": "https://resources.finalsite.net/images/v1786382693/a2schoolsorg/vstsej2pnck6ldcbpg4x/Korean_2026-27AAPSSchoolYearCalendarxlsx-GoogleSheets.pdf"
+    },
+    {
+      "type": "calendar-es",
+      "label": "2026–27 District Calendar — Spanish",
+      "pdfUrl": "https://resources.finalsite.net/images/v1786382707/a2schoolsorg/bjom6uxpr4sadlcs3dk3/Spanish_26-27AAPSSchoolCalendar.pdf"
+    }
+  ],
+  "icsHeading": "Add AAPS 2026–27 Dates to Your Calendar",
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Calendar Downloads",
+  "unifiedDownloadDescription": "Download a one-time .ics file or open the official AAPS PDF.",
+  "icsDescription": "Download the reviewed district dates as a one-time .ics file. The file includes grade-level notes, school-specific exam details, testing cautions, and late-start information.",
+  "icsButtonLabel": "Download AAPS Dates (.ics)",
+  "icsButtonSupportText": "This file does not update automatically. Confirm October and April testing dates and June final exam dates with AAPS or the student's high school.",
+  "icsSourceNote": "The .ics file excludes the unresolved October PSAT/NMSQT date and June final exam dates. It uses April 14 for SAT grade 11 / PSAT grade 10, with the PDF conflict noted on this page.",
+  "hideIcsImportDisclaimer": true,
+  "pdfHeading": "Official AAPS 2026–27 School Calendar",
+  "pdfDescription": "Open the official one-page calendar dated July 6, 2026. Check the October, April, and June differences noted above before relying on testing or final exam dates.",
+  "pdfButtonLabel": "View Official AAPS PDF",
+  "pdfVersionLabel": "AAPS 2026-2027 School Calendar — July 6, 2026",
+  "customSections": [
+    {
+      "id": "aaps-2026-2027-scope",
+      "label": "What This Calendar Covers",
+      "content": "This page covers the districtwide 2026–27 AAPS calendar. Preschool and A2Virtual use separate calendars, and individual schools may publish additional events and schedule updates.",
+      "position": "afterVerification",
+      "linksDisplay": "inline",
+      "links": [
+        { "label": "AAPS Preschool Programs", "to": "https://www.a2schools.org/teaching-learning/preschools" },
+        { "label": "A2Virtual Calendar", "to": "https://a2virtual.a2schools.org/calendar" }
+      ]
+    },
+    {
+      "id": "aaps-2026-2027-source-differences",
+      "label": "Official AAPS Calendar Differences to Know",
+      "content": "The July 6 printable PDF and the August 11 text calendar differ on several high school testing and final exam dates. Confirm testing and final exam dates with the student's high school before making plans.",
+      "position": "afterVerification",
+      "table": {
+        "columns": ["Item", "July 6 printable PDF", "August 11 text calendar", "How this page handles it"],
+        "rows": [
+          ["October PSAT/NMSQT", "October 8", "October 7", "Unresolved — the July 6 PDF says October 8; the later August 11 text calendar says October 7. Confirm with the high school"],
+          ["April SAT / PSAT", "April 14 in the chronology and month grid; April 16 in the bottom exam table", "April 14", "Uses April 14; confirm with the high school"],
+          ["June high school finals", "June 11–15 for both school groups", "June 11, 12, and 14–16; schedule varies by school", "Does not publish one districtwide final exam window; check the high school schedule"]
+        ],
+        "footnote": "The district may revise either source. Confirm testing and final exam dates before arranging transportation, appointments, or travel."
+      },
+      "links": [
+        { "label": "Official AAPS 2026–27 Text Calendar", "to": "https://www.a2schools.org/about-aaps/calendars/2026-27-text-calendar" },
+        { "label": "Official AAPS Printable PDF", "to": "https://resources.finalsite.net/images/v1783435853/a2schoolsorg/ryqbf2qmktmocbwwonik/2026-27AAPSSchoolYearCalendarJuly6.pdf" }
+      ]
+    },
+    {
+      "id": "aaps-2026-2027-bell-schedules",
+      "label": "Half-Day Release Times",
+      "content": "The PDF lists one set of release times for the first day and report-writing half days and an earlier set for the last day. Community's regular dismissal time varies by student schedule.",
+      "position": "afterAllDates",
+      "table": {
+        "columns": ["School level", "First day / report-writing half day", "Last day"],
+        "rows": [
+          ["Huron / Pioneer / Skyline", "11:00 a.m.", "9:40 a.m."],
+          ["Community", "11:00 a.m.", "9:40 a.m."],
+          ["Pathways", "11:00 a.m.", "9:40 a.m."],
+          ["Middle schools", "11:15 a.m.", "10:45 a.m."],
+          ["K-8", "11:15 a.m.", "10:50 a.m."],
+          ["K-5", "11:50 a.m.", "11:35 a.m."],
+          ["Westerman / Mitchell PK", "11:25 a.m.", "Not listed"]
+        ],
+        "footnote": "The PK row applies only to Westerman and Mitchell. Preschool attendance dates are published separately."
+      }
+    },
+    {
+      "id": "aaps-2026-2027-exam-tracks",
+      "label": "High School Exam Schedules",
+      "content": "Community, Huron, and Pioneer use semester exams. Pathways and Skyline use trimester exams. The July PDF and August text calendar list different June final exam dates, so families should confirm the June schedule with their high school.",
+      "position": "afterAllDates",
+      "table": {
+        "columns": ["Schools", "Exam cycle", "July 6 printable PDF", "August 11 text calendar"],
+        "rows": [
+          ["Community, Huron, Pioneer", "Semester", "Jan. 19–22; June 11–15", "January window not listed; June dates vary by school"],
+          ["Pathways, Skyline", "Trimester", "Nov. 20–24; Mar. 11–15; June 11–15", "November and March windows not listed; June dates vary by school"]
+        ],
+        "footnote": "The July PDF lists June 11–15 for both groups. The August 11 text calendar lists June 11, 12, and 14–16 and says the schedule varies by school."
+      }
+    }
+  ],
+  "events": [
+    { "date": "2026-08-31", "name": "First Day of School for Students — Half Day", "type": "school_start" },
+    { "date": "2026-09-04", "endDate": "2026-09-07", "name": "Labor Day Holiday Break — No School for Students and Staff", "type": "break_start" },
+    { "date": "2026-09-08", "name": "School Resumes", "type": "academic" },
+    { "date": "2026-09-28", "name": "Staff Professional Development — No School for Students", "type": "teacher_workday" },
+    { "date": "2026-10-07", "name": "Student Count Day", "type": "academic" },
+    { "date": "2026-10-08", "displayDate": "October 7 or 8, 2026", "name": "Grade 11 PSAT/NMSQT — Official Sources Conflict", "type": "academic", "badgeLabel": "Confirm Date", "description": "The July 6 PDF says October 8; the later August 11 text calendar says October 7. The conflict is unresolved. Confirm the date and late-start schedule with the high school.", "hideFromCalendarExport": true },
+    { "date": "2026-10-09", "endDate": "2026-10-12", "name": "Early Fall Break — No School for Students and Staff", "type": "break_start" },
+    { "date": "2026-10-13", "name": "School Resumes", "type": "academic" },
+    { "date": "2026-10-30", "name": "Elementary, K-8, and Middle School Half Day — Report Writing", "type": "early_dismissal", "description": "High school students attend a full day." },
+    { "date": "2026-11-03", "name": "Election Day — No School for Students and Staff", "type": "holiday" },
+    { "date": "2026-11-20", "endDate": "2026-11-24", "name": "Pathways and Skyline Trimester Exams", "type": "academic" },
+    { "date": "2026-11-25", "endDate": "2026-11-27", "name": "Thanksgiving Break (Late Fall Break in the July PDF) — No School for Students and Staff", "type": "break_start" },
+    { "date": "2026-11-30", "name": "School Resumes", "type": "academic" },
+    { "date": "2026-12-09", "name": "Staff Professional Development — No School for Students", "type": "teacher_workday" },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "name": "Winter Break — No School for Students and Staff", "type": "break_start" },
+    { "date": "2027-01-04", "name": "School Resumes", "type": "academic" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day — No School for Students and Staff", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-01-19", "endDate": "2027-01-22", "name": "Community, Huron, and Pioneer Semester Exams", "type": "academic" },
+    { "date": "2027-02-10", "name": "Student Count Day", "type": "academic" },
+    { "date": "2027-02-12", "endDate": "2027-02-15", "name": "Mid-Winter Break — No School for Students and Staff", "type": "break_start" },
+    { "date": "2027-02-16", "name": "School Resumes", "type": "academic" },
+    { "date": "2027-03-09", "name": "Elementary, K-8, and Middle School Half Day — Report Writing", "type": "early_dismissal", "description": "High school students attend a full day." },
+    { "date": "2027-03-11", "endDate": "2027-03-15", "name": "Pathways and Skyline Trimester Exams", "type": "academic" },
+    { "date": "2027-03-26", "endDate": "2027-04-02", "name": "Spring Break — No School for Students and Staff", "type": "break_start" },
+    { "date": "2027-04-05", "name": "School Resumes", "type": "academic" },
+    { "date": "2027-04-08", "name": "PSAT Grades 8 and 9; WIN Work Readiness Grade 11 — Late Start for Grades 6, 7, 10, and 12", "type": "academic" },
+    { "date": "2027-04-14", "name": "SAT Grade 11; PSAT Grade 10 — Late Start for Grades 9 and 12", "type": "academic", "description": "The PDF chronology, month grid, and official text page say April 14; the PDF's bottom exam table says April 16. Confirm with AAPS before relying on this date." },
+    { "date": "2027-04-26", "name": "Grade 8 Transition Day — High School Half Day", "type": "early_dismissal" },
+    { "date": "2027-04-29", "name": "Grade 5 Transition Day — Middle School Half Day", "type": "early_dismissal" },
+    { "date": "2027-05-04", "name": "Election Day / Staff Professional Development — No School for Students", "type": "teacher_workday" },
+    { "date": "2027-05-13", "name": "Elementary and K-8 Half Day — Report Writing", "type": "early_dismissal", "description": "Middle and high school students attend a full day." },
+    { "date": "2027-05-31", "name": "Memorial Day — No School for Students and Staff", "type": "holiday" },
+    { "date": "2027-06-11", "name": "High School Final Exams — Schedule Varies by School", "type": "academic", "badgeLabel": "Exam Schedule", "description": "The July 6 PDF lists June 11–15 for both high school groups. The August 11 text calendar lists June 11, 12, and 14–16 and says the schedule varies by school. Check your high school's final exam schedule.", "displayAsRange": false, "hideFromCalendarExport": true },
+    { "date": "2027-06-15", "name": "Middle School Half Day — MS/HS Exam Grading and Report Writing", "type": "early_dismissal" },
+    { "date": "2027-06-16", "name": "Last Day of School for All Students — Half Day", "type": "school_end" }
+  ],
+  "calendarFaqs": [
+    { "q": "When does Ann Arbor Public Schools start in 2026?", "a": "AAPS students start Monday, August 31, 2026. The first day is a half day for all students, with release times that vary by school level." },
+    { "q": "When is the last day of AAPS in 2027?", "a": "The last day is Wednesday, June 16, 2027. It is a half day for all students; the PDF lists different release times for high school, middle school, K-8, and K-5." },
+    { "q": "When is AAPS Winter Break in 2026-27?", "a": "Winter Break runs Monday, December 21, 2026, through Friday, January 1, 2027. School resumes Monday, January 4." },
+    { "q": "When is AAPS Spring Break in 2027?", "a": "Spring Break runs Friday, March 26, through Friday, April 2, 2027. School resumes Monday, April 5." },
+    { "q": "Which AAPS students have report-writing half days?", "a": "Elementary, K-8, and middle school students have report-writing half days October 30 and March 9 while high school students attend a full day. On May 13, only elementary and K-8 students have a report-writing half day." },
+    { "q": "Do all AAPS high schools use the same exam schedule?", "a": "No. Community, Huron, and Pioneer use semester exams, while Pathways and Skyline use trimester exams. The July PDF and August text calendar list different June dates, so families should confirm the final exam schedule with their high school." },
+    { "q": "Is the AAPS PSAT/NMSQT date October 7 or October 8, 2026?", "a": "The July 6 printable PDF says October 8, while the later August 11 text calendar says October 7. The conflict is unresolved, so this event is excluded from the .ics file. Students should confirm the date and late-start schedule with their high school." },
+    { "q": "Is the AAPS SAT and PSAT date April 14 or April 16, 2027?", "a": "The PDF chronology, April grid, and official text calendar say April 14; the PDF's bottom exam table says April 16. This page uses April 14, but students should confirm with their high school." },
+    { "q": "Do preschool and A2Virtual follow the main AAPS calendar?", "a": "Not exactly. AAPS says preschool and A2Virtual use slightly different calendars. Families should check the program or school calendar for dates outside the district overview." }
+  ],
+  "faqDisplayQuestions": [
+    "When does Ann Arbor Public Schools start in 2026?",
+    "When is the last day of AAPS in 2027?",
+    "When is AAPS Winter Break in 2026-27?",
+    "When is AAPS Spring Break in 2027?",
+    "Which AAPS students have report-writing half days?",
+    "Do all AAPS high schools use the same exam schedule?",
+    "Is the AAPS PSAT/NMSQT date October 7 or October 8, 2026?",
+    "Is the AAPS SAT and PSAT date April 14 or April 16, 2027?",
+    "Do preschool and A2Virtual follow the main AAPS calendar?"
+  ],
+  "faqDisplayLimit": 9,
+  "hiddenCustomSectionIds": [
+    "aaps-school-level-clock-guide",
+    "aaps-high-school-calendar-tracks",
+    "aaps-calendar-scope"
+  ],
+  "hiddenSections": [
+    "instructionalDays",
+    "comparison",
+    "whatsDifferent",
+    "nationalTrends",
+    "keyDateCards",
+    "quickFacts",
+    "yearNumbers",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "todayStatus",
+    "downloadCta"
+  ],
+  "sourceReviewSummary": "Reviewed August 14, 2026, against the current AAPS calendar hub, July 6 printable PDF, August 11 text calendar, six translated editions, and the district bell-schedule page.",
+  "sourceReviewDetails": [
+    "The local PDF and current official direct PDF are byte-for-byte identical and share the same SHA-256 checksum.",
+    "The one-page PDF was text-extracted, rendered at high resolution, and visually checked across the chronology, month grids, bell table, commencement table, and exam table.",
+    "The 2026–27 half-day release times shown on this page come from the July 6 PDF. The district's standalone bell-schedule page is a supplemental reference and still carries a prior-year last-day label.",
+    "The July PDF says October 8 for the grade 11 PSAT/NMSQT, while the later August 11 text calendar says October 7. The conflict is unresolved, so the event is displayed with both dates and excluded from the .ics file.",
+    "The April 14 / April 16 SAT-PSAT conflict is preserved visibly; April 14 is used because the PDF chronology, April grid, and text calendar agree.",
+    "The July PDF lists June 11–15 finals for both high school groups. The August 11 text calendar lists June 11, 12, and 14–16 and says the schedule varies by school, so the .ics file excludes June final exam dates.",
+    "The translated calendars are linked as official alternate formats. Preschool and A2Virtual dates were not inferred from the district calendar."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Ann Arbor Public Schools sources.",
+  "sourceNextReviewText": "Next review: when AAPS resolves the October or April testing conflicts, confirms June final exam schedules, revises either calendar source, or publishes commencement dates.",
+  "sources": [
+    { "label": "AAPS calendar hub and translated calendars", "url": "https://www.a2schools.org/about-aaps/calendars" },
+    { "label": "Official AAPS 2026-2027 printable PDF", "url": "https://resources.finalsite.net/images/v1783435853/a2schoolsorg/ryqbf2qmktmocbwwonik/2026-27AAPSSchoolYearCalendarJuly6.pdf" },
+    { "label": "AAPS 2026-2027 calendar resource record", "url": "https://www.a2schools.org/fs/resource-manager/view/829b4fcb-e59a-4b69-a763-63313a0df6e1" },
+    { "label": "AAPS 2026-2027 text calendar", "url": "https://www.a2schools.org/about-aaps/calendars/2026-27-text-calendar" },
+    { "label": "AAPS Bell Schedules — supplemental reference", "url": "https://www.a2schools.org/about-aaps/calendars/aaps-bell-schedules" }
+  ]
+}

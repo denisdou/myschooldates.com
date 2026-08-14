@@ -5,6 +5,7 @@ const eventSchema = z.object({
   endDate: z.string().optional(),
   dates: z.array(z.string()).optional(),
   displayDate: z.string().optional(),
+  displayAsRange: z.boolean().optional(),
   name: z.string(),
   type: z.enum([
     'school_start', 'school_end', 'school_resume', 'school_reopen',
@@ -21,6 +22,7 @@ const eventSchema = z.object({
   exportDatesIndividually: z.boolean().optional(),
   showDuringBreak: z.boolean().optional(),
   badgeLabel: z.string().optional(),
+  labelType: z.string().optional(),
   isDerivedPlanningDate: z.boolean().optional(),
   preserveOfficialName: z.boolean().optional(),
   hideFromAllDates: z.boolean().optional(),
@@ -330,6 +332,7 @@ export default defineContentConfig({
         breakNotes: z.record(z.string(), z.string()).optional(),
         unifiedDownloadTitle: z.string().optional(),
         unifiedDownloadDescription: z.string().optional(),
+        groupAlternateCalendarsWithDownloads: z.boolean().optional(),
         shareCalendarHeading: z.string().optional(),
         icsHeading: z.string().optional(),
         icsDescription: z.string().optional(),

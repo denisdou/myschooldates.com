@@ -1,0 +1,281 @@
+{
+  "institutionId": "dearborn-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Dearborn Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-24",
+  "lastDay": "2027-06-10",
+  "temporalCoverageStart": "2026-08-19",
+  "temporalCoverageEnd": "2027-06-11",
+  "semesters": 2,
+  "sourceUrl": "https://dearbornschools.org/calendars/",
+  "sourceDocumentPage": "https://dearbornschools.org/calendars/",
+  "sourcePdfUrl": "https://drive.google.com/file/d/1wVxThnf80covfoYSTjOtzoj-_cqpKUxy/view",
+  "lastCheckedPdfUrl": "https://drive.google.com/file/d/1wVxThnf80covfoYSTjOtzoj-_cqpKUxy/view",
+  "sourceCheckedAt": "2026-08-14",
+  "sourceChecksumSha256": "1189a35c7c022e1ace79fc698210fd0b594f611c119773c08ea85d9de3bdc1ad",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://dearbornschools.org/calendars/",
+    "linkText": "2026-27 District Calendar Graphic (English PDF)",
+    "expectedDocumentUrl": "https://drive.google.com/file/d/1wVxThnf80covfoYSTjOtzoj-_cqpKUxy/view",
+    "expectedText": ["2026-27 District Calendar Graphic", "English PDF", "Arabic PDF"]
+  },
+  "lastVerifiedAt": "2026-08-14",
+  "dateCreated": "2026-08-14",
+  "datePublished": "2026-08-14",
+  "dateModified": "2026-08-14",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "start_dismissal_schedule_change", "makeup_day_activation"],
+  "sourceVersion": "Current official calendar graphic, updated February 25, 2026; Dearborn identifies the 2026–27 calendar as tentative",
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeComparisonSchema": false,
+  "includeArticleSchema": false,
+  "hideDatasetSchema": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideInstructionalDaysSummary": true,
+  "seoTitle": "Dearborn Public Schools Calendar 2026–27: Key Dates & PDF",
+  "seoDescription": "Dearborn Public Schools starts Aug. 24, 2026. See 2026–27 breaks, Tuesday early dismissals, Eid closures, the tentative June 10 last day, and the official PDF.",
+  "heroSummary": "Dearborn Public Schools begins Monday, August 24, 2026, with a half day for all students. Young 5s and kindergarten stay on half days through August 27. Most Tuesdays from September through May end 90 minutes early. The tentative last day is June 10, 2027; it moves to June 11 only if the district adds an extra Eid closure in March.",
+  "calendarNotes": "The districtwide calendar includes a four-half-day opening for Young 5s and kindergarten, school-specific Tuesday dismissal times, grade-level schedule differences on October 23 and January 5, and an Eid-related last-day contingency.",
+  "heroFactChips": ["Half-day start Aug 24", "Tuesday times vary by school", "Jun 11 is conditional"],
+  "verificationBadgeText": "Checked against official Dearborn Public Schools sources · Last reviewed August 14, 2026",
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "keyDatesSummaryTitle": "Dearborn Public Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Opening schedule, major breaks, and tentative last day",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School — Half Day for All Students", "date": "2026-08-24", "type": "school_start" },
+    { "label": "Break", "name": "Thanksgiving Break", "date": "2026-11-25", "endDate": "2026-11-27", "type": "break_start" },
+    { "label": "Break", "name": "Winter Break", "date": "2026-12-21", "endDate": "2027-01-01", "type": "break_start" },
+    { "label": "Break", "name": "Spring Break", "date": "2027-03-29", "endDate": "2027-04-02", "type": "break_start" },
+    { "label": "Last Day", "name": "Tentative Last Day — Half Day", "date": "2027-06-10", "type": "school_end" }
+  ],
+  "allDatesTitle": "Dearborn Public Schools 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This list includes the student attendance, closure, early-dismissal, conference, grading-period, and contingency dates on the current district calendar. Unless noted otherwise, Tuesday dismissal is 90 minutes early; exact release times vary by school and program. School activities, testing, college-course meetings, and emergency changes are not included.",
+  "allDatesCoverageNotePosition": "top",
+  "allDatesSourceLabel": "Dearborn Public Schools 2026–27 School Calendar Graphic",
+  "dateLegendItems": [
+    { "label": "No School / Holiday", "dot": "bg-amber-400" },
+    { "label": "Break", "dot": "bg-purple-400" },
+    { "label": "Early Dismissal / Half Day", "dot": "bg-sky-400" },
+    { "label": "Academic / Conference", "dot": "bg-slate-400" },
+    { "label": "Conditional", "dot": "bg-orange-300" }
+  ],
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "gradingPeriodsTitle": "Dearborn Public Schools 2026–27 Grading Periods",
+  "gradingPeriodsDescription": "Four card-marking periods are listed on Dearborn’s official calendar. Semester 1 runs August 24–December 18, 2026, and Semester 2 runs January 4–June 10, 2027.",
+  "gradingPeriods": [
+    { "label": "Card Marking 1", "start": "2026-08-24", "end": "2026-10-23" },
+    { "label": "Card Marking 2", "start": "2026-10-26", "end": "2026-12-18" },
+    { "label": "Card Marking 3", "start": "2027-01-04", "end": "2027-03-19" },
+    { "label": "Card Marking 4", "start": "2027-03-22", "end": "2027-06-10" }
+  ],
+  "alternateCalendarsTitle": "Official Dearborn Calendar in Arabic",
+  "alternateCalendarsDescription": "The Arabic graphic contains the same districtwide 2026–27 dates as the English version. The district also provides text versions in English and Arabic.",
+  "alternateCalendarsButtonLabel": "View Official Arabic PDF",
+  "alternateCalendars": [
+    {
+      "type": "calendar-ar",
+      "label": "2026–27 Calendar Graphic — Arabic",
+      "description": "Official Arabic edition of the Dearborn district calendar graphic.",
+      "pdfUrl": "https://drive.google.com/file/d/1rlkalrrIdthNYoTNCAP9lS6HRY9q7m-5/view"
+    }
+  ],
+  "icsHeading": "Add Dearborn Public Schools 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download the confirmed dates on this page as a one-time .ics file. June 11 is not included because it is only a possible make-up day.",
+  "icsButtonLabel": "Download Dearborn Dates (.ics)",
+  "icsButtonSupportText": "This file does not update automatically. Recheck Dearborn's calendar hub for Eid timing, emergency closures, and school-specific changes.",
+  "icsSourceNote": "The download uses the same reviewed dates shown on this page.",
+  "hideIcsImportDisclaimer": true,
+  "pdfHeading": "Official Dearborn Public Schools 2026–27 Calendar",
+  "pdfDescription": "Open the current official English calendar graphic. The graphic is labeled updated February 25, 2026, and the district describes the calendar as tentative.",
+  "pdfButtonLabel": "View Official English Calendar",
+  "pdfVersionLabel": "Dearborn Schools 2026–27 Calendar — English",
+  "otherCalendarsPosition": "beforeCalendarExport",
+  "hideFaqSchema": true,
+  "hiddenSections": ["keyDateCards", "downloadCta", "todayStatus", "quickFacts", "about", "yearNumbers", "whatsDifferent", "comparison", "planningTips", "districtProfile", "livingHere", "otherCalendars", "nationalTrends"],
+  "hiddenCustomSectionIds": ["dearborn-tuesday-dismissal-times", "dearborn-calendar-resources"],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Full Calendar", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Early Dismissal", "id": "dearborn-2026-2027-tuesday-times" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" }
+  ],
+  "customSections": [
+    {
+      "id": "dearborn-2026-2027-family-notes",
+      "label": "What Families Need to Know About the 2026–27 Calendar",
+      "content": "A few Dearborn dates need more explanation than a standard holiday list provides.",
+      "position": "afterKeyDates",
+      "table": {
+        "columns": ["Date or topic", "What families should know"],
+        "rows": [
+          ["Aug. 24–27", "All students begin with a half day on August 24. Young 5s and kindergarten continue on half days through August 27."],
+          ["Oct. 23", "Elementary students have a half day; secondary students attend a full day."],
+          ["Jan. 5", "Secondary students have a half day; elementary students follow the regular Tuesday early-dismissal schedule."],
+          ["Eid and June 11", "Schools are closed March 10–11. June 11 would be used only if lunar timing requires an additional closure on March 9 or 12."]
+        ],
+        "footnote": "June 11 is conditional and is not included in the calendar download."
+      },
+      "links": [
+        { "label": "Dearborn’s 2026–27 Calendar Announcement", "to": "https://firstbell.dearbornschools.org/2026/01/16/district-releases-2026-27-calendar/" },
+        { "label": "Official Dearborn Calendar Hub", "to": "https://dearbornschools.org/calendars/" }
+      ]
+    },
+    {
+      "id": "dearborn-2026-2027-tuesday-times",
+      "label": "Tuesday Early-Dismissal Times by School Level",
+      "content": "Dearborn’s calendar identifies 31 in-session Tuesdays with shortened schedules. Most use the district’s standard 90-minute early dismissal; January 5 has a separate secondary half-day schedule.",
+      "position": "afterKeyDates",
+      "table": {
+        "columns": ["School or program", "Tuesday dismissal"],
+        "rows": [
+          ["Elementary schools", "2:25 p.m."],
+          ["Middle and K–8 schools", "1:50 p.m."],
+          ["High schools", "1:15 p.m."],
+          ["Lowrey elementary / middle grades", "1:40 p.m. / 1:35 p.m."],
+          ["The Heights high-school programs and Henry Ford Early College", "12:55 p.m."],
+          ["STEM Middle School and Dearborn Virtual K–12", "1:15 p.m."]
+        ]
+      }
+    },
+    {
+      "id": "dearborn-2026-2027-calendar-guide",
+      "label": "Official Dearborn Calendar Resources",
+      "content": "The district’s one-page calendar covers districtwide school days, closures, and early dismissals. Use the additional resources for translated calendars, conferences, the Young 5s and kindergarten soft start, and school-specific details. Students taking Henry Ford College courses should also check their HFC course schedule.",
+      "position": "afterOtherCalendars",
+      "links": [
+        { "label": "Dearborn Schools Calendar Hub", "to": "https://dearbornschools.org/calendars/" },
+        { "label": "2026–27 Calendar Graphic — Arabic", "to": "https://drive.google.com/file/d/1rlkalrrIdthNYoTNCAP9lS6HRY9q7m-5/view" },
+        { "label": "2026–27 English Calendar Text", "to": "https://docs.google.com/document/d/1v1Jf9MsmJty14LNvezyc4_1DbHS_d-L5dFEVlI_UBdw/edit?usp=sharing" },
+        { "label": "2026–27 Arabic Calendar Text", "to": "https://docs.google.com/document/d/1xdtawxMbGAslCrXY7J3D53nknriZ3qxXR0nJDOv6VYw/edit?usp=sharing" },
+        { "label": "Open Houses and Parent-Teacher Conferences", "to": "https://drive.google.com/file/d/12lBs_IBiQyExQxWpzOPjRwMgi60uG4ld/view?usp=sharing" },
+        { "label": "Young 5s and Kindergarten Soft Start", "to": "https://drive.google.com/file/d/1nkC8aJGcsAwk1pi_tHiTeUvDbFGkFYDC/view?usp=sharing" }
+      ]
+    },
+    {
+      "id": "dearborn-2026-2027-about",
+      "label": "About Dearborn Public Schools",
+      "content": "Dearborn Public Schools serves nearly 20,000 students across 37 schools in 36 buildings. The district serves almost all of Dearborn and part of Dearborn Heights, and about 45% of students are English learners. The district publishes calendar materials in both English and Arabic, and the 2026–27 calendar includes districtwide Eid closures.",
+      "position": "beforeSources"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When does Dearborn Public Schools start in 2026–27?",
+      "a": "Students start Monday, August 24, 2026 on a half-day schedule. Young 5s and kindergarten continue with half days August 25–27."
+    },
+    {
+      "q": "When is the last day of Dearborn Public Schools in 2027, and why could it move to June 11?",
+      "a": "Thursday, June 10, 2027 is the tentative last day and a half day. June 11 becomes the last day only if lunar timing requires an additional Eid closure on March 9 or March 12."
+    },
+    {
+      "q": "Does Dearborn dismiss early every Tuesday?",
+      "a": "No. The district lists 31 in-session Tuesdays with shortened schedules from September through May. Most are 90-minute early dismissals; January 5 has a separate secondary half-day schedule. Tuesdays that are districtwide no-school days are excluded."
+    },
+    {
+      "q": "What time is Tuesday early dismissal?",
+      "a": "The common times are 2:25 p.m. for elementary schools, 1:50 p.m. for middle and K–8 schools, and 1:15 p.m. for high schools. Several schools and programs have listed exceptions."
+    },
+    {
+      "q": "Is October 23 a half day for every Dearborn student?",
+      "a": "No. October 23 is an elementary half day with teacher duty in the afternoon; secondary students have a full day."
+    },
+    {
+      "q": "Is January 5 a half day for every Dearborn student?",
+      "a": "No. Secondary students have a half day and elementary students use the regular Tuesday early-dismissal schedule."
+    },
+    {
+      "q": "Where can families find the Arabic Dearborn calendar?",
+      "a": "Dearborn provides both an Arabic calendar graphic and an Arabic text version through its official calendar hub."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When does Dearborn Public Schools start in 2026–27?",
+    "When is the last day of Dearborn Public Schools in 2027, and why could it move to June 11?",
+    "Does Dearborn dismiss early every Tuesday?",
+    "What time is Tuesday early dismissal?",
+    "Is October 23 a half day for every Dearborn student?",
+    "Is January 5 a half day for every Dearborn student?",
+    "Where can families find the Arabic Dearborn calendar?"
+  ],
+  "faqLimit": 7,
+  "sourceReviewDetails": [
+    "Dates were checked against Dearborn Public Schools’ calendar hub, official 2026–27 calendar graphic, calendar announcement, and current start and end times.",
+    "School-specific schedules, testing, staff events, and program dates may be published separately by the district or individual schools.",
+    "The .ics download is a one-time import. June 11 is excluded because it is only a possible make-up day."
+  ],
+  "sources": [
+    { "label": "Dearborn Schools official calendar hub", "url": "https://dearbornschools.org/calendars/" },
+    { "label": "Dearborn 2026–27 English calendar graphic", "url": "https://drive.google.com/file/d/1wVxThnf80covfoYSTjOtzoj-_cqpKUxy/view" },
+    { "label": "Dearborn 2026–27 calendar announcement", "url": "https://firstbell.dearbornschools.org/2026/01/16/district-releases-2026-27-calendar/" },
+    { "label": "Dearborn school start and end times", "url": "https://dearbornschools.org/services/school-start-and-end-times/" }
+  ],
+  "events": [
+    { "date": "2026-08-19", "endDate": "2026-08-20", "name": "Staff Professional Development — No School", "type": "teacher_workday", "description": "District staff professional-development days before students begin; students do not attend.", "hideFromCalendarExport": true },
+    { "date": "2026-08-21", "name": "Teacher Duty and Open Houses — No School", "type": "teacher_workday", "description": "Teachers have duty time in the morning and open houses in the afternoon; students do not attend.", "hideFromCalendarExport": true },
+    { "date": "2026-08-24", "name": "First Day of School — Half Day for All Students", "type": "school_start", "description": "All students begin on a half day. Teachers have professional development in the afternoon." },
+    { "date": "2026-08-25", "endDate": "2026-08-27", "name": "Young 5s and Kindergarten Soft Start — Half Days", "type": "early_dismissal", "description": "Young 5s and kindergarten continue on half days; other grades follow their regular schedule.", "exportDatesIndividually": true },
+    { "date": "2026-09-04", "name": "No School", "type": "no_school", "description": "Districtwide no-school day before Labor Day weekend." },
+    { "date": "2026-09-07", "name": "Labor Day — No School", "type": "holiday", "description": "Schools are closed for Labor Day." },
+    { "date": "2026-09-08", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2026-09-15", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2026-09-22", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2026-09-29", "name": "Professional Development — No School", "type": "teacher_workday", "description": "District professional-development day; students do not attend." },
+    { "date": "2026-10-06", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2026-10-13", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2026-10-20", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2026-10-23", "name": "Card Marking 1 Ends — Elementary Half Day", "type": "quarter_end", "description": "Elementary students have a half day and teachers have duty time in the afternoon; secondary students attend a full day." },
+    { "date": "2026-10-27", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2026-11-03", "name": "Election Day Professional Development — No School", "type": "teacher_workday", "description": "Students do not attend while staff participate in professional development." },
+    { "date": "2026-11-10", "name": "Tuesday Early Dismissal and Parent-Teacher Conferences", "type": "early_dismissal", "description": "All grades dismiss 90 minutes early, and the district graphic also marks parent-teacher conferences; use the school appointment schedule." },
+    { "date": "2026-11-12", "name": "Elementary Parent-Teacher Conferences", "type": "academic", "description": "Elementary conference date; the district graphic does not mark an additional districtwide student closure." },
+    { "date": "2026-11-17", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2026-11-24", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2026-11-25", "endDate": "2026-11-27", "name": "Thanksgiving Break — No School", "type": "break_start", "description": "Students do not attend November 25–27. November 25 is also marked as conference release." },
+    { "date": "2026-12-01", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2026-12-08", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2026-12-15", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2026-12-18", "name": "Card Marking 2 and Semester 1 End", "type": "semester_end", "description": "The second card-marking period and first semester end; this is an academic milestone, not a separate closure." },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "name": "Winter Break — No School", "type": "break_start", "description": "Schools are closed for winter break; students return January 4 on a half-day schedule." },
+    { "date": "2027-01-04", "name": "School Resumes — Half Day for All Students", "type": "early_dismissal", "description": "All students return from winter break for a half day; teachers have duty time in the afternoon." },
+    { "date": "2027-01-05", "name": "Secondary Half Day; Elementary Early Dismissal", "type": "early_dismissal", "description": "Secondary students have a half day and teacher duty follows; elementary students use the regular Tuesday early-dismissal schedule." },
+    { "date": "2027-01-12", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day — No School", "type": "holiday", "description": "Schools are closed in observance of Martin Luther King Jr. Day." },
+    { "date": "2027-01-19", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2027-01-26", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2027-02-02", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2027-02-09", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2027-02-15", "name": "No School", "type": "no_school", "description": "Districtwide no-school day as marked on the official calendar; the source does not assign a holiday name." },
+    { "date": "2027-02-16", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2027-02-23", "name": "Professional Development — No School", "type": "teacher_workday", "description": "District professional-development day; students do not attend." },
+    { "date": "2027-03-02", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2027-03-09", "name": "Tuesday Early Dismissal", "type": "early_dismissal", "description": "Current schedule: students dismiss 90 minutes early. Lunar timing could instead make March 9 an additional Eid closure." },
+    { "date": "2027-03-10", "endDate": "2027-03-11", "name": "Eid — No School", "type": "holiday", "description": "Schools are closed for Eid. Dearborn notes that lunar timing could require one additional closure on March 9 or March 12." },
+    { "date": "2027-03-16", "name": "Tuesday Early Dismissal and Secondary Conferences", "type": "early_dismissal", "description": "Students dismiss 90 minutes early, and the calendar also marks secondary parent-teacher conferences; use the school appointment schedule." },
+    { "date": "2027-03-19", "name": "Card Marking 3 Ends", "type": "quarter_end", "description": "The third card-marking period ends; this is an academic milestone, not a separate closure." },
+    { "date": "2027-03-23", "name": "Tuesday Early Dismissal and Elementary Conferences", "type": "early_dismissal", "description": "Students dismiss 90 minutes early, and the calendar also marks elementary parent-teacher conferences; use the school appointment schedule." },
+    { "date": "2027-03-26", "name": "Good Friday — No School", "type": "holiday", "description": "Schools are closed for Good Friday before spring break." },
+    { "date": "2027-03-29", "endDate": "2027-04-02", "name": "Spring Break — No School", "type": "break_start", "description": "Schools are closed for spring break March 29–April 2." },
+    { "date": "2027-04-06", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2027-04-13", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2027-04-20", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2027-04-27", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2027-05-04", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2027-05-11", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2027-05-17", "endDate": "2027-05-19", "name": "Eid — No School", "type": "holiday", "description": "Schools are closed May 17–19 for Eid." },
+    { "date": "2027-05-25", "name": "Tuesday Early Dismissal", "type": "early_dismissal" },
+    { "date": "2027-05-31", "name": "Memorial Day — No School", "type": "holiday", "description": "Schools are closed for Memorial Day." },
+    { "date": "2027-06-10", "name": "Tentative Last Day of School — Half Day", "type": "school_end", "description": "Students have a half day and teachers have duty time in the afternoon. This remains the last day unless Dearborn activates the June 11 Eid contingency." },
+    { "date": "2027-06-11", "name": "Alternate Last Day if Eid Adjustment Is Needed", "type": "makeup_day", "description": "Conditional only: June 11 becomes a student day if lunar timing requires an additional Eid closure on March 9 or March 12; otherwise students do not attend and staff have conference release.", "hideFromCalendarExport": true }
+  ]
+}

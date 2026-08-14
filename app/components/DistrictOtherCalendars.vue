@@ -13,6 +13,8 @@ const props = defineProps<{
   footerDescription?: string
   footerLinkLabel?: string
   footerLinkUrl?: string
+  embedded?: boolean
+  hideHeading?: boolean
 }>()
 
 const calendarGroups = computed(() => {
@@ -27,8 +29,13 @@ const calendarGroups = computed(() => {
 </script>
 
 <template>
-  <div id="other-calendars" class="bg-white rounded-lg border border-gray-200 p-6">
-    <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ title || 'Other Official Calendars' }}</h2>
+  <div
+    id="other-calendars"
+    :class="embedded ? 'district-utility-panel__section p-6' : 'bg-white rounded-lg border border-gray-200 p-6'"
+  >
+    <component v-if="!hideHeading" :is="embedded ? 'h3' : 'h2'" class="text-lg font-semibold text-gray-900 mb-1">
+      {{ title || 'Other Official Calendars' }}
+    </component>
     <p class="text-sm text-gray-500 mb-4">{{ description || `${districtName} publishes separate calendars for specific programs.` }}</p>
     <component :is="collapsible ? 'details' : 'div'" class="group">
       <summary
@@ -42,7 +49,13 @@ const calendarGroups = computed(() => {
       </summary>
       <div :class="collapsible ? 'mt-4' : ''" class="space-y-5">
         <section v-for="group in calendarGroups" :key="group.label || 'calendars'">
-          <h3 v-if="group.label" class="text-sm font-semibold text-gray-900">{{ group.label }}</h3>
+          <component
+            :is="embedded && hideHeading ? 'h3' : embedded ? 'h4' : 'h3'"
+            v-if="group.label"
+            class="text-sm font-semibold text-gray-900"
+          >
+            {{ group.label }}
+          </component>
           <ul :class="group.label ? 'mt-1' : ''" class="space-y-0">
             <li
               v-for="alt in group.calendars"

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const pageTitle = 'Winter Break 2026 | School Calendar Dates and Trends'
-const pageDescription = 'See 2026 winter break school calendar trends from 100 reviewed U.S. district calendars, including the December 21, 2026 start-date cluster.'
+const pageDescription = 'See 2026 winter break school calendar trends from 175 reviewed U.S. district calendars, including the December 21, 2026 start-date cluster.'
 const pageUrl = 'https://myschooldates.com/winter-break-2026'
 
 const breakRows = [
-  ['December 21, 2026', '89 records', 'Strongest winter break start-date signal in the current dataset.'],
-  ['December 23-24, 2026', '8 records', 'Later starts appear in some district calendars and regional patterns.'],
-  ['Other or not listed', '3 records', 'Some records use different labels or do not list a clean winter break start signal.'],
+  ['December 21, 2026', '151 records', 'Strongest winter break start-date signal in the current dataset.'],
+  ['December 23-24, 2026', '17 records', 'Later starts appear in some district calendars and regional patterns.'],
+  ['Other or not listed', '7 records', 'Some records use different labels or do not list a clean winter break start signal.'],
 ]
 
 const faqRows = [
@@ -88,12 +88,12 @@ useHead({
         <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">School Break Trend Guide</p>
         <h1 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Winter Break 2026</h1>
         <p class="mt-4 max-w-3xl text-lg leading-relaxed text-gray-600">
-          December 21, 2026 is the dominant winter break start-date signal in the current MySchoolDates 2026-2027 trend dataset, appearing in 89 of 100 reviewed district calendar records.
+          December 21, 2026 is the dominant winter break start-date signal in the current MySchoolDates 2026-2027 trend dataset, appearing in 151 of 175 reviewed district calendar records.
         </p>
         <div class="mt-5 flex flex-wrap gap-2 text-sm text-gray-600">
-          <span class="rounded-lg bg-gray-100 px-3 py-1">100 reviewed calendars</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">13 states</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified July 27, 2026</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">175 reviewed calendars</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">25 states</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified August 14, 2026</span>
         </div>
       </header>
 

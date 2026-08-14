@@ -1,0 +1,51 @@
+{
+  "institutionId": "dearborn-public-schools",
+  "name": "Dearborn Public Schools",
+  "shortName": "DPS",
+  "slug": "dearborn-public-schools-calendar",
+  "state": "Michigan",
+  "stateCode": "MI",
+  "city": "Dearborn",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://dearbornschools.org/",
+  "calendarPage": "https://dearbornschools.org/calendars/",
+  "logo": "https://dearbornschools.org/wp-content/uploads/2026/08/website-logo-v1.png",
+  "timezone": "America/Detroit",
+  "county": "Wayne County",
+  "region": "Southeast Michigan",
+  "metro": "Detroit",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "studentCount": 19347,
+  "studentCountAsOf": "2026-08-14",
+  "studentCountSourceLabel": "Dearborn Public Schools homepage",
+  "studentCountSourceUrl": "https://dearbornschools.org/",
+  "schoolCount": 37,
+  "profileSchoolCountExact": true,
+  "founded": 1944,
+  "seoTitle": "Dearborn Public Schools Calendar: Dates & PDF",
+  "seoDescription": "Reviewed Dearborn Schools dates, Tuesday early dismissals, K and Young 5s soft start, Eid closures, grading periods, bell-time exceptions, and official PDFs.",
+  "districtFact": "Dearborn Public Schools serves nearly all of Dearborn and a small part of Dearborn Heights and publishes official calendar materials in English and Arabic.",
+  "about": [],
+  "districtFaqs": [],
+  "customSections": [],
+  "relatedDistricts": [
+    {
+      "name": "Detroit Public Schools Community District",
+      "slug": "detroit-public-schools-community-district-calendar",
+      "state": "Michigan",
+      "comparisonNote": "Compare another Wayne County district with a different PD, conference, and make-up-day structure."
+    }
+  ],
+  "hiddenSections": ["comparison", "whatsDifferent", "nationalTrends"],
+  "includeComparisonSchema": false,
+  "sources": [
+    { "label": "Dearborn Public Schools official website", "url": "https://dearbornschools.org/" },
+    { "label": "Dearborn Schools calendar hub", "url": "https://dearbornschools.org/calendars/" },
+    { "label": "Dearborn Public Schools district profile", "url": "https://dearbornschools.org/district/" },
+    { "label": "Dearborn school start and end times", "url": "https://dearbornschools.org/services/school-start-and-end-times/" },
+    { "label": "First Bell 2026–27 calendar announcement", "url": "https://firstbell.dearbornschools.org/2026/01/16/district-releases-2026-27-calendar/" }
+  ]
+}

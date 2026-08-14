@@ -1,96 +1,283 @@
 {
   "institutionId": "garland-isd",
   "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Garland ISD Calendar 2027–2028",
   "firstDay": "2027-08-09",
   "lastDay": "2028-05-24",
+  "temporalCoverageStart": "2027-07-01",
+  "temporalCoverageEnd": "2028-06-30",
   "totalSchoolDays": 175,
   "semesters": 2,
   "sourceUrl": "https://www.garlandisd.net/calendars/school-year-calendar",
-  "sourcePdfUrl": "https://www.garlandisd.net/media/19368/download?inline",
-  "lastVerifiedAt": "2026-07-19",
+  "sourceDocumentPage": "https://www.garlandisd.net/calendars/school-year-calendar",
+  "sourcePdfUrl": "https://www.garlandisd.net/media/19368/download?inline=",
+  "lastCheckedPdfUrl": "https://www.garlandisd.net/media/19368/download?inline=",
+  "sourceCheckedAt": "2026-08-14",
+  "sourceUpdatedAt": "2025-12-03",
+  "sourceChecksumSha256": "c672c29def2b75e44e0f8315f02e75564818a20510df706f5b58bf4a6abb9b7c",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceConflict": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.garlandisd.net/calendars/school-year-calendar",
+    "linkText": "2027-28 calendar",
+    "expectedPdfUrl": "https://www.garlandisd.net/media/19368/download?inline=",
+    "expectedChecksumSha256": "c672c29def2b75e44e0f8315f02e75564818a20510df706f5b58bf4a6abb9b7c"
+  },
+  "lastVerifiedAt": "2026-08-14",
   "datePublished": "2026-07-19",
-  "dateModified": "2026-07-19",
+  "dateModified": "2026-08-14",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision"],
+  "sourceCalendarName": "2027–28 Garland ISD Academic Calendar",
+  "sourceCalendarDateModified": "2025-12-03",
+  "sourceVersion": "v3",
+  "sourceVersionLabel": "Official calendar",
+  "sourceVersionDisplay": "2027–28 Garland ISD Academic Calendar v3 · updated December 3, 2025",
   "calendarType": "traditional",
-  "yearNumbersMode": "compact",
-  "seoTitle": "Garland ISD Calendar 2027-2028: Holidays, Breaks & PDF",
-  "seoDescription": "Garland ISD 2027-2028 calendar with Aug 9 first day, May 24 last day, fall break, holidays, breaks, early dismissal, PDF and ICS.",
-  "calendarNotes": "Garland ISD starts the 2027-2028 school year on August 9, 2027 and lists May 24, 2028 as the last day of class with early dismissal. Fall Break runs October 11-15, Thanksgiving Break runs November 22-26, Winter Break runs December 20-31, and Spring Break runs March 13-17. The calendar lists 82 days in the first semester and 93 days in the second semester.",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "schemaCalendarName": "Garland ISD 2027–28 Academic Calendar",
+  "schemaDatasetName": "Garland ISD 2027–28 Academic Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed dates from Garland ISD’s 2027–28 academic calendar, including school-year boundaries, district-closure and staff-development ranges, grading dates, student holidays, breaks, early dismissal, and student return dates.",
+  "schemaCalendarDownloadName": "Garland ISD 2027–28 Calendar (.ics)",
+  "schemaCalendarDownloadDescription": "Selected family-facing Garland ISD calendar dates for one-time import, generated from the reviewed district records used on this page.",
+  "seoTitle": "Garland ISD Calendar 2027–28: Key Dates, Breaks & PDF",
+  "seoDescription": "Garland ISD starts Aug. 9, 2027. See 2027–28 breaks, return dates, early dismissal times, the May 24 last day of school, official PDF and .ics download.",
+  "nonCurrentYearNotice": "This is Garland ISD’s published upcoming 2027–28 academic calendar. The district notes that the PDF is subject to change, so check the official calendar page again before making fixed plans.",
+  "heroSummary": "Garland ISD classes begin Monday, August 9, 2027, and the last day is Wednesday, May 24, 2028. Fall Break is October 11–15, Thanksgiving Break is November 22–26, Winter Break runs December 20–31, and Spring Break is March 13–17. Students return October 19 after Fall Break and January 4 after Winter Break.",
+  "calendarNotes": "The official calendar lists 175 instructional days, with 82 days in the first semester and 93 in the second. Early dismissal is scheduled for December 17 and May 24.",
+  "heroFactChips": ["175 instructional days", "82 days in semester 1", "93 days in semester 2"],
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "verificationBadgeText": "Checked against the official Garland ISD PDF · Last reviewed August 14, 2026",
+  "verificationBadgeReviewerName": "Denis Dou",
+  "verificationBadgeReviewerHref": "/author",
+  "keyDatesSummaryTitle": "Garland ISD 2027–28 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, and return dates families should know",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of Class", "date": "2027-08-09", "type": "school_start" },
+    { "label": "Break", "name": "Fall Break", "date": "2027-10-11", "endDate": "2027-10-15", "type": "break_start", "description": "October 18 is also a student holiday. Students return Tuesday, October 19." },
+    { "label": "Break", "name": "Thanksgiving Break", "date": "2027-11-22", "endDate": "2027-11-26", "type": "break_start" },
+    { "label": "Break", "name": "Winter Break", "date": "2027-12-20", "endDate": "2027-12-31", "type": "break_start", "description": "January 3 is also a student holiday. Students return Tuesday, January 4." },
+    { "label": "Break", "name": "Spring Break", "date": "2028-03-13", "endDate": "2028-03-17", "type": "break_start" },
+    { "label": "Last Day", "name": "Last Day of Class — Early Dismissal", "date": "2028-05-24", "type": "school_end" }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "What to Know", "id": "garland-2027-2028-notice" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Dismissal Times", "id": "garland-2027-2028-dismissal-times" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Changes", "id": "year-comparison" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "Garland ISD 2027–28 School Year Dates",
+  "allDatesCoverageNote": "This list follows the published 2027–28 PDF, including district-closure and staff-development ranges, student holidays, grading dates, breaks, early dismissal, and the last day of class. Campus-specific testing, athletics, performances, and ceremonies are not included.",
+  "allDatesCoverageNotePosition": "top",
+  "allDatesSourceLinks": [
+    { "label": "Garland ISD 2027–28 academic calendar PDF", "url": "https://www.garlandisd.net/media/19368/download?inline=" },
+    { "label": "Garland ISD school-year calendar page", "url": "https://www.garlandisd.net/calendars/school-year-calendar" }
+  ],
+  "dateLegendLabelOverrides": {
+    "Early Release": "Early Dismissal",
+    "Last Day · Early Closing": "Last Day · Early Dismissal"
+  },
+  "breaksTitle": "Planning Around Garland ISD School Breaks",
+  "hideBreakDurationBadges": true,
+  "breakNotes": {
+    "Fall Break": "October 18 is a student holiday and staff-development day. Students return Tuesday, October 19.",
+    "Thanksgiving Break": "Students return Monday, November 29.",
+    "Winter Break": "January 3 is a student holiday and staff-development day. Students return Tuesday, January 4.",
+    "Spring Break": "Students return Monday, March 20."
+  },
+  "icsHeading": "Download Garland ISD 2027–28 Dates",
+  "icsDescription": "Download an .ics file for Google Calendar, Apple Calendar, or Outlook. This is a one-time import; check Garland ISD for later calendar changes.",
+  "icsButtonLabel": "Download Garland ISD Dates (.ics)",
+  "icsButtonSupportText": "The .ics file includes the family-facing dates selected for calendar import. Some district-office, staff-only, and post-school-year dates shown on this page are not included.",
+  "icsSourceNote": "",
+  "hideIcsImportDisclaimer": true,
+  "pdfHeading": "Official Garland ISD 2027–28 Calendar PDF",
+  "pdfDescription": "Open the official upcoming-year academic calendar published by Garland ISD. The PDF was updated December 3, 2025, and is subject to change.",
+  "pdfButtonLabel": "View Official Garland ISD PDF",
   "calendarFaqs": [
-    {
-      "q": "When does Garland ISD start school in 2027?",
-      "a": "Garland ISD starts the 2027-2028 school year on Monday, August 9, 2027."
-    },
-    {
-      "q": "When is Garland ISD Fall Break in 2027?",
-      "a": "Fall Break runs Monday, October 11 through Friday, October 15, 2027."
-    },
-    {
-      "q": "When is Garland ISD Spring Break in 2028?",
-      "a": "Spring Break runs Monday, March 13 through Friday, March 17, 2028."
-    },
-    {
-      "q": "When is the last day of school for Garland ISD in 2028?",
-      "a": "The last day of class is Wednesday, May 24, 2028, with early dismissal."
-    }
+    { "q": "When does Garland ISD start school in 2027?", "a": "The first day of class is Monday, August 9, 2027." },
+    { "q": "When is Garland ISD Fall Break in 2027?", "a": "Fall Break runs October 11–15, 2027. October 18 is a student holiday and staff-development day, so students return Tuesday, October 19." },
+    { "q": "When is Garland ISD Winter Break in 2027–28?", "a": "Winter Break runs December 20–31, 2027. January 3 is a student holiday and staff-development day, so students return Tuesday, January 4." },
+    { "q": "When is Garland ISD Spring Break in 2028?", "a": "Spring Break runs Monday, March 13 through Friday, March 17, 2028. Students return Monday, March 20." },
+    { "q": "When is the last day of school for Garland ISD in 2028?", "a": "The last day of class is Wednesday, May 24, 2028, with early dismissal." },
+    { "q": "What time is early dismissal in Garland ISD?", "a": "The 2027–28 PDF lists 1:25 p.m. for full-day Pre-K and elementary, 2:05 p.m. for middle school, and 12:40 p.m. for high school." }
   ],
-  "yearNumbers": [
-    {
-      "label": "Instructional Days",
-      "value": "175",
-      "detail": "The calendar lists 82 first-semester days and 93 second-semester days."
-    },
-    {
-      "label": "Fall Break",
-      "value": "Oct 11-15",
-      "detail": "Garland ISD schedules a full week of Fall Break before the second grading period begins."
-    },
-    {
-      "label": "Early Dismissal",
-      "value": "2 dates",
-      "detail": "Early dismissal is listed on December 17 and May 24."
-    }
+  "faqDisplayQuestions": [
+    "When does Garland ISD start school in 2027?",
+    "When is Garland ISD Fall Break in 2027?",
+    "When is Garland ISD Winter Break in 2027–28?",
+    "When is Garland ISD Spring Break in 2028?",
+    "When is the last day of school for Garland ISD in 2028?",
+    "What time is early dismissal in Garland ISD?"
   ],
+  "faqDisplayLimit": 6,
   "whatsNew": {
-    "title": "Changes from the 2026-2027 Calendar",
+    "title": "Changes from the 2026–27 Calendar",
     "content": [
-      "The first day moves from August 10 in 2026 to August 9 in 2027.",
-      "Spring Break moves from March 15-19 in 2027 to March 13-17 in 2028.",
-      "The last day moves from May 27 in 2027 to May 24 in 2028."
+      "School starts one day earlier: August 9 instead of August 10.",
+      "Fall Break shifts one day earlier: October 11–15 instead of October 12–16.",
+      "Winter Break shifts one day earlier: December 20–31 instead of December 21–January 1.",
+      "Spring Break starts two days earlier: March 13–17 instead of March 15–19.",
+      "The school year ends three calendar days earlier: May 24 instead of May 27."
     ]
   },
+  "visibleSections": ["whatsDifferent"],
+  "comparisonBeforeFaq": true,
+  "comparisonDistrictSlugs": ["plano-independent-school-district-calendar"],
+  "comparisonTitle": "Garland ISD vs. Plano ISD: 2027–28 Calendar",
+  "comparisonSummary": "Compare Garland ISD and Plano ISD for the first day, last day, Thanksgiving Break, winter return date, Spring Break, and the return after Spring Break.",
+  "hideComparisonInsights": true,
+  "hideComparisonNotes": true,
+  "comparisonSourceNote": "Sources are linked below.",
+  "comparisonCustomRows": [
+    {
+      "key": "firstDay",
+      "label": "First Day",
+      "values": {
+        "garland-independent-school-district-calendar": "Aug 9, 2027",
+        "plano-independent-school-district-calendar": "Aug 11, 2027"
+      }
+    },
+    {
+      "key": "lastDay",
+      "label": "Last Day",
+      "values": {
+        "garland-independent-school-district-calendar": "May 24, 2028",
+        "plano-independent-school-district-calendar": "May 24, 2028"
+      }
+    },
+    {
+      "key": "thanksgivingBreak",
+      "label": "Thanksgiving Break",
+      "values": {
+        "garland-independent-school-district-calendar": "Nov 22–26, 2027",
+        "plano-independent-school-district-calendar": "Nov 22–26, 2027"
+      }
+    },
+    {
+      "key": "winterReturn",
+      "label": "Students Return After Winter Break",
+      "values": {
+        "garland-independent-school-district-calendar": "Jan 4, 2028",
+        "plano-independent-school-district-calendar": "Jan 5, 2028"
+      }
+    },
+    {
+      "key": "springBreak",
+      "label": "Spring Break",
+      "values": {
+        "garland-independent-school-district-calendar": "Mar 13–17, 2028",
+        "plano-independent-school-district-calendar": "Mar 13–17, 2028"
+      }
+    },
+    {
+      "key": "springReturn",
+      "label": "Students Return After Spring Break",
+      "values": {
+        "garland-independent-school-district-calendar": "Mar 20, 2028",
+        "plano-independent-school-district-calendar": "Mar 21, 2028"
+      }
+    }
+  ],
+  "customSections": [
+    {
+      "id": "garland-2027-2028-notice",
+      "label": "What to Know About the 2027–28 Garland ISD Calendar",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "A few dates extend the time students are away from class beyond the break names printed on the calendar.",
+      "table": {
+        "columns": ["Student time off / return", "What families should know"],
+        "rows": [
+          ["Oct 11–18 · Return Oct 19", "Fall Break ends October 15, but October 18 is a student holiday and staff-development day. Students return Tuesday, October 19."],
+          ["Dec 20–Jan 3 · Return Jan 4", "Winter Break ends December 31, but January 3 is a student holiday and staff-development day. Students return Tuesday, January 4."],
+          ["Dec 17 and May 24", "Both dates have early dismissal, so families may need to adjust pickup or after-school care."]
+        ]
+      }
+    },
+    {
+      "id": "garland-2027-2028-dismissal-times",
+      "label": "Early Dismissal Times",
+      "position": "afterBreaks",
+      "schemaHasPart": true,
+      "content": "Garland ISD’s 2027–28 PDF lists the following early-dismissal times for December 17 and May 24.",
+      "table": {
+        "columns": ["School level", "Published dismissal time"],
+        "rows": [
+          ["Full-day Pre-K", "1:25 p.m."],
+          ["Elementary", "1:25 p.m."],
+          ["Middle school", "2:05 p.m."],
+          ["High school", "12:40 p.m."]
+        ]
+      }
+    }
+  ],
   "events": [
-    { "date": "2027-07-01", "name": "GISD Administrative Facilities Closed", "type": "holiday" },
-    { "date": "2027-07-05", "name": "Independence Day Observed", "type": "holiday" },
-    { "date": "2027-07-29", "name": "Staff Development", "type": "teacher_workday" },
-    { "date": "2027-08-02", "name": "Staff Development", "type": "teacher_workday" },
-    { "date": "2027-08-06", "name": "Staff Development End", "type": "teacher_workday" },
+    { "date": "2027-07-01", "endDate": "2027-07-02", "name": "GISD Administrative Facilities Closed", "type": "holiday", "badgeLabel": "District Offices Closed", "preserveOfficialName": true, "hideFromCalendarExport": true },
+    { "date": "2027-07-04", "name": "Independence Day", "type": "holiday", "hideFromCalendarExport": true },
+    { "date": "2027-07-05", "name": "Independence Day Observed", "type": "holiday", "hideFromCalendarExport": true },
+    { "date": "2027-07-29", "endDate": "2027-07-30", "name": "Staff Development", "type": "teacher_workday", "preserveOfficialName": true, "hideFromCalendarExport": true },
+    { "date": "2027-08-02", "endDate": "2027-08-06", "name": "Staff Development", "type": "teacher_workday", "preserveOfficialName": true, "hideFromCalendarExport": true },
     { "date": "2027-08-09", "name": "First Day of Class", "type": "school_start" },
     { "date": "2027-09-06", "name": "Labor Day", "type": "holiday" },
     { "date": "2027-10-08", "name": "First Grading Period Ends", "type": "academic" },
-    { "date": "2027-10-11", "name": "Fall Break", "type": "break_start" },
+    { "date": "2027-10-11", "endDate": "2027-10-15", "name": "Fall Break", "type": "break_start" },
     { "date": "2027-10-15", "name": "Fall Break End", "type": "break_end" },
-    { "date": "2027-10-18", "name": "Staff Development/Student Holiday", "type": "student_holiday" },
-    { "date": "2027-10-19", "name": "Second Grading Period Begins", "type": "school_resume" },
-    { "date": "2027-11-02", "name": "Staff Development/Student Holiday", "type": "student_holiday" },
-    { "date": "2027-11-22", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2027-10-18", "name": "Staff Development / Student Holiday", "type": "student_holiday", "description": "No school for students. Students return Tuesday, October 19." },
+    { "date": "2027-10-19", "name": "Second Grading Period Begins", "type": "school_resume", "description": "Students return after Fall Break and the October 18 student holiday." },
+    { "date": "2027-11-02", "name": "Staff Development / Student Holiday", "type": "student_holiday" },
+    { "date": "2027-11-22", "endDate": "2027-11-26", "name": "Thanksgiving Break", "type": "break_start" },
     { "date": "2027-11-26", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2027-12-17", "name": "Early Dismissal/Second Grading Period Ends", "type": "early_release" },
-    { "date": "2027-12-20", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-12-17", "name": "Early Dismissal / Second Grading Period Ends", "type": "early_release", "badgeLabel": "Early Dismissal" },
+    { "date": "2027-12-20", "endDate": "2027-12-31", "name": "Winter Break", "type": "break_start" },
     { "date": "2027-12-31", "name": "Winter Break End", "type": "break_end" },
-    { "date": "2028-01-03", "name": "Staff Development/Student Holiday", "type": "student_holiday" },
-    { "date": "2028-01-04", "name": "Third Grading Period Begins", "type": "school_resume" },
+    { "date": "2028-01-03", "name": "Staff Development / Student Holiday", "type": "student_holiday", "description": "No school for students. Students return Tuesday, January 4." },
+    { "date": "2028-01-04", "name": "Third Grading Period Begins", "type": "school_resume", "description": "Students return after Winter Break and the January 3 student holiday." },
     { "date": "2028-01-17", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2028-02-14", "name": "Staff/Student Holiday", "type": "student_holiday" },
-    { "date": "2028-02-15", "name": "Staff Development/Student Holiday", "type": "student_holiday" },
+    { "date": "2028-02-14", "name": "Staff / Student Holiday", "type": "student_holiday" },
+    { "date": "2028-02-15", "name": "Staff Development / Student Holiday", "type": "student_holiday" },
     { "date": "2028-03-10", "name": "Third Grading Period Ends", "type": "academic" },
-    { "date": "2028-03-13", "name": "Spring Break", "type": "break_start" },
+    { "date": "2028-03-13", "endDate": "2028-03-17", "name": "Spring Break", "type": "break_start" },
     { "date": "2028-03-17", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2028-03-20", "name": "Fourth Grading Period Begins", "type": "school_resume" },
-    { "date": "2028-04-14", "name": "Staff/Student Holiday", "type": "student_holiday" },
-    { "date": "2028-05-24", "name": "Last Day of Class/Early Dismissal", "type": "school_end" },
-    { "date": "2028-05-25", "name": "Staff Development/Student Holiday", "type": "student_holiday" },
-    { "date": "2028-05-29", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2028-06-19", "name": "Juneteenth", "type": "holiday" },
-    { "date": "2028-06-29", "name": "GISD Administrative Facilities Closed", "type": "holiday" }
+    { "date": "2028-03-20", "name": "Fourth Grading Period Begins", "type": "school_resume", "description": "Students return after Spring Break." },
+    { "date": "2028-04-14", "name": "Staff / Student Holiday", "type": "student_holiday" },
+    { "date": "2028-05-24", "name": "Last Day of Class — Early Dismissal", "type": "school_end", "badgeLabel": "Last Day · Early Dismissal" },
+    { "date": "2028-05-25", "name": "Staff Development / Student Holiday", "type": "student_holiday", "hideFromCalendarExport": true },
+    { "date": "2028-05-29", "name": "Memorial Day", "type": "holiday", "hideFromCalendarExport": true },
+    { "date": "2028-06-19", "name": "Juneteenth", "type": "holiday", "hideFromCalendarExport": true },
+    { "date": "2028-06-29", "endDate": "2028-06-30", "name": "GISD Administrative Facilities Closed", "type": "holiday", "badgeLabel": "District Offices Closed", "preserveOfficialName": true, "hideFromCalendarExport": true }
+  ],
+  "hiddenSections": ["keyDateCards", "downloadCta", "todayStatus", "quickFacts", "about", "yearNumbers", "planningTips", "districtProfile", "livingHere", "nationalTrends"],
+  "yearSwitcherPosition": "afterSources",
+  "sourceReviewSummary": "Sources checked include Garland ISD’s school-year calendar page and official 2027–28 academic calendar PDF. The detailed 2027–28 dates come from the PDF linked under the district’s upcoming school years.",
+  "sourceReviewDetails": [
+    "The PDF was checked visually and by text extraction for school-year boundaries, closure and staff-development ranges, grading dates, student holidays, breaks, and early-dismissal times.",
+    "The first semester has 82 instructional days and the second semester has 93, for 175 total instructional days.",
+    "The PDF lists July 1–2, July 29–30, August 2–6, and June 29–30 as ranges; this page preserves those ranges.",
+    "The district notes that the upcoming-year PDF is subject to change."
+  ],
+  "sourceNextReviewText": "Next review: when Garland ISD revises the upcoming-year academic calendar or changes the linked PDF.",
+  "sources": [
+    { "label": "Garland ISD school-year calendar page", "url": "https://www.garlandisd.net/calendars/school-year-calendar" },
+    { "label": "Official Garland ISD 2027–28 academic calendar PDF", "url": "https://www.garlandisd.net/media/19368/download?inline=" }
   ]
 }

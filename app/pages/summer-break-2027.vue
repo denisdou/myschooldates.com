@@ -1,19 +1,19 @@
 <script setup lang="ts">
 const pageTitle = 'Summer Break 2027 | Last Day of School Trends'
-const pageDescription = 'See when summer break starts in 2027 using MySchoolDates trend data from 100 reviewed district calendars, including May and June last-day patterns.'
+const pageDescription = 'See when summer break starts in 2027 using MySchoolDates trend data from 175 reviewed district calendars, including May and June last-day patterns.'
 const pageUrl = 'https://myschooldates.com/summer-break-2027'
 
 const endRows = [
-  ['May', '61 districts', 'May endings are more common in the reviewed 2026-2027 sample.'],
-  ['June', '39 districts', 'June endings remain important in Northeast, Mid-Atlantic, and some California district records.'],
+  ['May', '99 districts', 'May endings are more common in the reviewed 2026-2027 sample.'],
+  ['June', '76 districts', 'June endings remain important in northern, western, and some California district records.'],
 ]
 
 const lastDayRows = [
-  ['May 27, 2027', '23 districts'],
-  ['May 28, 2027', '14 districts'],
-  ['May 26, 2027', '13 districts'],
-  ['June 4, 2027', '8 districts'],
-  ['June 9, 2027', '8 districts'],
+  ['May 27, 2027', '38 districts'],
+  ['May 26, 2027', '21 districts'],
+  ['May 28, 2027', '18 districts'],
+  ['June 4, 2027', '11 districts'],
+  ['June 10, 2027', '10 districts'],
 ]
 
 const faqRows = [
@@ -23,7 +23,7 @@ const faqRows = [
   },
   {
     q: 'Do most schools end in May or June 2027?',
-    a: 'In the reviewed dataset, 61 of 100 district calendars end in May and 39 end in June.',
+    a: 'In the reviewed dataset, 99 of 175 district calendars end in May and 76 end in June.',
   },
   {
     q: 'How many weeks is summer break in America?',
@@ -98,9 +98,9 @@ useHead({
           Summer break 2027 usually begins after a district's final student day. In the current MySchoolDates trend dataset, May endings are more common than June endings, and May 27, 2027 is the most common last student day.
         </p>
         <div class="mt-5 flex flex-wrap gap-2 text-sm text-gray-600">
-          <span class="rounded-lg bg-gray-100 px-3 py-1">100 reviewed calendars</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">13 states</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified July 27, 2026</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">175 reviewed calendars</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">25 states</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified August 14, 2026</span>
         </div>
       </header>
 

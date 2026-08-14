@@ -37,7 +37,7 @@ function toComparisonCalendarSummary(c: any) {
     comparisonExtraSourceLabel: c.comparisonExtraSourceLabel ?? c.meta?.comparisonExtraSourceLabel,
     events: (c.events ?? [])
       .filter((e: any) => e.type === 'break_start' || e.type === 'break_end')
-      .map((e: any) => ({ name: e.name, date: e.date, type: e.type })),
+      .map((e: any) => ({ name: e.name, date: e.date, endDate: e.endDate, type: e.type })),
   }
 }
 
@@ -262,6 +262,9 @@ const updatedDate = computed(() => {
 function formatCompactDateRange(start: string, end: string) {
   const startDate = new Date(start + 'T00:00:00')
   const endDate = new Date(end + 'T00:00:00')
+  if (start === end) {
+    return startDate.toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+  }
   const sameYear = startDate.getFullYear() === endDate.getFullYear()
   const sameMonth = sameYear && startDate.getMonth() === endDate.getMonth()
   if (sameMonth) {
@@ -285,6 +288,9 @@ const hiddenSections = computed(() => {
 })
 const comparisonBeforeFaq = computed(() =>
   Boolean((cal.value as any)?.comparisonBeforeFaq ?? (cal.value as any)?.meta?.comparisonBeforeFaq ?? (district.value as any)?.comparisonBeforeFaq ?? (district.value as any)?.meta?.comparisonBeforeFaq)
+)
+const comparisonAfterSources = computed(() =>
+  Boolean((cal.value as any)?.comparisonAfterSources ?? (cal.value as any)?.meta?.comparisonAfterSources ?? (district.value as any)?.comparisonAfterSources ?? (district.value as any)?.meta?.comparisonAfterSources)
 )
 const sourcesBeforeFaq = computed(() =>
   Boolean((cal.value as any)?.sourcesBeforeFaq ?? (cal.value as any)?.meta?.sourcesBeforeFaq ?? (district.value as any)?.sourcesBeforeFaq ?? (district.value as any)?.meta?.sourcesBeforeFaq)
@@ -660,10 +666,11 @@ const resolvedJumpNavigation = computed(() => {
     ...(sourcesBeforeFaq.value ? ['#sources'] : []),
     '#faq',
     ...customTargets('afterFaq'),
-    ...(!comparisonBeforeFaq.value ? ['#comparison', ...customTargets('afterComparison')] : []),
+    ...(!comparisonBeforeFaq.value && !comparisonAfterSources.value ? ['#comparison', ...customTargets('afterComparison')] : []),
     ...customTargets('afterPlanningTips'),
     ...customTargets('beforeSources'),
     ...(!sourcesBeforeFaq.value ? ['#sources'] : []),
+    ...(comparisonAfterSources.value ? ['#comparison', ...customTargets('afterComparison')] : []),
   ]
   return resolveJumpNavigation(customJumpNavigation.value, targets)
 })
@@ -2156,7 +2163,7 @@ useHead({
       />
 
       <!-- Compare with Nearby Districts -->
-      <template v-if="!comparisonBeforeFaq">
+      <template v-if="!comparisonBeforeFaq && !comparisonAfterSources">
         <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal!" :district="district!" :related-cals="relatedCals ?? []" :all-districts="relatedDistricts ?? []" :year="year" />
         <DistrictCustomSections :sections="customSections" position="afterComparison" />
       </template>
@@ -2229,6 +2236,11 @@ useHead({
         :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
         :hide-review-date="Boolean((cal as any).hideSourceReviewDate ?? (cal as any).meta?.hideSourceReviewDate)"
       />
+
+      <template v-if="comparisonAfterSources">
+        <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal!" :district="district!" :related-cals="relatedCals ?? []" :all-districts="relatedDistricts ?? []" :year="year" />
+        <DistrictCustomSections :sections="customSections" position="afterComparison" />
+      </template>
 
       <div v-if="showYearSwitcherAfterSources && visibleYearSwitcherYears.length" class="flex items-center gap-2 flex-wrap">
         <span class="text-sm text-[#7b756d]">{{ yearSwitcherLabel }}</span>

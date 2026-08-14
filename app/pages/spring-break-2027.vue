@@ -1,21 +1,21 @@
 <script setup lang="ts">
 const pageTitle = 'Spring Break 2027 | School Calendar Dates and Trends'
-const pageDescription = 'Compare spring break 2027 timing patterns from 100 reviewed U.S. district calendars, including March 22, March 15, March 29, and April 5 clusters.'
+const pageDescription = 'Compare spring break 2027 timing patterns from 175 reviewed U.S. district calendars, including March 22, March 15, April 5, and March 29 clusters.'
 const pageUrl = 'https://myschooldates.com/spring-break-2027'
 
 const breakRows = [
-  ['March 22, 2027', '29 districts'],
-  ['March 15, 2027', '25 districts'],
-  ['March 29, 2027', '14 districts'],
-  ['April 5, 2027', '10 districts'],
-  ['March 8, 2027', '9 districts'],
-  ['Other or not listed', '13 districts'],
+  ['March 22, 2027', '44 districts'],
+  ['March 15, 2027', '42 districts'],
+  ['April 5, 2027', '26 districts'],
+  ['March 29, 2027', '25 districts'],
+  ['March 8, 2027', '12 districts'],
+  ['Other or not listed', '26 districts'],
 ]
 
 const faqRows = [
   {
     q: 'When is spring break 2027 for most schools?',
-    a: 'In the current MySchoolDates 2026-2027 trend dataset, March 22, 2027 is the largest spring break start-date cluster, followed by March 15 and March 29.',
+    a: 'In the current MySchoolDates 2026-2027 trend dataset, March 22, 2027 is the largest spring break start-date cluster, followed by March 15, April 5, and March 29.',
   },
   {
     q: 'Why do school districts have different spring break dates?',
@@ -91,12 +91,12 @@ useHead({
         <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">School Break Trend Guide</p>
         <h1 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Spring Break 2027</h1>
         <p class="mt-4 max-w-3xl text-lg leading-relaxed text-gray-600">
-          Spring break 2027 is more varied than winter break. In the current MySchoolDates trend dataset, the largest cluster begins March 22, 2027, followed by March 15 and March 29.
+          Spring break 2027 is more varied than winter break. In the current MySchoolDates trend dataset, the largest cluster begins March 22, 2027, followed by March 15, April 5, and March 29.
         </p>
         <div class="mt-5 flex flex-wrap gap-2 text-sm text-gray-600">
-          <span class="rounded-lg bg-gray-100 px-3 py-1">100 reviewed calendars</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">13 states</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified July 27, 2026</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">175 reviewed calendars</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">25 states</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified August 14, 2026</span>
         </div>
       </header>
 

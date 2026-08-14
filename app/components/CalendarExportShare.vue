@@ -24,6 +24,10 @@ const hideCalendarUpdatesButton = computed(() => Boolean(props.cal?.hideCalendar
 const hidePdfDownloadSection = computed(() => Boolean(props.cal?.hidePdfDownloadSection ?? props.cal?.meta?.hidePdfDownloadSection))
 const unifiedDownloadTitle = computed(() => props.cal?.unifiedDownloadTitle ?? props.cal?.meta?.unifiedDownloadTitle ?? '')
 const unifiedDownloadDescription = computed(() => props.cal?.unifiedDownloadDescription ?? props.cal?.meta?.unifiedDownloadDescription ?? '')
+const groupAlternateCalendarsWithDownloads = computed(() => Boolean(
+  props.cal?.groupAlternateCalendarsWithDownloads ?? props.cal?.meta?.groupAlternateCalendarsWithDownloads
+))
+const alternateCalendars = computed(() => props.cal?.alternateCalendars ?? props.cal?.meta?.alternateCalendars ?? [])
 const officialSubscriptionTitle = computed(() => props.cal?.officialSubscriptionTitle ?? props.cal?.meta?.officialSubscriptionTitle ?? '')
 const officialSubscriptionDescription = computed(() => props.cal?.officialSubscriptionDescription ?? props.cal?.meta?.officialSubscriptionDescription ?? '')
 const officialSubscriptionButtonLabel = computed(() => props.cal?.officialSubscriptionButtonLabel ?? props.cal?.meta?.officialSubscriptionButtonLabel ?? 'Subscribe to Official Calendar')
@@ -257,7 +261,7 @@ const icsAriaLabel = computed(() =>
 
     <!-- PDF Download -->
     <div v-if="pdfUrl && !hidePdfDownloadSection" class="district-utility-panel__section p-6">
-      <component :is="compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-rds-ink mb-1">{{ pdfHeading }}</component>
+      <component :is="groupAlternateCalendarsWithDownloads ? 'h4' : compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-rds-ink mb-1">{{ pdfHeading }}</component>
       <p v-if="pdfVersionLabel && !hidePdfVersionLabel" class="text-xs font-medium text-rds-ink-muted mb-2">{{ pdfVersionLabel }}</p>
       <p class="text-sm text-rds-ink-muted mb-4">{{ pdfDescription }}</p>
       <p v-if="pdfNoticeText || (pdfNoticeLinkLabel && pdfNoticeHref)" class="mb-4 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm leading-relaxed text-amber-900">
@@ -307,6 +311,23 @@ const icsAriaLabel = computed(() =>
         </p>
       </div>
     </div>
+
+    <DistrictOtherCalendars
+      v-if="groupAlternateCalendarsWithDownloads && alternateCalendars.length"
+      :alternate-calendars="alternateCalendars"
+      :district-name="districtName"
+      :title="cal.alternateCalendarsTitle ?? cal.meta?.alternateCalendarsTitle"
+      :description="cal.alternateCalendarsDescription ?? cal.meta?.alternateCalendarsDescription"
+      :button-label="cal.alternateCalendarsButtonLabel ?? cal.meta?.alternateCalendarsButtonLabel"
+      :collapsible="cal.alternateCalendarsCollapsible ?? cal.meta?.alternateCalendarsCollapsible"
+      :summary-label="cal.alternateCalendarsSummaryLabel ?? cal.meta?.alternateCalendarsSummaryLabel"
+      :footer-title="cal.alternateCalendarsFooterTitle ?? cal.meta?.alternateCalendarsFooterTitle"
+      :footer-description="cal.alternateCalendarsFooterDescription ?? cal.meta?.alternateCalendarsFooterDescription"
+      :footer-link-label="cal.alternateCalendarsFooterLinkLabel ?? cal.meta?.alternateCalendarsFooterLinkLabel"
+      :footer-link-url="cal.alternateCalendarsFooterLinkUrl ?? cal.meta?.alternateCalendarsFooterLinkUrl"
+      embedded
+      hide-heading
+    />
 
     <!-- Share with Parents -->
     <div class="district-utility-panel__section p-6">
