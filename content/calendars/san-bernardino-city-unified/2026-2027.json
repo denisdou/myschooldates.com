@@ -5,21 +5,86 @@
   "lastDay": "2027-06-03",
   "sourceUrl": "https://www.sbcusd.com/about-us/school-year-calendars",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1721245246/sbcusdcom/xoewqw5ypcujoaacqu91/2026-27_SchoolCalendar.pdf",
-  "lastVerifiedAt": "2026-07-19",
+  "lastVerifiedAt": "2026-08-15",
   "datePublished": "2026-07-19",
-  "dateModified": "2026-07-19",
+  "dateModified": "2026-08-15",
+  "contentStatus": "production_ready",
   "calendarType": "traditional",
-  "totalSchoolDays": 180,
-  "yearNumbersMode": "compact",
-  "seoTitle": "San Bernardino City Unified Calendar 2026-2027 | Holidays, Breaks, PDF & ICS",
-  "seoDescription": "View the SBCUSD Calendar 2026-2027 with school holidays, Aug 3 first day, Jun 3 last day, Winter Recess, Spring Break, printable PDF and Google Calendar download.",
-  "calendarNotes": "San Bernardino City Unified starts the 2026-2027 traditional school year on August 3, 2026 as a minimum day. The last day of school and graduation date is June 3, 2027. Thanksgiving Recess runs November 23-27, Winter Recess runs December 21-January 8, and Spring Break runs March 22-April 2.",
+  "temporalCoverageStart": "2026-07-03",
+  "temporalCoverageEnd": "2027-06-18",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "San Bernardino City Unified School District Calendar 2026–2027",
+  "seoTitle": "SBCUSD Calendar 2026–27: Key Dates, Breaks & Official PDF",
+  "seoDescription": "SBCUSD starts school August 3, 2026. Find 2026–27 holidays, Winter Recess, Spring Break, minimum-day schedules, the official PDF, and an ICS download.",
+  "heroSummary": "SBCUSD's 2026–27 traditional school year starts Monday, August 3, 2026, with a minimum day and ends Thursday, June 3, 2027. Thanksgiving Recess is Nov. 23–27, Winter Recess is Dec. 21–Jan. 8, and Spring Break is Mar. 22–Apr. 2.",
+  "calendarNotes": "This page covers SBCUSD's 2026–27 traditional calendar. Middle College High School and the Inland Career Education Center use separate calendars.",
+  "alternateCalendarsNotice": "This page covers SBCUSD's 2026–27 Traditional School Year Calendar. The district also publishes separate calendars for Middle College High School and the Inland Career Education Center.",
+  "alternateCalendarsNoticeLinkLabel": "View other official calendars.",
+  "alternateCalendarsNoticeLinkHref": "#other-calendars",
+  "alternateCalendarsTitle": "Other Official SBCUSD Calendars",
+  "alternateCalendarsDescription": "Use the calendar for the student's school or program; dates differ from the traditional calendar summarized on this page.",
+  "alternateCalendarsButtonLabel": "Open Official Calendar",
   "alternateCalendars": [
     {
       "type": "middle-college",
       "label": "Middle College High School 2026-2027 Calendar",
-      "pdfUrl": "https://resources.finalsite.net/images/v1776877900/sbcusdcom/tgxszwaq7du7hmgot5ka/2026-27_SchoolCalendarMCHS.pdf"
+      "pdfUrl": "https://www.sbcusd.com/fs/resource-manager/view/fc572d6d-66c2-44ba-b43c-933b29e6a996"
+    },
+    {
+      "type": "inland-career-education-center",
+      "label": "Inland Career Education Center 2026-2027 Calendar",
+      "pdfUrl": "https://www.sbcusd.com/fs/resource-manager/view/977e3f34-7cf6-4206-8d0f-7b099d268e04"
     }
+  ],
+  "hiddenSections": [
+    "quickFacts",
+    "keyDatesSummary",
+    "downloadCta",
+    "todayStatus",
+    "yearNumbers",
+    "whatsDifferent",
+    "about",
+    "planningTips",
+    "districtProfile"
+  ],
+  "breaksBeforeAllDates": true,
+  "comparisonBeforeFaq": true,
+  "comparisonTitle": "SBCUSD Calendar Compared With Selected Southern California Districts",
+  "comparisonSummary": "The table uses each district's published 2026–27 calendar to compare the first day, last day, and major break dates.",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "hideInstructionalDaysSummary": true,
+  "hideRelatedDistrictDescriptions": true,
+  "keyDatesHeading": "Key Dates",
+  "keyDateCardsThirdLabel": "Major Breaks",
+  "keyDateCardsThirdValue": "3",
+  "breaksTitle": "Major School Breaks",
+  "allDatesTitle": "All Important Dates — 2026–27",
+  "allDatesCoverageNote": "This table summarizes major dates shown on SBCUSD's 2026–27 Traditional School Calendar. Event times vary by school; check your school's calendar or announcements for details, campus-specific dates, testing, and schedule changes.",
+  "unifiedDownloadTitle": "Download or Print the SBCUSD Calendar",
+  "unifiedDownloadDescription": "Choose the official district PDF, a one-time calendar import, or a print-friendly copy of the dates on this page.",
+  "compactDownloadModule": true,
+  "icsHeading": "Calendar File (.ics)",
+  "pdfHeading": "Official Traditional Calendar PDF",
+  "pdfDescription": "Open or print SBCUSD's official 2026–27 Traditional School Year Calendar PDF. Check the district calendar page for revisions.",
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "href": "#key-dates" },
+    { "label": "Breaks", "href": "#breaks" },
+    { "label": "All Dates", "href": "#all-dates" },
+    { "label": "School Schedules", "href": "#sbcusd-school-day-schedules" },
+    { "label": "PDF & Calendar", "href": "#add-to-calendar" },
+    { "label": "Other Calendars", "href": "#other-calendars" },
+    { "label": "Changes", "href": "#sbcusd-calendar-changes-2026-2027" },
+    { "label": "Planning", "href": "#sbcusd-planning-notes-2026-2027" },
+    { "label": "Comparison", "href": "#comparison" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Sources", "href": "#sources" }
   ],
   "calendarFaqs": [
     {
@@ -31,79 +96,83 @@
       "a": "Spring Break runs Monday, March 22 through Friday, April 2, 2027."
     },
     {
-      "q": "When is the last day of school for SBCUSD in 2027?",
-      "a": "The last day of school and graduation date is Thursday, June 3, 2027."
+      "q": "Is August 3 a minimum day for SBCUSD?",
+      "a": "Yes. Monday, August 3, 2026 is the first day of school and a minimum day. Use the minimum-day schedule for the student's school level."
     },
     {
-      "q": "What days are off school for SBCUSD in 2026-2027?",
-      "a": "Major SBCUSD days off school include Thanksgiving Recess, Winter Recess, Spring Break, Labor Day, Veterans Day, Martin Luther King Jr. Day, Lincoln's Birthday observed, Presidents' Day observed, Memorial Day, teacher work days, professional development days, and student non-attendance days."
+      "q": "When do SBCUSD students return after Winter Recess?",
+      "a": "Students return Monday, January 11, 2027, after Winter Recess ends Friday, January 8."
     },
     {
-      "q": "Does SBCUSD have school on holidays?",
-      "a": "SBCUSD students do not attend school on districtwide holidays listed on the official calendar. Families should still check the official calendar and campus notices because some teacher work days, minimum days, and conference dates are not the same as major holidays."
-    },
-    {
-      "q": "Where can I download the SBCUSD calendar PDF?",
-      "a": "The official SBCUSD 2026-2027 traditional calendar PDF is linked from this page, and families can also download the MySchoolDates calendar file for Google Calendar, Apple Calendar, and Outlook."
-    },
-    {
-      "q": "How many school days are in the SBCUSD 2026-2027 calendar?",
-      "a": "The SBCUSD 2026-2027 traditional calendar includes 180 instructional days for students."
+      "q": "How do I import the SBCUSD calendar into Google Calendar or Apple Calendar?",
+      "a": "Download the .ics file in the calendar download section, then import it into Google Calendar, Apple Calendar, or Outlook. This is a one-time import and will not update automatically if SBCUSD changes the calendar."
     }
+  ],
+  "faqDisplayQuestions": [
+    "When does San Bernardino City Unified start school in 2026?",
+    "When is SBCUSD Spring Break in 2027?",
+    "Is August 3 a minimum day for SBCUSD?",
+    "Does every SBCUSD school follow the traditional calendar?",
+    "When do SBCUSD students return after Winter Recess?",
+    "Where can I check for SBCUSD calendar changes?",
+    "How do I import the SBCUSD calendar into Google Calendar or Apple Calendar?"
   ],
   "customSections": [
     {
-      "id": "sbcusd-days-off-school-2026-2027",
-      "label": "SBCUSD Days Off School 2026-2027",
-      "position": "beforeSources",
-      "content": "Parents often search for SBCUSD days off school when planning childcare, appointments, and family activities. Major no-school periods include district holidays, Thanksgiving Recess, Winter Recess, Spring Break, teacher work days, professional development days, and student non-attendance days.",
-      "groups": [
-        {
-          "label": "Main no-school categories",
-          "items": [
-            "Thanksgiving Recess: November 23-27, 2026.",
-            "Winter Recess: December 21, 2026-January 8, 2027.",
-            "Spring Break: March 22-April 2, 2027.",
-            "Teacher work days and professional development days may affect student attendance.",
-            "Elementary parent-teacher conference dates can affect family scheduling even when they are not major school breaks."
-          ]
-        }
-      ]
+      "id": "sbcusd-school-day-schedules",
+      "label": "SBCUSD School Day Schedules",
+      "position": "afterAllDates",
+      "content": "Because the first day of school is a minimum day, use the minimum-day schedule for the student's school level on August 3.",
+      "table": {
+        "caption": "SBCUSD regular, Monday collaboration, and minimum-day schedules by school level",
+        "columns": [
+          "School level",
+          "Regular day",
+          "Monday collaboration day",
+          "Minimum day"
+        ],
+        "rows": [
+          ["Elementary", "8:50 a.m.–3:30 p.m.", "8:50 a.m.–1:00 p.m.", "8:50 a.m.–1:00 p.m."],
+          ["Middle", "8:00 a.m.–2:31 p.m.", "9:45 a.m.–2:35 p.m.", "8:00 a.m.–12:30 p.m."],
+          ["High", "8:30 a.m.–3:35 p.m.", "9:45 a.m.–2:50 p.m.", "8:30 a.m.–1:20 p.m."]
+        ],
+        "footnote": "These districtwide schedules are published on SBCUSD's School Year Calendars page, which is linked in Sources below. Check the school for campus-specific changes."
+      }
     },
     {
       "id": "sbcusd-calendar-changes-2026-2027",
-      "label": "SBCUSD Calendar Changes Compared With 2025-2026",
-      "position": "beforeSources",
-      "content": "Families comparing SBCUSD calendar changes can use this summary to see how the 2026-2027 traditional calendar differs from the previous school year.",
+      "label": "What Changed From 2025–26",
+      "position": "afterYearDiff",
+      "content": "The major recesses keep the same Monday-to-Friday timing as last year, while the first and last student days each move one day earlier.",
       "groups": [
         {
-          "label": "2025-2026 vs 2026-2027",
+          "label": "Date changes",
           "items": [
-            "First day: August 4, 2025 in 2025-2026; August 3, 2026 in 2026-2027.",
-            "Last day: June 4, 2026 in 2025-2026; June 3, 2027 in 2026-2027.",
-            "Thanksgiving Recess: November 24-28, 2025 in 2025-2026; November 23-27, 2026 in 2026-2027.",
-            "Winter Recess: December 22, 2025-January 9, 2026 in 2025-2026; December 21, 2026-January 8, 2027 in 2026-2027.",
-            "Spring Break: March 23-April 3, 2026 in 2025-2026; March 22-April 2, 2027 in 2026-2027."
+            "First day: August 4, 2025 → August 3, 2026.",
+            "Last day: June 4, 2026 → June 3, 2027.",
+            "Thanksgiving Recess: November 24–28, 2025 → November 23–27, 2026.",
+            "Winter Recess: December 22, 2025–January 9, 2026 → December 21, 2026–January 8, 2027.",
+            "Spring Break: March 23–April 3, 2026 → March 22–April 2, 2027."
           ]
         }
       ]
-    }
-  ],
-  "yearNumbers": [
-    {
-      "label": "First Day",
-      "value": "Aug 3",
-      "detail": "The first day of school is August 3, 2026 and is marked as a minimum day."
     },
     {
-      "label": "Spring Break",
-      "value": "Mar 22-Apr 2",
-      "detail": "SBCUSD lists a two-week Spring Break for 2026-2027."
-    },
-    {
-      "label": "Alternate Calendar",
-      "value": "MCHS",
-      "detail": "A separate Middle College High School calendar is available for 2026-2027."
+      "id": "sbcusd-planning-notes-2026-2027",
+      "label": "Planning Notes for SBCUSD Families",
+      "position": "afterYearDiff",
+      "hideGroupLabels": true,
+      "content": "",
+      "groups": [
+        {
+          "label": "Planning notes",
+          "items": [
+            "Elementary parent-teacher conference dates apply to elementary families; the district calendar marks full days for other students.",
+            "High school final exams use minimum-day schedules December 15–17, May 28, and June 1–2; June 3 is a minimum day for all students and the last day of school.",
+            "Middle College High School and the Inland Career Education Center use separate official calendars."
+          ]
+        }
+      ]
     }
   ],
   "events": [
@@ -113,31 +182,66 @@
     { "date": "2026-07-30", "name": "Teacher Work Day/Non-Student Day", "type": "teacher_workday" },
     { "date": "2026-07-31", "name": "Teacher Work Day/Non-Student Day", "type": "teacher_workday" },
     { "date": "2026-08-03", "name": "First Day of School/Minimum Day", "type": "school_start" },
+    { "date": "2026-08-06", "name": "Back to School Night — Elementary Schools", "type": "academic" },
+    { "date": "2026-08-13", "name": "Back to School Night — High Schools", "type": "academic" },
+    { "date": "2026-08-20", "name": "Back to School Night — Middle Schools", "type": "academic" },
     { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
-    { "date": "2026-10-02", "name": "Elementary Teacher Work Day/Non-Student Day", "type": "student_holiday" },
-    { "date": "2026-10-29", "name": "Elementary Parent/Teacher Conferences", "type": "academic" },
-    { "date": "2026-10-30", "name": "Elementary Parent/Teacher Conferences", "type": "academic" },
-    { "date": "2026-11-02", "name": "Elementary Parent/Teacher Conferences Begin", "type": "academic" },
-    { "date": "2026-11-06", "name": "Elementary Parent/Teacher Conferences End", "type": "academic" },
+    { "date": "2026-10-02", "name": "Elementary Teacher Work Day / Non-Student Day", "type": "student_holiday", "badgeLabel": "Non-Student Day", "preserveOfficialName": true },
+    { "date": "2026-10-15", "name": "Open House — Alternative Schools", "type": "academic" },
+    {
+      "date": "2026-10-29",
+      "dates": ["2026-10-29", "2026-10-30", "2026-11-02", "2026-11-03", "2026-11-04", "2026-11-05", "2026-11-06"],
+      "displayDate": "October 29–30 and November 2–6, 2026",
+      "name": "Elementary Parent-Teacher Conferences",
+      "type": "academic",
+      "exportDatesIndividually": true
+    },
     { "date": "2026-11-11", "name": "Veterans Day Observed", "type": "holiday" },
-    { "date": "2026-11-23", "name": "Thanksgiving Recess", "type": "break_start" },
-    { "date": "2026-11-27", "name": "Thanksgiving Recess End/Admissions Day Observed", "type": "break_end" },
-    { "date": "2026-12-18", "name": "Middle/High School Teacher Work Day/Non-Student Day", "type": "student_holiday" },
+    { "date": "2026-11-23", "endDate": "2026-11-27", "name": "Thanksgiving Recess", "type": "break_start", "description": "Nov. 27 is also Admission's Day (Observed)." },
+    { "date": "2026-11-27", "name": "Thanksgiving Recess End / Admission's Day Observed", "type": "break_end" },
+    { "date": "2026-12-15", "endDate": "2026-12-17", "name": "High School Final Exams / Minimum Days", "type": "early_release", "badgeLabel": "High Schools Only", "description": "Elementary and middle schools have full days." },
+    { "date": "2026-12-18", "name": "Middle & High School Teacher Work Day / Non-Student Day", "type": "student_holiday", "badgeLabel": "Non-Student Day", "preserveOfficialName": true },
     { "date": "2026-12-21", "name": "Winter Recess", "type": "break_start" },
     { "date": "2027-01-08", "name": "Winter Recess End", "type": "break_end" },
     { "date": "2027-01-18", "name": "Dr. Martin Luther King Jr. Day", "type": "holiday" },
     { "date": "2027-02-08", "name": "Abraham Lincoln's Birthday Observed", "type": "holiday" },
     { "date": "2027-02-15", "name": "George Washington's Birthday Observed", "type": "holiday" },
-    { "date": "2027-02-25", "name": "Elementary Parent/Teacher Conferences", "type": "academic" },
-    { "date": "2027-02-26", "name": "Elementary Parent/Teacher Conferences", "type": "academic" },
-    { "date": "2027-03-01", "name": "Elementary Parent/Teacher Conferences Begin", "type": "academic" },
-    { "date": "2027-03-05", "name": "Elementary Parent/Teacher Conferences End", "type": "academic" },
+    {
+      "date": "2027-02-25",
+      "dates": ["2027-02-25", "2027-02-26", "2027-03-01", "2027-03-02", "2027-03-03", "2027-03-04", "2027-03-05"],
+      "displayDate": "February 25–26 and March 1–5, 2027",
+      "name": "Elementary Parent-Teacher Conferences",
+      "type": "academic",
+      "exportDatesIndividually": true
+    },
     { "date": "2027-03-22", "name": "Spring Break", "type": "break_start" },
     { "date": "2027-04-02", "name": "Spring Break End", "type": "break_end" },
+    { "date": "2027-05-28", "name": "Minimum Day — All Students / High School Finals", "type": "early_release" },
     { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2027-06-01", "name": "Minimum Days/High School Finals Begin", "type": "early_release" },
-    { "date": "2027-06-03", "name": "Last Day of School/Graduation", "type": "school_end" },
+    { "date": "2027-06-01", "endDate": "2027-06-02", "name": "Minimum Days — All Students / High School Finals", "type": "early_release" },
+    { "date": "2027-06-03", "name": "Last Day of School / Graduation — Minimum Day", "type": "school_end" },
     { "date": "2027-06-04", "name": "Teacher Work Day/Non-Student Day", "type": "teacher_workday" },
     { "date": "2027-06-18", "name": "Juneteenth National Freedom Day Observed", "type": "holiday" }
+  ],
+  "sources": [
+    {
+      "label": "SBCUSD 2026–27 Traditional School Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1721245246/sbcusdcom/xoewqw5ypcujoaacqu91/2026-27_SchoolCalendar.pdf"
+    },
+    {
+      "label": "SBCUSD School Year Calendars and School Schedules",
+      "url": "https://www.sbcusd.com/about-us/school-year-calendars"
+    },
+    {
+      "label": "SBCUSD 2025–26 Traditional School Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1721245246/sbcusdcom/svpdevfwk7amn8arjtwd/2025-26_SchoolCalendar.pdf"
+    }
+  ],
+  "sourceReviewSummary": "Calendar dates were checked against SBCUSD's official 2026–27 Traditional School Calendar. School-day schedules and alternate-calendar links were checked against the district's School Year Calendars page on August 15, 2026.",
+  "sourceReviewDetailsTitle": "How this page was verified",
+  "sourceReviewDetails": [
+    "The 2026–27 Traditional School Calendar PDF was used for student dates, Back to School Night and Open House dates, teacher workdays, conference windows, finals and minimum days, and recesses.",
+    "The School Year Calendars page was used for elementary, middle, and high school schedules and for the Middle College High School and Inland Career Education Center calendar links.",
+    "The 2025–26 Traditional School Calendar PDF was used only for the year-over-year comparison."
   ]
 }

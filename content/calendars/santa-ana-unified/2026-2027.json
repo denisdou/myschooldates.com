@@ -1,171 +1,300 @@
 {
   "institutionId": "santa-ana-unified",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Santa Ana Unified School District Calendar 2026–27",
   "firstDay": "2026-08-10",
   "lastDay": "2027-05-26",
-  "temporalCoverageStart": "2026-08-10",
+  "temporalCoverageStart": "2026-08-05",
   "temporalCoverageEnd": "2027-05-28",
   "totalSchoolDays": 180,
   "teacherWorkDays": 187,
   "semesters": 2,
   "sourceUrl": "https://www.sausd.us/about/school-calendars",
-  "sourcePdfUrl": "https://resources.finalsite.net/images/v1775156774/sausdus/hv8nqswyzh7qgblgxklo/2026-2027AcademicSchoolCalendar2.pdf",
-  "lastVerifiedAt": "2026-07-19",
+  "sourceDocumentPage": "https://www.sausd.us/fs/resource-manager/view/3562c557-37b7-4374-ae99-0c40a4b86968",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1784751274/sausdus/ixozeyfmnwhxevc3yguj/2026-2027AcademicSchoolCalendar3.pdf",
+  "previousSourcePdfUrl": "https://resources.finalsite.net/images/v1775156774/sausdus/hv8nqswyzh7qgblgxklo/2026-2027AcademicSchoolCalendar2.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1784751274/sausdus/ixozeyfmnwhxevc3yguj/2026-2027AcademicSchoolCalendar3.pdf",
+  "sourceCheckedAt": "2026-08-15",
+  "sourceUpdatedAt": "2026-07-22",
+  "sourceChecksumSha256": "864d558653fb0e0909eb27364e3743803cb18f17377f27279ed09eed0d796caf",
+  "previousSourceChecksumSha256": "3e02d09e5796c7171b27b9a8c2416887c97dce31d09577d61fb9e0b3660189f0",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceResourceMonitor": {
+    "type": "resource-uuid",
+    "checkUrl": "https://www.sausd.us/about/school-calendars",
+    "linkText": "2026-27 Elementary, Intermediate, and High Schools",
+    "expectedResourceUuid": "3562c557-37b7-4374-ae99-0c40a4b86968",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1784751274/sausdus/ixozeyfmnwhxevc3yguj/2026-2027AcademicSchoolCalendar3.pdf",
+    "expectedChecksumSha256": "864d558653fb0e0909eb27364e3743803cb18f17377f27279ed09eed0d796caf"
+  },
+  "lastVerifiedAt": "2026-08-15",
   "datePublished": "2026-07-19",
-  "dateModified": "2026-07-19",
+  "dateModified": "2026-08-15",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_schedule_change", "confirmed_data_error"],
   "sourceVersion": "Board Approved: January 23, 2024",
+  "sourceCalendarName": "SAUSD 2026–27 Academic School Calendar PDF",
+  "schemaCalendarName": "Santa Ana Unified School District 2026–27 Academic Calendar",
+  "schemaDatasetName": "Santa Ana Unified School District 2026–27 Academic Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed 2026–27 SAUSD academic calendar dates, including districtwide breaks, student-free days, modified days, parent conferences, and grade-specific dates.",
+  "schemaCalendarDownloadName": "SAUSD 2026–27 Calendar ICS File",
   "calendarType": "traditional",
-  "yearNumbersMode": "compact",
+  "hideSemesterCount": true,
+  "hideFaqSchema": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
   "itemListMode": "allImportantDates",
-  "seoTitle": "Santa Ana Unified Calendar 2026-2027: Holidays, Breaks & PDF",
-  "seoDescription": "View the Santa Ana Unified Calendar 2026-2027 with first day of school, SAUSD school holidays, Thanksgiving Recess, Winter Break, Spring Recess, student-free days, PDF and calendar download.",
-  "heroSummary": "Santa Ana Unified Calendar 2026-2027 starts instruction on Monday, August 10, 2026 and ends on Wednesday, May 26, 2027. Thanksgiving Recess runs November 23-27, Winter Break runs December 21, 2026-January 1, 2027, and Spring Recess runs April 5-9, 2027.",
-  "calendarNotes": "Santa Ana Unified starts instruction on August 10, 2026 and lists May 26, 2027 as the last day of instruction. Students attend 180 days, while the calendar lists 187 teacher duty days. The PDF includes grade-span notes for elementary, intermediate, high school, and educational options, including parent conference windows, student-free days, modified days, and SAUSD academic calendar details.",
-  "faqSchemaLimit": 11,
-  "calendarFaqs": [
+  "seoTitle": "Santa Ana Unified Calendar 2026–27: Key Dates & PDF",
+  "seoDescription": "See SAUSD’s 2026–27 first and last days, Thanksgiving Recess, Winter Break, Spring Recess, student-free and modified days, official PDF, and ICS download.",
+  "heroSummary": "The first day of school for SAUSD students is Monday, August 10, 2026, and the last day of instruction is Wednesday, May 26, 2027. Thanksgiving Recess runs November 23–27, Winter Break runs December 21, 2026–January 1, 2027, and Spring Recess runs April 5–9, 2027.",
+  "calendarNotes": "SAUSD’s official PDF separates elementary (ES), intermediate (IS), high school (HS), and Educational Options (OP) dates. The first and last days and major recesses are districtwide, while several student-free and modified days apply only to specific school levels.",
+  "verificationBadgeText": "Verified against SAUSD’s current 2026–27 calendar · Updated August 15, 2026",
+  "keyDatesHeading": "At a Glance",
+  "keyDateCardsVariant": "compact",
+  "keyDateCardsThirdLabel": "Instructional Days",
+  "keyDateCardsThirdValue": "180 days",
+  "allDatesTitle": "All Important SAUSD Dates — 2026–27",
+  "allDatesCoverageNote": "This table follows the current SAUSD academic calendar through the May 28 staff service date. Grade-specific student-free and modified days are identified by ES, IS, HS, or OP; recurring campus bell times should be confirmed with the school.",
+  "dateLegendLabelOverrides": {
+    "Early Release": "Modified Day"
+  },
+  "hideCoveredBreakDatesNote": true,
+  "unifiedDownloadTitle": "Download the SAUSD 2026–27 Calendar",
+  "unifiedDownloadDescription": "Use the MySchoolDates ICS file or open SAUSD’s current official PDF.",
+  "compactDownloadModule": true,
+  "icsHeading": "Calendar File (ICS)",
+  "icsDescription": "Import the reviewed dates into Google Calendar, Apple Calendar, or Outlook. The ICS file is a one-time import and does not sync with later SAUSD changes.",
+  "icsButtonLabel": "Download SAUSD 2026–27 ICS",
+  "hideIcsButtonSupportText": true,
+  "pdfHeading": "Official SAUSD Calendar PDF",
+  "pdfDescription": "Open the current English 2026–27 academic calendar published by SAUSD.",
+  "hidePdfVersionLabel": true,
+  "shareCalendarHeading": "Share",
+  "hiddenSections": [
+    "keyDatesSummary",
+    "downloadCta",
+    "quickFacts",
+    "todayStatus",
+    "about",
+    "yearNumbers",
+    "planningTips",
+    "districtProfile",
+    "nationalTrends"
+  ],
+  "comparisonBeforeFaq": true,
+  "comparisonDistrictSlugs": [
+    "garden-grove-unified-school-district-calendar",
+    "irvine-unified-school-district-calendar",
+    "long-beach-unified-school-district-calendar"
+  ],
+  "comparisonRowsInclude": ["firstDay", "thanksgivingBreak", "winterBreak", "springBreak", "lastDay"],
+  "comparisonRowLabels": {
+    "thanksgivingBreak": "Thanksgiving Week"
+  },
+  "comparisonSourceNote": "Rows compare equivalent break periods, although districts may use different labels. LBUSD labels November 23–27 as Fall Break; Thanksgiving holidays are November 26–27. Adjacent holidays and staff workdays are not included unless they fall within the listed range.",
+  "hideComparisonNotes": true,
+  "hideRelatedDistrictDescriptions": true,
+  "yearSwitcherPosition": "afterSources",
+  "jumpNavigation": [
+    { "label": "At a Glance", "id": "key-dates" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Student-Free Days", "id": "sausd-grade-specific-dates" },
+    { "label": "Modified Days", "id": "sausd-parent-conferences-modified-days" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "2025–26 Comparison", "id": "year-comparison" },
+    { "label": "Nearby Districts", "id": "comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "sourceReviewSummary": "This page follows the English 2026–27 calendar currently linked from SAUSD’s School Calendars page. The English calendar link on that page now points to a different PDF than the one previously cited here. The current file keeps the same first day, last day, major breaks, 180 student days, and 187 teacher duty days, but it revises the November day count and two grade-specific March modified-day dates.",
+  "sourceReviewDetails": [
+    "On August 15, 2026, we followed the 2026–27 English calendar link on SAUSD’s School Calendars page and reviewed the PDF it currently resolves to.",
+    "We compared the current PDF with the previously linked file. The November instructional-day count changed from ES 13 / IS-HS-OP 14 to ES 14 / IS-HS-OP 15.",
+    "The current PDF lists March 19 as an elementary modified day and March 26 as an intermediate modified day. The prior PDF had those school levels reversed; this page now follows the current file.",
+    "We separately checked the ES, IS, HS, and OP notes for student-free days, parent conferences, modified days, Back to School Nights, and Open Houses."
+  ],
+  "hideSourceNextReview": true,
+  "sources": [
     {
-      "q": "When does Santa Ana Unified start school in 2026-2027?",
-      "a": "Santa Ana Unified starts instruction on Monday, August 10, 2026. The first day of service for staff is August 5, 2026."
+      "label": "Official SAUSD School Calendars page",
+      "url": "https://www.sausd.us/about/school-calendars"
     },
     {
-      "q": "When is SAUSD Spring Recess in 2027?",
-      "a": "Spring Recess runs Monday, April 5 through Friday, April 9, 2027."
-    },
-    {
-      "q": "When is the last day of school for Santa Ana Unified in 2027?",
-      "a": "The last day of instruction is Wednesday, May 26, 2027. The last day of service is Friday, May 28, 2027."
-    },
-    {
-      "q": "How many instructional days are on the SAUSD 2026-2027 calendar?",
-      "a": "The official 2026-2027 academic calendar lists 180 student instructional days."
-    },
-    {
-      "q": "When is SAUSD Thanksgiving Break 2026?",
-      "a": "Santa Ana Unified Thanksgiving Recess runs Monday, November 23 through Friday, November 27, 2026."
-    },
-    {
-      "q": "When is SAUSD Winter Break 2026?",
-      "a": "SAUSD Winter Break runs Monday, December 21, 2026 through Friday, January 1, 2027. Spring instruction begins Monday, January 4, 2027."
-    },
-    {
-      "q": "Does SAUSD have school on Monday holidays?",
-      "a": "No-school dates depend on the official academic calendar. Families should check the listed holidays, student-free days, and recesses instead of assuming every federal holiday is observed."
-    },
-    {
-      "q": "What days are there no school in SAUSD 2026-2027?",
-      "a": "SAUSD no school days include listed holidays, Thanksgiving Recess, Winter Break, Spring Recess, student-free days, and duty days marked for no student attendance. Families should confirm grade-span notes because some student-free or modified dates apply to specific school levels."
-    },
-    {
-      "q": "Where can I download the SAUSD calendar PDF?",
-      "a": "Use the official Santa Ana Unified academic calendar PDF linked from this page for the source calendar. MySchoolDates also provides a searchable date list and a one-time calendar download file."
+      "label": "Current SAUSD 2026–27 Academic School Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1784751274/sausdus/ixozeyfmnwhxevc3yguj/2026-2027AcademicSchoolCalendar3.pdf"
     }
   ],
-  "customSections": [
+  "faqOrderLimit": 6,
+  "faqDisplayQuestions": [
+    "Does every Santa Ana Unified school follow exactly the same dates?",
+    "Which SAUSD student-free days apply to elementary, intermediate, high school, or Educational Options students?",
+    "When do SAUSD students return after Winter Break?",
+    "Are February 12 and February 15 no-school days in SAUSD?",
+    "Where should families verify last-minute Santa Ana Unified calendar changes?",
+    "Where can I download the official SAUSD 2026–27 calendar PDF?"
+  ],
+  "calendarFaqs": [
     {
-      "id": "sausd-why-use-this-page",
-      "label": "Why Use This SAUSD Calendar Page?",
-      "position": "afterKeyDates",
-      "content": "The official district PDF is the source document, but this page makes the Santa Ana Unified calendar easier to search, scan, and use.",
-      "groups": [
-        {
-          "label": "What this page helps with",
-          "items": [
-            "View important SAUSD dates by category.",
-            "Search school breaks, holidays, student-free days, and recesses without opening a PDF.",
-            "Download calendar events for Google Calendar, Apple Calendar, and Outlook.",
-            "Review major SAUSD school dates, PDF access, and calendar download options in one place."
-          ]
-        }
-      ]
+      "q": "Which SAUSD student-free days apply to elementary, intermediate, high school, or Educational Options students?",
+      "a": "October 30 and February 19 are student-free for TK–12 except Educational Options; OP has modified days instead. Elementary students are also off November 16, intermediate students October 5, and OP students October 9, December 18, and March 5. High school students are also off December 18."
     },
     {
-      "id": "sausd-calendar-highlights-2026-2027",
-      "label": "Santa Ana Unified 2026-2027 Calendar Highlights",
-      "position": "afterAbout",
-      "content": "The main SAUSD planning dates for the 2026-2027 school year include the first instruction day, Thanksgiving Recess, Winter Break, Spring Recess, and the last day of instruction.",
+      "q": "When do SAUSD students return after Winter Break?",
+      "a": "Spring instruction begins Monday, January 4, 2027."
+    },
+    {
+      "q": "Are February 12 and February 15 no-school days in SAUSD?",
+      "a": "Yes. The official calendar lists Friday, February 12 and Monday, February 15 as separate holidays, creating a four-day weekend; it does not label them as one continuous break."
+    },
+    {
+      "q": "Where can I download the official SAUSD 2026–27 calendar PDF?",
+      "a": "Use the Current SAUSD 2026–27 Academic School Calendar PDF in the Sources section or the View Official PDF button in Downloads. MySchoolDates also provides a separate one-time ICS import based on the dates reviewed for this page."
+    }
+  ],
+  "whatsNew": {
+    "title": "What Changed From 2025–26",
+    "content": [
+      "The first day moves from August 11 in 2025–26 to August 10 in 2026–27.",
+      "The last day of instruction moves from May 28 to May 26.",
+      "Thanksgiving Recess shifts from November 24–28 in 2025–26 to November 23–27 in 2026–27.",
+      "Winter Break shifts from December 22–January 2 to December 21–January 1.",
+      "Spring Recess moves later in the calendar, from March 30–April 3 in 2025–26 to April 5–9 in 2026–27.",
+      "The totals remain 180 student instructional days and 187 teacher duty days."
+    ]
+  },
+  "customSections": [
+    {
+      "id": "sausd-grade-specific-dates",
+      "label": "Which SAUSD Student-Free Days Apply to My Child?",
+      "position": "afterAllDates",
+      "content": "The official PDF uses ES for elementary, IS for intermediate, HS for high school, and OP for Educational Options. Thanksgiving, Winter, and Spring Recess apply districtwide; the dates below do not all apply to every student.",
       "groups": [
         {
-          "label": "Calendar snapshot",
+          "label": "Elementary (ES)",
           "items": [
-            "First instruction day: August 10, 2026.",
-            "Last instruction day: May 26, 2027.",
-            "Instructional days: 180 student days.",
-            "Teacher duty days: 187 days."
+            "Monday, November 16 is an elementary duty day and student-free day.",
+            "Elementary parent conferences run November 16–20 and March 8–12, with modified schedules."
           ]
         },
         {
-          "label": "Major planning breaks",
+          "label": "Intermediate (IS)",
           "items": [
-            "Thanksgiving Recess: November 23-27, 2026.",
-            "Winter Break: December 21, 2026-January 1, 2027.",
-            "Spring Recess: April 5-9, 2027."
+            "Monday, October 5 is an intermediate parent-conference duty day and student-free day.",
+            "Intermediate modified-day windows include December 16–18 and May 24–26."
+          ]
+        },
+        {
+          "label": "High school (HS)",
+          "items": [
+            "Friday, December 18 is a high school duty day and student-free day.",
+            "High school modified-day windows include December 15–17 and May 24–26."
+          ]
+        },
+        {
+          "label": "Educational Options (OP)",
+          "items": [
+            "OP student-free days are October 9, December 18, and March 5.",
+            "October 30 and February 19 are modified days for OP, not OP student-free days."
+          ]
+        },
+        {
+          "label": "TK–12 except OP",
+          "items": [
+            "Friday, October 30 and Friday, February 19 are duty days and student-free days for TK–12 students except OP."
           ]
         }
       ]
     },
     {
-      "id": "sausd-whats-new-2026-2027",
-      "label": "What's New in the 2026-2027 SAUSD Calendar?",
-      "position": "afterAbout",
-      "content": "The 2026-2027 Santa Ana Unified academic calendar continues the district's traditional structure with 180 student instructional days, two academic semesters, Thanksgiving Recess, Winter Break, Spring Recess, student-free days, and professional duty days. Families should review the official district calendar each year because parent conference windows, modified days, and professional development schedules can change."
-    }
-  ],
-  "yearNumbers": [
-    {
-      "label": "Instructional Days",
-      "value": "180",
-      "detail": "180 days - official student instructional days."
-    },
-    {
-      "label": "First Instruction Day",
-      "value": "Aug 10",
-      "detail": "Instruction begins Monday, August 10, 2026."
-    },
-    {
-      "label": "Spring Recess",
-      "value": "Apr 5-9",
-      "detail": "Spring Recess is listed for April 5-9, 2027."
+      "id": "sausd-parent-conferences-modified-days",
+      "label": "SAUSD Parent Conferences and Modified Days",
+      "position": "afterAllDates",
+      "content": "Modified days shorten the regular schedule; dismissal times are set by the school. The PDF also states that Wednesdays are modified days for elementary and intermediate schools, Lorin Griset Academy, and Chavez High School.",
+      "groups": [
+        {
+          "label": "Back to School Night",
+          "items": [
+            "Elementary: August 20, 2026; High school and Educational Options: August 27, 2026; Intermediate: September 3, 2026."
+          ]
+        },
+        {
+          "label": "Open House",
+          "items": [
+            "Intermediate: March 18, 2027; Elementary: March 25, 2027; High school and Educational Options: April 1, 2027."
+          ]
+        }
+      ],
+      "table": {
+        "caption": "SAUSD grade-specific parent conferences and modified days for 2026–27",
+        "columns": ["School level", "Parent conferences", "Other modified days"],
+        "rows": [
+          ["Elementary (ES)", "Nov. 16–20; Mar. 8–12", "Aug. 21; Dec. 18; Mar. 19; May 25–26"],
+          ["Intermediate (IS)", "Oct. 5", "Sep. 4; Dec. 16–18; Mar. 26; May 24–26"],
+          ["High school (HS)", "None listed", "Aug. 28; Dec. 15–17; Apr. 2; May 24–26"],
+          ["Educational Options (OP)", "None listed", "Oct. 6–8; Oct. 30; Feb. 19; Mar. 2–4; Apr. 2; May 24–26"]
+        ],
+        "footnote": "The PDF provides dates, not campus bell times. Confirm the exact modified-day schedule with the school."
+      }
     }
   ],
   "events": [
-    { "date": "2026-07-03", "name": "Holiday", "type": "holiday" },
-    { "date": "2026-08-05", "name": "First Day of Service/Professional Development Begins", "type": "teacher_workday" },
-    { "date": "2026-08-06", "name": "Professional Development Ends", "type": "teacher_workday" },
-    { "date": "2026-08-07", "name": "Duty Day/Student-Free Day", "type": "student_holiday" },
+    { "date": "2026-08-05", "endDate": "2026-08-06", "name": "Professional Development Days", "type": "teacher_workday", "description": "August 5 is the first day of service; students do not attend." },
+    { "date": "2026-08-07", "name": "Duty Day / Student-Free Day", "type": "student_holiday" },
     { "date": "2026-08-10", "name": "First Day of Fall Instruction", "type": "school_start" },
+    { "date": "2026-08-20", "name": "Elementary Back to School Night", "type": "academic", "description": "Elementary schools only." },
+    { "date": "2026-08-21", "name": "Elementary Modified Day", "type": "early_release", "description": "Elementary schools only; confirm dismissal time with the school." },
+    { "date": "2026-08-27", "name": "High School and Educational Options Back to School Night", "type": "academic" },
+    { "date": "2026-08-28", "name": "High School Modified Day", "type": "early_release", "description": "High schools only; confirm dismissal time with the school." },
+    { "date": "2026-09-03", "name": "Intermediate Back to School Night", "type": "academic" },
+    { "date": "2026-09-04", "name": "Intermediate Modified Day", "type": "early_release", "description": "Intermediate schools only; confirm dismissal time with the school." },
     { "date": "2026-09-07", "name": "Labor Day Holiday", "type": "holiday" },
-    { "date": "2026-09-18", "name": "Progress Reports: 6 Weeks TK-12", "type": "academic" },
-    { "date": "2026-10-05", "name": "Intermediate Parent Conference Duty Day/Student-Free Day", "type": "student_holiday" },
-    { "date": "2026-10-08", "name": "Educational Options Quarter Ends", "type": "academic" },
-    { "date": "2026-10-09", "name": "Educational Options Duty Day/Student-Free Day", "type": "student_holiday" },
-    { "date": "2026-10-29", "name": "Elementary Trimester Ends/Progress Reports", "type": "academic" },
-    { "date": "2026-10-30", "name": "TK-12 Duty Day/Student-Free Day", "type": "student_holiday" },
-    { "date": "2026-11-11", "name": "Holiday", "type": "holiday" },
-    { "date": "2026-11-16", "name": "Elementary Duty Day/Student-Free Day and Parent Conferences Begin", "type": "student_holiday" },
-    { "date": "2026-11-20", "name": "Elementary Parent Conferences End", "type": "academic" },
+    { "date": "2026-09-18", "name": "Six-Week Progress Reports", "type": "academic", "description": "TK–12." },
+    { "date": "2026-10-05", "name": "Intermediate Parent Conference / Student-Free Day", "type": "student_holiday", "description": "Intermediate students only." },
+    { "date": "2026-10-06", "endDate": "2026-10-08", "name": "Educational Options Modified Days", "type": "early_release", "description": "Educational Options only." },
+    { "date": "2026-10-08", "name": "Educational Options Quarter Ends", "type": "quarter_end" },
+    { "date": "2026-10-09", "name": "Educational Options Duty Day / Student-Free Day", "type": "student_holiday", "description": "Educational Options students only." },
+    { "date": "2026-10-29", "name": "Elementary Trimester Ends / Secondary Progress Report", "type": "academic", "description": "Elementary trimester ends; intermediate and high school 12-week progress report." },
+    { "date": "2026-10-30", "name": "TK–12 Duty Day / Student-Free Day", "type": "student_holiday", "description": "Applies to TK–12 except Educational Options; OP has a modified day." },
+    { "date": "2026-11-11", "name": "Veterans Day Holiday", "type": "holiday" },
+    { "date": "2026-11-16", "name": "Elementary Duty Day / Student-Free Day", "type": "student_holiday", "description": "Elementary students only; parent conferences begin." },
+    { "date": "2026-11-16", "endDate": "2026-11-20", "name": "Elementary Parent Conferences / Modified Days", "type": "early_release", "description": "Elementary schools only; November 16 is also student-free." },
     { "date": "2026-11-23", "name": "Thanksgiving Recess", "type": "break_start" },
     { "date": "2026-11-27", "name": "Thanksgiving Recess End", "type": "break_end" },
-    { "date": "2026-12-17", "name": "High School Semester Ends/Educational Options Quarter Ends", "type": "semester_end" },
-    { "date": "2026-12-18", "name": "Intermediate Semester Ends/Modified Day", "type": "semester_end" },
+    { "date": "2026-12-15", "endDate": "2026-12-17", "name": "High School and Educational Options Modified Days", "type": "early_release" },
+    { "date": "2026-12-17", "name": "High School Semester / Educational Options Quarter Ends", "type": "semester_end" },
+    { "date": "2026-12-16", "endDate": "2026-12-18", "name": "Intermediate Modified Days", "type": "early_release" },
+    { "date": "2026-12-18", "name": "High School and Educational Options Duty Day / Student-Free Day", "type": "student_holiday", "description": "High school and Educational Options students only." },
+    { "date": "2026-12-18", "name": "Intermediate Semester Ends / Elementary and Intermediate Modified Day", "type": "semester_end" },
     { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
     { "date": "2027-01-01", "name": "Winter Break End", "type": "break_end" },
-    { "date": "2027-01-04", "name": "First Day of Spring Instruction", "type": "school_resume" },
-    { "date": "2027-01-18", "name": "Holiday", "type": "holiday" },
-    { "date": "2027-02-12", "name": "Holiday", "type": "holiday" },
-    { "date": "2027-02-15", "name": "Holiday", "type": "holiday" },
+    { "date": "2027-01-04", "name": "First Day of Spring Instruction", "type": "school_resume", "description": "School resumes after Winter Break." },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day Holiday", "type": "holiday" },
+    { "date": "2027-02-12", "name": "District Holiday", "type": "holiday", "description": "The official SAUSD PDF lists Friday, February 12 as a holiday." },
+    { "date": "2027-02-15", "name": "District Holiday", "type": "holiday", "description": "The official SAUSD PDF lists Monday, February 15 as a separate holiday." },
     { "date": "2027-02-18", "name": "Intermediate and High School Progress Reports", "type": "academic" },
-    { "date": "2027-02-19", "name": "TK-12 Duty Day/Student-Free Day", "type": "student_holiday" },
-    { "date": "2027-03-04", "name": "Educational Options Quarter Ends", "type": "academic" },
-    { "date": "2027-03-05", "name": "Educational Options Duty Day/Student-Free Day", "type": "student_holiday" },
-    { "date": "2027-03-08", "name": "Elementary Parent Conferences Begin", "type": "academic" },
-    { "date": "2027-03-12", "name": "Elementary Parent Conferences End", "type": "academic" },
-    { "date": "2027-04-02", "name": "Progress Reports and Modified Day", "type": "academic" },
+    { "date": "2027-02-19", "name": "TK–12 Duty Day / Student-Free Day", "type": "student_holiday", "description": "Applies to TK–12 except Educational Options; OP has a modified day." },
+    { "date": "2027-03-02", "endDate": "2027-03-04", "name": "Educational Options Modified Days", "type": "early_release" },
+    { "date": "2027-03-04", "name": "Educational Options Quarter Ends", "type": "quarter_end" },
+    { "date": "2027-03-05", "name": "Educational Options Duty Day / Student-Free Day", "type": "student_holiday", "description": "Educational Options students only." },
+    { "date": "2027-03-08", "endDate": "2027-03-12", "name": "Elementary Parent Conferences / Modified Days", "type": "early_release", "description": "Elementary schools only." },
+    { "date": "2027-03-18", "name": "Intermediate Open House", "type": "academic" },
+    { "date": "2027-03-19", "name": "Elementary Modified Day", "type": "early_release" },
+    { "date": "2027-03-25", "name": "Elementary Open House", "type": "academic" },
+    { "date": "2027-03-26", "name": "Intermediate Modified Day", "type": "early_release" },
+    { "date": "2027-04-01", "name": "High School and Educational Options Open House", "type": "academic" },
+    { "date": "2027-04-02", "name": "Progress Reports / High School and Educational Options Modified Day", "type": "academic", "description": "Six-week progress reports are listed for TK–12; HS and OP have a modified day." },
     { "date": "2027-04-05", "name": "Spring Recess", "type": "break_start" },
     { "date": "2027-04-09", "name": "Spring Recess End", "type": "break_end" },
-    { "date": "2027-05-26", "name": "Last Day of Instruction", "type": "school_end" },
-    { "date": "2027-05-27", "name": "Duty Day/Student-Free Day", "type": "teacher_workday" },
-    { "date": "2027-05-28", "name": "Last Day of Service", "type": "teacher_workday" },
-    { "date": "2027-05-31", "name": "Holiday", "type": "holiday" },
-    { "date": "2027-06-18", "name": "Holiday", "type": "holiday" }
+    { "date": "2027-05-24", "name": "Intermediate, High School, and Educational Options Modified Day", "type": "early_release" },
+    { "date": "2027-05-25", "endDate": "2027-05-26", "name": "TK–12 Modified Days", "type": "early_release" },
+    { "date": "2027-05-26", "name": "Last Day of Instruction", "type": "school_end", "description": "Also the end of the ES trimester and IS/HS semester; modified day for TK–12." },
+    { "date": "2027-05-27", "name": "Duty Day / Student-Free Day", "type": "teacher_workday", "description": "After the student school year." },
+    { "date": "2027-05-28", "name": "Last Day of Service", "type": "teacher_workday", "description": "Staff date after the last day of instruction." }
   ]
 }

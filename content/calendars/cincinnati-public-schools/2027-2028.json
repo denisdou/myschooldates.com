@@ -1,0 +1,305 @@
+{
+  "institutionId": "cincinnati-public-schools",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Cincinnati Public Schools Calendar 2027–28",
+  "firstDay": "2027-08-18",
+  "lastDay": "2028-05-24",
+  "temporalCoverageStart": "2027-08-11",
+  "temporalCoverageEnd": "2028-07-04",
+  "totalSchoolDays": 171,
+  "teacherWorkDays": 191,
+  "sourceUrl": "https://www.cps-k12.org/calendar",
+  "sourceDocumentPage": "https://www.cps-k12.org/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1773934899/cpsk12/fois1pud6eip9zeldjun/27-28CalendarDates.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1773934899/cpsk12/fois1pud6eip9zeldjun/27-28CalendarDates.pdf",
+  "sourceCheckedAt": "2026-08-15",
+  "sourceUpdatedAt": "2026-02-24",
+  "sourceChecksumSha256": "33c85abe9a5a0af4c00aebd6c58d4d9f9e39912cdb204d6233cdb89de1f2fa72",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The English PDF's December 2027 month grid repeats 15 in the Friday cell where 17 belongs, while its second-page details list no event on December 17. The Arabic translation also describes May 25 as a teacher workday and 'last day for students,' while the English, Spanish, and French details identify May 24 as the last student day and May 25 as the last teacher day. The PDF additionally lists 171 student days and 191 teacher days, but its printed quarter instructional totals of 41, 46, 45, and 43 add up to 175, while its staff-day totals of 48, 53, 51, and 45 add up to 197. A MySchoolDates date-by-date count suggests Quarter 3 may contain 41 student days rather than the printed 45, but CPS has not published corrected quarter figures. This page follows the English details list for dated events, uses May 24 as the last student day, and leaves the staff-day totals unreconciled.",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.cps-k12.org/calendar",
+    "linkText": "CPS 2027-2028 12 Month Calendar",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1773934899/cpsk12/fois1pud6eip9zeldjun/27-28CalendarDates.pdf",
+    "expectedChecksumSha256": "33c85abe9a5a0af4c00aebd6c58d4d9f9e39912cdb204d6233cdb89de1f2fa72"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.cps-k12.org/calendar",
+      "linkText": "CPS 2027-2028 12 Month Calendar - Spanish",
+      "expectedPdfUrl": "https://resources.finalsite.net/images/v1775583869/cpsk12/dle9l30tpte6wrovumyo/2027-202812-Month-Calendar-Spanish.pdf",
+      "expectedChecksumSha256": "15c9071def287b9451fb55a0869ce70d7268fe26fb02c19a70e03b47f908e320"
+    },
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.cps-k12.org/calendar",
+      "linkText": "CPS 2027-2028 12 Month Calendar - French",
+      "expectedPdfUrl": "https://resources.finalsite.net/images/v1775583928/cpsk12/hgbecevgmtqi4hoajmwg/2027-202812-Month-Calendar-French.pdf",
+      "expectedChecksumSha256": "c6d7b9bcd46f53421dc1942eed2b903eafe94988348acc036ff17a1445c1bfb0"
+    },
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.cps-k12.org/calendar",
+      "linkText": "CPS 2027-2028 12 Month Calendar - Arabic",
+      "expectedPdfUrl": "https://resources.finalsite.net/images/v1775583953/cpsk12/fozdfbjnknx76rzswmij/27-28calendar_Arabic.pdf",
+      "expectedChecksumSha256": "43390b7339048782efc165e890290457bd66286c9d9c42d305f1a5e95a20515e"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-15",
+  "dateCreated": "2026-08-15",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_back_to_school_guidance", "official_source_conflict", "official_schedule_change", "confirmed_data_error"],
+  "sourceVersion": "CPS 2027-2028 English 12-Month Calendar; PDF created February 24, 2026",
+  "sourceVersionDisplay": "CPS 2027–28 English calendar · source discrepancies disclosed",
+  "calendarType": "districtwide",
+  "calendarTrackId": "districtwide",
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "seoTitle": "Cincinnati Public Schools Calendar 2027–28: Key Dates & Breaks",
+  "seoDescription": "Cincinnati Public Schools' current 2027–28 calendar lists Aug. 18 as the first day and May 24 as the last. See breaks, no-school dates, PDFs and ICS.",
+  "heroSummary": "CPS's current 2027–28 calendar lists Wednesday, August 18, 2027, as the first day for students and Wednesday, May 24, 2028, as the last student day. It lists 171 student days and 191 teacher days. Thanksgiving week is November 22–26, Winter Recess is December 20–31, and Spring Break is March 20–24.",
+  "heroSourceLine": "2027–28 student dates · Cross-checked against English, Spanish, French, and Arabic CPS calendars",
+  "calendarNotes": "This page follows CPS's current English details page for dated entries. The source notes disclose the repeated December 15 in the English grid, the Arabic May 25 label conflict, and quarter instructional and staff totals that do not reconcile with the published annual student- and teacher-day totals. School-only closures still mean no classes, while all-CPS closures also close the central office.",
+  "futureYearNotice": "CPS's current published 2027–28 calendar is summarized below. Dates may change if CPS issues a revision or later back-to-school guidance.",
+  "verificationBadgeText": "Reviewed August 15, 2026 · Source discrepancies disclosed",
+  "keyDatesHeading": "Cincinnati CPS 2027–28 Key Dates",
+  "keyDatesSummaryTitle": "Cincinnati CPS 2027–28 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, and student no-school dates",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School for Students", "date": "2027-08-18", "type": "school_start", "schemaDescription": "CPS's current 2027–28 calendar lists August 18, 2027, as the first day for students." },
+    { "label": "Thanksgiving", "name": "Thanksgiving Week — Schools Closed", "date": "2027-11-22", "endDate": "2027-11-26", "type": "break_start" },
+    { "label": "Winter", "name": "Winter Recess — Schools Closed", "date": "2027-12-20", "endDate": "2027-12-31", "type": "break_start" },
+    { "label": "Spring", "name": "Spring Break — Schools Closed", "date": "2028-03-20", "endDate": "2028-03-24", "type": "break_start" },
+    { "label": "Last Day", "name": "Last Day for Students", "date": "2028-05-24", "type": "school_end", "schemaDescription": "CPS's current 2027–28 calendar lists May 24, 2028, as the last day for students." }
+  ],
+  "allDatesTitle": "Cincinnati CPS 2027–28 Calendar Dates",
+  "allDatesCoverageNote": "This table uses the English details page for dated entries, with Spanish and French pages as cross-checks. Source Notes documents the December grid error, the Arabic May 25 label, and printed instructional and staff quarter totals that do not reconcile with the annual student- and teacher-day totals.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1773934899/cpsk12/fois1pud6eip9zeldjun/27-28CalendarDates.pdf",
+  "allDatesSourceLabel": "Official English CPS 2027-2028 12-Month Calendar",
+  "breakNotes": {
+    "Thanksgiving Week — Schools Closed": "Students return Monday, November 29. November 24 is the Teacher Conference Exchange Day; schools and the central office close November 25–26.",
+    "Winter Recess — Schools Closed": "January 3 is a no-student professional-development day. Students return Tuesday, January 4.",
+    "Spring Break — Schools Closed": "Students return Monday, March 27."
+  },
+  "dateLegendItems": [
+    { "label": "School start / end", "dot": "bg-yellow-400" },
+    { "label": "School holiday / break", "dot": "bg-rose-500" },
+    { "label": "Staff day — no students", "dot": "bg-teal-500" },
+    { "label": "Academic marker", "dot": "bg-slate-400" },
+    { "label": "Post-year district closure", "dot": "bg-orange-300" }
+  ],
+  "yearNumbersMode": "customOnly",
+  "yearNumbersTitle": "CPS 2027–28 by the Numbers",
+  "yearNumbers": [
+    { "label": "Student days", "value": "171", "detail": "Districtwide total printed in all four language editions" },
+    { "label": "Teacher days", "value": "191", "detail": "Includes classroom workdays and professional development" },
+    { "label": "Instructional hours", "value": "1,050–1,137.5", "detail": "Range printed on the CPS calendar" }
+  ],
+  "alternateCalendarsTitle": "Official Spanish, French, and Arabic Calendars",
+  "alternateCalendarsDescription": "CPS publishes three translations alongside the English calendar. Core student dates align, but the Arabic May 25 label is inconsistent with the other three versions; use May 24 as the last student day.",
+  "alternateCalendarsButtonLabel": "View Official Translation PDF",
+  "otherCalendarsPosition": "beforeCalendarExport",
+  "alternateCalendars": [
+    {
+      "type": "translation-spanish",
+      "group": "CPS 2027–28 Translations",
+      "label": "CPS 2027–2028 12-Month Calendar — Spanish",
+      "description": "The Spanish details agree with English that May 24 is the last student day and May 25 is the last teacher workday.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1775583869/cpsk12/dle9l30tpte6wrovumyo/2027-202812-Month-Calendar-Spanish.pdf",
+      "firstDay": "2027-08-18"
+    },
+    {
+      "type": "translation-french",
+      "group": "CPS 2027–28 Translations",
+      "label": "CPS 2027–2028 12-Month Calendar — French",
+      "description": "The French details agree with English that May 24 is the last student day and May 25 is the last teacher workday; some first-page weekday headings show layout artifacts.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1775583928/cpsk12/hgbecevgmtqi4hoajmwg/2027-202812-Month-Calendar-French.pdf",
+      "firstDay": "2027-08-18"
+    },
+    {
+      "type": "translation-arabic",
+      "group": "CPS 2027–28 Translations",
+      "label": "CPS 2027–2028 12-Month Calendar — Arabic",
+      "description": "The Arabic file shows May 24 as the Quarter 4 ending, but its May 25 teacher-workday line says 'last day for students.' English, Spanish, and French identify May 25 as the last day for teachers.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1775583953/cpsk12/fozdfbjnknx76rzswmij/27-28calendar_Arabic.pdf",
+      "firstDay": "2027-08-18"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "cincinnati-cps-2027-2028-source-notes",
+      "label": "Source Notes: Three Issues in the Published 2027–28 Calendars",
+      "content": "We use the English details page for dated entries and compare it with the Spanish, French, and Arabic editions. Three inconsistencies in the published files need context.",
+      "position": "afterKeyDates",
+      "table": {
+        "columns": ["Source issue", "What the PDFs show", "How this page handles it"],
+        "rows": [
+          ["December 2027 English month grid", "The Friday cell repeats 15 instead of printing 17", "No December 17 event; the details page lists none"],
+          ["Arabic May 25 label", "English, Spanish, and French identify May 24 as the last student day and May 25 as the last teacher workday; the Arabic May 25 line says last day for students", "May 24 is used as the last student day"],
+          ["Quarter totals", "The PDF lists 171 student days and 191 teacher days. Its printed quarter instructional totals of 41, 46, 45, and 43 add up to 175, while the printed staff-day totals of 48, 53, 51, and 45 add up to 197", "A date-by-date count of Quarter 3 appears to yield 41 student days rather than the printed 45, which would reconcile the 171-day student total. This is a MySchoolDates calculation, not a CPS correction. The staff-day totals remain unreconciled because CPS has not published corrected quarter figures"]
+        ],
+        "footnote": "These discrepancies are documented so readers can see how the dates and totals were interpreted."
+      }
+    },
+    {
+      "id": "cincinnati-cps-2027-2028-closure-labels",
+      "label": "How to Read Cincinnati CPS Closure Labels",
+      "content": "The official legend distinguishes school-only closures from dates when all of CPS closes. Both categories mean no classes for students; the difference is whether the central office also closes.",
+      "position": "afterBreaks",
+      "table": {
+        "columns": ["Official calendar wording", "Student attendance", "Central office"],
+        "rows": [
+          ["Holiday/Break — Only Schools Closed", "No classes", "May remain open"],
+          ["Holiday/Break — All of CPS Is Closed", "No classes", "Closed"],
+          ["Teacher workday / PD day — No Students", "No classes", "Staff schedule applies"],
+          ["Midterm Week / End of Quarter", "Normal attendance unless separately closed", "Normal operations unless separately closed"]
+        ],
+        "footnote": "The asterisk on many staff dates directs CPS employees to payroll calendars for paid-holiday and schedule details."
+      }
+    }
+  ],
+  "events": [
+    { "date": "2027-08-11", "endDate": "2027-08-12", "name": "Teacher Classroom Workdays — No Students", "type": "teacher_workday" },
+    { "date": "2027-08-13", "name": "Professional Development Day — No Students", "type": "teacher_workday" },
+    { "date": "2027-08-16", "endDate": "2027-08-17", "name": "Professional Development Days — No Students", "type": "teacher_workday" },
+    { "date": "2027-08-18", "name": "First Day of School for Students", "type": "school_start" },
+    { "date": "2027-09-06", "name": "Labor Day — Schools and Central Office Closed", "type": "holiday" },
+    { "date": "2027-09-13", "name": "Midterm Week Begins", "type": "academic", "description": "Academic marker; not a student closure." },
+    { "date": "2027-10-11", "name": "Teacher Classroom Workday — No Students", "type": "teacher_workday" },
+    { "date": "2027-10-15", "name": "End of First Quarter", "type": "quarter_end", "description": "The PDF prints 41 instructional days and 48 staff days for Quarter 1." },
+    { "date": "2027-11-01", "name": "District Professional Development Day — No Students", "type": "teacher_workday" },
+    { "date": "2027-11-02", "name": "Election Day — Only Schools Closed", "type": "no_school" },
+    { "date": "2027-11-11", "name": "Veterans Day — Schools and Central Office Closed", "type": "holiday" },
+    { "date": "2027-11-15", "name": "Midterm Week Begins", "type": "academic", "description": "Academic marker; not a student closure." },
+    { "date": "2027-11-22", "endDate": "2027-11-26", "name": "Thanksgiving Week — Schools Closed", "type": "break_start", "description": "November 22–24 are school-only closures; November 24 is the Teacher Conference Exchange Day; schools and the central office close November 25–26." },
+    { "date": "2027-12-20", "endDate": "2027-12-31", "name": "Winter Recess — Schools Closed", "type": "break_start", "description": "Only schools are closed for the recess; the PDF separately identifies central-office holidays within the period." },
+    { "date": "2028-01-03", "name": "District Professional Development Day — No Students", "type": "teacher_workday" },
+    { "date": "2028-01-04", "name": "Schools Reopen", "type": "school_reopen" },
+    { "date": "2028-01-14", "name": "End of Second Quarter", "type": "quarter_end", "description": "The PDF prints 46 instructional days and 53 staff days for Quarter 2." },
+    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day — Schools and Central Office Closed", "type": "holiday" },
+    { "date": "2028-02-07", "name": "Teacher Conference Exchange Day — Only Schools Closed", "type": "no_school" },
+    { "date": "2028-02-14", "name": "Midterm Week Begins", "type": "academic", "description": "Academic marker; not a student closure." },
+    { "date": "2028-02-21", "name": "Presidents Day — Schools and Central Office Closed", "type": "holiday" },
+    { "date": "2028-03-06", "name": "District Professional Development Day — No Students", "type": "teacher_workday" },
+    { "date": "2028-03-17", "name": "End of Third Quarter", "type": "quarter_end", "description": "The PDF prints 45 instructional days and 51 staff days for Quarter 3; see Source Notes for the annual-total discrepancy." },
+    { "date": "2028-03-20", "endDate": "2028-03-24", "name": "Spring Break — Schools Closed", "type": "break_start" },
+    { "date": "2028-03-27", "name": "Schools Reopen", "type": "school_reopen" },
+    { "date": "2028-04-17", "name": "Midterm Week Begins", "type": "academic", "description": "Academic marker; not a student closure." },
+    { "date": "2028-05-24", "name": "End of Fourth Quarter — Last Day for Students", "type": "school_end", "description": "The PDF prints 43 instructional days and 45 staff days for Quarter 4." },
+    { "date": "2028-05-25", "name": "Teacher Classroom Workday — Last Day for Teachers", "type": "teacher_workday", "description": "The Arabic translation mislabels this as the last day for students; English, Spanish, and French identify it as the last teacher day.", "hideFromCalendarExport": true },
+    { "date": "2028-05-29", "name": "Memorial Day — Schools and Central Office Closed", "type": "operational_closure", "description": "District operating holiday after the regular student year.", "hideFromCalendarExport": true },
+    { "date": "2028-06-01", "endDate": "2028-06-30", "name": "Summer School", "type": "summer_school", "badgeLabel": "Summer School", "description": "For participating students; separate from the regular school year and not included in the downloadable ICS file.", "hideFromCalendarExport": true },
+    { "date": "2028-06-19", "name": "Juneteenth — Schools and Central Office Closed", "type": "operational_closure", "description": "District operating holiday after the regular student year; Summer School schedules may be affected.", "hideFromCalendarExport": true },
+    { "date": "2028-07-04", "name": "Independence Day — Schools and Central Office Closed", "type": "operational_closure", "description": "District operating holiday after the regular student year.", "hideFromCalendarExport": true }
+  ],
+  "compactDownloadModule": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "unifiedDownloadTitle": "Cincinnati CPS 2027–28 Calendar Downloads",
+  "unifiedDownloadDescription": "Download reviewed student dates as a one-time ICS file or open the official English, Spanish, French, and Arabic PDFs.",
+  "icsHeading": "Add Cincinnati CPS 2027–28 Dates",
+  "icsDescription": "Download student dates, no-student days, breaks, quarter markers, and reopen dates as a one-time ICS file.",
+  "icsButtonLabel": "Add Cincinnati CPS Dates (.ics)",
+  "icsButtonSupportText": "One-time import. Source discrepancies are documented above; Summer School and post-year operations are excluded.",
+  "pdfHeading": "Official English CPS 2027–28 Calendar",
+  "pdfDescription": "Open the two-page English calendar. Source Notes explains the December grid, Arabic May label, and quarter-total discrepancies.",
+  "pdfButtonLabel": "View Official English CPS PDF",
+  "pdfVersionLabel": "CPS 2027-2028 English 12-Month Calendar",
+  "calendarFaqs": [
+    { "q": "When does Cincinnati Public Schools start in 2027–28?", "a": "CPS's current calendar lists Wednesday, August 18, 2027, as the first day for students. Teacher workdays are August 11–12, followed by professional-development days August 13 and 16–17." },
+    { "q": "When is Cincinnati CPS Thanksgiving Break in 2027?", "a": "Students are out November 22–26, 2027. November 24 is the Teacher Conference Exchange Day; schools and the central office close November 25–26." },
+    { "q": "When is Cincinnati CPS Winter Recess in 2027–28?", "a": "Winter Recess runs December 20–31, 2027. January 3 is a no-student professional-development day, and schools reopen Tuesday, January 4, 2028." },
+    { "q": "When is Cincinnati CPS Spring Break in 2028?", "a": "Spring Break runs Monday, March 20 through Friday, March 24, 2028. Schools reopen Monday, March 27." },
+    { "q": "When is the last day for Cincinnati CPS students in 2028?", "a": "The last student day and end of Quarter 4 is Wednesday, May 24, 2028. May 25 is the last teacher classroom workday." },
+    { "q": "How many student days are on the Cincinnati CPS 2027–28 calendar?", "a": "The official calendar lists 171 student days and 191 teacher days, but both sets of printed quarter totals fail to reconcile with those annual figures. A date-by-date count suggests Quarter 3 may contain 41 student days rather than the printed 45; CPS has not published corrected quarter totals." },
+    { "q": "Does the repeated December 15 in the CPS PDF create a calendar event?", "a": "No. The English month grid repeats 15 where Friday the 17th belongs, but the details page lists no December 17 event, so December 17 is not included here." },
+    { "q": "Is May 24 or May 25 the last student day in 2028?", "a": "May 24 is the last student day. English, Spanish, and French agree that May 25 is the final teacher workday; the Arabic May 25 line contains an inconsistent student label." }
+  ],
+  "faqDisplayLimit": 8,
+  "faqDisplayQuestions": [
+    "When does Cincinnati Public Schools start in 2027–28?",
+    "When is Cincinnati CPS Thanksgiving Break in 2027?",
+    "When is Cincinnati CPS Winter Recess in 2027–28?",
+    "When is Cincinnati CPS Spring Break in 2028?",
+    "When is the last day for Cincinnati CPS students in 2028?",
+    "How many student days are on the Cincinnati CPS 2027–28 calendar?",
+    "Does the repeated December 15 in the CPS PDF create a calendar event?",
+    "Is May 24 or May 25 the last student day in 2028?"
+  ],
+  "faqSchemaQuestions": [
+    "When does Cincinnati Public Schools start in 2027–28?",
+    "When is Cincinnati CPS Thanksgiving Break in 2027?",
+    "When is Cincinnati CPS Winter Recess in 2027–28?",
+    "When is Cincinnati CPS Spring Break in 2028?",
+    "When is the last day for Cincinnati CPS students in 2028?",
+    "How many student days are on the Cincinnati CPS 2027–28 calendar?",
+    "Does the repeated December 15 in the CPS PDF create a calendar event?",
+    "Is May 24 or May 25 the last student day in 2028?"
+  ],
+  "schemaCalendarName": "Cincinnati Public Schools 2027–28 District Calendar",
+  "schemaDatasetName": "Cincinnati Public Schools 2027–28 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Cincinnati Public Schools 2027–28 student dates, staff no-student days, school closures, breaks, quarter and midterm markers, and reopen dates. The source notes disclose the December grid error, Arabic May 25 label, and quarter totals that do not reconcile with the PDF's annual student- and teacher-day totals.",
+  "schemaSpatialCoverage": "Cincinnati, Ohio",
+  "schemaCalendarDownloadName": "Cincinnati CPS 2027–28 calendar file",
+  "schemaCalendarDownloadDescription": "One-time calendar import generated from the reviewed CPS details page and cross-checked language editions. Source discrepancies are disclosed on the page; Summer School and post-year operations are excluded from the file.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-spanish",
+      "type": "CreativeWork",
+      "name": "Official Spanish CPS 2027–28 12-Month Calendar",
+      "url": "https://resources.finalsite.net/images/v1775583869/cpsk12/dle9l30tpte6wrovumyo/2027-202812-Month-Calendar-Spanish.pdf"
+    },
+    {
+      "id": "source-calendar-french",
+      "type": "CreativeWork",
+      "name": "Official French CPS 2027–28 12-Month Calendar",
+      "url": "https://resources.finalsite.net/images/v1775583928/cpsk12/hgbecevgmtqi4hoajmwg/2027-202812-Month-Calendar-French.pdf"
+    },
+    {
+      "id": "source-calendar-arabic",
+      "type": "CreativeWork",
+      "name": "Official Arabic CPS 2027–28 12-Month Calendar",
+      "url": "https://resources.finalsite.net/images/v1775583953/cpsk12/fozdfbjnknx76rzswmij/27-28calendar_Arabic.pdf"
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Source Notes", "id": "cincinnati-cps-2027-2028-source-notes" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Closure Labels", "id": "cincinnati-cps-2027-2028-closure-labels" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "Sources", "id": "sources" },
+    { "label": "FAQ", "id": "faq" }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "yearSwitcherPosition": "afterSources",
+  "sourcesBeforeFaq": true,
+  "hiddenSections": ["downloadCta", "todayStatus", "keyDateCards", "quickFacts", "districtProfile", "relatedDistricts", "comparison", "whatsDifferent", "nationalTrends", "otherCalendars", "about", "planningTips", "livingHere", "yearNumbers"],
+  "hiddenCustomSectionIds": ["cincinnati-cps-closure-language", "cincinnati-cps-calendar-vs-school-choice", "cincinnati-cps-official-boundaries"],
+  "sourceReviewSummary": "Reviewed August 15, 2026 against all eight pages of the official English, Spanish, French, and Arabic 2027–28 PDFs. The English PDF reviewed matches the current CPS download.",
+  "sourceReviewDetails": [
+    "Confirmed that the PDF prints 171 student days, 191 teacher days, the instructional-hour range, instructional quarter totals of 41, 46, 45, and 43 that add up to 175, and staff quarter totals of 48, 53, 51, and 45 that add up to 197. A MySchoolDates date-by-date count finds 44 weekdays from January 18 through March 17, less the February 7, February 21, and March 6 student closures, for an apparent Quarter 3 student total of 41. That would reconcile the annual student total, but CPS has not published corrected student or staff quarter figures; the staff totals remain unreconciled.",
+    "Documented the repeated December 15 in the English grid and confirmed that no language details page lists a December 17 event.",
+    "Resolved the Arabic May 25 label against the English, Spanish, and French details, which agree that May 24 is the last student day and May 25 is the last teacher workday."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Cincinnati Public Schools sources.",
+  "sourceNextReviewText": "Next review: when CPS revises the 2027–28 calendar, publishes 2027–28 back-to-school guidance, republishes the English grid, or corrects a translated edition.",
+  "sources": [
+    { "label": "CPS live calendar and 12-month calendar downloads", "url": "https://www.cps-k12.org/calendar" },
+    { "label": "Official English CPS 2027–28 12-Month Calendar PDF", "url": "https://resources.finalsite.net/images/v1773934899/cpsk12/fois1pud6eip9zeldjun/27-28CalendarDates.pdf" },
+    { "label": "Official CPS 2027–28 Spanish Calendar PDF", "url": "https://resources.finalsite.net/images/v1775583869/cpsk12/dle9l30tpte6wrovumyo/2027-202812-Month-Calendar-Spanish.pdf" },
+    { "label": "Official CPS 2027–28 French Calendar PDF", "url": "https://resources.finalsite.net/images/v1775583928/cpsk12/hgbecevgmtqi4hoajmwg/2027-202812-Month-Calendar-French.pdf" },
+    { "label": "Official CPS 2027–28 Arabic Calendar PDF", "url": "https://resources.finalsite.net/images/v1775583953/cpsk12/fozdfbjnknx76rzswmij/27-28calendar_Arabic.pdf" }
+  ]
+}

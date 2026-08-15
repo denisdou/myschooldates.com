@@ -1,0 +1,425 @@
+{
+  "institutionId": "akron-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Akron Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-27",
+  "lastDay": "2027-06-03",
+  "temporalCoverageStart": "2026-08-24",
+  "temporalCoverageEnd": "2027-06-04",
+  "sourceUrl": "https://www.akronschools.com/district/district-information/calendar",
+  "sourceDocumentPage": "https://www.akronschools.com/district/district-information/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1784229983/akronschoolscom/mhorqtm8mssdya0yiu4m/APS_2026-2027SchoolCalendar_ADACompliant_071626.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1784229983/akronschoolscom/mhorqtm8mssdya0yiu4m/APS_2026-2027SchoolCalendar_ADACompliant_071626.pdf",
+  "sourceCheckedAt": "2026-08-15",
+  "sourceUpdatedAt": "2026-07-16",
+  "sourceChecksumSha256": "a7aaabdfd8055740207f40f9f0a6e1f44c62d60cfbc730258164971bc7bd1830",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceConflict": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.akronschools.com/district/district-information/calendar",
+    "linkText": "Download the 2026-2027 School Calendar",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1784229983/akronschoolscom/mhorqtm8mssdya0yiu4m/APS_2026-2027SchoolCalendar_ADACompliant_071626.pdf",
+    "expectedChecksumSha256": "a7aaabdfd8055740207f40f9f0a6e1f44c62d60cfbc730258164971bc7bd1830"
+  },
+  "lastVerifiedAt": "2026-08-15",
+  "dateCreated": "2026-08-15",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_schedule_change", "confirmed_data_error"],
+  "sourceVersion": "APS 2026-2027 School Calendar PDF created July 16, 2026",
+  "allDatesMode": "all",
+  "calendarType": "traditional",
+  "calendarTrackId": "district-pdf-calendar",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "seoTitle": "Akron Public Schools Calendar 2026–27: Key Dates & PDF",
+  "seoDescription": "Akron Public Schools grades 1–12 start Aug. 27, 2026. Kindergarten phases in Aug. 27–28; Pre-K and kindergarten begin Aug. 31. See breaks, no-school days, PDF and ICS.",
+  "heroSummary": "Akron Public Schools grades 1–12 start Thursday, August 27, 2026. Kindergarten phase-in is August 27–28, and Pre-K and kindergarten begin Monday, August 31. The last day for students is Thursday, June 3, 2027. The Thanksgiving holiday is November 26–27; students are also off November 25 for conferences. Winter break runs December 21–January 1, and spring break is March 29–April 2.",
+  "heroSourceLine": "2026–27 dates · Reviewed against the official APS PDF and live district calendar",
+  "heroVerificationSourceText": "Official APS PDF reviewed",
+  "heroVerificationComparisonText": "Live district calendar reviewed",
+  "heroVerificationIcsText": "Grade-level start dates checked separately",
+  "calendarNotes": "The one-page APS PDF lists August 27 as the first day for students. The live district calendar adds that grades 1–12 start August 27, kindergarten phases in August 27–28, and Pre-K and kindergarten begin August 31. September 25, November 3, January 29 and May 4 are professional-development days with no students. Parent-teacher conferences close school to students November 25 and February 12, while January 15 is a records day with no students. Thanksgiving closes schools and offices November 26–27. Students are off for winter break December 21–January 1, while district offices close only December 24–25, December 31 and January 1. Good Friday closes schools and offices March 26, immediately before spring break March 29–April 2. Marking periods end October 30, January 14, March 25 and June 3; those dates are not closures unless the calendar says otherwise. June 3 is the last day for students, followed by the last teacher and staff day June 4.",
+  "verificationBadgeText": "Reviewed August 15, 2026 · APS PDF and live district calendar",
+  "keyDatesHeading": "Akron APS 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "Akron APS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Main district dates at a glance",
+  "dateLegendLabelOverrides": {
+    "Operational Closure": "Offices Closed",
+    "End of Quarter": "Marking Period",
+    "Some Students Off": "Grade-Specific"
+  },
+  "keyDateSummaryItems": [
+    { "label": "Grades 1–12", "name": "First Day for Grades 1–12", "date": "2026-08-27", "type": "school_start", "schemaDescription": "Grades 1–12 start school on August 27, 2026, according to the APS live district calendar." },
+    { "label": "Pre-K / K", "name": "First Day for Pre-K and Kindergarten", "date": "2026-08-31", "type": "school_start", "schemaDescription": "Pre-K and kindergarten begin August 31, 2026, after kindergarten phase-in on August 27–28." },
+    { "label": "Thanksgiving", "name": "Thanksgiving Holiday", "date": "2026-11-26", "endDate": "2026-11-27", "type": "break_start" },
+    { "label": "Winter", "name": "Winter Break", "date": "2026-12-21", "endDate": "2027-01-01", "type": "break_start" },
+    { "label": "Spring", "name": "Spring Break", "date": "2027-03-29", "endDate": "2027-04-02", "type": "break_start" },
+    { "label": "Last Day", "name": "Last Day for Students", "date": "2027-06-03", "type": "school_end" }
+  ],
+  "allDatesTitle": "Akron APS 2026–27 School Calendar Dates",
+  "allDatesCoverageNote": "This table combines the official one-page APS calendar with the grade-level opening details on the live district calendar. It distinguishes days when students are off from dates when both schools and district offices are closed, and shows marking-period endings as academic dates, not automatic days off.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1784229983/akronschoolscom/mhorqtm8mssdya0yiu4m/APS_2026-2027SchoolCalendar_ADACompliant_071626.pdf",
+  "allDatesSourceLabel": "Official APS 2026-2027 School Calendar PDF",
+  "breakNotes": {
+    "Thanksgiving Holiday — Schools and Offices Closed": "The preceding Wednesday, November 25, is a parent-teacher conference day with no students.",
+    "Winter Break — No Students": "Students are off December 21–January 1. District offices are closed only December 24–25, December 31 and January 1.",
+    "Spring Break — No Students": "Good Friday on March 26 closes schools and offices before the break begins Monday, March 29."
+  },
+  "breakDurationLabels": {
+    "Thanksgiving Holiday — Schools and Offices Closed": "2-day holiday"
+  },
+  "gradingPeriodsTitle": "Akron APS 2026–27 Marking-Period Endings",
+  "gradingPeriodsDescription": "APS lists four marking-period end dates. Only January 14 is followed by a Records Day; a marking-period ending is not a day off unless the calendar says otherwise.",
+  "gradingPeriods": [
+    {
+      "label": "Marking Period 1",
+      "end": "2026-10-30"
+    },
+    {
+      "label": "Marking Period 2",
+      "end": "2027-01-14"
+    },
+    {
+      "label": "Marking Period 3",
+      "end": "2027-03-25"
+    },
+    {
+      "label": "Marking Period 4",
+      "end": "2027-06-03"
+    }
+  ],
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "customSections": [
+    {
+      "id": "akron-aps-2026-2027-start-dates",
+      "label": "2026–27 Start Dates by Grade",
+      "content": "The one-page APS calendar lists August 27 as the first day for students. The live district calendar adds the grade-level details below.",
+      "position": "afterVerification",
+      "table": {
+        "columns": ["Date", "Students", "What families should know"],
+        "rows": [
+          ["August 27", "Grades 1–12", "First day of school"],
+          ["August 27–28", "Kindergarten", "Phase-in; confirm the assigned schedule with the school"],
+          ["August 31", "Pre-K and kindergarten", "First day for Pre-K and kindergarten"]
+        ]
+      }
+    },
+    {
+      "id": "akron-aps-2026-2027-no-student-days",
+      "label": "APS Staff Development, Conference and Records Days With No Students",
+      "content": "These dates are separate from major breaks and school-and-office holidays. Students do not attend, but APS does not identify district offices as closed.",
+      "position": "afterKeyDates",
+      "table": {
+        "columns": ["Date", "Official reason"],
+        "rows": [
+          ["September 25", "Staff professional development"],
+          ["November 3", "Staff professional development"],
+          ["November 25", "Parent-teacher conferences"],
+          ["January 15", "Records Day"],
+          ["January 29", "Staff professional development"],
+          ["February 12", "Parent-teacher conferences"],
+          ["May 4", "Staff professional development"]
+        ],
+        "footnote": "August 24–26 are also no-student staff dates, but they occur before the August 27 first student day."
+      }
+    },
+    {
+      "id": "akron-aps-2026-2027-program-calendars",
+      "label": "Does This Calendar Apply to Every APS Program?",
+      "content": "This page summarizes the districtwide APS calendar. Akron Early College, STEM schools, academies and other specialty programs may publish program-specific orientation, testing or event dates. Check the assigned school or program calendar before making plans.",
+      "position": "afterCalendarExport"
+    },
+    {
+      "id": "akron-aps-2026-2027-resources",
+      "label": "Other APS Calendars and Resources",
+      "content": "Use the district calendar for systemwide dates and the school directory for building- or program-specific schedules.",
+      "position": "beforeSources",
+      "links": [
+        { "label": "APS District Calendar", "to": "https://www.akronschools.com/district/district-information/calendar" },
+        { "label": "APS Schools and CLC Directory", "to": "https://www.akronschools.com/schools" }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-24",
+      "name": "Convocation / Teacher Work Day — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2026-08-25",
+      "endDate": "2026-08-26",
+      "name": "Staff Professional Development — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2026-08-27",
+      "name": "First Day for Grades 1–12",
+      "type": "school_start",
+      "schemaDescription": "Grades 1–12 start school on August 27, 2026, according to the APS live district calendar."
+    },
+    {
+      "date": "2026-08-27",
+      "endDate": "2026-08-28",
+      "name": "Kindergarten Phase-In",
+      "type": "academic",
+      "badgeLabel": "Kindergarten",
+      "labelType": "partial_closure",
+      "description": "Confirm the assigned phase-in schedule with the school.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-31",
+      "name": "First Day for Pre-K and Kindergarten",
+      "type": "school_start",
+      "badgeLabel": "Pre-K / K",
+      "labelType": "partial_closure"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-25",
+      "name": "Staff Professional Development — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2026-10-30",
+      "name": "End of Marking Period 1",
+      "type": "quarter_end",
+      "description": "Academic marker; not a student closure."
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Staff Professional Development — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2026-11-25",
+      "name": "Parent-Teacher Conferences — No Students",
+      "type": "no_school",
+      "badgeLabel": "Conferences"
+    },
+    {
+      "date": "2026-11-26",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Holiday — Schools and Offices Closed",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break — No Students",
+      "type": "break_start",
+      "description": "Office closures are limited to December 24–25, December 31 and January 1."
+    },
+    {
+      "date": "2026-12-24",
+      "endDate": "2026-12-25",
+      "name": "Winter Holidays — Schools and Offices Closed",
+      "type": "operational_closure",
+      "description": "Office closure inside the student Winter Break.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-31",
+      "endDate": "2027-01-01",
+      "name": "Winter Holidays — Schools and Offices Closed",
+      "type": "operational_closure",
+      "description": "Office closure inside the student Winter Break.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-14",
+      "name": "End of Marking Period 2",
+      "type": "quarter_end",
+      "description": "Academic marker; students attend unless APS issues a separate change."
+    },
+    {
+      "date": "2027-01-15",
+      "name": "Records Day — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — Schools and Offices Closed",
+      "type": "holiday",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-01-29",
+      "name": "Staff Professional Development — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2027-02-12",
+      "name": "Parent-Teacher Conferences — No Students",
+      "type": "no_school",
+      "badgeLabel": "Conferences"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-25",
+      "name": "End of Marking Period 3",
+      "type": "quarter_end",
+      "description": "Academic marker; not a student closure."
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Good Friday — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "name": "Spring Break — No Students",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-05-04",
+      "name": "Staff Professional Development — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-06-03",
+      "name": "End of Marking Period 4 / Last Day of School for Students",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-06-04",
+      "name": "Last Day for Teachers and Staff",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Akron APS 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Download the reviewed student dates as a one-time ICS file or open the official one-page APS calendar PDF.",
+  "icsHeading": "Add Akron APS 2026–27 Dates",
+  "icsDescription": "Download no-school days, holidays, breaks, and the first and last days of school as a one-time ICS file.",
+  "icsButtonLabel": "Add Akron APS Dates (.ics)",
+  "icsButtonSupportText": "One-time import. Recheck APS for emergency changes, CLC events, athletics and program schedules.",
+  "pdfHeading": "Official Akron APS 2026–27 Calendar",
+  "pdfDescription": "Open the accessible one-page district calendar created July 16, 2026 and linked from the APS calendar hub.",
+  "calendarFaqs": [
+    {
+      "q": "When does Akron Public Schools start in 2026–27?",
+      "a": "Grades 1–12 start Thursday, August 27, 2026. Kindergarten phase-in is August 27–28, and Pre-K and kindergarten begin Monday, August 31."
+    },
+    {
+      "q": "When is Akron APS Winter Break in 2026–27?",
+      "a": "Winter Break runs December 21, 2026 through January 1, 2027. APS offices close December 24–25, December 31 and January 1."
+    },
+    {
+      "q": "When is Akron APS Spring Break in 2027?",
+      "a": "Spring Break runs Monday, March 29 through Friday, April 2, 2027. Good Friday on March 26 closes schools and offices immediately before the break."
+    },
+    {
+      "q": "When is the last day for Akron APS students in 2027?",
+      "a": "The last student day is Thursday, June 3, 2027, which is also the end of the fourth marking period. June 4 is the last day for teachers and staff."
+    },
+    {
+      "q": "Are APS offices closed whenever students are off?",
+      "a": "No. Staff development, records and conference dates are student no-school days, but the calendar does not identify district offices as closed. During Winter Break, offices close only December 24–25, December 31 and January 1."
+    },
+    {
+      "q": "Does the district calendar apply to Early College, STEM and other specialty programs?",
+      "a": "It covers districtwide dates, but specialty programs may publish additional orientation, testing and event dates. Check the assigned school or program calendar as well."
+    }
+  ],
+  "faqDisplayLimit": 6,
+  "faqDisplayQuestions": [
+    "When does Akron Public Schools start in 2026–27?",
+    "When is Akron APS Winter Break in 2026–27?",
+    "When is Akron APS Spring Break in 2027?",
+    "When is the last day for Akron APS students in 2027?",
+    "Are APS offices closed whenever students are off?",
+    "Does the district calendar apply to Early College, STEM and other specialty programs?"
+  ],
+  "schemaCalendarName": "Akron Public Schools Calendar 2026–27",
+  "schemaDatasetName": "Akron Public Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Akron APS 2026–27 dates with grade-specific starts, student no-school days, office-closure dates, marking periods, breaks, and first and last days of school.",
+  "schemaCalendarDownloadName": "APS 2026–27 Calendar ICS File",
+  "schemaSpatialCoverage": "Akron, Ohio",
+  "jumpNavigation": [
+    {
+      "label": "Start Dates",
+      "id": "akron-aps-2026-2027-start-dates"
+    },
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "No-Student Days",
+      "id": "akron-aps-2026-2027-no-student-days"
+    },
+    {
+      "label": "All Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Marking Periods",
+      "id": "grading-periods"
+    },
+    {
+      "label": "Download",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "yearSwitcherPosition": "afterSources",
+  "hiddenSections": ["downloadCta", "keyDateCards", "quickFacts", "yearNumbers", "todayStatus", "about", "planningTips", "livingHere", "districtProfile", "relatedDistricts", "comparison", "whatsDifferent", "nationalTrends", "otherCalendars"],
+  "hiddenCustomSectionIds": ["akron-aps-opening-pattern", "akron-aps-operating-labels", "akron-aps-official-resources"],
+  "sourceReviewSummary": "Reviewed August 15, 2026 against the official APS 2026–27 PDF and live district calendar.",
+  "sourceReviewDetails": [
+    "We checked first and last days, grade-level opening details, staff dates, conferences, holidays, break ranges, marking-period endings, and the difference between student no-school days and office closures."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Akron Public Schools sources.",
+  "sourceNextReviewText": "Next review: when APS revises the 2026–27 PDF or changes the live district calendar.",
+  "sources": [
+    {
+      "label": "APS district calendar hub",
+      "url": "https://www.akronschools.com/district/district-information/calendar"
+    },
+    {
+      "label": "Official APS 2026–27 School Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1784229983/akronschoolscom/mhorqtm8mssdya0yiu4m/APS_2026-2027SchoolCalendar_ADACompliant_071626.pdf"
+    },
+    {
+      "label": "Akron Early College calendar",
+      "url": "https://akronearlycollege.akronschools.com/calendar-bhs"
+    }
+  ]
+}

@@ -11,27 +11,30 @@
   "lastVerifiedAt": "2026-07-19",
   "dateCreated": "2026-07-12",
   "datePublished": "2026-07-19",
-  "dateModified": "2026-08-14",
+  "dateModified": "2026-08-15",
   "temporalCoverageStart": "2026-08-03",
   "temporalCoverageEnd": "2027-05-31",
   "calendarType": "traditional",
   "displaySchoolYear": "2026–27",
-  "faqSchemaLimit": 9,
-  "faqOrderLimit": 9,
+  "faqSchemaLimit": 6,
+  "faqOrderLimit": 6,
+  "hideFaqSchema": true,
+  "includeArticleSchema": false,
+  "webPageMainEntity": "keyDates",
   "faqDisplayQuestions": [
     "When does Lewisville ISD start school in 2026?",
-    "When is Lewisville ISD Spring Break in 2027?",
-    "When is Lewisville ISD Winter Break?",
-    "When is the last day of school for Lewisville ISD in 2027?",
     "What are the LISD early release dates?",
+    "When do Lewisville ISD students return after Winter Break?",
     "What is the LISD bad weather day?",
     "How many instructional days are in the Lewisville ISD 2026–27 calendar?",
-    "Can I add the Lewisville ISD calendar to Google Calendar?",
-    "Where can I check for LISD calendar changes?"
+    "Will the MySchoolDates calendar update automatically if LISD changes a date?"
   ],
   "hiddenSections": [
     "about",
+    "breaks",
     "downloadCta",
+    "keyDateCards",
+    "nationalTrends",
     "todayStatus",
     "yearNumbers",
     "planningTips",
@@ -44,7 +47,8 @@
     "lisd-planning-around-calendar",
     "lisd-parent-reminders",
     "lisd-communities-served",
-    "lisd-verification-notes"
+    "lisd-verification-notes",
+    "lisd-about-short"
   ],
   "hideHeroVerificationProcess": true,
   "hideHeroReviewedField": true,
@@ -54,70 +58,76 @@
   "hideSemesterCount": true,
   "hideSecondSemesterStartSummary": true,
   "heroFactChips": [
-    "2 early-release dates",
-    "2 semesters"
+    "2 early-release dates"
   ],
   "verificationBadgeText": "Checked against the official LISD calendar · Reviewed July 19, 2026",
   "seoTitle": "Lewisville ISD Calendar 2026–2027: Holidays, Breaks & Important Dates",
-  "seoDescription": "Find Lewisville ISD’s 2026–27 first and last day, Thanksgiving, Winter and Spring Break, early-release dates, and the official LISD calendar PDF.",
+  "seoDescription": "Lewisville ISD starts Aug. 12, 2026 and ends May 21, 2027. Find breaks, early-release times, school hours, the official PDF, and an .ics calendar file.",
+  "pageHeading": "Lewisville ISD Calendar 2026–27",
   "heroSummary": "Lewisville ISD students start school Wednesday, Aug. 12, 2026. The last day is Friday, May 21, 2027, with early release. Spring Break runs March 15–19, and students return Monday, March 22.",
-  "calendarNotes": "The official LISD calendar lists 174 instructional days: 84 in the first semester and 90 in the second. Students and staff have early release December 18, and May 21 is an early-release last day for students. January 4 is a staff day before students return January 5. March 29 is reserved as the district's bad weather day and should be rechecked if LISD uses weather make-up time earlier in the year.",
+  "calendarNotes": "The official LISD calendar lists 174 instructional days: 84 in the first semester and 90 in the second. December 18 and May 21 are early-release dates; dismissal times are listed in the school-hours section. January 4 is a staff day before students return January 5. March 29 is the district's bad weather day and should be rechecked if LISD uses weather make-up time earlier in the year.",
   "keyDatesSummaryTitle": "LISD 2026–27 Key Dates & Holidays",
-  "keyDatesSummarySubtitle": "First and last day, major breaks, and dates families should check first",
-  "keyDateCardsThirdLabel": "Spring Break",
-  "keyDateCardsThirdValue": "March 15–19, 2027",
-  "keyDateCardsThirdDate": "2027-03-15",
-  "keyDateCardsThirdNote": "Students return Monday, March 22.",
-  "quickFactsTitle": "LISD 2026–27 at a Glance",
-  "quickFacts": [
+  "keyDatesSummarySubtitle": "First and last days, major breaks, and dates families should check first",
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
     {
-      "label": "First Day",
-      "value": "Aug. 12"
+      "label": "Key Dates",
+      "id": "key-dates"
     },
     {
-      "label": "Last Day",
-      "value": "May 21"
+      "label": "What to Know",
+      "id": "lisd-2026-family-notes"
     },
     {
-      "label": "Winter Break",
-      "value": "Dec. 21–Jan. 1"
+      "label": "School Hours",
+      "id": "lisd-2026-school-hours-early-release"
     },
     {
-      "label": "Spring Break",
-      "value": "Mar. 15–19"
+      "label": "All Dates",
+      "id": "all-dates"
     },
     {
-      "label": "Early Release",
-      "value": "2 Dates"
+      "label": "Changes",
+      "id": "year-comparison"
     },
     {
-      "label": "Instructional Days",
-      "value": "174"
+      "label": "Download",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Comparison",
+      "id": "comparison"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
     }
   ],
   "allDatesTitle": "LISD 2026–27 Calendar Dates",
   "allDatesCoverageNote": "This table covers districtwide academic dates from the official LISD calendar. Use your campus calendar for testing, athletics, performances, graduation, and other school-specific events.",
+  "dateLegendTitle": "Calendar key",
   "dateLegendLabelOverrides": {
     "Reserved Weather Day": "Bad Weather Day"
   },
-  "breakNotes": {
-    "Thanksgiving Break": "Students return Monday, November 30.",
-    "Winter Break": "January 4 is a staff day; students return Tuesday, January 5.",
-    "Spring Break": "Students return Monday, March 22."
-  },
+  "yearComparisonPosition": "afterAllDates",
   "icsHeading": "Add LISD 2026–27 Dates to Your Calendar",
   "icsDescription": "Download the dates on this page as a one-time .ics file for Google Calendar, Apple Calendar, or Outlook.",
   "hideIcsButtonSupportText": true,
   "hideIcsImportDisclaimer": true,
-  "icsSourceNote": "The file includes the districtwide dates listed on this page. Check LISD and your campus for later revisions and dismissal times.",
+  "icsSourceNote": "The file includes the districtwide dates listed on this page. Check LISD and your campus for later revisions or campus-specific schedule changes.",
   "shareCalendarHeading": "Share This Page",
   "pdfHeading": "Official LISD 2026–27 Calendar PDF",
   "pdfDescription": "Open the official 2026–27 academic calendar PDF published by LISD. Check the district calendar page for revisions.",
+  "hidePdfVersionLabel": true,
   "hideBreakDurationBadges": true,
   "hideRelatedDistrictDescriptions": true,
   "comparisonBeforeFaq": true,
   "comparisonTitle": "How the LISD Calendar Compares With Nearby Districts",
-  "compareIntro": "Compare the 2026–27 first day, last day, Thanksgiving Break, Winter Break, and Spring Break across LISD, Dallas, Frisco, and Garland. Each date is drawn from the reviewed district calendar for that school year.",
+  "compareIntro": "Thanksgiving and Spring Break line up across LISD, Dallas, Frisco, and Garland, while their start and end dates differ. We checked each district against its published 2026–27 calendar.",
   "comparisonRowsInclude": [
     "firstDay",
     "lastDay",
@@ -138,6 +148,12 @@
       "label": "End date comparison",
       "items": [
         "LISD ends five days before Dallas ISD, seven days after Frisco ISD, and six days before Garland ISD."
+      ]
+    },
+    {
+      "label": "Winter Break comparison",
+      "items": [
+        "LISD and Garland list Winter Break through January 1, while Dallas and Frisco list it through January 4."
       ]
     }
   ],
@@ -160,32 +176,66 @@
     "First and last days, breaks, staff days, early-release dates, the bad weather day, and grading-period dates were checked against the official LISD calendar.",
     "The .ics download is a one-time import and does not automatically reflect later LISD revisions."
   ],
+  "sourceMaintainerText": "Denis Dou for MySchoolDates",
+  "hideSourceReviewAuthor": true,
   "customSections": [
     {
       "id": "lisd-2026-family-notes",
       "label": "What LISD Families Should Know",
-      "content": "Four dates on the 2026–27 calendar need more context than a date list alone provides.",
+      "content": "A few dates on the LISD calendar are easy to overlook:",
       "position": "afterKeyDates",
       "hideGroupLabels": true,
       "groups": [
         {
           "label": "Important calendar notes",
           "items": [
-            "December 18: Students and staff have early release. LISD lists dismissal at 1:00 p.m. for high schools, 12:20 p.m. for middle schools, and 11:45 a.m. for elementary schools.",
+            "December 18: Students and staff have early release.",
             "January 4–5: January 4 is a staff day; students return from Winter Break on Tuesday, January 5.",
             "March 29: LISD marks this as its bad weather day. Check the district calendar again if weather closures occur earlier in the year.",
-            "May 21: The last day of school is also an early-release day. LISD lists the same 2026–27 dismissal times by school level. Families in early childhood programs should check LISD's school-hours information for program-specific schedules."
+            "May 21: The last day of school is also an early-release day, so plan pickup or afternoon care around the shortened day."
           ]
         }
-      ],
+      ]
+    },
+    {
+      "id": "lisd-2026-school-hours-early-release",
+      "label": "LISD School Hours & Early Release Times for 2026–27",
+      "content": "LISD lists new school hours for 2026–27. These early-release times apply on December 18, 2026 and May 21, 2027.",
+      "position": "afterKeyDates",
+      "table": {
+        "caption": "Lewisville ISD regular school hours and early-release times for 2026–27",
+        "columns": [
+          "School Level",
+          "Regular Hours",
+          "Early Release"
+        ],
+        "rows": [
+          [
+            "High School",
+            "8:50 a.m.–4:15 p.m.",
+            "1:00 p.m."
+          ],
+          [
+            "Middle School",
+            "8:15 a.m.–3:40 p.m.",
+            "12:20 p.m."
+          ],
+          [
+            "Elementary",
+            "7:40 a.m.–3:05 p.m.",
+            "11:45 a.m."
+          ]
+        ],
+        "footnote": "Half-day Pre-K and early childhood schedules differ; use LISD's school-hours information for program-specific times."
+      },
       "links": [
         {
-          "label": "LISD School Hours",
+          "label": "Official LISD school-hours information",
           "url": "https://www.lisd.net/our-district/about/school-hours"
         }
       ],
       "linksDisplay": "inline",
-      "linksLabel": "Official early childhood schedule:"
+      "linksLabel": "Source:"
     },
     {
       "id": "lisd-about-short",
@@ -200,20 +250,12 @@
       "a": "Lewisville ISD starts the 2026–27 school year on Wednesday, August 12, 2026."
     },
     {
-      "q": "When is Lewisville ISD Spring Break in 2027?",
-      "a": "Spring Break runs Monday, March 15 through Friday, March 19, 2027."
-    },
-    {
-      "q": "When is Lewisville ISD Winter Break?",
-      "a": "Lewisville ISD Winter Break starts Monday, December 21, 2026 and runs through Friday, January 1, 2027. Students return on Tuesday, January 5, 2027 after a staff day on January 4."
-    },
-    {
-      "q": "When is the last day of school for Lewisville ISD in 2027?",
-      "a": "The last student day is Friday, May 21, 2027, which is also listed as a student early release day."
-    },
-    {
       "q": "What are the LISD early release dates?",
-      "a": "The official calendar lists December 18, 2026 and May 21, 2027 as early-release dates. LISD lists dismissal at 1:00 p.m. for high schools, 12:20 p.m. for middle schools, and 11:45 a.m. for elementary schools. Early childhood schedules may differ."
+      "a": "The official calendar lists December 18, 2026 and May 21, 2027 as early-release dates. High schools dismiss at 1:00 p.m., middle schools at 12:20 p.m., and elementary schools at 11:45 a.m. Half-day Pre-K and early childhood schedules differ."
+    },
+    {
+      "q": "When do Lewisville ISD students return after Winter Break?",
+      "a": "Students return Tuesday, January 5, 2027. January 4 is a staff day with no school for students."
     },
     {
       "q": "How many instructional days are in the Lewisville ISD 2026–27 calendar?",
@@ -224,16 +266,13 @@
       "a": "LISD marks Monday, March 29, 2027 as its bad weather day. Check the official district calendar again if weather closures occur earlier in the school year."
     },
     {
-      "q": "Can I add the Lewisville ISD calendar to Google Calendar?",
-      "a": "Yes. MySchoolDates provides a one-time .ics calendar file generated from the reviewed Lewisville ISD calendar records. It can be imported into Google Calendar, Apple Calendar, and Outlook, but it will not automatically update if LISD revises the official calendar."
-    },
-    {
-      "q": "Where can I check for LISD calendar changes?",
-      "a": "Check the official Lewisville ISD calendar page and your campus announcements for revisions, emergency closures, dismissal-time changes, and school-specific events."
+      "q": "Will the MySchoolDates calendar update automatically if LISD changes a date?",
+      "a": "No. The .ics file is a one-time import for Google Calendar, Apple Calendar, or Outlook. Check the official LISD calendar page and campus announcements for later revisions or emergency schedule changes."
     }
   ],
   "whatsNew": {
-    "title": "Changes from the 2025–26 Calendar",
+    "title": "What Changed from 2025–26",
+    "subtitle": "Three changes families are most likely to notice.",
     "content": [
       "The first day remains August 12.",
       "Spring Break moves from March 16–20 in 2025–26 to March 15–19 in 2026–27.",
@@ -254,7 +293,7 @@
       ],
       "displayDate": "August 3–7 and August 10–11, 2026",
       "exportDatesIndividually": true,
-      "name": "Staff Days — No Student Attendance",
+      "name": "Staff Days — No School for Students",
       "type": "teacher_workday",
       "description": "Students begin classes Wednesday, August 12."
     },
@@ -307,7 +346,7 @@
       "date": "2026-12-18",
       "name": "Student & Staff Early Release — Second 9 Weeks Ends",
       "type": "early_release",
-      "description": "LISD lists dismissal at 1:00 p.m. for high schools, 12:20 p.m. for middle schools, and 11:45 a.m. for elementary schools."
+      "description": "See LISD School Hours & Early Release Times for dismissal times by school level."
     },
     {
       "date": "2026-12-21",
@@ -321,7 +360,7 @@
     },
     {
       "date": "2027-01-04",
-      "name": "Staff Day (No Student Attendance)",
+      "name": "Staff Day — No School for Students",
       "type": "teacher_workday"
     },
     {
@@ -376,7 +415,8 @@
       "name": "Last Day of School — Early Release",
       "type": "school_end",
       "badgeLabel": "Last Day · Early Release",
-      "description": "LISD lists dismissal at 1:00 p.m. for high schools, 12:20 p.m. for middle schools, and 11:45 a.m. for elementary schools."
+      "description": "See LISD School Hours & Early Release Times for dismissal times by school level.",
+      "schemaDescription": "May 21, 2027 is LISD's last student day and an early-release day."
     },
     {
       "date": "2027-05-31",

@@ -1,103 +1,208 @@
 {
   "institutionId": "hampton-city-schools",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Hampton City Schools Calendar 2026-2027",
   "firstDay": "2026-08-24",
   "lastDay": "2027-06-09",
+  "temporalCoverageStart": "2026-07-03",
+  "temporalCoverageEnd": "2027-06-25",
   "sourceUrl": "https://www.hampton.k12.va.us/calendars/calendar.html",
   "sourcePdfUrl": "https://www.hampton.k12.va.us/calendars/Hampton%20City%20Schools%20Calendar%20-%202026-2027.pdf",
-  "lastVerifiedAt": "2026-07-20",
+  "lastVerifiedAt": "2026-08-15",
   "datePublished": "2026-07-20",
-  "dateModified": "2026-07-20",
+  "dateModified": "2026-08-15",
   "calendarType": "traditional",
-  "totalSchoolDays": 180,
+  "hideInstructionalDaysSummary": true,
   "hideSemesterCount": true,
-  "yearNumbersMode": "compact",
-  "seoTitle": "Hampton City Schools Calendar 2026-2027: Holidays, Breaks, PDF & Important Dates",
-  "seoDescription": "View the Hampton City Schools Calendar 2026-2027 in Virginia with first day, last day, holidays, winter break, spring break, exams, PDF, ICS download, and important dates.",
-  "calendarNotes": "Hampton City Schools starts the 2026-2027 school year on August 24, 2026. Winter Break runs December 21-January 1, Spring Break runs April 5-9, and the last day of school is June 9, 2027. The calendar also lists teacher workdays, elementary planning days, progress reports, report cards, early release dates, high school exam schedules, and graduations.",
+  "hideSecondSemesterStartSummary": true,
+  "seoTitle": "Hampton City Schools Calendar 2026–27: Dates, Breaks & PDF",
+  "seoDescription": "See Hampton City Schools’ 2026–27 key dates, holidays, winter and spring breaks, early-release days, exams, graduation dates, and the official calendar PDF.",
+  "sourceCalendarName": "Hampton City Schools 2026–27 Calendar",
+  "schemaCalendarName": "Hampton City Schools 2026–27 Calendar",
+  "schemaDatasetName": "Hampton City Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Districtwide 2026–27 calendar dates for Hampton City Schools, including student attendance dates, holidays and closures, breaks, staff schedule dates, report dates, exam schedules, early release and early close dates, and graduations.",
+  "schemaCalendarDownloadName": "Hampton City Schools 2026–27 ICS calendar",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-agenda-calendar",
+      "name": "Hampton City Schools 2026–27 Agenda Calendar",
+      "url": "https://www.hampton.k12.va.us/calendars/202627AgendaCalendar.pdf"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-agenda-calendar"
+  ],
+  "calendarNotes": "Hampton City Schools begins the 2026–27 school year on August 24, 2026. Winter Break runs December 21, 2026–January 1, 2027, Spring Break runs April 5–9, and the last student day is June 9, 2027.",
+  "heroSummary": "Hampton City Schools begins the 2026–27 school year on Monday, August 24, 2026. The last student day is Wednesday, June 9, 2027. Spring Break is April 5–9, 2027, and students return from Winter Break on Tuesday, January 5, 2027.",
+  "heroSourceLine": "2026–27 calendar dates · Official HCS sources",
+  "hideHeroDownloadLink": true,
+  "heroCtas": [
+    {
+      "label": "View Official PDF",
+      "href": "__sourcePdfUrl",
+      "variant": "secondary"
+    },
+    {
+      "label": "Download Calendar (.ics)",
+      "href": "__icsUrl",
+      "variant": "primary",
+      "download": true,
+      "filename": "__icsFilename"
+    }
+  ],
+  "verificationBadgeText": "Reviewed August 15, 2026 · Checked against the official HCS calendars",
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideFaqSchema": true,
+  "hiddenSections": [
+    "downloadCta",
+    "keyDateCards",
+    "todayStatus",
+    "about",
+    "yearNumbers",
+    "whatsDifferent",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends"
+  ],
+  "hiddenCustomSectionIds": [
+    "hampton-city-schools-district-calendar-context",
+    "related-hampton-city-schools-calendars"
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Full Calendar", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "What's Changed", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "keyDatesSummaryTitle": "Hampton City Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last student days, major breaks, the winter return date, and graduations",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School", "date": "2026-08-24", "type": "school_start" },
+    { "label": "Break", "name": "Thanksgiving Break", "date": "2026-11-25", "endDate": "2026-11-27", "type": "break_start" },
+    { "label": "Break", "name": "Winter Break", "date": "2026-12-21", "endDate": "2027-01-01", "type": "break_start" },
+    { "label": "Return", "name": "Students Return from Winter Break", "date": "2027-01-05", "type": "school_resume", "schemaDescription": "HCS students return from Winter Break on January 5, 2027." },
+    { "label": "Break", "name": "Spring Break", "date": "2027-04-05", "endDate": "2027-04-09", "type": "break_start" },
+    { "label": "Last Day", "name": "Last Student Day", "date": "2027-06-09", "type": "school_end" },
+    { "label": "Graduation", "name": "High School Graduations", "date": "2027-06-10", "endDate": "2027-06-12", "type": "graduation", "schemaDescription": "HCS high school graduations are scheduled for June 10–12, 2027." }
+  ],
+  "quickFactsTitle": "Hampton Schedule at a Glance",
+  "quickFacts": [
+    { "value": "2", "label": "Elementary-only no-school days" },
+    { "value": "Jan 19–22", "label": "January high school exams" },
+    { "value": "Jun 4 & 7–9", "label": "Early release / high school exams" },
+    { "value": "Jun 10–12", "label": "High school graduations" }
+  ],
+  "allDatesTitle": "Hampton City Schools 2026–27 Full Calendar",
+  "allDatesCoverageNote": "This table follows the districtwide dates published by HCS, including student holidays, staff schedule milestones, elementary-only no-school days, report dates, exam schedules, early-release dates, graduations, and summer operational closures.",
+  "allDatesCoverageNotePosition": "top",
+  "dateLegendItems": [
+    { "label": "Holiday", "dot": "bg-teal-400" },
+    { "label": "Closure", "dot": "bg-slate-400" },
+    { "label": "Operational Closure", "dot": "bg-stone-400" },
+    { "label": "No School for Students", "dot": "bg-amber-400" },
+    { "label": "Early Close", "dot": "bg-orange-300" },
+    { "label": "Early Release", "dot": "bg-orange-400" },
+    { "label": "Break", "dot": "bg-purple-400" }
+  ],
+  "breaksTitle": "Major School Breaks",
+  "allDatesCoveredBreakDatesNote": "Closures that fall within a listed break are not repeated as separate entries.",
+  "moveCalendarExportBeforeAllDates": false,
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Calendar Downloads and Official PDF",
+  "unifiedDownloadDescription": "Download a one-time calendar import or open the official HCS 2026–27 calendar PDF.",
+  "icsHeading": "Add Hampton City Schools Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file for Google Calendar, Apple Calendar, or Outlook. The file includes the districtwide dates listed on this page.",
+  "icsButtonSupportText": "One-time import. Check HCS for revisions, weather closures, and school-specific schedule changes.",
+  "pdfHeading": "Official Hampton City Schools 2026–27 Calendar",
+  "pdfDescription": "Open or print the official district calendar used to review the dates on this page.",
+  "pdfButtonLabel": "View Official HCS PDF",
+  "yearSwitcherPosition": "afterSources",
+  "yearSwitcherLabel": "Other Hampton school years:",
+  "comparisonBeforeFaq": true,
+  "comparisonRowsMode": "sharedValuesOnly",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "comparisonSummary": "Compare Hampton’s first day, last day, and major breaks with nearby Hampton Roads school divisions.",
+  "hideComparisonNotes": true,
+  "hideRelatedDistrictDescriptions": true,
+  "sources": [
+    {
+      "label": "Hampton City Schools calendar page",
+      "url": "https://www.hampton.k12.va.us/calendars/calendar.html"
+    },
+    {
+      "label": "Hampton City Schools 2026–2027 Agenda Calendar",
+      "url": "https://www.hampton.k12.va.us/calendars/202627AgendaCalendar.pdf"
+    },
+    {
+      "label": "Hampton City Schools 2026–2027 official calendar PDF",
+      "url": "https://www.hampton.k12.va.us/calendars/Hampton%20City%20Schools%20Calendar%20-%202026-2027.pdf"
+    }
+  ],
+  "sourceReviewSummary": "Reviewed August 15, 2026, against the official HCS calendar page, Agenda Calendar, and complete 2026–27 calendar PDF.",
+  "sourceReviewDetailsTitle": "Review scope",
+  "sourceReviewDetails": [
+    "The dates and schedule details shown on this page were checked against the district’s published calendars.",
+    "When HCS lists nonconsecutive dates, we preserve those dates rather than presenting them as one continuous range.",
+    "The downloadable ICS file is a one-time import; HCS remains the source of record for revisions and emergency schedule changes."
+  ],
   "customSections": [
     {
-      "id": "hampton-calendar-2026-2027-overview",
-      "position": "afterKeyDates",
-      "label": "About Hampton City Schools Calendar 2026-2027",
-      "content": "The Hampton City Schools Calendar 2026-2027 is the districtwide academic calendar for students, families, teachers, and school staff in Hampton, Virginia. This calendar includes traditional school-year dates, student holidays, teacher workdays, elementary planning and professional development days, exam windows, early release dates, report card dates, and high school graduation dates. Families can use it to plan school attendance, childcare, appointments, vacations, transportation, and important activities during the school year."
-    },
-    {
-      "id": "hampton-calendar-highlights-2026-2027",
-      "position": "afterKeyDates",
-      "label": "Hampton City Schools 2026-2027 Calendar Highlights",
-      "content": "The 2026-2027 Hampton City Schools calendar follows a traditional academic schedule with a late-August start, a January semester transition, spring break in April, and high school graduation activities after the final student day.",
+      "id": "hampton-families-should-know-2026-2027",
+      "position": "afterQuickFacts",
+      "label": "What Hampton Families Should Know",
+      "content": "Hampton’s elementary, high school, and year-end schedules do not always follow the same pattern.",
       "groups": [
         {
-          "label": "What families should know",
+          "label": "Elementary families",
           "items": [
-            "The first semester ends in January 2027 after the January high school exam window.",
-            "High school exam periods are listed in January and June, which can affect early release, transportation, and after-school planning.",
-            "Spring Break is scheduled for April 5-9, 2027.",
-            "Graduation activities are listed for June 10-12, 2027, after the final student day.",
-            "Teacher workdays and professional development days may affect childcare and transportation schedules even when they are not major school breaks."
+            "September 18 and February 22 are elementary-only teacher planning and professional development days. Only elementary students are off on these two dates."
           ]
-        }
-      ]
-    },
-    {
-      "id": "hampton-school-breaks-summary-2026-2027",
-      "position": "afterBreaks",
-      "label": "Hampton City Schools School Breaks Summary",
-      "content": "Use this quick summary for the major Hampton City Schools breaks most families search for during the 2026-2027 academic year.",
-      "table": {
-        "columns": [
-          "Break",
-          "Dates",
-          "Planning note"
-        ],
-        "rows": [
-          [
-            "Thanksgiving Break",
-            "November 25-27, 2026",
-            "Short holiday break around Thanksgiving week"
-          ],
-          [
-            "Winter Break",
-            "December 21, 2026-January 1, 2027",
-            "Longest scheduled student break in the first half of the year"
-          ],
-          [
-            "Spring Break",
-            "April 5-9, 2027",
-            "Main spring travel and childcare planning period"
-          ]
-        ]
-      }
-    },
-    {
-      "id": "hampton-important-dates-for-parents",
-      "position": "afterBreaks",
-      "label": "Hampton City Schools Important Dates for Parents",
-      "content": "These dates are the most useful planning checkpoints for Hampton families using the 2026-2027 school year calendar.",
-      "groups": [
+        },
         {
-          "label": "Start and return dates",
+          "label": "January schedule",
           "items": [
-            "Students begin school on Monday, August 24, 2026.",
             "Students return from Winter Break on Tuesday, January 5, 2027.",
-            "Second semester begins on Wednesday, January 27, 2027."
+            "High school exams run January 19–22. Students do not report January 25–26, and the second semester begins January 27."
           ]
         },
         {
-          "label": "Breaks and travel planning",
+          "label": "End of school",
           "items": [
-            "Winter Break runs December 21, 2026 through January 1, 2027.",
-            "Spring Break runs April 5-9, 2027.",
-            "Families planning travel should confirm school-specific activities, athletics, and program calendars before making arrangements."
+            "May 28 is an Early Close for students and staff divisionwide, two hours before regular dismissal.",
+            "Elementary and middle schools have early release June 4 and June 7–9. High schools follow their exam schedule on those dates.",
+            "June 9 is the final student day."
           ]
         },
         {
-          "label": "Exams, graduation, and year-end dates",
+          "label": "Graduation",
           "items": [
-            "High school exam schedules run January 19-22, 2027 and June 4-9, 2027.",
-            "The last day of school is Wednesday, June 9, 2027.",
-            "High school graduations are listed for June 10-12, 2027."
+            "Phoebus High School graduation is June 10 at 7:00 p.m.",
+            "Kecoughtan High School graduation is June 11 at 7:00 p.m.",
+            "Bethel High School graduation is June 12 at 9:00 a.m.",
+            "Hampton High School graduation is June 12 at 1:30 p.m."
+          ]
+        },
+        {
+          "label": "Weather make-up days",
+          "items": [
+            "HCS has one banked student instructional day for inclement weather. Additional missed days are made up at the superintendent’s discretion."
           ]
         }
       ]
@@ -105,13 +210,13 @@
     {
       "id": "hampton-calendar-changes-2026-2027",
       "position": "afterYearDiff",
-      "label": "2025-2026 vs 2026-2027 Hampton Calendar Changes",
-      "content": "Compared with the previous Hampton City Schools calendar, several major planning dates move one calendar day earlier in 2026-2027.",
+      "label": "What Changed From 2025–26",
+      "content": "Several major dates fall one calendar day earlier in 2026–27 than in the previous school year.",
       "table": {
         "columns": [
           "Calendar item",
-          "2025-2026",
-          "2026-2027",
+          "2025–26",
+          "2026–27",
           "Change"
         ],
         "rows": [
@@ -129,58 +234,35 @@
           ],
           [
             "Winter Break",
-            "December 22, 2025-January 2, 2026",
-            "December 21, 2026-January 1, 2027",
+            "December 22, 2025–January 2, 2026",
+            "December 21, 2026–January 1, 2027",
             "Starts and ends one calendar day earlier"
           ],
           [
             "Spring Break",
-            "April 6-10, 2026",
-            "April 5-9, 2027",
+            "April 6–10, 2026",
+            "April 5–9, 2027",
             "Starts and ends one calendar day earlier"
           ],
           [
             "High school graduations",
-            "June 11-13, 2026",
-            "June 10-12, 2027",
-            "Starts one calendar day earlier"
+            "June 11–13, 2026",
+            "June 10–12, 2027",
+            "Moves one day earlier"
           ]
         ]
       }
-    },
-    {
-      "id": "hampton-calendar-verification-method",
-      "position": "beforeSources",
-      "label": "How We Verify Hampton Calendar Information",
-      "content": "MySchoolDates verifies Hampton City Schools calendar information before publishing this independent reference page.",
-      "groups": [
-        {
-          "label": "Verification process",
-          "items": [
-            "Review the official Hampton City Schools calendar page and published PDF.",
-            "Compare key dates including first day, last day, holidays, winter break, spring break, teacher workdays, exam windows, and graduation dates.",
-            "Generate the downloadable ICS calendar file from verified calendar records.",
-            "Keep the official source link available so families can confirm district revisions or weather make-up changes."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "hampton-calendar-update-history-2026-2027",
-      "position": "beforeSources",
-      "label": "Hampton Calendar Update History",
-      "content": "This update history explains when the Hampton City Schools calendar record was reviewed for this page.",
-      "groups": [
-        {
-          "label": "Calendar record updates",
-          "items": [
-            "July 20, 2026: Verified the 2026-2027 Hampton City Schools calendar against the official district calendar page and PDF.",
-            "July 20, 2026: Generated the downloadable ICS calendar file from the reviewed Hampton calendar records.",
-            "Future district revisions, weather make-up decisions, or school-specific schedule changes should be confirmed with Hampton City Schools."
-          ]
-        }
-      ]
     }
+  ],
+  "faqDisplayQuestions": [
+    "When does Hampton City Schools start school in 2026?",
+    "When is Hampton City Schools winter break 2026?",
+    "When is Hampton City Schools Spring Break in 2027?",
+    "When do Hampton City Schools students return after winter break?",
+    "Does Hampton City Schools have a fall break?",
+    "When are Hampton high school exam dates in 2027?",
+    "When are Hampton high school graduations in 2027?",
+    "Which days are elementary-only no-school days in Hampton City Schools?"
   ],
   "calendarFaqs": [
     {
@@ -192,20 +274,20 @@
       "a": "Spring Break runs Monday, April 5 through Friday, April 9, 2027."
     },
     {
-      "q": "When is the last day of school for Hampton in 2027?",
-      "a": "The last day of school is Wednesday, June 9, 2027."
+      "q": "When are Hampton high school exam dates in 2027?",
+      "a": "The January high school exam schedule runs January 19–22, 2027. High schools also follow the exam schedule on June 4 and June 7–9."
     },
     {
       "q": "When are Hampton high school graduations in 2027?",
-      "a": "The official calendar lists high school graduations on June 10-12, 2027."
+      "a": "The official calendar lists high school graduations on June 10–12, 2027."
     },
     {
-      "q": "How many school days are in Hampton City Schools 2026-2027 calendar?",
-      "a": "The Hampton City Schools 2026-2027 calendar includes 180 instructional days for students."
+      "q": "Which days are elementary-only no-school days in Hampton City Schools?",
+      "a": "Elementary students do not report on September 18, 2026, or February 22, 2027, for teacher planning and professional development. Only elementary students are off on these two dates."
     },
     {
       "q": "Does Hampton City Schools have a fall break?",
-      "a": "Hampton City Schools does not list a traditional fall break on the 2026-2027 calendar. The calendar does include teacher workdays, conference days, and holidays when students do not report."
+      "a": "Hampton City Schools does not list a traditional fall break on the 2026–27 calendar. The calendar does include teacher workdays, a conference day, and holidays when students do not report."
     },
     {
       "q": "When do Hampton City Schools students return after winter break?",
@@ -214,38 +296,17 @@
     {
       "q": "When is Hampton City Schools winter break 2026?",
       "a": "Hampton City Schools Winter Break runs from Monday, December 21, 2026 through Friday, January 1, 2027. Students return on Tuesday, January 5, 2027."
-    },
-    {
-      "q": "Is Hampton City Schools closed today?",
-      "a": "This page lists planned Hampton City Schools calendar dates. For weather closures, emergency schedule changes, or same-day announcements, families should check the latest Hampton City Schools alerts and official school communications."
-    }
-  ],
-  "yearNumbers": [
-    {
-      "label": "First Day",
-      "value": "Aug 24",
-      "detail": "The first day of school is August 24, 2026."
-    },
-    {
-      "label": "Spring Break",
-      "value": "Apr 5-9",
-      "detail": "Spring Break runs April 5-9, 2027."
-    },
-    {
-      "label": "Last Day",
-      "value": "Jun 9",
-      "detail": "The last day of school is June 9, 2027."
     }
   ],
   "events": [
-    { "date": "2026-07-03", "name": "Observance of Independence Day - Schools and Offices Closed", "type": "holiday" },
-    { "date": "2026-08-03", "name": "New Teacher Orientation Begins", "type": "teacher_workday" },
-    { "date": "2026-08-11", "name": "New Teacher Orientation Ends", "type": "teacher_workday" },
-    { "date": "2026-08-12", "name": "Pre-Service Days Begin", "type": "teacher_workday" },
-    { "date": "2026-08-20", "name": "Pre-Service Days End", "type": "teacher_workday" },
+    { "date": "2026-07-03", "name": "Observance of Independence Day — Schools and Offices Closed", "type": "holiday" },
+    { "date": "2026-07-10", "dates": ["2026-07-10", "2026-07-17", "2026-07-24", "2026-07-31"], "displayDate": "July 10, 17, 24, and 31, 2026", "name": "Summer Operational Hours — Schools and Offices Closed", "type": "operational_closure", "exportDatesIndividually": true },
+    { "date": "2026-08-03", "dates": ["2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-10", "2026-08-11"], "displayDate": "August 3–6 and 10–11, 2026", "name": "New Teacher Orientation", "type": "teacher_workday", "exportDatesIndividually": true },
+    { "date": "2026-08-07", "name": "Summer Operational Hours — Schools and Offices Closed", "type": "operational_closure" },
+    { "date": "2026-08-12", "dates": ["2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20"], "displayDate": "August 12–14 and 17–20, 2026", "name": "Pre-Service Days", "type": "teacher_workday", "exportDatesIndividually": true },
     { "date": "2026-08-21", "name": "Teachers Do Not Report", "type": "teacher_workday" },
-    { "date": "2026-08-24", "name": "First Day of School", "type": "school_start", "description": "First scheduled student attendance day for Hampton City Schools in 2026-2027." },
-    { "date": "2026-09-04", "name": "Schools and Offices Closed", "type": "holiday" },
+    { "date": "2026-08-24", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-09-04", "name": "Schools and Offices Closed", "type": "closure" },
     { "date": "2026-09-07", "name": "Labor Day - Schools and Offices Closed", "type": "holiday" },
     { "date": "2026-09-18", "name": "Elementary Teacher Planning/Professional Development Day - Elementary Students Do Not Report", "type": "teacher_workday" },
     { "date": "2026-09-30", "name": "Progress Reports", "type": "academic" },
@@ -254,16 +315,16 @@
     { "date": "2026-11-03", "name": "Conference Day - Students Do Not Report", "type": "no_school" },
     { "date": "2026-11-04", "name": "Second Quarter Begins", "type": "academic" },
     { "date": "2026-11-10", "name": "Report Cards", "type": "academic" },
-    { "date": "2026-11-25", "name": "Thanksgiving Break", "type": "break_start", "description": "Start of Thanksgiving Break for Hampton City Schools students." },
+    { "date": "2026-11-25", "name": "Thanksgiving Break", "type": "break_start" },
     { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
     { "date": "2026-12-15", "name": "Progress Reports", "type": "academic" },
-    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start", "description": "Start of Winter Break for Hampton City Schools students." },
+    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
     { "date": "2027-01-01", "name": "Winter Break End", "type": "break_end" },
     { "date": "2027-01-04", "name": "Teacher Work Day - Students Do Not Report", "type": "teacher_workday", "schemaEvent": true, "description": "Teacher work day after Winter Break; students do not report." },
     { "date": "2027-01-05", "name": "Students Return from Winter Break", "type": "school_resume" },
     { "date": "2027-01-18", "name": "MLK Day - Schools and Offices Closed", "type": "holiday" },
-    { "date": "2027-01-19", "name": "January High School Exam Schedule Begins", "type": "academic", "schemaEvent": true, "description": "Start of the January high school exam schedule listed by Hampton City Schools." },
-    { "date": "2027-01-22", "name": "High School Exam Schedule Ends; First Semester Ends", "type": "semester_end" },
+    { "date": "2027-01-19", "dates": ["2027-01-19", "2027-01-20", "2027-01-21", "2027-01-22"], "displayDate": "January 19–22, 2027", "name": "January High School Exam Schedule", "type": "academic", "exportDatesIndividually": true, "description": "High schools follow the district exam schedule on these dates." },
+    { "date": "2027-01-22", "name": "First Semester Ends", "type": "semester_end" },
     { "date": "2027-01-25", "name": "Teacher Work Day - Students Do Not Report", "type": "teacher_workday" },
     { "date": "2027-01-26", "name": "Regional Professional Development Day - Students Do Not Report", "type": "teacher_workday" },
     { "date": "2027-01-27", "name": "Second Semester Begins", "type": "school_resume" },
@@ -273,21 +334,19 @@
     { "date": "2027-02-25", "name": "Progress Reports", "type": "academic" },
     { "date": "2027-03-19", "name": "Teacher Work Day/Professional Development Day - Students Do Not Report", "type": "teacher_workday" },
     { "date": "2027-04-02", "name": "Third Quarter Ends", "type": "academic" },
-    { "date": "2027-04-05", "name": "Spring Break", "type": "break_start", "description": "Start of Spring Break for Hampton City Schools students." },
+    { "date": "2027-04-05", "name": "Spring Break", "type": "break_start" },
     { "date": "2027-04-09", "name": "Spring Break End", "type": "break_end" },
     { "date": "2027-04-09", "name": "Schools and Offices Closed", "type": "holiday" },
     { "date": "2027-04-12", "name": "Fourth Quarter Begins", "type": "academic" },
     { "date": "2027-04-16", "name": "Report Cards", "type": "academic" },
     { "date": "2027-05-05", "name": "Progress Reports", "type": "academic" },
-    { "date": "2027-05-28", "name": "Early Close", "type": "early_release" },
+    { "date": "2027-05-28", "name": "Early Close", "type": "early_close", "description": "Students and staff are dismissed two hours early divisionwide." },
     { "date": "2027-05-31", "name": "Memorial Day - Schools and Offices Closed", "type": "holiday" },
-    { "date": "2027-06-04", "name": "Early Release for Elementary and Middle Schools", "type": "early_release" },
-    { "date": "2027-06-04", "name": "June High School Exam Schedule Begins", "type": "academic", "schemaEvent": true, "description": "Start of the June high school exam schedule listed by Hampton City Schools." },
-    { "date": "2027-06-09", "name": "Last Day of School", "type": "school_end", "description": "Final scheduled student attendance day for Hampton City Schools in 2026-2027." },
-    { "date": "2027-06-09", "name": "Early Release and High School Exam Schedule Ends", "type": "early_release" },
+    { "date": "2027-06-04", "dates": ["2027-06-04", "2027-06-07", "2027-06-08", "2027-06-09"], "displayDate": "June 4 and 7–9, 2027", "name": "Elementary and Middle School Early Release; High School Exam Schedule", "type": "early_release", "exportDatesIndividually": true, "description": "Elementary and middle schools release early; high schools follow the exam schedule." },
+    { "date": "2027-06-09", "name": "Last Day of School", "type": "school_end" },
     { "date": "2027-06-10", "name": "Teacher Work Day", "type": "teacher_workday" },
-    { "date": "2027-06-10", "name": "High School Graduation Begins", "type": "graduation", "schemaEvent": true, "description": "Start of the Hampton City Schools high school graduation window." },
-    { "date": "2027-06-12", "name": "High School Graduation Ends", "type": "graduation", "schemaEvent": true, "description": "End of the Hampton City Schools high school graduation window." },
-    { "date": "2027-06-18", "name": "Juneteenth - Schools and Offices Closed", "type": "holiday" }
+    { "date": "2027-06-10", "endDate": "2027-06-12", "displayDate": "June 10–12, 2027", "name": "High School Graduations", "type": "graduation", "schemaEvent": true, "description": "Hampton City Schools high school graduation window." },
+    { "date": "2027-06-18", "name": "Juneteenth — Schools and Offices Closed", "type": "holiday" },
+    { "date": "2027-06-25", "name": "Summer Operational Hours — Schools and Offices Closed", "type": "operational_closure" }
   ]
 }

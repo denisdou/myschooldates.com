@@ -1,0 +1,605 @@
+{
+  "institutionId": "cleveland-metropolitan-school-district",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Cleveland Metropolitan School District Calendar 2026–27",
+  "firstDay": "2026-08-24",
+  "lastDay": "2027-06-03",
+  "temporalCoverageStart": "2026-07-03",
+  "temporalCoverageEnd": "2027-06-18",
+  "semesters": 2,
+  "sourceUrl": "https://www.clevelandmetroschools.org/about-us/district-calendar",
+  "sourceDocumentPage": "https://www.clevelandmetroschools.org/about-us/district-calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1772221580/clevelandmetroschoolsorg/jrqheoqee94zold3xhjf/SY26-27CalendarDraftv511.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1772221580/clevelandmetroschoolsorg/jrqheoqee94zold3xhjf/SY26-27CalendarDraftv511.pdf",
+  "sourceCheckedAt": "2026-08-15",
+  "sourceUpdatedAt": "2025-12-10",
+  "sourceChecksumSha256": "40481a586707be223a9a3374fbca1abfa7eb52c69d99f67b17aa8c6b813301b6",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The official district page labels the download “2026-27 Approved Calendar,” but the linked PDF is titled “SY26-27 Calendar Draft (11.18.25),” carries a DRAFT watermark on all 12 pages, and lists 174 student working days on the first page but 176 on the last. The live district calendar currently labels August 24 for grades 9-12, while the Back-to-School page says grades 1-12 and the PDF calls it the student first day. This page uses August 24 for traditional grades 1-12, omits the disputed student-day total, and keeps the source under manual review.",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.clevelandmetroschools.org/about-us/district-calendar",
+    "linkText": "2026-27 Approved Calendar",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1772221580/clevelandmetroschoolsorg/jrqheoqee94zold3xhjf/SY26-27CalendarDraftv511.pdf",
+    "expectedChecksumSha256": "40481a586707be223a9a3374fbca1abfa7eb52c69d99f67b17aa8c6b813301b6"
+  },
+  "lastVerifiedAt": "2026-08-15",
+  "dateCreated": "2026-08-15",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_source_conflict", "official_schedule_change", "start_dismissal_schedule_change", "confirmed_data_error"],
+  "sourceVersion": "CMSD 2026–27 approved-calendar listing; linked 12-page PDF titled SY26-27 Calendar Draft (11.18.25), created December 10, 2025",
+  "allDatesMode": "all",
+  "calendarType": "traditional",
+  "calendarTrackId": "traditional",
+  "includeComparisonSchema": false,
+  "includeArticleSchema": false,
+  "hideFaqSchema": true,
+  "hideDatasetSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "hiddenSections": [
+    "about",
+    "districtProfile",
+    "downloadCta",
+    "keyDateCards",
+    "livingHere",
+    "quickFacts",
+    "todayStatus",
+    "yearNumbers"
+  ],
+  "seoTitle": "CMSD Calendar 2026–27: Dates, Breaks & PDF",
+  "seoDescription": "CMSD grades 1–12 start Aug. 24, 2026. Check kindergarten and Pre-K start dates, school breaks, no-school days, early dismissals, extended-year dates, and the official calendar PDF.",
+  "heroSummary": "Most CMSD students in grades 1–12 start school Monday, August 24, 2026, and finish Thursday, June 3, 2027. Kindergarten starts August 28. Pre-K phases in September 1–4 and has its first full day September 8. Students at Downtown Education Center and The School of One follow a separate extended-year calendar, from August 10 through June 16.",
+  "heroSourceLine": "2026–27 dates · Reviewed against the CMSD PDF, live calendar, and Back-to-School page",
+  "heroFactChips": [],
+  "verificationBadgeText": "Reviewed August 15, 2026 · Source: Cleveland Metropolitan School District",
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "keyDatesSummaryTitle": "CMSD 2026–27 Traditional Calendar Key Dates",
+  "keyDatesSummarySubtitle": "Traditional start date, school breaks, and last day",
+  "breaksTitle": "Multi-Day School Breaks",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Traditional Grades 1–12",
+      "date": "2026-08-24",
+      "type": "school_start",
+      "schemaDescription": "The first day of classes for traditional-calendar students in grades 1–12."
+    },
+    {
+      "label": "Fall Break",
+      "name": "Fall Break — Schools Closed",
+      "date": "2026-10-09",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Spring Break",
+      "name": "Spring Break",
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Traditional Students",
+      "date": "2027-06-03",
+      "type": "school_end",
+      "schemaDescription": "The last day for students on the traditional CMSD calendar."
+    }
+  ],
+  "allDatesTitle": "CMSD 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This table follows all family-relevant dates in the official 12-page PDF, including traditional, kindergarten, Pre-K, and 205-day extended-year milestones. It excludes administrator contract dates and ordinary observances that do not change student attendance. Campus events, bell times, and emergency changes still require the live district and school calendars.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1772221580/clevelandmetroschoolsorg/jrqheoqee94zold3xhjf/SY26-27CalendarDraftv511.pdf",
+  "allDatesSourceLabel": "Official CMSD 2026–27 approved-calendar download",
+  "breakNotes": {
+    "Fall Break — Schools Closed, Facilities Open": "Traditional classes resume Monday, October 12.",
+    "Thanksgiving Break": "Students return Monday, November 30; facilities are open November 25 and closed November 26–27.",
+    "Winter Break": "Teachers and students return Monday, January 4.",
+    "Spring Break": "Students return Monday, April 5. Good Friday on March 26 precedes the Monday-through-Friday break."
+  },
+  "dateLegendItems": [
+    { "label": "School start / end", "dot": "bg-yellow-400" },
+    { "label": "No school / holiday", "dot": "bg-rose-500" },
+    { "label": "Kindergarten / Pre-K only", "dot": "bg-pink-400" },
+    { "label": "Early dismissal / conference", "dot": "bg-purple-400" },
+    { "label": "Academic marker", "dot": "bg-slate-400" },
+    { "label": "Extended-year track", "dot": "bg-teal-500" }
+  ],
+  "customSections": [
+    {
+      "id": "cmsd-2026-2027-opening",
+      "label": "Which CMSD Start Date Applies to My Child?",
+      "content": "CMSD does not have one first day for every student. Use the date that matches your child's grade or program.",
+      "position": "afterKeyDates",
+      "table": {
+        "columns": ["Date", "Students", "What families should know"],
+        "rows": [
+          ["August 10", "DEC and SO1 extended-year students", "205-day schedule begins"],
+          ["August 24", "Traditional grades 1–12", "First day for most students"],
+          ["August 28", "Kindergarten", "Kindergarten begins"],
+          ["September 1–4", "Pre-K", "Phase-in dates"],
+          ["September 8", "Pre-K", "First full day"]
+        ]
+      }
+    },
+    {
+      "id": "cmsd-2026-2027-changes",
+      "label": "What Changed for 2026–27",
+      "content": "CMSD moved the traditional student start date to August 24 for the 2026–27 school year. Signal Cleveland reported that the one-week shift is connected to school mergers and other Building Brighter Futures changes. Some campuses also have new start and dismissal times, so families should confirm their school assignment and bell schedule before the first day.",
+      "position": "afterKeyDates",
+      "links": [
+        {
+          "label": "See 2026–27 school times →",
+          "to": "#cmsd-2026-2027-school-times"
+        }
+      ]
+    },
+    {
+      "id": "cmsd-2026-2027-grade-closures",
+      "label": "Kindergarten and Pre-K No-School Fridays",
+      "content": "These professional-development dates apply only to the named program. Other grades follow their regular schedule.",
+      "position": "afterAllDates",
+      "table": {
+        "columns": ["Program", "No-school dates"],
+        "rows": [
+          ["Kindergarten", "September 18, December 4, and April 9"],
+          ["Pre-K", "September 25, October 23, December 11, January 29, March 19, and April 23"]
+        ]
+      }
+    },
+    {
+      "id": "cmsd-2026-2027-source-note",
+      "label": "Why the Student-Day Total Is Not Shown",
+      "content": "CMSD's official calendar page calls the file approved, but the PDF retains a DRAFT watermark. Its July page lists 174 student working days and its June page lists 176. Because those totals conflict, we list the dates that can be verified but do not publish a student-day count.",
+      "position": "beforeSources"
+    },
+    {
+      "id": "cmsd-2026-2027-school-times",
+      "label": "CMSD School Start and Dismissal Times for 2026–27",
+      "content": "Some campuses have new start or dismissal times for 2026–27. After confirming your child's school, check the district's current start-and-end-time sheet.",
+      "position": "afterCalendarExport",
+      "links": [
+        {
+          "label": "View CMSD 2026–27 Start and End Times",
+          "to": "https://resources.finalsite.net/images/v1772221580/clevelandmetroschoolsorg/sqwf0ufxknxlcoieczlv/SY26_27Start_EndTimes.pdf"
+        },
+        {
+          "label": "Open the CMSD School Finder",
+          "to": "https://cmsd.finder.schoolmint.com/"
+        }
+      ]
+    },
+    {
+      "id": "cmsd-2026-2027-planning-notes",
+      "label": "CMSD Calendar Planning Notes",
+      "content": "A few dates require extra pickup, attendance, or weather planning:",
+      "position": "afterCalendarExport",
+      "hideGroupLabels": true,
+      "groups": [
+        {
+          "label": "Planning notes",
+          "items": [
+            "Check the grade label on professional-development Fridays because kindergarten- or Pre-K-only closures do not affect every student.",
+            "Plan earlier pickup for the September open house and the February and April conference dates; November conferences are a full no-school day for students.",
+            "Check your school's bell schedule and follow CMSD for weather closures or other emergency changes."
+          ]
+        }
+      ]
+    }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Start Dates", "id": "cmsd-2026-2027-opening" },
+    { "label": "Changes", "id": "cmsd-2026-2027-changes" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Grade Closures", "id": "cmsd-2026-2027-grade-closures" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "School Times", "id": "cmsd-2026-2027-school-times" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "pdfHeading": "Official CMSD 2026–27 Calendar",
+  "pdfDescription": "Open the 12-page calendar PDF linked from CMSD's district calendar page.",
+  "pdfButtonLabel": "View Official CMSD PDF",
+  "pdfVersionLabel": "CMSD 2026–27 approved-calendar listing / linked Draft 11.18.25 PDF",
+  "hidePdfVersionLabel": true,
+  "icsHeading": "Add CMSD Traditional Dates to Your Calendar",
+  "icsDescription": "Download the traditional districtwide dates as a one-time .ics file. It excludes the DEC/SO1 extended-year track, Pre-K phase-in, and kindergarten- or Pre-K-only closures.",
+  "icsButtonLabel": "Download CMSD Traditional Dates (.ics)",
+  "icsButtonSupportText": "This file does not update automatically. Check CMSD for weather changes, school events, and source revisions.",
+  "icsSourceNote": "",
+  "hideIcsImportDisclaimer": true,
+  "faqOrderLimit": 8,
+  "faqDisplayQuestions": [
+    "When does Cleveland Metropolitan School District start in 2026–27?",
+    "Do kindergarten and Pre-K students start on August 24?",
+    "When are CMSD Winter Break and Spring Break in 2026–27?",
+    "Which CMSD students follow the extended-year calendar?",
+    "Are all CMSD professional-development Fridays districtwide no-school days?",
+    "Does a CMSD parent-teacher conference day always mean no school?",
+    "Is the linked 2026–27 CMSD calendar approved or a draft?",
+    "Where should families check CMSD weather closures?"
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When does Cleveland Metropolitan School District start in 2026–27?",
+      "a": "Traditional students in grades 1–12 start Monday, August 24, 2026. The 205-day extended-year programs start August 10, kindergarten starts August 28, and Pre-K phases in September 1–4 before its first full day September 8."
+    },
+    {
+      "q": "When are CMSD Winter Break and Spring Break in 2026–27?",
+      "a": "Winter Break runs December 21, 2026 through January 1, 2027, and students return January 4. Spring Break runs March 29 through April 2, 2027, and students return April 5."
+    }
+  ],
+  "sources": [
+    {
+      "label": "CMSD live calendar and 2026–27 approved-calendar listing",
+      "url": "https://www.clevelandmetroschools.org/about-us/district-calendar"
+    },
+    {
+      "label": "Official CMSD 2026–27 calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1772221580/clevelandmetroschoolsorg/jrqheoqee94zold3xhjf/SY26-27CalendarDraftv511.pdf"
+    },
+    {
+      "label": "CMSD Back-to-School 2026 opening dates",
+      "url": "https://www.clevelandmetroschools.org/schools/back-to-school-2026"
+    },
+    {
+      "label": "Official CMSD 2026–27 start and end times PDF",
+      "url": "https://resources.finalsite.net/images/v1772221580/clevelandmetroschoolsorg/sqwf0ufxknxlcoieczlv/SY26_27Start_EndTimes.pdf"
+    },
+    {
+      "label": "CMSD Weather FAQs",
+      "url": "https://www.clevelandmetroschools.org/about-us/weather-faqs"
+    },
+    {
+      "label": "Signal Cleveland — CMSD 2026–27 calendar and school merger context",
+      "url": "https://signalcleveland.org/cmsd-approves-2026-school-calendar-shifts-start-date-back-one-week/"
+    }
+  ],
+  "sourceCalendarName": "Cleveland Metropolitan School District 2026–27 calendar PDF",
+  "sourceReviewSummary": "Reviewed August 15, 2026, against the official 12-page PDF, the CMSD calendar page, the live district calendar, the Back-to-School 2026 page, and the 2026–27 school-time PDF.",
+  "sourceReviewDetails": [
+    "Confirmed that the user-provided local PDF and the current official download are byte-for-byte identical with SHA-256 40481a586707be223a9a3374fbca1abfa7eb52c69d99f67b17aa8c6b813301b6.",
+    "Extracted the text and visually reviewed all 12 monthly pages for start dates, breaks, early dismissals, grade-specific closures, marking-period boundaries, and last days.",
+    "Compared the August opening labels with the live district calendar and the Back-to-School page, then used August 24 for traditional grades 1–12.",
+    "Recorded the approved-versus-draft labeling issue and the PDF's conflicting 174/176 student working-day totals instead of silently choosing one."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Cleveland Metropolitan School District sources.",
+  "events": [
+    {
+      "date": "2026-07-03",
+      "name": "Independence Day Observed — Facilities Closed",
+      "type": "holiday",
+      "description": "District closure before the student year begins.",
+      "hideFromAllDates": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-03",
+      "endDate": "2026-08-07",
+      "name": "205-Day Extended-Year Professional Development",
+      "type": "teacher_workday",
+      "description": "Staff preparation for the separate extended-year schedule at DEC and SO1.",
+      "hideFromAllDates": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-10",
+      "name": "First Day for 205-Day Extended-Year Students — DEC and SO1",
+      "type": "school_start",
+      "badgeLabel": "Extended-Year",
+      "labelType": "partial_closure",
+      "description": "Separate extended-year opening for Downtown Education Center and The School of One.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-17",
+      "endDate": "2026-08-21",
+      "name": "School and District Professional Development Days",
+      "type": "teacher_workday",
+      "description": "Teachers start August 17; students have not yet begun the traditional calendar.",
+      "hideFromAllDates": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-20",
+      "endDate": "2026-08-21",
+      "name": "Back-to-School Meet and Greet Events",
+      "type": "academic",
+      "description": "Families should check the event time for their assigned school.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-24",
+      "name": "First Day for Traditional Grades 1–12",
+      "type": "school_start",
+      "description": "Marking Period 1 and Semester 1 also begin. The Back-to-School page identifies grades 1–12; kindergarten and Pre-K begin later."
+    },
+    {
+      "date": "2026-08-28",
+      "name": "First Day of Kindergarten",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-01",
+      "endDate": "2026-09-04",
+      "name": "Pre-K Phase-In",
+      "type": "academic",
+      "badgeLabel": "Pre-K Only",
+      "labelType": "partial_closure",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — Facilities Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-08",
+      "name": "First Full Day of Pre-K",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-09",
+      "name": "All-School Open House — Early Dismissal",
+      "type": "early_dismissal",
+      "description": "Open house is scheduled from 6–8 p.m. at all schools."
+    },
+    {
+      "date": "2026-09-18",
+      "name": "No School for Kindergarten — Teacher Professional Development",
+      "type": "no_school",
+      "badgeLabel": "Kindergarten Only",
+      "labelType": "partial_closure",
+      "preserveOfficialName": true,
+      "description": "Students in other grades follow their normal schedule.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-09-25",
+      "name": "No School for Pre-K — Teacher Professional Development",
+      "type": "no_school",
+      "badgeLabel": "Pre-K Only",
+      "labelType": "partial_closure",
+      "preserveOfficialName": true,
+      "description": "Students in grades K–12 follow their normal schedule.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-09",
+      "name": "Fall Break — Schools Closed, Facilities Open",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-10-23",
+      "name": "Marking Period 1 Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-23",
+      "name": "No School for Pre-K — Teacher Professional Development",
+      "type": "no_school",
+      "badgeLabel": "Pre-K Only",
+      "labelType": "partial_closure",
+      "preserveOfficialName": true,
+      "description": "Students in grades K–12 follow their normal schedule.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-26",
+      "name": "Marking Period 2 Begins",
+      "type": "quarter_start",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-11-02",
+      "name": "Parent-Teacher Conferences — No School for Students",
+      "type": "no_school",
+      "description": "All-school conferences run 12:30–7 p.m."
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Election Day — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day — Facilities Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start",
+      "description": "Schools are closed all three days. Facilities remain open November 25 and are closed November 26–27."
+    },
+    {
+      "date": "2026-12-04",
+      "name": "No School for Kindergarten — Teacher Professional Development",
+      "type": "no_school",
+      "badgeLabel": "Kindergarten Only",
+      "labelType": "partial_closure",
+      "preserveOfficialName": true,
+      "description": "Students in other grades follow their normal schedule.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-11",
+      "name": "No School for Pre-K — Teacher Professional Development",
+      "type": "no_school",
+      "badgeLabel": "Pre-K Only",
+      "labelType": "partial_closure",
+      "preserveOfficialName": true,
+      "description": "Students in grades K–12 follow their normal schedule.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start",
+      "description": "Facilities close at noon December 24 and are closed December 25 and January 1."
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Students and Teachers Return",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-15",
+      "name": "Marking Period 2 Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — Facilities Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-19",
+      "name": "Marking Period 3 and Semester 2 Begin",
+      "type": "quarter_start",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-29",
+      "name": "No School for Pre-K — Teacher Professional Development",
+      "type": "no_school",
+      "badgeLabel": "Pre-K Only",
+      "labelType": "partial_closure",
+      "preserveOfficialName": true,
+      "description": "Students in grades K–12 follow their normal schedule.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-02-11",
+      "name": "Parent-Teacher Conferences — Early Dismissal",
+      "type": "early_dismissal",
+      "description": "All-school conferences; students dismiss early and teachers have an extended day."
+    },
+    {
+      "date": "2027-02-12",
+      "name": "District Professional Development Day — Schools Closed",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day — Facilities Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-19",
+      "name": "No School for Pre-K — Teacher Professional Development",
+      "type": "no_school",
+      "badgeLabel": "Pre-K Only",
+      "labelType": "partial_closure",
+      "preserveOfficialName": true,
+      "description": "Students in grades K–12 follow their normal schedule.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-25",
+      "name": "Marking Period 3 Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Good Friday — Facilities Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-04-05",
+      "name": "Students Return",
+      "type": "school_resume",
+      "description": "Marking Period 4 begins."
+    },
+    {
+      "date": "2027-04-09",
+      "name": "No School for Kindergarten — Teacher Professional Development",
+      "type": "no_school",
+      "badgeLabel": "Kindergarten Only",
+      "labelType": "partial_closure",
+      "preserveOfficialName": true,
+      "description": "Students in other grades follow their normal schedule.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-04-14",
+      "name": "Parent-Teacher Conferences — Early Dismissal",
+      "type": "early_dismissal",
+      "description": "All-school conferences; students dismiss early and teachers have an extended day."
+    },
+    {
+      "date": "2027-04-23",
+      "name": "No School for Pre-K — Teacher Professional Development",
+      "type": "no_school",
+      "badgeLabel": "Pre-K Only",
+      "labelType": "partial_closure",
+      "preserveOfficialName": true,
+      "description": "Students in grades K–12 follow their normal schedule.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day — Facilities Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-06-02",
+      "name": "Last Day for Pre-K Students",
+      "type": "school_end",
+      "badgeLabel": "Pre-K Only",
+      "labelType": "partial_closure",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-03",
+      "name": "Last Day for Traditional Students",
+      "type": "school_end",
+      "description": "Marking Period 4 and Semester 2 end the same day."
+    },
+    {
+      "date": "2027-06-16",
+      "name": "Last Day for 205-Day Extended-Year Students — DEC and SO1",
+      "type": "school_end",
+      "badgeLabel": "Extended-Year",
+      "labelType": "partial_closure",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-18",
+      "name": "Juneteenth Observed — Facilities Closed",
+      "type": "holiday",
+      "description": "District closure after the traditional student year ends.",
+      "hideFromAllDates": true,
+      "hideFromCalendarExport": true
+    }
+  ]
+}

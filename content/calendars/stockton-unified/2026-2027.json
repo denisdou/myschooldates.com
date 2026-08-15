@@ -3,156 +3,226 @@
   "schoolYear": "2026-2027",
   "firstDay": "2026-07-30",
   "lastDay": "2027-05-26",
-  "sourceUrl": "https://www.stocktonusd.net/56958",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Stockton Unified School District Calendar 2026-2027",
+  "sourceUrl": "https://www.stocktonusd.net/64039_4",
   "sourcePdfUrl": "https://files.smartsites.parentsquare.com/8508/26-27_instrcal_updated_41026.pdf",
+  "sourceCalendarName": "SUSD 2026–27 Instructional Calendar, 180-Day Schedule",
+  "sourceVersion": "Board approved December 16, 2025 · district file updated April 10, 2026",
+  "sourceCalendarDateModified": "2026-04-10",
   "lastVerifiedAt": "2026-07-19",
   "datePublished": "2026-07-19",
-  "dateModified": "2026-07-19",
+  "dateModified": "2026-08-15",
   "calendarType": "traditional",
   "totalSchoolDays": 180,
-  "yearNumbersMode": "compact",
   "seoTitle": "Stockton Unified Calendar 2026-2027: Holidays, Breaks & PDF",
-  "seoDescription": "View the Stockton Unified Calendar 2026-2027 with school holidays, Jul 30 first day, May 26 last day, Fall Break, Winter Break, Spring Break, printable PDF and Google Calendar download.",
-  "calendarNotes": "Stockton Unified lists a 180-day instructional calendar for 2026-2027. The first day of school is July 30, 2026 and the last day is May 26, 2027. Fall Break runs October 5-9, Thanksgiving Break runs November 23-27, Winter Break runs December 21-January 1, and Spring Break runs March 15-19.",
+  "seoDescription": "SUSD’s districtwide 180-day calendar starts July 30, 2026, and ends May 26, 2027. See major breaks, no-school days, return dates, the official PDF, and calendar downloads.",
+  "schemaCalendarName": "Stockton Unified School District 2026–27 Instructional Calendar",
+  "schemaDatasetName": "Stockton Unified School District 2026–27 Instructional Calendar Dataset",
+  "schemaDatasetDescription": "Major dates from Stockton Unified School District’s districtwide 180-day instructional calendar, including school-year boundaries, major holidays, break ranges, and next regular school days.",
+  "schemaCalendarDownloadName": "Stockton Unified School District 2026–27 ICS calendar file",
+  "heroSourceUrl": "https://files.smartsites.parentsquare.com/8508/26-27_instrcal_updated_41026.pdf",
+  "heroSourceLabel": "SUSD 2026–27 Instructional Calendar, 180-Day Schedule",
+  "heroSourceSuffix": " · Board approved December 16, 2025 · updated April 10, 2026",
+  "heroSummary": "On SUSD’s districtwide 180-day calendar, the first day of school is Thursday, July 30, 2026. The last day is Wednesday, May 26, 2027, and Spring Break runs March 15–19, 2027.",
+  "verificationBadgeText": "Checked against the official SUSD calendar on July 19, 2026.",
+  "verificationBadgeReviewerName": "Denis Dou",
+  "verificationBadgeReviewerHref": "/author",
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideSecondSemesterStartSummary": true,
+  "heroFactChips": [
+    "Next regular school day after Winter Break: Jan 4, 2027"
+  ],
+  "keyDatesHeading": "Stockton Unified 2026–27 Key Dates",
+  "keyDateCardsFirstLabel": "First Day of School",
+  "keyDateCardsSecondLabel": "Last Day of School",
+  "keyDateCardsThirdLabel": "Instructional Days",
+  "keyDateCardsThirdValue": "180 days",
+  "breaksBeforeAllDates": true,
+  "breaksTitle": "Major Breaks and Student Return Dates",
+  "hideBreakDurationBadges": true,
+  "breakNotes": {
+    "2026-10-05": "Next regular school day: Monday, October 12.",
+    "2026-11-23": "Next regular school day: Monday, November 30.",
+    "2026-12-21": "Next regular school day: Monday, January 4.",
+    "2027-03-15": "Next regular school day: Monday, March 22."
+  },
+  "dateLegendLabelOverrides": {
+    "Staff Day": "No School"
+  },
+  "allDatesTitle": "Stockton Unified 2026–27 Important Student Dates",
+  "allDatesCoverageNote": "This table focuses on student attendance, no-school, break, holiday, and grading-period dates between the first and last day of school. SUSD prints both quarter and trimester end dates; schools may use different reporting cycles, so confirm campus reporting dates with your school.",
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Calendar Tools and Official PDF",
+  "unifiedDownloadDescription": "Download the dates shown on this page, open SUSD’s official instructional calendar PDF, or share this resource.",
+  "icsHeading": "Download the Stockton Unified 2026–27 Calendar",
+  "icsDescription": "Download a one-time .ics file for Google Calendar, Apple Calendar, or Outlook. The file does not update automatically if SUSD revises its calendar.",
+  "icsButtonLabel": "Download calendar (.ics)",
+  "icsButtonSupportText": "One-time import. Check the official SUSD calendar page for revisions.",
+  "pdfHeading": "Official SUSD 2026–27 Calendar PDF",
+  "pdfDescription": "Open the district’s 180-day instructional calendar, board approved December 16, 2025 and updated April 10, 2026.",
+  "pdfButtonLabel": "View Official PDF",
+  "hidePdfVersionLabel": true,
+  "comparisonBeforeFaq": true,
+  "comparisonTitle": "Stockton Unified Calendar Compared With Selected California Districts",
+  "compareIntro": "Compare Stockton Unified’s 2026–27 school-year dates with three other California districts.",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "instructionalDays",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "comparisonRowsMode": "sharedValuesOnly",
+  "comparisonRowLabels": {
+    "instructionalDays": "Instructional Days"
+  },
+  "hideComparisonNotes": true,
+  "hideComparisonReviewedDate": true,
+  "yearSwitcherPosition": "afterSources",
+  "hideFaqSchema": true,
+  "faqDisplayLimit": 6,
+  "faqDisplayQuestions": [
+    "Which Stockton Unified calendar does this page use?",
+    "Does Stockton Early College Academy use the same calendar?",
+    "When do students return after Winter Break?",
+    "Are teacher professional development days school days for students?",
+    "Does the calendar download update automatically?",
+    "Where can I check for SUSD calendar revisions?"
+  ],
+  "hiddenSections": [
+    "keyDatesSummary",
+    "downloadCta",
+    "quickFacts",
+    "todayStatus",
+    "yearNumbers",
+    "about",
+    "planningTips",
+    "whatsDifferent",
+    "districtProfile",
+    "nationalTrends",
+    "relatedDistricts"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "href": "#key-dates" },
+    { "label": "Breaks", "href": "#breaks" },
+    { "label": "Important Dates", "href": "#all-dates" },
+    { "label": "Days Off", "id": "stockton-midweek-days-off-2026-2027" },
+    { "label": "Downloads", "href": "#add-to-calendar" },
+    { "label": "Comparisons", "id": "stockton-year-comparison-2026-2027" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Sources", "href": "#sources" }
+  ],
+  "sources": [
+    {
+      "label": "SUSD 2026–27 calendars page",
+      "url": "https://www.stocktonusd.net/64039_4"
+    },
+    {
+      "label": "SUSD 2026–27 Instructional Calendar, 180-Day Schedule (PDF)",
+      "url": "https://files.smartsites.parentsquare.com/8508/26-27_instrcal_updated_41026.pdf"
+    }
+  ],
+  "hideSourceVersionDisplay": true,
+  "sourceReviewSummary": "Source: SUSD 2026–27 Instructional Calendar, 180-Day Schedule. Board approved December 16, 2025; district file updated April 10, 2026; last checked by MySchoolDates July 19, 2026.",
+  "sourceReviewDetails": [
+    "We compared the first and last student days, four major break ranges, holidays, grading-period dates, and teacher professional development or other non-contact days with the official PDF.",
+    "The official 2026–27 calendars page lists a separate instructional calendar for Stockton Early College Academy (SECA). This page does not apply that SECA calendar to the districtwide dates.",
+    "The downloadable .ics file is generated from the dates shown here and is a one-time import, not a live district sync."
+  ],
   "calendarFaqs": [
     {
-      "q": "When does Stockton Unified start school in 2026?",
-      "a": "Stockton Unified starts the 2026-2027 school year on Thursday, July 30, 2026."
+      "q": "Which Stockton Unified calendar does this page use?",
+      "a": "This page summarizes SUSD’s districtwide 2026–27 Instructional Calendar, 180-Day Schedule. It covers the main student attendance calendar rather than every school or program calendar."
     },
     {
-      "q": "When is Stockton Unified Fall Break in 2026?",
-      "a": "Fall Break runs Monday, October 5 through Friday, October 9, 2026."
+      "q": "Does Stockton Early College Academy use the same calendar?",
+      "a": "No. SUSD lists a separate instructional calendar for Stockton Early College Academy (SECA). SECA families should use the school’s official calendar before making plans."
     },
     {
-      "q": "When is Stockton Unified Spring Break in 2027?",
-      "a": "Spring Break runs Monday, March 15 through Friday, March 19, 2027."
+      "q": "When do students return after Winter Break?",
+      "a": "Winter Break ends Friday, January 1, 2027. The next regular school day is Monday, January 4."
     },
     {
-      "q": "When is the last day of school for Stockton Unified in 2027?",
-      "a": "The last day of school is Wednesday, May 26, 2027."
+      "q": "Are teacher professional development days school days for students?",
+      "a": "No. Dates labeled Teacher Professional Development/Other Non-Contact Day on the official schedule are not student attendance days."
     },
     {
-      "q": "How many school days are in the Stockton Unified 2026-2027 calendar?",
-      "a": "The Stockton Unified 2026-2027 instructional calendar lists 180 school days for students."
+      "q": "Does the calendar download update automatically?",
+      "a": "No. The .ics file is a one-time import for Google Calendar, Apple Calendar, or Outlook. Check the official SUSD calendar page for later revisions."
     },
     {
-      "q": "When does Stockton Unified summer break start in 2027?",
-      "a": "Summer break begins after the last student day on Wednesday, May 26, 2027."
-    },
-    {
-      "q": "Where can parents download the Stockton Unified calendar PDF?",
-      "a": "The official Stockton Unified 2026-2027 instructional calendar PDF is linked from this page, and families can also download the MySchoolDates calendar file for Google Calendar, Apple Calendar, and Outlook."
-    },
-    {
-      "q": "Does the Stockton Unified calendar include teacher work days?",
-      "a": "Yes. The official instructional calendar includes teacher professional development days and other non-contact days, which families should check when planning childcare and student activities."
+      "q": "Where can I check for SUSD calendar revisions?",
+      "a": "Use SUSD’s official 2026–27 calendars page and your school’s announcements. MySchoolDates is an independent reference and is not affiliated with Stockton Unified."
     }
   ],
   "customSections": [
     {
-      "id": "stockton-unified-calendar-2026-2027-highlights",
-      "label": "Stockton Unified Calendar 2026-2027 Highlights",
-      "position": "afterKeyDates",
-      "content": "These are the Stockton Unified dates families usually need first when planning the 2026-2027 school year.",
-      "groups": [
+      "id": "stockton-calendar-coverage-2026-2027",
+      "label": "Which Calendar Does This Page Cover?",
+      "position": "afterVerification",
+      "content": "This page summarizes SUSD’s districtwide 180-day instructional calendar. Stockton Early College Academy (SECA) has a separate instructional calendar, so SECA families should confirm dates on the district’s official 2026–27 calendars page.",
+      "linksDisplay": "inline",
+      "linksLabel": "Official source:",
+      "links": [
         {
-          "label": "At a glance",
-          "items": [
-            "First student day: July 30, 2026.",
-            "Last student day: May 26, 2027.",
-            "Total instructional days: 180.",
-            "Longest scheduled student break: Winter Break, December 21, 2026-January 1, 2027.",
-            "Spring Break: March 15-19, 2027.",
-            "Fall Break is included, running October 5-9, 2026.",
-            "Stockton Unified starts in late July, earlier than many California districts, so families should review July teacher non-contact days before the first student attendance day."
-          ]
+          "label": "SUSD 2026–27 calendars",
+          "url": "https://www.stocktonusd.net/64039_4"
         }
       ]
     },
     {
-      "id": "stockton-unified-days-off-school-2026-2027",
-      "label": "Stockton Unified Days Off School 2026-2027",
-      "position": "beforeSources",
-      "content": "Parents often search for Stockton Unified days off school when planning childcare, family activities, and appointments. Major no-school periods include district holidays, Fall Break, Thanksgiving Break, Winter Break, Spring Break, teacher professional development days, and other non-contact days.",
-      "groups": [
-        {
-          "label": "Main no-school categories",
-          "items": [
-            "Fall Break: October 5-9, 2026.",
-            "Thanksgiving Break: November 23-27, 2026.",
-            "Winter Break: December 21, 2026-January 1, 2027.",
-            "Spring Break: March 15-19, 2027.",
-            "Teacher professional development and other non-contact days may affect student attendance even when they are not major school holidays."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "stockton-unified-local-calendar-notes-2026-2027",
-      "label": "Local Calendar Notes for Stockton Unified Families",
-      "position": "afterPlanningTips",
-      "content": "Stockton Unified begins the 2026-2027 school year in late July, earlier than many traditional September-start districts. Families should pay close attention to July professional development and teacher non-contact days before student attendance begins, because staff calendar dates appear immediately before the first student day."
-    },
-    {
-      "id": "stockton-unified-calendar-comparison-2026-2027",
-      "label": "Stockton Unified Calendar Compared With 2025-2026",
-      "position": "beforeSources",
-      "content": "Families comparing Stockton Unified calendar changes can use this summary to see how the 2026-2027 instructional calendar differs from the previous school year.",
+      "id": "stockton-midweek-days-off-2026-2027",
+      "label": "Midweek No-School Days",
+      "position": "afterAllDates",
+      "content": "These four Wednesday no-school days fall outside the major break weeks and are easy to miss when arranging childcare or appointments.",
       "table": {
-        "columns": ["Date", "2025-2026", "2026-2027"],
+        "columns": ["Date", "Reason"],
         "rows": [
-          ["First day", "July 31, 2025", "July 30, 2026"],
-          ["Last day", "May 28, 2026", "May 26, 2027"],
-          ["Fall Break", "October 6-10, 2025", "October 5-9, 2026"],
-          ["Thanksgiving Break", "November 24-28, 2025", "November 23-27, 2026"],
-          ["Winter Break", "December 22, 2025-January 2, 2026", "December 21, 2026-January 1, 2027"],
-          ["Spring Break", "March 16-20, 2026", "March 15-19, 2027"]
+          ["Wednesday, September 23, 2026", "Teacher professional development / other non-contact day"],
+          ["Wednesday, November 11, 2026", "Veterans Day"],
+          ["Wednesday, January 27, 2027", "Teacher professional development / other non-contact day"],
+          ["Wednesday, March 31, 2027", "Cesar Chavez Day"]
         ]
       }
     },
     {
-      "id": "printable-stockton-unified-calendar-2026-2027",
-      "label": "Printable Stockton Unified Calendar 2026-2027",
-      "position": "afterKeyDates",
-      "content": "Families looking for a printable Stockton Unified calendar can use the official PDF source linked on this page, print this page for a searchable calendar view, or import the calendar file into Google Calendar, Apple Calendar, and Outlook."
-    }
-  ],
-  "yearNumbers": [
-    {
-      "label": "First Day",
-      "value": "Jul 30",
-      "detail": "The first day of school is July 30, 2026."
-    },
-    {
-      "label": "Instructional Days",
-      "value": "180",
-      "detail": "The district calendar lists a 180-day instructional schedule."
-    },
-    {
-      "label": "Spring Break",
-      "value": "Mar 15-19",
-      "detail": "Spring Break runs March 15-19, 2027."
+      "id": "stockton-year-comparison-2026-2027",
+      "label": "What Changed From 2025–26?",
+      "position": "afterCalendarExport",
+      "content": "The overall pattern changes only slightly from 2025–26. Each major break starts one day earlier in the month, school starts one day earlier, and the last day moves from May 28 to May 26.",
+      "table": {
+        "columns": ["Calendar item", "2025–26", "2026–27"],
+        "rows": [
+          ["First day", "July 31, 2025", "July 30, 2026"],
+          ["Last day", "May 28, 2026", "May 26, 2027"],
+          ["Fall Break", "October 6–10, 2025", "October 5–9, 2026"],
+          ["Thanksgiving Break", "November 24–28, 2025", "November 23–27, 2026"],
+          ["Winter Break", "December 22, 2025–January 2, 2026", "December 21, 2026–January 1, 2027"],
+          ["Spring Break", "March 16–20, 2026", "March 15–19, 2027"]
+        ]
+      }
     }
   ],
   "events": [
-    { "date": "2026-07-03", "name": "Independence Day Observed", "type": "holiday" },
-    { "date": "2026-07-27", "name": "Teacher Professional Development/Other Non-Contact Day", "type": "teacher_workday" },
-    { "date": "2026-07-28", "name": "Teacher Professional Development/Other Non-Contact Day", "type": "teacher_workday" },
-    { "date": "2026-07-29", "name": "Teacher Professional Development/Other Non-Contact Day", "type": "teacher_workday" },
-    { "date": "2026-07-30", "name": "First Day of School", "type": "school_start" },
+    { "date": "2026-07-30", "name": "First Day of School", "type": "school_start", "schemaDescription": "The first day of classes on SUSD’s districtwide 180-day instructional calendar." },
     { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
     { "date": "2026-09-23", "name": "Teacher Professional Development/Other Non-Contact Day", "type": "teacher_workday" },
     { "date": "2026-10-02", "name": "First Quarter Ends", "type": "academic" },
-    { "date": "2026-10-05", "name": "Fall Break", "type": "break_start" },
+    { "date": "2026-10-05", "name": "Fall Break", "type": "break_start", "schemaDescription": "On SUSD’s districtwide 180-day calendar, Fall Break runs Oct 5–9, 2026." },
     { "date": "2026-10-09", "name": "Fall Break End", "type": "break_end" },
     { "date": "2026-10-23", "name": "Teacher Professional Development/Other Non-Contact Day", "type": "teacher_workday" },
     { "date": "2026-10-30", "name": "Trimester 1 Ends", "type": "academic" },
     { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday" },
-    { "date": "2026-11-23", "name": "Thanksgiving Break", "type": "break_start" },
+    { "date": "2026-11-23", "name": "Thanksgiving Break", "type": "break_start", "schemaDescription": "On SUSD’s districtwide 180-day calendar, Thanksgiving Break runs Nov 23–27, 2026." },
     { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2026-12-11", "name": "P-1 Ends", "type": "academic" },
     { "date": "2026-12-18", "name": "Second Quarter Ends", "type": "academic" },
-    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
+    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start", "schemaDescription": "On SUSD’s districtwide 180-day calendar, Winter Break runs Dec 21, 2026–Jan 1, 2027." },
     { "date": "2027-01-01", "name": "Winter Break End", "type": "break_end" },
     { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
     { "date": "2027-01-27", "name": "Teacher Professional Development/Other Non-Contact Day", "type": "teacher_workday" },
@@ -160,15 +230,10 @@
     { "date": "2027-02-15", "name": "Presidents' Day", "type": "holiday" },
     { "date": "2027-02-18", "name": "Trimester 2 Ends", "type": "academic" },
     { "date": "2027-03-12", "name": "Third Quarter Ends", "type": "academic" },
-    { "date": "2027-03-15", "name": "Spring Break", "type": "break_start" },
+    { "date": "2027-03-15", "name": "Spring Break", "type": "break_start", "schemaDescription": "On SUSD’s districtwide 180-day calendar, Spring Break runs Mar 15–19, 2027." },
     { "date": "2027-03-19", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2027-03-19", "name": "P-2 Ends", "type": "academic" },
     { "date": "2027-03-26", "name": "School Break or Vacation Day", "type": "student_holiday" },
     { "date": "2027-03-31", "name": "Cesar Chavez Day", "type": "holiday" },
-    { "date": "2027-05-26", "name": "Last Day of School", "type": "school_end" },
-    { "date": "2027-05-27", "name": "Teacher Professional Development/Other Non-Contact Day", "type": "teacher_workday" },
-    { "date": "2027-05-28", "name": "School Break or Vacation Day", "type": "student_holiday" },
-    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2027-06-18", "name": "Juneteenth Observed", "type": "holiday" }
+    { "date": "2027-05-26", "name": "Last Day of School", "type": "school_end", "schemaDescription": "The last day of classes on SUSD’s districtwide 180-day instructional calendar." }
   ]
 }

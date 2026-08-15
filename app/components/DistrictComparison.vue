@@ -439,6 +439,9 @@ const showComparisonNotes = computed(() =>
 const comparisonReviewedText = computed(() =>
   (props.cal as any)?.comparisonReviewedText ?? (props.cal as any)?.meta?.comparisonReviewedText ?? (props.district as any)?.comparisonReviewedText ?? (props.district as any)?.meta?.comparisonReviewedText ?? ''
 )
+const showComparisonReviewedDate = computed(() =>
+  !Boolean((props.cal as any)?.hideComparisonReviewedDate ?? (props.cal as any)?.meta?.hideComparisonReviewedDate ?? (props.district as any)?.hideComparisonReviewedDate ?? (props.district as any)?.meta?.hideComparisonReviewedDate)
+)
 const comparisonSourceNote = computed(() =>
   (props.cal as any)?.comparisonSourceNote ??
   (props.cal as any)?.meta?.comparisonSourceNote ??
@@ -547,12 +550,12 @@ const comparisonCaption = computed(() =>
       <p v-if="comparisonFooterText">
         {{ comparisonFooterText }}
         <template v-if="comparisonReviewedText"> {{ comparisonReviewedText }}</template>
-        <template v-else-if="reviewedDate"> Last reviewed {{ reviewedDate }}.</template>
+        <template v-else-if="showComparisonReviewedDate && reviewedDate"> Last reviewed {{ reviewedDate }}.</template>
       </p>
       <p v-else>
         Dates come from each district's published {{ displaySchoolYear }} calendar. {{ comparisonSourceNote }}
         <template v-if="comparisonReviewedText"> {{ comparisonReviewedText }}</template>
-        <template v-else-if="reviewedDate"> Last reviewed {{ reviewedDate }}.</template>
+        <template v-else-if="showComparisonReviewedDate && reviewedDate"> Last reviewed {{ reviewedDate }}.</template>
       </p>
       <div v-if="sourceRows.length" class="mt-3 grid gap-3 sm:grid-cols-2">
         <div v-for="row in sourceRows" :key="row.slug" class="leading-relaxed">

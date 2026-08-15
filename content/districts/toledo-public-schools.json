@@ -1,0 +1,120 @@
+{
+  "institutionId": "toledo-public-schools",
+  "name": "Toledo Public Schools",
+  "shortName": "TPS",
+  "slug": "toledo-public-schools-calendar",
+  "state": "Ohio",
+  "stateCode": "OH",
+  "city": "Toledo",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["PK", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.tps.org/",
+  "calendarPage": "https://www.tps.org/calendar",
+  "logo": "https://cdnsm5-ss11.sharpschool.com/UserFiles/Servers/Server_7818346/Templates/theme/img/logo.png",
+  "timezone": "America/New_York",
+  "county": "Lucas County",
+  "region": "Northwest Ohio",
+  "metro": "Toledo",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "studentCount": 21261,
+  "studentCountAsOf": "October 2024 K–12 enrollment reported in the district's 2025 official statement",
+  "studentCountSourceLabel": "Toledo City School District — 2025 Official Statement",
+  "studentCountSourceUrl": "https://www.tps.org/UserFiles/Servers/Server_7818346/File/Departments/Treasurer%27s%20Division/2025/Series%202025%20Toledo%20City%20Schools%20Official%20Statement.pdf",
+  "profileStudentCountApproximate": false,
+  "schoolCount": 54,
+  "profileSchoolCountExact": true,
+  "founded": 1849,
+  "calendarType": "Student attendance calendar with grade-staggered high-school reporting, Pre-School and kindergarten phase-in, separate EHSO opening, K–8 delay days, and elementary conference closures",
+  "seoTitle": "Toledo Public Schools Calendar: TPS Dates & PDFs",
+  "seoDescription": "Reviewed Toledo TPS calendars with staggered grade starts, Pre-School and kindergarten phase-in, EHSO dates, K–8 delays, breaks, exams, and official PDFs.",
+  "districtFact": "TPS does not begin with one universal first day: most students report on successive grade-based dates, while some schools and programs use separate opening schedules.",
+  "profileDisclaimer": "The 21,261 enrollment figure covers grades K–12 as of October 2024. The 54-site count follows the same official statement's 42 K–8 schools, six high schools, and six education or specialized learning centers.",
+  "about": [
+    {
+      "title": "Quarter Endings Change the K–8 Day",
+      "content": "The first- and third-quarter ending dates are two-hour delays for K–8 students, not full closures. High school exam periods are listed separately and do not turn those K–8 delay dates into districtwide no-school days."
+    },
+    {
+      "title": "Elementary Conferences Close K–8 for Two Days",
+      "content": "TPS schedules a two-day parent-teacher conference block for elementary schools and explicitly says no K–8 students. High school families should not assume those dates are districtwide student holidays."
+    }
+  ],
+  "calendarNotes": "TPS uses successive reporting dates by grade and program, so one generic first day is incomplete. School-specific exceptions belong on the applicable school-year page. Preschool and kindergarten phase in before their first all-student day, and EHSO has its own opening date. The first- and third-quarter endings use a two-hour delay for K–8 rather than a closure. The two elementary conference days are no-school days for K–8 students, while the district calendar does not say high schools are closed. High school exam dates are schedule changes and should be checked against the student's building timetable.",
+  "planningTips": {
+    "title": "Planning Notes for TPS Families",
+    "content": [
+      "Ask the assigned school for the exact preschool or kindergarten phase-in appointment; the district PDF gives only the overall window.",
+      "Plan for a later K–8 arrival on the first- and third-quarter ending dates because they are two-hour delays, not days off.",
+      "K–8 students do not attend during the two elementary conference days; high school exam schedules should be confirmed with the school."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Do all Toledo Public Schools students start on the same day?",
+      "a": "No. TPS starts grades 1–9 first, grade 10 the next day, and grades 11–12 the following day. EHSO has a separate start, while preschool and kindergarten phase in before their first all-student day."
+    },
+    {
+      "q": "What does EHSO mean on the TPS calendar?",
+      "a": "EHSO means Early High School Opportunity. TPS lists a separate first day for that program on each attendance calendar reviewed here."
+    },
+    {
+      "q": "Are TPS quarter-ending dates no-school days?",
+      "a": "Not generally. The first- and third-quarter endings are two-hour delays for K–8. The second and fourth quarter endings coincide with semester markers but are not labeled as districtwide closures."
+    },
+    {
+      "q": "Who is out during TPS elementary parent-teacher conferences?",
+      "a": "The official calendar says there are no K–8 students on the two conference dates. It does not say high schools are closed."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "toledo-tps-attendance-boundaries",
+      "label": "Not Every TPS Calendar Date Means No School",
+      "content": "Three TPS labels are especially easy to misread. Check the affected grade level before planning for a day off.",
+      "position": "afterPlanningTips",
+      "table": {
+        "columns": ["Calendar label", "What families should know"],
+        "rows": [
+          ["Parent/Teacher Conf. — Elem Schools — No K–8 Students", "No K–8 students; the district calendar does not say high schools are closed"],
+          ["K–8 2 hr delay", "K–8 attends two hours late"],
+          ["High School Exam Dates", "High school exam dates; the calendar does not mark them as a districtwide closure"]
+        ]
+      }
+    }
+  ],
+  "relatedDistrictsTitle": "Other Reviewed Ohio City District Calendars",
+  "relatedDistrictsDescription": "Compare Toledo's grade-staggered opening with other large Ohio districts whose calendar structures use different tracks and operating labels.",
+  "relatedDistricts": [
+    {
+      "name": "Cleveland Metropolitan School District",
+      "slug": "cleveland-metropolitan-school-district-calendar",
+      "state": "Ohio",
+      "comparisonNote": "Cleveland separates traditional and 205-day extended-year programs; Toledo keeps a shared attendance calendar but staggers grade and program openings."
+    },
+    {
+      "name": "Columbus City Schools",
+      "slug": "columbus-city-schools-calendar",
+      "state": "Ohio",
+      "comparisonNote": "Columbus separates traditional, Woodcrest year-round, and Pre-K calendars, while Toledo publishes one attendance sheet per school year."
+    },
+    {
+      "name": "Cincinnati Public Schools",
+      "slug": "cincinnati-public-schools-calendar",
+      "state": "Ohio",
+      "comparisonNote": "Cincinnati uses a 12-month operations calendar with school-only and all-CPS closures; Toledo emphasizes staggered reporting and K–8 schedule changes."
+    }
+  ],
+  "hiddenSections": ["comparison", "whatsDifferent", "nationalTrends"],
+  "includeComparisonSchema": false,
+  "sources": [
+    { "label": "Toledo Public Schools official website", "url": "https://www.tps.org/" },
+    { "label": "TPS calendar center and Student Attendance Calendar PDFs", "url": "https://www.tps.org/calendar" },
+    { "label": "TPS 2025 official statement — enrollment, schools, and learning communities", "url": "https://www.tps.org/UserFiles/Servers/Server_7818346/File/Departments/Treasurer%27s%20Division/2025/Series%202025%20Toledo%20City%20Schools%20Official%20Statement.pdf" },
+    { "label": "TPS Magnet Schools", "url": "https://www.tps.org/departments/t_p_s_magnet_schools" },
+    { "label": "TPS Career Technology", "url": "https://www.tps.org/career_tech" },
+    { "label": "TPS Gifted Program and EHSO reference", "url": "https://www.tps.org/students_parents/advanced_academics/gifted_program" },
+    { "label": "Official TPS logo", "url": "https://cdnsm5-ss11.sharpschool.com/UserFiles/Servers/Server_7818346/Templates/theme/img/logo.png" }
+  ]
+}

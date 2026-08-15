@@ -2137,6 +2137,7 @@ useHead({
         :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
         :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
         :hide-next-review="Boolean((cal as any).hideSourceNextReview ?? (cal as any).meta?.hideSourceNextReview)"
+        :hide-review-author="Boolean((cal as any).hideSourceReviewAuthor ?? (cal as any).meta?.hideSourceReviewAuthor)"
         :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
         :hide-review-date="Boolean((cal as any).hideSourceReviewDate ?? (cal as any).meta?.hideSourceReviewDate)"
       />
@@ -2233,6 +2234,7 @@ useHead({
         :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
         :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
         :hide-next-review="Boolean((cal as any).hideSourceNextReview ?? (cal as any).meta?.hideSourceNextReview)"
+        :hide-review-author="Boolean((cal as any).hideSourceReviewAuthor ?? (cal as any).meta?.hideSourceReviewAuthor)"
         :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
         :hide-review-date="Boolean((cal as any).hideSourceReviewDate ?? (cal as any).meta?.hideSourceReviewDate)"
       />

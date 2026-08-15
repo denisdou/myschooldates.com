@@ -1,0 +1,333 @@
+{
+  "institutionId": "akron-public-schools",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025–26",
+  "pageHeading": "Akron Public Schools Calendar 2025–26",
+  "firstDay": "2025-08-21",
+  "lastDay": "2026-05-28",
+  "temporalCoverageStart": "2025-08-18",
+  "temporalCoverageEnd": "2026-05-29",
+  "sourceUrl": "https://www.akronschools.com/district/district-information/calendar",
+  "sourceDocumentPage": "https://www.akronschools.com/for-students-families/back-to-school/2025-26-school-calendar",
+  "sourceCheckedAt": "2026-08-15",
+  "sourceChecksumSha256": "adf5b782e878c60404704f00ba81bce14eed7b87dccf73384bf0bf43e6fc1781",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceConflict": false,
+  "sourceResourceMonitor": {
+    "type": "web-page",
+    "checkUrl": "https://www.akronschools.com/for-students-families/back-to-school/2025-26-school-calendar",
+    "linkText": "2025-26 School Calendar",
+    "expectedDocumentUrl": "https://www.akronschools.com/for-students-families/back-to-school/2025-26-school-calendar",
+    "expectedText": [
+      "First Day for Students in Grades 1-12",
+      "First Day for Students in Grades Pre-K and Kindergarten",
+      "Final Day for Students"
+    ]
+  },
+  "lastVerifiedAt": "2026-08-15",
+  "dateCreated": "2026-08-15",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_schedule_change", "confirmed_data_error"],
+  "sourceVersion": "Official APS 2025-26 School Calendar of holidays and breaks web page reviewed August 15, 2026",
+  "allDatesMode": "all",
+  "calendarType": "traditional",
+  "calendarTrackId": "district-web-calendar",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideSemesterCount": true,
+  "hideDatasetSchema": true,
+  "hidePdfDownloadSection": true,
+  "seoTitle": "Akron APS Calendar 2025–26: Dates & Breaks",
+  "seoDescription": "Akron APS grades 1–12 started Aug. 21, 2025; Pre-K and kindergarten started Aug. 25. See conferences, breaks, office closures, last days, and ICS download.",
+  "heroSummary": "Akron Public Schools grades 1–12 started Thursday, August 21, 2025. Kindergarten used appointments on August 21 or 22 and a phase-in day August 22; Pre-K and kindergarten began together August 25. Grade 12 finished May 22, 2026, and the final day for students generally was May 28.",
+  "heroSourceLine": "2025–26 holidays and breaks · Reviewed against the official APS web calendar",
+  "calendarNotes": "The firstDay field uses August 21 because that is the first attendance date for grades 1–12. Kindergarten students attended by scheduled appointment on August 21 or 22, August 22 is separately labeled Kindergarten Phase-In, and August 25 is the first day for Pre-K and kindergarten. September 26, November 4, January 16, January 20 and May 5 are staff or records dates with no students. Parent-teacher conferences close school to students October 10 and February 13. Thanksgiving Break is November 26–28, but APS explicitly says offices are open November 26. Winter Break is December 22–January 2, with offices closed only December 24–25, December 31 and January 1. Spring Break is March 30–April 3, with offices closed April 3 for Good Friday. Grade 12 finishes May 22, six calendar days before the May 28 final day for students generally.",
+  "verificationBadgeText": "Reviewed August 15, 2026 · Official APS web calendar",
+  "keyDatesHeading": "Akron APS 2025–26 Key Dates",
+  "allDatesTitle": "Akron APS 2025–26 Holidays and Breaks",
+  "allDatesCoverageNote": "This list follows every dated item on the official APS 2025–26 holidays-and-breaks page. It preserves the grade-specific opening and senior ending, staff and conference closures, student break ranges, and office-status details. It does not invent marking-period dates or a PDF that APS did not publish on this archive page.",
+  "allDatesSourceUrl": "https://www.akronschools.com/for-students-families/back-to-school/2025-26-school-calendar",
+  "allDatesSourceLabel": "Official APS 2025-26 School Calendar web page",
+  "breakNotes": {
+    "Thanksgiving Break — Schools Closed": "APS offices are explicitly listed as open on Wednesday, November 26.",
+    "Winter Break — No Students": "Offices close December 24–25, December 31 and January 1 rather than for the entire student break.",
+    "Spring Break — Schools Closed": "District offices close Friday, April 3 for Good Friday."
+  },
+  "customSections": [
+    {
+      "id": "akron-aps-2025-2026-opening",
+      "label": "Akron's 2025–26 Opening Used Three Younger-Student Steps",
+      "content": "August 21 is not a universal first full day. Kindergarten families needed a school-scheduled appointment before the first full Pre-K and kindergarten date.",
+      "position": "afterKeyDates",
+      "table": {
+        "columns": ["Date", "Students", "What APS published"],
+        "rows": [
+          ["August 21", "Grades 1–12", "First day"],
+          ["August 21 or 22", "Kindergarten", "Appointment arranged with the child's school"],
+          ["August 22", "Kindergarten", "Phase-in"],
+          ["August 25", "Pre-K and kindergarten", "First program day"]
+        ]
+      }
+    },
+    {
+      "id": "akron-aps-2025-2026-office-boundary",
+      "label": "Student Breaks and Office Closures Do Not Fully Match",
+      "content": "Students are out throughout each break range, but APS identifies narrower office availability. Thanksgiving offices remain open November 26; Winter Break office closures occur on four named holidays; and Spring Break closes offices on Good Friday only.",
+      "position": "afterAllDates"
+    },
+    {
+      "id": "akron-aps-2025-2026-no-pdf",
+      "label": "The Official 2025–26 Source Is a Web Page",
+      "content": "APS publishes this archived list as HTML rather than a downloadable annual PDF. The official web page is therefore the canonical source, and this page does not show a PDF download button.",
+      "position": "beforeSources"
+    }
+  ],
+  "events": [
+    {
+      "date": "2025-08-18",
+      "name": "Convocation / Teacher Work Day — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2025-08-19",
+      "endDate": "2025-08-20",
+      "name": "All-Staff Professional Development — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2025-08-21",
+      "name": "First Day for Grades 1–12 / Kindergarten Appointments Begin",
+      "type": "school_start",
+      "description": "Kindergarten attendance is by a school-scheduled appointment on August 21 or 22."
+    },
+    {
+      "date": "2025-08-22",
+      "name": "Kindergarten Phase-In and Appointment Day",
+      "type": "academic",
+      "badgeLabel": "Kindergarten",
+      "labelType": "partial_closure",
+      "description": "Families were directed to contact the child's school to schedule an August 21 or 22 appointment."
+    },
+    {
+      "date": "2025-08-25",
+      "name": "First Day for Pre-K and Kindergarten",
+      "type": "school_start",
+      "badgeLabel": "Pre-K / K",
+      "labelType": "partial_closure"
+    },
+    {
+      "date": "2025-09-01",
+      "name": "Labor Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-09-26",
+      "name": "All-Staff Professional Development — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2025-10-10",
+      "name": "Parent-Teacher Conferences — No Students",
+      "type": "no_school",
+      "badgeLabel": "Conferences"
+    },
+    {
+      "date": "2025-11-04",
+      "name": "Election Day / All-Staff Professional Development — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2025-11-26",
+      "endDate": "2025-11-28",
+      "name": "Thanksgiving Break — Schools Closed",
+      "type": "break_start",
+      "description": "APS offices are open November 26; the source does not describe the entire student break as an office closure."
+    },
+    {
+      "date": "2025-12-22",
+      "endDate": "2026-01-02",
+      "name": "Winter Break — No Students",
+      "type": "break_start",
+      "description": "Office closures are limited to December 24–25, December 31 and January 1."
+    },
+    {
+      "date": "2025-12-24",
+      "endDate": "2025-12-25",
+      "name": "Winter Holidays — APS Offices Closed",
+      "type": "operational_closure",
+      "description": "Office closure inside the student Winter Break.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-12-31",
+      "endDate": "2026-01-01",
+      "name": "Winter Holidays — APS Offices Closed",
+      "type": "operational_closure",
+      "description": "Office closure inside the student Winter Break.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-01-16",
+      "name": "Citywide Inservice / Records Day — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Martin Luther King Jr. Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-01-20",
+      "name": "All-Staff Professional Development — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2026-02-13",
+      "name": "Parent-Teacher Conferences — No Students",
+      "type": "no_school",
+      "badgeLabel": "Conferences"
+    },
+    {
+      "date": "2026-02-16",
+      "name": "Presidents Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-03-30",
+      "endDate": "2026-04-03",
+      "name": "Spring Break — Schools Closed",
+      "type": "break_start",
+      "description": "The break includes Good Friday; APS offices close April 3."
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Good Friday — APS Offices Closed",
+      "type": "operational_closure",
+      "description": "Office closure inside Spring Break.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-05-05",
+      "name": "All-Staff Professional Development — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Final Day for Grade 12",
+      "type": "school_end",
+      "badgeLabel": "Grade 12",
+      "labelType": "partial_closure",
+      "description": "Other students continue through May 28."
+    },
+    {
+      "date": "2026-05-25",
+      "name": "Memorial Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-05-28",
+      "name": "Final Day for Students",
+      "type": "school_end"
+    },
+    {
+      "date": "2026-05-29",
+      "name": "Final Day for Teachers",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Akron APS 2025–26 Calendar Download",
+  "unifiedDownloadDescription": "Download a one-time ICS file built from the official APS web calendar. APS did not publish this archived source as a PDF.",
+  "icsHeading": "Add Akron APS 2025–26 Dates",
+  "icsDescription": "Download the staggered opening, no-student dates, breaks, senior ending and final student day as a one-time ICS file.",
+  "icsButtonLabel": "Add Akron APS Dates (.ics)",
+  "icsButtonSupportText": "One-time import. Kindergarten appointments, CLC events and emergency changes still require an APS or school-level check.",
+  "calendarFaqs": [
+    {
+      "q": "When did Akron Public Schools start in 2025–26?",
+      "a": "Grades 1–12 started Thursday, August 21, 2025. Kindergarten used appointments August 21 or 22 and a phase-in date August 22; Pre-K and kindergarten began August 25."
+    },
+    {
+      "q": "When was Akron APS Thanksgiving Break in 2025?",
+      "a": "Schools were closed November 26–28, 2025. APS specifically says district offices were open Wednesday, November 26."
+    },
+    {
+      "q": "When was Akron APS Winter Break in 2025–26?",
+      "a": "Winter Break ran December 22, 2025 through January 2, 2026. Offices closed December 24–25, December 31 and January 1 rather than for the full student break."
+    },
+    {
+      "q": "When was Akron APS Spring Break in 2026?",
+      "a": "Spring Break ran Monday, March 30 through Friday, April 3, 2026. District offices closed April 3 for Good Friday."
+    },
+    {
+      "q": "When was the last day for Akron APS seniors in 2026?",
+      "a": "The final day for grade 12 was Friday, May 22, 2026. The final day for students generally was Thursday, May 28."
+    },
+    {
+      "q": "Is there an official Akron APS 2025–26 calendar PDF?",
+      "a": "Not on the official archive supplied for this year. APS publishes the reviewed holidays-and-breaks list as a web page, so that page is the canonical source here."
+    }
+  ],
+  "faqLimit": 7,
+  "schemaCalendarName": "Akron Public Schools Calendar 2025–26",
+  "schemaSpatialCoverage": "Akron, Ohio",
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Opening",
+      "id": "akron-aps-2025-2026-opening"
+    },
+    {
+      "label": "All Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Office Status",
+      "id": "akron-aps-2025-2026-office-boundary"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Download",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "yearSwitcherPosition": "afterSources",
+  "hiddenSections": ["downloadCta", "quickFacts", "districtProfile", "relatedDistricts", "comparison", "whatsDifferent", "nationalTrends", "otherCalendars", "pdfDownload"],
+  "sourceReviewSummary": "Reviewed August 15, 2026 against every dated entry on the official APS 2025–26 web calendar; the source is HTML, not an annual PDF.",
+  "sourceReviewDetails": [
+    "Captured SHA-256 adf5b782e878c60404704f00ba81bce14eed7b87dccf73384bf0bf43e6fc1781 for the official web page downloaded during review.",
+    "Preserved the grades 1–12 opening, kindergarten appointment and phase-in details, and the later Pre-K/kindergarten first day as separate milestones.",
+    "Kept grade 12's May 22 ending separate from the May 28 final student day and retained the office-status notes inside Thanksgiving, Winter and Spring breaks."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Akron Public Schools sources.",
+  "sourceNextReviewText": "Next review: if APS edits the archived web page or publishes a replacement document.",
+  "sources": [
+    {
+      "label": "APS district calendar hub",
+      "url": "https://www.akronschools.com/district/district-information/calendar"
+    },
+    {
+      "label": "Official APS 2025–26 School Calendar web page",
+      "url": "https://www.akronschools.com/for-students-families/back-to-school/2025-26-school-calendar"
+    }
+  ]
+}

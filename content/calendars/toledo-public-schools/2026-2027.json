@@ -1,0 +1,241 @@
+{
+  "institutionId": "toledo-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Toledo Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-24",
+  "lastDay": "2027-05-28",
+  "temporalCoverageStart": "2026-08-20",
+  "temporalCoverageEnd": "2027-06-18",
+  "totalSchoolDays": 174,
+  "semesters": 2,
+  "sourceUrl": "https://www.tps.org/calendar",
+  "sourceDocumentPage": "https://www.tps.org/calendar",
+  "sourcePdfUrl": "https://cdnsm5-ss11.sharpschool.com/UserFiles/Servers/Server_7818346/Image/Discover%20TPS/Calendar/Calendars/2026-2027/2026-2027%20Student%20Attendance%20Calendar%20BOE%20adopted%2012.18.2025.pdf",
+  "lastCheckedPdfUrl": "https://cdnsm5-ss11.sharpschool.com/UserFiles/Servers/Server_7818346/Image/Discover%20TPS/Calendar/Calendars/2026-2027/2026-2027%20Student%20Attendance%20Calendar%20BOE%20adopted%2012.18.2025.pdf",
+  "sourceCheckedAt": "2026-08-15",
+  "sourceUpdatedAt": "2025-12-18",
+  "sourceChecksumSha256": "9934bef78fd61f7f779ad97d9804b4ac0f49f490a5f372425908e88c2c7d6b6b",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The visible PDF page, official calendar link, and URL all identify the file as the 2026-2027 Student Attendance Calendar. The embedded PDF Title metadata incorrectly says 2028-2029. This page follows the visible 2026-2027 content and keeps the metadata anomaly disclosed.",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.tps.org/calendar",
+    "linkText": "2026-2027 Student Calendar",
+    "expectedPdfUrl": "https://cdnsm5-ss11.sharpschool.com/UserFiles/Servers/Server_7818346/Image/Discover%20TPS/Calendar/Calendars/2026-2027/2026-2027%20Student%20Attendance%20Calendar%20BOE%20adopted%2012.18.2025.pdf",
+    "expectedChecksumSha256": "9934bef78fd61f7f779ad97d9804b4ac0f49f490a5f372425908e88c2c7d6b6b"
+  },
+  "lastVerifiedAt": "2026-08-15",
+  "dateCreated": "2026-08-15",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_source_conflict", "official_schedule_change", "confirmed_data_error"],
+  "sourceVersion": "TPS 2026-2027 Student Attendance Calendar, BOE adopted December 18, 2025",
+  "allDatesMode": "all",
+  "calendarType": "student_attendance",
+  "calendarTrackId": "student-attendance",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideBreakDurationBadges": true,
+  "seoTitle": "Toledo Public Schools Calendar 2026–27: Start Dates & Breaks",
+  "seoDescription": "Most TPS students in grades 1–9 start Aug. 24, 2026, but Bowsher and Start have grade-specific exceptions. See school breaks, K–8 delays, exams, and the official calendar.",
+  "heroSummary": "Most Toledo Public Schools students in grades 1–9 start Monday, August 24, 2026, most grade 10 students start August 25, and grades 11–12 start August 26. At Bowsher and Start, grade 9 starts one day later than the usual grade 9 date, and grade 10 starts one day later than the usual grade 10 date. Grades 7–8 and 11–12 follow the regular TPS dates. Preschool and kindergarten students phase in from August 24 through September 1, with all students attending September 2. Early High School Opportunity (EHSO) begins September 1, and the last day for students is May 28, 2027.",
+  "heroSourceLine": "2026–27 school calendar dates · Reviewed against the TPS calendar and July 24 Back-to-School update",
+  "calendarNotes": "Most TPS students in grades 1–9 begin August 24, most grade 10 students begin August 25, and students in grades 11–12 begin August 26. At Bowsher and Start, grade 9 begins August 25 and grade 10 begins August 26; grades 7–8 and 11–12 follow the regular TPS dates. Preschool and kindergarten phase in August 24–September 1 before all students attend September 2; EHSO begins September 1. October 16 and March 12 are K–8 two-hour delays, October 29–30 are no-school conference dates for K–8, and the high school exam windows are not districtwide closures.",
+  "verificationBadgeText": "Reviewed August 15, 2026 · Official TPS sources",
+  "heroVerificationSourceText": "Official district sources checked",
+  "heroVerificationComparisonText": "Key dates compared against official sources",
+  "keyDatesHeading": "Toledo Public Schools 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "Toledo Public Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Staggered start dates, major breaks, and the May 28 last day",
+  "keyDateSummaryItems": [
+    { "label": "Opening Dates", "name": "Grades 1–12 Start Dates", "date": "2026-08-24", "endDate": "2026-08-26", "dateJoiner": "–", "type": "milestone", "description": "Most students in grades 1–9 begin Aug. 24, most grade 10 students begin Aug. 25, and grades 11–12 begin Aug. 26. Bowsher and Start grades 9 and 10 start one day later than the usual dates for those grades.", "schemaDescription": "TPS grades 1–12 use staggered start dates from August 24 through August 26. At Bowsher and Start, grades 9 and 10 start one day later than the usual TPS dates for those grades." },
+    { "label": "Thanksgiving", "name": "Thanksgiving Break", "date": "2026-11-23", "endDate": "2026-11-27", "type": "break_start" },
+    { "label": "Winter", "name": "Winter Break", "date": "2026-12-21", "endDate": "2027-01-01", "type": "break_start" },
+    { "label": "Spring", "name": "Spring Break", "date": "2027-03-26", "endDate": "2027-04-02", "type": "break_start" },
+    { "label": "Last Day", "name": "Last Day of School", "date": "2027-05-28", "type": "school_end" }
+  ],
+  "allDatesTitle": "Toledo Public Schools 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This table distinguishes districtwide closures from grade- or program-specific openings, K–8 delays, K–8 conference closures, and high school exam periods. Dates after May 28 are staff or district dates and do not extend the student school year.",
+  "allDatesSourceUrl": "https://cdnsm5-ss11.sharpschool.com/UserFiles/Servers/Server_7818346/Image/Discover%20TPS/Calendar/Calendars/2026-2027/2026-2027%20Student%20Attendance%20Calendar%20BOE%20adopted%2012.18.2025.pdf",
+  "allDatesSourceLabel": "Official TPS 2026-2027 Student Attendance Calendar",
+  "allDatesSourceLinks": [
+    { "label": "Official TPS 2026–27 Student Attendance Calendar", "url": "https://cdnsm5-ss11.sharpschool.com/UserFiles/Servers/Server_7818346/Image/Discover%20TPS/Calendar/Calendars/2026-2027/2026-2027%20Student%20Attendance%20Calendar%20BOE%20adopted%2012.18.2025.pdf" },
+    { "label": "TPS Back-to-School Dates and Information", "url": "https://www.tps.org/discover_tps/news/back_to_school_dates" }
+  ],
+  "breakNotes": {
+    "Thanksgiving Break — Schools Closed": "Classes resume Monday, November 30.",
+    "Winter Break — Schools Closed": "January 4 is a teacher inservice day with no students; classes resume Tuesday, January 5.",
+    "Presidents' Day Break — Schools Closed": "Classes resume Tuesday, February 16.",
+    "Spring Break — Schools Closed": "Classes resume Monday, April 5."
+  },
+  "dateLegendLabelOverrides": {
+    "Operational Closure": "District Holiday"
+  },
+  "gradingPeriodsTitle": "TPS 2026–27 Quarter and Semester Endings",
+  "gradingPeriodsDescription": "The first- and third-quarter endings include a K–8 two-hour delay. The TPS calendar lists quarter totals of 39, 39, 47, and 49 days. Because student start dates vary by grade and school, these totals should not be read as an individual attendance-day count for every student.",
+  "gradingPeriods": [
+    { "label": "Quarter 1", "end": "2026-10-16", "studentDays": 39 },
+    { "label": "Quarter 2 / Semester 1", "end": "2026-12-17", "studentDays": 39 },
+    { "label": "Quarter 3", "end": "2027-03-12", "studentDays": 47 },
+    { "label": "Quarter 4 / Semester 2", "end": "2027-05-28", "studentDays": 49 }
+  ],
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "customSections": [
+    {
+      "id": "toledo-tps-2026-2027-opening",
+      "label": "Which First Day Applies to Your Student?",
+      "content": "Most schools follow TPS's grade-staggered opening. At Bowsher and Start, only grades 9 and 10 differ from the usual dates for those grades; grades 7–8 and 11–12 follow the regular TPS schedule.",
+      "position": "afterKeyDates",
+      "table": {
+        "columns": ["Student group", "First day"],
+        "rows": [
+          ["Most students in grades 1–9", "August 24"],
+          ["Bowsher / Start grade 9", "August 25"],
+          ["Most grade 10 students", "August 25"],
+          ["Bowsher / Start grade 10", "August 26"],
+          ["Grades 11–12", "August 26"],
+          ["EHSO", "September 1"],
+          ["Preschool / kindergarten", "Phase-in August 24–September 1; all attend September 2"]
+        ]
+      }
+    },
+    {
+      "id": "toledo-tps-2026-2027-attendance",
+      "label": "TPS Dates That Affect Student Attendance",
+      "content": "Some TPS dates apply only to certain grade levels. Check which students are affected before planning for a day off or late arrival.",
+      "position": "afterGradingPeriodsBeforeCalendarExport",
+      "table": {
+        "columns": ["Calendar label", "What families should know"],
+        "rows": [
+          ["Parent/Teacher Conf. — Elem Schools — No K–8 Students", "No K–8 students; the district calendar does not say high schools are closed"],
+          ["K–8 2 hr delay", "K–8 students attend two hours late"],
+          ["High School Exam Dates", "High school schedules may change; these are not marked as districtwide no-school days"]
+        ]
+      }
+    },
+    {
+      "id": "toledo-tps-2026-2027-source-metadata",
+      "label": "A Note About the Official PDF Metadata",
+      "content": "The official file is clearly labeled as the 2026–27 Student Attendance Calendar, and its dates match the district’s 2026–27 calendar link. However, the document’s embedded title identifies a different school year. We therefore rely on the visible calendar dates and the district’s official 2026–27 listing.",
+      "position": "afterAllDates"
+    }
+  ],
+  "events": [
+    { "date": "2026-08-20", "endDate": "2026-08-21", "name": "Teacher Inservice — No Students", "type": "teacher_workday" },
+    { "date": "2026-08-20", "name": "Elementary Open House — PM", "type": "academic", "description": "The live TPS calendar lists the open house from 4–8 p.m.; confirm the assigned school's time.", "hideFromCalendarExport": true },
+    { "date": "2026-08-24", "name": "First Day for Most Students in Grades 1–9", "type": "school_start", "description": "Bowsher and Start grade 9 begins August 25; grades 7–8 follow this regular TPS date." },
+    { "date": "2026-08-24", "endDate": "2026-09-01", "name": "Pre-School and Kindergarten Phase-In", "type": "academic", "badgeLabel": "Pre-K / K", "labelType": "partial_closure", "description": "Families should confirm the child's assigned phase-in day with the school.", "hideFromCalendarExport": true },
+    { "date": "2026-08-25", "name": "First Day for Most Grade 10 Students", "type": "school_start", "badgeLabel": "Most Grade 10", "labelType": "partial_closure", "description": "Bowsher and Start grade 10 begins August 26." },
+    { "date": "2026-08-25", "name": "First Day for Bowsher and Start Grade 9", "type": "school_start", "badgeLabel": "Bowsher / Start", "labelType": "partial_closure" },
+    { "date": "2026-08-26", "name": "First Day for Students in Grades 11–12", "type": "school_start", "badgeLabel": "Grades 11–12", "labelType": "partial_closure" },
+    { "date": "2026-08-26", "name": "First Day for Bowsher and Start Grade 10", "type": "school_start", "badgeLabel": "Bowsher / Start", "labelType": "partial_closure" },
+    { "date": "2026-09-01", "name": "First Day of Early High School Opportunity", "type": "school_start", "badgeLabel": "EHSO", "labelType": "partial_closure" },
+    { "date": "2026-09-02", "name": "First Day for All Pre-School and Kindergarten Students", "type": "school_start", "badgeLabel": "Pre-K / K", "labelType": "partial_closure" },
+    { "date": "2026-09-07", "name": "Labor Day — Schools Closed", "type": "holiday" },
+    { "date": "2026-10-16", "name": "End of Quarter 1 / K–8 Two-Hour Delay", "type": "academic", "badgeLabel": "K–8 Delay", "labelType": "partial_closure", "description": "K–8 students report two hours late; this is not a closure." },
+    { "date": "2026-10-29", "endDate": "2026-10-30", "name": "Elementary Parent-Teacher Conferences — No K–8 Students", "type": "no_school", "badgeLabel": "K–8 Only", "labelType": "partial_closure", "description": "The PDF does not label high schools as closed." },
+    { "date": "2026-11-03", "name": "Teacher Inservice — No Students", "type": "teacher_workday" },
+    { "date": "2026-11-23", "endDate": "2026-11-27", "name": "Thanksgiving Break — Schools Closed", "type": "break_start" },
+    { "date": "2026-12-15", "endDate": "2026-12-17", "name": "High School First-Semester Exams", "type": "academic", "badgeLabel": "High School", "labelType": "partial_closure", "description": "Check the high school's daily exam timetable.", "hideFromCalendarExport": true },
+    { "date": "2026-12-17", "name": "End of Quarter 2 and Semester 1", "type": "semester_end" },
+    { "date": "2026-12-18", "name": "Teacher Work Day — No Students", "type": "teacher_workday" },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "name": "Winter Break — Schools Closed", "type": "break_start" },
+    { "date": "2027-01-04", "name": "Teacher Inservice — No Students", "type": "teacher_workday" },
+    { "date": "2027-01-05", "name": "Students Return from Winter Break", "type": "school_resume" },
+    { "date": "2027-01-08", "name": "O.O.D. Application Deadline", "type": "academic", "badgeLabel": "Deadline", "description": "The TPS calendar lists this as ‘Deadline-O.O.D. Apps.’ Check the district for application requirements and eligibility.", "hideFromCalendarExport": true },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day — Schools Closed", "type": "holiday" },
+    { "date": "2027-02-12", "endDate": "2027-02-15", "name": "Presidents' Day Break — Schools Closed", "type": "break_start" },
+    { "date": "2027-03-12", "name": "End of Quarter 3 / K–8 Two-Hour Delay", "type": "academic", "badgeLabel": "K–8 Delay", "labelType": "partial_closure", "description": "K–8 students report two hours late; this is not a closure." },
+    { "date": "2027-03-26", "endDate": "2027-04-02", "name": "Spring Break — Schools Closed", "type": "break_start" },
+    { "date": "2027-05-26", "endDate": "2027-05-28", "name": "High School Second-Semester Exams", "type": "academic", "badgeLabel": "High School", "labelType": "partial_closure", "description": "Check the high school's daily exam timetable.", "hideFromCalendarExport": true },
+    { "date": "2027-05-28", "name": "End of Quarter 4 and Semester 2 / Students' Final Day", "type": "school_end" },
+    { "date": "2027-05-31", "name": "Memorial Day — Schools Closed", "type": "operational_closure", "description": "District holiday after the regular student year.", "hideFromCalendarExport": true },
+    { "date": "2027-06-01", "name": "Teacher Work Day — No Students", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2027-06-02", "name": "Key Day — No Students", "type": "no_school", "preserveOfficialName": true, "description": "No students; occurs after the student year ends.", "hideFromCalendarExport": true },
+    { "date": "2027-06-18", "name": "Juneteenth Observed — Schools Closed", "type": "operational_closure", "description": "District holiday after the regular student year.", "hideFromCalendarExport": true }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Toledo Public Schools 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Download a one-time calendar file based on the reviewed TPS sources, or open the official BOE-adopted Student Attendance Calendar.",
+  "icsHeading": "Add Toledo Public Schools 2026–27 Dates",
+  "icsDescription": "Import grade- and program-specific opening dates—including the Bowsher and Start grade 9 and grade 10 exceptions—plus districtwide attendance changes. The ICS file is a one-time import and does not sync with later TPS changes.",
+  "icsButtonLabel": "Add Toledo TPS Dates (.ics)",
+  "hideIcsButtonSupportText": true,
+  "pdfHeading": "Official Toledo TPS 2026–27 Calendar",
+  "pdfDescription": "Open the one-page Student Attendance Calendar adopted by the Toledo Board of Education on December 18, 2025.",
+  "pdfNoticeText": "Bowsher and Start opening exceptions come from",
+  "pdfNoticeLinkLabel": "TPS's July 24 Back-to-School update.",
+  "pdfNoticeHref": "https://www.tps.org/discover_tps/news/back_to_school_dates",
+  "pdfButtonLabel": "View Official TPS PDF",
+  "pdfVersionLabel": "TPS 2026-2027 Student Attendance Calendar · BOE adopted 12.18.2025",
+  "calendarFaqs": [
+    { "q": "When does Toledo Public Schools start in 2026–27?", "a": "Most students in grades 1–9 start August 24, 2026, most grade 10 students start August 25, and students in grades 11–12 start August 26. At Bowsher and Start, grades 9 and 10 start one day later than the usual TPS dates for those grades. EHSO starts September 1, and all preschool and kindergarten students attend September 2 after phase-in." },
+    { "q": "Do all Toledo Public Schools students start on the same day?", "a": "No. TPS staggers opening dates by grade and program. Most students begin August 24–26, EHSO begins September 1, and preschool and kindergarten students phase in before all attend September 2." },
+    { "q": "Do Bowsher and Start follow the usual TPS first-day schedule?", "a": "Not for grades 9 and 10. Bowsher and Start grade 9 begins August 25, one day later than the usual grade 9 date, and grade 10 begins August 26, one day later than the usual grade 10 date. Grades 7–8 and 11–12 follow the regular TPS dates." },
+    { "q": "What does EHSO mean, and when does it start?", "a": "EHSO means Early High School Opportunity. Its first day is Tuesday, September 1, 2026." },
+    { "q": "Are TPS K–8 delay and conference dates days off?", "a": "The October 16 and March 12 quarter endings are two-hour delays for K–8, not days off. K–8 students do not attend during the October 29–30 elementary parent-teacher conferences; the district calendar does not say high schools are closed." },
+    { "q": "When are TPS Thanksgiving, Winter, and Spring Breaks?", "a": "Thanksgiving Break runs November 23–27, 2026. Winter Break runs December 21, 2026–January 1, 2027, with students returning January 5 after a teacher inservice day. Spring Break runs March 26–April 2, with classes resuming April 5, 2027." }
+  ],
+  "faqOrderLimit": 5,
+  "faqDisplayLimit": 5,
+  "faqDisplayQuestions": [
+    "When does Toledo Public Schools start in 2026–27?",
+    "Do Bowsher and Start follow the usual TPS first-day schedule?",
+    "What does EHSO mean, and when does it start?",
+    "Are TPS K–8 delay and conference dates days off?",
+    "When are TPS Thanksgiving, Winter, and Spring Breaks?"
+  ],
+  "schemaCalendarName": "Toledo Public Schools Student Attendance Calendar 2026–27",
+  "schemaDatasetName": "Toledo Public Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Toledo Public Schools 2026–27 calendar dates. The BOE-adopted Student Attendance Calendar supplies districtwide dates; TPS's July 24 Back-to-School update supplies the Bowsher and Start grade 9 and grade 10 opening-date exceptions. The dataset includes staggered grade starts, preschool and kindergarten phase-in, EHSO, K–8 delays, conference closures, breaks, exams, the O.O.D. application deadline, and staff days.",
+  "schemaCalendarDownloadName": "TPS 2026–27 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import based on the BOE-adopted TPS Student Attendance Calendar and the July 24 Back-to-School update, including the Bowsher and Start grade 9 and grade 10 opening-date exceptions.",
+  "schemaSpatialCoverage": "Toledo, Ohio",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-back-to-school-dates",
+      "type": "WebPage",
+      "name": "TPS Back-to-School Dates and Information",
+      "url": "https://www.tps.org/discover_tps/news/back_to_school_dates",
+      "datePublished": "2026-07-24"
+    }
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "First Days", "id": "toledo-tps-2026-2027-opening" },
+    { "label": "Full Calendar", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Quarter Dates", "id": "grading-periods" },
+    { "label": "Attendance", "id": "toledo-tps-2026-2027-attendance" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Planning Notes", "id": "planning-tips" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "yearSwitcherPosition": "afterSources",
+  "hiddenSections": ["downloadCta", "keyDateCards", "quickFacts", "todayStatus", "about", "yearNumbers", "livingHere", "districtProfile", "relatedDistricts", "comparison", "whatsDifferent", "nationalTrends", "otherCalendars"],
+  "hiddenCustomSectionIds": ["toledo-tps-attendance-boundaries", "toledo-tps-2026-2027-source-metadata"],
+  "sourceReviewSummary": "Reviewed August 15, 2026 against the official TPS Student Attendance Calendar, district calendar, and July 24 Back-to-School update.",
+  "sourceReviewDetails": [
+    "Compared the July 24 Back-to-School update with the districtwide opening sequence. At Bowsher and Start, grade 9 begins August 25 and grade 10 begins August 26, one day later than the usual TPS dates for those grades; grades 7–8 and 11–12 match the regular dates.",
+    "Note about the official PDF: its visible page, official link, and URL identify the 2026–27 Student Attendance Calendar, but the embedded Title metadata incorrectly says 2028–2029. This page follows the visible 2026–27 schedule and keeps the metadata mismatch documented for source monitoring.",
+    "Confirmed SHA-256 9934bef78fd61f7f779ad97d9804b4ac0f49f490a5f372425908e88c2c7d6b6b for both the local and official files.",
+    "Reviewed the full calendar for staggered starts, phase-in, the January 8 O.O.D. application deadline, breaks, K–8 delays, conferences, exams, quarter totals, and the last student day, then compared the August dates with TPS's published Back-to-School guidance."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Toledo Public Schools sources.",
+  "sourceNextReviewText": "Next review: when TPS revises the 2026–27 calendar, updates its Back-to-School guidance, or corrects the embedded PDF title metadata.",
+  "sources": [
+    { "label": "TPS calendar center and live district calendar", "url": "https://www.tps.org/calendar" },
+    { "label": "Official TPS 2026–27 Student Attendance Calendar PDF", "url": "https://cdnsm5-ss11.sharpschool.com/UserFiles/Servers/Server_7818346/Image/Discover%20TPS/Calendar/Calendars/2026-2027/2026-2027%20Student%20Attendance%20Calendar%20BOE%20adopted%2012.18.2025.pdf" },
+    { "label": "TPS Back-to-School Dates and Information — Bowsher and Start opening schedule", "url": "https://www.tps.org/discover_tps/news/back_to_school_dates" },
+    { "label": "TPS Gifted Program and EHSO reference", "url": "https://www.tps.org/students_parents/advanced_academics/gifted_program" }
+  ]
+}

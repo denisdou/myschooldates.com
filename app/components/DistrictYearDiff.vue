@@ -70,6 +70,7 @@ const items = computed(() => {
 })
 
 const title = computed(() => props.cal?.whatsNew?.title)
+const subtitle = computed(() => props.cal?.whatsNew?.subtitle)
 const defaultOpen = computed(() => Boolean(
   props.cal?.yearComparisonDefaultOpen ?? props.cal?.meta?.yearComparisonDefaultOpen
 ))
@@ -85,7 +86,7 @@ const displayPrevYear = computed(() => {
       <div class="flex items-start justify-between gap-4">
         <div>
           <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ title ?? `What's New for ${currentYear}` }}</h2>
-          <p class="text-sm text-gray-500">How this school year compares with {{ displayPrevYear }}.</p>
+          <p class="text-sm text-gray-500">{{ subtitle ?? `How this school year compares with ${displayPrevYear}.` }}</p>
         </div>
         <span class="mt-1 text-sm font-medium text-blue-600 group-open:hidden">Show</span>
         <span class="mt-1 text-sm font-medium text-blue-600 hidden group-open:inline">Hide</span>

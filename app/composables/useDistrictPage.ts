@@ -291,10 +291,11 @@ export function useDistrictPage() {
   }
 
   const eventTypeLabel: Record<string, string> = {
-    school_start: 'First Day', school_end: 'Last Day', holiday: 'Holiday',
+    school_start: 'First Day', school_end: 'Last Day', holiday: 'Holiday', closure: 'Closure',
     break: 'Break', break_start: 'Break Starts', break_end: 'Break Ends',
     no_school: 'No School', student_holiday: 'No School',
-    early_release: 'Early Release', early_dismissal: 'Early Dismissal',
+    early_release: 'Early Release', early_dismissal: 'Early Dismissal', early_close: 'Early Close',
+    operational_closure: 'Operational Closure',
     half_day_high_school: 'Half-Day High Schools',
     half_day_dismissal: 'Half-Day Dismissal',
     digital_learning: 'Online Learning',
@@ -323,6 +324,7 @@ export function useDistrictPage() {
     school_start: 'bg-[#e7efe5] text-[#315b39]',
     school_end: 'bg-[#f2e7df] text-[#7a3f2c]',
     holiday: 'bg-[#e6f0ef] text-[#0f5d6b]',
+    closure: 'bg-[#eeeae2] text-[#625b52]',
     break: 'bg-[#eee9f3] text-[#5b4b6f]',
     break_start: 'bg-[#eee9f3] text-[#5b4b6f]',
     break_end: 'bg-[#eee9f3] text-[#5b4b6f]',
@@ -330,6 +332,8 @@ export function useDistrictPage() {
     student_holiday: 'bg-[#f3ead7] text-[#74552a]',
     early_release: 'bg-[#f1e5d9] text-[#744c28]',
     early_dismissal: 'bg-[#f1e5d9] text-[#744c28]',
+    early_close: 'bg-[#f1e5d9] text-[#744c28]',
+    operational_closure: 'bg-[#eeeae2] text-[#625b52]',
     half_day_high_school: 'bg-[#f1e5d9] text-[#744c28]',
     half_day_dismissal: 'bg-[#f1e5d9] text-[#744c28]',
     digital_learning: 'bg-[#eee7ec] text-[#68495f]',

@@ -27,6 +27,10 @@ const unifiedDownloadDescription = computed(() => props.cal?.unifiedDownloadDesc
 const groupAlternateCalendarsWithDownloads = computed(() => Boolean(
   props.cal?.groupAlternateCalendarsWithDownloads ?? props.cal?.meta?.groupAlternateCalendarsWithDownloads
 ))
+const pdfHeadingTag = computed(() =>
+  props.cal?.pdfHeadingTag ?? props.cal?.meta?.pdfHeadingTag
+  ?? (groupAlternateCalendarsWithDownloads.value ? 'h4' : compactDownloadModule.value ? 'h3' : 'h2')
+)
 const alternateCalendars = computed(() => props.cal?.alternateCalendars ?? props.cal?.meta?.alternateCalendars ?? [])
 const officialSubscriptionTitle = computed(() => props.cal?.officialSubscriptionTitle ?? props.cal?.meta?.officialSubscriptionTitle ?? '')
 const officialSubscriptionDescription = computed(() => props.cal?.officialSubscriptionDescription ?? props.cal?.meta?.officialSubscriptionDescription ?? '')
@@ -109,8 +113,11 @@ const icsIncludedItems = computed(() => {
   const events = (props.cal?.events ?? []).filter((event: any) => !event.hideFromCalendarExport)
   const hasType = (types: string[]) => events.some((event: any) => types.includes(event.type))
   const items = ['student holidays', 'break ranges']
+  if (hasType(['closure'])) items.push('district closures')
   if (hasType(['no_school', 'student_holiday'])) items.push('student no-school dates')
   if (hasType(['early_dismissal', 'early_release'])) items.push('early-release dates')
+  if (hasType(['early_close'])) items.push('early-close dates')
+  if (hasType(['operational_closure'])) items.push('operational closures')
   if (hasType(['school_resume', 'school_reopen'])) items.push('school resume dates')
   if (hasType(['academic', 'quarter_end', 'semester_end'])) items.push('key academic dates')
   return [...new Set(items)]
@@ -261,7 +268,7 @@ const icsAriaLabel = computed(() =>
 
     <!-- PDF Download -->
     <div v-if="pdfUrl && !hidePdfDownloadSection" class="district-utility-panel__section p-6">
-      <component :is="groupAlternateCalendarsWithDownloads ? 'h4' : compactDownloadModule ? 'h3' : 'h2'" class="text-base font-semibold text-rds-ink mb-1">{{ pdfHeading }}</component>
+      <component :is="pdfHeadingTag" class="text-base font-semibold text-rds-ink mb-1">{{ pdfHeading }}</component>
       <p v-if="pdfVersionLabel && !hidePdfVersionLabel" class="text-xs font-medium text-rds-ink-muted mb-2">{{ pdfVersionLabel }}</p>
       <p class="text-sm text-rds-ink-muted mb-4">{{ pdfDescription }}</p>
       <p v-if="pdfNoticeText || (pdfNoticeLinkLabel && pdfNoticeHref)" class="mb-4 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm leading-relaxed text-amber-900">

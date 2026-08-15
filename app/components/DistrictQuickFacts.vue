@@ -25,6 +25,10 @@ const verifiedDate = computed(() => {
   return new Date(props.cal.lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 })
 
+const hideReviewDate = computed(() => Boolean(
+  props.cal?.hideQuickFactsReviewDate ?? props.cal?.meta?.hideQuickFactsReviewDate
+))
+
 // prevYearStr needed for yearComparison
 const prevYearStr = computed(() => {
   if (!props.prevCal) return ''
@@ -565,8 +569,8 @@ const sectionTitle = computed(() =>
         {{ districtName }} official calendar
         <span class="sr-only">(opens in a new tab)</span>
       </a>
-      <span v-if="verifiedDate" class="ml-1 text-green-700 font-medium">· Last reviewed {{ verifiedDate }}</span>
-      <span v-else class="ml-1 text-gray-600">· Not yet verified against official source</span>
+      <span v-if="verifiedDate && !hideReviewDate" class="ml-1 text-green-700 font-medium">· Last reviewed {{ verifiedDate }}</span>
+      <span v-else-if="!verifiedDate" class="ml-1 text-gray-600">· Not yet verified against official source</span>
     </div>
   </div>
 </template>

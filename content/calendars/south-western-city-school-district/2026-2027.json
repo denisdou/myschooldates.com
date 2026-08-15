@@ -1,0 +1,283 @@
+{
+  "institutionId": "south-western-city-school-district",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "South Western City Schools Calendar 2026–27",
+  "firstDay": "2026-08-19",
+  "lastDay": "2027-05-28",
+  "totalSchoolDays": 180,
+  "temporalCoverageStart": "2026-08-19",
+  "temporalCoverageEnd": "2027-06-08",
+  "sourceUrl": "https://www.swcsd.us/Calendar.aspx",
+  "sourceDocumentPage": "https://www.swcsd.us/Calendar.aspx",
+  "sourcePdfUrl": "https://drive.google.com/file/d/1pAz5PB7maOGMRQGtG1RyVsIC6Nkay1iX/view?usp=sharing",
+  "lastCheckedPdfUrl": "https://drive.google.com/file/d/1pAz5PB7maOGMRQGtG1RyVsIC6Nkay1iX/view?usp=sharing",
+  "sourceCheckedAt": "2026-08-15",
+  "reviewedSourcePdfUrl": "https://drive.google.com/file/d/1F8z5-cm6zvaedyimPLnGAS3C8zrNDNsN/view?usp=drive_link",
+  "reviewedSourceUpdatedAt": "2026-07-29",
+  "reviewedSourceChecksumSha256": "5df177e8f5bbf581c45fcb0d425de2d532c72d5dcf5950b7a36957d1e25f379c",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The graphic calendar prints March 15, 2026. SWCS's grade-card schedule lists March 15–May 28, 2027, which matches the 2026–27 school-year sequence used on this page. The current official calendar page links a different Google Drive file from the separately reviewed English copy; no checksum is attributed to the current Drive file.",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.swcsd.us/Calendar.aspx",
+    "linkText": "2026-2027 Graphic Calendar (English)",
+    "expectedDocumentUrl": "https://drive.google.com/file/d/1pAz5PB7maOGMRQGtG1RyVsIC6Nkay1iX/view?usp=sharing",
+    "expectedText": ["2026-2027 Graphic Calendar (English)", "2026-2027 Graphic Calendar (Spanish)"]
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.swcsd.us/Calendar.aspx",
+      "linkText": "2026-2027 Graphic Calendar (Spanish)",
+      "expectedDocumentUrl": "https://drive.google.com/file/d/16PmMrLsDCKCKQy7ZntU1mgxSIfoJOxtx/view?usp=drive_link"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-15",
+  "dateCreated": "2026-08-15",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_source_conflict", "official_schedule_change", "makeup_day_activation", "confirmed_data_error"],
+  "sourceVersion": "Current SWCS 2026–27 English Graphic Calendar",
+  "sourceCalendarName": "Current SWCS 2026–27 English Graphic Calendar",
+  "schemaCalendarName": "South Western City Schools 2026–27 Calendar",
+  "schemaDatasetName": "South Western City Schools 2026–27 Student Calendar Dataset",
+  "schemaDatasetDescription": "Districtwide SWCS student dates for 2026–27, including the K–3 surname phase-in, the first full K–12 attendance day, breaks, no-school dates, grading-period starts, the planned last day, and clearly labeled tentative or conditional dates.",
+  "schemaCalendarDownloadName": "SWCS 2026–27 confirmed-dates ICS calendar",
+  "schemaCalendarDownloadDescription": "One-time ICS download of the confirmed district dates shown on this page; the tentative May closure and conditional June calamity dates are excluded.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-back-to-school-faq",
+      "type": "WebPage",
+      "name": "SWCS 2026–27 Back-to-School FAQ",
+      "url": "https://swinsider.com/2026/06/29/2026-2027-back-to-school-faq/"
+    },
+    {
+      "id": "source-finland-opening-schedule",
+      "type": "WebPage",
+      "name": "Finland Elementary School 2026–27 opening schedule",
+      "url": "https://fes.swcsd.us/"
+    },
+    {
+      "id": "source-reviewed-calendar-copy",
+      "type": "CreativeWork",
+      "name": "Reviewed English calendar copy",
+      "url": "https://drive.google.com/file/d/1F8z5-cm6zvaedyimPLnGAS3C8zrNDNsN/view?usp=drive_link"
+    }
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "districtwide-english",
+  "hideSemesterCount": true,
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideAlternateCalendarsNotice": true,
+  "seoTitle": "South Western City Schools Calendar 2026–27 | SWCS",
+  "seoDescription": "South Western City Schools grades 4–12 start Aug. 19, 2026; K–3 starts are staggered by last-name group. See breaks, the planned last day, Spanish PDF, and ICS.",
+  "heroSummary": "South Western City Schools begins Wednesday, August 19, 2026 for grades 4–12 and K–3 students with last names A–G. K–3 groups H–O and P–Z begin August 20 and 21, and all K–12 students attend together on August 24. The planned last student day is Friday, May 28, 2027; six June dates are calamity contingencies, not confirmed class days.",
+  "heroSourceLine": "2026–27 districtwide English graphic calendar · adopted November 19, 2025",
+  "verificationBadgeText": "Official district sources checked",
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideSourceVersionDisplay": true,
+  "calendarNotes": "This page covers the districtwide 2026–27 student calendar. School and program calendars may add orientations, ceremonies, athletics, transportation notices, and emergency changes.",
+  "allDatesTitle": "Full Student Calendar Dates",
+  "allDatesCoverageNote": "Dates follow the official English graphic calendar and SWCS calendar page. The K–3 phase-in is listed by surname group, and the tentative May closure and conditional June dates remain clearly labeled.",
+  "dateLegendItems": [
+    { "label": "School start / end", "dot": "bg-yellow-400" },
+    { "label": "Holiday / break", "dot": "bg-rose-500" },
+    { "label": "Professional day — no school", "dot": "bg-teal-500" },
+    { "label": "K–3 cohort / grading marker", "dot": "bg-slate-400" },
+    { "label": "Conditional date", "dot": "bg-orange-300" }
+  ],
+  "hiddenSections": [
+    "about",
+    "comparison",
+    "districtProfile",
+    "downloadCta",
+    "keyDateCards",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars",
+    "planningTips",
+    "todayStatus",
+    "whatsDifferent",
+    "yearNumbers"
+  ],
+  "hiddenCustomSectionIds": [
+    "swcs-grade-band-map",
+    "swcs-official-resources"
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "First Days", "id": "swcs-2026-2027-opening-map" },
+    { "label": "Full Calendar", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Dates to Check", "id": "swcs-2026-2027-source-corrections" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "yearSwitcherPosition": "afterSources",
+  "keyDatesSummaryTitle": "SWCS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Opening dates, major breaks, the planned last day, and graduation",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "Grades 4–12 and K–3 (A–G) Start", "date": "2026-08-19", "type": "school_start", "schemaDescription": "Grades 4–12 and K–3 students with last names A–G begin classes on August 19, 2026." },
+    { "label": "All K–12", "name": "First Full Day for All K–12 Students", "date": "2026-08-24", "type": "academic", "schemaDescription": "All SWCS K–12 students attend together on August 24, 2026, after the K–3 phase-in." },
+    { "label": "Break", "name": "Winter Break", "date": "2026-12-21", "endDate": "2027-01-01", "type": "break_start" },
+    { "label": "Break", "name": "Spring Break", "date": "2027-03-22", "endDate": "2027-03-26", "type": "break_start" },
+    { "label": "Last Day", "name": "Planned Last Student Day", "date": "2027-05-28", "type": "school_end", "schemaDescription": "The planned last student day is May 28, 2027; later calamity dates are conditional." },
+    { "label": "Graduation", "name": "High School Graduation Day", "date": "2027-05-30", "type": "graduation", "schemaDescription": "SWCS high school graduation day is May 30, 2027." }
+  ],
+  "quickFactsTitle": "SWCS Calendar at a Glance",
+  "quickFacts": [
+    { "value": "180", "label": "Instructional days" },
+    { "value": "3", "label": "K–3 opening groups" },
+    { "value": "Aug 24", "label": "First full K–12 attendance day" },
+    { "value": "4", "label": "Nine-week grading periods" },
+    { "value": "6", "label": "Conditional calamity dates" }
+  ],
+  "hideQuickFactsReviewDate": true,
+  "breaksTitle": "Major School Breaks",
+  "relatedDistrictsTitle": "Other Reviewed Ohio Calendars",
+  "relatedDistrictsDescription": "See other reviewed Ohio district calendars with different opening schedules.",
+  "hideRelatedDistrictDescriptions": true,
+  "breakNotes": {
+    "Thanksgiving Break — No School": "Students return Monday, November 30, 2026.",
+    "Winter Break — No School": "Students return Monday, January 4, 2027.",
+    "Spring Break — No School": "March 29 is a professional day. Students return Tuesday, March 30, 2027."
+  },
+  "otherCalendarsPosition": "beforeCalendarExport",
+  "alternateCalendarsDescription": "SWCS also publishes an official Spanish version of the 2026–27 calendar.",
+  "alternateCalendars": [
+    {
+      "type": "translation-spanish",
+      "group": "Spanish Calendar",
+      "label": "SWCS 2026–2027 Graphic Calendar — Spanish",
+      "description": "Official Spanish edition published by SWCS.",
+      "pdfUrl": "https://drive.google.com/file/d/16PmMrLsDCKCKQy7ZntU1mgxSIfoJOxtx/view?usp=drive_link",
+      "firstDay": "2026-08-19"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "swcs-2026-2027-opening-map",
+      "label": "Which SWCS First Day Applies?",
+      "content": "The first attendance date depends on grade and, for K–3, the first letter of the student's last name.",
+      "position": "afterKeyDates",
+      "table": {
+        "columns": ["Students", "First attendance day", "Planning note"],
+        "rows": [
+          ["Grades 4–12", "Wednesday, August 19, 2026", "All students in these grades"],
+          ["Grades K–3, last names A–G", "Wednesday, August 19, 2026", "First K–3 phase-in group"],
+          ["Grades K–3, last names H–O", "Thursday, August 20, 2026", "Second K–3 phase-in group"],
+          ["Grades K–3, last names P–Z", "Friday, August 21, 2026", "Third K–3 phase-in group"],
+          ["All K–12 students", "Monday, August 24, 2026", "First full attendance day after phase-in"]
+        ],
+        "footnote": "SWCS elementary school schedules identify August 24 as the first day all K–12 students attend together. Elementary schools serve K–4, but the phase-in applies only to K–3; fourth graders begin August 19."
+      }
+    },
+    {
+      "id": "swcs-2026-2027-source-corrections",
+      "label": "Dates That Need Extra Attention",
+      "content": "May 4 is tentative, the June dates are conditional, and a second SWCS schedule supports the March 15, 2027 grading-period date used here.",
+      "position": "afterBreaks",
+      "table": {
+        "columns": ["Date or period", "How this page handles it", "Official basis"],
+        "rows": [
+          ["Fourth grading period", "March 15–May 28, 2027", "The graphic calendar prints March 15, 2026; SWCS's grade-card schedule lists March 15–May 28, 2027, matching the 2026–27 sequence used here"],
+          ["May 4 Election Day", "Tentative and excluded from ICS", "The graphic calendar says the primary date may change"],
+          ["June 1–4 and 7–8", "Conditional and excluded from ICS", "These dates activate only if lost days require an extension"]
+        ]
+      }
+    },
+    {
+      "id": "swcs-2026-2027-planning-notes",
+      "label": "Planning Notes",
+      "content": "A few calendar labels affect how families should use these dates.",
+      "position": "afterCalendarExport",
+      "groups": [
+        {
+          "label": "Before making plans",
+          "items": [
+            "Nine-week dates mark grading periods; they are not days off.",
+            "Career Academy and preschool families should also check their program calendar for start dates, services, and events.",
+            "The ICS file is a one-time import and won't update automatically. Recheck SWCS after weather closures or a revised primary date."
+          ]
+        }
+      ]
+    }
+  ],
+  "events": [
+    { "date": "2026-08-19", "name": "First Day for Grades 4–12", "type": "school_start", "description": "All students in grades 4–12 attend." },
+    { "date": "2026-08-19", "name": "K–3 First Day — Last Names A–G", "type": "academic", "badgeLabel": "K–3 A–G", "description": "Only K–3 students whose last names begin A–G attend for this phase-in group." },
+    { "date": "2026-08-20", "name": "K–3 First Day — Last Names H–O", "type": "academic", "badgeLabel": "K–3 H–O", "description": "Only K–3 students whose last names begin H–O attend for this phase-in group." },
+    { "date": "2026-08-21", "name": "K–3 First Day — Last Names P–Z", "type": "academic", "badgeLabel": "K–3 P–Z", "description": "Only K–3 students whose last names begin P–Z attend for this phase-in group." },
+    { "date": "2026-08-24", "name": "First Full Day for All K–12 Students", "type": "academic", "badgeLabel": "All K–12", "description": "All K–12 students attend after the K–3 phase-in." },
+    { "date": "2026-09-07", "name": "Labor Day — No School", "type": "holiday" },
+    { "date": "2026-10-16", "name": "Professional Day — No School", "type": "teacher_workday" },
+    { "date": "2026-10-19", "name": "Second Nine-Week Grading Period Begins", "type": "quarter_start", "description": "Academic marker; not a closure." },
+    { "date": "2026-11-03", "name": "Election Day — No School", "type": "no_school" },
+    { "date": "2026-11-25", "endDate": "2026-11-27", "name": "Thanksgiving Break — No School", "type": "break_start" },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "name": "Winter Break — No School", "type": "break_start" },
+    { "date": "2027-01-11", "name": "Third Nine-Week Grading Period Begins", "type": "quarter_start", "description": "Academic marker; not a closure." },
+    { "date": "2027-01-18", "endDate": "2027-01-19", "name": "MLK Day and Professional Day — No School", "type": "no_school" },
+    { "date": "2027-02-15", "name": "Presidents Day — No School", "type": "holiday" },
+    { "date": "2027-03-15", "name": "Fourth Nine-Week Grading Period Begins", "type": "quarter_start", "description": "The graphic calendar prints March 15, 2026. SWCS's grade-card schedule lists March 15–May 28, 2027, which matches the 2026–27 school-year sequence used on this page." },
+    { "date": "2027-03-22", "endDate": "2027-03-26", "name": "Spring Break — No School", "type": "break_start" },
+    { "date": "2027-03-29", "name": "Professional Day — No School", "type": "teacher_workday" },
+    { "date": "2027-05-04", "name": "Tentative Election Day Closure", "type": "no_school", "badgeLabel": "Tentative", "description": "No school if SWCS confirms the May 4 primary date; the date is subject to change based on the Board of Elections schedule.", "hideFromCalendarExport": true },
+    { "date": "2027-05-28", "name": "Last Day for Students", "type": "school_end" },
+    { "date": "2027-05-30", "name": "High School Graduation Day", "type": "graduation", "description": "Districtwide graduation day; check the high school for ceremony time and venue." },
+    { "date": "2027-06-01", "dates": ["2027-06-01", "2027-06-02", "2027-06-03", "2027-06-04", "2027-06-07", "2027-06-08"], "displayDate": "June 1–4 and 7–8, 2027", "name": "Calamity Day Contingency Dates", "type": "makeup_day", "badgeLabel": "Conditional", "description": "Reserved extension dates; these are not confirmed attendance days unless SWCS activates them.", "hideFromCalendarExport": true }
+  ],
+  "compactDownloadModule": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "unifiedDownloadTitle": "SWCS 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Open the official English or Spanish calendar, or download a one-time ICS file of confirmed district dates.",
+  "icsHeading": "Add Confirmed SWCS 2026–27 Dates",
+  "icsDescription": "Download confirmed student dates as a one-time ICS file. The tentative May 4 closure and conditional June dates are not included.",
+  "icsButtonLabel": "Download Confirmed Dates (.ics)",
+  "icsButtonSupportText": "One-time import. Recheck SWCS for the tentative primary closure and any activated calamity dates.",
+  "pdfHeading": "Official SWCS 2026–27 English Calendar",
+  "pdfHeadingTag": "h3",
+  "hidePdfVersionLabel": true,
+  "pdfDescription": "Open the current English calendar linked by SWCS. A separately reviewed copy is identified in Sources and Review Notes.",
+  "calendarFaqs": [
+    { "q": "When do all SWCS K–12 students attend together?", "a": "Monday, August 24, 2026 is the first full attendance day for all K–12 students after the three-day K–3 phase-in." },
+    { "q": "Is May 4, 2027 definitely a no-school day?", "a": "No. SWCS labels May 4 as a tentative Election Day closure subject to the Board of Elections primary date." },
+    { "q": "Why does this page show March 15, 2027 for the fourth grading period?", "a": "The graphic calendar prints March 15, 2026. SWCS's grade-card schedule lists March 15–May 28, 2027, which matches the 2026–27 school-year sequence used on this page." },
+    { "q": "Does SWCS publish a Spanish school calendar?", "a": "Yes. SWCS publishes an official Spanish version of the 2026–27 calendar; it is linked in the Downloads section above." }
+  ],
+  "faqOrderLimit": 7,
+  "faqDisplayQuestions": [
+    "Do all SWCS students start on the same day?",
+    "When do all SWCS K–12 students attend together?",
+    "Are the SWCS calamity contingency dates confirmed school days?",
+    "Is May 4, 2027 definitely a no-school day?",
+    "Why does this page show March 15, 2027 for the fourth grading period?",
+    "Does SWCS publish a Spanish school calendar?",
+    "Do career academy and preschool families need another calendar?"
+  ],
+  "sourceReviewSummary": "This page was checked against SWCS's current calendar page, English graphic calendar, and published back-to-school schedules.",
+  "sourceReviewDetails": [
+    "The current SWCS calendar page links the English graphic calendar identified above as the official 2026–27 file.",
+    "A separately retained English copy was visually reviewed and recorded with SHA-256 checksum 5df177e8f5bbf581c45fcb0d425de2d532c72d5dcf5950b7a36957d1e25f379c; that checksum is not attributed to the current Drive file.",
+    "The graphic calendar prints March 15, 2026. SWCS's grade-card schedule lists March 15–May 28, 2027, which matches the 2026–27 school-year sequence used on this page.",
+    "SWCS's district back-to-school FAQ says combined daily K–3 classroom schedules begin August 24; Finland Elementary's opening schedule independently identifies that date as the first full attendance day for all K–12 students."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official South Western City Schools sources.",
+  "sourceNextReviewText": "Next review: when SWCS confirms the May primary closure, activates calamity dates, or changes either official Drive link.",
+  "sources": [
+    { "label": "SWCS District Calendar Center", "url": "https://www.swcsd.us/Calendar.aspx" },
+    { "label": "Current SWCS 2026–27 English Graphic Calendar", "url": "https://drive.google.com/file/d/1pAz5PB7maOGMRQGtG1RyVsIC6Nkay1iX/view?usp=sharing" },
+    { "label": "SWCS 2026–27 Back-to-School FAQ", "url": "https://swinsider.com/2026/06/29/2026-2027-back-to-school-faq/" },
+    { "label": "Reviewed English calendar copy", "url": "https://drive.google.com/file/d/1F8z5-cm6zvaedyimPLnGAS3C8zrNDNsN/view?usp=drive_link" },
+    { "label": "Official SWCS 2026–27 Spanish Graphic Calendar", "url": "https://drive.google.com/file/d/16PmMrLsDCKCKQy7ZntU1mgxSIfoJOxtx/view?usp=drive_link" },
+    { "label": "Finland Elementary School opening schedule", "url": "https://fes.swcsd.us/" }
+  ]
+}

@@ -40,6 +40,7 @@ function toComparisonCalendarSummary(c: any) {
     comparisonSourceLabel: c.comparisonSourceLabel ?? c.meta?.comparisonSourceLabel,
     comparisonExtraSourceUrl: c.comparisonExtraSourceUrl ?? c.meta?.comparisonExtraSourceUrl,
     comparisonExtraSourceLabel: c.comparisonExtraSourceLabel ?? c.meta?.comparisonExtraSourceLabel,
+    comparisonRanges: c.comparisonRanges ?? c.meta?.comparisonRanges,
     events: (c.events ?? [])
       .filter((e: any) => e.type === 'break_start' || e.type === 'break_end')
       .map((e: any) => ({ name: e.name, date: e.date, endDate: e.endDate, type: e.type })),
@@ -543,6 +544,26 @@ function keyDateListDateParts(event: any) {
     }
   }
   return dates.map((date: string) => ({ date, label: formatShortDate(date), ariaLabel: formatDate(date) }))
+}
+
+function keyDateRenderDateParts(event: any) {
+  const listParts = keyDateListDateParts(event)
+  if (listParts.length) return listParts
+  if (!event.endDate || event.endDate === event.date || !event.dateJoiner) return []
+
+  const start = new Date(event.date + 'T00:00:00')
+  const end = new Date(event.endDate + 'T00:00:00')
+  if (start.getFullYear() === end.getFullYear() && start.getMonth() === end.getMonth()) {
+    const month = start.toLocaleDateString('en-US', { month: 'short' })
+    return [
+      { date: event.date, label: `${month} ${start.getDate()}`, ariaLabel: formatDate(event.date) },
+      { date: event.endDate, label: `${end.getDate()}, ${end.getFullYear()}`, ariaLabel: formatDate(event.endDate) },
+    ]
+  }
+  return [
+    { date: event.date, label: formatShortDate(event.date), ariaLabel: formatDate(event.date) },
+    { date: event.endDate, label: formatShortDate(event.endDate), ariaLabel: formatDate(event.endDate) },
+  ]
 }
 
 function keyDateDisplayDate(event: any) {
@@ -1425,6 +1446,18 @@ if (!isStatePage && district.value) {
         .filter(Boolean)
     : sourceBasedOnRefs
   const datasetBasedOnValue = datasetBasedOnRefs.length === 1 ? datasetBasedOnRefs[0] : datasetBasedOnRefs
+  const webPageIsBasedOnSourceIds = (((cal as any)?.schemaWebPageIsBasedOnSourceIds ?? (cal as any)?.meta?.schemaWebPageIsBasedOnSourceIds) as string[] | undefined)
+  const webPageBasedOnRefs = Array.isArray(webPageIsBasedOnSourceIds)
+    ? webPageIsBasedOnSourceIds
+        .map(id => {
+          if ((id === 'source-calendar' || id === sourceCalendarId) && basedOnUrl) return { '@id': `${canonicalUrl}#${sourceCalendarId}` }
+          if (id === 'source-calendar-page' && sourcePageCitationUrl) return { '@id': `${canonicalUrl}#source-calendar-page` }
+          if (id && additionalSourceCalendarEntities.some(source => source['@id'] === `${canonicalUrl}#${id}`)) return { '@id': `${canonicalUrl}#${id}` }
+          return null
+        })
+        .filter(Boolean)
+    : sourceBasedOnRefs
+  const webPageBasedOnValue = webPageBasedOnRefs.length === 1 ? webPageBasedOnRefs[0] : webPageBasedOnRefs
   const calendarIcsUrl = district.value && cal
     ? `https://myschooldates.com/calendars/${district.value.slug}-${cal.schoolYear}.ics`
     : ''
@@ -1608,7 +1641,7 @@ if (!isStatePage && district.value) {
     ...(webPageMainEntity ? { mainEntity: webPageMainEntity } : {}),
     ...(webPageParts.length ? { hasPart: webPageParts } : {}),
     ...(yearPageLinks.length ? { relatedLink: yearPageLinks } : {}),
-    ...(sourceBasedOnRefs.length ? { isBasedOn: sourceBasedOnValue } : {}),
+    ...(webPageBasedOnRefs.length ? { isBasedOn: webPageBasedOnValue } : {}),
     ...(sourcePdfIsArchivedCopy ? {
       associatedMedia: {
         '@type': 'MediaObject',
@@ -2495,9 +2528,9 @@ if (!isStatePage && district.value) {
               </div>
               <span class="text-sm text-[#7b756d] tabular-nums ml-4 flex-shrink-0">
                 <span v-if="keyDateUsesPlainText(event)">{{ event.displayDate }}</span>
-                <template v-else-if="keyDateListDateParts(event).length">
+                <template v-else-if="keyDateRenderDateParts(event).length">
                   <template
-                    v-for="(part, index) in keyDateListDateParts(event)"
+                    v-for="(part, index) in keyDateRenderDateParts(event)"
                     :key="part.date"
                   >
                     <span v-if="index > 0">&nbsp;{{ event.dateJoiner ?? 'and' }}&nbsp;</span>
@@ -2894,6 +2927,7 @@ if (!isStatePage && district.value) {
           :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
           :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
           :hide-next-review="Boolean((cal as any).hideSourceNextReview ?? (cal as any).meta?.hideSourceNextReview)"
+          :hide-review-author="Boolean((cal as any).hideSourceReviewAuthor ?? (cal as any).meta?.hideSourceReviewAuthor)"
           :hide-review-date="Boolean((cal as any).hideSourceReviewDate ?? (cal as any).meta?.hideSourceReviewDate)"
           :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
         />
@@ -2990,6 +3024,7 @@ if (!isStatePage && district.value) {
           :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
           :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
           :hide-next-review="Boolean((cal as any).hideSourceNextReview ?? (cal as any).meta?.hideSourceNextReview)"
+          :hide-review-author="Boolean((cal as any).hideSourceReviewAuthor ?? (cal as any).meta?.hideSourceReviewAuthor)"
           :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
           :hide-review-date="Boolean((cal as any).hideSourceReviewDate ?? (cal as any).meta?.hideSourceReviewDate)"
         />

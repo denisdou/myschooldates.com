@@ -20,12 +20,30 @@ const props = defineProps<{
 }>()
 
 const formattedStudentCountAsOf = computed(() => {
-  if (!props.studentCountAsOf) return ''
-  return new Date(`${props.studentCountAsOf}T00:00:00`).toLocaleDateString('en-US', {
+  const value = props.studentCountAsOf?.trim()
+  if (!value) return ''
+  const schoolYearMatch = value.match(/^(\d{4})-(\d{4})$/)
+  if (schoolYearMatch) return `${schoolYearMatch[1]}–${schoolYearMatch[2]!.slice(2)}`
+  const date = new Date(`${value}T00:00:00`)
+  if (Number.isNaN(date.getTime())) return value
+  return date.toLocaleDateString('en-US', {
     month: 'short',
     day: 'numeric',
     year: 'numeric',
   })
+})
+
+const calendarTypeLabel = computed(() => {
+  const value = props.calendarType?.trim() ?? ''
+  const normalized = value.toLowerCase()
+  if (normalized === 'traditional') return 'Traditional'
+  if (normalized === 'year-round') return 'Year-Round'
+  if (normalized.includes('extended-year')) {
+    const dayCount = value.match(/(\d+)-day extended-year/i)?.[1]
+    return `Traditional + ${dayCount ? `${dayCount}-Day ` : ''}Extended-Year`
+  }
+  if (normalized.includes('year-round')) return 'Traditional + Year-Round'
+  return value
 })
 </script>
 
@@ -45,7 +63,7 @@ const formattedStudentCountAsOf = computed(() => {
       </div>
       <div v-if="calendarType && !hideCalendarType">
         <div class="text-sm font-semibold text-gray-900 leading-snug mt-1">
-          {{ calendarType === 'traditional' ? 'Traditional' : calendarType === 'year-round' ? 'Year-Round' : 'Traditional + Year-Round' }}
+          {{ calendarTypeLabel }}
         </div>
         <div class="text-xs text-gray-600 mt-0.5">calendar type</div>
       </div>

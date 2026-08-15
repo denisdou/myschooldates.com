@@ -20,6 +20,7 @@ const props = defineProps<{
   hideNextReview?: boolean
   reviewDateLabel?: string | null
   hideReviewDate?: boolean
+  hideReviewAuthor?: boolean
 }>()
 
 const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' && props.sourcePdfUrl.includes('assets.myschooldates.com'))
@@ -119,7 +120,7 @@ const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.
       </p>
       <p v-if="verifiedDate && !hideReviewDate">
         <span class="font-medium text-rds-ink-muted">{{ reviewDateLabel || 'Last manual review' }}:</span>
-        {{ verifiedDate }}, by Denis Dou.
+        {{ verifiedDate }}<template v-if="!hideReviewAuthor">, by Denis Dou</template>.
       </p>
       <p v-if="verifiedDate && !hideNextReview">
         <template v-if="nextReviewText">{{ nextReviewText }}</template>
