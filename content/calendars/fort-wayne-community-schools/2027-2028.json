@@ -1,0 +1,533 @@
+{
+  "institutionId": "fort-wayne-community-schools",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Fort Wayne Community Schools Calendar 2027–28",
+  "firstDay": "2027-08-11",
+  "lastDay": "2028-05-25",
+  "temporalCoverageStart": "2027-08-09",
+  "temporalCoverageEnd": "2028-06-03",
+  "semesters": 2,
+  "totalSchoolDays": 180,
+  "sourceUrl": "https://www.fortwayneschools.org/calendar",
+  "sourceDocumentPage": "https://www.fortwayneschools.org/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1758825375/fwcsk12inus/m2sfkjotya0lfmwam9ie/FWCScalendar2027-28_9-25-25_Publish.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1758825375/fwcsk12inus/m2sfkjotya0lfmwam9ie/FWCScalendar2027-28_9-25-25_Publish.pdf",
+  "sourceCheckedAt": "2026-08-16",
+  "sourceChecksumSha256": "4767e5812494cb5e71e3fd9603e1bed29181592dca1172732da997fe05f0a679",
+  "sourceStatus": "draft",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The district-linked PDF is watermarked DRAFT and says the calendar is subject to change. Transition Day and the Pre-K first day remain TBD, waiver days are not listed, and extra Winter Break days are listed. The PDF labels May 30 both Memorial Day and a reserve make-up date, although Memorial Day falls on May 29 in 2028. Its first-semester header ends December 17, while the Quarter 2 range and event list use December 22. The second-semester header starts January 4, while Winter Vacation runs through January 6, January 7 is a teacher work and make-up day, and Quarter 3 begins January 10.",
+  "lastVerifiedAt": "2026-08-16",
+  "dateCreated": "2026-08-16",
+  "datePublished": "2026-08-16",
+  "dateModified": "2026-08-16",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "draft_calendar_replacement",
+    "transition_day_publication",
+    "prek_start_publication",
+    "waiver_day_publication",
+    "makeup_day_activation",
+    "official_source_conflict",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "FWCS 2027–28 Calendar · As of 9/25/25 · PDF watermarked DRAFT and subject to change",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.fortwayneschools.org/calendar",
+    "linkText": "2027-28",
+    "expectedDocumentUrl": "https://resources.finalsite.net/images/v1758825375/fwcsk12inus/m2sfkjotya0lfmwam9ie/FWCScalendar2027-28_9-25-25_Publish.pdf",
+    "expectedChecksumSha256": "4767e5812494cb5e71e3fd9603e1bed29181592dca1172732da997fe05f0a679"
+  },
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroVerificationProcess": true,
+  "hideBreakDurationBadges": true,
+  "hideDateLegend": true,
+  "seoTitle": "Fort Wayne Community Schools Calendar 2027–28 | Draft",
+  "seoDescription": "The current FWCS draft lists Aug. 11, 2027, as the districtwide first student day and May 25, 2028, as the last. Transition Day and Pre-K remain TBD.",
+  "heroSummary": "The current Fort Wayne Community Schools draft lists Wednesday, August 11, 2027, as the districtwide first student day and Thursday, May 25, 2028, as the last. Transition Day and the first day of Pre-K remain TBD, and FWCS says waiver days are not yet listed.",
+  "futureYearNotice": "You're viewing the upcoming 2027–28 draft calendar. FWCS marks this calendar subject to change, and several dates remain unresolved.",
+  "heroSourceLine": "2027–28 draft calendar · Reviewed against the FWCS PDF marked subject to change as of September 25, 2025",
+  "verificationBadgeText": "Official FWCS source checked · Draft calendar with open dates",
+  "heroDownloadLabel": "Download ICS calendar",
+  "heroFactChips": [
+    "Printed quarter totals add to 180 student days",
+    "Transition Day TBD",
+    "Pre-K first day TBD"
+  ],
+  "hideHeroUpdatedField": true,
+  "calendarNotes": "The printed quarter totals add to 180 days, but the PDF remains a draft. FWCS explicitly says waiver days are not listed and extra Winter Break days are listed. Transition Day and the Pre-K first day are TBD. The draft labels May 30 both Memorial Day and a reserve make-up date, although Memorial Day falls on May 29 in 2028.",
+  "keyDatesSummaryTitle": "FWCS 2027–28 Draft Key Dates",
+  "keyDatesSummarySubtitle": "Published dates, major breaks, graduation, and TBD start dates",
+  "keyDateSummaryItems": [
+    {
+      "label": "Transition Day",
+      "name": "Transition Day for Kindergarten and Grades 6 and 9",
+      "displayDate": "TBD",
+      "type": "school_start",
+      "description": "The current draft does not provide a date."
+    },
+    {
+      "label": "First Day",
+      "name": "First Student Day",
+      "date": "2027-08-11",
+      "type": "school_start",
+      "schemaDescription": "The districtwide first student day listed in the current FWCS 2027–28 draft."
+    },
+    {
+      "label": "Pre-K",
+      "name": "First Day of Pre-K",
+      "displayDate": "TBD",
+      "type": "school_start",
+      "description": "The current draft does not provide a date."
+    },
+    {
+      "label": "Fall Break",
+      "name": "Fall Break — No Students",
+      "date": "2027-10-15",
+      "endDate": "2027-10-18",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2027-11-24",
+      "endDate": "2027-11-26",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Vacation",
+      "date": "2027-12-23",
+      "endDate": "2028-01-06",
+      "type": "break_start",
+      "description": "The draft notes that additional Winter Break days are included."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Vacation",
+      "date": "2028-04-04",
+      "endDate": "2028-04-08",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Student Day",
+      "date": "2028-05-25",
+      "type": "school_end"
+    },
+    {
+      "label": "Graduation",
+      "name": "Graduation Ceremonies",
+      "date": "2028-06-02",
+      "endDate": "2028-06-03",
+      "type": "graduation"
+    }
+  ],
+  "allDatesTitle": "FWCS 2027–28 Draft Calendar Dates",
+  "allDatesCoverageNote": "This table follows the dates currently printed on the district-linked draft. Transition Day, the Pre-K first day, and waiver days cannot be added until FWCS publishes them. Post-year Juneteenth is not included.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1758825375/fwcsk12inus/m2sfkjotya0lfmwam9ie/FWCScalendar2027-28_9-25-25_Publish.pdf",
+  "allDatesSourceLabel": "FWCS 2027–28 district-linked PDF currently watermarked DRAFT",
+  "breaksTitle": "FWCS Breaks and Return Dates",
+  "breaksBeforeAllDates": true,
+  "breakNotes": {
+    "Fall Break — No Students": "FWCS is closed Friday, Oct. 15, and students are also off Monday, Oct. 18. The draft has students returning Tuesday, Oct. 19.",
+    "Thanksgiving Break": "The draft has students returning Monday, Nov. 29.",
+    "Winter Vacation": "Winter Vacation runs Dec. 23–Jan. 6. Jan. 7 is listed as a teacher work and make-up day, followed by the weekend, so the draft has students returning Monday, Jan. 10. FWCS also notes that additional Winter Break days are included.",
+    "Spring Vacation": "The draft lists Spring Vacation for Apr. 4–8. It does not publish a student return date after the break, and waiver days are not yet listed. Good Friday is listed separately for Apr. 14."
+  },
+  "gradingPeriodsTitle": "FWCS 2027–28 Quarter and Semester Dates",
+  "gradingPeriodsDescription": "The draft lists quarter totals of 46, 43, 43, and 48 student days, for 89 days in the first semester and 91 in the second. Its semester header ends the first semester Dec. 17, while both the Quarter 2 range and dated event list use Dec. 22. The header also starts the second semester Jan. 4, while Winter Vacation runs through Jan. 6, Jan. 7 is a teacher work and make-up day, and Quarter 3 begins Jan. 10. This page follows the detailed Dec. 22 and Jan. 10 student-calendar entries.",
+  "gradingPeriods": [
+    {
+      "label": "Quarter 1",
+      "end": "2027-10-14",
+      "studentDays": 46
+    },
+    {
+      "label": "Quarter 2 / Semester 1",
+      "end": "2027-12-22",
+      "studentDays": 43
+    },
+    {
+      "label": "Quarter 3",
+      "end": "2028-03-09",
+      "studentDays": 43
+    },
+    {
+      "label": "Quarter 4 / Student Year",
+      "end": "2028-05-25",
+      "studentDays": 48
+    }
+  ],
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "customSections": [
+    {
+      "id": "fwcs-draft-open-items-2027-2028",
+      "label": "What Is Still Open on the FWCS 2027–28 Draft?",
+      "position": "afterKeyDates",
+      "content": "The current PDF provides a first student day but leaves several family-planning details unresolved.",
+      "table": {
+        "columns": [
+          "Calendar item",
+          "Current draft status",
+          "Planning note"
+        ],
+        "rows": [
+          [
+            "Transition Day for K, 6 and 9",
+            "TBD",
+            "Do not assume an earlier start date until FWCS publishes Transition Day"
+          ],
+          [
+            "First day of Pre-K",
+            "TBD",
+            "Confirm with FWCS or the assigned early-childhood program"
+          ],
+          [
+            "Waiver days",
+            "Not listed",
+            "Check later FWCS revisions for waiver and additional no-student dates"
+          ],
+          [
+            "Winter Vacation",
+            "December 23–January 6",
+            "The draft notes that additional Winter Break days are included"
+          ],
+          [
+            "Memorial Day / reserve make-up date",
+            "Source conflict",
+            "The FWCS draft labels May 30 as both Memorial Day and a reserve make-up date. Memorial Day falls on Monday, May 29, 2028, so families should wait for a revised FWCS calendar before relying on the May 30 holiday label."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fwcs-changes-2027-2028",
+      "label": "What Changed From 2026–27?",
+      "position": "afterGradingPeriodsBeforeCalendarExport",
+      "content": "The 2027–28 draft moves the districtwide first student day one day earlier, while Transition Day and the Pre-K start date remain TBD. It also lists a longer Winter Vacation, running Dec. 23 through Jan. 6.",
+      "table": {
+        "columns": [
+          "Calendar item",
+          "2026–27",
+          "2027–28 draft"
+        ],
+        "rows": [
+          [
+            "First student day",
+            "August 12, 2026",
+            "August 11, 2027"
+          ],
+          [
+            "Transition Day",
+            "August 6, 2026",
+            "TBD"
+          ],
+          [
+            "Pre-K first day",
+            "August 26, 2026",
+            "TBD"
+          ],
+          [
+            "Winter Vacation",
+            "December 21–January 1",
+            "December 23–January 6"
+          ],
+          [
+            "Spring Vacation",
+            "March 29–April 2",
+            "April 4–8"
+          ],
+          [
+            "Graduation",
+            "June 4–5, 2027",
+            "June 2–3, 2028"
+          ]
+        ]
+      }
+    }
+  ],
+  "events": [
+    {
+      "date": "2027-08-09",
+      "name": "Teacher Contract Day — No Students",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-10",
+      "name": "Teacher Professional Learning and Work Day — No Students",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-11",
+      "name": "First Student Day",
+      "type": "school_start"
+    },
+    {
+      "date": "2027-09-06",
+      "name": "Labor Day — District Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-10-14",
+      "name": "Quarter 1 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-10-15",
+      "endDate": "2027-10-18",
+      "name": "Fall Break — No Students",
+      "type": "break_start",
+      "description": "FWCS marks October 15 as district closed and October 18 as no student attendance."
+    },
+    {
+      "date": "2027-10-19",
+      "name": "Students Return After Fall Break",
+      "type": "school_resume",
+      "schemaDescription": "First student day after Fall Break."
+    },
+    {
+      "date": "2027-10-29",
+      "name": "Release Day for Parent-Teacher Conferences — No Students",
+      "type": "conference",
+      "badgeLabel": "No Students",
+      "labelType": "no_school"
+    },
+    {
+      "date": "2027-11-24",
+      "endDate": "2027-11-26",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-11-29",
+      "name": "Students Return After Thanksgiving Break",
+      "type": "school_resume",
+      "schemaDescription": "First student day after Thanksgiving Break."
+    },
+    {
+      "date": "2027-12-22",
+      "name": "Quarter 2 and First Semester End",
+      "type": "semester_end"
+    },
+    {
+      "date": "2027-12-23",
+      "endDate": "2028-01-06",
+      "name": "Winter Vacation",
+      "type": "break_start",
+      "description": "The draft notes that additional Winter Break days are included."
+    },
+    {
+      "date": "2028-01-07",
+      "name": "Teacher Work and Make-Up Day",
+      "type": "makeup_day",
+      "description": "The draft lists this as a teacher work and make-up day. Do not assume students attend unless FWCS later uses it as a make-up day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-01-10",
+      "name": "Students Return for Second Semester",
+      "type": "school_resume",
+      "schemaDescription": "First student day after Winter Vacation, the January 7 teacher work and make-up day, and the weekend."
+    },
+    {
+      "date": "2028-01-17",
+      "name": "Martin Luther King Jr. Day — No Students",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-03-09",
+      "name": "Quarter 3 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2028-03-10",
+      "name": "End of Quarter 3 Break — No Students",
+      "type": "no_school"
+    },
+    {
+      "date": "2028-04-04",
+      "endDate": "2028-04-08",
+      "name": "Spring Vacation",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-04-14",
+      "name": "Good Friday — No Students",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-05-25",
+      "name": "Last Student Day and Quarter 4 End",
+      "type": "school_end"
+    },
+    {
+      "date": "2028-05-26",
+      "name": "Teacher Work and Make-Up Day",
+      "type": "makeup_day",
+      "description": "This date may be used as a make-up day; check later FWCS updates before treating it as a student attendance day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-05-30",
+      "name": "Memorial Day — FWCS Draft Lists May 30",
+      "type": "holiday",
+      "badgeLabel": "Source Conflict",
+      "description": "The FWCS draft lists Memorial Day on May 30, although Memorial Day falls on Monday, May 29, 2028. May 30 is also included in the draft's reserve make-up range.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-05-30",
+      "endDate": "2028-05-31",
+      "name": "Reserve Make-Up Days",
+      "type": "makeup_day",
+      "description": "May 30 is also labeled Memorial Day in the draft.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-06-02",
+      "endDate": "2028-06-03",
+      "name": "Graduation Ceremonies",
+      "type": "graduation"
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "FWCS 2027–28 Draft Calendar Downloads",
+  "unifiedDownloadDescription": "Download selected dates from the current draft as a one-time ICS file or open the district-linked PDF.",
+  "icsHeading": "Download FWCS 2027–28 Draft Dates",
+  "icsDescription": "Download a one-time ICS file with the dated student-planning items currently published by FWCS. TBD openings, unlisted waiver days, and conditional make-up dates are not included.",
+  "icsButtonLabel": "Download Draft FWCS Dates (.ics)",
+  "icsButtonSupportText": "One-time import; recheck FWCS because the PDF is a draft and imported dates will not update.",
+  "pdfHeading": "FWCS 2027–28 Draft Calendar PDF",
+  "pdfDescription": "Open the one-page district-linked PDF. It is watermarked DRAFT, says the calendar is subject to change, leaves Transition Day and Pre-K TBD, and says waiver days are not listed.",
+  "pdfButtonLabel": "View FWCS Draft PDF",
+  "pdfVersionLabel": "FWCS 2027–28 Calendar · As of 9/25/25 · DRAFT",
+  "calendarFaqs": [
+    {
+      "q": "Is the FWCS 2027–28 calendar final?",
+      "a": "No. The district-linked PDF is watermarked DRAFT and says the calendar is subject to change. Transition Day and the Pre-K first day remain TBD, and waiver days are not listed."
+    },
+    {
+      "q": "When does Fort Wayne Community Schools start in 2027–28?",
+      "a": "The current draft lists August 11, 2027, as the districtwide first student day. FWCS has not yet published Transition Day for kindergarten and grades 6 and 9 or the first day of Pre-K."
+    },
+    {
+      "q": "Which FWCS dates may be used as make-up days in 2027–28?",
+      "a": "The draft labels January 7 and May 26 as teacher work and make-up days and May 30–31 as reserve make-up dates. It also labels May 30 as Memorial Day, although Memorial Day falls on May 29 in 2028. Check later FWCS revisions before treating any of these dates as student attendance days."
+    },
+    {
+      "q": "Is the October 29 FWCS conference date a school day?",
+      "a": "No. FWCS designates Oct. 29, 2027, as a Release Day for parent-teacher conferences; students do not attend school that day."
+    },
+    {
+      "q": "Why is the FWCS 2027–28 Winter Vacation longer?",
+      "a": "The draft lists Winter Vacation from December 23 through January 6 and explicitly notes that extra Winter Break days are listed. Because waiver days are not yet listed, the schedule may change in a later version."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "Is the FWCS 2027–28 calendar final?",
+    "When does Fort Wayne Community Schools start in 2027–28?",
+    "Which FWCS dates may be used as make-up days in 2027–28?",
+    "Is the October 29 FWCS conference date a school day?",
+    "Why is the FWCS 2027–28 Winter Vacation longer?"
+  ],
+  "faqDisplayLimit": 5,
+  "faqLimit": 5,
+  "schemaCalendarName": "Fort Wayne Community Schools Draft Calendar 2027–28",
+  "schemaDatasetName": "Fort Wayne Community Schools 2027–28 Draft Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed dates from the FWCS 2027–28 draft, including the published first and last days, breaks, quarter totals, parent-teacher conference release, conditional make-up dates, graduation, and explicit TBD or unlisted opening information.",
+  "schemaCalendarDownloadDescription": "One-time calendar import of dated student-planning items from the FWCS 2027–28 draft; TBD openings, unlisted waiver days, and conditional make-up dates are excluded.",
+  "schemaSpatialCoverage": "Fort Wayne Community Schools, Allen County, Indiana",
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Draft Status",
+      "id": "fwcs-draft-open-items-2027-2028"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Quarter Dates",
+      "id": "grading-periods"
+    },
+    {
+      "label": "What Changed",
+      "id": "fwcs-changes-2027-2028"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "yearSwitcherPosition": "afterSources",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "yearNumbers",
+    "whatsDifferent",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "comparison",
+    "relatedDistricts",
+    "nationalTrends",
+    "otherCalendars"
+  ],
+  "sourceReviewSummary": "Last reviewed August 16, 2026. Calendar dates were checked against the FWCS calendar page and district-linked 2027–28 draft PDF; the 2028 Memorial Day date was cross-checked against the U.S. Office of Personnel Management.",
+  "sourceMaintainerText": "Denis Dou using official Fort Wayne Community Schools sources.",
+  "sourceNextReviewText": "This page will be reviewed when FWCS replaces the draft, publishes Transition Day, Pre-K, or waiver dates, clarifies May 30, changes the PDF checksum, or activates a make-up date.",
+  "hideSourceVersionDisplay": true,
+  "hideSourceNextReview": true,
+  "hideSourceReviewDate": true,
+  "hideSourceReviewAuthor": true,
+  "hideSourceReviewDetails": true,
+  "sources": [
+    {
+      "label": "FWCS district calendars",
+      "url": "https://www.fortwayneschools.org/calendar"
+    },
+    {
+      "label": "FWCS 2027–28 district-linked PDF currently marked DRAFT",
+      "url": "https://resources.finalsite.net/images/v1758825375/fwcsk12inus/m2sfkjotya0lfmwam9ie/FWCScalendar2027-28_9-25-25_Publish.pdf"
+    },
+    {
+      "label": "U.S. Office of Personnel Management 2028 federal holiday schedule",
+      "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+    }
+  ]
+}

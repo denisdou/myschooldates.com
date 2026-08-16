@@ -1,0 +1,223 @@
+{
+  "institutionId": "msd-of-wayne-township",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "M.S.D. of Wayne Township Calendar 2027–28",
+  "firstDay": "2027-07-28",
+  "lastDay": "2028-05-31",
+  "temporalCoverageStart": "2027-07-26",
+  "temporalCoverageEnd": "2028-06-01",
+  "semesters": 2,
+  "sourceUrl": "https://www.wayne.k12.in.us/parentsstudents/calendar",
+  "sourceDocumentPage": "https://www.wayne.k12.in.us/parentsstudents/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1780596971/waynek12inus/akayqghuodb9gpwx4c94/2027-2028-school-calendar-with-eLearning-and-snow-days-english.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1780596971/waynek12inus/akayqghuodb9gpwx4c94/2027-2028-school-calendar-with-eLearning-and-snow-days-english.pdf",
+  "sourceCheckedAt": "2026-08-16",
+  "sourceUpdatedAt": "2026-02-09",
+  "sourceChecksumSha256": "12d463e5ce5cabf18fa114a70a93ced339b50e83f4fe462288d827f174bea555",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The district online calendar labels May 3, 2028 as Tuesday, while both official PDFs list Wednesday, May 3; this page uses Wednesday. The Spanish PDF prints ‘Miércoles, 31 de junio’ on the last-student-day line, while the English PDF and district online calendar list Wednesday, May 31. The annual calendar lists Wayne Preparatory Academy as not participating in late-start Mondays, while the current Late Start Mondays page and Information Guide give it an alternate morning schedule. The English PDF and district online calendar say the Friday before Memorial Day may be used if one snow day remains at Spring Break; the Spanish PDF phrases the condition as after Spring Recess. All four differences are disclosed on this page.",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.wayne.k12.in.us/parentsstudents/calendar",
+    "linkText": "2027-28 Calendar (English)",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1780596971/waynek12inus/akayqghuodb9gpwx4c94/2027-2028-school-calendar-with-eLearning-and-snow-days-english.pdf",
+    "expectedChecksumSha256": "12d463e5ce5cabf18fa114a70a93ced339b50e83f4fe462288d827f174bea555"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.wayne.k12.in.us/parentsstudents/calendar",
+      "linkText": "2027-28 Calendar (Spanish)",
+      "expectedPdfUrl": "https://resources.finalsite.net/images/v1781633836/waynek12inus/qnupambp5vdh1zmswlly/2027-2028-school-calendar-with-eLearning-and-snow-days-spanish.pdf",
+      "expectedChecksumSha256": "fc35bf0e63fb468d2836510e0951ca3b7a678d652490e153e4a8d1b69f8f3cf2"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-16",
+  "dateCreated": "2026-08-16",
+  "datePublished": "2026-08-16",
+  "dateModified": "2026-08-16",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_source_conflict", "official_schedule_change", "makeup_day_activation", "confirmed_data_error"],
+  "sourceVersion": "MSD of Wayne Township 2027–2028 School Calendar — approved February 9, 2026; English and Spanish editions reviewed",
+  "allDatesMode": "all",
+  "calendarType": "traditional",
+  "calendarTrackId": "wayne-township-district-calendar",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideDatasetSchema": true,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "itemListMode": "keyDates",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideBreakDurationBadges": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hiddenSections": ["keyDateCards", "otherCalendars", "quickFacts", "todayStatus", "about", "yearNumbers", "whatsDifferent", "planningTips", "districtProfile", "livingHere", "nationalTrends", "comparison", "relatedDistricts", "downloadCta"],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "href": "#key-dates" },
+    { "label": "All Dates", "href": "#all-dates" },
+    { "label": "Monday Schedule", "href": "#wayne-2027-2028-monday-schedule" },
+    { "label": "Breaks", "href": "#breaks" },
+    { "label": "Snow Days", "href": "#wayne-2027-2028-snow-days" },
+    { "label": "Downloads", "href": "#add-to-calendar" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Sources", "href": "#sources" }
+  ],
+  "seoTitle": "MSD of Wayne Township Calendar 2027–28: Dates & PDF",
+  "seoDescription": "Find MSD of Wayne Township's 2027–28 school dates, recesses, eLearning days, Monday late-start schedule, snow-day plan, and official English and Spanish PDFs.",
+  "heroSummary": "Wayne Township students start the 2027–28 school year on Wednesday, July 28, 2027. Fall Recess runs October 11–22, Winter Recess runs December 20–31, and Spring Recess runs March 27–April 7. Wayne Township lists May 31, 2028, as the last day for Pre-K through grade 11; June 1 is a teacher workday with no students.",
+  "heroSourceLine": "Based on Wayne Township's official 2027–28 English and Spanish calendars",
+  "hideHeroDownloadLink": true,
+  "heroCtas": [
+    { "label": "View Official English PDF", "href": "__sourcePdfUrl", "variant": "primary" },
+    { "label": "Add Dates to Calendar (.ics)", "href": "__icsUrl", "variant": "secondary", "download": true, "filename": "__icsFilename" }
+  ],
+  "verificationBadgeText": "Reviewed Aug. 16, 2026 · Denis Dou · Official Wayne Township sources",
+  "heroVerificationSourceText": "Reviewed the English and Spanish calendar PDFs",
+  "heroVerificationComparisonText": "Checked the district calendar, Information Guide, and Late Start Mondays page",
+  "calendarNotes": "Wayne Township opens July 28 for Pre-K, preschool, and grades K–12. Most schools start late on Mondays when school is in session, but the annual calendar conflicts with the current Late Start Mondays page and Information Guide on Wayne Preparatory Academy's Monday schedule. September 22, February 9, and May 3 are asynchronous eLearning staff-development days. The online calendar labels May 3 as Tuesday, while both PDFs and the 2028 calendar date support Wednesday. The Spanish PDF prints ‘31 de junio’ on the last-student-day line, while the English PDF and district online calendar list Wednesday, May 31. The district's snow rule keeps the first two snow days as no-school days and shifts the third and later cancellations to synchronous eLearning. The English calendar and online calendar say May 26 may be used if one snow day remains at Spring Break; the Spanish PDF phrases that condition as after Spring Recess.",
+  "keyDatesHeading": "MSD of Wayne Township 2027–28 Key Dates",
+  "keyDatesSummaryTitle": "MSD of Wayne Township 2027–28 Key Dates",
+  "keyDatesSummarySubtitle": "First day, major recesses, and the last student day",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Full Day for Pre-K, Preschool, and Grades K–12", "date": "2027-07-28", "type": "school_start" },
+    { "label": "Fall", "name": "Fall Recess", "date": "2027-10-11", "endDate": "2027-10-22", "type": "break_start" },
+    { "label": "Thanksgiving", "name": "Thanksgiving Recess", "date": "2027-11-24", "endDate": "2027-11-26", "type": "break_start" },
+    { "label": "Winter", "name": "Winter Recess", "date": "2027-12-20", "endDate": "2027-12-31", "type": "break_start" },
+    { "label": "Spring", "name": "Spring Recess", "date": "2028-03-27", "endDate": "2028-04-07", "type": "break_start" },
+    { "label": "Last Student Day", "name": "Last Day for Pre-K–Grade 11", "date": "2028-05-31", "type": "school_end" }
+  ],
+  "allDatesTitle": "MSD of Wayne Township 2027–28 Calendar Dates",
+  "allDatesCoverageNote": "Recurring late-start Mondays are explained below rather than repeated in the date list.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1780596971/waynek12inus/akayqghuodb9gpwx4c94/2027-2028-school-calendar-with-eLearning-and-snow-days-english.pdf",
+  "allDatesSourceLabel": "Official Wayne Township 2027–28 English School Calendar",
+  "dateLegendLabelOverrides": {
+    "Academic Date": "eLearning / Grading",
+    "Teacher Workday": "No Students / Staff Day",
+    "Reserved Weather Day": "Possible Snow Make-up Day",
+    "Possible Make-up Day": "Possible Snow Make-up Day",
+    "Make-up Day": "Possible Snow Make-up Day"
+  },
+  "breaksTitle": "Wayne Township 2027–28 School Recesses",
+  "breakNotes": {
+    "Fall Recess": "Students return Monday, October 25.",
+    "Thanksgiving Recess": "Students return Monday, November 29.",
+    "Winter Recess": "Staff return January 3; students return Tuesday, January 4.",
+    "Spring Recess": "Students return Monday, April 10."
+  },
+  "customSections": [
+    {
+      "id": "wayne-2027-2028-monday-schedule",
+      "label": "Wayne Township's Monday Late-Start Schedule",
+      "content": "Wayne Township's 2027–28 annual calendar lists Wayne Preparatory Academy among the schools that do not participate in late-start Mondays. The district's current Late Start Mondays page instead gives the academy an alternate schedule and lists the morning session as virtual learning; the Information Guide calls it an AM eLearning session. Families should check the school's current Monday schedule before making plans.",
+      "position": "afterAllDates",
+      "table": {
+        "columns": ["Monday schedule", "Students or programs", "What families should know"],
+        "rows": [
+          ["Late start", "Participating Pre-K–12 schools", "Occurs every Monday school is in session; confirm the school's bell time"],
+          ["Does not participate", "Area 31 Career Center; Little Giants Preschool", "Little Giants Preschool continues on the Area 31 Career Center schedule"],
+          ["Conflicting official guidance", "Wayne Preparatory Academy", "Annual calendar: not participating. Late Start Mondays page: AM virtual learning. Information Guide: AM eLearning. Check the school's current schedule"],
+          ["Alternate schedule", "Wayne Township Preschool", "Morning session 8:20–10:50 a.m.; afternoon session 1:00–3:30 p.m."]
+        ]
+      }
+    },
+    {
+      "id": "wayne-2027-2028-snow-days",
+      "label": "How Wayne Township Snow Days Affect the Calendar",
+      "content": "Wayne Township does not publish a fixed list of make-up dates. The English calendar and district online calendar say the Friday before Memorial Day will be used if one snow day remains at Spring Break. The Spanish PDF instead phrases the condition as after Spring Recess. This page follows the English calendar and online calendar and treats May 26 as conditional.",
+      "position": "afterBreaks",
+      "table": {
+        "columns": ["Cancellation", "Published response", "Planning note"],
+        "rows": [
+          ["Snow Day 1", "No school", "Watch for a district update on whether a make-up day will be needed"],
+          ["Snow Day 2", "No school", "Watch for a district update on whether a make-up day will be needed"],
+          ["Snow Day 3 or later", "Synchronous eLearning", "Students learn remotely on the announced schedule"],
+          ["One snow day remains at Spring Break", "May 26 may be used", "The Spanish PDF phrases the condition as after Spring Recess. Wait for district confirmation before treating May 26 as a school day"]
+        ]
+      }
+    }
+  ],
+  "events": [
+    { "date": "2027-07-26", "endDate": "2027-07-27", "name": "Teacher Workdays — District Staff Development", "type": "teacher_workday", "description": "No students." },
+    { "date": "2027-07-28", "name": "First Full Day for Pre-K, Preschool, and Grades K–12", "type": "school_start" },
+    { "date": "2027-09-06", "name": "Labor Day — No School", "type": "holiday" },
+    { "date": "2027-09-22", "name": "Asynchronous eLearning Day / Staff Development", "type": "academic", "badgeLabel": "Asynchronous eLearning", "description": "Pre-K, preschool, and grades K–12 learn asynchronously; staff development day." },
+    { "date": "2027-10-01", "name": "End of First Grading Period", "type": "quarter_end", "description": "The first grading period has 47 days." },
+    { "date": "2027-10-04", "name": "Beginning of Second Grading Period", "type": "quarter_start" },
+    { "date": "2027-10-04", "endDate": "2027-10-08", "name": "Parent-Teacher Conferences", "type": "academic", "description": "The calendar does not label these dates as no-school days.", "hideFromCalendarExport": true },
+    { "date": "2027-10-11", "endDate": "2027-10-22", "name": "Fall Recess", "type": "break_start", "description": "No school for Pre-K, preschool, and grades K–12." },
+    { "date": "2027-11-02", "name": "Staff Development Day — No School", "type": "teacher_workday", "description": "No school for Pre-K, preschool, and grades K–12." },
+    { "date": "2027-11-24", "endDate": "2027-11-26", "name": "Thanksgiving Recess", "type": "break_start", "description": "No school." },
+    { "date": "2027-12-17", "name": "End of First Semester", "type": "semester_end", "description": "The first semester has 88 days." },
+    { "date": "2027-12-20", "endDate": "2027-12-31", "name": "Winter Recess", "type": "break_start", "description": "No school." },
+    { "date": "2028-01-03", "name": "Staff Return from Winter Recess", "type": "teacher_workday", "description": "Students return January 4.", "hideFromCalendarExport": true },
+    { "date": "2028-01-04", "name": "Students Return / Second Semester Begins", "type": "school_resume" },
+    { "date": "2028-01-17", "name": "Dr. Martin Luther King Jr. Day — No School", "type": "holiday" },
+    { "date": "2028-02-09", "name": "Asynchronous eLearning Day / Staff Development", "type": "academic", "badgeLabel": "Asynchronous eLearning", "description": "Pre-K, preschool, and grades K–12 learn asynchronously; staff development day." },
+    { "date": "2028-02-21", "name": "Presidents' Day — No School", "type": "holiday" },
+    { "date": "2028-03-10", "name": "End of Third Grading Period", "type": "quarter_end", "description": "The third grading period has 47 days." },
+    { "date": "2028-03-27", "endDate": "2028-04-07", "name": "Spring Recess", "type": "break_start", "description": "No school." },
+    { "date": "2028-05-03", "name": "Asynchronous eLearning Day / Staff Development", "type": "academic", "badgeLabel": "Asynchronous eLearning", "description": "The district's online calendar labels May 3 as Tuesday, but May 3, 2028 falls on a Wednesday. Both the English and Spanish PDFs list Wednesday, May 3, so this page uses Wednesday, May 3. Pre-K, preschool, and grades K–12 learn asynchronously; staff development day." },
+    { "date": "2028-05-26", "name": "Possible Snow Make-up Day", "type": "makeup_day", "description": "Derived from the calendar rule for the Friday before Memorial Day. It becomes a school day only if Wayne Township activates it.", "hideFromCalendarExport": true },
+    { "date": "2028-05-29", "name": "Memorial Day — No School", "type": "holiday" },
+    { "date": "2028-05-31", "name": "Last Day for Pre-K–Grade 11 / End of Second Semester", "type": "school_end", "description": "The Spanish PDF prints ‘31 de junio’ on the last-student-day line. The English PDF and Wayne Township's online calendar both list Wednesday, May 31, 2028, so this page uses May 31." },
+    { "date": "2028-06-01", "name": "Teacher Workday — No Students", "type": "teacher_workday", "description": "The official calendar labels June 1 as the “Last Day of School,” but Pre-K through grade 11 students finish on May 31.", "hideFromCalendarExport": true }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Wayne Township 2027–28 Calendar Downloads",
+  "unifiedDownloadDescription": "Open the official English or Spanish PDF, or download these calendar dates for Google Calendar, Apple Calendar, or Outlook.",
+  "icsHeading": "Add Wayne Township Dates to Your Calendar",
+  "icsDescription": "Import selected Wayne Township dates into Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download Wayne Township Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. Recurring late-start Mondays are not repeated in the file, and May 26 is excluded unless the district activates it as a snow make-up day.",
+  "pdfHeading": "Official Wayne Township 2027–28 English Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Open the two-page English calendar with school dates, Monday schedule rules, and the snow-day sequence.",
+  "hidePdfVersionLabel": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "alternateCalendarsDescription": "The same Wayne Township calendar is also available in Spanish.",
+  "alternateCalendars": [
+    {
+      "type": "spanish",
+      "label": "Wayne Township 2027–28 Calendar — Spanish",
+      "description": "Official Spanish calendar PDF; see the notes above for documented source differences.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1781633836/waynek12inus/qnupambp5vdh1zmswlly/2027-2028-school-calendar-with-eLearning-and-snow-days-spanish.pdf"
+    }
+  ],
+  "calendarFaqs": [
+    { "q": "When is the last day for Wayne Township students in 2028?", "a": "The English calendar identifies Wednesday, May 31, 2028, as the last day for Pre-K through grade 11. June 1 is a teacher workday with no students; the PDF does not publish a separate grade 12 final-day date." },
+    { "q": "Does Wayne Township have late-start Mondays in 2027–28?", "a": "Yes. Most participating Pre-K–12 schools start late every Monday school is in session. Area 31 Career Center and Little Giants Preschool do not participate, and Wayne Township Preschool uses separate session times. Wayne Township's annual calendar lists Wayne Preparatory Academy as not participating. The dedicated Late Start Mondays page instead lists an alternate schedule with AM virtual learning, while the Information Guide calls it an AM eLearning session. Families should check the school's current schedule." },
+    { "q": "Which Wayne Township dates use asynchronous eLearning?", "a": "The calendar lists asynchronous eLearning on September 22, February 9, and May 3. These are also staff-development days." },
+    { "q": "How do Wayne Township snow days work?", "a": "The first two snow days are no-school days, and the third and later snow days use synchronous eLearning. The English calendar says May 26 may be used if one snow day remains at Spring Break; the Spanish PDF phrases that condition as after Spring Recess." },
+    { "q": "Is the 2027–28 Wayne Township calendar available in Spanish?", "a": "Yes. The official Spanish PDF is linked in Downloads. Its last-student-day line prints ‘31 de junio’; the English PDF and district online calendar both list May 31." }
+  ],
+  "faqLimit": 5,
+  "sources": [
+    { "label": "Wayne Township official calendar page", "url": "https://www.wayne.k12.in.us/parentsstudents/calendar" },
+    { "label": "Wayne Township Late Start Mondays page", "url": "https://www.wayne.k12.in.us/parentsstudents/late-start-monday" },
+    { "label": "Wayne Township Information Guide", "url": "https://www.wayne.k12.in.us/parentsstudents/information-guide" },
+    { "label": "Official Wayne Township 2027–28 English calendar PDF", "url": "https://resources.finalsite.net/images/v1780596971/waynek12inus/akayqghuodb9gpwx4c94/2027-2028-school-calendar-with-eLearning-and-snow-days-english.pdf" },
+    { "label": "Official Wayne Township 2027–28 Spanish calendar PDF", "url": "https://resources.finalsite.net/images/v1781633836/waynek12inus/qnupambp5vdh1zmswlly/2027-2028-school-calendar-with-eLearning-and-snow-days-spanish.pdf" }
+  ],
+  "sourceReviewSummary": "Reviewed Aug. 16, 2026 using Wayne Township's official English and Spanish calendar PDFs, online calendar, Late Start Mondays page, and Information Guide. Four differences between official Wayne Township sources are noted on this page: the weekday shown for May 3, the month shown on the Spanish last-student-day line, Wayne Preparatory Academy's Monday schedule, and the timing condition for the Friday-before-Memorial-Day snow make-up rule.",
+  "sourceReviewDetails": [
+    "Extracted the text and visually reviewed all four pages across the English and Spanish PDFs.",
+    "Confirmed the English PDF SHA-256 as 12d463e5ce5cabf18fa114a70a93ced339b50e83f4fe462288d827f174bea555 and the Spanish PDF SHA-256 as fc35bf0e63fb468d2836510e0951ca3b7a678d652490e153e4a8d1b69f8f3cf2.",
+    "The district online calendar labels May 3 as Tuesday, while both official PDFs list Wednesday, May 3. May 3, 2028 falls on Wednesday, so this page uses Wednesday.",
+    "The Spanish edition prints ‘Miércoles, 31 de junio’ on the last-student-day line, while the English edition and online calendar list Wednesday, May 31, 2028. The page uses May 31 and flags the source inconsistency.",
+    "The annual calendar lists Wayne Preparatory Academy as not participating in late-start Mondays. The current Late Start Mondays page gives it an alternate schedule with morning virtual learning, while the Information Guide calls it an AM eLearning session. The page presents all three instructions and tells families to check the school's current schedule.",
+    "The English PDF and district online calendar say the Friday before Memorial Day is used if one snow day remains at Spring Break; the Spanish PDF phrases the condition as after Spring Recess. This page follows the English and online wording.",
+    "We list the late-start Monday rule once rather than repeating it for every Monday. May 26 is shown as conditional because it becomes a school day only if Wayne Township activates the snow-day rule."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official M.S.D. of Wayne Township sources.",
+  "sourceNextReviewText": "Next review: when Wayne Township revises either language edition, corrects the May 3 weekday or Spanish May 31 line, resolves the Wayne Preparatory Academy Monday guidance or the snow-rule timing language, changes the Late Start Mondays page or Information Guide, or activates the May 26 snow make-up rule."
+}

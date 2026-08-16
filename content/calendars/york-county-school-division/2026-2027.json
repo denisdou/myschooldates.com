@@ -5,94 +5,126 @@
   "lastDay": "2027-06-09",
   "sourceUrl": "https://www.yorkcountyschools.org/about-us/calendars",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1783947117/yorkcountyschoolsorg/yorkcountyschoolsorg/tnkdaynu6jkbls5gvjbx/studentCalendar.pdf",
-  "lastVerifiedAt": "2026-07-20",
+  "sourceDocumentPage": "https://www.yorkcountyschools.org/about-us/calendars",
+  "sourceCheckedAt": "2026-08-16",
+  "sourceChecksumSha256": "3b7e14a66fbf2b4094da7610215b2ffa969ec14ed4866836ae8ba95d20bbe0b8",
+  "sourceStatus": "current",
+  "sourceVersion": "YCSD 2026–27 Student Calendar",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.yorkcountyschools.org/about-us/calendars",
+    "linkText": "2026-27 Student Calendar",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1783947117/yorkcountyschoolsorg/yorkcountyschoolsorg/tnkdaynu6jkbls5gvjbx/studentCalendar.pdf",
+    "expectedChecksumSha256": "3b7e14a66fbf2b4094da7610215b2ffa969ec14ed4866836ae8ba95d20bbe0b8"
+  },
+  "lastVerifiedAt": "2026-08-16",
   "datePublished": "2026-07-20",
-  "dateModified": "2026-07-20",
+  "dateModified": "2026-08-16",
   "calendarType": "traditional",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "York County School Division Calendar 2026–27",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_schedule_change", "confirmed_data_error"],
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideDatasetSchema": true,
+  "hideFaqSchema": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroUpdatedField": true,
+  "hideSourceVersionDisplay": true,
   "hideSemesterCount": true,
-  "yearNumbersMode": "compact",
-  "seoTitle": "York County School Division Calendar 2026-2027: Holidays, Breaks & PDF",
-  "seoDescription": "York County School Division 2026-2027 calendar with Aug 24 first day, Jun 9 last day, holidays, winter break, spring break, early release dates, PDF and ICS download.",
-  "faqLimit": 11,
-  "faqSchemaLimit": 11,
-  "calendarNotes": "York County School Division starts the 2026-2027 school year on August 24, 2026. Winter Break runs December 21-January 1, Spring Break runs April 5-9, and the last day of school is June 9, 2027. The official PDF also lists student holidays, schools and offices closed dates, early releases, quarter starts, interim reports, report cards, school hours, and make-up day notes.",
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideBreakDurationBadges": true,
+  "hiddenSections": ["keyDates", "keyDatesSummary", "quickFacts", "todayStatus", "about", "yearNumbers", "whatsDifferent", "planningTips", "districtProfile", "livingHere", "nationalTrends", "downloadCta"],
+  "hiddenCustomSectionIds": ["related-ycsd-calendars"],
+  "comparisonBeforeCalendarExport": true,
+  "comparisonRowsInclude": ["firstDay", "thanksgivingBreak", "winterBreak", "springBreak", "lastDay"],
+  "hideComparisonInsights": true,
+  "hideComparisonNotes": true,
+  "comparisonSummary": "Compare the YCSD school-year boundaries and major breaks with nearby Hampton Roads school divisions.",
+  "hideRelatedDistrictDescriptions": true,
+  "relatedDistrictsTitle": "More Virginia School Calendars",
+  "yearSwitcherPosition": "afterSources",
+  "yearSwitcherLabel": "Other school years:",
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "href": "#key-dates" },
+    { "label": "All Dates", "href": "#all-dates" },
+    { "label": "Early Release Times", "href": "#ycsd-early-release-times-2026-2027" },
+    { "label": "Breaks", "href": "#breaks" },
+    { "label": "Year Comparison", "href": "#ycsd-calendar-2026-2027-vs-2025-2026" },
+    { "label": "Nearby Districts", "href": "#comparison" },
+    { "label": "Downloads", "href": "#add-to-calendar" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Sources", "href": "#sources" }
+  ],
+  "seoTitle": "York County School Division Calendar 2026–27: Key Dates & PDF",
+  "seoDescription": "See York County School Division's 2026–27 calendar with first and last day, holidays, breaks, early release times, official PDF, and ICS download.",
+  "heroSummary": "York County School Division starts school on Monday, August 24, 2026. The last day of school is Wednesday, June 9, 2027, with an early release. Winter Break runs December 21–January 1, and Spring Break is April 5–9.",
+  "heroFactChips": ["Students return from Winter Break on Jan. 4, 2027"],
+  "heroSourceLine": "2026–27 school calendar dates · Reviewed against the official YCSD student calendar",
+  "verificationBadgeText": "Official YCSD sources checked",
+  "heroVerificationSourceText": "Official YCSD calendar and PDF checked",
+  "heroVerificationComparisonText": "Dates and school-hour table reviewed",
+  "keyDatesHeading": "York County School Division 2026–27 Key Dates",
+  "keyDateCardsThirdLabel": "Early Release Dates",
+  "keyDateCardsThirdValue": "4 dates",
+  "keyDateCardsThirdNote": "Jan. 22, Apr. 2, Apr. 30, and Jun. 9",
+  "allDatesTitle": "York County School Division 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This table includes districtwide holidays, early releases, quarter starts, interim reports, report cards, and the June 16 secondary report-card date. Early release days and student holidays may be used as make-up days.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1783947117/yorkcountyschoolsorg/yorkcountyschoolsorg/tnkdaynu6jkbls5gvjbx/studentCalendar.pdf",
+  "allDatesSourceLabel": "Official YCSD 2026–27 Student Calendar",
+  "dateLegendLabelOverrides": {
+    "No School for Students": "Student Holiday"
+  },
+  "breakNotes": {
+    "Thanksgiving Break": "Classes resume Monday, November 30.",
+    "Winter Break": "Classes resume Monday, January 4.",
+    "Spring Break": "Classes resume Monday, April 12."
+  },
+  "faqLimit": 6,
+  "faqDisplayLimit": 6,
+  "calendarNotes": "York County School Division starts school August 24, 2026 and ends June 9, 2027. The official student calendar also publishes school-level early release times and notes that early release days and student holidays are potential make-up days.",
   "customSections": [
     {
-      "id": "ycsd-calendar-highlights-2026-2027",
-      "label": "2026-2027 YCSD Calendar Highlights",
-      "position": "afterKeyDates",
-      "content": "Use this quick reference for the most-searched York County School Division Calendar 2026-2027 dates before reviewing the full YCSD date list.",
+      "id": "ycsd-early-release-times-2026-2027",
+      "label": "YCSD Early Release Times by School",
+      "position": "afterAllDates",
+      "content": "YCSD has four early release days in 2026–27: January 22, April 2, April 30, and June 9. Dismissal times vary by school, as shown in the district's official student calendar.",
       "table": {
-        "headers": [
-          "Event",
-          "Date"
-        ],
+        "headers": ["School group", "Start time", "Regular dismissal", "Early release"],
         "rows": [
-          [
-            "First Day of School",
-            "August 24, 2026"
-          ],
-          [
-            "Thanksgiving Break",
-            "November 25-27, 2026"
-          ],
-          [
-            "Winter Break",
-            "December 21, 2026-January 1, 2027"
-          ],
-          [
-            "Spring Break",
-            "April 5-9, 2027"
-          ],
-          [
-            "Last Day of School",
-            "June 9, 2027"
-          ]
-        ]
-      }
-    },
-    {
-      "id": "planning-around-ycsd-school-calendar-2026-2027",
-      "label": "YCSD Calendar Planning Guide",
-      "position": "afterKeyDates",
-      "content": "Families can use the York County School Division 2026-2027 calendar as a planning tool for vacations, childcare, transportation, appointments, and school activities. The official calendar notes that all early release days and student holidays are potential make-up days, so families should be careful before treating those dates as permanent no-school plans. The calendar also includes academic checkpoints such as quarter starts, interim reports, report cards, and early release dates that may matter for student planning even when they are not traditional school holidays.",
-      "groups": [
+          ["YHS", "7:15 a.m.", "2:00 p.m.", "11:15 a.m."],
+          ["BHS, GHS, THS", "7:20 a.m.", "2:05 p.m.", "11:20 a.m."],
+          ["YRA", "8:20 a.m.", "3:10 p.m.", "12:25 p.m."],
+          ["QLMS, TMS", "8:00 a.m.", "2:45 p.m.", "12:00 p.m."],
+          ["GMS, YMS", "8:05 a.m.", "2:50 p.m.", "12:05 p.m."],
+          ["BMES, MES, MVES, TES", "8:40 a.m.", "3:20 p.m.", "12:45 p.m."],
+          ["CES, GBES, WMES", "8:55 a.m.", "3:35 p.m.", "1:00 p.m."],
+          ["DES, SES, YES", "9:00 a.m.", "3:40 p.m.", "1:05 p.m."]
+        ],
+        "footnote": "School abbreviations follow the official YCSD calendar. All early release days and student holidays are potential make-up days; check YCSD before making travel or childcare commitments."
+      },
+      "links": [
         {
-          "label": "Family Vacation Planning",
-          "items": [
-            "Winter Break runs December 21, 2026 through January 1, 2027.",
-            "Spring Break runs April 5-9, 2027.",
-            "Thanksgiving Break runs November 25-27, 2026."
-          ]
-        },
-        {
-          "label": "Childcare and Transportation",
-          "items": [
-            "Early release days can require different pickup or transportation plans than regular school days.",
-            "Student holidays and early release days are listed as potential make-up days in the official YCSD calendar.",
-            "Families should confirm school-level dismissal times and school hours with their assigned school."
-          ]
-        },
-        {
-          "label": "Academic Planning",
-          "items": [
-            "Quarter starts, interim reports, and report card dates help families track academic checkpoints.",
-            "Elementary, middle, and high school report card timing may differ near the end of the year.",
-            "Weather-related schedule changes and make-up day decisions should be verified with York County School Division."
-          ]
+          "label": "View the official YCSD student calendar PDF",
+          "url": "https://resources.finalsite.net/images/v1783947117/yorkcountyschoolsorg/yorkcountyschoolsorg/tnkdaynu6jkbls5gvjbx/studentCalendar.pdf"
         }
-      ]
+      ],
+      "linksDisplay": "inline",
+      "linksLabel": "Source:"
     },
     {
       "id": "ycsd-calendar-2026-2027-vs-2025-2026",
-      "label": "YCSD Calendar Changes: 2025-2026 vs 2026-2027",
-      "position": "afterKeyDates",
-      "content": "Compare the current York County School Division calendar with the previous school year. The 2026-2027 YCSD calendar starts one day earlier than the 2025-2026 school year, ends one day earlier, and keeps Winter Break and Spring Break on similar seasonal schedules.",
+      "label": "YCSD Calendar Changes: 2025–26 vs 2026–27",
+      "position": "afterBreaks",
+      "content": "The 2026–27 YCSD calendar starts and ends one calendar day earlier than 2025–26. Winter Break and Spring Break also shift one day earlier.",
       "table": {
         "headers": [
           "Item",
-          "2025-2026",
-          "2026-2027"
+          "2025–26",
+          "2026–27"
         ],
         "rows": [
           [
@@ -107,131 +139,102 @@
           ],
           [
             "Winter Break",
-            "December 22, 2025-January 2, 2026",
-            "December 21, 2026-January 1, 2027"
+            "December 22, 2025–January 2, 2026",
+            "December 21, 2026–January 1, 2027"
           ],
           [
             "Spring Break",
-            "April 6-10, 2026",
-            "April 5-9, 2027"
-          ],
-          [
-            "Instruction Days",
-            "Not separately calculated on this page",
-            "180 calculated days"
+            "April 6–10, 2026",
+            "April 5–9, 2027"
           ]
         ]
       },
       "links": [
         {
-          "label": "York County School Division Calendar 2025-2026",
+          "label": "York County School Division Calendar 2025–26",
           "url": "/york-county-school-division-calendar/2025-2026"
-        }
-      ]
-    },
-    {
-      "id": "ycsd-calendar-source-verification-2026-2027",
-      "label": "YCSD Calendar Source and Verification Notes",
-      "position": "beforeSources",
-      "content": "This York County School Division calendar page was last checked against the official YCSD calendar source on July 20, 2026. MySchoolDates is an independent planning reference, not an official York County School Division website, and YCSD remains the source of record for calendar revisions, school-specific schedules, emergency changes, and make-up day decisions.",
-      "groups": [
-        {
-          "label": "What Families Should Verify",
-          "items": [
-            "Check the official York County School Division calendar page before making travel, childcare, or transportation commitments.",
-            "The .ics calendar file is a one-time import generated from checked records and will not automatically update if YCSD revises the calendar.",
-            "School hours, early release dismissal times, athletics, testing, graduation, and school-specific events may require confirmation with the assigned school."
-          ]
         }
       ]
     }
   ],
   "calendarFaqs": [
     {
-      "q": "When does York County School Division start school in 2026?",
-      "a": "The first day of school is Monday, August 24, 2026."
-    },
-    {
-      "q": "When is winter break for YCSD 2026-2027?",
-      "a": "Winter Break runs Monday, December 21, 2026 through Friday, January 1, 2027."
-    },
-    {
-      "q": "When is York County School Division Spring Break in 2027?",
-      "a": "Spring Break runs Monday, April 5 through Friday, April 9, 2027."
-    },
-    {
-      "q": "When is the last day of school for York County School Division in 2027?",
-      "a": "The last day of school is Wednesday, June 9, 2027."
-    },
-    {
       "q": "Are YCSD early release days potential make-up days?",
-      "a": "Yes. The official 2026-2027 calendar notes that all early release days and student holidays are potential make-up days."
+      "a": "Yes. The official 2026–27 calendar notes that all early release days and student holidays are potential make-up days."
     },
     {
-      "q": "How many school days are in the York County School Division 2026-2027 calendar?",
-      "a": "This page calculates 180 currently scheduled instructional days from the published YCSD calendar records. Families should confirm any revisions with York County School Division."
+      "q": "How many school days are in the York County School Division 2026–27 calendar?",
+      "a": "MySchoolDates counts 180 scheduled student days from the district's published calendar. YCSD does not publish a separate 180-day total in the reviewed PDF, so this is a calculated figure."
     },
     {
-      "q": "Does YCSD have early release days in 2026-2027?",
-      "a": "Yes. The YCSD calendar lists early release days on January 22, April 2, April 30, and June 9, 2027. Families should confirm school-level dismissal times."
+      "q": "Does YCSD have early release days in 2026–27?",
+      "a": "Yes. YCSD lists early release on January 22, April 2, April 30, and June 9, 2027. The school-hour table on this page shows the official dismissal time for each school group."
     },
     {
       "q": "Where can I download the YCSD calendar PDF?",
       "a": "Use the official PDF link on this page to open the York County School Division student calendar PDF. MySchoolDates also provides an .ics calendar file for calendar apps."
     },
     {
-      "q": "Is MySchoolDates the official York County School Division website?",
-      "a": "No. MySchoolDates is an independent calendar reference and is not affiliated with York County School Division. Families should verify schedule changes, emergency updates, and school-specific events with YCSD."
-    },
-    {
       "q": "Does the YCSD calendar include report card and interim dates?",
-      "a": "Yes. The 2026-2027 YCSD calendar includes quarter starts, interim reports, elementary report cards, and middle and high school report card dates."
+      "a": "Yes. The 2026–27 YCSD calendar includes quarter starts, interim reports, elementary report cards, and middle and high school report card dates."
     },
     {
       "q": "Can YCSD weather closures change the school calendar?",
-      "a": "Yes. Weather closures, emergency schedule changes, and make-up day decisions can change the practical schedule. Families should verify final updates with York County School Division."
+      "a": "Yes. Weather closures, emergency changes, and make-up day decisions can alter the published schedule. Families should check YCSD for the latest updates."
     }
   ],
-  "yearNumbers": [
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "York County School Division 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Download the reviewed dates or open YCSD's official student calendar PDF.",
+  "icsHeading": "Download YCSD 2026–27 Calendar",
+  "icsDescription": "Import the reviewed YCSD dates into Google Calendar, Apple Calendar, or Outlook. This is a one-time file and does not sync with later district revisions.",
+  "icsButtonLabel": "Download YCSD Calendar (.ics)",
+  "hideIcsButtonSupportText": true,
+  "pdfHeading": "Official YCSD 2026–27 Student Calendar",
+  "pdfDescription": "Open the official two-page student calendar with district dates and school-level early release times.",
+  "pdfButtonLabel": "View Official YCSD PDF",
+  "hidePdfVersionLabel": true,
+  "sources": [
     {
-      "label": "First Day",
-      "value": "Aug 24",
-      "detail": "The first day of school is August 24, 2026."
+      "label": "Official YCSD Calendars page",
+      "url": "https://www.yorkcountyschools.org/about-us/calendars"
     },
     {
-      "label": "Spring Break",
-      "value": "Apr 5-9",
-      "detail": "Spring Break runs April 5-9, 2027."
-    },
-    {
-      "label": "Last Day",
-      "value": "Jun 9",
-      "detail": "The last day of school is June 9, 2027."
+      "label": "Official YCSD 2026–27 Student Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1783947117/yorkcountyschoolsorg/yorkcountyschoolsorg/tnkdaynu6jkbls5gvjbx/studentCalendar.pdf"
     }
   ],
+  "sourceReviewSummary": "Reviewed August 16, 2026 against the official YCSD Calendars page and the complete two-page 2026–27 Student Calendar PDF. MySchoolDates is an independent reference; YCSD remains the source of record for revisions and make-up day decisions.",
+  "sourceReviewDetails": [
+    "Checked every date shown on this page against the official student calendar and visually reviewed both PDF pages.",
+    "Verified the eight school-hour groups and their regular and early release dismissal times against the PDF table.",
+    "The 180 scheduled student days are calculated by MySchoolDates from the published calendar; YCSD does not print a separate 180-day total."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "sourceNextReviewText": "Next review: when YCSD revises the student calendar, changes the official PDF, or announces make-up day changes.",
   "events": [
     { "date": "2026-08-24", "name": "First Day of School", "type": "school_start" },
     { "date": "2026-08-24", "name": "First Quarter Begins", "type": "academic" },
-    { "date": "2026-09-04", "name": "Student Holiday", "type": "student_holiday" },
+    { "date": "2026-09-04", "name": "Student Holiday", "type": "student_holiday", "preserveOfficialName": true, "badgeLabel": "Student Holiday" },
     { "date": "2026-09-07", "name": "Schools and Offices Closed", "type": "holiday" },
-    { "date": "2026-10-02", "name": "Student Holiday", "type": "student_holiday" },
+    { "date": "2026-10-02", "name": "Student Holiday", "type": "student_holiday", "preserveOfficialName": true, "badgeLabel": "Student Holiday" },
     { "date": "2026-10-08", "name": "Interim Reports", "type": "academic" },
-    { "date": "2026-11-02", "name": "Student Holiday", "type": "student_holiday" },
-    { "date": "2026-11-03", "name": "Student Holiday", "type": "student_holiday" },
+    { "date": "2026-11-02", "name": "Student Holiday", "type": "student_holiday", "preserveOfficialName": true, "badgeLabel": "Student Holiday" },
+    { "date": "2026-11-03", "name": "Student Holiday", "type": "student_holiday", "preserveOfficialName": true, "badgeLabel": "Student Holiday" },
     { "date": "2026-11-04", "name": "Second Quarter Begins", "type": "academic" },
     { "date": "2026-11-05", "name": "Report Cards", "type": "academic" },
     { "date": "2026-11-25", "name": "Thanksgiving Break", "type": "break_start" },
     { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
     { "date": "2026-12-17", "name": "Interim Reports", "type": "academic" },
-    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
-    { "date": "2027-01-01", "name": "Winter Break End; Schools and Offices Closed", "type": "break_end" },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "name": "Winter Break", "type": "break_start" },
+    { "date": "2027-01-01", "name": "Winter Break Ends — Schools and Offices Closed", "type": "break_end" },
     { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
     { "date": "2027-01-22", "name": "Early Release Day", "type": "early_release" },
-    { "date": "2027-01-25", "name": "Student Holiday", "type": "student_holiday" },
+    { "date": "2027-01-25", "name": "Student Holiday", "type": "student_holiday", "preserveOfficialName": true, "badgeLabel": "Student Holiday" },
     { "date": "2027-01-26", "name": "Third Quarter Begins", "type": "academic" },
     { "date": "2027-01-28", "name": "Report Cards", "type": "academic" },
     { "date": "2027-02-15", "name": "Presidents' Day", "type": "holiday" },
-    { "date": "2027-03-05", "name": "Student Holiday", "type": "student_holiday" },
+    { "date": "2027-03-05", "name": "Student Holiday", "type": "student_holiday", "preserveOfficialName": true, "badgeLabel": "Student Holiday" },
     { "date": "2027-03-11", "name": "Interim Reports", "type": "academic" },
     { "date": "2027-04-02", "name": "Early Release Day", "type": "early_release" },
     { "date": "2027-04-05", "name": "Spring Break", "type": "break_start" },
@@ -241,7 +244,7 @@
     { "date": "2027-04-30", "name": "Early Release Day", "type": "early_release" },
     { "date": "2027-05-06", "name": "Interim Reports", "type": "academic" },
     { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2027-06-09", "name": "Last Day of School; Early Release Day; Elementary Report Cards", "type": "school_end" },
+    { "date": "2027-06-09", "name": "Last Day of School", "type": "school_end", "description": "Early release; elementary report cards issued." },
     { "date": "2027-06-16", "name": "Middle and High School Report Cards", "type": "academic" }
   ]
 }

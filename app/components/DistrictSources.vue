@@ -21,6 +21,7 @@ const props = defineProps<{
   reviewDateLabel?: string | null
   hideReviewDate?: boolean
   hideReviewAuthor?: boolean
+  hideReviewDetails?: boolean
 }>()
 
 const isArchivedPdfCopy = computed(() => typeof props.sourcePdfUrl === 'string' && props.sourcePdfUrl.includes('assets.myschooldates.com'))
@@ -129,7 +130,7 @@ const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.
           When {{ shortName }} revises the calendar or updates its official calendar page.
         </template>
       </p>
-      <details class="pt-1">
+      <details v-if="!hideReviewDetails" class="pt-1">
         <summary class="cursor-pointer select-none font-medium text-rds-ink-muted hover:text-rds-ink">
           {{ reviewDetailsTitle || 'How we verify this calendar' }}
         </summary>

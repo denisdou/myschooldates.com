@@ -1,0 +1,533 @@
+{
+  "institutionId": "fort-wayne-community-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Fort Wayne Community Schools Calendar 2026–27",
+  "firstDay": "2026-08-12",
+  "lastDay": "2027-05-25",
+  "temporalCoverageStart": "2026-08-06",
+  "temporalCoverageEnd": "2027-06-05",
+  "semesters": 2,
+  "totalSchoolDays": 180,
+  "sourceUrl": "https://www.fortwayneschools.org/calendar",
+  "sourceDocumentPage": "https://www.fortwayneschools.org/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1779987997/fwcsk12inus/u8jhyrq3z7nkbqrgvvoz/FWCScalendar2026-27_05152026.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1779987997/fwcsk12inus/u8jhyrq3z7nkbqrgvvoz/FWCScalendar2026-27_05152026.pdf",
+  "sourceCheckedAt": "2026-08-16",
+  "sourceChecksumSha256": "2367553a1f298e36fead1ab090613f264f1a5f188757e7bc265c7a11167d88f1",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The PDF's semester headers do not fully match its quarter ranges and dated event list. The first-semester header ends December 17, while the detailed calendar uses December 18. The second-semester header ends May 26, while the Quarter 4 range and dated last-day entry use May 25; May 26 is listed separately as a teacher work and make-up day. This page follows the detailed dated entries.",
+  "lastVerifiedAt": "2026-08-16",
+  "dateCreated": "2026-08-16",
+  "datePublished": "2026-08-16",
+  "dateModified": "2026-08-16",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "makeup_day_activation",
+    "official_source_conflict",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "FWCS 2026–27 Calendar · Updated 5/15/2026",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.fortwayneschools.org/calendar",
+    "linkText": "2026-27",
+    "expectedDocumentUrl": "https://resources.finalsite.net/images/v1779987997/fwcsk12inus/u8jhyrq3z7nkbqrgvvoz/FWCScalendar2026-27_05152026.pdf",
+    "expectedChecksumSha256": "2367553a1f298e36fead1ab090613f264f1a5f188757e7bc265c7a11167d88f1"
+  },
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroVerificationProcess": true,
+  "hideBreakDurationBadges": true,
+  "hideDateLegend": true,
+  "seoTitle": "Fort Wayne Community Schools Calendar 2026–27 | FWCS",
+  "seoDescription": "The FWCS districtwide first student day is Aug. 12, 2026. See breaks, Transition Day, Pre-K, no-student days, make-up dates, and the official calendar.",
+  "heroSummary": "The districtwide first student day for Fort Wayne Community Schools is Wednesday, August 12, 2026, and the last student day is Tuesday, May 25, 2027. Kindergarten and grades 6 and 9 attend Transition Day on August 6, while Pre-K begins August 26.",
+  "heroSourceLine": "2026–27 school calendar · Reviewed against the official FWCS PDF updated May 15, 2026",
+  "verificationBadgeText": "Official FWCS sources checked",
+  "hideHeroUpdatedField": true,
+  "calendarNotes": "The printed quarter totals add to 180 student days. FWCS schedules Transition Day for kindergarten and grades 6 and 9 before the districtwide first student day, starts Pre-K two weeks later, and lists parent-teacher conference release, professional-learning, Good Friday, make-up, and graduation dates separately.",
+  "keyDatesSummaryTitle": "FWCS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Important start dates, major breaks, graduation, and the last student day",
+  "keyDateSummaryItems": [
+    {
+      "label": "Transition Day",
+      "name": "Transition Day for Kindergarten and Grades 6 and 9",
+      "date": "2026-08-06",
+      "type": "school_start",
+      "schemaDescription": "Transition Day for FWCS kindergarten students and students entering grades 6 and 9."
+    },
+    {
+      "label": "First Day",
+      "name": "First Student Day",
+      "date": "2026-08-12",
+      "type": "school_start",
+      "schemaDescription": "The districtwide first student day for FWCS students in kindergarten through grade 12."
+    },
+    {
+      "label": "Pre-K",
+      "name": "First Day of Pre-K",
+      "date": "2026-08-26",
+      "type": "school_start",
+      "schemaDescription": "The first day of Pre-K for FWCS students in 2026–27."
+    },
+    {
+      "label": "Fall Break",
+      "name": "Fall Break — No Students",
+      "date": "2026-10-16",
+      "endDate": "2026-10-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Vacation",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Vacation",
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Student Day",
+      "date": "2027-05-25",
+      "type": "school_end"
+    },
+    {
+      "label": "Graduation",
+      "name": "Graduation Ceremonies",
+      "date": "2027-06-04",
+      "endDate": "2027-06-05",
+      "type": "graduation"
+    }
+  ],
+  "allDatesTitle": "FWCS 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This table follows the family-facing dates on the official FWCS calendar, including Transition Day, Pre-K, no-student staff dates, quarter endings, breaks, parent-teacher conferences, make-up dates, and graduation. Post-year district office holidays are not included.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1779987997/fwcsk12inus/u8jhyrq3z7nkbqrgvvoz/FWCScalendar2026-27_05152026.pdf",
+  "allDatesSourceLabel": "Official FWCS 2026–27 calendar PDF",
+  "breaksTitle": "FWCS Breaks and Return Dates",
+  "breaksBeforeAllDates": true,
+  "breakNotes": {
+    "Fall Break — No Students": "FWCS is closed Friday, Oct. 16, and students are also off Monday, Oct. 19. Classes resume Tuesday, Oct. 20.",
+    "Thanksgiving Break": "Students return Monday, Nov. 30.",
+    "Winter Vacation": "Winter Vacation runs Dec. 21–Jan. 1. Jan. 4 is a teacher professional-learning and work day with no students, so classes resume Tuesday, Jan. 5.",
+    "Spring Vacation": "Students are also off for Good Friday on March 26 and a staff professional-learning day on April 5, so classes resume Tuesday, April 6."
+  },
+  "gradingPeriodsTitle": "FWCS 2026–27 Quarter and Semester Dates",
+  "gradingPeriodsDescription": "The FWCS calendar lists 47, 40, 47, and 46 student days by quarter, for 87 days in the first semester and 93 in the second. The PDF's semester headers do not fully match its quarter ranges and dated event list. The first-semester header ends Dec. 17, while the detailed calendar uses Dec. 18. The second-semester header ends May 26, while the Quarter 4 range and “Last day of 2nd Semester” entry use May 25; May 26 is listed separately as a teacher work and make-up day. This page follows the detailed dated entries.",
+  "gradingPeriods": [
+    {
+      "label": "Quarter 1",
+      "end": "2026-10-15",
+      "studentDays": 47
+    },
+    {
+      "label": "Quarter 2 / Semester 1",
+      "end": "2026-12-18",
+      "studentDays": 40
+    },
+    {
+      "label": "Quarter 3",
+      "end": "2027-03-11",
+      "studentDays": 47
+    },
+    {
+      "label": "Quarter 4 / Student Year",
+      "end": "2027-05-25",
+      "studentDays": 46
+    }
+  ],
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "customSections": [
+    {
+      "id": "fwcs-start-dates-2026-2027",
+      "label": "FWCS Start Dates by Student Group",
+      "position": "afterKeyDates",
+      "content": "Kindergarten and grades 6 and 9 attend Transition Day on Aug. 6 before the districtwide first student day on Aug. 12. Pre-K begins Aug. 26.",
+      "table": {
+        "columns": [
+          "Student group",
+          "Start date",
+          "What this date means"
+        ],
+        "rows": [
+          [
+            "Kindergarten and grades 6 and 9",
+            "August 6, 2026",
+            "Transition Day: K, 6 & 9"
+          ],
+          [
+            "All K–12 students",
+            "August 12, 2026",
+            "Districtwide First Student Day"
+          ],
+          [
+            "Pre-K",
+            "August 26, 2026",
+            "First Day of Pre-K"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fwcs-changes-2026-2027",
+      "label": "What Changed From 2025–26?",
+      "position": "afterGradingPeriodsBeforeCalendarExport",
+      "content": "FWCS starts the 2026–27 school year five days later than in 2025–26, and the last student day also moves five days later. Pre-K also starts five days later, and graduation moves to June 4–5.",
+      "table": {
+        "columns": [
+          "Calendar item",
+          "2025–26",
+          "2026–27"
+        ],
+        "rows": [
+          [
+            "First student day",
+            "August 7, 2025",
+            "August 12, 2026"
+          ],
+          [
+            "Pre-K first day",
+            "August 21, 2025",
+            "August 26, 2026"
+          ],
+          [
+            "Winter Vacation",
+            "December 22–January 2",
+            "December 21–January 1"
+          ],
+          [
+            "Spring Vacation",
+            "March 30–April 3",
+            "March 29–April 2"
+          ],
+          [
+            "Last student day",
+            "May 20, 2026",
+            "May 25, 2027"
+          ],
+          [
+            "Graduation",
+            "May 29–30, 2026",
+            "June 4–5, 2027"
+          ]
+        ]
+      }
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-06",
+      "name": "Transition Day for Kindergarten and Grades 6 and 9",
+      "type": "school_start",
+      "badgeLabel": "K, 6 & 9",
+      "labelType": "partial_closure",
+      "description": "Transition Day applies only to kindergarten and grades 6 and 9."
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Teacher Contract Day — No Students",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-10",
+      "name": "Teacher Professional Learning and Work Day — No Students",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-11",
+      "name": "Staff Professional Learning — No Students",
+      "type": "teacher_professional_learning",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-12",
+      "name": "First Student Day",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-08-26",
+      "name": "First Day of Pre-K",
+      "type": "school_start",
+      "badgeLabel": "Pre-K",
+      "labelType": "partial_closure"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — District Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-21",
+      "name": "Staff Professional Learning — No Students",
+      "type": "teacher_professional_learning"
+    },
+    {
+      "date": "2026-10-15",
+      "name": "Quarter 1 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-10-16",
+      "endDate": "2026-10-19",
+      "name": "Fall Break — No Students",
+      "type": "break_start",
+      "description": "FWCS is closed Friday, Oct. 16, and students are also off Monday, Oct. 19."
+    },
+    {
+      "date": "2026-10-20",
+      "name": "Students Return After Fall Break",
+      "type": "school_resume",
+      "schemaDescription": "First student day after Fall Break."
+    },
+    {
+      "date": "2026-10-30",
+      "name": "Release Day for Parent-Teacher Conferences — No Students",
+      "type": "conference",
+      "badgeLabel": "No Students",
+      "labelType": "no_school"
+    },
+    {
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-11-30",
+      "name": "Students Return After Thanksgiving Break",
+      "type": "school_resume",
+      "schemaDescription": "First student day after Thanksgiving Break."
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Quarter 2 and First Semester End",
+      "type": "semester_end"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Vacation",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Teacher Professional Learning and Work Day — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Students Return for Second Semester",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — No Students",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-08",
+      "name": "Staff Professional Learning — No Students",
+      "type": "teacher_professional_learning"
+    },
+    {
+      "date": "2027-03-11",
+      "name": "Quarter 3 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Quarter 3 Break — No Students",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Good Friday — No Students",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "name": "Spring Vacation",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-04-05",
+      "name": "Staff Professional Learning — No Students",
+      "type": "teacher_professional_learning"
+    },
+    {
+      "date": "2027-04-06",
+      "name": "Students Return After Spring Vacation",
+      "type": "school_resume",
+      "schemaDescription": "First student day after Spring Vacation and the April 5 staff day."
+    },
+    {
+      "date": "2027-05-25",
+      "name": "Last Student Day and Quarter 4 End",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-05-26",
+      "name": "Teacher Work and Make-Up Day",
+      "type": "makeup_day",
+      "description": "This post-year date may be used for make-up purposes; check FWCS to see whether the date will be used.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-27",
+      "endDate": "2027-05-28",
+      "name": "Reserve Make-Up Days",
+      "type": "makeup_day",
+      "description": "These are reserve dates, not regular student attendance days unless FWCS announces that they will be used.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-04",
+      "endDate": "2027-06-05",
+      "name": "Graduation Ceremonies",
+      "type": "graduation"
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "FWCS 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Download selected student-planning dates as a one-time ICS file or open the official FWCS PDF.",
+  "icsHeading": "Download FWCS 2026–27 Calendar Dates",
+  "icsDescription": "Download a one-time ICS file with confirmed FWCS student dates from this page. Conditional make-up days are excluded unless FWCS announces that they will be used.",
+  "icsButtonLabel": "Download FWCS Dates (.ics)",
+  "icsButtonSupportText": "One-time import; it does not sync with later FWCS revisions or make-up decisions.",
+  "pdfHeading": "Official FWCS 2026–27 Calendar PDF",
+  "pdfDescription": "Open the one-page FWCS calendar updated May 15, 2026, with Transition Day, Pre-K, staff dates, breaks, make-up dates, quarter totals, and graduation dates.",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfVersionLabel": "FWCS 2026–27 Calendar · Updated 5/15/2026",
+  "calendarFaqs": [
+    {
+      "q": "Do all FWCS students have the same first attendance date?",
+      "a": "No. Kindergarten and grades 6 and 9 attend Transition Day on August 6. The districtwide first student day for K–12 students is August 12, and Pre-K begins August 26."
+    },
+    {
+      "q": "Is the October 30 FWCS conference date a school day?",
+      "a": "No. FWCS designates Oct. 30, 2026, as a Release Day for parent-teacher conferences; students do not attend school that day."
+    },
+    {
+      "q": "Which FWCS dates may be used as make-up days?",
+      "a": "The calendar labels May 26 as a teacher work and make-up day and May 27–28 as reserve make-up days. Do not assume students attend on these dates unless FWCS announces that they will be used."
+    },
+    {
+      "q": "Why do some FWCS semester dates differ within the official PDF?",
+      "a": "The semester headers show Dec. 17 and May 26, while the detailed quarter ranges and dated entries use Dec. 18 and May 25. May 26 is listed separately as a teacher work and make-up day, so this page follows the detailed dated entries."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "Do all FWCS students have the same first attendance date?",
+    "Is the October 30 FWCS conference date a school day?",
+    "Which FWCS dates may be used as make-up days?",
+    "Why do some FWCS semester dates differ within the official PDF?"
+  ],
+  "faqDisplayLimit": 4,
+  "faqLimit": 4,
+  "schemaCalendarName": "Fort Wayne Community Schools Calendar 2026–27",
+  "schemaDatasetName": "Fort Wayne Community Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed FWCS 2026–27 dates including Transition Day for kindergarten and grades 6 and 9, the Pre-K start date, no-student staff dates, breaks, quarter totals, conditional make-up dates, and graduation.",
+  "schemaCalendarDownloadDescription": "One-time calendar import of confirmed FWCS student dates. Conditional make-up days are excluded unless FWCS announces that they will be used.",
+  "schemaSpatialCoverage": "Fort Wayne Community Schools, Allen County, Indiana",
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Start Dates",
+      "id": "fwcs-start-dates-2026-2027"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Quarter Dates",
+      "id": "grading-periods"
+    },
+    {
+      "label": "What Changed",
+      "id": "fwcs-changes-2026-2027"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "yearSwitcherPosition": "afterSources",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "yearNumbers",
+    "whatsDifferent",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "comparison",
+    "relatedDistricts",
+    "nationalTrends",
+    "otherCalendars"
+  ],
+  "sourceReviewSummary": "Last reviewed August 16, 2026. Dates were checked against the FWCS district calendar page and official 2026–27 PDF.",
+  "sourceMaintainerText": "Denis Dou using official Fort Wayne Community Schools sources.",
+  "hideSourceReviewAuthor": true,
+  "hideSourceReviewDate": true,
+  "hideSourceReviewDetails": true,
+  "sourceNextReviewText": "This page will be reviewed again if FWCS replaces the 2026–27 PDF, resolves the printed semester-date discrepancy, or announces a make-up schedule change.",
+  "hideSourceNextReview": true,
+  "hideSourceVersionDisplay": true,
+  "sources": [
+    {
+      "label": "FWCS district calendars",
+      "url": "https://www.fortwayneschools.org/calendar"
+    },
+    {
+      "label": "Official FWCS 2026–27 calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1779987997/fwcsk12inus/u8jhyrq3z7nkbqrgvvoz/FWCScalendar2026-27_05152026.pdf"
+    }
+  ]
+}

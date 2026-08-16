@@ -61,8 +61,8 @@ const contentParagraphs = (content?: string) =>
         </summary>
         <div class="mt-4">
           <div v-if="section.groups?.length" class="space-y-4">
-            <div v-for="group in section.groups" :key="group.label">
-              <h3 v-if="!section.hideGroupLabels" class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
+            <div v-for="(group, groupIndex) in section.groups" :key="group.label || `${section.id}-group-${groupIndex}`">
+              <h3 v-if="group.label && !section.hideGroupLabels" class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
               <p v-if="group.items.length === 1" class="text-sm leading-relaxed text-gray-600">
                 {{ group.items[0] }}
               </p>
@@ -173,8 +173,8 @@ const contentParagraphs = (content?: string) =>
           <div v-if="section.content" class="space-y-2">
             <p v-for="paragraph in contentParagraphs(section.content)" :key="paragraph" class="text-sm text-gray-600 leading-relaxed">{{ paragraph }}</p>
           </div>
-          <div v-for="group in section.groups" :key="group.label">
-            <h3 v-if="!section.hideGroupLabels" class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
+          <div v-for="(group, groupIndex) in section.groups" :key="group.label || `${section.id}-group-${groupIndex}`">
+            <h3 v-if="group.label && !section.hideGroupLabels" class="text-sm font-semibold text-gray-900 mb-2">{{ group.label }}</h3>
             <p v-if="group.items.length === 1" class="text-sm leading-relaxed text-gray-600">
               {{ group.items[0] }}
             </p>

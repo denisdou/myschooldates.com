@@ -431,9 +431,9 @@ const keyDateHighlights = computed(() => {
   const configured = (((cal as any).keyDateSummaryItems ?? (cal as any).meta?.keyDateSummaryItems ?? []) as any[])
   if (configured.length) {
     return configured
-      .filter(item => item.date || item.start)
+      .filter(item => item.date || item.start || item.displayDate)
       .map(item => ({
-        date: item.date ?? item.start,
+        date: item.date ?? item.start ?? '',
         endDate: item.endDate ?? item.end,
         name: item.name,
         displayDate: item.displayDate,
@@ -458,6 +458,9 @@ const keyDateHighlights = computed(() => {
 
 const itemListEvents = computed(() => {
   if (!cal?.events) return []
+  if (((cal as any).keyDateSummaryItems ?? (cal as any).meta?.keyDateSummaryItems ?? []).length) {
+    return keyDateHighlights.value.filter(event => event.date)
+  }
   if ((cal as any).itemListMode === 'allImportantDates') {
     return cal.events.filter(event => event.type !== 'break_end')
   }
@@ -523,7 +526,7 @@ function keyDateListDates(event: any) {
   return []
 }
 function keyDateUsesPlainText(event: any) {
-  return Boolean(event.displayDate && keyDateListDates(event).length > 1)
+  return Boolean(event.displayDate && (!event.date || keyDateListDates(event).length > 1))
 }
 
 function keyDateListDateParts(event: any) {
@@ -745,6 +748,9 @@ const hiddenSections = computed(() => {
 })
 const comparisonBeforeFaq = computed(() =>
   Boolean((cal as any)?.comparisonBeforeFaq ?? (cal as any)?.meta?.comparisonBeforeFaq ?? (district.value as any)?.comparisonBeforeFaq ?? (district.value as any)?.meta?.comparisonBeforeFaq)
+)
+const comparisonBeforeCalendarExport = computed(() =>
+  Boolean((cal as any)?.comparisonBeforeCalendarExport ?? (cal as any)?.meta?.comparisonBeforeCalendarExport ?? (district.value as any)?.comparisonBeforeCalendarExport ?? (district.value as any)?.meta?.comparisonBeforeCalendarExport)
 )
 const comparisonAfterSources = computed(() =>
   Boolean((cal as any)?.comparisonAfterSources ?? (cal as any)?.meta?.comparisonAfterSources ?? (district.value as any)?.comparisonAfterSources ?? (district.value as any)?.meta?.comparisonAfterSources)
@@ -1197,6 +1203,7 @@ const resolvedJumpNavigation = computed(() => {
     '#all-dates',
     ...customTargets('afterAllDates'),
     ...(!breaksBeforeAllDates.value ? ['#breaks', ...customTargets('afterBreaks')] : []),
+    ...(comparisonBeforeCalendarExport.value ? ['#comparison', ...customTargets('afterComparison')] : []),
     ...(gradingPeriodsBeforeCalendarExport.value ? ['#grading-periods', ...customTargets('afterGradingPeriodsBeforeCalendarExport')] : []),
     ...(otherCalendarsBeforeCalendarExport.value ? customTargets('afterOtherCalendars') : []),
     ...(!moveCalendarExportBeforeAllDates.value ? ['#add-to-calendar', ...customTargets('afterCalendarExport')] : []),
@@ -1205,15 +1212,15 @@ const resolvedJumpNavigation = computed(() => {
     ...(!gradingPeriodsBeforeCalendarExport.value ? ['#grading-periods', ...customTargets('afterGradingPeriods')] : []),
     '#year-comparison',
     ...customTargets('afterYearDiff'),
-    ...(comparisonBeforeFaq.value ? ['#comparison', ...customTargets('afterComparison')] : []),
+    ...(comparisonBeforeFaq.value && !comparisonBeforeCalendarExport.value ? ['#comparison', ...customTargets('afterComparison')] : []),
     ...(sourcesBeforeFaq.value ? ['#sources'] : []),
     '#faq',
     ...customTargets('afterFaq'),
-    ...(!comparisonBeforeFaq.value && !comparisonAfterSources.value ? ['#comparison', ...customTargets('afterComparison')] : []),
+    ...(!comparisonBeforeCalendarExport.value && !comparisonBeforeFaq.value && !comparisonAfterSources.value ? ['#comparison', ...customTargets('afterComparison')] : []),
     ...customTargets('afterPlanningTips'),
     ...customTargets('beforeSources'),
     ...(!sourcesBeforeFaq.value ? ['#sources'] : []),
-    ...(comparisonAfterSources.value ? ['#comparison', ...customTargets('afterComparison')] : []),
+    ...(comparisonAfterSources.value && !comparisonBeforeCalendarExport.value ? ['#comparison', ...customTargets('afterComparison')] : []),
   ]
   return resolveJumpNavigation(customJumpNavigation.value, targets)
 })
@@ -2730,6 +2737,11 @@ if (!isStatePage && district.value) {
         </div>
         <DistrictCustomSections v-if="!breaksBeforeAllDates && !hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
 
+        <template v-if="comparisonBeforeCalendarExport">
+          <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal" :district="district" :related-cals="relatedCals ?? []" :all-districts="relatedDistricts ?? []" :year="currentYear" />
+          <DistrictCustomSections :sections="customSections" position="afterComparison" />
+        </template>
+
         <DistrictGradingPeriods
           v-if="gradingPeriodsBeforeCalendarExport"
           :periods="(cal as any).gradingPeriods"
@@ -2903,7 +2915,7 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- Compare with Nearby Districts -->
-        <template v-if="comparisonBeforeFaq">
+        <template v-if="comparisonBeforeFaq && !comparisonBeforeCalendarExport">
           <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal" :district="district" :related-cals="relatedCals ?? []" :all-districts="relatedDistricts ?? []" :year="currentYear" />
           <DistrictCustomSections :sections="customSections" position="afterComparison" />
         </template>
@@ -2930,6 +2942,7 @@ if (!isStatePage && district.value) {
           :hide-review-author="Boolean((cal as any).hideSourceReviewAuthor ?? (cal as any).meta?.hideSourceReviewAuthor)"
           :hide-review-date="Boolean((cal as any).hideSourceReviewDate ?? (cal as any).meta?.hideSourceReviewDate)"
           :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
+          :hide-review-details="Boolean((cal as any).hideSourceReviewDetails ?? (cal as any).meta?.hideSourceReviewDetails)"
         />
 
         <!-- FAQ -->
@@ -2954,7 +2967,7 @@ if (!isStatePage && district.value) {
         />
 
         <!-- Compare with Nearby Districts -->
-        <template v-if="!comparisonBeforeFaq && !comparisonAfterSources">
+        <template v-if="!comparisonBeforeCalendarExport && !comparisonBeforeFaq && !comparisonAfterSources">
           <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal" :district="district" :related-cals="relatedCals ?? []" :all-districts="relatedDistricts ?? []" :year="currentYear" />
           <DistrictCustomSections :sections="customSections" position="afterComparison" />
         </template>
@@ -3027,9 +3040,10 @@ if (!isStatePage && district.value) {
           :hide-review-author="Boolean((cal as any).hideSourceReviewAuthor ?? (cal as any).meta?.hideSourceReviewAuthor)"
           :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
           :hide-review-date="Boolean((cal as any).hideSourceReviewDate ?? (cal as any).meta?.hideSourceReviewDate)"
+          :hide-review-details="Boolean((cal as any).hideSourceReviewDetails ?? (cal as any).meta?.hideSourceReviewDetails)"
         />
 
-        <template v-if="comparisonAfterSources">
+        <template v-if="comparisonAfterSources && !comparisonBeforeCalendarExport">
           <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal" :district="district" :related-cals="relatedCals ?? []" :all-districts="relatedDistricts ?? []" :year="currentYear" />
           <DistrictCustomSections :sections="customSections" position="afterComparison" />
         </template>

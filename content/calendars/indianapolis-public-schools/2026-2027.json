@@ -1,0 +1,501 @@
+{
+  "institutionId": "indianapolis-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Indianapolis Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-10",
+  "lastDay": "2027-05-27",
+  "temporalCoverageStart": "2026-07-03",
+  "temporalCoverageEnd": "2027-06-19",
+  "totalSchoolDays": 180,
+  "teacherWorkDays": 192,
+  "semesters": 2,
+  "sourceUrl": "https://www.myips.org/student-family-references/school-year-calendar",
+  "sourceDocumentPage": "https://drive.google.com/drive/folders/1Iz11C2K3DHM5PmoxlCQ4ePkyaEJL1ijg",
+  "sourcePdfUrl": "https://drive.google.com/file/d/1RFzNVz_xhDB8TipuOzW7-wDUXD9NqFH7/view",
+  "lastCheckedPdfUrl": "https://drive.google.com/file/d/1RFzNVz_xhDB8TipuOzW7-wDUXD9NqFH7/view",
+  "sourceCheckedAt": "2026-08-16",
+  "sourceChecksumSha256": "8d6168ad457ca6d9a7190d6a5af267a67439ba487b1689dd2e0cfc8e6b1cb55e",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceConflict": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://drive.google.com/drive/folders/1Iz11C2K3DHM5PmoxlCQ4ePkyaEJL1ijg",
+    "linkText": "SY26.27 Calendar_English.pdf",
+    "expectedPdfUrl": "https://drive.google.com/file/d/1RFzNVz_xhDB8TipuOzW7-wDUXD9NqFH7/view",
+    "expectedChecksumSha256": "8d6168ad457ca6d9a7190d6a5af267a67439ba487b1689dd2e0cfc8e6b1cb55e"
+  },
+  "lastVerifiedAt": "2026-08-16",
+  "dateCreated": "2026-08-16",
+  "datePublished": "2026-08-16",
+  "dateModified": "2026-08-16",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_schedule_change", "confirmed_data_error"],
+  "sourceVersion": "IPS SY2026-27 Student & Staff School Calendar — English",
+  "allDatesMode": "all",
+  "calendarType": "traditional",
+  "calendarTrackId": "ips-district-student-staff-calendar",
+  "schemaCalendarName": "Indianapolis Public Schools Student & Staff Calendar 2026–27",
+  "schemaDatasetName": "Indianapolis Public Schools Student & Staff Calendar 2026–27 Dataset",
+  "schemaDatasetDescription": "Key dates from the Indianapolis Public Schools 2026–27 Student & Staff School Calendar, including school-year dates, holidays, breaks, asynchronous learning days, and school resume dates.",
+  "schemaCalendarDownloadName": "Indianapolis Public Schools 2026–27 ICS calendar file",
+  "schemaCalendarDownloadDescription": "One-time ICS calendar import based on selected dates from the official IPS 2026–27 Student & Staff School Calendar.",
+  "schemaSpatialCoverage": "Indianapolis, Indiana",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "seoTitle": "Indianapolis Public Schools Calendar 2026–27: Key Dates",
+  "seoDescription": "Indianapolis Public Schools starts Aug. 10, 2026 and ends May 27, 2027. See IPS breaks, asynchronous learning days, quarter dates, the official PDF, and an ICS download.",
+  "heroSummary": "The first day of school for Indianapolis Public Schools students is Monday, August 10, 2026, and the last day is Thursday, May 27, 2027. Fall Break runs October 12–16, Thanksgiving Break is November 25–27, Winter Break runs December 21–January 1, and Spring Break is March 15–19. The IPS calendar lists 180 student days, including three asynchronous learning days.",
+  "heroSourceLine": "2026–27 dates · Official IPS Student & Staff School Calendar",
+  "verificationBadgeText": "Checked against the official IPS English calendar",
+  "hideHeroVerificationProcess": true,
+  "hideHeroUpdatedField": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "calendarNotes": "The IPS sheet is a combined student and staff calendar. Students begin August 10, after new-teacher induction, professional learning, and teacher work dates that start in July. September 8 and November 3 are staff professional-development days with no school. October 23 and March 26 are Student Progress Conference dates with Student Asynchronous Learning; February 16 is staff professional development with Student Asynchronous Learning. These three dates are instructional, not vacation days, and IPS counts one asynchronous day in semester 1 and two in semester 2. Fall Break runs October 12–16. The PDF prints Quarter 1 through Saturday, October 17 and Quarter 2 beginning Tuesday, October 20; it does not label Monday, October 19 as no school, so this page does not invent a closure. December 17 is the last student day of semester 1, December 18 is a no-school records day, and students return January 4. May 27 is the last student day, followed by a staff-only records day May 28. Memorial Day and Juneteenth observance dates appear after students finish.",
+  "keyDatesHeading": "Indianapolis Public Schools 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "IPS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "The first and last days of school, plus the four major breaks",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Students",
+      "date": "2026-08-10",
+      "type": "school_start"
+    },
+    {
+      "label": "Fall Break",
+      "name": "Fall Break",
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Students",
+      "date": "2027-05-27",
+      "type": "school_end"
+    }
+  ],
+  "allDatesTitle": "IPS 2026–27 Student & Staff Calendar Dates",
+  "allDatesCoverageNote": "This table follows the one-page IPS Student & Staff School Calendar, including pre-year staff dates, student no-school days, asynchronous learning days, semester markers, breaks, and post-year staff holidays. Asynchronous days are instructional and are not labeled as no-school days.",
+  "allDatesSourceUrl": "https://drive.google.com/file/d/1RFzNVz_xhDB8TipuOzW7-wDUXD9NqFH7/view",
+  "allDatesSourceLabel": "Official IPS SY2026-27 English Student & Staff School Calendar",
+  "dateLegendLabelOverrides": {
+    "Academic Date": "Asynchronous / Semester",
+    "Teacher Workday": "Staff Date"
+  },
+  "dateLegendItems": [
+    { "label": "Holiday", "dot": "bg-teal-400" },
+    { "label": "Staff Day", "dot": "bg-amber-400" },
+    { "label": "Asynchronous", "dot": "bg-[#68495f]" },
+    { "label": "Break", "dot": "bg-purple-400" },
+    { "label": "Observance", "dot": "bg-teal-400" }
+  ],
+  "breaksTitle": "IPS 2026–27 Breaks and Student Return Dates",
+  "breaksBeforeAllDates": true,
+  "breakNotes": {
+    "Fall Break": "The next scheduled school day is Monday, October 19.",
+    "Thanksgiving Break": "The next scheduled school day is Monday, November 30.",
+    "Winter Break": "Students return Monday, January 4 for the first student day of semester 2.",
+    "Spring Break": "Students return Monday, March 22, which is also the first day of Quarter 4."
+  },
+  "gradingPeriodsTitle": "IPS 2026–27 Quarter Ranges",
+  "gradingPeriodsDescription": "These are the four quarter ranges printed on the IPS calendar. They are academic ranges, not additional closure dates. The PDF ends Quarter 1 on Saturday, October 17 and begins Quarter 2 on Tuesday, October 20.",
+  "gradingPeriods": [
+    {
+      "label": "Quarter 1",
+      "start": "2026-08-10",
+      "end": "2026-10-17"
+    },
+    {
+      "label": "Quarter 2",
+      "start": "2026-10-20",
+      "end": "2026-12-18"
+    },
+    {
+      "label": "Quarter 3",
+      "start": "2027-01-04",
+      "end": "2027-03-12"
+    },
+    {
+      "label": "Quarter 4",
+      "start": "2027-03-22",
+      "end": "2027-05-27"
+    }
+  ],
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "customSections": [
+    {
+      "id": "ips-2026-2027-asynchronous-days",
+      "label": "Three IPS Asynchronous Learning Days",
+      "content": "Students are not on a regular in-person schedule on these dates, but IPS counts all three within the 180 student days listed on its calendar.",
+      "position": "afterBreaks",
+      "table": {
+        "columns": ["Date", "Official calendar label", "What it means for families"],
+        "rows": [
+          ["October 23, 2026", "Student Progress Conferences — Student Asynchronous Learning", "Students learn asynchronously that day; it counts toward Semester 1"],
+          ["February 16, 2027", "Staff Professional Development — Student Asynchronous Learning", "Students learn asynchronously; this is not a vacation day"],
+          ["March 26, 2027", "Student Progress Conferences — Student Asynchronous Learning", "Progress conferences and asynchronous learning take place on the same day"]
+        ],
+        "footnote": "IPS summarizes semester 1 as 84 student days with 1 asynchronous day and semester 2 as 96 student days with 2 asynchronous days."
+      }
+    },
+    {
+      "id": "ips-2026-2027-quarter-gap",
+      "label": "What the IPS PDF Says About October 19",
+      "content": "IPS does not mark Monday, October 19 as a no-school day, so we list it as the first day back after Fall Break. The quarter table still follows the dates printed in the district PDF: Quarter 1 ends October 17, and Quarter 2 begins October 20.",
+      "position": "afterBreaks"
+    },
+    {
+      "id": "ips-2026-2027-staff-ramp-up",
+      "label": "IPS Staff Calendar Before Students Start",
+      "content": "The IPS calendar includes staff dates beginning in July. These dates come before students return on August 10 and are not student attendance days.",
+      "position": "afterBreaks",
+      "table": {
+        "columns": ["Date", "Staff activity"],
+        "rows": [
+          ["July 21–23", "New IPS Teacher Induction"],
+          ["July 27 and August 6–7", "School-based professional learning"],
+          ["July 28 and August 3–4", "Districtwide professional learning"],
+          ["July 24 and August 5", "Teacher work days"]
+        ]
+      }
+    },
+    {
+      "id": "ips-2026-2027-calendar-scope",
+      "label": "Which IPS Calendar Should My Family Use?",
+      "content": "Families at district-managed IPS schools can use the district calendar for major dates. If your child attends an Innovation Network school, check the school's own calendar too. IPS also says Innovation Network schools make their own weather decisions.",
+      "position": "afterCalendarExport",
+      "links": [
+        {
+          "label": "IPS School Year Calendar Hub",
+          "to": "https://www.myips.org/student-family-references/school-year-calendar"
+        },
+        {
+          "label": "IPS 2026–27 Printable Calendar Folder",
+          "to": "https://drive.google.com/drive/folders/1Iz11C2K3DHM5PmoxlCQ4ePkyaEJL1ijg"
+        },
+        {
+          "label": "IPS Schools Directory",
+          "to": "https://www.myips.org/enrollment-options/ips-schools"
+        },
+        {
+          "label": "IPS Inclement Weather Policy",
+          "to": "https://www.myips.org/student-family-references/inclement-weather-policy"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-07-03",
+      "name": "Observance of Independence Day",
+      "type": "holiday",
+      "description": "Staff calendar observance before the student year.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-07-04",
+      "name": "Independence Day",
+      "type": "observance",
+      "description": "Federal holiday date shown on the staff calendar.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-07-21",
+      "endDate": "2026-07-23",
+      "name": "New IPS Teacher Induction",
+      "type": "teacher_workday",
+      "description": "Applies to new IPS teachers before the student year.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-07-24",
+      "name": "Teacher Work Day",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-07-27",
+      "name": "School-Based Staff Professional Learning",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-07-28",
+      "name": "Districtwide Staff Professional Learning",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-03",
+      "endDate": "2026-08-04",
+      "name": "Districtwide Staff Professional Learning",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-05",
+      "name": "Teacher Work Day",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-06",
+      "endDate": "2026-08-07",
+      "name": "School-Based Staff Professional Learning",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-10",
+      "name": "First Day for Students",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-08",
+      "name": "Staff Professional Development — No School",
+      "type": "teacher_workday",
+      "description": "School-based professional-learning day."
+    },
+    {
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "name": "Fall Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-10-23",
+      "name": "Student Progress Conferences — Student Asynchronous Learning",
+      "type": "academic",
+      "badgeLabel": "Asynchronous",
+      "labelType": "partial_closure",
+      "description": "Counted as an instructional student day; not a normal in-person schedule."
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Staff Professional Development — No School",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-17",
+      "name": "Last Student Day of First Semester",
+      "type": "semester_end",
+      "description": "This is not the last day of the school year."
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Records Day / Semester Close — No School",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "First Student Day of Second Semester",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Holiday — No School",
+      "type": "holiday",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-02-15",
+      "name": "President's Day — No School",
+      "type": "holiday",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-02-16",
+      "name": "Staff Professional Development — Student Asynchronous Learning",
+      "type": "academic",
+      "badgeLabel": "Asynchronous",
+      "labelType": "partial_closure",
+      "description": "Counted as an instructional student day; not a normal in-person schedule."
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Student Progress Conferences — Student Asynchronous Learning",
+      "type": "academic",
+      "badgeLabel": "Asynchronous",
+      "labelType": "partial_closure",
+      "description": "Counted as an instructional student day; not a normal in-person schedule."
+    },
+    {
+      "date": "2027-05-27",
+      "name": "Last Day for Students",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Records Day / Yearly Close — Staff Only",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day",
+      "type": "holiday",
+      "description": "Staff calendar holiday after the last student day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-18",
+      "name": "Observance of Juneteenth",
+      "type": "holiday",
+      "description": "Staff calendar observance after the last student day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-19",
+      "name": "Juneteenth",
+      "type": "observance",
+      "description": "Federal holiday date shown on the staff calendar.",
+      "hideFromCalendarExport": true
+    }
+  ],
+  "yearNumbersMode": "compact",
+  "instructionalDaysLabel": "Student days",
+  "instructionalDaysDescription": "IPS lists 180 student days, including three asynchronous learning days.",
+  "yearNumbers": [
+    {
+      "label": "Staff calendar",
+      "value": "192 days",
+      "detail": "94 staff days in semester 1 and 98 in semester 2"
+    },
+    {
+      "label": "Asynchronous learning",
+      "value": "3 days",
+      "detail": "One in semester 1 and two in semester 2; all count toward the 180 student days"
+    },
+    {
+      "label": "Enrollment zones",
+      "value": "4 zones",
+      "detail": "School choice and transportation context beyond the annual attendance calendar"
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "IPS 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Download selected student dates as a one-time ICS file or open the official English IPS Student & Staff School Calendar in Google Drive.",
+  "icsHeading": "Add IPS 2026–27 Dates",
+  "icsDescription": "Download first and last days, no-school dates, breaks, semester markers, and the three asynchronous learning dates as an ICS file.",
+  "icsButtonLabel": "Add IPS Dates (.ics)",
+  "icsButtonSupportText": "One-time import. Recheck IPS and the assigned school for revisions, weather decisions, events, and Innovation Network differences.",
+  "pdfHeading": "Official IPS 2026–27 English Calendar",
+  "pdfDescription": "Open the one-page IPS Student & Staff School Calendar in Google Drive. The district's printable folder may also contain school-specific Innovation Network calendars.",
+  "calendarFaqs": [
+    {
+      "q": "When does Indianapolis Public Schools start in 2026–27?",
+      "a": "The first day for IPS students is Monday, August 10, 2026. New-teacher induction, staff work days, and professional learning begin in July."
+    },
+    {
+      "q": "When is IPS Fall Break in 2026?",
+      "a": "IPS Fall Break runs Monday, October 12 through Friday, October 16, 2026."
+    },
+    {
+      "q": "When is IPS Winter Break in 2026–27?",
+      "a": "Winter Break runs December 21, 2026 through January 1, 2027. The first student day of semester 2 is Monday, January 4."
+    },
+    {
+      "q": "When is IPS Spring Break in 2027?",
+      "a": "Spring Break runs Monday, March 15 through Friday, March 19, 2027. Students return Monday, March 22, the first day of Quarter 4."
+    },
+    {
+      "q": "Are IPS asynchronous learning days school days?",
+      "a": "Yes. October 23, February 16, and March 26 are asynchronous instructional days. IPS includes all three in its total of 180 student days."
+    },
+    {
+      "q": "When is the last day for IPS students in 2027?",
+      "a": "The last student day is Thursday, May 27, 2027. May 28 is a staff-only records day."
+    }
+  ],
+  "faqLimit": 6,
+  "hiddenSections": ["keyDateCards", "quickFacts", "downloadCta", "todayStatus", "yearNumbers", "comparison", "whatsDifferent", "nationalTrends", "about", "planningTips", "livingHere", "districtProfile", "relatedDistricts"],
+  "hiddenCustomSectionIds": ["ips-asynchronous-learning-pattern", "ips-calendar-scope-check", "ips-official-calendar-resources"],
+  "jumpNavigation": [
+    { "label": "Key Dates", "href": "#key-dates" },
+    { "label": "Breaks", "href": "#breaks" },
+    { "label": "Asynchronous Days", "href": "#ips-2026-2027-asynchronous-days" },
+    { "label": "All Dates", "href": "#all-dates" },
+    { "label": "Quarters", "href": "#grading-periods" },
+    { "label": "Downloads", "href": "#add-to-calendar" },
+    { "label": "Calendar Scope", "href": "#ips-2026-2027-calendar-scope" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Sources", "href": "#sources" }
+  ],
+  "sourceReviewSummary": "Reviewed August 16, 2026 against the official one-page IPS SY2026-27 English Student & Staff School Calendar and the IPS live calendar hub.",
+  "sourceReviewDetails": [
+    "The image-based English PDF was checked for every dated legend item, quarter range, semester count, student total, staff total, and professional-learning list.",
+    "The student total is 180 days: semester 1 has 84 days including one asynchronous day, and semester 2 has 96 days including two asynchronous days. The staff total is 192 days.",
+    "The PDF prints Quarter 1 through October 17 and Quarter 2 beginning October 20. It does not mark October 19 as a no-school day, so this page lists October 19 as the first day back after Fall Break.",
+    "The official printable collection is labeled for District and Innovation Network calendars. This page uses the English IPS district Student & Staff School Calendar and does not claim that every network school follows it without exception."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Indianapolis Public Schools sources",
+  "sourceNextReviewText": "Next review: if IPS revises the 2026–27 file, clarifies the October quarter boundary, or announces a schedule change.",
+  "sources": [
+    {
+      "label": "IPS School Year Calendar Hub",
+      "url": "https://www.myips.org/student-family-references/school-year-calendar"
+    },
+    {
+      "label": "Official IPS 2026–27 Printable Calendar Folder",
+      "url": "https://drive.google.com/drive/folders/1Iz11C2K3DHM5PmoxlCQ4ePkyaEJL1ijg"
+    },
+    {
+      "label": "Official IPS SY2026-27 English Student & Staff School Calendar",
+      "url": "https://drive.google.com/file/d/1RFzNVz_xhDB8TipuOzW7-wDUXD9NqFH7/view"
+    },
+    {
+      "label": "IPS Inclement Weather Policy",
+      "url": "https://www.myips.org/student-family-references/inclement-weather-policy"
+    }
+  ]
+}

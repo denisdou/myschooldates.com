@@ -17,6 +17,7 @@ const eventSchema = z.object({
     'makeup_day', 'quarter_start', 'quarter_end', 'semester_end', 'graduation',
   ]),
   description: z.string().optional(),
+  sectionLabelBefore: z.string().optional(),
   schemaDescription: z.string().optional(),
   hideSchemaDescription: z.boolean().optional(),
   calendarExportDescription: z.string().optional(),
@@ -337,6 +338,7 @@ export default defineContentConfig({
         keyDatesHeading: z.string().optional(),
         allDatesTitle: z.string().optional(),
         allDatesCoverageNote: z.string().optional(),
+        allDatesSourceUrl: z.string().optional(),
         allDatesSourceLabel: z.string().optional(),
         dateLegendItems: z.array(z.object({
           label: z.string(),
@@ -478,6 +480,10 @@ export default defineContentConfig({
           value: z.string(),
           detail: z.string(),
         })).optional(),
+        yearComparisonTitle: z.string().optional(),
+        yearComparisonSubtitle: z.string().optional(),
+        yearComparisonStyle: z.enum(['default', 'movement', 'movement-simple']).optional(),
+        hideThanksgivingYearComparison: z.boolean().optional(),
         whatsNew: z.object({
           title: z.string().optional(),
           subtitle: z.string().optional(),

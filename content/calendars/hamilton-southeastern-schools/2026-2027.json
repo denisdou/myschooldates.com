@@ -1,0 +1,441 @@
+{
+  "institutionId": "hamilton-southeastern-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Hamilton Southeastern Schools Calendar 2026–27",
+  "firstDay": "2026-08-05",
+  "lastDay": "2027-05-21",
+  "temporalCoverageStart": "2026-08-03",
+  "temporalCoverageEnd": "2027-06-03",
+  "semesters": 2,
+  "sourceUrl": "https://www.hseschools.org/about/district-calendars",
+  "sourceDocumentPage": "https://www.hseschools.org/about/district-calendars",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1772054723/hsek12inus/iqbojqkd72oaucvsjt5c/HSEDistrictCalendar26-27.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1772054723/hsek12inus/iqbojqkd72oaucvsjt5c/HSEDistrictCalendar26-27.pdf",
+  "sourceCheckedAt": "2026-08-16",
+  "sourceChecksumSha256": "f8f474d251b93f56fb89b79559cb835190dac2ba62d3ebb02497a6d5e356b6db",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "lastVerifiedAt": "2026-08-16",
+  "dateCreated": "2026-08-16",
+  "datePublished": "2026-08-16",
+  "dateModified": "2026-08-16",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Board adopted February 12, 2025 · revised March 11, 2026",
+  "sourceCalendarName": "HSE Schools 2026–27 District Calendar",
+  "schemaCalendarName": "Hamilton Southeastern Schools 2026–27 District Calendar",
+  "schemaDatasetName": "Hamilton Southeastern Schools 2026–27 Academic Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed dates from HSE Schools' revised 2026–27 district calendar, including student and staff start dates, grading-period endings, breaks, holidays, the last student day, and separate Fishers and Hamilton Southeastern graduation dates.",
+  "schemaSpatialCoverage": "Fishers and southeastern Hamilton County, Indiana",
+  "schemaCalendarDownloadName": "Hamilton Southeastern Schools 2026–27 ICS Calendar File",
+  "schemaCalendarDownloadDescription": "One-time calendar import generated from HSE Schools' district calendar revised March 11, 2026.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-2025-2026",
+      "name": "HSE Schools 2025–26 District Calendar",
+      "url": "https://resources.finalsite.net/images/v1744051004/hsek12inus/z9dstm9lyq2huceq67ta/HSEDistrictCalendar25-26Accessible.pdf"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-2025-2026"
+  ],
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.hseschools.org/about/district-calendars",
+    "linkText": "2026-2027 DISTRICT CALENDAR",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1772054723/hsek12inus/iqbojqkd72oaucvsjt5c/HSEDistrictCalendar26-27.pdf",
+    "expectedChecksumSha256": "f8f474d251b93f56fb89b79559cb835190dac2ba62d3ebb02497a6d5e356b6db"
+  },
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "seoTitle": "HSE Schools Calendar 2026–27: Key Dates & Breaks",
+  "seoDescription": "Hamilton Southeastern Schools students start Aug. 5, 2026, and finish May 21, 2027. See HSE break dates, graduations, the official PDF and calendar download.",
+  "heroSummary": "HSE students start the 2026–27 school year on Wednesday, August 5, 2026. The last student day is Friday, May 21, 2027. Fall Break is October 19–23, Thanksgiving Break is November 25–27, Winter Break is December 21–January 1, and Spring Break is April 2–9.",
+  "heroSourceLine": "2026–27 dates · Based on the HSE district calendar revised March 11, 2026",
+  "verificationBadgeText": "Verified against the official HSE 2026–27 calendar",
+  "calendarNotes": "HSE's one-page district calendar separates staff orientation days from the first full day for all students, marks the first and third grading-period endings, and lists Fishers High School and Hamilton Southeastern High School graduations separately. The PDF also states that virtual learning days will be used if school is canceled.",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "comparison",
+    "nationalTrends"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "breaksBeforeAllDates": true,
+  "hideBreakDurationBadges": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "All Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "What's Changed",
+      "id": "year-comparison"
+    },
+    {
+      "label": "Graduation",
+      "id": "hse-graduation-2026-2027"
+    },
+    {
+      "label": "Grading Periods",
+      "id": "grading-periods"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "keyDatesSummaryTitle": "HSE Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "The first and last student days, four major breaks, and two high school graduations",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Full Day for All Students",
+      "date": "2026-08-05",
+      "type": "school_start"
+    },
+    {
+      "label": "Fall Break",
+      "name": "Fall Break",
+      "date": "2026-10-19",
+      "endDate": "2026-10-23",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-04-02",
+      "endDate": "2027-04-09",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Students",
+      "date": "2027-05-21",
+      "type": "school_end"
+    },
+    {
+      "label": "Fishers Graduation",
+      "name": "Fishers High School Graduation",
+      "date": "2027-06-02",
+      "type": "graduation"
+    },
+    {
+      "label": "HSE Graduation",
+      "name": "Hamilton Southeastern High School Graduation",
+      "date": "2027-06-03",
+      "type": "graduation"
+    }
+  ],
+  "allDatesTitle": "HSE Schools 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This table follows the official one-page HSE calendar, including staff-only dates, grading-period endings, school breaks, the last student day, and both high school graduations. Check HSE or your school for school-specific events and changes announced after the March 11 revision.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1772054723/hsek12inus/iqbojqkd72oaucvsjt5c/HSEDistrictCalendar26-27.pdf",
+  "allDatesSourceLabel": "Official HSE Schools 2026–27 district calendar PDF",
+  "breaksTitle": "HSE School Breaks and Return Dates",
+  "breakNotes": {
+    "Fall Break": "The next scheduled school day is Monday, October 26.",
+    "Thanksgiving Break": "The next scheduled school day is Monday, November 30.",
+    "Winter Break": "January 4 is a staff orientation and in-service half day. Students return Tuesday, January 5, 2027.",
+    "Spring Break": "The next scheduled school day is Monday, April 12."
+  },
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "gradingPeriodsTitle": "HSE Grading Period and Semester End Dates",
+  "gradingPeriodsDescription": "HSE's calendar lists the end of the first and third grading periods, along with both semester end dates. It does not give a day count for each grading period.",
+  "gradingPeriods": [
+    {
+      "label": "First Grading Period",
+      "end": "2026-10-02"
+    },
+    {
+      "label": "First Semester",
+      "end": "2026-12-18"
+    },
+    {
+      "label": "Third Grading Period",
+      "end": "2027-03-05"
+    },
+    {
+      "label": "Second Semester / Student Year",
+      "end": "2027-05-21"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "hse-virtual-learning-2026-2027",
+      "label": "What HSE Says About School Cancellations",
+      "position": "afterGradingPeriodsBeforeCalendarExport",
+      "content": "The district calendar says virtual learning days will be used if school is canceled. It does not list preset weather make-up dates, so families should check current HSE messages when a cancellation occurs.",
+      "links": [
+        {
+          "label": "Check HSE district calendars",
+          "to": "https://www.hseschools.org/about/district-calendars"
+        }
+      ]
+    },
+    {
+      "id": "hse-graduation-2026-2027",
+      "label": "2027 Graduation Dates for Fishers and HSE High Schools",
+      "position": "afterYearDiff",
+      "content": "The student year ends May 21, but the district calendar schedules the two high school ceremonies in early June.",
+      "table": {
+        "columns": [
+          "High school",
+          "Graduation date"
+        ],
+        "rows": [
+          [
+            "Fishers High School",
+            "June 2, 2027"
+          ],
+          [
+            "Hamilton Southeastern High School",
+            "June 3, 2027"
+          ]
+        ]
+      }
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "HSE Calendar Tools & Downloads",
+  "unifiedDownloadDescription": "Download a one-time .ics import, open the official district PDF, or share this calendar.",
+  "icsHeading": "Add HSE Schools Dates to Your Calendar",
+  "icsDescription": "Download the 2026–27 HSE district dates for Google Calendar, Apple Calendar, or Outlook. Staff-only dates are not included.",
+  "icsButtonLabel": "Download .ics Calendar",
+  "icsButtonSupportText": "This is a one-time import. Check HSE for later calendar revisions and day-of schedule changes.",
+  "pdfHeading": "Official HSE Schools 2026–27 Calendar PDF",
+  "pdfDescription": "Open the one-page HSE district calendar revised March 11, 2026.",
+  "sourceReviewSummary": "Reviewed August 16, 2026, against HSE Schools' current 2026–27 district calendar page and one-page PDF.",
+  "sourceReviewDetails": [
+    "We reviewed the PDF currently linked from HSE's district calendars page and verified the dates shown on this page against it.",
+    "We checked the full calendar, including staff-only dates, grading-period endings, breaks, graduation dates, and the district's virtual-learning note.",
+    "Return dates after Fall, Thanksgiving, and Spring Break are planning dates derived from the published break ranges. The January 5 return after Winter Break is printed directly on the HSE calendar."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Hamilton Southeastern Schools sources.",
+  "sourceNextReviewText": "Next review: when HSE revises the 2026–27 calendar or announces a districtwide schedule change.",
+  "sources": [
+    {
+      "label": "HSE Schools 2026–27 District Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1772054723/hsek12inus/iqbojqkd72oaucvsjt5c/HSEDistrictCalendar26-27.pdf"
+    },
+    {
+      "label": "HSE Schools district calendars page",
+      "url": "https://www.hseschools.org/about/district-calendars"
+    },
+    {
+      "label": "HSE Schools 2025–26 District Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1744051004/hsek12inus/z9dstm9lyq2huceq67ta/HSEDistrictCalendar25-26Accessible.pdf"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When does HSE school start in 2026?",
+      "a": "The first full day for all Hamilton Southeastern Schools students is Wednesday, August 5, 2026."
+    },
+    {
+      "q": "When do HSE students return after winter break?",
+      "a": "January 4 is a staff orientation and in-service half day. Students return Tuesday, January 5, 2027."
+    },
+    {
+      "q": "When is the last day of school for HSE in 2027?",
+      "a": "The last student day is Friday, May 21, 2027."
+    },
+    {
+      "q": "When are Fishers and HSE High School graduations in 2027?",
+      "a": "Fishers High School graduation is June 2, 2027, and Hamilton Southeastern High School graduation is June 3, 2027."
+    },
+    {
+      "q": "What happens if HSE cancels school?",
+      "a": "If HSE cancels school, the district calendar says virtual learning days will be used. Families should check current HSE messages for the day's plan."
+    }
+  ],
+  "faqOrderLimit": 5,
+  "faqDisplayQuestions": [
+    "When does HSE school start in 2026?",
+    "When do HSE students return after winter break?",
+    "When is the last day of school for HSE in 2027?",
+    "When are Fishers and HSE High School graduations in 2027?",
+    "What happens if HSE cancels school?"
+  ],
+  "whatsNew": {
+    "title": "What Changed for HSE in 2026–27",
+    "subtitle": "Two notable schedule changes from 2025–26.",
+    "content": [
+      "The first student day is August 5, one day earlier than last year's August 6 start.",
+      "Fall Break is October 19–23, one week later than last year's October 13–17 break."
+    ]
+  },
+  "yearComparisonPosition": "afterAllDates",
+  "yearComparisonDefaultOpen": true,
+  "yearSwitcherSort": "asc",
+  "events": [
+    {
+      "date": "2026-08-03",
+      "endDate": "2026-08-04",
+      "name": "Teacher Orientation and In-Service — All Staff",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Only",
+      "labelType": "staff_date",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-05",
+      "name": "First Full Day for All Students",
+      "type": "school_start",
+      "schemaDescription": "The first full day of classes for all Hamilton Southeastern Schools students in 2026–27."
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — No Students or Staff",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-10-02",
+      "name": "First Grading Period Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-10-19",
+      "endDate": "2026-10-23",
+      "name": "Fall Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-18",
+      "name": "First Semester Ends — Last Day Before Winter Break",
+      "type": "semester_end"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Teacher Orientation and In-Service — Half Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Half Day",
+      "labelType": "staff_date",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-05",
+      "name": "First Day After Winter Break for All Students",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — No Students or Staff",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day — No Students or Staff",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-05",
+      "name": "Third Grading Period Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-04-02",
+      "endDate": "2027-04-09",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-05-21",
+      "name": "Second Semester Ends — Last Day for Students",
+      "type": "school_end",
+      "schemaDescription": "The final student day for Hamilton Southeastern Schools in 2026–27."
+    },
+    {
+      "date": "2027-05-24",
+      "name": "Last Day for Teachers — Half Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Half Day",
+      "labelType": "staff_date",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day",
+      "type": "holiday",
+      "description": "Memorial Day falls after the last student day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-02",
+      "name": "Fishers High School Graduation",
+      "type": "graduation"
+    },
+    {
+      "date": "2027-06-03",
+      "name": "Hamilton Southeastern High School Graduation",
+      "type": "graduation"
+    }
+  ]
+}

@@ -5,19 +5,146 @@
   "lastDay": "2027-06-09",
   "sourceUrl": "https://wjccschools.org/calendar/",
   "sourcePdfUrl": "https://wjccschools.org/wp-content/uploads/2025/10/2026-27-Academic-Calendar.pdf",
-  "lastVerifiedAt": "2026-07-20",
+  "lastVerifiedAt": "2026-08-16",
   "datePublished": "2026-07-20",
-  "dateModified": "2026-07-20",
+  "dateModified": "2026-08-16",
   "calendarType": "traditional",
-  "instructionalDaysDescription": "calculated from the published WJCC Schools calendar",
+  "displaySchoolYear": "2026–27",
+  "sourceCalendarId": "source-academic-calendar",
+  "sourceCalendarName": "WJCC Schools 2026–27 Academic Calendar",
+  "sourceVersion": "Adopted March 24, 2026",
+  "sourceVersionDisplay": "Current PDF adopted March 24, 2026 · revision announcement published March 27, 2026",
+  "sourceCheckedAt": "2026-08-16",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "weather_makeup_day_change",
+    "confirmed_data_error"
+  ],
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-revisions",
+      "type": "WebPage",
+      "name": "WJCC Schools 2026–27 School Year Calendar Revisions Approved",
+      "url": "https://wjccschools.org/newsroom/2026-2027-school-year-calendar-revisions-approved/",
+      "datePublished": "2026-03-27"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-academic-calendar",
+    "source-calendar-page",
+    "source-calendar-revisions"
+  ],
+  "hideInstructionalDaysSummary": true,
   "hideSemesterCount": true,
-  "yearNumbersMode": "compact",
   "pageHeading": "WJCC Schools Calendar 2026-2027",
   "seoTitle": "WJCC Schools Calendar 2026-2027: Holidays & Breaks",
-  "seoDescription": "View the WJCC Schools Calendar 2026-2027 with Aug 24 first day, Jun 9 last day, WJCC school holidays, winter break, spring break, early release dates, PDF and ICS download.",
-  "faqLimit": 10,
-  "faqSchemaLimit": 10,
-  "calendarNotes": "Williamsburg-James City County Public Schools starts the 2026-2027 school year on August 24, 2026. Winter Break runs December 21-31, Spring Break runs April 5-9, and the last day of school is June 9, 2027. The calendar also lists CLP days, family conferences, marking period starts, early releases, holidays, and make-up day notes.",
+  "seoDescription": "WJCC Schools starts Aug. 24, 2026 and ends June 9, 2027. See breaks, student holidays, early-release days, the official PDF, and an ICS download.",
+  "heroSummary": "WJCC Schools begins the 2026–27 school year on Monday, August 24, 2026. The last day of school is Wednesday, June 9, 2027, with early release. Thanksgiving Break is November 25–27, Winter Break is December 21–31, and Spring Break is April 5–9. Several student holidays and early-release days apply only to certain grade levels, so families should check the grade-specific dates below.",
+  "heroSourceLine": "2026–27 dates · Checked against the current WJCC academic calendar and March 2026 revision announcement",
+  "verificationBadgeText": "Checked against WJCC's current calendar and March 2026 revisions",
+  "hideHeroVerificationProcess": true,
+  "hideHeroUpdatedField": true,
+  "hideFaqSchema": true,
+  "calendarNotes": "This page covers WJCC Schools' districtwide 2026–27 calendar. Individual schools may publish additional events, bell schedules, and program dates; WJCC remains the source of record for weather-related changes and make-up days.",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "whatsDifferent",
+    "nationalTrends"
+  ],
+  "hiddenCustomSectionIds": [
+    "wjcc-school-calendar-at-a-glance-2026-2027",
+    "planning-around-wjcc-school-calendar-2026-2027",
+    "understanding-wjcc-calendar-dates-2026-2027",
+    "important-wjcc-calendar-notes-2026-2027",
+    "wjcc-calendar-source-sync-2026-2027",
+    "wjcc-district-profile",
+    "how-families-use-wjcc-calendar",
+    "related-wjcc-calendars"
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Grade-Specific Dates", "id": "wjcc-calendar-frequently-missed-dates-2026-2027" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Comparisons", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "keyDatesSummaryTitle": "WJCC Schools 2026–27 Key Dates & Holidays",
+  "keyDatesSummarySubtitle": "The first and last days of school, plus the three major breaks",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-24",
+      "type": "school_start"
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2026-12-31",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-04-05",
+      "endDate": "2027-04-09",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-06-09",
+      "type": "school_end",
+      "description": "Early release for Pre-K–12 students."
+    }
+  ],
+  "allDatesTitle": "WJCC Schools 2026–27 Calendar Dates",
+  "allDatesSourceLabel": "WJCC Schools 2026–27 Academic Calendar PDF",
+  "allDatesSourceUrl": "https://wjccschools.org/wp-content/uploads/2025/10/2026-27-Academic-Calendar.pdf",
+  "allDatesCoverageNote": "The district calendar uses grade-specific labels for some student holidays and early-release days. Check the grade span on each entry and confirm dismissal times with their school.",
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "icsHeading": "Add WJCC Schools Dates to Your Calendar",
+  "icsDescription": "Download WJCC's 2026–27 districtwide dates for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonSupportText": "One-time import. This file does not automatically sync with later WJCC revisions.",
+  "pdfHeading": "Official WJCC Schools 2026–27 Calendar PDF",
+  "pdfDescription": "View the district's academic calendar adopted March 24, 2026. WJCC published an announcement on March 27 describing three School Board-approved adjustments; those dates are included on this page.",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfVersionLabel": "Current PDF adopted March 24, 2026 · revision announcement published March 27, 2026",
+  "schemaCalendarName": "WJCC Schools 2026–27 Academic Calendar",
+  "schemaDatasetName": "WJCC Schools 2026–27 Student Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Williamsburg-James City County Public Schools dates for 2026–27, including the first and last day, major breaks, student holidays, family conferences, grade-specific early releases, and three Board-approved adjustments described in WJCC's March 2026 announcement.",
+  "schemaCalendarDownloadName": "WJCC Schools 2026–27 ICS Calendar File",
+  "schemaCalendarDownloadDescription": "One-time calendar import generated from WJCC's current academic calendar and March 2026 revision announcement.",
+  "schemaSpatialCoverage": "Williamsburg and James City County, Virginia",
+  "comparisonBeforeFaq": true,
+  "sourcesBeforeFaq": false,
+  "hideRelatedDistrictDescriptions": true,
+  "relatedDistrictsTitle": "Related Virginia School Calendars",
+  "relatedDistrictsDescription": "Other reviewed school calendars in the Hampton Roads region.",
   "customSections": [
     {
       "id": "wjcc-school-calendar-at-a-glance-2026-2027",
@@ -52,6 +179,18 @@
           ]
         ]
       }
+    },
+    {
+      "id": "wjcc-calendar-revisions-2026-2027",
+      "label": "2026–27 Calendar Revisions",
+      "position": "afterKeyDates",
+      "content": "WJCC published a calendar revision announcement in March 2026 describing three School Board-approved adjustments. The changes added student holidays for Pre-K–5 on September 25 and December 11, plus a Pre-K student holiday on April 2 while K–12 students have early release. The district said the changes provide staff planning time and help Pre-K staff prepare for the move to two Bright Beginnings campuses in fall 2027. Those grade-specific dates are included in the calendar below.",
+      "links": [
+        {
+          "label": "Read WJCC's calendar revision announcement",
+          "url": "https://wjccschools.org/newsroom/2026-2027-school-year-calendar-revisions-approved/"
+        }
+      ]
     },
     {
       "id": "planning-around-wjcc-school-calendar-2026-2027",
@@ -145,27 +284,28 @@
     },
     {
       "id": "wjcc-calendar-frequently-missed-dates-2026-2027",
-      "label": "WJCC Calendar Dates Families Often Miss",
-      "position": "beforeSources",
-      "content": "These dates are easy to overlook because they are not all traditional holidays or full districtwide breaks.",
+      "label": "Dates WJCC Families Should Double-Check",
+      "position": "afterBreaks",
+      "content": "These grade-specific dates can be easy to miss in the district calendar.",
+      "hideGroupLabels": true,
       "groups": [
         {
-          "label": "Frequently Missed Dates",
+          "label": "Grade-specific dates",
           "items": [
-            "September 25 and December 11, 2026 are listed as PK-5 student holiday/staff CLP days.",
-            "November 2-3, 2026 are student holidays for family conferences.",
-            "April 2, 2027 is listed as Early Release - K-12; PK Student Holiday.",
-            "June 4 and June 7, 2027 are early release dates for grades 9-12.",
-            "June 8-9, 2027 are early release dates for Pre-K-12, with June 9 also listed as the last day of school."
+            "September 25 and December 11: no school for Pre-K–5 students.",
+            "November 2–3: student holidays for family conferences.",
+            "April 2: Pre-K students are off; K–12 students have early release.",
+            "June 4 and June 7: early release for grades 9–12.",
+            "June 8–9: early release for Pre-K–12; June 9 is the last day of school."
           ]
         }
       ]
     },
     {
       "id": "wjcc-calendar-year-comparison-2026-2027",
-      "label": "WJCC Calendar 2026-2027 vs 2025-2026",
+      "label": "WJCC School-Year Calendar Comparison",
       "position": "afterYearDiff",
-      "content": "Compare the current WJCC academic calendar with the previous and next school years. These year-to-year dates help families see whether school starts earlier, spring break shifts, the final day changes, or the listed instructional-day count differs from the current year.",
+      "content": "First-day, last-day, and major-break timing across three published WJCC school years.",
       "table": {
         "headers": [
           "Item",
@@ -197,12 +337,6 @@
             "April 6-10, 2026",
             "April 5-9, 2027",
             "April 3-7, 2028"
-          ],
-          [
-            "Instruction Days",
-            "Not separately calculated on this page",
-            "180 calculated days",
-            "Not separately calculated on this page"
           ]
         ]
       },
@@ -221,21 +355,20 @@
       "id": "wjcc-calendar-update-history-2026-2027",
       "label": "WJCC Calendar Update History",
       "position": "beforeSources",
-      "content": "This update history records when the WJCC Schools Calendar 2026-2027 page was checked or materially changed on MySchoolDates. It helps families understand when the page was last compared with the official district source and what changed in the published reference page.",
+      "content": "Changes to the WJCC calendar and updates to this page.",
       "groups": [
         {
-          "label": "July 20, 2026",
+          "label": "March 27, 2026 — WJCC published calendar revision announcement",
           "items": [
-            "Initial 2026-2027 WJCC calendar page published from the official Williamsburg-James City County Public Schools calendar source.",
-            "Key dates checked against the official WJCC calendar PDF, including first day, last day, Winter Break, Spring Break, Thanksgiving Break, early release dates, and CLP day labels.",
-            "Calendar import file generated from the checked page records for Google Calendar, Apple Calendar, Outlook, and other ICS-compatible calendar apps."
+            "WJCC announced three School Board-approved adjustments affecting September 25, December 11, and April 2.",
+            "The adjustments added two Pre-K–5 student holidays and made April 2 a Pre-K student holiday while keeping it an early-release day for K–12."
           ]
         },
         {
-          "label": "Future Updates",
+          "label": "August 16, 2026 — MySchoolDates review",
           "items": [
-            "If WJCC Schools revises the official calendar, MySchoolDates will update affected dates and refresh the page review date after checking the public district source.",
-            "Weather closures, emergency schedule changes, school-specific activities, and bell schedule changes should still be confirmed directly with WJCC Schools."
+            "Checked the first and last day, major breaks, family conferences, grade-specific student holidays, and early releases against the current WJCC PDF and revision announcement.",
+            "Regenerated the ICS download to match the reviewed dates."
           ]
         }
       ]
@@ -272,31 +405,89 @@
     },
     {
       "q": "When is the last day of school for WJCC in 2027?",
-      "a": "The last day of school is Wednesday, June 9, 2027."
+      "a": "The last day of school is Wednesday, June 9, 2027, with early release for Pre-K–12 students."
     },
     {
-      "q": "How many instructional days are in the WJCC 2026-2027 calendar?",
-      "a": "This page calculates 180 currently scheduled instructional days from the published WJCC Schools calendar records. Families should confirm any revisions with WJCC Schools."
+      "q": "Which WJCC dates are Pre-K–5 student holidays in 2026–27?",
+      "a": "September 25 and December 11, 2026, are Pre-K–5 student holidays and staff CLP days. WJCC added both student holidays in its March 2026 calendar revision."
     },
     {
-      "q": "Which WJCC dates are PK-5 CLP student holidays in 2026-2027?",
-      "a": "The calendar lists September 25 and December 11 as PK-5 student holiday/staff CLP days."
-    },
-    {
-      "q": "Are WJCC schools closed on Labor Day 2026?",
-      "a": "Yes. Labor Day is listed on Monday, September 7, 2026."
-    },
-    {
-      "q": "Does WJCC have early release days in 2026-2027?",
-      "a": "Yes. The WJCC calendar lists early release dates on April 2, June 4, June 7, June 8, and June 9, 2027, with grade-span notes on several dates."
+      "q": "Does WJCC have early-release days in 2026–27?",
+      "a": "Yes. April 2 is an early-release day for K–12 and a student holiday for Pre-K. June 4 and June 7 are early-release days for grades 9–12, while June 8 and June 9 are early-release days for Pre-K–12."
     },
     {
       "q": "When do WJCC students return after Winter Break?",
-      "a": "Winter Break ends December 31, 2026, and New Year's Day is listed on January 1, 2027. Families should confirm the first return day after the holiday weekend with WJCC Schools."
+      "a": "Winter Break ends Thursday, December 31, 2026. New Year's Day is Friday, January 1, and the next scheduled school day is Monday, January 4, 2027."
     },
     {
       "q": "Does the WJCC calendar change for weather closures?",
       "a": "Weather closures, make-up days, and district updates can change the practical school schedule. Families should verify final changes with WJCC Schools."
+    }
+  ],
+  "faqDisplayLimit": 8,
+  "faqSchemaLimit": 8,
+  "faqDisplayQuestions": [
+    "When does WJCC start school in 2026?",
+    "When is WJCC Spring Break in 2027?",
+    "When does WJCC Winter Break start in 2026?",
+    "When is the last day of school for WJCC in 2027?",
+    "Which WJCC dates are Pre-K–5 student holidays in 2026–27?",
+    "Does WJCC have early-release days in 2026–27?",
+    "When do WJCC students return after Winter Break?",
+    "Does the WJCC calendar change for weather closures?"
+  ],
+  "faqSchemaQuestions": [
+    "When does WJCC start school in 2026?",
+    "When is WJCC Spring Break in 2027?",
+    "When does WJCC Winter Break start in 2026?",
+    "When is the last day of school for WJCC in 2027?",
+    "Which WJCC dates are Pre-K–5 student holidays in 2026–27?",
+    "Does WJCC have early-release days in 2026–27?",
+    "When do WJCC students return after Winter Break?",
+    "Does the WJCC calendar change for weather closures?"
+  ],
+  "breaksTitle": "Major School Breaks",
+  "breakNotes": {
+    "2026-11-25": "Students return Monday, November 30.",
+    "2026-12-21": "New Year's Day follows the listed break; the next scheduled school day is Monday, January 4.",
+    "2027-04-05": "Students return Monday, April 12."
+  },
+  "breakDurationLabels": {
+    "2026-12-21": "9 weekdays in the published break"
+  },
+  "comparisonTitle": "WJCC Calendar Compared With Nearby Hampton Roads Districts",
+  "comparisonSummary": "Compare WJCC's first day, last day, and major breaks with Newport News, Hampton, and York County.",
+  "winterBreakComparisonLabel": "Published Winter Break",
+  "comparisonRowsMode": "sharedValuesOnly",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "hideComparisonNotes": true,
+  "sourceReviewSummary": "Reviewed August 16, 2026, against WJCC Schools' current 2026–27 academic calendar PDF and the district's March 27 calendar revision announcement.",
+  "sourceReviewDetailsTitle": "How we reviewed the WJCC calendar",
+  "sourceReviewDetails": [
+    "Confirmed the August 24 first day, June 9 last day, Thanksgiving, Winter and Spring Break ranges, family-conference days, marking-period starts, holidays, and grade-specific early releases against the current academic calendar PDF.",
+    "Checked the September 25 and December 11 Pre-K–5 student holidays and the April 2 Pre-K holiday and K–12 early release against WJCC's March 27 revision announcement.",
+    "The downloadable ICS file is a one-time import generated from the reviewed dates. It does not update automatically if WJCC changes the calendar."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official WJCC Schools sources.",
+  "sourceNextReviewText": "Next review: when WJCC revises the academic calendar, changes a weather make-up day, or publishes another districtwide schedule update.",
+  "sources": [
+    {
+      "label": "WJCC Schools calendar page",
+      "url": "https://wjccschools.org/calendar/"
+    },
+    {
+      "label": "WJCC Schools 2026–27 Academic Calendar PDF",
+      "url": "https://wjccschools.org/wp-content/uploads/2025/10/2026-27-Academic-Calendar.pdf"
+    },
+    {
+      "label": "WJCC Schools 2026–27 calendar revision announcement",
+      "url": "https://wjccschools.org/newsroom/2026-2027-school-year-calendar-revisions-approved/"
     }
   ],
   "yearNumbers": [
@@ -320,14 +511,14 @@
     { "date": "2026-08-24", "name": "First Day of School", "type": "school_start" },
     { "date": "2026-09-04", "name": "Student and Teacher Holiday", "type": "student_holiday" },
     { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
-    { "date": "2026-09-25", "name": "PK-5 Student Holiday/Staff CLP Day", "type": "student_holiday" },
+    { "date": "2026-09-25", "name": "Pre-K–5 Student Holiday / Staff CLP Day", "type": "student_holiday", "description": "Added in WJCC's March 2026 calendar revision." },
     { "date": "2026-10-12", "name": "Student Holiday/Staff CLP Day", "type": "student_holiday" },
     { "date": "2026-10-29", "name": "Second Marking Period Begins", "type": "academic" },
-    { "date": "2026-11-02", "name": "Student Holiday - Family Conferences", "type": "no_school" },
-    { "date": "2026-11-03", "name": "Student Holiday - Family Conferences", "type": "no_school" },
+    { "date": "2026-11-02", "name": "Student Holiday — Family Conferences", "type": "no_school" },
+    { "date": "2026-11-03", "name": "Student Holiday — Family Conferences", "type": "no_school" },
     { "date": "2026-11-25", "name": "Thanksgiving Break", "type": "break_start" },
     { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2026-12-11", "name": "PK-5 Student Holiday/Staff CLP Day", "type": "student_holiday" },
+    { "date": "2026-12-11", "name": "Pre-K–5 Student Holiday / Staff CLP Day", "type": "student_holiday", "description": "Added in WJCC's March 2026 calendar revision." },
     { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
     { "date": "2026-12-31", "name": "Winter Break End", "type": "break_end" },
     { "date": "2027-01-01", "name": "New Year's Day", "type": "holiday" },
@@ -337,13 +528,13 @@
     { "date": "2027-02-15", "name": "Presidents' Day", "type": "holiday" },
     { "date": "2027-03-05", "name": "Student Holiday/Staff CLP Day", "type": "student_holiday" },
     { "date": "2027-03-29", "name": "Fourth Marking Period Begins", "type": "academic" },
-    { "date": "2027-04-02", "name": "Early Release - K-12; PK Student Holiday", "type": "early_release" },
+    { "date": "2027-04-02", "name": "Early Release — K–12; Pre-K Student Holiday", "type": "early_release", "description": "The Pre-K holiday was added in WJCC's March 2026 calendar revision." },
     { "date": "2027-04-05", "name": "Spring Break", "type": "break_start" },
     { "date": "2027-04-09", "name": "Spring Break End", "type": "break_end" },
     { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2027-06-04", "name": "Early Release - Grades 9-12", "type": "early_release" },
-    { "date": "2027-06-07", "name": "Early Release - Grades 9-12", "type": "early_release" },
-    { "date": "2027-06-08", "name": "Early Release - Pre-K-12", "type": "early_release" },
-    { "date": "2027-06-09", "name": "Last Day of School; Early Release - Pre-K-12", "type": "school_end" }
+    { "date": "2027-06-04", "name": "Early Release — Grades 9–12", "type": "early_release" },
+    { "date": "2027-06-07", "name": "Early Release — Grades 9–12", "type": "early_release" },
+    { "date": "2027-06-08", "name": "Early Release — Pre-K–12", "type": "early_release" },
+    { "date": "2027-06-09", "name": "Last Day of School / Early Release — Pre-K–12", "type": "school_end" }
   ]
 }

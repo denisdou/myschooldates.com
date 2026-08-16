@@ -8,6 +8,7 @@ type CalendarEvent = {
   displayName?: string
   type: string
   description?: string
+  sectionLabelBefore?: string
   preserveOfficialName?: boolean
   labelType?: string
   badgeLabel?: string
@@ -519,12 +520,18 @@ function formatRangeEnd(event: DisplayEvent) {
           <p v-if="!group.events.length && group.note" class="px-6 py-4 text-sm text-rds-ink-muted">
             {{ group.note }}
           </p>
-          <div
+          <template
             v-for="event in group.events"
             :key="event.startDate + event.endDate + event.type + event.displayName"
-            class="calendar-print-event district-calendar-table__event flex flex-col items-start gap-2 px-6 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
           >
-            <div class="min-w-0">
+            <div
+              v-if="event.sectionLabelBefore"
+              class="calendar-print-section-label bg-[#f8f7f3] px-6 py-2 text-xs font-semibold uppercase tracking-wide text-rds-ink-muted"
+            >
+              {{ event.sectionLabelBefore }}
+            </div>
+            <div class="calendar-print-event district-calendar-table__event flex flex-col items-start gap-2 px-6 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+              <div class="min-w-0">
               <div class="font-medium text-rds-ink">{{ displayEventName(event) }}</div>
               <div class="district-calendar-table__date mt-0.5 text-sm">
                 <template v-if="displayDateRangeParts(event)">
@@ -553,11 +560,12 @@ function formatRangeEnd(event: DisplayEvent) {
               <p v-if="event.isDerivedPlanningDate || event.derivedFromPublishedBreakDates" class="mt-1 text-xs text-rds-ink-dim">
                 {{ derivedDateNote || 'Return date based on the district\'s published no-school schedule.' }}
               </p>
+              </div>
+              <span v-if="!event.hideLabel" class="rounded-rds px-2.5 py-1 text-xs font-medium whitespace-normal sm:whitespace-nowrap" :class="eventTypeColor[event.labelType]">
+                {{ displayLabelText(event) }}
+              </span>
             </div>
-            <span v-if="!event.hideLabel" class="rounded-rds px-2.5 py-1 text-xs font-medium whitespace-normal sm:whitespace-nowrap" :class="eventTypeColor[event.labelType]">
-              {{ displayLabelText(event) }}
-            </span>
-          </div>
+          </template>
         </div>
       </div>
     </div>

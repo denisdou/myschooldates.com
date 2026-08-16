@@ -1,0 +1,582 @@
+{
+  "institutionId": "olentangy-local-school-district",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Olentangy Schools Calendar 2026–27",
+  "firstDay": "2026-08-20",
+  "lastDay": "2027-05-27",
+  "temporalCoverageStart": "2026-08-17",
+  "temporalCoverageEnd": "2027-06-04",
+  "sourceUrl": "https://www.olentangy.k12.oh.us/parents-resources/school-calendars",
+  "sourceDocumentPage": "https://www.olentangy.k12.oh.us/fs/resource-manager/view/96212548-819a-4cd3-8fe4-4fceb44584dd",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1745265463/olentangyk12ohus/ytvs7gonxv06wyd9t3qf/26-27_DistrictCalendar_FINAL.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1745265463/olentangyk12ohus/ytvs7gonxv06wyd9t3qf/26-27_DistrictCalendar_FINAL.pdf",
+  "sourceCheckedAt": "2026-08-16",
+  "sourceUpdatedAt": "2025-03-12",
+  "sourceChecksumSha256": "04b3253fdf6cd5caf2108af1cef57a328785e6fc5d92482308b13a173727cbfd",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceConflict": false,
+  "sourceResourceMonitor": {
+    "type": "resource-uuid",
+    "checkUrl": "https://www.olentangy.k12.oh.us/parents-resources/school-calendars",
+    "linkText": "2026-2027 District Calendar",
+    "expectedDocumentUrl": "https://www.olentangy.k12.oh.us/fs/resource-manager/view/96212548-819a-4cd3-8fe4-4fceb44584dd",
+    "expectedResourceUuid": "96212548-819a-4cd3-8fe4-4fceb44584dd",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1745265463/olentangyk12ohus/ytvs7gonxv06wyd9t3qf/26-27_DistrictCalendar_FINAL.pdf",
+    "expectedChecksumSha256": "04b3253fdf6cd5caf2108af1cef57a328785e6fc5d92482308b13a173727cbfd",
+    "expectedText": ["2026-2027 District Calendar", "2026-2027 School Events Calendar", "2026-2027 Kindergarten Calendar", "2026-2027 Preschool Calendar"]
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "resource-uuid",
+      "checkUrl": "https://www.olentangy.k12.oh.us/parents-resources/school-calendars",
+      "linkText": "2026-2027 School Events Calendar",
+      "expectedDocumentUrl": "https://www.olentangy.k12.oh.us/fs/resource-manager/view/ae75ea42-8156-4f60-b77b-276f3abb4b55",
+      "expectedResourceUuid": "ae75ea42-8156-4f60-b77b-276f3abb4b55",
+      "expectedPdfUrl": "https://resources.finalsite.net/images/v1777904420/olentangyk12ohus/odkjohivsqbufdzwprbb/26-27_DistrictCurriulumEventCalendarV2.pdf",
+      "expectedChecksumSha256": "d2ab1a926d31b5dd57d8470d3d311941f2ae5f7484f0f80d9419f7b43bb7b8b4"
+    },
+    {
+      "type": "resource-uuid",
+      "checkUrl": "https://www.olentangy.k12.oh.us/parents-resources/school-calendars",
+      "linkText": "2026-2027 Kindergarten Calendar",
+      "expectedDocumentUrl": "https://www.olentangy.k12.oh.us/fs/resource-manager/view/fe9a2438-01a2-414f-83d0-9ad574f183b0",
+      "expectedResourceUuid": "fe9a2438-01a2-414f-83d0-9ad574f183b0",
+      "expectedPdfUrl": "https://resources.finalsite.net/images/v1775494958/olentangyk12ohus/fapeto0bfigyope04s2q/2026-27_KindergartenCalendar.pdf",
+      "expectedChecksumSha256": "a022cbb07c8511fdcf663cefa639e47c382a0961d32f27fbb48dc008d8e7abec"
+    },
+    {
+      "type": "resource-uuid",
+      "checkUrl": "https://www.olentangy.k12.oh.us/parents-resources/school-calendars",
+      "linkText": "2026-2027 Preschool Calendar",
+      "expectedDocumentUrl": "https://www.olentangy.k12.oh.us/fs/resource-manager/view/bcce0061-05a3-43fc-8984-7fe3c9f6367b",
+      "expectedResourceUuid": "bcce0061-05a3-43fc-8984-7fe3c9f6367b",
+      "expectedPdfUrl": "https://resources.finalsite.net/images/v1786114217/olentangyk12ohus/vesb6lbrdkbxbee24vhn/PreschoolParentCalendar.pdf",
+      "expectedChecksumSha256": "e8c0db168dd6ea19b49e85b19d3ba7b7ff37bcc4dc04d69c0ec9de189fe6599b"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-16",
+  "dateCreated": "2026-08-16",
+  "datePublished": "2026-08-16",
+  "dateModified": "2026-08-16",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_schedule_change", "start_dismissal_schedule_change", "confirmed_data_error"],
+  "sourceVersion": "Final 2026–27 District Calendar plus School Events, Kindergarten, and Preschool calendars reviewed August 16, 2026",
+  "sourceCalendarName": "Olentangy Schools 2026–27 District Calendar",
+  "schemaCalendarName": "Olentangy Schools 2026–27 Calendar",
+  "schemaDatasetName": "Olentangy Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Olentangy Schools dates for 2026–27, including the district calendar, kindergarten cohorts, preschool dates, curriculum events, report cards, senior dates, and graduation times.",
+  "schemaSpatialCoverage": "Olentangy Local School District, Ohio",
+  "schemaCalendarDownloadName": "Olentangy Schools 2026–27 districtwide ICS calendar",
+  "schemaCalendarDownloadDescription": "One-time ICS download of the districtwide K–12 dates shown on this page. Kindergarten cohort Wednesdays, preschool attendance days, and grade-specific curriculum events remain in their official companion calendars.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-school-events-calendar",
+      "type": "CreativeWork",
+      "name": "Olentangy 2026–27 School Events Calendar",
+      "url": "https://www.olentangy.k12.oh.us/fs/resource-manager/view/ae75ea42-8156-4f60-b77b-276f3abb4b55"
+    },
+    {
+      "id": "source-kindergarten-calendar",
+      "type": "CreativeWork",
+      "name": "Olentangy 2026–27 Kindergarten Calendar",
+      "url": "https://www.olentangy.k12.oh.us/fs/resource-manager/view/fe9a2438-01a2-414f-83d0-9ad574f183b0"
+    },
+    {
+      "id": "source-preschool-calendar",
+      "type": "CreativeWork",
+      "name": "Olentangy 2026–27 Preschool Calendar",
+      "url": "https://www.olentangy.k12.oh.us/fs/resource-manager/view/bcce0061-05a3-43fc-8984-7fe3c9f6367b"
+    },
+    {
+      "id": "source-start-dismissal-times",
+      "type": "WebPage",
+      "name": "Olentangy 2026–27 Start and Dismissal Times",
+      "url": "https://www.olentangy.k12.oh.us/parents-resources/start-and-dismissal-times"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-school-events-calendar",
+    "source-kindergarten-calendar",
+    "source-preschool-calendar"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "districtwide-k12",
+  "keyDateCardsFirstLabel": "District First Day",
+  "keyDateCardsSecondLabel": "Last Day for Grades K–11",
+  "keyDateCardsThirdLabel": "Senior Last Day",
+  "keyDateCardsThirdValue": "Friday, May 14, 2027",
+  "keyDateCardsThirdDate": "2027-05-14",
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideSemesterCount": true,
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "seoTitle": "Olentangy Schools Calendar 2026–27: Key Dates & PDFs",
+  "seoDescription": "Olentangy Schools starts Aug. 20, 2026. Grades K–11 end May 27 and seniors finish May 14. See breaks, kindergarten and preschool calendars, PDFs, and ICS.",
+  "heroSummary": "Olentangy Schools begins Thursday, August 20, 2026. Grades K–11 finish Thursday, May 27, while seniors finish May 14. Kindergarten and preschool follow separate attendance schedules, so families in those programs should also check the official companion calendars below. The May 27 two-hour early dismissal applies only to grades K–5.",
+  "heroSourceLine": "2026–27 District Calendar · Companion Kindergarten, Preschool, and School Events calendars reviewed",
+  "verificationBadgeText": "Four official one-page calendars visually reviewed",
+  "calendarNotes": "August 20 is the first day for most K–12 students, but one kindergarten cohort begins August 21. Preschool starts August 25 and generally meets Tuesday through Friday. Families in either program should use the official companion calendar for their child's attendance dates. September 21, October 16, November 25 and 30, January 4, February 12, March 12 and 26, and May 28 are staff or conference-exchange dates with no school for students. Winter Break runs December 21 through January 1; January 4 is a teacher workday, so students return January 5. Spring Break runs March 29 through April 2, after a Conference Exchange Day on March 26. Seniors finish May 14, high school graduations are May 16, preschool ends May 26, and grades K–11 finish May 27. The May 27 two-hour early dismissal applies only to grades K–5.",
+  "keyDatesHeading": "Olentangy 2026–27 Key Dates",
+  "allDatesTitle": "Olentangy 2026–27 District and Family Dates",
+  "allDatesCoverageNote": "Districtwide attendance dates come from the final District Calendar. The ICS download includes districtwide dates; grade-specific events that do not change attendance are left out. Use the official Kindergarten and Preschool calendars for assigned kindergarten Wednesdays and regular preschool attendance days.",
+  "allDatesSourceUrl": "https://www.olentangy.k12.oh.us/fs/resource-manager/view/96212548-819a-4cd3-8fe4-4fceb44584dd",
+  "allDatesSourceLabel": "Official Olentangy 2026–27 District Calendar",
+  "dateLegendItems": [
+    { "label": "First / last day", "dot": "bg-yellow-400" },
+    { "label": "Holiday / break", "dot": "bg-rose-500" },
+    { "label": "Staff or exchange day — no school", "dot": "bg-teal-500" },
+    { "label": "Quarter / report milestone", "dot": "bg-slate-400" },
+    { "label": "Program or grade-specific event", "dot": "bg-orange-300" }
+  ],
+  "breakNotes": {
+    "Winter Break": "Winter Break is December 21–January 1. January 4 is a teacher workday, so students return January 5.",
+    "Spring Break": "March 26 is a Conference Exchange Day before the weekend; the printed Spring Break is March 29–April 2."
+  },
+  "alternateCalendarsDescription": "Olentangy publishes separate School Events, Kindergarten, and Preschool calendars for program-specific dates and details not fully covered by the main district calendar.",
+  "alternateCalendars": [
+    {
+      "type": "school-events",
+      "label": "2026–27 School Events Calendar",
+      "description": "Curriculum nights by grade, dates when grades are due, report-card dates, and the four high school graduation times.",
+      "group": "Official companion calendars",
+      "pdfUrl": "https://resources.finalsite.net/images/v1777904420/olentangyk12ohus/odkjohivsqbufdzwprbb/26-27_DistrictCurriulumEventCalendarV2.pdf"
+    },
+    {
+      "type": "kindergarten",
+      "label": "2026–27 Kindergarten Calendar",
+      "description": "Two color-coded attendance cohorts: Monday/Thursday or Tuesday/Friday, plus assigned Wednesdays shown in the calendar grid.",
+      "group": "Official companion calendars",
+      "pdfUrl": "https://resources.finalsite.net/images/v1775494958/olentangyk12ohus/fapeto0bfigyope04s2q/2026-27_KindergartenCalendar.pdf",
+      "firstDay": "2026-08-20"
+    },
+    {
+      "type": "preschool",
+      "label": "2026–27 Preschool Calendar",
+      "description": "Tuesday–Friday attendance, preschool-only start and end dates, site conferences, and program events.",
+      "group": "Official companion calendars",
+      "pdfUrl": "https://resources.finalsite.net/images/v1786114217/olentangyk12ohus/vesb6lbrdkbxbee24vhn/PreschoolParentCalendar.pdf",
+      "firstDay": "2026-08-25"
+    }
+  ],
+  "otherCalendarsPosition": "beforeCalendarExport",
+  "groupAlternateCalendarsWithDownloads": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "href": "#key-dates" },
+    { "label": "Which Calendar", "href": "#olentangy-2026-2027-calendar-map" },
+    { "label": "All Dates", "href": "#all-dates" },
+    { "label": "Breaks", "href": "#breaks" },
+    { "label": "Graduation", "href": "#olentangy-2026-2027-graduation-blocks" },
+    { "label": "Downloads", "href": "#add-to-calendar" },
+    { "label": "Planning", "href": "#olentangy-2026-2027-planning-notes" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Sources", "href": "#sources" }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "customSections": [
+    {
+      "id": "olentangy-2026-2027-calendar-map",
+      "label": "Which 2026–27 Olentangy Calendar Applies?",
+      "content": "Start with the District Calendar. Kindergarten and preschool families should also use the companion calendar that applies to their child.",
+      "position": "afterKeyDates",
+      "table": {
+        "columns": ["Student / situation", "First / last date", "Also check"],
+        "rows": [
+          ["Grades 1–11", "August 20 / May 27", "School events and bell times"],
+          ["Grade 12", "August 20 / May 14", "May 16 graduation time"],
+          ["Kindergarten", "Blue: August 20; Yellow: August 21; both end May 27", "Assigned cohort and Wednesdays"],
+          ["Preschool", "August 25 / May 26", "Tuesday–Friday attendance and site conference dates"],
+          ["Grades K–5 on May 27", "Last day", "Two-hour early dismissal for K–5; no districtwide early dismissal is listed for grades 6–12"]
+        ],
+        "footnote": "The color names summarize the official Kindergarten Calendar legend; families should use the actual color assigned by the school."
+      }
+    },
+    {
+      "id": "olentangy-2026-2027-graduation-blocks",
+      "label": "Olentangy Graduation Times",
+      "content": "All four high school graduations are Sunday, May 16, 2027, but each school has a different start time.",
+      "position": "afterBreaks",
+      "table": {
+        "columns": ["Time", "High school"],
+        "rows": [
+          ["9:00 a.m.", "Olentangy High School"],
+          ["12:00 p.m.", "Olentangy Liberty High School"],
+          ["3:00 p.m.", "Olentangy Orange High School"],
+          ["6:00 p.m.", "Olentangy Berlin High School"]
+        ]
+      }
+    },
+    {
+      "id": "olentangy-2026-2027-preschool-sites",
+      "label": "Preschool Conference Dates Are Site-Specific",
+      "content": "Preschool conference dates vary by site and are not districtwide closures. Match the abbreviation on the calendar to your child's preschool location.",
+      "position": "afterBreaks",
+      "table": {
+        "columns": ["Abbreviation", "Preschool site"],
+        "rows": [
+          ["ACES", "Alum Creek Elementary School"],
+          ["AES", "Arrowhead Elementary School"],
+          ["PCES", "Peachblow Crossing Elementary School"],
+          ["OPCC", "Olentangy Preschool at the Career Center"],
+          ["OSP", "Olentangy Preschool at Shanahan"],
+          ["SMES", "Shale Meadows Elementary School"],
+          ["WRES", "Wyandot Run Elementary School"]
+        ]
+      }
+    },
+    {
+      "id": "olentangy-2026-2027-planning-notes",
+      "label": "Planning Notes for Olentangy Families",
+      "content": "A few dates require families to check the calendar for their child's grade or program.",
+      "position": "afterCalendarExport",
+      "groups": [
+        {
+          "label": "Dates to check",
+          "items": [
+            "Kindergarten families should use the color cohort assigned by their school, including the Wednesdays shown on the official Kindergarten Calendar.",
+            "Preschool generally meets Tuesday through Friday; use the Preschool Calendar for attendance dates and site conference appointments.",
+            "Conference Exchange Days are no-school days for students, but preschool conference appointments are site-specific.",
+            "The May 27 two-hour early dismissal applies only to grades K–5.",
+            "Use the School Events Calendar for curriculum nights, report cards, and the graduation time for each high school."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "olentangy-2026-2027-bell-times",
+      "label": "Bell Times Vary by School",
+      "content": "Check your child's school before planning pickup, after-school care, or the May 27 early dismissal.",
+      "position": "afterCalendarExport",
+      "table": {
+        "columns": ["Setting", "Published schedule"],
+        "rows": [
+          ["High schools", "7:20 a.m.–2:35 p.m."],
+          ["Berkshire, Hyatts, and Shanahan middle schools", "7:40 a.m.–2:45 p.m."],
+          ["Liberty Middle School", "8:05 a.m.–3:10 p.m."],
+          ["Berlin and Orange middle schools", "8:10 a.m.–3:15 p.m."],
+          ["Elementary schools", "Either 8:50 a.m.–3:30 p.m. or 9:05 a.m.–3:45 p.m., depending on school"],
+          ["Olentangy Academy", "ACT 8:20 a.m.–2:50 p.m.; STEM 7:20 a.m.–2:15 p.m."],
+          ["OASIS", "8:00 a.m.–noon"]
+        ]
+      }
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-17",
+      "endDate": "2026-08-19",
+      "name": "Teacher Work Days — No Students",
+      "type": "teacher_workday",
+      "description": "August 19 also includes district convocation, a partner expo, and building meetings on the School Events Calendar."
+    },
+    {
+      "date": "2026-08-18",
+      "name": "Elementary Open House — 4:00–6:00 p.m.",
+      "type": "academic",
+      "badgeLabel": "Elementary",
+      "description": "Family event during the pre-student workday period; not a student attendance day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-20",
+      "name": "District First Day",
+      "type": "school_start",
+      "description": "This is also the first attendance day shown for the Monday/Thursday kindergarten cohort."
+    },
+    {
+      "date": "2026-08-21",
+      "name": "First Day for Tuesday/Friday Kindergarten Cohort",
+      "type": "school_start",
+      "badgeLabel": "Kindergarten",
+      "labelType": "partial_closure",
+      "description": "Kindergarten attendance continues by color cohort with assigned Wednesdays; use the official Kindergarten Calendar.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-25",
+      "name": "First Day of Preschool",
+      "type": "school_start",
+      "badgeLabel": "Preschool",
+      "labelType": "partial_closure",
+      "description": "Regular preschool attendance is Tuesday through Friday.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-25",
+      "name": "High School Curriculum Night — Grades 9–12",
+      "type": "academic",
+      "badgeLabel": "Grades 9–12",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-26",
+      "name": "Elementary Curriculum Night — Grades K–2",
+      "type": "academic",
+      "badgeLabel": "Grades K–2",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-09-02",
+      "name": "Middle School Curriculum Night — Grades 6–8",
+      "type": "academic",
+      "badgeLabel": "Grades 6–8",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-09-03",
+      "name": "Elementary Curriculum Night — Grades 3–5",
+      "type": "academic",
+      "badgeLabel": "Grades 3–5",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-21",
+      "name": "Staff Professional Development — No School",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2026-10-15",
+      "name": "End of First Quarter",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-10-16",
+      "name": "Teacher Work Day — No School",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2026-10-23",
+      "name": "First-Quarter Report Cards Available",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-11-25",
+      "name": "Conference Exchange Day — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-11-26",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break — No School",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-11-30",
+      "name": "Staff Professional Development — No School",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2026-12-18",
+      "name": "End of Second Quarter and First Semester",
+      "type": "semester_end"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start",
+      "description": "January 4 is a teacher workday, so students return January 5."
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Teacher Work Day — No School",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Classes Resume / Second Semester Begins",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-15",
+      "name": "Second-Quarter Report Cards Available",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-12",
+      "name": "Staff Professional Development — No School",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-11",
+      "name": "End of Third Quarter",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Teacher Work Day — No School",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2027-03-19",
+      "name": "Third-Quarter Report Cards Available",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Conference Exchange Day — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "name": "Spring Break — No School",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-05-14",
+      "name": "Last Day for Seniors",
+      "type": "school_end",
+      "badgeLabel": "Grade 12",
+      "labelType": "partial_closure",
+      "description": "Other K–11 students continue through May 27.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-16",
+      "name": "High School Graduation Day",
+      "type": "graduation",
+      "description": "Olentangy High School 9:00 a.m.; Liberty 12:00 p.m.; Orange 3:00 p.m.; Berlin 6:00 p.m."
+    },
+    {
+      "date": "2027-05-26",
+      "name": "Last Day of Preschool",
+      "type": "school_end",
+      "badgeLabel": "Preschool",
+      "labelType": "partial_closure",
+      "description": "Preschool ends May 26 with no early release.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-27",
+      "name": "Last Day for Grades K–11",
+      "type": "school_end",
+      "description": "The early dismissal applies to kindergarten through grade 5, not grades 6–12."
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Teacher Work Day",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-04",
+      "name": "Fourth-Quarter Report Cards Available",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Official Olentangy 2026–27 Calendars",
+  "unifiedDownloadDescription": "Download the final District Calendar and the official School Events, Kindergarten, or Preschool companion PDF. The ICS includes the main districtwide K–12 dates, not every cohort or program date.",
+  "pdfHeading": "Official Olentangy 2026–27 PDF",
+  "pdfDescription": "The final one-page District Calendar is the primary K–12 source. Use the companion downloads when kindergarten cohorts, preschool attendance, curriculum nights, or graduation times apply.",
+  "icsHeading": "Add Olentangy 2026–27 District Dates",
+  "icsDescription": "Import the main districtwide dates, including the first day, May 27 last day, no-school days, breaks, quarter endings, and graduation.",
+  "icsButtonLabel": "Add Olentangy K–12 Dates (.ics)",
+  "icsButtonSupportText": "One-time import. Kindergarten cohort Wednesdays, regular preschool attendance dates, building events, and emergency changes require the official companion or school calendar.",
+  "sourceReviewSummary": "We reviewed the final 2026–27 District Calendar along with the official School Events, Kindergarten, and Preschool calendars. Dates and bell times on this page were checked against those district sources and the official Start and Dismissal Times page on August 16, 2026.",
+  "sourceReviewDetails": [
+    "The reviewed District Calendar matches the current official download. SHA-256: 04b3253fdf6cd5caf2108af1cef57a328785e6fc5d92482308b13a173727cbfd.",
+    "The School Events Calendar was checked for curriculum nights, dates when grades are due, report-card milestones, and four May 16 graduation times.",
+    "The Kindergarten Calendar was checked as a separate attendance track: one cohort attends Monday/Thursday, the other Tuesday/Friday, with assigned Wednesdays shown by color.",
+    "The Preschool Calendar was checked for Tuesday–Friday attendance, an August 25 first day, May 26 ending with no early release, site-specific conferences, and program events.",
+    "The school-level schedules in Bell Times Vary by School were checked against the official 2026–27 Start and Dismissal Times page.",
+    "No conflicting date was found among the four official one-page documents. Dates that apply only to a grade or program remain clearly labeled."
+  ],
+  "faqDisplayQuestions": [
+    "When does Olentangy Schools start in 2026–27?",
+    "When is Olentangy Winter Break in 2026–27?",
+    "When is Olentangy Spring Break in 2027?",
+    "When is the last day of Olentangy school in 2026–27?",
+    "How does the Olentangy kindergarten calendar work?",
+    "Does Olentangy preschool follow the K–12 calendar?",
+    "When are Olentangy high school graduations in 2027?"
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When does Olentangy Schools start in 2026–27?",
+      "a": "K–12 begins Thursday, August 20, 2026. The Monday/Thursday kindergarten cohort starts that day, the Tuesday/Friday cohort starts August 21, and preschool starts August 25."
+    },
+    {
+      "q": "When is Olentangy Winter Break in 2026–27?",
+      "a": "Students are out beginning December 21, 2026. January 4, 2027 is a teacher workday, and classes resume January 5."
+    },
+    {
+      "q": "When is Olentangy Spring Break in 2027?",
+      "a": "Spring Break runs Monday, March 29 through Friday, April 2, 2027. Students also have no school Friday, March 26 for a Conference Exchange Day."
+    },
+    {
+      "q": "When is the last day of Olentangy school in 2026–27?",
+      "a": "Grades K–11 finish Thursday, May 27, 2027, with a two-hour early dismissal for grades K–5. Seniors finish May 14 and preschool ends May 26 without early release."
+    },
+    {
+      "q": "How does the Olentangy kindergarten calendar work?",
+      "a": "One color cohort attends Monday and Thursday, the other attends Tuesday and Friday, and the official calendar assigns Wednesdays by color. Families should use the cohort provided by their school."
+    },
+    {
+      "q": "Does Olentangy preschool follow the K–12 calendar?",
+      "a": "It shares many district closures but has its own Tuesday–Friday attendance pattern, first and last dates, conferences, and program events. Use the Preschool Calendar for your child's attendance dates."
+    },
+    {
+      "q": "When are Olentangy high school graduations in 2027?",
+      "a": "All four are scheduled May 16: Olentangy at 9:00 a.m., Liberty at noon, Orange at 3:00 p.m., and Berlin at 6:00 p.m. Confirm venue and arrival instructions with the high school."
+    }
+  ],
+  "hiddenSections": [
+    "about",
+    "comparison",
+    "districtProfile",
+    "downloadCta",
+    "keyDatesSummary",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars",
+    "planningTips",
+    "quickFacts",
+    "todayStatus",
+    "whatsDifferent",
+    "yearNumbers"
+  ],
+  "hiddenCustomSectionIds": [
+    "olentangy-calendar-map",
+    "olentangy-bell-time-map",
+    "olentangy-official-resources"
+  ],
+  "hideRelatedDistrictDescriptions": true,
+  "relatedDistrictsTitle": "More Ohio School Calendars",
+  "relatedDistrictsDescription": "Browse other reviewed Ohio district calendars.",
+  "yearSwitcherPosition": "afterSources",
+  "sources": [
+    { "label": "Olentangy School Calendars", "url": "https://www.olentangy.k12.oh.us/parents-resources/school-calendars" },
+    { "label": "2026–27 District Calendar", "url": "https://www.olentangy.k12.oh.us/fs/resource-manager/view/96212548-819a-4cd3-8fe4-4fceb44584dd" },
+    { "label": "2026–27 School Events Calendar", "url": "https://www.olentangy.k12.oh.us/fs/resource-manager/view/ae75ea42-8156-4f60-b77b-276f3abb4b55" },
+    { "label": "2026–27 Kindergarten Calendar", "url": "https://www.olentangy.k12.oh.us/fs/resource-manager/view/fe9a2438-01a2-414f-83d0-9ad574f183b0" },
+    { "label": "2026–27 Preschool Calendar", "url": "https://www.olentangy.k12.oh.us/fs/resource-manager/view/bcce0061-05a3-43fc-8984-7fe3c9f6367b" },
+    { "label": "2026–27 Start and Dismissal Times", "url": "https://www.olentangy.k12.oh.us/parents-resources/start-and-dismissal-times" }
+  ]
+}

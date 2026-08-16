@@ -1,17 +1,26 @@
 {
   "institutionId": "brunswick-county-schools",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Brunswick County Schools Calendar 2026–27",
   "firstDay": "2026-08-24",
   "lastDay": "2027-05-28",
+  "temporalCoverageStart": "2026-07-03",
+  "temporalCoverageEnd": "2027-06-04",
   "sourceUrl": "https://www.bcswan.net/calendar/printable-calendars",
   "sourcePdfUrl": "https://drive.google.com/file/d/19Xtp-Rm1zCXb5GEedLSZWP6AvE4WL6pT/view",
   "lastVerifiedAt": "2026-07-21",
   "datePublished": "2026-07-21",
-  "dateModified": "2026-07-21",
+  "dateModified": "2026-08-16",
   "calendarType": "traditional",
-  "yearNumbersMode": "compact",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideSemesterCount": true,
   "hideInstructionalDaysSummary": true,
-  "instructionalDaysDescription": "This page summarizes published Brunswick County Schools traditional calendar dates; confirm exact attendance-day counts with BCS if needed.",
+  "hideSecondSemesterStartSummary": true,
+  "hideAlternateCalendarsNotice": true,
   "alternateCalendars": [
     {
       "type": "early-college",
@@ -19,64 +28,91 @@
       "pdfUrl": "https://drive.google.com/file/d/1eTFDGriu7uNDPHAgyUerjEf2r_w6NHsk/view"
     }
   ],
-  "seoTitle": "Brunswick County Schools Calendar 2026-2027 | Holidays, Breaks, PDF & Important Dates",
-  "seoDescription": "View Brunswick County Schools Calendar 2026-2027 with first day, last day, holidays, spring break dates, teacher workdays, printable PDF, and calendar download.",
-  "calendarNotes": "Brunswick County Schools starts the 2026-2027 traditional school year on August 24, 2026 and ends on May 28, 2027. Spring Break runs March 29-April 2, and the calendar also lists required workdays, non-required workdays, district PD days, holidays, annual leave, report card releases, semester endings, graduation schedules, school hours, and make-up day notes. A separate Early College calendar is available from the district.",
-  "faqLimit": 12,
+  "seoTitle": "Brunswick County Schools Calendar 2026–27: Key Dates & PDF",
+  "seoDescription": "The BCS traditional calendar starts Aug. 24, 2026, and ends May 28, 2027. See school breaks, student days off, the Early College calendar, official PDF and calendar download.",
+  "heroSummary": "On the Brunswick County Schools traditional calendar, the first day for students is Monday, August 24, 2026. The last day is Friday, May 28, 2027, and Spring Break runs March 29–April 2, 2027. Early College students use a separate district calendar.",
+  "heroSourceLine": "Source: BCS 2026–27 Traditional Calendar · reviewed July 21, 2026",
+  "heroSourceLabel": "BCS 2026–27 Traditional Calendar",
+  "heroSourceUrl": "https://drive.google.com/file/d/19Xtp-Rm1zCXb5GEedLSZWP6AvE4WL6pT/view",
+  "verificationBadgeText": "Reviewed July 21, 2026 against the official BCS traditional calendar.",
+  "heroVerificationSourceText": "Official BCS printable calendars page reviewed",
+  "heroVerificationComparisonText": "Official 2026–27 traditional calendar PDF reviewed",
+  "heroVerificationIcsText": "Key student dates checked against the district calendar",
+  "schemaCalendarName": "Brunswick County Schools Traditional Calendar 2026–27",
+  "schemaDatasetName": "Brunswick County Schools 2026–27 Traditional Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Brunswick County Schools traditional-calendar dates for 2026–27, including official workday, annual leave, holiday, reporting, graduation, and student attendance dates plus family-facing school breaks and days off.",
+  "schemaCalendarDownloadName": "Brunswick County Schools 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "One-time ICS import of the Brunswick County Schools traditional-calendar dates shown on this page. It does not update automatically after district revisions.",
+  "calendarNotes": "This page covers the 2026–27 BCS traditional calendar. The complete date table preserves the district’s workday, annual leave, holiday, reporting, and graduation labels; separate family-facing summaries show the main periods when students are not scheduled to attend.",
+  "keyDatesSummaryTitle": "Brunswick County Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Traditional-calendar dates at a glance, including major school breaks and student days off",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School", "date": "2026-08-24", "type": "school_start", "schemaDescription": "The first day of classes on the BCS 2026–27 traditional calendar." },
+    { "label": "No School", "name": "Thanksgiving Days Off", "date": "2026-11-25", "endDate": "2026-11-27", "type": "no_school", "hideSchemaDescription": true },
+    { "label": "No School", "name": "Winter Days Off", "date": "2026-12-21", "endDate": "2027-01-05", "type": "no_school", "hideSchemaDescription": true },
+    { "label": "Spring Break", "name": "Official Spring Break", "date": "2027-03-29", "endDate": "2027-04-02", "type": "break_start", "description": "Students are also off Friday, March 26 for the Good Friday holiday." },
+    { "label": "Last Day", "name": "Last Day of School", "date": "2027-05-28", "type": "school_end", "schemaDescription": "The last day of classes on the BCS 2026–27 traditional calendar." }
+  ],
+  "allDatesTitle": "Brunswick County Schools 2026–27 Traditional Calendar Dates",
+  "allDatesCoverageNote": "This table follows the labels on the official traditional calendar, including workdays, district professional development, annual leave, holidays, reporting dates, graduation dates, and the first and last days of school. Dates before August 24 and after May 28 are included only when they appear on the district calendar.",
+  "allDatesSourceUrl": "https://drive.google.com/file/d/19Xtp-Rm1zCXb5GEedLSZWP6AvE4WL6pT/view",
+  "allDatesSourceLabel": "Official BCS 2026–27 Traditional Calendar",
   "customSections": [
     {
-      "id": "brunswick-calendar-overview-2026-2027",
-      "label": "Brunswick County Schools Calendar Overview",
+      "id": "brunswick-calendar-coverage-2026-2027",
+      "label": "Which BCS Calendar Is Shown Here?",
       "position": "afterVerification",
-      "content": "The Brunswick County Schools 2026-2027 traditional calendar provides important dates for students, families, teachers, and staff in Brunswick County, North Carolina. The school year begins on August 24, 2026 and ends on May 28, 2027. This calendar includes student holidays, required workdays, non-required workdays, district professional development days, annual leave dates, report card releases, semester endings, graduation schedules, school hours, and weather make-up notes. Families should also note that Brunswick County Schools publishes a separate Early College calendar, so program-specific dates may differ from the traditional calendar."
+      "content": "This page summarizes the BCS traditional calendar. BCS publishes a separate Early College calendar, so Early College families should use the district’s official program calendar before making plans.",
+      "linksDisplay": "inline",
+      "linksLabel": "Official source:",
+      "links": [
+        {
+          "label": "BCS printable calendars",
+          "url": "https://www.bcswan.net/calendar/printable-calendars"
+        }
+      ]
     },
     {
-      "id": "brunswick-quick-answer-2026-2027",
-      "label": "Quick Answer: Brunswick County Schools 2026-2027",
-      "position": "afterVerification",
-      "content": "Brunswick County Schools starts the 2026-2027 traditional school year on Monday, August 24, 2026. The last day for students is Friday, May 28, 2027. Spring Break runs Monday, March 29 through Friday, April 2, 2027. The calendar also includes teacher workdays, district professional development days, annual leave, report card dates, graduation dates, and a separate Early College calendar for eligible students.",
+      "id": "brunswick-student-time-off-2026-2027",
+      "label": "School Breaks and Student Days Off",
+      "position": "afterAllDates",
+      "content": "These ranges combine the district’s official workday, annual leave, and holiday dates into the main Thanksgiving, winter, and spring periods when students do not attend school.",
       "table": {
-        "headers": ["Question", "Answer"],
+        "columns": ["Period", "Dates students are off", "Official BCS labels and return date"],
         "rows": [
-          ["When does BCS start school?", "August 24, 2026"],
-          ["When is the last day?", "May 28, 2027"],
-          ["When is Spring Break?", "March 29-April 2, 2027"],
-          ["Does BCS list teacher workdays?", "Yes, required and non-required workdays are listed"],
-          ["Is there an alternate calendar?", "Yes, a separate Early College calendar is available"]
-        ]
+          ["Thanksgiving", "November 25–27, 2026", "November 25 is annual leave; November 26–27 are the Thanksgiving Holiday. The next regular school day is Monday, November 30."],
+          ["Winter", "December 21, 2026–January 5, 2027", "BCS uses workday, annual leave, Christmas Holiday, and New Year’s Day labels across this period. The next regular school day is Wednesday, January 6."],
+          ["Spring", "March 26–April 2, 2027", "March 26 is the Good Friday Holiday; March 29–April 2 is Spring Break. The next regular school day is Monday, April 5."]
+        ],
+        "footnote": "Standalone holidays and workdays appear in the complete date table above."
       }
     },
     {
-      "id": "brunswick-calendar-verification-methodology",
-      "label": "How We Verify Brunswick County Schools Calendar Dates",
-      "position": "afterVerification",
-      "content": "MySchoolDates reviews the publicly available Brunswick County Schools printable calendars page and the official calendar PDF linked for this school year. Key dates such as the first student day, last student day, Spring Break, holiday ranges, workdays, report card releases, and graduation dates are compared against the published source before the page and calendar download are generated. MySchoolDates is an independent reference and is not affiliated with Brunswick County Schools, so families should confirm last-minute revisions with BCS directly."
-    },
-    {
-      "id": "brunswick-important-dates-explained-2026-2027",
-      "label": "Important Dates for Brunswick County Families",
-      "position": "afterKeyDates",
-      "content": "These dates are the most common planning checkpoints for families using the Brunswick County Schools calendar. The table summarizes the major student dates, while the notes below explain why each date matters for family travel, childcare, transportation, and school-year planning.",
-      "table": {
-        "headers": ["Event", "Date", "Planning note"],
-        "rows": [
-          ["First Day of School", "August 24, 2026", "Students following the traditional calendar return to school."],
-          ["Thanksgiving Break", "November 26-27, 2026", "Students have the Thanksgiving holiday period off; November 25 is annual leave."],
-          ["Winter Holiday Period", "December 24, 2026-January 1, 2027", "Holiday, annual leave, and workday dates may affect childcare planning."],
-          ["Spring Break", "March 29-April 2, 2027", "This is the longest spring planning window for family travel."],
-          ["Last Day of School", "May 28, 2027", "The final student day on the traditional Brunswick County Schools calendar."]
-        ]
-      }
+      "id": "brunswick-planning-notes-2026-2027",
+      "label": "Planning Notes for BCS Families",
+      "position": "afterYearDiff",
+      "content": "BCS uses several calendar labels for days when students don’t attend. Here are the ones that matter most for family planning.",
+      "hideGroupLabels": true,
+      "groups": [
+        {
+          "label": "Planning notes",
+          "items": [
+            "Required workdays, non-required workdays, district professional development days, and annual leave are days when students do not attend school unless BCS announces a make-up change.",
+            "BCS notes that calendar changes may use early-release days or Saturdays, so check district and school announcements after weather closures.",
+            "Graduation times, testing, athletics, and other school events should be confirmed with the student’s school."
+          ]
+        }
+      ]
     },
     {
       "id": "brunswick-traditional-vs-other-calendars-2026-2027",
       "label": "Traditional Calendar vs Other Brunswick County Calendars",
       "position": "afterKeyDates",
-      "content": "Most Brunswick County Schools students follow the traditional calendar summarized on this page. Some students may follow a separate Early College calendar or program-specific schedule, so families should confirm which calendar applies before relying on first day, break, workday, or graduation dates.",
+      "content": "This page summarizes the Brunswick County Schools traditional calendar. Early College students and students with program-specific schedules should confirm which calendar applies before relying on first day, break, workday, or graduation dates.",
       "table": {
         "headers": ["Calendar", "Who uses it", "Planning note"],
         "rows": [
-          ["Traditional Calendar", "Most Brunswick County Schools students", "Use this page for districtwide first day, holidays, workdays, Spring Break, and last day."],
+          ["Traditional Calendar", "Students assigned to the traditional calendar", "Use this page for districtwide first day, holidays, workdays, Spring Break, and last day."],
           ["Early College Calendar", "Early College students", "Use the separate Early College PDF linked by the district."],
           ["School or program schedules", "Students in school-specific activities or programs", "Confirm testing, athletic events, graduation times, and special events through school announcements."]
         ]
@@ -158,16 +194,16 @@
   ],
   "calendarFaqs": [
     {
-      "q": "When does Brunswick County Schools start school in 2026?",
-      "a": "The first day for students is Monday, August 24, 2026."
+      "q": "Which Brunswick County Schools calendar does this page use?",
+      "a": "This page summarizes the 2026–27 BCS traditional calendar. Early College students should use the district’s separate Early College calendar."
     },
     {
       "q": "When is Brunswick County Schools Spring Break in 2027?",
       "a": "Spring Break runs Monday, March 29 through Friday, April 2, 2027."
     },
     {
-      "q": "When is the last day of school for Brunswick County Schools in 2027?",
-      "a": "The last day for students is Friday, May 28, 2027."
+      "q": "Can Brunswick County Schools change the calendar after publication?",
+      "a": "Yes. Weather, board action, or instructional-time needs may change the calendar. Check the official BCS calendars page and school announcements before making plans."
     },
     {
       "q": "Does BCS have a separate Early College calendar in 2026-2027?",
@@ -175,11 +211,11 @@
     },
     {
       "q": "Are teacher workdays included in the Brunswick County school calendar?",
-      "a": "Yes. The 2026-2027 traditional calendar lists required workdays, non-required workdays, and district professional development days. These dates should generally be treated as student no-school days unless BCS announces a schedule change."
+      "a": "Yes. Required workdays, non-required workdays, and district professional development days are days when students do not attend school unless BCS announces a make-up change."
     },
     {
       "q": "Are Brunswick County Schools calendars different by school or program?",
-      "a": "Most students use the traditional Brunswick County Schools calendar, but the district also publishes a separate Early College calendar. Families should confirm the student's school or program calendar before making plans."
+      "a": "BCS publishes a traditional calendar and a separate Early College calendar. Families should confirm the student's school or program calendar before making plans."
     },
     {
       "q": "Where can I download the Brunswick County Schools calendar PDF?",
@@ -187,11 +223,11 @@
     },
     {
       "q": "When is Thanksgiving Break for Brunswick County Schools in 2026?",
-      "a": "Thanksgiving Holiday is listed for November 26-27, 2026, with annual leave listed on November 25, 2026."
+      "a": "Students are off November 25–27, 2026. BCS labels November 25 as annual leave and November 26–27 as the Thanksgiving Holiday. The next regular school day is Monday, November 30."
     },
     {
       "q": "When is winter break for Brunswick County Schools?",
-      "a": "The winter holiday period includes Christmas Holiday on December 24 and December 28, 2026, annual leave on December 23 and December 29-31, 2026, and New Year's Day Holiday on January 1, 2027. Families should also note workdays on December 21-22, 2026 and January 4-5, 2027."
+      "a": "Students are off December 21, 2026 through January 5, 2027. BCS uses workday, annual leave, Christmas Holiday, and New Year’s Day labels across that period. The next regular school day is Wednesday, January 6."
     },
     {
       "q": "How many school days are in the Brunswick County Schools 2026-2027 calendar?",
@@ -199,77 +235,151 @@
     },
     {
       "q": "Does Brunswick County Schools have early dismissal days?",
-      "a": "The traditional 2026-2027 calendar summarized here does not list a dedicated early dismissal date. Families should check school announcements for early release, testing, athletic, or emergency schedule updates."
+      "a": "The 2026–27 traditional calendar does not list a districtwide early-release day. Families should check school announcements for testing, athletics, early releases, and emergency schedule changes."
     },
     {
       "q": "When does the 2027-2028 Brunswick County Schools calendar release?",
       "a": "Brunswick County Schools has a 2027-2028 traditional calendar available from the district, and MySchoolDates links the next calendar year from this page when it is included in the site."
     }
   ],
-  "yearNumbers": [
+  "faqDisplayQuestions": [
+    "Which Brunswick County Schools calendar does this page use?",
+    "When is Brunswick County Schools Spring Break in 2027?",
+    "Are teacher workdays included in the Brunswick County school calendar?",
+    "When is winter break for Brunswick County Schools?",
+    "Where can I download the Brunswick County Schools calendar PDF?",
+    "Does Brunswick County Schools have early dismissal days?",
+    "Can Brunswick County Schools change the calendar after publication?"
+  ],
+  "faqDisplayLimit": 7,
+  "alternateCalendarsTitle": "Other Official BCS Calendars",
+  "alternateCalendarsDescription": "Early College students should use the calendar published for their program; its dates may differ from the traditional calendar summarized on this page.",
+  "alternateCalendarsButtonLabel": "View Official Early College Calendar",
+  "alternateCalendarsFooterDescription": "BCS may revise or add calendars during the year. Check the",
+  "alternateCalendarsFooterLinkLabel": "official printable calendars page",
+  "alternateCalendarsFooterLinkUrl": "https://www.bcswan.net/calendar/printable-calendars",
+  "otherCalendarsPosition": "beforeCalendarExport",
+  "compactDownloadModule": true,
+  "hidePdfVersionLabel": true,
+  "unifiedDownloadTitle": "Calendar Downloads",
+  "unifiedDownloadDescription": "Open the official traditional-calendar PDF or download a one-time calendar file from the dates reviewed for this page.",
+  "icsHeading": "Download the BCS 2026–27 Calendar",
+  "icsDescription": "Download a one-time ICS file for Google Calendar, Apple Calendar, or Outlook. It will not update automatically if BCS revises its calendar.",
+  "icsButtonLabel": "Download Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. Check BCS and school announcements for revisions, make-up changes, and campus events.",
+  "pdfHeading": "Official BCS 2026–27 Traditional Calendar",
+  "pdfDescription": "Open the district’s traditional calendar with its original workday, annual leave, holiday, reporting, and graduation labels.",
+  "pdfButtonLabel": "View Official PDF",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "about",
+    "planningTips",
+    "yearNumbers",
+    "comparison",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "relatedDistricts"
+  ],
+  "hiddenCustomSectionIds": [
+    "brunswick-traditional-vs-other-calendars-2026-2027",
+    "brunswick-calendar-changes-2026-2027",
+    "brunswick-parent-planning-guide-2026-2027",
+    "related-north-carolina-school-calendars"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Which Calendar?", "id": "brunswick-calendar-coverage-2026-2027" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Breaks & Days Off", "id": "brunswick-student-time-off-2026-2027" },
+    { "label": "Early College", "id": "other-calendars" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "What Changed", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "yearSwitcherPosition": "afterSources",
+  "yearComparisonTitle": "What Changed From 2025–26?",
+  "yearComparisonStyle": "movement",
+  "hideThanksgivingYearComparison": true,
+  "yearComparisonSubtitle": "Derived from the published 2025–26 and 2026–27 traditional-calendar records.",
+  "hideSourceVersionDisplay": true,
+  "sourceReviewSummary": "Reviewed July 21, 2026 using the official BCS 2026–27 Traditional Calendar and printable calendars page.",
+  "sourceReviewDetails": [
+    "Matched the first and last days, workdays, district professional development, annual leave, holidays, reporting dates, Spring Break, and graduation dates to the official traditional calendar.",
+    "Preserved the district’s event labels in the complete date table and separately summarized the Thanksgiving, winter, and spring periods when students are not scheduled to attend.",
+    "Generated the year-over-year comparison from the site’s published 2025–26 and 2026–27 Brunswick calendar records rather than maintaining a second set of comparison dates.",
+    "Confirmed that BCS publishes a separate 2026–27 Early College calendar and kept that program outside the traditional-calendar dates on this page.",
+    "The downloadable ICS file is a one-time import and does not update automatically after district revisions."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Brunswick County Schools sources.",
+  "sourceNextReviewText": "Next review: when BCS revises the 2026–27 traditional or Early College calendar.",
+  "sources": [
     {
-      "label": "First Day",
-      "value": "Aug 24",
-      "detail": "The first day for students is August 24, 2026."
+      "label": "BCS printable calendars",
+      "url": "https://www.bcswan.net/calendar/printable-calendars"
     },
     {
-      "label": "Spring Break",
-      "value": "Mar 29-Apr 2",
-      "detail": "Spring Break runs March 29-April 2, 2027."
+      "label": "Official BCS 2026–27 Traditional Calendar",
+      "url": "https://drive.google.com/file/d/19Xtp-Rm1zCXb5GEedLSZWP6AvE4WL6pT/view"
     },
     {
-      "label": "Last Day",
-      "value": "May 28",
-      "detail": "The last day for students is May 28, 2027."
+      "label": "Official BCS 2026–27 Early College Calendar",
+      "url": "https://drive.google.com/file/d/1eTFDGriu7uNDPHAgyUerjEf2r_w6NHsk/view"
     }
   ],
   "events": [
-    { "date": "2026-07-03", "name": "Independence Day Holiday", "type": "holiday" },
-    { "date": "2026-08-10", "name": "Non-Required Workday", "type": "no_school" },
-    { "date": "2026-08-11", "name": "Non-Required Workday", "type": "no_school" },
-    { "date": "2026-08-12", "name": "Required Workday", "type": "no_school" },
-    { "date": "2026-08-13", "name": "Required District Professional Development Day", "type": "no_school" },
-    { "date": "2026-08-14", "name": "Non-Required Workday", "type": "no_school" },
-    { "date": "2026-08-17", "name": "Required Workday", "type": "no_school" },
-    { "date": "2026-08-18", "name": "Required District Professional Development Day", "type": "no_school" },
-    { "date": "2026-08-19", "name": "Required Workday", "type": "no_school" },
-    { "date": "2026-08-20", "name": "Required District Professional Development Day", "type": "no_school" },
-    { "date": "2026-08-21", "name": "Non-Required Workday", "type": "no_school" },
+    { "date": "2026-07-03", "name": "Independence Day Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2026-08-10", "name": "Non-Required Workday", "type": "no_school", "preserveOfficialName": true },
+    { "date": "2026-08-11", "name": "Non-Required Workday", "type": "no_school", "preserveOfficialName": true },
+    { "date": "2026-08-12", "name": "Required Workday", "type": "no_school", "preserveOfficialName": true },
+    { "date": "2026-08-13", "name": "Required District Professional Development Day", "type": "no_school", "preserveOfficialName": true },
+    { "date": "2026-08-14", "name": "Non-Required Workday", "type": "no_school", "preserveOfficialName": true },
+    { "date": "2026-08-17", "name": "Required Workday", "type": "no_school", "preserveOfficialName": true },
+    { "date": "2026-08-18", "name": "Required District Professional Development Day", "type": "no_school", "preserveOfficialName": true },
+    { "date": "2026-08-19", "name": "Required Workday", "type": "no_school", "preserveOfficialName": true },
+    { "date": "2026-08-20", "name": "Required District Professional Development Day", "type": "no_school", "preserveOfficialName": true },
+    { "date": "2026-08-21", "name": "Non-Required Workday", "type": "no_school", "preserveOfficialName": true },
     { "date": "2026-08-24", "name": "First Day of School", "type": "school_start" },
-    { "date": "2026-09-07", "name": "Labor Day Holiday", "type": "holiday" },
+    { "date": "2026-09-07", "name": "Labor Day Holiday", "type": "holiday", "preserveOfficialName": true },
     { "date": "2026-10-16", "name": "End of First Quarter", "type": "academic" },
-    { "date": "2026-10-19", "name": "Required Workday", "type": "no_school" },
+    { "date": "2026-10-19", "name": "Required Workday", "type": "no_school", "preserveOfficialName": true },
     { "date": "2026-10-30", "name": "Report Cards Released", "type": "academic" },
-    { "date": "2026-11-03", "name": "Required District Professional Development Day", "type": "no_school" },
-    { "date": "2026-11-11", "name": "Veterans Day Holiday", "type": "holiday" },
+    { "date": "2026-11-03", "name": "Required District Professional Development Day", "type": "no_school", "preserveOfficialName": true },
+    { "date": "2026-11-11", "name": "Veterans Day Holiday", "type": "holiday", "preserveOfficialName": true },
     { "date": "2026-11-25", "name": "Annual Leave", "type": "no_school" },
     { "date": "2026-11-26", "name": "Thanksgiving Holiday", "type": "break_start" },
     { "date": "2026-11-27", "name": "Thanksgiving Holiday End", "type": "break_end" },
     { "date": "2026-12-18", "name": "Semester End", "type": "academic" },
-    { "date": "2026-12-21", "name": "Non-Required Workday", "type": "no_school" },
-    { "date": "2026-12-22", "name": "Non-Required Workday", "type": "no_school" },
+    { "date": "2026-12-21", "name": "Non-Required Workday", "type": "no_school", "preserveOfficialName": true },
+    { "date": "2026-12-22", "name": "Non-Required Workday", "type": "no_school", "preserveOfficialName": true },
     { "date": "2026-12-23", "name": "Annual Leave", "type": "no_school" },
     { "date": "2026-12-24", "name": "Christmas Holiday", "type": "break_start" },
     { "date": "2026-12-28", "name": "Christmas Holiday End", "type": "break_end" },
     { "date": "2026-12-29", "name": "Annual Leave", "type": "no_school" },
     { "date": "2026-12-30", "name": "Annual Leave", "type": "no_school" },
     { "date": "2026-12-31", "name": "Annual Leave", "type": "no_school" },
-    { "date": "2027-01-01", "name": "New Year's Day Holiday", "type": "holiday" },
-    { "date": "2027-01-04", "name": "Non-Required Workday", "type": "no_school" },
-    { "date": "2027-01-05", "name": "Required Workday", "type": "no_school" },
+    { "date": "2027-01-01", "name": "New Year's Day Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-01-04", "name": "Non-Required Workday", "type": "no_school", "preserveOfficialName": true },
+    { "date": "2027-01-05", "name": "Required Workday", "type": "no_school", "preserveOfficialName": true },
     { "date": "2027-01-15", "name": "Report Cards Released", "type": "academic" },
     { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2027-02-12", "name": "Required District Professional Development Day", "type": "no_school" },
-    { "date": "2027-02-15", "name": "Non-Required Workday", "type": "no_school" },
+    { "date": "2027-02-12", "name": "Required District Professional Development Day", "type": "no_school", "preserveOfficialName": true },
+    { "date": "2027-02-15", "name": "Non-Required Workday", "type": "no_school", "preserveOfficialName": true },
     { "date": "2027-03-12", "name": "End of Third Quarter", "type": "academic" },
-    { "date": "2027-03-15", "name": "Required Workday", "type": "no_school" },
+    { "date": "2027-03-15", "name": "Required Workday", "type": "no_school", "preserveOfficialName": true },
     { "date": "2027-03-25", "name": "Report Cards Released", "type": "academic" },
-    { "date": "2027-03-26", "name": "Good Friday Holiday", "type": "holiday" },
+    { "date": "2027-03-26", "name": "Good Friday Holiday", "type": "holiday", "preserveOfficialName": true },
     { "date": "2027-03-29", "name": "Spring Break", "type": "break_start" },
     { "date": "2027-04-02", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2027-04-26", "name": "Non-Required Workday", "type": "no_school" },
+    { "date": "2027-04-26", "name": "Non-Required Workday", "type": "no_school", "preserveOfficialName": true },
     { "date": "2027-05-28", "name": "Last Day of School", "type": "school_end" },
-    { "date": "2027-05-31", "name": "Memorial Day Holiday", "type": "holiday" },
+    { "date": "2027-05-31", "name": "Memorial Day Holiday", "type": "holiday", "preserveOfficialName": true },
     { "date": "2027-06-01", "name": "Required Workday; The COAST Graduation", "type": "graduation" },
     { "date": "2027-06-02", "name": "Required Workday; NBHS Graduation", "type": "graduation" },
     { "date": "2027-06-03", "name": "Required Workday; SBHS Graduation", "type": "graduation" },

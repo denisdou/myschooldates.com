@@ -1,247 +1,421 @@
 {
   "institutionId": "catawba-county-schools",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Catawba County Schools Calendar 2026–27",
   "firstDay": "2026-08-24",
   "lastDay": "2027-05-21",
-  "sourceUrl": "https://www.catawbaschools.net/212720_2",
+  "temporalCoverageStart": "2026-08-10",
+  "temporalCoverageEnd": "2027-07-05",
+  "sourceUrl": "https://www.catawbaschools.net/district-calendar",
+  "sourceDocumentPage": "https://www.catawbaschools.net/district-calendar",
   "sourcePdfUrl": "https://files.smartsites.parentsquare.com/9286/revised_approved_2026-2027_traditional_start_and_separate_spring_break_-_sheet1_1.pdf",
-  "lastVerifiedAt": "2026-07-21",
+  "lastCheckedPdfUrl": "https://files.smartsites.parentsquare.com/9286/revised_approved_2026-2027_traditional_start_and_separate_spring_break_-_sheet1_1.pdf",
+  "sourceCheckedAt": "2026-08-16",
+  "sourceUpdatedAt": "2026-02-23",
+  "sourceChecksumSha256": "937ae2029080e03feaca0a91414bd5904fb952d365db238899a5e78e4a253dc4",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.catawbaschools.net/district-calendar",
+    "linkText": "2026-27 Printable District Calendar",
+    "expectedDocumentUrl": "https://files.smartsites.parentsquare.com/9286/revised_approved_2026-2027_traditional_start_and_separate_spring_break_-_sheet1_1.pdf",
+    "expectedChecksumSha256": "937ae2029080e03feaca0a91414bd5904fb952d365db238899a5e78e4a253dc4"
+  },
+  "lastVerifiedAt": "2026-08-16",
+  "dateCreated": "2026-07-21",
   "datePublished": "2026-07-21",
-  "dateModified": "2026-07-21",
+  "dateModified": "2026-08-16",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Revised and Approved February 23, 2026",
+  "sourceCalendarName": "CCS Traditional Start & Separate Spring Break Calendar 2026–2027",
+  "schemaCalendarName": "Catawba County Schools Traditional Calendar 2026–2027",
+  "schemaDatasetName": "Catawba County Schools 2026–27 Traditional Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Catawba County Schools Traditional Calendar dates for 2026–27, including 165 elementary student days, 167 middle/high student days, 1,085.5 instructional hours, breaks, teacher workdays, weather make-up dates, and two three-hour early dismissals.",
+  "schemaCalendarDownloadName": "Catawba County Schools 2026–27 ICS calendar",
+  "schemaCalendarDownloadDescription": "One-time ICS download of the reviewed Traditional Calendar dates shown on this page; designated weather make-up dates may change after closures.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-challenger-calendar",
+      "type": "CreativeWork",
+      "name": "Challenger Early College High School 2026–27 Calendar",
+      "url": "https://files.smartsites.parentsquare.com/9286/26-27challenger_approved_schedule_26-27_-_google_sheets.pdf"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "webPageMainEntity": "dataset",
   "calendarType": "traditional",
-  "yearNumbersMode": "compact",
-  "alternateCalendars": [
+  "calendarTrackId": "traditional",
+  "allDatesMode": "all",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideAlternateCalendarsNotice": true,
+  "seoTitle": "Catawba County Schools Calendar 2026–27: Key Dates & PDF",
+  "seoDescription": "See the 2026–27 Catawba County Schools calendar, including the first day, teacher workdays, holidays, spring break, last scheduled student day, official PDF, and ICS file.",
+  "heroSummary": "Catawba County Schools begins the 2026–27 school year on Monday, August 24, 2026. The last scheduled day for students is Friday, May 21, 2027, with a three-hour early dismissal. Spring Break is April 12–16, 2027.",
+  "heroSourceLine": "Traditional calendar · revised and approved February 23, 2026",
+  "hideHeroDownloadLink": true,
+  "heroCtas": [
     {
-      "type": "early_college",
-      "label": "2026-27 Challenger Early College High School Calendar",
-      "pdfUrl": "https://files.smartsites.parentsquare.com/9286/26-27challenger_approved_schedule_26-27_-_google_sheets.pdf"
+      "label": "View Official PDF",
+      "href": "__sourcePdfUrl",
+      "variant": "primary"
+    },
+    {
+      "label": "Download Calendar (.ics)",
+      "href": "__icsUrl",
+      "variant": "secondary",
+      "download": true,
+      "filename": "__icsFilename"
     }
   ],
-  "seoTitle": "Catawba County Schools Calendar 2026-2027 | Holidays, Breaks & PDF",
-  "seoDescription": "Catawba County Schools Calendar 2026-2027 including first day, holidays, teacher workdays, Spring Break dates, printable PDF, and calendar downloads for Google Calendar, Apple Calendar, and Outlook.",
-  "calendarNotes": "Catawba County Schools starts the 2026-2027 traditional school year on August 24, 2026 and ends on May 21, 2027 with a 3-hour early dismissal. Winter Holidays run December 23-January 1, and Spring Break runs April 12-16. The calendar also lists optional and mandated teacher workdays, elementary-only workdays, holidays, early dismissals, and weather make-up dates. A separate Challenger Early College High School calendar is available from the district.",
-  "faqLimit": 10,
-  "faqSchemaLimit": 10,
-  "customSections": [
-    {
-      "id": "catawba-printable-calendar-2026-2027",
-      "label": "Printable Catawba County Schools Calendar 2026-2027",
-      "position": "afterKeyDates",
-      "content": "Families who prefer a paper copy can print the official Catawba County Schools 2026-2027 traditional calendar PDF. The printable version includes holidays, breaks, teacher workdays, early dismissals, weather make-up dates, and other important school dates."
-    },
-    {
-      "id": "catawba-calendar-works-2026-2027",
-      "label": "Catawba County Schools Calendar Types Explained",
-      "position": "afterKeyDates",
-      "content": "Catawba County Schools uses different calendars depending on school type and program. Most students follow the Traditional Calendar summarized on this page, while Challenger Early College High School has a separate 2026-2027 schedule published by the district. Families should confirm which calendar applies to their student before planning vacations, childcare, transportation, appointments, or school activities.",
-      "table": {
-        "headers": ["Calendar", "Who uses it", "Planning note"],
-        "rows": [
-          ["Traditional Calendar", "Most Catawba County Schools students", "Use this page for districtwide first day, holidays, workdays, Spring Break, early dismissals, and last day."],
-          ["Challenger Early College Calendar", "Challenger Early College High School students", "Use the separate official calendar PDF linked by Catawba County Schools."],
-          ["School-specific schedules", "Students in activities, testing, athletics, or special programs", "Confirm event times, make-up days, and school-level changes through CCS or the assigned school."]
-        ]
-      }
-    },
-    {
-      "id": "catawba-important-dates-for-parents-2026-2027",
-      "label": "Important Catawba County Schools Dates for Parents",
-      "position": "afterKeyDates",
-      "content": "These are the calendar dates families most often use for school-year planning. The table adds context for why each date matters instead of only repeating the date from the official calendar.",
-      "table": {
-        "headers": ["Date", "Event", "Why it matters"],
-        "rows": [
-          ["August 24, 2026", "First Day for Students", "Students on the Traditional Calendar return to school."],
-          ["November 25-27, 2026", "Thanksgiving Break", "A midweek holiday period that affects travel, childcare, and work schedules."],
-          ["December 23, 2026-January 1, 2027", "Winter Holidays", "The longest winter holiday window, with students returning after the New Year period."],
-          ["April 12-16, 2027", "Spring Break", "The main spring travel and childcare planning period for Traditional Calendar families."],
-          ["May 21, 2027", "Last Day for Students", "The final student day includes a 3-hour early dismissal."]
-        ]
-      }
-    },
-    {
-      "id": "catawba-teacher-workdays-explained-2026-2027",
-      "label": "Catawba County Schools Teacher Workdays Explained",
-      "position": "afterBreaks",
-      "content": "Teacher workdays are scheduled days when staff complete planning, professional development, grading, or administrative work. Catawba County Schools lists optional teacher workdays, mandated teacher workdays, elementary-only workdays, and weather make-up workdays on the 2026-2027 calendar. For family planning, these dates should generally be treated as student no-school dates unless CCS announces a make-up change or a school-specific exception.",
-      "groups": [
-        {
-          "label": "Parent planning notes",
-          "items": [
-            "Optional and mandated teacher workdays can affect childcare, transportation, and after-school plans.",
-            "Elementary-only workdays may not apply the same way for middle and high school students.",
-            "Weather make-up workdays may change if CCS adjusts the calendar after winter weather or emergency closures."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "catawba-school-closure-information-2026-2027",
-      "label": "Catawba County Schools Closure Information",
-      "position": "afterBreaks",
-      "content": "This calendar shows scheduled school holidays, breaks, teacher workdays, and planned early dismissal dates. Weather closures, emergency changes, and same-day school closing announcements are issued separately by Catawba County Schools. Families searching for whether CCS is closed today or tomorrow should check official district alerts before changing transportation, childcare, or work plans."
-    },
-    {
-      "id": "catawba-vacation-planning-2026-2027",
-      "label": "Before You Plan Vacations Around the CCS Calendar",
-      "position": "afterAbout",
-      "content": "Families in Catawba County, Newton, Hickory, and surrounding communities often use the CCS calendar to plan travel, childcare, appointments, and work schedules. Before booking vacation dates, review the official Spring Break window, Winter Holidays, Thanksgiving Break, teacher workdays, early dismissal dates, and any school-specific calendar that applies to your student.",
-      "groups": [
-        {
-          "label": "Check before making plans",
-          "items": [
-            "Confirm whether your student follows the Traditional Calendar or the Challenger Early College calendar.",
-            "Review teacher workdays and elementary-only workdays because some no-school dates apply differently by grade span or program.",
-            "Check the official CCS calendar page again before long trips because weather make-up days and district revisions can change schedules."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "related-north-carolina-catawba-calendars",
-      "label": "Nearby North Carolina District Calendars",
-      "position": "afterFaq",
-      "content": "Use these related North Carolina school calendar pages to compare Catawba County Schools with other district schedules available on MySchoolDates.",
-      "links": [
-        {
-          "label": "Iredell-Statesville Schools Calendar",
-          "url": "/iredell-statesville-schools-calendar",
-          "description": "Nearby North Carolina district calendar for Iredell County families."
-        },
-        {
-          "label": "Henderson County Public Schools Calendar",
-          "url": "/henderson-county-public-schools-calendar",
-          "description": "Western North Carolina district calendar with Traditional and Flex calendar notes."
-        },
-        {
-          "label": "Wake County School Calendar",
-          "url": "/wake-county-school-calendar",
-          "description": "Large North Carolina district calendar useful for statewide comparison."
-        },
-        {
-          "label": "New Hanover County Schools Calendar",
-          "url": "/new-hanover-county-school-calendar",
-          "description": "North Carolina district calendar with PDF and key date coverage."
-        },
-        {
-          "label": "North Carolina School Calendars",
-          "url": "/north-carolina",
-          "description": "Browse North Carolina district calendar pages."
-        }
-      ]
-    },
-    {
-      "id": "related-catawba-calendar-years",
-      "label": "Related Catawba County Schools Calendar Years",
-      "position": "afterFaq",
-      "content": "Use these Catawba County Schools year links to compare the current traditional calendar with another school year currently available on MySchoolDates. The next school year link should be added when the 2027-2028 Catawba County Schools calendar page is available.",
-      "links": [
-        {
-          "label": "Catawba County Schools Calendar 2025-2026",
-          "url": "/catawba-county-schools-calendar/2025-2026",
-          "description": "Previous Catawba County Schools traditional calendar year."
-        },
-        {
-          "label": "Catawba County Schools Calendar 2026-2027",
-          "url": "/catawba-county-schools-calendar",
-          "description": "Current Catawba County Schools traditional calendar page."
-        }
-      ]
-    }
+  "verificationBadgeText": "Checked against the official CCS calendar",
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "calendarNotes": "This page covers the CCS Traditional Calendar followed by most district schools. Challenger Early College High School has a separate calendar.",
+  "hiddenSections": [
+    "about",
+    "comparison",
+    "districtProfile",
+    "downloadCta",
+    "keyDateCards",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars",
+    "planningTips",
+    "quickFacts",
+    "relatedDistricts",
+    "todayStatus",
+    "yearNumbers"
   ],
-  "calendarFaqs": [
-    {
-      "q": "When does Catawba County Schools start school in 2026?",
-      "a": "The first day for students is Monday, August 24, 2026."
-    },
-    {
-      "q": "When is Catawba County Schools Spring Break in 2027?",
-      "a": "Spring Break runs Monday, April 12 through Friday, April 16, 2027."
-    },
-    {
-      "q": "When is the last day of school for Catawba County Schools in 2027?",
-      "a": "The last day for students is Friday, May 21, 2027, with a 3-hour early dismissal."
-    },
-    {
-      "q": "Does CCS have a Challenger Early College calendar for 2026-2027?",
-      "a": "Yes. Catawba County Schools publishes a separate 2026-27 Challenger Early College High School calendar linked as an alternate calendar."
-    },
-    {
-      "q": "Does Catawba County Schools have school tomorrow?",
-      "a": "This page shows planned calendar dates, not real-time closures. Families should check Catawba County Schools announcements for weather closures, emergency schedule changes, or same-day updates."
-    },
-    {
-      "q": "Are teacher workdays no-school days for Catawba County students?",
-      "a": "Optional, mandated, and elementary-only teacher workdays are generally student no-school planning dates unless Catawba County Schools announces a make-up change or school-specific exception."
-    },
-    {
-      "q": "When does Catawba County Schools release students for summer in 2027?",
-      "a": "The last day for students is Friday, May 21, 2027, and the calendar notes a 3-hour early dismissal."
-    },
-    {
-      "q": "Where can I download the Catawba County Schools calendar PDF?",
-      "a": "Use the PDF link on this page or the official Catawba County Schools calendar page to view the published 2026-2027 traditional calendar PDF."
-    },
-    {
-      "q": "How many instructional days are in the Catawba County Schools 2026-2027 calendar?",
-      "a": "The Catawba County Schools 2026-2027 traditional calendar includes approximately 180 scheduled instructional days based on the published calendar records. Families who need an official attendance-day count should verify it with CCS."
-    },
-    {
-      "q": "What calendar do most Catawba County Schools students follow?",
-      "a": "Most Catawba County Schools students follow the Traditional Calendar summarized on this page. Challenger Early College High School students should use the separate official Challenger Early College calendar."
-    }
+  "jumpNavigation": [
+    { "label": "Right Calendar?", "id": "catawba-right-calendar-2026-2027" },
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Workdays", "id": "catawba-workdays-2026-2027" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Changes", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
   ],
-  "yearNumbers": [
+  "preserveJumpNavigationOrder": true,
+  "yearSwitcherPosition": "afterSources",
+  "keyDatesSummaryTitle": "CCS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First day, last scheduled student day, major breaks, and the winter return date",
+  "keyDateSummaryItems": [
     {
       "label": "First Day",
-      "value": "Aug 24",
-      "detail": "The first day for students is August 24, 2026."
+      "name": "First Day for Students",
+      "date": "2026-08-24",
+      "type": "school_start",
+      "schemaDescription": "Students following the CCS Traditional Calendar begin classes on August 24, 2026."
     },
     {
-      "label": "Spring Break",
-      "value": "Apr 12-16",
-      "detail": "Spring Break runs April 12-16, 2027."
+      "label": "Break",
+      "name": "Thanksgiving",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Winter Holidays",
+      "date": "2026-12-23",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "January 4 is a mandated teacher workday. Students return January 5."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-04-12",
+      "endDate": "2027-04-16",
+      "type": "break_start"
     },
     {
       "label": "Last Day",
-      "value": "May 21",
-      "detail": "The last day for students is May 21, 2027."
+      "name": "Last Scheduled Day for Students",
+      "date": "2027-05-21",
+      "type": "school_end",
+      "description": "Students are dismissed three hours early.",
+      "schemaDescription": "The last scheduled day for students is May 21, 2027, with a three-hour early dismissal."
+    }
+  ],
+  "allDatesTitle": "CCS 2026–27 Calendar Dates",
+  "allDatesSourceUrl": "https://files.smartsites.parentsquare.com/9286/revised_approved_2026-2027_traditional_start_and_separate_spring_break_-_sheet1_1.pdf",
+  "allDatesSourceLabel": "CCS 2026–27 Traditional Calendar PDF",
+  "allDatesCoverageNote": "This table preserves the date ranges published in the revised CCS Traditional Calendar and uses plain-language labels where additional context helps families. It includes staff workdays before and after the student year; Challenger Early College dates are not included.",
+  "dateLegendItems": [
+    { "label": "School start / last day", "dot": "bg-yellow-400" },
+    { "label": "Holiday / break", "dot": "bg-rose-500" },
+    { "label": "Teacher workday — students off", "dot": "bg-teal-500" },
+    { "label": "Weather make-up date", "dot": "bg-orange-300" },
+    { "label": "Three-hour early dismissal", "dot": "bg-slate-400" }
+  ],
+  "dateLegendStyle": "text",
+  "breaksTitle": "Major School Breaks",
+  "hideBreakDurationBadges": true,
+  "breakNotes": {
+    "Thanksgiving — No School": "Students return Monday, November 30, 2026.",
+    "Winter Holidays — No School": "The last day students attend before winter break is Friday, December 18, with a three-hour early dismissal. Students are also off December 21–22 for teacher workdays and January 4 for a mandated workday. Classes resume Tuesday, January 5, 2027.",
+    "Spring Break — No School": "Students return Monday, April 19, 2027."
+  },
+  "alternateCalendarsDescription": "Challenger Early College High School follows a separate 2026–27 calendar.",
+  "alternateCalendars": [
+    {
+      "type": "early_college",
+      "group": "Early College Calendar",
+      "label": "Challenger Early College High School 2026–27 Calendar",
+      "description": "Official calendar for Challenger Early College High School students.",
+      "pdfUrl": "https://files.smartsites.parentsquare.com/9286/26-27challenger_approved_schedule_26-27_-_google_sheets.pdf"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "catawba-right-calendar-2026-2027",
+      "label": "Is This the Right Catawba County School Calendar?",
+      "position": "afterVerification",
+      "content": "This page is for Catawba County Schools (CCS). It does not apply to every public school in Catawba County. Hickory City Schools and Newton-Conover City Schools operate separate calendars for the 2026–27 school year.",
+      "groups": [
+        {
+          "label": "Which calendar to use",
+          "items": [
+            "Most CCS students use the Traditional Calendar summarized here.",
+            "Challenger Early College High School students use the separate Challenger calendar.",
+            "Hickory City Schools and Newton-Conover City Schools families should use their own district calendars."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Challenger Early College calendar",
+          "to": "https://files.smartsites.parentsquare.com/9286/26-27challenger_approved_schedule_26-27_-_google_sheets.pdf",
+          "description": "Official CCS alternate calendar."
+        },
+        {
+          "label": "Hickory City Schools calendar",
+          "to": "https://www.hickoryschools.net/families/calendar",
+          "description": "Official Hickory City Schools calendar."
+        },
+        {
+          "label": "Newton-Conover City Schools calendars",
+          "to": "https://www.newton-conover.org/page/n-ccs-yearly-district-calendars",
+          "description": "Official Newton-Conover district calendar page."
+        }
+      ]
+    },
+    {
+      "id": "catawba-workdays-2026-2027",
+      "label": "Teacher Workdays and Weather Make-Up Dates",
+      "position": "afterBreaks",
+      "content": "The CCS calendar includes both districtwide teacher workdays and elementary-only workdays. Students do not attend on districtwide workdays, while the two elementary-only dates apply only to elementary students. Three workdays are also designated as weather make-up dates and may change if CCS needs to recover missed instructional time.",
+      "groups": [
+        {
+          "label": "Optional teacher workdays",
+          "items": [
+            "August 10–14, October 16, and December 21–22, 2026",
+            "February 15, March 29, and June 1–4, 2027"
+          ]
+        },
+        {
+          "label": "Mandated teacher workdays",
+          "items": [
+            "August 17–21, 2026",
+            "January 4, February 12, March 12, and May 24–28, 2027"
+          ]
+        },
+        {
+          "label": "Elementary-only workdays",
+          "items": [
+            "September 25, 2026 and February 11, 2027 apply to elementary students only."
+          ]
+        },
+        {
+          "label": "Weather make-up designations",
+          "items": [
+            "February 12, February 15, and March 29 are workdays on the adopted calendar but are marked for possible weather make-up use."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catawba-student-day-totals-2026-2027",
+      "label": "Official Student-Day Totals",
+      "position": "afterBreaks",
+      "content": "The revised calendar lists 165 student days for elementary schools and 167 for middle and high schools.",
+      "table": {
+        "columns": ["Calendar measure", "Official total", "Scope"],
+        "rows": [
+          ["Student days", "165", "Elementary schools"],
+          ["Student days", "167", "Middle and high schools"],
+          ["Semester 1", "79 days", "Middle/high school calendar"],
+          ["Semester 2", "88 days", "Middle/high school calendar"],
+          ["Instructional time", "1,085.5 hours", "Published district total"]
+        ],
+        "footnote": "CCS does not publish separate elementary semester totals in this PDF."
+      }
+    },
+    {
+      "id": "catawba-planning-notes-2026-2027",
+      "label": "Planning Notes",
+      "position": "afterCalendarExport",
+      "content": "",
+      "hideGroupLabels": true,
+      "groups": [
+        {
+          "label": "Before making plans",
+          "items": [
+            "For weather closures or same-day schedule changes, check the district's official alerts.",
+            "The ICS file is a one-time import and will not update automatically if CCS activates a weather make-up date or revises the calendar.",
+            "Check your school for bell times, testing, athletics, performances, and other school-level events."
+          ]
+        }
+      ]
     }
   ],
   "events": [
-    { "date": "2026-08-10", "name": "Optional Teacher Workdays", "type": "no_school" },
-    { "date": "2026-08-14", "name": "Optional Teacher Workdays End", "type": "no_school" },
-    { "date": "2026-08-17", "name": "Mandated Teacher Workdays", "type": "no_school" },
-    { "date": "2026-08-21", "name": "Mandated Teacher Workdays End", "type": "no_school" },
+    { "date": "2026-08-10", "endDate": "2026-08-14", "name": "Optional Teacher Workdays", "type": "teacher_workday", "badgeLabel": "No School for Students" },
+    { "date": "2026-08-17", "endDate": "2026-08-21", "name": "Mandated Teacher Workdays", "type": "teacher_workday", "badgeLabel": "No School for Students" },
     { "date": "2026-08-24", "name": "First Day for Students", "type": "school_start" },
-    { "date": "2026-09-07", "name": "Labor Day Holiday", "type": "holiday" },
-    { "date": "2026-09-25", "name": "Elementary-Only Workday", "type": "no_school" },
-    { "date": "2026-10-16", "name": "Optional Teacher Workday", "type": "no_school" },
-    { "date": "2026-11-11", "name": "Veterans Day Holiday", "type": "holiday" },
-    { "date": "2026-11-25", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2026-12-18", "name": "3-Hour Early Dismissal for Students", "type": "early_release" },
-    { "date": "2026-12-21", "name": "Optional Teacher Workdays", "type": "no_school" },
-    { "date": "2026-12-22", "name": "Optional Teacher Workdays End", "type": "no_school" },
-    { "date": "2026-12-23", "name": "Winter Holidays", "type": "break_start" },
-    { "date": "2027-01-01", "name": "Winter Holidays End", "type": "break_end" },
-    { "date": "2027-01-04", "name": "Mandated Teacher Workday", "type": "no_school" },
-    { "date": "2027-01-05", "name": "First Day for Students After Winter Break", "type": "semester_start" },
-    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day Holiday", "type": "holiday" },
-    { "date": "2027-02-11", "name": "Elementary-Only Workday", "type": "no_school" },
-    { "date": "2027-02-12", "name": "Mandated Teacher Workday - Weather Make-up Day", "type": "no_school" },
-    { "date": "2027-02-15", "name": "Optional Teacher Workday - Weather Make-up Day", "type": "no_school" },
-    { "date": "2027-03-12", "name": "Mandated Teacher Workday", "type": "no_school" },
-    { "date": "2027-03-26", "name": "Good Friday Holiday", "type": "holiday" },
-    { "date": "2027-03-29", "name": "Optional Teacher Workday - Weather Make-up Day", "type": "no_school" },
-    { "date": "2027-04-12", "name": "Spring Break", "type": "break_start" },
-    { "date": "2027-04-16", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2027-05-21", "name": "Last Day for Students - 3-Hour Early Dismissal", "type": "school_end" },
-    { "date": "2027-05-24", "name": "Mandated Teacher Workdays", "type": "no_school" },
-    { "date": "2027-05-28", "name": "Mandated Teacher Workdays End", "type": "no_school" },
-    { "date": "2027-05-31", "name": "Memorial Day Holiday", "type": "holiday" },
-    { "date": "2027-06-01", "name": "Optional Teacher Workdays", "type": "no_school" },
-    { "date": "2027-06-04", "name": "Optional Teacher Workdays End", "type": "no_school" },
+    { "date": "2026-09-07", "name": "Labor Day — No School", "type": "holiday" },
+    { "date": "2026-09-25", "name": "Elementary-Only Workday", "type": "teacher_workday", "badgeLabel": "Elementary Students Off", "description": "This workday applies to elementary students only." },
+    { "date": "2026-10-16", "name": "Optional Teacher Workday", "type": "teacher_workday", "badgeLabel": "No School for Students" },
+    { "date": "2026-11-11", "name": "Veterans Day — No School", "type": "holiday" },
+    { "date": "2026-11-25", "endDate": "2026-11-27", "name": "Thanksgiving — No School", "type": "break_start" },
+    { "date": "2026-12-18", "name": "3-Hour Early Dismissal for Students", "type": "early_dismissal", "badgeLabel": "3-Hour Early Dismissal" },
+    { "date": "2026-12-21", "endDate": "2026-12-22", "name": "Optional Teacher Workdays", "type": "teacher_workday", "badgeLabel": "No School for Students" },
+    { "date": "2026-12-23", "endDate": "2027-01-01", "name": "Winter Holidays — No School", "type": "break_start" },
+    { "date": "2027-01-04", "name": "Mandated Teacher Workday", "type": "teacher_workday", "badgeLabel": "No School for Students" },
+    { "date": "2027-01-05", "name": "Students Return After Winter Holidays", "type": "semester_start", "badgeLabel": "Students Return" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day — No School", "type": "holiday" },
+    { "date": "2027-02-11", "name": "Elementary-Only Workday", "type": "teacher_workday", "badgeLabel": "Elementary Students Off", "description": "This workday applies to elementary students only." },
+    { "date": "2027-02-12", "name": "Mandated Teacher Workday — Weather Make-Up Date", "type": "teacher_workday", "badgeLabel": "Weather Make-Up Date", "description": "Students do not attend unless CCS activates this date to make up missed instructional time." },
+    { "date": "2027-02-15", "name": "Optional Teacher Workday — Weather Make-Up Date", "type": "teacher_workday", "badgeLabel": "Weather Make-Up Date", "description": "Students do not attend unless CCS activates this date to make up missed instructional time." },
+    { "date": "2027-03-12", "name": "Mandated Teacher Workday", "type": "teacher_workday", "badgeLabel": "No School for Students" },
+    { "date": "2027-03-26", "name": "Good Friday — No School", "type": "holiday" },
+    { "date": "2027-03-29", "name": "Optional Teacher Workday — Weather Make-Up Date", "type": "teacher_workday", "badgeLabel": "Weather Make-Up Date", "description": "Students do not attend unless CCS activates this date to make up missed instructional time." },
+    { "date": "2027-04-12", "endDate": "2027-04-16", "name": "Spring Break — No School", "type": "break_start" },
+    { "date": "2027-05-21", "name": "3-Hour Early Dismissal for Students", "displayName": "Last Scheduled Day for Students — 3-Hour Early Dismissal", "type": "school_end", "badgeLabel": "Last Day · 3-Hour Early Dismissal", "description": "This is the last scheduled student day in the published calendar." },
+    { "date": "2027-05-24", "endDate": "2027-05-28", "name": "Mandated Teacher Workdays", "type": "teacher_workday", "badgeLabel": "Students Do Not Attend", "sectionLabelBefore": "Staff dates after the student year" },
+    { "date": "2027-05-31", "name": "Memorial Day — No School", "type": "holiday" },
+    { "date": "2027-06-01", "endDate": "2027-06-04", "name": "Optional Teacher Workdays", "type": "teacher_workday", "badgeLabel": "Students Do Not Attend" },
     { "date": "2027-07-05", "name": "Independence Day Observed", "type": "holiday" }
+  ],
+  "compactDownloadModule": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "hideCompatibleCalendars": true,
+  "unifiedDownloadTitle": "CCS 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Open the official Traditional or Challenger calendar, or download a one-time ICS file of the reviewed Traditional Calendar dates.",
+  "icsHeading": "Download the CCS Traditional Calendar (.ics)",
+  "icsDescription": "Import the reviewed Traditional Calendar dates into Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. Check the CCS calendar again after weather closures or revisions.",
+  "icsSourceNote": "The ICS file is generated from the reviewed Traditional Calendar records shown on this page and does not update automatically.",
+  "pdfHeading": "Official CCS 2026–27 Traditional Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "View the calendar revised and approved February 23, 2026. Check the CCS District Calendar page for later revisions.",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfVersionLabel": "Revised and Approved February 23, 2026",
+  "calendarFaqs": [
+    {
+      "q": "When does Catawba County Schools start school in 2026?",
+      "a": "Students following the Traditional Calendar begin school Monday, August 24, 2026."
+    },
+    {
+      "q": "When is Catawba County Schools Spring Break in 2027?",
+      "a": "Spring Break runs Monday, April 12, through Friday, April 16, 2027. Students return Monday, April 19."
+    },
+    {
+      "q": "When is the last day of school for Catawba County Schools in 2027?",
+      "a": "The last scheduled day for students is Friday, May 21, 2027, with a three-hour early dismissal."
+    },
+    {
+      "q": "Does Challenger Early College use the CCS Traditional Calendar?",
+      "a": "No. Challenger Early College High School follows a separate 2026–27 calendar linked in the Downloads section."
+    },
+    {
+      "q": "Are CCS teacher workdays no-school days for students?",
+      "a": "Yes. Students do not attend on optional and mandated teacher workdays. September 25 and February 11 apply only to elementary students. February 12, February 15, and March 29 may be used as weather make-up dates."
+    },
+    {
+      "q": "How many student days are in the CCS 2026–27 calendar?",
+      "a": "The revised calendar lists 165 total days for elementary students and 167 total days for middle and high school students, with 1,085.5 total instructional hours."
+    }
+  ],
+  "faqOrderLimit": 6,
+  "faqDisplayQuestions": [
+    "When does Catawba County Schools start school in 2026?",
+    "When is Catawba County Schools Spring Break in 2027?",
+    "When is the last day of school for Catawba County Schools in 2027?",
+    "Does Challenger Early College use the CCS Traditional Calendar?",
+    "Are CCS teacher workdays no-school days for students?",
+    "How many student days are in the CCS 2026–27 calendar?"
+  ],
+  "whatsNew": {
+    "title": "What Changed From 2025–26",
+    "subtitle": "Four schedule differences families are most likely to notice.",
+    "content": [
+      "The first student day moves from August 25, 2025, to August 24, 2026 — one day earlier than the previous school year.",
+      "The last scheduled student day moves from May 22, 2026, to May 21, 2027 — one day earlier than the previous school year.",
+      "Spring Break moves from April 6–10 in 2026 to April 12–16 in 2027, starting six calendar days later.",
+      "Thanksgiving is unchanged: students are off Wednesday through Friday in both school years."
+    ]
+  },
+  "yearComparisonDefaultOpen": true,
+  "sourceReviewSummary": "The dates and grade-span totals on this page were checked against the revised CCS Traditional Calendar and the district's current calendar page.",
+  "sourceReviewDetails": [
+    "The official PDF lists 165 total days for elementary students, 167 total days for middle/high students, and 1,085.5 total instructional hours.",
+    "Multi-day workday ranges are recorded as the district publishes them rather than being inferred from adjacent dates.",
+    "Elementary-only workdays are kept separate from districtwide workdays because they apply to different students.",
+    "Weather make-up dates are identified separately because CCS may convert them to instructional days after a closure.",
+    "The county-system note distinguishes Catawba County Schools from Hickory City Schools and Newton-Conover City Schools for the 2026–27 school year."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official district and county sources.",
+  "sourceNextReviewText": "Next review: when CCS revises the PDF, activates a weather make-up date, or publishes a new schedule notice.",
+  "sources": [
+    {
+      "label": "Catawba County Schools District Calendar",
+      "url": "https://www.catawbaschools.net/district-calendar"
+    },
+    {
+      "label": "CCS 2026–27 Traditional Calendar — Revised and Approved February 23, 2026",
+      "url": "https://files.smartsites.parentsquare.com/9286/revised_approved_2026-2027_traditional_start_and_separate_spring_break_-_sheet1_1.pdf"
+    },
+    {
+      "label": "Challenger Early College High School 2026–27 Calendar",
+      "url": "https://files.smartsites.parentsquare.com/9286/26-27challenger_approved_schedule_26-27_-_google_sheets.pdf"
+    },
+    {
+      "label": "Catawba County school-system merger information",
+      "url": "https://www.catawbacountync.gov/news/commissioners-vote-to-approve-school-merger-plan/"
+    },
+    {
+      "label": "Hickory City Schools Calendar",
+      "url": "https://www.hickoryschools.net/families/calendar"
+    },
+    {
+      "label": "Newton-Conover City Schools District Yearly Calendars",
+      "url": "https://www.newton-conover.org/page/n-ccs-yearly-district-calendars"
+    }
   ]
 }

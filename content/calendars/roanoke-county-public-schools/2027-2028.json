@@ -4,88 +4,379 @@
   "firstDay": "2027-08-12",
   "lastDay": "2028-05-25",
   "sourceUrl": "https://www.rcps.us/about-us/academic-calendar",
+  "sourceDocumentPage": "https://www.rcps.us/about-us/academic-calendar",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1771856426/rcpsus/dookubizbn7wr0mbbibm/2027-2028-academic-calendar-ACCESSIBLE.pdf",
-  "lastVerifiedAt": "2026-07-20",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1771856426/rcpsus/dookubizbn7wr0mbbibm/2027-2028-academic-calendar-ACCESSIBLE.pdf",
+  "sourceCheckedAt": "2026-08-16",
+  "sourceChecksumSha256": "b6d1bfe41305b625879e57740227e211100fabf978ee2f47e528343f44b0ac3d",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "lastVerifiedAt": "2026-08-16",
   "datePublished": "2026-07-20",
-  "dateModified": "2026-07-20",
+  "dateModified": "2026-08-16",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "makeup_day_activation"
+  ],
+  "sourceVersion": "Updated draft approved by the Roanoke County School Board on Feb. 19, 2026; PDF remains labeled DRAFT — SUBJECT TO CHANGE",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.rcps.us/about-us/academic-calendar",
+    "linkText": "2027-2028 Draft Academic Calendar",
+    "expectedDocumentUrl": "https://resources.finalsite.net/images/v1771856426/rcpsus/dookubizbn7wr0mbbibm/2027-2028-academic-calendar-ACCESSIBLE.pdf",
+    "expectedChecksumSha256": "b6d1bfe41305b625879e57740227e211100fabf978ee2f47e528343f44b0ac3d"
+  },
   "calendarType": "traditional",
   "totalSchoolDays": 178,
+  "hideInstructionalDaysSummary": true,
+  "heroFactChips": [
+    "178 student days"
+  ],
   "hideSemesterCount": true,
-  "yearNumbersMode": "compact",
-  "seoTitle": "Roanoke County Public Schools Calendar 2027-2028: Holidays, Breaks & PDF",
-  "seoDescription": "Roanoke County Public Schools 2027-2028 calendar with Aug 12 first day, May 25 last day, holidays, breaks, graduations, PDF and ICS.",
-  "calendarNotes": "Roanoke County Public Schools starts the 2027-2028 school year on August 12, 2027. Winter Break runs December 20-31, Spring Break runs March 20-24, and the last day of school is May 25, 2028. The calendar lists 178 total student days and includes early dismissals, grading periods, high school virtual learning days, graduation ceremonies, and make-up day notes.",
+  "allDatesMode": "all",
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "hideCalendarTrackCaution": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "quickFacts",
+    "about",
+    "yearNumbers",
+    "whatsDifferent",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "comparison",
+    "relatedDistricts",
+    "nationalTrends",
+    "keyDates"
+  ],
+  "hiddenCustomSectionIds": [
+    "roanoke-county-district-calendar-context",
+    "related-roanoke-county-calendars"
+  ],
+  "seoTitle": "Roanoke County Public Schools Calendar 2027–28 | Key Dates & Breaks",
+  "seoDescription": "RCPS starts Aug. 12, 2027 and ends May 25, 2028. See breaks, teacher workdays, early dismissals, graduation dates, make-up days, and the official PDF.",
+  "heroSummary": "RCPS students start school on Thursday, Aug. 12, 2027, and the last student day is Thursday, May 25, 2028. Spring Break runs March 20–24, 2028.",
+  "heroSourceLine": "2027–28 academic calendar · Reviewed against the RCPS PDF currently labeled DRAFT — SUBJECT TO CHANGE",
+  "verificationBadgeText": "Official RCPS source checked · PDF subject to change",
+  "heroDownloadLabel": "Download ICS calendar",
+  "hideHeroUpdatedField": true,
+  "calendarNotes": "Roanoke County Public Schools starts the 2027–28 school year on August 12, 2027. The official calendar lists 178 student days, exact early-dismissal times, two high-school virtual-learning days, graduation dates, and a published weather make-up sequence.",
+  "keyDatesSummaryTitle": "RCPS 2027–28 Key Dates",
+  "keyDatesSummarySubtitle": "First and last student days, major breaks, the winter return date, and graduation",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Student Day",
+      "date": "2027-08-12",
+      "type": "school_start"
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2027-11-24",
+      "endDate": "2027-11-26",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "type": "break_start"
+    },
+    {
+      "label": "Return",
+      "name": "Students Return After Winter Break",
+      "date": "2028-01-04",
+      "type": "school_resume",
+      "schemaDescription": "Based on the district's published no-school schedule, RCPS students return after Winter Break on January 4, 2028."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2028-03-20",
+      "endDate": "2028-03-24",
+      "type": "break_start"
+    },
+    {
+      "label": "Graduation",
+      "name": "Graduation Ceremonies",
+      "date": "2028-05-23",
+      "endDate": "2028-05-24",
+      "type": "graduation",
+      "schemaDescription": "RCPS graduation ceremonies are scheduled for May 23–24, 2028."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Student Day",
+      "date": "2028-05-25",
+      "type": "school_end"
+    }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Schedule Notes", "id": "rcps-schedule-notes-2027-2028" },
+    { "label": "Full Calendar", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Make-Up Days", "id": "rcps-makeup-days-2027-2028" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "What's Changed", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "RCPS 2027–28 Academic Calendar Dates",
+  "allDatesCoverageNote": "This table follows the family-facing dates in RCPS’s accessible 2027–28 academic calendar, including teacher workdays, student closures, interim and report-card dates, early dismissals, high-school virtual-learning days, graduation, and district holidays. School-specific events and same-day weather updates may be published separately.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1771856426/rcpsus/dookubizbn7wr0mbbibm/2027-2028-academic-calendar-ACCESSIBLE.pdf",
+  "allDatesSourceLabel": "RCPS 2027–28 accessible academic calendar PDF",
+  "hideCoveredBreakDatesNote": true,
+  "dateLegendLabelOverrides": {
+    "Early Release": "Early Dismissal"
+  },
+  "breaksTitle": "Major School Breaks and Return Dates",
+  "breakNotes": {
+    "Thanksgiving Break": "Students return Monday, November 29, 2027.",
+    "Winter Break": "Monday, January 3 is a teacher workday; students return Tuesday, January 4, 2028.",
+    "Spring Break": "Students return Monday, March 27, 2028."
+  },
+  "unifiedDownloadTitle": "Calendar Downloads and Official PDF",
+  "unifiedDownloadDescription": "Download a one-time calendar import or open the RCPS 2027–28 academic calendar PDF.",
+  "compactDownloadModule": true,
+  "pdfHeading": "Official RCPS 2027–28 Academic Calendar PDF",
+  "pdfDescription": "Open the RCPS PDF used to review this page. The district calendar page calls it a draft and subject to change; the PDF itself remains labeled DRAFT — SUBJECT TO CHANGE.",
+  "hidePdfVersionLabel": true,
+  "icsHeading": "Download an ICS Calendar File",
+  "icsDescription": "Download a one-time ICS file for Google Calendar, Apple Calendar, or Outlook. It includes the main student-calendar dates from this page.",
+  "icsSourceNote": "The file does not update automatically. Check RCPS for a replacement PDF, activated make-up days, or emergency schedule changes.",
+  "yearSwitcherPosition": "afterSources",
+  "faqOrderLimit": 7,
+  "faqDisplayQuestions": [
+    "Is this the official RCPS calendar?",
+    "How do RCPS make-up days work in 2027–28?",
+    "When are RCPS teacher workdays in 2027–28?",
+    "What time do students leave on RCPS early-dismissal days?",
+    "When do RCPS students return after Winter Break?",
+    "Are March 14–15 virtual-learning days for all RCPS students?",
+    "When are RCPS graduation ceremonies in 2028?"
+  ],
+  "sourceReviewSummary": "Reviewed August 16, 2026, against the official RCPS Academic Calendar page and the current 2027–28 accessible PDF, which includes the district’s published make-up-day order.",
+  "sourceReviewDetails": [
+    "RCPS describes the current PDF as an updated draft approved by the School Board on February 19, 2026. The PDF remains labeled DRAFT — SUBJECT TO CHANGE.",
+    "The two August teacher-workday ranges, interim and report-card dates, early-dismissal times, high-school virtual-learning dates, graduations, and make-up sequence were checked against the accessible list and calendar grid. The make-up-day sequence shown on this page comes from the 2027–28 RCPS academic calendar PDF.",
+    "The downloadable ICS file is a one-time import. RCPS remains the source of record for replacement calendars, activated make-up days, and emergency schedule changes."
+  ],
+  "sourceNextReviewText": "This page will be reviewed again if RCPS replaces the current PDF or announces a weather make-up change.",
+  "sources": [
+    {
+      "label": "RCPS Academic Calendar page",
+      "url": "https://www.rcps.us/about-us/academic-calendar"
+    },
+    {
+      "label": "RCPS 2027–28 accessible academic calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1771856426/rcpsus/dookubizbn7wr0mbbibm/2027-2028-academic-calendar-ACCESSIBLE.pdf"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "rcps-key-dates-2027-2028",
+      "label": "RCPS 2027–28 Key Dates",
+      "position": "afterKeyDates",
+      "content": "First and last student days, major breaks, the winter return date, and graduation. The winter return date is based on the district's published no-school schedule.",
+      "table": {
+        "columns": [
+          "Calendar item",
+          "Date"
+        ],
+        "rows": [
+          ["First student day", "August 12, 2027"],
+          ["Thanksgiving Break", "November 24–26, 2027"],
+          ["Winter Break", "December 20–31, 2027"],
+          ["Students return after Winter Break", "January 4, 2028"],
+          ["Spring Break", "March 20–24, 2028"],
+          ["Graduation ceremonies", "May 23–24, 2028"],
+          ["Last student day", "May 25, 2028"]
+        ]
+      }
+    },
+    {
+      "id": "rcps-schedule-notes-2027-2028",
+      "label": "RCPS Schedule Notes",
+      "position": "afterKeyDates",
+      "content": "A few RCPS dates have different schedules by school level.",
+      "groups": [
+        {
+          "label": "Early dismissal",
+          "items": [
+            "On districtwide three-hour early-dismissal days, elementary schools dismiss at 11:25 a.m. and secondary schools at 12:25 p.m.",
+            "On May 23–24, early dismissal applies only to secondary students, at 12:25 p.m."
+          ]
+        },
+        {
+          "label": "High school virtual learning",
+          "items": [
+            "The district calendar lists March 14–15 as virtual-learning days for high school students only."
+          ]
+        },
+        {
+          "label": "Graduation",
+          "items": [
+            "Graduation ceremonies are scheduled May 23–24 at 2:30 p.m. and 5:30 p.m. Families should confirm each high school’s ceremony assignment."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rcps-makeup-days-2027-2028",
+      "label": "Make-Up Days & Weather Changes",
+      "position": "afterBreaks",
+      "content": "RCPS publishes the order it will use if weather or another closure requires additional instructional time.",
+      "groups": [
+        {
+          "label": "Published make-up order",
+          "items": [
+            "The first five missed days use banked days.",
+            "The sixth missed day uses January 3, the seventh uses February 7, and the eighth uses March 13.",
+            "The ninth missed day is marked “Not Required.” For 10 or more missed days, RCPS may add time to the school day."
+          ]
+        },
+        {
+          "label": "Before making plans",
+          "items": [
+            "Check RCPS announcements before treating January 3, February 7, or March 13 as a guaranteed day off."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "roanoke-county-calendar-changes-2027-2028",
+      "label": "What Changed From 2026–27",
+      "position": "afterYearDiff",
+      "content": "The first and last student days, major breaks, and graduation dates all fall earlier on the calendar than they did in 2026–27.",
+      "table": {
+        "columns": [
+          "Calendar item",
+          "2026–27",
+          "2027–28",
+          "Change"
+        ],
+        "rows": [
+          [
+            "First student day",
+            "August 13, 2026",
+            "August 12, 2027",
+            "One calendar day earlier"
+          ],
+          [
+            "Last student day",
+            "May 27, 2027",
+            "May 25, 2028",
+            "Two calendar days earlier"
+          ],
+          [
+            "Winter Break",
+            "December 21, 2026–January 1, 2027",
+            "December 20–31, 2027",
+            "Starts and ends one calendar day earlier"
+          ],
+          [
+            "Spring Break",
+            "March 22–26, 2027",
+            "March 20–24, 2028",
+            "Starts and ends two calendar days earlier"
+          ],
+          [
+            "Graduation ceremonies",
+            "May 25–26, 2027",
+            "May 23–24, 2028",
+            "Two calendar days earlier"
+          ]
+        ]
+      }
+    }
+  ],
   "calendarFaqs": [
     {
-      "q": "When does Roanoke County Public Schools start school in 2027?",
-      "a": "The first student day is Thursday, August 12, 2027."
+      "q": "Is this the official RCPS calendar?",
+      "a": "MySchoolDates is an independent reference based on the calendar page and PDF published by Roanoke County Public Schools. The current 2027–28 PDF remains labeled DRAFT — SUBJECT TO CHANGE, so RCPS is the source of record for revisions."
     },
     {
-      "q": "When is Roanoke County Spring Break in 2028?",
-      "a": "Spring Break runs Monday, March 20 through Friday, March 24, 2028."
+      "q": "How do RCPS make-up days work in 2027–28?",
+      "a": "RCPS uses banked days for the first five missed days. The published order then uses January 3 for the sixth day, February 7 for the seventh, and March 13 for the eighth. For 10 or more missed days, RCPS may add time to the school day."
     },
     {
-      "q": "When is the last day of school for Roanoke County in 2028?",
-      "a": "The last day of school and end of second semester is Thursday, May 25, 2028."
+      "q": "When are RCPS teacher workdays in 2027–28?",
+      "a": "Teacher workdays are August 2–6 and August 9–11, 2027, before students begin. The calendar also lists October 11, January 3, March 10, and May 26 as teacher workdays; January 3 may be converted under the make-up schedule."
+    },
+    {
+      "q": "What time do students leave on RCPS early-dismissal days?",
+      "a": "On districtwide three-hour early-dismissal days, elementary schools dismiss at 11:25 a.m. and secondary schools at 12:25 p.m. On May 23–24, early dismissal applies only to secondary students, at 12:25 p.m."
+    },
+    {
+      "q": "When do RCPS students return after Winter Break?",
+      "a": "Students return Tuesday, January 4, 2028. Monday, January 3 is a teacher workday and may be converted if RCPS needs its sixth make-up day."
+    },
+    {
+      "q": "Are March 14–15 virtual-learning days for all RCPS students?",
+      "a": "No. The official calendar lists March 14–15, 2028 as virtual-learning days for high school students only."
     },
     {
       "q": "When are RCPS graduation ceremonies in 2028?",
-      "a": "The official calendar lists graduation ceremonies on May 23-24, 2028."
-    }
-  ],
-  "yearNumbers": [
-    {
-      "label": "First Day",
-      "value": "Aug 12",
-      "detail": "The first student day is August 12, 2027."
-    },
-    {
-      "label": "Spring Break",
-      "value": "Mar 20-24",
-      "detail": "Spring Break runs March 20-24, 2028."
-    },
-    {
-      "label": "Total Days",
-      "value": "178",
-      "detail": "The official calendar lists 178 total student days."
+      "a": "RCPS lists graduation ceremonies on May 23–24, 2028, at 2:30 p.m. and 5:30 p.m. Secondary students dismiss at 12:25 p.m. on both days; families should confirm each school’s ceremony assignment."
     }
   ],
   "events": [
-    { "date": "2027-08-02", "name": "Teacher Workdays Begin", "type": "teacher_workday" },
-    { "date": "2027-08-05", "name": "Convocation", "type": "teacher_workday" },
-    { "date": "2027-08-06", "name": "Teacher Workdays", "type": "teacher_workday" },
-    { "date": "2027-08-09", "name": "Teacher Workdays Begin", "type": "teacher_workday" },
-    { "date": "2027-08-11", "name": "Teacher Workdays End", "type": "teacher_workday" },
-    { "date": "2027-08-12", "name": "First Student Day", "type": "school_start" },
-    { "date": "2027-09-06", "name": "Labor Day - Schools Closed", "type": "holiday" },
-    { "date": "2027-09-22", "name": "Three-Hour Early Dismissal", "type": "early_release" },
-    { "date": "2027-10-08", "name": "End of First Grading Period", "type": "academic" },
-    { "date": "2027-10-11", "name": "Teacher Workday - No Meetings", "type": "teacher_workday" },
-    { "date": "2027-10-20", "name": "Three-Hour Early Dismissal; Report Cards Sent Home", "type": "early_release" },
-    { "date": "2027-11-01", "name": "Student Conferences - Schools Closed", "type": "no_school" },
-    { "date": "2027-11-02", "name": "Election Day - Schools Closed", "type": "holiday" },
-    { "date": "2027-11-24", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2027-11-26", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2027-12-17", "name": "End of Second Grading Period and First Semester", "type": "semester_end" },
-    { "date": "2027-12-20", "name": "Winter Break", "type": "break_start" },
-    { "date": "2027-12-31", "name": "Winter Break End", "type": "break_end" },
-    { "date": "2028-01-03", "name": "Teacher Workday - No Meetings", "type": "teacher_workday", "description": "Listed in the official make-up day schedule as a possible converted day if needed." },
-    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day - Schools Closed", "type": "holiday" },
-    { "date": "2028-02-07", "name": "Parent-Teacher Conferences - Schools Closed", "type": "no_school", "description": "Listed in the official make-up day schedule as a possible converted day if needed." },
-    { "date": "2028-02-23", "name": "Three-Hour Early Dismissal", "type": "early_release" },
-    { "date": "2028-03-10", "name": "End of Third Grading Period; Teacher Workday - No Meetings", "type": "teacher_workday" },
-    { "date": "2028-03-13", "name": "Parent-Student Conferences - Schools Closed", "type": "no_school", "description": "Listed in the official make-up day schedule as a possible converted day if needed." },
-    { "date": "2028-03-14", "name": "High School Virtual Learning Days Begin", "type": "academic" },
-    { "date": "2028-03-15", "name": "High School Virtual Learning Days End", "type": "academic" },
-    { "date": "2028-03-20", "name": "Spring Break", "type": "break_start" },
-    { "date": "2028-03-24", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2028-04-14", "name": "Easter Holiday - Schools Closed", "type": "holiday" },
-    { "date": "2028-04-26", "name": "Three-Hour Early Dismissal; Middle School Student-Led Conferences", "type": "early_release" },
-    { "date": "2028-05-23", "name": "Graduation Ceremonies Begin; Secondary Early Dismissal", "type": "graduation" },
-    { "date": "2028-05-24", "name": "Graduation Ceremonies End; Secondary Early Dismissal", "type": "graduation" },
-    { "date": "2028-05-25", "name": "Last Day of School; Three-Hour Early Dismissal; End of Second Semester", "type": "school_end" },
-    { "date": "2028-05-26", "name": "Teacher Workday", "type": "teacher_workday" },
-    { "date": "2028-05-29", "name": "Memorial Day - Schools Closed", "type": "holiday" },
-    { "date": "2028-06-19", "name": "Juneteenth Holiday", "type": "holiday" }
+    { "date": "2027-07-04", "name": "Independence Day", "type": "holiday", "description": "Listed on the official RCPS academic calendar before the student year begins.", "hideFromCalendarExport": true },
+    { "date": "2027-08-02", "endDate": "2027-08-06", "name": "Teacher Workdays", "type": "teacher_workday", "description": "Staff workdays before the first student day.", "hideFromCalendarExport": true },
+    { "date": "2027-08-05", "name": "Convocation", "type": "teacher_workday", "description": "District convocation during the August teacher-workday period.", "hideFromCalendarExport": true },
+    { "date": "2027-08-09", "endDate": "2027-08-11", "name": "Teacher Workdays", "type": "teacher_workday", "description": "Staff workdays before the first student day.", "hideFromCalendarExport": true },
+    { "date": "2027-08-12", "name": "First Student Day", "type": "school_start", "description": "First student attendance day for the RCPS 2027–28 school year." },
+    { "date": "2027-09-06", "name": "Labor Day — Schools Closed", "type": "holiday" },
+    { "date": "2027-09-10", "name": "Interim Midpoint", "type": "academic" },
+    { "date": "2027-09-17", "name": "Interim Reports Available", "type": "academic" },
+    { "date": "2027-09-22", "name": "Three-Hour Early Dismissal", "type": "early_dismissal", "description": "No professional development. Elementary schools dismiss at 11:25 a.m.; secondary schools dismiss at 12:25 p.m." },
+    { "date": "2027-10-08", "name": "First Grading Period Ends", "type": "academic" },
+    { "date": "2027-10-11", "name": "Teacher Workday — No School for Students", "type": "teacher_workday", "description": "No meetings are scheduled." },
+    { "date": "2027-10-20", "name": "Three-Hour Early Dismissal", "type": "early_dismissal", "description": "Professional development day. Elementary schools dismiss at 11:25 a.m.; secondary schools dismiss at 12:25 p.m." },
+    { "date": "2027-10-20", "name": "Report Cards Sent Home", "type": "academic" },
+    { "date": "2027-11-01", "name": "Student Conferences — Schools Closed", "type": "no_school", "description": "Conferences take place during regular school hours." },
+    { "date": "2027-11-02", "name": "Election Day — Schools Closed", "type": "holiday" },
+    { "date": "2027-11-12", "name": "Interim Midpoint", "type": "academic" },
+    { "date": "2027-11-19", "name": "Interim Reports Available", "type": "academic" },
+    { "date": "2027-11-24", "endDate": "2027-11-26", "name": "Thanksgiving Break", "type": "break_start", "description": "Schools are closed November 24–26; students return November 29." },
+    { "date": "2027-11-29", "name": "Students Return After Thanksgiving Break", "type": "school_resume", "description": "First regular student day after Thanksgiving Break.", "isDerivedPlanningDate": true },
+    { "date": "2027-12-17", "name": "Second Grading Period and First Semester End", "type": "semester_end" },
+    { "date": "2027-12-20", "endDate": "2027-12-31", "name": "Winter Break", "type": "break_start", "description": "Schools are closed December 20–31. Students return January 4 after a January 3 teacher workday." },
+    { "date": "2028-01-03", "name": "Teacher Workday — No School for Students", "type": "teacher_workday", "description": "No meetings are scheduled. RCPS may use this as the sixth make-up day if needed." },
+    { "date": "2028-01-04", "name": "Students Return After Winter Break", "type": "school_resume", "description": "First regular student day after Winter Break and the January 3 teacher workday.", "isDerivedPlanningDate": true },
+    { "date": "2028-01-14", "name": "Report Cards Sent Home", "type": "academic" },
+    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day — Schools Closed", "type": "holiday" },
+    { "date": "2028-02-04", "name": "Interim Midpoint", "type": "academic" },
+    { "date": "2028-02-07", "name": "Parent-Teacher Conferences — Schools Closed", "type": "no_school", "description": "Conferences take place during regular school hours. RCPS may use this as the seventh make-up day if needed." },
+    { "date": "2028-02-08", "name": "Kindergarten Registration Begins for 2028–29", "type": "academic" },
+    { "date": "2028-02-11", "name": "Interim Reports Available", "type": "academic" },
+    { "date": "2028-02-23", "name": "Three-Hour Early Dismissal", "type": "early_dismissal", "description": "Professional development day. Elementary schools dismiss at 11:25 a.m.; secondary schools dismiss at 12:25 p.m." },
+    { "date": "2028-03-10", "name": "Third Grading Period Ends", "type": "academic" },
+    { "date": "2028-03-10", "name": "Teacher Workday — No School for Students", "type": "teacher_workday", "description": "No meetings are scheduled." },
+    { "date": "2028-03-13", "name": "Parent-Student Conferences — Schools Closed", "type": "no_school", "description": "RCPS may use this as the eighth make-up day if needed." },
+    { "date": "2028-03-14", "endDate": "2028-03-15", "name": "High School Virtual-Learning Days", "type": "academic", "badgeLabel": "High School", "description": "These virtual-learning days apply to high school students only." },
+    { "date": "2028-03-17", "name": "Report Cards Sent Home", "type": "academic" },
+    { "date": "2028-03-20", "endDate": "2028-03-24", "name": "Spring Break", "type": "break_start", "description": "Schools are closed March 20–24; students return March 27." },
+    { "date": "2028-03-27", "name": "Students Return After Spring Break", "type": "school_resume", "description": "First regular student day after Spring Break.", "isDerivedPlanningDate": true },
+    { "date": "2028-04-14", "name": "Easter Holiday — Schools Closed", "type": "holiday" },
+    { "date": "2028-04-21", "name": "Interim Midpoint", "type": "academic" },
+    { "date": "2028-04-26", "name": "Three-Hour Early Dismissal", "type": "early_dismissal", "description": "No professional development. Elementary schools dismiss at 11:25 a.m.; secondary schools dismiss at 12:25 p.m." },
+    { "date": "2028-04-26", "name": "Middle School Student-Led Conferences", "type": "academic", "badgeLabel": "Middle School" },
+    { "date": "2028-04-28", "name": "Interim Reports Available", "type": "academic" },
+    { "date": "2028-05-23", "endDate": "2028-05-24", "name": "Secondary Early Dismissal", "type": "early_dismissal", "badgeLabel": "Secondary", "description": "Secondary students dismiss at 12:25 p.m. Elementary schools follow their regular schedule." },
+    { "date": "2028-05-23", "endDate": "2028-05-24", "name": "Graduation Ceremonies", "type": "graduation", "schemaEvent": true, "description": "Ceremonies are scheduled at 2:30 p.m. and 5:30 p.m.; confirm each high school’s assignment." },
+    { "date": "2028-05-25", "name": "Last Day of School — Three-Hour Early Dismissal", "type": "school_end", "description": "Elementary schools dismiss at 11:25 a.m.; secondary schools dismiss at 12:25 p.m. The second semester also ends." },
+    { "date": "2028-05-26", "name": "Teacher Workday", "type": "teacher_workday", "description": "Staff workday after the last student day.", "hideFromCalendarExport": true },
+    { "date": "2028-05-29", "name": "Memorial Day — Schools and Offices Closed", "type": "operational_closure", "description": "District closure after the student year ends.", "hideFromCalendarExport": true },
+    { "date": "2028-06-19", "name": "Juneteenth — Schools and Offices Closed", "type": "operational_closure", "description": "District closure after the student year ends.", "hideFromCalendarExport": true }
   ]
 }

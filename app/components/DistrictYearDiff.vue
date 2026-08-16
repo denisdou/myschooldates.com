@@ -6,6 +6,31 @@ const props = defineProps<{
   prevCal?: any
 }>()
 
+function formatComparisonDate(dateStr: string) {
+  return new Date(`${dateStr}T00:00:00`).toLocaleDateString('en-US', {
+    year: 'numeric', month: 'long', day: 'numeric',
+  })
+}
+
+function formatComparisonRange(start: string, end: string) {
+  const startDate = new Date(`${start}T00:00:00`)
+  const endDate = new Date(`${end}T00:00:00`)
+  if (startDate.getFullYear() === endDate.getFullYear()) {
+    const startMonth = startDate.toLocaleDateString('en-US', { month: 'long' })
+    if (startDate.getMonth() === endDate.getMonth()) {
+      return `${startMonth} ${startDate.getDate()}–${endDate.getDate()}, ${endDate.getFullYear()}`
+    }
+    const endMonth = endDate.toLocaleDateString('en-US', { month: 'long' })
+    return `${startMonth} ${startDate.getDate()}–${endMonth} ${endDate.getDate()}, ${endDate.getFullYear()}`
+  }
+  return `${formatComparisonDate(start)}–${formatComparisonDate(end)}`
+}
+
+function countWord(value: number) {
+  const words = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
+  return words[value] ?? String(value)
+}
+
 function computeYearDiff(curCal: any, prevCalData: any, prevYearStr: string): string[] {
   if (!prevCalData) return []
   const currentTrack = curCal.calendarTrackId ?? curCal.meta?.calendarTrackId
@@ -17,6 +42,10 @@ function computeYearDiff(curCal: any, prevCalData: any, prevYearStr: string): st
   if ((currentTrack || previousTrack) && (!currentTrack || !previousTrack || currentTrack !== previousTrack)) return []
 
   const items: string[] = []
+  const comparisonStyle = curCal.yearComparisonStyle ?? curCal.meta?.yearComparisonStyle
+  const useMovementStyle = comparisonStyle === 'movement' || comparisonStyle === 'movement-simple'
+  const useSimpleMovementStyle = comparisonStyle === 'movement-simple'
+  const hideThanksgiving = Boolean(curCal.hideThanksgivingYearComparison ?? curCal.meta?.hideThanksgivingYearComparison)
 
   const mmddDiff = (a: string, b: string) =>
     Math.round(
@@ -24,12 +53,14 @@ function computeYearDiff(curCal: any, prevCalData: any, prevYearStr: string): st
     )
 
   const sd = mmddDiff(curCal.firstDay, prevCalData.firstDay)
-  if (sd === 0) items.push(`First day of school is unchanged from ${prevYearStr} — ${formatShortDate(curCal.firstDay)}.`)
+  if (useMovementStyle && sd !== 0) items.push(`The first day moves from ${formatComparisonDate(prevCalData.firstDay)} to ${formatComparisonDate(curCal.firstDay)}.`)
+  else if (sd === 0) items.push(`First day of school is unchanged from ${prevYearStr} — ${formatShortDate(curCal.firstDay)}.`)
   else if (sd > 0) items.push(`School starts ${sd} day${sd !== 1 ? 's' : ''} later than ${prevYearStr} — ${formatShortDate(curCal.firstDay)}.`)
   else items.push(`School starts ${Math.abs(sd)} day${Math.abs(sd) !== 1 ? 's' : ''} earlier than ${prevYearStr} — ${formatShortDate(curCal.firstDay)}.`)
 
   const ed = mmddDiff(curCal.lastDay, prevCalData.lastDay)
-  if (ed === 0) items.push(`Last day of school is unchanged from ${prevYearStr} — ${formatShortDate(curCal.lastDay)}.`)
+  if (useMovementStyle && ed !== 0) items.push(`The last student day moves from ${formatComparisonDate(prevCalData.lastDay)} to ${formatComparisonDate(curCal.lastDay)}.`)
+  else if (ed === 0) items.push(`Last day of school is unchanged from ${prevYearStr} — ${formatShortDate(curCal.lastDay)}.`)
   else if (ed > 0) items.push(`Last day of school is ${ed} day${ed !== 1 ? 's' : ''} later than ${prevYearStr} — ${formatShortDate(curCal.lastDay)}.`)
   else items.push(`Last day of school is ${Math.abs(ed)} day${Math.abs(ed) !== 1 ? 's' : ''} earlier than ${prevYearStr} — ${formatShortDate(curCal.lastDay)}.`)
 
@@ -40,14 +71,23 @@ function computeYearDiff(curCal: any, prevCalData: any, prevYearStr: string): st
       (new Date(`2000-${curSp.start.slice(5)}T00:00:00`).getTime() - new Date(`2000-${prevSp.start.slice(5)}T00:00:00`).getTime()) / 86400000
     )
     if (Math.abs(diff) >= 5) {
-      if (diff > 0) items.push(`Spring Break starts ${diff} days later than ${prevYearStr} — ${formatShortDate(curSp.start)}–${formatShortDate(curSp.end)}.`)
+      if (useMovementStyle) {
+        if (useSimpleMovementStyle) {
+          items.push(`Spring Break moves from ${formatComparisonRange(prevSp.start, prevSp.end)} to ${formatComparisonRange(curSp.start, curSp.end)}.`)
+        }
+        else {
+          const direction = diff > 0 ? 'later' : 'earlier'
+          items.push(`Spring Break moves ${countWord(Math.abs(diff))} days ${direction} on the calendar, from ${formatComparisonRange(prevSp.start, prevSp.end)} to ${formatComparisonRange(curSp.start, curSp.end)}.`)
+        }
+      }
+      else if (diff > 0) items.push(`Spring Break starts ${diff} days later than ${prevYearStr} — ${formatShortDate(curSp.start)}–${formatShortDate(curSp.end)}.`)
       else items.push(`Spring Break starts ${Math.abs(diff)} days earlier than ${prevYearStr} — ${formatShortDate(curSp.start)}–${formatShortDate(curSp.end)}.`)
     }
   }
 
   const curTh = getBreaks(curCal.events).find((b: any) => b.name.toLowerCase().includes('thanksgiving'))
   const prevTh = getBreaks(prevCalData.events).find((b: any) => b.name.toLowerCase().includes('thanksgiving'))
-  if (curTh && prevTh) {
+  if (curTh && prevTh && !hideThanksgiving) {
     const ld = curTh.days - prevTh.days
     if (ld === 0) items.push(`Thanksgiving Break is ${curTh.days} days — unchanged from ${prevYearStr}.`)
     else if (ld > 0) items.push(`Thanksgiving Break is ${ld} day${ld !== 1 ? 's' : ''} longer than ${prevYearStr} — ${curTh.days} days total.`)
@@ -69,8 +109,8 @@ const items = computed(() => {
   return [...base, ...extra]
 })
 
-const title = computed(() => props.cal?.whatsNew?.title)
-const subtitle = computed(() => props.cal?.whatsNew?.subtitle)
+const title = computed(() => props.cal?.yearComparisonTitle ?? props.cal?.whatsNew?.title)
+const subtitle = computed(() => props.cal?.yearComparisonSubtitle ?? props.cal?.whatsNew?.subtitle)
 const defaultOpen = computed(() => Boolean(
   props.cal?.yearComparisonDefaultOpen ?? props.cal?.meta?.yearComparisonDefaultOpen
 ))
@@ -83,14 +123,14 @@ const displayPrevYear = computed(() => {
 <template>
   <details v-if="items.length" :open="defaultOpen" class="bg-white rounded-lg border border-gray-200 p-6 group">
     <summary class="cursor-pointer list-none">
-      <div class="flex items-start justify-between gap-4">
-        <div>
-          <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ title ?? `What's New for ${currentYear}` }}</h2>
-          <p class="text-sm text-gray-500">{{ subtitle ?? `How this school year compares with ${displayPrevYear}.` }}</p>
-        </div>
+      <h2 class="m-0 flex items-start justify-between gap-4">
+        <span class="min-w-0">
+          <span class="block text-lg font-semibold text-gray-900 mb-1">{{ title ?? `What's New for ${currentYear}` }}</span>
+          <span class="block text-sm font-normal text-gray-500">{{ subtitle ?? `How this school year compares with ${displayPrevYear}.` }}</span>
+        </span>
         <span class="mt-1 text-sm font-medium text-blue-600 group-open:hidden">Show</span>
         <span class="mt-1 text-sm font-medium text-blue-600 hidden group-open:inline">Hide</span>
-      </div>
+      </h2>
     </summary>
     <ul class="mt-4 space-y-2">
       <li v-for="item in items" :key="item" class="flex items-start gap-2 text-sm text-gray-700">

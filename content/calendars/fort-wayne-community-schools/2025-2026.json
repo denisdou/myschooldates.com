@@ -1,0 +1,535 @@
+{
+  "institutionId": "fort-wayne-community-schools",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025–26",
+  "pageHeading": "Fort Wayne Community Schools Calendar 2025–26",
+  "firstDay": "2025-08-07",
+  "lastDay": "2026-05-20",
+  "temporalCoverageStart": "2025-07-29",
+  "temporalCoverageEnd": "2026-05-30",
+  "semesters": 2,
+  "totalSchoolDays": 180,
+  "sourceUrl": "https://www.fortwayneschools.org/calendar",
+  "sourceDocumentPage": "https://www.fortwayneschools.org/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1779986993/fwcsk12inus/fwcsk12inus/fwcsk12inus/fwcsk12inus/vfugnz8sdtuxnm8zhi47/FWCScalendar2025-26_updated1-28-26.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1779986993/fwcsk12inus/fwcsk12inus/fwcsk12inus/fwcsk12inus/vfugnz8sdtuxnm8zhi47/FWCScalendar2025-26_updated1-28-26.pdf",
+  "sourceCheckedAt": "2026-08-16",
+  "sourceChecksumSha256": "4dbbdaea62f92b05f3fa894b93d93dcc83d63ddefdab40f4dc0183b910852a97",
+  "sourceStatus": "archived",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The PDF's dated event list prints February 9 and April 6 with the year 2025, although both entries appear in the February and April 2026 calendar grids and fall within the second-semester sequence. This page uses February 9, 2026 and April 6, 2026.",
+  "lastVerifiedAt": "2026-08-16",
+  "dateCreated": "2026-08-16",
+  "datePublished": "2026-08-16",
+  "dateModified": "2026-08-16",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_archive_replacement",
+    "official_source_conflict",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "FWCS 2025–26 Calendar · Archived district PDF · Dates may be subject to change",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.fortwayneschools.org/calendar",
+    "linkText": "2025-26",
+    "expectedDocumentUrl": "https://resources.finalsite.net/images/v1779986993/fwcsk12inus/fwcsk12inus/fwcsk12inus/fwcsk12inus/vfugnz8sdtuxnm8zhi47/FWCScalendar2025-26_updated1-28-26.pdf",
+    "expectedChecksumSha256": "4dbbdaea62f92b05f3fa894b93d93dcc83d63ddefdab40f4dc0183b910852a97"
+  },
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideBreakDurationBadges": true,
+  "seoTitle": "Fort Wayne Community Schools Calendar 2025–26 | FWCS",
+  "seoDescription": "FWCS started Aug. 7, 2025 and ended May 20, 2026. See Transition Days, Pre-K, breaks, weather schedule changes, graduation, and the official PDF.",
+  "heroSummary": "Fort Wayne Community Schools students started Thursday, August 7, 2025, and the last student day was Wednesday, May 20, 2026. Grades 6 and 9 attended Transition Day July 29, kindergarten attended August 1, and Pre-K began August 21.",
+  "heroSourceLine": "2025–26 archived school calendar · Reviewed against the official FWCS PDF",
+  "verificationBadgeText": "Official FWCS archive checked · Printed year typos noted",
+  "heroFactChips": [
+    "180 student days",
+    "Transition Day varies by grade",
+    "Pre-K began August 21"
+  ],
+  "hideHeroUpdatedField": true,
+  "calendarNotes": "The printed quarter totals add to 180 student days. FWCS separated Transition Day for grades 6 and 9 from kindergarten, started Pre-K on August 21, and later marked weather-related eLearning, a district weather closing, and two-hour delays directly on the one-page calendar.",
+  "keyDatesSummaryTitle": "FWCS 2025–26 Key Dates",
+  "keyDatesSummarySubtitle": "Grade-specific openings, major breaks, and the May ending",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Student Day",
+      "date": "2025-08-07",
+      "type": "school_start"
+    },
+    {
+      "label": "Pre-K",
+      "name": "First Day of Pre-K",
+      "date": "2025-08-21",
+      "type": "school_start"
+    },
+    {
+      "label": "Fall Break",
+      "name": "Fall Break — No Students",
+      "date": "2025-10-10",
+      "endDate": "2025-10-13",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2025-11-26",
+      "endDate": "2025-11-28",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Vacation",
+      "date": "2025-12-22",
+      "endDate": "2026-01-02",
+      "type": "break_start"
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Vacation and Good Friday",
+      "date": "2026-03-30",
+      "endDate": "2026-04-03",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Student Day",
+      "date": "2026-05-20",
+      "type": "school_end"
+    }
+  ],
+  "allDatesTitle": "FWCS 2025–26 Academic Calendar Dates",
+  "allDatesCoverageNote": "This table follows the family-facing dates and weather markings on the archived FWCS calendar, including grade-specific Transition Days, Pre-K, no-student staff dates, breaks, quarter endings, parent-teacher conferences, make-up dates, and graduation. Summer office closings are not included.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1779986993/fwcsk12inus/fwcsk12inus/fwcsk12inus/fwcsk12inus/vfugnz8sdtuxnm8zhi47/FWCScalendar2025-26_updated1-28-26.pdf",
+  "allDatesSourceLabel": "Official FWCS 2025–26 archived calendar PDF",
+  "breaksTitle": "FWCS Breaks and Return Dates",
+  "breakNotes": {
+    "Fall Break — No Students": "Students returned Tuesday, October 14. The PDF marks October 10 as the district-closed date.",
+    "Thanksgiving Break": "Classes were scheduled to resume Monday, December 1; FWCS later marked that date Weather Closing — eLearning.",
+    "Winter Vacation": "January 5 was a teacher professional-learning/work day; students returned Tuesday, January 6.",
+    "Spring Vacation and Good Friday": "April 6 was a staff professional-learning day; students returned Tuesday, April 7."
+  },
+  "gradingPeriodsTitle": "FWCS 2025–26 Quarter and Semester Dates",
+  "gradingPeriodsDescription": "FWCS printed quarter totals of 46, 45, 46, and 43 student days, for 91 days in the first semester and 89 in the second.",
+  "gradingPeriods": [
+    {
+      "label": "Quarter 1",
+      "end": "2025-10-09",
+      "studentDays": 46
+    },
+    {
+      "label": "Quarter 2 / Semester 1",
+      "end": "2025-12-19",
+      "studentDays": 45
+    },
+    {
+      "label": "Quarter 3",
+      "end": "2026-03-12",
+      "studentDays": 46
+    },
+    {
+      "label": "Quarter 4 / Student Year",
+      "end": "2026-05-20",
+      "studentDays": 43
+    }
+  ],
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "customSections": [
+    {
+      "id": "fwcs-start-dates-2025-2026",
+      "label": "Which FWCS Start Date Applied to Your Student?",
+      "position": "afterKeyDates",
+      "content": "FWCS used separate Transition Days before the districtwide first student day, and Pre-K started two weeks later.",
+      "table": {
+        "columns": [
+          "Student group",
+          "Start date",
+          "Calendar label"
+        ],
+        "rows": [
+          [
+            "Grades 6 and 9",
+            "July 29, 2025",
+            "Transition Day"
+          ],
+          [
+            "Kindergarten",
+            "August 1, 2025",
+            "Transition Day"
+          ],
+          [
+            "Most K–12 students",
+            "August 7, 2025",
+            "First Student Day"
+          ],
+          [
+            "Pre-K",
+            "August 21, 2025",
+            "First Day of Pre-K"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fwcs-weather-record-2025-2026",
+      "label": "Weather Schedule Changes Recorded by FWCS",
+      "position": "afterAllDates",
+      "content": "The archived PDF uses color-coded calendar cells to record how weather affected instruction. These are historical schedule changes, not future make-up dates.",
+      "table": {
+        "columns": [
+          "Date",
+          "FWCS calendar status"
+        ],
+        "rows": [
+          [
+            "December 1, 2025",
+            "Weather Closing — eLearning"
+          ],
+          [
+            "January 23, 27, and 28, 2026",
+            "Weather Closing — Virtual Learning"
+          ],
+          [
+            "January 26, 2026",
+            "District Weather Closing"
+          ],
+          [
+            "March 5–6, 2026",
+            "Two-hour delays"
+          ]
+        ]
+      }
+    }
+  ],
+  "events": [
+    {
+      "date": "2025-07-29",
+      "name": "Transition Day for Grades 6 and 9",
+      "type": "school_start",
+      "badgeLabel": "Grades 6 and 9",
+      "labelType": "partial_closure",
+      "description": "Transition Day applied only to students in grades 6 and 9."
+    },
+    {
+      "date": "2025-08-01",
+      "name": "Kindergarten Transition Day",
+      "type": "school_start",
+      "badgeLabel": "Kindergarten",
+      "labelType": "partial_closure"
+    },
+    {
+      "date": "2025-08-04",
+      "endDate": "2025-08-05",
+      "name": "Teacher Work Days — No Students",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-08-06",
+      "name": "Staff Professional Learning — No Students",
+      "type": "teacher_professional_learning",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-08-07",
+      "name": "First Student Day",
+      "type": "school_start"
+    },
+    {
+      "date": "2025-08-21",
+      "name": "First Day of Pre-K",
+      "type": "school_start",
+      "badgeLabel": "Pre-K",
+      "labelType": "partial_closure"
+    },
+    {
+      "date": "2025-09-01",
+      "name": "Labor Day — District Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-09-22",
+      "name": "Staff Professional Learning — No Students",
+      "type": "teacher_professional_learning"
+    },
+    {
+      "date": "2025-10-09",
+      "name": "Quarter 1 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2025-10-10",
+      "endDate": "2025-10-13",
+      "name": "Fall Break — No Students",
+      "type": "break_start",
+      "description": "FWCS marks October 10 as district closed and October 13 as no student attendance."
+    },
+    {
+      "date": "2025-10-14",
+      "name": "Students Return After Fall Break",
+      "type": "school_resume",
+      "isDerivedPlanningDate": true,
+      "schemaDescription": "Based on the printed Quarter 2 start, FWCS students returned after Fall Break on October 14, 2025."
+    },
+    {
+      "date": "2025-10-31",
+      "name": "Release Day for Parent-Teacher Conferences — No Students",
+      "type": "conference",
+      "badgeLabel": "No Students",
+      "labelType": "no_school"
+    },
+    {
+      "date": "2025-11-26",
+      "endDate": "2025-11-28",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2025-12-01",
+      "name": "Weather Closing — eLearning",
+      "type": "remote_learning"
+    },
+    {
+      "date": "2025-12-19",
+      "name": "Quarter 2 and First Semester End",
+      "type": "semester_end"
+    },
+    {
+      "date": "2025-12-22",
+      "endDate": "2026-01-02",
+      "name": "Winter Vacation",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-01-05",
+      "name": "Teacher Professional Learning and Work Day — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2026-01-06",
+      "name": "Students Return for Second Semester",
+      "type": "school_resume"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Martin Luther King Jr. Day — No Students",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-01-23",
+      "name": "Weather Closing — Virtual Learning",
+      "type": "remote_learning"
+    },
+    {
+      "date": "2026-01-26",
+      "name": "District Weather Closing — No Students",
+      "type": "closure"
+    },
+    {
+      "date": "2026-01-27",
+      "endDate": "2026-01-28",
+      "name": "Weather Closing — Virtual Learning",
+      "type": "remote_learning"
+    },
+    {
+      "date": "2026-02-09",
+      "name": "Staff Professional Learning — No Students",
+      "type": "teacher_professional_learning"
+    },
+    {
+      "date": "2026-02-16",
+      "name": "Presidents' Day — No Students",
+      "type": "holiday",
+      "description": "The FWCS calendar says Presidents' Day was observed because Good Friday fell during Spring Break."
+    },
+    {
+      "date": "2026-03-05",
+      "endDate": "2026-03-06",
+      "name": "Two-Hour Delays",
+      "type": "late_start"
+    },
+    {
+      "date": "2026-03-12",
+      "name": "Quarter 3 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-03-13",
+      "name": "Quarter 3 Break — No Students",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-03-30",
+      "endDate": "2026-04-03",
+      "name": "Spring Vacation and Good Friday",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Staff Professional Learning — No Students",
+      "type": "teacher_professional_learning"
+    },
+    {
+      "date": "2026-04-07",
+      "name": "Students Return After Spring Vacation",
+      "type": "school_resume",
+      "isDerivedPlanningDate": true,
+      "schemaDescription": "Based on the FWCS no-student schedule, students returned after Spring Vacation on April 7, 2026."
+    },
+    {
+      "date": "2026-05-20",
+      "name": "Last Student Day and Quarter 4 End",
+      "type": "school_end"
+    },
+    {
+      "date": "2026-05-21",
+      "name": "Teacher Work Day and Semester End — No Students",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Reserve Make-Up Day",
+      "type": "makeup_day",
+      "description": "This date was reserved for make-up use and was not a regular student day."
+    },
+    {
+      "date": "2026-05-29",
+      "endDate": "2026-05-30",
+      "name": "Graduation Ceremonies",
+      "type": "graduation"
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "FWCS 2025–26 Calendar Downloads",
+  "unifiedDownloadDescription": "Download selected student-planning dates as a one-time ICS file or open the official archived FWCS PDF.",
+  "icsHeading": "Download FWCS 2025–26 Calendar Dates",
+  "icsDescription": "Download a one-time ICS file with the student schedule dates listed on this page, including the weather changes recorded by FWCS.",
+  "icsButtonLabel": "Download FWCS Dates (.ics)",
+  "icsButtonSupportText": "Historical one-time import; it does not sync with later archive changes.",
+  "pdfHeading": "Official FWCS 2025–26 Calendar PDF",
+  "pdfDescription": "Open the archived one-page FWCS calendar with Transition Days, staff dates, breaks, weather markings, make-up dates, and graduations.",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfVersionLabel": "FWCS 2025–26 archived calendar · Dates may be subject to change",
+  "calendarFaqs": [
+    {
+      "q": "When did Fort Wayne Community Schools start in 2025–26?",
+      "a": "The districtwide first student day was August 7, 2025. Grades 6 and 9 had Transition Day July 29, kindergarten had Transition Day August 1, and Pre-K started August 21."
+    },
+    {
+      "q": "When did FWCS students return after Winter Vacation?",
+      "a": "Students returned Tuesday, January 6, 2026. Monday, January 5 was a teacher professional-learning and work day with no students."
+    },
+    {
+      "q": "Was October 31, 2025 a student attendance day?",
+      "a": "No. FWCS labeled October 31 a Release Day for parent-teacher conferences, and the calendar marks no student attendance."
+    },
+    {
+      "q": "Which weather schedule changes appear on the 2025–26 FWCS calendar?",
+      "a": "The archived calendar records eLearning or virtual learning on December 1, January 23, January 27, and January 28; a district weather closing January 26; and two-hour delays March 5–6."
+    },
+    {
+      "q": "When were FWCS graduations in 2026?",
+      "a": "FWCS listed graduation ceremonies for May 29 and May 30, 2026. Families should use school-specific records for ceremony assignments and times."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When did Fort Wayne Community Schools start in 2025–26?",
+    "When did FWCS students return after Winter Vacation?",
+    "Was October 31, 2025 a student attendance day?",
+    "Which weather schedule changes appear on the 2025–26 FWCS calendar?",
+    "When were FWCS graduations in 2026?"
+  ],
+  "faqDisplayLimit": 5,
+  "schemaCalendarName": "Fort Wayne Community Schools Calendar 2025–26",
+  "schemaDatasetName": "Fort Wayne Community Schools 2025–26 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed FWCS 2025–26 dates including grade-specific Transition Days, the Pre-K opening, no-student staff dates, breaks, quarter totals, recorded weather changes, a reserve make-up date, and graduations.",
+  "schemaCalendarDownloadDescription": "One-time calendar import of selected student-planning dates from the archived FWCS 2025–26 calendar.",
+  "schemaSpatialCoverage": "Fort Wayne and Allen County, Indiana",
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Start Dates",
+      "id": "fwcs-start-dates-2025-2026"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Weather Record",
+      "id": "fwcs-weather-record-2025-2026"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Quarter Dates",
+      "id": "grading-periods"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "yearSwitcherPosition": "afterSources",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "yearNumbers",
+    "whatsDifferent",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "comparison",
+    "relatedDistricts",
+    "nationalTrends",
+    "otherCalendars"
+  ],
+  "sourceReviewSummary": "Reviewed August 16, 2026, against the archived FWCS calendar page and the official 2025–26 PDF.",
+  "sourceReviewDetails": [
+    "Confirmed that the official remote PDF and the user-provided local file share SHA-256 4dbbdaea62f92b05f3fa894b93d93dcc83d63ddefdab40f4dc0183b910852a97.",
+    "Rendered and visually reviewed the full one-page calendar because symbols and cell colors distinguish Transition Days, no-student dates, eLearning, district weather closings, two-hour delays, make-up dates, and graduations.",
+    "The event list prints February 9 and April 6 with the year 2025, but both dates appear in the 2026 month grids and second-semester sequence. This page records them as February 9, 2026 and April 6, 2026.",
+    "Checked the printed quarter totals of 46, 45, 46, and 43 days, which sum to 180 student days.",
+    "The ICS file is a one-time historical import and does not update automatically."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Fort Wayne Community Schools sources.",
+  "sourceNextReviewText": "This archived page will be reviewed again if FWCS replaces the official 2025–26 PDF, corrects the two printed year errors, or a confirmed date error is reported.",
+  "sources": [
+    {
+      "label": "FWCS district calendars",
+      "url": "https://www.fortwayneschools.org/calendar"
+    },
+    {
+      "label": "Official FWCS 2025–26 calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1779986993/fwcsk12inus/fwcsk12inus/fwcsk12inus/fwcsk12inus/vfugnz8sdtuxnm8zhi47/FWCScalendar2025-26_updated1-28-26.pdf"
+    }
+  ]
+}

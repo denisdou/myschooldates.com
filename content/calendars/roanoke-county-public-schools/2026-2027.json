@@ -4,147 +4,242 @@
   "firstDay": "2026-08-13",
   "lastDay": "2027-05-27",
   "sourceUrl": "https://www.rcps.us/about-us/academic-calendar",
+  "sourceDocumentPage": "https://www.rcps.us/about-us/academic-calendar",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1771856407/rcpsus/hle12nd9wudwdbckuntx/2026-2027-academic-calendar-ACCESSIBLE.pdf",
-  "lastVerifiedAt": "2026-07-20",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1771856407/rcpsus/hle12nd9wudwdbckuntx/2026-2027-academic-calendar-ACCESSIBLE.pdf",
+  "sourceCheckedAt": "2026-08-16",
+  "sourceChecksumSha256": "dc5f9dbb23c5a82537115a7552ed51a8d6031e8856190cac4abd1d6e2fd82996",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "lastVerifiedAt": "2026-08-16",
   "datePublished": "2026-07-20",
-  "dateModified": "2026-07-20",
+  "dateModified": "2026-08-16",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "makeup_day_activation"
+  ],
+  "sourceVersion": "Updated draft approved by the Roanoke County School Board on Feb. 19, 2026; PDF remains labeled DRAFT — SUBJECT TO CHANGE",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.rcps.us/about-us/academic-calendar",
+    "linkText": "2026-2027 Academic Calendar",
+    "expectedDocumentUrl": "https://resources.finalsite.net/images/v1771856407/rcpsus/hle12nd9wudwdbckuntx/2026-2027-academic-calendar-ACCESSIBLE.pdf",
+    "expectedChecksumSha256": "dc5f9dbb23c5a82537115a7552ed51a8d6031e8856190cac4abd1d6e2fd82996"
+  },
   "calendarType": "traditional",
   "totalSchoolDays": 178,
+  "hideInstructionalDaysSummary": true,
+  "heroFactChips": [
+    "178 student days"
+  ],
   "hideSemesterCount": true,
-  "yearNumbersMode": "compact",
-  "seoTitle": "Roanoke County Public Schools Calendar 2026-2027: Holidays, Breaks, PDF & Important Dates",
-  "seoDescription": "View the Roanoke County Public Schools Calendar 2026-2027 with Aug 13 first day, May 27 last day, RCPS holidays, Winter Break, Spring Break, graduation dates, teacher workdays, PDF and ICS download.",
-  "calendarNotes": "Roanoke County Public Schools starts the 2026-2027 school year on August 13, 2026. Winter Break runs December 21-January 1, Spring Break runs March 22-26, and the last day of school is May 27, 2027. The calendar lists 178 total student days and includes early dismissals, grading periods, high school virtual learning days, graduation ceremonies, and make-up day notes.",
+  "allDatesMode": "all",
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "hideCalendarTrackCaution": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "quickFacts",
+    "about",
+    "yearNumbers",
+    "whatsDifferent",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "comparison",
+    "relatedDistricts",
+    "nationalTrends"
+  ],
+  "hiddenCustomSectionIds": [
+    "roanoke-county-district-calendar-context",
+    "related-roanoke-county-calendars"
+  ],
+  "seoTitle": "Roanoke County Public Schools Calendar 2026–27 | Key Dates & Breaks",
+  "seoDescription": "RCPS starts Aug. 13, 2026 and ends May 27, 2027. See breaks, teacher workdays, early dismissals, graduation dates, make-up days, and the official PDF.",
+  "heroSummary": "RCPS students start school on Thursday, Aug. 13, 2026, and the last student day is Thursday, May 27, 2027. Spring Break runs March 22–26, 2027.",
+  "heroSourceLine": "2026–27 academic calendar · Reviewed against the RCPS PDF currently labeled DRAFT — SUBJECT TO CHANGE",
+  "verificationBadgeText": "Official RCPS source checked · PDF subject to change",
+  "hideHeroUpdatedField": true,
+  "calendarNotes": "Roanoke County Public Schools starts the 2026–27 school year on August 13, 2026. The official calendar lists 178 student days, exact early-dismissal times, two high-school virtual-learning days, graduation dates, and a published weather make-up sequence.",
+  "keyDatesSummaryTitle": "RCPS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last student days, major breaks, the winter return date, and graduation",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Student Day",
+      "date": "2026-08-13",
+      "type": "school_start"
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Return",
+      "name": "Students Return After Winter Break",
+      "date": "2027-01-05",
+      "type": "school_resume",
+      "schemaDescription": "Based on the district's published no-school schedule, RCPS students return after Winter Break on January 5, 2027."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "type": "break_start"
+    },
+    {
+      "label": "Graduation",
+      "name": "Graduation Ceremonies",
+      "date": "2027-05-25",
+      "endDate": "2027-05-26",
+      "type": "graduation",
+      "schemaDescription": "RCPS graduation ceremonies are scheduled for May 25–26, 2027."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Student Day",
+      "date": "2027-05-27",
+      "type": "school_end"
+    }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Schedule Notes", "id": "rcps-schedule-notes-2026-2027" },
+    { "label": "Full Calendar", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Make-Up Days", "id": "rcps-makeup-days-2026-2027" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "What's Changed", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "allDatesTitle": "RCPS 2026–27 Academic Calendar Dates",
+  "allDatesCoverageNote": "This table follows the family-facing dates in RCPS’s accessible 2026–27 academic calendar, including teacher workdays, student closures, interim and report-card dates, early dismissals, high-school virtual-learning days, graduation, and district holidays. School-specific events and same-day weather updates may be published separately.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1771856407/rcpsus/hle12nd9wudwdbckuntx/2026-2027-academic-calendar-ACCESSIBLE.pdf",
+  "allDatesSourceLabel": "RCPS 2026–27 accessible academic calendar PDF",
+  "hideCoveredBreakDatesNote": true,
+  "dateLegendLabelOverrides": {
+    "Early Release": "Early Dismissal"
+  },
+  "breaksTitle": "Major School Breaks and Return Dates",
+  "breakNotes": {
+    "Thanksgiving Break": "Students return Monday, November 30, 2026.",
+    "Winter Break": "Monday, January 4 is a teacher workday; students return Tuesday, January 5, 2027.",
+    "Spring Break": "Monday, March 29 is the Easter holiday; students return Tuesday, March 30, 2027."
+  },
+  "unifiedDownloadTitle": "Calendar Downloads and Official PDF",
+  "unifiedDownloadDescription": "Download a one-time calendar import or open the RCPS 2026–27 academic calendar PDF.",
+  "compactDownloadModule": true,
+  "pdfHeading": "Official RCPS 2026–27 Academic Calendar PDF",
+  "pdfDescription": "Open the RCPS PDF used to review this page. The district calendar page calls it printable and subject to change; the PDF itself remains labeled DRAFT — SUBJECT TO CHANGE.",
+  "hidePdfVersionLabel": true,
+  "icsHeading": "Download an ICS Calendar File",
+  "icsDescription": "Download a one-time ICS file for Google Calendar, Apple Calendar, or Outlook. It includes the main student-calendar dates from this page.",
+  "icsSourceNote": "The file does not update automatically. Check RCPS for a replacement PDF, activated make-up days, or emergency schedule changes.",
+  "yearSwitcherPosition": "afterSources",
+  "faqOrderLimit": 8,
+  "faqDisplayQuestions": [
+    "Is this the official RCPS calendar?",
+    "Does RCPS use make-up days?",
+    "Does RCPS have school on Veterans Day?",
+    "When are RCPS teacher workdays?",
+    "What time do students leave on RCPS early-dismissal days?",
+    "When do RCPS students return after Winter Break?",
+    "Are March 16–17 virtual-learning days for all RCPS students?",
+    "When are RCPS graduation ceremonies in 2027?"
+  ],
+  "sourceReviewSummary": "Reviewed August 16, 2026, against the official RCPS Academic Calendar page and the current 2026–27 accessible PDF, which includes the district’s published make-up-day order.",
+  "sourceReviewDetails": [
+    "The current PDF is described as an updated draft approved by the School Board on February 19, 2026, and remains labeled DRAFT — SUBJECT TO CHANGE.",
+    "The two August teacher-workday ranges, interim and report-card dates, early-dismissal times, high-school virtual-learning dates, graduations, and make-up sequence were checked against the accessible list and calendar grid. The make-up-day sequence shown on this page comes from the 2026–27 RCPS academic calendar PDF.",
+    "The downloadable ICS file is a one-time import. RCPS remains the source of record for replacement calendars, activated make-up days, and emergency schedule changes."
+  ],
+  "sourceNextReviewText": "This page will be reviewed again if RCPS replaces the current PDF or announces a weather make-up change.",
+  "sources": [
+    {
+      "label": "RCPS Academic Calendar page",
+      "url": "https://www.rcps.us/about-us/academic-calendar"
+    },
+    {
+      "label": "RCPS 2026–27 accessible academic calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1771856407/rcpsus/hle12nd9wudwdbckuntx/2026-2027-academic-calendar-ACCESSIBLE.pdf"
+    }
+  ],
   "customSections": [
     {
-      "id": "rcps-academic-calendar-overview-2026-2027",
-      "label": "2026-2027 RCPS Calendar Overview",
+      "id": "rcps-schedule-notes-2026-2027",
+      "label": "RCPS Schedule Notes",
       "position": "afterKeyDates",
-      "content": "The Roanoke County Public Schools 2026-2027 academic calendar includes 178 student days, districtwide school holidays, scheduled breaks, teacher workdays, grading periods, early dismissals, high school virtual learning days, graduation events, and make-up day procedures. RCPS follows a traditional school-year calendar for families in Roanoke County and the Roanoke Valley, so this page is useful for planning transportation, childcare, vacations, appointments, senior-year activities, and academic milestones around districtwide dates. This overview helps families understand the RCPS school schedule beyond the first day and last day of school while still checking school-specific programs and weather-related changes with the district.",
+      "content": "A few RCPS dates have different schedules by school level.",
       "groups": [
         {
-          "label": "Calendar Coverage",
+          "label": "Early dismissal",
           "items": [
-            "Student attendance days and districtwide school holidays.",
-            "Teacher workdays, conference days, and make-up day candidates.",
-            "Grading period dates, report card dates, and academic checkpoints.",
-            "Graduation ceremonies and end-of-year schedule notes."
+            "On districtwide three-hour early-dismissal days, elementary schools dismiss at 11:25 a.m. and secondary schools at 12:25 p.m.",
+            "On May 25–26, early dismissal applies only to secondary students, at 12:25 p.m."
           ]
         },
         {
-          "label": "Why This Matters",
+          "label": "High school virtual learning",
           "items": [
-            "The RCPS academic calendar is used for vacation planning, childcare, transportation, appointments, and senior-year activities.",
-            "Families should still confirm school-specific events, weather make-up decisions, and program calendars directly with RCPS."
+            "The district calendar lists March 16–17 as virtual-learning days for high school students only."
           ]
         },
         {
-          "label": "How to Use This Calendar",
+          "label": "Graduation",
           "items": [
-            "Use the key dates for quick planning, then check the full date list for teacher workdays, grading periods, early dismissals, and make-up day notes.",
-            "Download the ICS file if you want RCPS dates in Google Calendar, Apple Calendar, or Outlook, but verify district changes before making time-sensitive plans.",
-            "Use the official PDF link when you need the district source document for school forms, travel planning, or senior-year scheduling."
+            "Graduation ceremonies are scheduled May 25–26 at 2:30 p.m. and 5:30 p.m. Families should confirm each high school’s ceremony assignment."
           ]
         }
       ]
     },
     {
-      "id": "roanoke-county-calendar-highlights-2026-2027",
-      "label": "Roanoke County Public Schools 2026-2027 Calendar Highlights",
+      "id": "rcps-makeup-days-2026-2027",
+      "label": "Make-Up Days & Weather Changes",
       "position": "afterBreaks",
-      "content": "The 2026-2027 RCPS school calendar follows a traditional academic schedule with 178 total student days, scheduled breaks, teacher workdays, early dismissals, grading periods, high school virtual learning days, and graduation ceremonies.",
+      "content": "RCPS publishes the order it will use if weather or another closure requires additional instructional time.",
       "groups": [
         {
-          "label": "Key Planning Periods",
+          "label": "Published make-up order",
           "items": [
-            "First student day: Thursday, August 13, 2026.",
-            "First semester ends: Friday, December 18, 2026.",
-            "Winter Break: Monday, December 21, 2026 through Friday, January 1, 2027.",
-            "Spring Break: Monday, March 22 through Friday, March 26, 2027.",
-            "Graduation ceremonies: Tuesday, May 25 and Wednesday, May 26, 2027.",
-            "Last student day: Thursday, May 27, 2027."
+            "The first five missed days use banked days.",
+            "The sixth missed day uses January 4, the seventh uses February 8, and the eighth uses March 12.",
+            "The ninth missed day is marked “Not Required.” For 10 or more missed days, RCPS may add time to the school day."
           ]
         },
         {
-          "label": "Planning Notes",
+          "label": "Before making plans",
           "items": [
-            "Teacher workdays and make-up day candidates may affect childcare and travel plans.",
-            "Three-hour early dismissals should be tracked separately because dismissal timing may vary by school level.",
-            "High school virtual learning days apply only to high schools, so families should confirm campus-level expectations."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "planning-guide-roanoke-county-families-2026-2027",
-      "label": "Planning Guide for Roanoke County Families",
-      "position": "afterAbout",
-      "content": "Families can use the RCPS 2026-2027 calendar to plan vacations, childcare, transportation, appointments, senior-year events, and school activities around districtwide dates.",
-      "groups": [
-        {
-          "label": "Vacation Planning",
-          "items": [
-            "Winter Break and Spring Break are the clearest districtwide travel windows for students.",
-            "Families should review the RCPS make-up day schedule before booking travel near January, February, and March teacher workdays."
-          ]
-        },
-        {
-          "label": "Childcare and Transportation",
-          "items": [
-            "Three-hour early dismissals are listed separately from holidays and may require different transportation or childcare arrangements.",
-            "Conference days and teacher workdays may close schools for students even when staff are working."
-          ]
-        },
-        {
-          "label": "Graduation Planning",
-          "items": [
-            "Graduation ceremonies are listed for May 25-26, 2027.",
-            "Families of seniors should confirm ceremony assignments and school-specific graduation details directly with RCPS."
-          ]
-        },
-        {
-          "label": "Calendar Changes",
-          "items": [
-            "Weather closures, make-up days, and school board updates can change the practical school schedule.",
-            "Use the official RCPS academic calendar page for final confirmation before making time-sensitive plans."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "rcps-calendar-updates-weather-closures-2026-2027",
-      "label": "Calendar Updates and Weather Closures",
-      "position": "afterAbout",
-      "content": "Roanoke County school calendar changes can happen because of weather closures, emergency schedule changes, school board decisions, or make-up day adjustments. MySchoolDates summarizes the reviewed RCPS academic calendar, but the district remains the source of record for final schedule changes.",
-      "groups": [
-        {
-          "label": "What Families Should Watch",
-          "items": [
-            "Weather closures and make-up days may change how teacher workdays or scheduled breaks are used.",
-            "Three-hour early dismissals, high school virtual learning days, and conference dates may affect childcare and transportation.",
-            "Graduation assignments, school-specific events, and program calendars should be confirmed with the assigned school."
-          ]
-        },
-        {
-          "label": "How to Verify Changes",
-          "items": [
-            "Check the official RCPS academic calendar page before making travel or childcare plans.",
-            "Review district announcements for emergency closures, snow days, and make-up day decisions.",
-            "Use the downloadable calendar file as a planning aid, not as an automatically updating official district calendar."
+            "Check RCPS announcements before treating January 4, February 8, or March 12 as a guaranteed day off."
           ]
         }
       ]
     },
     {
       "id": "roanoke-county-calendar-changes-2026-2027",
-      "label": "2025-2026 vs 2026-2027 Roanoke County Calendar Changes",
+      "label": "What Changed From 2025–26",
       "position": "afterYearDiff",
-      "content": "The current RCPS calendar keeps the same 178 total student days while shifting several major dates one calendar day earlier than the prior school year.",
+      "content": "The first and last student days, major breaks, and graduation dates all fall one day earlier on the calendar than they did in 2025–26.",
       "table": {
-        "headers": [
-          "Item",
-          "2025-2026",
-          "2026-2027",
+        "columns": [
+          "Calendar item",
+          "2025–26",
+          "2026–27",
           "Change"
         ],
         "rows": [
@@ -162,156 +257,106 @@
           ],
           [
             "Winter Break",
-            "December 22, 2025-January 2, 2026",
-            "December 21, 2026-January 1, 2027",
+            "December 22, 2025–January 2, 2026",
+            "December 21, 2026–January 1, 2027",
             "Starts and ends one calendar day earlier"
           ],
           [
             "Spring Break",
-            "March 23-27, 2026",
-            "March 22-26, 2027",
+            "March 23–27, 2026",
+            "March 22–26, 2027",
             "Starts and ends one calendar day earlier"
           ],
           [
             "Graduation ceremonies",
-            "May 26-27, 2026",
-            "May 25-26, 2027",
-            "Starts one calendar day earlier"
+            "May 26–27, 2026",
+            "May 25–26, 2027",
+            "Moves one calendar day earlier"
           ]
         ]
       }
-    },
-    {
-      "id": "roanoke-county-calendar-update-history-2026-2027",
-      "label": "Roanoke County Calendar Update History",
-      "position": "beforeSources",
-      "content": "This page is updated when reviewed RCPS calendar source material changes or when the MySchoolDates calendar file is regenerated.",
-      "groups": [
-        {
-          "label": "July 20, 2026",
-          "items": [
-            "Verified key dates against the official Roanoke County Public Schools academic calendar PDF.",
-            "Generated the downloadable ICS calendar file from reviewed calendar records.",
-            "Reviewed make-up day notes, teacher workdays, early dismissals, and graduation dates for family planning context."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "how-we-verify-roanoke-county-calendar",
-      "label": "How We Verify Roanoke County Calendar Information",
-      "position": "beforeSources",
-      "content": "MySchoolDates reviews public district calendar sources before publishing searchable calendar pages and downloadable calendar files.",
-      "groups": [
-        {
-          "label": "Verification Steps",
-          "items": [
-            "Check the official RCPS academic calendar page and official calendar PDF.",
-            "Compare first day, last day, breaks, holidays, teacher workdays, early dismissals, and graduation dates.",
-            "Convert reviewed records into a downloadable calendar file for Google Calendar, Apple Calendar, and Outlook.",
-            "Keep an independent disclaimer because RCPS remains the official source for final updates."
-          ]
-        }
-      ]
     }
   ],
   "calendarFaqs": [
     {
-      "q": "When does Roanoke County Public Schools start school in 2026?",
-      "a": "The first student day is Thursday, August 13, 2026."
+      "q": "Is this the official RCPS calendar?",
+      "a": "MySchoolDates is an independent reference based on the calendar page and PDF published by Roanoke County Public Schools. The current PDF remains labeled DRAFT — SUBJECT TO CHANGE, so RCPS is the source of record for revisions."
     },
     {
-      "q": "When is Roanoke County Spring Break in 2027?",
-      "a": "Spring Break runs Monday, March 22 through Friday, March 26, 2027."
+      "q": "Does RCPS use make-up days?",
+      "a": "Yes. RCPS uses banked days for the first five missed days. The published order then uses January 4 for the sixth day, February 8 for the seventh, and March 12 for the eighth. For 10 or more missed days, RCPS may add time to the school day."
     },
     {
-      "q": "When is the last day of school for Roanoke County in 2027?",
-      "a": "The last day of school and end of second semester is Thursday, May 27, 2027."
-    },
-    {
-      "q": "When are RCPS graduation ceremonies in 2027?",
-      "a": "The official calendar lists graduation ceremonies on May 25-26, 2027."
-    },
-    {
-      "q": "Does Roanoke County Public Schools have school on Veterans Day?",
-      "a": "The reviewed 2026-2027 RCPS calendar does not list a separate Veterans Day school closure in the important dates shown on this page. Families should verify school-specific observances and any district updates with RCPS."
-    },
-    {
-      "q": "How many days are students off during Winter Break?",
-      "a": "Winter Break runs from Monday, December 21, 2026 through Friday, January 1, 2027, covering 10 weekdays when students are not scheduled for school."
+      "q": "Does RCPS have school on Veterans Day?",
+      "a": "The current 2026–27 RCPS calendar does not list Veterans Day as a school closure, so November 11 is scheduled as a regular school day unless the district announces a change."
     },
     {
       "q": "When are RCPS teacher workdays?",
-      "a": "The 2026-2027 RCPS calendar lists teacher workdays on August 3, August 7, August 10-12, October 12, January 4, March 12, and May 28. Some dates are also listed in the official make-up day schedule."
+      "a": "Teacher workdays are August 3–7 and August 10–12, 2026, before students begin. The calendar also lists October 12, January 4, March 12, and May 28 as teacher workdays; January 4 and March 12 may be converted under the make-up schedule."
     },
     {
-      "q": "Does RCPS have early dismissal days?",
-      "a": "Yes. The calendar lists three-hour early dismissals on September 23, October 21, February 24, April 28, and May 27, plus graduation-related secondary early dismissals on May 25-26, 2027."
+      "q": "What time do students leave on RCPS early-dismissal days?",
+      "a": "On districtwide three-hour early-dismissal days, elementary schools dismiss at 11:25 a.m. and secondary schools at 12:25 p.m. On May 25–26, early dismissal applies only to secondary students, at 12:25 p.m."
     },
     {
-      "q": "How many school days are in the RCPS 2026-2027 calendar?",
-      "a": "The Roanoke County Public Schools 2026-2027 calendar lists 178 total student days."
-    }
-  ],
-  "yearNumbers": [
-    {
-      "label": "First Day",
-      "value": "Aug 13",
-      "detail": "The first student day is August 13, 2026."
+      "q": "When do RCPS students return after Winter Break?",
+      "a": "Students return Tuesday, January 5, 2027. Monday, January 4 is a teacher workday and may be converted if RCPS needs its sixth make-up day."
     },
     {
-      "label": "Spring Break",
-      "value": "Mar 22-26",
-      "detail": "Spring Break runs March 22-26, 2027."
+      "q": "Are March 16–17 virtual-learning days for all RCPS students?",
+      "a": "No. The official calendar lists March 16–17, 2027 as virtual-learning days for high school students only."
     },
     {
-      "label": "Total Days",
-      "value": "178",
-      "detail": "The official calendar lists 178 total student days."
+      "q": "When are RCPS graduation ceremonies in 2027?",
+      "a": "RCPS lists graduation ceremonies on May 25–26, 2027, at 2:30 p.m. and 5:30 p.m. Secondary students dismiss at 12:25 p.m. on both days; families should confirm each school’s ceremony assignment."
     }
   ],
   "events": [
-    { "date": "2026-08-03", "name": "Teacher Workdays Begin", "type": "teacher_workday" },
-    { "date": "2026-08-07", "name": "Teacher Workdays", "type": "teacher_workday" },
-    { "date": "2026-08-10", "name": "Teacher Workdays Begin", "type": "teacher_workday" },
-    { "date": "2026-08-12", "name": "Teacher Workdays End", "type": "teacher_workday" },
-    { "date": "2026-08-13", "name": "First Student Day", "type": "school_start", "description": "First student attendance day for the Roanoke County Public Schools 2026-2027 school year." },
-    { "date": "2026-09-07", "name": "Labor Day - Schools Closed", "type": "holiday" },
-    { "date": "2026-09-23", "name": "Three-Hour Early Dismissal", "type": "early_release", "description": "District-listed three-hour early dismissal day." },
-    { "date": "2026-10-09", "name": "End of First Grading Period", "type": "academic" },
-    { "date": "2026-10-12", "name": "Teacher Workday - No Meetings", "type": "teacher_workday" },
-    { "date": "2026-10-21", "name": "Three-Hour Early Dismissal", "type": "early_release", "description": "District-listed three-hour early dismissal day." },
+    { "date": "2026-07-04", "name": "Independence Day", "type": "holiday", "description": "Listed on the official RCPS academic calendar before the student year begins.", "hideFromCalendarExport": true },
+    { "date": "2026-08-03", "endDate": "2026-08-07", "name": "Teacher Workdays", "type": "teacher_workday", "description": "Staff workdays before the first student day.", "hideFromCalendarExport": true },
+    { "date": "2026-08-10", "endDate": "2026-08-12", "name": "Teacher Workdays", "type": "teacher_workday", "description": "Staff workdays before the first student day.", "hideFromCalendarExport": true },
+    { "date": "2026-08-13", "name": "First Student Day", "type": "school_start", "description": "First student attendance day for the RCPS 2026–27 school year." },
+    { "date": "2026-09-07", "name": "Labor Day — Schools Closed", "type": "holiday" },
+    { "date": "2026-09-11", "name": "Interim Midpoint", "type": "academic" },
+    { "date": "2026-09-18", "name": "Interim Reports Available", "type": "academic" },
+    { "date": "2026-09-23", "name": "Three-Hour Early Dismissal", "type": "early_dismissal", "description": "No professional development. Elementary schools dismiss at 11:25 a.m.; secondary schools dismiss at 12:25 p.m." },
+    { "date": "2026-10-09", "name": "First Grading Period Ends", "type": "academic" },
+    { "date": "2026-10-12", "name": "Teacher Workday — No School for Students", "type": "teacher_workday", "description": "No meetings are scheduled." },
+    { "date": "2026-10-21", "name": "Three-Hour Early Dismissal", "type": "early_dismissal", "description": "Professional development day. Elementary schools dismiss at 11:25 a.m.; secondary schools dismiss at 12:25 p.m." },
     { "date": "2026-10-21", "name": "Report Cards Sent Home", "type": "academic" },
-    { "date": "2026-11-02", "name": "Student Conferences - Schools Closed", "type": "no_school" },
-    { "date": "2026-11-03", "name": "Election Day - Schools Closed", "type": "holiday" },
-    { "date": "2026-11-25", "name": "Thanksgiving Break", "type": "break_start", "description": "Thanksgiving Break begins for Roanoke County Public Schools students." },
-    { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2026-12-18", "name": "End of Second Grading Period and First Semester", "type": "semester_end" },
-    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start", "description": "Winter Break begins for Roanoke County Public Schools students." },
-    { "date": "2027-01-01", "name": "Winter Break End", "type": "break_end" },
-    { "date": "2027-01-04", "name": "Teacher Workday - No Meetings", "type": "teacher_workday", "description": "Listed in the official make-up day schedule as a possible converted day if needed." },
-    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day - Schools Closed", "type": "holiday" },
-    { "date": "2027-02-08", "name": "Parent-Teacher Conferences - Schools Closed", "type": "no_school", "description": "Listed in the official make-up day schedule as a possible converted day if needed." },
-    { "date": "2027-02-24", "name": "Three-Hour Early Dismissal", "type": "early_release", "description": "District-listed three-hour early dismissal day." },
-    { "date": "2027-03-11", "name": "End of Third Grading Period", "type": "academic" },
-    { "date": "2027-03-12", "name": "Teacher Workday - No Meetings", "type": "teacher_workday", "description": "Listed in the official make-up day schedule as a possible converted day if needed." },
-    { "date": "2027-03-15", "name": "Parent-Student Conferences - Schools Closed", "type": "no_school" },
-    { "date": "2027-03-16", "name": "High School Virtual Learning Days Begin", "type": "academic" },
-    { "date": "2027-03-17", "name": "High School Virtual Learning Days End", "type": "academic" },
-    { "date": "2027-03-22", "name": "Spring Break", "type": "break_start", "description": "Spring Break begins for Roanoke County Public Schools students." },
-    { "date": "2027-03-26", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2027-03-29", "name": "Easter Holiday - Schools Closed", "type": "holiday" },
-    { "date": "2027-04-28", "name": "Three-Hour Early Dismissal", "type": "early_release", "description": "District-listed three-hour early dismissal day." },
-    { "date": "2027-04-28", "name": "Middle School Student-Led Conferences", "type": "academic" },
-    { "date": "2027-05-25", "name": "Graduation Ceremonies Begin", "type": "graduation", "schemaEvent": true, "description": "Roanoke County Public Schools graduation ceremonies begin." },
-    { "date": "2027-05-25", "name": "Secondary Early Dismissal", "type": "early_release", "description": "Secondary early dismissal listed on the official RCPS calendar." },
-    { "date": "2027-05-26", "name": "Graduation Ceremonies End", "type": "graduation", "schemaEvent": true, "description": "Roanoke County Public Schools graduation ceremonies end." },
-    { "date": "2027-05-26", "name": "Secondary Early Dismissal", "type": "early_release", "description": "Secondary early dismissal listed on the official RCPS calendar." },
-    { "date": "2027-05-27", "name": "Last Day of School", "type": "school_end", "description": "Last student day for the Roanoke County Public Schools 2026-2027 school year." },
-    { "date": "2027-05-27", "name": "Three-Hour Early Dismissal", "type": "early_release", "description": "District-listed three-hour early dismissal on the last student day." },
-    { "date": "2027-05-27", "name": "End of Second Semester", "type": "semester_end" },
-    { "date": "2027-05-28", "name": "Teacher Workday", "type": "teacher_workday" },
-    { "date": "2027-05-31", "name": "Memorial Day - Schools Closed", "type": "holiday" },
-    { "date": "2027-06-18", "name": "Juneteenth Holiday Observed", "type": "holiday" }
+    { "date": "2026-11-02", "name": "Student Conferences — Schools Closed", "type": "no_school", "description": "Conferences take place during regular school hours." },
+    { "date": "2026-11-03", "name": "Election Day — Schools Closed", "type": "holiday" },
+    { "date": "2026-11-13", "name": "Interim Midpoint", "type": "academic" },
+    { "date": "2026-11-20", "name": "Interim Reports Available", "type": "academic" },
+    { "date": "2026-11-25", "endDate": "2026-11-27", "name": "Thanksgiving Break", "type": "break_start", "description": "Schools are closed November 25–27; students return November 30." },
+    { "date": "2026-12-18", "name": "Second Grading Period and First Semester End", "type": "semester_end" },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "name": "Winter Break", "type": "break_start", "description": "Schools are closed December 21–January 1. Students return January 5 after a January 4 teacher workday." },
+    { "date": "2027-01-04", "name": "Teacher Workday — No School for Students", "type": "teacher_workday", "description": "No meetings are scheduled. RCPS may use this as the sixth make-up day if needed." },
+    { "date": "2027-01-05", "name": "Students Return After Winter Break", "type": "school_resume", "description": "First regular student day after Winter Break and the January 4 teacher workday.", "isDerivedPlanningDate": true },
+    { "date": "2027-01-15", "name": "Report Cards Sent Home", "type": "academic" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day — Schools Closed", "type": "holiday" },
+    { "date": "2027-02-05", "name": "Interim Midpoint", "type": "academic" },
+    { "date": "2027-02-08", "name": "Schools Closed", "type": "no_school", "description": "RCPS may use this as the seventh make-up day if needed." },
+    { "date": "2027-02-09", "name": "Kindergarten Registration Begins for 2027–28", "type": "academic" },
+    { "date": "2027-02-12", "name": "Interim Reports Available", "type": "academic" },
+    { "date": "2027-02-24", "name": "Three-Hour Early Dismissal", "type": "early_dismissal", "description": "Professional development day. Elementary schools dismiss at 11:25 a.m.; secondary schools dismiss at 12:25 p.m." },
+    { "date": "2027-03-11", "name": "Third Grading Period Ends", "type": "academic" },
+    { "date": "2027-03-12", "name": "Teacher Workday — No School for Students", "type": "teacher_workday", "description": "No meetings are scheduled. RCPS may use this as the eighth make-up day if needed." },
+    { "date": "2027-03-15", "name": "Parent-Student Conferences — Schools Closed", "type": "no_school" },
+    { "date": "2027-03-16", "endDate": "2027-03-17", "name": "High School Virtual-Learning Days", "type": "academic", "badgeLabel": "High School", "description": "These virtual-learning days apply to high school students only." },
+    { "date": "2027-03-19", "name": "Report Cards Sent Home", "type": "academic" },
+    { "date": "2027-03-22", "endDate": "2027-03-26", "name": "Spring Break", "type": "break_start", "description": "Schools are closed March 22–26. Students return March 30 after the March 29 Easter holiday." },
+    { "date": "2027-03-29", "name": "Easter Holiday — Schools Closed", "type": "holiday" },
+    { "date": "2027-03-30", "name": "Students Return After Spring Break", "type": "school_resume", "description": "First regular student day after Spring Break and the March 29 Easter holiday.", "isDerivedPlanningDate": true },
+    { "date": "2027-04-22", "name": "Interim Midpoint", "type": "academic" },
+    { "date": "2027-04-28", "name": "Three-Hour Early Dismissal", "type": "early_dismissal", "description": "No professional development. Elementary schools dismiss at 11:25 a.m.; secondary schools dismiss at 12:25 p.m." },
+    { "date": "2027-04-28", "name": "Middle School Student-Led Conferences", "type": "academic", "badgeLabel": "Middle School" },
+    { "date": "2027-04-29", "name": "Interim Reports Available", "type": "academic" },
+    { "date": "2027-05-25", "endDate": "2027-05-26", "name": "Secondary Early Dismissal", "type": "early_dismissal", "badgeLabel": "Secondary", "description": "Secondary students dismiss at 12:25 p.m. Elementary schools follow their regular schedule." },
+    { "date": "2027-05-25", "endDate": "2027-05-26", "name": "Graduation Ceremonies", "type": "graduation", "schemaEvent": true, "description": "Ceremonies are scheduled at 2:30 p.m. and 5:30 p.m.; confirm each high school’s assignment." },
+    { "date": "2027-05-27", "name": "Last Day of School — Three-Hour Early Dismissal", "type": "school_end", "description": "Elementary schools dismiss at 11:25 a.m.; secondary schools dismiss at 12:25 p.m. The second semester also ends." },
+    { "date": "2027-05-28", "name": "Teacher Workday", "type": "teacher_workday", "description": "Staff workday after the last student day.", "hideFromCalendarExport": true },
+    { "date": "2027-05-31", "name": "Memorial Day — Schools and Offices Closed", "type": "operational_closure", "description": "District closure after the student year ends.", "hideFromCalendarExport": true },
+    { "date": "2027-06-18", "name": "Juneteenth Observed — Schools and Offices Closed", "type": "operational_closure", "description": "District closure after the student year ends.", "hideFromCalendarExport": true }
   ]
 }
