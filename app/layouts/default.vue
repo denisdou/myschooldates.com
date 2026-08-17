@@ -1,32 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-
-const stateLinks = [
-  { slug: 'arizona', name: 'Arizona' },
-  { slug: 'california', name: 'California' },
-  { slug: 'colorado', name: 'Colorado' },
-  { slug: 'florida', name: 'Florida' },
-  { slug: 'georgia', name: 'Georgia' },
-  { slug: 'hawaii', name: 'Hawaii' },
-  { slug: 'idaho', name: 'Idaho' },
-  { slug: 'illinois', name: 'Illinois' },
-  { slug: 'kentucky', name: 'Kentucky' },
-  { slug: 'maryland', name: 'Maryland' },
-  { slug: 'massachusetts', name: 'Massachusetts' },
-  { slug: 'michigan', name: 'Michigan' },
-  { slug: 'minnesota', name: 'Minnesota' },
-  { slug: 'nevada', name: 'Nevada' },
-  { slug: 'new-mexico', name: 'New Mexico' },
-  { slug: 'new-york', name: 'New York' },
-  { slug: 'north-carolina', name: 'North Carolina' },
-  { slug: 'ohio', name: 'Ohio' },
-  { slug: 'oregon', name: 'Oregon' },
-  { slug: 'pennsylvania', name: 'Pennsylvania' },
-  { slug: 'texas', name: 'Texas' },
-  { slug: 'utah', name: 'Utah' },
-  { slug: 'virginia', name: 'Virginia' },
-  { slug: 'washington', name: 'Washington' },
-]
+const { stateLinks } = useAppConfig()
 
 const statePageNames = Object.fromEntries(stateLinks.map(state => [state.slug, state.name])) as Record<string, string>
 const currentStateSlug = computed(() => route.path.split('/').filter(Boolean)[0] ?? '')

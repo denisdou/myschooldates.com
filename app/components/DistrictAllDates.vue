@@ -45,6 +45,7 @@ const props = defineProps<{
   coveredBreakDatesNote?: string
   hideCoveredBreakDatesNote?: boolean
   derivedDateNote?: string
+  derivedDateNotePosition?: 'event' | 'footer'
   includedDatesInKeyDates?: string[]
   firstDay?: string
   lastDay?: string
@@ -102,6 +103,11 @@ const visibleEvents = computed(() => props.events.filter(e =>
       (e.showDuringBreak || e.type === 'holiday' || !isCoveredByBreak(e, props.events))
     : e.type !== 'break_end' && !isRangeEndEvent(e) && (e.showDuringBreak || !isCoveredByBreak(e, props.events)))
 ))
+const showDerivedDateNoteInFooter = computed(() =>
+  props.derivedDateNotePosition === 'footer' &&
+  Boolean(props.derivedDateNote) &&
+  visibleEvents.value.some(event => event.isDerivedPlanningDate || event.derivedFromPublishedBreakDates)
+)
 
 const coveredBreakDateNames = computed(() => {
   if (props.hideCoveredBreakDatesNote) return []
@@ -557,7 +563,7 @@ function formatRangeEnd(event: DisplayEvent) {
               <p v-if="shouldShowDescription(event)" class="district-calendar-table__note mt-1 max-w-3xl text-sm leading-relaxed">
                 {{ event.description }}
               </p>
-              <p v-if="event.isDerivedPlanningDate || event.derivedFromPublishedBreakDates" class="mt-1 text-xs text-rds-ink-dim">
+              <p v-if="props.derivedDateNotePosition !== 'footer' && (event.isDerivedPlanningDate || event.derivedFromPublishedBreakDates)" class="mt-1 text-xs text-rds-ink-dim">
                 {{ derivedDateNote || 'Return date based on the district\'s published no-school schedule.' }}
               </p>
               </div>
@@ -571,6 +577,7 @@ function formatRangeEnd(event: DisplayEvent) {
     </div>
     <div class="district-calendar-table__footer flex items-center gap-1.5 px-6 py-3 text-xs leading-relaxed">
       <span>
+        <template v-if="showDerivedDateNoteInFooter">{{ derivedDateNote }} </template>
         <template v-if="footerMode === 'source_sentence'">
           <template v-if="footerCoverageNote">{{ footerCoverageNote }} </template>
           <template v-else><span class="font-medium text-[#6b645c]">Sources:</span> </template>

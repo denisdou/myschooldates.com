@@ -1,0 +1,689 @@
+{
+  "institutionId": "st-louis-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Saint Louis Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-24",
+  "lastDay": "2027-05-27",
+  "temporalCoverageStart": "2026-07-03",
+  "temporalCoverageEnd": "2027-07-02",
+  "semesters": 2,
+  "sourceUrl": "https://www.slps.org/calendar",
+  "sourceDocumentPage": "https://www.slps.org/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1770992831/slpsorg/slclfmv88eayf5bxba86/SLPS2026-27CalendarStaff.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1770992831/slpsorg/slclfmv88eayf5bxba86/SLPS2026-27CalendarStaff.pdf",
+  "sourceCheckedAt": "2026-08-17",
+  "sourceUpdatedAt": "2026-02-13",
+  "sourceChecksumSha256": "88c18b4934105de696670515d15ceb77f8974c9be673d348af847ef94fc98329",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "lastVerifiedAt": "2026-08-17",
+  "dateCreated": "2026-08-17",
+  "datePublished": "2026-08-17",
+  "dateModified": "2026-08-17",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "SLPS 2026–27 Calendar",
+  "sourceCalendarName": "Saint Louis Public Schools District 2026–27 Calendar",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.slps.org/calendar",
+    "linkText": "2026-27 Calendar",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1770992831/slpsorg/slclfmv88eayf5bxba86/SLPS2026-27CalendarStaff.pdf",
+    "expectedChecksumSha256": "88c18b4934105de696670515d15ceb77f8974c9be673d348af847ef94fc98329"
+  },
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideBreakDurationBadges": true,
+  "hideCoveredBreakDatesNote": true,
+  "hideDateLegend": true,
+  "seoTitle": "Saint Louis Public Schools Calendar 2026–27 | St. Louis, MO",
+  "seoDescription": "SLPS starts Aug. 24, 2026, and ends May 27, 2027. See breaks, no-school days, early releases, finals, the official PDF, and a one-time ICS download.",
+  "heroSummary": "Saint Louis Public Schools starts Monday, August 24, 2026, and the last day for students is Thursday, May 27, 2027. Students have two-hour early releases on October 14 and February 10. Thanksgiving Break is November 23–27, Winter Break is December 21–January 1, and Spring Break is March 29–April 2; March 26 is a separate no-school day.",
+  "heroSourceLine": "2026–27 school calendar dates · Reviewed against the official one-page SLPS calendar",
+  "verificationBadgeText": "Checked against official SLPS sources",
+  "calendarNotes": "The one-page SLPS calendar includes student dates, staff preparation, conferences, high school finals, conditional snow or make-up days, and summer school. This page keeps those categories separate so families can see which dates change the regular school day.",
+  "keyDatesSummaryTitle": "SLPS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last student days, major breaks, and the winter return date",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-24",
+      "type": "school_start",
+      "schemaDescription": "The first day of school for Saint Louis Public Schools students in 2026–27."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break — District Closed",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break — No School",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "Students are off for the full break; some district staff work on selected dates. School resumes January 4."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "type": "break_start",
+      "description": "March 26 is a separate no-school day immediately before the break."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Students",
+      "date": "2027-05-27",
+      "type": "school_end"
+    }
+  ],
+  "breaksTitle": "SLPS School Breaks and Return Dates",
+  "breaksBeforeAllDates": true,
+  "breakNotes": {
+    "Thanksgiving Break — District Closed": "The next scheduled school day is Monday, Nov. 30.",
+    "Winter Break — No School": "Students are off for the full break. The district calendar says 12-month employees work Dec. 21–23 and Dec. 28–30; Dec. 24–25, Dec. 31, and Jan. 1 are district-closed dates. School resumes Monday, Jan. 4.",
+    "Spring Break — No School": "March 26 is a separate no-school day immediately before Spring Break. The next scheduled school day is Monday, April 5."
+  },
+  "allDatesTitle": "Saint Louis Public Schools 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This table includes every dated item on the district's one-page calendar. Official source rows remain separate from the family-focused break summaries above.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1770992831/slpsorg/slclfmv88eayf5bxba86/SLPS2026-27CalendarStaff.pdf",
+  "allDatesSourceLabel": "Official SLPS 2026–27 calendar PDF",
+  "gradingPeriodsTitle": "SLPS 2026–27 Quarter and Semester Dates",
+  "gradingPeriodsDescription": "The SLPS calendar lists the end of Quarter 1, Quarter 2 / Semester 1, and Quarter 3. It also marks the start of Semester 2 and Quarter 4. May 27 is listed separately as the last day for students.",
+  "gradingPeriods": [
+    {
+      "label": "Quarter 1",
+      "end": "2026-10-22"
+    },
+    {
+      "label": "Quarter 2 / Semester 1",
+      "end": "2027-01-14"
+    },
+    {
+      "label": "Quarter 3",
+      "end": "2027-03-18"
+    }
+  ],
+  "gradingPeriodsPosition": "afterCalendarExport",
+  "customSections": [
+    {
+      "id": "slps-attendance-2026-2027",
+      "label": "How Special SLPS Dates Affect the School Day",
+      "position": "afterKeyDates",
+      "content": "Not every special date on the SLPS calendar changes the school day in the same way. Some are no-school days, two are early-release days, and conference weeks do not automatically change the regular schedule.",
+      "table": {
+        "columns": [
+          "Dates",
+          "What families should know"
+        ],
+        "rows": [
+          [
+            "Oct. 14 and Feb. 10",
+            "Students are released two hours early for professional development."
+          ],
+          [
+            "Oct. 23, Jan. 15, and Mar. 19",
+            "SLPS lists these as record keeping, professional development, or wellness dates. The published 2026–27 calendar does not separately label them “No School.”"
+          ],
+          [
+            "Nov. 2–3",
+            "No school on both days; Nov. 3 is Election Day."
+          ],
+          [
+            "Oct. 26–30 and Mar. 22–25",
+            "Parent-teacher conference windows; the calendar does not mark these dates as districtwide no-school or early-release days."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "slps-high-school-dates-2026-2027",
+      "label": "SLPS High School Finals and Senior Dates",
+      "position": "afterGradingPeriods",
+      "content": "These dates are for high school students and seniors. Finals are not listed as districtwide school closures.",
+      "table": {
+        "columns": [
+          "Calendar item",
+          "Dates"
+        ],
+        "rows": [
+          [
+            "First-semester high school finals",
+            "January 11–14, 2027"
+          ],
+          [
+            "Senior finals",
+            "May 17–20, 2027"
+          ],
+          [
+            "Last day for seniors",
+            "May 21, 2027"
+          ],
+          [
+            "Second-semester high school finals",
+            "May 24–27, 2027"
+          ]
+        ]
+      }
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-07-03",
+      "name": "Independence Day — District Closed",
+      "type": "operational_closure",
+      "badgeLabel": "District Holiday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-10",
+      "name": "Building Professional Development and Classroom Preparation",
+      "type": "teacher_professional_learning",
+      "badgeLabel": "Staff Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-11",
+      "name": "Classroom Preparation",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-12",
+      "endDate": "2026-08-19",
+      "name": "Professional Development — Details TBD",
+      "type": "teacher_professional_learning",
+      "badgeLabel": "Staff Only",
+      "description": "The official calendar lists this period as “PD (TBD).”",
+      "preserveOfficialName": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Building Professional Development and Open House",
+      "type": "academic",
+      "badgeLabel": "Staff / Families",
+      "description": "Check the assigned school for its open-house time.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-21",
+      "name": "Classroom Preparation",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-24",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — District Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-18",
+      "name": "Quarter 1 Progress Period Ends",
+      "type": "academic",
+      "badgeLabel": "Progress Period",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-14",
+      "name": "Two-Hour Early Release — Professional Development",
+      "type": "early_dismissal"
+    },
+    {
+      "date": "2026-10-22",
+      "name": "Quarter 1 Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-23",
+      "name": "Record Keeping / Wellness",
+      "type": "academic",
+      "badgeLabel": "PD / Recordkeeping / Wellness",
+      "preserveOfficialName": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-26",
+      "name": "Quarter 2 Begins",
+      "type": "academic",
+      "badgeLabel": "Quarter Begins",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-26",
+      "endDate": "2026-10-30",
+      "name": "Parent-Teacher Conferences",
+      "type": "academic",
+      "badgeLabel": "Conferences",
+      "description": "The calendar does not label these dates as districtwide no-school or early-release days.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-11-02",
+      "name": "No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Election Day — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day — District Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break — District Closed",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-04",
+      "name": "Quarter 2 Progress Period Ends",
+      "type": "academic",
+      "badgeLabel": "Progress Period",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break — No School",
+      "type": "break_start",
+      "description": "Family-focused summary of the official winter rows listed separately below.",
+      "hideFromAllDates": true,
+      "isDerivedPlanningDate": true
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2026-12-23",
+      "name": "Winter Break — No School, School Staff Only; 12-Month Works",
+      "type": "no_school",
+      "badgeLabel": "No School",
+      "preserveOfficialName": true,
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-24",
+      "endDate": "2026-12-25",
+      "name": "Christmas (District Closed)",
+      "type": "operational_closure",
+      "badgeLabel": "District Holiday",
+      "preserveOfficialName": true,
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-28",
+      "endDate": "2026-12-30",
+      "name": "Winter Break — No School, School Staff Only; 12-Month Works",
+      "type": "no_school",
+      "badgeLabel": "No School",
+      "preserveOfficialName": true,
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-31",
+      "name": "Winter Break / District Closed",
+      "type": "operational_closure",
+      "badgeLabel": "District Holiday",
+      "preserveOfficialName": true,
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-01",
+      "name": "New Year's Day (District Closed)",
+      "type": "holiday",
+      "preserveOfficialName": true,
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-04",
+      "name": "School Resumes",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-11",
+      "endDate": "2027-01-14",
+      "name": "First-Semester Finals — High School",
+      "type": "academic",
+      "badgeLabel": "High School",
+      "labelType": "partial_closure",
+      "description": "Check the high school for its daily finals schedule.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-14",
+      "name": "Quarter 2 and Semester 1 End",
+      "type": "semester_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-15",
+      "name": "Record Keeping / PD",
+      "type": "academic",
+      "badgeLabel": "PD / Recordkeeping / Wellness",
+      "preserveOfficialName": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — District Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-19",
+      "name": "Quarter 3 and Semester 2 Begin",
+      "type": "academic",
+      "badgeLabel": "Semester Begins",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-02-10",
+      "name": "Two-Hour Early Release — Professional Development",
+      "type": "early_dismissal"
+    },
+    {
+      "date": "2027-02-12",
+      "name": "Quarter 3 Progress Period Ends",
+      "type": "academic",
+      "badgeLabel": "Progress Period",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day — District Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-18",
+      "name": "Quarter 3 Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-19",
+      "name": "Record Keeping / PD",
+      "type": "academic",
+      "badgeLabel": "PD / Recordkeeping / Wellness",
+      "preserveOfficialName": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-22",
+      "name": "Quarter 4 Begins",
+      "type": "academic",
+      "badgeLabel": "Quarter Begins",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-22",
+      "endDate": "2027-03-25",
+      "name": "Parent-Teacher Conferences",
+      "type": "academic",
+      "badgeLabel": "Conferences",
+      "description": "The calendar does not label these dates as districtwide no-school or early-release days.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-26",
+      "name": "No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "name": "Spring Break — No School",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-04-23",
+      "name": "Quarter 4 Progress Period Ends",
+      "type": "academic",
+      "badgeLabel": "Progress Period",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-17",
+      "endDate": "2027-05-20",
+      "name": "Senior Finals — High School",
+      "type": "academic",
+      "badgeLabel": "Seniors",
+      "labelType": "partial_closure",
+      "description": "Check the high school for its daily finals schedule.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-21",
+      "name": "Last Day for Seniors",
+      "type": "school_end",
+      "badgeLabel": "Seniors",
+      "labelType": "partial_closure",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-24",
+      "endDate": "2027-05-27",
+      "name": "Second-Semester Finals — High School",
+      "type": "academic",
+      "badgeLabel": "High School",
+      "labelType": "partial_closure",
+      "description": "Check the high school for its daily finals schedule.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-27",
+      "name": "Last Day for Students",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Record Keeping",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day — District Closed",
+      "type": "operational_closure",
+      "badgeLabel": "District Holiday",
+      "description": "District holiday after the regular student year.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-01",
+      "endDate": "2027-06-04",
+      "name": "Snow / Make-Up Days — If Needed",
+      "type": "makeup_day",
+      "badgeLabel": "Conditional",
+      "description": "Do not assume students attend unless SLPS announces that one or more dates will be used.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-07",
+      "name": "Summer School Begins",
+      "type": "academic",
+      "badgeLabel": "Summer School",
+      "description": "Separate from the regular 2026–27 student calendar.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-18",
+      "name": "Juneteenth Observed — District Closed",
+      "type": "operational_closure",
+      "badgeLabel": "District Holiday",
+      "description": "District holiday during summer school.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-07-02",
+      "name": "Last Day of Summer School",
+      "type": "academic",
+      "badgeLabel": "Summer School",
+      "description": "Separate from the regular 2026–27 student calendar.",
+      "hideFromCalendarExport": true
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "SLPS 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Download the dates most families need as a one-time calendar file, or open the official SLPS PDF.",
+  "hideCompatibleCalendars": true,
+  "hideShareCalendarHeading": true,
+  "hideSocialShareButtons": true,
+  "hideCalendarUpdatesButton": true,
+  "icsHeading": "Download the SLPS 2026–27 Calendar",
+  "icsDescription": "Import the first and last student days, breaks, holidays, confirmed no-school dates, two-hour early releases, and the January 4 return date. Staff preparation, PD/recordkeeping/wellness labels, grading markers, conferences, high school finals, conditional make-up dates, and summer school are excluded.",
+  "icsButtonLabel": "Download SLPS Calendar (.ics)",
+  "icsButtonSupportText": "This is a one-time import and does not sync with later SLPS revisions or weather decisions.",
+  "hideIcsImportDisclaimer": true,
+  "pdfHeading": "Official SLPS 2026–27 Calendar",
+  "pdfDescription": "Open the one-page district calendar used to verify student dates, staff days, breaks, finals, conditional make-up dates, and summer school.",
+  "pdfButtonLabel": "View Official SLPS PDF",
+  "pdfVersionLabel": "Saint Louis Public Schools District 2026–27 Calendar",
+  "calendarFaqs": [
+    {
+      "q": "Are the SLPS two-hour early-release dates days off?",
+      "a": "No. Students attend on October 14, 2026, and February 10, 2027, but are released two hours early for professional development. Families should confirm dismissal and transportation details with the school."
+    },
+    {
+      "q": "Do students have school during the SLPS parent-teacher conference weeks?",
+      "a": "The district calendar lists conferences October 26–30 and March 22–25 but does not label those dates as districtwide no-school or early-release days. Check the assigned school for conference times and any school-specific schedule."
+    },
+    {
+      "q": "Are June 1–4, 2027, regular SLPS school days?",
+      "a": "Not automatically. The calendar reserves June 1–4 as snow or make-up days if needed. Do not treat them as student attendance days unless SLPS announces that one or more dates will be used."
+    },
+    {
+      "q": "Are the SLPS high school finals dates districtwide days off?",
+      "a": "No. The January 11–14 and May 24–27 finals periods apply to high school schedules, and senior finals run May 17–20. The district calendar does not label those periods as districtwide school closures."
+    },
+    {
+      "q": "Does the downloaded SLPS calendar update automatically?",
+      "a": "No. The ICS file is a one-time import and does not sync with later SLPS revisions, weather decisions, or activated make-up days. Check the official SLPS calendar before relying on a date that may change."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "Are the SLPS two-hour early-release dates days off?",
+    "Do students have school during the SLPS parent-teacher conference weeks?",
+    "Are June 1–4, 2027, regular SLPS school days?",
+    "Are the SLPS high school finals dates districtwide days off?",
+    "Does the downloaded SLPS calendar update automatically?"
+  ],
+  "faqDisplayLimit": 5,
+  "schemaCalendarName": "Saint Louis Public Schools District 2026–27 Calendar",
+  "schemaDatasetName": "Saint Louis Public Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Saint Louis Public Schools 2026–27 calendar records from the district-linked one-page calendar, including the first and last student days, breaks, district closures, two-hour early releases, PD/recordkeeping/wellness labels, grading markers, conferences, high school finals, conditional snow or make-up days, and separate summer-school dates.",
+  "schemaCalendarDownloadName": "SLPS 2026–27 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import of selected student attendance dates from the official Saint Louis Public Schools 2026–27 calendar.",
+  "schemaSpatialCoverage": "Saint Louis Public Schools, St. Louis, Missouri",
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Attendance",
+      "id": "slps-attendance-2026-2027"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Quarter Dates",
+      "id": "grading-periods"
+    },
+    {
+      "label": "High School",
+      "id": "slps-high-school-dates-2026-2027"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "yearSwitcherPosition": "afterSources",
+  "hiddenSections": [
+    "instructionalDays",
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "comparison",
+    "whatsDifferent",
+    "nationalTrends",
+    "otherCalendars",
+    "relatedDistricts"
+  ],
+  "sourceReviewSummary": "Reviewed August 17, 2026, against the SLPS calendar page and district-linked one-page 2026–27 PDF.",
+  "sourceReviewDetailsTitle": "What we checked",
+  "sourceReviewDetails": [
+    "We checked every dated item against the one-page SLPS calendar and kept the PDF's attendance and operating labels separate.",
+    "The PDF does not separately label October 23, January 15, or March 19 as no-school days, so those dates are not included in the family ICS file.",
+    "Families should confirm school-specific conference, finals, transportation, and dismissal details with SLPS or the assigned school."
+  ],
+  "sourceNextReviewText": "Next review: when SLPS revises the 2026–27 calendar or activates a snow or make-up day.",
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Saint Louis Public Schools sources.",
+  "sources": [
+    {
+      "label": "Saint Louis Public Schools calendar page",
+      "url": "https://www.slps.org/calendar"
+    },
+    {
+      "label": "Official SLPS 2026–27 calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1770992831/slpsorg/slclfmv88eayf5bxba86/SLPS2026-27CalendarStaff.pdf"
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "institutionId": "kansas-city-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Kansas City Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-24",
+  "lastDay": "2027-05-28",
+  "temporalCoverageStart": "2026-08-10",
+  "temporalCoverageEnd": "2027-06-18",
+  "semesters": 2,
+  "sourceUrl": "https://www.kcpublicschools.org/page/calendar",
+  "sourceDocumentPage": "https://www.kcpublicschools.org/page/calendar",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5738/Northeast/944dcd22-b313-4f0e-b256-793f675493a7/2026-27-KCPS-Calendar-%287%29.pdf?disposition=inline",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5738/Northeast/944dcd22-b313-4f0e-b256-793f675493a7/2026-27-KCPS-Calendar-%287%29.pdf?disposition=inline",
+  "sourceCheckedAt": "2026-08-17",
+  "sourceUpdatedAt": "2026-04-08",
+  "sourceChecksumSha256": "c9f893c390bc5b52130ded89190423158012537410e3ae59f873eaba19992d3e",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The current English PDF lists four reporting dates one day or several days earlier than the Spanish and Swahili editions: September 29, January 27, March 3, and April 8. The translated PDFs also contain June 2027 month-grid errors, and the Spanish sidebar spells July as ‘JULIIO.’ This page follows the current English calendar and links the translated editions as official KCPS language resources.",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.kcpublicschools.org/page/calendar",
+    "linkText": "2026–27 KCPS Calendar — English",
+    "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5738/Northeast/944dcd22-b313-4f0e-b256-793f675493a7/2026-27-KCPS-Calendar-%287%29.pdf?disposition=inline",
+    "expectedChecksumSha256": "c9f893c390bc5b52130ded89190423158012537410e3ae59f873eaba19992d3e"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.kcpublicschools.org/page/calendar",
+      "linkText": "Calendario Escolar — Spanish",
+      "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5738/Kcps/cd1dd3b4-65b8-4630-88d0-fb202c9c20a7/UPDATED-2026-27-KCPS-Calendar-%282%29.pdf?disposition=inline",
+      "expectedChecksumSha256": "c16dc60c4da0e612befc1f5eadea254b9a52b322f8f6cad12c13f4fa5b83e093"
+    },
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.kcpublicschools.org/page/calendar",
+      "linkText": "Kalenda ya Shule — Swahili",
+      "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5738/Kcps/c9950f43-fd97-4098-9b9c-cbd441fbf5ab/UPDATED-2026-27-KCPS-Calendar.pdf?disposition=inline",
+      "expectedChecksumSha256": "ac8d760ee7942869a23973545d8773e6e7b9b442b99a4570f939b57f7f1f132e"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-17",
+  "dateCreated": "2026-08-17",
+  "datePublished": "2026-08-17",
+  "dateModified": "2026-08-17",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_source_conflict", "official_schedule_change", "start_dismissal_schedule_change", "confirmed_data_error"],
+  "sourceCalendarName": "Kansas City Public Schools 2026–27 School Calendar",
+  "schemaCalendarName": "Kansas City Public Schools Calendar 2026–27",
+  "schemaDatasetName": "Kansas City Public Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Kansas City Public Schools dates for 2026–27, including the first and last student days, breaks, student closures, quarter dates, progress reports, report cards, the seniors' last day, and early dismissal. Dates follow the current English calendar; differences in the official Spanish and Swahili editions are documented on the page.",
+  "schemaSpatialCoverage": "Kansas City, Missouri",
+  "schemaCalendarDownloadName": "Kansas City Public Schools 2026–27 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with KCPS first and last days, breaks, no-school dates, quarter markers, report dates, the seniors' last day, and the last day for students with early dismissal.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-spanish",
+      "type": "CreativeWork",
+      "name": "KCPS 2026–27 Calendario Escolar — Spanish",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5738/Kcps/cd1dd3b4-65b8-4630-88d0-fb202c9c20a7/UPDATED-2026-27-KCPS-Calendar-%282%29.pdf?disposition=inline"
+    },
+    {
+      "id": "source-calendar-swahili",
+      "type": "CreativeWork",
+      "name": "KCPS 2026–27 Kalenda ya Shule — Swahili",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5738/Kcps/c9950f43-fd97-4098-9b9c-cbd441fbf5ab/UPDATED-2026-27-KCPS-Calendar.pdf?disposition=inline"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": ["source-calendar", "source-calendar-page", "source-calendar-spanish", "source-calendar-swahili"],
+  "schemaWebPageIsBasedOnSourceIds": ["source-calendar", "source-calendar-page", "source-calendar-spanish", "source-calendar-swahili"],
+  "calendarType": "traditional",
+  "calendarTrackId": "kcps-district-calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "itemListMode": "keyDates",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hiddenSections": ["keyDateCards", "quickFacts", "todayStatus", "breaks", "about", "yearNumbers", "whatsDifferent", "planningTips", "districtProfile", "livingHere", "nationalTrends", "comparison", "relatedDistricts", "downloadCta", "otherCalendars"],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Student Days Off", "id": "kcps-2026-2027-student-days-off" },
+    { "label": "Full Calendar", "id": "all-dates" },
+    { "label": "Quarter Dates", "id": "grading-periods" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Language Review", "id": "kcps-2026-2027-language-review" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "seoTitle": "Kansas City Public Schools Calendar 2026–27: Dates & PDFs",
+  "seoDescription": "KCPS starts Aug. 24, 2026, and ends May 28, 2027. See breaks, no-school days, quarter dates, early-dismissal details, and official English, Spanish, and Swahili PDFs.",
+  "heroSummary": "Kansas City Public Schools students start Monday, August 24, 2026. Fall Break runs November 23–27. Winter Break runs December 21–January 1, followed by a district PD day on January 4, so students return January 5. Students are also off March 22–26 for Spring Break and the Spring Holiday. Seniors' last day is April 30, and May 28 is the last day for all students, with early dismissal.",
+  "heroSourceLine": "Dates follow KCPS's current 2026–27 English calendar; Spanish and Swahili editions were also reviewed",
+  "hideHeroDownloadLink": true,
+  "heroCtas": [
+    { "label": "View Official English PDF", "href": "__sourcePdfUrl", "variant": "primary" },
+    { "label": "Add Dates to Calendar (.ics)", "href": "__icsUrl", "variant": "secondary", "download": true, "filename": "__icsFilename" }
+  ],
+  "verificationBadgeText": "Reviewed Aug. 17, 2026 · Denis Dou · Official KCPS sources",
+  "heroVerificationSourceText": "Reviewed the English, Spanish, and Swahili calendar PDFs",
+  "heroVerificationComparisonText": "Cross-checked the event schedule and documented translated month-grid errors",
+  "calendarNotes": "KCPS lists August 24 as the first student day and May 28 as the last student day with early dismissal. The official schedule includes four quarters, progress-report and report-card dates, parent-teacher conference closures, district professional-development days, Fall Break, Winter Break, Spring Break, a separate Spring Holiday, and a separate April 30 seniors' last day. January 4 is a district professional-development day, so students return from Winter Break on January 5. The official Spring Break ends March 25, but students are also out March 26 for the Spring Holiday. Four reporting dates in the current English PDF differ from the Spanish and Swahili editions, and the translated June 2027 grids contain duplicated and omitted date numbers. The PDF does not state a total instructional-day count, and this page does not infer one.",
+  "keyDatesHeading": "Kansas City Public Schools 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "Kansas City Public Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "The first day, major breaks, seniors' last day, and the last day for students",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day for Students", "date": "2026-08-24", "type": "school_start" },
+    { "label": "Fall", "name": "Fall Break", "date": "2026-11-23", "endDate": "2026-11-27", "type": "break_start" },
+    { "label": "Winter", "name": "Winter Break", "date": "2026-12-21", "endDate": "2027-01-01", "type": "break_start", "description": "January 4 is a district PD day; students return January 5." },
+    { "label": "Spring", "name": "Spring Student Days Off", "date": "2027-03-22", "endDate": "2027-03-26", "type": "break_start", "description": "Official Spring Break runs March 22–25, followed by the Spring Holiday on March 26." },
+    { "label": "Seniors", "name": "Seniors' Last Day", "date": "2027-04-30", "type": "academic" },
+    { "label": "Last Student Day", "name": "Last Day for Students — Early Dismissal", "date": "2027-05-28", "type": "school_end" }
+  ],
+  "allDatesTitle": "Kansas City Public Schools 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This table transcribes the dates and labels in the current English KCPS calendar. The family-planning section groups longer stretches without regular classes while preserving the underlying KCPS event labels.",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5738/Northeast/944dcd22-b313-4f0e-b256-793f675493a7/2026-27-KCPS-Calendar-%287%29.pdf?disposition=inline",
+  "allDatesSourceLabel": "Official KCPS 2026–27 English School Calendar",
+  "dateLegendLabelOverrides": {
+    "Academic Date": "Quarter / Reports",
+    "Teacher Workday": "Staff Date",
+    "No School": "No School for Students",
+    "Early Release": "Early Dismissal"
+  },
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "gradingPeriodsTitle": "KCPS 2026–27 Quarter Dates",
+  "gradingPeriodsDescription": "KCPS prints four quarter ranges on the annual school calendar.",
+  "gradingPeriods": [
+    { "label": "Quarter 1", "start": "2026-08-24", "end": "2026-10-22" },
+    { "label": "Quarter 2", "start": "2026-10-23", "end": "2027-01-20" },
+    { "label": "Quarter 3", "start": "2027-01-21", "end": "2027-04-01" },
+    { "label": "Quarter 4", "start": "2027-04-02", "end": "2027-05-28" }
+  ],
+  "customSections": [
+    {
+      "id": "kcps-2026-2027-family-notes",
+      "label": "What KCPS Families Should Know",
+      "position": "afterKeyDates",
+      "content": "Three details in the district calendar are especially easy to miss.",
+      "groups": [
+        {
+          "label": "",
+          "items": [
+            "October 29–30 and February 11–15 create longer stretches without regular classes.",
+            "Students return from Winter Break on January 5, not January 4.",
+            "April 30 is only the seniors' last day; May 28 is the last day for all KCPS students."
+          ]
+        }
+      ],
+      "hideGroupLabels": true
+    },
+    {
+      "id": "kcps-2026-2027-student-days-off",
+      "label": "KCPS Breaks and Student Days Off",
+      "position": "afterKeyDates",
+      "content": "KCPS uses break, conference, professional-development, workday, and holiday labels for dates when students do not attend. These ranges show longer stretches when students are out of regular classes and identify the next regular school day. Single no-school days are listed in the full calendar.",
+      "table": {
+        "caption": "KCPS 2026–27 student days off and return dates",
+        "columns": ["Student days off", "KCPS calendar labels", "Next regular school day"],
+        "rows": [
+          ["October 29–30, 2026", "Parent/Teacher Conferences on Thursday; PD Day on Friday", "Monday, November 2"],
+          ["November 23–27, 2026", "Fall Break", "Monday, November 30"],
+          ["December 21, 2026–January 4, 2027", "Winter Break through January 1; District PD Day on January 4", "Tuesday, January 5"],
+          ["February 11–15, 2027", "Parent/Teacher Conferences; PD/Workday; Presidents' Day", "Tuesday, February 16"],
+          ["March 22–26, 2027", "Spring Break March 22–25; Spring Holiday March 26", "Monday, March 29"]
+        ]
+      }
+    },
+    {
+      "id": "kcps-2026-2027-language-review",
+      "label": "A Note About the Spanish and Swahili Calendars",
+      "position": "afterCalendarExport",
+      "content": "KCPS publishes its 2026–27 calendar in English, Spanish, and Swahili. The current English PDF lists Mid-Term Progress Reports on September 29 and March 3, and Report Cards on January 27 and April 8. The translated PDFs list September 30, March 4, January 28, and April 12. Their June 2027 month grids also contain date-number errors, so this page follows the current English calendar. The translated PDFs remain available in Downloads as official KCPS resources.",
+      "table": {
+        "columns": ["Edition", "Use on this page", "Review note"],
+        "rows": [
+          ["English", "Primary source used to verify the dates", "The current English PDF lists the reporting dates used on this page."],
+          ["Spanish", "Official Spanish version", "Four reporting dates differ from the current English PDF; the June grid also has duplicated and omitted date numbers."],
+          ["Swahili", "Official Swahili version", "Four reporting dates differ from the current English PDF; the June grid has the same duplicated and omitted date numbers."]
+        ]
+      }
+    }
+  ],
+  "events": [
+    { "date": "2026-08-10", "name": "Teachers Return", "type": "teacher_workday", "description": "Students have not started the school year.", "hideFromCalendarExport": true },
+    { "date": "2026-08-11", "endDate": "2026-08-20", "name": "Teacher PD/Prep Days", "type": "teacher_workday", "description": "Students have not started the school year.", "hideFromCalendarExport": true },
+    { "date": "2026-08-21", "name": "Non-work Day for Teachers (Buildings Open)", "type": "closure", "description": "Students have not started the school year.", "hideFromCalendarExport": true },
+    { "date": "2026-08-24", "name": "First Day for Students", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day (No School)", "type": "holiday" },
+    { "date": "2026-09-29", "name": "Mid-Term Progress Reports Available", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-10-02", "name": "District PD Day (No School)", "type": "no_school", "badgeLabel": "No School" },
+    { "date": "2026-10-22", "name": "End of Q1", "type": "quarter_end", "hideFromCalendarExport": true },
+    { "date": "2026-10-23", "name": "Q2 Begins", "type": "quarter_start", "hideFromCalendarExport": true },
+    { "date": "2026-10-29", "name": "Report Cards Available", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-10-29", "name": "Parent/Teacher Conferences (No School)", "type": "no_school", "badgeLabel": "No School" },
+    { "date": "2026-10-30", "name": "PD Day (No School)", "type": "no_school", "badgeLabel": "No School" },
+    { "date": "2026-11-20", "name": "District PD Day (No School)", "type": "no_school", "badgeLabel": "No School" },
+    { "date": "2026-11-23", "endDate": "2026-11-27", "name": "Fall Break (No School)", "type": "break_start" },
+    { "date": "2026-12-11", "name": "Mid-Term Progress Reports Available", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "name": "Winter Break (No School)", "type": "break_start" },
+    { "date": "2027-01-04", "name": "District PD Day (No School)", "type": "no_school", "badgeLabel": "No School", "description": "Students return January 5." },
+    { "date": "2027-01-05", "name": "Students Return", "type": "school_resume" },
+    { "date": "2027-01-18", "name": "MLK Day (No School)", "type": "holiday" },
+    { "date": "2027-01-20", "name": "End of Q2", "type": "quarter_end", "hideFromCalendarExport": true },
+    { "date": "2027-01-21", "name": "Q3 Begins", "type": "quarter_start", "hideFromCalendarExport": true },
+    { "date": "2027-01-27", "name": "Report Cards Available", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-02-11", "name": "Parent/Teacher Conferences (No School)", "type": "no_school", "badgeLabel": "No School" },
+    { "date": "2027-02-12", "name": "PD/Workday (No School)", "type": "no_school", "badgeLabel": "No School", "preserveOfficialName": true },
+    { "date": "2027-02-15", "name": "Presidents' Day (No School)", "type": "holiday" },
+    { "date": "2027-03-03", "name": "Q3 Mid-Term Progress Reports Available", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-03-22", "endDate": "2027-03-25", "name": "Spring Break (No School)", "type": "break_start" },
+    { "date": "2027-03-26", "name": "Spring Holiday (No School)", "type": "holiday" },
+    { "date": "2027-04-01", "name": "End of Q3", "type": "quarter_end", "hideFromCalendarExport": true },
+    { "date": "2027-04-02", "name": "Q4 Begins", "type": "quarter_start", "hideFromCalendarExport": true },
+    { "date": "2027-04-09", "name": "District PD Day (No School)", "type": "no_school", "badgeLabel": "No School" },
+    { "date": "2027-04-08", "name": "Report Cards Available", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-04-30", "name": "Seniors' Last Day", "type": "academic", "badgeLabel": "Seniors" },
+    { "date": "2027-05-07", "name": "Mid-Term Progress Reports Available", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-05-28", "name": "Last Day for Students", "type": "school_end", "badgeLabel": "Last Student Day" },
+    { "date": "2027-05-28", "name": "Early Dismissal", "type": "early_dismissal", "description": "KCPS does not publish one districtwide dismissal time. Check your school's schedule.", "hideFromCalendarExport": true },
+    { "date": "2027-05-28", "name": "Report Cards Available", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-05-31", "name": "Memorial Day (Employees Off)", "type": "observance", "description": "Students have already finished the school year by this date.", "hideFromCalendarExport": true },
+    { "date": "2027-06-01", "name": "Last Day for Teachers (Teacher Checkout)", "type": "teacher_workday", "description": "Students finished May 28.", "hideFromCalendarExport": true },
+    { "date": "2027-06-18", "name": "Juneteenth (Observed)", "type": "observance", "description": "This observance falls after the regular student school year ends.", "hideFromCalendarExport": true }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "KCPS 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Open the official English, Spanish, or Swahili PDF, or download selected KCPS dates for Google Calendar, Apple Calendar, or Outlook.",
+  "icsHeading": "Add KCPS Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file with student calendar dates from the reviewed KCPS schedule.",
+  "icsButtonLabel": "Download KCPS Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. School-specific events, bell times, and later KCPS revisions will not update automatically.",
+  "pdfHeading": "Official KCPS 2026–27 English School Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "View or print the official English calendar used to verify these dates.",
+  "hidePdfVersionLabel": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "alternateCalendarsDescription": "KCPS also provides Spanish and Swahili versions of the calendar. Four reporting dates and the June 2027 grids differ from the current English PDF. See the language note on this page.",
+  "alternateCalendars": [
+    {
+      "type": "spanish",
+      "label": "KCPS 2026–27 Calendario Escolar — Spanish",
+      "description": "Official Spanish calendar PDF; see the language note for documented date differences.",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5738/Kcps/cd1dd3b4-65b8-4630-88d0-fb202c9c20a7/UPDATED-2026-27-KCPS-Calendar-%282%29.pdf?disposition=inline"
+    },
+    {
+      "type": "swahili",
+      "label": "KCPS 2026–27 Kalenda ya Shule — Swahili",
+      "description": "Official Swahili calendar PDF; see the language note for documented date differences.",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5738/Kcps/c9950f43-fd97-4098-9b9c-cbd441fbf5ab/UPDATED-2026-27-KCPS-Calendar.pdf?disposition=inline"
+    }
+  ],
+  "calendarFaqs": [
+    { "q": "When does Kansas City Public Schools start in 2026–27?", "a": "KCPS students start Monday, August 24, 2026." },
+    { "q": "When do KCPS students return after Winter Break?", "a": "The official Winter Break runs December 21, 2026, through January 1, 2027. January 4 is a district professional-development day with no school, so students return Tuesday, January 5." },
+    { "q": "When are KCPS students off for Spring Break in 2027?", "a": "The official Spring Break runs March 22–25, 2027. March 26 is a separate Spring Holiday, so students are out March 22–26 and return Monday, March 29." },
+    { "q": "When is the last day for KCPS seniors in 2027?", "a": "The calendar lists Friday, April 30, 2027, as the seniors' last day. May 28 is the last day for all KCPS students." },
+    { "q": "Does KCPS dismiss early on the last day of school?", "a": "Yes. Friday, May 28, 2027, is the last day for students and an early-dismissal day. The annual PDF does not give one districtwide dismissal time, so families should check their school's schedule." },
+    { "q": "Does KCPS publish Spanish and Swahili school calendars?", "a": "Yes. Official Spanish and Swahili PDFs are linked in Downloads. Four reporting dates differ from the current English calendar, and their June 2027 grids contain date-number errors. This page follows the current English PDF and documents those differences." }
+  ],
+  "faqLimit": 6,
+  "sources": [
+    { "label": "KCPS official calendar page", "url": "https://www.kcpublicschools.org/page/calendar" },
+    { "label": "Official KCPS 2026–27 English calendar PDF", "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5738/Northeast/944dcd22-b313-4f0e-b256-793f675493a7/2026-27-KCPS-Calendar-%287%29.pdf?disposition=inline" },
+    { "label": "Official KCPS 2026–27 Spanish calendar PDF", "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5738/Kcps/cd1dd3b4-65b8-4630-88d0-fb202c9c20a7/UPDATED-2026-27-KCPS-Calendar-%282%29.pdf?disposition=inline" },
+    { "label": "Official KCPS 2026–27 Swahili calendar PDF", "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5738/Kcps/c9950f43-fd97-4098-9b9c-cbd441fbf5ab/UPDATED-2026-27-KCPS-Calendar.pdf?disposition=inline" }
+  ],
+  "sourceReviewSummary": "Reviewed Aug. 17, 2026 using the official KCPS English, Spanish, and Swahili calendar PDFs. The current English calendar is used for the dates shown here, with differences in the translated editions documented separately.",
+  "sourceReviewDetails": [
+    "Checked the complete one-page English, Spanish, and Swahili calendar PDFs.",
+    "The current English calendar lists September 29, January 27, March 3, and April 8 for four reporting dates; the translated editions list September 30, January 28, March 4, and April 12.",
+    "The Spanish and Swahili June 2027 grids duplicate June 26 and June 28 and omit June 25 and June 27; the Spanish sidebar also prints ‘JULIIO.’",
+    "Student return dates and combined days-off ranges are derived from the sequence of dates in the official schedule without renaming the underlying KCPS events.",
+    "The annual calendar does not publish an instructional-day total or one districtwide May 28 dismissal time, so neither is inferred."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Kansas City Public Schools sources.",
+  "sourceNextReviewText": "Next review: when KCPS replaces any language edition, corrects the translated month grids, changes a first or last day, publishes a districtwide May 28 dismissal time, or releases a later school year."
+}

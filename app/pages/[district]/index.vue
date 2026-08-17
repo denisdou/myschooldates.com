@@ -1569,16 +1569,30 @@ if (!isStatePage && district.value) {
     })
     .map((section) => {
       const sectionBasedOn = (section as any).schema?.isBasedOn ?? (section as any).isBasedOn
-      const sectionBasedOnId = typeof sectionBasedOn === 'string'
-        ? sectionBasedOn.startsWith('http')
-          ? sectionBasedOn
-          : `${canonicalUrl}#${sectionBasedOn.replace(/^#/, '')}`
-        : ''
+      const sectionBasedOnSources = Array.isArray(sectionBasedOn)
+        ? sectionBasedOn
+        : sectionBasedOn
+          ? [sectionBasedOn]
+          : []
+      const sectionBasedOnRefs = sectionBasedOnSources
+        .map((source: any) => {
+          const sourceId = typeof source === 'string' ? source : source?.['@id']
+          if (!sourceId) return null
+          return {
+            '@id': sourceId.startsWith('http')
+              ? sourceId
+              : `${canonicalUrl}#${sourceId.replace(/^#/, '')}`,
+          }
+        })
+        .filter(Boolean)
+      const sectionBasedOnValue = sectionBasedOnRefs.length === 1
+        ? sectionBasedOnRefs[0]
+        : sectionBasedOnRefs
       return {
         '@type': 'WebPageElement',
         '@id': `${canonicalUrl}#${section.id}`,
         name: section.label,
-        ...(sectionBasedOnId ? { isBasedOn: { '@id': sectionBasedOnId } } : {}),
+        ...(sectionBasedOnRefs.length ? { isBasedOn: sectionBasedOnValue } : {}),
       }
     })
   const yearNumbersTitle = (cal as any)?.yearNumbersTitle ?? (cal as any)?.meta?.yearNumbersTitle ?? ''
@@ -2708,6 +2722,7 @@ if (!isStatePage && district.value) {
           :covered-break-dates-note="(cal as any).allDatesCoveredBreakDatesNote ?? (cal as any).meta?.allDatesCoveredBreakDatesNote"
           :hide-covered-break-dates-note="(cal as any).hideCoveredBreakDatesNote ?? (cal as any).meta?.hideCoveredBreakDatesNote"
           :derived-date-note="(cal as any).allDatesDerivedDateNote ?? (cal as any).meta?.allDatesDerivedDateNote"
+          :derived-date-note-position="(cal as any).allDatesDerivedDateNotePosition ?? (cal as any).meta?.allDatesDerivedDateNotePosition"
           :legend-style="(cal as any).dateLegendStyle ?? (cal as any).meta?.dateLegendStyle"
           :month-notes="(cal as any).allDatesMonthNotes ?? (cal as any).meta?.allDatesMonthNotes"
         />

@@ -1,104 +1,199 @@
 {
   "institutionId": "henderson-county-schools-ky",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Henderson County Schools Calendar 2026–27",
   "firstDay": "2026-08-13",
   "lastDay": "2027-05-25",
+  "temporalCoverageStart": "2026-08-13",
+  "temporalCoverageEnd": "2027-05-28",
   "sourceUrl": "https://www.henderson.kyschools.us/events",
-  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3112/Hcs/8aae55c0-6a63-47de-b6ad-c4912d202930/2026-2027-HCS-Academic-Calendar---12-month-2025-2026-%288%29.pdf",
-  "lastVerifiedAt": "2026-07-21",
+  "sourceDocumentPage": "https://www.henderson.kyschools.us/article/2601842",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3112/Hcs/dcbc685b-1496-4585-a621-c01a574c0521/2026-2027-HCS-Academic-Calendar---12-month-2025-2026-%287%29.pdf?disposition=inline",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3112/Hcs/dcbc685b-1496-4585-a621-c01a574c0521/2026-2027-HCS-Academic-Calendar---12-month-2025-2026-%287%29.pdf?disposition=inline",
+  "sourceCheckedAt": "2026-08-17",
+  "lastVerifiedAt": "2026-08-17",
+  "dateCreated": "2026-07-21",
   "datePublished": "2026-07-21",
-  "dateModified": "2026-07-21",
+  "dateModified": "2026-08-17",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "weather_makeup_day_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Board approved December 2025",
+  "sourceCalendarName": "Henderson County Schools 2026–27 Academic Calendar PDF",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-approval",
+      "type": "WebPage",
+      "name": "HCS 2026–27 School Calendar Approval Announcement",
+      "url": "https://www.henderson.kyschools.us/article/2601842",
+      "datePublished": "2025-12-16"
+    },
+    {
+      "id": "source-break-dates",
+      "type": "WebPage",
+      "name": "HCS 2025–2028 Fall and Spring Break Approval Announcement",
+      "url": "https://www.henderson.kyschools.us/article/1888965",
+      "datePublished": "2024-11-21"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-approval",
+    "source-break-dates"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-approval",
+    "source-break-dates"
+  ],
   "calendarType": "traditional",
-  "yearNumbersMode": "compact",
-  "instructionalDaysDescription": "calendar summary based on the published Henderson County Schools KY academic calendar; confirm official attendance totals with HCS if needed",
-  "seoTitle": "Henderson County Schools KY Calendar 2026-2027 | Holidays, Breaks & Important Dates",
-  "seoDescription": "View Henderson County Schools KY Calendar 2026-2027 with first day, last day, holidays, fall break, winter break, spring break dates, PDF and calendar download options.",
-  "calendarNotes": "Henderson County Schools in Kentucky starts the 2026-2027 school year on August 13, 2026 and ends on May 25, 2027. Fall Break runs October 5-9, Winter Break runs December 21-January 1, and Spring Break runs April 5-9. The calendar also lists professional development days, election days, holidays, possible make-up days, closing day for staff, Memorial Day, and school hours.",
-  "faqLimit": 11,
-  "faqSchemaLimit": 11,
+  "allDatesMode": "keyDates",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroUpdatedField": true,
+  "hideBreakDurationBadges": true,
+  "verificationBadgeText": "Checked against the HCS 2026–27 calendar and Board approval announcement",
+  "heroSourceLine": "2026–27 dates · Official HCS calendar and Board approval announcement",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "schemaCalendarName": "Henderson County Schools 2026–27 Academic Calendar",
+  "schemaDatasetName": "Henderson County Schools 2026–27 Academic Calendar Dataset",
+  "schemaDatasetDescription": "Selected districtwide student dates from the Henderson County Schools 2026–27 academic calendar, including school-year boundaries, major breaks, professional development closures, election-day closures, and make-up dates, including dates marked as possible make-up days.",
+  "schemaCalendarDownloadName": "Henderson County Schools 2026–27 ICS Calendar File",
+  "schemaCalendarDownloadDescription": "One-time calendar import containing selected student dates from the official HCS 2026–27 academic calendar; possible make-up dates retain their tentative status.",
+  "schemaSpatialCoverage": "Henderson County, Kentucky",
+  "seoTitle": "Henderson County Schools Calendar 2026–27 (Kentucky)",
+  "seoDescription": "Henderson County Schools students start Aug. 13, 2026, and finish May 25, 2027. See breaks, no-school days, make-up dates, PDF, and calendar download.",
+  "heroSummary": "The first day for Henderson County Schools students in Kentucky is Thursday, August 13, 2026, and the last student day is Tuesday, May 25, 2027. Fall Break is October 5–9, Thanksgiving Break is November 25–27, Winter Break is December 21–January 1, and Spring Break is April 5–9. January 4 is a professional development day with no school; students return Tuesday, January 5.",
+  "calendarNotes": "This page covers the districtwide HCS academic calendar. School-specific events and weather-related make-up decisions should be confirmed through Henderson County Schools.",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "yearNumbers",
+    "comparison"
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Calendar Notes", "id": "hcs-ky-calendar-notes-2026-2027" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "What Changed", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "keyDatesSummaryTitle": "Henderson County Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "The first and last student days, plus the four major breaks",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Students",
+      "date": "2026-08-13",
+      "type": "school_start"
+    },
+    {
+      "label": "Break",
+      "name": "Fall Break",
+      "date": "2026-10-05",
+      "endDate": "2026-10-09",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-04-05",
+      "endDate": "2027-04-09",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Students",
+      "date": "2027-05-25",
+      "type": "school_end"
+    }
+  ],
+  "allDatesTitle": "Henderson County Schools 2026–27 Student Calendar Dates",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3112/Hcs/dcbc685b-1496-4585-a621-c01a574c0521/2026-2027-HCS-Academic-Calendar---12-month-2025-2026-%287%29.pdf?disposition=inline",
+  "allDatesSourceLabel": "Official HCS 2026–27 Academic Calendar PDF",
+  "allDatesCoverageNote": "This table focuses on districtwide student dates. The official PDF also lists pre-year professional development dates, staff opening and closing days, and school hours.",
+  "dateLegendItems": [
+    { "label": "Holiday", "dot": "bg-teal-400" },
+    { "label": "No School", "dot": "bg-amber-400" },
+    { "label": "Possible Make-Up Day", "dot": "bg-orange-300" },
+    { "label": "Make-Up Day", "dot": "bg-orange-400" },
+    { "label": "Break", "dot": "bg-purple-400" }
+  ],
+  "breaksTitle": "HCS 2026–27 Breaks and Student Return Dates",
+  "breakNotes": {
+    "Fall Break": "October 12 is a professional development day with no school. Students return Tuesday, October 13.",
+    "Thanksgiving Break": "The next scheduled student day is Monday, November 30.",
+    "Winter Break": "January 4 is a professional development day with no school. Students return Tuesday, January 5.",
+    "Spring Break": "The next scheduled student day is Monday, April 12."
+  },
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "icsHeading": "Add Henderson County Schools Dates to Your Calendar",
+  "icsDescription": "Download selected HCS 2026–27 student dates for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonSupportText": "One-time import. Check HCS updates before relying on a possible make-up date.",
+  "pdfHeading": "Official HCS 2026–27 Academic Calendar PDF",
+  "pdfDescription": "View the one-page calendar approved by the Henderson County Board of Education in December 2025.",
+  "pdfButtonLabel": "View Official PDF",
   "customSections": [
     {
-      "id": "hcs-ky-calendar-highlights-2026-2027",
-      "label": "Henderson County Schools 2026-2027 Calendar Highlights",
-      "position": "afterKeyDates",
-      "content": "Use this quick overview to confirm the Henderson County Schools KY dates families most often search for before opening the full calendar or PDF.",
+      "id": "hcs-ky-calendar-notes-2026-2027",
+      "label": "HCS Calendar Notes for 2026–27",
+      "position": "afterAllDates",
+      "content": "The Henderson County Board of Education approved the 2026–27 calendar at its December 2025 meeting. HCS also approved Fall and Spring Break dates several years in advance to help families plan ahead.",
       "table": {
-        "headers": ["Calendar item", "Date", "Planning note"],
+        "headers": ["Date", "What families should know"],
         "rows": [
-          ["First day for students", "August 13, 2026", "First regular student attendance day for the 2026-2027 academic calendar."],
-          ["Fall Break", "October 5-9, 2026", "Five weekdays families often use for childcare coverage or travel."],
-          ["Thanksgiving Break", "November 25-27, 2026", "Three weekdays around Thanksgiving when regular classes are not scheduled."],
-          ["Winter Break", "December 21, 2026-January 1, 2027", "Longest mid-year holiday period on the HCS KY calendar."],
-          ["Spring Break", "April 5-9, 2027", "Five weekday break commonly used for family travel and appointment planning."],
-          ["Last day for students", "May 25, 2027", "Final listed student day before summer break and possible make-up windows."]
+          ["October 12, 2026", "Professional development day with no school; students return October 13."],
+          ["November 3, 2026 and May 18, 2027", "Election Day closures with no school."],
+          ["January 4, 2027", "Professional development day immediately after Winter Break; students return January 5."],
+          ["February 26 and March 1, 2027", "No school unless HCS activates either date as a make-up day."],
+          ["May 27–28, 2027", "Make-up dates after the scheduled last student day; confirm with HCS before making plans."]
         ]
-      }
-    },
-    {
-      "id": "hcs-ky-district-overview-2026-2027",
-      "label": "About Henderson County Schools District",
-      "position": "afterAbout",
-      "content": "Henderson County Schools is a public school district located in Henderson County, Kentucky, serving students from preschool through high school. The district publishes annual academic calendars for families, staff, and community planning. This page summarizes districtwide student dates from the official HCS calendar, including the first day of school, holidays, fall break, winter break, spring break, professional development days, election day no-school dates, possible make-up days, and PDF or calendar download options."
-    },
-    {
-      "id": "hcs-ky-break-length-summary-2026-2027",
-      "label": "Henderson County Schools Break Length Summary",
-      "position": "afterBreaks",
-      "content": "Break lengths help families estimate childcare, travel windows, and work schedule changes. These ranges summarize the major Henderson County Schools KY breaks listed on the 2026-2027 calendar.",
-      "table": {
-        "headers": ["Break", "Dates", "Planning note"],
-        "rows": [
-          ["Fall Break", "October 5-9, 2026", "Five weekdays away from regular classes."],
-          ["Thanksgiving Break", "November 25-27, 2026", "Three weekdays around Thanksgiving."],
-          ["Winter Break", "December 21, 2026-January 1, 2027", "The longest mid-year student break window."],
-          ["Spring Break", "April 5-9, 2027", "Five weekdays for spring travel and childcare planning."]
-        ]
-      }
-    },
-    {
-      "id": "hcs-ky-parent-planning-guide-2026-2027",
-      "label": "Planning Around the Henderson County Schools Calendar",
-      "position": "afterYearDiff",
-      "content": "The Henderson County Schools 2026-2027 academic calendar is most useful when families treat it as a planning checklist, not only a list of dates. Parents can use the first student day to finalize transportation, morning routines, before-school care, and after-school pickup plans. Fall Break, Winter Break, and Spring Break are the main travel windows, while professional development days, election day closures, and possible make-up days are the dates most likely to affect childcare or work schedules. The official PDF is also helpful for families coordinating appointments, sports practices, club meetings, and summer camp registration because it shows the school-year boundaries and major no-school periods in one place. For working parents, the highest-impact dates are usually the staff-only professional development days, election day closures, and late-year make-up windows because those dates can change daily routines even when they are not long breaks. Families with athletes, preschool students, or school-specific activities should also watch campus announcements because those schedules may not appear in the districtwide calendar PDF.",
-      "groups": [
-        {
-          "label": "Family planning uses",
-          "items": [
-            "Use Fall Break, Winter Break, and Spring Break to plan trips, appointments, and extended childcare coverage.",
-            "Review professional development and staff-only dates separately because students typically do not attend on those days.",
-            "Check possible make-up days before booking late-winter or late-May travel."
-          ]
-        },
-        {
-          "label": "Before finalizing plans",
-          "items": [
-            "Check whether a listed date is a student holiday, professional development day, election day, break period, or possible make-up day.",
-            "Confirm weather-related make-up decisions with Henderson County Schools before booking travel near February, March, or late May make-up windows.",
-            "Use campus announcements for preschool schedules, athletics, transportation changes, graduation events, and school-specific activities."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "hcs-ky-calendar-years-2026-2027",
-      "label": "Related Kentucky and Henderson County School Calendars",
-      "position": "afterFaq",
-      "content": "Use these links to compare Henderson County Schools KY calendar dates across available school years and return to Kentucky school calendar listings.",
+      },
       "links": [
         {
-          "label": "Kentucky School Calendars",
-          "url": "/kentucky",
-          "description": "Browse Kentucky school calendar pages available on MySchoolDates."
+          "label": "Read the HCS 2026–27 calendar approval announcement",
+          "to": "https://www.henderson.kyschools.us/article/2601842"
         },
         {
-          "label": "Henderson County Schools Calendar 2025-2026",
-          "url": "/henderson-county-schools-ky-calendar/2025-2026",
-          "description": "Previous Henderson County Schools Kentucky calendar year."
-        },
-        {
-          "label": "Henderson County Schools Calendar 2026-2027",
-          "url": "/henderson-county-schools-ky-calendar",
-          "description": "Current Henderson County Schools Kentucky calendar page."
+          "label": "Read the HCS Fall and Spring Break announcement",
+          "to": "https://www.henderson.kyschools.us/article/1888965"
         }
       ]
     }
@@ -109,91 +204,99 @@
       "a": "The first day for students is Thursday, August 13, 2026."
     },
     {
+      "q": "When is Fall Break for Henderson County Schools in 2026?",
+      "a": "Fall Break runs October 5–9, 2026. October 12 is a professional development day with no school, so students return Tuesday, October 13."
+    },
+    {
+      "q": "When is Winter Break for Henderson County Schools in 2026–27?",
+      "a": "Winter Break runs December 21, 2026 through January 1, 2027. January 4 is a professional development day, and students return Tuesday, January 5."
+    },
+    {
       "q": "When is Henderson County Schools Spring Break in 2027?",
-      "a": "Spring Break runs Monday, April 5 through Friday, April 9, 2027."
+      "a": "Spring Break runs Monday, April 5 through Friday, April 9, 2027. The next scheduled student day is Monday, April 12."
+    },
+    {
+      "q": "Which HCS dates are possible make-up days in 2026–27?",
+      "a": "The official calendar labels February 26 and March 1 as no-school dates that may be used as make-up days. May 27–28 are also listed as make-up days after the scheduled last student day. Check HCS announcements before relying on those dates."
     },
     {
       "q": "When is the last day of school for Henderson County Schools in 2027?",
-      "a": "The last day for students is Tuesday, May 25, 2027."
-    },
-    {
-      "q": "Does Henderson County Schools close for Election Day in 2026-2027?",
-      "a": "Yes. The 2026-2027 calendar lists November 3, 2026 and May 18, 2027 as Election Day no-school dates."
-    },
-    {
-      "q": "When is winter break for Henderson County Schools in 2026-2027?",
-      "a": "Winter Break runs Monday, December 21, 2026 through Friday, January 1, 2027."
-    },
-    {
-      "q": "Does Henderson County Schools have fall break?",
-      "a": "Yes. Henderson County Schools Fall Break is scheduled for October 5-9, 2026."
-    },
-    {
-      "q": "When does school end in Henderson County KY in 2027?",
-      "a": "The last day for Henderson County Schools students is Tuesday, May 25, 2027."
-    },
-    {
-      "q": "How many school days are in the Henderson County Schools 2026-2027 calendar?",
-      "a": "This page summarizes the published Henderson County Schools KY calendar dates. Families who need the official instructional-day count should confirm attendance totals directly with Henderson County Schools."
-    },
-    {
-      "q": "Where can parents download the HCS calendar PDF?",
-      "a": "Use the official PDF link on this page to view the published Henderson County Schools 2026-2027 academic calendar PDF."
-    },
-    {
-      "q": "Is this Henderson County Schools calendar updated for 2026-2027?",
-      "a": "Yes. This page is based on the 2026-2027 Henderson County Schools Kentucky calendar source checked by MySchoolDates on July 21, 2026."
-    },
-    {
-      "q": "Are there teacher work days in Henderson County Schools?",
-      "a": "Yes. The 2026-2027 Henderson County Schools calendar lists professional development days and staff-only dates. Students typically do not attend on those dates unless the district announces a make-up schedule or school-specific exception."
+      "a": "The scheduled last day for students is Tuesday, May 25, 2027. May 27–28 remain listed as make-up days."
     }
   ],
-  "yearNumbers": [
+  "faqDisplayQuestions": [
+    "When does Henderson County Schools start school in 2026?",
+    "When is Fall Break for Henderson County Schools in 2026?",
+    "When is Winter Break for Henderson County Schools in 2026–27?",
+    "When is Henderson County Schools Spring Break in 2027?",
+    "Which HCS dates are possible make-up days in 2026–27?",
+    "When is the last day of school for Henderson County Schools in 2027?"
+  ],
+  "faqDisplayLimit": 6,
+  "yearComparisonTitle": "What Changed for 2026–27",
+  "yearComparisonSubtitle": "How the published student dates compare with 2025–26.",
+  "whatsNew": {
+    "content": [
+      "The first student day moves from August 7 in 2025–26 to August 13 in 2026–27.",
+      "The scheduled last student day moves from May 19 in 2025–26 to May 25 in 2026–27.",
+      "Thanksgiving Break remains three school days, running November 25–27 in 2026–27."
+    ]
+  },
+  "nationalTrendsTitle": "Compare HCS with National School Calendar Trends",
+  "sources": [
     {
-      "label": "First Day",
-      "value": "Aug 13",
-      "detail": "The first day for students is August 13, 2026."
+      "label": "HCS 2026–27 Academic Calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3112/Hcs/dcbc685b-1496-4585-a621-c01a574c0521/2026-2027-HCS-Academic-Calendar---12-month-2025-2026-%287%29.pdf?disposition=inline"
     },
     {
-      "label": "Spring Break",
-      "value": "Apr 5-9",
-      "detail": "Spring Break runs April 5-9, 2027."
+      "label": "HCS 2026–27 Calendar Approval Announcement",
+      "url": "https://www.henderson.kyschools.us/article/2601842"
     },
     {
-      "label": "Last Day",
-      "value": "May 25",
-      "detail": "The last day for students is May 25, 2027."
+      "label": "HCS Fall and Spring Break Approval Announcement",
+      "url": "https://www.henderson.kyschools.us/article/1888965"
+    },
+    {
+      "label": "Henderson County Schools Events Calendar",
+      "url": "https://www.henderson.kyschools.us/events"
     }
   ],
+  "sourceReviewSummary": "MySchoolDates is an independent calendar reference. We reviewed the current HCS PDF, the December 2025 Board approval announcement, and HCS's advance Fall and Spring Break announcement on August 17, 2026.",
+  "sourceReviewDetailsTitle": "How we checked the HCS calendar",
+  "sourceReviewDetails": [
+    "We checked the first and last student days, four major breaks, professional development closures, Election Day closures, and possible make-up dates against the current one-page HCS calendar.",
+    "Return dates after breaks are identified as the next scheduled student weekdays after accounting for separately listed no-school dates.",
+    "The downloadable ICS file is a one-time import. Henderson County Schools remains the source of record for weather-related changes and activated make-up days."
+  ],
+  "sourceNextReviewText": "Next review: when HCS revises the 2026–27 calendar or announces that a possible make-up date will be used.",
   "events": [
-    { "date": "2026-08-05", "name": "Professional Development Day", "type": "no_school" },
-    { "date": "2026-08-06", "name": "Professional Development Day", "type": "no_school" },
-    { "date": "2026-08-07", "name": "Professional Development Day", "type": "no_school" },
-    { "date": "2026-08-10", "name": "Professional Development Day", "type": "no_school" },
-    { "date": "2026-08-11", "name": "Professional Development Day", "type": "no_school" },
-    { "date": "2026-08-12", "name": "Opening Day for Staff", "type": "no_school" },
-    { "date": "2026-08-13", "name": "First Day of School", "type": "school_start" },
-    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
+    { "date": "2026-08-05", "name": "Professional Development Day", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2026-08-06", "name": "Professional Development Day", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2026-08-07", "name": "Professional Development Day", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2026-08-10", "name": "Professional Development Day", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2026-08-11", "name": "Professional Development Day", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2026-08-12", "name": "Opening Day for Staff", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2026-08-13", "name": "First Day of School for Students", "type": "school_start" },
+    { "date": "2026-09-07", "name": "Labor Day — No School", "type": "holiday" },
     { "date": "2026-10-05", "name": "Fall Break", "type": "break_start" },
     { "date": "2026-10-09", "name": "Fall Break End", "type": "break_end" },
-    { "date": "2026-10-12", "name": "Professional Development Day - No School", "type": "no_school" },
-    { "date": "2026-11-03", "name": "Election Day - No School", "type": "no_school" },
+    { "date": "2026-10-12", "name": "Professional Development Day — No School", "type": "no_school", "description": "Students return Tuesday, October 13." },
+    { "date": "2026-11-03", "name": "Election Day — No School", "type": "no_school" },
     { "date": "2026-11-25", "name": "Thanksgiving Break", "type": "break_start" },
     { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
     { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
     { "date": "2027-01-01", "name": "Winter Break End", "type": "break_end" },
-    { "date": "2027-01-04", "name": "Professional Development Day - No School", "type": "no_school" },
-    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2027-02-26", "name": "No School - Possible Make-Up Day", "type": "no_school" },
-    { "date": "2027-03-01", "name": "No School - Possible Make-Up Day", "type": "no_school" },
+    { "date": "2027-01-04", "name": "Professional Development Day — No School", "type": "no_school", "description": "Students return Tuesday, January 5." },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day — No School", "type": "holiday" },
+    { "date": "2027-02-26", "name": "No School / Possible Make-Up Day", "displayName": "No School / Possible Make-Up Days", "type": "makeup_day", "badgeLabel": "Possible Make-Up Day", "status": "TENTATIVE", "description": "No school unless HCS activates either date as a make-up day." },
+    { "date": "2027-03-01", "name": "No School / Possible Make-Up Day", "displayName": "No School / Possible Make-Up Days", "type": "makeup_day", "badgeLabel": "Possible Make-Up Day", "status": "TENTATIVE", "description": "No school unless HCS activates either date as a make-up day." },
     { "date": "2027-04-05", "name": "Spring Break", "type": "break_start" },
     { "date": "2027-04-09", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2027-05-18", "name": "Election Day - No School", "type": "no_school" },
-    { "date": "2027-05-25", "name": "Last Day of School", "type": "school_end" },
-    { "date": "2027-05-26", "name": "Closing Day for Staff", "type": "no_school" },
-    { "date": "2027-05-27", "name": "Make-Up Day", "type": "no_school" },
-    { "date": "2027-05-28", "name": "Make-Up Day", "type": "no_school" },
-    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" }
+    { "date": "2027-05-18", "name": "Election Day — No School", "type": "no_school" },
+    { "date": "2027-05-25", "name": "Last Day of School for Students", "type": "school_end" },
+    { "date": "2027-05-26", "name": "Closing Day for Staff", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2027-05-27", "name": "Make-Up Day", "displayName": "Make-Up Days", "type": "makeup_day", "badgeLabel": "Make-Up Day", "status": "TENTATIVE", "description": "These dates fall after the scheduled last student day and would be used if HCS needs additional make-up days." },
+    { "date": "2027-05-28", "name": "Make-Up Day", "displayName": "Make-Up Days", "type": "makeup_day", "badgeLabel": "Make-Up Day", "status": "TENTATIVE", "description": "These dates fall after the scheduled last student day and would be used if HCS needs additional make-up days." },
+    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday", "hideFromCalendarExport": true }
   ]
 }

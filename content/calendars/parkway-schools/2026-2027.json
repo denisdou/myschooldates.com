@@ -1,0 +1,570 @@
+{
+  "institutionId": "parkway-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Parkway Schools Calendar 2026–27",
+  "firstDay": "2026-08-25",
+  "lastDay": "2027-05-28",
+  "temporalCoverageStart": "2026-08-25",
+  "temporalCoverageEnd": "2027-07-16",
+  "semesters": 2,
+  "sourceUrl": "https://www.parkwayschools.net/about-parkway/calendar",
+  "sourceDocumentPage": "https://www.parkwayschools.net/about-parkway/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1751342769/parkwayschoolsnet/vveqzuvjrs8wofgpy5nv/26-27ParkwayDistrictAcademicCalendar.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1751342769/parkwayschoolsnet/vveqzuvjrs8wofgpy5nv/26-27ParkwayDistrictAcademicCalendar.pdf",
+  "sourceCheckedAt": "2026-08-17",
+  "sourceChecksumSha256": "ea1c99d1eb05b0a7f7b0f4a9b26d55e7a0e2b21381f114134a4e8063e7f4e43a",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "lastVerifiedAt": "2026-08-17",
+  "dateCreated": "2026-08-17",
+  "datePublished": "2026-08-17",
+  "dateModified": "2026-08-17",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "religious_observances_revision",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Parkway Board of Education approved April 16, 2025",
+  "sourceCalendarName": "Parkway Schools 2026–27 Academic Calendar",
+  "schemaCalendarName": "Parkway Schools 2026–27 Academic Calendar",
+  "schemaDatasetName": "Parkway Schools 2026–27 Academic Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Parkway Schools dates for 2026–27, including school days, districtwide and high-school-only half days, breaks, Professional Development and Teacher Records dates, the last regular school day, and summer-school dates after the regular school year.",
+  "schemaSpatialCoverage": "Parkway Schools in western St. Louis County, Missouri",
+  "schemaCalendarDownloadName": "Parkway Schools 2026–27 ICS Calendar File",
+  "schemaCalendarDownloadDescription": "One-time family calendar import generated from the reviewed Parkway 2026–27 academic calendar; summer-school dates after the regular school year and observance-only dates are excluded.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-religious-observances-2026-2027",
+      "name": "Parkway Schools 2026–27 Calendar of Religious Observances",
+      "url": "https://resources.finalsite.net/images/v1752608269/parkwayschoolsnet/zd3ehs59svbloecnrc2c/26-27ReligiousObservances.pdf"
+    },
+    {
+      "id": "source-parkway-early-childhood-calendar",
+      "type": "WebPage",
+      "name": "Parkway Early Childhood Calendar",
+      "url": "https://earlychildhood.parkwayschools.net/news/calendar"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-religious-observances-2026-2027",
+    "source-parkway-early-childhood-calendar"
+  ],
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.parkwayschools.net/about-parkway/calendar",
+    "linkText": "2026-27 Academic Calendar",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1751342769/parkwayschoolsnet/vveqzuvjrs8wofgpy5nv/26-27ParkwayDistrictAcademicCalendar.pdf",
+    "expectedChecksumSha256": "ea1c99d1eb05b0a7f7b0f4a9b26d55e7a0e2b21381f114134a4e8063e7f4e43a"
+  },
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideDateLegend": true,
+  "webPageMainEntity": "dataset",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideAlternateCalendarsNotice": true,
+  "seoTitle": "Parkway Schools Calendar 2026–27: Key Dates & PDF",
+  "seoDescription": "Parkway students start school Aug. 25, 2026, and finish May 28, 2027. See breaks, half-day times, high school finals, official PDFs, and an ICS download.",
+  "heroSummary": "Parkway students start the 2026–27 school year on Tuesday, August 25, 2026. The last regular school day is Friday, May 28, 2027, with a half-day schedule for students in PK–12. Fall Break is Monday, November 2; Thanksgiving Break runs November 25–27; Winter Break runs December 23–January 1; and Spring Break runs March 15–19.",
+  "heroSourceLine": "St. Louis County, Missouri · 2026–27 academic calendar · Board approved April 16, 2025",
+  "verificationBadgeText": "Verified against the official Parkway 2026–27 calendar",
+  "calendarNotes": "Parkway's academic calendar distinguishes no-school days from districtwide half days and high-school-only finals. Half-day dismissal depends on the student's school tier: Tier 1 dismisses at 11:35 a.m., Tier 2 at 12:20 p.m., and Tier 3 at 1:05 p.m. The December and May finals ranges apply to grades 9–12. Teacher Records Days and the last day of school use the PK–12 half-day schedule. The separate religious-observances calendar is scheduling guidance and does not create additional closure dates. Summer-school dates remain visible after the regular last day but are excluded from the downloadable ICS calendar.",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "whatsDifferent",
+    "comparison",
+    "nationalTrends",
+    "otherCalendars"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "breaksBeforeAllDates": true,
+  "hideBreakDurationBadges": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Half Days",
+      "id": "parkway-half-days-2026-2027"
+    },
+    {
+      "label": "All Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Religious Observances",
+      "id": "parkway-religious-observances-2026-2027"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "keyDatesSummaryTitle": "Parkway Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "The first and last regular school days and four major breaks",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-25",
+      "type": "school_start"
+    },
+    {
+      "label": "Fall Break",
+      "name": "Fall Break",
+      "date": "2026-11-02",
+      "type": "break_start",
+      "schemaDescription": "Parkway Fall Break is Monday, November 2, 2026."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-23",
+      "endDate": "2027-01-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School — PK–12 Half Day",
+      "date": "2027-05-28",
+      "type": "school_end"
+    }
+  ],
+  "breaksTitle": "Parkway School Breaks and Return Dates",
+  "breakNotes": {
+    "Fall Break": "November 3 is a Professional Development Day, so there is no school. Students return Wednesday, November 4.",
+    "Thanksgiving Break": "The next scheduled school day is Monday, November 30.",
+    "Winter Break": "January 4 is a Teacher Records Day, so there is no school. Classes resume Tuesday, January 5, 2027.",
+    "Spring Break": "The next scheduled school day is Monday, March 22."
+  },
+  "allDatesTitle": "Parkway Schools 2026–27 Academic Calendar Dates",
+  "allDatesCoverageNote": "This table follows Parkway's official one-page academic calendar, including districtwide no-school and half days, high school finals, breaks, the last regular school day, and summer-school dates after the regular school year. Summer-school dates apply only to enrolled students and are not included in the downloadable ICS calendar.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1751342769/parkwayschoolsnet/vveqzuvjrs8wofgpy5nv/26-27ParkwayDistrictAcademicCalendar.pdf",
+  "allDatesSourceLabel": "Official Parkway Schools 2026–27 Academic Calendar PDF",
+  "customSections": [
+    {
+      "id": "parkway-half-days-2026-2027",
+      "label": "How Parkway Half Days Work",
+      "position": "afterBreaks",
+      "schemaHasPart": true,
+      "isBasedOn": [
+        "source-calendar",
+        "source-parkway-early-childhood-calendar"
+      ],
+      "content": "Parkway publishes three dismissal tiers rather than one districtwide half-day time. The district calendar lists all three dismissal times but does not identify which schools use each tier, so families should confirm their school's tier before arranging pickup. High school finals are half days for grades 9–12. Teacher Records Days and the last day of school use the PK–12 half-day schedule. On district early-release days, Parkway Early Childhood dismisses preschool students by noon, and afternoon classes do not meet.",
+      "table": {
+        "columns": [
+          "Schedule",
+          "Published schedule",
+          "Who it applies to"
+        ],
+        "rows": [
+          [
+            "Tier 1 half day",
+            "11:35 a.m.",
+            "Students at Tier 1 schools"
+          ],
+          [
+            "Tier 2 half day",
+            "12:20 p.m.",
+            "Students at Tier 2 schools"
+          ],
+          [
+            "Tier 3 half day",
+            "1:05 p.m.",
+            "Students at Tier 3 schools"
+          ],
+          [
+            "High school finals",
+            "Half-day morning schedule",
+            "Grades 9–12 only"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "parkway-religious-observances-2026-2027",
+      "label": "Religious Observances Are Planning Guidance, Not Closure Dates",
+      "position": "afterAllDates",
+      "schemaHasPart": true,
+      "isBasedOn": "source-religious-observances-2026-2027",
+      "content": "Parkway's separate religious-observances calendar lists many faith traditions and highlights five observances when schools and teachers are asked to avoid events, testing, or major projects. It also says testing or major projects should be avoided the following day. These observances are not additional days off. We keep them separate from districtwide closure dates.",
+      "table": {
+        "columns": [
+          "Highlighted observance",
+          "Published date",
+          "Parkway guidance"
+        ],
+        "rows": [
+          [
+            "Rosh Hashanah",
+            "September 11 at sunset–September 13",
+            "Avoid events, testing, or major projects"
+          ],
+          [
+            "Yom Kippur",
+            "September 20 at sunset–September 21",
+            "Avoid events, testing, or major projects"
+          ],
+          [
+            "Eid al-Fitr",
+            "Estimated March 9 at sunset–March 10",
+            "Avoid events, testing, or major projects"
+          ],
+          [
+            "Good Friday",
+            "March 26",
+            "No events"
+          ],
+          [
+            "Eid al-Adha",
+            "Estimated May 16–17",
+            "Avoid events, testing, or major projects"
+          ]
+        ],
+        "footnote": "The official PDF says regional customs, group preferences, or moon sightings may change dates marked with #. It also states that absences for religious observances are excused."
+      },
+      "links": [
+        {
+          "label": "Open Parkway's 2026–27 Religious Observances PDF",
+          "to": "https://resources.finalsite.net/images/v1752608269/parkwayschoolsnet/zd3ehs59svbloecnrc2c/26-27ReligiousObservances.pdf"
+        }
+      ]
+    }
+  ],
+  "compactDownloadModule": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "unifiedDownloadTitle": "Parkway Calendar Tools & Downloads",
+  "unifiedDownloadDescription": "Download a one-time .ics import, open the official academic PDF, or view Parkway's separate religious-observances calendar.",
+  "icsHeading": "Add Parkway Schools Dates to Your Calendar",
+  "icsDescription": "Download Parkway's 2026–27 school dates for Google Calendar, Apple Calendar, or Outlook. Summer-school dates after the regular school year and religious observances are not included.",
+  "icsButtonLabel": "Download .ics Calendar",
+  "icsButtonSupportText": "This is a one-time import. If Parkway changes the calendar later, this downloaded file will not update automatically.",
+  "pdfHeading": "Official Parkway Schools 2026–27 Academic Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Open the one-page academic calendar approved by the Parkway Board of Education on April 16, 2025.",
+  "alternateCalendarsTitle": "Parkway 2026–27 Religious Observances Calendar",
+  "alternateCalendarsDescription": "This separate official calendar is an awareness and scheduling resource, not a list of additional school closures.",
+  "alternateCalendarsButtonLabel": "View Official PDF",
+  "alternateCalendars": [
+    {
+      "type": "religious-observances",
+      "group": "Religious Observances Calendar",
+      "label": "2026–27 Calendar of Religious Observances",
+      "buttonLabel": "View Official PDF",
+      "pdfUrl": "https://resources.finalsite.net/images/v1752608269/parkwayschoolsnet/zd3ehs59svbloecnrc2c/26-27ReligiousObservances.pdf",
+      "ariaLabel": "View Parkway's official 2026–27 Calendar of Religious Observances"
+    }
+  ],
+  "sourceReviewSummary": "Reviewed August 17, 2026, against Parkway's District Calendar page, the current 2026–27 academic PDF, the separate religious-observances PDF, and the Parkway Early Childhood calendar page.",
+  "sourceReviewDetails": [
+    "We verified every published academic-calendar entry against the one-page PDF currently linked by Parkway, including overlapping December and May finals and PK–12 half days.",
+    "We record multi-day finals, Thanksgiving, Winter Break, Spring Break, and summer-school ranges exactly as Parkway publishes them rather than inferring dates from adjacent entries.",
+    "Half-day dismissal times were checked visually because the PDF's tier table carries information not repeated in the event list.",
+    "The Parkway Early Childhood calendar page was checked separately because preschool early-release instructions are not included in the academic PDF's tier table.",
+    "Religious observances remain separate from closure events because Parkway presents that PDF as awareness and scheduling guidance.",
+    "The observances PDF's visible page is titled 2026–2027, while its embedded document Title metadata still says 25–26 Parkway Planning Calendar. This page follows the visible calendar content and Parkway's official 2026–27 link label."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Parkway Schools sources.",
+  "sourceNextReviewText": "Next review: when Parkway replaces the 2026–27 academic or religious-observances PDF, changes its Early Childhood early-release guidance, or announces a districtwide calendar revision.",
+  "sources": [
+    {
+      "label": "Parkway Schools 2026–27 Academic Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1751342769/parkwayschoolsnet/vveqzuvjrs8wofgpy5nv/26-27ParkwayDistrictAcademicCalendar.pdf"
+    },
+    {
+      "label": "Parkway Schools District Calendar page",
+      "url": "https://www.parkwayschools.net/about-parkway/calendar"
+    },
+    {
+      "label": "Parkway Schools 2026–27 Calendar of Religious Observances",
+      "url": "https://resources.finalsite.net/images/v1752608269/parkwayschoolsnet/zd3ehs59svbloecnrc2c/26-27ReligiousObservances.pdf"
+    },
+    {
+      "label": "Parkway Early Childhood Calendar",
+      "url": "https://earlychildhood.parkwayschools.net/news/calendar"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When do Parkway students return after winter break?",
+      "a": "January 4 is a Teacher Records Day, so there is no school. Students return Tuesday, January 5, 2027."
+    },
+    {
+      "q": "What time does Parkway dismiss on half days?",
+      "a": "The 2026–27 calendar lists 11:35 a.m. for Tier 1, 12:20 p.m. for Tier 2, and 1:05 p.m. for Tier 3. Confirm which tier your school uses. Parkway Early Childhood says preschool students are dismissed by noon on district early-release days and afternoon classes do not meet."
+    },
+    {
+      "q": "When is the last day of school for Parkway in 2027?",
+      "a": "The last regular school day is Friday, May 28, 2027. It is a half day for grades PK–12."
+    },
+    {
+      "q": "Are Parkway religious observances no-school days?",
+      "a": "Not automatically. Parkway's separate observances calendar provides awareness and scheduling guidance; use the academic calendar to identify districtwide closures."
+    },
+    {
+      "q": "Are Parkway summer-school dates included in the downloadable calendar?",
+      "a": "No. Summer-school dates after the regular school year remain in the complete date list for enrolled students but are excluded from the downloadable ICS calendar."
+    }
+  ],
+  "faqOrderLimit": 5,
+  "faqDisplayQuestions": [
+    "When do Parkway students return after winter break?",
+    "What time does Parkway dismiss on half days?",
+    "When is the last day of school for Parkway in 2027?",
+    "Are Parkway religious observances no-school days?",
+    "Are Parkway summer-school dates included in the downloadable calendar?"
+  ],
+  "yearSwitcherSort": "asc",
+  "events": [
+    {
+      "date": "2026-08-25",
+      "name": "First Day of School",
+      "type": "school_start",
+      "schemaDescription": "The first regular school day for Parkway Schools students in 2026–27."
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-09",
+      "name": "Professional Development Half Day",
+      "type": "half_day_dismissal",
+      "description": "Students follow Parkway's tiered half-day dismissal schedule."
+    },
+    {
+      "date": "2026-10-07",
+      "name": "Professional Development Half Day",
+      "type": "half_day_dismissal",
+      "description": "Students follow Parkway's tiered half-day dismissal schedule."
+    },
+    {
+      "date": "2026-10-16",
+      "name": "Teacher Records Day — PK–12 Half Day",
+      "type": "half_day_dismissal",
+      "badgeLabel": "PK–12 Half Day",
+      "labelType": "early_release"
+    },
+    {
+      "date": "2026-11-02",
+      "endDate": "2026-11-02",
+      "name": "Fall Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Professional Development Day — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Professional Development Half Day",
+      "type": "half_day_dismissal"
+    },
+    {
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-09",
+      "name": "Professional Development Half Day",
+      "type": "half_day_dismissal"
+    },
+    {
+      "date": "2026-12-18",
+      "endDate": "2026-12-22",
+      "name": "High School Finals — Morning Half Days",
+      "type": "half_day_high_school",
+      "badgeLabel": "Grades 9–12",
+      "labelType": "partial_closure",
+      "description": "Half-day morning schedule for grades 9–12 only."
+    },
+    {
+      "date": "2026-12-22",
+      "name": "Teacher Records Day — PK–12 Half Day",
+      "type": "half_day_dismissal",
+      "badgeLabel": "PK–12 Half Day",
+      "labelType": "early_release"
+    },
+    {
+      "date": "2026-12-23",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Teacher Records Day — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-01-05",
+      "name": "School Resumes",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-14",
+      "name": "Professional Development Half Day",
+      "type": "half_day_dismissal"
+    },
+    {
+      "date": "2027-01-15",
+      "name": "Professional Development Day — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Dr. Martin Luther King Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-11",
+      "name": "Professional Development Half Day",
+      "type": "half_day_dismissal"
+    },
+    {
+      "date": "2027-02-12",
+      "name": "Professional Development Day — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Teacher Records Day — PK–12 Half Day",
+      "type": "half_day_dismissal",
+      "badgeLabel": "PK–12 Half Day",
+      "labelType": "early_release"
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-04-06",
+      "name": "Professional Development Day — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-04-14",
+      "name": "Professional Development Half Day",
+      "type": "half_day_dismissal"
+    },
+    {
+      "date": "2027-05-26",
+      "endDate": "2027-05-28",
+      "name": "High School Finals — Morning Half Days",
+      "type": "half_day_high_school",
+      "badgeLabel": "Grades 9–12",
+      "labelType": "partial_closure",
+      "description": "Half-day morning schedule for grades 9–12 only."
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Last Day of School — PK–12 Half Day",
+      "type": "school_end",
+      "description": "The regular student year ends on Parkway's tiered half-day dismissal schedule.",
+      "schemaDescription": "The last regular school day for Parkway Schools in 2026–27; grades PK–12 follow a half-day schedule."
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day",
+      "type": "holiday",
+      "description": "Memorial Day falls after the last regular school day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-07",
+      "name": "Summer School Begins — Grades K–12",
+      "type": "academic",
+      "badgeLabel": "Summer School",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-18",
+      "name": "Juneteenth — No Summer School",
+      "type": "holiday",
+      "badgeLabel": "Summer School",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-25",
+      "name": "Summer School Ends — Grades K–8",
+      "type": "academic",
+      "badgeLabel": "K–8 Summer",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-07-05",
+      "name": "Independence Day Observed — No Summer School",
+      "type": "holiday",
+      "badgeLabel": "Summer School",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-07-16",
+      "name": "Summer School Ends — Grades 9–12",
+      "type": "academic",
+      "badgeLabel": "9–12 Summer",
+      "hideFromCalendarExport": true
+    }
+  ]
+}

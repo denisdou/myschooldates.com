@@ -1,304 +1,221 @@
 {
   "institutionId": "randolph-county-school-system",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Randolph County School System Calendar 2026–27",
   "firstDay": "2026-08-24",
   "lastDay": "2027-06-09",
+  "temporalCoverageStart": "2026-07-03",
+  "temporalCoverageEnd": "2027-06-11",
+  "totalSchoolDays": 180,
   "sourceUrl": "https://www.randolph.k12.nc.us/documents/calendars/620428",
+  "sourceDocumentPage": "https://www.randolph.k12.nc.us/documents/calendars/620428",
   "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4774/Rcss/5f427d6f-c6e6-4487-a9c3-54dc0645ae33/2026-2027_School_Calendar---final---approved_2.pdf?disposition=inline",
-  "lastVerifiedAt": "2026-07-21",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4774/Rcss/5f427d6f-c6e6-4487-a9c3-54dc0645ae33/2026-2027_School_Calendar---final---approved_2.pdf?disposition=inline",
+  "sourceCheckedAt": "2026-08-17",
+  "sourceUpdatedAt": "2025-03-17",
+  "sourceChecksumSha256": "e76e7095e3d0ec02178d1cebe2be3eb75fec87c5aa60d9ae423ec472409e53d5",
+  "sourceStatus": "current",
+  "sourceVersion": "RCSS 2026–2027 School Calendar — approved February 10, 2025",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.randolph.k12.nc.us/documents/calendars/620428",
+    "linkText": "2026-2027 School Calendar",
+    "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4774/Rcss/5f427d6f-c6e6-4487-a9c3-54dc0645ae33/2026-2027_School_Calendar---final---approved_2.pdf?disposition=inline",
+    "expectedChecksumSha256": "e76e7095e3d0ec02178d1cebe2be3eb75fec87c5aa60d9ae423ec472409e53d5"
+  },
+  "lastVerifiedAt": "2026-08-17",
+  "dateCreated": "2026-07-21",
   "datePublished": "2026-07-21",
-  "dateModified": "2026-07-21",
+  "dateModified": "2026-08-17",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "makeup_day_activation", "official_schedule_change", "confirmed_data_error"],
   "calendarType": "traditional",
-  "yearNumbersMode": "compact",
-  "instructionalDaysDescription": "calendar summary based on the published Randolph County School System calendar",
-  "seoTitle": "Randolph County School System Calendar 2026-2027 | Holidays, Breaks & PDF",
-  "seoDescription": "View the Randolph County School System 2026-2027 calendar including first day of school, holidays, teacher workdays, breaks, early dismissal dates, PDF, and calendar download options.",
-  "calendarNotes": "Randolph County School System starts the 2026-2027 school year on August 24, 2026 and ends on June 9, 2027 with a 2-hour early dismissal. Student no-school periods include Thanksgiving holidays November 26-27, winter annual leave and holidays December 21-January 1, and annual leave March 29-April 1. The calendar also lists teacher workdays, report cards, interim reports, quarter dates, early releases, and inclement-weather make-up notes.",
-  "faqLimit": 10,
-  "faqSchemaLimit": 10,
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "itemListMode": "keyDates",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideHeroVerificationProcess": true,
+  "hiddenSections": ["keyDateCards", "quickFacts", "todayStatus", "breaks", "about", "planningTips", "yearNumbers", "whatsDifferent", "comparison", "districtProfile", "livingHere", "nationalTrends", "relatedDistricts", "downloadCta", "otherCalendars"],
+  "seoTitle": "Randolph County School System Calendar 2026–27: Key Dates & PDF",
+  "seoDescription": "See Randolph County School System’s 2026–27 key dates, student days off, teacher workdays, and weather make-up rules, plus the official PDF and ICS download.",
+  "heroSummary": "RCSS students start Monday, August 24, 2026, and finish Wednesday, June 9, 2027, with a two-hour early dismissal. RCSS lists Spring Annual Leave from March 29 through April 1; students are also off April 2 for a Workday, and the fourth quarter begins April 5.",
+  "heroSourceLine": "Based on the RCSS 2026–27 calendar approved February 10, 2025",
+  "hideHeroDownloadLink": true,
+  "heroCtas": [
+    { "label": "View Official RCSS PDF", "href": "__sourcePdfUrl", "variant": "primary" },
+    { "label": "Add Dates to Calendar (.ics)", "href": "__icsUrl", "variant": "secondary", "download": true, "filename": "__icsFilename" }
+  ],
+  "heroFactChips": ["180 student days"],
+  "verificationBadgeText": "Verified against the official RCSS calendar · Reviewed Aug. 17, 2026",
+  "heroVerificationSourceText": "Reviewed the official one-page RCSS calendar PDF",
+  "heroVerificationComparisonText": "Checked student days off, grading periods, and the printed weather make-up rule",
+  "schemaCalendarName": "Randolph County School System Calendar 2026–27",
+  "schemaDatasetName": "Randolph County School System 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed RCSS 2026–27 calendar dates, including 180 student days, teacher workdays, holidays, annual leave, grading dates, early dismissals, and the district’s printed weather make-up schedule.",
+  "schemaCalendarDownloadName": "RCSS 2026–27 calendar file",
+  "schemaCalendarDownloadDescription": "One-time ICS import of selected districtwide RCSS dates. It does not update automatically after district revisions or weather make-up decisions.",
+  "calendarNotes": "The official RCSS calendar has 180 student days across four grading periods. This page preserves the district’s Workday, Annual Leave, Holiday, and grading labels while separately explaining the main periods when students do not attend.",
+  "keyDatesHeading": "RCSS 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "RCSS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First day, major student days off, and the last student day",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School", "date": "2026-08-24", "type": "school_start" },
+    { "label": "Students Off", "name": "Thanksgiving Days Off", "date": "2026-11-25", "endDate": "2026-11-27", "type": "no_school", "description": "November 25 is a Workday; November 26–27 are Holidays." },
+    { "label": "Students Off", "name": "Winter Annual Leave and Holidays", "date": "2026-12-21", "endDate": "2027-01-01", "type": "break_start" },
+    { "label": "Students Off", "name": "Spring Days Off", "date": "2027-03-26", "endDate": "2027-04-02", "type": "no_school", "description": "RCSS labels March 26 a Holiday, March 29–April 1 Annual Leave, and April 2 a Workday." },
+    { "label": "Last Student Day", "name": "Last Student Day — Two-Hour Early Dismissal", "date": "2027-06-09", "type": "school_end" }
+  ],
+  "moveCalendarExportBeforeAllDates": true,
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "RCSS 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Open the official RCSS PDF or download these calendar dates for Google Calendar, Apple Calendar, or Outlook.",
+  "icsHeading": "Add RCSS Dates to Your Calendar",
+  "icsDescription": "Import selected RCSS dates into Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download RCSS Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. It will not update automatically if RCSS revises the calendar or activates a weather make-up date.",
+  "pdfHeading": "Official RCSS 2026–27 School Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Open the one-page district calendar approved February 10, 2025.",
+  "hidePdfVersionLabel": true,
+  "allDatesTitle": "Randolph County School System 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "The date list uses the RCSS calendar’s Workday, Annual Leave, Holiday, grading, and early-dismissal labels. The weather make-up rule is explained separately below.",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4774/Rcss/5f427d6f-c6e6-4487-a9c3-54dc0645ae33/2026-2027_School_Calendar---final---approved_2.pdf?disposition=inline",
+  "allDatesSourceLabel": "Official RCSS 2026–27 School Calendar",
   "customSections": [
     {
-      "id": "randolph-calendar-overview-2026-2027",
-      "label": "2026-2027 Randolph County School Calendar Overview",
-      "position": "afterKeyDates",
-      "content": "The Randolph County School System 2026-2027 calendar gives families a single place to review the school-year dates that affect attendance, transportation, childcare, travel, and academic planning. The traditional school year begins on August 24, 2026 and ends on June 9, 2027 with a 2-hour early dismissal. Summer break begins after the final student day on June 9, 2027. The calendar also includes teacher workdays, professional development dates, annual leave periods, holidays, early dismissals, quarter endings, semester transitions, report cards, interim reports, and inclement-weather make-up notes.",
-      "groups": [
-        {
-          "label": "This RCSS calendar page includes",
-          "items": [
-            "First day and last student day for the 2026-2027 school year.",
-            "Thanksgiving holidays, winter annual leave, spring annual leave, and major no-school dates.",
-            "Teacher workdays, early dismissal dates, grading-period milestones, PDF access, and calendar download options."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "randolph-verification-methodology-2026-2027",
-      "label": "How We Verify RCSS Calendar Dates",
-      "position": "afterVerification",
-      "content": "MySchoolDates checks Randolph County School System calendar dates against the publicly available official RCSS calendar source. We compare key dates such as the first day of school, final student day, annual leave periods, holidays, teacher workdays, early dismissals, and make-up notes before publishing the page. The downloadable calendar file is generated from the checked records used on this page, but the official RCSS calendar remains the source of record for last-minute changes, weather closures, and school-specific announcements."
-    },
-    {
-      "id": "randolph-calendar-update-history-2026-2027",
-      "label": "Calendar Update History",
-      "position": "afterVerification",
-      "content": "This page is maintained as an independent calendar reference for the Randolph County School System 2026-2027 school year. Update notes help families understand when the page was last checked and what changed during the review process.",
+      "id": "randolph-student-days-off-2026-2027",
+      "label": "RCSS Workdays and Extended Student Breaks",
+      "position": "afterCalendarExport",
+      "content": "RCSS uses Workday, Annual Leave, and Holiday labels for dates when students do not attend. The table groups adjacent days off so families can see the full no-school stretch. RCSS’s official labels are shown alongside each period.",
       "table": {
-        "headers": ["Date", "Update"],
+        "columns": ["Student days off", "Official RCSS labels", "What families should know"],
         "rows": [
-          ["July 21, 2026", "Initial verified publication based on the approved RCSS 2026-2027 school calendar source."],
-          ["Future updates", "Revisions, emergency schedule changes, weather make-up decisions, or updated district PDFs will be reviewed against official RCSS announcements."]
-        ]
+          ["October 16, 2026", "Workday", "Students return Monday, October 19."],
+          ["November 3, 2026", "Workday", "Students return Wednesday, November 4."],
+          ["November 25–27, 2026", "Workday + Holidays", "November 25 is a Workday; November 26–27 are Holidays. Students return Monday, November 30."],
+          ["December 21, 2026–January 1, 2027", "Annual Leave + Holidays", "The next scheduled school day is Monday, January 4."],
+          ["January 18–20, 2027", "Holiday + Workdays", "The second semester and third quarter begin Thursday, January 21."],
+          ["February 15, 2027", "Workday", "Students return Tuesday, February 16."],
+          ["March 26–April 2, 2027", "Holiday + Annual Leave + Workday", "March 26 is a Holiday, March 29–April 1 is Annual Leave, and April 2 is a Workday. The fourth quarter begins Monday, April 5."]
+        ],
+        "footnote": "Standalone holidays, along with staff-only dates before and after the student year, appear in the complete date list below."
       }
     },
     {
-      "id": "randolph-important-dates-for-parents-2026-2027",
-      "label": "Important Randolph County School System Dates for Parents",
-      "position": "afterKeyDates",
-      "content": "These are the RCSS dates families most often use for planning. The table adds context for why each date matters instead of only repeating the date from the official calendar.",
+      "id": "randolph-weather-makeup-2026-2027",
+      "label": "How RCSS Handles Inclement Weather Make-Up Days",
+      "position": "afterAllDates",
+      "content": "The official calendar says RCSS will absorb the first five closure days. After those five days, the district may use up to five remote-learning days if necessary. The PDF also lists make-up dates. Don’t assume a listed Workday becomes a school day unless RCSS announces the change.",
       "table": {
-        "headers": ["Date", "Event", "Why it matters"],
+        "columns": ["Printed RCSS rule", "Dates shown on the calendar", "Planning note"],
         "rows": [
-          ["August 24, 2026", "First Day of School", "Students return after summer break and regular school-year transportation begins."],
-          ["November 26-27, 2026", "Thanksgiving Holidays", "A short holiday period that affects travel, childcare, and work schedules."],
-          ["December 21, 2026-January 1, 2027", "Winter Annual Leave and Holidays", "The longest mid-year break window for family travel and childcare planning."],
-          ["March 29-April 1, 2027", "Spring Annual Leave", "The main spring vacation planning period before fourth quarter begins."],
-          ["June 9, 2027", "Last Student Day", "The final student day includes a 2-hour early dismissal, so afternoon pickup plans may change."]
-        ]
+          ["First five closure days", "Absorbed", "RCSS says time for delays will also be absorbed."],
+          ["After the first five days", "Up to five remote-learning days", "Remote learning is used only if RCSS announces it is necessary."],
+          ["First-semester make-up schedule", "November 25, 2026; January 20, 2027", "Both dates are printed as Workdays on the calendar."],
+          ["Second-semester make-up schedule", "February 15, 2027; April 2, 2027", "Both dates are printed as Workdays on the calendar."]
+        ],
+        "footnote": "Weather closures and make-up decisions are announced separately by RCSS."
       }
-    },
-    {
-      "id": "randolph-teacher-workdays-2026-2027",
-      "label": "RCSS Teacher Workdays 2026-2027",
-      "position": "afterKeyDates",
-      "content": "Randolph County School System teacher workdays are important no-school planning dates for families. These dates can affect childcare, transportation, appointments, and work schedules, even though they are primarily scheduled for staff planning, professional development, grading, or calendar transition work.",
-      "table": {
-        "headers": ["Date", "Calendar item", "Parent planning note"],
-        "rows": [
-          ["August 21, 2026", "Teacher Workday", "Final staff preparation day before students return on August 24."],
-          ["October 16, 2026", "Teacher Workday", "Student no-school planning date before the end of first quarter."],
-          ["November 3, 2026", "Teacher Workday", "Student no-school date during the second quarter."],
-          ["November 25, 2026", "Teacher Workday", "Extends the Thanksgiving planning window before the district holidays."],
-          ["January 19-20, 2027", "Teacher Workdays", "Semester transition period before students begin the second semester on January 21."],
-          ["February 15, 2027", "Teacher Workday", "Mid-semester student no-school planning date."],
-          ["April 2, 2027", "Teacher Workday", "Follows Spring Annual Leave before fourth quarter begins."],
-          ["June 10-11, 2027", "Teacher Workdays", "Post-year staff workdays after the final student day."]
-        ]
-      }
-    },
-    {
-      "id": "randolph-teacher-workdays-explained-2026-2027",
-      "label": "Randolph County School System Teacher Workdays Explained",
-      "position": "afterBreaks",
-      "content": "Teacher workdays are scheduled days when staff complete planning, professional development, grading, or administrative work. Randolph County School System lists teacher workdays throughout the 2026-2027 calendar, including dates before school starts, around Thanksgiving, between semesters, after Spring Annual Leave, and after the final student day. For family planning, these dates should generally be treated as student no-school dates unless RCSS announces a make-up change or a school-specific exception.",
-      "groups": [
-        {
-          "label": "Parent planning notes",
-          "items": [
-            "Teacher workdays can affect childcare, transportation, and after-school plans.",
-            "Workdays near holidays may extend the practical break period for students.",
-            "Inclement-weather make-up decisions can change how some listed workdays are used."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "randolph-parent-planning-2026-2027",
-      "label": "Planning Around the RCSS School Calendar",
-      "position": "afterPlanningTips",
-      "content": "Families in Randolph County, Asheboro, and nearby Piedmont Triad communities often use the RCSS calendar to plan vacations, childcare, appointments, transportation, and academic checkpoints. Before scheduling travel or time off work, review the first day of school, Thanksgiving holidays, winter annual leave, spring annual leave, teacher workdays, early dismissals, and the last student day.",
-      "groups": [
-        {
-          "label": "Before making plans",
-          "items": [
-            "Confirm whether a listed date is a holiday, annual leave day, teacher workday, or early dismissal.",
-            "Add 2-hour early dismissal dates separately because pickup and bus schedules may change.",
-            "Check official RCSS announcements for weather closures, make-up days, and school-specific changes."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "randolph-calendar-changes-2026-2027",
-      "label": "Randolph County School System Calendar Changes: 2025-2026 vs 2026-2027",
-      "position": "afterYearDiff",
-      "content": "Families comparing RCSS school years can review how the first day, final student day, winter break, and spring annual leave shift from the previous calendar to the 2026-2027 calendar.",
-      "table": {
-        "headers": ["Calendar item", "2025-2026", "2026-2027"],
-        "rows": [
-          ["First Day of School", "August 25, 2025", "August 24, 2026"],
-          ["Last Student Day", "June 10, 2026", "June 9, 2027"],
-          ["Winter Annual Leave and Holidays", "December 22, 2025-January 2, 2026", "December 21, 2026-January 1, 2027"],
-          ["Spring Annual Leave", "April 6-10, 2026", "March 29-April 1, 2027"],
-          ["Final Day Dismissal", "2-hour early dismissal", "2-hour early dismissal"]
-        ]
-      }
-    },
-    {
-      "id": "randolph-calendar-changes-updates-2026-2027",
-      "label": "2026-2027 RCSS Calendar Changes & Updates",
-      "position": "afterKeyDates",
-      "content": "The 2026-2027 RCSS calendar reflects the scheduled dates currently published by Randolph County School System. Families comparing this year with the previous school year should note that the first day moves to August 24, 2026, the final student day moves to June 9, 2027, and Spring Annual Leave shifts to March 29-April 1, 2027. Weather closures, emergency cancellations, revised early dismissal schedules, and district calendar updates are announced separately by RCSS, so families should verify changes with the official district source before changing travel, childcare, or transportation plans.",
-      "groups": [
-        {
-          "label": "Updates families should watch for",
-          "items": [
-            "Weather closures and inclement-weather make-up decisions.",
-            "Emergency cancellations or remote learning announcements.",
-            "Revised early dismissal schedules or school-specific changes.",
-            "Updated PDF calendars posted by Randolph County School System."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "related-north-carolina-randolph-calendars",
-      "label": "Nearby North Carolina District Calendars",
-      "position": "afterFaq",
-      "content": "Use these related North Carolina school calendar pages to compare Randolph County School System with other district schedules available on MySchoolDates.",
-      "links": [
-        {
-          "label": "Guilford County Schools Calendar",
-          "url": "/guilford-county-school-calendar",
-          "description": "Nearby Piedmont Triad district calendar for comparing breaks and teacher workdays."
-        },
-        {
-          "label": "Catawba County Schools Calendar",
-          "url": "/catawba-county-schools-calendar",
-          "description": "North Carolina district calendar with traditional calendar, PDF, and ICS coverage."
-        },
-        {
-          "label": "Wake County School Calendar",
-          "url": "/wake-county-school-calendar",
-          "description": "Large North Carolina district calendar useful for statewide comparison."
-        },
-        {
-          "label": "North Carolina School Calendars",
-          "url": "/north-carolina",
-          "description": "Browse North Carolina district calendar pages."
-        }
-      ]
-    },
-    {
-      "id": "related-randolph-calendar-years",
-      "label": "Related Randolph County School System Calendar Years",
-      "position": "afterFaq",
-      "content": "Use these RCSS year links to compare the current school calendar with the previous and next school years available on MySchoolDates.",
-      "links": [
-        {
-          "label": "Randolph County School System Calendar 2025-2026",
-          "url": "/randolph-county-school-system-calendar/2025-2026",
-          "description": "Previous Randolph County School System calendar year."
-        },
-        {
-          "label": "Randolph County School System Calendar 2026-2027",
-          "url": "/randolph-county-school-system-calendar",
-          "description": "Current Randolph County School System calendar page."
-        },
-        {
-          "label": "Randolph County School System Calendar 2027-2028",
-          "url": "/randolph-county-school-system-calendar/2027-2028",
-          "description": "Next Randolph County School System calendar year."
-        }
-      ]
     }
   ],
   "calendarFaqs": [
-    {
-      "q": "When does Randolph County School System start school in 2026?",
-      "a": "The first day of school is Monday, August 24, 2026."
-    },
-    {
-      "q": "When is Randolph County School System Spring Break in 2027?",
-      "a": "The main spring annual leave period runs Monday, March 29 through Thursday, April 1, 2027, followed by a workday on April 2."
-    },
-    {
-      "q": "When is the last day of school for Randolph County School System in 2027?",
-      "a": "The last student day is Wednesday, June 9, 2027, with a 2-hour early dismissal."
-    },
-    {
-      "q": "Does Randolph County School System have school tomorrow?",
-      "a": "This page shows planned calendar dates, not real-time closures. Families should check Randolph County School System announcements for weather closures, emergency changes, or same-day schedule updates."
-    },
-    {
-      "q": "Are Randolph County School System teacher workdays no-school days for students?",
-      "a": "Teacher workdays are generally student no-school planning dates unless RCSS announces a make-up change or a school-specific exception."
-    },
-    {
-      "q": "When does Randolph County School System release students for summer in 2027?",
-      "a": "Students are released for summer after the last student day on Wednesday, June 9, 2027. The calendar notes a 2-hour early dismissal that day."
-    },
-    {
-      "q": "Where can I download the Randolph County School System calendar PDF?",
-      "a": "Use the PDF link on this page or the official Randolph County School System calendar page to view the published 2026-2027 school calendar PDF."
-    },
-    {
-      "q": "How many instructional days are in the Randolph County School System 2026-2027 calendar?",
-      "a": "The calendar covers approximately 180 instructional days based on the published RCSS schedule. Families should confirm official attendance totals with Randolph County School System."
-    },
-    {
-      "q": "Does the Randolph County School System calendar include early dismissal days?",
-      "a": "Yes. The 2026-2027 calendar includes early dismissal dates, including the last student day on June 9, 2027 with a 2-hour early dismissal."
-    },
-    {
-      "q": "How does RCSS handle school closings and make-up days?",
-      "a": "The calendar includes inclement-weather make-up notes, but weather closures and emergency schedule changes are announced separately by Randolph County School System."
-    }
+    { "q": "When does Randolph County School System start school in 2026?", "a": "The first day for RCSS students is Monday, August 24, 2026." },
+    { "q": "When is RCSS spring break in 2027?", "a": "RCSS lists Spring Annual Leave from March 29 through April 1, 2027. Students are also off March 26 for a Holiday and April 2 for a Workday; the fourth quarter begins Monday, April 5." },
+    { "q": "When is the last day of school for RCSS in 2027?", "a": "The last student day is Wednesday, June 9, 2027, with a two-hour early dismissal." },
+    { "q": "Do RCSS students have school on teacher workdays?", "a": "No. The Workdays shown on this page are student no-school dates unless RCSS activates one under its weather make-up schedule or announces another change." },
+    { "q": "How does RCSS handle weather make-up days?", "a": "The calendar says RCSS will absorb the first five closure days, then may use up to five remote-learning days if necessary. The calendar also lists November 25, January 20, February 15, and April 2 as make-up dates. Wait for RCSS confirmation before treating any Workday as a student attendance day." },
+    { "q": "Where can I find the official RCSS calendar PDF?", "a": "Use the official PDF button on this page or open the Randolph County School System calendars page. The 2026–27 PDF was approved February 10, 2025." }
   ],
-  "yearNumbers": [
-    {
-      "label": "First Day",
-      "value": "Aug 24",
-      "detail": "The first day of school is August 24, 2026."
-    },
-    {
-      "label": "Spring Break",
-      "value": "Mar 29-Apr 2",
-      "detail": "Spring annual leave runs March 29-April 1, followed by a workday on April 2, 2027."
-    },
-    {
-      "label": "Last Day",
-      "value": "Jun 9",
-      "detail": "The last student day is June 9, 2027."
-    }
+  "faqDisplayQuestions": [
+    "When does Randolph County School System start school in 2026?",
+    "When is RCSS spring break in 2027?",
+    "When is the last day of school for RCSS in 2027?",
+    "Do RCSS students have school on teacher workdays?",
+    "How does RCSS handle weather make-up days?",
+    "Where can I find the official RCSS calendar PDF?"
+  ],
+  "faqLimit": 6,
+  "faqDisplayLimit": 6,
+  "yearSwitcherPosition": "afterSources",
+  "hideSourceVersionDisplay": true,
+  "sourceReviewSummary": "Reviewed Aug. 17, 2026 using the official one-page RCSS 2026–27 calendar approved February 10, 2025.",
+  "sourceReviewDetails": [
+    "We reviewed the full one-page RCSS calendar PDF and checked the dates used on this page.",
+    "Confirmed 180 student days from the four printed grading-period totals: 45 + 43 + 45 + 47.",
+    "Combined adjacent Workday, Annual Leave, and Holiday dates only in the family-facing no-school summary; the complete date list retains the district’s individual labels.",
+    "Weather make-up dates are not treated as attendance days unless RCSS announces a change."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Randolph County School System sources.",
+  "hideSourceReviewAuthor": true,
+  "sourceNextReviewText": "Next review: when RCSS revises the 2026–27 calendar, announces a weather make-up decision, or publishes a confirmed schedule change.",
+  "sources": [
+    { "label": "RCSS official calendars page", "url": "https://www.randolph.k12.nc.us/documents/calendars/620428" },
+    { "label": "Official RCSS 2026–27 School Calendar PDF", "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4774/Rcss/5f427d6f-c6e6-4487-a9c3-54dc0645ae33/2026-2027_School_Calendar---final---approved_2.pdf?disposition=inline" }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Workdays & Breaks", "id": "randolph-student-days-off-2026-2027" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Weather Make-Up", "id": "randolph-weather-makeup-2026-2027" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
   ],
   "events": [
-    { "date": "2026-07-03", "name": "Independence Day Holiday", "type": "holiday" },
-    { "date": "2026-08-17", "name": "First Day for Teachers", "type": "no_school" },
-    { "date": "2026-08-18", "name": "Middle School Open House", "type": "other" },
-    { "date": "2026-08-19", "name": "High School Open House; Professional Development Day", "type": "other" },
-    { "date": "2026-08-20", "name": "Elementary School Open House", "type": "other" },
-    { "date": "2026-08-21", "name": "Teacher Workday", "type": "no_school" },
+    { "date": "2026-07-03", "name": "Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2026-08-17", "name": "First Day for Teachers", "type": "teacher_workday", "description": "No students; the student year begins August 24.", "hideFromCalendarExport": true },
+    { "date": "2026-08-18", "name": "Middle School Open House", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-08-19", "name": "High School Open House; Professional Development Day", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-08-20", "name": "Elementary School Open House", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-08-21", "name": "Workday", "type": "teacher_workday", "description": "No students; the student year begins August 24.", "preserveOfficialName": true, "hideFromCalendarExport": true },
     { "date": "2026-08-24", "name": "First Day of School", "type": "school_start" },
-    { "date": "2026-09-07", "name": "Labor Day Holiday", "type": "holiday" },
-    { "date": "2026-10-16", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2026-10-27", "name": "End of First Quarter", "type": "quarter_end" },
+    { "date": "2026-09-07", "name": "Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2026-09-21", "name": "20th Day", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-09-24", "name": "Interim Reports", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-10-16", "name": "Workday", "type": "teacher_workday", "description": "No school for students.", "preserveOfficialName": true },
+    { "date": "2026-10-20", "name": "40th Day", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-10-27", "name": "First Quarter Ends", "type": "quarter_end", "description": "The first grading period has 45 student days." },
     { "date": "2026-10-28", "name": "Second Quarter Begins", "type": "quarter_start" },
-    { "date": "2026-11-03", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2026-11-11", "name": "Veterans Day Holiday", "type": "holiday" },
-    { "date": "2026-11-25", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2026-11-26", "name": "Thanksgiving Holidays", "type": "break_start" },
-    { "date": "2026-11-27", "name": "Thanksgiving Holidays End", "type": "break_end" },
-    { "date": "2026-12-18", "name": "2-Hour Early Dismissal", "type": "early_release" },
-    { "date": "2026-12-21", "name": "Winter Annual Leave and Holidays", "type": "break_start" },
-    { "date": "2027-01-01", "name": "New Year's Day Holiday", "type": "holiday" },
-    { "date": "2027-01-01", "name": "Winter Annual Leave and Holidays End", "type": "break_end" },
-    { "date": "2027-01-15", "name": "End of First Semester and Second Quarter", "type": "semester_end" },
-    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day Holiday", "type": "holiday" },
-    { "date": "2027-01-19", "name": "Teacher Workdays", "type": "no_school" },
-    { "date": "2027-01-20", "name": "Teacher Workdays End", "type": "no_school" },
-    { "date": "2027-01-21", "name": "Second Semester and Third Quarter Begins", "type": "semester_start" },
-    { "date": "2027-02-15", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2027-03-25", "name": "End of Third Quarter", "type": "quarter_end" },
-    { "date": "2027-03-26", "name": "Holiday", "type": "holiday" },
-    { "date": "2027-03-29", "name": "Spring Annual Leave", "type": "break_start" },
-    { "date": "2027-04-01", "name": "Spring Annual Leave End", "type": "break_end" },
-    { "date": "2027-04-02", "name": "Teacher Workday", "type": "no_school" },
+    { "date": "2026-11-03", "name": "Workday", "type": "teacher_workday", "description": "No school for students.", "preserveOfficialName": true },
+    { "date": "2026-11-05", "name": "Report Cards", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-11-11", "name": "Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2026-11-25", "name": "Workday", "type": "teacher_workday", "description": "No school for students; the PDF also lists this date in the first-semester make-up schedule.", "preserveOfficialName": true },
+    { "date": "2026-11-26", "endDate": "2026-11-27", "name": "Holidays", "type": "break_start", "description": "Thanksgiving holidays; students are also off November 25 for a Workday.", "preserveOfficialName": true },
+    { "date": "2026-12-04", "name": "Interim Reports", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2026-12-18", "name": "Two-Hour Early Dismissal", "type": "early_dismissal" },
+    { "date": "2026-12-21", "endDate": "2026-12-23", "name": "Annual Leave", "type": "no_school", "preserveOfficialName": true },
+    { "date": "2026-12-24", "endDate": "2026-12-25", "name": "Holidays", "type": "break_start", "preserveOfficialName": true },
+    { "date": "2026-12-28", "name": "Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2026-12-29", "endDate": "2026-12-31", "name": "Annual Leave", "type": "no_school", "preserveOfficialName": true },
+    { "date": "2027-01-01", "name": "Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-01-15", "name": "First Semester / Second Quarter Ends", "type": "semester_end", "description": "The second grading period has 43 student days; the first semester has 88." },
+    { "date": "2027-01-18", "name": "Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-01-19", "endDate": "2027-01-20", "name": "Workdays", "type": "teacher_workday", "description": "No school for students. January 20 is also listed in the first-semester make-up schedule.", "preserveOfficialName": true },
+    { "date": "2027-01-21", "name": "Second Semester / Third Quarter Begins", "type": "quarter_start" },
+    { "date": "2027-01-27", "name": "Report Cards", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-02-05", "name": "100th Day", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-02-15", "name": "Workday", "type": "teacher_workday", "description": "No school for students; the PDF also lists this date in the second-semester make-up schedule.", "preserveOfficialName": true },
+    { "date": "2027-02-23", "name": "Interim Reports", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-03-25", "name": "Third Quarter Ends", "type": "quarter_end", "description": "The third grading period has 45 student days." },
+    { "date": "2027-03-26", "name": "Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-03-29", "endDate": "2027-04-01", "name": "Annual Leave", "type": "break_start", "description": "RCSS uses the official label Annual Leave; students are also off April 2 for a Workday.", "preserveOfficialName": true },
+    { "date": "2027-04-02", "name": "Workday", "type": "teacher_workday", "description": "No school for students; the PDF also lists this date in the second-semester make-up schedule.", "preserveOfficialName": true },
     { "date": "2027-04-05", "name": "Fourth Quarter Begins", "type": "quarter_start" },
-    { "date": "2027-05-31", "name": "Memorial Day Holiday", "type": "holiday" },
-    { "date": "2027-06-09", "name": "Last Student Day - 2-Hour Early Dismissal", "type": "school_end" },
-    { "date": "2027-06-10", "name": "Teacher Workdays", "type": "no_school" },
-    { "date": "2027-06-11", "name": "Teacher Workdays End", "type": "no_school" }
+    { "date": "2027-04-09", "name": "Report Cards", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-05-05", "name": "Interim Reports", "type": "academic", "hideFromCalendarExport": true },
+    { "date": "2027-05-31", "name": "Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-06-09", "name": "Last Student Day — Two-Hour Early Dismissal", "type": "school_end", "description": "The fourth grading period has 47 student days, bringing the school-year total to 180." },
+    { "date": "2027-06-10", "endDate": "2027-06-11", "name": "Workdays", "type": "teacher_workday", "description": "No students; the student year ended June 9.", "preserveOfficialName": true, "hideFromCalendarExport": true }
   ]
 }

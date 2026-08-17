@@ -1,0 +1,113 @@
+{
+  "institutionId": "parkway-schools",
+  "name": "Parkway Schools",
+  "shortName": "Parkway",
+  "slug": "parkway-schools-calendar",
+  "state": "Missouri",
+  "stateCode": "MO",
+  "city": "Chesterfield",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.parkwayschools.net/",
+  "calendarPage": "https://www.parkwayschools.net/about-parkway/calendar",
+  "logo": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1738018438/parkwayschoolsnet/flfsqqrgbjxddtho4zcs/ParkwaySchools_HEADER.png",
+  "timezone": "America/Chicago",
+  "county": "St. Louis County",
+  "region": "Greater St. Louis",
+  "metro": "St. Louis",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "calendarType": "traditional",
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Parkway Schools calendar",
+    "Parkway School District calendar",
+    "Parkway academic calendar",
+    "Parkway St. Louis school calendar",
+    "Chesterfield Missouri school calendar"
+  ],
+  "districtFact": "Parkway's one-page academic calendars distinguish districtwide half days from high-school-only finals, publish three dismissal tiers, continue through optional summer-school dates, and pair the main 2026–27 calendar with a separate religious-observances planning calendar.",
+  "about": [
+    {
+      "title": "Half-Day Dismissal Depends on School Tier",
+      "content": "Parkway does not publish one universal half-day dismissal time. The academic calendar lists separate Tier 1, Tier 2, and Tier 3 times, so families need their school's tier before planning pickup."
+    },
+    {
+      "title": "High School Finals Have a Narrower Scope",
+      "content": "The December and May finals ranges are half days for grades 9–12. Other Parkway half days can apply across PK–12, so the page keeps those two scopes separate instead of treating every half day as districtwide."
+    },
+    {
+      "title": "Religious Observances Are Planning Guidance",
+      "content": "Parkway's separate 2026–27 religious-observances calendar identifies highlighted dates when schools and teachers should avoid events, testing, or major projects. An observance is not a districtwide closure unless the academic calendar separately says there is no school."
+    },
+    {
+      "title": "Summer School Continues After the Main Student Year",
+      "content": "The academic PDF continues beyond the last regular school day with K–12 summer-school dates. Those entries are retained for source completeness but kept out of the standard family ICS import because they apply only to summer-school participants."
+    }
+  ],
+  "calendarNotes": "Use the annual academic PDF for districtwide school days, breaks, professional-development dates, teacher-records dates, half days, high-school finals, and summer-school markers. Check the student's school tier before using a half-day dismissal time. High-school finals apply to grades 9–12, while PK–12 teacher-records and last-day half days have a broader scope. The 2026–27 religious-observances calendar is scheduling guidance rather than a closure calendar. Summer-school dates apply only to enrolled participants and continue after the regular student year. School events, athletics, testing details, and same-day changes may appear outside the one-page academic calendar. An imported ICS file is a one-time copy and will not update automatically if Parkway revises the calendar.",
+  "districtFaqs": [
+    {
+      "q": "Do all Parkway schools dismiss at the same time on half days?",
+      "a": "No. Parkway publishes separate half-day dismissal times for Tier 1, Tier 2, and Tier 3 schools. Use the reviewed school-year page for the published times, then confirm your school's tier."
+    },
+    {
+      "q": "Do Parkway high school finals half days apply to every grade?",
+      "a": "No. The academic calendars label the finals ranges as half days for grades 9–12. Districtwide PK–12 half days are listed separately."
+    },
+    {
+      "q": "Does every date on Parkway's religious-observances calendar mean no school?",
+      "a": "No. The observances calendar is an awareness and scheduling resource. Only dates separately marked as no school on the academic calendar are districtwide closures."
+    },
+    {
+      "q": "Are Parkway summer-school dates part of the regular school year?",
+      "a": "No. The PDF lists summer-school dates after the regular last day, but they apply only to participating students. They are not included in the standard family ICS import."
+    },
+    {
+      "q": "Where should families check Parkway calendar changes?",
+      "a": "Use Parkway's official District Calendar page and current district or school messages. MySchoolDates is an independent reference, and downloaded calendar files do not update automatically."
+    }
+  ],
+  "hiddenSections": [
+    "comparison",
+    "nationalTrends"
+  ],
+  "sources": [
+    {
+      "label": "Parkway Schools official website",
+      "url": "https://www.parkwayschools.net/"
+    },
+    {
+      "label": "Parkway Schools District Calendar",
+      "url": "https://www.parkwayschools.net/about-parkway/calendar"
+    },
+    {
+      "label": "Parkway 2026–27 Academic Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1751342769/parkwayschoolsnet/vveqzuvjrs8wofgpy5nv/26-27ParkwayDistrictAcademicCalendar.pdf"
+    },
+    {
+      "label": "Parkway 2027–28 Academic Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1782928237/parkwayschoolsnet/thlnizmez7q5hzvkwopb/ParkwayDistrictAcademicCalendar27-28-27-281.pdf"
+    },
+    {
+      "label": "Parkway 2026–27 Calendar of Religious Observances",
+      "url": "https://resources.finalsite.net/images/v1752608269/parkwayschoolsnet/zd3ehs59svbloecnrc2c/26-27ReligiousObservances.pdf"
+    }
+  ]
+}

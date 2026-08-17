@@ -1,178 +1,606 @@
 {
   "institutionId": "bakersfield-city-school-district",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Bakersfield City School District Calendar 2026–27",
   "firstDay": "2026-08-12",
   "lastDay": "2027-05-26",
+  "temporalCoverageStart": "2026-08-12",
+  "temporalCoverageEnd": "2027-05-28",
   "sourceUrl": "https://www.bcsd.com/schools1/calendar",
-  "sourcePdfUrl": "https://drive.google.com/file/d/1WDcFkMz1-xChwt0U0dhxpM_XGwwHKYA-/view",
-  "lastVerifiedAt": "2026-07-22",
+  "sourceDocumentPage": "https://www.bcsd.com/schools1/calendar",
+  "sourcePdfUrl": "https://drive.google.com/file/d/1WDcFkMz1-xChwt0U0dhxpM_XGwwHKYA-/view?usp=drive_link",
+  "lastCheckedPdfUrl": "https://drive.google.com/file/d/1WDcFkMz1-xChwt0U0dhxpM_XGwwHKYA-/view?usp=drive_link",
+  "sourceCheckedAt": "2026-08-17",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "lastVerifiedAt": "2026-08-17",
+  "dateCreated": "2026-07-22",
   "datePublished": "2026-07-22",
-  "dateModified": "2026-07-22",
-  "calendarType": "traditional",
-  "totalSchoolDays": 180,
-  "yearNumbersMode": "compact",
-  "seoTitle": "BCSD Calendar 2026-2027 | Bakersfield City School District Dates, Holidays & PDF",
-  "seoDescription": "BCSD 2026-2027 student calendar with Aug 12 first day, May 26 last day, school holidays, no school days, two-hour delayed starts, Thanksgiving, Winter Break, Spring Break, PDF and ICS.",
-  "calendarNotes": "Bakersfield City School District lists 180 total school days for 2026-2027. The first day of school is August 12, 2026 and the last day of school is May 26, 2027. Winter Break runs December 21, 2026 through January 1, 2027. Spring Break runs March 22-26, 2027, followed by a March 29 holiday in lieu of Admission Day. The calendar marks two-hour delayed-start collaboration days on September 10, October 15, November 19, December 10, January 14, February 25, March 11, and May 13. Parent-teacher conference windows run October 19-23, 2026 and March 30-April 2, 2027. May 27 and May 28 are reserved as student attendance days only if needed to maintain 180 instructional days.",
-  "calendarFaqs": [
+  "dateModified": "2026-08-17",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "reserved_attendance_day_activation",
+    "official_schedule_change",
+    "confirmed_data_error"
+  ],
+  "sourceCalendarName": "BCSD School Calendar 2026–27",
+  "schemaCalendarName": "Bakersfield City School District Calendar 2026–27",
+  "schemaDatasetName": "Bakersfield City School District 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed BCSD student and family calendar dates for 2026–27, including the first and last days, holidays, breaks, eight two-hour delayed starts, four minimum days, two parent-teacher conference windows, reporting dates, and two reserved attendance days that apply only if needed.",
+  "schemaSpatialCoverage": "Bakersfield, California",
+  "schemaCalendarDownloadName": "BCSD 2026–27 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import of the reviewed BCSD student and family dates shown on this page; the reserved May 27–28 attendance days are excluded.",
+  "schemaAdditionalSourceCalendars": [
     {
-      "q": "When does BCSD start school in 2026?",
-      "a": "Bakersfield City School District starts the 2026-2027 school year on Wednesday, August 12, 2026."
+      "id": "source-calendar-2025-2026",
+      "name": "BCSD School Calendar 2025–26",
+      "url": "https://drive.google.com/file/d/1bSvx6EnTo1PkH_CE_8gAJd9MPosaKmh2/view"
     },
     {
-      "q": "When is BCSD Winter Break in 2026-2027?",
-      "a": "Winter Break runs Monday, December 21, 2026 through Friday, January 1, 2027."
+      "id": "source-late-start-page",
+      "type": "WebPage",
+      "name": "BCSD 2026–27 Late Start Collaboration Days",
+      "url": "https://www.bcsd.com/schools1/late-start-days"
+    },
+    {
+      "id": "source-bell-schedule-page",
+      "type": "WebPage",
+      "name": "BCSD 2026–27 School Bell Schedules",
+      "url": "https://www.bcsd.com/schools1/bell-schedule"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-2025-2026",
+    "source-late-start-page",
+    "source-bell-schedule-page"
+  ],
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.bcsd.com/schools1/calendar",
+    "linkText": "2026-2027 School Calendar/Calendario Escolar 2026-2027",
+    "expectedDocumentUrl": "https://drive.google.com/file/d/1WDcFkMz1-xChwt0U0dhxpM_XGwwHKYA-/view?usp=drive_link"
+  },
+  "calendarType": "traditional",
+  "allDatesMode": "all",
+  "totalSchoolDays": 180,
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "dataset",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "seoTitle": "Bakersfield City School District Calendar 2026–27: Key Dates & Breaks",
+  "seoDescription": "Bakersfield City School District's 2026–27 calendar starts Aug. 12 and ends May 26. See breaks, delayed starts, minimum days, PDF and ICS downloads.",
+  "heroSummary": "The first day of school is Wednesday, August 12, 2026. The last scheduled student day is Wednesday, May 26, 2027, and it is a minimum day. Thanksgiving Recess is November 23–27, Winter Break is December 21–January 1, and Spring Break is March 22–26.",
+  "heroSourceLine": "2026–27 bilingual district calendar · official BCSD source checked August 17, 2026",
+  "verificationBadgeText": "Verified against the official BCSD 2026–27 calendar",
+  "calendarNotes": "This page covers districtwide BCSD dates that affect student attendance or family schedules. Campus events, bell times, and emergency changes should be checked with BCSD or the student's school.",
+  "hiddenSections": [
+    "about",
+    "comparison",
+    "districtProfile",
+    "downloadCta",
+    "keyDateCards",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars",
+    "planningTips",
+    "quickFacts",
+    "relatedDistricts",
+    "todayStatus",
+    "yearNumbers"
+  ],
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Schedule Changes",
+      "id": "bcsd-schedule-changes-2026-2027"
+    },
+    {
+      "label": "Calendar Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "What's Changed",
+      "id": "year-comparison"
+    },
+    {
+      "label": "Local Calendars",
+      "id": "bakersfield-area-calendars-2026-2027"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "yearSwitcherPosition": "afterSources",
+  "keyDatesSummaryTitle": "BCSD 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last student days, major breaks, and return dates",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-12",
+      "type": "school_start"
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Recess",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "Students return Monday, January 4."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "type": "break_start",
+      "description": "March 29 is an additional holiday; students return March 30."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Scheduled Student Day — Minimum Day",
+      "date": "2027-05-26",
+      "type": "school_end",
+      "schemaDescription": "The last scheduled BCSD student day is May 26, 2027, and it is a minimum day."
+    }
+  ],
+  "allDatesTitle": "BCSD 2026–27 Student Calendar Dates",
+  "allDatesSourceUrl": "https://drive.google.com/file/d/1WDcFkMz1-xChwt0U0dhxpM_XGwwHKYA-/view?usp=drive_link",
+  "allDatesSourceLabel": "Official BCSD 2026–27 bilingual calendar PDF",
+  "allDatesCoverageNote": "This table includes districtwide dates that affect student attendance or family planning. Purely administrative staff-duty dates before and after the student year are not included. May 27–28 are reserved attendance days that apply only if needed, not confirmed extensions of the school year.",
+  "dateLegendItems": [
+    {
+      "label": "First / last day",
+      "dot": "bg-yellow-400"
+    },
+    {
+      "label": "Holiday / break",
+      "dot": "bg-rose-500"
+    },
+    {
+      "label": "Delayed start / minimum day",
+      "dot": "bg-teal-500"
+    },
+    {
+      "label": "Conference / reporting date",
+      "dot": "bg-slate-400"
+    },
+    {
+      "label": "Reserved attendance day",
+      "dot": "bg-orange-300"
+    }
+  ],
+  "dateLegendStyle": "text",
+  "breaksTitle": "Major School Breaks and Return Dates",
+  "hideBreakDurationBadges": true,
+  "breakNotes": {
+    "Thanksgiving Recess": "Students return Monday, November 30, 2026.",
+    "Winter Break": "Students return Monday, January 4, 2027.",
+    "Spring Break": "Monday, March 29 is also a holiday in lieu of Admission Day. Students return Tuesday, March 30, 2027."
+  },
+  "customSections": [
+    {
+      "id": "bcsd-schedule-changes-2026-2027",
+      "label": "BCSD Schedule Changes Families Should Know",
+      "position": "afterKeyDates",
+      "content": "BCSD's calendar includes eight two-hour delayed starts, four minimum days, two conference windows, and two reserved attendance days. Most affect arrival or dismissal times; May 27–28 are used only if additional attendance days are needed.",
+      "groups": [
+        {
+          "label": "Two-hour delayed starts",
+          "items": [
+            "September 10, October 15, November 19, and December 10, 2026",
+            "January 14, February 25, March 11, and May 13, 2027",
+            "BCSD says all schools start two hours later; morning buses run two hours later, breakfast is served, and dismissal times stay the same."
+          ]
+        },
+        {
+          "label": "Minimum days",
+          "items": [
+            "November 20 and December 18, 2026",
+            "March 19 and May 26, 2027; May 26 is also the last scheduled student day."
+          ]
+        },
+        {
+          "label": "Wednesday Bank Day schedules",
+          "items": [
+            "BCSD's 2026–27 bell schedules include Wednesday Bank Day dismissal times for each campus. Many schools dismiss earlier than on a regular day, so families should check the listed time for their school."
+          ]
+        },
+        {
+          "label": "Parent-teacher conference windows",
+          "items": [
+            "October 19–23, 2026",
+            "March 30–April 2, 2027"
+          ]
+        },
+        {
+          "label": "Reserved attendance days",
+          "items": [
+            "BCSD reserves May 27–28, 2027, only if additional attendance days are needed. They are excluded from the default ICS file."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "BCSD Late Start Days",
+          "to": "https://www.bcsd.com/schools1/late-start-days",
+          "description": "Official delayed-start dates and transportation details."
+        },
+        {
+          "label": "BCSD 2026–27 Bell Schedules",
+          "to": "https://www.bcsd.com/schools1/bell-schedule",
+          "description": "Official campus start, dismissal, and Wednesday Bank Day times."
+        }
+      ]
+    },
+    {
+      "id": "bakersfield-area-calendars-2026-2027",
+      "label": "Use the Right Bakersfield-Area District Calendar",
+      "position": "afterYearDiff",
+      "content": "This page applies to Bakersfield City School District, not every public school in Bakersfield. Families with students in another local district should use that district's own calendar; Kern High School District is especially relevant when a BCSD student moves on to high school.",
+      "links": [
+        {
+          "label": "Panama-Buena Vista Union School District calendar",
+          "to": "https://www.pbvusd.k12.ca.us/about-us/calendar",
+          "description": "Official 2026–27 district calendar page."
+        },
+        {
+          "label": "Greenfield Union School District calendar",
+          "to": "https://www.gfusd.net/apps/pages/index.jsp?pREC_ID=1933027&type=d&uREC_ID=444536",
+          "description": "Official English and Spanish district calendars."
+        },
+        {
+          "label": "Kern High School District attendance calendar",
+          "to": "https://www.kernhigh.org/apps/pages/Attendance-Calendar",
+          "description": "Official student attendance calendar for the local high school district."
+        }
+      ]
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "BCSD Calendar Downloads",
+  "unifiedDownloadDescription": "Open the official bilingual PDF or download a one-time ICS file of the reviewed student and family dates.",
+  "icsHeading": "Download the BCSD Calendar (.ics)",
+  "icsDescription": "Import the reviewed 2026–27 BCSD dates into Google Calendar, Apple Calendar, or Outlook. The reserved May 27–28 attendance days are not included.",
+  "icsButtonLabel": "Download Calendar (.ics)",
+  "icsButtonSupportText": "This is a one-time import. Check BCSD for calendar revisions and same-day schedule changes.",
+  "icsSourceNote": "The ICS file is generated from the reviewed student and family dates shown on this page and does not update automatically.",
+  "pdfHeading": "Official BCSD 2026–27 Calendar PDF",
+  "pdfDescription": "Open BCSD's official 2026–27 calendar in English and Spanish.",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfVersionLabel": "Current 2026–27 calendar linked by BCSD",
+  "calendarFaqs": [
+    {
+      "q": "When did Bakersfield City School District start school in 2026?",
+      "a": "The first day of school was Wednesday, August 12, 2026."
+    },
+    {
+      "q": "When is BCSD Winter Break in 2026–27?",
+      "a": "Winter Break runs December 21, 2026, through January 1, 2027. Students return Monday, January 4."
     },
     {
       "q": "When is BCSD Spring Break in 2027?",
-      "a": "Spring Break runs Monday, March 22 through Friday, March 26, 2027. The district also lists Monday, March 29, 2027 as a holiday in lieu of Admission Day."
+      "a": "Spring Break runs March 22–26, 2027. March 29 is also a holiday in lieu of Admission Day, and students return Tuesday, March 30."
     },
     {
       "q": "When is the last day of school for BCSD in 2027?",
-      "a": "The last day of school is Wednesday, May 26, 2027. May 27 and May 28 may be used only if additional student attendance days are needed."
+      "a": "The last scheduled student day is Wednesday, May 26, 2027, and it is a minimum day. May 27–28 are reserved attendance days that apply only if BCSD needs them."
     },
     {
-      "q": "How many days are in the BCSD school year?",
-      "a": "The Bakersfield City School District 2026-2027 calendar includes 180 instructional days."
+      "q": "What are the BCSD two-hour delayed-start dates?",
+      "a": "The delayed starts are September 10, October 15, November 19, and December 10, 2026, plus January 14, February 25, March 11, and May 13, 2027. BCSD says schools and morning buses start two hours later, while dismissal times remain unchanged."
     },
     {
-      "q": "Does BCSD have school on Friday?",
-      "a": "School attendance depends on the specific Friday. Check the BCSD calendar above for holidays, breaks, minimum days, delayed-start schedules, conference windows, and reserved attendance days."
+      "q": "Which days are minimum days for BCSD students?",
+      "a": "The minimum days are November 20 and December 18, 2026, and March 19 and May 26, 2027."
     },
     {
-      "q": "When does BCSD Winter Break end?",
-      "a": "BCSD Winter Break ends on Friday, January 1, 2027. Students return Monday, January 4, 2027."
+      "q": "When are BCSD parent-teacher conferences?",
+      "a": "The district calendar lists conference windows on October 19–23, 2026, and March 30–April 2, 2027. Check the student's school for appointment and bell-schedule details."
     },
     {
-      "q": "Where can I download the BCSD 2026-2027 PDF calendar?",
-      "a": "Use the PDF link on this page to open the official Bakersfield City School District 2026-2027 calendar PDF. The PDF includes English and Spanish calendar pages, school holidays, delayed starts, minimum days, conference dates, and reporting dates."
+      "q": "Does BCSD publish a Spanish 2026–27 calendar?",
+      "a": "Yes. The official BCSD PDF includes both English and Spanish calendar pages."
     }
   ],
-  "customSections": [
-    {
-      "id": "bcsd-calendar-pdf-guide-2026-2027",
-      "label": "BCSD Calendar PDF Guide",
-      "position": "afterKeyDates",
-      "content": "The official BCSD calendar PDF is the source document for this page and includes English and Spanish calendar pages, school holidays, delayed-start collaboration days, minimum days, parent-teacher conference dates, reporting dates, and instructional calendar information. Families who need a printable BCSD calendar should use the PDF for a saved copy and verify later changes with the district source.",
-      "table": {
-        "columns": ["PDF Section", "Why families use it"],
-        "rows": [
-          ["English and Spanish calendar pages", "Useful for households that prefer either language version."],
-          ["School holidays and breaks", "Helps families plan travel, childcare, and no-school coverage."],
-          ["Delayed starts and minimum days", "Important for morning transportation, pickup timing, and after-school arrangements."],
-          ["Conference and reporting dates", "Helps parents plan around conference windows and report-card timing."]
-        ]
-      }
-    },
-    {
-      "id": "bcsd-family-planning-guide-2026-2027",
-      "label": "BCSD Family Planning Guide 2026-2027",
-      "position": "afterPlanningTips",
-      "content": "Beyond major holidays, BCSD families should watch delayed starts, minimum days, parent-teacher conference windows, and reserved attendance make-up days. Before the first day of school on August 12, 2026, families may want to confirm transportation arrangements, enrollment information, school supply lists, after-school programs, meal program updates, and campus-specific announcements.",
-      "table": {
-        "columns": ["Planning Item", "Dates or Timing", "Why it matters"],
-        "rows": [
-          ["Back-to-school preparation", "Before August 12, 2026", "Confirm transportation, supplies, enrollment details, meals, and after-school care."],
-          ["Morning schedule changes", "Two-hour delayed-start collaboration days", "Families may need adjusted morning childcare or transportation plans."],
-          ["Pickup schedule changes", "Minimum days and conference windows", "Student dismissal may differ from a regular day."],
-          ["Travel windows", "Winter Break and Spring Break", "These are the main longer student break periods for family travel planning."],
-          ["Make-up attendance days", "May 27-28, 2027 if needed", "These dates may be used only if extra student attendance days are required."]
-        ]
-      }
-    },
-    {
-      "id": "bcsd-calendar-updates-2026-2027",
-      "label": "BCSD Calendar Updates",
-      "position": "beforeSources",
-      "content": "Check this page after district calendar revisions, board approvals, or schedule updates. The official BCSD calendar remains the final source for emergency changes, campus-specific updates, delayed starts, minimum days, and reserved attendance make-up days."
-    },
-    {
-      "id": "bcsd-calendar-review-information-2026-2027",
-      "label": "BCSD Calendar Review Information",
-      "position": "beforeSources",
-      "content": "This page was last reviewed on July 22, 2026 against the official Bakersfield City School District 2026-2027 calendar source. MySchoolDates checked the first day, last day, school holidays, two-hour delayed-start days, minimum days, parent-teacher conference windows, reporting dates, reserved attendance make-up days, downloadable files, and official source links."
-    },
-    {
-      "id": "how-this-bcsd-calendar-was-prepared-2026-2027",
-      "label": "How This BCSD Calendar Was Prepared",
-      "position": "beforeSources",
-      "content": "This BCSD calendar page is prepared from the district's published school calendar documents. MySchoolDates extracts and reviews first and last student days, holidays and break periods, delayed starts, minimum days, conference windows, reporting dates, reserved attendance days, and downloadable calendar files. Calendar records are maintained by the MySchoolDates Calendar Data Team, and dates are checked against the official district source before publication."
-    }
+  "faqOrderLimit": 8,
+  "faqDisplayQuestions": [
+    "When did Bakersfield City School District start school in 2026?",
+    "When is BCSD Winter Break in 2026–27?",
+    "When is BCSD Spring Break in 2027?",
+    "When is the last day of school for BCSD in 2027?",
+    "What are the BCSD two-hour delayed-start dates?",
+    "Which days are minimum days for BCSD students?",
+    "When are BCSD parent-teacher conferences?",
+    "Does BCSD publish a Spanish 2026–27 calendar?"
   ],
-  "yearNumbers": [
+  "whatsNew": {
+    "title": "What Changed From 2025–26",
+    "subtitle": "Four schedule differences from the previous BCSD calendar.",
+    "content": [
+      "The school year starts August 12 instead of August 13.",
+      "Thanksgiving Recess begins November 23 instead of November 24.",
+      "Spring Break moves from March 30–April 3 in 2025–26 to March 22–26 in 2026–27.",
+      "The last scheduled student day moves from May 29 to May 26."
+    ]
+  },
+  "yearComparisonDefaultOpen": true,
+  "yearSwitcherSort": "asc",
+  "sourceReviewSummary": "BCSD's official calendar page was checked August 17, 2026. It still links the same 2026–27 Drive file used for the date review on this page.",
+  "sourceReviewDetails": [
+    "The student dates, breaks, delayed starts, minimum days, conference windows, reporting dates, and reserved attendance days were reviewed from BCSD's bilingual 2026–27 calendar.",
+    "Purely administrative duty dates for principals and office staff are omitted from the student calendar table because they do not change student attendance.",
+    "BCSD's Late Start Days page corroborates the eight delayed-start Thursdays and says morning buses run two hours later, breakfast is served, and dismissal times remain the same.",
+    "The BCSD Late Start Days page lists January 14, 2026. The 2026–27 district calendar lists the January delayed start on January 14, 2027, so that is the date used here.",
+    "BCSD's 2026–27 bell schedules list campus-specific Wednesday Bank Day dismissal times; many schools dismiss earlier than on a regular day.",
+    "May 27–28 are reserved attendance days that apply only if needed and are excluded from the default ICS file."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official district sources.",
+  "sourceNextReviewText": "Next review: when BCSD revises the calendar, activates a reserved attendance day, or announces a districtwide schedule change.",
+  "sources": [
     {
-      "label": "Delayed Starts",
-      "value": "8",
-      "detail": "The calendar marks eight two-hour delayed-start collaboration days."
+      "label": "BCSD 2026–27 School Calendar — English and Spanish",
+      "url": "https://drive.google.com/file/d/1WDcFkMz1-xChwt0U0dhxpM_XGwwHKYA-/view?usp=drive_link"
     },
     {
-      "label": "Conference Windows",
-      "value": "2",
-      "detail": "Parent-teacher conference windows are listed in October and March."
+      "label": "Bakersfield City School District Calendar",
+      "url": "https://www.bcsd.com/schools1/calendar"
     },
     {
-      "label": "Reserved Days",
-      "value": "2",
-      "detail": "May 27-28 are reserved as student attendance days only if needed."
+      "label": "BCSD 2026–27 Late Start Collaboration Days",
+      "url": "https://www.bcsd.com/schools1/late-start-days"
+    },
+    {
+      "label": "BCSD 2026–27 School Bell Schedules",
+      "url": "https://www.bcsd.com/schools1/bell-schedule"
+    },
+    {
+      "label": "BCSD 2025–26 School Calendar",
+      "url": "https://drive.google.com/file/d/1bSvx6EnTo1PkH_CE_8gAJd9MPosaKmh2/view"
     }
   ],
   "events": [
-    { "date": "2026-07-03", "name": "Independence Day Holiday Observed", "type": "holiday" },
-    { "date": "2026-07-22", "name": "Principals on Duty", "type": "staff_workday" },
-    { "date": "2026-07-28", "name": "School Secretaries, School Clerks, and Office Assistants on Duty", "type": "staff_workday" },
-    { "date": "2026-08-04", "name": "New Teachers Report - First Year", "type": "teacher_workday" },
-    { "date": "2026-08-06", "name": "New Teachers Report - Second Year", "type": "teacher_workday" },
-    { "date": "2026-08-10", "name": "Certificated and Classified Employees on Duty", "type": "teacher_workday" },
-    { "date": "2026-08-12", "name": "First Day of School", "type": "school_start" },
-    { "date": "2026-08-20", "name": "Back to School Night - Elementary", "type": "academic" },
-    { "date": "2026-08-27", "name": "Back to School Night - Middle and Junior High", "type": "academic" },
-    { "date": "2026-09-07", "name": "Labor Day Holiday", "type": "holiday" },
-    { "date": "2026-09-10", "name": "Two-Hour Delayed Start", "type": "academic" },
-    { "date": "2026-09-11", "name": "Progress Report Sent Home", "type": "academic" },
-    { "date": "2026-10-09", "name": "End of 1st Quarter", "type": "academic" },
-    { "date": "2026-10-15", "name": "Two-Hour Delayed Start", "type": "academic" },
-    { "date": "2026-10-19", "name": "Parent Teacher Conferences Begin", "type": "academic" },
-    { "date": "2026-10-23", "name": "Parent Teacher Conferences End", "type": "academic" },
-    { "date": "2026-10-23", "name": "Report to Parents Sent Home", "type": "academic" },
-    { "date": "2026-11-11", "name": "Veterans Day Holiday", "type": "holiday" },
-    { "date": "2026-11-13", "name": "Progress Report Sent Home", "type": "academic" },
-    { "date": "2026-11-19", "name": "Two-Hour Delayed Start", "type": "academic" },
-    { "date": "2026-11-20", "name": "Minimum Day - Students Only", "type": "early_release" },
-    { "date": "2026-11-23", "name": "Thanksgiving Recess Begins - Schools Only", "type": "break_start" },
-    { "date": "2026-11-27", "name": "Thanksgiving Recess Ends", "type": "break_end" },
-    { "date": "2026-12-10", "name": "Two-Hour Delayed Start", "type": "academic" },
-    { "date": "2026-12-18", "name": "End of 2nd Quarter", "type": "academic" },
-    { "date": "2026-12-18", "name": "Minimum Day - Students Only", "type": "early_release" },
-    { "date": "2026-12-21", "name": "Winter Break Begins", "type": "break_start" },
-    { "date": "2027-01-01", "name": "Winter Break Ends", "type": "break_end" },
-    { "date": "2027-01-15", "name": "Report to Parents Sent Home", "type": "academic" },
-    { "date": "2027-01-18", "name": "Martin Luther King Jr. Holiday", "type": "holiday" },
-    { "date": "2027-01-14", "name": "Two-Hour Delayed Start", "type": "academic" },
-    { "date": "2027-01-22", "name": "100th Day of School", "type": "academic" },
-    { "date": "2027-02-05", "name": "Progress Report Sent Home", "type": "academic" },
-    { "date": "2027-02-08", "name": "Lincoln's Day Holiday", "type": "holiday" },
-    { "date": "2027-02-15", "name": "Presidents' Day Holiday", "type": "holiday" },
-    { "date": "2027-02-25", "name": "Two-Hour Delayed Start", "type": "academic" },
-    { "date": "2027-03-11", "name": "Two-Hour Delayed Start", "type": "academic" },
-    { "date": "2027-03-12", "name": "End of 3rd Quarter", "type": "academic" },
-    { "date": "2027-03-19", "name": "Minimum Day - Students Only", "type": "early_release" },
-    { "date": "2027-03-22", "name": "Spring Break Begins", "type": "break_start" },
-    { "date": "2027-03-26", "name": "Spring Break Ends", "type": "break_end" },
-    { "date": "2027-03-29", "name": "In Lieu of Admission Day Holiday", "type": "holiday" },
-    { "date": "2027-03-30", "name": "Parent Teacher Conferences Begin", "type": "academic" },
-    { "date": "2027-04-02", "name": "Parent Teacher Conferences End", "type": "academic" },
-    { "date": "2027-04-02", "name": "Report to Parents Sent Home", "type": "academic" },
-    { "date": "2027-04-09", "name": "Progress Report Sent Home", "type": "academic" },
-    { "date": "2027-05-12", "name": "Day of the Teacher Observance", "type": "observance" },
-    { "date": "2027-05-13", "name": "Two-Hour Delayed Start", "type": "academic" },
-    { "date": "2027-05-17", "name": "Classified School Employee Week Begins", "type": "observance" },
-    { "date": "2027-05-21", "name": "Classified School Employee Week Ends", "type": "observance" },
-    { "date": "2027-05-26", "name": "Last Day of School", "type": "school_end" },
-    { "date": "2027-05-26", "name": "Minimum Day - Students Only", "type": "early_release" },
-    { "date": "2027-05-27", "name": "Reserved Student Attendance Day If Needed", "type": "weather_makeup" },
-    { "date": "2027-05-28", "name": "Reserved Student Attendance Day If Needed", "type": "weather_makeup" },
-    { "date": "2027-05-31", "name": "Memorial Day Holiday", "type": "holiday" },
-    { "date": "2027-06-02", "name": "Last Day for Principals, School Secretaries, School Clerks, and Office Assistants", "type": "staff_workday" },
-    { "date": "2027-06-18", "name": "Juneteenth Holiday Observed", "type": "holiday" }
+    {
+      "date": "2026-08-12",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Back to School Night — Elementary",
+      "type": "academic"
+    },
+    {
+      "date": "2026-08-27",
+      "name": "Back to School Night — Middle and Junior High",
+      "type": "academic"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-10",
+      "name": "Two-Hour Delayed Start",
+      "type": "academic",
+      "badgeLabel": "2-Hour Delayed Start"
+    },
+    {
+      "date": "2026-09-11",
+      "name": "Progress Report Sent Home",
+      "type": "academic"
+    },
+    {
+      "date": "2026-10-09",
+      "name": "First Quarter Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-10-15",
+      "name": "Two-Hour Delayed Start",
+      "type": "academic",
+      "badgeLabel": "2-Hour Delayed Start"
+    },
+    {
+      "date": "2026-10-19",
+      "endDate": "2026-10-23",
+      "name": "Parent-Teacher Conferences",
+      "type": "academic"
+    },
+    {
+      "date": "2026-10-23",
+      "name": "Report to Parents Sent Home",
+      "type": "academic"
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-13",
+      "name": "Progress Report Sent Home",
+      "type": "academic"
+    },
+    {
+      "date": "2026-11-19",
+      "name": "Two-Hour Delayed Start",
+      "type": "academic",
+      "badgeLabel": "2-Hour Delayed Start"
+    },
+    {
+      "date": "2026-11-20",
+      "name": "Minimum Day — Students",
+      "type": "early_release",
+      "badgeLabel": "Minimum Day"
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Recess",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-10",
+      "name": "Two-Hour Delayed Start",
+      "type": "academic",
+      "badgeLabel": "2-Hour Delayed Start"
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Second Quarter Ends — Minimum Day",
+      "type": "early_release",
+      "badgeLabel": "Minimum Day"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-14",
+      "name": "Two-Hour Delayed Start",
+      "type": "academic",
+      "badgeLabel": "2-Hour Delayed Start"
+    },
+    {
+      "date": "2027-01-15",
+      "name": "Report to Parents Sent Home",
+      "type": "academic"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-22",
+      "name": "100th Day of School",
+      "type": "academic"
+    },
+    {
+      "date": "2027-02-05",
+      "name": "Progress Report Sent Home",
+      "type": "academic"
+    },
+    {
+      "date": "2027-02-08",
+      "name": "Lincoln's Day Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents' Day Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-25",
+      "name": "Two-Hour Delayed Start",
+      "type": "academic",
+      "badgeLabel": "2-Hour Delayed Start"
+    },
+    {
+      "date": "2027-03-11",
+      "name": "Two-Hour Delayed Start",
+      "type": "academic",
+      "badgeLabel": "2-Hour Delayed Start"
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Third Quarter Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-03-19",
+      "name": "Minimum Day — Students",
+      "type": "early_release",
+      "badgeLabel": "Minimum Day"
+    },
+    {
+      "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-29",
+      "name": "Holiday in Lieu of Admission Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-30",
+      "endDate": "2027-04-02",
+      "name": "Parent-Teacher Conferences",
+      "type": "academic"
+    },
+    {
+      "date": "2027-04-02",
+      "name": "Report to Parents Sent Home",
+      "type": "academic"
+    },
+    {
+      "date": "2027-04-09",
+      "name": "Progress Report Sent Home",
+      "type": "academic"
+    },
+    {
+      "date": "2027-05-13",
+      "name": "Two-Hour Delayed Start",
+      "type": "academic",
+      "badgeLabel": "2-Hour Delayed Start"
+    },
+    {
+      "date": "2027-05-26",
+      "name": "Last Day of School — Minimum Day",
+      "type": "school_end",
+      "badgeLabel": "Last Day · Minimum Day"
+    },
+    {
+      "date": "2027-05-27",
+      "endDate": "2027-05-28",
+      "name": "Reserved Student Attendance Days — If Needed",
+      "type": "weather_makeup",
+      "badgeLabel": "Reserved if needed",
+      "description": "These dates are used only if BCSD needs additional student attendance days.",
+      "hideFromCalendarExport": true
+    }
   ]
 }

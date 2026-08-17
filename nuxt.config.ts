@@ -12,6 +12,7 @@ type CalendarRouteRecord = {
 
 type StateRouteRecord = {
   stateSlug?: string
+  stateName?: string
 }
 
 function readContentJson<T>(path: string): T {
@@ -69,25 +70,28 @@ function getCalendarPrerenderRoutes() {
 
 const calendarPrerenderRoutes = getCalendarPrerenderRoutes()
 
-function getStatePrerenderRoutes() {
+function getStateNavigationLinks() {
   const statesDir = join(process.cwd(), 'content', 'states')
   const stateSlugs = new Set<string>()
+  const stateLinks: Array<{ slug: string, name: string }> = []
 
   for (const file of readdirSync(statesDir).filter(file => file.endsWith('.json')).sort()) {
     const state = readContentJson<StateRouteRecord>(join(statesDir, file))
-    if (!state.stateSlug) {
-      throw new Error(`State content is missing stateSlug: ${file}`)
+    if (!state.stateSlug || !state.stateName) {
+      throw new Error(`State content is missing stateSlug or stateName: ${file}`)
     }
     if (stateSlugs.has(state.stateSlug)) {
       throw new Error(`Duplicate state slug: ${state.stateSlug}`)
     }
     stateSlugs.add(state.stateSlug)
+    stateLinks.push({ slug: state.stateSlug, name: state.stateName })
   }
 
-  return [...stateSlugs].sort().map(stateSlug => `/${stateSlug}`)
+  return stateLinks.sort((a, b) => a.name.localeCompare(b.name))
 }
 
-const statePrerenderRoutes = getStatePrerenderRoutes()
+const stateNavigationLinks = getStateNavigationLinks()
+const statePrerenderRoutes = stateNavigationLinks.map(state => `/${state.slug}`)
 
 const googleAnalyticsScripts = process.env.NODE_ENV === 'production'
   ? [
@@ -114,6 +118,10 @@ export default defineNuxtConfig({
 
   modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
   css: ['~/assets/css/main.css'],
+
+  appConfig: {
+    stateLinks: stateNavigationLinks,
+  },
 
   content: {
     _localDatabase: {

@@ -1,0 +1,361 @@
+{
+  "institutionId": "carmel-clay-schools",
+  "schoolYear": "2028-2029",
+  "displaySchoolYear": "2028–29",
+  "pageHeading": "Carmel Clay Schools Calendar 2028–29",
+  "firstDay": "2028-08-09",
+  "lastDay": "2029-05-24",
+  "temporalCoverageStart": "2028-08-09",
+  "temporalCoverageEnd": "2029-05-24",
+  "semesters": 2,
+  "sourceUrl": "https://www.ccs.k12.in.us/about/district-calendar",
+  "sourceDocumentPage": "https://docs.google.com/document/d/1wr0GVBV3THuP25vVFQUoaH-jra6riyVH2A2s5Nf-WBk/edit?tab=t.0#heading=h.v46blfbsfqgy",
+  "sourcePdfUrl": "https://docs.google.com/document/d/1wr0GVBV3THuP25vVFQUoaH-jra6riyVH2A2s5Nf-WBk/edit?tab=t.0#heading=h.v46blfbsfqgy",
+  "lastCheckedPdfUrl": "https://docs.google.com/document/d/1wr0GVBV3THuP25vVFQUoaH-jra6riyVH2A2s5Nf-WBk/edit?tab=t.0#heading=h.v46blfbsfqgy",
+  "sourceCheckedAt": "2026-08-17",
+  "sourceStatus": "current_future_year",
+  "manualReviewRequired": true,
+  "lastVerifiedAt": "2026-08-17",
+  "dateCreated": "2026-08-17",
+  "datePublished": "2026-08-17",
+  "dateModified": "2026-08-17",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_google_document_revision",
+    "future_year_live_calendar_published",
+    "late_start_schedule_published",
+    "school_rotation_calendar_published",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Board approved April 29, 2026",
+  "sourceVersionLabel": "Approved",
+  "sourceVersionDisplay": "April 29, 2026",
+  "sourceCalendarName": "Carmel Clay Schools 2028–29 District Calendar — Google Document",
+  "schemaCalendarName": "Carmel Clay Schools Calendar 2028–29",
+  "schemaDatasetName": "Carmel Clay Schools 2028–29 Academic Calendar Dataset",
+  "schemaDatasetDescription": "Carmel Clay Schools' published 2028–29 academic calendar dates, including the first and last student days and Fall, Thanksgiving, Winter, and Spring Break.",
+  "schemaSpatialCoverage": "Carmel and Clay Township, Hamilton County, Indiana",
+  "schemaCalendarDownloadName": "Carmel Clay Schools 2028–29 ICS Calendar File",
+  "schemaCalendarDownloadDescription": "One-time calendar import based on major dates in the official CCS 2028–29 calendar.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-school-calendars",
+      "type": "WebPage",
+      "name": "CCS Individual School Calendars",
+      "url": "https://www.ccs.k12.in.us/about/district-calendar/school-calendars"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-school-calendars"
+  ],
+  "sourceResourceMonitor": {
+    "type": "google-document-link",
+    "checkUrl": "https://www.ccs.k12.in.us/about/district-calendar",
+    "linkText": "2028-29 District Calendar",
+    "expectedDocumentUrl": "https://docs.google.com/document/d/1wr0GVBV3THuP25vVFQUoaH-jra6riyVH2A2s5Nf-WBk/edit?tab=t.0#heading=h.v46blfbsfqgy"
+  },
+  "calendarType": "district",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "seoTitle": "Carmel Clay Schools Calendar 2028–29: Key Dates",
+  "seoDescription": "Carmel Clay Schools' approved 2028–29 calendar starts Aug. 9, 2028 and ends May 24, 2029. See major breaks, official CCS sources, and calendar downloads.",
+  "heroSummary": "CCS's approved 2028–29 calendar lists Wednesday, August 9, 2028, as the first student day and Thursday, May 24, 2029, as the last. Fall Break is October 9–13, Thanksgiving Break is November 22–24, Winter Break is December 25–January 8, and Spring Break is April 2–6. CCS has not yet published 2028–29 late-start or building rotation schedules.",
+  "heroSourceLine": "Based on the official 2028–29 CCS calendar, approved April 29, 2026.",
+  "verificationBadgeText": "Checked against current CCS sources",
+  "calendarNotes": "The CCS board approved the 2028–29 calendar alongside 2027–28 on April 29, 2026. The annual source is a Google document rather than a PDF. Future Blue/Gold, middle-school rotation, late-start, staff, and building-event details should be checked again when CCS publishes the live 2028–29 school calendars.",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "comparison",
+    "nationalTrends",
+    "breaks",
+    "whatsDifferent"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "breaksBeforeAllDates": false,
+  "hideBreakDurationBadges": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Calendar Approval",
+      "id": "ccs-calendar-approval-2028-2029"
+    },
+    {
+      "label": "Future Schedules",
+      "id": "ccs-calendar-guide-2028-2029"
+    },
+    {
+      "label": "Calendar Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "What's Changed",
+      "id": "ccs-year-changes-2028-2029"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "keyDatesSummaryTitle": "Carmel Clay Schools 2028–29 Key Dates",
+  "keyDatesSummarySubtitle": "The first and last student days and four major school breaks",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Student Day",
+      "date": "2028-08-09",
+      "type": "school_start"
+    },
+    {
+      "label": "Fall Break",
+      "name": "Fall Break",
+      "date": "2028-10-09",
+      "endDate": "2028-10-13",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2028-11-22",
+      "endDate": "2028-11-24",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2028-12-25",
+      "endDate": "2029-01-08",
+      "type": "break_start"
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2029-04-02",
+      "endDate": "2029-04-06",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Student Day",
+      "date": "2029-05-24",
+      "type": "school_end"
+    }
+  ],
+  "allDatesTitle": "CCS 2028–29 Published Calendar Dates",
+  "allDatesCoverageNote": "This table includes only the major dates currently published in the official 2028–29 CCS calendar. Late-start, staff, conference, and color-day schedules are omitted until CCS publishes them for 2028–29.",
+  "allDatesSourceUrl": "https://docs.google.com/document/d/1wr0GVBV3THuP25vVFQUoaH-jra6riyVH2A2s5Nf-WBk/edit?tab=t.0#heading=h.v46blfbsfqgy",
+  "allDatesSourceLabel": "Official CCS 2028–29 calendar — Google document",
+  "dateLegendItems": [
+    {
+      "label": "First / last student day",
+      "dot": "bg-yellow-400"
+    },
+    {
+      "label": "Published school break",
+      "dot": "bg-rose-500"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "ccs-calendar-approval-2028-2029",
+      "label": "CCS Approved the 2028–29 Calendar on April 29, 2026",
+      "position": "afterKeyDates",
+      "content": "The Carmel Clay school board approved the 2028–29 calendar together with 2027–28. Current in Carmel reported that CCS received responses from more than 2,500 parents and 600 staff members. More than 60% of responding families preferred a weeklong Fall Break, and ending before Memorial Day was another recurring preference.",
+      "links": [
+        {
+          "label": "Read the April 29 calendar approval report",
+          "to": "https://www.youarecurrent.com/2026/04/30/calendars-approved-for-next-2-school-years-in-carmel/"
+        }
+      ]
+    },
+    {
+      "id": "ccs-year-changes-2028-2029",
+      "label": "What Changes from CCS 2027–28 to 2028–29?",
+      "position": "afterAllDates",
+      "content": "The two calendars keep a Wednesday opening, a weeklong Fall Break, and a last student day before Memorial Day. Most major dates move earlier, while Winter Break shifts five days later.",
+      "table": {
+        "columns": [
+          "Milestone",
+          "2027–28",
+          "2028–29"
+        ],
+        "rows": [
+          [
+            "First student day",
+            "Aug. 11",
+            "Aug. 9"
+          ],
+          [
+            "Fall Break",
+            "Oct. 11–15",
+            "Oct. 9–13"
+          ],
+          [
+            "Thanksgiving Break",
+            "Nov. 24–26",
+            "Nov. 22–24"
+          ],
+          [
+            "Winter Break",
+            "Dec. 20–Jan. 3",
+            "Dec. 25–Jan. 8"
+          ],
+          [
+            "Spring Break",
+            "Apr. 3–7",
+            "Apr. 2–6"
+          ],
+          [
+            "Last student day",
+            "May 25",
+            "May 24"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ccs-calendar-guide-2028-2029",
+      "label": "Late Starts and Color-Day Calendars Come Later",
+      "position": "afterKeyDates",
+      "content": "The approved district calendar covers the major school-year dates. CCS publishes late starts, Carmel High School Blue/Gold days, and middle-school color-day rotations separately through its live school calendars. Those 2028–29 schedules have not been published yet, so this page does not carry forward dates from an earlier school year.",
+      "links": [
+        {
+          "label": "Check CCS individual school calendars",
+          "to": "https://www.ccs.k12.in.us/about/district-calendar/school-calendars"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "date": "2028-08-09",
+      "name": "First Student Day",
+      "type": "school_start",
+      "schemaDescription": "The first student day on the approved Carmel Clay Schools 2028–29 calendar."
+    },
+    {
+      "date": "2028-10-09",
+      "endDate": "2028-10-13",
+      "name": "Fall Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-11-22",
+      "endDate": "2028-11-24",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-12-25",
+      "endDate": "2029-01-08",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2029-04-02",
+      "endDate": "2029-04-06",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2029-05-24",
+      "name": "Last Student Day",
+      "type": "school_end",
+      "schemaDescription": "The last student day on the approved Carmel Clay Schools 2028–29 calendar."
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Calendar Downloads and Official CCS Links",
+  "unifiedDownloadDescription": "Download a one-time ICS import or open the official 2028–29 CCS calendar. Future building schedules are not included.",
+  "icsHeading": "Add Carmel Clay Schools 2028–29 Dates",
+  "icsDescription": "Download the currently published first and last student days and four major break ranges.",
+  "icsButtonLabel": "Download .ics Calendar",
+  "icsButtonSupportText": "This is a one-time import. Late-start, staff, conference, and color-day schedules will not be included until CCS publishes them for 2028–29.",
+  "pdfHeading": "Official CCS 2028–29 Calendar",
+  "pdfDescription": "CCS publishes the approved annual calendar as a Google document rather than a PDF.",
+  "pdfButtonLabel": "Open Official CCS Calendar",
+  "pdfVersionLabel": "Board approved April 29, 2026",
+  "sourceReviewSummary": "Reviewed August 17, 2026, against the CCS calendar hub and official 2028–29 calendar document. The major dates and April 29 approval context were also checked against Current in Carmel's report on the board meeting.",
+  "sourceReviewDetails": [
+    "CCS publishes this annual source as a Google document; no official PDF file was supplied or represented on this page.",
+    "Only the first and last student days and four major break ranges currently confirmed for 2028–29 are listed and included in the ICS file.",
+    "Late-start, staff, conference, and color-day schedules are omitted until CCS publishes them for 2028–29.",
+    "The survey and board-approval context comes from Current in Carmel's report on the April 29, 2026 meeting, not from the academic calendar dataset itself."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Carmel Clay Schools sources and Current in Carmel's report on the April 29 board meeting.",
+  "sourceNextReviewText": "Next review: when CCS revises the official calendar document or publishes 2028–29 live, late-start, staff, conference, or color-day calendars.",
+  "sources": [
+    {
+      "label": "CCS 2028–29 District Calendar — Google Document",
+      "url": "https://docs.google.com/document/d/1wr0GVBV3THuP25vVFQUoaH-jra6riyVH2A2s5Nf-WBk/edit?tab=t.0#heading=h.v46blfbsfqgy"
+    },
+    {
+      "label": "CCS District Calendar hub",
+      "url": "https://www.ccs.k12.in.us/about/district-calendar"
+    },
+    {
+      "label": "Current in Carmel — April 29 calendar approval report",
+      "url": "https://www.youarecurrent.com/2026/04/30/calendars-approved-for-next-2-school-years-in-carmel/"
+    },
+    {
+      "label": "CCS individual school calendars",
+      "url": "https://www.ccs.k12.in.us/about/district-calendar/school-calendars"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Has CCS approved the 2028–29 calendar?",
+      "a": "Yes. The Carmel Clay school board approved the 2028–29 calendar on April 29, 2026."
+    },
+    {
+      "q": "Are 2028–29 CCS late-start and Blue/Gold dates available yet?",
+      "a": "Not yet. CCS has published the annual district calendar, but the 2028–29 late-start, Carmel High School Blue/Gold, and middle-school color-day schedules are not yet available on the live school calendars."
+    },
+    {
+      "q": "Are return dates after 2028–29 school breaks confirmed?",
+      "a": "Not yet. The approved calendar confirms the break ranges, but CCS has not published the future staff and live school calendars needed to verify when students return after each break."
+    },
+    {
+      "q": "Where should families check for 2028–29 calendar updates?",
+      "a": "Check the official CCS District Calendar page and your child's live school calendar. Those sources will list staff dates, late starts, building events, and color-day schedules as CCS publishes them."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "Has CCS approved the 2028–29 calendar?",
+    "Are 2028–29 CCS late-start and Blue/Gold dates available yet?",
+    "Are return dates after 2028–29 school breaks confirmed?",
+    "Where should families check for 2028–29 calendar updates?"
+  ],
+  "faqOrderLimit": 4
+}

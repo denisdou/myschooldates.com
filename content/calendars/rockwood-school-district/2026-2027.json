@@ -1,0 +1,573 @@
+{
+  "institutionId": "rockwood-school-district",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Rockwood School District Calendar 2026–27",
+  "firstDay": "2026-08-24",
+  "lastDay": "2027-05-28",
+  "temporalCoverageStart": "2026-08-11",
+  "temporalCoverageEnd": "2027-06-01",
+  "sourceUrl": "https://www.rsdmo.org/discover/calendars/school-year-overview",
+  "sourceDocumentPage": "https://www.rsdmo.org/discover/calendars/school-year-overview",
+  "sourceCheckedAt": "2026-08-17",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The School Year Overview lists 'Friday, March 11, 2027' for the middle- and high-school third-quarter ending, but March 11 is Thursday; Friday is March 12, which Rockwood separately lists as a no-school professional-development day. This page retains the district's printed date, March 11, and flags the weekday mismatch. Rockwood's district Start and Dismissal Times page and Marquette High list March 22 as a high school late start, while Eureka, Lafayette, and Rockwood Summit list March 29. Because the official sources conflict, neither March date is exported in the ICS file. Rockwood lists May 28 as an Early Dismissal/Grade Recording Day, and its calendar announcement says the 2026–27 school year ends May 28; this page therefore identifies it as the final scheduled K–11 student day.",
+  "sourceResourceMonitor": {
+    "type": "web-page",
+    "checkUrl": "https://www.rsdmo.org/discover/calendars/school-year-overview",
+    "linkText": "2026-2027 School Year Overview",
+    "expectedDocumentUrl": "https://www.rsdmo.org/discover/calendars/school-year-overview",
+    "expectedText": [
+      "First Day of School for Students",
+      "Monday, August 24, 2026",
+      "Early Dismissal/Grade Recording Day",
+      "Friday, May 28, 2027",
+      "Alternate Methods of Instruction (AMI) days"
+    ],
+    "contentAssertions": [
+      {
+        "startText": "2026-2027",
+        "endText": "Note",
+        "expectedText": ["No School – Winter Break", "No School – Spring Recess", "Last Day for Seniors"]
+      }
+    ]
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "web-page",
+      "checkUrl": "https://marquette.rsdmo.org/discover/attendance",
+      "linkText": "Marquette High Attendance",
+      "expectedDocumentUrl": "https://marquette.rsdmo.org/discover/attendance",
+      "expectedText": [
+        "School does not start until 9:58 am"
+      ],
+      "contentAssertions": [
+        {
+          "startText": "Late Start Days",
+          "endText": "School is Not In Session",
+          "expectedText": ["School does not start until 9:58 am", "March 22"],
+          "forbiddenText": ["School does not start until 9:51 am"]
+        }
+      ]
+    }
+  ],
+  "lastVerifiedAt": "2026-08-17",
+  "dateCreated": "2026-08-17",
+  "datePublished": "2026-08-17",
+  "dateModified": "2026-08-17",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": ["official_calendar_revision", "official_source_conflict", "official_schedule_change", "start_dismissal_schedule_change", "makeup_day_activation", "confirmed_data_error"],
+  "sourceVersion": "Official Rockwood 2026–27 School Year Overview HTML table reviewed August 17, 2026",
+  "sourceCalendarName": "Rockwood School District 2026–27 School Year Overview",
+  "schemaCalendarName": "Rockwood School District 2026–27 Calendar",
+  "schemaDatasetName": "Rockwood School District 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Official Rockwood School District 2026–27 overview dates, including staff orientation, the student year, districtwide closures, two early-dismissal days, seven high school late-start dates consistent across district and school schedules, a documented March source conflict, grade-band quarter endings, the last day for seniors, and the inclement-weather AMI thresholds.",
+  "schemaCalendarDownloadName": "Rockwood School District 2026–27 ICS calendar",
+  "schemaCalendarDownloadDescription": "One-time ICS download of districtwide student dates and the seven non-conflicting high school late-start dates verified against Rockwood's official online calendars.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-rockwood-times",
+      "type": "WebPage",
+      "name": "Rockwood 2026–27 Start and Dismissal Times",
+      "url": "https://www.rsdmo.org/discover/calendars/start-and-dismissal-times"
+    },
+    {
+      "id": "source-rockwood-district-events",
+      "type": "WebPage",
+      "name": "Rockwood District Calendar and Events",
+      "url": "https://www.rsdmo.org/discover/calendars"
+    },
+    {
+      "id": "source-rockwood-school-calendars",
+      "type": "WebPage",
+      "name": "Rockwood School Calendars",
+      "url": "https://www.rsdmo.org/discover/calendars/school-calendars"
+    },
+    {
+      "id": "source-rockwood-calendar-announcement",
+      "type": "WebPage",
+      "name": "Rockwood Board Approves the 2026–27 Calendar",
+      "url": "https://www.rsdmo.org/news/article/~board/rsd/post/rockwood-board-approves-2025-2026-school-year-calendar-revisions-2026-2027-calendar"
+    },
+    {
+      "id": "source-eureka-daily-schedule",
+      "type": "WebPage",
+      "name": "Eureka High 2026–27 Daily Schedule",
+      "url": "https://eurekahs.rsdmo.org/discover/daily-schedule"
+    },
+    {
+      "id": "source-lafayette-daily-schedule",
+      "type": "WebPage",
+      "name": "Lafayette High 2026–27 Daily Schedule",
+      "url": "https://lafayette.rsdmo.org/discover/daily-schedule"
+    },
+    {
+      "id": "source-marquette-daily-schedule",
+      "type": "WebPage",
+      "name": "Marquette High 2026–27 Daily Schedule",
+      "url": "https://marquette.rsdmo.org/discover/daily-schedule"
+    },
+    {
+      "id": "source-rockwood-summit-daily-schedule",
+      "type": "WebPage",
+      "name": "Rockwood Summit High 2026–27 Daily Schedule",
+      "url": "https://rsummit.rsdmo.org/discover/daily-schedule"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-rockwood-times",
+    "source-rockwood-calendar-announcement",
+    "source-eureka-daily-schedule",
+    "source-lafayette-daily-schedule",
+    "source-marquette-daily-schedule",
+    "source-rockwood-summit-daily-schedule"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-rockwood-times",
+    "source-rockwood-district-events",
+    "source-rockwood-school-calendars",
+    "source-rockwood-calendar-announcement",
+    "source-eureka-daily-schedule",
+    "source-lafayette-daily-schedule",
+    "source-marquette-daily-schedule",
+    "source-rockwood-summit-daily-schedule"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "districtwide-html-overview",
+  "allDatesMode": "all",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideFaqSchema": true,
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hidePdfDownloadSection": true,
+  "webPageMainEntity": "dataset",
+  "seoTitle": "Rockwood School District Calendar 2026–27: Key Dates & Breaks",
+  "seoDescription": "Rockwood students start Aug. 24, 2026. See school breaks, high school late starts, early-dismissal times, AMI rules, and the final K–11 student day.",
+  "heroSummary": "Rockwood students start school Monday, August 24, 2026. Thanksgiving break is November 25–27, winter break is December 23–January 4, and spring recess is March 15–19. High school families should also note several 9:51 a.m. late starts during the year. Seniors finish May 7, while May 28 is the final scheduled K–11 student day and an early-dismissal day.",
+  "heroSourceLine": "2026–27 School Year Overview · Official Rockwood sources reviewed Aug. 17, 2026",
+  "verificationBadgeText": "Official Rockwood calendar sources reviewed",
+  "calendarNotes": "Use Rockwood's School Year Overview for districtwide attendance dates and the individual school calendar for building events, activities, athletics, and later schedule changes.",
+  "hiddenSections": [
+    "about",
+    "comparison",
+    "districtProfile",
+    "downloadCta",
+    "keyDateCards",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars",
+    "planningTips",
+    "quickFacts",
+    "relatedDistricts",
+    "todayStatus",
+    "whatsDifferent",
+    "yearNumbers"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "hideBreakDurationBadges": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Late Starts", "id": "rockwood-2026-2027-late-starts" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Bell Times", "id": "rockwood-bell-times-2026-2027" },
+    { "label": "Weather & AMI", "id": "rockwood-2026-2027-weather-rule" },
+    { "label": "March 11 Note", "id": "rockwood-2026-2027-source-correction" },
+    { "label": "Calendar Guide", "id": "rockwood-calendar-map-2026-2027" },
+    { "label": "Download", "id": "add-to-calendar" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "keyDatesSummaryTitle": "Rockwood 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First day, major breaks, the last day for seniors, and the final K–11 student day",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School for Students", "date": "2026-08-24", "type": "school_start" },
+    { "label": "Thanksgiving", "name": "Thanksgiving Holiday", "date": "2026-11-25", "endDate": "2026-11-27", "type": "break_start" },
+    { "label": "Winter", "name": "Winter Break", "date": "2026-12-23", "endDate": "2027-01-04", "type": "break_start", "description": "Students return Tuesday, Jan. 5, 2027." },
+    { "label": "Spring", "name": "Spring Recess", "date": "2027-03-15", "endDate": "2027-03-19", "type": "break_start" },
+    { "label": "Grade 12", "name": "Last Day for Seniors", "date": "2027-05-07", "type": "school_end", "schemaDescription": "The last scheduled day for Rockwood seniors in the 2026–27 school year." },
+    { "label": "K–11", "name": "Final K–11 Student Day — Early Dismissal", "date": "2027-05-28", "type": "school_end", "schemaDescription": "May 28 is the final scheduled K–11 student day and an early-dismissal and grade-recording day." }
+  ],
+  "allDatesTitle": "Rockwood 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This table follows Rockwood's official School Year Overview and includes the seven high school late-start dates that agree across district and school sources. The conflicting March dates are explained separately and excluded from the calendar export. School events and board meetings are not included.",
+  "allDatesCoveredBreakDatesNote": "January 4 is already included in winter break, so the overlapping teacher workday is not repeated as a separate student date.",
+  "allDatesSourceUrl": "https://www.rsdmo.org/discover/calendars/school-year-overview",
+  "allDatesSourceLabel": "Official Rockwood 2026–27 School Year Overview",
+  "dateLegendItems": [
+    { "label": "First / last day", "dot": "bg-yellow-400" },
+    { "label": "Holiday / break", "dot": "bg-rose-500" },
+    { "label": "Staff or conference day — no school", "dot": "bg-teal-500" },
+    { "label": "Early dismissal / high-school late start", "dot": "bg-orange-300" },
+    { "label": "Quarter marker / staff-only date", "dot": "bg-slate-400" }
+  ],
+  "breakNotes": {
+    "Winter Break — No School": "Rockwood lists winter break through January 4, which is also a teacher workday. Students return January 5.",
+    "Spring Recess — No School": "Rockwood uses the term Spring Recess for March 15–19 and separately lists a Spring Holiday on March 26."
+  },
+  "breaksTitle": "Major Rockwood School Breaks",
+  "customSections": [
+    {
+      "id": "rockwood-2026-2027-late-starts",
+      "label": "Rockwood High School Late Starts",
+      "content": "Seven late-start dates match across Rockwood's district and high school schedules. The March date does not: the district Start and Dismissal Times page and Marquette High list March 22, while Eureka, Lafayette, and Rockwood Summit list March 29. Families should confirm the March date with their high school. Late-start classes begin at 9:51 a.m., with dismissal at 3:17 p.m.",
+      "position": "afterKeyDates",
+      "table": {
+        "columns": ["Schedule", "Late-start dates"],
+        "rows": [
+          ["Dates consistent across sources", "Aug. 31, Sep. 21, Oct. 19, Nov. 16, Jan. 25, Feb. 22, Apr. 19"],
+          ["March — district + Marquette", "March 22"],
+          ["March — Eureka, Lafayette + Rockwood Summit", "March 29"]
+        ]
+      },
+      "links": [
+        { "label": "District Start and Dismissal Times", "to": "https://www.rsdmo.org/discover/calendars/start-and-dismissal-times" },
+        { "label": "Eureka High Daily Schedule", "to": "https://eurekahs.rsdmo.org/discover/daily-schedule" },
+        { "label": "Lafayette High Daily Schedule", "to": "https://lafayette.rsdmo.org/discover/daily-schedule" },
+        { "label": "Marquette High Daily Schedule", "to": "https://marquette.rsdmo.org/discover/daily-schedule" },
+        { "label": "Rockwood Summit High Daily Schedule", "to": "https://rsummit.rsdmo.org/discover/daily-schedule" }
+      ]
+    },
+    {
+      "id": "rockwood-bell-times-2026-2027",
+      "label": "Early Dismissal and High School Late-Start Times",
+      "content": "December 22 and May 28 are districtwide early-dismissal days, but dismissal times vary by school level and elementary start group.",
+      "position": "afterBreaks",
+      "table": {
+        "columns": ["Level", "Regular schedule", "Early dismissal on Dec. 22 and May 28"],
+        "rows": [
+          ["Elementary — early group", "8:26 a.m.–3:23 p.m.", "12:19 p.m."],
+          ["Elementary — later group", "9:02 a.m.–3:59 p.m.", "12:55 p.m."],
+          ["Middle school", "7:40 a.m.–2:39 p.m.", "11:32 a.m."],
+          ["High school", "8:21 a.m.–3:17 p.m.", "12:16 p.m."],
+          ["High school late start", "9:51 a.m.–3:17 p.m.", "Not the early-dismissal schedule"]
+        ]
+      },
+      "links": [
+        { "label": "Rockwood Start and Dismissal Times", "to": "https://www.rsdmo.org/discover/calendars/start-and-dismissal-times" }
+      ]
+    },
+    {
+      "id": "rockwood-2026-2027-weather-rule",
+      "label": "Weather Closures and AMI",
+      "content": "Rockwood's response depends on the cumulative number of closure days. An AMI day is an instructional day with assigned work, not a day off or an automatic extension of the school year.",
+      "position": "afterBreaks",
+      "table": {
+        "columns": ["Cumulative closure days", "Official 2026–27 response", "What families should know"],
+        "rows": [
+          ["1–4", "No change in the last day", "No make-up day is added at this stage"],
+          ["5–9", "Alternate Methods of Instruction (AMI) days", "Watch for assignments and attendance directions"],
+          ["10 or more", "District calendar will be adjusted", "Check the district calendar again before summer or travel plans"]
+        ],
+        "footnote": "The overview cites Missouri's 1,044-hour requirement and the funding provision for at least 169 in-session days as the context for this sequence."
+      }
+    },
+    {
+      "id": "rockwood-2026-2027-source-correction",
+      "label": "A Note About Rockwood's March 11 Date",
+      "content": "Rockwood lists the middle- and high-school third-quarter ending as 'Friday, March 11, 2027.' March 11 actually falls on a Thursday; Friday is March 12, which the district separately lists as a professional-development day. We keep March 11 because that is the date published by the district and flag the weekday mismatch here.",
+      "position": "afterBreaks"
+    },
+    {
+      "id": "rockwood-calendar-map-2026-2027",
+      "label": "Which Rockwood Calendar Should You Use?",
+      "content": "Rockwood separates districtwide attendance dates from live district events, school activities, bell times, assessments, and special-program calendars. Use the source that matches the question you are trying to answer.",
+      "position": "afterBreaks",
+      "table": {
+        "columns": ["Question", "Official source", "What it covers"],
+        "rows": [
+          ["Is there school on this date?", "School Year Overview", "Districtwide attendance dates, scheduled closures, breaks, and early dismissals"],
+          ["What is happening districtwide?", "District Calendar", "Live events, including board meetings and other non-attendance items"],
+          ["What is happening at my school?", "School Calendars", "Activities, athletics, performances, conferences, and local events"],
+          ["What time do students arrive or leave?", "Start and Dismissal Times", "Regular, high school late-start, and early-dismissal times"],
+          ["Does a special program follow this schedule?", "School Calendars — Programs", "Early Childhood and Center for Creative Learning calendars"]
+        ]
+      },
+      "links": [
+        { "label": "School Year Overview", "to": "https://www.rsdmo.org/discover/calendars/school-year-overview" },
+        { "label": "District Calendar", "to": "https://www.rsdmo.org/discover/calendars" },
+        { "label": "School Calendars", "to": "https://www.rsdmo.org/discover/calendars/school-calendars" },
+        { "label": "Start and Dismissal Times", "to": "https://www.rsdmo.org/discover/calendars/start-and-dismissal-times" }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-11",
+      "endDate": "2026-08-14",
+      "name": "New Teacher Orientation",
+      "type": "teacher_workday",
+      "description": "Staff orientation before regular teacher orientation and the first student day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-18",
+      "endDate": "2026-08-21",
+      "name": "Regular Teacher Orientation — Teachers on Duty",
+      "type": "teacher_workday",
+      "description": "Students begin August 24.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-24",
+      "name": "First Day of School for Students",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-08-31",
+      "name": "High School Late Start — 9:51 a.m.",
+      "type": "academic",
+      "badgeLabel": "High school",
+      "labelType": "partial_closure",
+      "description": "Eureka, Lafayette, Marquette, and Rockwood Summit high schools; regular 3:17 p.m. dismissal."
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-21",
+      "name": "High School Late Start — 9:51 a.m.",
+      "type": "academic",
+      "badgeLabel": "High school",
+      "labelType": "partial_closure"
+    },
+    {
+      "date": "2026-10-05",
+      "name": "Professional Development Day — No School",
+      "type": "teacher_workday",
+      "description": "Teachers are on duty."
+    },
+    {
+      "date": "2026-10-19",
+      "name": "High School Late Start — 9:51 a.m.",
+      "type": "academic",
+      "badgeLabel": "High school",
+      "labelType": "partial_closure"
+    },
+    {
+      "date": "2026-10-23",
+      "name": "First Quarter Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-11-02",
+      "name": "Conference Compensation Day — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Professional Development Day — No School",
+      "type": "teacher_workday",
+      "description": "Teachers are on duty."
+    },
+    {
+      "date": "2026-11-16",
+      "name": "High School Late Start — 9:51 a.m.",
+      "type": "academic",
+      "badgeLabel": "High school",
+      "labelType": "partial_closure"
+    },
+    {
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Holiday — No School",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-22",
+      "name": "Early Dismissal / Grade Recording Day",
+      "type": "early_dismissal",
+      "description": "Elementary dismissal is 12:19 or 12:55 p.m. by school; middle dismissal is 11:32 a.m.; high-school dismissal is 12:16 p.m."
+    },
+    {
+      "date": "2026-12-23",
+      "endDate": "2027-01-04",
+      "name": "Winter Break — No School",
+      "type": "break_start",
+      "description": "January 4 is also a teacher workday. Students resume January 5."
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Teacher Work Day — No School",
+      "type": "teacher_workday",
+      "description": "This staff day overlaps the final date printed for Winter Break.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-05",
+      "name": "School Resumes / Second Semester Begins",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-15",
+      "name": "Professional Development Day — No School",
+      "type": "teacher_workday",
+      "description": "Teachers are on duty."
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-25",
+      "name": "High School Late Start — 9:51 a.m.",
+      "type": "academic",
+      "badgeLabel": "High school",
+      "labelType": "partial_closure"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-22",
+      "name": "High School Late Start — 9:51 a.m.",
+      "type": "academic",
+      "badgeLabel": "High school",
+      "labelType": "partial_closure"
+    },
+    {
+      "date": "2027-03-05",
+      "name": "Third Quarter Ends — Elementary",
+      "type": "quarter_end",
+      "badgeLabel": "Elementary",
+      "labelType": "partial_closure"
+    },
+    {
+      "date": "2027-03-11",
+      "name": "Third Quarter Ends — Middle and High School",
+      "type": "quarter_end",
+      "badgeLabel": "Middle / high",
+      "labelType": "partial_closure",
+      "description": "The source prints the numeric date March 11 but incorrectly labels it Friday; March 11, 2027 is Thursday."
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Professional Development Day — No School",
+      "type": "teacher_workday",
+      "description": "Teachers are on duty."
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Recess — No School",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Spring Holiday — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-04-16",
+      "name": "Conference Compensation Day — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-04-19",
+      "name": "High School Late Start — 9:51 a.m.",
+      "type": "academic",
+      "badgeLabel": "High school",
+      "labelType": "partial_closure"
+    },
+    {
+      "date": "2027-05-07",
+      "name": "Last Day for Seniors",
+      "type": "school_end",
+      "badgeLabel": "Grade 12",
+      "labelType": "partial_closure",
+      "description": "Other K–11 students continue through May 28."
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Final K–11 Student Day — Early Dismissal / Grade Recording",
+      "type": "school_end",
+      "badgeLabel": "Last Day · Early Dismissal",
+      "description": "Rockwood lists May 28 as an Early Dismissal/Grade Recording Day. It is also the final scheduled student day for grades K–11."
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day Holiday — No School",
+      "type": "holiday",
+      "description": "Memorial Day falls after the final K–11 student day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-01",
+      "name": "Records Day — Teachers on Duty",
+      "type": "teacher_workday",
+      "description": "Staff records day after the student school year ends.",
+      "hideFromCalendarExport": true
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Rockwood Calendar Tools & Downloads",
+  "unifiedDownloadDescription": "Rockwood publishes the 2026–27 School Year Overview online rather than as an annual PDF. Open the official page or download a one-time ICS file.",
+  "officialSubscriptionTitle": "Official Rockwood 2026–27 School Year Overview",
+  "officialSubscriptionDescription": "Open Rockwood's districtwide online calendar for the source dates and any later changes.",
+  "officialSubscriptionButtonLabel": "Open Official Online Calendar",
+  "officialSubscriptionUrl": "https://www.rsdmo.org/discover/calendars/school-year-overview",
+  "icsHeading": "Add Rockwood 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download the districtwide student dates, breaks, early dismissals, quarter endings, the last day for seniors, and seven non-conflicting high school late starts shown on this page. The disputed March late-start date is not included.",
+  "icsButtonLabel": "Download Rockwood Calendar (.ics)",
+  "icsButtonSupportText": "This is a one-time import. Check Rockwood or the student's school for later calendar changes, AMI announcements, and graduation details.",
+  "sourceReviewSummary": "Reviewed August 17, 2026, against Rockwood's School Year Overview, Start and Dismissal Times page, and the four high school Daily Schedule pages.",
+  "sourceReviewDetails": [
+    "Rockwood publishes its 2026–27 calendar as a School Year Overview web page rather than an annual PDF.",
+    "The overview supplies districtwide student dates and AMI rules; Start and Dismissal Times supplies level-specific early-dismissal times and the district's high school late-start dates.",
+    "Seven high school late-start dates agree across the district and school schedules. Marquette High matches the district's March 22 date, while Eureka, Lafayette, and Rockwood Summit currently list March 29; neither March date is included in the ICS file.",
+    "Rockwood lists the middle and high school third-quarter ending as Friday, March 11, 2027, although March 11 is Thursday and March 12 is separately listed as a no-school professional-development day.",
+    "Rockwood labels May 28 as an Early Dismissal/Grade Recording Day, and the district's calendar announcement identifies May 28 as the end of the 2026–27 school year."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Rockwood School District sources.",
+  "sourceNextReviewText": "Next review: when Rockwood resolves the March late-start conflict, revises the School Year Overview, changes bell times, or announces a districtwide calendar adjustment.",
+  "faqDisplayQuestions": [
+    "When does Rockwood School District start in 2026–27?",
+    "When is Rockwood Winter Break in 2026–27?",
+    "When is Rockwood Spring Recess in 2027?",
+    "When is Rockwood's last day of school in 2026–27?",
+    "How do Rockwood snow days and AMI affect the last day?"
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When does Rockwood School District start in 2026–27?",
+      "a": "The first day for students is Monday, August 24, 2026."
+    },
+    {
+      "q": "When is Rockwood Winter Break in 2026–27?",
+      "a": "Winter Break runs December 23, 2026 through January 4, 2027. January 4 is also a teacher workday, and students return Tuesday, January 5."
+    },
+    {
+      "q": "When is Rockwood Spring Recess in 2027?",
+      "a": "Spring Recess runs Monday, March 15 through Friday, March 19, 2027. Rockwood separately lists Friday, March 26 as a no-school Spring Holiday."
+    },
+    {
+      "q": "When is Rockwood's last day of school in 2026–27?",
+      "a": "Seniors finish Friday, May 7, 2027. Friday, May 28 is the final scheduled K–11 student day and an early-dismissal and grade-recording day."
+    },
+    {
+      "q": "How do Rockwood snow days and AMI affect the last day?",
+      "a": "Closure days one through four cause no last-day change. Days five through nine become AMI days. At ten or more closure days, Rockwood says the district calendar will be adjusted."
+    }
+  ],
+  "sources": [
+    { "label": "Rockwood 2026–27 School Year Overview", "url": "https://www.rsdmo.org/discover/calendars/school-year-overview" },
+    { "label": "Rockwood Start and Dismissal Times", "url": "https://www.rsdmo.org/discover/calendars/start-and-dismissal-times" },
+    { "label": "Rockwood District Calendar and Events", "url": "https://www.rsdmo.org/discover/calendars" },
+    { "label": "Rockwood School Calendars", "url": "https://www.rsdmo.org/discover/calendars/school-calendars" },
+    { "label": "Rockwood Board Calendar Announcement", "url": "https://www.rsdmo.org/news/article/~board/rsd/post/rockwood-board-approves-2025-2026-school-year-calendar-revisions-2026-2027-calendar" }
+  ]
+}

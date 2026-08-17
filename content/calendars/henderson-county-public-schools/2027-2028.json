@@ -1,86 +1,528 @@
 {
   "institutionId": "henderson-county-public-schools",
   "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Henderson County Public Schools Calendar 2027–28",
   "firstDay": "2027-08-12",
   "lastDay": "2028-05-26",
+  "temporalCoverageStart": "2027-08-05",
+  "temporalCoverageEnd": "2028-05-31",
   "sourceUrl": "https://www.hendersoncountypublicschoolsnc.org/district/calendar/",
+  "sourceDocumentPage": "https://www.hendersoncountypublicschoolsnc.org/district/calendar/",
   "sourcePdfUrl": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/2027-2028_FINAL_TradHCEC-Calendar_1.13.26.pdf",
-  "lastVerifiedAt": "2026-07-21",
+  "lastCheckedPdfUrl": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/2027-2028_FINAL_TradHCEC-Calendar_1.13.26.pdf",
+  "sourceCheckedAt": "2026-08-17",
+  "lastVerifiedAt": "2026-08-17",
   "datePublished": "2026-07-21",
-  "dateModified": "2026-07-21",
+  "dateModified": "2026-08-17",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "inclement_weather_extension",
+    "official_schedule_change"
+  ],
+  "sourceVersion": "Final 2027–28 Traditional/HCEC printable calendar dated January 13, 2026; HCPS states that the calendar is subject to change and may be extended for inclement weather",
+  "sourceCalendarName": "HCPS 2027–28 Traditional & Early College Calendar",
+  "schemaCalendarName": "Henderson County Public Schools 2027–28 Calendar",
+  "schemaDatasetName": "Henderson County Public Schools 2027–28 Traditional & Early College Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed HCPS Traditional and Early College calendar dates for 2027–28, including school breaks, optional and required teacher workdays, holidays, early dismissals, and return dates.",
+  "schemaSpatialCoverage": "Henderson County, North Carolina",
+  "schemaCalendarDownloadName": "HCPS 2027–28 Traditional & Early College calendar ICS file",
+  "schemaCalendarDownloadDescription": "One-time ICS download of the main Traditional and Early College student-calendar dates selected from this page.",
+  "schemaKeyDateItemListName": "HCPS 2027–28 Traditional & Early College Key Dates",
+  "schemaCalendarDateItemListName": "HCPS 2027–28 Traditional & Early College Calendar Dates",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-ereader-calendar",
+      "type": "CreativeWork",
+      "name": "HCPS 2027–28 Traditional & Early College eReader Calendar",
+      "url": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/2027-2028_FINALTradHCEC-English-eReader-Friendly_1.13.26.pdf"
+    },
+    {
+      "id": "source-flex-calendar",
+      "type": "CreativeWork",
+      "name": "HCPS 2027–28 Flex Calendar",
+      "url": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/2027-2028_FINAL_Flex-Calendar_1.13.26.pdf"
+    },
+    {
+      "id": "source-spanish-traditional-calendar",
+      "type": "CreativeWork",
+      "name": "HCPS 2027–28 Traditional & Early College Calendar in Spanish",
+      "url": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/SPANISH-2027-2028_FINAL_TradHCEC-Calendar_1.13.26.pdf"
+    },
+    {
+      "id": "source-spanish-flex-calendar",
+      "type": "CreativeWork",
+      "name": "HCPS 2027–28 Flex Calendar in Spanish",
+      "url": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/SPANISH-2027-2028_FINAL_Flex-Calendar_1.13.26.pdf"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.hendersoncountypublicschoolsnc.org/district/calendar/",
+    "linkText": "2027-2028 Traditional & Early College Calendar",
+    "expectedDocumentUrl": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/2027-2028_FINAL_TradHCEC-Calendar_1.13.26.pdf",
+    "expectedText": [
+      "August 5",
+      "August 6 - 11",
+      "December 20 - 30",
+      "December 31",
+      "May 30 - 31"
+    ]
+  },
   "calendarType": "traditional",
-  "yearNumbersMode": "compact",
-  "alternateCalendars": [
-    {
-      "type": "flex",
-      "label": "2027-2028 Flex Calendar",
-      "pdfUrl": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/2027-2028_FINAL_Flex-Calendar_1.13.26.pdf"
-    }
+  "calendarTrackId": "traditional-hcec",
+  "allDatesMode": "all",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "yearNumbers",
+    "whatsDifferent",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "comparison",
+    "nationalTrends",
+    "otherCalendars",
+    "backToCurrent"
   ],
-  "seoTitle": "Henderson County Public Schools Calendar 2027-2028 | Holidays, Breaks & PDF",
-  "seoDescription": "View Henderson County Public Schools NC calendar 2027-2028. Find first day of school, holidays, winter break, spring break, PDF and downloadable calendar files.",
-  "calendarNotes": "Henderson County Public Schools starts the 2027-2028 Traditional/HCEC school year on August 12, 2027 and ends on May 26, 2028 with early dismissal. Winter Break runs December 20-January 2, and Spring Break runs March 13-17. The calendar also lists optional and required teacher workdays, holidays, annual leave, early dismissal, and inclement-weather notes. A separate Flex calendar is available from the district.",
-  "calendarFaqs": [
-    {
-      "q": "When does Henderson County Public Schools start school in 2027?",
-      "a": "The first day of school is Thursday, August 12, 2027."
-    },
-    {
-      "q": "When is Henderson County Public Schools Spring Break in 2028?",
-      "a": "Spring Break runs Monday, March 13 through Friday, March 17, 2028."
-    },
-    {
-      "q": "When is the last day of school for Henderson County Public Schools in 2028?",
-      "a": "The last day of school is Friday, May 26, 2028, with early dismissal."
-    },
-    {
-      "q": "Does HCPS have a Flex calendar for 2027-2028?",
-      "a": "Yes. The district publishes a separate 2027-2028 Flex calendar linked as an alternate calendar."
-    }
-  ],
-  "yearNumbers": [
+  "seoTitle": "Henderson County Public Schools Calendar 2027–28 | Key Dates & PDF",
+  "seoDescription": "The HCPS Traditional & Early College calendar starts Aug. 12, 2027 and ends May 26, 2028. See teacher workdays, breaks, early dismissal dates, Flex and Spanish calendars, and the official PDF.",
+  "heroSummary": "HCPS students on the Traditional and Early College calendar start school Thursday, August 12, 2027. The last student day is Friday, May 26, 2028, with early dismissal at noon. Spring Break is March 13–17. Students on the Flex schedule should use the separate Flex calendar below.",
+  "heroSourceLine": "2027–28 Traditional & Early College Calendar · Flex and Spanish versions also published",
+  "verificationBadgeText": "Official HCPS calendars reviewed August 17, 2026",
+  "futureYearNotice": "You’re viewing HCPS’s upcoming 2027–28 Traditional & Early College calendar. HCPS states that the calendar is subject to change and may be extended for inclement weather.",
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "calendarNotes": "The HCPS 2027–28 Traditional and Early College printable calendar lists school breaks, optional and required teacher workdays, holidays, early dismissals, and inclement-weather guidance. A separate Flex calendar follows different dates.",
+  "keyDatesSummaryTitle": "HCPS 2027–28 Key Dates",
+  "keyDatesSummarySubtitle": "First and last student days, major breaks, and the winter return date",
+  "keyDateSummaryItems": [
     {
       "label": "First Day",
-      "value": "Aug 12",
-      "detail": "The first day of school is August 12, 2027."
+      "name": "First Day of School",
+      "date": "2027-08-12",
+      "type": "school_start",
+      "schemaDescription": "The first day of classes for students on the HCPS Traditional & Early College calendar is August 12, 2027."
     },
     {
-      "label": "Spring Break",
-      "value": "Mar 13-17",
-      "detail": "Spring Break runs March 13-17, 2028."
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2027-11-24",
+      "endDate": "2027-11-26",
+      "type": "break_start",
+      "schemaDescription": "Thanksgiving Break on the HCPS Traditional & Early College calendar runs November 24–26, 2027."
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2027-12-20",
+      "endDate": "2027-12-30",
+      "type": "break_start",
+      "schemaDescription": "The HCPS Traditional & Early College printable calendar labels December 20–30, 2027 as Winter Break."
+    },
+    {
+      "label": "Return",
+      "name": "Students Return After Winter Break",
+      "date": "2028-01-04",
+      "type": "school_resume",
+      "schemaDescription": "Based on the printable calendar's Winter Break, December 31 holiday, and January 3 optional teacher workday, students on the HCPS Traditional & Early College calendar return January 4, 2028."
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "type": "break_start",
+      "schemaDescription": "Spring Break on the HCPS Traditional & Early College calendar runs March 13–17, 2028."
     },
     {
       "label": "Last Day",
-      "value": "May 26",
-      "detail": "The last day of school is May 26, 2028."
+      "name": "Last Student Day — Early Dismissal",
+      "date": "2028-05-26",
+      "type": "school_end",
+      "schemaDescription": "May 26, 2028 is the last student day on the HCPS Traditional & Early College calendar, with early dismissal at noon."
+    }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "href": "#key-dates" },
+    { "label": "Which Calendar", "href": "#hcps-2027-2028-calendar-map" },
+    { "label": "Full Calendar", "href": "#all-dates" },
+    { "label": "Breaks", "href": "#breaks" },
+    { "label": "Downloads", "href": "#add-to-calendar" },
+    { "label": "What's Changed", "href": "#year-comparison" },
+    { "label": "Planning", "href": "#hcps-2027-2028-planning-notes" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Sources", "href": "#sources" }
+  ],
+  "allDatesTitle": "HCPS 2027–28 Traditional & Early College Calendar Dates",
+  "allDatesCoverageNote": "This table follows the family-facing dates and event categories in the official Traditional and Early College printable calendar. Flex-calendar dates are published separately.",
+  "allDatesSourceUrl": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/2027-2028_FINAL_TradHCEC-Calendar_1.13.26.pdf",
+  "allDatesSourceLabel": "Official HCPS 2027–28 Traditional & Early College Calendar PDF",
+  "hideCoveredBreakDatesNote": true,
+  "dateLegendItems": [
+    { "label": "First / last day", "dot": "bg-yellow-400" },
+    { "label": "Holiday / break", "dot": "bg-rose-500" },
+    { "label": "Optional or required teacher workday", "dot": "bg-teal-500" },
+    { "label": "Early dismissal", "dot": "bg-orange-300" }
+  ],
+  "dateLegendLabelOverrides": {
+    "Early Release": "Early Dismissal"
+  },
+  "breaksTitle": "School Breaks and Return Dates",
+  "breakNotes": {
+    "Thanksgiving Break": "Students return Monday, November 29, 2027.",
+    "Winter Break": "The printable calendar lists Winter Break as December 20–30. December 31 is the New Year's Day holiday, January 3 is an optional teacher workday, and students return January 4.",
+    "Spring Break": "Students return Monday, March 20, 2028."
+  },
+  "alternateCalendarsTitle": "Official HCPS Calendars",
+  "alternateCalendarsDescription": "HCPS publishes a separate Flex schedule and Spanish versions of both school calendars for 2027–28.",
+  "alternateCalendars": [
+    {
+      "type": "flex",
+      "label": "2027–28 Flex Calendar",
+      "description": "Use this calendar if your school or program follows the Flex schedule; its opening dates, intersessions, breaks, and last day differ from the Traditional and Early College calendar.",
+      "group": "Official school calendars",
+      "pdfUrl": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/2027-2028_FINAL_Flex-Calendar_1.13.26.pdf"
+    },
+    {
+      "type": "spanish-traditional",
+      "label": "Traditional & Early College Calendar in Spanish",
+      "description": "Spanish-language version of the Traditional and Early College calendar.",
+      "group": "Spanish school calendars",
+      "pdfUrl": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/SPANISH-2027-2028_FINAL_TradHCEC-Calendar_1.13.26.pdf"
+    },
+    {
+      "type": "spanish-flex",
+      "label": "Flex Calendar in Spanish",
+      "description": "Spanish-language version of the Flex calendar.",
+      "group": "Spanish school calendars",
+      "pdfUrl": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/SPANISH-2027-2028_FINAL_Flex-Calendar_1.13.26.pdf"
+    }
+  ],
+  "otherCalendarsPosition": "beforeCalendarExport",
+  "groupAlternateCalendarsWithDownloads": true,
+  "unifiedDownloadTitle": "Calendar Downloads and Official PDFs",
+  "unifiedDownloadDescription": "Download a one-time calendar import or open the official HCPS Traditional, Flex, and Spanish calendars.",
+  "officialSubscriptionTitle": "Official HCPS Online Calendars",
+  "officialSubscriptionDescription": "HCPS also offers online calendars that Google users can subscribe to from the district's School Calendars page.",
+  "officialSubscriptionButtonLabel": "View HCPS Online Calendars",
+  "officialSubscriptionUrl": "https://www.hendersoncountypublicschoolsnc.org/district/calendar/",
+  "compactDownloadModule": true,
+  "pdfHeading": "Official HCPS 2027–28 Traditional & Early College Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Open the official printable PDF used for the event categories on this page. HCPS states that the calendar is subject to change and may be extended for inclement weather.",
+  "hidePdfVersionLabel": true,
+  "pdfSupplementalTitle": "Accessible calendar version",
+  "pdfSupplementalDescription": "HCPS also publishes an eReader-friendly version of the Traditional and Early College calendar.",
+  "pdfSupplementalLinks": [
+    {
+      "label": "Open eReader-Friendly Calendar",
+      "url": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/2027-2028_FINALTradHCEC-English-eReader-Friendly_1.13.26.pdf"
+    }
+  ],
+  "icsHeading": "Download an ICS Calendar File",
+  "icsDescription": "Download a one-time ICS file for Google Calendar, Apple Calendar, or Outlook. It includes the main Traditional and Early College student-calendar dates selected from this page.",
+  "icsSourceNote": "The file does not update automatically and does not represent the Flex schedule. Check HCPS for weather changes, revised calendars, and school-specific announcements.",
+  "yearSwitcherPosition": "afterSources",
+  "yearComparisonPosition": "default",
+  "faqOrderLimit": 6,
+  "faqDisplayQuestions": [
+    "Is this the official HCPS calendar?",
+    "Which HCPS calendar applies to my student?",
+    "When do HCPS students return after Winter Break?",
+    "When are HCPS early dismissal days in 2027–28?",
+    "When are HCPS teacher workdays in 2027–28?",
+    "Where can I download the official HCPS calendars?"
+  ],
+  "sourceReviewSummary": "Reviewed August 17, 2026, against the official HCPS calendar page and the current 2027–28 Traditional and Early College printable/eReader, Flex, and Spanish calendar PDFs.",
+  "sourceReviewDetails": [
+    "The printable Traditional and Early College calendar labels Winter Break as December 20–30 and lists December 31 separately as the New Year's Day holiday. The district's eReader version includes December 31 in the Winter Break range. This page uses the printable calendar's more specific categories.",
+    "The August, October, January, February, March, April, and May teacher-workday labels and ranges were checked against the printable and eReader calendars. May 29 remains visible as the Memorial Day holiday, followed by required teacher workdays May 30–31.",
+    "The Traditional & Early College calendar and the Flex calendar follow separate schedules. Spanish translations are linked as companion resources rather than merged into this page's date table.",
+    "The downloadable ICS file is a one-time import. HCPS remains the source of record for weather-related extensions, revised files, and school-specific schedule changes."
+  ],
+  "sourceNextReviewText": "This page will be reviewed again if HCPS replaces a calendar PDF or announces an inclement-weather schedule change.",
+  "sources": [
+    {
+      "label": "HCPS School Calendars page",
+      "url": "https://www.hendersoncountypublicschoolsnc.org/district/calendar/"
+    },
+    {
+      "label": "HCPS 2027–28 Traditional & Early College Calendar PDF",
+      "url": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/2027-2028_FINAL_TradHCEC-Calendar_1.13.26.pdf"
+    },
+    {
+      "label": "HCPS 2027–28 Traditional & Early College eReader PDF",
+      "url": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/2027-2028_FINALTradHCEC-English-eReader-Friendly_1.13.26.pdf"
+    },
+    {
+      "label": "HCPS 2027–28 Flex Calendar PDF",
+      "url": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/2027-2028_FINAL_Flex-Calendar_1.13.26.pdf"
+    },
+    {
+      "label": "HCPS Traditional & Early College Calendar in Spanish",
+      "url": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/SPANISH-2027-2028_FINAL_TradHCEC-Calendar_1.13.26.pdf"
+    },
+    {
+      "label": "HCPS Flex Calendar in Spanish",
+      "url": "https://www.hendersoncountypublicschoolsnc.org/wp-content/uploads/2026/06/SPANISH-2027-2028_FINAL_Flex-Calendar_1.13.26.pdf"
+    }
+  ],
+  "relatedDistrictsTitle": "More North Carolina School Calendars",
+  "relatedDistrictsDescription": "Browse other reviewed North Carolina district calendars.",
+  "hideRelatedDistrictDescriptions": true,
+  "customSections": [
+    {
+      "id": "hcps-2027-2028-calendar-map",
+      "label": "Which HCPS Calendar Applies to My Student?",
+      "position": "afterKeyDates",
+      "content": "Start with the calendar assigned by your school or program. The date table on this page follows the Traditional and Early College calendar.",
+      "table": {
+        "columns": ["Calendar or resource", "Who should use it", "What to know"],
+        "rows": [
+          ["Traditional & Early College", "Students assigned to the district's Traditional schedule or Henderson County Early College", "Use this page for district dates, breaks, teacher workdays, and early dismissals."],
+          ["Flex", "Students at schools or programs assigned to the Flex schedule", "Use the separate Flex PDF because its opening dates, intersessions, breaks, and last day differ."],
+          ["Spanish versions", "Families who prefer a Spanish-language calendar", "HCPS publishes Spanish versions of both the Traditional & Early College calendar and the Flex calendar."]
+        ]
+      }
+    },
+    {
+      "id": "hcps-2027-2028-year-changes",
+      "label": "What Changed From 2026–27",
+      "position": "afterYearDiff",
+      "content": "The first student day is again August 12, while the last student day moves from May 21 to May 26. Winter Break starts December 20 instead of December 21, and Spring Break shifts from March 22–26 to March 13–17.",
+      "table": {
+        "columns": ["Calendar item", "2026–27", "2027–28", "Change"],
+        "rows": [
+          ["First student day", "August 12, 2026", "August 12, 2027", "Remains Aug. 12"],
+          ["Last student day", "May 21, 2027", "May 26, 2028", "Moves from May 21 to May 26"],
+          ["Winter Break", "December 21–31, 2026", "December 20–30, 2027", "Moves from Dec. 21–31 to Dec. 20–30"],
+          ["Spring Break", "March 22–26, 2027", "March 13–17, 2028", "Moves from Mar. 22–26 to Mar. 13–17"]
+        ]
+      }
+    },
+    {
+      "id": "hcps-2027-2028-planning-notes",
+      "label": "Planning Notes for HCPS Families",
+      "position": "afterYearDiff",
+      "content": "A few dates on the Traditional and Early College calendar require extra planning.",
+      "groups": [
+        {
+          "label": "Dates to check",
+          "items": [
+            "December 17 is an early-dismissal day at 12:00 noon and the end of the first semester.",
+            "The printable calendar's Winter Break ends December 30, but students return January 4 after the December 31 holiday and the January 3 optional teacher workday.",
+            "May 26 is the last student day, with early dismissal at 12:00 noon.",
+            "HCPS says the calendar may be extended for inclement weather. Check district announcements before relying on later-year dates after a closure."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hcps-calendar-update-history-2027-2028",
+      "label": "Calendar Update History",
+      "position": "beforeSources",
+      "content": "This log records completed reviews and material changes to this page.",
+      "table": {
+        "columns": ["Date", "Update"],
+        "rows": [
+          ["July 21, 2026", "Page published after review of the HCPS 2027–28 Traditional & Early College calendar."],
+          ["August 17, 2026", "Teacher-workday ranges, Winter Break labels, event categories, Flex and Spanish resources, and source provenance rechecked against HCPS files."]
+        ]
+      }
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Is this the official HCPS calendar?",
+      "a": "MySchoolDates is an independent reference based on calendar files published by Henderson County Public Schools. HCPS is the source of record for revisions, school-specific schedules, and weather changes."
+    },
+    {
+      "q": "Which HCPS calendar applies to my student?",
+      "a": "Use the calendar assigned by your school or program. This page follows the Traditional and Early College calendar; families on the Flex schedule should use the official Flex calendar in the Downloads section."
+    },
+    {
+      "q": "When do HCPS students return after Winter Break?",
+      "a": "Students on the Traditional and Early College calendar return Tuesday, January 4, 2028. The printable calendar lists Winter Break through December 30, followed by the December 31 holiday and a January 3 optional teacher workday."
+    },
+    {
+      "q": "When are HCPS early dismissal days in 2027–28?",
+      "a": "The Traditional and Early College calendar lists early dismissal at 12:00 noon on December 17, 2027 and on the last student day, May 26, 2028."
+    },
+    {
+      "q": "When are HCPS teacher workdays in 2027–28?",
+      "a": "Optional teacher workdays are August 5, October 15, January 3, January 17, March 7, April 14, and April 17. Required teacher workdays are August 6–11, October 18, February 18, and May 30–31. These are no-school dates for students on the Traditional and Early College calendar."
+    },
+    {
+      "q": "Where can I download the official HCPS calendars?",
+      "a": "The downloads section links the official Traditional and Early College printable/eReader, Flex, and Spanish calendar PDFs. The ICS file on this page is a one-time import for the main Traditional and Early College student-calendar dates."
     }
   ],
   "events": [
-    { "date": "2027-08-05", "name": "Optional Teacher Workday", "type": "no_school" },
-    { "date": "2027-08-06", "name": "Required Teacher Workdays", "type": "no_school" },
-    { "date": "2027-08-11", "name": "Required Teacher Workdays End", "type": "no_school" },
-    { "date": "2027-08-12", "name": "First Day of School", "type": "school_start" },
-    { "date": "2027-09-06", "name": "Labor Day Holiday", "type": "holiday" },
-    { "date": "2027-10-15", "name": "Optional Teacher Workday", "type": "no_school" },
-    { "date": "2027-10-18", "name": "Required Teacher Workday", "type": "no_school" },
-    { "date": "2027-11-11", "name": "Veterans Day Holiday", "type": "holiday" },
-    { "date": "2027-11-24", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2027-11-26", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2027-12-17", "name": "Early Dismissal at 12:00 Noon; End of First Semester", "type": "early_release" },
-    { "date": "2027-12-20", "name": "Winter Break", "type": "break_start" },
-    { "date": "2027-12-30", "name": "Winter Break End", "type": "break_end" },
-    { "date": "2027-12-31", "name": "New Year's Day Holiday", "type": "holiday" },
-    { "date": "2028-01-03", "name": "Optional Teacher Workday", "type": "no_school" },
-    { "date": "2028-01-17", "name": "Optional Teacher Workday - Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2028-02-18", "name": "Required Teacher Workday", "type": "no_school" },
-    { "date": "2028-03-07", "name": "Optional Teacher Workday", "type": "no_school" },
-    { "date": "2028-03-13", "name": "Spring Break", "type": "break_start" },
-    { "date": "2028-03-17", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2028-04-14", "name": "Optional Teacher Workday - Good Friday", "type": "holiday" },
-    { "date": "2028-04-17", "name": "Optional Teacher Workday", "type": "no_school" },
-    { "date": "2028-05-26", "name": "Last Day of School - Early Dismissal", "type": "school_end" },
-    { "date": "2028-05-29", "name": "Memorial Day Holiday", "type": "holiday" },
-    { "date": "2028-05-30", "name": "Required Teacher Workdays", "type": "no_school" },
-    { "date": "2028-05-31", "name": "Required Teacher Workdays End", "type": "no_school" }
+    {
+      "date": "2027-08-05",
+      "name": "Optional Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students",
+      "description": "Optional staff workday before the first student day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-06",
+      "endDate": "2027-08-11",
+      "name": "Required Teacher Workdays",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students",
+      "description": "Required staff workdays before the first student day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-12",
+      "name": "First Day of School",
+      "type": "school_start",
+      "description": "First student day on the Traditional and Early College calendar."
+    },
+    {
+      "date": "2027-09-06",
+      "name": "Labor Day Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-10-15",
+      "name": "Optional Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-10-18",
+      "name": "Required Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-11-11",
+      "name": "Veterans Day Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-11-24",
+      "endDate": "2027-11-26",
+      "name": "Thanksgiving Break",
+      "type": "break_start",
+      "description": "Students return Monday, November 29."
+    },
+    {
+      "date": "2027-12-17",
+      "name": "Early Dismissal at 12:00 Noon",
+      "type": "early_dismissal"
+    },
+    {
+      "date": "2027-12-17",
+      "name": "First Semester Ends",
+      "type": "semester_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-12-20",
+      "endDate": "2027-12-30",
+      "name": "Winter Break",
+      "type": "break_start",
+      "description": "The printable calendar's Winter Break ends December 30. Students return January 4 after the December 31 holiday and the January 3 optional teacher workday."
+    },
+    {
+      "date": "2027-12-31",
+      "name": "New Year's Day Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-01-03",
+      "name": "Optional Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2028-01-04",
+      "name": "Students Return After Winter Break",
+      "type": "school_resume",
+      "description": "First regular student day after the printable calendar's Winter Break, the December 31 holiday, and the January 3 optional teacher workday.",
+      "isDerivedPlanningDate": true
+    },
+    {
+      "date": "2028-01-17",
+      "name": "Optional Teacher Workday (MLK Day)",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2028-02-18",
+      "name": "Required Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2028-03-07",
+      "name": "Optional Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "name": "Spring Break",
+      "type": "break_start",
+      "description": "Students return Monday, March 20."
+    },
+    {
+      "date": "2028-04-14",
+      "name": "Optional Teacher Workday (Good Friday)",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2028-04-17",
+      "name": "Optional Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2028-05-26",
+      "name": "Last Day of School — Early Dismissal at 12:00 Noon",
+      "type": "school_end",
+      "badgeLabel": "Last Day · Early Dismissal"
+    },
+    {
+      "date": "2028-05-29",
+      "name": "Memorial Day Holiday",
+      "type": "holiday",
+      "description": "District holiday after the last student day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-05-30",
+      "endDate": "2028-05-31",
+      "name": "Required Teacher Workdays",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students",
+      "description": "Required staff workdays after the last student day.",
+      "hideFromCalendarExport": true
+    }
   ]
 }

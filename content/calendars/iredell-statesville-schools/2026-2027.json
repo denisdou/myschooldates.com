@@ -1,230 +1,760 @@
 {
   "institutionId": "iredell-statesville-schools",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Iredell-Statesville Schools Calendar 2026-2027",
   "firstDay": "2026-08-12",
   "lastDay": "2027-05-27",
+  "temporalCoverageStart": "2026-07-03",
+  "temporalCoverageEnd": "2027-05-31",
   "sourceUrl": "https://www.issnc.org/families-and-students/calendar",
+  "sourceDocumentPage": "https://www.issnc.org/families-and-students/calendar",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1774010666/issschoolwirescom/efv8btvl4hqk3ivgdjy0/26-27I-SSFinalCalendar_3.pdf",
-  "lastVerifiedAt": "2026-07-21",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1774010666/issschoolwirescom/efv8btvl4hqk3ivgdjy0/26-27I-SSFinalCalendar_3.pdf",
+  "sourceCheckedAt": "2026-08-17",
+  "sourceChecksumSha256": "936548ac82d9a63f4e61f4ab2b76ed4826df3f96a9a85415fb89235e44faa176",
+  "sourceStatus": "current",
+  "sourceVersion": "I-SS 2026–27 Calendar · Approved 2.9.26",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.issnc.org/families-and-students/calendar",
+    "linkText": "2026-2027 Printable School Calendar",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1774010666/issschoolwirescom/efv8btvl4hqk3ivgdjy0/26-27I-SSFinalCalendar_3.pdf",
+    "expectedChecksumSha256": "936548ac82d9a63f4e61f4ab2b76ed4826df3f96a9a85415fb89235e44faa176"
+  },
+  "lastVerifiedAt": "2026-08-17",
+  "dateCreated": "2026-07-21",
   "datePublished": "2026-07-21",
-  "dateModified": "2026-07-21",
+  "dateModified": "2026-08-17",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "weather_makeup_change",
+    "alternate_calendar_change",
+    "confirmed_data_error"
+  ],
   "calendarType": "traditional",
-  "instructionalDaysDescription": "Approximately 180 instructional days are scheduled based on the published Iredell-Statesville Schools traditional calendar records.",
-  "yearNumbersMode": "compact",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideDatasetSchema": true,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroUpdatedField": true,
+  "hideBreakDurationBadges": true,
+  "hideDateLegend": true,
+  "hideAlternateCalendarsNotice": true,
+  "seoTitle": "Iredell-Statesville Schools Calendar 2026-2027 | I-SS",
+  "seoDescription": "Iredell-Statesville Schools starts Aug. 12, 2026. See 2026–27 spring and winter break dates, no-school days, early releases, official PDFs, and ICS download.",
+  "heroSummary": "Iredell-Statesville Schools begins the 2026–27 school year on Wednesday, August 12, 2026, and the last student day is Thursday, May 27, 2027. Students are out of school from Dec. 21 through Jan. 4 and return Tuesday, Jan. 5. The March 8–12 spring break period is marked as Annual Leave on the district calendar.",
+  "heroSourceLine": "2026–27 student calendar · Reviewed against the official I-SS calendar approved February 9, 2026",
+  "verificationBadgeText": "Official I-SS sources checked",
+  "calendarNotes": "Most I-SS students use the district's 2026–27 calendar. The PDF lists different professional development early-release dates for traditional schools and Early Colleges, while N.B. Mills Elementary has a separate printable calendar.",
+  "keyDatesSummaryTitle": "I-SS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last student days, Thanksgiving break, winter break, and spring break. MySchoolDates groups consecutive workdays, annual leave days, and holidays for family planning; these break names are not single event titles in the district PDF.",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-12",
+      "type": "school_start",
+      "description": "Students on the main district calendar begin classes.",
+      "schemaDescription": "The first student day on the main Iredell-Statesville Schools 2026–27 calendar."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "description": "Annual leave on Nov. 25 and holidays Nov. 26–27; students return Nov. 30.",
+      "schemaDescription": "A family planning range assembled by MySchoolDates from the annual leave and holiday dates printed on the I-SS calendar."
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "type": "break_start",
+      "description": "Teacher workdays, annual leave, and holidays; students return Jan. 5.",
+      "schemaDescription": "A family planning range assembled by MySchoolDates from the teacher workdays, annual leave, and holidays printed on the I-SS calendar."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-08",
+      "endDate": "2027-03-12",
+      "type": "break_start",
+      "description": "The PDF marks these five weekdays as annual leave; students return Mar. 15.",
+      "schemaDescription": "A family planning range assembled by MySchoolDates from the five annual leave days printed on the I-SS calendar."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-05-27",
+      "type": "school_end",
+      "description": "Final student day on the main district calendar.",
+      "schemaDescription": "The last student day on the main Iredell-Statesville Schools 2026–27 calendar."
+    }
+  ],
+  "allDatesTitle": "Iredell-Statesville Schools 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This table preserves the district PDF's Traditional Schools Only and Early Colleges Only early-release labels. The break planning ranges elsewhere on this page group the workdays, annual leave, and holidays printed in the PDF.",
+  "allDatesCoverageNotePosition": "top",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1774010666/issschoolwirescom/efv8btvl4hqk3ivgdjy0/26-27I-SSFinalCalendar_3.pdf",
+  "allDatesSourceLabel": "Official I-SS 2026–27 calendar PDF",
+  "allDatesDerivedDateNote": "Return dates are derived from the next regular school day after the published no-school dates; they are not separate event labels in the district PDF.",
+  "allDatesDerivedDateNotePosition": "footer",
+  "hideCoveredBreakDatesNote": true,
   "alternateCalendars": [
     {
       "type": "school-specific",
-      "label": "2026-2027 N.B. Mills Elementary Calendar",
+      "label": "2026–27 N.B. Mills Elementary Calendar",
       "pdfUrl": "https://resources.finalsite.net/images/v1781545703/issschoolwirescom/com7ryxa15atmnv9fpjj/NBMills26-27FinalCalendar_wERPD.pdf"
     }
   ],
-  "seoTitle": "Iredell-Statesville Schools Calendar 2026-2027 | Holidays, Breaks & PDF",
-  "seoDescription": "View the Iredell-Statesville Schools Calendar 2026-2027 with holidays, breaks, teacher workdays, first and last day of school, PDF and calendar downloads.",
-  "faqLimit": 7,
-  "faqSchemaLimit": 7,
-  "calendarNotes": "Iredell-Statesville Schools starts the 2026-2027 traditional school year on August 12, 2026 and ends on May 27, 2027. Spring Break runs March 8-12, and the calendar also lists teacher workdays, holidays, annual leave dates, progress reports, report cards, quarter endings, Mitchell Community College in-session dates, and professional development early release days. N.B. Mills Elementary has a separate 2026-2027 calendar.",
+  "alternateCalendarsTitle": "Other Official I-SS Calendars",
+  "alternateCalendarsDescription": "I-SS publishes a separate 2026–27 calendar for N.B. Mills Elementary. As of Aug. 17, 2026, I-SS did not list a separate 2026–27 Early College PDF; the main calendar instead lists separate Early College early-release dates for professional development.",
+  "alternateCalendarsButtonLabel": "Open N.B. Mills Calendar",
   "customSections": [
     {
-      "id": "iss-2026-2027-calendar-overview",
-      "label": "About the Iredell-Statesville Schools 2026-2027 Calendar",
-      "position": "afterVerification",
-      "content": "The Iredell-Statesville Schools 2026-2027 traditional calendar covers the main districtwide school year for most I-SS students. It includes the first day of school, last day of school, teacher workdays, required teacher workdays, student holidays, annual leave dates, professional development early release days, progress reports, report cards, quarter endings, winter break, and spring break. Families should use this page as a planning reference and confirm school-specific or revised dates with Iredell-Statesville Schools."
-    },
-    {
-      "id": "iss-2026-2027-important-dates-summary",
-      "label": "I-SS Calendar 2026-2027 Important Dates",
+      "id": "iss-calendar-applies-2026-2027",
+      "label": "Which I-SS Calendar Applies to Your Student?",
       "position": "afterKeyDates",
-      "content": "Use this quick reference for the most-searched Iredell-Statesville Schools calendar dates before reviewing the full date list.",
+      "content": "Most students use the district's 2026–27 calendar. The PDF lists separate early-release dates for traditional schools and Early Colleges. N.B. Mills Elementary has its own printable calendar.",
       "table": {
         "headers": [
-          "Event",
-          "Date"
+          "Student group",
+          "Calendar to use",
+          "Important distinction"
         ],
         "rows": [
           [
-            "First Day of School",
-            "August 12, 2026"
+            "Most I-SS students",
+            "District 2026–27 calendar",
+            "Traditional-school early releases are marked with their own symbol"
           ],
           [
-            "Thanksgiving Break",
-            "November 25-27, 2026"
+            "Early College students",
+            "District 2026–27 calendar plus campus updates",
+            "The PDF marks separate Early Colleges Only early-release dates"
           ],
           [
-            "Winter Break",
-            "December 23-31, 2026"
+            "N.B. Mills Elementary",
+            "Separate N.B. Mills calendar",
+            "Use the school-specific PDF linked on this page"
+          ]
+        ]
+      },
+      "links": [
+        {
+          "label": "Official I-SS calendar page",
+          "url": "https://www.issnc.org/families-and-students/calendar"
+        },
+        {
+          "label": "N.B. Mills 2026–27 PDF",
+          "url": "https://resources.finalsite.net/images/v1781545703/issschoolwirescom/com7ryxa15atmnv9fpjj/NBMills26-27FinalCalendar_wERPD.pdf"
+        }
+      ],
+      "linksDisplay": "inline",
+      "linksLabel": "Official calendars:"
+    },
+    {
+      "id": "iss-parent-planning-2026-2027",
+      "label": "I-SS Early Release Dates by School Type",
+      "position": "afterAllDates",
+      "content": "The district PDF lists six early-release dates for professional development at traditional schools and six different dates for Early Colleges. It does not publish dismissal times, so check the time with your child's school.",
+      "table": {
+        "headers": [
+          "Schools",
+          "Professional-development early release dates"
+        ],
+        "rows": [
+          [
+            "Traditional Schools Only",
+            "Sept. 23, Nov. 4, Dec. 2, Feb. 17, Apr. 7, and May 5"
           ],
           [
-            "Spring Break",
-            "March 8-12, 2027"
-          ],
-          [
-            "Last Day of School",
-            "May 27, 2027"
+            "Early Colleges Only",
+            "Sept. 25, Nov. 6, Dec. 4, Feb. 19, Apr. 9, and May 7"
           ]
         ]
       }
     },
     {
-      "id": "iss-2026-2027-parent-planning-guide",
-      "label": "Parent Planning Guide for I-SS Families",
-      "position": "afterKeyDates",
-      "content": "Families in Statesville, Mooresville, and surrounding Iredell County communities often use the Iredell-Statesville Schools calendar to plan childcare, transportation, appointments, family travel, and academic checkpoints. The most important planning dates are the first day of school, teacher workdays, annual leave days, professional development early releases, winter break, spring break, and the last day of school.",
-      "groups": [
-        {
-          "label": "Family Travel and Vacation Planning",
-          "items": [
-            "Winter Break is listed from December 23-31, 2026, followed by the New Year's Day holiday on January 1, 2027.",
-            "Spring Break runs March 8-12, 2027.",
-            "Thanksgiving week includes annual leave on November 25 and Thanksgiving holidays on November 26-27, 2026."
+      "id": "iss-no-school-planning-ranges-2026-2027",
+      "label": "I-SS Breaks and No-School Periods",
+      "position": "afterAllDates",
+      "content": "For easier family planning, MySchoolDates groups consecutive teacher workdays, annual leave days, and holidays into the three break ranges below. These are not single event titles printed in the I-SS PDF.",
+      "table": {
+        "headers": [
+          "Break",
+          "Dates",
+          "Students return",
+          "Labels used in the PDF"
+        ],
+        "rows": [
+          [
+            "Thanksgiving Break",
+            "Nov. 25–27, 2026",
+            "Nov. 30",
+            "Annual Leave; Holiday"
+          ],
+          [
+            "Winter Break",
+            "Dec. 21, 2026–Jan. 4, 2027",
+            "Jan. 5",
+            "Teacher Workday; Annual Leave; Holiday"
+          ],
+          [
+            "Spring Break",
+            "Mar. 8–12, 2027",
+            "Mar. 15",
+            "Annual Leave"
           ]
-        },
-        {
-          "label": "Childcare and Transportation",
-          "items": [
-            "Teacher workdays and required teacher workdays are no-school planning dates for students on the traditional calendar.",
-            "Professional development early release dates can affect pickup times, bus schedules, and after-school care.",
-            "Families should confirm school-level dismissal details with their assigned school."
-          ]
-        },
-        {
-          "label": "Academic Planning",
-          "items": [
-            "Progress reports, report cards, and quarter ending dates help families track academic checkpoints.",
-            "Mitchell Community College in-session dates may matter for families coordinating Early College or college-linked schedules.",
-            "N.B. Mills Elementary uses a separate 2026-2027 calendar, so families in that program should use the alternate calendar link."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "iss-2026-2027-calendar-terms",
-      "label": "Understanding I-SS Calendar Terms",
-      "position": "afterBreaks",
-      "content": "The I-SS calendar uses several date labels that affect families differently. Teacher workdays and required teacher workdays are staff planning days when students typically do not attend regular classes. Annual leave days are also no-school planning dates for students. Professional development early release days are school days with adjusted dismissal, so families should confirm pickup, transportation, and after-school arrangements.",
-      "groups": [
-        {
-          "label": "Traditional vs Alternate Calendars",
-          "items": [
-            "This page summarizes the traditional Iredell-Statesville Schools calendar.",
-            "Early College and N.B. Mills Elementary calendars may have different dates.",
-            "Families should use the alternate calendar links when their student follows a program-specific schedule."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "iss-2026-2027-calendar-update-policy",
-      "label": "I-SS Calendar Updates and Verification",
-      "position": "beforeSources",
-      "content": "This page was last checked against the publicly available Iredell-Statesville Schools calendar source on July 21, 2026. Calendar dates may change because of weather closures, district decisions, state requirements, emergency schedule changes, or revised PDFs. MySchoolDates is an independent reference, and Iredell-Statesville Schools remains the source of record for official updates.",
-      "groups": [
-        {
-          "label": "What Families Should Verify",
-          "items": [
-            "Check the official I-SS calendar page before making travel, childcare, or transportation commitments.",
-            "Confirm school-specific events, early release times, testing dates, athletics, and program calendars with the assigned school.",
-            "The .ics calendar file is a one-time import and will not automatically update if I-SS revises the official calendar."
-          ]
-        }
-      ]
+        ],
+        "footnote": "Check the official I-SS calendar again after a weather closure or district schedule change."
+      }
     }
   ],
+  "whatsNew": {
+    "title": "What Changed From 2025–26?",
+    "subtitle": "A comparison of the two official district calendar files.",
+    "content": [
+      "The first student day moves from Aug. 11 to Aug. 12, while the last student day moves from May 22 to May 27.",
+      "The spring break planning range shifts from Mar. 9–13 to Mar. 8–12.",
+      "All six traditional-school early-release dates for professional development change in 2026–27. They are Sept. 23, Nov. 4, Dec. 2, Feb. 17, Apr. 7, and May 5."
+    ]
+  },
+  "yearComparisonDefaultOpen": true,
+  "comparisonBeforeFaq": true,
+  "comparisonTitle": "I-SS Calendar Compared With Nearby Districts",
+  "comparisonSummary": "Compare I-SS first and last student days and major break periods with nearby North Carolina districts.",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak",
+    "lastDay"
+  ],
+  "hideComparisonInsights": true,
+  "hideComparisonNotes": true,
+  "hideComparisonReviewedDate": true,
+  "hideRelatedDistrictDescriptions": true,
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Iredell-Statesville Schools 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Download the dates on this page as an ICS file, or open the official I-SS PDF.",
+  "icsHeading": "Download I-SS 2026–27 Calendar",
+  "icsDescription": "Import the districtwide calendar dates, traditional-school early releases, and three break planning ranges into Google Calendar, Apple Calendar, or Outlook. This one-time file excludes Early College-only early releases and N.B. Mills dates.",
+  "icsButtonLabel": "Download I-SS Calendar (.ics)",
+  "hideIcsButtonSupportText": true,
+  "pdfHeading": "Official I-SS 2026–27 Calendar",
+  "pdfDescription": "Open the district PDF with the student year, workdays, annual leave, holidays, grading dates, and separate early-release markers for traditional schools and Early Colleges.",
+  "pdfButtonLabel": "View Official I-SS PDF",
+  "hidePdfVersionLabel": true,
+  "schemaCalendarName": "Iredell-Statesville Schools Calendar 2026-2027",
+  "schemaCalendarDownloadDescription": "One-time calendar import of districtwide calendar dates, traditional-school early releases, and MySchoolDates break planning ranges. Early College-only early releases and N.B. Mills dates are excluded.",
+  "schemaSpatialCoverage": "Iredell-Statesville Schools, Iredell County, North Carolina",
   "calendarFaqs": [
     {
-      "q": "When does Iredell-Statesville Schools start school in 2026?",
-      "a": "The first day for students on the traditional calendar is Wednesday, August 12, 2026."
+      "q": "Which Iredell-Statesville Schools calendar should my student follow?",
+      "a": "Most students use the district's 2026–27 calendar. That PDF lists different early-release dates for professional development at traditional schools and Early Colleges. N.B. Mills Elementary has a separate official calendar linked on this page."
     },
     {
-      "q": "When is Iredell-Statesville Schools Spring Break in 2027?",
-      "a": "Spring Break runs Monday, March 8 through Friday, March 12, 2027."
+      "q": "Are I-SS teacher workdays no-school days for students?",
+      "a": "Yes. Students do not attend school on the teacher workdays and required teacher workdays printed on the 2026–27 calendar. Check I-SS after weather closures in case the district revises the schedule."
     },
     {
-      "q": "When is the last day of school for Iredell-Statesville in 2027?",
-      "a": "The last day for students on the traditional calendar is Thursday, May 27, 2027."
+      "q": "When do I-SS students return after winter break?",
+      "a": "Students return Tuesday, Jan. 5, 2027. MySchoolDates groups the teacher workdays, annual leave, and holidays from Dec. 21 through Jan. 4 as a winter break planning range."
     },
     {
-      "q": "Does Iredell-Statesville Schools have teacher workdays in 2026-2027?",
-      "a": "Yes. The traditional calendar lists teacher workdays and required teacher workdays. These are planning dates when students typically do not attend regular classes unless the district announces a calendar change."
+      "q": "Does the I-SS calendar download update automatically?",
+      "a": "No. The .ics file is a one-time import and does not sync with later district revisions. Download a new file if I-SS changes the published calendar."
     },
     {
-      "q": "What is the difference between the traditional calendar and alternate I-SS calendars?",
-      "a": "Most students follow the traditional calendar summarized on this page. Early College and N.B. Mills Elementary have separate calendars, so families in those programs should use the alternate calendar links published by Iredell-Statesville Schools."
-    },
-    {
-      "q": "When should parents check for I-SS calendar changes?",
-      "a": "Parents should check the official I-SS calendar page before travel, childcare, transportation planning, and after weather closures or district announcements."
-    },
-    {
-      "q": "Does the I-SS calendar include early release dates?",
-      "a": "Yes. The 2026-2027 traditional calendar lists professional development early release dates, including September 23, November 4, December 2, February 17, April 7, and May 5."
+      "q": "Where should families check after an I-SS weather closure?",
+      "a": "Check the official I-SS calendar page and messages from your child's school. Weather closures or district decisions can change workdays, no-school dates, and return dates."
     }
   ],
-  "yearNumbers": [
+  "faqDisplayQuestions": [
+    "Which Iredell-Statesville Schools calendar should my student follow?",
+    "Are I-SS teacher workdays no-school days for students?",
+    "When do I-SS students return after winter break?",
+    "Does the I-SS calendar download update automatically?",
+    "Where should families check after an I-SS weather closure?"
+  ],
+  "faqDisplayLimit": 5,
+  "faqLimit": 5,
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
     {
-      "label": "First Day",
-      "value": "Aug 12",
-      "detail": "The first day for students is August 12, 2026."
+      "label": "Key Dates",
+      "id": "key-dates"
     },
     {
-      "label": "Spring Break",
-      "value": "Mar 8-12",
-      "detail": "Spring Break runs March 8-12, 2027."
+      "label": "Calendar Dates",
+      "id": "all-dates"
     },
     {
-      "label": "Last Day",
-      "value": "May 27",
-      "detail": "The last day for students is May 27, 2027."
+      "label": "Early Release",
+      "id": "iss-parent-planning-2026-2027"
+    },
+    {
+      "label": "Breaks",
+      "id": "iss-no-school-planning-ranges-2026-2027"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Other Calendars",
+      "id": "other-calendars"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "yearSwitcherPosition": "afterSources",
+  "yearSwitcherLabel": "Other school years:",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "about",
+    "yearNumbers",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "relatedDistricts",
+    "nationalTrends"
+  ],
+  "hiddenCustomSectionIds": [
+    "related-iss-north-carolina-calendars"
+  ],
+  "sourceReviewSummary": "Last reviewed August 17, 2026. Calendar dates and the separate early-release dates for traditional schools and Early Colleges were checked against the official I-SS calendar page and approved 2026–27 PDF.",
+  "sourceMaintainerText": "Denis Dou using official Iredell-Statesville Schools sources.",
+  "hideSourceReviewAuthor": true,
+  "hideSourceReviewDate": true,
+  "hideSourceReviewDetails": true,
+  "hideSourceNextReview": true,
+  "hideSourceVersionDisplay": true,
+  "sources": [
+    {
+      "label": "Official I-SS calendar page",
+      "url": "https://www.issnc.org/families-and-students/calendar"
+    },
+    {
+      "label": "Official I-SS 2026–27 calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1774010666/issschoolwirescom/efv8btvl4hqk3ivgdjy0/26-27I-SSFinalCalendar_3.pdf"
+    },
+    {
+      "label": "Official N.B. Mills 2026–27 calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1781545703/issschoolwirescom/com7ryxa15atmnv9fpjj/NBMills26-27FinalCalendar_wERPD.pdf"
     }
   ],
   "events": [
-    { "date": "2026-07-03", "name": "Independence Day Holiday", "type": "holiday" },
-    { "date": "2026-08-03", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2026-08-04", "name": "Required Teacher Workday", "type": "no_school" },
-    { "date": "2026-08-05", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2026-08-06", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2026-08-07", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2026-08-10", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2026-08-11", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2026-08-12", "name": "First Day of School", "type": "school_start" },
-    { "date": "2026-09-07", "name": "Labor Day Holiday", "type": "holiday" },
-    { "date": "2026-09-10", "name": "Progress Reports", "type": "academic" },
-    { "date": "2026-09-21", "name": "Mitchell Community College in Session", "type": "academic" },
-    { "date": "2026-09-23", "name": "Early Release - Professional Development", "type": "early_release" },
-    { "date": "2026-10-09", "name": "Last Day of Quarter", "type": "academic" },
-    { "date": "2026-10-12", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2026-10-13", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2026-10-21", "name": "Report Cards", "type": "academic" },
-    { "date": "2026-11-04", "name": "Early Release - Professional Development", "type": "early_release" },
-    { "date": "2026-11-11", "name": "Veterans Day Holiday", "type": "holiday" },
-    { "date": "2026-11-12", "name": "Progress Reports", "type": "academic" },
-    { "date": "2026-11-25", "name": "Annual Leave", "type": "no_school" },
-    { "date": "2026-11-26", "name": "Thanksgiving Holiday", "type": "holiday" },
-    { "date": "2026-11-27", "name": "Thanksgiving Holiday", "type": "holiday" },
-    { "date": "2026-12-02", "name": "Early Release - Professional Development", "type": "early_release" },
-    { "date": "2026-12-18", "name": "Last Day of Quarter", "type": "academic" },
-    { "date": "2026-12-21", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2026-12-22", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2026-12-23", "name": "Winter Break", "type": "break_start" },
-    { "date": "2026-12-24", "name": "Holiday", "type": "holiday" },
-    { "date": "2026-12-25", "name": "Holiday", "type": "holiday" },
-    { "date": "2026-12-31", "name": "Winter Break End", "type": "break_end" },
-    { "date": "2027-01-01", "name": "New Year's Day Holiday", "type": "holiday" },
-    { "date": "2027-01-04", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2027-01-12", "name": "Report Cards", "type": "academic" },
-    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2027-02-03", "name": "Progress Reports", "type": "academic" },
-    { "date": "2027-02-17", "name": "Early Release - Professional Development", "type": "early_release" },
-    { "date": "2027-03-08", "name": "Spring Break", "type": "break_start" },
-    { "date": "2027-03-12", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2027-03-19", "name": "Last Day of Quarter", "type": "academic" },
-    { "date": "2027-03-29", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2027-03-31", "name": "Report Cards", "type": "academic" },
-    { "date": "2027-04-07", "name": "Early Release - Professional Development", "type": "early_release" },
-    { "date": "2027-04-21", "name": "Progress Reports", "type": "academic" },
-    { "date": "2027-04-23", "name": "Teacher Workday", "type": "no_school" },
-    { "date": "2027-05-05", "name": "Early Release - Professional Development", "type": "early_release" },
-    { "date": "2027-05-27", "name": "Last Day of School", "type": "school_end" },
-    { "date": "2027-05-28", "name": "Required Teacher Workday", "type": "no_school" },
-    { "date": "2027-05-31", "name": "Memorial Day Holiday", "type": "holiday" }
+    {
+      "date": "2026-07-03",
+      "name": "Independence Day Holiday",
+      "type": "holiday",
+      "sectionLabelBefore": "District dates before the student year"
+    },
+    {
+      "date": "2026-08-03",
+      "endDate": "2026-08-04",
+      "name": "Required Teacher Workday",
+      "type": "teacher_workday",
+      "preserveOfficialName": true,
+      "badgeLabel": "Staff Day",
+      "sectionLabelBefore": "Staff dates before the student year"
+    },
+    {
+      "date": "2026-08-05",
+      "endDate": "2026-08-07",
+      "name": "Teacher Workday",
+      "type": "teacher_workday",
+      "preserveOfficialName": true,
+      "badgeLabel": "Staff Day"
+    },
+    {
+      "date": "2026-08-10",
+      "endDate": "2026-08-11",
+      "name": "Teacher Workday",
+      "type": "teacher_workday",
+      "preserveOfficialName": true,
+      "badgeLabel": "Staff Day"
+    },
+    {
+      "date": "2026-08-12",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-10",
+      "name": "Progress Reports",
+      "type": "academic"
+    },
+    {
+      "date": "2026-09-21",
+      "name": "Mitchell Community College in Session",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-09-23",
+      "name": "Professional Development Early Release — Traditional Schools Only",
+      "type": "early_release",
+      "preserveOfficialName": true,
+      "badgeLabel": "Traditional Schools"
+    },
+    {
+      "date": "2026-09-25",
+      "name": "Professional Development Early Release — Early Colleges Only",
+      "type": "early_release",
+      "preserveOfficialName": true,
+      "badgeLabel": "Early Colleges",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-09",
+      "name": "Last Day of Quarter",
+      "type": "academic"
+    },
+    {
+      "date": "2026-10-12",
+      "endDate": "2026-10-13",
+      "name": "Teacher Workday",
+      "type": "teacher_workday",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2026-10-21",
+      "name": "Report Cards",
+      "type": "academic"
+    },
+    {
+      "date": "2026-11-04",
+      "name": "Professional Development Early Release — Traditional Schools Only",
+      "type": "early_release",
+      "preserveOfficialName": true,
+      "badgeLabel": "Traditional Schools"
+    },
+    {
+      "date": "2026-11-06",
+      "name": "Professional Development Early Release — Early Colleges Only",
+      "type": "early_release",
+      "preserveOfficialName": true,
+      "badgeLabel": "Early Colleges",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-12",
+      "name": "Progress Reports",
+      "type": "academic"
+    },
+    {
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start",
+      "description": "Family planning range assembled from one annual leave day and two holidays.",
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2026-11-25",
+      "name": "Annual Leave",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School for Students",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-11-26",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Holiday",
+      "type": "holiday",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-11-30",
+      "name": "Students Return After Thanksgiving",
+      "type": "school_resume",
+      "isDerivedPlanningDate": true,
+      "derivedFromPublishedBreakDates": true
+    },
+    {
+      "date": "2026-12-02",
+      "name": "Professional Development Early Release — Traditional Schools Only",
+      "type": "early_release",
+      "preserveOfficialName": true,
+      "badgeLabel": "Traditional Schools"
+    },
+    {
+      "date": "2026-12-04",
+      "name": "Professional Development Early Release — Early Colleges Only",
+      "type": "early_release",
+      "preserveOfficialName": true,
+      "badgeLabel": "Early Colleges",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Last Day of Quarter",
+      "type": "academic"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "name": "Winter Break",
+      "type": "break_start",
+      "description": "Family planning range assembled from teacher workdays, annual leave, and holidays.",
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2026-12-22",
+      "name": "Teacher Workday",
+      "type": "teacher_workday",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School for Students",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-23",
+      "name": "Annual Leave",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School for Students",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-24",
+      "endDate": "2026-12-25",
+      "name": "Holiday",
+      "type": "holiday",
+      "preserveOfficialName": true,
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-28",
+      "name": "Holiday",
+      "type": "holiday",
+      "preserveOfficialName": true,
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-29",
+      "endDate": "2026-12-31",
+      "name": "Annual Leave",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School for Students",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-01",
+      "name": "New Year's Day Holiday",
+      "type": "holiday",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Teacher Workday",
+      "type": "teacher_workday",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School for Students",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Students Return After Winter Break",
+      "type": "school_resume",
+      "isDerivedPlanningDate": true,
+      "derivedFromPublishedBreakDates": true
+    },
+    {
+      "date": "2027-01-12",
+      "name": "Report Cards",
+      "type": "academic"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-03",
+      "name": "Progress Reports",
+      "type": "academic"
+    },
+    {
+      "date": "2027-02-17",
+      "name": "Professional Development Early Release — Traditional Schools Only",
+      "type": "early_release",
+      "preserveOfficialName": true,
+      "badgeLabel": "Traditional Schools"
+    },
+    {
+      "date": "2027-02-19",
+      "name": "Professional Development Early Release — Early Colleges Only",
+      "type": "early_release",
+      "preserveOfficialName": true,
+      "badgeLabel": "Early Colleges",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-08",
+      "endDate": "2027-03-12",
+      "name": "Spring Break",
+      "type": "break_start",
+      "description": "Family planning range assembled from five annual leave days.",
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2027-03-08",
+      "endDate": "2027-03-12",
+      "name": "Annual Leave",
+      "type": "no_school",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School for Students",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-15",
+      "name": "Students Return After Spring Break",
+      "type": "school_resume",
+      "isDerivedPlanningDate": true,
+      "derivedFromPublishedBreakDates": true
+    },
+    {
+      "date": "2027-03-19",
+      "name": "Last Day of Quarter",
+      "type": "academic"
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Mitchell Community College in Session",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-29",
+      "name": "Teacher Workday",
+      "type": "teacher_workday",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-03-29",
+      "name": "Mitchell Community College in Session",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-31",
+      "name": "Report Cards",
+      "type": "academic"
+    },
+    {
+      "date": "2027-04-07",
+      "name": "Professional Development Early Release — Traditional Schools Only",
+      "type": "early_release",
+      "preserveOfficialName": true,
+      "badgeLabel": "Traditional Schools"
+    },
+    {
+      "date": "2027-04-09",
+      "name": "Professional Development Early Release — Early Colleges Only",
+      "type": "early_release",
+      "preserveOfficialName": true,
+      "badgeLabel": "Early Colleges",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-04-21",
+      "name": "Progress Reports",
+      "type": "academic"
+    },
+    {
+      "date": "2027-04-23",
+      "name": "Teacher Workday",
+      "type": "teacher_workday",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-04-23",
+      "name": "Mitchell Community College in Session",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-05",
+      "name": "Professional Development Early Release — Traditional Schools Only",
+      "type": "early_release",
+      "preserveOfficialName": true,
+      "badgeLabel": "Traditional Schools"
+    },
+    {
+      "date": "2027-05-07",
+      "name": "Professional Development Early Release — Early Colleges Only",
+      "type": "early_release",
+      "preserveOfficialName": true,
+      "badgeLabel": "Early Colleges",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-27",
+      "name": "Last Day of School",
+      "type": "school_end",
+      "description": "Last student day and last day of the fourth quarter."
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Required Teacher Workday",
+      "type": "teacher_workday",
+      "preserveOfficialName": true,
+      "badgeLabel": "Staff Day",
+      "sectionLabelBefore": "Staff dates after the student year"
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day Holiday",
+      "type": "holiday"
+    }
   ]
 }

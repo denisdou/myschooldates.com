@@ -1,0 +1,674 @@
+{
+  "institutionId": "carmel-clay-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Carmel Clay Schools Calendar 2026–27",
+  "firstDay": "2026-08-12",
+  "lastDay": "2027-05-27",
+  "temporalCoverageStart": "2026-08-07",
+  "temporalCoverageEnd": "2027-05-31",
+  "semesters": 2,
+  "sourceUrl": "https://www.ccs.k12.in.us/about/district-calendar",
+  "sourceDocumentPage": "https://docs.google.com/document/d/1jCOIPuqpbHZLXlQ72iVsbKmdlVcrSNgLVAXlW3Yg2WM/preview?tab=t.0",
+  "sourcePdfUrl": "https://docs.google.com/document/d/1jCOIPuqpbHZLXlQ72iVsbKmdlVcrSNgLVAXlW3Yg2WM/preview?tab=t.0",
+  "lastCheckedPdfUrl": "https://docs.google.com/document/d/1jCOIPuqpbHZLXlQ72iVsbKmdlVcrSNgLVAXlW3Yg2WM/preview?tab=t.0",
+  "sourceCheckedAt": "2026-08-17",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "lastVerifiedAt": "2026-08-17",
+  "dateCreated": "2026-08-17",
+  "datePublished": "2026-08-17",
+  "dateModified": "2026-08-17",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_google_document_revision",
+    "late_start_schedule_change",
+    "school_rotation_calendar_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Current 2026–27 CCS calendar",
+  "sourceCalendarName": "Carmel Clay Schools 2026–27 District Calendar — Google Document",
+  "schemaCalendarName": "Carmel Clay Schools Calendar 2026–27",
+  "schemaDatasetName": "Carmel Clay Schools 2026–27 Academic Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Carmel Clay Schools dates for 2026–27, including the first and last student days, major breaks, districtwide late starts, elementary conference schedules, staff-only dates, and school resume dates.",
+  "schemaSpatialCoverage": "Carmel and Clay Township, Hamilton County, Indiana",
+  "schemaCalendarDownloadName": "Carmel Clay Schools 2026–27 ICS Calendar File",
+  "schemaCalendarDownloadDescription": "One-time calendar import generated from the official 2026–27 CCS calendar and district and school calendar entries reviewed on this page.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-school-calendars",
+      "type": "WebPage",
+      "name": "CCS Individual School Calendars",
+      "url": "https://www.ccs.k12.in.us/about/district-calendar/school-calendars"
+    },
+    {
+      "id": "source-late-starts",
+      "type": "WebPage",
+      "name": "CCS 2026–27 Late Start Dates",
+      "url": "https://www.ccs.k12.in.us/pto-wce/about/news"
+    },
+    {
+      "id": "source-chs-calendar",
+      "type": "WebPage",
+      "name": "Carmel High School Calendar and Blue/Gold Schedule",
+      "url": "https://www.ccs.k12.in.us/chs/about/calendar"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-late-starts"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-school-calendars",
+    "source-late-starts",
+    "source-chs-calendar"
+  ],
+  "sourceResourceMonitor": {
+    "type": "google-document-link",
+    "checkUrl": "https://www.ccs.k12.in.us/about/district-calendar",
+    "linkText": "2026-27 District Calendar",
+    "expectedDocumentUrl": "https://docs.google.com/document/d/1jCOIPuqpbHZLXlQ72iVsbKmdlVcrSNgLVAXlW3Yg2WM/preview?tab=t.0"
+  },
+  "calendarType": "district",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroDownloadLink": true,
+  "hideSourceReviewDate": true,
+  "hidePdfVersionLabel": true,
+  "seoTitle": "Carmel Clay Schools Calendar 2026–27: Key Dates",
+  "seoDescription": "Carmel Clay Schools starts Aug. 12, 2026 and ends May 27, 2027. See breaks, late-start days, elementary conferences, the official CCS calendar and ICS.",
+  "heroSummary": "Carmel Clay Schools students start Wednesday, August 12, 2026, and the last student day is Thursday, May 27, 2027. Fall Break is October 12–16, Thanksgiving Break is November 25–27, Winter Break is December 21–January 1, and Spring Break is April 5–9. The calendar also includes an elementary-only conference schedule on November 5–6 and 19 districtwide late-start Wednesdays.",
+  "heroSourceLine": "Based on the official 2026–27 CCS calendar and current district and school calendars.",
+  "verificationBadgeText": "Checked against current CCS sources",
+  "calendarNotes": "The annual CCS calendar is a Google document rather than a PDF. The live district and school calendars add 19 late-start Wednesdays, elementary parent-teacher conference schedules, and building-specific events. Carmel High School and the three middle schools also publish separate color-day rotations, so the district calendar does not replace a student's building calendar.",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "comparison",
+    "nationalTrends"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "breaksBeforeAllDates": false,
+  "hideBreakDurationBadges": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Late Starts",
+      "id": "ccs-late-starts-2026-2027"
+    },
+    {
+      "label": "Elementary Schedule",
+      "id": "ccs-elementary-conferences-2026-2027"
+    },
+    {
+      "label": "All Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Return Dates",
+      "id": "breaks"
+    },
+    {
+      "label": "Calendar Guide",
+      "id": "ccs-calendar-guide-2026-2027"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "keyDatesSummaryTitle": "Carmel Clay Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "The first and last student days, major breaks, and the Nov. 5–6 elementary conference schedule",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Student Day",
+      "date": "2026-08-12",
+      "type": "school_start"
+    },
+    {
+      "label": "Fall Break",
+      "name": "Fall Break",
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "type": "break_start"
+    },
+    {
+      "label": "Elementary Half Day",
+      "name": "Elementary Parent-Teacher Conferences — Half Day",
+      "date": "2026-11-05",
+      "type": "early_dismissal",
+      "schemaDescription": "Elementary students are dismissed early for parent-teacher conferences."
+    },
+    {
+      "label": "Elementary No School",
+      "name": "Elementary Parent-Teacher Conferences — No School for Elementary Students",
+      "date": "2026-11-06",
+      "type": "conference",
+      "schemaDescription": "No school for elementary students because of parent-teacher conferences."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-04-05",
+      "endDate": "2027-04-09",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Student Day",
+      "date": "2027-05-27",
+      "type": "school_end"
+    }
+  ],
+  "allDatesTitle": "Carmel Clay Schools 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This list combines major dates from the official CCS calendar with districtwide late-start dates and the elementary conference schedule from official CCS district and school sources. Building events and Blue/Gold or Red/White rotation days remain on the individual school calendars.",
+  "allDatesSourceUrl": "https://docs.google.com/document/d/1jCOIPuqpbHZLXlQ72iVsbKmdlVcrSNgLVAXlW3Yg2WM/preview?tab=t.0",
+  "allDatesSourceLabel": "Official CCS 2026–27 calendar — Google document",
+  "dateLegendItems": [
+    {
+      "label": "First / last student day",
+      "dot": "bg-yellow-400"
+    },
+    {
+      "label": "Holiday / break",
+      "dot": "bg-rose-500"
+    },
+    {
+      "label": "Late start — all levels",
+      "dot": "bg-sky-400"
+    },
+    {
+      "label": "Elementary-only schedule",
+      "dot": "bg-orange-300"
+    },
+    {
+      "label": "Staff day — no students",
+      "dot": "bg-slate-400"
+    }
+  ],
+  "breaksTitle": "When Students Return After Each Break",
+  "breakNotes": {
+    "Fall Break": "Students return Monday, October 19.",
+    "Thanksgiving Break": "Students return Monday, November 30.",
+    "Winter Break": "January 4 is a teacher workday with no students. Students return Tuesday, January 5, 2027.",
+    "Spring Break": "Students return Monday, April 12."
+  },
+  "customSections": [
+    {
+      "id": "ccs-late-starts-2026-2027",
+      "label": "CCS Has 19 Late-Start Wednesdays in 2026–27",
+      "position": "afterKeyDates",
+      "content": "All CCS schools start 40 minutes later on these Wednesdays. Dismissal times do not change.",
+      "table": {
+        "columns": [
+          "Month",
+          "Late-start Wednesdays"
+        ],
+        "rows": [
+          [
+            "August",
+            "19"
+          ],
+          [
+            "September",
+            "2, 16, 30"
+          ],
+          [
+            "October",
+            "7, 21"
+          ],
+          [
+            "November",
+            "4, 18"
+          ],
+          [
+            "December",
+            "2, 16"
+          ],
+          [
+            "January",
+            "13, 27"
+          ],
+          [
+            "February",
+            "10, 24"
+          ],
+          [
+            "March",
+            "10, 24"
+          ],
+          [
+            "April",
+            "14, 28"
+          ],
+          [
+            "May",
+            "12"
+          ]
+        ],
+        "footnote": "On late-start days, elementary schools run from 8:20 a.m. to 2:25 p.m., middle schools from 9:05 a.m. to 3:25 p.m., and Carmel High School from 9:45 a.m. to 4:05 p.m."
+      },
+      "links": [
+        {
+          "label": "View CCS 2026–27 late-start dates",
+          "to": "https://www.ccs.k12.in.us/pto-wce/about/news"
+        }
+      ]
+    },
+    {
+      "id": "ccs-elementary-conferences-2026-2027",
+      "label": "Nov. 5–6: Elementary Conference Schedule",
+      "position": "afterKeyDates",
+      "content": "Elementary students are dismissed early November 5 for parent-teacher conferences and have no school November 6. These schedule changes apply to elementary students; middle- and high-school families should check their school calendars.",
+      "table": {
+        "columns": [
+          "Date",
+          "Elementary schedule"
+        ],
+        "rows": [
+          [
+            "Thursday, Nov. 5",
+            "Half day; conferences follow dismissal"
+          ],
+          [
+            "Friday, Nov. 6",
+            "No school for elementary students"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ccs-calendar-guide-2026-2027",
+      "label": "Which Carmel Clay Calendar Should My Family Use?",
+      "position": "afterBreaks",
+      "content": "Use the district Google document for major school-year dates and the live school calendar for building events. Carmel High School follows a separate Blue/Gold block rotation, while Carmel, Clay, and Creekside middle schools publish their own color-day rotations.",
+      "table": {
+        "columns": [
+          "Need",
+          "Best CCS source"
+        ],
+        "rows": [
+          [
+            "First day, last day, and major breaks",
+            "Official 2026–27 district calendar"
+          ],
+          [
+            "Late starts and building events",
+            "Live district or school calendar"
+          ],
+          [
+            "CHS Blue/Gold day",
+            "Carmel High School Blue/Gold calendar"
+          ],
+          [
+            "Middle-school rotation",
+            "The student's middle-school color-day calendar"
+          ]
+        ]
+      },
+      "links": [
+        {
+          "label": "CCS individual school calendars",
+          "to": "https://www.ccs.k12.in.us/about/district-calendar/school-calendars"
+        },
+        {
+          "label": "Carmel High School calendar",
+          "to": "https://www.ccs.k12.in.us/chs/about/calendar"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-07",
+      "name": "Teacher Work Day — No Students",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-10",
+      "endDate": "2026-08-11",
+      "name": "Teacher Work Days — No Students",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-12",
+      "name": "First Student Day",
+      "type": "school_start",
+      "schemaDescription": "The first day of classes for Carmel Clay Schools students in 2026–27."
+    },
+    {
+      "date": "2026-08-19",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic",
+      "description": "All school levels begin 40 minutes later; dismissal is unchanged."
+    },
+    {
+      "date": "2026-09-02",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-16",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2026-09-30",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2026-10-07",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "name": "Fall Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-10-21",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2026-11-04",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2026-11-05",
+      "name": "Elementary Parent-Teacher Conferences — Half Day",
+      "type": "early_dismissal",
+      "badgeLabel": "Elementary",
+      "labelType": "partial_closure",
+      "description": "Elementary students are dismissed early; conferences follow dismissal."
+    },
+    {
+      "date": "2026-11-06",
+      "name": "Elementary Parent-Teacher Conferences — No School for Elementary Students",
+      "type": "conference",
+      "badgeLabel": "Elementary",
+      "labelType": "partial_closure"
+    },
+    {
+      "date": "2026-11-18",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-02",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2026-12-16",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Teacher Work Day — No Students",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Students Return After Winter Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-13",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-27",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2027-02-10",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-24",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2027-03-10",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2027-03-24",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2027-04-05",
+      "endDate": "2027-04-09",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-04-14",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2027-04-28",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2027-05-12",
+      "name": "Districtwide Late Start",
+      "type": "late_start",
+      "badgeLabel": "Late Start",
+      "labelType": "academic"
+    },
+    {
+      "date": "2027-05-27",
+      "name": "Last Student Day",
+      "type": "school_end",
+      "schemaDescription": "The final student day for Carmel Clay Schools in 2026–27."
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Teacher Work Day — No Students",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day",
+      "type": "holiday",
+      "description": "Memorial Day falls after the last student day.",
+      "hideFromCalendarExport": true
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Calendar Downloads and Official CCS Links",
+  "unifiedDownloadDescription": "Download a one-time ICS import, open the official CCS calendar, or check the live district calendar for updates.",
+  "icsHeading": "Add Carmel Clay Schools Dates to Your Calendar",
+  "icsDescription": "Download the 2026–27 district dates, including late starts and elementary conference schedule changes, for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download .ics Calendar",
+  "icsButtonSupportText": "This is a one-time import. Blue/Gold and middle-school rotation days are not included.",
+  "pdfHeading": "Official CCS 2026–27 Calendar",
+  "pdfDescription": "CCS publishes this annual calendar as a Google document rather than a PDF. Open the district source for its current school-year layout.",
+  "pdfButtonLabel": "Open Official CCS Calendar",
+  "pdfVersionLabel": "Current 2026–27 CCS calendar",
+  "sourceReviewSummary": "Reviewed August 17, 2026, against the official 2026–27 CCS Google document, district calendar, school calendars, bell times, and late-start schedule.",
+  "sourceReviewDetails": [
+    "CCS publishes the annual source as a Google document rather than a PDF.",
+    "The first student day and August staff dates were checked against current official CCS calendar entries.",
+    "The 19 late-start dates and the 40-minute change were checked against the official West Clay calendar page and district bell-time table.",
+    "The district calendar does not replace Carmel High School Blue/Gold or middle-school color-day calendars. Those rotations are intentionally excluded from the ICS file."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Carmel Clay Schools sources.",
+  "sourceNextReviewText": "Next review: when CCS revises the Google document, changes a late-start date, or republishes a building rotation calendar.",
+  "sources": [
+    {
+      "label": "CCS 2026–27 District Calendar — Google Document",
+      "url": "https://docs.google.com/document/d/1jCOIPuqpbHZLXlQ72iVsbKmdlVcrSNgLVAXlW3Yg2WM/preview?tab=t.0"
+    },
+    {
+      "label": "CCS District Calendar and bell times",
+      "url": "https://www.ccs.k12.in.us/about/district-calendar"
+    },
+    {
+      "label": "CCS 2026–27 late-start dates",
+      "url": "https://www.ccs.k12.in.us/pto-wce/about/news"
+    },
+    {
+      "label": "CCS individual school calendars",
+      "url": "https://www.ccs.k12.in.us/about/district-calendar/school-calendars"
+    },
+    {
+      "label": "Carmel High School Blue/Gold calendar and schedules",
+      "url": "https://www.ccs.k12.in.us/chs/about/calendar"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When do Carmel Clay students return after Winter Break?",
+      "a": "Winter Break runs December 21, 2026 through January 1, 2027. January 4 is a teacher workday, and students return Tuesday, January 5."
+    },
+    {
+      "q": "What time do CCS schools start on late-start days?",
+      "a": "Elementary schools begin at 8:20 a.m., middle schools at 9:05 a.m., and Carmel High School at 9:45 a.m. Dismissal times remain 2:25, 3:25, and 4:05 p.m., respectively."
+    },
+    {
+      "q": "Are November 5 and 6 no-school days for every CCS student?",
+      "a": "No. November 5 is an elementary half day for parent-teacher conferences, and there is no school for elementary students on November 6. Middle- and high-school families should check their school calendars."
+    },
+    {
+      "q": "Which CCS calendar should I check for school-specific events or Blue/Gold days?",
+      "a": "Use the live calendar for your child's school for building events. Carmel High School publishes a separate Blue/Gold calendar, and Carmel, Clay, and Creekside middle schools publish their own color-day rotations."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When do Carmel Clay students return after Winter Break?",
+    "What time do CCS schools start on late-start days?",
+    "Are November 5 and 6 no-school days for every CCS student?",
+    "Which CCS calendar should I check for school-specific events or Blue/Gold days?"
+  ],
+  "faqOrderLimit": 4
+}
