@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const { stateLinks } = useAppConfig()
+const { stateLinks, coverageStats } = useAppConfig()
 
 const statePageNames = Object.fromEntries(stateLinks.map(state => [state.slug, state.name])) as Record<string, string>
 const currentStateSlug = computed(() => route.path.split('/').filter(Boolean)[0] ?? '')
@@ -292,8 +292,30 @@ watch(() => route.fullPath, () => {
             </ul>
           </div>
         </div>
+        <div class="mb-6 flex justify-center">
+          <a
+            href="https://www.producthunt.com/products/myschooldates/reviews/new?utm_source=badge-product_review&amp;utm_medium=badge&amp;utm_source=badge-myschooldates"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            class="inline-flex"
+            aria-label="Review MySchoolDates on Product Hunt"
+          >
+            <img
+              src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1289881&amp;theme=dark"
+              alt="MySchoolDates - Find official school dates and add them to your calendar | Product Hunt"
+              class="h-[54px] w-[250px]"
+              width="250"
+              height="54"
+              loading="lazy"
+              decoding="async"
+            >
+          </a>
+        </div>
         <div class="site-footer__bottom pt-6 text-center text-xs">
-          <p>&copy; {{ new Date().getFullYear() }} MySchoolDates &mdash; US School Calendar Platform</p>
+          <p>
+            &copy; {{ new Date().getFullYear() }} MySchoolDates &mdash;
+            {{ coverageStats.districts }} districts across {{ coverageStats.states }} states
+          </p>
         </div>
       </div>
     </footer>

@@ -4,6 +4,7 @@ import { join } from 'node:path'
 type DistrictRouteRecord = {
   institutionId?: string
   slug?: string
+  state?: string
 }
 
 type CalendarRouteRecord = {
@@ -70,6 +71,27 @@ function getCalendarPrerenderRoutes() {
 
 const calendarPrerenderRoutes = getCalendarPrerenderRoutes()
 
+function getCoverageStats() {
+  const districtsDir = join(process.cwd(), 'content', 'districts')
+  const files = readdirSync(districtsDir).filter(file => file.endsWith('.json'))
+  const states = new Set<string>()
+
+  for (const file of files) {
+    const district = readContentJson<DistrictRouteRecord>(join(districtsDir, file))
+    if (!district.state) {
+      throw new Error(`District content is missing state: ${file}`)
+    }
+    states.add(district.state)
+  }
+
+  return {
+    districts: files.length,
+    states: states.size,
+  }
+}
+
+const coverageStats = getCoverageStats()
+
 function getStateNavigationLinks() {
   const statesDir = join(process.cwd(), 'content', 'states')
   const stateSlugs = new Set<string>()
@@ -121,6 +143,7 @@ export default defineNuxtConfig({
 
   appConfig: {
     stateLinks: stateNavigationLinks,
+    coverageStats,
   },
 
   content: {

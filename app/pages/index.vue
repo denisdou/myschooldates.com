@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { stateLinks, coverageStats } = useAppConfig()
+
 const { data: districts } = await useAsyncData(
   'districts-list',
   () => queryCollection('districts').order('name', 'ASC').all()
@@ -15,14 +17,12 @@ const toStateSlug = (name: string) => name.toLowerCase().replace(/\s+/g, '-')
 const STATE_ORDER = [
   'California', 'Florida', 'Texas', 'New York',
   'Illinois', 'Pennsylvania', 'North Carolina', 'Arizona', 'Nevada', 'Virginia', 'Kentucky', 'Hawaii', 'Maryland',
-  'Colorado', 'Georgia', 'Massachusetts', 'Michigan', 'Minnesota', 'New Mexico', 'Idaho', 'Ohio', 'Oregon', 'Utah', 'Washington', 'Wisconsin',
+  'Colorado', 'Georgia', 'Massachusetts', 'Michigan', 'Minnesota', 'Missouri', 'Kansas', 'Indiana', 'New Mexico',
+  'Idaho', 'Ohio', 'Oregon', 'Utah', 'Washington', 'Wisconsin',
 ]
 
-const STATE_HUBS = new Set([
-  'California', 'Florida', 'Texas', 'New York', 'Illinois', 'Pennsylvania', 'North Carolina', 'Arizona', 'Nevada',
-  'Virginia', 'Kentucky', 'Hawaii', 'Maryland', 'Colorado', 'Georgia', 'Massachusetts', 'Michigan', 'Minnesota',
-  'New Mexico', 'Idaho', 'Oregon', 'Utah', 'Washington',
-])
+const STATE_HUBS = new Set(stateLinks.map(state => state.name))
+const stateOrderIndex = new Map(STATE_ORDER.map((state, index) => [state, index]))
 
 const STATE_SUMMARIES: Record<string, string> = {
   California: `California's public school system is the largest in the nation, serving more than 6 million K–12 students across over 1,000 school districts. Unlike most states, California has no uniform start date — districts set their own calendars independently. Los Angeles Unified, the second-largest district in the country, typically begins in early September. Many Central Valley districts, including Fresno Unified, start in early August. The school year generally runs through June, with winter break in late December and spring break in March or April. California requires a minimum of 180 instructional days.`,
@@ -75,13 +75,17 @@ const byState = computed(() => {
     if (!map.has(d.state)) map.set(d.state, [])
     map.get(d.state)!.push(d)
   }
-  return STATE_ORDER
-    .filter(s => map.has(s))
-    .map(s => ({ state: s, districts: map.get(s)! }))
+  return [...map.entries()]
+    .sort(([stateA], [stateB]) => {
+      const rankA = stateOrderIndex.get(stateA) ?? Number.MAX_SAFE_INTEGER
+      const rankB = stateOrderIndex.get(stateB) ?? Number.MAX_SAFE_INTEGER
+      return rankA - rankB || stateA.localeCompare(stateB)
+    })
+    .map(([state, stateDistricts]) => ({ state, districts: stateDistricts }))
 })
 
-const districtCount = computed(() => districts.value?.length ?? 0)
-const stateCount = computed(() => byState.value.length)
+const districtCount = computed(() => coverageStats.districts)
+const stateCount = computed(() => coverageStats.states)
 const availableYears = computed(() => {
   const years = new Set((calendars.value ?? []).map(c => c.schoolYear).filter(Boolean))
   return Array.from(years).sort().reverse()
