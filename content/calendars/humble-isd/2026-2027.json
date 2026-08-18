@@ -1,291 +1,745 @@
 {
   "institutionId": "humble-isd",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
   "firstDay": "2026-08-12",
   "lastDay": "2027-05-28",
-  "sourceUrl": "https://www.humbleisd.net/o/humbleisd/page/academic-calendar#printable",
+  "temporalCoverageStart": "2026-07-31",
+  "temporalCoverageEnd": "2027-06-02",
+  "semesters": 2,
+  "sourceUrl": "https://www.humbleisd.net/academiccalendar",
+  "sourceDocumentPage": "https://www.humbleisd.net/o/humbleisd/article/2635158",
   "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3592/Humble_Isd/fe37e372-5ca9-4f8e-8717-f6a78a74adec/2026-2027-Approved-Calendar.pdf?disposition=inline",
-  "lastVerifiedAt": "2026-07-22",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3592/Humble_Isd/fe37e372-5ca9-4f8e-8717-f6a78a74adec/2026-2027-Approved-Calendar.pdf?disposition=inline",
+  "sourceCheckedAt": "2026-08-18",
+  "lastVerifiedAt": "2026-08-18",
+  "dateCreated": "2026-07-22",
   "datePublished": "2026-07-22",
-  "dateModified": "2026-07-22",
+  "dateModified": "2026-08-18",
+  "sourceStatus": "current",
+  "contentStatus": "production_ready",
+  "manualReviewRequired": true,
+  "sourceVersion": "Approved 2/24/26",
+  "sourceChecksumSha256": "ada10efc9fd38108e122f8a222967df85ce8830bedaca13f6d2fc94c057b06e9",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "inclement_weather_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.humbleisd.net/academiccalendar",
+    "linkText": "2026-2027 Printable PDF",
+    "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3592/Humble_Isd/fe37e372-5ca9-4f8e-8717-f6a78a74adec/2026-2027-Approved-Calendar.pdf?disposition=inline",
+    "expectedChecksumSha256": "ada10efc9fd38108e122f8a222967df85ce8830bedaca13f6d2fc94c057b06e9"
+  },
   "calendarType": "traditional",
-  "totalSchoolDays": 180,
-  "yearNumbersMode": "compact",
-  "alternateCalendars": [
+  "calendarTrackId": "humble-isd-district-calendar",
+  "allDatesMode": "all",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideFaqSchema": true,
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "hiddenSections": [
+    "about",
+    "breaks",
+    "downloadCta",
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "yearNumbers",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars"
+  ],
+  "hideAlternateCalendarsNotice": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationIcs": true,
+  "hideDateLegend": true,
+  "hideBreakDurationBadges": true,
+  "hideRelatedDistrictDescriptions": true,
+  "seoTitle": "Humble ISD Calendar 2026–2027: Key Dates & PDF",
+  "seoDescription": "Humble ISD starts Aug. 12, 2026, and ends May 28, 2027. See major breaks, Feb. 8–9 weather make-up dates, late arrivals, early releases, PDFs, and ICS.",
+  "pageHeading": "Humble ISD Calendar 2026–2027",
+  "heroSummary": "Humble ISD starts the 2026–2027 school year on Wednesday, August 12, 2026. The last day of school is Friday, May 28, 2027, with early release. Spring Break is March 15–19, 2027.",
+  "heroSourceLine": "Reviewed against Humble ISD's official 2026–27 calendar and approval notice",
+  "heroFactChips": [
+    "75,600+ instructional minutes",
+    "187 teacher workdays"
+  ],
+  "verificationBadgeText": "Official Humble ISD sources reviewed · August 18, 2026",
+  "hideHeroDownloadLink": true,
+  "heroCtas": [
     {
-      "type": "spanish",
-      "label": "Calendario 2026-2027 de Humble ISD",
-      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3592/Humble_Isd/dcfca885-c675-445c-91aa-0a4c933ebb91/Calendario-de-Humble-ISD-para-2026-2027.pdf?disposition=inline"
+      "label": "View Official PDF",
+      "href": "__sourcePdfUrl",
+      "variant": "primary"
+    },
+    {
+      "label": "Download Humble ISD Calendar (.ics)",
+      "href": "__icsUrl",
+      "variant": "secondary",
+      "download": true,
+      "filename": "__icsFilename"
     }
   ],
-  "seoTitle": "Humble ISD Calendar 2026-2027: Holidays, Breaks & Important Dates",
-  "seoDescription": "Humble ISD 2026-2027 calendar with Aug 12 first day, May 28 last day, student/teacher break, Thanksgiving, winter break, spring break, printable PDF, ICS, and Google Calendar download.",
-  "pageHeading": "Humble ISD Calendar 2026-2027: Holidays, Breaks & Important Dates",
-  "calendarNotes": "Humble ISD starts the 2026-2027 school year on August 12, 2026 and ends on May 28, 2027. Student/Teacher Break runs October 12-16, Thanksgiving Holiday runs November 23-27, Winter Break runs December 21-January 1, and Spring Break runs March 15-19. February 8-9 are listed as inclement weather days that may become school days if time is lost to bad weather. Humble ISD also publishes a Spanish calendar for 2026-2027.",
-  "calendarFaqs": [
-    {
-      "q": "When does Humble ISD start school in 2026?",
-      "a": "The first day of school is Wednesday, August 12, 2026."
-    },
-    {
-      "q": "When is Humble ISD Spring Break in 2027?",
-      "a": "Spring Break runs Monday, March 15 through Friday, March 19, 2027."
-    },
-    {
-      "q": "When is the last day of school for Humble ISD in 2027?",
-      "a": "The last day of school is Friday, May 28, 2027."
-    },
-    {
-      "q": "Does Humble ISD have a Spanish calendar for 2026-2027?",
-      "a": "Yes. Humble ISD publishes Calendario 2026-2027 de Humble ISD, linked as an alternate calendar."
-    },
-    {
-      "q": "How many instructional days are in Humble ISD 2026-2027?",
-      "a": "The Humble ISD 2026-2027 traditional calendar includes 180 instructional days."
-    },
-    {
-      "q": "Does Humble ISD have early release days?",
-      "a": "Yes. Humble ISD lists early release dates during the 2026-2027 school year, including middle school, high school, and all-school early release dates. Families should confirm dismissal times with the district and their assigned campus."
-    },
-    {
-      "q": "When do Humble ISD students return after Winter Break?",
-      "a": "Students return for the spring semester on Wednesday, January 6, 2027, after Winter Break and the January staff workdays."
-    },
-    {
-      "q": "Does Humble ISD have a traditional calendar?",
-      "a": "Yes. This page covers the Humble ISD traditional academic calendar for 2026-2027, which applies to most districtwide school-year planning. Families should confirm campus-specific or program-specific notes with Humble ISD."
-    },
-    {
-      "q": "Are Humble ISD calendar dates the same for all schools?",
-      "a": "This page summarizes the districtwide Humble ISD academic calendar. Individual campuses, Summer Creek Early College High School, athletics, testing schedules, graduation events, and emergency updates may have additional dates or schedule notes."
-    },
-    {
-      "q": "Where can I download the Humble ISD calendar PDF?",
-      "a": "Use the official Humble ISD calendar PDF link on this page to view, save, or print the 2026-2027 school calendar."
-    }
-  ],
-  "customSections": [
-    {
-      "id": "humble-isd-quick-answer",
-      "label": "Quick Answer: Humble ISD Calendar 2026-2027",
-      "position": "afterVerification",
-      "content": "This page covers the Humble ISD Traditional Calendar for most district schools. School starts on Wednesday, August 12, 2026. The last day of school is Friday, May 28, 2027. Spring Break runs March 15-19, 2027. The calendar includes 180 instructional days, printable PDF access, and an importable calendar file for Google Calendar, Apple Calendar, and Outlook. Last reviewed: July 22, 2026."
-    },
-    {
-      "id": "about-humble-isd-calendar",
-      "label": "About Humble ISD 2026-2027 School Calendar",
-      "position": "afterVerification",
-      "content": "Humble Independent School District serves students and families in the Humble area of Texas, including northeast Harris County communities such as Humble, Atascocita, and Kingwood. This page summarizes the official Humble ISD 2026-2027 academic calendar for families who need key student dates, school holidays, instructional breaks, early release dates, and downloadable calendar formats.\n\nFamilies can use this Humble ISD calendar to quickly check the first day of school, holiday breaks, Spring Break dates, the last day of school, printable calendar resources, and calendar import options. Campus-specific events, Summer Creek Early College High School notes, emergency closures, and same-day dismissal changes should still be confirmed directly with Humble ISD or the assigned school."
-    },
-    {
-      "id": "humble-isd-calendar-highlights",
-      "label": "Humble ISD 2026-2027 Calendar Highlights",
-      "position": "afterKeyDates",
-      "content": "These Humble ISD calendar highlights summarize the major dates families are most likely to save when planning school attendance, childcare, transportation, appointments, travel, and summer schedules.",
-      "groups": [
-        {
-          "label": "Key planning dates",
-          "items": [
-            "School begins on Wednesday, August 12, 2026.",
-            "Student/Teacher Break runs October 12-16, 2026.",
-            "Thanksgiving Holiday runs November 23-27, 2026.",
-            "Winter Break runs December 21, 2026-January 1, 2027.",
-            "Students return for the spring semester on Wednesday, January 6, 2027.",
-            "Spring Break runs March 15-19, 2027.",
-            "The last day of school is Friday, May 28, 2027."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "humble-isd-calendar-guide-for-parents",
-      "label": "Humble ISD Calendar Guide for Parents",
-      "position": "afterKeyDates",
-      "content": "Parents can use the Humble ISD 2026-2027 calendar as a planning guide for school attendance, childcare, family travel, appointments, athletics, and daily routines. The most important dates to save are the first day of school, Student/Teacher Break, Thanksgiving Holiday, Winter Break, Spring Break, inclement weather days, early release dates, staff workdays, and the final student day.\n\nStudent holidays, staff workdays, and early release dates are especially important because they can affect pickup times, childcare coverage, and transportation. Humble ISD also identifies inclement weather days that may become school days if time is lost to bad weather, so families should treat those dates as conditional planning dates until the district confirms whether make-up time is needed.",
-      "groups": [
-        {
-          "label": "How families can use this calendar",
-          "items": [
-            "Save first day, last day, and major break dates before planning vacations or summer programs.",
-            "Track early release dates separately because dismissal timing may differ by school level.",
-            "Review inclement weather days before making February plans because those dates may become school days.",
-            "Use the official Humble ISD calendar source for emergency closures, revisions, campus-specific events, and schedule updates."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "important-humble-isd-dates-for-parents",
-      "label": "Important Humble ISD Dates Parents Should Know",
-      "position": "afterKeyDates",
-      "content": "These Humble ISD dates are useful planning points for families because they affect student attendance, childcare, transportation, travel, and campus routines.",
-      "table": {
-        "columns": ["Event", "Category", "Date", "Why it matters"],
-        "rows": [
-          ["First Day of School", "Start date", "August 12, 2026", "First student attendance day for confirming supplies, transportation, pickup routines, and before-school or after-school care."],
-          ["Student/Teacher Break", "Break", "October 12-16, 2026", "A full school-week break that families often use for childcare coverage, appointments, or short trips."],
-          ["Thanksgiving Holiday", "Holiday break", "November 23-27, 2026", "A full holiday week that can affect travel plans, childcare, and family schedules."],
-          ["Winter Break", "Holiday break", "December 21, 2026-January 1, 2027", "The main mid-year holiday period before students return for the spring semester on January 6, 2027."],
-          ["Inclement Weather Days", "Conditional dates", "February 8-9, 2027", "Conditional planning dates that may become school days if Humble ISD needs to make up lost instructional time."],
-          ["Spring Break", "Break", "March 15-19, 2027", "A common family travel and appointment-planning week for Humble ISD students."],
-          ["Last Day of School", "End date", "May 28, 2027", "Anchor date for summer childcare, camps, travel, and end-of-year planning."]
-        ]
-      }
-    },
-    {
-      "id": "humble-isd-2026-2027-calendar-overview",
-      "label": "Humble ISD 2026-2027 Calendar Overview",
-      "position": "afterKeyDates",
-      "content": "The Humble ISD 2026-2027 academic calendar is organized around two semesters and four nine-week grading periods. The school year begins with the August 12, 2026 first day of school and continues through the first semester before Winter Break. Students return in January 2027 for the spring semester, which continues through the fourth grading period and the final student day on May 28, 2027.\n\nThe calendar includes 180 instructional days, major holiday breaks, Student/Teacher Break, Thanksgiving Holiday, Winter Break, Spring Break, staff workdays, inclement weather days, elementary parent-teacher conference dates, and early release dates. Families should pay special attention to dates that are not simple holiday breaks because early release days, staff workdays, and weather make-up decisions can affect attendance, childcare, transportation, and campus routines.\n\nThis overview is intended to help families understand the school-year structure before using the detailed date table, printable PDF, or calendar import file."
-    },
-    {
-      "id": "humble-isd-pdf-vs-calendar-file",
-      "label": "Humble ISD Printable PDF vs Calendar File",
-      "position": "afterKeyDates",
-      "content": "Humble ISD families can use either the printable school calendar PDF or the calendar file depending on how they prefer to save school dates.",
-      "table": {
-        "columns": ["Option", "Best for", "What to know"],
-        "rows": [
-          ["Printable PDF", "Printing, sharing, and keeping a paper copy at home", "Use the official Humble ISD PDF when you want the district's published calendar layout."],
-          ["Calendar File (.ics)", "Google Calendar, Apple Calendar, Outlook, and personal scheduling apps", "Import the calendar file to save reviewed Humble ISD dates, but verify official updates because it is not a live district sync."],
-          ["Official Calendar Page", "Checking revisions, Spanish calendars, campus notes, and emergency updates", "Use Humble ISD as the source of record before making time-sensitive plans."]
-        ]
-      }
-    },
-    {
-      "id": "humble-isd-calendar-2025-2026-vs-2026-2027",
-      "label": "Humble ISD Calendar 2025-2026 vs 2026-2027",
-      "position": "afterYearDiff",
-      "content": "Families comparing the previous Humble ISD calendar with the 2026-2027 school year can use this summary to review major date changes before planning travel, childcare, appointments, and summer activities.",
-      "table": {
-        "columns": ["Calendar item", "2025-2026", "2026-2027"],
-        "rows": [
-          ["First day of school", "August 13, 2025", "August 12, 2026"],
-          ["Last day of school", "May 29, 2026", "May 28, 2027"],
-          ["Student/Teacher Break", "October 13-17, 2025", "October 12-16, 2026"],
-          ["Thanksgiving Holiday", "November 24-28, 2025", "November 23-27, 2026"],
-          ["Winter Break", "December 22, 2025-January 2, 2026", "December 21, 2026-January 1, 2027"],
-          ["Spring Break", "March 16-20, 2026", "March 15-19, 2027"],
-          ["Inclement weather days", "February 9-10, 2026", "February 8-9, 2027"]
-        ]
-      }
-    },
-    {
-      "id": "humble-isd-calendar-verification-method",
-      "label": "How We Verify Humble ISD Calendar Information",
-      "position": "beforeSources",
-      "content": "MySchoolDates reviews the official Humble ISD academic calendar page and published district calendar PDF, compares key dates such as first day, last day, Student/Teacher Break, Thanksgiving Holiday, Winter Break, Spring Break, inclement weather days, early release dates, staff workdays, and elementary parent-teacher conference dates, then converts the reviewed records into the calendar file used on this page.\n\nThe official Humble ISD calendar remains the source of record for revisions, campus-specific events, emergency closures, and same-day announcements. For more detail, see the MySchoolDates calendar verification methodology."
-    },
-    {
-      "id": "parent-questions-about-humble-isd-calendar",
-      "label": "Parent Questions About the Humble ISD Calendar",
-      "position": "afterFaq",
-      "content": "These parent-focused answers cover no-school days, early release, inclement weather days, and schedule-change checks. They are visible page content and do not replace the official Humble ISD calendar.",
-      "table": {
-        "columns": ["Question", "Answer"],
-        "rows": [
-          ["Does Humble ISD have school on holidays?", "Humble ISD schools are closed on district holidays and scheduled break dates listed in the official calendar unless the district announces a calendar change."],
-          ["Are Humble ISD staff workdays student holidays?", "Staff workdays listed as student holidays are no-school days for students, even when district staff report for planning or professional work."],
-          ["When does Humble ISD summer break start?", "Summer break begins after the final student day on Friday, May 28, 2027."],
-          ["Does Humble ISD have school tomorrow?", "This page shows planned calendar dates only. For tomorrow-specific attendance, weather closures, emergency cancellations, or same-day updates, families should check official Humble ISD announcements."],
-          ["Can inclement weather days become school days?", "Yes. Humble ISD notes that February 8-9, 2027 may become school days if time is lost to bad weather."],
-          ["Is the Humble ISD calendar the same for every campus?", "This page summarizes the districtwide academic calendar. Individual campuses, programs, athletics, testing schedules, and graduation events may have additional dates families should confirm with Humble ISD."]
-        ]
-      }
-    },
-    {
-      "id": "related-humble-isd-resources",
-      "label": "Related Houston Area School Calendars",
-      "position": "afterFaq",
-      "content": "Use these related school calendars to compare Humble ISD with other Houston-area and Texas district schedules.",
-      "links": [
-        {
-          "label": "Humble ISD Calendar 2025-2026",
-          "to": "/humble-isd-calendar/2025-2026",
-          "description": "Review the previous school year calendar for year-over-year planning."
-        },
-        {
-          "label": "Texas School Calendars",
-          "to": "/texas",
-          "description": "Browse Texas district calendar pages available on MySchoolDates."
-        },
-        {
-          "label": "Spring ISD Calendar",
-          "to": "/spring-isd-calendar",
-          "description": "Compare nearby north Houston-area district dates."
-        },
-        {
-          "label": "Klein ISD Calendar",
-          "to": "/klein-isd-calendar",
-          "description": "Compare another north Harris County district calendar."
-        },
-        {
-          "label": "Houston ISD Calendar",
-          "to": "/houston-independent-school-district-calendar",
-          "description": "Compare Humble ISD with the largest Houston-area district calendar."
-        },
-        {
-          "label": "Cypress-Fairbanks ISD Calendar",
-          "to": "/cypress-fairbanks-isd-calendar",
-          "description": "Compare Humble ISD with another large northwest Harris County district calendar."
-        },
-        {
-          "label": "Conroe ISD Calendar",
-          "to": "/conroe-independent-school-district-calendar",
-          "description": "Compare Humble ISD with a nearby north Houston and Montgomery County district calendar."
-        }
-      ]
-    }
-  ],
-  "yearNumbers": [
+  "calendarNotes": "Humble ISD's approval notice confirms at least 75,600 instructional minutes and 187 teacher workdays; it does not publish a student instructional-day total. The calendar includes weeklong October and February breaks, recurring middle- and high-school late arrivals, Friday SECHS early releases, and separate early-release dates in December and May. February 8–9 may become school days if time is lost to bad weather.",
+  "keyDatesHeading": "Humble ISD 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "Humble ISD 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "The first and last days, five major breaks, and the conditional February dates",
+  "keyDateSummaryItems": [
     {
       "label": "First Day",
-      "value": "Aug 12",
-      "detail": "The first day of school is August 12, 2026."
+      "name": "First Day of School",
+      "date": "2026-08-12",
+      "type": "school_start"
     },
     {
-      "label": "Spring Break",
-      "value": "Mar 15-19",
-      "detail": "Spring Break runs March 15-19, 2027."
+      "label": "October",
+      "name": "Student/Teacher Break",
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Holiday",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "January 4–5 are staff workdays; students return January 6."
+    },
+    {
+      "label": "February",
+      "name": "February Break",
+      "date": "2027-02-08",
+      "endDate": "2027-02-12",
+      "type": "break_start",
+      "description": "February 8–9 may become school days if Humble ISD needs to recover time lost to bad weather."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
     },
     {
       "label": "Last Day",
-      "value": "May 28",
-      "detail": "The last day of school is May 28, 2027."
+      "name": "Last Day of School — Early Release",
+      "date": "2027-05-28",
+      "type": "school_end"
     }
   ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "What to Know",
+      "id": "humble-isd-2026-2027-family-notes"
+    },
+    {
+      "label": "Calendar Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Breaks",
+      "id": "humble-isd-2026-2027-breaks"
+    },
+    {
+      "label": "Schedules",
+      "id": "humble-isd-2026-2027-schedules"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Changes",
+      "id": "year-comparison"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "allDatesTitle": "Humble ISD 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This table follows Humble ISD's official 2026–27 calendar and academic-calendar page. Recurring MS/HS late arrivals and SECHS Friday early releases are grouped here and listed individually in the schedule details. Use campus communications for testing, athletics, graduation, and later schedule changes.",
+  "allDatesSourceUrl": "https://www.humbleisd.net/academiccalendar",
+  "allDatesSourceLabel": "Official Humble ISD 2026–27 Academic Calendar",
+  "allDatesSourceLinks": [
+    {
+      "label": "Official PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3592/Humble_Isd/fe37e372-5ca9-4f8e-8717-f6a78a74adec/2026-2027-Approved-Calendar.pdf?disposition=inline"
+    }
+  ],
+  "compactDownloadModule": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "unifiedDownloadTitle": "Humble ISD 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Open the official English or Spanish PDF, or download reviewed Humble ISD dates for Google Calendar, Apple Calendar, or Outlook.",
+  "icsHeading": "Download Humble ISD 2026–27 Dates",
+  "icsDescription": "Download a one-time ICS file with districtwide student dates, recurring MS/HS late arrivals, and SECHS early releases.",
+  "icsButtonLabel": "Download Humble ISD Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. February 8–9 remain conditional, and later Humble ISD revisions will not update automatically.",
+  "pdfHeading": "Official Humble ISD 2026–27 Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Open Humble ISD's official two-page 2026–27 calendar PDF. The Board approved the calendar January 13, 2026; the current PDF is marked “Approved 2/24/26.”",
+  "hidePdfVersionLabel": true,
+  "alternateCalendarsDescription": "Humble ISD also publishes an official Spanish edition of the 2026–27 calendar.",
+  "alternateCalendars": [
+    {
+      "type": "spanish",
+      "label": "Calendario de Humble ISD para 2026–2027",
+      "description": "Official Spanish calendar PDF published by Humble ISD.",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3592/Humble_Isd/dcfca885-c675-445c-91aa-0a4c933ebb91/Calendario-de-Humble-ISD-para-2026-2027.pdf?disposition=inline"
+    }
+  ],
+  "yearComparisonPosition": "afterAllDates",
+  "whatsNew": {
+    "title": "What Changed from 2025–26",
+    "content": [
+      "The first day moves from August 13 to August 12.",
+      "The October break moves from October 13–17 to October 12–16.",
+      "The February break moves from February 9–13 to February 8–12; its first two dates remain the district's conditional inclement-weather days.",
+      "Spring Break and the last day each move one day earlier, to March 15–19 and May 28."
+    ]
+  },
+  "hideYearComparisonSubtitle": true,
+  "comparisonBeforeFaq": true,
+  "comparisonTitle": "Humble ISD Calendar Compared with Nearby Districts",
+  "compareIntro": "Compare Humble ISD's first and last student days and major breaks with nearby Houston-area districts using the dates published for 2026–27.",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "comparisonRowsMode": "sharedValuesOnly",
+  "hideComparisonNotes": true,
+  "customSections": [
+    {
+      "id": "humble-isd-2026-2027-family-notes",
+      "label": "What Humble ISD Families Should Know",
+      "position": "afterKeyDates",
+      "content": "A few details are easy to miss in the district calendar.",
+      "hideGroupLabels": true,
+      "groups": [
+        {
+          "label": "Calendar notes",
+          "items": [
+            "Humble ISD has scheduled weeklong October and February breaks since 2019–20.",
+            "February 8–9 are inclement-weather days inside February Break. They may become school days if the district needs to recover time lost to bad weather.",
+            "School starts on a Wednesday so district offices can help families complete registration on Monday and Tuesday and students begin with a shorter first week.",
+            "Spring Break coincides with Lone Star College, and first-semester final exams take place before Winter Break.",
+            "The approval notice confirms at least 75,600 instructional minutes and 187 teacher workdays; it does not publish a student instructional-day total."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Humble ISD calendar approval notice",
+          "url": "https://www.humbleisd.net/o/humbleisd/article/2635158"
+        }
+      ],
+      "linksDisplay": "inline",
+      "linksLabel": "Source:"
+    },
+    {
+      "id": "humble-isd-2026-2027-breaks",
+      "label": "Humble ISD Breaks and Return Dates",
+      "position": "afterAllDates",
+      "content": "February 8–9 need a closer look: they are part of February Break unless Humble ISD uses them as weather make-up days.",
+      "table": {
+        "caption": "Humble ISD 2026–27 breaks and return dates",
+        "columns": [
+          "Break",
+          "Dates",
+          "Next regular school day"
+        ],
+        "rows": [
+          [
+            "October Break",
+            "October 12–16, 2026",
+            "Monday, October 19"
+          ],
+          [
+            "Thanksgiving Break",
+            "November 23–27, 2026",
+            "Monday, November 30"
+          ],
+          [
+            "Winter Break",
+            "December 21, 2026–January 1, 2027",
+            "Wednesday, January 6, after staff workdays January 4–5"
+          ],
+          [
+            "February Break",
+            "February 8–12, 2027; February 8–9 are conditional weather dates",
+            "MS/HS: Monday, February 15; elementary: Tuesday, February 16"
+          ],
+          [
+            "Spring Break",
+            "March 15–19, 2027",
+            "Monday, March 22"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "humble-isd-2026-2027-schedules",
+      "label": "Humble ISD Late Arrival, Early Release & School Hours",
+      "position": "afterAllDates",
+      "content": "Humble ISD publishes recurring schedule changes by school level. Late-arrival and early-release dates are subject to change.",
+      "table": {
+        "caption": "Humble ISD regular hours and 2026–27 schedule changes",
+        "columns": [
+          "Schedule",
+          "Published hours",
+          "2026–27 dates or scope"
+        ],
+        "rows": [
+          [
+            "Elementary regular day",
+            "7:55 a.m.–3:20 p.m.",
+            "Regular elementary schedule"
+          ],
+          [
+            "Middle school regular / late arrival",
+            "8:30 a.m.–4:00 p.m. / 10:05 a.m.–4:00 p.m.",
+            "15 published Thursdays from September 17 through May 6"
+          ],
+          [
+            "High school regular / late arrival",
+            "7:25 a.m.–2:55 p.m. / 9:25 a.m.–2:55 p.m.",
+            "The same 15 published Thursdays"
+          ],
+          [
+            "SECHS Monday–Thursday / Friday",
+            "7:30 a.m.–3:00 p.m. / 7:30 a.m.–1:00 p.m.",
+            "34 published Friday early releases from August 14 through May 21"
+          ],
+          [
+            "Middle and high school early release",
+            "Check the campus dismissal time",
+            "December 17 and May 27"
+          ],
+          [
+            "All-school early release",
+            "Check the campus dismissal time",
+            "December 18 and May 28"
+          ]
+        ],
+        "footnote": "The district calendar publishes regular and late-arrival hours but does not provide one early-release dismissal time for December 17–18 or May 27–28. Confirm those times with your school."
+      },
+      "expandableGroups": [
+        {
+          "summaryLabel": "View all 15 MS/HS late-arrival dates",
+          "label": "MS/HS late-arrival Thursdays",
+          "items": [
+            "September 2026: 17, 24",
+            "October 2026: 1, 8, 22, 29",
+            "November 2026: 12, 19",
+            "January 2027: 14, 28",
+            "February 2027: 18, 25",
+            "March 2027: 4, 11",
+            "May 2027: 6"
+          ]
+        },
+        {
+          "summaryLabel": "View all 34 SECHS early-release dates",
+          "label": "SECHS Friday early releases",
+          "items": [
+            "August 2026: 14, 21, 28",
+            "September 2026: 4, 11, 18, 25",
+            "October 2026: 2, 9, 23, 30",
+            "November 2026: 6, 13, 20",
+            "December 2026: 4, 11, 18",
+            "January 2027: 8, 15, 22, 29",
+            "February 2027: 5, 19, 26",
+            "March 2027: 5, 12",
+            "April 2027: 2, 9, 16, 23, 30",
+            "May 2027: 7, 14, 21"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "label": "Official Humble ISD academic calendar and school hours",
+          "url": "https://www.humbleisd.net/academiccalendar"
+        }
+      ],
+      "linksDisplay": "inline",
+      "linksLabel": "Source:"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When does Humble ISD start school in 2026?",
+      "a": "Humble ISD students start school Wednesday, August 12, 2026. The district chose a midweek opening to leave Monday and Tuesday available for registration help and give students a shorter first week."
+    },
+    {
+      "q": "When is Humble ISD February Break in 2027?",
+      "a": "February Break runs February 8–12, 2027. February 8–9 are designated inclement-weather days and may become school days if Humble ISD needs to recover time lost to bad weather."
+    },
+    {
+      "q": "When do Humble ISD students return after Winter Break?",
+      "a": "Students return Wednesday, January 6, 2027. Winter Break ends January 1, and January 4–5 are staff workdays with no school for students."
+    },
+    {
+      "q": "When is Humble ISD Spring Break in 2027?",
+      "a": "Spring Break runs Monday, March 15 through Friday, March 19, 2027. Students return Monday, March 22."
+    },
+    {
+      "q": "Does Humble ISD have late-arrival and early-release days?",
+      "a": "Yes. The district publishes 15 MS/HS late-arrival Thursdays, Friday early releases for SECHS, MS/HS early releases on December 17 and May 27, and all-school early releases on December 18 and May 28."
+    },
+    {
+      "q": "When is the last day of school for Humble ISD in 2027?",
+      "a": "The last day of school is Friday, May 28, 2027. It is an early-release day for all students; check your school for its dismissal time."
+    },
+    {
+      "q": "Does Humble ISD publish a Spanish calendar for 2026–27?",
+      "a": "Yes. Humble ISD publishes an official Spanish calendar PDF, available in the Downloads section on this page."
+    }
+  ],
+  "faqLimit": 7,
+  "schemaCalendarName": "Humble ISD 2026–27 Academic Calendar",
+  "schemaDatasetName": "Humble ISD 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Humble ISD dates for 2026–27, including the first and last student days, breaks, student holidays, grading-period markers, recurring MS/HS late arrivals, SECHS Friday early releases, school-level hours, and conditional inclement-weather dates.",
+  "schemaSpatialCoverage": "Humble Independent School District in northeast Harris County, Texas",
+  "schemaCalendarDownloadName": "Humble ISD 2026–27 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time import of reviewed Humble ISD student dates, recurring MS/HS late arrivals, and SECHS early releases. February 8–9 remain conditional.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-announcement",
+      "type": "WebPage",
+      "name": "Humble ISD Approved 2026–2027 Calendar",
+      "url": "https://www.humbleisd.net/o/humbleisd/article/2635158"
+    },
+    {
+      "id": "source-calendar-spanish",
+      "type": "CreativeWork",
+      "name": "Calendario de Humble ISD para 2026–2027",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3592/Humble_Isd/dcfca885-c675-445c-91aa-0a4c933ebb91/Calendario-de-Humble-ISD-para-2026-2027.pdf?disposition=inline"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-announcement"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-announcement",
+    "source-calendar-spanish"
+  ],
+  "sources": [
+    {
+      "label": "Humble ISD 2026–27 Academic Calendar and school hours",
+      "url": "https://www.humbleisd.net/academiccalendar"
+    },
+    {
+      "label": "Official Humble ISD 2026–27 calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3592/Humble_Isd/fe37e372-5ca9-4f8e-8717-f6a78a74adec/2026-2027-Approved-Calendar.pdf?disposition=inline"
+    },
+    {
+      "label": "Humble ISD 2026–27 calendar approval notice",
+      "url": "https://www.humbleisd.net/o/humbleisd/article/2635158"
+    },
+    {
+      "label": "Official Humble ISD 2026–27 Spanish calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3592/Humble_Isd/dcfca885-c675-445c-91aa-0a4c933ebb91/Calendario-de-Humble-ISD-para-2026-2027.pdf?disposition=inline"
+    }
+  ],
+  "sourceReviewSummary": "Sources used: Humble ISD's current two-page calendar PDF, academic-calendar page, and calendar approval notice.",
+  "sourceReviewDetails": [
+    "Checked the first and last days, break ranges, student holidays, grading markers, late-arrival dates, early-release dates, and school hours against Humble ISD's official calendar sources.",
+    "The Board approval notice is dated January 13, 2026; the current two-page PDF is separately marked “Approved 2/24/26.”",
+    "The approval notice confirms at least 75,600 instructional minutes and 187 teacher workdays; Humble ISD does not publish a student instructional-day total in these sources.",
+    "The PDF states that February 8–9 may become school days if time is lost to bad weather; the downloadable calendar keeps those dates tentative.",
+    "The ICS file is a one-time import and does not automatically reflect later Humble ISD changes."
+  ],
+  "sourceMaintainerText": "Denis Dou for MySchoolDates",
+  "hideSourceReviewAuthor": true,
+  "sourceNextReviewText": "Next review: when Humble ISD replaces the 2026–27 PDF, changes a recurring late-arrival or early-release date, or announces use of February 8–9 as school days.",
   "events": [
-    { "date": "2026-08-12", "name": "First Day of School", "type": "school_start" },
-    { "date": "2026-09-07", "name": "Labor Day Holiday", "type": "holiday" },
-    { "date": "2026-09-28", "name": "Elementary Holiday / Staff Workday", "type": "student_holiday" },
-    { "date": "2026-10-09", "name": "End of 1st 9 Weeks", "type": "quarter_end" },
-    { "date": "2026-10-12", "name": "Student/Teacher Break", "type": "break_start" },
-    { "date": "2026-10-16", "name": "Student/Teacher Break End", "type": "break_end" },
-    { "date": "2026-10-19", "name": "Begin 2nd 9 Weeks", "type": "quarter_start" },
-    { "date": "2026-11-03", "name": "All Student Holiday / Staff Workday; Elementary Parent/Teacher Conference", "type": "student_holiday" },
-    { "date": "2026-11-23", "name": "Thanksgiving Holiday", "type": "break_start" },
-    { "date": "2026-11-27", "name": "Thanksgiving Holiday End", "type": "break_end" },
-    { "date": "2026-12-17", "name": "Early Release for Middle School and High School", "type": "early_release" },
-    { "date": "2026-12-18", "name": "Early Release for All Schools / End of 2nd 9 Weeks", "type": "semester_end" },
-    { "date": "2026-12-21", "name": "Winter Break Holiday", "type": "break_start" },
-    { "date": "2027-01-01", "name": "Winter Break Holiday End", "type": "break_end" },
-    { "date": "2027-01-04", "name": "Staff Workdays", "type": "student_holiday" },
-    { "date": "2027-01-05", "name": "Staff Workdays End", "type": "student_holiday" },
-    { "date": "2027-01-06", "name": "Begin Spring Semester / 3rd 9 Weeks", "type": "semester_start" },
-    { "date": "2027-01-18", "name": "MLK Day Holiday", "type": "holiday" },
-    { "date": "2027-02-08", "name": "Inclement Weather Day / All Student Holiday / Staff Workday", "type": "student_holiday" },
-    { "date": "2027-02-09", "name": "Inclement Weather Day / All Student Holiday / Staff Workday", "type": "student_holiday" },
-    { "date": "2027-02-10", "name": "Student/Teacher Break", "type": "break_start" },
-    { "date": "2027-02-12", "name": "Student/Teacher Break End", "type": "break_end" },
-    { "date": "2027-02-15", "name": "Elementary Holiday / Staff Workday", "type": "student_holiday" },
-    { "date": "2027-03-12", "name": "End of 3rd 9 Weeks", "type": "quarter_end" },
-    { "date": "2027-03-15", "name": "Spring Break Holiday", "type": "break_start" },
-    { "date": "2027-03-19", "name": "Spring Break Holiday End", "type": "break_end" },
-    { "date": "2027-03-22", "name": "Begin 4th 9 Weeks", "type": "quarter_start" },
-    { "date": "2027-03-26", "name": "Good Friday Holiday", "type": "holiday" },
-    { "date": "2027-05-21", "name": "Elementary Holiday / Staff Workday; Elementary Parent/Teacher Conference", "type": "student_holiday" },
-    { "date": "2027-05-27", "name": "Early Release for Middle School and High School", "type": "early_release" },
-    { "date": "2027-05-28", "name": "Early Release for All Students / Last Day of School", "type": "school_end" },
-    { "date": "2027-05-31", "name": "Memorial Day Holiday", "type": "holiday" }
+    {
+      "date": "2026-07-31",
+      "dates": [
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11"
+      ],
+      "displayDate": "July 31; August 3–7 and August 10–11, 2026",
+      "name": "Staff Workdays Before School Begins",
+      "type": "teacher_workday",
+      "description": "Students begin classes Wednesday, August 12.",
+      "hideFromCalendarExport": true,
+      "sectionLabelBefore": "Staff dates before the student year"
+    },
+    {
+      "date": "2026-08-12",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-08-14",
+      "dates": [
+        "2026-08-14",
+        "2026-08-21",
+        "2026-08-28",
+        "2026-09-04",
+        "2026-09-11",
+        "2026-09-18",
+        "2026-09-25",
+        "2026-10-02",
+        "2026-10-09",
+        "2026-10-23",
+        "2026-10-30",
+        "2026-11-06",
+        "2026-11-13",
+        "2026-11-20",
+        "2026-12-04",
+        "2026-12-11",
+        "2026-12-18",
+        "2027-01-08",
+        "2027-01-15",
+        "2027-01-22",
+        "2027-01-29",
+        "2027-02-05",
+        "2027-02-19",
+        "2027-02-26",
+        "2027-03-05",
+        "2027-03-12",
+        "2027-04-02",
+        "2027-04-09",
+        "2027-04-16",
+        "2027-04-23",
+        "2027-04-30",
+        "2027-05-07",
+        "2027-05-14",
+        "2027-05-21"
+      ],
+      "displayDate": "34 published Fridays from August 14, 2026 through May 21, 2027",
+      "exportDatesIndividually": true,
+      "name": "SECHS Early Release",
+      "type": "early_release",
+      "badgeLabel": "SECHS Fridays",
+      "description": "Sconzo Early College High School dismisses at 1:00 p.m. on these Fridays. Dates are subject to change."
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-17",
+      "dates": [
+        "2026-09-17",
+        "2026-09-24",
+        "2026-10-01",
+        "2026-10-08",
+        "2026-10-22",
+        "2026-10-29",
+        "2026-11-12",
+        "2026-11-19",
+        "2027-01-14",
+        "2027-01-28",
+        "2027-02-18",
+        "2027-02-25",
+        "2027-03-04",
+        "2027-03-11",
+        "2027-05-06"
+      ],
+      "displayDate": "15 published Thursdays from September 17, 2026 through May 6, 2027",
+      "exportDatesIndividually": true,
+      "name": "Middle and High School Late Arrival",
+      "type": "academic",
+      "badgeLabel": "MS/HS Late Arrival",
+      "description": "Middle school begins at 10:05 a.m.; high school begins at 9:25 a.m. Dates are subject to change."
+    },
+    {
+      "date": "2026-09-28",
+      "name": "Elementary Holiday / Staff Workday",
+      "type": "student_holiday",
+      "badgeLabel": "Elementary Only",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2026-10-09",
+      "name": "End of 1st 9 Weeks",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "name": "Student/Teacher Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-10-19",
+      "name": "Begin 2nd 9 Weeks",
+      "type": "quarter_start",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-11-03",
+      "name": "All Student Holiday / Staff Workday; Elementary Parent/Teacher Conference",
+      "type": "student_holiday",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Holiday",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-17",
+      "name": "Early Release for Middle School and High School",
+      "type": "early_release",
+      "badgeLabel": "MS/HS Early Release"
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Early Release for All Schools / End of 2nd 9 Weeks",
+      "type": "early_release",
+      "badgeLabel": "All Schools"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break Holiday",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "endDate": "2027-01-05",
+      "name": "Staff Workdays / Student Holidays",
+      "type": "student_holiday",
+      "preserveOfficialName": true,
+      "description": "Students return Wednesday, January 6."
+    },
+    {
+      "date": "2027-01-06",
+      "name": "Begin Spring Semester / 3rd 9 Weeks",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "MLK Day Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-08",
+      "endDate": "2027-02-09",
+      "name": "All Student Holiday / Staff Workday (District Comp Days)",
+      "type": "weather_day",
+      "status": "TENTATIVE",
+      "badgeLabel": "Conditional Weather Dates",
+      "description": "These dates may become school days if time is lost to bad weather. Otherwise, they remain part of Student/Teacher Break."
+    },
+    {
+      "date": "2027-02-10",
+      "endDate": "2027-02-12",
+      "name": "Student/Teacher Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Elementary Holiday / Staff Workday",
+      "type": "student_holiday",
+      "badgeLabel": "Elementary Only",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-03-12",
+      "name": "End of 3rd 9 Weeks",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break Holiday",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-22",
+      "name": "Begin 4th 9 Weeks",
+      "type": "quarter_start",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Good Friday Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-05-21",
+      "name": "Elementary Holiday / Staff Workday; Elementary Parent/Teacher Conference",
+      "type": "student_holiday",
+      "badgeLabel": "Elementary Only",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-05-27",
+      "name": "Early Release for Middle School and High School",
+      "type": "early_release",
+      "badgeLabel": "MS/HS Early Release"
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Last Day of School / Early Release for All Students",
+      "type": "school_end",
+      "badgeLabel": "Last Day / Early Release"
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day Holiday",
+      "type": "holiday",
+      "description": "This holiday falls after the last student day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-01",
+      "endDate": "2027-06-02",
+      "name": "Staff Workdays After School Ends",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true,
+      "sectionLabelBefore": "Staff dates after the student year"
+    }
   ]
 }

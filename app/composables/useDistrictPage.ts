@@ -264,6 +264,12 @@ export function useDistrictPage() {
     const breaks = getBreaks(cal.events)
     for (const event of eventsForExport) {
       const start = event.date.replace(/-/g, '')
+      const uidEvent = event.name
+        .normalize('NFKD')
+        .replace(/[^a-z0-9]+/gi, '-')
+        .replace(/^-+|-+$/g, '')
+        .toLowerCase()
+        .slice(0, 64) || 'event'
       const breakRange = event.type === 'break_start'
         ? breaks.find(b => b.name === event.name && b.start === event.date)
         : null
@@ -275,7 +281,7 @@ export function useDistrictPage() {
         `DTSTART;VALUE=DATE:${start}`,
         `DTEND;VALUE=DATE:${end}`,
         `SUMMARY:${event.name} – ${district.name}`,
-        `UID:${start}-${end}-${event.type}@myschooldates.com`,
+        `UID:${start}-${end}-${event.type}-${uidEvent}@myschooldates.com`,
         'END:VEVENT',
       )
     }

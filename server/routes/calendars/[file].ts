@@ -57,6 +57,15 @@ function compactDate(date: string) {
   return date.replace(/-/g, '')
 }
 
+function uidPart(value: string) {
+  return value
+    .normalize('NFKD')
+    .replace(/[^a-z0-9]+/gi, '-')
+    .replace(/^-+|-+$/g, '')
+    .toLowerCase()
+    .slice(0, 64) || 'event'
+}
+
 function escapeText(value: string) {
   return value
     .replace(/\\/g, '\\\\')
@@ -305,6 +314,7 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord, track?: { 
     const start = compactDate(event.date)
     const end = compactDate(dateKey(nextDay))
     const uidSlug = district.slug.replace(/[^a-z0-9-]/gi, '-').toLowerCase()
+    const uidEvent = uidPart(event.name)
     const summaryName = event.type === 'teacher_workday' || event.type === 'teacher_professional_learning' || event.type === 'break_start'
       ? normalizeCalendarName(event)
       : event.name
@@ -321,7 +331,7 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord, track?: { 
       `SUMMARY:${escapeText(`${summaryName} - ${district.name}`)}`,
       ...(eventStatus ? [`STATUS:${eventStatus}`] : []),
       ...(eventDescription ? [`DESCRIPTION:${escapeText(eventDescription)}`] : []),
-      `UID:${start}-${end}-${event.type}${track ? `-${track.id}` : ''}-${uidSlug}@myschooldates.com`,
+      `UID:${start}-${end}-${event.type}-${uidEvent}${track ? `-${track.id}` : ''}-${uidSlug}@myschooldates.com`,
       'END:VEVENT',
     )
   }

@@ -793,6 +793,7 @@ type DistrictCustomSection = {
   definitions?: { term: string; description: string }[]
   links?: { label: string; to: string; description?: string }[]
   table?: { caption?: string; columns?: string[]; headers?: string[]; rows: string[][]; footnote?: string }
+  expandableGroups?: { summaryLabel: string; label?: string; items: string[] }[]
 }
 const customSections = computed(() => {
   const hiddenIds = new Set([
@@ -1112,6 +1113,9 @@ const allDatesTitle = computed(() =>
 )
 const keyDatesSummaryTitle = computed(() =>
   (cal as any)?.keyDatesSummaryTitle ?? (cal as any)?.meta?.keyDatesSummaryTitle ?? `${displaySchoolYear.value} Key Dates & Holidays`
+)
+const keyDatesSummaryId = computed(() =>
+  (cal as any)?.keyDatesSummaryId ?? (cal as any)?.meta?.keyDatesSummaryId ?? (hiddenSections.value.has('keyDateCards') ? 'key-dates' : undefined)
 )
 const keyDatesHeading = computed(() =>
   (cal as any)?.keyDatesHeading ?? (cal as any)?.meta?.keyDatesHeading ?? 'Key Dates'
@@ -2526,7 +2530,7 @@ if (!isStatePage && district.value) {
         <!-- Key Dates & Holidays Summary -->
         <div
           v-if="!hiddenSections.has('keyDates') && !hiddenSections.has('keyDatesSummary') && keyDateHighlights.length"
-          :id="hiddenSections.has('keyDateCards') ? 'key-dates' : undefined"
+          :id="keyDatesSummaryId"
           class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24"
         >
           <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ keyDatesSummaryTitle }}</h2>
@@ -2938,6 +2942,7 @@ if (!isStatePage && district.value) {
         <!-- Sources & Verification: optional position before FAQ -->
         <DistrictSources
           v-if="sourcesBeforeFaq && !hiddenSections.has('sources') && pageSources.length"
+          :title="(cal as any).sourcesTitle ?? (cal as any).meta?.sourcesTitle"
           :sources="pageSources"
           :district-name="district.name"
           :short-name="(district as any).shortName || district.name"
@@ -3011,6 +3016,7 @@ if (!isStatePage && district.value) {
           :school-count="(district as any).schoolCount"
           :school-count-exact="Boolean((district as any).profileSchoolCountExact)"
           :school-count-approximate="Boolean((district as any).profileSchoolCountApproximate ?? (district as any).meta?.profileSchoolCountApproximate)"
+          :school-count-label="(district as any).schoolCountLabel ?? (district as any).meta?.schoolCountLabel"
           :calendar-type="(district as any).calendarType"
           :hide-calendar-type="Boolean((district as any).hideProfileCalendarType)"
           :grades="district.grades"
@@ -3036,6 +3042,7 @@ if (!isStatePage && district.value) {
         <!-- Sources & Verification -->
         <DistrictSources
           v-if="!sourcesBeforeFaq && !hiddenSections.has('sources') && pageSources.length"
+          :title="(cal as any).sourcesTitle ?? (cal as any).meta?.sourcesTitle"
           :sources="pageSources"
           :district-name="district.name"
           :short-name="(district as any).shortName || district.name"

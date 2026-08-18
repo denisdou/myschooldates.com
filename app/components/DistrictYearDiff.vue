@@ -111,6 +111,9 @@ const items = computed(() => {
 
 const title = computed(() => props.cal?.yearComparisonTitle ?? props.cal?.whatsNew?.title)
 const subtitle = computed(() => props.cal?.yearComparisonSubtitle ?? props.cal?.whatsNew?.subtitle)
+const hideSubtitle = computed(() => Boolean(
+  props.cal?.hideYearComparisonSubtitle ?? props.cal?.meta?.hideYearComparisonSubtitle
+))
 const defaultOpen = computed(() => Boolean(
   props.cal?.yearComparisonDefaultOpen ?? props.cal?.meta?.yearComparisonDefaultOpen
 ))
@@ -126,7 +129,7 @@ const displayPrevYear = computed(() => {
       <h2 class="m-0 flex items-start justify-between gap-4">
         <span class="min-w-0">
           <span class="block text-lg font-semibold text-gray-900 mb-1">{{ title ?? `What's New for ${currentYear}` }}</span>
-          <span class="block text-sm font-normal text-gray-500">{{ subtitle ?? `How this school year compares with ${displayPrevYear}.` }}</span>
+          <span v-if="!hideSubtitle" class="block text-sm font-normal text-gray-500">{{ subtitle ?? `How this school year compares with ${displayPrevYear}.` }}</span>
         </span>
         <span class="mt-1 text-sm font-medium text-blue-600 group-open:hidden">Show</span>
         <span class="mt-1 text-sm font-medium text-blue-600 hidden group-open:inline">Hide</span>

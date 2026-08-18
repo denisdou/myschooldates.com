@@ -2,6 +2,7 @@
 type SourceLink = { label: string; url?: string; note?: string; versionLabel?: string }
 
 const props = defineProps<{
+  title?: string | null
   sources: SourceLink[]
   districtName: string
   shortName: string
@@ -50,7 +51,7 @@ const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.
 
 <template>
   <div id="sources" class="district-source-panel scroll-mt-24 p-6">
-    <h2 class="text-xl font-semibold tracking-tight text-rds-ink mb-2">Sources and Review Notes</h2>
+    <h2 class="text-xl font-semibold tracking-tight text-rds-ink mb-2">{{ title || 'Sources and Review Notes' }}</h2>
     <p v-if="reviewSummary" class="text-sm leading-relaxed text-rds-ink-muted mb-4">
       {{ reviewSummary }}
     </p>

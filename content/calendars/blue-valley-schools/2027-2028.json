@@ -1,0 +1,768 @@
+{
+  "institutionId": "blue-valley-schools",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Blue Valley Schools Calendar 2027–28",
+  "firstDay": "2027-08-11",
+  "lastDay": "2028-05-24",
+  "temporalCoverageStart": "2027-07-04",
+  "temporalCoverageEnd": "2028-06-19",
+  "semesters": 2,
+  "sourceUrl": "https://www.bluevalleyk12.org/about/calendar",
+  "sourceDocumentPage": "https://www.bluevalleyk12.org/about/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1776290150/bluevalleyk12org/yxggjkhwlzq39mw3m3sk/2027-2028_Calendar.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1776290150/bluevalleyk12org/yxggjkhwlzq39mw3m3sk/2027-2028_Calendar.pdf",
+  "sourceCheckedAt": "2026-08-18",
+  "sourceUpdatedAt": "2026-04-13",
+  "sourceChecksumSha256": "2713d833a868453473c74d0d66d3452236e25f8ac7921a708e5ebc0edd825eb3",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.bluevalleyk12.org/about/calendar",
+    "linkText": "2027-28 Calendar (PDF)",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1776290150/bluevalleyk12org/yxggjkhwlzq39mw3m3sk/2027-2028_Calendar.pdf",
+    "expectedChecksumSha256": "2713d833a868453473c74d0d66d3452236e25f8ac7921a708e5ebc0edd825eb3"
+  },
+  "lastVerifiedAt": "2026-08-18",
+  "dateCreated": "2026-08-18",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-18",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "graduation_schedule_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Board approved April 13, 2026",
+  "sourceCalendarName": "Blue Valley Schools 2027–28 Calendar",
+  "schemaCalendarName": "Blue Valley Schools Calendar 2027–28",
+  "schemaDatasetName": "Blue Valley Schools 2027–28 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Blue Valley dates for 2027–28, including transition day, the EC–12 opening, grade-specific closures, conferences, breaks, early releases and year-end dates.",
+  "schemaSpatialCoverage": "South Overland Park, Leawood, Olathe and Johnson County, Kansas",
+  "schemaCalendarDownloadName": "Blue Valley Schools 2027–28 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with Blue Valley student attendance dates, breaks, grade-specific closures, conference days and early releases.",
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-board-approval-notice"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-board-approval-notice"
+  ],
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-board-approval-notice",
+      "type": "WebPage",
+      "name": "Blue Valley Board approval notice for the 2027–28 calendar",
+      "url": "https://www.bluevalleyk12.org/about/dept/communications/news/details/~board/news-media/post/board-approves-2027-28-calendar"
+    }
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "blue-valley-district-calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "itemListMode": "keyDates",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "whatsDifferent",
+    "otherCalendars",
+    "breaks",
+    "comparison",
+    "nationalTrends"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Opening Days",
+      "id": "blue-valley-2027-2028-opening"
+    },
+    {
+      "label": "Grade Rules",
+      "id": "blue-valley-2027-2028-grade-rules"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "School Hours",
+      "id": "blue-valley-2027-2028-hours"
+    },
+    {
+      "label": "Year End",
+      "id": "blue-valley-2027-2028-year-end"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Calendar Guide",
+      "id": "blue-valley-2027-2028-calendar-guide"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Blue Valley Schools Calendar 2027–28: Key Dates",
+  "seoDescription": "Blue Valley grades 6 and 9 attend Transition Day Aug. 11, 2027; the EC–12 first day is Aug. 12. See breaks, grade-specific days off, early releases and year-end dates.",
+  "heroSummary": "Blue Valley students in grades 6 and 9 attend Transition Day on Wednesday, August 11, 2027. The first day for EC–12 is August 12, which is also kindergarten orientation day. Thanksgiving Break runs November 22–26, Winter Break December 20–31, and Spring Break March 13–17. Seniors' last day is May 12. Early Childhood finishes May 23, and grades K–11 finish May 24 with early release.",
+  "heroSourceLine": "Based on the official Blue Valley 2027–28 calendar, board approved April 13, 2026",
+  "hideHeroDownloadLink": true,
+  "verificationBadgeText": "Checked against current Blue Valley sources",
+  "heroVerificationSourceText": "We checked the full 2027–28 calendar against Blue Valley's board approval notice and published school hours",
+  "heroVerificationComparisonText": "The board notice was used to confirm the separate Early Childhood and K–11 year-end dates",
+  "calendarNotes": "August 11 is a transition day only for grades 6 and 9; the EC–12 first day and kindergarten orientation are August 12. The K–5 professional-collaboration closures do not apply to grades 6–12. During conference weeks, October 21 and February 17 are no-school days for EC–8 while grades 9–12 attend; October 22 and February 18 are no-school days for EC–12. High-school finals use building schedules. The annual calendar labels May 13–14 as tentative graduation dates. Blue Valley's approval notice identifies May 23 as the Early Childhood last day and May 24 as the K–11 last day.",
+  "keyDatesHeading": "Blue Valley Schools Calendar 2027–28 Key Dates",
+  "keyDatesSummaryTitle": "Blue Valley Schools Calendar 2027–28 Key Dates",
+  "keyDatesSummarySubtitle": "Transition day, major breaks and grade-specific last days",
+  "keyDateSummaryItems": [
+    {
+      "label": "Transition Day",
+      "name": "Grades 6 and 9 Begin",
+      "date": "2027-08-11",
+      "type": "school_start",
+      "schemaDescription": "Transition Day for Blue Valley students in grades 6 and 9."
+    },
+    {
+      "label": "EC–12 Opening",
+      "name": "First Day for EC–12",
+      "date": "2027-08-12",
+      "type": "school_start",
+      "schemaDescription": "First day for Blue Valley EC–12 students; the date also includes kindergarten orientation."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2027-11-22",
+      "endDate": "2027-11-26",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "type": "break_start"
+    },
+    {
+      "label": "Return",
+      "name": "School Resumes",
+      "date": "2028-01-04",
+      "type": "school_resume",
+      "schemaDescription": "Blue Valley students return after Winter Break on January 4, 2028."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "type": "break_start"
+    },
+    {
+      "label": "Early Childhood",
+      "name": "Last Day for Early Childhood",
+      "date": "2028-05-23",
+      "type": "school_end",
+      "schemaDescription": "Last day of school for Blue Valley Early Childhood students."
+    },
+    {
+      "label": "Grades K–11",
+      "name": "Last Day for K–11 — Early Release",
+      "date": "2028-05-24",
+      "type": "school_end",
+      "schemaDescription": "Scheduled last day for grades K–11, with early release. Early Childhood does not attend."
+    }
+  ],
+  "allDatesTitle": "Blue Valley Schools Calendar 2027–28 Dates",
+  "allDatesCoverageNote": "This list keeps Blue Valley's grade-level distinctions intact. K–5 collaboration days, EC–8 conference closures, high-school finals and staff-only dates are labeled separately so families can see which dates affect their students.",
+  "allDatesFooterMode": "source_sentence",
+  "allDatesSourceLinks": [
+    {
+      "label": "Based on Blue Valley's official 2027–28 calendar",
+      "url": "https://resources.finalsite.net/images/v1776290150/bluevalleyk12org/yxggjkhwlzq39mw3m3sk/2027-2028_Calendar.pdf"
+    },
+    {
+      "label": "board approval notice",
+      "url": "https://www.bluevalleyk12.org/about/dept/communications/news/details/~board/news-media/post/board-approves-2027-28-calendar"
+    }
+  ],
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1776290150/bluevalleyk12org/yxggjkhwlzq39mw3m3sk/2027-2028_Calendar.pdf",
+  "allDatesSourceLabel": "Official Blue Valley 2027–28 Calendar",
+  "dateLegendLabelOverrides": {
+    "Academic Date": "Grade / School Date",
+    "Teacher Workday": "Professional Learning",
+    "No School": "No Students"
+  },
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Calendar Downloads and Official Blue Valley Links",
+  "unifiedDownloadDescription": "Download a one-time ICS file or open the official Blue Valley PDF and live district calendar.",
+  "officialSubscriptionTitle": "Official Blue Valley Live Calendar",
+  "officialSubscriptionDescription": "Want updates without re-importing? Blue Valley's official calendar page provides subscription options for Google Calendar, Apple Calendar, Outlook and other calendar apps.",
+  "officialSubscriptionButtonLabel": "Open Blue Valley Live Calendar",
+  "officialSubscriptionUrl": "https://www.bluevalleyk12.org/about/calendar",
+  "hideCompatibleCalendars": true,
+  "hideShareCalendarHeading": true,
+  "hideSocialShareButtons": true,
+  "hideCalendarUpdatesButton": true,
+  "icsHeading": "Add Blue Valley 2027–28 Dates to Your Calendar",
+  "icsDescription": "The ICS file includes major breaks, no-school days, Transition Day, conference closures, K–5 collaboration days and early releases. Each event notes which students the date applies to.",
+  "icsButtonLabel": "Download Blue Valley Dates (.ics)",
+  "icsButtonSupportText": "This is a one-time import and will not update automatically. Check Blue Valley's district or school calendar for later changes, building events, conference times and confirmed graduation details.",
+  "icsSourceNote": "",
+  "hideIcsImportDisclaimer": true,
+  "pdfHeading": "Official Blue Valley 2027–28 Calendar",
+  "pdfDescription": "Open Blue Valley's one-page annual calendar for the published school-year dates and grade-level attendance labels listed here.",
+  "pdfButtonLabel": "View Official Blue Valley PDF",
+  "pdfVersionLabel": "Board approved April 13, 2026",
+  "sourceReviewSummary": "Reviewed August 18, 2026, against Blue Valley's 2027–28 calendar, board approval notice and published school hours. The board notice confirms separate year-end dates for Early Childhood and grades K–11.",
+  "sourceReviewDetails": [
+    "The PDF reviewed for this page matches Blue Valley's current official file by SHA-256 checksum.",
+    "The PDF is the board-approved April 13, 2026 calendar currently linked by Blue Valley.",
+    "The board approval notice confirms May 23 as the Early Childhood last day and May 24 as the K–11 last day.",
+    "Tentative graduation dates are shown for planning but excluded from the one-time ICS."
+  ],
+  "sourceMaintainerText": "Blue Valley Schools publishes the calendar; MySchoolDates reviewed the dates and grade-level attendance details against the district's official sources.",
+  "hideSourceNextReview": true,
+  "hiddenCustomSectionIds": [
+    "blue-valley-calendar-map"
+  ],
+  "groupAlternateCalendarsWithDownloads": true,
+  "faqDisplayQuestions": [
+    "Do all Blue Valley students start school on the same day?",
+    "Are Blue Valley K–5 professional collaboration days no-school days for every grade?",
+    "How do Blue Valley conference weeks affect student attendance?",
+    "What time does Blue Valley dismiss on an early-release day?",
+    "Are Blue Valley's 2028 graduation dates final?",
+    "Does the Blue Valley ICS download update when the district calendar changes?"
+  ],
+  "faqDisplayLimit": 6,
+  "calendarFaqs": [
+    {
+      "q": "Are Blue Valley's 2028 graduation dates final?",
+      "a": "No. Blue Valley lists May 13–14 as tentative graduation dates. Families should check with their high school for the confirmed ceremony date, time and location."
+    }
+  ],
+  "relatedDistrictsTitle": "More Kansas School Calendars",
+  "relatedDistrictsDescription": "View another reviewed Kansas district calendar.",
+  "hideRelatedDistrictDescriptions": true,
+  "customSections": [
+    {
+      "id": "blue-valley-2027-2028-opening",
+      "label": "How the Blue Valley 2027–28 Opening Works",
+      "content": "Only students in grades 6 and 9 attend on August 11 for Transition Day. If your child is not in grade 6 or 9, use August 12 as the district's published first day; that date also includes kindergarten orientation.",
+      "position": "afterKeyDates",
+      "table": {
+        "caption": "Blue Valley 2027–28 opening schedule",
+        "columns": [
+          "Date",
+          "Students",
+          "What happens"
+        ],
+        "rows": [
+          [
+            "Aug. 11, 2027",
+            "Grades 6 and 9",
+            "Transition Day"
+          ],
+          [
+            "Aug. 12, 2027",
+            "EC–12",
+            "First day of school; kindergarten orientation"
+          ]
+        ],
+        "footnote": "Schools provide kindergarten orientation times and transition-day details."
+      }
+    },
+    {
+      "id": "blue-valley-2027-2028-grade-rules",
+      "label": "Not Every Blue Valley No-School Day Applies to Every Grade",
+      "content": "Blue Valley has several no-school days that apply only to certain grade levels. K–5 collaboration days do not affect middle or high school students, while EC–8 conference closures still have grades 9–12 in class.",
+      "position": "afterKeyDates",
+      "table": {
+        "caption": "Student attendance rules in the Blue Valley 2027–28 calendar",
+        "columns": [
+          "Calendar label",
+          "Students out",
+          "Who still attends"
+        ],
+        "rows": [
+          [
+            "No School K–5 — Teacher Professional Collaboration",
+            "Grades K–5",
+            "Early Childhood and grades 6–12"
+          ],
+          [
+            "No School EC–8 — Conferences",
+            "Early Childhood through grade 8",
+            "Grades 9–12"
+          ],
+          [
+            "No School EC–12",
+            "EC–12",
+            "None"
+          ],
+          [
+            "Kindergarten Kick-Off",
+            "Current kindergarten students",
+            "Early Childhood and grades 1–12"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "blue-valley-2027-2028-hours",
+      "label": "Blue Valley School Hours and Early Release Times",
+      "content": "Blue Valley publishes a different early-release time for each school level. Its high schools follow an odd/even block schedule, and Blue Valley North begins five minutes earlier than the other high schools on Tuesday and Thursday.",
+      "position": "afterAllDates",
+      "table": {
+        "caption": "Blue Valley published school and early-release hours",
+        "columns": [
+          "School level",
+          "Regular schedule",
+          "Early release"
+        ],
+        "rows": [
+          [
+            "Elementary",
+            "8:40 a.m.–3:45 p.m.",
+            "11:45 a.m."
+          ],
+          [
+            "Middle school",
+            "7:50 a.m.–3:00 p.m.",
+            "10:50 a.m."
+          ],
+          [
+            "BVHS, BVW, BVSW and BVNW",
+            "Mon./Wed. 7:35 a.m.; Tue./Thu. 8:35 a.m.; Fri. 7:35 a.m. — all end 2:45 p.m.",
+            "10:30 a.m."
+          ],
+          [
+            "Blue Valley North",
+            "Mon./Wed. 7:35 a.m.; Tue./Thu. 8:30 a.m.; Fri. 7:35 a.m. — all end 2:45 p.m.",
+            "10:30 a.m."
+          ]
+        ],
+        "footnote": "Families in CAPS, Blue Valley Academy or Early Childhood should check their program's calendar for hours and dismissal details."
+      }
+    },
+    {
+      "id": "blue-valley-2027-2028-year-end",
+      "label": "Early Childhood, Seniors and Grades K–11 Finish Separately",
+      "content": "Blue Valley's final student dates differ by grade level. Seniors finish May 12, tentative graduation dates are May 13–14, Early Childhood finishes May 23, and grades K–11 finish May 24 with early release. Grades 9–11 also have early-release finals May 22–23.",
+      "position": "afterAllDates",
+      "table": {
+        "caption": "Blue Valley 2027–28 year-end sequence",
+        "columns": [
+          "Date",
+          "Students",
+          "What happens"
+        ],
+        "rows": [
+          [
+            "May 12",
+            "Grade 12",
+            "Class Day and last day for seniors"
+          ],
+          [
+            "May 13–14",
+            "Graduating seniors",
+            "Tentative graduation dates"
+          ],
+          [
+            "May 22–23",
+            "Grades 9–11",
+            "Early release and high-school finals"
+          ],
+          [
+            "May 23",
+            "Early Childhood",
+            "Last day confirmed in the board approval notice"
+          ],
+          [
+            "May 24",
+            "Grades K–11",
+            "Early release, end of semester and last day; no Early Childhood"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "blue-valley-2027-2028-calendar-guide",
+      "label": "Which Blue Valley Calendar Should You Use?",
+      "content": "Use the annual district PDF and Blue Valley's board approval notice for the 2027–28 school-year dates. Use the live district or school calendar for building events, conference times and changes published later.",
+      "position": "beforeSources",
+      "table": {
+        "caption": "Blue Valley calendar sources by planning task",
+        "columns": [
+          "Planning need",
+          "Best official source"
+        ],
+        "rows": [
+          [
+            "Opening dates, district breaks and grade-specific closures",
+            "Annual district calendar PDF"
+          ],
+          [
+            "Separate Early Childhood and K–11 year-end dates",
+            "Blue Valley board approval notice"
+          ],
+          [
+            "Conference appointment time",
+            "Communication from the student's building"
+          ],
+          [
+            "Athletics, performances and school events",
+            "Individual school calendar"
+          ],
+          [
+            "Calendar changes published later",
+            "Live Blue Valley district calendar"
+          ]
+        ]
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Blue Valley district calendar page",
+      "url": "https://www.bluevalleyk12.org/about/calendar"
+    },
+    {
+      "label": "Official Blue Valley 2027–28 Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1776290150/bluevalleyk12org/yxggjkhwlzq39mw3m3sk/2027-2028_Calendar.pdf"
+    },
+    {
+      "label": "Blue Valley Board approval notice for the 2027–28 calendar",
+      "url": "https://www.bluevalleyk12.org/about/dept/communications/news/details/~board/news-media/post/board-approves-2027-28-calendar"
+    },
+    {
+      "label": "Blue Valley family resources and school hours",
+      "url": "https://www.bluevalleyk12.org/families/bv-resources"
+    }
+  ],
+  "events": [
+    {
+      "date": "2027-07-04",
+      "name": "Independence Day",
+      "type": "holiday",
+      "description": "District holiday before the student year.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-03",
+      "endDate": "2027-08-06",
+      "name": "New Staff Onboarding",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Dates",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-09",
+      "endDate": "2027-08-11",
+      "name": "All Staff Professional Learning",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Dates",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-11",
+      "name": "Transition Day for Grades 6 and 9",
+      "type": "school_start",
+      "badgeLabel": "Grades 6 / 9",
+      "description": "Other grades begin August 12."
+    },
+    {
+      "date": "2027-08-12",
+      "name": "First Day of School for EC–12 / Kindergarten Orientation",
+      "type": "school_start",
+      "description": "Grades 6 and 9 attended Transition Day on August 11. Schools provide kindergarten orientation times."
+    },
+    {
+      "date": "2027-08-27",
+      "name": "Teacher Professional Collaboration — No School for K–5",
+      "type": "no_school",
+      "badgeLabel": "K–5 Only"
+    },
+    {
+      "date": "2027-09-06",
+      "name": "Labor Day — No School for EC–12",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-09-07",
+      "name": "Professional Learning — No School for EC–12",
+      "type": "teacher_workday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2027-09-24",
+      "name": "Teacher Professional Collaboration — No School for K–5",
+      "type": "no_school",
+      "badgeLabel": "K–5 Only"
+    },
+    {
+      "date": "2027-10-08",
+      "name": "No School for EC–12 — End of Quarter / Professional Learning and Grade Prep",
+      "type": "no_school",
+      "badgeLabel": "No School",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-10-18",
+      "endDate": "2027-10-22",
+      "name": "Conference Week — Refer to Building Schedules",
+      "type": "academic",
+      "badgeLabel": "Building Conferences",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-10-21",
+      "name": "Conferences — No School for EC–8",
+      "type": "no_school",
+      "badgeLabel": "EC–8 Only",
+      "description": "Grades 9–12 attend school."
+    },
+    {
+      "date": "2027-10-22",
+      "name": "No School for EC–12",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-10-29",
+      "name": "Teacher Professional Collaboration — No School for K–5",
+      "type": "no_school",
+      "badgeLabel": "K–5 Only"
+    },
+    {
+      "date": "2027-11-01",
+      "name": "Professional Learning — No School for EC–12",
+      "type": "teacher_workday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2027-11-22",
+      "endDate": "2027-11-26",
+      "name": "Thanksgiving Break — No School for EC–12",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-12-03",
+      "name": "Teacher Professional Collaboration — No School for K–5",
+      "type": "no_school",
+      "badgeLabel": "K–5 Only"
+    },
+    {
+      "date": "2027-12-15",
+      "dates": [
+        "2027-12-15",
+        "2027-12-16"
+      ],
+      "displayDate": "Dec. 15–16",
+      "name": "Early Release for Grades 9–12 / High-School Finals",
+      "type": "early_dismissal",
+      "badgeLabel": "Grades 9–12",
+      "description": "Refer to building schedules.",
+      "exportDatesIndividually": true
+    },
+    {
+      "date": "2027-12-17",
+      "name": "Early Release for K–12 / End of Semester",
+      "type": "semester_end",
+      "description": "Afternoon grade preparation follows student dismissal."
+    },
+    {
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "name": "Winter Break — No School for EC–12",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-01-03",
+      "name": "Professional Learning — No School for EC–12",
+      "type": "teacher_workday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2028-01-04",
+      "name": "School Resumes",
+      "type": "school_resume"
+    },
+    {
+      "date": "2028-01-17",
+      "name": "Martin Luther King Jr. Day — No School for EC–12",
+      "displayName": "Martin Luther King Jr. Day — No School for EC–12",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-01-28",
+      "name": "Teacher Professional Collaboration — No School for K–5",
+      "type": "no_school",
+      "badgeLabel": "K–5 Only"
+    },
+    {
+      "date": "2028-02-14",
+      "endDate": "2028-02-18",
+      "name": "Conference Week — Refer to Building Schedules",
+      "type": "academic",
+      "badgeLabel": "Building Conferences",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-02-17",
+      "name": "Conferences — No School for EC–8",
+      "type": "no_school",
+      "badgeLabel": "EC–8 Only",
+      "description": "Grades 9–12 attend school."
+    },
+    {
+      "date": "2028-02-18",
+      "name": "No School for EC–12",
+      "type": "no_school"
+    },
+    {
+      "date": "2028-02-21",
+      "name": "Presidents’ Day — No School for EC–12",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-02-28",
+      "name": "Teacher Professional Collaboration — No School for K–5",
+      "type": "no_school",
+      "badgeLabel": "K–5 Only"
+    },
+    {
+      "date": "2028-03-10",
+      "name": "No School for EC–12 — End of Quarter / Professional Learning and Grade Prep",
+      "type": "no_school",
+      "badgeLabel": "No School",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "name": "Spring Break — No School for EC–12",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-03-20",
+      "name": "Professional Learning — No School for EC–12",
+      "type": "teacher_workday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2028-04-07",
+      "name": "Teacher Professional Collaboration — No School for K–5",
+      "type": "no_school",
+      "badgeLabel": "K–5 Only"
+    },
+    {
+      "date": "2028-04-14",
+      "name": "Kindergarten Kick-Off — No School for Current Kindergarten Students",
+      "type": "no_school",
+      "badgeLabel": "Kindergarten Only"
+    },
+    {
+      "date": "2028-04-17",
+      "name": "Professional Learning — No School for EC–12",
+      "type": "teacher_workday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2028-05-05",
+      "name": "Teacher Professional Collaboration — No School for K–5",
+      "type": "no_school",
+      "badgeLabel": "K–5 Only"
+    },
+    {
+      "date": "2028-05-12",
+      "name": "Class Day / Last Day for Seniors",
+      "type": "school_end",
+      "badgeLabel": "Grade 12"
+    },
+    {
+      "date": "2028-05-13",
+      "endDate": "2028-05-14",
+      "name": "Tentative Graduation Dates",
+      "type": "graduation",
+      "description": "Confirm ceremony date, time and location with the high school.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-05-22",
+      "dates": [
+        "2028-05-22",
+        "2028-05-23"
+      ],
+      "displayDate": "May 22–23",
+      "name": "Early Release for Grades 9–11 / High-School Finals",
+      "type": "early_dismissal",
+      "badgeLabel": "Grades 9–11",
+      "description": "Refer to building schedules.",
+      "exportDatesIndividually": true
+    },
+    {
+      "date": "2028-05-23",
+      "name": "Last Day for Early Childhood",
+      "type": "school_end",
+      "badgeLabel": "Early Childhood",
+      "description": "Confirmed in the district's board approval notice."
+    },
+    {
+      "date": "2028-05-24",
+      "name": "Last Day for Grades K–11 — Early Release / No Early Childhood",
+      "type": "school_end",
+      "badgeLabel": "K–11",
+      "description": "End of semester; afternoon grade preparation follows student dismissal."
+    },
+    {
+      "date": "2028-05-29",
+      "name": "Memorial Day",
+      "type": "holiday",
+      "description": "District holiday after the student year.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-06-19",
+      "name": "Juneteenth — No Summer Learning",
+      "type": "no_school",
+      "badgeLabel": "Summer Learning",
+      "description": "Applies to district Summer Learning rather than the regular school year.",
+      "hideFromCalendarExport": true
+    }
+  ]
+}

@@ -8,6 +8,7 @@ const props = defineProps<{
   schoolCount?: number
   schoolCountExact?: boolean
   schoolCountApproximate?: boolean
+  schoolCountLabel?: string
   calendarType?: string
   hideCalendarType?: boolean
   grades?: string[]
@@ -59,7 +60,7 @@ const calendarTypeLabel = computed(() => {
       </div>
       <div v-if="schoolCount">
         <div class="text-2xl font-bold text-gray-900">{{ schoolCountApproximate ? '~' : '' }}{{ schoolCount }}{{ !schoolCountApproximate && !schoolCountExact ? '+' : '' }}</div>
-        <div class="text-xs text-gray-600 mt-0.5">{{ schoolCountExact ? 'campuses' : 'schools & campuses' }}</div>
+        <div class="text-xs text-gray-600 mt-0.5">{{ schoolCountLabel || (schoolCountExact ? 'campuses' : 'schools & campuses') }}</div>
       </div>
       <div v-if="calendarType && !hideCalendarType">
         <div class="text-sm font-semibold text-gray-900 leading-snug mt-1">

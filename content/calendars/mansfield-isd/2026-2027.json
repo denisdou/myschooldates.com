@@ -1,251 +1,395 @@
 {
   "institutionId": "mansfield-isd",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Mansfield ISD Calendar 2026-2027",
   "firstDay": "2026-08-12",
   "lastDay": "2027-05-20",
+  "temporalCoverageStart": "2026-08-03",
+  "temporalCoverageEnd": "2027-05-21",
   "sourceUrl": "https://www.mansfieldisd.org/news-events/calendars",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1776886057/mansfieldisd/mansfieldisd/hflqly3k2n4xlu3rcj0w/26-27OptionA.pdf",
-  "lastVerifiedAt": "2026-07-22",
+  "sourceDocumentPage": "https://www.mansfieldisd.org/news-events/calendars",
+  "sourceCheckedAt": "2026-08-18",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceChecksumSha256": "081591bb761cf819a1401a25297b318d25c63e4bef89178abb38fed66fce8ba7",
+  "sourceResourceMonitor": {
+    "type": "pdf-link",
+    "checkUrl": "https://www.mansfieldisd.org/news-events/calendars",
+    "linkText": "2026-27 School Calendar",
+    "expectedDocumentUrl": "https://resources.finalsite.net/images/v1776886057/mansfieldisd/mansfieldisd/hflqly3k2n4xlu3rcj0w/26-27OptionA.pdf",
+    "expectedChecksumSha256": "081591bb761cf819a1401a25297b318d25c63e4bef89178abb38fed66fce8ba7"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "pdf-link",
+      "checkUrl": "https://www.mansfieldisd.org/news-events/calendars",
+      "linkText": "2026-27 A/B Calendar",
+      "expectedDocumentUrl": "https://resources.finalsite.net/images/v1776886111/mansfieldisd/kybwvzvsj4cry1xgaoew/26-27-ABDayCalendar.pdf",
+      "expectedChecksumSha256": "c6fcfa4cf441101222b80e03ccba4a87aa80a8ba7fc65c541b8a2e085b3617c3"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-18",
+  "dateCreated": "2026-07-22",
   "datePublished": "2026-07-22",
-  "dateModified": "2026-07-22",
+  "dateModified": "2026-08-18",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_pdf_link_change",
+    "ab_calendar_revision",
+    "bad_weather_makeup_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Current 2026–27 Option A calendar linked by Mansfield ISD",
+  "hideSourceVersionDisplay": true,
+  "hidePdfVersionLabel": true,
+  "sourceCalendarName": "Mansfield ISD 2026–27 Option A Calendar",
+  "schemaCalendarName": "Mansfield ISD 2026–27 Calendar",
+  "schemaDatasetName": "Mansfield ISD 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed dates from Mansfield ISD's 2026–27 Option A calendar, including the student year, six-week grading periods, student holidays, staff work and professional-learning dates, SDCE days, major breaks, and two conditional bad-weather makeup days.",
+  "schemaCalendarDownloadName": "Mansfield ISD 2026–27 ICS calendar",
+  "schemaCalendarDownloadDescription": "One-time ICS download of selected reviewed Mansfield ISD school-year dates from this page. It does not automatically update if the district revises its calendar.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-ab-calendar",
+      "type": "CreativeWork",
+      "name": "Mansfield ISD 2026–27 A/B Calendar",
+      "url": "https://resources.finalsite.net/images/v1776886111/mansfieldisd/kybwvzvsj4cry1xgaoew/26-27-ABDayCalendar.pdf",
+      "encodingFormat": "application/pdf"
+    },
+    {
+      "id": "source-professional-learning",
+      "type": "WebPage",
+      "name": "Mansfield ISD Professional Learning and SDCE Information",
+      "url": "https://www.mansfieldisd.org/staff/profdev"
+    },
+    {
+      "id": "source-live-event-calendar",
+      "type": "WebPage",
+      "name": "Mansfield ISD Live Event Calendars",
+      "url": "https://www.mansfieldisd.org/news-events/calendars/the-everything-calendar"
+    },
+    {
+      "id": "source-calendar-2025-2026",
+      "type": "CreativeWork",
+      "name": "Mansfield ISD 2025–26 Calendar",
+      "url": "https://resources.finalsite.net/images/v1741359897/mansfieldisd/jfndgegadw2fg8siqdcu/2025-26CalendarFinal.pdf",
+      "encodingFormat": "application/pdf"
+    },
+    {
+      "id": "source-arlington-calendar",
+      "type": "CreativeWork",
+      "name": "Arlington ISD 2026–27 Calendar",
+      "url": "https://drive.google.com/file/d/1-BDmMFTL4vW52HbJQN8uFIiBee89RFcX/view",
+      "publisherName": "Arlington Independent School District",
+      "publisherUrl": "https://www.aisd.net/"
+    },
+    {
+      "id": "source-fort-worth-calendar",
+      "type": "CreativeWork",
+      "name": "Fort Worth ISD 2026–27 Traditional Calendar",
+      "url": "https://resources.finalsite.net/images/v1778769269/fwisdorg/a6k27q42e9uccau06wnx/2026-2027TraditionalCalendar_Amended_5-11-2026.pdf",
+      "encodingFormat": "application/pdf",
+      "publisherName": "Fort Worth Independent School District",
+      "publisherUrl": "https://www.fwisd.org/"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-ab-calendar",
+    "source-professional-learning",
+    "source-live-event-calendar",
+    "source-calendar-2025-2026",
+    "source-arlington-calendar",
+    "source-fort-worth-calendar"
+  ],
   "calendarType": "traditional",
-  "totalSchoolDays": 180,
-  "yearNumbersMode": "compact",
+  "calendarTrackId": "option-a",
+  "schemaSpatialCoverage": {
+    "@type": "Place",
+    "name": "Mansfield Independent School District service area",
+    "url": "https://www.mansfieldisd.org/about-misd"
+  },
+  "allDatesMode": "all",
+  "hideSemesterCount": true,
+  "hideInstructionalDaysSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideFaqSchema": true,
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "webPageMainEntity": "dataset",
+  "seoTitle": "Mansfield ISD Calendar 2026-2027: Holidays & Breaks",
+  "seoDescription": "Mansfield ISD began the 2026–27 school year on Aug. 12, 2026 and ends May 20, 2027. See break dates, bad-weather makeup days, the official PDF, and calendar downloads.",
+  "heroSummary": "The first day of school was Wednesday, August 12, 2026, and the last day is Thursday, May 20, 2027. Thanksgiving Break is November 23–27, Winter Holiday is December 21–January 1, and Spring Break is March 15–19. February 12 and March 26 are scheduled holidays that may be used as bad-weather makeup days.",
+  "heroSourceLine": "2026–27 Option A calendar · Official Mansfield ISD sources reviewed Aug. 18, 2026",
+  "verificationBadgeText": "Official Mansfield ISD calendar sources reviewed",
+  "calendarNotes": "This page follows Mansfield ISD's Option A calendar. Use the separate A/B calendar for alternating-day schedules and the district's live calendars for campus events, alerts, and later changes.",
+  "alternateCalendarsNotice": "This page follows Mansfield ISD's 2026–27 Option A calendar. Mansfield ISD publishes a separate A/B calendar for alternating-day schedules.",
+  "hiddenSections": [
+    "about",
+    "comparison",
+    "districtProfile",
+    "downloadCta",
+    "keyDateCards",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars",
+    "planningTips",
+    "quickFacts",
+    "relatedDistricts",
+    "todayStatus",
+    "whatsDifferent",
+    "yearNumbers"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "yearSwitcherPosition": "afterSources",
+  "hideBreakDurationBadges": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Family Notes", "id": "mansfield-family-calendar-notes-2026-2027" },
+    { "label": "All Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "What's Changed", "id": "mansfield-calendar-changes-2026-2027" },
+    { "label": "Nearby Districts", "id": "mansfield-nearby-calendar-comparison-2026-2027" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "keyDatesSummaryTitle": "Mansfield ISD 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last student days, major breaks, and return dates",
+  "keyDateSummaryItems": [
+    { "label": "First Day", "name": "First Day of School", "date": "2026-08-12", "type": "school_start" },
+    { "label": "Thanksgiving", "name": "Thanksgiving Break", "date": "2026-11-23", "endDate": "2026-11-27", "type": "break_start", "description": "Students return Monday, Nov. 30." },
+    { "label": "Winter", "name": "Winter Holiday", "date": "2026-12-21", "endDate": "2027-01-01", "type": "break_start", "description": "Jan. 4–6 are also student holidays; students return Thursday, Jan. 7." },
+    { "label": "Spring", "name": "Spring Break", "date": "2027-03-15", "endDate": "2027-03-19", "type": "break_start", "description": "Students return Monday, Mar. 22." },
+    {
+      "label": "If Needed",
+      "name": "Bad-Weather Makeup Days",
+      "date": "2027-02-12",
+      "dates": ["2027-02-12", "2027-03-26"],
+      "dateJoiner": "and",
+      "type": "makeup_day",
+      "description": "Scheduled holidays unless Mansfield ISD needs to recover instructional time.",
+      "schemaAdditionalProperties": [
+        { "@type": "PropertyValue", "name": "First conditional makeup date", "value": "2027-02-12" },
+        { "@type": "PropertyValue", "name": "Second conditional makeup date", "value": "2027-03-26" }
+      ]
+    },
+    { "label": "Last Day", "name": "Last Day of School", "date": "2027-05-20", "type": "school_end" }
+  ],
+  "allDatesTitle": "Mansfield ISD 2026–27 Student and Teacher Calendar Dates",
+  "allDatesCoverageNote": "This table follows Mansfield ISD's one-page Option A calendar. It includes districtwide student dates, grading-period markers, student holidays, staff work and professional-learning dates, SDCE days, and the two conditional bad-weather makeup days. Campus events and same-day announcements are not included.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1776886057/mansfieldisd/mansfieldisd/hflqly3k2n4xlu3rcj0w/26-27OptionA.pdf",
+  "allDatesSourceLabel": "Official Mansfield ISD 2026–27 Option A calendar PDF",
+  "allDatesCoveredBreakDatesNote": "Staff dates that fall within a student break or holiday are noted within that date range rather than repeated as separate student dates.",
+  "dateLegendItems": [
+    { "label": "First / last day", "dot": "bg-yellow-400" },
+    { "label": "Holiday / break", "dot": "bg-rose-500" },
+    { "label": "Staff or conference day — student holiday", "dot": "bg-teal-500" },
+    { "label": "Bad-weather makeup day — if needed", "dot": "bg-orange-300" },
+    { "label": "Grading-period marker", "dot": "bg-slate-400" }
+  ],
+  "breaksTitle": "Major School Breaks and Return Dates",
+  "breakNotes": {
+    "Thanksgiving Break": "Students return Monday, November 30.",
+    "Winter Holiday": "Students return Thursday, January 7.",
+    "Spring Break": "Students return Monday, March 22."
+  },
+  "unifiedDownloadTitle": "Mansfield ISD Calendar Resources",
+  "unifiedDownloadDescription": "Use the live district calendar for ongoing events, the Option A PDF for the official school-year schedule, or the A/B calendar for alternating-day schedules.",
+  "officialSubscriptionTitle": "Live District and Campus Event Calendars",
+  "officialSubscriptionDescription": "Mansfield ISD's event calendars provide live iCal feeds and alerts for ongoing district and campus events. Use them for updates beyond the fixed school-year dates on this page.",
+  "officialSubscriptionButtonLabel": "Open Official Live Calendars",
+  "officialSubscriptionUrl": "https://www.mansfieldisd.org/news-events/calendars/the-everything-calendar",
+  "icsHeading": "Add Mansfield ISD School-Year Dates",
+  "icsDescription": "Download selected Mansfield ISD school-year dates from this page for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download Mansfield ISD Calendar File",
+  "icsButtonSupportText": "One-time import; check Mansfield ISD for later revisions and bad-weather makeup decisions.",
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideSocialShareButtons": true,
+  "hideShareCalendarHeading": true,
+  "hideCalendarUpdatesButton": true,
+  "pdfHeading": "Official Mansfield ISD 2026–27 Option A Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Open Mansfield ISD's official one-page Option A school calendar.",
+  "pdfButtonLabel": "View Official Option A PDF",
+  "groupAlternateCalendarsWithDownloads": true,
+  "alternateCalendarsTitle": "Separate A/B Calendar",
+  "alternateCalendarsDescription": "Use this official calendar for schedules that follow Mansfield ISD's alternating A/B day rotation.",
+  "alternateCalendarsButtonLabel": "View Official A/B PDF",
   "alternateCalendars": [
     {
       "type": "ab",
-      "label": "2026-2027 A/B Calendar",
-      "pdfUrl": "https://resources.finalsite.net/images/v1776886111/mansfieldisd/kybwvzvsj4cry1xgaoew/26-27-ABDayCalendar.pdf"
+      "group": "Official A/B Calendar",
+      "label": "Mansfield ISD 2026–27 A/B Calendar",
+      "buttonLabel": "View Official A/B PDF",
+      "pdfUrl": "https://resources.finalsite.net/images/v1776886111/mansfieldisd/kybwvzvsj4cry1xgaoew/26-27-ABDayCalendar.pdf",
+      "ariaLabel": "View the official Mansfield ISD 2026–27 A/B calendar PDF"
     }
   ],
-  "seoTitle": "Mansfield ISD Calendar 2026-2027: Holidays & Breaks",
-  "seoDescription": "Mansfield ISD 2026-2027 calendar with Aug 12 first day, May 20 last day, Thanksgiving, winter holiday, spring break, bad weather days, printable PDF, ICS, and Google Calendar download.",
-  "pageHeading": "Mansfield ISD Calendar 2026-2027",
-  "calendarNotes": "Mansfield ISD starts the 2026-2027 school year on August 12, 2026 and ends on May 20, 2027. Thanksgiving Break runs November 23-27, Winter Holiday runs December 21-January 1, and Spring Break runs March 15-19. February 12 and March 26 are listed as bad weather makeup days. Mansfield ISD also publishes a separate 2026-2027 A/B Calendar.",
   "calendarFaqs": [
     {
-      "q": "When does Mansfield ISD start school in 2026?",
-      "a": "The first day of school is Wednesday, August 12, 2026."
-    },
-    {
       "q": "When is Mansfield ISD Spring Break in 2027?",
-      "a": "Spring Break runs Monday, March 15 through Friday, March 19, 2027."
+      "a": "Spring Break runs Monday, March 15, through Friday, March 19, 2027. Students return Monday, March 22."
     },
     {
-      "q": "When is the last day of school for Mansfield ISD in 2027?",
-      "a": "The last day of school is Thursday, May 20, 2027."
+      "q": "What are the Mansfield ISD bad-weather makeup days?",
+      "a": "February 12 and March 26, 2027, are scheduled holidays that may become instructional days if Mansfield ISD needs to recover lost time."
     },
     {
-      "q": "Does Mansfield ISD have an A/B calendar for 2026-2027?",
-      "a": "Yes. Mansfield ISD publishes a separate 2026-2027 A/B Calendar, linked as an alternate calendar."
+      "q": "What does SDCE mean on the Mansfield ISD calendar?",
+      "a": "SDCE stands for Staff Development Credit Equivalency. November 23 and March 15 are student holidays marked as SDCE days on the district calendar."
     },
     {
-      "q": "How many instructional days are in Mansfield ISD 2026-2027?",
-      "a": "The Mansfield ISD 2026-2027 calendar includes 180 instructional days."
+      "q": "Does Mansfield ISD publish an A/B calendar for 2026–27?",
+      "a": "Yes. Mansfield ISD publishes a separate A/B calendar for schedules that use alternating A and B days."
     },
     {
-      "q": "When does Mansfield ISD second semester start?",
-      "a": "The Mansfield ISD second semester begins on Thursday, January 7, 2027."
-    },
-    {
-      "q": "Where can I download the Mansfield ISD calendar PDF?",
-      "a": "Use the official PDF link on this page to download the Mansfield ISD 2026-2027 calendar. Families can also use the calendar file for Google Calendar, Apple Calendar, Outlook, and other apps."
+      "q": "Where can I find the official Mansfield ISD calendar PDF?",
+      "a": "The official Option A PDF and separate A/B PDF are linked in the Calendar Resources section. Mansfield ISD's live event calendars are also linked for district and campus events."
     }
   ],
   "customSections": [
     {
-      "id": "about-mansfield-isd-2026-2027-calendar",
-      "label": "About Mansfield ISD 2026-2027 Calendar",
-      "position": "afterVerification",
-      "content": "The Mansfield Independent School District 2026-2027 calendar covers the traditional school schedule for Mansfield ISD students and families in Mansfield, Texas and the Dallas-Fort Worth area.\n\nThis page organizes the official Mansfield ISD school calendar into key dates, a printable PDF source, an importable calendar file, and a student-focused date list so families can quickly find Mansfield ISD holidays, school breaks, no-school days, and important dates without searching through the full PDF.\n\nFamilies should also note that Mansfield ISD publishes supporting calendar materials, including an A/B calendar for applicable schedules. Use the district source before making time-sensitive plans around campus events, alternating-day schedules, emergency updates, or calendar revisions."
-    },
-    {
-      "id": "mansfield-isd-local-calendar-insight",
-      "label": "Local Calendar Insight for Mansfield ISD Families",
-      "position": "afterVerification",
-      "content": "Mansfield ISD families often plan school breaks around Dallas-Fort Worth travel, shared childcare, athletics, and nearby district schedules. Thanksgiving Break, Winter Holiday, Spring Break, and the two bad weather makeup days are the dates most likely to affect family logistics beyond normal school attendance.\n\nBecause Mansfield sits between major North Texas school systems, families with siblings, relatives, or childcare providers in nearby districts may want to compare the Mansfield ISD calendar with Dallas, Fort Worth, Garland, Frisco, and Plano calendars before booking trips or arranging coverage."
-    },
-    {
-      "id": "mansfield-isd-important-dates-explained",
-      "label": "Important Mansfield ISD Dates Explained",
+      "id": "mansfield-family-calendar-notes-2026-2027",
+      "label": "What Mansfield ISD Families Should Know About 2026–27",
+      "content": "",
       "position": "afterKeyDates",
-      "content": "These Mansfield ISD dates are the main planning points families should save because they affect school attendance, childcare, transportation, vacation timing, and campus routines.",
-      "table": {
-        "columns": ["Event", "Category", "Date", "Why it matters"],
-        "rows": [
-          ["First Day of School", "Start date", "August 12, 2026", "Mansfield ISD students return for the first day of school, so families should confirm supplies, transportation, pickup routines, and before-school or after-school care."],
-          ["Thanksgiving Break", "Holiday break", "November 23-27, 2026", "A full holiday week that commonly affects travel, childcare, and shared family schedules."],
-          ["Winter Holiday", "Holiday break", "December 21, 2026-January 1, 2027", "The main mid-year break before students return after January professional learning and work days."],
-          ["Second Semester Begins", "Semester date", "January 7, 2027", "Students return for the second semester after Winter Holiday and district work days."],
-          ["Bad Weather Makeup Day #1", "Conditional date", "February 12, 2027", "A planned student and teacher holiday that may become a school day if Mansfield ISD needs to make up lost instructional time."],
-          ["Spring Break", "Break", "March 15-19, 2027", "A common travel and appointment-planning week for Mansfield ISD families."],
-          ["Bad Weather Makeup Day #2", "Conditional date", "March 26, 2027", "A student holiday that families should treat as conditional until the district confirms whether make-up time is needed."],
-          ["Last Day of School", "End date", "May 20, 2027", "Anchor date for summer childcare, camps, travel, and end-of-year planning."]
-        ]
-      }
-    },
-    {
-      "id": "mansfield-isd-calendar-guide-for-parents",
-      "label": "Mansfield ISD Calendar Guide for Parents",
-      "position": "afterKeyDates",
-      "content": "Parents can use the Mansfield ISD 2026-2027 calendar as a planning guide for school attendance, childcare, family travel, appointments, athletics, and daily routines. This section focuses on how to use the calendar rather than repeating every date in the full list.\n\nBad weather makeup days are especially important because they may remain holidays or become instructional days depending on weather-related closures. Families should also review the separate Mansfield ISD A/B calendar when planning secondary schedules or alternating-day routines.",
       "groups": [
         {
-          "label": "How families can use this calendar",
+          "label": "SDCE days",
           "items": [
-            "Save first day, last day, Thanksgiving Break, Winter Holiday, and Spring Break before planning travel or summer programs.",
-            "Track student holidays and parent-teacher conference days because they can affect childcare even when they are not major holiday breaks.",
-            "Review February 12 and March 26 as bad weather makeup days before making long-weekend plans.",
-            "Use the official Mansfield ISD calendars page for A/B day schedules, campus-specific events, emergency updates, and calendar revisions."
+            "SDCE stands for Staff Development Credit Equivalency. November 23 and March 15 are student holidays marked as SDCE days; eligible professional employees may use approved professional development for SDCE credit."
+          ]
+        },
+        {
+          "label": "Why students return January 7",
+          "items": [
+            "Winter Holiday ends January 1, but January 4–6 remain student holidays while staff complete professional-learning and work days. The second semester begins Thursday, January 7."
+          ]
+        },
+        {
+          "label": "Bad-weather makeup days",
+          "items": [
+            "February 12 and March 26 are scheduled holidays, but either date may become an instructional day if Mansfield ISD needs to recover time lost to weather."
           ]
         }
-      ]
-    },
-    {
-      "id": "mansfield-isd-2026-2027-calendar-overview",
-      "label": "Mansfield ISD 2026-2027 School Year Overview",
-      "position": "afterKeyDates",
-      "content": "The Mansfield ISD 2026-2027 academic calendar is organized around two semesters and six six-week grading periods. The first semester runs through the December grading-period close before Winter Holiday, and the second semester begins after January professional learning and work days.\n\nThe calendar includes 180 instructional days, major school holidays, professional learning and work days, parent-teacher conference dates, bad weather makeup days, and a separate A/B calendar. Families should pay attention to dates that are not simple holiday breaks because student holidays, professional learning days, and bad weather makeup decisions can affect attendance, childcare, transportation, and campus routines."
-    },
-    {
-      "id": "mansfield-isd-pdf-vs-calendar-file",
-      "label": "Mansfield ISD Printable PDF vs Calendar File",
-      "position": "afterKeyDates",
-      "content": "Mansfield ISD families can use either the printable calendar PDF or the calendar file depending on how they prefer to save school dates.",
-      "table": {
-        "columns": ["Option", "Best for", "What to know"],
-        "rows": [
-          ["Printable PDF", "Printing, sharing, and keeping a paper copy at home", "Use the official Mansfield ISD PDF when you want the district's published calendar layout."],
-          ["Calendar File (.ics)", "Google Calendar, Apple Calendar, Outlook, and personal scheduling apps", "Import the calendar file to save reviewed Mansfield ISD dates, but verify official updates because it is not a live district sync."],
-          ["Official Calendars Page", "Checking revisions, A/B calendar details, campus notes, and emergency updates", "Use Mansfield ISD as the source of record before making time-sensitive plans."]
-        ]
-      }
-    },
-    {
-      "id": "mansfield-isd-calendar-2025-2026-vs-2026-2027",
-      "label": "Mansfield ISD Calendar 2025-2026 vs 2026-2027",
-      "position": "afterYearDiff",
-      "content": "Families comparing the previous Mansfield ISD calendar with the 2026-2027 school year can use this summary to review major date changes before planning travel, childcare, appointments, and summer activities.",
-      "table": {
-        "columns": ["Calendar item", "2025-2026", "2026-2027"],
-        "rows": [
-          ["First day of school", "August 13, 2025", "August 12, 2026"],
-          ["Last day of school", "May 21, 2026", "May 20, 2027"],
-          ["Thanksgiving Break", "November 24-28, 2025", "November 23-27, 2026"],
-          ["Winter Break / Holiday", "December 19, 2025-January 2, 2026", "December 21, 2026-January 1, 2027"],
-          ["Spring Break", "March 16-20, 2026", "March 15-19, 2027"],
-          ["Bad weather makeup days", "February 13 and April 3, 2026", "February 12 and March 26, 2027"]
-        ]
-      }
-    },
-    {
-      "id": "mansfield-isd-district-calendar-types",
-      "label": "Mansfield ISD District Calendar Types",
-      "position": "afterYearDiff",
-      "content": "Mansfield ISD publishes more than one official calendar resource. This summary helps families understand which calendar file to check before planning school attendance, A/B day routines, travel, childcare, or campus-specific activities.",
-      "table": {
-        "columns": ["Calendar", "Applies to", "Best use"],
-        "rows": [
-          ["Traditional Calendar", "Most Mansfield ISD students and families", "Use for first day, last day, student holidays, professional learning days, major breaks, and bad weather makeup days."],
-          ["A/B Calendar", "Students or campuses following alternating A/B day schedules", "Use alongside the traditional calendar when planning secondary schedules or alternating-day routines."],
-          ["Campus Calendars and Announcements", "Individual schools and programs", "Use for campus events, emergency updates, early release notes, testing dates, and schedule changes."]
-        ]
-      }
-    },
-    {
-      "id": "parent-questions-about-mansfield-isd-calendar",
-      "label": "Parent Questions About the Mansfield ISD Calendar",
-      "position": "afterFaq",
-      "content": "These parent-focused answers cover school-year length, winter break, early release checks, no-school days, and official update sources. They are visible page content and do not replace the official Mansfield ISD calendar.",
-      "table": {
-        "columns": ["Question", "Answer"],
-        "rows": [
-          ["How many days are in the Mansfield ISD 2026-2027 school year?", "The Mansfield ISD 2026-2027 calendar includes 180 instructional days."],
-          ["When is Mansfield ISD winter break 2026?", "Winter Holiday runs from December 21, 2026 through January 1, 2027. Students return for the second semester on January 7, 2027 after professional learning and work days."],
-          ["When does Mansfield ISD school end in 2027?", "The last day of school is Thursday, May 20, 2027."],
-          ["Does Mansfield ISD have early release days?", "This page focuses on major district calendar dates. Families should check the official Mansfield ISD calendar PDF, A/B calendar, and campus announcements for early release schedules or dismissal-time changes."],
-          ["Are Mansfield ISD bad weather makeup days school days?", "February 12 and March 26, 2027 are listed as bad weather makeup days. They may become instructional days if Mansfield ISD needs to make up lost time."],
-          ["Does Mansfield ISD have school tomorrow?", "This page shows planned calendar dates only. For tomorrow-specific attendance, weather closures, emergency cancellations, or same-day updates, families should check official Mansfield ISD announcements."]
-        ]
-      }
-    },
-    {
-      "id": "related-texas-school-calendars-for-mansfield-isd",
-      "label": "Nearby District Calendars",
-      "position": "afterFaq",
-      "content": "Families comparing Mansfield ISD with nearby North Texas districts can use these related calendar pages to check first day, last day, spring break, and major holiday timing.",
+      ],
       "links": [
-        { "label": "Dallas ISD Calendar", "href": "/dallas-independent-school-district-calendar" },
-        { "label": "Fort Worth ISD Calendar", "href": "/fort-worth-independent-school-district-calendar" },
-        { "label": "Garland ISD Calendar", "href": "/garland-independent-school-district-calendar" },
-        { "label": "Frisco ISD Calendar", "href": "/frisco-independent-school-district-calendar" },
-        { "label": "Plano ISD Calendar", "href": "/plano-independent-school-district-calendar" },
-        { "label": "Texas School Calendars", "href": "/texas" }
+        { "label": "Mansfield ISD Professional Learning", "to": "https://www.mansfieldisd.org/staff/profdev" }
       ]
     },
     {
-      "id": "mansfield-isd-calendar-revision-history",
-      "label": "Mansfield ISD Calendar Revision History",
-      "position": "beforeSources",
-      "content": "July 22, 2026: Initial MySchoolDates publication based on the official Mansfield ISD 2026-2027 calendar source.\n\nFuture changes should be verified against the official Mansfield ISD calendars page before families make travel, childcare, attendance, or campus-specific plans."
+      "id": "mansfield-calendar-changes-2026-2027",
+      "label": "What Changed From 2025–26",
+      "content": "School starts and ends one day earlier than in 2025–26, and Mansfield ISD's second bad-weather makeup day moves from April 3 to March 26.",
+      "position": "afterCalendarExport",
+      "table": {
+        "columns": ["Calendar item", "2025–26", "2026–27"],
+        "rows": [
+          ["First day of school", "Aug. 13, 2025", "Aug. 12, 2026"],
+          ["Thanksgiving Break", "Nov. 24–28, 2025", "Nov. 23–27, 2026"],
+          ["Winter Break / Holiday", "Dec. 19, 2025–Jan. 2, 2026", "Dec. 21, 2026–Jan. 1, 2027"],
+          ["Spring Break", "Mar. 16–20, 2026", "Mar. 15–19, 2027"],
+          ["Bad-weather makeup days", "Feb. 13 and Apr. 3, 2026", "Feb. 12 and Mar. 26, 2027"],
+          ["Last day of school", "May 21, 2026", "May 20, 2027"]
+        ]
+      },
+      "links": [
+        { "label": "Mansfield ISD 2025–26 Calendar PDF", "to": "https://resources.finalsite.net/images/v1741359897/mansfieldisd/jfndgegadw2fg8siqdcu/2025-26CalendarFinal.pdf" }
+      ]
     },
     {
-      "id": "mansfield-isd-calendar-verification-method",
-      "label": "How We Verify Mansfield ISD Calendar Information",
-      "position": "beforeSources",
-      "content": "MySchoolDates reviews the official Mansfield ISD calendars page and published district calendar PDF, compares key dates such as first day, last day, Thanksgiving Break, Winter Holiday, Spring Break, student holidays, professional learning and work days, parent-teacher conference dates, bad weather makeup days, and A/B calendar notes, then converts the reviewed records into the calendar file used on this page.\n\nThe official Mansfield ISD calendar remains the source of record for revisions, campus-specific events, emergency closures, and same-day announcements. For more detail, see the MySchoolDates calendar verification methodology."
+      "id": "mansfield-nearby-calendar-comparison-2026-2027",
+      "label": "How Mansfield ISD's Calendar Compares With Nearby Districts",
+      "content": "Mansfield ISD serves Mansfield and parts of Arlington, Grand Prairie, Burleson, Fort Worth, Venus, Alvarado, and Kennedale. Mansfield, Arlington, and Fort Worth ISDs share the same 2026–27 Thanksgiving, winter, and spring break ranges, but their first and last student days differ.",
+      "position": "afterCalendarExport",
+      "table": {
+        "columns": ["District", "First day", "Last day", "Thanksgiving", "Winter break", "Spring break"],
+        "rows": [
+          ["Mansfield ISD", "Aug. 12", "May 20", "Nov. 23–27", "Dec. 21–Jan. 1", "Mar. 15–19"],
+          ["Arlington ISD", "Aug. 12", "May 26", "Nov. 23–27", "Dec. 21–Jan. 1", "Mar. 15–19"],
+          ["Fort Worth ISD", "Aug. 10", "May 21", "Nov. 23–27", "Dec. 21–Jan. 1", "Mar. 15–19"]
+        ]
+      },
+      "links": [
+        { "label": "Arlington ISD Calendar", "to": "/arlington-isd-calendar" },
+        { "label": "Fort Worth ISD Calendar", "to": "/fort-worth-independent-school-district-calendar" },
+        { "label": "Official Arlington ISD Calendar", "to": "https://www.aisd.net/district/about/calendars/" },
+        { "label": "Official Fort Worth ISD Calendar", "to": "https://www.fwisd.org/calendar" }
+      ]
     }
   ],
-  "yearNumbers": [
+  "sources": [
     {
-      "label": "First Day",
-      "value": "Aug 12",
-      "detail": "The first day of school is August 12, 2026."
+      "label": "Mansfield ISD 2026–27 Option A Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1776886057/mansfieldisd/mansfieldisd/hflqly3k2n4xlu3rcj0w/26-27OptionA.pdf"
     },
     {
-      "label": "Spring Break",
-      "value": "Mar 15-19",
-      "detail": "Spring Break runs March 15-19, 2027."
+      "label": "Mansfield ISD calendars page",
+      "url": "https://www.mansfieldisd.org/news-events/calendars"
     },
     {
-      "label": "Last Day",
-      "value": "May 20",
-      "detail": "The last day of school is May 20, 2027."
+      "label": "Mansfield ISD 2026–27 A/B Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1776886111/mansfieldisd/kybwvzvsj4cry1xgaoew/26-27-ABDayCalendar.pdf"
+    },
+    {
+      "label": "Mansfield ISD Professional Learning and SDCE information",
+      "url": "https://www.mansfieldisd.org/staff/profdev"
+    },
+    {
+      "label": "Mansfield ISD live event calendars",
+      "url": "https://www.mansfieldisd.org/news-events/calendars/the-everything-calendar"
+    },
+    {
+      "label": "Mansfield ISD 2025–26 Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1741359897/mansfieldisd/jfndgegadw2fg8siqdcu/2025-26CalendarFinal.pdf"
     }
   ],
+  "sourceReviewSummary": "Reviewed August 18, 2026, against Mansfield ISD's calendars page, current Option A and A/B PDFs, Professional Learning page, and live event-calendar guidance.",
+  "sourceReviewDetails": [
+    "The Option A PDF supplies the districtwide dates shown in the full calendar table; the A/B PDF is presented separately for alternating-day schedules.",
+    "We checked the first and last student days, six-week grading markers, student and staff holidays, professional-learning and work days, parent-teacher conference day, SDCE dates, major breaks, and bad-weather makeup days.",
+    "The nearby-district comparison uses the reviewed 2026–27 Arlington ISD and Fort Worth ISD calendars and includes only dates available for all three districts."
+  ],
+  "sourceNextReviewText": "Next review: when Mansfield ISD revises the Option A or A/B calendar, activates a bad-weather makeup day, or publishes later districtwide schedule guidance.",
   "events": [
-    { "date": "2026-07-04", "name": "Fourth of July Holiday", "type": "holiday" },
-    { "date": "2026-08-03", "name": "Teachers Report / Professional Learning and Work Days Begin", "type": "student_holiday", "schemaEvent": true },
-    { "date": "2026-08-11", "name": "Professional Learning and Work Days End", "type": "student_holiday" },
+    { "date": "2026-08-03", "endDate": "2026-08-11", "name": "Professional Learning and Work Days", "type": "teacher_workday", "description": "Teachers report August 3; these are student holidays before the first day of school.", "hideFromCalendarExport": true },
     { "date": "2026-08-12", "name": "First Day of School / Six Weeks 1 Begins", "type": "school_start" },
-    { "date": "2026-09-07", "name": "Labor Day Holiday", "type": "holiday", "schemaEvent": true },
-    { "date": "2026-09-17", "name": "End of Six Weeks 1", "type": "quarter_end" },
-    { "date": "2026-09-18", "name": "Student Holiday", "type": "student_holiday" },
+    { "date": "2026-09-07", "name": "Labor Day Holiday", "type": "holiday" },
+    { "date": "2026-09-17", "name": "Six Weeks 1 Ends", "type": "quarter_end" },
+    { "date": "2026-09-18", "name": "Student Holiday", "type": "student_holiday", "preserveOfficialName": true },
     { "date": "2026-09-21", "name": "Six Weeks 2 Begins", "type": "quarter_start" },
-    { "date": "2026-10-09", "name": "Parent-Teacher Conference / Student Holiday", "type": "student_holiday", "schemaEvent": true },
-    { "date": "2026-10-12", "name": "Columbus Day / Student and Teacher Holiday", "type": "holiday", "schemaEvent": true },
-    { "date": "2026-10-30", "name": "End of Six Weeks 2", "type": "quarter_end" },
+    { "date": "2026-10-09", "name": "Parent-Teacher Conference / Student Holiday", "type": "student_holiday" },
+    { "date": "2026-10-12", "name": "Columbus Day / Student and Teacher Holiday", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2026-10-30", "name": "Six Weeks 2 Ends", "type": "quarter_end" },
     { "date": "2026-11-02", "name": "Six Weeks 3 Begins", "type": "quarter_start" },
-    { "date": "2026-11-23", "name": "Thanksgiving Break / SDCE Day", "type": "break_start" },
-    { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2026-12-17", "name": "First Semester Ends / End of Six Weeks 3", "type": "semester_end", "schemaEvent": true },
-    { "date": "2026-12-18", "name": "Student Holiday", "type": "student_holiday" },
-    { "date": "2026-12-21", "name": "Winter Holiday", "type": "break_start" },
-    { "date": "2027-01-01", "name": "Winter Holiday End", "type": "break_end" },
-    { "date": "2027-01-04", "name": "Student Holiday / Professional Learning and Work Days Begin", "type": "student_holiday" },
-    { "date": "2027-01-06", "name": "Student Holiday / Professional Learning and Work Days End", "type": "student_holiday" },
-    { "date": "2027-01-07", "name": "Second Semester Begins / Six Weeks 4 Begins", "type": "semester_start", "schemaEvent": true },
-    { "date": "2027-01-18", "name": "Dr. Martin Luther King Jr. Day", "type": "holiday", "schemaEvent": true },
-    { "date": "2027-02-11", "name": "End of Six Weeks 4", "type": "quarter_end" },
-    { "date": "2027-02-12", "name": "Student and Teacher Holiday / Bad Weather Makeup Day #1", "type": "holiday", "schemaEvent": true },
+    { "date": "2026-11-23", "endDate": "2026-11-27", "name": "Thanksgiving Break", "type": "break_start", "description": "November 23 is also marked as an SDCE day. Students return November 30." },
+    { "date": "2026-12-17", "name": "First Semester / Six Weeks 3 Ends", "type": "semester_end" },
+    { "date": "2026-12-18", "name": "Student Holiday", "type": "student_holiday", "preserveOfficialName": true },
+    { "date": "2026-12-21", "endDate": "2027-01-01", "name": "Winter Holiday", "type": "break_start", "description": "January 4–6 are also student holidays; students return January 7." },
+    { "date": "2027-01-04", "endDate": "2027-01-06", "name": "Student Holidays / Professional Learning & Work Days", "type": "student_holiday", "description": "Students return January 7.", "preserveOfficialName": true },
+    { "date": "2027-01-07", "name": "Second Semester / Six Weeks 4 Begins", "type": "semester_start" },
+    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
+    { "date": "2027-02-11", "name": "Six Weeks 4 Ends", "type": "quarter_end" },
+    { "date": "2027-02-12", "name": "Student and Teacher Holiday / Bad-Weather Makeup Day", "type": "makeup_day", "status": "TENTATIVE", "badgeLabel": "Holiday / If Needed", "description": "Scheduled holiday unless Mansfield ISD uses the date to recover instructional time." },
     { "date": "2027-02-15", "name": "Student and Teacher Holiday", "type": "holiday" },
     { "date": "2027-02-16", "name": "Six Weeks 5 Begins", "type": "quarter_start" },
-    { "date": "2027-03-15", "name": "Spring Break / SDCE Day", "type": "break_start" },
-    { "date": "2027-03-19", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2027-03-26", "name": "Student Holiday / Bad Weather Makeup Day #2", "type": "student_holiday", "schemaEvent": true },
-    { "date": "2027-04-02", "name": "End of Six Weeks 5", "type": "quarter_end" },
+    { "date": "2027-03-15", "endDate": "2027-03-19", "name": "Spring Break", "type": "break_start", "description": "March 15 is also marked as an SDCE day. Students return March 22." },
+    { "date": "2027-03-26", "name": "Student Holiday / Bad-Weather Makeup Day", "type": "makeup_day", "status": "TENTATIVE", "badgeLabel": "Holiday / If Needed", "description": "Scheduled student holiday unless Mansfield ISD uses the date to recover instructional time." },
+    { "date": "2027-04-02", "name": "Six Weeks 5 Ends", "type": "quarter_end" },
     { "date": "2027-04-05", "name": "Six Weeks 6 Begins", "type": "quarter_start" },
-    { "date": "2027-05-20", "name": "Last Day of School / End of Six Weeks 6", "type": "school_end" },
-    { "date": "2027-05-21", "name": "Teacher Workday", "type": "student_holiday" }
+    { "date": "2027-05-20", "name": "Last Day of School / Six Weeks 6 Ends", "type": "school_end" },
+    { "date": "2027-05-21", "name": "Teacher Workday", "type": "teacher_workday", "hideFromCalendarExport": true }
   ]
 }

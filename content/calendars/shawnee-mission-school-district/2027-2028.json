@@ -1,0 +1,933 @@
+{
+  "institutionId": "shawnee-mission-school-district",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Shawnee Mission School District Calendar 2027–28",
+  "firstDay": "2027-08-12",
+  "firstDayScope": "Earliest student attendance date; applies only to grades 1–7 and 9.",
+  "earlyChildhoodFirstDay": "2027-08-16",
+  "lastDay": "2028-05-23",
+  "lastDayScope": "Final scheduled student date for grades K–11; Pre-K finishes earlier and the district calendar does not identify a senior last day.",
+  "earlyChildhoodLastDay": "2028-05-22",
+  "k11LastDay": "2028-05-23",
+  "temporalCoverageStart": "2027-07-05",
+  "temporalCoverageEnd": "2028-06-19",
+  "reportingPeriodDaysTotal": 172,
+  "reportingPeriodDaysScope": "Total printed across the four SMSD quarters; not a universal attendance-day count for every student group.",
+  "semesters": 2,
+  "sourceUrl": "https://www.smsd.org/calendar",
+  "sourceDocumentPage": "https://www.smsd.org/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1781018461/smsdorg/st4nibtiur2rfmpazwsk/Calendar27-28-Final.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1781018461/smsdorg/st4nibtiur2rfmpazwsk/Calendar27-28-Final.pdf",
+  "sourceCheckedAt": "2026-08-18",
+  "sourceUpdatedAt": "2026-01-29",
+  "sourceChecksumSha256": "eeeb56ec427d3402ebb38cde587a5c2f797589f472c1cd7da9b7e1b8ef452cb8",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.smsd.org/calendar",
+    "linkText": "2027-2028 District Calendar",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1781018461/smsdorg/st4nibtiur2rfmpazwsk/Calendar27-28-Final.pdf",
+    "expectedChecksumSha256": "eeeb56ec427d3402ebb38cde587a5c2f797589f472c1cd7da9b7e1b8ef452cb8"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.smsd.org/calendar",
+      "linkText": "2027-2028 District Calendar (Español)",
+      "expectedPdfUrl": "https://resources.finalsite.net/images/v1781018675/smsdorg/k67fiexxcpqf9jzn6hhx/27-28Spanishcalendar_bothpages_1.pdf"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-18",
+  "dateCreated": "2026-08-18",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-18",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "graduation_schedule_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Board approved January 29, 2026",
+  "sourceCalendarName": "SMSD 2027–28 District Calendar",
+  "schemaCalendarName": "Shawnee Mission School District Calendar 2027–28",
+  "schemaDatasetName": "Shawnee Mission School District 2027–28 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed SMSD dates for 2027–28, including the staggered Pre-K–12 opening, student no-school days, breaks, early dismissals, parent conferences, high school finals and graduation dates.",
+  "schemaSpatialCoverage": "Shawnee Mission and Johnson County, Kansas",
+  "schemaCalendarDownloadName": "Shawnee Mission School District 2027–28 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with SMSD student attendance dates, districtwide breaks and closures, grade-specific opening dates, early dismissals and graduations.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-spanish",
+      "type": "CreativeWork",
+      "name": "SMSD Calendario del Distrito 2027–28 — Español",
+      "url": "https://resources.finalsite.net/images/v1781018675/smsdorg/k67fiexxcpqf9jzn6hhx/27-28Spanishcalendar_bothpages_1.pdf"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-spanish"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "smsd-district-calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideCoveredBreakDatesNote": true,
+  "breaksBeforeAllDates": true,
+  "yearComparisonPosition": "afterAllDates",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "whatsDifferent",
+    "comparison",
+    "nationalTrends",
+    "otherCalendars"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Opening Days",
+      "id": "smsd-2027-2028-opening"
+    },
+    {
+      "label": "Major Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Early Dismissal",
+      "id": "smsd-2027-2028-early-dismissal"
+    },
+    {
+      "label": "Conferences",
+      "id": "smsd-2027-2028-conferences"
+    },
+    {
+      "label": "Graduations",
+      "id": "smsd-2027-2028-graduation"
+    },
+    {
+      "label": "2027 Changes",
+      "id": "smsd-2027-2028-changes"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Shawnee Mission School District Calendar 2027–28: Key Dates",
+  "seoDescription": "Find SMSD 2027–28 first days by grade, school breaks, conference dates, early dismissals, graduations, and official calendar links.",
+  "heroSummary": "Shawnee Mission students start the 2027–28 school year on different days depending on grade. Grades 1–7 and 9 start Thursday, August 12; grades 8 and 10–12 start August 13; and Pre-K and kindergarten start Monday, August 16 after conferences on August 12–13. Thanksgiving Break runs November 22–26, Winter Break December 22–January 3, and Spring Break March 13–17. Pre-K finishes May 22, while grades K–11 finish with early dismissal on May 23.",
+  "heroSourceLine": "Based on the official SMSD 2027–28 District Calendar, approved January 29, 2026",
+  "hideHeroDownloadLink": true,
+  "verificationBadgeText": "Checked against current SMSD sources",
+  "heroVerificationSourceText": "The official English PDF was verified against our archived copy and visually checked in full",
+  "heroVerificationComparisonText": "The official Spanish translation was included as a companion source, not as a separate attendance track",
+  "calendarNotes": "SMSD uses three opening dates, not one universal first day. Grades 1–7 and 9 begin August 12, with early dismissal for grades 1–6; grades 8 and 10–12 begin August 13; Pre-K and kindergarten begin August 16 after conferences August 12–13. SMSD’s four quarter counts total 172 student days, but individual grade groups do not all share the same first and last attendance dates. Fall evening conferences cover grades 7–12 on October 13 and Pre-K–6 on October 14; spring evening conferences cover grades 9–12 on February 9 and Pre-K–8 on February 10. All Pre-K–12 students are out October 15 and February 11 for conferences. Pre-K does not attend December 21 and finishes May 22. Grades K–11 finish with early dismissal May 23. The calendar gives graduation dates and host sites but not an explicit districtwide senior last day.",
+  "keyDatesHeading": "Shawnee Mission School District Calendar 2027–28 Key Dates",
+  "keyDatesSummaryTitle": "SMSD 2027–28 Key Dates",
+  "keyDatesSummarySubtitle": "First days by grade, major breaks, and grade-specific last days",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "Grades 1–7 and 9 Begin",
+      "date": "2027-08-12",
+      "type": "school_start",
+      "schemaDescription": "The first day of classes for SMSD students in grades 1–7 and 9."
+    },
+    {
+      "label": "First Day",
+      "name": "Grades 8 and 10–12 Begin",
+      "date": "2027-08-13",
+      "type": "school_start",
+      "schemaDescription": "The first day of classes for SMSD students in grades 8 and 10–12."
+    },
+    {
+      "label": "First Day",
+      "name": "First Day for Pre-K and Kindergarten",
+      "date": "2027-08-16",
+      "type": "school_start",
+      "schemaDescription": "The first day of classes for SMSD Pre-K and kindergarten students."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2027-11-22",
+      "endDate": "2027-11-26",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2027-12-22",
+      "endDate": "2028-01-03",
+      "type": "break_start"
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "type": "break_start"
+    },
+    {
+      "label": "Pre-K Last Day",
+      "name": "Last Day for Pre-K",
+      "date": "2028-05-22",
+      "type": "school_end",
+      "schemaDescription": "The last day of classes for SMSD Pre-K students."
+    },
+    {
+      "label": "K–11 Last Day",
+      "name": "Last Day for Grades K–11 — Early Dismissal",
+      "date": "2028-05-23",
+      "type": "school_end",
+      "schemaDescription": "The last day of classes for SMSD students in grades K–11."
+    }
+  ],
+  "allDatesTitle": "SMSD 2027–28 District Calendar Dates",
+  "allDatesCoverageNote": "This list preserves the grade and program scope printed in the official PDF. Dates are kept separate when SMSD gives them different student, grade, or staff implications, even when they fall within a longer school break.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1781018461/smsdorg/st4nibtiur2rfmpazwsk/Calendar27-28-Final.pdf",
+  "allDatesSourceLabel": "Official SMSD 2027–28 District Calendar",
+  "dateLegendLabelOverrides": {
+    "Academic Date": "Grade / School Date",
+    "Teacher Workday": "Staff Date",
+    "No School": "No Students",
+    "Early Release": "Early Dismissal"
+  },
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Calendar Downloads and Official SMSD Links",
+  "unifiedDownloadDescription": "Subscribe to SMSD’s official calendar, download a one-time ICS file, or open the official English or Spanish district calendar.",
+  "hideCompatibleCalendars": true,
+  "hideShareCalendarHeading": true,
+  "hideSocialShareButtons": true,
+  "hideCalendarUpdatesButton": true,
+  "officialSubscriptionTitle": "Official SMSD Calendar Subscription",
+  "officialSubscriptionUrl": "webcal://www.smsd.org/calendar/calendar_348.ics",
+  "officialSubscriptionDescription": "Subscribe to SMSD’s official calendar for broader district events and future updates.",
+  "officialSubscriptionButtonLabel": "Subscribe to the Official SMSD Calendar",
+  "icsHeading": "Add SMSD 2027–28 Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file with the 2027–28 dates summarized on this page.",
+  "icsButtonLabel": "Download SMSD Dates (.ics)",
+  "icsButtonSupportText": "The ICS file does not include high school finals, building events or individual conference appointment times. Check the official district or school calendar for those.",
+  "icsSourceNote": "",
+  "hideIcsImportDisclaimer": true,
+  "pdfHeading": "Official SMSD 2027–28 District Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Open the one-page English calendar used to verify the dates and grade-level attendance rules on this page.",
+  "pdfButtonLabel": "View Official SMSD PDF",
+  "pdfVersionLabel": "Board approved January 29, 2026",
+  "groupAlternateCalendarsWithDownloads": true,
+  "alternateCalendarsTitle": "Other Official SMSD 2027–28 Calendars",
+  "alternateCalendarsDescription": "The Spanish PDF is an official translation of the same district schedule. Use the live All Schools Events calendar for later building events and updates.",
+  "alternateCalendars": [
+    {
+      "type": "language",
+      "group": "Official language edition",
+      "label": "SMSD 2027–28 District Calendar — Spanish",
+      "pdfUrl": "https://resources.finalsite.net/images/v1781018675/smsdorg/k67fiexxcpqf9jzn6hhx/27-28Spanishcalendar_bothpages_1.pdf",
+      "description": "Official Spanish translation; board approved January 29, 2026.",
+      "buttonLabel": "View Spanish PDF"
+    }
+  ],
+  "faqOrderLimit": 6,
+  "calendarFaqs": [
+    {
+      "q": "Do all Shawnee Mission students start school on the same day?",
+      "a": "No. Grades 1–7 and 9 begin August 12, grades 8 and 10–12 begin August 13, and Pre-K and kindergarten begin August 16 after conferences on August 12–13."
+    },
+    {
+      "q": "Are the Shawnee Mission Pre-K and kindergarten conference days regular school days?",
+      "a": "No. Pre-K and kindergarten conferences are August 12–13, and students begin classes Monday, August 16. Families should use their school communication for appointment details."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "smsd-2027-2028-opening",
+      "label": "SMSD First Days by Grade",
+      "content": "Not every SMSD student starts on August 12. Grades 1–7 and 9 begin first, grades 8 and 10–12 begin August 13, and Pre-K and kindergarten begin Monday, August 16 after conferences on August 12–13.",
+      "position": "afterKeyDates",
+      "table": {
+        "caption": "SMSD 2027–28 opening schedule by grade",
+        "columns": [
+          "Students",
+          "First attendance date",
+          "What to know"
+        ],
+        "rows": [
+          [
+            "Grades 1–6",
+            "Thursday, August 12",
+            "Early dismissal on the first day"
+          ],
+          [
+            "Grades 7 and 9",
+            "Thursday, August 12",
+            "Regular first day for these grades"
+          ],
+          [
+            "Grades 8 and 10–12",
+            "Friday, August 13",
+            "First day for these grades"
+          ],
+          [
+            "Pre-K and kindergarten",
+            "Monday, August 16",
+            "Conferences are August 12–13"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "smsd-2027-2028-early-dismissal",
+      "label": "SMSD 2027–28 Early Dismissal Dates",
+      "content": "SMSD schedules early dismissal for different grade groups on five dates. The annual district calendar does not publish 2027–28 dismissal times, so families should confirm pickup times with their school.",
+      "position": "afterAllDates",
+      "table": {
+        "caption": "SMSD 2027–28 early dismissal dates by grade",
+        "columns": [
+          "Date",
+          "Students",
+          "What to know"
+        ],
+        "rows": [
+          [
+            "August 12",
+            "Grades 1–6",
+            "Early dismissal on the first day"
+          ],
+          [
+            "December 20",
+            "Grades 9–12",
+            "Early dismissal during fall finals"
+          ],
+          [
+            "December 21",
+            "Grades K–12",
+            "Early dismissal before Winter Break"
+          ],
+          [
+            "May 22",
+            "Grades 9–12",
+            "Early dismissal during spring finals"
+          ],
+          [
+            "May 23",
+            "Grades K–11",
+            "Last day of school and early dismissal"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "smsd-2027-2028-conferences",
+      "label": "Parent Conference Schedules Differ in Fall and Spring",
+      "content": "SMSD uses different grade groupings for evening conferences in fall and spring. In both semesters, the evening conference dates are followed by a no-school day for all Pre-K–12 students.",
+      "position": "afterAllDates",
+      "table": {
+        "caption": "SMSD 2027–28 district conference dates",
+        "columns": [
+          "Date",
+          "Students covered",
+          "Schedule"
+        ],
+        "rows": [
+          [
+            "October 13",
+            "Grades 7–12",
+            "District evening conferences"
+          ],
+          [
+            "October 14",
+            "Pre-K–6",
+            "District evening conferences"
+          ],
+          [
+            "October 15",
+            "Pre-K–12",
+            "No school — parent conferences"
+          ],
+          [
+            "February 9",
+            "Grades 9–12",
+            "District evening conferences"
+          ],
+          [
+            "February 10",
+            "Pre-K–8",
+            "District evening conferences"
+          ],
+          [
+            "February 11",
+            "Pre-K–12",
+            "No school — parent conferences"
+          ]
+        ],
+        "footnote": "Schools provide individual conference appointment times."
+      }
+    },
+    {
+      "id": "smsd-2027-2028-calendar-guide",
+      "label": "Which SMSD Calendar Should Families Use?",
+      "content": "Use the annual PDF for the adopted school-year schedule and the official subscription for broader district events and ongoing updates.",
+      "position": "beforeSources",
+      "table": {
+        "caption": "SMSD 2027–28 calendar sources by planning task",
+        "columns": [
+          "Planning need",
+          "Best official source"
+        ],
+        "rows": [
+          [
+            "Opening days, districtwide closures, finals and graduation dates",
+            "Annual district calendar PDF"
+          ],
+          [
+            "Broader district events and ongoing updates",
+            "Official SMSD calendar subscription"
+          ],
+          [
+            "Building events and school-specific changes",
+            "Live All Schools Events calendar or the school calendar"
+          ],
+          [
+            "Conference appointment time",
+            "Communication from the student's school"
+          ],
+          [
+            "Graduation dates and host sites",
+            "Annual district calendar PDF"
+          ],
+          [
+            "Ceremony times and guest details",
+            "School communication or the live school calendar"
+          ],
+          [
+            "Spanish translation of the district schedule",
+            "Official Spanish district calendar PDF"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "smsd-2027-2028-quarter-days",
+      "label": "SMSD Lists 172 Student Days Across Four Quarters",
+      "content": "SMSD’s four quarter counts total 172 student days in both school years, although the distribution across quarters changes in 2027–28.",
+      "position": "beforeSources",
+      "table": {
+        "columns": [
+          "Quarter",
+          "2026–27",
+          "2027–28"
+        ],
+        "rows": [
+          [
+            "Quarter 1",
+            "40",
+            "39"
+          ],
+          [
+            "Quarter 2",
+            "43",
+            "45"
+          ],
+          [
+            "Quarter 3",
+            "43",
+            "44"
+          ],
+          [
+            "Quarter 4",
+            "46",
+            "44"
+          ]
+        ],
+        "footnote": "The four quarter counts total 172 student days in each year; individual grade groups do not necessarily share the same first and last attendance dates."
+      }
+    },
+    {
+      "id": "smsd-2027-2028-changes",
+      "label": "What Changes from SMSD 2026–27 to 2027–28?",
+      "content": "The grade 1–7 and 9 opening remains August 12, but Pre-K and kindergarten begin after the weekend. The final K–11 day moves from May 26 to May 23, and both finals windows change.",
+      "position": "afterYearDiff",
+      "table": {
+        "caption": "Published SMSD calendar changes between school years",
+        "columns": [
+          "Date group",
+          "2026–27",
+          "2027–28"
+        ],
+        "rows": [
+          [
+            "Pre-K / kindergarten first day",
+            "August 14",
+            "August 16"
+          ],
+          [
+            "Thanksgiving Break",
+            "November 23–27",
+            "November 22–26"
+          ],
+          [
+            "Winter Break",
+            "December 21–January 4",
+            "December 22–January 3"
+          ],
+          [
+            "Spring Break",
+            "March 15–19",
+            "March 13–17"
+          ],
+          [
+            "High school fall finals",
+            "December 16–18",
+            "December 17, 20–21"
+          ],
+          [
+            "High school spring finals",
+            "May 24–26",
+            "May 19, 22–23"
+          ],
+          [
+            "Last day for grades K–11",
+            "May 26",
+            "May 23"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "smsd-2027-2028-graduation",
+      "label": "SMSD 2028 Graduation Dates and Host Sites",
+      "content": "The district calendar gives dates and host sites for five high schools and Horizons. Schools provide ceremony times and guest details.",
+      "position": "afterAllDates",
+      "table": {
+        "caption": "SMSD graduations printed in the 2027–28 district calendar",
+        "columns": [
+          "Date",
+          "Ceremony",
+          "Host site"
+        ],
+        "rows": [
+          [
+            "May 16",
+            "Shawnee Mission East",
+            "Shawnee Mission North"
+          ],
+          [
+            "May 16",
+            "Shawnee Mission South",
+            "Shawnee Mission South"
+          ],
+          [
+            "May 17",
+            "Shawnee Mission North",
+            "Shawnee Mission North"
+          ],
+          [
+            "May 17",
+            "Shawnee Mission West",
+            "Shawnee Mission South"
+          ],
+          [
+            "May 18",
+            "Horizons",
+            "See school communication"
+          ],
+          [
+            "May 18",
+            "Shawnee Mission Northwest",
+            "Shawnee Mission North"
+          ]
+        ]
+      }
+    }
+  ],
+  "events": [
+    {
+      "date": "2027-07-05",
+      "name": "Independence Day Observed — District Offices Closed",
+      "type": "holiday",
+      "description": "Office closure before the student year.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-03",
+      "endDate": "2027-08-05",
+      "name": "New Teachers Report / Professional Learning",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Dates",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-06",
+      "name": "Continuing Teachers Report / Professional Learning",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Date",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-09",
+      "endDate": "2027-08-11",
+      "name": "Professional Learning / Work Time",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Dates",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-12",
+      "name": "First Day for Grades 1–7 and 9",
+      "type": "school_start",
+      "description": "Grades 1–6 dismiss early. Grades 8 and 10–12 do not begin until August 13."
+    },
+    {
+      "date": "2027-08-12",
+      "endDate": "2027-08-13",
+      "name": "Pre-K and Kindergarten Conferences",
+      "type": "academic",
+      "badgeLabel": "Pre-K / K Conferences",
+      "description": "Pre-K and kindergarten students begin August 16.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-13",
+      "name": "First Day for Grades 8 and 10–12",
+      "type": "school_start"
+    },
+    {
+      "date": "2027-08-16",
+      "name": "First Day for Pre-K and Kindergarten",
+      "type": "school_start"
+    },
+    {
+      "date": "2027-09-06",
+      "name": "Labor Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-09-17",
+      "name": "Professional Learning — No School for Pre-K–12",
+      "type": "teacher_workday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2027-10-08",
+      "name": "Teacher Workday — No School for Pre-K–12",
+      "type": "teacher_workday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2027-10-13",
+      "name": "District Evening Conferences for Grades 7–12",
+      "type": "academic",
+      "badgeLabel": "Evening Conferences",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-10-14",
+      "name": "District Evening Conferences for Pre-K–6",
+      "type": "academic",
+      "badgeLabel": "Evening Conferences",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-10-15",
+      "name": "Parent Conferences — No School for Pre-K–12",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-11-01",
+      "name": "Professional Learning — No School for Pre-K–12",
+      "type": "teacher_workday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2027-11-22",
+      "endDate": "2027-11-26",
+      "name": "Thanksgiving Break — No School for Pre-K–12",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-11-22",
+      "name": "Teacher-Facilitated Professional Learning",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Date",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-11-23",
+      "name": "Teacher Flex Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Date",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-12-17",
+      "dates": [
+        "2027-12-17",
+        "2027-12-20",
+        "2027-12-21"
+      ],
+      "displayDate": "Dec. 17 and Dec. 20–21, 2027",
+      "displayAsRange": false,
+      "name": "High School Semester Exams",
+      "type": "academic",
+      "badgeLabel": "Grades 9–12",
+      "description": "December 20 is an early-dismissal day for grades 9–12; December 21 is an early-dismissal day for grades K–12.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-12-20",
+      "name": "Early Dismissal for Grades 9–12",
+      "type": "early_dismissal"
+    },
+    {
+      "date": "2027-12-21",
+      "name": "No School for Pre-K",
+      "type": "no_school",
+      "badgeLabel": "Pre-K Only"
+    },
+    {
+      "date": "2027-12-21",
+      "name": "Early Dismissal for Grades K–12",
+      "type": "early_dismissal"
+    },
+    {
+      "date": "2027-12-22",
+      "endDate": "2028-01-03",
+      "name": "Winter Break — No School for Pre-K–12",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-01-03",
+      "name": "Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Date",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-01-17",
+      "name": "Martin Luther King Jr. Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-02-09",
+      "name": "District Evening Conferences for Grades 9–12",
+      "type": "academic",
+      "badgeLabel": "Evening Conferences",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-02-10",
+      "name": "District Evening Conferences for Pre-K–8",
+      "type": "academic",
+      "badgeLabel": "Evening Conferences",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-02-11",
+      "name": "Parent Conferences — No School for Pre-K–12",
+      "type": "no_school"
+    },
+    {
+      "date": "2028-02-18",
+      "name": "Professional Learning — No School for Pre-K–12",
+      "type": "teacher_workday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2028-02-21",
+      "name": "Presidents Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-03-10",
+      "name": "Teacher Workday — No School for Pre-K–12",
+      "type": "teacher_workday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "name": "Spring Break — No School for Pre-K–12",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-03-20",
+      "name": "Professional Learning — No School for Pre-K–12",
+      "type": "teacher_workday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2028-04-14",
+      "name": "Professional Learning — No School for Pre-K–12",
+      "type": "teacher_workday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2028-05-05",
+      "name": "Teacher Flex Day — No School for Pre-K–12",
+      "type": "teacher_workday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2028-05-16",
+      "name": "Shawnee Mission East and Shawnee Mission South Graduations",
+      "type": "graduation",
+      "description": "Shawnee Mission East is hosted at Shawnee Mission North; Shawnee Mission South is hosted at Shawnee Mission South."
+    },
+    {
+      "date": "2028-05-17",
+      "name": "Shawnee Mission North and Shawnee Mission West Graduations",
+      "type": "graduation",
+      "description": "Shawnee Mission North is hosted at Shawnee Mission North; Shawnee Mission West is hosted at Shawnee Mission South."
+    },
+    {
+      "date": "2028-05-18",
+      "name": "Horizons and Shawnee Mission Northwest Graduations",
+      "type": "graduation",
+      "description": "Shawnee Mission Northwest is hosted at Shawnee Mission North. Check school communication for the Horizons site and all ceremony times."
+    },
+    {
+      "date": "2028-05-19",
+      "dates": [
+        "2028-05-19",
+        "2028-05-22",
+        "2028-05-23"
+      ],
+      "displayDate": "May 19 and May 22–23, 2028",
+      "displayAsRange": false,
+      "name": "High School Semester Exams",
+      "type": "academic",
+      "badgeLabel": "Grades 9–12",
+      "description": "May 22 is also an early-dismissal day for grades 9–12; May 23 is the K–11 early-dismissal day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-05-22",
+      "name": "Last Day for Pre-K",
+      "type": "school_end",
+      "badgeLabel": "Pre-K"
+    },
+    {
+      "date": "2028-05-22",
+      "name": "Early Dismissal for Grades 9–12",
+      "type": "early_dismissal"
+    },
+    {
+      "date": "2028-05-23",
+      "name": "Last Day for Grades K–11 — Early Dismissal",
+      "type": "school_end",
+      "badgeLabel": "Grades K–11",
+      "description": "The PDF does not label this as the last day for grade 12."
+    },
+    {
+      "date": "2028-05-24",
+      "name": "Teacher Workday",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Date",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-05-25",
+      "name": "Teacher-Facilitated Professional Learning",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Date",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-05-29",
+      "name": "Memorial Day — District Offices Closed",
+      "type": "holiday",
+      "description": "Office closure after the student year.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-06-19",
+      "name": "Juneteenth — District Offices Closed",
+      "type": "holiday",
+      "description": "Office closure after the student year.",
+      "hideFromCalendarExport": true
+    }
+  ],
+  "faqDisplayQuestions": [
+    "Do all Shawnee Mission students start school on the same day?",
+    "Are the Shawnee Mission Pre-K and kindergarten conference days regular school days?",
+    "Do SMSD parent-conference nights cover the same grades in fall and spring?",
+    "Does Shawnee Mission publish an official Spanish calendar?",
+    "Where should SMSD families check school-specific events?",
+    "Does the Shawnee Mission ICS file update automatically?"
+  ],
+  "faqDisplayLimit": 6,
+  "hideRelatedDistrictDescriptions": true,
+  "relatedDistrictsTitle": "More Kansas School Calendars",
+  "relatedDistrictsDescription": "View another reviewed Kansas district calendar.",
+  "sourceReviewSummary": "Reviewed August 18, 2026, against the SMSD calendar hub and the official English 2027–28 District Calendar.",
+  "sourceReviewDetails": [
+    "The reviewed local English PDF matches the current official download byte for byte (SHA-256: eeeb56ec427d3402ebb38cde587a5c2f797589f472c1cd7da9b7e1b8ef452cb8).",
+    "The one-page PDF was text-extracted, rendered and visually checked in full.",
+    "Opening days, early dismissals, conference grade bands, finals and graduation host sites were kept separate instead of being collapsed into generic events.",
+    "May 23 is labeled as the last day for grades K–11, not as a universal Pre-K–12 last day."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Shawnee Mission School District sources.",
+  "sourceNextReviewText": "Next review: if SMSD revises the annual PDF, publishes updated school hours or changes the graduation schedule.",
+  "sources": [
+    {
+      "label": "SMSD district calendar and live events",
+      "url": "https://www.smsd.org/calendar"
+    },
+    {
+      "label": "Official SMSD 2027–28 District Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1781018461/smsdorg/st4nibtiur2rfmpazwsk/Calendar27-28-Final.pdf"
+    },
+    {
+      "label": "Official SMSD 2027–28 Spanish Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1781018675/smsdorg/k67fiexxcpqf9jzn6hhx/27-28Spanishcalendar_bothpages_1.pdf"
+    }
+  ]
+}

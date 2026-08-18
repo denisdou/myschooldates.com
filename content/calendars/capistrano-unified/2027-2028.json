@@ -1,198 +1,644 @@
 {
   "institutionId": "capistrano-unified",
   "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Capistrano Unified School District Calendar 2027–28",
   "firstDay": "2027-08-16",
   "lastDay": "2028-06-01",
   "sourceUrl": "https://www.capousd.org/District/Our-District/Calendars/index.html",
+  "sourceDocumentPage": "https://www.capousd.org/District/Our-District/Calendars/index.html",
   "sourcePdfUrl": "https://d16k74nzx9emoe.cloudfront.net/13ddfaac-9b53-4a20-afb9-8c62e7dd2cd2/CUSD%20Calendar%202027-2028%20Board%20Approved%20April%2022-%202026.pdf",
-  "lastVerifiedAt": "2026-07-22",
+  "lastCheckedPdfUrl": "https://d16k74nzx9emoe.cloudfront.net/13ddfaac-9b53-4a20-afb9-8c62e7dd2cd2/CUSD%20Calendar%202027-2028%20Board%20Approved%20April%2022-%202026.pdf",
+  "sourceCheckedAt": "2026-08-18",
+  "sourceUpdatedAt": "2026-04-22",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "lastVerifiedAt": "2026-08-18",
+  "dateCreated": "2026-07-22",
   "datePublished": "2026-07-22",
-  "dateModified": "2026-07-22",
+  "dateModified": "2026-08-18",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "source_pdf_replacement",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Board approved April 22, 2026",
+  "sourceCalendarName": "Capistrano Unified School District 2027–28 School Calendar",
   "calendarType": "traditional",
+  "allDatesMode": "keyDates",
   "totalSchoolDays": 180,
-  "yearNumbersMode": "compact",
-  "seoTitle": "CUSD Calendar 2027-2028: Capistrano Holidays, Breaks & PDF",
-  "seoDescription": "CUSD 2027-2028 calendar with Aug 16 first day, Jun 1 last day, minimum days, Thanksgiving, Winter Recess, Spring Recess, PDF and ICS.",
-  "calendarNotes": "Capistrano Unified lists 180 school days for 2027-2028. The first day of school is August 16, 2027 and is a minimum day for elementary and middle school students. Fall Recess runs November 22-24, 2027, followed by Thanksgiving holidays on November 25-26. Winter Recess runs December 20-31, 2027, and Spring Recess runs April 3-7, 2028. The last day of school is June 1, 2028 and is a minimum day for all students with graduation ceremonies.",
-  "calendarFaqs": [
-    {
-      "q": "When does CUSD start school in 2027?",
-      "a": "Capistrano Unified starts the 2027-2028 school year on Monday, August 16, 2027."
-    },
-    {
-      "q": "When is CUSD Winter Recess in 2027-2028?",
-      "a": "Winter Recess runs Monday, December 20 through Friday, December 31, 2027."
-    },
-    {
-      "q": "When is CUSD Spring Recess in 2028?",
-      "a": "Spring Recess runs Monday, April 3 through Friday, April 7, 2028."
-    },
-    {
-      "q": "When is the last day of school for CUSD in 2028?",
-      "a": "The last day of school is Thursday, June 1, 2028. The calendar lists it as a minimum day for all students with graduation ceremonies."
-    },
-    {
-      "q": "Does CUSD have school on Veterans Day?",
-      "a": "No. The CUSD 2027-2028 calendar lists Veterans Day on Thursday, November 11, 2027 and Veterans Day Recess on Friday, November 12, 2027 as district no-school dates."
-    },
-    {
-      "q": "When does CUSD Winter Recess end?",
-      "a": "CUSD Winter Recess ends on Friday, December 31, 2027, and school resumes on Monday, January 3, 2028."
-    },
-    {
-      "q": "Are CUSD calendars different by school?",
-      "a": "This page summarizes the districtwide CUSD 2027-2028 school-year calendar. Individual schools may publish separate campus events, bell schedules, athletics, graduation details, back-to-school night assignments, and activity calendars."
-    },
-    {
-      "q": "Where can I download the CUSD calendar PDF?",
-      "a": "Use the official CUSD 2027-2028 calendar PDF link on this page for the source calendar. MySchoolDates also provides an importable calendar file for Google Calendar, Apple Calendar, and Outlook."
-    },
-    {
-      "q": "Does CUSD have minimum days?",
-      "a": "Yes. The 2027-2028 CUSD calendar lists minimum days for elementary and middle school students on the first day, elementary parent conference windows, high school final exam windows, and the last day of school."
-    },
-    {
-      "q": "Does CUSD have a calendar for each school?",
-      "a": "Capistrano Unified publishes a districtwide school-year calendar, while individual CUSD schools may provide additional campus-specific dates for events, bell schedules, athletics, performances, graduation activities, and school programs."
-    },
-    {
-      "q": "When are CUSD holidays in 2027-2028?",
-      "a": "Major CUSD holidays and no-school periods in 2027-2028 include Labor Day, Veterans Day, Veterans Day Recess, Fall Recess, Thanksgiving holidays, Winter Recess, Martin Luther King Jr. Day, Lincoln Day, Washington Day, Spring Recess, Memorial Day, and observed summer holidays listed on the official calendar."
-    },
-    {
-      "q": "Can I add the CUSD calendar to Google Calendar?",
-      "a": "Yes. MySchoolDates provides an ICS calendar file that can be imported into Google Calendar, Apple Calendar, and Outlook. The file is a one-time import, so families should verify later changes with the official CUSD calendar source."
-    }
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "heroFactChips": [
+    "180 school days"
   ],
-  "customSections": [
-    {
-      "id": "cusd-2027-2028-calendar-summary",
-      "label": "CUSD 2027-2028 Calendar Summary",
-      "position": "afterBreaks",
-      "content": "The CUSD 2027-2028 school year runs from August 16, 2027 through June 1, 2028. Key planning periods include the first student day on August 16, Winter Recess from December 20-31, 2027, Spring Recess from April 3-7, 2028, and the last student day on June 1, 2028. The district calendar includes 180 school days."
-    },
-    {
-      "id": "cusd-2027-2028-breaks-explained",
-      "label": "CUSD 2027-2028 Breaks Explained",
-      "position": "afterBreaks",
-      "content": "These CUSD recess periods are the main planning windows for families because they affect childcare, travel, appointments, student activities, and school routines. Always confirm campus-specific events with the assigned school before making time-sensitive plans.",
-      "table": {
-        "columns": ["Break", "Dates", "What families should know"],
-        "rows": [
-          ["Fall Recess", "November 22-24, 2027", "A short Thanksgiving-week recess before the Thanksgiving holidays on November 25-26."],
-          ["Winter Recess", "December 20-31, 2027", "The longest continuous recess period in the CUSD 2027-2028 school year and a major childcare and travel planning window."],
-          ["Spring Recess", "April 3-7, 2028", "The main spring vacation week for CUSD families; school resumes Monday, April 10, 2028."]
-        ]
-      }
-    },
-    {
-      "id": "planning-around-cusd-calendar-2027-2028",
-      "label": "Planning Around the CUSD Calendar",
-      "position": "afterAbout",
-      "content": "Families often use the CUSD 2027-2028 calendar to plan vacations, childcare arrangements, appointments, transportation, extracurricular activities, and campus events throughout the school year. Winter Recess and Spring Recess are the longest student break windows, while minimum days, parent conference weeks, teacher pre-service days, and high school final exam schedules can affect pickup times and after-school coverage.\n\nThe district calendar establishes the main academic schedule, while individual campuses may publish additional operational dates that apply only to their students. Parents should confirm school-specific announcements for back-to-school nights, athletics, performances, graduation activities, field trips, and program events that do not appear as districtwide calendar dates.",
-      "table": {
-        "columns": ["Date Type", "Why it matters"],
-        "rows": [
-          ["First Student Day", "Transportation, childcare, school supplies, and first-week routines."],
-          ["Winter Recess", "Longer travel planning, childcare coverage, and holiday activity schedules."],
-          ["Minimum Days", "Pickup arrangements, after-school coverage, and campus dismissal-time checks."],
-          ["Parent Conferences", "Elementary schedule adjustments and family appointment planning."],
-          ["Last Day", "Summer program, travel, graduation, and end-of-year childcare planning."]
-        ]
-      }
-    },
-    {
-      "id": "cusd-calendar-review-information-2027-2028",
-      "label": "CUSD Calendar Review Information",
-      "position": "beforeSources",
-      "content": "This page was last reviewed on July 22, 2026 against the official Capistrano Unified 2027-2028 calendar source. MySchoolDates checked the first day, last day, holidays, fall recess, winter recess, spring recess, minimum days, teacher workdays, semester dates, progress reporting dates, downloadable files, and official source links."
-    },
-    {
-      "id": "how-this-cusd-calendar-was-prepared-2027-2028",
-      "label": "How This CUSD Calendar Was Prepared",
-      "position": "beforeSources",
-      "content": "This CUSD calendar page is prepared from the district's published school calendar documents. MySchoolDates extracts and reviews first and last student days, holidays and recess periods, minimum days and early dismissals, semester and reporting dates, and downloadable calendar files. Dates are checked against the official district source before publication."
-    },
-    {
-      "id": "cusd-calendar-updates-and-changes-2027-2028",
-      "label": "CUSD Calendar Updates and Changes",
-      "position": "beforeSources",
-      "content": "School calendars may be revised after board approval, district announcements, or source-file updates. MySchoolDates tracks the published CUSD calendar version shown on this page and recommends checking the official Capistrano Unified calendar source before making travel plans, changing childcare arrangements, or relying on a minimum-day schedule."
-    }
-  ],
-  "yearNumbers": [
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideBreakDurationBadges": true,
+  "hideCoveredBreakDatesNote": true,
+  "seoTitle": "Capistrano Unified Calendar 2027–28: Key Dates, Breaks & PDF",
+  "seoDescription": "Capistrano Unified (CUSD) 2027–28 calendar with first and last school days, pupil-free days, minimum days, breaks, official PDF, and ICS download.",
+  "heroSummary": "Capistrano Unified starts the 2027–28 school year on Monday, August 16, 2027. The last day of school is Thursday, June 1, 2028, and is a minimum day for all students. Spring Recess runs April 3–7, 2028.",
+  "heroSourceLine": "Board approved April 22, 2026",
+  "verificationBadgeText": "Checked against the Board-approved CUSD 2027–28 calendar",
+  "calendarNotes": "The CUSD calendar includes two K–12 pupil-free days, a two-day Veterans Day recess, grade-specific minimum days, Back-to-School Night windows, reporting dates, three recess periods, and a minimum-day schedule on the last day of school.",
+  "keyDatesSummaryTitle": "CUSD 2027–28 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, major recess periods, and Thanksgiving week",
+  "keyDateSummaryItems": [
     {
       "label": "First Day",
-      "value": "Aug 16",
-      "detail": "Families begin the CUSD school year with the first student attendance day on August 16, 2027."
+      "name": "First Day of School — Minimum Day for Elementary and Middle School Students",
+      "date": "2027-08-16",
+      "type": "school_start"
     },
     {
-      "label": "Major Break Periods",
-      "value": "3",
-      "detail": "Fall Recess, Winter Recess, and Spring Recess are the main scheduled student break periods for CUSD families."
+      "label": "Thanksgiving",
+      "name": "Fall Recess and Thanksgiving Holidays",
+      "date": "2027-11-22",
+      "endDate": "2027-11-26",
+      "type": "break_start"
     },
     {
-      "label": "Spring Recess",
-      "value": "Apr 3-7",
-      "detail": "Spring Recess is the main spring travel and childcare planning week for CUSD families."
+      "label": "Winter",
+      "name": "Winter Recess",
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "type": "break_start",
+      "description": "School resumes Monday, January 3."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Recess",
+      "date": "2028-04-03",
+      "endDate": "2028-04-07",
+      "type": "break_start",
+      "description": "School resumes Monday, April 10."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School — Minimum Day for All Students",
+      "date": "2028-06-01",
+      "type": "school_end"
+    }
+  ],
+  "breaksTitle": "CUSD School Recesses and Return Dates",
+  "breakNotes": {
+    "Fall Recess": "Thanksgiving holidays follow on November 25–26. School resumes Monday, November 29.",
+    "Winter Recess": "School resumes Monday, January 3.",
+    "Spring Recess": "School resumes Monday, April 10."
+  },
+  "allDatesTitle": "CUSD 2027–28 Student Calendar Dates",
+  "allDatesCoverageNote": "This table lists districtwide student dates from the Board-approved CUSD calendar, including holidays, recesses, pupil-free days, minimum days, Back-to-School Night windows, and reporting dates. Check the assigned school for exact dismissal and campus-event times.",
+  "allDatesSourceUrl": "https://d16k74nzx9emoe.cloudfront.net/13ddfaac-9b53-4a20-afb9-8c62e7dd2cd2/CUSD%20Calendar%202027-2028%20Board%20Approved%20April%2022-%202026.pdf",
+  "allDatesSourceLabel": "Official CUSD 2027–28 calendar PDF",
+  "dateLegendLabelOverrides": {
+    "Early Release": "Minimum Day",
+    "Academic Date": "School Calendar Date",
+    "No School": "No School for Students"
+  },
+  "customSections": [
+    {
+      "id": "cusd-2027-2028-minimum-pupil-free-days",
+      "label": "CUSD Minimum Days and Pupil-Free Days",
+      "position": "afterKeyDates",
+      "content": "CUSD uses the term “Minimum Day” for shortened student schedules. The Board-approved 2027–28 calendar lists the dates below. Individual schools may set their own dismissal times and specific Back-to-School Night dates within the district window.",
+      "table": {
+        "columns": [
+          "Dates",
+          "Who is affected",
+          "CUSD calendar label"
+        ],
+        "rows": [
+          [
+            "Aug. 16, 2027",
+            "Elementary and middle school students",
+            "Opening day minimum day"
+          ],
+          [
+            "Nov. 1, 2027",
+            "K–12 students",
+            "No School — K–12 Pupil-Free Day"
+          ],
+          [
+            "Nov. 2–5, 2027",
+            "Elementary students",
+            "Parent conference minimum days"
+          ],
+          [
+            "Dec. 14–16, 2027",
+            "High school students",
+            "Final exam minimum days"
+          ],
+          [
+            "Dec. 17, 2027",
+            "K–12 students",
+            "No School — K–12 Pupil-Free Day"
+          ],
+          [
+            "Feb. 28–Mar. 2, 2028",
+            "Elementary students",
+            "Parent conference minimum days"
+          ],
+          [
+            "May 30–Jun. 1, 2028",
+            "High school students",
+            "Final exam minimum days"
+          ],
+          [
+            "Jun. 1, 2028",
+            "All students",
+            "Last day minimum day"
+          ]
+        ]
+      }
     }
   ],
   "events": [
-    { "date": "2027-07-05", "name": "Independence Day Holiday Observed", "type": "holiday" },
-    { "date": "2027-08-10", "name": "New Teacher Pre-Service Day", "type": "teacher_workday" },
-    { "date": "2027-08-11", "name": "Elementary School Professional Development", "type": "teacher_workday" },
-    { "date": "2027-08-12", "name": "All Teachers Pre-Service Day", "type": "teacher_workday" },
-    { "date": "2027-08-13", "name": "All Teachers Pre-Service Day", "type": "teacher_workday" },
-    { "date": "2027-08-16", "name": "Opening Day of School", "type": "school_start" },
-    { "date": "2027-08-16", "name": "Minimum Day for Elementary and Middle School Students", "type": "early_release" },
-    { "date": "2027-08-24", "name": "Back-to-School Night Window Begins - Middle School", "type": "academic" },
-    { "date": "2027-08-26", "name": "Back-to-School Night Window Ends - Middle School", "type": "academic" },
-    { "date": "2027-08-31", "name": "Back-to-School Night Window Begins - Elementary School", "type": "academic" },
-    { "date": "2027-09-02", "name": "Back-to-School Night Window Ends - Elementary School", "type": "academic" },
-    { "date": "2027-09-06", "name": "Labor Day", "type": "holiday" },
-    { "date": "2027-09-07", "name": "Back-to-School Night Window Begins - High School", "type": "academic" },
-    { "date": "2027-09-09", "name": "Back-to-School Night Window Ends - High School", "type": "academic" },
-    { "date": "2027-10-01", "name": "End of First Progress Reporting Period - High School", "type": "academic" },
-    { "date": "2027-10-15", "name": "End of First Quarter - Middle School", "type": "academic" },
-    { "date": "2027-10-29", "name": "End of First Reporting Period - Elementary", "type": "academic" },
-    { "date": "2027-11-01", "name": "No School - K-12 Pupil-Free Day", "type": "teacher_workday" },
-    { "date": "2027-11-02", "name": "Elementary Parent Conferences Minimum Days Begin", "type": "early_release" },
-    { "date": "2027-11-05", "name": "Elementary Parent Conferences Minimum Days End", "type": "early_release" },
-    { "date": "2027-11-11", "name": "Veterans Day", "type": "holiday" },
-    { "date": "2027-11-12", "name": "Veterans Day Recess", "type": "holiday" },
-    { "date": "2027-11-12", "name": "End of Second Progress Reporting Period - High School", "type": "academic" },
-    { "date": "2027-11-22", "name": "Fall Recess Begins", "type": "break_start" },
-    { "date": "2027-11-24", "name": "Fall Recess Ends", "type": "break_end" },
-    { "date": "2027-11-25", "name": "Thanksgiving Holiday", "type": "holiday" },
-    { "date": "2027-11-26", "name": "Thanksgiving Holiday", "type": "holiday" },
-    { "date": "2027-11-29", "name": "School Resumes", "type": "academic" },
-    { "date": "2027-12-14", "name": "High School Final Exam Minimum Days Begin", "type": "early_release" },
-    { "date": "2027-12-16", "name": "High School Final Exam Minimum Days End", "type": "early_release" },
-    { "date": "2027-12-16", "name": "End of First Semester - High School", "type": "academic" },
-    { "date": "2027-12-16", "name": "End of Second Quarter - Middle School", "type": "academic" },
-    { "date": "2027-12-17", "name": "No School - K-12 Pupil-Free Day", "type": "teacher_workday" },
-    { "date": "2027-12-20", "name": "Winter Recess Begins", "type": "break_start" },
-    { "date": "2027-12-31", "name": "Winter Recess Ends", "type": "break_end" },
-    { "date": "2028-01-03", "name": "School Resumes and Second Semester Begins", "type": "academic" },
-    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2028-02-17", "name": "End of First Progress Reporting Period - High School", "type": "academic" },
-    { "date": "2028-02-18", "name": "Lincoln Day", "type": "holiday" },
-    { "date": "2028-02-21", "name": "Washington Day", "type": "holiday" },
-    { "date": "2028-02-25", "name": "End of Second Progress Reporting Period - Elementary", "type": "academic" },
-    { "date": "2028-02-28", "name": "Elementary Parent Conferences Minimum Days Begin", "type": "early_release" },
-    { "date": "2028-03-02", "name": "Elementary Parent Conferences Minimum Days End", "type": "early_release" },
-    { "date": "2028-03-10", "name": "End of Third Quarter - Middle School", "type": "academic" },
-    { "date": "2028-04-03", "name": "Spring Recess Begins", "type": "break_start" },
-    { "date": "2028-04-07", "name": "Spring Recess Ends", "type": "break_end" },
-    { "date": "2028-04-07", "name": "Spring Holiday", "type": "holiday" },
-    { "date": "2028-04-10", "name": "School Resumes", "type": "academic" },
-    { "date": "2028-04-14", "name": "End of Second Progress Reporting Period - High School", "type": "academic" },
-    { "date": "2028-05-29", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2028-05-30", "name": "High School Final Exam Minimum Days Begin", "type": "early_release" },
-    { "date": "2028-06-01", "name": "High School Final Exam Minimum Days End", "type": "early_release" },
-    { "date": "2028-06-01", "name": "Last Day of School - Minimum Day for All Students", "type": "school_end" },
-    { "date": "2028-06-01", "name": "End of Second Semester - High School", "type": "academic" },
-    { "date": "2028-06-02", "name": "Last Day of School for All Teachers", "type": "teacher_workday" },
-    { "date": "2028-06-19", "name": "Juneteenth", "type": "holiday" }
+    {
+      "date": "2027-07-05",
+      "name": "Independence Day Holiday Observed",
+      "type": "holiday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-10",
+      "name": "New Teacher Pre-Service Day",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-11",
+      "name": "Elementary School Professional Development",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-12",
+      "endDate": "2027-08-13",
+      "name": "All Teachers Pre-Service Days",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-16",
+      "name": "Opening Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2027-08-16",
+      "name": "Minimum Day for Elementary and Middle School Students",
+      "type": "early_release",
+      "badgeLabel": "Minimum Day"
+    },
+    {
+      "date": "2027-08-24",
+      "endDate": "2027-08-26",
+      "name": "Back-to-School Night Window — Middle School",
+      "type": "academic",
+      "description": "District date window; confirm your school's specific date."
+    },
+    {
+      "date": "2027-08-31",
+      "endDate": "2027-09-02",
+      "name": "Back-to-School Night Window — Elementary School",
+      "type": "academic",
+      "description": "District date window; confirm your school's specific date."
+    },
+    {
+      "date": "2027-09-06",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-09-07",
+      "endDate": "2027-09-09",
+      "name": "Back-to-School Night Window — High School",
+      "type": "academic",
+      "description": "District date window; confirm your school's specific date."
+    },
+    {
+      "date": "2027-10-01",
+      "name": "End of First Progress Reporting Period — High School",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-10-15",
+      "name": "End of First Quarter — Middle School",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-10-29",
+      "name": "End of First Reporting Period — Elementary",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-11-01",
+      "name": "No School — K–12 Pupil-Free Day",
+      "type": "no_school",
+      "badgeLabel": "Pupil-Free Day",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-11-02",
+      "endDate": "2027-11-05",
+      "name": "Elementary Parent Conference Minimum Days",
+      "type": "early_release",
+      "badgeLabel": "Minimum Day"
+    },
+    {
+      "date": "2027-11-11",
+      "name": "Veterans Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-11-12",
+      "name": "Veterans Day Recess",
+      "type": "holiday",
+      "badgeLabel": "Recess",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-11-12",
+      "name": "End of Second Progress Reporting Period — High School",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-11-22",
+      "endDate": "2027-11-24",
+      "name": "Fall Recess",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-11-25",
+      "endDate": "2027-11-26",
+      "name": "Thanksgiving Holidays",
+      "type": "holiday",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-11-29",
+      "name": "School Resumes",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-12-14",
+      "endDate": "2027-12-16",
+      "name": "High School Final Exam Minimum Days",
+      "type": "early_release",
+      "badgeLabel": "Minimum Day"
+    },
+    {
+      "date": "2027-12-16",
+      "name": "End of First Semester — High School",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-12-16",
+      "name": "End of Second Quarter — Middle School",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-12-17",
+      "name": "No School — K–12 Pupil-Free Day",
+      "type": "no_school",
+      "badgeLabel": "Pupil-Free Day",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "name": "Winter Recess",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-01-03",
+      "name": "School Resumes and Second Semester Begins",
+      "type": "school_resume"
+    },
+    {
+      "date": "2028-01-17",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-02-17",
+      "name": "End of First Progress Reporting Period — High School",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-02-18",
+      "name": "Lincoln Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-02-21",
+      "name": "Washington Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-02-25",
+      "name": "End of Second Progress Reporting Period — Elementary",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-02-28",
+      "endDate": "2028-03-02",
+      "name": "Elementary Parent Conference Minimum Days",
+      "type": "early_release",
+      "badgeLabel": "Minimum Day"
+    },
+    {
+      "date": "2028-03-10",
+      "name": "End of Third Quarter — Middle School",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-04-03",
+      "endDate": "2028-04-07",
+      "name": "Spring Recess",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-04-07",
+      "name": "Spring Holiday",
+      "type": "holiday",
+      "preserveOfficialName": true,
+      "showDuringBreak": true,
+      "description": "Falls within Spring Recess.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-04-10",
+      "name": "School Resumes",
+      "type": "school_resume"
+    },
+    {
+      "date": "2028-04-14",
+      "name": "End of Second Progress Reporting Period — High School",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-05-29",
+      "name": "Memorial Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-05-30",
+      "endDate": "2028-06-01",
+      "name": "High School Final Exam Minimum Days",
+      "type": "early_release",
+      "badgeLabel": "Minimum Day"
+    },
+    {
+      "date": "2028-06-01",
+      "name": "Last Day of School — Minimum Day for All Students",
+      "type": "school_end",
+      "badgeLabel": "Last Day / Minimum Day"
+    },
+    {
+      "date": "2028-06-01",
+      "name": "End of Second Semester — High School",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-06-01",
+      "name": "End of Fourth Quarter — Middle School",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-06-01",
+      "name": "End of Third Progress Reporting Period — Elementary",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-06-02",
+      "name": "Last Day of School for All Teachers",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-06-19",
+      "name": "Juneteenth",
+      "type": "holiday",
+      "hideFromCalendarExport": true
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "CUSD 2027–28 Calendar Downloads",
+  "unifiedDownloadDescription": "Open the official PDF or download selected CUSD student dates for Google Calendar, Apple Calendar, or Outlook.",
+  "hideCompatibleCalendars": true,
+  "hideShareCalendarHeading": true,
+  "hideSocialShareButtons": true,
+  "hideCalendarUpdatesButton": true,
+  "icsHeading": "Add CUSD Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file with the first and last days, recesses, holidays, pupil-free days, minimum days, Back-to-School Night windows, and school return dates.",
+  "icsButtonLabel": "Download CUSD Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. Campus schedules and later CUSD changes do not update automatically.",
+  "hideIcsImportDisclaimer": true,
+  "pdfHeading": "Official CUSD 2027–28 Calendar",
+  "pdfDescription": "View CUSD's 2027–28 calendar, Board approved April 22, 2026.",
+  "pdfButtonLabel": "View Official CUSD PDF",
+  "pdfVersionLabel": "Board approved April 22, 2026",
+  "calendarFaqs": [
+    {
+      "q": "When does CUSD start school in 2027?",
+      "a": "Capistrano Unified starts the 2027–28 school year on Monday, August 16, 2027. It is a minimum day for elementary and middle school students."
+    },
+    {
+      "q": "When is CUSD Winter Recess, and when does school resume?",
+      "a": "Winter Recess runs December 20 through December 31, 2027. School resumes Monday, January 3, 2028."
+    },
+    {
+      "q": "When is CUSD Spring Recess in 2028?",
+      "a": "Spring Recess runs Monday, April 3, through Friday, April 7, 2028. School resumes Monday, April 10."
+    },
+    {
+      "q": "When is the last day of school for CUSD in 2028?",
+      "a": "The last day of school is Thursday, June 1, 2028. CUSD lists it as a minimum day for all students."
+    },
+    {
+      "q": "Which CUSD dates are minimum days or pupil-free days?",
+      "a": "November 1 and December 17 are K–12 pupil-free days. Minimum-day schedules include August 16 for elementary and middle school students, elementary conference windows November 2–5 and February 28–March 2, high school final-exam windows December 14–16 and May 30–June 1, and June 1 for all students. Check the assigned school for exact dismissal times."
+    },
+    {
+      "q": "Does CUSD have school on November 11–12, 2027?",
+      "a": "No. CUSD lists Veterans Day on Thursday, November 11, and Veterans Day Recess on Friday, November 12, 2027."
+    },
+    {
+      "q": "Where can I get the official CUSD 2027–28 PDF?",
+      "a": "Use the official PDF link in Downloads. The source is the CUSD calendar Board approved April 22, 2026."
+    },
+    {
+      "q": "Can I add the CUSD calendar to Google Calendar or Apple Calendar?",
+      "a": "Yes. MySchoolDates provides a one-time ICS file for Google Calendar, Apple Calendar, and Outlook. It does not sync with later district changes, so confirm updates with CUSD."
+    }
+  ],
+  "faqDisplayLimit": 8,
+  "faqOrderLimit": 8,
+  "faqDisplayQuestions": [
+    "When does CUSD start school in 2027?",
+    "When is CUSD Winter Recess, and when does school resume?",
+    "When is CUSD Spring Recess in 2028?",
+    "When is the last day of school for CUSD in 2028?",
+    "Which CUSD dates are minimum days or pupil-free days?",
+    "Does CUSD have school on November 11–12, 2027?",
+    "Where can I get the official CUSD 2027–28 PDF?",
+    "Can I add the CUSD calendar to Google Calendar or Apple Calendar?"
+  ],
+  "comparisonBeforeFaq": true,
+  "comparisonDistrictSlugs": [
+    "irvine-unified-school-district-calendar"
+  ],
+  "comparisonTitle": "Capistrano Unified Calendar Compared With Irvine Unified",
+  "comparisonSummary": "Compare CUSD and Irvine Unified first and last days, school-day totals, and major recess periods for 2027–28.",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "instructionalDays",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "comparisonRowLabels": {
+    "instructionalDays": "School Days",
+    "thanksgivingBreak": "Thanksgiving Week"
+  },
+  "springBreakComparisonLabel": "Spring Recess",
+  "comparisonRanges": {
+    "thanksgivingBreak": {
+      "start": "2027-11-22",
+      "end": "2027-11-26"
+    }
+  },
+  "hideComparisonNotes": true,
+  "comparisonInsights": [
+    {
+      "label": "2027–28 calendar differences",
+      "items": [
+        "Irvine starts two days after CUSD and ends one day after CUSD.",
+        "Both districts list Winter Recess for December 20–31 and Spring Recess for April 3–7."
+      ]
+    }
+  ],
+  "whatsNew": {
+    "title": "What Changed from 2026–27",
+    "subtitle": "Student dates and CUSD schedule details that differ from the prior school year.",
+    "content": [
+      "School starts August 16, two days earlier than the August 18 opening in 2026–27.",
+      "The last student day is June 1, two days earlier than June 3 in 2026–27.",
+      "CUSD lists Veterans Day Recess through Friday, November 12, in addition to Veterans Day on November 11.",
+      "The K–12 pupil-free days are November 1 and December 17, one calendar day earlier than the corresponding dates in 2026–27.",
+      "The middle, elementary, and high school Back-to-School Night windows each move one calendar day earlier."
+    ]
+  },
+  "yearComparisonTitle": "What Changed from 2026–27",
+  "yearComparisonStyle": "movement-simple",
+  "compactYearComparison": true,
+  "schemaCalendarName": "Capistrano Unified School District 2027–28 School Calendar",
+  "schemaDatasetName": "Capistrano Unified School District 2027–28 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed dates from the Board-approved Capistrano Unified 2027–28 school calendar, including first and last days, recesses, holidays, K–12 pupil-free days, minimum days, Back-to-School Night windows, and reporting dates.",
+  "schemaCalendarDownloadName": "CUSD 2027–28 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import of selected family-facing dates from the Board-approved Capistrano Unified 2027–28 school calendar.",
+  "schemaSpatialCoverage": "Capistrano Unified School District, Orange County, California",
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Minimum Days",
+      "id": "cusd-2027-2028-minimum-pupil-free-days"
+    },
+    {
+      "label": "Student Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "What Changed",
+      "id": "year-comparison"
+    },
+    {
+      "label": "Comparison",
+      "id": "comparison"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "yearSwitcherPosition": "afterSources",
+  "relatedDistrictsSameYearOnly": true,
+  "hideRelatedDistrictDescriptions": true,
+  "relatedDistrictsTitle": "More 2027–28 California School Calendars",
+  "relatedDistrictsDescription": "Open another reviewed California district calendar for the same school year.",
+  "hiddenCustomSectionIds": [
+    "capistrano-unified-calendar-planning-notes",
+    "cusd-schools-and-grade-levels"
+  ],
+  "hiddenSections": [
+    "instructionalDays",
+    "downloadCta",
+    "todayStatus",
+    "schoolYearStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "nationalTrends"
+  ],
+  "sourceReviewSummary": "Reviewed August 18, 2026, against the CUSD calendars page and the 2027–28 PDF Board approved April 22, 2026.",
+  "sourceReviewDetailsTitle": "What we checked",
+  "sourceReviewDetails": [
+    "CUSD's calendars page identifies the 2027–28 calendar as Board approved April 22, 2026; it is not labeled revised.",
+    "The calendar lists November 1 and December 17 as K–12 pupil-free days and uses “Minimum Day” for shortened student schedules.",
+    "CUSD lists Veterans Day on November 11 and Veterans Day Recess on November 12 for students and teachers.",
+    "School-level dismissal times, Back-to-School Night dates, graduation details, and later changes should be confirmed with CUSD or the assigned school."
+  ],
+  "sourceNextReviewText": "Next review: when CUSD replaces or revises the 2027–28 PDF or announces a districtwide schedule change.",
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Capistrano Unified sources.",
+  "sources": [
+    {
+      "label": "Capistrano Unified calendars page",
+      "url": "https://www.capousd.org/District/Our-District/Calendars/index.html"
+    },
+    {
+      "label": "Official CUSD 2027–28 calendar PDF",
+      "url": "https://d16k74nzx9emoe.cloudfront.net/13ddfaac-9b53-4a20-afb9-8c62e7dd2cd2/CUSD%20Calendar%202027-2028%20Board%20Approved%20April%2022-%202026.pdf"
+    }
   ]
 }

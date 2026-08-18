@@ -1,0 +1,718 @@
+{
+  "institutionId": "wichita-public-schools",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Wichita Public Schools Calendar 2027–28",
+  "firstDay": "2027-08-12",
+  "lastDay": "2028-05-24",
+  "temporalCoverageStart": "2027-07-08",
+  "temporalCoverageEnd": "2028-05-29",
+  "semesters": 2,
+  "sourceUrl": "https://www.usd259.org/all-events",
+  "sourceDocumentPage": "https://www.usd259.org/all-events",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1777903959/usd259org/ibniirrgklwgbusntbsk/27-28CalendarEnglish.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1777903959/usd259org/ibniirrgklwgbusntbsk/27-28CalendarEnglish.pdf",
+  "sourceCheckedAt": "2026-08-18",
+  "sourceUpdatedAt": "2026-02-05",
+  "sourceChecksumSha256": "d32f4b86314918aaaf3e819bedf7c0bd93e58a7328145c83de5a8a938d3d9dd1",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.usd259.org/all-events",
+    "linkText": "2027-28 School Year Calendar",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1777903959/usd259org/ibniirrgklwgbusntbsk/27-28CalendarEnglish.pdf",
+    "expectedChecksumSha256": "d32f4b86314918aaaf3e819bedf7c0bd93e58a7328145c83de5a8a938d3d9dd1"
+  },
+  "lastVerifiedAt": "2026-08-18",
+  "dateCreated": "2026-08-18",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-18",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Revised February 5, 2026",
+  "sourceCalendarName": "Wichita Public Schools 2027–28 School Year Calendar",
+  "schemaCalendarName": "Wichita Public Schools Calendar 2027–28",
+  "schemaDatasetName": "Wichita Public Schools 2027–28 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Wichita Public Schools dates for 2027–28, including enrollment, orientation, the first and last student days, recesses, district inservice and nonteaching days, parent-teacher conferences, high school finals, and grading periods.",
+  "schemaSpatialCoverage": "Wichita, Kansas",
+  "schemaCalendarDownloadName": "Wichita Public Schools 2027–28 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with WPS student attendance dates, districtwide no-school days, recesses, high school finals, and the new-student orientation date.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-spanish",
+      "type": "CreativeWork",
+      "name": "WPS 2027–28 Calendario del Año Escolar — Spanish",
+      "url": "https://resources.finalsite.net/images/v1777905696/usd259org/esjvwpk1ycpakekycooj/27-28CalendarSpanish.pdf"
+    },
+    {
+      "id": "source-calendar-vietnamese",
+      "type": "CreativeWork",
+      "name": "WPS 2027–28 Lịch năm học — Vietnamese",
+      "url": "https://resources.finalsite.net/images/v1777910063/usd259org/hjd5o3lmuek4fljan0ct/27-28CalendarVietnamese.pdf"
+    },
+    {
+      "id": "source-boe-calendar-agenda",
+      "type": "DigitalDocument",
+      "name": "Wichita Board of Education February 2, 2026 Agenda",
+      "url": "https://resources.finalsite.net/images/v1770051587/usd259org/usd259org/usd259org/x17c2nmiztyugphifud5/20260202Agenda-BOE.pdf"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-spanish",
+    "source-calendar-vietnamese",
+    "source-boe-calendar-agenda"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "wps-school-year-calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "whatsDifferent",
+    "comparison",
+    "nationalTrends",
+    "breaks",
+    "otherCalendars"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "What Changed",
+      "id": "wps-2027-2028-year-changes"
+    },
+    {
+      "label": "Winter Recess",
+      "id": "wps-2027-2028-winter-recess"
+    },
+    {
+      "label": "Conferences",
+      "id": "wps-2027-2028-conferences"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Calendar Guide",
+      "id": "wps-2027-2028-calendar-guide"
+    },
+    {
+      "label": "Grading Periods",
+      "id": "grading-periods"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Wichita Public Schools Calendar 2027–28: Dates & PDFs",
+  "seoDescription": "Wichita Public Schools starts Aug. 12, 2027, and ends May 24, 2028. See WPS breaks, no-school days, conferences, grading periods, and official calendar PDFs.",
+  "heroSummary": "Wichita Public Schools starts classes Thursday, August 12, 2027, and the last day of school is Wednesday, May 24, 2028. Fall Recess runs November 23–26, Student Winter Recess runs December 17–January 4, and Spring Recess runs March 13–17. Students in grades 6–12 who are new to their building attend orientation on August 11.",
+  "heroSourceLine": "Based on the official WPS 2027–28 School Year Calendar, approved February 2 and revised February 5, 2026",
+  "hideHeroDownloadLink": true,
+  "verificationBadgeText": "Checked against current WPS sources",
+  "heroVerificationSourceText": "Reviewed the official English calendar and the district calendar hub",
+  "heroVerificationComparisonText": "English, Spanish, and Vietnamese editions were checked as official versions of the same calendar",
+  "calendarNotes": "WPS lists August 12 as the first student day and May 24 as the last. Student Winter Recess runs December 17–January 4; the shorter December 24–January 3 range shows when district administrative offices are closed. January 4 is a District Inservice Day, and the calendar expressly lists January 5 as the student return date. WPS standardizes parent-teacher conference dates districtwide and separately identifies the conference day with no school, the next nonteaching day, and later Conference Release Days. The PDF lists 171 contact days across four grading periods. Kindergarten opening attendance is assigned by each school and is not represented as a separate districtwide date here.",
+  "keyDatesHeading": "Wichita Public Schools 2027–28 Key Dates",
+  "keyDatesSummaryTitle": "Wichita Public Schools 2027–28 Key Dates",
+  "keyDatesSummarySubtitle": "Start and end dates, major breaks, and the January 5 return to class",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2027-08-12",
+      "type": "school_start"
+    },
+    {
+      "label": "Fall",
+      "name": "Fall Recess",
+      "date": "2027-11-23",
+      "endDate": "2027-11-26",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Student Winter Recess",
+      "date": "2027-12-17",
+      "endDate": "2028-01-04",
+      "type": "break_start",
+      "description": "Students return January 5."
+    },
+    {
+      "label": "Return",
+      "name": "Students Return After Winter Recess",
+      "date": "2028-01-05",
+      "type": "school_resume"
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Recess",
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2028-05-24",
+      "type": "school_end"
+    }
+  ],
+  "allDatesTitle": "Wichita Public Schools 2027–28 Calendar Dates",
+  "allDatesCoverageNote": "This table follows the official WPS calendar. Student Winter Recess and the shorter period when district offices are closed are explained separately above because they apply to different audiences.",
+  "hideCoveredBreakDatesNote": true,
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1777903959/usd259org/ibniirrgklwgbusntbsk/27-28CalendarEnglish.pdf",
+  "allDatesSourceLabel": "Official WPS 2027–28 School Year Calendar",
+  "dateLegendLabelOverrides": {
+    "Academic Date": "School / Grading Date",
+    "Teacher Workday": "Staff Day",
+    "No School": "No School for Students"
+  },
+  "gradingPeriodsTitle": "WPS 2027–28 Grading Periods",
+  "gradingPeriodsDescription": "The official calendar lists 171 contact days across four grading periods.",
+  "gradingPeriodsDaysLabel": "Contact Days",
+  "gradingPeriodsFooterNote": "The official WPS calendar presents grading-period dates in two ways. The grading-period summary ends the student contact-day ranges on October 13, March 8, and May 24, while the event list separately marks October 15, March 10, and May 25 as the ends of those grading periods alongside nonteaching days. The table above follows the published contact-day ranges.",
+  "gradingPeriods": [
+    {
+      "label": "Grading Period 1",
+      "start": "2027-08-12",
+      "end": "2027-10-13",
+      "studentDays": 43
+    },
+    {
+      "label": "Grading Period 2",
+      "start": "2027-10-18",
+      "end": "2027-12-16",
+      "studentDays": 38
+    },
+    {
+      "label": "Grading Period 3",
+      "start": "2028-01-05",
+      "end": "2028-03-08",
+      "studentDays": 44
+    },
+    {
+      "label": "Grading Period 4",
+      "start": "2028-03-20",
+      "end": "2028-05-24",
+      "studentDays": 46
+    }
+  ],
+  "customSections": [
+    {
+      "id": "wps-2027-2028-year-changes",
+      "label": "What Changes from WPS 2026–27 to 2027–28?",
+      "position": "afterKeyDates",
+      "content": "The 2027–28 school year starts one day earlier on the calendar and ends one day earlier than 2026–27. Student Winter Recess begins four days earlier, while Spring Recess shifts two days earlier in March.\n\nWPS also carried forward the November schedule changes introduced in 2026–27. Election Day remains a District Inservice Day, and the Veterans Day observance falls within Fall Recess week. WPS says this structure makes more schools available as polling sites, supports civic engagement, and gives students a full Fall Recess week.",
+      "table": {
+        "caption": "Published WPS date changes between school years",
+        "columns": [
+          "Calendar item",
+          "2026–27",
+          "2027–28"
+        ],
+        "rows": [
+          [
+            "First student day",
+            "Aug. 13, 2026",
+            "Aug. 12, 2027"
+          ],
+          [
+            "Last student day",
+            "May 25, 2027",
+            "May 24, 2028"
+          ],
+          [
+            "Fall Recess",
+            "Nov. 24–27",
+            "Nov. 23–26"
+          ],
+          [
+            "Student Winter Recess",
+            "Dec. 21–Jan. 4",
+            "Dec. 17–Jan. 4"
+          ],
+          [
+            "Spring Recess",
+            "Mar. 15–19",
+            "Mar. 13–17"
+          ],
+          [
+            "Parent Teacher Conferences",
+            "Oct. 13–15 / Mar. 9–11",
+            "Oct. 12–14 / Mar. 7–9"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "wps-2027-2028-winter-recess",
+      "label": "Two Winter Recess Ranges Appear on the WPS Calendar",
+      "position": "afterKeyDates",
+      "content": "For student attendance, use the longer Student Winter Recess: December 17 through January 4. The shorter December 24–January 3 range shows when district administrative offices are closed. January 4 is also a District Inservice Day, and students return Wednesday, January 5.",
+      "table": {
+        "caption": "How the two WPS Winter Recess ranges differ",
+        "columns": [
+          "Published range",
+          "What it means",
+          "Family planning"
+        ],
+        "rows": [
+          [
+            "Dec. 17, 2027–Jan. 4, 2028",
+            "Student Winter Recess",
+            "Students do not attend"
+          ],
+          [
+            "Dec. 24, 2027–Jan. 3, 2028",
+            "District administrative offices are closed",
+            "Students remain out of school"
+          ],
+          [
+            "Jan. 5, 2028",
+            "Students return",
+            "Students return to class after winter recess and the Jan. 4 inservice day"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "wps-2027-2028-conferences",
+      "label": "How WPS Conference Dates Affect Attendance",
+      "position": "afterKeyDates",
+      "content": "WPS sets parent-teacher conference dates districtwide. The calendar distinguishes the conference window from the no-school conference day, the following Nonteaching Duty Day, and later Conference Release Days. Schools set individual appointment times.",
+      "table": {
+        "caption": "WPS 2027–28 parent-teacher conference schedule",
+        "columns": [
+          "Dates",
+          "Published label",
+          "Student attendance"
+        ],
+        "rows": [
+          [
+            "Oct. 12–14, 2027",
+            "Parent Teacher Conferences",
+            "No school Oct. 14"
+          ],
+          [
+            "Oct. 15, 2027",
+            "Nonteaching Duty Day",
+            "No school"
+          ],
+          [
+            "Nov. 22, 2027",
+            "Conference Release Day",
+            "No school"
+          ],
+          [
+            "Mar. 7–9, 2028",
+            "Parent Teacher Conferences",
+            "No school Mar. 9"
+          ],
+          [
+            "Mar. 10, 2028",
+            "Nonteaching Duty Day",
+            "No school"
+          ],
+          [
+            "Apr. 14, 2028",
+            "Conference Release Day",
+            "No school"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "wps-2027-2028-calendar-guide",
+      "label": "Which Wichita Public Schools Calendar Should My Family Use?",
+      "position": "afterCalendarExport",
+      "content": "The annual PDF is the source for districtwide school-year dates. Other WPS sources answer different planning questions.",
+      "table": {
+        "caption": "Best WPS calendar source by task",
+        "columns": [
+          "Need",
+          "Best WPS source"
+        ],
+        "rows": [
+          [
+            "First day, recesses, no-school days, conferences, and last day",
+            "Official School Year Calendar PDF"
+          ],
+          [
+            "Building events or changes published after the PDF",
+            "WPS All Events page and school calendar"
+          ],
+          [
+            "Kindergarten attendance during the first few days",
+            "Assigned schedule from the child's school"
+          ],
+          [
+            "Employee work schedules",
+            "WPS Human Resources employee calendars"
+          ]
+        ]
+      }
+    }
+  ],
+  "unifiedDownloadTitle": "WPS Calendar Downloads and Official PDFs",
+  "unifiedDownloadDescription": "Add key WPS dates to your calendar or open the official English, Spanish, and Vietnamese school-year PDFs.",
+  "compactDownloadModule": true,
+  "pdfHeading": "Official WPS 2027–28 School Year Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "The English PDF is the primary source used for the dates on this page.",
+  "hidePdfVersionLabel": false,
+  "groupAlternateCalendarsWithDownloads": true,
+  "icsHeading": "Add WPS Dates to Your Calendar",
+  "icsDescription": "Download a one-time calendar file with the first and last student days, districtwide recesses and no-school dates, new-student orientation, high school finals, and the January 5 return date.",
+  "icsButtonLabel": "Download WPS 2027–28 ICS",
+  "icsButtonSupportText": "One-time import. Check the official WPS or school calendar for conference appointment times, kindergarten opening assignments, building events, and any later district revisions.",
+  "alternateCalendarsDescription": "WPS publishes Spanish and Vietnamese translations of the same 2027–28 district calendar.",
+  "alternateCalendars": [
+    {
+      "type": "language",
+      "group": "Official language editions",
+      "label": "2027–28 Calendario del Año Escolar — Spanish",
+      "description": "Official Spanish version of the WPS school-year calendar.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1777905696/usd259org/esjvwpk1ycpakekycooj/27-28CalendarSpanish.pdf"
+    },
+    {
+      "type": "language",
+      "group": "Official language editions",
+      "label": "2027–28 Lịch năm học — Vietnamese",
+      "description": "Official Vietnamese version of the WPS school-year calendar.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1777910063/usd259org/hjd5o3lmuek4fljan0ct/27-28CalendarVietnamese.pdf"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When do Wichita Public Schools students return after Winter Recess?",
+      "a": "Students return Wednesday, January 5, 2028. Student Winter Recess runs through January 4, and January 4 is also a District Inservice Day."
+    },
+    {
+      "q": "Why does the WPS calendar show two Winter Recess ranges?",
+      "a": "December 17–January 4 is Student Winter Recess. The shorter December 24–January 3 range shows when district administrative offices are closed."
+    },
+    {
+      "q": "When are WPS parent-teacher conferences in 2027–28?",
+      "a": "The districtwide conference ranges are October 12–14, 2027, and March 7–9, 2028. Students have no school on October 14 and March 9; schools provide appointment times."
+    },
+    {
+      "q": "What is a WPS Conference Release Day?",
+      "a": "WPS explains that a Conference Release Day recognizes evening hours worked during parent-teacher conferences. Students do not attend on the published release day."
+    },
+    {
+      "q": "Do all Wichita kindergarten students attend school on August 12?",
+      "a": "August 12 is WPS's districtwide first day of school, but kindergarteners have scheduled attendance days during the first few days. Families should follow the schedule provided by their school."
+    },
+    {
+      "q": "Are the Spanish and Vietnamese calendars different schedules?",
+      "a": "No. They are official language versions of the same WPS 2027–28 school-year calendar and are linked in Downloads."
+    }
+  ],
+  "faqOrderLimit": 6,
+  "faqDisplayQuestions": [
+    "When do Wichita Public Schools students return after Winter Recess?",
+    "Why does the WPS calendar show two Winter Recess ranges?",
+    "When are WPS parent-teacher conferences in 2027–28?",
+    "What is a WPS Conference Release Day?",
+    "Do all Wichita kindergarten students attend school on August 12?",
+    "Are the Spanish and Vietnamese calendars different schedules?"
+  ],
+  "sourceReviewSummary": "We checked the dates on this page against the current WPS School Year Calendar and district calendar page. The November policy note is based on the February 2, 2026 Board of Education agenda.",
+  "sourcesTitle": "Sources and Review Notes",
+  "sourceReviewDetailsTitle": "How this calendar was verified",
+  "sourceReviewDetails": [
+    "We checked the school-year dates, contact-day totals, grading periods, and special attendance notes against the current English WPS calendar.",
+    "We list Student Winter Recess separately from the shorter period when district offices are closed because they apply to different audiences.",
+    "The WPS calendar page identifies the 2027–28 calendar as Board-approved on February 2, 2026; the current PDF is revised February 5, 2026.",
+    "Spanish and Vietnamese files are linked as official language versions of the same calendar."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Wichita Public Schools sources.",
+  "sourceNextReviewText": "We'll review this page again if WPS revises the annual PDF or publishes a schedule change.",
+  "sources": [
+    {
+      "label": "Wichita Public Schools All Events and annual calendars",
+      "url": "https://www.usd259.org/all-events"
+    },
+    {
+      "label": "WPS 2027–28 School Year Calendar — English",
+      "url": "https://resources.finalsite.net/images/v1777903959/usd259org/ibniirrgklwgbusntbsk/27-28CalendarEnglish.pdf"
+    },
+    {
+      "label": "WPS 2027–28 Calendario del Año Escolar — Spanish",
+      "url": "https://resources.finalsite.net/images/v1777905696/usd259org/esjvwpk1ycpakekycooj/27-28CalendarSpanish.pdf"
+    },
+    {
+      "label": "WPS 2027–28 Lịch năm học — Vietnamese",
+      "url": "https://resources.finalsite.net/images/v1777910063/usd259org/hjd5o3lmuek4fljan0ct/27-28CalendarVietnamese.pdf"
+    },
+    {
+      "label": "Wichita Public Schools kindergarten information",
+      "url": "https://www.usd259.org/discover-wps/kindergarten"
+    },
+    {
+      "label": "Wichita Public Schools employee calendars",
+      "url": "https://www.usd259.org/humanresources/calendars"
+    },
+    {
+      "label": "Wichita Board of Education February 2, 2026 Agenda",
+      "url": "https://resources.finalsite.net/images/v1770051587/usd259org/usd259org/usd259org/x17c2nmiztyugphifud5/20260202Agenda-BOE.pdf"
+    }
+  ],
+  "events": [
+    {
+      "date": "2027-07-08",
+      "dates": [
+        "2027-07-08",
+        "2027-07-12"
+      ],
+      "name": "Centralized Multilingual Enrollment",
+      "type": "academic",
+      "badgeLabel": "Enrollment",
+      "exportDatesIndividually": true
+    },
+    {
+      "date": "2027-07-26",
+      "endDate": "2027-07-27",
+      "name": "In-Person Enrollment",
+      "type": "academic",
+      "badgeLabel": "Enrollment"
+    },
+    {
+      "date": "2027-08-02",
+      "endDate": "2027-08-03",
+      "name": "Orientation for New Teachers",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-04",
+      "endDate": "2027-08-11",
+      "name": "District Inservice (All Teachers)",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-11",
+      "name": "New Student Orientation (Grades 6–12)",
+      "type": "academic",
+      "badgeLabel": "New Grades 6–12"
+    },
+    {
+      "date": "2027-08-12",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2027-09-06",
+      "name": "Labor Day Holiday",
+      "type": "holiday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2027-09-07",
+      "name": "District Inservice Day",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-09-20",
+      "name": "Official Enrollment Count",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-10-12",
+      "endDate": "2027-10-14",
+      "name": "Parent Teacher Conferences",
+      "type": "academic",
+      "description": "WPS standardizes these dates districtwide. Schools provide appointment times; students do not attend October 14.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-10-14",
+      "name": "No School (Conferences)",
+      "type": "no_school",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-10-15",
+      "name": "Nonteaching Duty Day · End of First Grading Period",
+      "type": "no_school",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-11-02",
+      "name": "District Inservice Day",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-11-22",
+      "name": "Conference Release Day",
+      "type": "no_school",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-11-23",
+      "endDate": "2027-11-26",
+      "name": "Fall Recess",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-12-15",
+      "endDate": "2027-12-16",
+      "name": "High School Finals",
+      "type": "academic",
+      "badgeLabel": "High School"
+    },
+    {
+      "date": "2027-12-17",
+      "name": "Nonteaching Duty Day · End of Semester",
+      "type": "semester_end",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-12-17",
+      "endDate": "2028-01-04",
+      "name": "Student Winter Recess",
+      "type": "break_start",
+      "description": "The shorter December 24–January 3 range in the PDF shows when district offices are closed. Students return January 5."
+    },
+    {
+      "date": "2028-01-04",
+      "name": "District Inservice Day",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-01-05",
+      "name": "Students Return After Winter Recess",
+      "type": "school_resume"
+    },
+    {
+      "date": "2028-01-17",
+      "name": "Martin Luther King, Jr. Day Observed",
+      "type": "holiday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2028-02-21",
+      "name": "District Inservice Day",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2028-03-07",
+      "endDate": "2028-03-09",
+      "name": "Parent Teacher Conferences",
+      "type": "academic",
+      "description": "WPS standardizes these dates districtwide. Schools provide appointment times; students do not attend March 9.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-03-09",
+      "name": "No School (Conferences)",
+      "type": "no_school",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2028-03-10",
+      "name": "Nonteaching Duty Day · End of Third Grading Period",
+      "type": "no_school",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "name": "Spring Recess",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-04-14",
+      "name": "Conference Release Day",
+      "type": "no_school",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2028-04-17",
+      "name": "District Inservice Day",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2028-05-23",
+      "endDate": "2028-05-24",
+      "name": "High School Finals",
+      "type": "academic",
+      "badgeLabel": "High School"
+    },
+    {
+      "date": "2028-05-24",
+      "name": "Last Day of School",
+      "type": "school_end"
+    },
+    {
+      "date": "2028-05-25",
+      "name": "Nonteaching Duty Day · End of Fourth Grading Period",
+      "displayName": "Nonteaching Duty Day · End of Fourth Grading Period",
+      "type": "teacher_workday",
+      "description": "Staff workday after students' last day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-05-29",
+      "name": "Memorial Day Holiday",
+      "type": "holiday",
+      "description": "District holiday after the school year ends.",
+      "hideFromCalendarExport": true
+    }
+  ]
+}

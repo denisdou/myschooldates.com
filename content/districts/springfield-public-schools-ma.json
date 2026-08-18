@@ -1,0 +1,91 @@
+{
+  "institutionId": "springfield-public-schools-ma",
+  "name": "Springfield Public Schools",
+  "shortName": "SPS",
+  "slug": "springfield-public-schools-ma-calendar",
+  "state": "Massachusetts",
+  "stateCode": "MA",
+  "city": "Springfield",
+  "country": "US",
+  "type": "public_district",
+  "grades": ["Pre-K", "K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  "officialWebsite": "https://www.springfieldpublicschools.com",
+  "calendarPage": "https://www.springfieldpublicschools.com/calendar",
+  "logo": "https://cdnsm5-ss18.sharpschool.com/UserFiles/Servers/Server_494605/Image/Departments/Communications/2025%20Summer%20Uploads/SPS%20Color%20Logo%20No%20White%20Field%202025.png",
+  "timezone": "America/New_York",
+  "county": "Hampden County",
+  "region": "Western Massachusetts",
+  "metro": "Springfield metropolitan area",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "studentCount": 23574,
+  "studentCountAsOf": "Massachusetts DESE 2025-26 district profile",
+  "studentCountSourceLabel": "Massachusetts School and District Profiles — Springfield",
+  "studentCountSourceUrl": "https://profiles.doe.mass.edu/general/general.aspx?leftNavId=100&orgcode=02810000&orgtypecode=5&topNavID=1",
+  "profileStudentCountApproximate": false,
+  "schoolCount": 64,
+  "profileSchoolCountExact": true,
+  "schoolCountLabel": "schools",
+  "calendarType": "District academic calendar",
+  "hideProfileCalendarType": true,
+  "profileTitle": "Springfield Public Schools — Springfield, Massachusetts",
+  "seoTitle": "Springfield Public Schools Calendar | Springfield, MA",
+  "seoDescription": "Springfield Public Schools calendar dates for Springfield, Massachusetts, including grade-level starts, vacations, district closures, PDF, and ICS.",
+  "districtFact": "This page covers Springfield Public Schools in Springfield, Massachusetts, in Hampden County.",
+  "profileDisclaimer": "Enrollment and school counts use the Massachusetts DESE 2025–26 district profile.",
+  "calendarNotes": "Springfield Public Schools publishes a district academic calendar plus separate SEZP and Innovation School calendar collections. Families should confirm which calendar applies to their assigned school.",
+  "planningTips": {
+    "title": "Springfield Calendar Planning Notes",
+    "content": [
+      "Before school begins, confirm the start date and calendar for your child's grade, program, and assigned school.",
+      "Treat June 25 as tentative and avoid locking in nonrefundable summer plans until SPS issues its final bulletin.",
+      "The ICS is a one-time snapshot. Recheck SPS after weather closures or any calendar revision."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Is this the Springfield Public Schools calendar for Massachusetts?",
+      "a": "Yes. This page covers Springfield Public Schools in Springfield, Massachusetts, using springfieldpublicschools.com and the official district calendar. The MA suffix distinguishes it from Springfield systems in Missouri and Illinois."
+    },
+    {
+      "q": "What is the difference between schools closed and district closed?",
+      "a": "The PDF's yellow dates close schools for students and teachers, while green dates close schools and central offices. During some vacations, families may still be able to reach district offices on yellow dates."
+    },
+    {
+      "q": "Do SEZP and Innovation schools use the same SPS calendar?",
+      "a": "Not necessarily. SPS provides separate calendar collections for Springfield Empowerment Zone Partnership and Innovation schools. Families should compare the district PDF with the calendar named for their assigned school."
+    },
+    {
+      "q": "Does the SPS calendar include every religious or cultural observance?",
+      "a": "No. The district calendar does not list every religious or cultural observance and directs families to the SPS Informational Calendar for a broader list of holidays and celebrations."
+    }
+  ],
+  "hiddenSections": ["comparison", "whatsDifferent", "nationalTrends", "relatedDistricts"],
+  "includeComparisonSchema": false,
+  "sources": [
+    {
+      "label": "Springfield Public Schools official website",
+      "url": "https://www.springfieldpublicschools.com"
+    },
+    {
+      "label": "Springfield Public Schools district calendar",
+      "url": "https://www.springfieldpublicschools.com/calendar"
+    },
+    {
+      "label": "Massachusetts DESE Springfield district profile",
+      "url": "https://profiles.doe.mass.edu/general/general.aspx?leftNavId=100&orgcode=02810000&orgtypecode=5&topNavID=1"
+    },
+    {
+      "label": "SPS Student Assignment Services Center",
+      "url": "https://www.springfieldpublicschools.com/departments/student_assignment_services"
+    },
+    {
+      "label": "SPS SEZP School Calendars",
+      "url": "https://www.springfieldpublicschools.com/calendar/szep_school_calendars"
+    },
+    {
+      "label": "SPS Innovation School Calendars",
+      "url": "https://www.springfieldpublicschools.com/calendar/innovation_school_calendars"
+    }
+  ]
+}

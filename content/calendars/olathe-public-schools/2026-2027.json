@@ -1,0 +1,890 @@
+{
+  "institutionId": "olathe-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Olathe Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-13",
+  "firstDayScope": "First student attendance date; applies only to grades K–5, 6 and 9 for a half day.",
+  "firstFullK12Day": "2026-08-14",
+  "earlyChildhoodFirstDay": "2026-08-17",
+  "lastDay": "2027-05-25",
+  "lastDayScope": "Final scheduled student date for grades K–11; seniors and Early Childhood finish earlier.",
+  "seniorLastDay": "2027-05-20",
+  "earlyChildhoodLastDay": "2027-05-24",
+  "k11LastDay": "2027-05-25",
+  "temporalCoverageStart": "2026-07-07",
+  "temporalCoverageEnd": "2027-06-04",
+  "reportingPeriodDaysTotal": 170,
+  "reportingPeriodDaysScope": "Total printed across the four OPS reporting periods; not a universal attendance-day count for every student group.",
+  "semesters": 2,
+  "sourceUrl": "https://www.olatheschools.org/district-calendar-page",
+  "sourceDocumentPage": "https://www.olatheschools.org/district-calendar-page",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1775056734/olatheschoolsorg/os0nvitf0p0tpbcorzso/2026-27-District-Calendar-040126.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1775056734/olatheschoolsorg/os0nvitf0p0tpbcorzso/2026-27-District-Calendar-040126.pdf",
+  "sourceCheckedAt": "2026-08-18",
+  "sourceUpdatedAt": "2026-04-01",
+  "sourceChecksumSha256": "ccb73bce35aafacd881b776b7e4bb3e5bb1809152bfd517434acb5a7c5fb697c",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.olatheschools.org/district-calendar-page",
+    "linkText": "2026-27 District Calendar (PDF)",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1775056734/olatheschoolsorg/os0nvitf0p0tpbcorzso/2026-27-District-Calendar-040126.pdf",
+    "expectedChecksumSha256": "ccb73bce35aafacd881b776b7e4bb3e5bb1809152bfd517434acb5a7c5fb697c"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.olatheschools.org/district-calendar-page",
+      "linkText": "2026-27 District Calendar (Spanish PDF)",
+      "expectedPdfUrl": "https://resources.finalsite.net/images/v1782225346/olatheschoolsorg/rfnkcvuhiaultiqaebg4/2026-27-District-Calendar-062226-SPANISH.pdf",
+      "expectedChecksumSha256": "27110d335af54787515795f295f65b68fe3302c7051e73ac89dd6c212dc4f249"
+    },
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.olatheschools.org/district-calendar-page",
+      "linkText": "2026-27 Elementary Specials Calendar (PDF)",
+      "expectedPdfUrl": "https://resources.finalsite.net/images/v1774974509/olatheschoolsorg/vasjbcd1kgfzvzbtb7ja/2026-27-elementary-specials-calendar-032426.pdf",
+      "expectedChecksumSha256": "f7bf3d461ecd5fe67a602ff663d047ea3df16b0a4aba768000389b0b40d38834"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-18",
+  "dateCreated": "2026-08-18",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-18",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Revised April 1, 2026",
+  "sourceCalendarName": "Olathe Public Schools 2026–27 School Year Calendar Dates",
+  "schemaCalendarName": "Olathe Public Schools Calendar 2026–27",
+  "schemaDatasetName": "Olathe Public Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Olathe Public Schools dates for 2026–27, including the staged K–12 and Early Childhood opening, half days, conferences, breaks, reporting periods, finals, commencement and possible inclement-weather dates.",
+  "schemaSpatialCoverage": "Olathe and Johnson County, Kansas",
+  "schemaCalendarDownloadName": "Olathe Public Schools 2026–27 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with OPS student attendance dates, districtwide breaks and closures, grade-specific half days, conference closures and last days.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-spanish",
+      "type": "CreativeWork",
+      "name": "OPS Calendario del año escolar 2026–27 — Spanish",
+      "url": "https://resources.finalsite.net/images/v1782225346/olatheschoolsorg/rfnkcvuhiaultiqaebg4/2026-27-District-Calendar-062226-SPANISH.pdf"
+    },
+    {
+      "id": "source-calendar-elementary-specials",
+      "type": "CreativeWork",
+      "name": "OPS Elementary Specials A/B/C/D Calendar 2026–27",
+      "url": "https://resources.finalsite.net/images/v1774974509/olatheschoolsorg/vasjbcd1kgfzvzbtb7ja/2026-27-elementary-specials-calendar-032426.pdf"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-spanish",
+    "source-calendar-elementary-specials"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "ops-district-calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideInstructionalDaysSummary": true,
+  "heroFactChips": [
+    "170 days across four reporting periods"
+  ],
+  "hiddenCustomSectionIds": [
+    "olathe-calendar-map"
+  ],
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "whatsDifferent",
+    "breaks",
+    "otherCalendars",
+    "comparison",
+    "nationalTrends"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Opening Days",
+      "id": "ops-2026-2027-opening"
+    },
+    {
+      "label": "Conferences",
+      "id": "ops-2026-2027-conferences"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "School Hours",
+      "id": "ops-2026-2027-hours"
+    },
+    {
+      "label": "Weather & Specials",
+      "id": "ops-2026-2027-weather-specials"
+    },
+    {
+      "label": "Reporting Periods",
+      "id": "grading-periods"
+    },
+    {
+      "label": "Calendar Guide",
+      "id": "ops-2026-2027-calendar-guide"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Olathe Public Schools Calendar 2026–27: Key Dates",
+  "seoDescription": "Olathe Public Schools begins Aug. 13, 2026, for grades K–5, 6 and 9. See 2026–27 start dates, breaks, half days, last days, school hours and official PDFs.",
+  "heroSummary": "Olathe Public Schools starts the 2026–27 school year with a half day for grades K–5, 6 and 9 on Thursday, Aug. 13. All K–12 students attend a full day Aug. 14, and Early Childhood starts Aug. 17. Fall Break is Nov. 23–27, Winter Break is Dec. 21–Jan. 1, Spring Break is March 15–19, and grades K–11 finish with a half day May 25.",
+  "heroSourceLine": "Based on the official OPS 2026–27 district calendar, revised April 1, 2026",
+  "hideHeroDownloadLink": true,
+  "verificationBadgeText": "Checked against current OPS sources",
+  "heroVerificationSourceText": "Reviewed against the current OPS district calendar",
+  "heroVerificationComparisonText": "The Spanish edition and Elementary Specials calendar were also reviewed",
+  "calendarNotes": "OPS uses a three-step opening rather than one universal first day: grades K–5, 6 and 9 attend a morning half day August 13; all K–12 grades attend a full day August 14; Early Childhood begins August 17. The annual PDF lists 170 reporting-period days across four quarters. Conference windows run October 12–14 and February 8–10, but buildings provide appointment times; October 14 and February 10 are half days, while October 15 and February 11 are no-student conference days. Winter Break ends January 1, but January 4–5 are professional days, so students resume January 6. March 22 and April 23 are printed both as professional days and possible inclement-weather dates; their status can change if OPS activates them. The Elementary Specials A/B/C/D rotation remains fixed after weather closures. Grade 12 ends May 20 and does not attend the May 25 K–11 half day.",
+  "keyDatesHeading": "Olathe Public Schools Calendar 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "Olathe Public Schools Calendar 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "The staged opening, major breaks, return after Winter Break and grade-specific last days",
+  "keyDateSummaryItems": [
+    {
+      "label": "Opening Half Day",
+      "name": "Grades K–5, 6 and 9 Begin",
+      "date": "2026-08-13",
+      "type": "school_start",
+      "schemaDescription": "First attendance day for grades K–5, 6 and 9; students attend a half day."
+    },
+    {
+      "label": "All K–12",
+      "name": "First Full Day for K–12",
+      "date": "2026-08-14",
+      "type": "school_start",
+      "schemaDescription": "First full day for all grades K–12; Early Childhood does not attend."
+    },
+    {
+      "label": "Early Childhood",
+      "name": "First Day for Early Childhood",
+      "date": "2026-08-17",
+      "type": "school_start",
+      "schemaDescription": "First attendance day for Early Childhood students."
+    },
+    {
+      "label": "Fall",
+      "name": "Fall Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Return",
+      "name": "Students Return After Winter Break",
+      "date": "2027-01-06",
+      "type": "school_resume",
+      "schemaDescription": "Students return after Winter Break on Jan. 6, 2027."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Last K–11 Day",
+      "name": "Last Half Day for Grades K–11",
+      "date": "2027-05-25",
+      "type": "school_end",
+      "schemaDescription": "Last scheduled day for grades K–11; students attend a half day."
+    }
+  ],
+  "allDatesTitle": "Olathe Public Schools Calendar 2026–27 Dates",
+  "allDatesCoverageNote": "This table follows the grade and attendance details in the official PDF. Conference windows are listed separately from no-student days, and the two possible weather dates remain conditional.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1775056734/olatheschoolsorg/os0nvitf0p0tpbcorzso/2026-27-District-Calendar-040126.pdf",
+  "allDatesSourceLabel": "Official OPS 2026–27 District Calendar",
+  "dateLegendLabelOverrides": {
+    "Academic Date": "Grade / School Date",
+    "Teacher Workday": "Professional Day",
+    "Reserved Weather Day": "Possible Weather Date",
+    "No School": "No Students"
+  },
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "gradingPeriodsTitle": "OPS 2026–27 Reporting Periods",
+  "gradingPeriodsDescription": "The four reporting periods printed in the official calendar total 170 days. These are district reporting periods, not grade-specific first or last days.",
+  "gradingPeriodsDaysLabel": "Days in Period",
+  "gradingPeriods": [
+    {
+      "label": "1st Quarter",
+      "start": "2026-08-13",
+      "end": "2026-10-08",
+      "studentDays": 40
+    },
+    {
+      "label": "2nd Quarter",
+      "start": "2026-10-12",
+      "end": "2026-12-18",
+      "studentDays": 42
+    },
+    {
+      "label": "3rd Quarter",
+      "start": "2027-01-06",
+      "end": "2027-03-12",
+      "studentDays": 43
+    },
+    {
+      "label": "4th Quarter",
+      "start": "2027-03-23",
+      "end": "2027-05-25",
+      "studentDays": 45
+    }
+  ],
+  "customSections": [
+    {
+      "id": "ops-2026-2027-opening",
+      "label": "Olathe First Days of School: Aug. 13, 14 and 17",
+      "position": "afterKeyDates",
+      "content": "Aug. 13 is not the first day for every Olathe student. Grades K–5, 6 and 9 attend that morning only. All K–12 students attend a full day Aug. 14, and Early Childhood starts Aug. 17.",
+      "table": {
+        "caption": "OPS 2026–27 first attendance date by student group",
+        "columns": [
+          "Date",
+          "Students attending",
+          "Published schedule"
+        ],
+        "rows": [
+          [
+            "Aug. 13, 2026",
+            "Grades K–5, 6 and 9",
+            "K–5: 8:55–11:30 a.m.; grade 6: 8:20 a.m.–12:55 p.m.; grade 9: 7:40 a.m.–12:15 p.m."
+          ],
+          [
+            "Aug. 14, 2026",
+            "All grades K–12; no Early Childhood",
+            "First full day on regular K–12 hours"
+          ],
+          [
+            "Aug. 17, 2026",
+            "Early Childhood",
+            "First day on Harmony or Heartland session hours"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ops-2026-2027-conferences",
+      "label": "What Happens During Olathe Conference Weeks?",
+      "position": "afterKeyDates",
+      "content": "Conference week does not mean students are off all week. Buildings provide appointment times, and OPS says canceled conferences may be rescheduled for the following week on the same weekday and time.",
+      "table": {
+        "caption": "Student attendance during OPS 2026–27 conference weeks",
+        "columns": [
+          "Published dates",
+          "Calendar meaning",
+          "Student attendance"
+        ],
+        "rows": [
+          [
+            "Oct. 12–14",
+            "Building conferences",
+            "Students attend; Oct. 14 is a half day"
+          ],
+          [
+            "Oct. 15",
+            "Conferences",
+            "No students"
+          ],
+          [
+            "Oct. 16",
+            "No School",
+            "No students"
+          ],
+          [
+            "Feb. 8–10",
+            "Building conferences",
+            "Students attend; Feb. 10 is a half day"
+          ],
+          [
+            "Feb. 11",
+            "Conferences",
+            "No students"
+          ],
+          [
+            "Feb. 12",
+            "No School",
+            "No students"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ops-2026-2027-hours",
+      "label": "Olathe School Hours and Half-Day Dismissal Times",
+      "position": "afterAllDates",
+      "content": "High school dismissal is 10 minutes later on Oct. 14 than on the other listed half days. Grades 9–12 dismiss at 11:05 a.m. on Oct. 14 and at 10:55 a.m. on Dec. 18, Feb. 10 and May 25. Grades 6–8 dismiss at 11:35 a.m. on each listed half day.",
+      "table": {
+        "caption": "OPS 2026–27 published school hours",
+        "columns": [
+          "Student group",
+          "Regular day",
+          "Oct. 14 half day",
+          "Dec. 18, Feb. 10 and May 25 half days"
+        ],
+        "rows": [
+          [
+            "Grades K–5",
+            "8:55 a.m.–3:55 p.m.",
+            "8:55 a.m.–12:10 p.m.",
+            "8:55 a.m.–12:10 p.m."
+          ],
+          [
+            "Grades 6–8",
+            "8:20 a.m.–3:20 p.m.",
+            "8:20–11:35 a.m.",
+            "8:20–11:35 a.m."
+          ],
+          [
+            "Grades 9–12",
+            "7:40 a.m.–2:40 p.m.",
+            "7:40–11:05 a.m.",
+            "7:40–10:55 a.m."
+          ],
+          [
+            "Harmony Early Childhood",
+            "8:55 a.m.–noon or 12:50–3:55 p.m.",
+            "No Early Childhood",
+            "No Early Childhood"
+          ],
+          [
+            "Heartland Early Childhood",
+            "8:20–11:25 a.m. or 12:15–3:20 p.m.",
+            "No Early Childhood",
+            "No Early Childhood"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ops-2026-2027-weather-specials",
+      "label": "How Weather Can Affect the Olathe Calendar",
+      "position": "afterAllDates",
+      "content": "March 22 and April 23 are scheduled professional days, but OPS also lists them as possible inclement-weather make-up dates. Unless OPS activates one, students do not attend. The Elementary Specials calendar works differently: weather closures do not shift the printed A/B/C/D rotation.",
+      "table": {
+        "caption": "How weather can affect two different OPS calendar layers",
+        "columns": [
+          "Calendar layer",
+          "Published rule",
+          "Family action"
+        ],
+        "rows": [
+          [
+            "District attendance calendar",
+            "March 22 and April 23 are possible inclement-weather dates",
+            "Check OPS alerts before assuming no school"
+          ],
+          [
+            "Elementary Specials A/B/C/D calendar",
+            "Weather closures do not shift the printed rotation",
+            "Use the letter already printed on the next school date"
+          ],
+          [
+            "Live building calendar",
+            "Building events and conference times may change",
+            "Confirm details with the school"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ops-2026-2027-calendar-guide",
+      "label": "Which Olathe Calendar Do I Need?",
+      "content": "Use the district calendar for dates that apply across OPS, then check the calendar for your child's school or program.",
+      "position": "afterGradingPeriodsBeforeCalendarExport",
+      "table": {
+        "caption": "Olathe calendar sources by planning task",
+        "columns": [
+          "What you need",
+          "Where to check"
+        ],
+        "rows": [
+          [
+            "First and last days, breaks, half days and reporting periods",
+            "District school-year PDF"
+          ],
+          [
+            "Elementary Specials rotation",
+            "Elementary Specials A/B/C/D PDF"
+          ],
+          [
+            "Conference appointment time",
+            "Your child's school"
+          ],
+          [
+            "Performances, clubs and school events",
+            "Individual school calendar"
+          ],
+          [
+            "High school competitions and activities",
+            "High school activity calendar"
+          ],
+          [
+            "Weather closure or two-hour delay",
+            "OPS alert channels and Inclement Weather page"
+          ]
+        ]
+      }
+    }
+  ],
+  "unifiedDownloadTitle": "OPS Calendar Downloads and Official PDFs",
+  "unifiedDownloadDescription": "Import selected family dates once or open the official English, Spanish and Elementary Specials calendar files.",
+  "compactDownloadModule": true,
+  "pdfHeading": "Official OPS 2026–27 District Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "The revised April 1 English PDF is the primary source used for structured dates on this page.",
+  "hidePdfVersionLabel": false,
+  "groupAlternateCalendarsWithDownloads": true,
+  "icsHeading": "Add OPS 2026–27 Dates to Your Calendar",
+  "icsDescription": "Import the staged opening, breaks, student closures, half days, grade-specific ending dates and the January 6 return date.",
+  "icsButtonLabel": "Download OPS 2026–27 ICS",
+  "icsButtonSupportText": "This is a one-time import, not a live subscription. Check OPS for weather make-up days, conference times, Specials letters, building events and any later calendar changes.",
+  "alternateCalendarsDescription": "OPS publishes a Spanish translation of the district calendar and a separate A/B/C/D reference for elementary Specials.",
+  "alternateCalendars": [
+    {
+      "type": "language",
+      "group": "Official language edition",
+      "label": "Calendario del año escolar 2026–27 — Spanish",
+      "description": "Official Spanish translation of the OPS district calendar, revised June 22, 2026.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1782225346/olatheschoolsorg/rfnkcvuhiaultiqaebg4/2026-27-District-Calendar-062226-SPANISH.pdf"
+    },
+    {
+      "type": "program",
+      "group": "Elementary rotation",
+      "label": "Elementary Specials A/B/C/D Calendar 2026–27",
+      "description": "Districtwide elementary Specials rotation, revised March 24, 2026; its printed sequence does not shift after inclement weather.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1774974509/olatheschoolsorg/vasjbcd1kgfzvzbtb7ja/2026-27-elementary-specials-calendar-032426.pdf",
+      "firstDay": "2026-08-14"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When does Olathe Public Schools start in 2026–27?",
+      "a": "The opening is grade-specific. Grades K–5, 6 and 9 attend a half day Thursday, August 13, 2026. All K–12 grades attend a full day August 14, and Early Childhood starts August 17."
+    },
+    {
+      "q": "When do Olathe students return after Winter Break in 2027?",
+      "a": "Winter Break runs December 21, 2026, through January 1, 2027. January 4–5 are professional days with no students, so students return Wednesday, January 6."
+    },
+    {
+      "q": "When are the 2026–27 Olathe conference half days?",
+      "a": "Wednesday, October 14, 2026, and Wednesday, February 10, 2027, are half days for grades K–12 with no Early Childhood. The following Thursdays are conference days with no students."
+    },
+    {
+      "q": "What are the possible Olathe weather make-up dates in 2026–27?",
+      "a": "March 22 and April 23, 2027, are scheduled professional days that OPS may use to recover time lost to inclement weather. Check OPS announcements before relying on either date as a day off."
+    },
+    {
+      "q": "When is the last day of school for Olathe Public Schools in 2027?",
+      "a": "Seniors finish May 20, Early Childhood finishes May 24, and grades K–11 finish with a morning half day Tuesday, May 25, 2027. Grade 12 does not attend May 25."
+    },
+    {
+      "q": "When are Olathe high school finals in 2026–27?",
+      "a": "Finals use regular high school hours December 16 and May 21. They use the 7:40–10:55 a.m. schedule December 17–18 and May 24–25."
+    },
+    {
+      "q": "How many days are in the Olathe 2026–27 reporting periods?",
+      "a": "The official PDF lists 40, 42, 43 and 45 days, totaling 170 reporting-period days."
+    },
+    {
+      "q": "Does the 2026–27 Elementary Specials calendar shift after a weather closure?",
+      "a": "No. OPS states that the A/B/C/D schedule remains consistent across elementary buildings and is not affected by inclement weather."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When does Olathe Public Schools start in 2026–27?",
+    "When do Olathe students return after Winter Break in 2027?",
+    "When are the 2026–27 Olathe conference half days?",
+    "What are the possible Olathe weather make-up dates in 2026–27?",
+    "When is the last day of school for Olathe Public Schools in 2027?",
+    "When are Olathe high school finals in 2026–27?",
+    "What does No EC mean on the Olathe calendar?",
+    "Does the 2026–27 Elementary Specials calendar shift after a weather closure?",
+    "Where should families look for Olathe school events and conference times?",
+    "How does Olathe announce weather closures or delays?"
+  ],
+  "sourceReviewSummary": "We reviewed the current OPS district calendar, Spanish edition and Elementary Specials calendar for this page.",
+  "sourcesTitle": "Official Olathe Public Schools Sources",
+  "sourceReviewDetailsTitle": "What was verified",
+  "sourceReviewDetails": [
+    "The current English PDF published by OPS matches the reviewed file.",
+    "The Spanish PDF carries the same dates, reporting periods and hours as the English district calendar.",
+    "The Elementary Specials PDF was reviewed as an A/B/C/D rotation aid, not as a separate attendance calendar.",
+    "Conditional March and April inclement-weather dates are excluded from the one-time ICS until activated."
+  ],
+  "sourceMaintainerText": "Olathe Public Schools; page data reviewed by MySchoolDates against official OPS publications.",
+  "sourceNextReviewText": "We review this page again if OPS changes the district calendar, activates a weather make-up date or revises the Elementary Specials rotation.",
+  "sources": [
+    {
+      "label": "OPS district calendar page",
+      "url": "https://www.olatheschools.org/district-calendar-page"
+    },
+    {
+      "label": "Official OPS 2026–27 District Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1775056734/olatheschoolsorg/os0nvitf0p0tpbcorzso/2026-27-District-Calendar-040126.pdf"
+    },
+    {
+      "label": "Official OPS 2026–27 Spanish Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1782225346/olatheschoolsorg/rfnkcvuhiaultiqaebg4/2026-27-District-Calendar-062226-SPANISH.pdf"
+    },
+    {
+      "label": "Official OPS 2026–27 Elementary Specials Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1774974509/olatheschoolsorg/vasjbcd1kgfzvzbtb7ja/2026-27-elementary-specials-calendar-032426.pdf"
+    },
+    {
+      "label": "OPS inclement weather procedures",
+      "url": "https://www.olatheschools.org/students-and-families/inclement-weather"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-07-07",
+      "name": "Online Registration Available",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-07-20",
+      "name": "School Buildings Open to the Public",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-03",
+      "endDate": "2026-08-05",
+      "name": "New Educators Report",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-06",
+      "dates": [
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12"
+      ],
+      "displayDate": "Aug. 6–7 and 10–12, 2026",
+      "name": "Professional Days Before School",
+      "type": "teacher_workday",
+      "description": "Staff dates before students begin.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-13",
+      "name": "Opening Half Day for Grades K–5, 6 and 9",
+      "type": "school_start",
+      "badgeLabel": "Grade-Specific Start",
+      "description": "K–5 attend 8:55–11:30 a.m.; grade 6 attends 8:20 a.m.–12:55 p.m.; grade 9 attends 7:40 a.m.–12:15 p.m. No Early Childhood or grades 7–8 and 10–12."
+    },
+    {
+      "date": "2026-08-14",
+      "name": "First Full Day of Classes for Grades K–12",
+      "type": "school_start",
+      "badgeLabel": "All K–12",
+      "description": "No Early Childhood."
+    },
+    {
+      "date": "2026-08-17",
+      "name": "First Day for Early Childhood",
+      "type": "school_start",
+      "badgeLabel": "Early Childhood"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day (No School)",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-10-08",
+      "name": "End of 1st Quarter",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-09",
+      "name": "Professional Day (No Students)",
+      "type": "teacher_workday",
+      "badgeLabel": "No Students"
+    },
+    {
+      "date": "2026-10-12",
+      "endDate": "2026-10-14",
+      "name": "Conferences — Times Provided by Buildings",
+      "type": "academic",
+      "badgeLabel": "Building Conferences",
+      "description": "Students attend during this range; October 14 is a half day. Buildings provide appointment times.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-14",
+      "name": "Conference Half Day for Grades K–12",
+      "type": "early_dismissal",
+      "description": "No Early Childhood. K–5 end at 12:10 p.m., grades 6–8 at 11:35 a.m. and grades 9–12 at 11:05 a.m."
+    },
+    {
+      "date": "2026-10-15",
+      "name": "Conferences (No Students)",
+      "type": "no_school",
+      "badgeLabel": "No Students"
+    },
+    {
+      "date": "2026-10-16",
+      "name": "No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-11-02",
+      "name": "Professional Day (No Students)",
+      "type": "teacher_workday",
+      "badgeLabel": "No Students"
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Fall Break (No School)",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-16",
+      "name": "High School Finals — Regular Hours",
+      "type": "academic",
+      "badgeLabel": "High School",
+      "description": "High schools follow 7:40 a.m.–2:40 p.m.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-17",
+      "endDate": "2026-12-18",
+      "name": "High School Finals — Half-Day Hours",
+      "type": "academic",
+      "badgeLabel": "High School",
+      "description": "High schools follow 7:40–10:55 a.m.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Half Day for Grades K–12",
+      "type": "early_dismissal",
+      "description": "No Early Childhood. K–5 end at 12:10 p.m., grades 6–8 at 11:35 a.m. and grades 9–12 at 10:55 a.m."
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break (No School)",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "endDate": "2027-01-05",
+      "name": "Professional Days (No Students)",
+      "type": "teacher_workday",
+      "badgeLabel": "No Students",
+      "description": "Students return January 6."
+    },
+    {
+      "date": "2027-01-06",
+      "name": "Students Return After Winter Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Dr. Martin Luther King Jr. Holiday (No School)",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-05",
+      "name": "Professional Day (No Students)",
+      "type": "teacher_workday",
+      "badgeLabel": "No Students"
+    },
+    {
+      "date": "2027-02-08",
+      "endDate": "2027-02-10",
+      "name": "Conferences — Times Provided by Buildings",
+      "type": "academic",
+      "badgeLabel": "Building Conferences",
+      "description": "Students attend during this range; February 10 is a half day. Buildings provide appointment times.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-02-10",
+      "name": "Conference Half Day for Grades K–12",
+      "type": "early_dismissal",
+      "description": "No Early Childhood. K–5 end at 12:10 p.m., grades 6–8 at 11:35 a.m. and grades 9–12 at 10:55 a.m."
+    },
+    {
+      "date": "2027-02-11",
+      "name": "Conferences (No Students)",
+      "type": "no_school",
+      "badgeLabel": "No Students"
+    },
+    {
+      "date": "2027-02-12",
+      "name": "No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents' Day (No School)",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-12",
+      "name": "End of 3rd Quarter",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break (No School)",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-22",
+      "name": "Professional Day / Possible Inclement Weather Date",
+      "type": "makeup_day",
+      "badgeLabel": "Conditional",
+      "description": "Professional day with no students unless OPS activates it to recover inclement-weather time.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-23",
+      "name": "4th Quarter Begins",
+      "type": "quarter_start",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-04-08",
+      "name": "Kindergarten Enrollment (No Kindergarten Students)",
+      "type": "academic",
+      "badgeLabel": "No Kindergarten",
+      "description": "Other grade levels follow their regular schedule.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-04-23",
+      "name": "Professional Day / Possible Inclement Weather Date",
+      "type": "makeup_day",
+      "badgeLabel": "Conditional",
+      "description": "Professional day with no students unless OPS activates it to recover inclement-weather time.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-20",
+      "name": "Seniors' Last Day",
+      "type": "school_end",
+      "badgeLabel": "Grade 12"
+    },
+    {
+      "date": "2027-05-21",
+      "name": "High School Finals — Regular Hours",
+      "type": "academic",
+      "badgeLabel": "High School",
+      "description": "High schools follow 7:40 a.m.–2:40 p.m.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-21",
+      "endDate": "2027-05-23",
+      "name": "Senior Commencement Ceremonies",
+      "type": "graduation",
+      "description": "The district PDF gives the ceremony range; high school communications provide individual times and locations."
+    },
+    {
+      "date": "2027-05-24",
+      "name": "Early Childhood Last Day",
+      "type": "school_end",
+      "badgeLabel": "Early Childhood"
+    },
+    {
+      "date": "2027-05-24",
+      "endDate": "2027-05-25",
+      "name": "High School Finals — Half-Day Hours",
+      "type": "academic",
+      "badgeLabel": "High School",
+      "description": "High schools follow 7:40–10:55 a.m.; grade 12 does not attend May 25.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-25",
+      "name": "Last Half Day for Grades K–11",
+      "type": "school_end",
+      "badgeLabel": "Grades K–11",
+      "description": "K–5 end at 12:10 p.m., grades 6–8 at 11:35 a.m. and grades 9–11 at 10:55 a.m. Grade 12 does not attend."
+    },
+    {
+      "date": "2027-05-26",
+      "name": "Professional Day — Last Day for Staff",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-02",
+      "endDate": "2027-06-04",
+      "name": "Summer Conference",
+      "type": "teacher_workday",
+      "description": "Post-student-year staff dates.",
+      "hideFromCalendarExport": true
+    }
+  ]
+}

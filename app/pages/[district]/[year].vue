@@ -469,6 +469,7 @@ type DistrictCustomSection = {
   definitions?: { term: string; description: string }[]
   links?: { label: string; to: string; description?: string }[]
   table?: { caption?: string; columns?: string[]; headers?: string[]; rows: string[][]; footnote?: string }
+  expandableGroups?: { summaryLabel: string; label?: string; items: string[] }[]
 }
 const customSections = computed(() => {
   const hiddenIds = new Set([
@@ -1118,6 +1119,9 @@ const configuredKeyDateSummaryItems = computed(() =>
 )
 const keyDatesSummaryTitle = computed(() =>
   (cal.value as any)?.keyDatesSummaryTitle ?? (cal.value as any)?.meta?.keyDatesSummaryTitle ?? `${displaySchoolYear.value} Key Dates & Holidays`
+)
+const keyDatesSummaryId = computed(() =>
+  (cal.value as any)?.keyDatesSummaryId ?? (cal.value as any)?.meta?.keyDatesSummaryId ?? (hiddenSections.value.has('keyDateCards') ? 'key-dates' : undefined)
 )
 const keyDatesHeading = computed(() =>
   (cal.value as any)?.keyDatesHeading ?? (cal.value as any)?.meta?.keyDatesHeading ?? 'Key Dates'
@@ -1795,8 +1799,8 @@ useHead({
       </div>
 
       <div
-        v-if="hiddenSections.has('keyDateCards') && configuredKeyDateSummaryItems.length"
-        id="key-dates"
+        v-if="configuredKeyDateSummaryItems.length && (hiddenSections.has('keyDateCards') || keyDatesSummaryId)"
+        :id="keyDatesSummaryId"
         class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24"
       >
         <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ keyDatesSummaryTitle }}</h2>
@@ -2145,6 +2149,7 @@ useHead({
       <!-- Sources -->
       <DistrictSources
         v-if="sourcesBeforeFaq && !hiddenSections.has('sources') && pageSources.length"
+        :title="(cal as any).sourcesTitle ?? (cal as any).meta?.sourcesTitle"
         :sources="pageSources"
         :district-name="district!.name"
         :short-name="district!.shortName || district!.name"
@@ -2226,6 +2231,7 @@ useHead({
         :school-count="(district as any).schoolCount"
         :school-count-exact="Boolean((district as any).profileSchoolCountExact)"
         :school-count-approximate="Boolean((district as any).profileSchoolCountApproximate ?? (district as any).meta?.profileSchoolCountApproximate)"
+        :school-count-label="(district as any).schoolCountLabel ?? (district as any).meta?.schoolCountLabel"
         :calendar-type="(district as any).calendarType"
         :hide-calendar-type="Boolean((district as any).hideProfileCalendarType)"
         :grades="district!.grades"
@@ -2243,6 +2249,7 @@ useHead({
       <!-- Sources -->
       <DistrictSources
         v-if="!sourcesBeforeFaq && !hiddenSections.has('sources') && pageSources.length"
+        :title="(cal as any).sourcesTitle ?? (cal as any).meta?.sourcesTitle"
         :sources="pageSources"
         :district-name="district!.name"
         :short-name="district!.shortName || district!.name"

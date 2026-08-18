@@ -17,6 +17,7 @@ const props = defineProps<{
     linksLabel?: string
     timeline?: { marker: string; label: string; detail: string }[]
     table?: { caption?: string; columns?: string[]; headers?: string[]; rows: string[][]; footnote?: string }
+    expandableGroups?: { summaryLabel: string; label?: string; items: string[] }[]
   }[]
   position: string
 }>()
@@ -254,6 +255,30 @@ const contentParagraphs = (content?: string) =>
         <p v-if="section.table?.footnote" class="mt-2 text-xs leading-relaxed text-gray-500">
           {{ section.table.footnote }}
         </p>
+        <div v-if="section.expandableGroups?.length" class="mt-4 grid gap-3">
+          <details
+            v-for="(expandableGroup, expandableGroupIndex) in section.expandableGroups"
+            :key="`${section.id}-expandable-${expandableGroupIndex}`"
+            class="group rounded-lg border border-gray-200 bg-gray-50"
+          >
+            <summary class="cursor-pointer list-none px-4 py-3">
+              <span class="flex items-center justify-between gap-4">
+                <span class="text-sm font-semibold text-gray-900">{{ expandableGroup.summaryLabel }}</span>
+                <span class="text-sm font-medium text-blue-600 group-open:hidden">Show</span>
+                <span class="text-sm font-medium text-blue-600 hidden group-open:inline">Hide</span>
+              </span>
+            </summary>
+            <div class="border-t border-gray-200 bg-white px-4 py-3">
+              <h3 v-if="expandableGroup.label" class="text-sm font-semibold text-gray-900 mb-2">{{ expandableGroup.label }}</h3>
+              <ul class="grid gap-1.5 sm:grid-cols-2">
+                <li v-for="item in expandableGroup.items" :key="item" class="flex items-start gap-2 text-sm text-gray-600">
+                  <span class="mt-2 h-1.5 w-1.5 rounded-lg bg-blue-400 flex-shrink-0" />
+                  <span>{{ item }}</span>
+                </li>
+              </ul>
+            </div>
+          </details>
+        </div>
         <p v-if="section.links?.length && section.linksDisplay === 'inline'" class="mt-4 text-sm text-gray-600">
           <span class="font-medium text-gray-900">{{ section.linksLabel || 'Sources:' }}</span>
           <template v-for="(link, linkIndex) in section.links" :key="linkTarget(link)">

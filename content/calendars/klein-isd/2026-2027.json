@@ -1,171 +1,582 @@
 {
   "institutionId": "klein-isd",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Klein ISD Calendar 2026-2027: Holidays, Breaks & Important Dates",
   "firstDay": "2026-08-12",
   "lastDay": "2027-05-28",
+  "temporalCoverageStart": "2026-08-12",
+  "temporalCoverageEnd": "2027-05-28",
   "sourceUrl": "https://www.kleinisd.net/calendar",
+  "sourceDocumentPage": "https://www.kleinisd.net/calendar",
   "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5525/Kisd/4627cc15-b5d2-427f-8c32-af51928c7d67/26-27_KleinISDCalendar_English_Color.pdf?disposition=inline",
-  "lastVerifiedAt": "2026-07-22",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5525/Kisd/4627cc15-b5d2-427f-8c32-af51928c7d67/26-27_KleinISDCalendar_English_Color.pdf?disposition=inline",
+  "sourceCheckedAt": "2026-08-18",
+  "sourceChecksumSha256": "8e23c266bef355ee08c175b52c60b01d6f354e723f92aaa50608170c49efb787",
+  "lastVerifiedAt": "2026-08-18",
   "datePublished": "2026-07-22",
-  "dateModified": "2026-07-22",
+  "dateModified": "2026-08-18",
+  "contentStatus": "production_ready",
   "calendarType": "traditional",
-  "totalSchoolDays": 180,
-  "yearNumbersMode": "compact",
+  "hideInstructionalDaysSummary": true,
+  "hideFaqSchema": true,
+  "includeArticleSchema": false,
+  "webPageMainEntity": "dataset",
+  "sourceCalendarName": "Klein ISD 2026–27 District Calendar",
+  "schemaCalendarName": "Klein ISD 2026–27 District Calendar",
+  "schemaDatasetName": "Klein ISD 2026–27 Student Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Klein ISD student calendar dates, including the first and last days, holidays, breaks, no-school workdays, and grading-period changes.",
+  "schemaSpatialCoverage": "Klein Independent School District in northwest Harris County, Texas",
+  "schemaCalendarDownloadName": "Klein ISD 2026–27 ICS Calendar",
+  "schemaCalendarDownloadDescription": "One-time ICS import of selected Klein ISD student calendar dates; staff-only dates before and after the student year are excluded.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-spanish",
+      "name": "Klein ISD 2026–27 Spanish District Calendar",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5525/Kisd/ae20767d-eb9c-411c-8d92-2e16d0b34a5a/26-27_KleinISDCalendar_Spanish_Color.pdf?disposition=inline"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-spanish"
+  ],
+  "seoTitle": "Klein ISD Calendar 2026-2027: Holidays & Breaks",
+  "seoDescription": "Klein ISD’s 2026–27 school calendar starts Aug. 12 and ends May 28. See major breaks, school hours, the official PDF, Spanish calendar, and an ICS download.",
+  "heroSummary": "Klein ISD students start school Wednesday, August 12, 2026, and finish Friday, May 28, 2027. Fall Break is October 12–16, Thanksgiving Break is November 23–27, Winter Break is December 21–January 1, Mid-Winter Break is February 8–12, and Spring Break is March 15–19.",
+  "heroSourceLine": "Northwest Harris County, Texas · Based on Klein ISD’s official 2026–27 district calendar",
+  "heroCtas": [
+    {
+      "label": "View Official PDF",
+      "href": "__sourcePdfUrl",
+      "variant": "secondary"
+    },
+    {
+      "label": "Download Calendar (.ics)",
+      "href": "__icsUrl",
+      "variant": "primary",
+      "download": true,
+      "filename": "__icsFilename"
+    }
+  ],
+  "verificationBadgeText": "Reviewed August 18, 2026 · Denis Dou · Official Klein ISD sources",
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroDownloadLink": true,
+  "hideAlternateCalendarsNotice": true,
+  "hiddenSections": [
+    "downloadCta",
+    "quickFacts",
+    "todayStatus",
+    "about",
+    "planningTips",
+    "yearNumbers",
+    "whatsDifferent",
+    "districtProfile",
+    "livingHere",
+    "otherCalendars"
+  ],
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "School Hours",
+      "id": "klein-isd-school-hours"
+    },
+    {
+      "label": "Student Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "What's New",
+      "id": "klein-isd-whats-new-2026-2027"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Comparison",
+      "id": "comparison"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "preserveJumpNavigationOrder": true,
+  "keyDatesSummaryTitle": "Klein ISD 2026–27 Key Dates & Holidays",
+  "keyDatesSummaryId": "key-dates-summary",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, and when students return after Winter Break",
+  "keyDateCardsThirdLabel": "Spring Break",
+  "keyDateCardsThirdValue": "March 15–19, 2027",
+  "keyDateCardsThirdDate": "2027-03-15",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-12",
+      "type": "school_start"
+    },
+    {
+      "label": "Break",
+      "name": "Fall Break",
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Return",
+      "name": "Students Return after Winter Break",
+      "date": "2027-01-06",
+      "type": "school_resume",
+      "schemaDescription": "Klein ISD students return after Winter Break on January 6, 2027."
+    },
+    {
+      "label": "Break",
+      "name": "Mid-Winter Break",
+      "date": "2027-02-08",
+      "endDate": "2027-02-12",
+      "type": "break_start"
+    },
+    {
+      "label": "Break",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-05-28",
+      "type": "school_end"
+    }
+  ],
+  "allDatesMode": "all",
+  "allDatesTitle": "Klein ISD 2026–27 Student Calendar Dates",
+  "allDatesCoverageNote": "This table focuses on major student calendar dates, including holidays, breaks, no-school workdays, grading-period changes, and the first and last days. Staff-only dates before and after the student year are not shown.",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5525/Kisd/4627cc15-b5d2-427f-8c32-af51928c7d67/26-27_KleinISDCalendar_English_Color.pdf?disposition=inline",
+  "allDatesSourceLabel": "Official Klein ISD 2026–27 district calendar PDF",
+  "dateLegendItems": [
+    {
+      "label": "Holiday",
+      "dot": "bg-teal-400"
+    },
+    {
+      "label": "No School",
+      "dot": "bg-amber-400"
+    },
+    {
+      "label": "Break",
+      "dot": "bg-purple-400"
+    },
+    {
+      "label": "Grading Period",
+      "dot": "bg-slate-400"
+    }
+  ],
+  "breaksTitle": "Klein ISD School Breaks and Return Dates",
+  "hideBreakDurationBadges": true,
+  "breakNotes": {
+    "Fall Break": "Students return Monday, October 19.",
+    "Thanksgiving Break": "Students return Monday, November 30.",
+    "Winter Break": "January 4–5 are teacher and staff workdays with no school. Students return Wednesday, January 6.",
+    "Mid-Winter Break": "February 8–10 are teacher and staff workdays; February 11–12 are student and staff holidays. Students return Tuesday, February 16, after Presidents Day.",
+    "Spring Break": "Students return Monday, March 22."
+  },
+  "compactDownloadModule": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "unifiedDownloadTitle": "Klein ISD Calendar Downloads",
+  "unifiedDownloadDescription": "Open the official English or Spanish calendar PDF, or download selected student dates for Google Calendar, Apple Calendar, or Outlook.",
+  "icsHeading": "Add Klein ISD Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file with selected Klein ISD student calendar dates. Staff-only dates before and after the student year are not included.",
+  "icsButtonLabel": "Download Klein ISD Calendar (.ics)",
+  "icsButtonSupportText": "This file does not update automatically if Klein ISD revises its calendar.",
+  "pdfHeading": "Official Klein ISD 2026–27 Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Open or print the English district calendar used to review this page.",
+  "pdfButtonLabel": "View Official English PDF",
+  "alternateCalendarsTitle": "Spanish Calendar",
+  "alternateCalendarsDescription": "Klein ISD also publishes the same 2026–27 district calendar in Spanish.",
   "alternateCalendars": [
     {
       "type": "spanish",
-      "label": "2026-2027 School Year (Spanish)",
+      "group": "Spanish Calendar",
+      "label": "Klein ISD 2026–27 Spanish Calendar",
+      "buttonLabel": "View Spanish PDF",
       "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5525/Kisd/ae20767d-eb9c-411c-8d92-2e16d0b34a5a/26-27_KleinISDCalendar_Spanish_Color.pdf?disposition=inline"
     }
   ],
-  "seoTitle": "Klein ISD Calendar 2026-2027: Holidays & Breaks",
-  "seoDescription": "Klein ISD 2026-2027 calendar with Aug 12 first day, May 28 last day, fall break, Thanksgiving, winter break, spring break, PDF, ICS, and Google Calendar download.",
-  "pageHeading": "Klein ISD Calendar 2026-2027: Holidays, Breaks & Important Dates",
-  "calendarNotes": "Klein ISD starts the 2026-2027 school year on August 12, 2026 and ends on May 28, 2027. Fall Break runs October 12-16, Thanksgiving Break runs November 23-27, Winter Break runs December 21-January 1, Mid-Winter Break runs February 8-12, and Spring Break runs March 15-19. The district also publishes a Spanish version of the 2026-2027 calendar.",
+  "comparisonBeforeFaq": true,
+  "comparisonTitle": "Klein ISD Calendar Compared with Nearby Districts",
+  "comparisonSummary": "Compare Klein ISD with Conroe ISD, Cypress-Fairbanks ISD, and Houston ISD for the first and last days and major school breaks in 2026–27.",
+  "comparisonRowsMode": "anyValues",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "fallBreak",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "comparisonInsights": [
+    {
+      "label": "First day",
+      "items": [
+        "Klein ISD, Cypress-Fairbanks ISD, and Conroe ISD start August 12. Houston ISD starts August 10."
+      ]
+    },
+    {
+      "label": "Spring Break",
+      "items": [
+        "Klein ISD, Cypress-Fairbanks ISD, and Conroe ISD schedule Spring Break for March 15–19. Houston ISD schedules it for March 8–12."
+      ]
+    },
+    {
+      "label": "Last day",
+      "items": [
+        "Klein ISD and Houston ISD end May 28. Cypress-Fairbanks ISD and Conroe ISD end May 27."
+      ]
+    }
+  ],
+  "hideComparisonNotes": true,
+  "hideComparisonReviewedDate": true,
+  "comparisonFooterText": "Dates are based on each district’s published 2026–27 calendar and compare equivalent break periods where available.",
   "calendarFaqs": [
     {
       "q": "When does Klein ISD start school in 2026?",
-      "a": "The first day of school is Wednesday, August 12, 2026."
+      "a": "Klein ISD students start school Wednesday, August 12, 2026."
     },
     {
       "q": "When is Klein ISD Spring Break in 2027?",
-      "a": "Spring Break runs Monday, March 15 through Friday, March 19, 2027."
+      "a": "Klein ISD Spring Break runs Monday, March 15 through Friday, March 19, 2027. Students return Monday, March 22."
     },
     {
       "q": "When is the last day of school for Klein ISD in 2027?",
       "a": "The last day of school is Friday, May 28, 2027."
     },
     {
-      "q": "How many instructional days are in Klein ISD 2026-2027?",
-      "a": "The Klein ISD 2026-2027 calendar includes 180 instructional days."
+      "q": "When do Klein ISD students return after Winter Break?",
+      "a": "Students return Wednesday, January 6, 2027. January 4–5 are teacher and staff workdays with no school for students."
     },
     {
-      "q": "When do Klein ISD students return after Winter Break?",
-      "a": "Klein ISD students return for the second semester on Wednesday, January 6, 2027, after Winter Break and the January teacher and staff workdays."
+      "q": "Do Klein ISD students have school on teacher and staff workdays?",
+      "a": "No. The teacher and staff workdays listed on this page are no-school days for students."
+    },
+    {
+      "q": "Where can I find the Spanish Klein ISD calendar?",
+      "a": "The official Klein ISD 2026–27 Spanish calendar PDF is linked in the Downloads section."
     }
   ],
+  "faqOrderLimit": 6,
+  "faqDisplayQuestions": [
+    "When does Klein ISD start school in 2026?",
+    "When is Klein ISD Spring Break in 2027?",
+    "When is the last day of school for Klein ISD in 2027?",
+    "When do Klein ISD students return after Winter Break?",
+    "Do Klein ISD students have school on teacher and staff workdays?",
+    "Where can I find the Spanish Klein ISD calendar?"
+  ],
+  "sources": [
+    {
+      "label": "Klein ISD calendar page",
+      "url": "https://www.kleinisd.net/calendar"
+    },
+    {
+      "label": "Official Klein ISD 2026–27 English calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5525/Kisd/4627cc15-b5d2-427f-8c32-af51928c7d67/26-27_KleinISDCalendar_English_Color.pdf?disposition=inline"
+    },
+    {
+      "label": "Official Klein ISD 2026–27 Spanish calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5525/Kisd/ae20767d-eb9c-411c-8d92-2e16d0b34a5a/26-27_KleinISDCalendar_Spanish_Color.pdf?disposition=inline"
+    }
+  ],
+  "sourceReviewSummary": "Reviewed August 18, 2026, against Klein ISD’s official calendar page and 2026–27 English district calendar.",
+  "sourceReviewDetailsTitle": "Review scope",
+  "sourceReviewDetails": [
+    "The first and last days, all five major breaks, grading-period dates, student holidays, and teacher and staff workdays were checked against the district PDF.",
+    "School hours were checked directly against the hours printed on the district PDF.",
+    "The student calendar and ICS exclude staff-only dates before August 12 and after May 28.",
+    "The ICS file is a one-time import; Klein ISD remains the source of record for revisions and emergency schedule changes."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Klein ISD sources.",
+  "sourceNextReviewText": "Next review: when Klein ISD revises the 2026–27 calendar or publishes a replacement PDF.",
+  "yearSwitcherPosition": "afterSources",
+  "yearSwitcherLabel": "Other Klein ISD school years:",
   "customSections": [
     {
-      "id": "about-klein-isd-2026-2027-school-calendar",
-      "label": "About Klein ISD 2026-2027 School Calendar",
+      "id": "klein-isd-school-hours",
+      "label": "Klein ISD School Hours for 2026–27",
       "position": "afterKeyDates",
-      "content": "The Klein ISD 2026-2027 school calendar is the districtwide academic calendar for Klein Independent School District families in northwest Harris County and the greater Houston area. It shows the first day of school, last day of school, semester and grading-period markers, major holidays, student holidays, teacher and staff workdays, teacher exchange days, Fall Break, Thanksgiving Break, Winter Break, Mid-Winter Break, Spring Break, and end-of-year dates.\n\nMost families use the traditional Klein ISD calendar to plan school attendance, transportation, childcare, appointments, athletics, travel, and summer activities. The district also publishes a Spanish version of the 2026-2027 calendar, and families should check campus announcements for school-specific events, testing schedules, graduation details, emergency closures, and dismissal-time changes.\n\nThis page organizes the official Klein ISD calendar into key dates, a printable PDF source, an importable calendar file, and a student-focused date list so parents can find holidays, no-school days, and break dates without searching through the full PDF."
-    },
-    {
-      "id": "important-klein-isd-dates-for-parents",
-      "label": "Important Dates Parents Should Know",
-      "position": "afterKeyDates",
-      "content": "These Klein ISD dates are useful planning points for families because they affect student attendance, childcare, travel, transportation, and daily routines.",
+      "schemaHasPart": true,
+      "isBasedOn": "source-calendar",
+      "content": "Klein ISD’s 2026–27 district calendar lists regular school hours by grade level.",
       "table": {
-        "columns": ["Event", "Date", "Why it matters"],
+        "caption": "Klein ISD school hours published on the 2026–27 district calendar",
+        "columns": [
+          "School level",
+          "Regular hours"
+        ],
         "rows": [
-          ["First Day of School", "August 12, 2026", "First student attendance day for setting supplies, transportation, pickup routines, and before-school or after-school care."],
-          ["Fall Break", "October 12-16, 2026", "A full school-week break families often use for childcare coverage, appointments, or short trips."],
-          ["Thanksgiving Break", "November 23-27, 2026", "A full holiday week that can affect travel plans and family schedules."],
-          ["Winter Break", "December 21, 2026-January 1, 2027", "The main mid-year holiday period for vacation planning and return-to-school routines."],
-          ["Mid-Winter Break", "February 8-12, 2027", "A February break window that includes student holidays, teacher workdays, and break dates."],
-          ["Spring Break", "March 15-19, 2027", "A common travel and appointment-planning week for Klein ISD families."],
-          ["Last Day of School", "May 28, 2027", "Anchor date for summer childcare, camps, travel, and end-of-year planning."]
-        ]
-      }
+          [
+            "Elementary",
+            "8:05 a.m.–3:25 p.m."
+          ],
+          [
+            "Intermediate",
+            "8:55 a.m.–4:15 p.m."
+          ],
+          [
+            "High School",
+            "7:15 a.m.–2:35 p.m."
+          ]
+        ],
+        "footnote": "Campus-specific events, testing schedules, and dismissal changes may follow separate school announcements."
+      },
+      "links": [
+        {
+          "label": "Official Klein ISD calendar PDF",
+          "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5525/Kisd/4627cc15-b5d2-427f-8c32-af51928c7d67/26-27_KleinISDCalendar_English_Color.pdf?disposition=inline"
+        }
+      ],
+      "linksDisplay": "inline",
+      "linksLabel": "Source:"
     },
     {
-      "id": "klein-isd-2026-2027-calendar-overview",
-      "label": "Klein ISD 2026-2027 Calendar Overview",
-      "position": "afterKeyDates",
-      "content": "The Klein ISD 2026-2027 academic calendar is organized around two semesters and four grading periods. The first semester begins with the August 12, 2026 first day of school and ends in December 2026 before Winter Break. Students return in January 2027 for the second semester, which continues through the fourth grading period and the final student day on May 28, 2027.\n\nFamilies should pay special attention to dates that are not simple holiday breaks. Teacher and staff workdays, teacher exchange days, high school early dismissal notes, grading-period changes, and Mid-Winter Break can affect attendance, childcare, transportation, and campus routines. The February Mid-Winter Break window includes student no-school days and associated staff workdays, so parents should review the full date list and official Klein ISD calendar notes before making plans.\n\nThis overview is intended to help families understand the school-year structure before using the detailed date table, printable PDF, or calendar import file."
-    },
-    {
-      "id": "klein-isd-calendar-pdf-vs-calendar-file",
-      "label": "Klein ISD Calendar PDF vs Calendar File",
-      "position": "afterKeyDates",
-      "content": "Klein ISD families can use either the printable PDF or the calendar file depending on how they prefer to save school dates.",
+      "id": "klein-isd-whats-new-2026-2027",
+      "label": "What Changed from 2025–26?",
+      "position": "afterBreaks",
+      "content": "Compared with 2025–26, school starts on August 12 instead of August 13. Fall Break, Thanksgiving Break, and Spring Break each start one calendar day earlier, while the last day remains May 28.",
       "table": {
-        "columns": ["Option", "Best for", "What to know"],
+        "columns": [
+          "Calendar item",
+          "2025–26",
+          "2026–27"
+        ],
         "rows": [
-          ["Printable PDF", "Printing, sharing, and keeping a paper copy at home", "Use the official Klein ISD PDF when you want the district's published calendar layout."],
-          ["Calendar File (.ics)", "Google Calendar, Apple Calendar, Outlook, and personal scheduling apps", "Import the calendar file to save reviewed dates, but verify official updates because it is not a live district sync."],
-          ["Official Calendar Page", "Checking revisions, campus notes, translations, and emergency updates", "Use Klein ISD as the source of record before making time-sensitive plans."]
+          [
+            "First day of school",
+            "August 13, 2025",
+            "August 12, 2026"
+          ],
+          [
+            "Fall Break",
+            "October 13–17",
+            "October 12–16"
+          ],
+          [
+            "Thanksgiving Break",
+            "November 24–28",
+            "November 23–27"
+          ],
+          [
+            "Spring Break",
+            "March 16–20",
+            "March 15–19"
+          ],
+          [
+            "Last day of school",
+            "May 28, 2026",
+            "May 28, 2027"
+          ]
         ]
-      }
-    },
-    {
-      "id": "klein-isd-calendar-verification-method",
-      "label": "Calendar Verification Methodology",
-      "position": "beforeSources",
-      "content": "MySchoolDates reviews the official Klein ISD calendar page and published district calendar PDF, compares key dates such as first day, last day, Fall Break, Thanksgiving Break, Winter Break, Mid-Winter Break, Spring Break, teacher and staff workdays, teacher exchange days, and early dismissal notes, then converts the reviewed records into the calendar file used on this page. The official Klein ISD calendar remains the source of record for revisions, campus-specific events, emergency closures, and same-day announcements.\n\nFor more detail, see the MySchoolDates calendar verification methodology."
-    },
-    {
-      "id": "parent-questions-about-klein-isd-calendar",
-      "label": "Parent Questions About the Klein ISD Calendar",
-      "position": "afterFaq",
-      "content": "These parent-focused answers cover no-school days, teacher workdays, early dismissal, and schedule-change checks. They are visible page content and do not replace the official Klein ISD calendar.",
-      "table": {
-        "columns": ["Question", "Answer"],
-        "rows": [
-          ["How many school days are in the Klein ISD 2026-2027 calendar?", "Families who need an official school-day or instructional-day count should confirm it with Klein ISD because staff workdays, teacher exchange days, and calendar revisions can affect attendance totals."],
-          ["When does Klein ISD winter break end?", "Winter Break ends Friday, January 1, 2027. Students return after the January teacher and staff workdays, with the second semester beginning Wednesday, January 6, 2027."],
-          ["Are teacher workdays student holidays?", "Yes. Klein ISD lists teacher and staff workdays as student holidays or no-school days for students."],
-          ["Does Klein ISD have early release days?", "Klein ISD calendars may include early dismissal dates for high school students in some years. Families should check the official calendar and campus announcements for dismissal-time details."],
-          ["Does Klein ISD have school tomorrow?", "This page shows planned calendar dates only. For tomorrow-specific attendance, weather closures, emergency cancellations, or same-day updates, families should check official Klein ISD announcements."],
-          ["Where can families find the Spanish Klein ISD calendar?", "Klein ISD publishes a Spanish version of the 2026-2027 school calendar, linked as an alternate calendar on this page when available."]
-        ]
-      }
-    }
-  ],
-  "yearNumbers": [
-    {
-      "label": "First Day",
-      "value": "Aug 12",
-      "detail": "The first day of school is August 12, 2026."
-    },
-    {
-      "label": "Spring Break",
-      "value": "Mar 15-19",
-      "detail": "Spring Break runs March 15-19, 2027."
-    },
-    {
-      "label": "Last Day",
-      "value": "May 28",
-      "detail": "The last day of school is May 28, 2027."
+      },
+      "links": [
+        {
+          "label": "View the Klein ISD 2025–26 calendar",
+          "to": "/klein-isd-calendar/2025-2026"
+        }
+      ]
     }
   ],
   "events": [
-    { "date": "2026-07-03", "name": "Independence Day Observed - Staff Holiday", "type": "holiday" },
-    { "date": "2026-08-03", "name": "Teacher and Staff Workdays", "type": "student_holiday" },
-    { "date": "2026-08-11", "name": "Teacher and Staff Workdays End", "type": "student_holiday" },
-    { "date": "2026-08-12", "name": "First Day of School", "type": "school_start" },
-    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
-    { "date": "2026-09-18", "name": "Student Holiday / Teacher and Staff Workday", "type": "student_holiday" },
-    { "date": "2026-10-09", "name": "End of Grading Period 1", "type": "quarter_end" },
-    { "date": "2026-10-12", "name": "Fall Break", "type": "break_start" },
-    { "date": "2026-10-16", "name": "Fall Break End", "type": "break_end" },
-    { "date": "2026-10-19", "name": "First Day of Grading Period 2", "type": "quarter_start" },
-    { "date": "2026-11-03", "name": "Election Day - Student Holiday / Teacher and Staff Workday", "type": "student_holiday" },
-    { "date": "2026-11-23", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2026-12-18", "name": "Last Day of First Semester / End of Grading Period 2", "type": "semester_end" },
-    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
-    { "date": "2027-01-01", "name": "Winter Break End", "type": "break_end" },
-    { "date": "2027-01-04", "name": "Student Holiday / Teacher and Staff Workday", "type": "student_holiday" },
-    { "date": "2027-01-05", "name": "Student Holiday / Teacher and Staff Workday", "type": "student_holiday" },
-    { "date": "2027-01-06", "name": "First Day of Grading Period 3", "type": "semester_start" },
-    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2027-02-08", "name": "Mid-Winter Break", "type": "break_start" },
-    { "date": "2027-02-10", "name": "Mid-Winter Break - Student Holiday / Teacher and Staff Workdays End", "type": "student_holiday" },
-    { "date": "2027-02-11", "name": "Mid-Winter Break - Student Holiday", "type": "student_holiday" },
-    { "date": "2027-02-12", "name": "Mid-Winter Break End", "type": "break_end" },
-    { "date": "2027-02-15", "name": "Presidents Day", "type": "holiday" },
-    { "date": "2027-03-12", "name": "End of Grading Period 3", "type": "quarter_end" },
-    { "date": "2027-03-15", "name": "Spring Break", "type": "break_start" },
-    { "date": "2027-03-19", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2027-03-22", "name": "First Day of Grading Period 4", "type": "quarter_start" },
-    { "date": "2027-03-26", "name": "Student and Staff Holiday", "type": "holiday" },
-    { "date": "2027-04-16", "name": "Student Holiday / Teacher and Staff Workday", "type": "student_holiday" },
-    { "date": "2027-05-28", "name": "Last Day of School / End of Grading Period 4", "type": "school_end" },
-    { "date": "2027-05-31", "name": "Memorial Day - Staff Holiday", "type": "holiday" },
-    { "date": "2027-06-01", "name": "Teacher and Staff Workdays", "type": "student_holiday" },
-    { "date": "2027-06-02", "name": "Teacher and Staff Workdays End", "type": "student_holiday" },
-    { "date": "2027-06-03", "name": "Teacher Exchange Day", "type": "student_holiday" }
+    {
+      "date": "2026-07-03",
+      "name": "Independence Day Observed — Staff Holiday",
+      "type": "holiday",
+      "hideFromAllDates": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-03",
+      "endDate": "2026-08-11",
+      "name": "Teacher and Staff Workdays",
+      "type": "teacher_workday",
+      "hideFromAllDates": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-12",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — Student and Staff Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-18",
+      "name": "Student Holiday / Teacher and Staff Workday",
+      "displayName": "Student Holiday / Staff Workday",
+      "type": "student_holiday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2026-10-09",
+      "name": "End of Grading Period 1",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "name": "Fall Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-10-19",
+      "name": "First Day of Grading Period 2",
+      "type": "quarter_start"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Election Day — Student Holiday / Staff Workday",
+      "type": "student_holiday",
+      "preserveOfficialName": true,
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Last Day of First Semester / End of Grading Period 2",
+      "type": "semester_end"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "endDate": "2027-01-05",
+      "name": "Student Holiday / Teacher and Staff Workdays",
+      "displayName": "Student Holiday / Staff Workdays",
+      "type": "student_holiday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2027-01-06",
+      "name": "First Day of Grading Period 3",
+      "type": "semester_start"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — Student and Staff Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-08",
+      "endDate": "2027-02-12",
+      "name": "Mid-Winter Break",
+      "type": "break_start",
+      "description": "February 8–10 are Student Holidays / Teacher and Staff Workdays; February 11–12 are Student and Staff Holidays."
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day — Student and Staff Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-12",
+      "name": "End of Grading Period 3",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-22",
+      "name": "First Day of Grading Period 4",
+      "type": "quarter_start"
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Student and Staff Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-04-16",
+      "name": "Student Holiday / Teacher and Staff Workday",
+      "displayName": "Student Holiday / Staff Workday",
+      "type": "student_holiday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Last Day of School / End of Grading Period 4",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day — Staff Holiday",
+      "type": "holiday",
+      "hideFromAllDates": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-01",
+      "endDate": "2027-06-02",
+      "name": "Teacher and Staff Workdays",
+      "type": "teacher_workday",
+      "hideFromAllDates": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-03",
+      "name": "Teacher Exchange Day",
+      "type": "teacher_workday",
+      "hideFromAllDates": true,
+      "hideFromCalendarExport": true
+    }
   ]
 }
