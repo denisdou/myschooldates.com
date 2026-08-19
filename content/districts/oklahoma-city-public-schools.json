@@ -1,0 +1,180 @@
+{
+  "institutionId": "oklahoma-city-public-schools",
+  "name": "Oklahoma City Public Schools",
+  "shortName": "OKCPS",
+  "slug": "oklahoma-city-public-schools-calendar",
+  "state": "Oklahoma",
+  "stateCode": "OK",
+  "city": "Oklahoma City",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.okcps.org/",
+  "calendarPage": "https://www.okcps.org/student-and-families/student-tools/student-calendar",
+  "logo": "https://resources.finalsite.net/images/v1698656440/okcpsorg/triv4a8ulhifcbtnjwxp/bird.svg",
+  "timezone": "America/Chicago",
+  "county": "Oklahoma County",
+  "region": "Central Oklahoma",
+  "metro": "Oklahoma City",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "calendarType": "traditional",
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Oklahoma City Public Schools calendar",
+    "OKCPS calendar",
+    "Oklahoma City school calendar",
+    "Oklahoma City School District I-89 calendar",
+    "OKCPS student calendar"
+  ],
+  "districtFact": "OKCPS publishes one bilingual English-Spanish student calendar that separates student no-school periods from shorter administrative-building closure windows. For 2026–27, the district also changed school-day hours to add the state-required 40 minutes of supervised, unstructured recess for grades K–5.",
+  "about": [
+    {
+      "title": "A district calendar with two different closure layers",
+      "content": "The OKCPS student calendar uses a No School column for student attendance and a separate Admin Building Closings column for district-office operations. Those ranges are not interchangeable. For example, students are out for the full Thanksgiving and Winter Break ranges, while administrative offices close for fewer days inside those breaks."
+    },
+    {
+      "title": "Parent conferences do not always mean a day off",
+      "content": "OKCPS marks two parent-conference dates in fall and two in winter. In 2026–27, the annual calendar does not label those four conference dates as no-school days. The 2027–28 draft separately lists September 24 and February 18 as Conference Days with no school, after the published conference dates. Families should use school communication for appointment times and the student calendar for attendance status."
+    },
+    {
+      "title": "The 2026–27 school day changed with Oklahoma recess law",
+      "content": "OKCPS announced revised 2026–27 bell times after Oklahoma Senate Bill 1481 increased supervised, unstructured recess for grades K–5 from 20 to 40 minutes each school day. The district published different schedules for high schools, Pre-K centers, elementary schools and middle schools, with a separate time for Classen School of Advanced Studies High School at Northeast."
+    },
+    {
+      "title": "The 2027–28 calendar is not final",
+      "content": "The district calendar page currently labels 2027–28 as pending an HB3151 adjustment, and the linked file is visibly marked DRAFT. The dates are useful for provisional planning, but families should not treat them as a final adopted schedule until OKCPS removes that warning or publishes a replacement."
+    }
+  ],
+  "calendarNotes": "Use the OKCPS Student Calendar page for the current annual source. Read the No School column for student attendance; the Admin Building Closings column only shows when district offices close and can be shorter than the student break. Parent Conference dates are meeting dates unless the calendar separately labels a Conference Day as no school. The 2026–27 file is maintained as a live Google Sheet rather than a direct district PDF. Its English and Spanish summary tables disagree on the Student Days total, so this site follows the English table and discloses the difference. The 2027–28 file is a draft pending an HB3151 adjustment and should be rechecked before making nonrefundable plans. An imported ICS file is a one-time copy and will not update automatically when OKCPS revises a source.",
+  "planningTips": {
+    "title": "Planning with the OKCPS calendar",
+    "content": [
+      "For childcare and travel, use the longer ranges in the No School column. Administrative-building closures are office schedules and do not shorten the student break.",
+      "Treat Parent Conference dates as appointment dates unless a separate Conference Day is listed under No School. Schools provide the meeting time and format.",
+      "For 2026–27 transportation and care, use the new level-specific school hours announced by OKCPS rather than a prior-year bell schedule.",
+      "Keep the April snow date flexible. April 16, 2027 is printed as a Snow Day, while April 14, 2028 is explicitly conditional: Snow Day (If Available).",
+      "Recheck the 2027–28 calendar before booking travel because OKCPS says it is pending an HB3151 adjustment and the PDF is still marked DRAFT.",
+      "Use a school calendar or direct school communication for open houses, conference appointment times, activities and building-specific changes."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "What is the difference between OKCPS No School dates and Admin Building Closings?",
+      "a": "No School dates control student attendance. Admin Building Closings show when district offices are closed and may cover fewer days inside a longer student break. Families should use the No School range for childcare and travel planning."
+    },
+    {
+      "q": "Are OKCPS Parent Conference dates no-school days?",
+      "a": "Not automatically. The 2026–27 calendar lists conference dates without placing them in the No School column. The 2027–28 draft separately lists September 24 and February 18 as no-school Conference Days. Schools provide appointment times."
+    },
+    {
+      "q": "Why do the English and Spanish OKCPS calendar tables show different Student Days totals?",
+      "a": "The bilingual source contains inconsistent summary totals. The 2026–27 English table shows 169 Student Days and the Spanish table shows 168; the 2027–28 draft shows 170 and 168. This site uses the English figures and flags the conflict for review."
+    },
+    {
+      "q": "Is the OKCPS 2027–28 calendar final?",
+      "a": "No. The official OKCPS calendar page says the 2027–28 calendar is pending an HB3151 adjustment, and the linked PDF is marked DRAFT. Treat its dates as provisional until the district publishes a final version."
+    },
+    {
+      "q": "Did OKCPS change school hours for 2026–27?",
+      "a": "Yes. OKCPS changed level-specific bell times to support 40 minutes of supervised, unstructured daily recess for grades K–5 under Oklahoma Senate Bill 1481. Alternative Education was listed as unchanged."
+    },
+    {
+      "q": "Does the OKCPS calendar include school events and conference times?",
+      "a": "The annual student calendar covers districtwide attendance dates and conference dates, but not every appointment, activity or building event. Check the child's school for conference times, open houses, athletics and later local changes."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "okcps-calendar-map",
+      "label": "Which OKCPS Calendar Source Should a Family Use?",
+      "content": "OKCPS publishes different sources for districtwide attendance, employee schedules and building events. Start with the student calendar, then use the narrower source for the planning question.",
+      "position": "beforeSources",
+      "table": {
+        "caption": "OKCPS calendar sources by planning need",
+        "columns": [
+          "Planning need",
+          "Best official source"
+        ],
+        "rows": [
+          [
+            "First and last class days, breaks, no-school dates and districtwide conferences",
+            "OKCPS Student Calendar page and current annual file"
+          ],
+          [
+            "Conference appointment time or open house",
+            "Communication from the student's school"
+          ],
+          [
+            "Daily arrival and dismissal time",
+            "Current OKCPS school-hours announcement and the student's school"
+          ],
+          [
+            "Employee work schedule",
+            "OKCPS Work Day Calendars"
+          ],
+          [
+            "Weather-related virtual learning",
+            "OKCPS Virtual Learning Days and district notifications"
+          ],
+          [
+            "Activities, athletics and building events",
+            "Individual school calendar"
+          ]
+        ]
+      }
+    }
+  ],
+  "hiddenSections": [
+    "comparison",
+    "nationalTrends",
+    "livingHere",
+    "districtProfile",
+    "relatedDistricts"
+  ],
+  "sources": [
+    {
+      "label": "Oklahoma City Public Schools official website",
+      "url": "https://www.okcps.org/"
+    },
+    {
+      "label": "OKCPS Student Calendar page",
+      "url": "https://www.okcps.org/student-and-families/student-tools/student-calendar"
+    },
+    {
+      "label": "OKCPS 2026–27 Student Calendar — Google Sheet",
+      "url": "https://docs.google.com/spreadsheets/d/1Z1nd_-1aGRQRK0N7l7lU2ScQ_xs2CW5Vj_rZB06uW9s/edit?gid=0#gid=0"
+    },
+    {
+      "label": "OKCPS 2027–28 Draft Student Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1779916848/okcpsorg/o1a88wwdi1kuyspxk9df/DRAFT2027_2028StudentCalendar-Sheet1.pdf"
+    },
+    {
+      "label": "OKCPS 2026–27 school-day and recess update",
+      "url": "https://www.okcps.org/about-okcps/okcps-newsroom/post-details/~board/news-oklahoma-city-public-schools-5049/post/okcps-adjusts-school-day-schedule-to-meet-new-state-recess-requirements"
+    },
+    {
+      "label": "OKCPS Virtual Learning Days",
+      "url": "https://www.okcps.org/student-and-families/virtual-learning"
+    },
+    {
+      "label": "OKCPS Work Day Calendars",
+      "url": "https://www.okcps.org/departments/human-resources/work-day-calendars"
+    }
+  ]
+}

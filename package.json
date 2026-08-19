@@ -11,8 +11,8 @@
     "trends:refresh": "node scripts/generate-school-calendar-trends.mjs",
     "trends:check": "node scripts/generate-school-calendar-trends.mjs --check",
     "verify:sources": "node scripts/verify-calendar-sources.mjs",
-    "prebuild": "node scripts/prepare-indexnow-key.mjs --if-configured && node scripts/generate-calendar-route-manifest.mjs",
-    "pregenerate": "node scripts/prepare-indexnow-key.mjs --if-configured && node scripts/generate-calendar-route-manifest.mjs",
+    "prebuild": "node scripts/validate-school-year-content.mjs && node scripts/prepare-indexnow-key.mjs --if-configured && node scripts/generate-calendar-route-manifest.mjs",
+    "pregenerate": "node scripts/validate-school-year-content.mjs && node scripts/prepare-indexnow-key.mjs --if-configured && node scripts/generate-calendar-route-manifest.mjs",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },

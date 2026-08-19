@@ -1,0 +1,568 @@
+{
+  "institutionId": "lincoln-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Lincoln Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-12",
+  "firstDayScope": "First attendance date for kindergarten, grade 6 and grade 9 only; all K–12 students are in session August 13.",
+  "firstFullK12Day": "2026-08-13",
+  "lastDay": "2027-05-20",
+  "lastDayScope": "Final scheduled student day on the districtwide LPS Student Calendar.",
+  "temporalCoverageStart": "2026-08-12",
+  "temporalCoverageEnd": "2027-05-23",
+  "semesters": 2,
+  "sourceUrl": "https://www.lps.org/page/calendars",
+  "sourceDocumentPage": "https://www.lps.org/page/calendars",
+  "sourcePdfUrl": "https://drive.google.com/file/d/1VUhuFFjwMG-W8uQ1YlsR4JpVqQv37NR8/view",
+  "lastCheckedPdfUrl": "https://drive.google.com/file/d/1VUhuFFjwMG-W8uQ1YlsR4JpVqQv37NR8/view",
+  "sourceCheckedAt": "2026-08-19",
+  "sourceUpdatedAt": "2026-06-10",
+  "sourceChecksumSha256": "b98d67f087cb9200e0f81c2553255d71b6cb2257c3e5d6911166cf6c944fed2b",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.lps.org/page/calendars",
+    "linkText": "2026-2027 Student Calendar",
+    "expectedPdfUrl": "https://drive.google.com/file/d/1VUhuFFjwMG-W8uQ1YlsR4JpVqQv37NR8/view",
+    "expectedChecksumSha256": "b98d67f087cb9200e0f81c2553255d71b6cb2257c3e5d6911166cf6c944fed2b"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.lps.org/page/calendars",
+      "linkText": "2026-2027 Middle School X/Y Calendar",
+      "expectedPdfUrl": "https://drive.google.com/file/d/1KAiUxvtJlqT-HRzbhuidMispdIPJYuMN/view"
+    },
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.lps.org/page/calendars",
+      "linkText": "2026-2027 Preschool Calendar",
+      "expectedPdfUrl": "https://drive.google.com/file/d/1sE-Fbc1b2EnDNuBG3Y2MG9kkj4sy3OzR/view"
+    },
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.lps.org/page/calendars",
+      "linkText": "2026-2027 Full Day Preschool Calendar",
+      "expectedPdfUrl": "https://drive.google.com/file/d/1vkm0xlYuPZiDR_NI-1NXt9UqJfda99hi/view"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-19",
+  "dateCreated": "2026-08-18",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-19",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "PDF mark: Approved 3/25; file updated June 10, 2026",
+  "sourceCalendarName": "Lincoln Public Schools 2026–27 Student Calendar",
+  "schemaCalendarName": "Lincoln Public Schools Calendar 2026–27",
+  "schemaDatasetName": "Lincoln Public Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Lincoln Public Schools K–12 dates for 2026–27, including the transition-grade opening, all-K–12 opening, quarter breaks, professional learning and planning days, semester break, spring break, the last student day and published graduation dates.",
+  "schemaSpatialCoverage": "Lincoln and Lancaster County, Nebraska",
+  "schemaCalendarDownloadName": "Lincoln Public Schools 2026–27 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with LPS K–12 opening dates, districtwide no-school dates, professional learning and planning days, breaks and the last student day.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-middle-school-xy",
+      "type": "CreativeWork",
+      "name": "LPS 2026–27 Middle School X/Y Calendar",
+      "url": "https://drive.google.com/file/d/1KAiUxvtJlqT-HRzbhuidMispdIPJYuMN/view"
+    },
+    {
+      "id": "source-calendar-preschool",
+      "type": "CreativeWork",
+      "name": "LPS 2026–27 Preschool Calendar",
+      "url": "https://drive.google.com/file/d/1sE-Fbc1b2EnDNuBG3Y2MG9kkj4sy3OzR/view"
+    },
+    {
+      "id": "source-calendar-full-day-preschool",
+      "type": "CreativeWork",
+      "name": "LPS 2026–27 Full Day Preschool Calendar",
+      "url": "https://drive.google.com/file/d/1vkm0xlYuPZiDR_NI-1NXt9UqJfda99hi/view"
+    },
+    {
+      "id": "source-early-childhood-start",
+      "type": "WebPage",
+      "name": "LPS July 31, 2026 Monthly Family Update",
+      "url": "https://lincolnpublicschoolsne.edurooms.com/newsletters/lincoln-public-schools/newsletters/july-31-2026-monthly-family-update",
+      "datePublished": "2026-07-31"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-middle-school-xy",
+    "source-calendar-preschool",
+    "source-calendar-full-day-preschool",
+    "source-early-childhood-start"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "lps-student-calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideInstructionalDaysSummary": true,
+  "hiddenCustomSectionIds": [
+    "lps-calendar-map"
+  ],
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "whatsDifferent",
+    "breaks",
+    "otherCalendars",
+    "comparison",
+    "nationalTrends"
+  ],
+  "yearSwitcherPosition": "afterSources",
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Planning Notes",
+      "id": "lps-2026-2027-planning-notes"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Which Calendar",
+      "id": "lps-2026-2027-calendar-map"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Graduation",
+      "id": "lps-2026-2027-graduation"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Lincoln Public Schools Calendar 2026–27 (Lincoln, NE)",
+  "seoDescription": "Lincoln Public Schools in Lincoln, NE starts Aug. 12 for K, 6 and 9; all K–12 students are in session Aug. 13. See breaks, return dates, official PDFs and downloads.",
+  "heroSummary": "Lincoln Public Schools begins the 2026–27 school year Wednesday, August 12, for kindergarten, grade 6 and grade 9; all K–12 students are in session August 13. Quarter Break is October 15–19, Semester Break is December 23–January 3, Spring Break is March 8–12, and the last student day is May 20, 2027.",
+  "heroSourceLine": "Based on the official LPS 2026–27 Student Calendar",
+  "hideHeroDownloadLink": true,
+  "verificationBadgeText": "Checked against the official LPS PDF",
+  "heroVerificationSourceText": "Reviewed against the complete district Student Calendar",
+  "heroVerificationComparisonText": "Middle School X/Y and preschool calendars are linked separately",
+  "calendarNotes": "LPS begins with kindergarten, grade 6 and grade 9 on August 12, then brings all K–12 students into session August 13. Labor Day on September 7 is followed by a professional learning/planning day September 8, so students return September 9. Quarter 1 ends October 14; the student break runs October 15–19 and Quarter 2 begins October 20. Thanksgiving no-school dates run November 25–27, followed by a professional learning/planning day November 30. Quarter 2 ends December 22, Semester Break runs December 23–January 3, January 4 is a professional learning/planning day and Quarter 3 begins January 5. Quarter 3 ends March 5, Spring Break runs March 8–12 and Quarter 4 begins March 15. The Middle School X/Y, Preschool and Full Day Preschool calendars are companion schedules and are not merged into the K–12 event list or ICS. LPS may revise minutes or days if weather-related lost time puts the year below state minimum school hours.",
+  "keyDatesHeading": "Lincoln Public Schools Calendar 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "LPS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Two opening dates, major breaks and the last day for students",
+  "keyDateSummaryItems": [
+    {
+      "label": "Transition Grades",
+      "name": "First Day for K, 6 and 9",
+      "date": "2026-08-12",
+      "type": "school_start",
+      "schemaDescription": "First day of classes for kindergarten, grade 6 and grade 9 students."
+    },
+    {
+      "label": "All K–12",
+      "name": "All K–12 Students in Session",
+      "date": "2026-08-13",
+      "type": "school_start",
+      "schemaDescription": "All K–12 grades are in session; students in the remaining grades begin classes."
+    },
+    {
+      "label": "Fall",
+      "name": "Quarter Break",
+      "date": "2026-10-15",
+      "endDate": "2026-10-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Semester Break",
+      "date": "2026-12-23",
+      "endDate": "2027-01-03",
+      "type": "break_start"
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-08",
+      "endDate": "2027-03-12",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Students",
+      "date": "2027-05-20",
+      "type": "school_end"
+    }
+  ],
+  "allDatesTitle": "Lincoln Public Schools 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This table follows the districtwide K–12 Student Calendar. Middle School X/Y rotation days and preschool dates are listed in separate LPS calendars.",
+  "allDatesSourceUrl": "https://drive.google.com/file/d/1VUhuFFjwMG-W8uQ1YlsR4JpVqQv37NR8/view",
+  "allDatesSourceLabel": "Official LPS 2026–27 Student Calendar",
+  "dateLegendLabelOverrides": {
+    "Academic Date": "Quarter / Graduation Date",
+    "Teacher Workday": "Professional Learning / Planning",
+    "No School": "All Schools Not in Session"
+  },
+  "alternateCalendarsDescription": "These official files answer program-specific questions that the districtwide K–12 Student Calendar does not.",
+  "alternateCalendars": [
+    {
+      "type": "rotation",
+      "group": "Middle school",
+      "label": "2026–27 Middle School X/Y Calendar",
+      "description": "Official X/Y rotation calendar for LPS middle schools.",
+      "pdfUrl": "https://drive.google.com/file/d/1KAiUxvtJlqT-HRzbhuidMispdIPJYuMN/view"
+    },
+    {
+      "type": "program",
+      "group": "Preschool",
+      "label": "2026–27 Preschool Calendar",
+      "description": "Official calendar for the standard LPS preschool schedule.",
+      "pdfUrl": "https://drive.google.com/file/d/1sE-Fbc1b2EnDNuBG3Y2MG9kkj4sy3OzR/view"
+    },
+    {
+      "type": "program",
+      "group": "Preschool",
+      "label": "2026–27 Full Day Preschool Calendar",
+      "description": "Official calendar for LPS Full Day Preschool.",
+      "pdfUrl": "https://drive.google.com/file/d/1vkm0xlYuPZiDR_NI-1NXt9UqJfda99hi/view"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "lps-2026-2027-planning-notes",
+      "label": "LPS Planning Notes",
+      "position": "afterKeyDates",
+      "content": "LPS uses two opening dates for the three main school transitions. Several no-school periods are extended by a professional learning/planning day, so students sometimes return later than the named holiday or break dates suggest.",
+      "table": {
+        "caption": "Opening and return dates that affect family planning",
+        "columns": [
+          "Calendar sequence",
+          "What families should plan for"
+        ],
+        "rows": [
+          [
+            "Aug. 12–13 opening",
+            "Kindergarten, grade 6 and grade 9 begin Aug. 12; all K–12 students are in session Aug. 13."
+          ],
+          [
+            "Labor Day and planning day",
+            "Students are out Sept. 7–8 and return Wednesday, Sept. 9."
+          ],
+          [
+            "Thanksgiving and planning day",
+            "Students are out Nov. 25–30 and return Tuesday, Dec. 1."
+          ],
+          [
+            "Semester Break and planning day",
+            "Semester Break ends Jan. 3, Jan. 4 is a planning day, and students return Tuesday, Jan. 5."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lps-2026-2027-calendar-map",
+      "label": "Which LPS Calendar Applies to Your Student?",
+      "position": "afterAllDates",
+      "content": "LPS publishes separate calendars for different kinds of planning. The Student Calendar covers districtwide K–12 dates, while middle-school X/Y rotations and preschool attendance are published separately. LPS says Early Childhood students begin classes August 18; families should use the preschool calendar that matches their program for program-specific attendance dates.",
+      "table": {
+        "caption": "Best LPS calendar by planning need",
+        "columns": [
+          "Planning need",
+          "Official calendar"
+        ],
+        "rows": [
+          [
+            "K–12 opening dates, closures, breaks, quarters and last day",
+            "Student Calendar"
+          ],
+          [
+            "Middle-school rotation sequence",
+            "Middle School X/Y Calendar"
+          ],
+          [
+            "Standard preschool attendance",
+            "Preschool Calendar"
+          ],
+          [
+            "Full-day preschool attendance",
+            "Full Day Preschool Calendar"
+          ],
+          [
+            "School events, athletics and local reminders",
+            "Individual school calendar or school communication"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lps-2026-2027-graduation",
+      "label": "LPS 2027 Graduation Dates",
+      "position": "afterCalendarExport",
+      "content": "The district calendar lists program graduations separately from the comprehensive high school ceremonies at Pinnacle Bank Arena. Schools provide ceremony times, tickets and arrival instructions.",
+      "table": {
+        "caption": "Graduation schedule printed on the LPS calendar",
+        "columns": [
+          "Date",
+          "Program or venue"
+        ],
+        "rows": [
+          [
+            "May 18, 2027",
+            "Yankee Hill"
+          ],
+          [
+            "May 19, 2027",
+            "Independence Academy"
+          ],
+          [
+            "May 20, 2027",
+            "Bryan Community"
+          ],
+          [
+            "May 21–23, 2027",
+            "Comprehensive high schools at Pinnacle Bank Arena"
+          ]
+        ]
+      }
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Do all LPS students start on August 12?",
+      "a": "No. August 12 is the first day for kindergarten, grade 6 and grade 9. Students in the remaining K–12 grades begin August 13."
+    },
+    {
+      "q": "Do students return on January 4 after Semester Break?",
+      "a": "No. Semester Break runs through January 3, and January 4 is a professional learning and planning day. Students return Tuesday, January 5."
+    },
+    {
+      "q": "Does the ICS include Middle School X/Y days?",
+      "a": "No. The ICS covers selected districtwide K–12 dates. Use the official Middle School X/Y PDF for rotation days."
+    },
+    {
+      "q": "Which preschool calendar should I use?",
+      "a": "Use the Preschool Calendar for the standard preschool schedule or the Full Day Preschool Calendar for that program. Neither schedule is included in the K–12 ICS."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "Do all LPS students start on August 12?",
+    "Do students return on January 4 after Semester Break?",
+    "Does the ICS include Middle School X/Y days?",
+    "Which preschool calendar should I use?"
+  ],
+  "compactDownloadModule": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "unifiedDownloadTitle": "Official Calendars & Downloads",
+  "unifiedDownloadDescription": "Open the official calendar that applies to your student, or download a one-time ICS file with selected districtwide K–12 dates.",
+  "icsHeading": "Add LPS 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download a one-time file with the two K–12 opening dates, districtwide closures, professional learning/planning days, breaks and last student day. X/Y and preschool program dates are not included.",
+  "icsButtonLabel": "Download LPS 2026–27 ICS",
+  "icsButtonSupportText": "One-time import. Recheck LPS after weather or calendar revisions.",
+  "pdfHeading": "Official LPS 2026–27 Calendars",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Use the Student Calendar for districtwide K–12 dates. Middle-school and preschool families should also use the calendar for their specific rotation or program.",
+  "sourceReviewSummary": "The LPS Student Calendar is the primary K–12 source; the Middle School X/Y and preschool calendars were checked separately.",
+  "sourcesTitle": "Sources and Review Notes",
+  "sourceReviewDetailsTitle": "How we reviewed this LPS calendar",
+  "sourceReviewDetails": [
+    "We reviewed the complete Student Calendar, checked its legend and verified the dates against the district source.",
+    "We checked the first-day, quarter and professional learning/planning symbols against the calendar key.",
+    "Middle School X/Y and preschool dates remain in their separate official calendars."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Lincoln Public Schools sources.",
+  "sourceNextReviewText": "We'll review this page if LPS replaces any calendar file or announces a weather-related schedule change.",
+  "sources": [
+    {
+      "label": "Lincoln Public Schools calendars",
+      "url": "https://www.lps.org/page/calendars"
+    },
+    {
+      "label": "LPS 2026–27 Student Calendar",
+      "url": "https://drive.google.com/file/d/1VUhuFFjwMG-W8uQ1YlsR4JpVqQv37NR8/view"
+    },
+    {
+      "label": "LPS 2026–27 Middle School X/Y Calendar",
+      "url": "https://drive.google.com/file/d/1KAiUxvtJlqT-HRzbhuidMispdIPJYuMN/view"
+    },
+    {
+      "label": "LPS 2026–27 Preschool Calendar",
+      "url": "https://drive.google.com/file/d/1sE-Fbc1b2EnDNuBG3Y2MG9kkj4sy3OzR/view"
+    },
+    {
+      "label": "LPS 2026–27 Full Day Preschool Calendar",
+      "url": "https://drive.google.com/file/d/1vkm0xlYuPZiDR_NI-1NXt9UqJfda99hi/view"
+    },
+    {
+      "label": "LPS July 31, 2026 Monthly Family Update",
+      "url": "https://lincolnpublicschoolsne.edurooms.com/newsletters/lincoln-public-schools/newsletters/july-31-2026-monthly-family-update"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-12",
+      "name": "First Day for Kindergarten, Grade 6 and Grade 9",
+      "type": "school_start",
+      "description": "Transition-focused opening day for kindergarten, sixth-grade and ninth-grade students only."
+    },
+    {
+      "date": "2026-08-13",
+      "name": "All K–12 Students in Session",
+      "type": "school_start",
+      "description": "The remaining grades begin and all K–12 students are in session."
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "type": "holiday",
+      "badgeLabel": "All Schools Not in Session"
+    },
+    {
+      "date": "2026-09-08",
+      "name": "Professional Learning / Planning Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Schools Not in Session"
+    },
+    {
+      "date": "2026-10-14",
+      "name": "Quarter 1 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-10-15",
+      "endDate": "2026-10-19",
+      "name": "Quarter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-10-20",
+      "name": "Quarter 2 Begins",
+      "type": "quarter_start"
+    },
+    {
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-11-30",
+      "name": "Professional Learning / Planning Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Schools Not in Session"
+    },
+    {
+      "date": "2026-12-22",
+      "name": "Quarter 2 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-12-23",
+      "endDate": "2027-01-03",
+      "name": "Semester Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Professional Learning / Planning Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Schools Not in Session"
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Quarter 3 Begins",
+      "type": "quarter_start"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday",
+      "badgeLabel": "All Schools Not in Session"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Professional Learning / Planning Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Schools Not in Session"
+    },
+    {
+      "date": "2027-03-05",
+      "name": "Quarter 3 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-03-08",
+      "endDate": "2027-03-12",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-15",
+      "name": "Quarter 4 Begins",
+      "type": "quarter_start"
+    },
+    {
+      "date": "2027-04-05",
+      "name": "Professional Learning / Planning Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Schools Not in Session"
+    },
+    {
+      "date": "2027-04-30",
+      "name": "All Schools Not in Session",
+      "type": "no_school",
+      "badgeLabel": "All Schools Not in Session",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-05-20",
+      "name": "Last Day for Students",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-05-21",
+      "endDate": "2027-05-23",
+      "name": "Comprehensive High School Graduation Weekend",
+      "type": "graduation",
+      "badgeLabel": "Pinnacle Bank Arena",
+      "hideFromCalendarExport": true
+    }
+  ]
+}

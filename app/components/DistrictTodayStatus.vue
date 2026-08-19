@@ -21,7 +21,7 @@ const todayStr = (() => {
 })()
 
 const breaks = computed(() => getBreaks(props.cal.events))
-const keyDateTypes = new Set(['school_start', 'school_end', 'holiday', 'closure', 'break_start', 'early_dismissal', 'early_release', 'early_close', 'operational_closure', 'academic', 'graduation'])
+const keyDateTypes = new Set(['school_start', 'school_end', 'holiday', 'closure', 'break', 'break_start', 'early_dismissal', 'early_release', 'early_close', 'operational_closure', 'academic', 'graduation'])
 const nextEvent = computed(() =>
   props.cal.events.find(e => keyDateTypes.has(e.type) && new Date(e.date + 'T00:00:00') >= today) ?? null
 )

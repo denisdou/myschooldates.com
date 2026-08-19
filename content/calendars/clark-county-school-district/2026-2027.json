@@ -1,106 +1,406 @@
 {
   "institutionId": "clark-county-school-district",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Clark County School District Calendar 2026–2027",
   "firstDay": "2026-08-10",
+  "firstDayScope": "First scheduled student day on the CCSD student calendar.",
   "lastDay": "2027-05-20",
+  "lastDayScope": "Last scheduled student day on the CCSD student calendar; contingency dates may be activated if needed.",
+  "temporalCoverageStart": "2026-08-10",
+  "temporalCoverageEnd": "2027-05-21",
   "sourceUrl": "https://www.ccsd.net/calendars",
+  "sourceDocumentPage": "https://www.ccsd.net/calendars",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1767641305/ccsdnet/ano6uzxheee9tby6g8ta/2026-2027-school-calendar-students-updated-final.pdf",
-  "lastVerifiedAt": "2026-07-24",
+  "lastVerifiedAt": "2026-08-19",
   "datePublished": "2026-07-24",
-  "dateModified": "2026-07-24",
+  "dateModified": "2026-08-19",
   "calendarType": "traditional",
+  "calendarTrackId": "ccsd-traditional-student-calendar",
   "totalSchoolDays": 180,
-  "yearNumbersMode": "compact",
+  "hideInstructionalDaysSummary": true,
+  "allDatesMode": "all",
+  "allDatesTitle": "CCSD Student Calendar Dates — 2026–2027",
+  "allDatesCoverageNote": "This table follows the official CCSD student calendar, including student holidays, staff development days, the elementary conference day, grading-period endings and contingency dates.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1767641305/ccsdnet/ano6uzxheee9tby6g8ta/2026-2027-school-calendar-students-updated-final.pdf",
+  "allDatesSourceLabel": "Official CCSD 2026–27 student calendar PDF",
+  "seoTitle": "CCSD Calendar 2026–2027: School Dates, Breaks & PDF",
+  "seoDescription": "See Clark County School District’s 2026–27 student calendar, including the first and last days of school, holidays, no-school days, winter and spring break, plus the official PDF and an ICS calendar download.",
+  "heroSummary": "Clark County School District begins the 2026–27 school year on Monday, August 10, 2026, and the scheduled last day of school is Thursday, May 20, 2027. Students are off for Winter Break December 21–January 1 and Spring Break March 15–19.\n\nClasses resume January 5 after a staff development day on January 4, and students return from Spring Break on March 22.",
+  "heroSourceLine": "2026–27 student calendar · Clark County, Nevada",
+  "verificationBadgeText": "Reviewed against the official CCSD student calendar",
+  "hideHeroVerificationProcess": true,
+  "hideSecondSemesterStartSummary": true,
+  "keyDatesHeading": "CCSD 2026–27 Key Dates",
+  "alternateCalendarsNotice": "This page follows CCSD’s 2026–27 Student Calendar. If your school uses a year-round or separate program schedule, check your school calendar before making plans.",
+  "alternateCalendarsTitle": "Other CCSD Calendars and Languages",
+  "alternateCalendarsDescription": "CCSD publishes an official Spanish version of the 2026–27 student calendar. Schools or programs on another schedule may publish additional dates.",
+  "alternateCalendarsButtonLabel": "View Official Spanish PDF",
   "alternateCalendars": [
     {
       "type": "spanish",
-      "label": "2026-2027 School Calendar (Spanish)",
+      "label": "2026–27 Student Calendar — Spanish",
       "pdfUrl": "https://resources.finalsite.net/images/v1767640877/ccsdnet/yvwzsr47byehvjkoszsd/2026-2027-school-calendar-students-updated-final-Spanish.pdf"
     }
   ],
+  "breaksTitle": "Winter and Spring Break",
+  "breakNotes": {
+    "Winter Break": "No school Dec. 21–Jan. 1. Students return Jan. 5 after the Jan. 4 staff development day.",
+    "Spring Break": "No school March 15–19. Students return Monday, March 22."
+  },
+  "breakSummaryOverrides": {
+    "Winter Break": {
+      "durationLabel": "10 school days"
+    },
+    "Spring Break": {
+      "durationLabel": "5 school days"
+    }
+  },
+  "dateLegendItems": [
+    {
+      "label": "First / last day",
+      "dot": "bg-orange-500"
+    },
+    {
+      "label": "Holiday / break",
+      "dot": "bg-amber-400"
+    },
+    {
+      "label": "No school / staff development",
+      "dot": "bg-violet-700"
+    },
+    {
+      "label": "Academic date",
+      "dot": "bg-blue-400"
+    },
+    {
+      "label": "Contingency date",
+      "dot": "bg-slate-400"
+    }
+  ],
+  "dateLegendLabelOverrides": {
+    "Teacher Workday": "Staff Development",
+    "No School": "No School / Contingency"
+  },
+  "unifiedDownloadTitle": "CCSD 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Open the official CCSD student calendar PDF or download a one-time ICS file of the dates listed on this page.",
+  "pdfHeading": "Official CCSD 2026–27 Student Calendar PDF",
+  "pdfDescription": "Check the CCSD calendars page for revisions or contingency-day changes before making final plans.",
+  "icsHeading": "ICS Calendar File",
+  "icsDescription": "Import the reviewed student-calendar dates into Google Calendar, Apple Calendar or Outlook. This is a one-time download and does not update automatically.",
+  "icsButtonLabel": "Download CCSD 2026–27 ICS",
+  "compactDownloadModule": true,
   "customSections": [
     {
-      "id": "ccsd-calendar-2026-2027-spanish-version",
-      "label": "CCSD Calendar 2026-2027 Spanish Version",
+      "id": "which-ccsd-calendar-applies",
+      "label": "Does This Calendar Apply to My School?",
       "position": "afterOtherCalendars",
-      "content": "Clark County School District also publishes a Spanish version of the 2026-2027 student calendar. Families who prefer Spanish can use the official Spanish PDF for the same school-year planning topics, including holidays, breaks, staff development days, contingency days, and student calendar dates.",
-      "links": [
+      "content": "This page follows CCSD’s district Student Calendar.",
+      "groups": [
         {
-          "label": "Download the CCSD Spanish Calendar PDF",
-          "url": "https://resources.finalsite.net/images/v1767640877/ccsdnet/yvwzsr47byehvjkoszsd/2026-2027-school-calendar-students-updated-final-Spanish.pdf",
-          "description": "Open the official CCSD 2026-2027 student calendar in Spanish."
+          "label": "Use this page for",
+          "items": [
+            "District student calendar dates."
+          ]
+        },
+        {
+          "label": "Check your school for",
+          "items": [
+            "Separate program schedules, bell times, athletics, testing and campus events."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "what-ccsd-families-should-know",
+      "label": "What CCSD Families Should Know",
+      "position": "afterAbout",
+      "content": "Four details on the student calendar can affect family plans.",
+      "groups": [
+        {
+          "label": "Staff development",
+          "items": [
+            "Students do not attend on Sept. 21, Nov. 3, Jan. 4 or March 29."
+          ]
+        },
+        {
+          "label": "Elementary conferences",
+          "items": [
+            "Oct. 12 is a no-school day for elementary students only; middle and high school families should follow their school schedule."
+          ]
+        },
+        {
+          "label": "Contingency dates",
+          "items": [
+            "Nov. 25, March 26 and May 21 are reserved dates that CCSD may use if instructional time must be recovered."
+          ]
+        },
+        {
+          "label": "Break timing",
+          "items": [
+            "Winter and Spring Break begin after school on Dec. 18 and March 12; the actual no-school ranges begin the following Monday."
+          ]
         }
       ]
     }
   ],
-  "seoTitle": "CCSD Calendar 2026-2027: Holidays, Breaks, PDF & Important Dates",
-  "seoDescription": "View the CCSD Calendar 2026-2027 with first day of school, holidays, winter break, spring break, PDF download, ICS calendar file, and important dates for Clark County families.",
-  "calendarNotes": "Clark County School District lists 180 student days for 2026-2027. Classes begin on August 10, 2026 and the school year ends on May 20, 2027. Winter Break begins at the end of the day on December 18, with no school December 21, 2026 through January 1, 2027; classes resume January 5, 2027 after the January 4 staff development day. Spring Break begins at the end of the day on March 12, with no school March 15-19 and classes resuming March 22. CCSD also publishes a Spanish student calendar for 2026-2027.",
+  "whatsNew": {
+    "title": "What’s Different From 2025–26",
+    "subtitle": "Changes between the official CCSD student calendars for the two school years.",
+    "content": [
+      "The first day moves from Aug. 11, 2025 to Aug. 10, 2026.",
+      "The scheduled last day moves from May 22, 2026 to May 20, 2027.",
+      "The Spring Break no-school week moves from March 16–20, 2026 to March 15–19, 2027."
+    ]
+  },
+  "yearComparisonDefaultOpen": true,
+  "yearSwitcherPosition": "afterSources",
+  "yearSwitcherLabel": "Other CCSD school years:",
   "calendarFaqs": [
     {
       "q": "When does CCSD start school in 2026?",
-      "a": "Clark County School District starts classes on Monday, August 10, 2026."
+      "a": "Classes begin Monday, Aug. 10, 2026 on the CCSD student calendar."
     },
     {
-      "q": "When is CCSD Winter Break in 2026-2027?",
-      "a": "Winter Break begins at the end of the day on December 18, 2026. No school is scheduled December 21, 2026 through January 1, 2027."
+      "q": "When is CCSD Winter Break in 2026–27?",
+      "a": "Students have no school Dec. 21, 2026 through Jan. 1, 2027. Jan. 4 is a staff development day, and classes resume Tuesday, Jan. 5."
     },
     {
       "q": "When is CCSD Spring Break in 2027?",
-      "a": "Spring Break begins at the end of the day on March 12, 2027. No school is scheduled March 15-19, and classes resume March 22."
-    },
-    {
-      "q": "Does CCSD publish a Spanish calendar for 2026-2027?",
-      "a": "Yes. Clark County School District publishes a Spanish version of the 2026-2027 student calendar, linked as an alternate calendar."
+      "a": "Students have no school March 15–19, 2027. Classes resume Monday, March 22."
     },
     {
       "q": "When is the last day of school for CCSD in 2027?",
-      "a": "The last day of school is Thursday, May 20, 2027."
-    }
-  ],
-  "yearNumbers": [
-    {
-      "label": "Longest Break",
-      "value": "Dec 21-Jan 1",
-      "detail": "Winter Break is the longest predictable closure window on the 2026-2027 CCSD student calendar."
+      "a": "The scheduled last day is Thursday, May 20, 2027. CCSD also lists May 21 as a contingency date if needed."
     },
     {
-      "label": "Semester Transition",
-      "value": "Jan 5",
-      "detail": "Students return after Winter Break on January 5, 2027, following the January 4 staff development day."
+      "q": "Are CCSD staff development days school days for students?",
+      "a": "No. Students do not attend on the staff development days listed on the student calendar."
     },
     {
-      "label": "Contingency Dates",
-      "value": "3 listed",
-      "detail": "The calendar lists contingency dates that may be used if CCSD needs to recover instructional time."
+      "q": "What are CCSD contingency days?",
+      "a": "Contingency days are reserved dates that may become instructional days if CCSD needs to recover school time. Do not treat them as guaranteed holidays until the district confirms the schedule."
+    },
+    {
+      "q": "Does this calendar apply to every CCSD school?",
+      "a": "It follows CCSD’s district Student Calendar. Schools using a year-round or separate program schedule may have different dates, and every school may publish additional campus events."
+    },
+    {
+      "q": "Where can I find the Spanish CCSD calendar?",
+      "a": "Use the official Spanish student-calendar PDF in the Other CCSD Calendars and Languages section above."
     }
   ],
+  "faqLimit": 8,
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Calendar Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Other Calendars",
+      "id": "other-calendars"
+    },
+    {
+      "label": "Planning Notes",
+      "id": "what-ccsd-families-should-know"
+    },
+    {
+      "label": "Year Changes",
+      "id": "year-comparison"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "sources": [
+    {
+      "label": "CCSD 2026–27 Student Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1767641305/ccsdnet/ano6uzxheee9tby6g8ta/2026-2027-school-calendar-students-updated-final.pdf"
+    },
+    {
+      "label": "CCSD Calendars Page",
+      "url": "https://www.ccsd.net/calendars"
+    }
+  ],
+  "sourceReviewSummary": "Reviewed against the official CCSD 2026–27 student calendar PDF and district calendars page.",
+  "sourceReviewDetails": [
+    "We separated the after-school break start from the actual student no-school range.",
+    "We checked staff development days, the elementary-only conference day and all three contingency dates."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "sourceNextReviewText": "Recheck if CCSD revises the student calendar or activates a contingency date.",
+  "schemaDatasetName": "CCSD 2026–27 Student Calendar Dates",
+  "schemaDatasetDescription": "Student calendar dates for Clark County School District in 2026–27, including school-year boundaries, holidays, staff development days, conference dates, breaks, contingency dates, grading-period endings and return dates.",
+  "schemaCalendarDownloadName": "CCSD 2026–27 Student Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time ICS calendar file generated from the reviewed CCSD 2026–27 student calendar dates listed on this page.",
   "events": [
-    { "date": "2026-08-10", "name": "Classes Begin", "type": "school_start" },
-    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
-    { "date": "2026-09-21", "name": "Staff Development Day - No School for Students", "type": "teacher_workday" },
-    { "date": "2026-10-09", "name": "End of First Grading Period", "type": "academic" },
-    { "date": "2026-10-12", "name": "Elementary School Parent-Teacher Conferences - No School for Elementary Students Only", "type": "academic" },
-    { "date": "2026-10-30", "name": "Nevada Day Observed", "type": "holiday" },
-    { "date": "2026-11-03", "name": "Election Day / Staff Development Day - No School for Students", "type": "teacher_workday" },
-    { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday" },
-    { "date": "2026-11-25", "name": "No School - First Contingency Day if Needed", "type": "no_school" },
-    { "date": "2026-11-26", "name": "Thanksgiving Day", "type": "holiday" },
-    { "date": "2026-11-27", "name": "Family Day", "type": "holiday" },
-    { "date": "2026-12-18", "name": "End of Second Grading Period and First Semester", "type": "academic" },
-    { "date": "2026-12-18", "name": "Winter Break Begins - End of Day", "type": "break_start" },
-    { "date": "2027-01-01", "name": "Winter Break Ends", "type": "break_end" },
-    { "date": "2027-01-04", "name": "Staff Development Day - No School for Students", "type": "teacher_workday" },
-    { "date": "2027-01-05", "name": "Classes Resume", "type": "school_resume" },
-    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2027-02-15", "name": "Presidents' Day", "type": "holiday" },
-    { "date": "2027-03-12", "name": "End of Third Grading Period", "type": "academic" },
-    { "date": "2027-03-12", "name": "Spring Break Begins - End of Day", "type": "break_start" },
-    { "date": "2027-03-19", "name": "Spring Break Ends", "type": "break_end" },
-    { "date": "2027-03-22", "name": "Classes Resume", "type": "school_resume" },
-    { "date": "2027-03-26", "name": "No School - Second Contingency Day if Needed", "type": "no_school" },
-    { "date": "2027-03-29", "name": "Staff Development Day - No School for Students", "type": "teacher_workday" },
-    { "date": "2027-05-20", "name": "End of Fourth Grading Period and School Year", "type": "school_end" },
-    { "date": "2027-05-21", "name": "Third Contingency Day if Needed", "type": "no_school" }
+    {
+      "date": "2026-08-10",
+      "name": "Classes Begin",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-21",
+      "name": "Staff Development Day — No School for Students",
+      "type": "staff_development"
+    },
+    {
+      "date": "2026-10-09",
+      "name": "End of First Grading Period",
+      "type": "academic"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Elementary Parent-Teacher Conferences",
+      "type": "conference",
+      "description": "No school for elementary students only.",
+      "badgeLabel": "Elementary Only"
+    },
+    {
+      "date": "2026-10-30",
+      "name": "Nevada Day Observed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Election Day / Staff Development Day — No School for Students",
+      "type": "staff_development"
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-25",
+      "name": "First Contingency Day",
+      "type": "contingency",
+      "description": "No school unless CCSD activates this date to recover instructional time.",
+      "badgeLabel": "Contingency"
+    },
+    {
+      "date": "2026-11-26",
+      "name": "Thanksgiving Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-27",
+      "name": "Family Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-12-18",
+      "name": "End of Second Grading Period and First Semester",
+      "type": "academic"
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Winter Break Begins After School",
+      "type": "break_start",
+      "description": "Students attend school on Dec. 18; the no-school period begins Monday, Dec. 21.",
+      "badgeLabel": "Break Begins",
+      "displayAsRange": false,
+      "preserveOfficialName": true,
+      "excludeFromDateSchema": true
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Staff Development Day — No School for Students",
+      "type": "staff_development"
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Classes Resume",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents’ Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-12",
+      "name": "End of Third Grading Period",
+      "type": "academic"
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Spring Break Begins After School",
+      "type": "break_start",
+      "description": "Students attend school on March 12; the no-school period begins Monday, March 15.",
+      "badgeLabel": "Break Begins",
+      "displayAsRange": false,
+      "preserveOfficialName": true,
+      "excludeFromDateSchema": true
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break",
+      "type": "break"
+    },
+    {
+      "date": "2027-03-22",
+      "name": "Classes Resume",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Second Contingency Day",
+      "type": "contingency",
+      "description": "No school unless CCSD activates this date to recover instructional time.",
+      "badgeLabel": "Contingency"
+    },
+    {
+      "date": "2027-03-29",
+      "name": "Staff Development Day — No School for Students",
+      "type": "staff_development"
+    },
+    {
+      "date": "2027-05-20",
+      "name": "End of Fourth Grading Period and Scheduled Last Day",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-05-21",
+      "name": "Third Contingency Day",
+      "type": "contingency",
+      "description": "Reserved for instruction if CCSD activates this date.",
+      "badgeLabel": "Contingency"
+    }
   ]
 }

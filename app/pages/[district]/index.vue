@@ -42,7 +42,7 @@ function toComparisonCalendarSummary(c: any) {
     comparisonExtraSourceLabel: c.comparisonExtraSourceLabel ?? c.meta?.comparisonExtraSourceLabel,
     comparisonRanges: c.comparisonRanges ?? c.meta?.comparisonRanges,
     events: (c.events ?? [])
-      .filter((e: any) => e.type === 'break_start' || e.type === 'break_end')
+      .filter((e: any) => e.type === 'break' || e.type === 'break_start' || e.type === 'break_end')
       .map((e: any) => ({ name: e.name, date: e.date, endDate: e.endDate, type: e.type })),
   }
 }
@@ -452,8 +452,8 @@ const keyDateHighlights = computed(() => {
         additionalProperties: item.additionalProperties,
       }))
   }
-  const HIGHLIGHT_TYPES = new Set(['school_start', 'school_end', 'break_start'])
-  return cal.events.filter(e => HIGHLIGHT_TYPES.has(e.type) || (e as any).schemaEvent === true)
+  const HIGHLIGHT_TYPES = new Set(['school_start', 'school_end', 'break', 'break_start'])
+  return cal.events.filter(e => !(e as any).excludeFromDateSchema && (HIGHLIGHT_TYPES.has(e.type) || (e as any).schemaEvent === true))
 })
 
 const itemListEvents = computed(() => {
@@ -462,7 +462,7 @@ const itemListEvents = computed(() => {
     return keyDateHighlights.value.filter(event => event.date)
   }
   if ((cal as any).itemListMode === 'allImportantDates') {
-    return cal.events.filter(event => event.type !== 'break_end')
+    return cal.events.filter(event => event.type !== 'break_end' && !(event as any).excludeFromDateSchema)
   }
   return keyDateHighlights.value
 })
@@ -1149,12 +1149,12 @@ const dateLegend = computed(() => {
     ...(hasEventType(['schools_offices_closed']) ? [{ label: 'Schools & Offices Closed', dot: 'bg-red-400' }] : []),
     ...(hasEventType(['schools_closed']) ? [{ label: 'Schools Closed', dot: 'bg-red-300' }] : []),
     ...(hasEventType(['holiday']) ? [{ label: 'Holiday', dot: 'bg-teal-400' }] : []),
-    ...(hasEventType(['no_school', 'student_holiday', 'teacher_workday', 'teacher_professional_learning']) ? [{ label: 'No School for Students', dot: 'bg-amber-400' }] : []),
+    ...(hasEventType(['no_school', 'student_holiday', 'teacher_workday', 'teacher_professional_learning', 'staff_development']) ? [{ label: 'No School for Students', dot: 'bg-amber-400' }] : []),
     ...(hasEventType(['partial_closure']) ? [{ label: 'Some Students Off', dot: 'bg-pink-400' }] : []),
     ...(hasEventType(['half_day_high_school', 'half_day_dismissal']) ? [{ label: 'Half-Day Dismissal', dot: 'bg-orange-300' }] : []),
     ...(hasEventType(['early_dismissal', 'early_release']) ? [{ label: 'Early Release', dot: 'bg-orange-400' }] : []),
     ...(hasEventType(['makeup_day', 'weather_day', 'inclement_weather_day']) ? [{ label: 'Reserved Weather Day', dot: 'bg-orange-300' }] : []),
-    ...(hasEventType(['break_start']) || hasPossibleMakeupDay ? [{ label: 'Break', dot: 'bg-purple-400' }] : []),
+    ...(hasEventType(['break', 'break_start']) || hasPossibleMakeupDay ? [{ label: 'Break', dot: 'bg-purple-400' }] : []),
     ...(hasEventType(['observance']) ? [{ label: 'Observance', dot: 'bg-teal-400' }] : []),
     ...dateLegendExtraItems.value,
   ]
@@ -2768,6 +2768,7 @@ if (!isStatePage && district.value) {
           :description="(cal as any).gradingPeriodsDescription ?? (cal as any).meta?.gradingPeriodsDescription"
           :days-label="(cal as any).gradingPeriodsDaysLabel ?? (cal as any).meta?.gradingPeriodsDaysLabel"
           :next-date-label="(cal as any).gradingPeriodsNextDateLabel ?? (cal as any).meta?.gradingPeriodsNextDateLabel"
+          :reports-label="(cal as any).gradingPeriodsReportsLabel ?? (cal as any).meta?.gradingPeriodsReportsLabel"
           :footer-note="(cal as any).gradingPeriodsFooterNote ?? (cal as any).meta?.gradingPeriodsFooterNote"
         />
         <DistrictCustomSections
@@ -2906,6 +2907,7 @@ if (!isStatePage && district.value) {
           :description="(cal as any).gradingPeriodsDescription ?? (cal as any).meta?.gradingPeriodsDescription"
           :days-label="(cal as any).gradingPeriodsDaysLabel ?? (cal as any).meta?.gradingPeriodsDaysLabel"
           :next-date-label="(cal as any).gradingPeriodsNextDateLabel ?? (cal as any).meta?.gradingPeriodsNextDateLabel"
+          :reports-label="(cal as any).gradingPeriodsReportsLabel ?? (cal as any).meta?.gradingPeriodsReportsLabel"
           :footer-note="(cal as any).gradingPeriodsFooterNote ?? (cal as any).meta?.gradingPeriodsFooterNote"
         />
         <DistrictCustomSections
@@ -2956,6 +2958,7 @@ if (!isStatePage && district.value) {
           :review-summary="(cal as any).sourceReviewSummary ?? (cal as any).meta?.sourceReviewSummary"
           :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
           :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
+          :maintainer-label="(cal as any).sourceMaintainerLabel ?? (cal as any).meta?.sourceMaintainerLabel"
           :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
           :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
           :hide-next-review="Boolean((cal as any).hideSourceNextReview ?? (cal as any).meta?.hideSourceNextReview)"
@@ -3056,6 +3059,7 @@ if (!isStatePage && district.value) {
           :review-summary="(cal as any).sourceReviewSummary ?? (cal as any).meta?.sourceReviewSummary"
           :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
           :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
+          :maintainer-label="(cal as any).sourceMaintainerLabel ?? (cal as any).meta?.sourceMaintainerLabel"
           :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
           :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
           :hide-next-review="Boolean((cal as any).hideSourceNextReview ?? (cal as any).meta?.hideSourceNextReview)"

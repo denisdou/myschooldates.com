@@ -41,7 +41,7 @@ export function useDistrictPage() {
     return count
   }
 
-  function getBreaks(events: Array<{ date: string; endDate?: string; name: string; type: string }>) {
+  function getBreaks(events: Array<{ date?: string; endDate?: string; name: string; type: string }>) {
     const result: { name: string; start: string; end: string; days: number }[] = []
     const normalizeBreakName = (name: string) => name
       .toLowerCase()
@@ -56,21 +56,32 @@ export function useDistrictPage() {
       .replace(/\s+/g, ' ')
       .trim()
     for (let i = 0; i < events.length; i++) {
+      if (events[i].type === 'break' && events[i].endDate) {
+        if (!events[i].date) continue
+        result.push({
+          name: events[i].name,
+          start: events[i].date!,
+          end: events[i].endDate,
+          days: daysBetween(events[i].date!, events[i].endDate),
+        })
+        continue
+      }
       if (events[i].type === 'break_start') {
+        if (!events[i].date) continue
         const baseName = events[i].name
         if (events[i].endDate) {
           result.push({
             name: baseName,
-            start: events[i].date,
+            start: events[i].date!,
             end: events[i].endDate,
-            days: daysBetween(events[i].date, events[i].endDate),
+            days: daysBetween(events[i].date!, events[i].endDate),
           })
           continue
         }
         const normalizedBase = normalizeBreakName(baseName)
         const endEvent = events.find(
           (e, j) => {
-            if (j <= i || e.type !== 'break_end') return false
+            if (j <= i || e.type !== 'break_end' || !e.date) return false
             const normalizedEnd = normalizeBreakName(e.name)
             return normalizedEnd === normalizedBase ||
               normalizedEnd.includes(normalizedBase) ||
@@ -80,9 +91,9 @@ export function useDistrictPage() {
         if (endEvent) {
           result.push({
             name: baseName,
-            start: events[i].date,
-            end: endEvent.date,
-            days: daysBetween(events[i].date, endEvent.date),
+            start: events[i].date!,
+            end: endEvent.date!,
+            days: daysBetween(events[i].date!, endEvent.date!),
           })
         }
       }
@@ -91,33 +102,36 @@ export function useDistrictPage() {
   }
 
   function isCoveredByBreak(
-    event: { date: string; type: string },
-    events: Array<{ date: string; name: string; type: string }>
+    event: { date?: string; type: string },
+    events: Array<{ date?: string; name: string; type: string }>
   ) {
-    if (!['holiday', 'no_school', 'student_holiday', 'teacher_workday'].includes(event.type)) return false
+    if (!event.date) return false
+    if (!['holiday', 'no_school', 'student_holiday', 'teacher_workday', 'staff_development'].includes(event.type)) return false
     return getBreaks(events).some(b => event.date >= b.start && event.date <= b.end)
   }
 
   // Returns the first student school day after winter break ends (skips weekends and no_school days)
-  function getSecondSemesterStart(events: Array<{ date: string; name: string; type: string }>): string {
+  function getSecondSemesterStart(events: Array<{ date?: string; name: string; type: string }>): string {
     const explicitSemesterStart = events
-      .filter(e => ['school_resume', 'school_reopen', 'semester_start'].includes(e.type))
-      .sort((a, b) => a.date.localeCompare(b.date))
+      .filter(e => Boolean(e.date) && ['school_resume', 'school_reopen', 'semester_start'].includes(e.type))
+      .sort((a, b) => a.date!.localeCompare(b.date!))
       .find(e => e.name.toLowerCase().includes('semester'))
-    if (explicitSemesterStart) return explicitSemesterStart.date
+    if (explicitSemesterStart) return explicitSemesterStart.date!
 
+    const winterBreak = getBreaks(events).find(b => b.name.toLowerCase().includes('winter'))
     const winterEnd = events.find(
-      e => e.type === 'break_end' && e.name.toLowerCase().includes('winter')
+      e => Boolean(e.date) && e.type === 'break_end' && e.name.toLowerCase().includes('winter')
     )
-    if (!winterEnd) return ''
+    const winterEndDate = winterBreak?.end ?? winterEnd?.date
+    if (!winterEndDate) return ''
     // Prefer an explicit student return event before falling back to the next weekday.
     const resumeEvent = events.find(e =>
-      ['school_resume', 'school_reopen', 'semester_start'].includes(e.type) && e.date > winterEnd.date
+      Boolean(e.date) && ['school_resume', 'school_reopen', 'semester_start'].includes(e.type) && e.date! > winterEndDate
     )
-    if (resumeEvent) return resumeEvent.date
+    if (resumeEvent) return resumeEvent.date!
     // Fallback: advance past weekends and any no-student day
     const noStudentDates = new Set(
-      events.filter(e => ['no_school', 'student_holiday', 'holiday', 'teacher_workday'].includes(e.type)).map(e => e.date)
+      events.filter(e => Boolean(e.date) && ['no_school', 'student_holiday', 'holiday', 'teacher_workday', 'staff_development'].includes(e.type)).map(e => e.date!)
     )
     const toDateStr = (dt: Date) => {
       const y = dt.getFullYear()
@@ -125,7 +139,7 @@ export function useDistrictPage() {
       const day = String(dt.getDate()).padStart(2, '0')
       return `${y}-${m}-${day}`
     }
-    const d = new Date(winterEnd.date + 'T00:00:00')
+    const d = new Date(winterEndDate + 'T00:00:00')
     d.setDate(d.getDate() + 1)
     let dateStr = toDateStr(d)
     while (d.getDay() === 0 || d.getDay() === 6 || noStudentDates.has(dateStr)) {
@@ -145,7 +159,7 @@ export function useDistrictPage() {
       teacherWorkDays?: number
       semesters?: number
       sourceUrl?: string
-      events: Array<{ date: string; name: string; type: string }>
+      events: Array<{ date?: string; name: string; type: string }>
     },
     officialWebsite: string
   ) {
@@ -258,22 +272,23 @@ export function useDistrictPage() {
     ]
     const eventsForExport = cal.events.filter(event =>
       !(event as any).hideFromCalendarExport &&
+      Boolean(event.date) &&
       event.type !== 'break_end' &&
       (event.showDuringBreak || event.type === 'observance' || !isCoveredByBreak(event, cal.events))
     )
     const breaks = getBreaks(cal.events)
     for (const event of eventsForExport) {
-      const start = event.date.replace(/-/g, '')
+      const start = event.date!.replace(/-/g, '')
       const uidEvent = event.name
         .normalize('NFKD')
         .replace(/[^a-z0-9]+/gi, '-')
         .replace(/^-+|-+$/g, '')
         .toLowerCase()
         .slice(0, 64) || 'event'
-      const breakRange = event.type === 'break_start'
-        ? breaks.find(b => b.name === event.name && b.start === event.date)
+      const breakRange = event.type === 'break_start' || event.type === 'break'
+        ? breaks.find(b => b.name === event.name && b.start === event.date!)
         : null
-      const nextDay = new Date((breakRange?.end ?? event.date) + 'T00:00:00')
+      const nextDay = new Date((breakRange?.end ?? event.date!) + 'T00:00:00')
       nextDay.setDate(nextDay.getDate() + 1)
       const end = nextDay.toISOString().slice(0, 10).replace(/-/g, '')
       lines.push(
@@ -298,7 +313,7 @@ export function useDistrictPage() {
 
   const eventTypeLabel: Record<string, string> = {
     school_start: 'First Day', school_end: 'Last Day', holiday: 'Holiday', closure: 'Closure',
-    break: 'Break', break_start: 'Break Starts', break_end: 'Break Ends',
+    break: 'Break', break_start: 'Break Begins', break_end: 'Break Ends',
     no_school: 'No School', student_holiday: 'No School',
     early_release: 'Early Release', early_dismissal: 'Early Dismissal', early_close: 'Early Close',
     operational_closure: 'Operational Closure',
@@ -320,6 +335,8 @@ export function useDistrictPage() {
     milestone: 'School Event',
     school_return: 'Schools Reopen',
     conference: 'Conference Day',
+    contingency: 'Contingency',
+    staff_development: 'Staff Development',
     staff_date: 'Teachers',
     teacher_workday: 'Teacher Workday',
     teacher_professional_learning: 'Professional Development',
@@ -334,6 +351,7 @@ export function useDistrictPage() {
     break: 'bg-[#eee9f3] text-[#5b4b6f]',
     break_start: 'bg-[#eee9f3] text-[#5b4b6f]',
     break_end: 'bg-[#eee9f3] text-[#5b4b6f]',
+    contingency: 'bg-[#eeeae2] text-[#625b52]',
     no_school: 'bg-[#f3ead7] text-[#74552a]',
     student_holiday: 'bg-[#f3ead7] text-[#74552a]',
     early_release: 'bg-[#f1e5d9] text-[#744c28]',
@@ -368,6 +386,7 @@ export function useDistrictPage() {
     conference: 'bg-[#f3ead7] text-[#74552a]',
     staff_date: 'bg-[#eeeae2] text-[#625b52]',
     teacher_workday: 'bg-[#f3ead7] text-[#74552a]',
+    staff_development: 'bg-[#f3ead7] text-[#74552a]',
     teacher_professional_learning: 'bg-[#f3ead7] text-[#74552a]',
     extended_learning: 'bg-[#eee7ec] text-[#68495f]',
   }

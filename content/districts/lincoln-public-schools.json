@@ -1,0 +1,178 @@
+{
+  "institutionId": "lincoln-public-schools",
+  "name": "Lincoln Public Schools",
+  "shortName": "LPS",
+  "slug": "lincoln-public-schools-calendar",
+  "state": "Nebraska",
+  "stateCode": "NE",
+  "city": "Lincoln",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.lps.org/",
+  "calendarPage": "https://www.lps.org/page/calendars",
+  "logo": "https://cmsv2-assets.apptegy.net/uploads/31429/logo/34544/LPS_Logo_new.png",
+  "timezone": "America/Chicago",
+  "county": "Lancaster County",
+  "region": "Southeast Nebraska",
+  "metro": "Lincoln",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "calendarType": "traditional",
+  "studentCount": 41940,
+  "studentCountAsOf": "2025-10-01",
+  "studentCountSourceLabel": "LPS 2025–26 official enrollment announcement",
+  "studentCountSourceUrl": "https://www.lps.org/article/2950548",
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Lincoln Public Schools calendar",
+    "LPS calendar",
+    "Lincoln Nebraska school calendar",
+    "Lincoln NE school calendar",
+    "LPS student calendar",
+    "Lincoln Public Schools Nebraska calendar"
+  ],
+  "districtFact": "Lincoln Public Schools uses a transition-focused opening: kindergarten, grade 6 and grade 9 attend first, then the remaining K–12 grades join the next day. LPS also publishes separate calendars for middle-school X/Y rotations and preschool programs when those schedules differ from the district student calendar.",
+  "about": [
+    {
+      "title": "Nebraska's second-largest public school district",
+      "content": "Lincoln Public Schools describes itself as Nebraska's second-largest public school district. The district reported 41,940 Pre-K–12 students as of October 1, 2025 and serves families through more than 70 schools and programs across Lincoln. The district student calendar is the systemwide planning source, while individual schools and specialized programs publish additional schedules for building events and program-specific attendance."
+    },
+    {
+      "title": "A first week built around grade transitions",
+      "content": "LPS does not bring every K–12 student back on the same first day. Kindergarten, sixth-grade and ninth-grade students begin first so they can learn routines at the three main transition points; grades 1–5, 7–8 and 10–12 begin the following day. Families with children in multiple grade bands should plan transportation and care around both opening dates."
+    },
+    {
+      "title": "One district calendar does not cover every LPS program",
+      "content": "The annual Student Calendar covers districtwide attendance days, quarter boundaries, breaks, professional-learning days and the last student day. Middle-school families may also need the X/Y rotation calendar, while preschool families should use the half-day or Full Day Preschool calendar that matches their program. School events, athletics and conference details remain on school-level calendars and communications."
+    }
+  ],
+  "calendarNotes": "Use the annual LPS Student Calendar for districtwide K–12 dates, but read the opening symbols carefully because kindergarten, grade 6 and grade 9 start one day before the remaining grades. The gray and outlined symbols distinguish general closures from professional learning or planning days, and the 2027–28 calendar further separates building professional learning, district professional learning and compensatory days. Quarter start and end symbols describe academic reporting periods rather than separate attendance tracks. The district's religious-observance note tells families to notify schools for an excused absence and make-up opportunity; it does not convert every observance into a districtwide closure. LPS warns that weather or other disruptions can lead to added minutes, added days or conversion of a previously non-student day when the calendar falls below state minimum hours. For 2026–27, the Middle School X/Y, Preschool and Full Day Preschool files are official companion calendars and should not be treated as duplicates of the K–12 Student Calendar. Imported ICS dates are one-time copies and do not update automatically after a district revision.",
+  "planningTips": {
+    "title": "Planning with the Lincoln Public Schools calendar",
+    "content": [
+      "Check both opening dates if a household includes kindergarten, grade 6 or grade 9 students and students in other grades.",
+      "Use the Middle School X/Y calendar for rotation days; the district Student Calendar only identifies systemwide attendance and closure dates.",
+      "Preschool families should choose between the Preschool Calendar and Full Day Preschool Calendar because program attendance can differ from K–12.",
+      "Treat professional learning, planning and compensatory labels as distinct published reasons for no school, even when they create a longer break around a holiday.",
+      "Recheck the live LPS calendar page after severe weather because the district may change minutes or scheduled days to satisfy Nebraska school-hour requirements."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Do all Lincoln Public Schools students start on the same day?",
+      "a": "No. LPS starts kindergarten, grade 6 and grade 9 first to support school transitions. Grades 1–5, 7–8 and 10–12 begin the next day."
+    },
+    {
+      "q": "Does the LPS Student Calendar include the middle-school X/Y rotation?",
+      "a": "No. The Student Calendar lists districtwide dates. Middle-school families should use the separate X/Y calendar for the published rotation sequence."
+    },
+    {
+      "q": "Which LPS preschool calendar should families use?",
+      "a": "Use the Preschool Calendar for the standard preschool schedule and the Full Day Preschool Calendar for that program. Both are separate from the districtwide K–12 Student Calendar."
+    },
+    {
+      "q": "Are religious observances automatically no-school days in LPS?",
+      "a": "Not unless the district calendar marks the date as a closure. LPS asks families observing other religious holidays to notify the school; students receive an excused absence and a reasonable opportunity to make up missed work."
+    },
+    {
+      "q": "Can Lincoln Public Schools change the calendar after bad weather?",
+      "a": "Yes. LPS says it may add minutes, add days, reschedule a non-student day as a student day or use another appropriate measure if lost time puts the year below Nebraska minimum requirements."
+    },
+    {
+      "q": "Where are LPS graduation dates published?",
+      "a": "The annual Student Calendar lists graduation dates for Yankee Hill, Independence Academy, Bryan Community Focus Program and the comprehensive high schools at Pinnacle Bank Arena. School communications provide ceremony details."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "lps-calendar-map",
+      "label": "Which Lincoln Public Schools Calendar Should a Family Use?",
+      "position": "beforeSources",
+      "content": "LPS publishes companion calendars because a districtwide attendance date, a middle-school rotation and a preschool program schedule answer different questions.",
+      "table": {
+        "caption": "Best LPS source by planning need",
+        "columns": [
+          "Planning need",
+          "Official source"
+        ],
+        "rows": [
+          [
+            "K–12 opening dates, closures, breaks, quarter boundaries and last day",
+            "LPS Student Calendar"
+          ],
+          [
+            "Middle-school X/Y rotation",
+            "Middle School X/Y Calendar"
+          ],
+          [
+            "Standard preschool attendance",
+            "Preschool Calendar"
+          ],
+          [
+            "Full-day preschool attendance",
+            "Full Day Preschool Calendar"
+          ],
+          [
+            "School events, athletics and local reminders",
+            "Individual school calendar or school communication"
+          ],
+          [
+            "Weather-related revisions",
+            "LPS calendar page and district announcements"
+          ]
+        ]
+      }
+    }
+  ],
+  "hiddenSections": [
+    "comparison",
+    "nationalTrends",
+    "livingHere"
+  ],
+  "sources": [
+    {
+      "label": "Lincoln Public Schools official website",
+      "url": "https://www.lps.org/"
+    },
+    {
+      "label": "Lincoln Public Schools calendars",
+      "url": "https://www.lps.org/page/calendars"
+    },
+    {
+      "label": "LPS 2025–26 official enrollment announcement",
+      "url": "https://www.lps.org/article/2950548"
+    },
+    {
+      "label": "Lincoln Board of Education approval of the 2027–28 student calendar",
+      "url": "https://www.lps.org/article/2942628"
+    },
+    {
+      "label": "LPS 2025–26 Student Calendar",
+      "url": "https://drive.google.com/file/d/126czHohNawwFUG5nELXuJOJJtxwkf-0G/view"
+    },
+    {
+      "label": "LPS 2026–27 Student Calendar",
+      "url": "https://drive.google.com/file/d/1VUhuFFjwMG-W8uQ1YlsR4JpVqQv37NR8/view"
+    },
+    {
+      "label": "LPS 2027–28 Student Calendar",
+      "url": "https://drive.google.com/file/d/1r5UjTY5ROljnnShdZr6DHRdwM3-Rq1TV/view"
+    }
+  ]
+}

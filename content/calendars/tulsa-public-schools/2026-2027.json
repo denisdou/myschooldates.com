@@ -1,0 +1,671 @@
+{
+  "institutionId": "tulsa-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Tulsa Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-19",
+  "firstDayScope": "First day for most TPS students; Pre-K students have an assessment on August 19 or 20 and their first full day on August 21.",
+  "earlyChildhoodFirstDay": "2026-08-21",
+  "lastDay": "2027-05-28",
+  "lastDayScope": "Published last day when all three built-in weather days are used; the teacher calendar moves the ending to May 25, 26 or 27 when zero, one or two weather days are used.",
+  "temporalCoverageStart": "2026-08-12",
+  "temporalCoverageEnd": "2027-06-01",
+  "reportingPeriodDaysTotal": 168,
+  "reportingPeriodDaysScope": "Total printed across the four TPS quarter counts: 37, 39, 46 and 46 student days.",
+  "sourceUrl": "https://www.tulsaschools.org/student-and-family-support/calendars",
+  "sourceDocumentPage": "https://www.tulsaschools.org/student-and-family-support/calendars",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1774449123/tulsaschoolsorg/rikia03yxxzmrldjaqjn/Calendar_Student_2627_English_1.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1774449123/tulsaschoolsorg/rikia03yxxzmrldjaqjn/Calendar_Student_2627_English_1.pdf",
+  "sourceCheckedAt": "2026-08-18",
+  "sourceChecksumSha256": "7b9f31c1a6e46dc764318a6da86398657d2d84640505e08ac211929d5dc2d40f",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The official Spanish family PDF contains an internal spring-conference conflict: its event list says March 19, while its legend and highlighted calendar date show January 19. The English family calendar and the detailed teacher calendar also show January 19. Structured data therefore uses January 19 and preserves this note for review.",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.tulsaschools.org/student-and-family-support/calendars",
+    "linkText": "Printable School Calendar for Families",
+    "expectedDocumentUrl": "https://resources.finalsite.net/images/v1774449123/tulsaschoolsorg/rikia03yxxzmrldjaqjn/Calendar_Student_2627_English_1.pdf",
+    "expectedText": [
+      "FIRST DAY OF CLASSES: AUGUST 19",
+      "LAST DAY OF CLASSES: MAY 28",
+      "JANUARY 19 - SPRING PARENT/TEACHER CONFERENCES"
+    ],
+    "expectedChecksumSha256": "7b9f31c1a6e46dc764318a6da86398657d2d84640505e08ac211929d5dc2d40f"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.tulsaschools.org/student-and-family-support/calendars",
+      "linkText": "Calendario escolar para familias para imprimir 2026-2027",
+      "expectedDocumentUrl": "https://resources.finalsite.net/images/v1781119182/tulsaschoolsorg/iquvxikfddojqiwpcab8/Calendar_Student_2627_Spanish_1.pdf",
+      "expectedText": [
+        "PRIMER DÍA DE CLASES: 19 DE AGOSTO",
+        "ÚLTIMO DÍA DE CLASES: 28 DE MAYO"
+      ],
+      "expectedChecksumSha256": "9250c72b26100d5a33d42388c5b060845ab9ac306f05dfd8d2e559fc2b0be162"
+    },
+    {
+      "type": "resource-uuid",
+      "checkUrl": "https://www.tulsaschools.org/fs/resource-manager/view/2ddab332-dc5f-42c7-ac3e-fdc8026fb829",
+      "linkText": "Teacher Calendar",
+      "expectedDocumentUrl": "https://www.tulsaschools.org/fs/resource-manager/view/2ddab332-dc5f-42c7-ac3e-fdc8026fb829",
+      "expectedText": [
+        "37 39 46 46 168",
+        "3 WEATHER DAYS",
+        "MAY 28"
+      ],
+      "expectedResourceUuid": "2ddab332-dc5f-42c7-ac3e-fdc8026fb829",
+      "expectedChecksumSha256": "1c2a74c31a8c5fe94f33582ed935c8f1f6c313ac702160ab552749495347fb6f"
+    },
+    {
+      "type": "web-page",
+      "checkUrl": "https://www.tulsaschools.org/about/news/news-item/~board/district-news/post/pre-k-orientation-information",
+      "linkText": "Pre-K assessment and first day of school information",
+      "expectedText": [
+        "The first full day of school for pre-K students is Friday, August 21",
+        "Pre-K students will participate in a short assessment on either August 19 or 20",
+        "A parent/guardian must attend this assessment with their student"
+      ]
+    }
+  ],
+  "lastVerifiedAt": "2026-08-19",
+  "dateCreated": "2026-08-18",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-19",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_source_conflict",
+    "official_schedule_change",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Board approved March 24, 2025",
+  "sourceCalendarName": "Tulsa Public Schools 2026–27 Printable School Calendar for Families",
+  "schemaCalendarName": "Tulsa Public Schools Calendar 2026–27",
+  "schemaDatasetName": "Tulsa Public Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed TPS 2026–27 school dates from the official English and Spanish family calendars, teacher calendar, live district calendar and Pre-K guidance, including separate first days, Pre-K assessments, districtwide no-class dates, quarter totals and the weather-dependent final student day.",
+  "schemaSpatialCoverage": "Tulsa and Tulsa County, Oklahoma",
+  "schemaCalendarDownloadName": "Tulsa Public Schools 2026–27 ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with TPS first days, districtwide student closures, breaks, conference days and the conditional published May 28 ending.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-tps-spanish-family-calendar",
+      "type": "CreativeWork",
+      "name": "Tulsa Public Schools 2026–27 Printable Family Calendar — Spanish",
+      "url": "https://resources.finalsite.net/images/v1781119182/tulsaschoolsorg/iquvxikfddojqiwpcab8/Calendar_Student_2627_Spanish_1.pdf"
+    },
+    {
+      "id": "source-tps-teacher-calendar",
+      "type": "CreativeWork",
+      "name": "Tulsa Public Schools 2026–27 Teacher Calendar",
+      "url": "https://www.tulsaschools.org/fs/resource-manager/view/2ddab332-dc5f-42c7-ac3e-fdc8026fb829"
+    },
+    {
+      "id": "source-tps-pre-k-information",
+      "type": "WebPage",
+      "name": "Tulsa Public Schools Pre-K Assessment and First-Day Information — July 9, 2026",
+      "url": "https://www.tulsaschools.org/about/news/news-item/~board/district-news/post/pre-k-orientation-information",
+      "datePublished": "2026-07-09"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar-page",
+    "source-calendar",
+    "source-tps-spanish-family-calendar",
+    "source-tps-teacher-calendar",
+    "source-tps-pre-k-information"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar-page",
+    "source-calendar",
+    "source-tps-spanish-family-calendar",
+    "source-tps-teacher-calendar",
+    "source-tps-pre-k-information"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "tps-family-calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "hideSemesterCount": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideInstructionalDaysSummary": true,
+  "hidePdfDownloadSection": false,
+  "breaksBeforeAllDates": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "whatsDifferent",
+    "comparison",
+    "nationalTrends",
+    "relatedDistricts",
+    "otherCalendars"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "First Days",
+      "id": "tps-2026-2027-first-days"
+    },
+    {
+      "label": "Weather Rule",
+      "id": "tps-2026-2027-weather-days"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Quarters",
+      "id": "grading-periods"
+    },
+    {
+      "label": "Calendar Guide",
+      "id": "tps-2026-2027-calendar-guide"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Tulsa Public Schools Calendar 2026–27: Dates & PDF",
+  "seoDescription": "Tulsa Public Schools starts Aug. 19, 2026; Pre-K's first full day is Aug. 21. See breaks, conference days, the May 25–28 last-day rule, official PDFs and ICS.",
+  "heroSummary": "Most TPS students start Wednesday, August 19, 2026. Pre-K students attend a short assessment with a parent or guardian on August 19 or 20, and their first full day is Friday, August 21. Thanksgiving Break runs November 23–27, Winter Break runs December 21–January 1, and Spring Break runs March 15–19. May 28 is the published last day only when all three built-in weather days are used.",
+  "heroSourceLine": "Based on official TPS calendars and Pre-K guidance, reviewed August 19, 2026",
+  "hideHeroDownloadLink": true,
+  "verificationBadgeText": "Checked against current TPS sources",
+  "heroVerificationSourceText": "Reviewed the official English and Spanish family calendars, teacher calendar, live district calendar and Pre-K guidance",
+  "heroVerificationComparisonText": "First days, quarter totals, the weather-day formula and the Spanish spring-conference conflict were checked across sources",
+  "calendarNotes": "Most TPS students start August 19. Pre-K students attend a short assessment with a parent or guardian on August 19 or 20, and their first full day is August 21. The family calendar publishes May 28 as the last day and notes that it includes three weather days; the teacher calendar supplies the exact sliding rule from May 25 through May 28. October 13 and January 19 are no-class parent-teacher conference days, with schools responsible for exact conference dates and times. The Spanish PDF's event list says March 19 for spring conferences, but its legend and highlighted date, the English family calendar and the teacher calendar all show January 19. Quarter dates mark grading periods and do not always fall on student attendance days; Quarter 2 begins October 13 even though classes are not held that day.",
+  "keyDatesHeading": "Tulsa Public Schools 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "TPS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First days, major breaks, and the weather-dependent end of the school year",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of Classes",
+      "date": "2026-08-19",
+      "type": "school_start",
+      "description": "Most students start; Pre-K's first full day is August 21 after assessments on August 19 or 20."
+    },
+    {
+      "label": "Pre-K",
+      "name": "First Full Day for Pre-K",
+      "date": "2026-08-21",
+      "type": "school_start",
+      "schemaDescription": "First full day of classes for TPS Pre-K students, after assessments on August 19 or 20."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Published Last Day",
+      "name": "Last Day if Three Weather Days Are Used",
+      "date": "2027-05-28",
+      "type": "school_end",
+      "description": "Moves earlier to May 25–27 if fewer than three weather days are used."
+    }
+  ],
+  "allDatesTitle": "Tulsa Public Schools 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This table combines the official family calendar with the teacher calendar and the live district calendar. August 21 applies to Pre-K. May 28 is conditional on three weather days, and staff-only dates are labeled separately.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1774449123/tulsaschoolsorg/rikia03yxxzmrldjaqjn/Calendar_Student_2627_English_1.pdf",
+  "allDatesSourceLabel": "Official TPS 2026–27 Printable School Calendar for Families",
+  "dateLegendLabelOverrides": {
+    "Academic Date": "School / Quarter Date",
+    "Teacher Workday": "Staff Day — No Classes",
+    "No School": "No Classes"
+  },
+  "breakNotes": {
+    "Winter Break": "Winter Break ends Friday, January 1. Monday, January 4 is a professional day; students return Tuesday, January 5.",
+    "Spring Break": "Students return Monday, March 22, which is also the start of Quarter 4."
+  },
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "gradingPeriodsTitle": "TPS 2026–27 Quarter Day Counts",
+  "gradingPeriodsDescription": "The teacher calendar prints 168 student days across four quarters: 37, 39, 46 and 46. Quarter dates mark grading periods and do not always fall on student attendance days; October 13 starts Quarter 2 but is also a no-class conference day.",
+  "gradingPeriodsDaysLabel": "Student Days",
+  "gradingPeriods": [
+    {
+      "label": "Quarter 1",
+      "start": "2026-08-19",
+      "end": "2026-10-09",
+      "studentDays": 37
+    },
+    {
+      "label": "Quarter 2",
+      "start": "2026-10-13",
+      "end": "2026-12-18",
+      "studentDays": 39
+    },
+    {
+      "label": "Quarter 3",
+      "start": "2027-01-05",
+      "end": "2027-03-12",
+      "studentDays": 46
+    },
+    {
+      "label": "Quarter 4",
+      "start": "2027-03-22",
+      "end": "2027-05-28",
+      "studentDays": 46
+    }
+  ],
+  "customSections": [
+    {
+      "id": "tps-2026-2027-first-days",
+      "label": "Pre-K Starts on a Different Schedule",
+      "position": "afterKeyDates",
+      "content": "Most TPS students start August 19. Pre-K students instead attend a short assessment on August 19 or 20 with a parent or guardian; the school schedules the appointment. Their first full day is Friday, August 21.",
+      "table": {
+        "caption": "Tulsa Public Schools 2026–27 opening dates",
+        "columns": [
+          "Students",
+          "Date",
+          "What happens"
+        ],
+        "rows": [
+          [
+            "Most students",
+            "Wednesday, Aug. 19, 2026",
+            "First day of classes"
+          ],
+          [
+            "Pre-K",
+            "Aug. 19 or 20, 2026",
+            "Short assessment; a parent or guardian attends"
+          ],
+          [
+            "Pre-K",
+            "Friday, Aug. 21, 2026",
+            "First full day of classes"
+          ]
+        ],
+        "footnote": "Each school contacts Pre-K families to schedule the assessment appointment."
+      }
+    },
+    {
+      "id": "tps-2026-2027-weather-days",
+      "label": "How Weather Days Can Move the TPS Last Day",
+      "position": "afterKeyDates",
+      "content": "The family calendar publishes May 28 as the last day because it includes three weather days. The teacher calendar shows the last student day when zero, one, two, or three weather days are used. If more than three inclement-weather days are needed, TPS says the calendar will be extended or the missed time will be made up another way. Check the live TPS calendar for any resulting change.",
+      "table": {
+        "caption": "TPS 2026–27 last student day by weather days used",
+        "columns": [
+          "Weather days used",
+          "Last student day"
+        ],
+        "rows": [
+          [
+            "0",
+            "Tuesday, May 25, 2027"
+          ],
+          [
+            "1",
+            "Wednesday, May 26, 2027"
+          ],
+          [
+            "2",
+            "Thursday, May 27, 2027"
+          ],
+          [
+            "3",
+            "Friday, May 28, 2027"
+          ]
+        ],
+        "footnote": "Do not treat May 28 as fixed until TPS confirms weather-day use."
+      }
+    },
+    {
+      "id": "tps-2026-2027-conferences",
+      "label": "Why the Spanish TPS Calendar Shows a Different Conference Date",
+      "position": "afterAllDates",
+      "content": "TPS marks October 13 and January 19 as no-class conference days and tells families to check their school for exact dates and times. March 19 appears only in the Spanish calendar's event list. The same PDF's legend and highlighted date show January 19, which also matches the English family calendar and teacher calendar.",
+      "table": {
+        "caption": "How the spring conference date was reconciled",
+        "columns": [
+          "Official evidence",
+          "Date shown"
+        ],
+        "rows": [
+          [
+            "English family calendar event list",
+            "Jan. 19, 2027"
+          ],
+          [
+            "TPS teacher calendar",
+            "Jan. 19, 2027"
+          ],
+          [
+            "Spanish calendar legend and highlighted date",
+            "Jan. 19, 2027"
+          ],
+          [
+            "Spanish calendar event list only",
+            "Mar. 19, 2027"
+          ]
+        ],
+        "footnote": "We use January 19 here and in the downloadable calendar."
+      }
+    },
+    {
+      "id": "tps-2026-2027-calendar-guide",
+      "label": "Which Official TPS Calendar Should You Use?",
+      "position": "afterGradingPeriodsBeforeCalendarExport",
+      "content": "TPS publishes overlapping calendar sources rather than one file that answers every family question.",
+      "table": {
+        "caption": "Official TPS calendar sources by purpose",
+        "columns": [
+          "Source",
+          "Best used for"
+        ],
+        "rows": [
+          [
+            "English or Spanish family PDF",
+            "Districtwide class days, breaks and closures"
+          ],
+          [
+            "Teacher calendar",
+            "Quarter day counts, staff days and the weather-day ending rule"
+          ],
+          [
+            "Live district calendar",
+            "Pre-K opening, later updates and dated district events"
+          ],
+          [
+            "TPS July 9 Pre-K notice",
+            "Pre-K assessment dates and appointment instructions"
+          ],
+          [
+            "School communication",
+            "Conference appointments and building-specific details"
+          ]
+        ]
+      }
+    }
+  ],
+  "unifiedDownloadTitle": "TPS Calendar Downloads and Official Links",
+  "unifiedDownloadDescription": "Download the official English or Spanish family calendar, add a one-time ICS file, or open the live TPS calendar for updates.",
+  "compactDownloadModule": true,
+  "pdfHeading": "English Family Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Primary printable student calendar published by Tulsa Public Schools.",
+  "pdfButtonLabel": "View English PDF",
+  "groupAlternateCalendarsWithDownloads": true,
+  "alternateCalendarsDescription": "The Spanish family calendar includes a conflicting spring conference date; the discrepancy is explained above.",
+  "alternateCalendarsButtonLabel": "View Spanish PDF",
+  "alternateCalendars": [
+    {
+      "type": "language_translation",
+      "label": "TPS 2026–27 Family Calendar — Spanish",
+      "description": "Official Spanish companion to the printable family calendar.",
+      "group": "Spanish Family Calendar",
+      "pdfUrl": "https://resources.finalsite.net/images/v1781119182/tulsaschoolsorg/iquvxikfddojqiwpcab8/Calendar_Student_2627_Spanish_1.pdf"
+    }
+  ],
+  "icsHeading": "Add TPS 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS copy of the dates on this page. May 28 remains conditional on weather-day use.",
+  "icsButtonLabel": "Download TPS 2026–27 ICS",
+  "icsButtonSupportText": "One-time import; it will not update automatically.",
+  "icsSourceNote": "Check the live TPS calendar and school messages for revisions, conference times and the confirmed last day.",
+  "officialSubscriptionTitle": "Official TPS Live Calendar",
+  "officialSubscriptionDescription": "Open the live district calendar for current events and updates.",
+  "officialSubscriptionButtonLabel": "Open Official TPS Calendar",
+  "officialSubscriptionUrl": "https://www.tulsaschools.org/student-and-family-support/calendars",
+  "sourceReviewSummary": "Reviewed August 19, 2026, against the TPS calendar hub, July 9 Pre-K notice, live district calendar and official English, Spanish and teacher calendars.",
+  "sourceReviewDetailsTitle": "How the 2026–27 dates were verified",
+  "sourceReviewDetails": [
+    "We reviewed the English and Spanish family calendars, the teacher calendar, the live district calendar and TPS's July 9 Pre-K notice, including their date grids, legends, footnotes and weather-day table.",
+    "The teacher calendar supplies the 37/39/46/46 quarter counts, 168-day total and May 25–28 weather adjustment. The July 9 Pre-K notice supplies the August 19–20 assessment window and August 21 first full day.",
+    "January 19 is used for spring conferences because it appears in the English and teacher calendars and in the Spanish PDF's legend and highlighted date; the Spanish event list's March 19 is retained as a disclosed source conflict."
+  ],
+  "sourceMaintainerLabel": "Official source",
+  "sourceMaintainerText": "Tulsa Public Schools is the official source for calendar changes.",
+  "sourceNextReviewText": "We recheck this page when TPS replaces a calendar PDF, changes a districtwide date or confirms weather-day use.",
+  "sources": [
+    {
+      "label": "Tulsa Public Schools calendar hub and live district calendar",
+      "url": "https://www.tulsaschools.org/student-and-family-support/calendars"
+    },
+    {
+      "label": "TPS Pre-K assessment and first-day information — July 9, 2026",
+      "url": "https://www.tulsaschools.org/about/news/news-item/~board/district-news/post/pre-k-orientation-information"
+    },
+    {
+      "label": "TPS 2026–27 Printable School Calendar for Families — English",
+      "url": "https://resources.finalsite.net/images/v1774449123/tulsaschoolsorg/rikia03yxxzmrldjaqjn/Calendar_Student_2627_English_1.pdf"
+    },
+    {
+      "label": "TPS 2026–27 Printable School Calendar for Families — Spanish",
+      "url": "https://resources.finalsite.net/images/v1781119182/tulsaschoolsorg/iquvxikfddojqiwpcab8/Calendar_Student_2627_Spanish_1.pdf"
+    },
+    {
+      "label": "TPS 2026–27 Teacher Calendar",
+      "url": "https://www.tulsaschools.org/fs/resource-manager/view/2ddab332-dc5f-42c7-ac3e-fdc8026fb829"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "How many student days are on the TPS 2026–27 calendar?",
+      "a": "The four official quarter counts total 168 student days: 37 in Quarter 1, 39 in Quarter 2, and 46 in each of Quarters 3 and 4."
+    },
+    {
+      "q": "Will the downloaded TPS calendar update automatically?",
+      "a": "No. The ICS file is a one-time copy. Use the official live calendar and school messages for revisions and confirmation of the final day of classes."
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-12",
+      "dates": [
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-17",
+        "2026-08-18"
+      ],
+      "displayDate": "August 12–13 and 17–18, 2026",
+      "displayAsRange": false,
+      "name": "Professional Days",
+      "type": "teacher_workday",
+      "description": "Staff professional days before classes begin.",
+      "exportDatesIndividually": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-14",
+      "name": "Teacher Work Day",
+      "type": "teacher_workday",
+      "description": "Staff work day before classes begin.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-19",
+      "name": "First Day of Classes",
+      "type": "school_start",
+      "description": "First day for most students; Pre-K's first full day is August 21 after assessments on August 19 or 20.",
+      "schemaDescription": "First day for most Tulsa Public Schools students; Pre-K students have assessments on August 19 or 20 and begin full days August 21.",
+      "calendarExportDescription": "First day for most TPS students. Pre-K's first full day is August 21.",
+      "badgeLabel": "First Day"
+    },
+    {
+      "date": "2026-08-21",
+      "name": "First Full Day for Pre-K",
+      "type": "school_start",
+      "description": "Pre-K students attend a short assessment with a parent or guardian on August 19 or 20 before their first full day.",
+      "schemaDescription": "First full day for Tulsa Public Schools Pre-K students after short assessments on August 19 or 20.",
+      "badgeLabel": "First Day"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "type": "holiday",
+      "description": "No classes."
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Indigenous Peoples’ Day",
+      "type": "holiday",
+      "description": "No classes."
+    },
+    {
+      "date": "2026-10-13",
+      "name": "Fall Parent/Teacher Conferences",
+      "type": "no_school",
+      "description": "No classes. Check the school for exact conference dates and times. Quarter 2 also begins that day.",
+      "calendarExportDescription": "No classes. Confirm the conference appointment time with the school.",
+      "badgeLabel": "No Classes"
+    },
+    {
+      "date": "2026-10-14",
+      "endDate": "2026-10-16",
+      "name": "Fall Break",
+      "type": "break_start",
+      "description": "No classes."
+    },
+    {
+      "date": "2026-11-02",
+      "endDate": "2026-11-03",
+      "name": "Civic Engagement",
+      "type": "no_school",
+      "description": "No classes."
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start",
+      "description": "No classes."
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start",
+      "description": "No classes. January 4 is a professional day; students return January 5."
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Professional Day",
+      "type": "teacher_workday",
+      "description": "No classes."
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Students Return; Quarter 3 Begins",
+      "type": "school_resume",
+      "description": "First student day after Winter Break and the January 4 professional day."
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday",
+      "description": "No classes."
+    },
+    {
+      "date": "2027-01-19",
+      "name": "Spring Parent/Teacher Conferences",
+      "type": "no_school",
+      "description": "No classes. The English family calendar, teacher calendar and Spanish PDF legend support January 19; the Spanish event list alone says March 19.",
+      "calendarExportDescription": "No classes. Confirm the conference appointment time with the school.",
+      "badgeLabel": "No Classes"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "President’s Day",
+      "type": "holiday",
+      "description": "No classes."
+    },
+    {
+      "date": "2027-02-16",
+      "name": "Professional Day",
+      "type": "teacher_workday",
+      "description": "No classes."
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break",
+      "type": "break_start",
+      "description": "No classes."
+    },
+    {
+      "date": "2027-03-22",
+      "name": "Students Return; Quarter 4 Begins",
+      "type": "school_resume",
+      "description": "First student day after Spring Break."
+    },
+    {
+      "date": "2027-04-23",
+      "name": "April Holiday",
+      "type": "holiday",
+      "preserveOfficialName": true,
+      "description": "No classes."
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Published Last Day of Classes",
+      "type": "school_end",
+      "description": "Applies when TPS uses all three built-in weather days. The last student day moves to May 25, 26 or 27 when zero, one or two weather days are used.",
+      "schemaDescription": "Published Tulsa Public Schools last day of classes when all three built-in weather days are used; the official teacher calendar provides May 25 through May 28 alternatives.",
+      "calendarExportDescription": "Conditional published last day with three weather days used. Confirm the final date with TPS.",
+      "badgeLabel": "Conditional Last Day"
+    },
+    {
+      "date": "2027-06-01",
+      "name": "Teacher Work Day",
+      "type": "teacher_workday",
+      "description": "Post-year staff work day.",
+      "hideFromCalendarExport": true
+    }
+  ]
+}

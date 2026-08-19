@@ -197,7 +197,7 @@ function computeMetricPool(
 
   // ── nextStudentDayOff ──────────────────────────────────────────────────
   const nextSdoEvt = events
-    .filter(e => e.date >= todayStrVal && (e.type === 'holiday' || e.type === 'no_school' || e.type === 'break_start'))
+    .filter(e => e.date >= todayStrVal && (e.type === 'holiday' || e.type === 'no_school' || e.type === 'break' || e.type === 'break_start'))
     .sort((a, b) => a.date.localeCompare(b.date))[0] ?? null
   const nextStudentDayOff = nextSdoEvt
     ? { name: nextSdoEvt.name, date: nextSdoEvt.date, daysUntil: daysUntilFn(nextSdoEvt.date) }
@@ -213,7 +213,7 @@ function computeMetricPool(
 
   // ── nextTeacherWorkday ─────────────────────────────────────────────────
   const nextTwdEvt = events
-    .filter(e => e.date >= todayStrVal && e.type === 'teacher_workday')
+    .filter(e => e.date >= todayStrVal && (e.type === 'teacher_workday' || e.type === 'staff_development'))
     .sort((a, b) => a.date.localeCompare(b.date))[0] ?? null
   const nextTeacherWorkday = nextTwdEvt
     ? { name: nextTwdEvt.name, date: nextTwdEvt.date, daysUntil: daysUntilFn(nextTwdEvt.date) }
@@ -362,7 +362,7 @@ function computeMetricPool(
   if (prevCalVal && yearComparisonVal) {
     // Only show the card when spring break hasn't happened yet
     const sprStart = (events as any[])
-      .filter(e => e.name?.toLowerCase().includes('spring') && (e.type === 'break_start' || e.type === 'holiday'))
+      .filter(e => e.name?.toLowerCase().includes('spring') && (e.type === 'break' || e.type === 'break_start' || e.type === 'holiday'))
       .map(e => e.date)
       .sort()[0] ?? null
     const springBreakPassed = sprStart ? sprStart < todayStrVal : false

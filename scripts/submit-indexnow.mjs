@@ -6,6 +6,7 @@ const root = dirname(dirname(fileURLToPath(import.meta.url)))
 const envPath = join(root, '.env')
 const districtsDir = join(root, 'content', 'districts')
 const calendarsDir = join(root, 'content', 'calendars')
+const statesDir = join(root, 'content', 'states')
 const defaultSiteUrl = 'https://myschooldates.com'
 const defaultEndpoint = 'https://api.indexnow.org/indexnow'
 const keyPattern = /^[A-Za-z0-9-]{8,128}$/
@@ -20,7 +21,7 @@ const responseHints = {
 }
 
 function printHelp() {
-  console.log(`Submit district hub URLs to IndexNow.
+  console.log(`Submit structured content URLs to IndexNow.
 
 Usage:
   pnpm indexnow
@@ -29,8 +30,8 @@ Usage:
   pnpm indexnow -- --all
 
 Options:
-  --date <YYYY-MM-DD>       Publication date; defaults to the local date
-  --all                     Submit every primary district hub URL
+  --date <YYYY-MM-DD>       Content creation date; defaults to the local date
+  --all                     Submit all state, district, and school-year URLs
   --dry-run                 Print matching URLs without submitting them
   --site-url <URL>          Canonical site origin (default: ${defaultSiteUrl})
   --key-location <URL>      Public IndexNow key file URL
@@ -126,53 +127,154 @@ function normalizeSiteUrl(value) {
   return url.origin
 }
 
+function readJson(path) {
+  try {
+    return JSON.parse(readFileSync(path, 'utf8'))
+  } catch (error) {
+    throw new Error(`Could not read JSON content ${path}: ${error.message}`)
+  }
+}
+
+function contentCreationDate(record, fallbackField) {
+  return record.dateCreated || record.datePublished || (fallbackField ? record[fallbackField] : undefined)
+}
+
 function readDistricts() {
   if (!existsSync(districtsDir)) throw new Error('Missing content/districts directory')
   const districtsByInstitutionId = new Map()
-  for (const file of readdirSync(districtsDir)) {
+  for (const file of readdirSync(districtsDir).sort()) {
     if (!file.endsWith('.json')) continue
     const path = join(districtsDir, file)
-    const district = JSON.parse(readFileSync(path, 'utf8'))
+    const district = readJson(path)
     if (!district.institutionId) throw new Error(`District record has no institutionId: ${path}`)
     if (!district.slug) throw new Error(`District record has no slug: ${path}`)
+    if (districtsByInstitutionId.has(district.institutionId)) {
+      throw new Error(`Duplicate district institutionId: ${district.institutionId}`)
+    }
     districtsByInstitutionId.set(district.institutionId, {
+      institutionId: district.institutionId,
       name: district.name || file,
       slug: district.slug,
+      state: district.state,
+      stateCode: district.stateCode,
+      creationDate: contentCreationDate(district),
     })
   }
   return districtsByInstitutionId
 }
 
-function findAllDistricts() {
-  return [...readDistricts().values()].sort((a, b) => a.name.localeCompare(b.name))
+function readStates() {
+  if (!existsSync(statesDir)) throw new Error('Missing content/states directory')
+  const states = []
+  const statesByIdentity = new Map()
+
+  for (const file of readdirSync(statesDir).sort()) {
+    if (!file.endsWith('.json')) continue
+    const path = join(statesDir, file)
+    const state = readJson(path)
+    if (!state.stateSlug) throw new Error(`State record has no stateSlug: ${path}`)
+    if (!state.stateName) throw new Error(`State record has no stateName: ${path}`)
+
+    const item = {
+      name: state.stateName,
+      slug: state.stateSlug,
+      stateCode: state.stateCode,
+      creationDate: contentCreationDate(state, 'lastVerifiedAt'),
+    }
+    states.push(item)
+    statesByIdentity.set(`name:${state.stateName.toLowerCase()}`, item)
+    statesByIdentity.set(`slug:${state.stateSlug.toLowerCase()}`, item)
+    if (state.stateCode) statesByIdentity.set(`code:${state.stateCode.toUpperCase()}`, item)
+  }
+
+  return { states, statesByIdentity }
 }
 
-function findDistrictsByDate(publicationDate) {
+function readCalendars() {
   if (!existsSync(calendarsDir)) throw new Error('Missing content/calendars directory')
+  const calendars = []
 
-  const districtsByInstitutionId = readDistricts()
+  for (const entry of readdirSync(calendarsDir, { withFileTypes: true })
+    .filter(entry => entry.isDirectory())
+    .sort((a, b) => a.name.localeCompare(b.name))) {
+    const institutionPath = join(calendarsDir, entry.name)
 
-  const matchingInstitutionIds = new Set()
-  for (const institutionDir of readdirSync(calendarsDir)) {
-    const institutionPath = join(calendarsDir, institutionDir)
-    if (!existsSync(institutionPath)) continue
-
-    for (const file of readdirSync(institutionPath)) {
+    for (const file of readdirSync(institutionPath).sort()) {
       if (!file.endsWith('.json')) continue
       const path = join(institutionPath, file)
-      const calendar = JSON.parse(readFileSync(path, 'utf8'))
-      if (calendar.datePublished === publicationDate && calendar.institutionId) {
-        matchingInstitutionIds.add(calendar.institutionId)
-      }
+      const calendar = readJson(path)
+      if (!calendar.institutionId) throw new Error(`Calendar record has no institutionId: ${path}`)
+      if (!calendar.schoolYear) throw new Error(`Calendar record has no schoolYear: ${path}`)
+      calendars.push({
+        institutionId: calendar.institutionId,
+        schoolYear: calendar.schoolYear,
+        creationDate: contentCreationDate(calendar),
+      })
     }
   }
 
-  return [...matchingInstitutionIds].map((institutionId) => {
-    const district = districtsByInstitutionId.get(institutionId)
-    if (!district) {
-      throw new Error(`Published calendar has no matching district record: ${institutionId}`)
+  return calendars
+}
+
+function resolveDistrictState(district, statesByIdentity) {
+  if (district.stateCode) {
+    const state = statesByIdentity.get(`code:${district.stateCode.toUpperCase()}`)
+    if (state) return state
+  }
+  if (district.state) {
+    return statesByIdentity.get(`name:${district.state.toLowerCase()}`)
+      || statesByIdentity.get(`slug:${district.state.toLowerCase()}`)
+  }
+}
+
+function collectContentUrls({ all, creationDate, siteUrl }) {
+  const districtsByInstitutionId = readDistricts()
+  const { states, statesByIdentity } = readStates()
+  const calendars = readCalendars()
+  const urlsByPath = new Map()
+
+  const addUrl = (path, type, label) => {
+    if (!urlsByPath.has(path)) {
+      urlsByPath.set(path, { type, label, url: `${siteUrl}${path}` })
     }
-    return district
+  }
+  const addState = state => state && addUrl(`/${state.slug}`, 'State page', state.name)
+  const addDistrict = district => addUrl(`/${district.slug}`, 'District hub', district.name)
+
+  for (const state of states) {
+    if (all || state.creationDate === creationDate) addState(state)
+  }
+
+  for (const district of districtsByInstitutionId.values()) {
+    if (all || district.creationDate === creationDate) {
+      addDistrict(district)
+      addState(resolveDistrictState(district, statesByIdentity))
+    }
+  }
+
+  for (const calendar of calendars) {
+    if (!all && calendar.creationDate !== creationDate) continue
+    const district = districtsByInstitutionId.get(calendar.institutionId)
+    if (!district) {
+      throw new Error(`Calendar has no matching district record: ${calendar.institutionId}`)
+    }
+    addDistrict(district)
+    addUrl(
+      `/${district.slug}/${calendar.schoolYear}`,
+      'School-year page',
+      `${district.name} ${calendar.schoolYear}`,
+    )
+    addState(resolveDistrictState(district, statesByIdentity))
+  }
+
+  const typeOrder = new Map([
+    ['State page', 0],
+    ['District hub', 1],
+    ['School-year page', 2],
+  ])
+  return [...urlsByPath.values()].sort((a, b) => {
+    const typeDifference = typeOrder.get(a.type) - typeOrder.get(b.type)
+    return typeDifference || a.label.localeCompare(b.label) || a.url.localeCompare(b.url)
   })
 }
 
@@ -242,26 +344,25 @@ async function main() {
     return
   }
 
-  const publicationDate = options.all ? undefined : options.date || localIsoDate()
-  if (publicationDate) validateDate(publicationDate)
+  const creationDate = options.all ? undefined : options.date || localIsoDate()
+  if (creationDate) validateDate(creationDate)
 
   const siteUrl = normalizeSiteUrl(options.siteUrl || process.env.INDEXNOW_SITE_URL || defaultSiteUrl)
-  const districts = options.all ? findAllDistricts() : findDistrictsByDate(publicationDate)
-  const urls = districts.map(district => `${siteUrl}/${district.slug}`)
+  const contentUrls = collectContentUrls({ all: options.all, creationDate, siteUrl })
+  const urls = contentUrls.map(item => item.url)
 
-  console.log(`Submission scope: ${options.all ? 'all primary district hubs' : `calendars published on ${publicationDate}`}`)
-  if (!options.all) console.log(`Calendar source: ${calendarsDir}`)
-  console.log(`District slug source: ${districtsDir}`)
+  console.log(`Submission scope: ${options.all ? 'all structured content pages' : `content created on ${creationDate}`}`)
+  console.log(`Content sources: ${districtsDir}, ${calendarsDir}, ${statesDir}`)
   if (urls.length === 0) {
     console.log(options.all
-      ? 'No district hub URLs found. Nothing to submit.'
-      : 'No district hub URLs found for this date. Nothing to submit.')
+      ? 'No structured content URLs found. Nothing to submit.'
+      : 'No structured content URLs found for this date. Nothing to submit.')
     return
   }
 
-  console.log(`District hub URLs (${urls.length}):`)
-  for (const [index, url] of urls.entries()) {
-    console.log(`- ${districts[index].name}: ${url}`)
+  console.log(`Content URLs (${urls.length}):`)
+  for (const item of contentUrls) {
+    console.log(`- ${item.type} — ${item.label}: ${item.url}`)
   }
 
   if (options.dryRun) {

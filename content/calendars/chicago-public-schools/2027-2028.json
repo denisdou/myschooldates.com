@@ -1,94 +1,434 @@
 {
   "institutionId": "chicago-public-schools",
   "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Chicago Public Schools (CPS) Calendar 2027-2028",
   "firstDay": "2027-08-23",
+  "firstDayScope": "First day for K–12 students; preschool students begin August 24.",
+  "earlyChildhoodFirstDay": "2027-08-24",
   "lastDay": "2028-06-09",
-  "sourceUrl": "https://www.cps.edu/calendar/?calendars=1149%2C1151%2C1135%2C1150%2C1106%2C1115%2C1118",
-  "sourcePdfUrl": "https://cdn.bfldr.com/MXCD21SV/as/pkh92mgjjbpwqvzj5gcwwv/EDUC_District_Calendar_626857_Calend_Fam_SY27-28_D_EN_SP_01082026",
-  "lastVerifiedAt": "2026-07-24",
-  "datePublished": "2026-07-24",
-  "dateModified": "2026-07-24",
-  "calendarType": "traditional",
+  "lastDayScope": "Last day for K–12 students; preschool students finish June 8.",
+  "earlyChildhoodLastDay": "2028-06-08",
+  "temporalCoverageStart": "2027-08-16",
+  "temporalCoverageEnd": "2028-07-03",
   "totalSchoolDays": 176,
-  "yearNumbersMode": "compact",
-  "seoTitle": "CPS Calendar 2027-2028: Start Date, Holidays, Breaks & PDF",
-  "seoDescription": "View the CPS 2027-2028 school calendar with official source dates, first day, last day, holidays, breaks, printable PDF and ICS download.",
-  "calendarNotes": "The CPS calendar from Chicago Public Schools lists 176 K-12 student attendance days for 2027-2028. K-12 students begin classes on August 23, 2027 and end on June 9, 2028, while preschool students begin August 24, 2027 and end June 8, 2028. Winter Vacation runs December 20-31, 2027, and Spring Vacation runs March 20-24, 2028. Parent-teacher conference days are November 2, 2027 and April 13, 2028 and are non-attendance days for students. CPS lists June 13-16 and June 20 as emergency days if student days fall below the state requirement.",
+  "sourceUrl": "https://www.cps.edu/calendar/",
+  "sourceDocumentPage": "https://www.cps.edu/calendar/",
+  "sourcePdfUrl": "https://cdn.bfldr.com/MXCD21SV/as/pkh92mgjjbpwqvzj5gcwwv/EDUC_District_Calendar_626857_Calend_Fam_SY27-28_D_EN_SP_01082026",
+  "lastCheckedPdfUrl": "https://cdn.bfldr.com/MXCD21SV/as/pkh92mgjjbpwqvzj5gcwwv/EDUC_District_Calendar_626857_Calend_Fam_SY27-28_D_EN_SP_01082026",
+  "sourceCheckedAt": "2026-08-19",
+  "sourceChecksumSha256": "9a770364141e3d3dc2f9806a976952354e353890e3f06669c2003a873462b338",
+  "sourceStatus": "current",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.cps.edu/calendar/",
+    "linkText": "ENGLISH & Spanish",
+    "expectedDocumentUrl": "https://cdn.bfldr.com/MXCD21SV/as/pkh92mgjjbpwqvzj5gcwwv/EDUC_District_Calendar_626857_Calend_Fam_SY27-28_D_EN_SP_01082026",
+    "expectedText": [
+      "Students begin classes on Monday, August 23, 2027",
+      "Q1 on September 23, 2027",
+      "Days 42 45 42 47 176",
+      "Last Update: 3.5.26"
+    ],
+    "expectedChecksumSha256": "9a770364141e3d3dc2f9806a976952354e353890e3f06669c2003a873462b338"
+  },
+  "lastVerifiedAt": "2026-08-19",
+  "dateCreated": "2026-07-24",
+  "datePublished": "2026-07-24",
+  "dateModified": "2026-08-19",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_source_conflict",
+    "official_schedule_change",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "March 5, 2026",
+  "sourceVersionLabel": "District PDF last updated",
+  "sourceVersionDisplay": "March 5, 2026",
+  "sourceCalendarDateModified": "2026-03-05",
+  "sourceCalendarName": "Chicago Public Schools 2027–28 Family Calendar — Elementary and High Schools",
+  "schemaCalendarName": "Chicago Public Schools 2027–28 Family Calendar",
+  "schemaDatasetName": "Chicago Public Schools 2027–28 Family Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed dates from the Board-approved CPS Family Calendar for elementary and high schools, including K–12 and preschool boundaries, student non-attendance days, vacations, quarter totals, report dates, conditional emergency days, and the earliest summer-program date.",
+  "schemaSpatialCoverage": "Chicago, Illinois",
+  "schemaCalendarDownloadName": "Chicago Public Schools 2027–28 Family Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with CPS first and last days, student non-attendance dates, holidays, vacations, and report dates.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-staff-calendar",
+      "name": "Chicago Public Schools 2027–28 Staff Calendar",
+      "url": "https://cdn.bfldr.com/MXCD21SV/as/xbhrv8j63zsgq59vp5ttgvpw/EDUC_District_Calendar_626857_Calend_Staff_SY27-28_D_EN_01122026",
+      "version": "March 11, 2026",
+      "dateModified": "2026-03-11"
+    },
+    {
+      "id": "source-board-approval",
+      "type": "WebPage",
+      "name": "CPS Calendars Now Available for the Next Two School Years",
+      "url": "https://www.cps.edu/media/community-updates/2026/february/community-letter-02-27-26/",
+      "datePublished": "2026-02-27"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar-page",
+    "source-calendar",
+    "source-staff-calendar",
+    "source-board-approval"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar-page",
+    "source-calendar",
+    "source-staff-calendar",
+    "source-board-approval"
+  ],
+  "webPageMainEntity": "dataset",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "itemListMode": "keyDates",
+  "allDatesMode": "keyDates",
+  "allDatesTitle": "Major Student Calendar Dates — 2027–28",
+  "allDatesIncludedDatesInKeyDates": [
+    "2028-06-19"
+  ],
+  "allDatesCoverageNote": "This table follows the CPS Family Calendar for elementary and high schools. The separate professional development and conference section highlights student non-attendance days that are easy to miss, and conditional emergency days are shown near the end of the year.",
+  "hideAlternateCalendarsNotice": true,
+  "hideInstructionalDaysSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationIcs": true,
+  "heroFactChips": [
+    "Board-approved calendar",
+    "176 student attendance days"
+  ],
+  "heroSummary": "Chicago Public Schools begins classes for K–12 students on Monday, August 23, 2027. K–12 students finish Friday, June 9, 2028, and Spring Vacation runs March 20–24, 2028.",
+  "heroSourceLine": "Based on the Board-approved CPS Family Calendar for elementary and high schools",
+  "verificationBadgeText": "Checked against the current CPS Family Calendar",
+  "seoTitle": "Chicago Public Schools Calendar 2027-2028: CPS Dates & PDF",
+  "seoDescription": "Chicago Public Schools (CPS) 2027–28 calendar with first and last days, holidays, breaks, student days off, the official PDF, and an ICS calendar import.",
+  "calendarNotes": "Chicago Public Schools lists 176 student attendance days for 2027–28. K–12 students begin August 23, preschool students begin August 24, and students return from Winter Vacation on January 4 because January 3 is a professional development day. Quarter 2 ends January 21, after Winter Vacation. The official Family Calendar also marks June 13–16 and June 20 as emergency days if student days fall below the state requirement.",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "yearNumbers",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "nationalTrends",
+    "relatedDistricts"
+  ],
+  "hiddenCustomSectionIds": [
+    "about-cps-calendar-structure",
+    "chicago-public-schools-calendar-planning-notes",
+    "cps-calendar-vs-school-specific-calendars",
+    "how-we-collect-cps-calendar-data",
+    "illinois-school-calendars-link",
+    "cps-calendar-important-dates-for-families",
+    "when-should-cps-families-start-planning",
+    "cps-calendar-download-options"
+  ],
+  "comparisonAfterSources": true,
+  "comparisonDistrictSlugs": [
+    "los-angeles-unified-school-district-calendar"
+  ],
+  "relatedDistrictsSameYearOnly": true,
+  "comparisonTitle": "Chicago Public Schools and LAUSD Calendar Comparison",
+  "comparisonSummary": "For context, compare CPS with LAUSD, another large urban school district with a published 2027–28 calendar.",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "instructionalDays",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "comparisonRowLabels": {
+    "instructionalDays": "Student / Instruction Days"
+  },
+  "hideComparisonNotes": true,
+  "hideComparisonReviewedDate": true,
+  "dateLegendLabelOverrides": {
+    "Reserved Weather Day": "Conditional Emergency Day"
+  },
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "href": "#key-dates" },
+    { "label": "PD & Conferences", "href": "#student-days-off" },
+    { "label": "Calendar Dates", "href": "#all-dates" },
+    { "label": "Breaks", "href": "#breaks" },
+    { "label": "Downloads", "href": "#add-to-calendar" },
+    { "label": "Calendar Versions", "href": "#other-calendars" },
+    { "label": "Quarters", "href": "#grading-periods" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Sources", "href": "#sources" }
+  ],
+  "keyDatesSummaryTitle": "Key Dates at a Glance",
+  "keyDatesSummarySubtitle": "The dates families are most likely to need, including the January 4 student return.",
+  "keyDatesSummaryId": "key-dates",
+  "keyDateSummaryItems": [
+    {
+      "date": "2027-08-23",
+      "name": "First Day for K–12 Students",
+      "label": "K–12 First Day",
+      "type": "school_start",
+      "description": "A full day of school. Preschool begins the following day."
+    },
+    {
+      "date": "2027-08-24",
+      "name": "First Day for Preschool Students",
+      "label": "Preschool",
+      "type": "school_start",
+      "description": "First day of classes for CPS preschool students."
+    },
+    {
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "name": "Winter Vacation",
+      "label": "Winter Vacation",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-01-04",
+      "name": "Students Return After Winter Vacation",
+      "label": "Students Return",
+      "type": "school_resume",
+      "description": "January 3 is a professional development day with no student attendance."
+    },
+    {
+      "date": "2028-03-20",
+      "endDate": "2028-03-24",
+      "name": "Spring Vacation",
+      "label": "Spring Vacation",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-06-09",
+      "name": "Last Day for K–12 Students",
+      "label": "K–12 Last Day",
+      "type": "school_end",
+      "description": "Preschool students finish Thursday, June 8."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "student-days-off",
+      "label": "Professional Development and Conference Days",
+      "position": "afterKeyDates",
+      "content": "Between the first and last K–12 school days, CPS has eight additional student non-attendance days outside holidays and major vacations. January 3 is the one families are most likely to miss: students return from Winter Vacation on Tuesday, January 4.",
+      "table": {
+        "columns": ["Date", "Official reason", "What families should know"],
+        "rows": [
+          ["Sep. 24, 2027", "Professional development", "No student attendance"],
+          ["Nov. 1, 2027", "Professional development", "No student attendance"],
+          ["Nov. 2, 2027", "Parent-teacher conferences", "Elementary and high school students do not attend"],
+          ["Jan. 3, 2028", "Professional development", "Students return from Winter Vacation Jan. 4"],
+          ["Jan. 28, 2028", "Professional development", "No student attendance"],
+          ["Feb. 22, 2028", "Professional development", "No student attendance"],
+          ["Apr. 13, 2028", "Parent-teacher conferences", "Elementary and high school students do not attend"],
+          ["Apr. 14, 2028", "Professional development", "No student attendance"]
+        ],
+        "footnote": "The CPS Family Calendar separately lists holidays and major vacations; this table focuses on professional development and conference days between the first and last K–12 school days."
+      }
+    },
+    {
+      "id": "families-should-know",
+      "label": "What Families Should Know About 2027–28",
+      "position": "afterYearDiff",
+      "content": "CPS released the 2027–28 calendar as one of two Board-approved future calendars after receiving feedback from more than 36,000 students, families, staff, and partners.",
+      "groups": [
+        {
+          "label": "First semester ends after Winter Vacation",
+          "items": [
+            "Students return January 4, and Quarter 2 ends January 21. CPS says the late 2027 Labor Day made it difficult to complete the required semester credits before Winter Vacation."
+          ]
+        },
+        {
+          "label": "Emergency days remain conditional",
+          "items": [
+            "June 13–16 and June 20 are school days only if CPS needs them to meet the state student-day requirement. They are shown on this page but excluded from the ICS file unless CPS activates them."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cps-calendar-scope",
+      "label": "What the CPS Family Calendar Does—and Doesn’t—Cover",
+      "position": "afterYearDiff",
+      "content": "This page summarizes the CPS Family Calendar for elementary and high schools. Use it for districtwide first and last days, holidays, vacations, professional development days, parent-teacher conference days, and quarter dates. It does not replace school-specific bell schedules, testing dates, athletics, ceremonies, transportation notices, or program calendars; confirm those details with the school."
+    }
+  ],
+  "breaksTitle": "Major Breaks and Student Return Dates",
+  "breakNotes": {
+    "2027-11-25": "Students return Monday, November 29.",
+    "2027-12-20": "Winter Vacation ends December 31. January 3 is a professional development day, so students return Tuesday, January 4.",
+    "2028-03-20": "Students return Monday, March 27."
+  },
+  "unifiedDownloadTitle": "Download the CPS Family Calendar",
+  "unifiedDownloadDescription": "View the official English–Spanish PDF or import the selected dates into Google Calendar, Apple Calendar, or Outlook.",
+  "compactDownloadModule": true,
+  "hideShareCalendarHeading": true,
+  "hideSocialShareButtons": true,
+  "icsHeading": "Add CPS Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS copy of the dates on this page. It will not update automatically if CPS revises the calendar. Conditional emergency days are not included unless CPS activates them.",
+  "icsButtonLabel": "Download CPS 2027–28 ICS",
+  "icsButtonSupportText": "One-time import; check CPS for later changes.",
+  "pdfHeading": "Official CPS Family Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfVersionLabel": "District PDF last updated March 5, 2026",
+  "pdfDescription": "The official two-page CPS Family Calendar combines English and Spanish and covers elementary and high schools.",
+  "pdfButtonLabel": "View Official CPS PDF",
+  "alternateCalendarsTitle": "Official CPS Calendar Versions",
+  "alternateCalendarsDescription": "CPS currently publishes a combined English–Spanish Family Calendar and a separate English Staff Calendar for 2027–28. The Family Calendar is available in the download section above.",
+  "alternateCalendarsButtonLabel": "View PDF",
+  "alternateCalendars": [
+    {
+      "type": "staff-english",
+      "label": "English Staff Calendar",
+      "description": "Official staff calendar with role-specific work dates and professional-development details. District staff PDF last updated March 11, 2026.",
+      "pdfUrl": "https://cdn.bfldr.com/MXCD21SV/as/xbhrv8j63zsgq59vp5ttgvpw/EDUC_District_Calendar_626857_Calend_Staff_SY27-28_D_EN_01122026"
+    }
+  ],
+  "gradingPeriodsTitle": "CPS Quarter Schedule",
+  "gradingPeriodsDescription": "The Family Calendar prints these quarter endings and student attendance-day counts.",
+  "gradingPeriodsDaysLabel": "Attendance Days",
+  "gradingPeriodsReportsLabel": "Report Card / Conference Date",
+  "gradingPeriodsFooterNote": "The official quarter counts total 176 student attendance days: 42 + 45 + 42 + 47. Q1 and Q3 report cards are associated with parent-teacher conference days; Q2 and Q4 report cards are sent home.",
+  "gradingPeriods": [
+    { "label": "Quarter 1", "end": "2027-10-22", "studentDays": 42, "reportsIssued": "2027-11-02" },
+    { "label": "Quarter 2", "end": "2028-01-21", "studentDays": 45, "reportsIssued": "2028-01-28" },
+    { "label": "Quarter 3", "end": "2028-03-31", "studentDays": 42, "reportsIssued": "2028-04-13" },
+    { "label": "Quarter 4", "end": "2028-06-09", "studentDays": 47, "reportsIssued": "2028-06-09" }
+  ],
+  "whatsNew": {
+    "title": "What’s Different in 2027–28",
+    "subtitle": "A concise comparison with the published 2026–27 CPS calendar.",
+    "content": [
+      "The first day moves from Aug. 24 in 2026–27 to Aug. 23 in 2027–28.",
+      "The K–12 last day moves from June 11 to June 9.",
+      "The Thanksgiving Holiday remains two weekdays, Nov. 25–26."
+    ]
+  },
+  "faqOrderLimit": 8,
+  "faqDisplayQuestions": [
+    "When does CPS start school in 2027?",
+    "When is CPS Winter Vacation in 2027–28?",
+    "When do CPS students return after Winter Vacation?",
+    "When is CPS Spring Vacation in 2028?",
+    "When is the last day of school for CPS in 2028?",
+    "Which CPS professional development and conference days are student days off?",
+    "Does CPS publish separate preschool dates for 2027–28?",
+    "Can emergency days extend the CPS 2027–28 school year?"
+  ],
   "calendarFaqs": [
     {
       "q": "When does CPS start school in 2027?",
-      "a": "Chicago Public Schools starts the 2027-2028 K-12 school year on Monday, August 23, 2027."
+      "a": "Chicago Public Schools starts the 2027–28 K–12 school year on Monday, August 23, 2027. Preschool students begin Tuesday, August 24. The first K–12 school day is a full day."
     },
     {
-      "q": "When is CPS Winter Vacation in 2027-2028?",
-      "a": "Winter Vacation runs Monday, December 20 through Friday, December 31, 2027."
+      "q": "When is CPS Winter Vacation in 2027–28?",
+      "a": "CPS Winter Vacation runs Monday, December 20, through Friday, December 31, 2027. January 3 is a professional development day, so students do not return that Monday."
+    },
+    {
+      "q": "When do CPS students return after Winter Vacation?",
+      "a": "Students return Tuesday, January 4, 2028. The published Winter Vacation ends December 31, but CPS schedules a professional development day with no student attendance on Monday, January 3."
     },
     {
       "q": "When is CPS Spring Vacation in 2028?",
-      "a": "Spring Vacation runs Monday, March 20 through Friday, March 24, 2028."
+      "a": "CPS Spring Vacation runs Monday, March 20, through Friday, March 24, 2028. Students return Monday, March 27."
     },
     {
       "q": "When is the last day of school for CPS in 2028?",
-      "a": "The last day for K-12 students is Friday, June 9, 2028."
+      "a": "The last day for K–12 students is Friday, June 9, 2028. Preschool students finish Thursday, June 8. The first and last K–12 school days are both full days."
+    },
+    {
+      "q": "Which CPS professional development and conference days are student days off?",
+      "a": "CPS lists professional development days on September 24, November 1, January 3 and 28, February 22, and April 14. Parent-teacher conference days on November 2 and April 13 are also student non-attendance days."
+    },
+    {
+      "q": "Does CPS publish separate preschool dates for 2027–28?",
+      "a": "Yes. Preschool students begin August 24, 2027, one day after K–12 students, and finish June 8, 2028, one day before the K–12 last day."
+    },
+    {
+      "q": "Can emergency days extend the CPS 2027–28 school year?",
+      "a": "Yes. CPS marks June 13–16 and June 20, 2028, as emergency days when school may be in session if student days fall below the state requirement. Check CPS before making firm plans for those dates."
     }
   ],
-  "yearNumbers": [
+  "sourceReviewSummary": "District Family Calendar PDF last updated March 5, 2026. MySchoolDates reviewed the current CPS calendar page, Family Calendar, Staff Calendar, and Board-approval announcement on August 19, 2026.",
+  "sourceReviewDetailsTitle": "How the 2027–28 dates were checked",
+  "sourceReviewDetails": [
+    "CPS calls the source document its Family Calendar for elementary and high schools, and this page follows the district’s terminology.",
+    "The Chicago Board of Education approved the 2026–27 and 2027–28 calendars after CPS received feedback from more than 36,000 students, families, staff, and partners.",
+    "The review confirmed the September 23 Q1 progress-report date, the January 3 professional development day, the January 4 student return, the 42/45/42/47 quarter totals, and the June 13–16 and June 20 emergency days.",
+    "The Spanish page’s legend repeats 2026 first-day years, but its date grid and Spanish school-calendar paragraph correctly show August 23–24, 2027. This page uses the dates supported by the English page and the Spanish calendar body.",
+    "School-specific bell schedules, testing dates, athletics, ceremonies, transportation notices, and program calendars remain outside the districtwide Family Calendar."
+  ],
+  "sourceMaintainerLabel": "Official calendar authority",
+  "sourceMaintainerText": "Chicago Public Schools publishes and revises the official district calendar.",
+  "sourceNextReviewText": "We recheck this page when CPS replaces the Family Calendar, changes a districtwide date, or activates an emergency day.",
+  "sources": [
     {
-      "label": "First Day",
-      "value": "Aug 23",
-      "detail": "K-12 students begin classes on August 23, 2027."
+      "label": "Chicago Public Schools District Calendar",
+      "url": "https://www.cps.edu/calendar/"
     },
     {
-      "label": "Student Days",
-      "value": "176",
-      "detail": "The official CPS family calendar lists 176 student attendance days."
+      "label": "CPS 2027–28 Family Calendar — English and Spanish",
+      "url": "https://cdn.bfldr.com/MXCD21SV/as/pkh92mgjjbpwqvzj5gcwwv/EDUC_District_Calendar_626857_Calend_Fam_SY27-28_D_EN_SP_01082026"
     },
     {
-      "label": "Spring Vacation",
-      "value": "Mar 20-24",
-      "detail": "Spring Vacation runs March 20-24, 2028."
+      "label": "CPS 2027–28 Staff Calendar — English",
+      "url": "https://cdn.bfldr.com/MXCD21SV/as/xbhrv8j63zsgq59vp5ttgvpw/EDUC_District_Calendar_626857_Calend_Staff_SY27-28_D_EN_01122026"
+    },
+    {
+      "label": "CPS Board-approved calendar announcement — February 27, 2026",
+      "url": "https://www.cps.edu/media/community-updates/2026/february/community-letter-02-27-26/"
     }
   ],
   "events": [
-    { "date": "2027-08-16", "name": "Professional Development Days Begin", "type": "teacher_workday" },
-    { "date": "2027-08-20", "name": "Professional Development Days End", "type": "teacher_workday" },
-    { "date": "2027-08-23", "name": "First Day of School for K-12 Students", "type": "school_start" },
+    { "date": "2027-08-16", "endDate": "2027-08-20", "name": "Professional Development Days", "type": "teacher_workday" },
+    { "date": "2027-08-23", "name": "First Day of School for K–12 Students", "type": "school_start", "description": "A full day of school." },
     { "date": "2027-08-24", "name": "First Day of School for Preschool Students", "type": "school_start" },
     { "date": "2027-09-06", "name": "Labor Day", "type": "holiday" },
     { "date": "2027-09-23", "name": "Q1 Progress Report Distribution", "type": "academic" },
-    { "date": "2027-09-24", "name": "Professional Development Day", "type": "teacher_workday" },
-    { "date": "2027-10-11", "name": "Indigenous Peoples' Day", "type": "holiday" },
-    { "date": "2027-10-22", "name": "End of Quarter 1", "type": "academic" },
-    { "date": "2027-11-01", "name": "Professional Development Day", "type": "teacher_workday" },
-    { "date": "2027-11-02", "name": "Parent-Teacher Conference Day - No Student Attendance", "type": "academic" },
-    { "date": "2027-11-11", "name": "Veterans Day", "type": "holiday" },
-    { "date": "2027-11-25", "name": "Thanksgiving Holiday Begins", "type": "break_start" },
-    { "date": "2027-11-26", "name": "Thanksgiving Holiday Ends", "type": "break_end" },
+    { "date": "2027-09-24", "name": "Professional Development Day — No Student Attendance", "type": "teacher_workday", "badgeLabel": "No School for Students" },
+    { "date": "2027-10-11", "name": "Indigenous Peoples’ Day", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-10-22", "name": "End of Quarter 1", "type": "quarter_end" },
+    { "date": "2027-11-01", "name": "Professional Development Day — No Student Attendance", "type": "teacher_workday", "badgeLabel": "No School for Students" },
+    { "date": "2027-11-02", "name": "Parent-Teacher Conference Day — No Student Attendance", "type": "no_school", "badgeLabel": "Conference Day" },
+    { "date": "2027-11-11", "name": "Veterans Day", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2027-11-25", "endDate": "2027-11-26", "name": "Thanksgiving Holiday", "type": "break_start" },
     { "date": "2027-12-10", "name": "Q2 Progress Report Distribution", "type": "academic" },
-    { "date": "2027-12-20", "name": "Winter Vacation Begins", "type": "break_start" },
-    { "date": "2027-12-31", "name": "Winter Vacation Ends", "type": "break_end" },
-    { "date": "2028-01-03", "name": "Professional Development Day", "type": "teacher_workday" },
+    { "date": "2027-12-20", "endDate": "2027-12-31", "name": "Winter Vacation", "type": "break_start" },
+    { "date": "2028-01-03", "name": "Professional Development Day — No Student Attendance", "type": "teacher_workday", "badgeLabel": "No School for Students" },
+    { "date": "2028-01-04", "name": "Students Return After Winter Vacation", "type": "school_resume", "description": "January 3 is a professional development day.", "isDerivedPlanningDate": true },
     { "date": "2028-01-17", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2028-01-21", "name": "End of Quarter 2", "type": "academic" },
+    { "date": "2028-01-21", "name": "End of Quarter 2", "type": "quarter_end" },
     { "date": "2028-01-28", "name": "Q2 Report Card Distribution", "type": "academic" },
-    { "date": "2028-01-28", "name": "Professional Development Day", "type": "teacher_workday" },
-    { "date": "2028-02-21", "name": "Presidents' Day", "type": "holiday" },
-    { "date": "2028-02-22", "name": "Professional Development Day", "type": "teacher_workday" },
+    { "date": "2028-01-28", "name": "Professional Development Day — No Student Attendance", "type": "teacher_workday", "badgeLabel": "No School for Students" },
+    { "date": "2028-02-21", "name": "Presidents’ Day", "type": "holiday", "preserveOfficialName": true },
+    { "date": "2028-02-22", "name": "Professional Development Day — No Student Attendance", "type": "teacher_workday", "badgeLabel": "No School for Students" },
     { "date": "2028-02-25", "name": "Q3 Progress Report Distribution", "type": "academic" },
-    { "date": "2028-03-20", "name": "Spring Vacation Begins", "type": "break_start" },
-    { "date": "2028-03-24", "name": "Spring Vacation Ends", "type": "break_end" },
-    { "date": "2028-03-31", "name": "End of Quarter 3", "type": "academic" },
-    { "date": "2028-04-13", "name": "Parent-Teacher Conference Day - No Student Attendance", "type": "academic" },
-    { "date": "2028-04-14", "name": "Professional Development Day", "type": "teacher_workday" },
+    { "date": "2028-03-20", "endDate": "2028-03-24", "name": "Spring Vacation", "type": "break_start" },
+    { "date": "2028-03-31", "name": "End of Quarter 3", "type": "quarter_end" },
+    { "date": "2028-04-13", "name": "Parent-Teacher Conference Day — No Student Attendance", "type": "no_school", "badgeLabel": "Conference Day" },
+    { "date": "2028-04-14", "name": "Professional Development Day — No Student Attendance", "type": "teacher_workday", "badgeLabel": "No School for Students" },
     { "date": "2028-05-05", "name": "Q4 Progress Report Distribution", "type": "academic" },
-    { "date": "2028-05-26", "name": "Earliest High School Graduation Ceremony Date", "type": "academic" },
+    { "date": "2028-05-26", "name": "Earliest High School Graduation Ceremony Date", "type": "graduation" },
     { "date": "2028-05-29", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2028-06-05", "name": "Earliest Elementary Graduation Ceremony Date", "type": "academic" },
+    { "date": "2028-06-05", "name": "Earliest Elementary Graduation Ceremony Date", "type": "graduation" },
     { "date": "2028-06-08", "name": "Last Day of School for Preschool Students", "type": "school_end" },
-    { "date": "2028-06-09", "name": "Last Day of School for K-12 Students", "type": "school_end" },
-    { "date": "2028-06-09", "name": "End of Quarter 4", "type": "academic" },
+    { "date": "2028-06-09", "name": "Last Day of School for K–12 Students", "type": "school_end", "description": "A full day of school." },
+    { "date": "2028-06-09", "name": "End of Quarter 4", "type": "quarter_end" },
     { "date": "2028-06-12", "name": "Professional Development Day", "type": "teacher_workday" },
+    { "date": "2028-06-13", "name": "Potential Emergency Days", "type": "makeup_day", "description": "School is in session only if student days fall below the state requirement.", "badgeLabel": "Conditional Emergency Day", "hideFromCalendarExport": true },
+    { "date": "2028-06-14", "name": "Potential Emergency Days", "type": "makeup_day", "description": "School is in session only if student days fall below the state requirement.", "badgeLabel": "Conditional Emergency Day", "hideFromCalendarExport": true },
+    { "date": "2028-06-15", "name": "Potential Emergency Days", "type": "makeup_day", "description": "School is in session only if student days fall below the state requirement.", "badgeLabel": "Conditional Emergency Day", "hideFromCalendarExport": true },
+    { "date": "2028-06-16", "name": "Potential Emergency Days", "type": "makeup_day", "description": "School is in session only if student days fall below the state requirement.", "badgeLabel": "Conditional Emergency Day", "hideFromCalendarExport": true },
     { "date": "2028-06-19", "name": "Juneteenth", "type": "holiday" },
+    { "date": "2028-06-20", "name": "Potential Emergency Day", "type": "makeup_day", "description": "School is in session only if student days fall below the state requirement.", "badgeLabel": "Conditional Emergency Day", "hideFromCalendarExport": true },
     { "date": "2028-07-03", "name": "Earliest Anticipated Summer Programs Start Date", "type": "academic" }
   ]
 }

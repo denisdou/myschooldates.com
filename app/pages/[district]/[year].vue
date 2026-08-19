@@ -36,7 +36,7 @@ function toComparisonCalendarSummary(c: any) {
     comparisonExtraSourceUrl: c.comparisonExtraSourceUrl ?? c.meta?.comparisonExtraSourceUrl,
     comparisonExtraSourceLabel: c.comparisonExtraSourceLabel ?? c.meta?.comparisonExtraSourceLabel,
     events: (c.events ?? [])
-      .filter((e: any) => e.type === 'break_start' || e.type === 'break_end')
+      .filter((e: any) => e.type === 'break' || e.type === 'break_start' || e.type === 'break_end')
       .map((e: any) => ({ name: e.name, date: e.date, endDate: e.endDate, type: e.type })),
   }
 }
@@ -602,12 +602,12 @@ const dateLegend = computed(() => {
     ...(hasEventType(['schools_offices_closed']) ? [{ label: 'Schools & Offices Closed', dot: 'bg-red-400' }] : []),
     ...(hasEventType(['schools_closed']) ? [{ label: 'Schools Closed', dot: 'bg-red-300' }] : []),
     ...(hasEventType(['holiday']) ? [{ label: 'Holiday', dot: 'bg-teal-400' }] : []),
-    ...(hasEventType(['no_school', 'student_holiday', 'teacher_workday', 'teacher_professional_learning']) ? [{ label: 'No School for Students', dot: 'bg-amber-400' }] : []),
+    ...(hasEventType(['no_school', 'student_holiday', 'teacher_workday', 'teacher_professional_learning', 'staff_development']) ? [{ label: 'No School for Students', dot: 'bg-amber-400' }] : []),
     ...(hasEventType(['partial_closure']) ? [{ label: 'Some Students Off', dot: 'bg-pink-400' }] : []),
     ...(hasEventType(['half_day_high_school', 'half_day_dismissal']) ? [{ label: 'Half-Day Dismissal', dot: 'bg-orange-300' }] : []),
     ...(hasEventType(['early_dismissal', 'early_release']) ? [{ label: 'Early Release', dot: 'bg-orange-400' }] : []),
     ...(hasEventType(['makeup_day', 'weather_day', 'inclement_weather_day']) ? [{ label: 'Reserved Weather Day', dot: 'bg-orange-300' }] : []),
-    ...(hasEventType(['break_start']) || hasPossibleMakeupDay ? [{ label: 'Break', dot: 'bg-purple-400' }] : []),
+    ...(hasEventType(['break', 'break_start']) || hasPossibleMakeupDay ? [{ label: 'Break', dot: 'bg-purple-400' }] : []),
     ...(hasEventType(['conference', 'conference_day', 'conference_days']) ? [{ label: 'Conferences', dot: 'bg-blue-400' }] : []),
     ...(hasEventType(['academic']) ? [{ label: 'Academic', dot: 'bg-slate-400' }] : []),
     ...(hasEventType(['observance']) ? [{ label: 'Observance', dot: 'bg-teal-400' }] : []),
@@ -1235,11 +1235,11 @@ const keyDateItemListEvents = computed(() => {
   if (configuredKeyDateSummaryItems.value.length) {
     return configuredKeyDateSummaryItems.value.filter(event => event.date)
   }
-  const HIGHLIGHT_TYPES = new Set(['school_start', 'school_end', 'break_start'])
+  const HIGHLIGHT_TYPES = new Set(['school_start', 'school_end', 'break', 'break_start'])
   if ((cal.value as any)?.itemListMode === 'allImportantDates') {
-    return (cal.value?.events ?? []).filter((event: any) => event.type !== 'break_end')
+    return (cal.value?.events ?? []).filter((event: any) => event.type !== 'break_end' && !event.excludeFromDateSchema)
   }
-  return (cal.value?.events ?? []).filter((event: any) => HIGHLIGHT_TYPES.has(event.type) || event.schemaEvent === true)
+  return (cal.value?.events ?? []).filter((event: any) => !event.excludeFromDateSchema && (HIGHLIGHT_TYPES.has(event.type) || event.schemaEvent === true))
 })
 const customSectionSchemaParts = computed(() =>
   customSections.value
@@ -1311,7 +1311,7 @@ const calendarDateItemListId = computed(() => String(
 ).replace(/^#/, ''))
 const calendarDateItemListEvents = computed(() => {
   if (!splitCalendarDateItemListSchema.value) return []
-  return (cal.value?.events ?? []).filter((event: any) => event.type !== 'break_end')
+  return (cal.value?.events ?? []).filter((event: any) => event.type !== 'break_end' && !event.excludeFromDateSchema)
 })
 if (datasetEntity && !hideItemListSchema.value && calendarDateItemListEvents.value.length) {
   Object.assign(datasetEntity, { mainEntity: { '@id': `${canonicalUrl}#${calendarDateItemListId.value}` } })
@@ -2039,6 +2039,7 @@ useHead({
         :description="(cal as any).gradingPeriodsDescription ?? (cal as any).meta?.gradingPeriodsDescription"
         :days-label="(cal as any).gradingPeriodsDaysLabel ?? (cal as any).meta?.gradingPeriodsDaysLabel"
         :next-date-label="(cal as any).gradingPeriodsNextDateLabel ?? (cal as any).meta?.gradingPeriodsNextDateLabel"
+        :reports-label="(cal as any).gradingPeriodsReportsLabel ?? (cal as any).meta?.gradingPeriodsReportsLabel"
         :footer-note="(cal as any).gradingPeriodsFooterNote ?? (cal as any).meta?.gradingPeriodsFooterNote"
       />
       <DistrictCustomSections
@@ -2106,6 +2107,7 @@ useHead({
         :description="(cal as any).gradingPeriodsDescription ?? (cal as any).meta?.gradingPeriodsDescription"
         :days-label="(cal as any).gradingPeriodsDaysLabel ?? (cal as any).meta?.gradingPeriodsDaysLabel"
         :next-date-label="(cal as any).gradingPeriodsNextDateLabel ?? (cal as any).meta?.gradingPeriodsNextDateLabel"
+        :reports-label="(cal as any).gradingPeriodsReportsLabel ?? (cal as any).meta?.gradingPeriodsReportsLabel"
         :footer-note="(cal as any).gradingPeriodsFooterNote ?? (cal as any).meta?.gradingPeriodsFooterNote"
       />
       <DistrictCustomSections
@@ -2163,6 +2165,7 @@ useHead({
         :review-summary="(cal as any).sourceReviewSummary ?? (cal as any).meta?.sourceReviewSummary"
         :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
         :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
+        :maintainer-label="(cal as any).sourceMaintainerLabel ?? (cal as any).meta?.sourceMaintainerLabel"
         :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
         :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
         :hide-next-review="Boolean((cal as any).hideSourceNextReview ?? (cal as any).meta?.hideSourceNextReview)"
@@ -2263,6 +2266,7 @@ useHead({
         :review-summary="(cal as any).sourceReviewSummary ?? (cal as any).meta?.sourceReviewSummary"
         :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
         :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
+        :maintainer-label="(cal as any).sourceMaintainerLabel ?? (cal as any).meta?.sourceMaintainerLabel"
         :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
         :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
         :hide-next-review="Boolean((cal as any).hideSourceNextReview ?? (cal as any).meta?.hideSourceNextReview)"

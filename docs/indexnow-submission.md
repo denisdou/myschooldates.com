@@ -1,10 +1,17 @@
-# IndexNow District URL Submission
+# IndexNow Content URL Submission
 
-This project submits district hub URLs by scanning the structured content files.
-It matches `content/calendars/*/*.json` by `datePublished`, deduplicates their
-`institutionId` values, and reads each public `slug` from the corresponding district
-main file under `content/districts/`. School-year URLs are intentionally excluded,
-and the content roadmap is not read by this script.
+This project submits public URLs by scanning the structured district, calendar, and
+state content files. For a requested creation date, it includes:
+
+- each matching school-year URL;
+- its district hub URL;
+- its state-level URL;
+- state or district pages whose own content record matches the date.
+
+Calendar and district records use `dateCreated`, with `datePublished` as a fallback
+for older content. State records use `dateCreated` or `datePublished` when present,
+then fall back to `lastVerifiedAt`. `dateModified` does not place an existing page in
+a creation-date submission. The content roadmap is not read by this script.
 
 ## One-time setup
 
@@ -38,7 +45,7 @@ in the hosting provider's build environment because the local `.env` is not push
 
 ## Usage
 
-Preview today's district hub URLs without sending a request:
+Preview today's matching content URLs without sending a request:
 
 ```bash
 pnpm indexnow -- --dry-run
@@ -58,8 +65,9 @@ pnpm indexnow -- --date 2026-08-06
 ```
 
 `2026-08-06` can also be passed as a positional argument. The date defaults to the
-machine's local calendar date, not UTC. A date with no matching district records
-exits successfully without contacting IndexNow.
+machine's local calendar date, not UTC. A date with no matching content records
+exits successfully without contacting IndexNow. Use `--all` to include every state,
+district hub, and school-year URL.
 
 ## Configuration
 
@@ -75,10 +83,10 @@ endpoint. Run `pnpm indexnow -- --help` for the complete list.
 
 ## Validation and responses
 
-Before submission, the script validates the date, reads published calendar records,
-deduplicates districts, resolves their main-file slugs, and accepts IndexNow HTTP
-200 and 202 responses. It prints specific guidance for HTTP 400, 403, 422, and 429
-errors.
+Before submission, the script validates the date, reads the structured content
+records, resolves district and state slugs, deduplicates URLs, and accepts IndexNow
+HTTP 200 and 202 responses. It prints specific guidance for HTTP 400, 403, 422, and
+429 errors.
 
 An accepted IndexNow request means participating search engines received the URLs;
 it does not guarantee that Bing will crawl or index every page.

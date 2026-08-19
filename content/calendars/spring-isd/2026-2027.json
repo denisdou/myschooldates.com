@@ -1,169 +1,631 @@
 {
   "institutionId": "spring-isd",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Spring ISD Calendar 2026–27",
   "firstDay": "2026-08-12",
   "lastDay": "2027-05-28",
-  "sourceUrl": "https://www.springisd.org/documents/printable-calendars/662033",
-  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4570/Sisd/e29153ea-fc14-4c77-b3eb-9a03f2389835/Calendar_26-27_Final_12-10.pdf?disposition=inline",
-  "lastVerifiedAt": "2026-07-22",
-  "datePublished": "2026-07-22",
-  "dateModified": "2026-07-22",
-  "calendarType": "traditional",
+  "temporalCoverageStart": "2026-08-12",
+  "temporalCoverageEnd": "2027-05-28",
   "totalSchoolDays": 180,
-  "yearNumbersMode": "compact",
-  "alternateCalendars": [
+  "sourceUrl": "https://www.springisd.org/documents/printable-calendars/662033",
+  "sourceDocumentPage": "https://www.springisd.org/documents/printable-calendars/662033",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4570/Sisd/e29153ea-fc14-4c77-b3eb-9a03f2389835/Calendar_26-27_Final_12-10.pdf?disposition=inline",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4570/Sisd/e29153ea-fc14-4c77-b3eb-9a03f2389835/Calendar_26-27_Final_12-10.pdf?disposition=inline",
+  "sourceCheckedAt": "2026-08-19",
+  "sourceChecksumSha256": "84dafe89e3fe60ef90457af83019b783f2d172126ed7ad4aa131250be5c9d927",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.springisd.org/documents/printable-calendars/662033",
+    "linkText": "2026-27 Instructional Calendar",
+    "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4570/Sisd/e29153ea-fc14-4c77-b3eb-9a03f2389835/Calendar_26-27_Final_12-10.pdf?disposition=inline",
+    "expectedChecksumSha256": "84dafe89e3fe60ef90457af83019b783f2d172126ed7ad4aa131250be5c9d927"
+  },
+  "additionalSourceResourceMonitors": [
     {
-      "type": "spanish",
-      "label": "2026-2027 Instructional Calendar (Espanol)",
-      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4570/Sisd/4d0407d5-e905-4e87-8c6b-606d269723c4/Calendar_26-27_Final_SP_12-10.pdf?disposition=inline"
+      "type": "web-page",
+      "checkUrl": "https://www.springisd.org/live-feed",
+      "linkText": "2026–2027 Accelerating Campus Excellence (ACE) School Calendar",
+      "expectedDocumentUrl": "https://www.springisd.org/live-feed",
+      "expectedText": [
+        "Bailey Middle School",
+        "Ponderosa Elementary",
+        "Monday, Aug. 10"
+      ]
     }
   ],
-  "seoTitle": "Spring ISD Calendar 2026-2027 | Holidays, Breaks & Printable PDF",
-  "seoDescription": "Spring ISD 2026-2027 calendar with Aug 12 first day, May 28 last day, fall break, Thanksgiving, winter break, spring break, printable PDF, ICS, and Google Calendar download.",
-  "pageHeading": "Spring ISD Calendar 2026-2027: Holidays, Breaks & Important Dates",
-  "calendarNotes": "Spring ISD starts the 2026-2027 school year on August 12, 2026 and ends on May 28, 2027. Fall Break runs October 12-16, Thanksgiving Break runs November 23-27, Winter Break runs December 21-January 1, Mid-Winter Break runs February 15-19, and Spring Break runs March 15-19.",
-  "calendarFaqs": [
+  "lastVerifiedAt": "2026-08-19",
+  "dateCreated": "2026-07-22",
+  "datePublished": "2026-07-22",
+  "dateModified": "2026-08-19",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "alternate_calendar_change",
+    "makeup_day_activation",
+    "emergency_closure",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Spring ISD 2026–27 Instructional Calendar · Rev. 06/23/26",
+  "sourceCalendarName": "Spring ISD 2026–27 Instructional Calendar",
+  "schemaCalendarName": "Spring ISD Calendar 2026–27",
+  "schemaDatasetName": "Spring ISD 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed standard-calendar dates for most Spring ISD campuses, including class dates, breaks, early-release days, no-student days and the daily exceptions within Mid-Winter Break. Bailey Middle School and Ponderosa Elementary use a separate ACE calendar.",
+  "schemaSpatialCoverage": "Spring and north Harris County, Texas",
+  "schemaCalendarDownloadName": "Spring ISD Standard 2026–27 ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import based on the standard Spring ISD calendar, including major breaks, no-student days and early-release dates. The separate Bailey and Ponderosa ACE schedule is not included.",
+  "schemaAdditionalSourceCalendars": [
     {
-      "q": "When does Spring ISD school start in 2026?",
-      "a": "The first day of school is Wednesday, August 12, 2026."
+      "id": "source-ace-calendar-notice",
+      "type": "WebPage",
+      "name": "Spring ISD 2026–27 ACE Calendar Notice for Bailey and Ponderosa",
+      "url": "https://www.springisd.org/live-feed"
     },
     {
-      "q": "When is Spring ISD Spring Break in 2027?",
-      "a": "Spring Break runs Monday, March 15 through Friday, March 19, 2027."
+      "id": "source-calendar-approval",
+      "type": "WebPage",
+      "name": "Spring ISD Board Approves the 2026–27 Instructional Calendar",
+      "url": "https://news.springisd.org/2025/12/spring-isd-board-of-trustees-approves-2026-27-instructional-calendar/"
     },
     {
-      "q": "When is the last day of school for Spring ISD in 2027?",
-      "a": "The last day of school is Friday, May 28, 2027."
-    },
-    {
-      "q": "Does Spring ISD have a Spanish calendar for 2026-2027?",
-      "a": "Yes. Spring ISD publishes a Spanish version of the 2026-2027 instructional calendar, linked as an alternate calendar."
-    },
-    {
-      "q": "How many school days are in Spring ISD 2026-2027?",
-      "a": "The Spring ISD 2026-2027 calendar includes 180 instructional days."
-    },
-    {
-      "q": "Does Spring ISD have early release days?",
-      "a": "Families should check the official Spring ISD calendar and campus announcements for early release dates, dismissal-time changes, and school-specific schedule notes."
-    },
-    {
-      "q": "Where can parents check emergency Spring ISD school closures?",
-      "a": "This page shows planned calendar dates only. For weather closures, emergency cancellations, same-day changes, and campus-specific updates, families should check official Spring ISD announcements."
+      "id": "source-calendar-2025-2026",
+      "type": "CreativeWork",
+      "name": "Spring ISD 2025–26 Instructional Calendar",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4570/Sisd/2a90a477-1c85-4f24-b6b1-a1f299a0c5db/Calendar_25-26_Rev_7-29-25.pdf?disposition=inline"
     }
   ],
-  "customSections": [
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-ace-calendar-notice",
+    "source-calendar-approval",
+    "source-calendar-2025-2026"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "spring-isd-standard-instructional-calendar",
+  "allDatesMode": "keyDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "none",
+  "itemListMode": "keyDates",
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideInstructionalDaysSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": false,
+  "hideHeroDownloadLink": true,
+  "hideHeroVerificationIcs": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideDateLegend": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "breaks",
+    "otherCalendars",
+    "nationalTrends"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
     {
-      "id": "spring-isd-calendar-2026-2027-overview",
-      "label": "Spring ISD Calendar 2026-2027 Overview",
-      "position": "afterKeyDates",
-      "content": "The Spring ISD 2026-2027 school calendar is the districtwide academic calendar for Spring Independent School District families in north Harris County and the greater Houston area.\n\nIt includes the first day of school, last day of school, semester and grading-period markers, school holidays, Fall Break, Thanksgiving Break, Winter Break, Mid-Winter Break, Spring Break, report card distribution dates, and end-of-year dates.\n\nFamilies can use this Spring ISD academic calendar to plan school attendance, transportation, childcare, appointments, athletics, travel, summer activities, and other school-year routines. The calendar includes 180 instructional days.\n\nThis page organizes the official Spring ISD calendar into key dates, a printable PDF source, an importable calendar file, and a student-focused date list so parents can quickly find Spring ISD school holidays, no-school dates, important dates, and break periods without searching through the full PDF."
+      "label": "Campus Calendars",
+      "id": "spring-isd-calendar-scope"
     },
     {
-      "id": "about-spring-independent-school-district",
-      "label": "About Spring Independent School District",
-      "position": "afterKeyDates",
-      "content": "Spring Independent School District is a public school district serving students and families in Spring, Texas, north Harris County, and the greater Houston metropolitan area. This calendar page focuses on the districtwide Spring ISD instructional calendar used for school-year planning by students, parents, staff, and community members.\n\nFamilies should use this page for official-calendar organization and quick planning, then confirm campus-specific schedules, Spring Early College Academy adjustments, testing dates, athletics, performances, graduation details, emergency closures, and dismissal-time changes directly with Spring ISD or their assigned campus."
+      "label": "Key Dates",
+      "id": "key-dates"
     },
     {
-      "id": "important-spring-isd-dates-explained",
-      "label": "Important Spring ISD Dates Explained",
-      "position": "afterKeyDates",
-      "content": "These Spring ISD dates are the main planning points families should save because they affect student attendance, childcare, transportation, vacation timing, and campus routines.",
-      "table": {
-        "columns": ["Event", "Date", "Why it matters"],
-        "rows": [
-          ["First Day of School", "August 12, 2026", "First student attendance day for confirming transportation schedules, school supply lists, campus announcements, and pickup routines."],
-          ["Fall Break", "October 12-16, 2026", "A full school-week break that families often use for childcare coverage, appointments, or short trips."],
-          ["Thanksgiving Break", "November 23-27, 2026", "A full holiday week that can affect travel plans, childcare, and family schedules."],
-          ["Winter Break", "December 21, 2026-January 1, 2027", "The main mid-year holiday period before students return for the spring semester on January 5, 2027."],
-          ["Mid-Winter Break", "February 15-19, 2027", "A February break week that can affect childcare, appointments, athletics, and school activity planning."],
-          ["Spring Break", "March 15-19, 2027", "A common family travel and appointment-planning week for Spring ISD students."],
-          ["Last Day of School", "May 28, 2027", "Anchor date for summer childcare, camps, travel, and end-of-year planning."]
-        ]
-      }
+      "label": "Major Dates",
+      "id": "all-dates"
     },
     {
-      "id": "spring-isd-pdf-vs-calendar-file",
-      "label": "Spring ISD Printable PDF vs Calendar File",
-      "position": "afterKeyDates",
-      "content": "Spring ISD families can use either the printable school calendar PDF or the calendar file depending on how they prefer to save school dates.",
-      "table": {
-        "columns": ["Option", "Best for", "What to know"],
-        "rows": [
-          ["Printable PDF", "Printing, sharing, and keeping a paper copy at home", "Use the official Spring ISD PDF when you want the district's published calendar layout."],
-          ["Calendar File (.ics)", "Google Calendar, Apple Calendar, Outlook, and personal scheduling apps", "Import the calendar file to save reviewed Spring ISD dates, but verify official updates because it is not a live district sync."],
-          ["Official Calendar Page", "Checking revisions, Spanish calendars, campus notes, and emergency updates", "Use Spring ISD as the source of record before making time-sensitive plans."]
-        ]
-      }
+      "label": "Attendance Exceptions",
+      "id": "spring-isd-attendance-days"
     },
     {
-      "id": "spring-isd-calendar-verification-method",
-      "label": "How We Verify Spring ISD Calendar Information",
-      "position": "beforeSources",
-      "content": "MySchoolDates reviews the official Spring ISD printable calendars page and published district calendar PDF, compares key dates such as first day, last day, Fall Break, Thanksgiving Break, Winter Break, Mid-Winter Break, Spring Break, grading-period dates, report card distribution dates, and district holidays, then converts the reviewed records into the calendar file used on this page.\n\nThe official Spring ISD calendar remains the source of record for revisions, campus-specific events, emergency closures, and same-day announcements. For more detail, see the MySchoolDates calendar verification methodology."
+      "label": "Downloads",
+      "id": "add-to-calendar"
     },
     {
-      "id": "parent-questions-about-spring-isd-calendar",
-      "label": "Parent Questions About the Spring ISD Calendar",
-      "position": "afterFaq",
-      "content": "These parent-focused answers cover school holidays, no-school days, early release checks, and unexpected schedule changes. They are visible page content and do not replace the official Spring ISD calendar.",
-      "table": {
-        "columns": ["Question", "Answer"],
-        "rows": [
-          ["Does Spring ISD have school on holidays?", "Spring ISD schools are closed on district holidays and scheduled break dates listed in the official instructional calendar."],
-          ["Are Spring ISD teacher workdays student holidays?", "Teacher workdays and professional development days are generally no-student days when listed on the official district calendar."],
-          ["When does Spring ISD summer break start?", "Summer break begins after the final student day on Friday, May 28, 2027."],
-          ["Does Spring ISD have school tomorrow?", "This page shows planned calendar dates only. For tomorrow-specific attendance, weather closures, emergency cancellations, or same-day updates, families should check official Spring ISD announcements."],
-          ["Is the Spring ISD calendar the same for every campus?", "This page summarizes the districtwide instructional calendar. Individual campuses may have schedule notes or adjustments families should confirm with Spring ISD."]
-        ]
-      }
+      "label": "Year Changes",
+      "id": "year-comparison"
+    },
+    {
+      "label": "Comparison",
+      "id": "comparison"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
     }
   ],
-  "yearNumbers": [
+  "seoTitle": "Spring ISD Calendar 2026–27: Dates, Breaks & PDF",
+  "seoDescription": "Most Spring ISD campuses start Aug. 12, 2026, and end May 28, 2027. Find breaks, early-release days, no-school dates, ACE exceptions and the official PDF.",
+  "heroSummary": "For most Spring ISD campuses, the first day of school is Wednesday, August 12, 2026, and the last day is Friday, May 28, 2027. Spring Break is March 15–19, 2027. Bailey Middle School and Ponderosa Elementary use a separate ACE calendar and begin August 10.",
+  "heroSourceLine": "Based on the Spring ISD instructional calendar revised June 23, 2026 · Reviewed August 19, 2026",
+  "verificationBadgeText": "Checked against the current Spring ISD PDF and campus calendar notices",
+  "heroVerificationSourceText": "First and last days, breaks, early-release symbols and no-student dates were checked against the district PDF",
+  "heroVerificationComparisonText": "The ACE campus schedule and Spring Early College Academy note were checked separately",
+  "calendarNotes": "This page covers the standard Spring ISD instructional calendar. Bailey Middle School and Ponderosa Elementary use a separate ACE calendar and start August 10. Spring Early College Academy may adjust dates to match Lone Star College. The revised standard PDF also gives daily exceptions within the February 15–19 Mid-Winter Break period.",
+  "keyDatesHeading": "Key Dates",
+  "keyDatesSummaryTitle": "Key Dates",
+  "keyDatesSummarySubtitle": "Dates for campuses using the standard Spring ISD instructional calendar",
+  "keyDateSummaryItems": [
     {
       "label": "First Day",
-      "value": "Aug 12",
-      "detail": "The first day of school is August 12, 2026."
+      "name": "First Day of School",
+      "date": "2026-08-12",
+      "type": "school_start",
+      "description": "Most campuses; Bailey and Ponderosa start August 10."
     },
     {
-      "label": "Spring Break",
-      "value": "Mar 15-19",
-      "detail": "Spring Break runs March 15-19, 2027."
+      "label": "Fall",
+      "name": "Fall Break",
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "Students return Tuesday, January 5."
+    },
+    {
+      "label": "Mid-Winter",
+      "name": "Mid-Winter Break",
+      "date": "2027-02-15",
+      "endDate": "2027-02-19",
+      "type": "academic",
+      "description": "The district labels Feb. 15–19 as Mid-Winter Break; special attendance schedules apply each day."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Spring Holiday",
+      "name": "Spring Holiday",
+      "date": "2027-03-26",
+      "type": "holiday",
+      "displayName": "Spring Holiday"
     },
     {
       "label": "Last Day",
-      "value": "May 28",
-      "detail": "The last day of school is May 28, 2027."
+      "name": "Last Day of School",
+      "date": "2027-05-28",
+      "type": "school_end",
+      "description": "Early-release schedule."
+    }
+  ],
+  "allDatesTitle": "Major Student Calendar Dates",
+  "allDatesCoverageNote": "This list follows the standard instructional calendar. The February overview points to the daily attendance details in the next section.",
+  "hideCoveredBreakDatesNote": true,
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4570/Sisd/e29153ea-fc14-4c77-b3eb-9a03f2389835/Calendar_26-27_Final_12-10.pdf?disposition=inline",
+  "allDatesSourceLabel": "Official Spring ISD 2026–27 Instructional Calendar PDF",
+  "customSections": [
+    {
+      "id": "spring-isd-calendar-scope",
+      "label": "Which Campuses Use This Calendar?",
+      "position": "afterVerification",
+      "content": "Most Spring ISD campuses follow the standard calendar summarized on this page. Two ACE campuses start earlier, and Spring Early College Academy may adjust dates around Lone Star College classes.",
+      "table": {
+        "caption": "Spring ISD 2026–27 calendar scope",
+        "columns": [
+          "Campus group",
+          "Calendar to use",
+          "First day"
+        ],
+        "rows": [
+          [
+            "Most Spring ISD campuses",
+            "Standard instructional calendar",
+            "Aug. 12, 2026"
+          ],
+          [
+            "Bailey Middle School and Ponderosa Elementary",
+            "Separate ACE calendar",
+            "Aug. 10, 2026"
+          ],
+          [
+            "Spring Early College Academy",
+            "Confirm the academy schedule; dates may shift with Lone Star College",
+            "Check with the academy"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "spring-isd-attendance-days",
+      "label": "Attendance Exceptions and Early Release Days",
+      "position": "afterAllDates",
+      "content": "The revised PDF uses daily symbols to show attendance details that are easy to miss in the holiday list. The February 15–19 Mid-Winter Break label includes a conditional make-up day, intervention days for selected students, an early-release day and a no-student conference day.",
+      "table": {
+        "caption": "Spring ISD 2026–27 student attendance exceptions",
+        "columns": [
+          "Date",
+          "Published schedule",
+          "What families should know"
+        ],
+        "rows": [
+          [
+            "Nov. 2, 2026",
+            "Professional Development Day",
+            "No students"
+          ],
+          [
+            "Nov. 3, 2026",
+            "Parent-Teacher Conferences",
+            "No students"
+          ],
+          [
+            "Dec. 17, 2026",
+            "Early Release Half Day — high schools only",
+            "High school dismissal at 12:00 p.m."
+          ],
+          [
+            "Dec. 18, 2026",
+            "Early Release Half Day",
+            "Elementary 12:55 p.m.; middle 1:55 p.m.; high school 12:00 p.m."
+          ],
+          [
+            "Jan. 4, 2027",
+            "Professional Development Day",
+            "No students; classes resume Jan. 5"
+          ],
+          [
+            "Feb. 15, 2027",
+            "Make-up Day (if needed)",
+            "Check Spring ISD before assuming students are out"
+          ],
+          [
+            "Feb. 16–17, 2027",
+            "Intervention Days",
+            "Select students only"
+          ],
+          [
+            "Feb. 18, 2027",
+            "Early Release Half Day",
+            "Elementary 12:55 p.m.; middle 1:55 p.m.; high school 12:00 p.m."
+          ],
+          [
+            "Feb. 19, 2027",
+            "Parent-Teacher Conferences",
+            "No students"
+          ],
+          [
+            "May 27, 2027",
+            "Early Release Half Day — high schools only",
+            "High school dismissal at 12:00 p.m."
+          ],
+          [
+            "May 28, 2027",
+            "Last Day of School / Early Release Half Day",
+            "Elementary 12:55 p.m.; middle 1:55 p.m.; high school 12:00 p.m."
+          ]
+        ]
+      }
+    }
+  ],
+  "alternateCalendars": [
+    {
+      "type": "ace-2026-2027",
+      "group": "Alternate schedules",
+      "label": "Bailey Middle School and Ponderosa Elementary ACE Calendar",
+      "description": "These two campuses start August 10 and do not use the standard calendar for every date.",
+      "firstDay": "2026-08-10",
+      "pdfUrl": "https://www.springisd.org/live-feed",
+      "buttonLabel": "View ACE Calendar Notice",
+      "ariaLabel": "Open the Spring ISD ACE calendar notice for Bailey Middle School and Ponderosa Elementary"
+    },
+    {
+      "type": "spanish",
+      "group": "Other languages",
+      "label": "2026–27 Instructional Calendar — Español",
+      "description": "Spanish translation of the standard district calendar.",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4570/Sisd/4d0407d5-e905-4e87-8c6b-606d269723c4/Calendar_26-27_Final_SP_12-10.pdf?disposition=inline",
+      "buttonLabel": "View Spanish PDF",
+      "ariaLabel": "Open the Spanish Spring ISD 2026-2027 instructional calendar PDF"
+    }
+  ],
+  "groupAlternateCalendarsWithDownloads": true,
+  "alternateCalendarsTitle": "Alternate Schedules and Other Languages",
+  "alternateCalendarsDescription": "Use the ACE notice for Bailey and Ponderosa. The Spanish PDF is a translation of the standard calendar.",
+  "alternateCalendarsFooterDescription": "Spring ISD may publish revised or additional files on its",
+  "alternateCalendarsFooterLinkLabel": "printable calendars page",
+  "alternateCalendarsFooterLinkUrl": "https://www.springisd.org/documents/printable-calendars/662033",
+  "unifiedDownloadTitle": "Official Calendar and Download Options",
+  "unifiedDownloadDescription": "Open the official district PDF or download a one-time calendar file for the standard schedule. Bailey and Ponderosa families should use the separate ACE schedule.",
+  "compactDownloadModule": true,
+  "icsHeading": "Add the Standard 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download a one-time file with major breaks, early-release dates and no-student days from the standard calendar. The separate ACE schedule is not included.",
+  "icsButtonLabel": "Download Spring ISD 2026–27 ICS",
+  "icsAriaLabel": "Download the standard Spring ISD 2026-2027 calendar file for Google Calendar, Apple Calendar, and Outlook",
+  "icsButtonSupportText": "One-time import. Check the district calendar for revisions or changes to the February 15 make-up day.",
+  "icsSourceNote": "The .ics file is generated from the Spring ISD dates reviewed for this page. It is not a live district subscription.",
+  "pdfHeading": "Official Spring ISD 2026–27 Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Open the one-page district calendar used to verify the standard-campus dates, daily attendance symbols and early-release times on this page.",
+  "pdfVersionLabel": "Revised June 23, 2026",
+  "pdfButtonLabel": "View Official PDF",
+  "yearComparisonTitle": "What Changed from 2025–26?",
+  "yearComparisonSubtitle": "The main date changes in the standard instructional calendar.",
+  "yearComparisonDefaultOpen": true,
+  "whatsNew": {
+    "title": "What Changed from 2025–26?",
+    "subtitle": "The main date changes in the standard instructional calendar.",
+    "content": [
+      "The standard-campus first day remains August 12; the last day moves from May 29 to May 28.",
+      "Spring Holiday moves from April 3 in 2025–26 to March 26 in 2026–27."
+    ]
+  },
+  "hideRelatedDistrictDescriptions": true,
+  "comparisonBeforeFaq": true,
+  "comparisonTitle": "How Spring ISD’s 2026–27 Calendar Compares with Nearby Districts",
+  "comparisonSummary": "Spring ISD values use the standard instructional calendar; Bailey Middle School and Ponderosa Elementary follow the separate ACE calendar.",
+  "comparisonDistrictSlugs": [
+    "klein-isd-calendar",
+    "houston-independent-school-district-calendar",
+    "conroe-independent-school-district-calendar"
+  ],
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "fallBreak",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "comparisonRowsMode": "sharedValuesOnly",
+  "hideComparisonInsights": true,
+  "hideComparisonNotes": true,
+  "comparisonSourceNote": "Districts may use different names for equivalent break periods; staff-only days outside the listed ranges are not included.",
+  "calendarFaqs": [
+    {
+      "q": "When does Spring ISD school start in 2026?",
+      "a": "Most Spring ISD campuses start Wednesday, August 12, 2026. Bailey Middle School and Ponderosa Elementary follow the ACE calendar and start Monday, August 10."
+    },
+    {
+      "q": "When is Spring ISD Spring Break in 2027?",
+      "a": "Spring Break is March 15–19, 2027. The separate Spring Holiday is Friday, March 26."
+    },
+    {
+      "q": "When is the last day of school for Spring ISD in 2027?",
+      "a": "The standard calendar ends Friday, May 28, 2027, on an early-release schedule. Families at ACE campuses should use their separate calendar."
+    },
+    {
+      "q": "When do Spring ISD students return after Winter Break?",
+      "a": "Students on the standard calendar return Tuesday, January 5, 2027. January 4 is a Professional Development Day with no students."
+    },
+    {
+      "q": "Are there early-release or no-student days on the Spring ISD 2026–27 calendar?",
+      "a": "Yes. No-student days include November 2–3, January 4 and February 19. The PDF marks high-school-only early release on December 17 and May 27, and districtwide early release on December 18, February 18 and May 28. February 15–17 have conditional or selected-student schedules."
+    },
+    {
+      "q": "Do all Spring ISD campuses follow this calendar?",
+      "a": "No. Bailey Middle School and Ponderosa Elementary use a separate ACE calendar and start August 10. Spring Early College Academy may also adjust dates to align with Lone Star College classes."
+    }
+  ],
+  "faqOrderLimit": 6,
+  "faqDisplayQuestions": [
+    "When does Spring ISD school start in 2026?",
+    "When is Spring ISD Spring Break in 2027?",
+    "When is the last day of school for Spring ISD in 2027?",
+    "When do Spring ISD students return after Winter Break?",
+    "Are there early-release or no-student days on the Spring ISD 2026–27 calendar?",
+    "Do all Spring ISD campuses follow this calendar?"
+  ],
+  "sourcesTitle": "Sources and Review Notes",
+  "sourceReviewSummary": "Reviewed August 19, 2026 against the Spring ISD printable calendars page, the current and prior-year instructional calendar PDFs, and the district's ACE campus notice.",
+  "sourceReviewDetailsTitle": "What was checked",
+  "sourceReviewDetails": [
+    "The August 12 first day, May 28 last day, major breaks and March 26 Spring Holiday were checked against the revised district PDF.",
+    "Daily PDF symbols were checked for early release, no-student days, the conditional February 15 make-up day and February 16–17 Intervention Days.",
+    "The district notice confirms that Bailey Middle School and Ponderosa Elementary use the ACE calendar and start August 10.",
+    "The standard PDF notes that Spring Early College Academy may adjust dates to match Lone Star College classes.",
+    "The first and last days and Spring Holiday were compared with the 2025–26 PDF. Both calendars use day-by-day symbols for the February schedule."
+  ],
+  "sourceMaintainerText": "Spring ISD publishes the source calendars; MySchoolDates organizes the dates and explains attendance exceptions.",
+  "sourceNextReviewText": "Review again if Spring ISD revises the PDF, activates the February make-up day, changes the ACE schedule or publishes a campus-specific update.",
+  "sources": [
+    {
+      "label": "Spring ISD printable calendars page",
+      "url": "https://www.springisd.org/documents/printable-calendars/662033"
+    },
+    {
+      "label": "Official Spring ISD 2026–27 Instructional Calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4570/Sisd/e29153ea-fc14-4c77-b3eb-9a03f2389835/Calendar_26-27_Final_12-10.pdf?disposition=inline"
+    },
+    {
+      "label": "Spring ISD 2026–27 calendar approval announcement",
+      "url": "https://news.springisd.org/2025/12/spring-isd-board-of-trustees-approves-2026-27-instructional-calendar/"
+    },
+    {
+      "label": "Spring ISD district ACE calendar notice for Bailey and Ponderosa",
+      "url": "https://www.springisd.org/live-feed"
+    },
+    {
+      "label": "Official Spring ISD 2025–26 Instructional Calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4570/Sisd/2a90a477-1c85-4f24-b6b1-a1f299a0c5db/Calendar_25-26_Rev_7-29-25.pdf?disposition=inline"
     }
   ],
   "events": [
-    { "date": "2026-08-12", "name": "First Day of School / Grading Period 1 Begins", "type": "school_start" },
-    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
-    { "date": "2026-10-02", "name": "End of Grading Period 1", "type": "quarter_end" },
-    { "date": "2026-10-05", "name": "Grading Period 2 Begins", "type": "quarter_start" },
-    { "date": "2026-10-09", "name": "Report Card Distribution / IEP Goal Update", "type": "other" },
-    { "date": "2026-10-12", "name": "Fall Break", "type": "break_start" },
-    { "date": "2026-10-16", "name": "Fall Break End", "type": "break_end" },
-    { "date": "2026-11-23", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2026-11-27", "name": "Thanksgiving Break End", "type": "break_end" },
-    { "date": "2026-12-18", "name": "Last Day of First Semester / End of Grading Period 2", "type": "semester_end" },
-    { "date": "2026-12-21", "name": "Winter Break", "type": "break_start" },
-    { "date": "2027-01-01", "name": "Winter Break End", "type": "break_end" },
-    { "date": "2027-01-05", "name": "First Day of Spring Semester / Grading Period 3 Begins", "type": "semester_start" },
-    { "date": "2027-01-08", "name": "Report Card Distribution / IEP Goal Update", "type": "other" },
-    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2027-02-15", "name": "Mid-Winter Break", "type": "break_start" },
-    { "date": "2027-02-19", "name": "Mid-Winter Break End", "type": "break_end" },
-    { "date": "2027-03-05", "name": "End of Grading Period 3", "type": "quarter_end" },
-    { "date": "2027-03-08", "name": "Grading Period 4 Begins", "type": "quarter_start" },
-    { "date": "2027-03-12", "name": "Report Card Distribution / IEP Goal Update", "type": "other" },
-    { "date": "2027-03-15", "name": "Spring Break", "type": "break_start" },
-    { "date": "2027-03-19", "name": "Spring Break End", "type": "break_end" },
-    { "date": "2027-03-26", "name": "Spring Holiday", "type": "holiday" },
-    { "date": "2027-05-28", "name": "Last Day of School / End of Grading Period 4", "type": "school_end" },
-    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2027-06-03", "name": "Report Card Distribution / IEP Goal Update", "type": "other" },
-    { "date": "2027-06-19", "name": "Juneteenth", "type": "holiday" }
+    {
+      "date": "2026-08-12",
+      "name": "First Day of School",
+      "type": "school_start",
+      "description": "First day for campuses using the standard instructional calendar."
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "name": "Fall Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-11-02",
+      "name": "Professional Development Day",
+      "type": "no_school",
+      "badgeLabel": "No Students",
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Parent-Teacher Conferences",
+      "type": "no_school",
+      "badgeLabel": "No Students",
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-17",
+      "name": "Early Release Half Day — High Schools Only",
+      "type": "early_release",
+      "description": "High school dismissal at 12:00 p.m.",
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Early Release Half Day",
+      "type": "early_release",
+      "description": "Elementary dismissal 12:55 p.m.; middle school 1:55 p.m.; high school 12:00 p.m.",
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Professional Development Day",
+      "type": "no_school",
+      "badgeLabel": "No Students",
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Students Return After Winter Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-15",
+      "endDate": "2027-02-19",
+      "name": "Mid-Winter Break",
+      "type": "academic",
+      "badgeLabel": "Special Attendance",
+      "description": "The district labels Feb. 15–19 as Mid-Winter Break. Daily attendance exceptions apply; see the details below.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Mid-Winter Break / Make-up Day (If Needed)",
+      "type": "makeup_day",
+      "badgeLabel": "Conditional",
+      "description": "Check Spring ISD before assuming students are out.",
+      "hideFromAllDates": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-02-16",
+      "dates": [
+        "2027-02-16",
+        "2027-02-17"
+      ],
+      "name": "Mid-Winter Break / Intervention Days",
+      "type": "partial_closure",
+      "badgeLabel": "Select Students Only",
+      "description": "The district calendar identifies Intervention Days for selected students.",
+      "hideFromAllDates": true,
+      "exportDatesIndividually": true
+    },
+    {
+      "date": "2027-02-18",
+      "name": "Mid-Winter Break / Early Release Half Day",
+      "type": "early_release",
+      "description": "Elementary dismissal 12:55 p.m.; middle school 1:55 p.m.; high school 12:00 p.m.",
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2027-02-19",
+      "name": "Mid-Winter Break / Parent-Teacher Conferences",
+      "type": "no_school",
+      "badgeLabel": "No Students",
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Spring Holiday",
+      "displayName": "Spring Holiday",
+      "preserveOfficialName": true,
+      "type": "holiday"
+    },
+    {
+      "date": "2027-05-27",
+      "name": "Early Release Half Day — High Schools Only",
+      "type": "early_release",
+      "description": "High school dismissal at 12:00 p.m.",
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Last Day of School / Early Release Half Day",
+      "type": "school_end",
+      "description": "Elementary dismissal 12:55 p.m.; middle school 1:55 p.m.; high school 12:00 p.m."
+    }
   ]
 }

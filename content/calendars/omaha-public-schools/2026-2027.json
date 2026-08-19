@@ -1,0 +1,921 @@
+{
+  "institutionId": "omaha-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Omaha Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-19",
+  "firstDayScope": "Kindergarten and entry-level grades at middle and high schools",
+  "firstFullK12Day": "2026-08-20",
+  "earlyChildhoodFirstDay": "2026-08-26",
+  "lastDay": "2027-05-26",
+  "lastDayScope": "Last student day for the main district and Early Childhood calendars; seniors finish May 14",
+  "seniorLastDay": "2027-05-14",
+  "earlyChildhoodLastDay": "2027-05-26",
+  "temporalCoverageStart": "2026-06-01",
+  "temporalCoverageEnd": "2027-07-04",
+  "semesters": 2,
+  "sourceUrl": "https://www.ops.org/students-families/calendars-school-hours",
+  "sourceDocumentPage": "https://www.ops.org/students-families/calendars-school-hours",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1781619056/wwwopsorg/pmrbkdzi2w2vs8ko4ygz/2026-27DistrictCalendar-English.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1781619056/wwwopsorg/pmrbkdzi2w2vs8ko4ygz/2026-27DistrictCalendar-English.pdf",
+  "sourceCheckedAt": "2026-08-19",
+  "sourceUpdatedAt": "2026-04-07",
+  "sourceChecksumSha256": "2b54f9f3ab2b35fa578ea1109dbee8d9c3109eed39edd4f005d53a451e713435",
+  "reviewedSourcePdfUrl": "https://resources.finalsite.net/images/v1781619056/wwwopsorg/pmrbkdzi2w2vs8ko4ygz/2026-27DistrictCalendar-English.pdf",
+  "reviewedSourceUpdatedAt": "2026-04-07",
+  "reviewedSourceChecksumSha256": "2b54f9f3ab2b35fa578ea1109dbee8d9c3109eed39edd4f005d53a451e713435",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The OPS 2026–27 Back-to-School Guide labels Aug. 26 as Thursday, but August 26, 2026 falls on Wednesday. The official district calendar PDF lists Aug. 26 as the Pre-K first day without a weekday. This page uses Wednesday, August 26, 2026 and retains the guide wording as an internal monitoring assertion so a later OPS correction triggers review.",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.ops.org/students-families/calendars-school-hours",
+    "linkText": "District Calendar",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1781619056/wwwopsorg/pmrbkdzi2w2vs8ko4ygz/2026-27DistrictCalendar-English.pdf",
+    "expectedChecksumSha256": "2b54f9f3ab2b35fa578ea1109dbee8d9c3109eed39edd4f005d53a451e713435"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.ops.org/students-families/calendars-school-hours",
+      "linkText": "Early Childhood Calendar",
+      "expectedPdfUrl": "https://resources.finalsite.net/images/v1781619084/wwwopsorg/uf0nhwnqelamoxjvlo2f/2026-27EarlyChildhoodCalendar-English.pdf",
+      "expectedChecksumSha256": "0bd354bf63f491341a3aa3e0de4c666faa021d8c21be41006e4b74d31b18e809"
+    },
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.ops.org/students-families/calendars-school-hours",
+      "linkText": "Wilson Focus Elementary",
+      "expectedPdfUrl": "https://resources.finalsite.net/images/v1781619084/wwwopsorg/kss8n6pqb725hf2ywxvx/2026-27WilsonFocusCalendar.pdf",
+      "expectedChecksumSha256": "dc702245f21bb5e662110ae8cf84d30e05e495cf1b7152d17d6f5c0eb0d5d757"
+    },
+    {
+      "type": "web-page",
+      "checkUrl": "https://www.ops.org/students-families/back-to-school-guide",
+      "linkText": "2026–27 Back-to-School Guide",
+      "expectedDocumentUrl": "https://www.ops.org/students-families/back-to-school-guide",
+      "expectedText": [
+        "Wednesday, Aug. 19",
+        "Thursday, Aug. 20",
+        "Thursday, Aug. 26: Pre-K students"
+      ]
+    }
+  ],
+  "lastVerifiedAt": "2026-08-19",
+  "dateCreated": "2026-08-18",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-19",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_source_conflict",
+    "official_schedule_change",
+    "start_dismissal_schedule_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Updated April 7, 2026",
+  "sourceCalendarName": "Omaha Public Schools 2026–27 District Calendar",
+  "schemaCalendarName": "Omaha Public Schools Calendar 2026–27",
+  "schemaDatasetName": "Omaha Public Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Omaha Public Schools dates for 2026–27, including the staggered K–12 and Pre-K opening, program-specific no-school dates, two-hour late starts, conference closures, high-school testing attendance, major recesses, and separate senior and last-student dates.",
+  "schemaSpatialCoverage": "Omaha, Nebraska",
+  "schemaCalendarDownloadName": "Omaha Public Schools 2026–27 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with OPS districtwide and grade- or program-specific student dates from the reviewed District and Early Childhood calendars; Wilson Focus follows its separate official PDF.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-spanish",
+      "type": "CreativeWork",
+      "name": "Omaha Public Schools 2026–27 District Calendar — Spanish",
+      "url": "https://resources.finalsite.net/images/v1781619036/wwwopsorg/a3xpdkonbmleaercnvx0/2026-27DistrictCalendar-Spanish.pdf"
+    },
+    {
+      "id": "source-early-childhood",
+      "type": "CreativeWork",
+      "name": "Omaha Public Schools 2026–27 Early Childhood Calendar — English",
+      "url": "https://resources.finalsite.net/images/v1781619084/wwwopsorg/uf0nhwnqelamoxjvlo2f/2026-27EarlyChildhoodCalendar-English.pdf"
+    },
+    {
+      "id": "source-early-childhood-spanish",
+      "type": "CreativeWork",
+      "name": "Omaha Public Schools 2026–27 Early Childhood Calendar — Spanish",
+      "url": "https://resources.finalsite.net/images/v1781619084/wwwopsorg/iweyzfncdztvliwgxj2u/2026-27EarlyChildhoodCalendar-Spanish.pdf"
+    },
+    {
+      "id": "source-wilson-focus",
+      "type": "CreativeWork",
+      "name": "Wilson Focus Elementary 2026–27 Calendar",
+      "url": "https://resources.finalsite.net/images/v1781619084/wwwopsorg/kss8n6pqb725hf2ywxvx/2026-27WilsonFocusCalendar.pdf"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-early-childhood"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-spanish",
+    "source-early-childhood",
+    "source-early-childhood-spanish",
+    "source-wilson-focus"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "ops-district-calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "itemListMode": "keyDates",
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "whatsDifferent",
+    "comparison",
+    "nationalTrends",
+    "breaks",
+    "otherCalendars"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Opening",
+      "id": "ops-2026-2027-opening"
+    },
+    {
+      "label": "Who Attends",
+      "id": "ops-2026-2027-attendance-rules"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "School Hours",
+      "id": "ops-2026-2027-school-hours"
+    },
+    {
+      "label": "Program Calendars",
+      "id": "ops-2026-2027-program-calendars"
+    },
+    {
+      "label": "Calendar Guide",
+      "id": "ops-2026-2027-calendar-guide"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Omaha Public Schools Calendar 2026–27: Key Dates",
+  "seoDescription": "OPS students start Aug. 19, Aug. 20 or Aug. 26, depending on grade or program. See 2026–27 breaks, late starts, grade-specific dates and official calendars.",
+  "heroSummary": "Omaha Public Schools begins 2026–27 with a staggered start: kindergarten and entry-level grades at middle and high schools attend August 19, all other K–12 students begin August 20, and Pre-K begins August 26. Thanksgiving Recess runs November 23–27, Winter Recess December 21–January 4, and Spring Recess March 15–19. Seniors finish May 14, and the main district calendar's last student day is May 26. Wilson Focus Elementary follows a separate calendar.",
+  "heroSourceLine": "Based on the official OPS 2026–27 District, Early Childhood, and Wilson Focus calendars",
+  "hideHeroDownloadLink": true,
+  "verificationBadgeText": "Checked against current OPS sources",
+  "heroVerificationSourceText": "Reviewed the official English district calendar and OPS Calendars & School Hours page",
+  "heroVerificationComparisonText": "Early Childhood and Wilson Focus calendars were checked separately for program-specific dates",
+  "calendarNotes": "OPS uses three opening dates: August 19 for kindergarten and entry-level grades at middle and high schools, August 20 for all other K–12 students, and August 26 for Pre-K. All students have two-hour late starts on September 29, October 27, January 26, and February 23. Several dates apply only to certain students: selected Alternative Education programs are closed September 4 and 11; grades 11–12 do not attend on the November 10 PreACT day; Early Childhood and kindergarten do not attend January 15; and grades 9, 10, and 12 do not attend on the April 6 ACT day. Early Childhood has additional no-school days. Wilson Focus begins August 4, ends June 16, and follows its own enrichment and recess schedule. Wilson-only dates are not included in the main event table or ICS file.",
+  "keyDatesHeading": "Omaha Public Schools 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "Omaha Public Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Grade-specific opening dates, major recesses, and separate senior and district year-end dates",
+  "keyDateSummaryItems": [
+    {
+      "label": "K & Entry Grades",
+      "name": "Kindergarten and Entry-Level Secondary Grades Begin",
+      "date": "2026-08-19",
+      "type": "school_start",
+      "description": "Kindergarten and entry-level grades at middle and high schools attend."
+    },
+    {
+      "label": "Other K–12",
+      "name": "All Other K–12 Students Begin",
+      "date": "2026-08-20",
+      "type": "school_start",
+      "schemaDescription": "First day for all other OPS K–12 students."
+    },
+    {
+      "label": "Pre-K",
+      "name": "First Day for Pre-K Students",
+      "date": "2026-08-26",
+      "type": "school_start",
+      "schemaDescription": "First day for OPS Pre-K students."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Recess",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "schemaDescription": "Thanksgiving Recess on the main OPS District Calendar."
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Recess",
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "type": "break_start",
+      "description": "Students return January 5.",
+      "schemaDescription": "Winter Recess on the main OPS District Calendar; students return January 5."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Recess",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start",
+      "schemaDescription": "Spring Recess on the main OPS District Calendar."
+    },
+    {
+      "label": "Seniors",
+      "name": "Last Official Day for Seniors",
+      "date": "2027-05-14",
+      "type": "school_end",
+      "schemaDescription": "Last official school day for OPS high-school seniors."
+    },
+    {
+      "label": "Last Student Day",
+      "name": "Last Student Day — Fourth Quarter Ends",
+      "date": "2027-05-26",
+      "type": "school_end",
+      "schemaDescription": "Last student day for the main OPS district and Early Childhood calendars."
+    }
+  ],
+  "allDatesTitle": "Omaha Public Schools 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This August-to-May calendar combines the main OPS student schedule with additional Early Childhood no-school days. Dates that apply only to certain grades or programs say who is affected. Wilson Focus Elementary follows the separate calendar summarized below and linked in Downloads.",
+  "hideCoveredBreakDatesNote": true,
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1781619056/wwwopsorg/pmrbkdzi2w2vs8ko4ygz/2026-27DistrictCalendar-English.pdf",
+  "allDatesSourceLabel": "Official OPS 2026–27 District Calendar",
+  "dateLegendItems": [
+    {
+      "label": "Holiday",
+      "dot": "bg-teal-400"
+    },
+    {
+      "label": "No School",
+      "dot": "bg-amber-400"
+    },
+    {
+      "label": "Break",
+      "dot": "bg-purple-400"
+    },
+    {
+      "label": "2-Hour Late Start",
+      "dot": "bg-slate-400"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "ops-2026-2027-opening",
+      "label": "OPS Starts 2026–27 on Three Different Dates",
+      "position": "afterKeyDates",
+      "content": "August 19 is not the first day for every OPS student. The first day depends on the student's grade or program. The official district calendar refers to the middle- and high-school group as “entry-level grades” rather than listing specific grade numbers.",
+      "table": {
+        "caption": "Omaha Public Schools 2026–27 staggered opening",
+        "columns": [
+          "Date",
+          "Students who begin"
+        ],
+        "rows": [
+          [
+            "Aug. 19, 2026",
+            "Kindergarten and entry-level grades at middle and high schools"
+          ],
+          [
+            "Aug. 20, 2026",
+            "All other K–12 students"
+          ],
+          [
+            "Aug. 26, 2026",
+            "Pre-K students"
+          ],
+          [
+            "Aug. 4, 2026",
+            "Wilson Focus Elementary students under the separate Wilson calendar"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ops-2026-2027-attendance-rules",
+      "label": "Not Every OPS Calendar Date Applies to Every Student",
+      "position": "afterKeyDates",
+      "content": "Not every no-school date applies districtwide. Several dates affect only certain grades or programs, so check who is out before making plans.",
+      "table": {
+        "caption": "OPS 2026–27 grade and program attendance rules",
+        "columns": [
+          "Date",
+          "Who is out",
+          "Who attends or what happens"
+        ],
+        "rows": [
+          [
+            "Sept. 4 and 11",
+            "Students in Blackburn, ESP, SSP, ILP, and Transition Programs",
+            "Students in other OPS programs attend on their regular schedule"
+          ],
+          [
+            "Nov. 10",
+            "High-school grades 11 and 12",
+            "Grades 9 and 10 take the PreACT"
+          ],
+          [
+            "Jan. 15",
+            "Early Childhood and kindergarten students",
+            "District Kindergarten Registration Day"
+          ],
+          [
+            "Apr. 6",
+            "High-school grades 9, 10, and 12",
+            "Grade 11 takes the ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ops-2026-2027-summer-dates",
+      "label": "Summer and District Observance Dates",
+      "position": "afterAllDates",
+      "content": "These dates fall outside the main August 2026–May 2027 student calendar. The summer-program closure applies only to Next Level Learning students; the other dates are district observances that fall outside the regular school year.",
+      "table": {
+        "caption": "OPS summer and district observance dates outside the main student calendar",
+        "columns": [
+          "Date",
+          "What happens"
+        ],
+        "rows": [
+          [
+            "June 1–July 1, 2026",
+            "Next Level Learning summer program"
+          ],
+          [
+            "June 19, 2026",
+            "No school for Next Level Learning students"
+          ],
+          [
+            "July 3, 2026",
+            "Independence Day observation"
+          ],
+          [
+            "May 31, 2027",
+            "Memorial Day"
+          ],
+          [
+            "June 18, 2027",
+            "Juneteenth observation"
+          ],
+          [
+            "July 4, 2027",
+            "Independence Day observation"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ops-2026-2027-school-hours",
+      "label": "OPS School Hours and Two-Hour Late Starts",
+      "position": "afterAllDates",
+      "content": "OPS publishes regular hours for elementary, middle, and high schools. All students have two-hour late starts on September 29, October 27, January 26, and February 23. Wilson Focus and Alternative Programs use school-specific hours, so families should check directly with their school or program.",
+      "table": {
+        "caption": "Published Omaha Public Schools hours",
+        "columns": [
+          "School level or program",
+          "Regular hours"
+        ],
+        "rows": [
+          [
+            "Elementary",
+            "8:50 a.m.–4:05 p.m."
+          ],
+          [
+            "Middle school",
+            "7:40 a.m.–3:05 p.m."
+          ],
+          [
+            "High school",
+            "7:40 a.m.–3:05 p.m."
+          ],
+          [
+            "Wilson Focus Elementary",
+            "Check with the school for start time; dismissal is 3:30 p.m. and 4:30 p.m. on enrichment days"
+          ],
+          [
+            "Alternative Programs",
+            "Check with the program for start and end times"
+          ]
+        ],
+        "footnote": "The annual calendar identifies late-start dates but does not publish separate transportation or arrival times for every school and program."
+      }
+    },
+    {
+      "id": "ops-2026-2027-program-calendars",
+      "label": "Early Childhood Has Additional Dates; Wilson Focus Uses a Separate Calendar",
+      "position": "afterAllDates",
+      "content": "Early Childhood students start August 26 and finish May 26, but they have several additional no-school days during the year. Wilson Focus Elementary follows a different calendar from most OPS schools: students start August 4 and finish June 16, with separate enrichment sessions and school-specific breaks.",
+      "table": {
+        "caption": "Which OPS calendar should families use?",
+        "columns": [
+          "Calendar",
+          "Start and end dates",
+          "Key differences"
+        ],
+        "rows": [
+          [
+            "OPS District Calendar",
+            "Staggered Aug. 19, Aug. 20, and Aug. 26 openings; May 26 last student day",
+            "Districtwide dates, Alternative Education closures, high-school testing rules, and two-hour late starts"
+          ],
+          [
+            "Early Childhood Calendar",
+            "Pre-K begins Aug. 26; last student day is May 26",
+            "Additional Early Childhood no-school dates on Sept. 25, Oct. 16, Nov. 20, Dec. 18, Jan. 15, Feb. 11, Mar. 26, Apr. 15, and May 14"
+          ],
+          [
+            "Wilson Focus Elementary Calendar",
+            "First student day Aug. 4; last student day June 16",
+            "Four enrichment sessions, Wilson-only no-school periods, and different winter and spring breaks"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ops-2026-2027-calendar-guide",
+      "label": "Which Omaha Public Schools Calendar Source Should I Use?",
+      "position": "afterAllDates",
+      "content": "The right source depends on your child's grade or program and what you need to check.",
+      "table": {
+        "caption": "Best OPS source by task",
+        "columns": [
+          "Need",
+          "Best official source"
+        ],
+        "rows": [
+          [
+            "Main K–12 dates, Pre-K opening, testing rules, late starts, and districtwide closures",
+            "OPS District Calendar"
+          ],
+          [
+            "Additional Early Childhood no-school dates",
+            "OPS Early Childhood Calendar"
+          ],
+          [
+            "Wilson first and last days, enrichment sessions, and Wilson-only recesses",
+            "Wilson Focus Elementary Calendar"
+          ],
+          [
+            "Regular school hours and current annual calendar links",
+            "OPS Calendars & School Hours page"
+          ],
+          [
+            "School activities, transportation details, weather changes, or later revisions",
+            "Live OPS calendar and the student's school"
+          ]
+        ]
+      }
+    }
+  ],
+  "unifiedDownloadTitle": "OPS Calendar Downloads and Official PDFs",
+  "unifiedDownloadDescription": "Add OPS district and Early Childhood dates to your calendar, or open the official file for your child's language or program.",
+  "compactDownloadModule": true,
+  "pdfHeading": "Official OPS 2026–27 District Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Open the English district calendar for the main 2026–27 schedule. Early Childhood, Wilson Focus, and Spanish files are listed alongside it so families can choose the version for their program or language.",
+  "hidePdfVersionLabel": false,
+  "groupAlternateCalendarsWithDownloads": true,
+  "icsHeading": "Add OPS Dates to Your Calendar",
+  "icsDescription": "The ICS file includes staggered opening dates, districtwide recesses and closures, two-hour late starts, PreACT and ACT attendance by grade, Early Childhood no-school days, the senior last day, and the May 26 last student day. Wilson Focus dates are not included because Wilson follows a separate calendar.",
+  "icsButtonLabel": "Download OPS 2026–27 ICS",
+  "icsButtonSupportText": "One-time import. Check OPS and the student's school for Wilson Focus dates, activity and conference times, transportation details, weather changes, and later calendar revisions.",
+  "alternateCalendarsDescription": "OPS publishes an official Spanish edition of the district schedule, English and Spanish Early Childhood calendars, and a separate Wilson Focus Elementary calendar.",
+  "alternateCalendars": [
+    {
+      "type": "language",
+      "group": "Official language edition",
+      "label": "2026–27 District Calendar — Spanish",
+      "description": "Official Spanish edition of the OPS District Calendar; it follows the same schedule as the English district calendar.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1781619036/wwwopsorg/a3xpdkonbmleaercnvx0/2026-27DistrictCalendar-Spanish.pdf"
+    },
+    {
+      "type": "program",
+      "group": "Early Childhood calendars",
+      "label": "2026–27 Early Childhood Calendar — English",
+      "description": "Official OPS calendar with additional no-school days for Early Childhood students.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1781619084/wwwopsorg/uf0nhwnqelamoxjvlo2f/2026-27EarlyChildhoodCalendar-English.pdf",
+      "firstDay": "2026-08-26"
+    },
+    {
+      "type": "program-language",
+      "group": "Early Childhood calendars",
+      "label": "2026–27 Early Childhood Calendar — Spanish",
+      "description": "Official Spanish edition of the OPS Early Childhood calendar.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1781619084/wwwopsorg/iweyzfncdztvliwgxj2u/2026-27EarlyChildhoodCalendar-Spanish.pdf",
+      "firstDay": "2026-08-26"
+    },
+    {
+      "type": "school",
+      "group": "Separate school calendar",
+      "label": "2026–27 Wilson Focus Elementary Calendar",
+      "description": "Wilson Focus begins August 4, uses enrichment sessions and Wilson-only recesses, and ends June 16.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1781619084/wwwopsorg/kss8n6pqb725hf2ywxvx/2026-27WilsonFocusCalendar.pdf",
+      "firstDay": "2026-08-04"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Is August 19 the first day for every OPS student?",
+      "a": "No. Kindergarten and entry-level grades at middle and high schools begin August 19, 2026. All other K–12 students begin August 20, and Pre-K begins August 26. Wilson Focus Elementary starts August 4 under its separate calendar."
+    },
+    {
+      "q": "When are the OPS two-hour late starts in 2026–27?",
+      "a": "The district calendar lists two-hour late starts for all students on September 29, October 27, January 26, and February 23. Wilson Focus and Alternative Programs use school-specific hours, so families should confirm program and transportation details."
+    },
+    {
+      "q": "When are Omaha Public Schools conferences in 2026–27?",
+      "a": "OPS conference weeks are October 19–23, 2026, and March 8–12, 2027. All students have no school October 22–23 and March 11–12. Individual schools provide conference appointment times."
+    },
+    {
+      "q": "Does my child have school on November 10 or April 6?",
+      "a": "It depends on the student's grade. Grades 9 and 10 take the PreACT on November 10 while grades 11 and 12 do not attend. Grade 11 takes the ACT on April 6 while grades 9, 10, and 12 do not attend."
+    },
+    {
+      "q": "Does OPS Early Childhood have extra no-school days?",
+      "a": "Yes. The Early Childhood calendar adds no-school days throughout the year, including September 25, October 16, November 20, December 18, February 11, March 26, April 15, and May 14. Early Childhood and kindergarten are also out January 15."
+    },
+    {
+      "q": "Does Wilson Focus Elementary follow the main OPS calendar?",
+      "a": "No. Wilson Focus begins August 4, 2026, ends June 16, 2027, and publishes four enrichment sessions plus Wilson-only no-school periods. Families at Wilson should use the separate official PDF linked in Downloads."
+    }
+  ],
+  "faqOrderLimit": 6,
+  "faqDisplayQuestions": [
+    "Is August 19 the first day for every OPS student?",
+    "When are the OPS two-hour late starts in 2026–27?",
+    "When are Omaha Public Schools conferences in 2026–27?",
+    "Does my child have school on November 10 or April 6?",
+    "Does OPS Early Childhood have extra no-school days?",
+    "Does Wilson Focus Elementary follow the main OPS calendar?"
+  ],
+  "sourceReviewSummary": "The OPS District Calendar provides the main K–12 and Pre-K schedule. The Early Childhood calendar adds program-specific no-school days, while the Wilson Focus calendar covers its separate August 4–June 16 schedule. The Spanish files are official translations of the matching English calendars.",
+  "sourceReviewDetails": [
+    "Each school year, MySchoolDates checks the dates shown on this page against the district's published calendar and other official calendar documents.",
+    "If we find a mismatch, we correct the page and update its review date. This page covers major districtwide student dates along with selected grade- and program-specific exceptions published in the official calendars. School-specific dismissal times, staff details, and program events may appear only in the official PDF or individual school calendars. The downloadable calendar file is a one-time import generated from the calendar records used for this page, and the official district calendar remains the source of record for last-minute changes.",
+    "Confirm program deadlines, transportation notices, and emergency schedule changes directly with OPS."
+  ],
+  "sourcesTitle": "Official Omaha Public Schools Sources",
+  "sources": [
+    {
+      "label": "OPS Calendars & School Hours",
+      "url": "https://www.ops.org/students-families/calendars-school-hours"
+    },
+    {
+      "label": "OPS 2026–27 District Calendar — English",
+      "url": "https://resources.finalsite.net/images/v1781619056/wwwopsorg/pmrbkdzi2w2vs8ko4ygz/2026-27DistrictCalendar-English.pdf"
+    },
+    {
+      "label": "OPS 2026–27 District Calendar — Spanish",
+      "url": "https://resources.finalsite.net/images/v1781619036/wwwopsorg/a3xpdkonbmleaercnvx0/2026-27DistrictCalendar-Spanish.pdf"
+    },
+    {
+      "label": "OPS 2026–27 Early Childhood Calendar — English",
+      "url": "https://resources.finalsite.net/images/v1781619084/wwwopsorg/uf0nhwnqelamoxjvlo2f/2026-27EarlyChildhoodCalendar-English.pdf"
+    },
+    {
+      "label": "OPS 2026–27 Early Childhood Calendar — Spanish",
+      "url": "https://resources.finalsite.net/images/v1781619084/wwwopsorg/iweyzfncdztvliwgxj2u/2026-27EarlyChildhoodCalendar-Spanish.pdf"
+    },
+    {
+      "label": "Wilson Focus Elementary 2026–27 Calendar",
+      "url": "https://resources.finalsite.net/images/v1781619084/wwwopsorg/kss8n6pqb725hf2ywxvx/2026-27WilsonFocusCalendar.pdf"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-06-01",
+      "endDate": "2026-07-01",
+      "name": "Next Level Learning",
+      "type": "academic",
+      "description": "Summer learning program. Families should check with their school for specific activity dates.",
+      "hideFromCalendarExport": true,
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Juneteenth — No School for Next Level Learning Students",
+      "type": "no_school",
+      "description": "This closure applies to students participating in the summer Next Level Learning program.",
+      "badgeLabel": "No School — Next Level Learning",
+      "hideFromCalendarExport": true,
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2026-07-03",
+      "name": "Independence Day Observation",
+      "type": "observance",
+      "hideFromCalendarExport": true,
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2026-08-19",
+      "name": "First Day for Kindergarten and Entry-Level Secondary Grades",
+      "type": "school_start",
+      "description": "Kindergarten and entry-level grades at middle and high schools attend. This is not the first day for every K–12 student.",
+      "schemaDescription": "First day for Omaha Public Schools kindergarten students and entry-level grades at middle and high schools."
+    },
+    {
+      "date": "2026-08-20",
+      "name": "First Day for All Other K–12 Students",
+      "type": "school_start",
+      "description": "All other K–12 students begin school. Students whose first day was August 19 continue attending.",
+      "schemaDescription": "First day for all other Omaha Public Schools K–12 students."
+    },
+    {
+      "date": "2026-08-26",
+      "name": "First Day for Pre-K Students",
+      "type": "school_start",
+      "schemaDescription": "First day for Omaha Public Schools Pre-K and Early Childhood students."
+    },
+    {
+      "date": "2026-09-04",
+      "name": "No School for Listed Alternative Education Programs",
+      "type": "no_school",
+      "description": "No school for students in Blackburn, the Expelled Students Program, Secondary Success Program, Integrated Learning Program, and Transition Programs.",
+      "badgeLabel": "No School — Alternative Education"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — No School for All Students",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-11",
+      "name": "No School for Listed Alternative Education Programs",
+      "type": "no_school",
+      "description": "No school for students in Blackburn, the Expelled Students Program, Secondary Success Program, Integrated Learning Program, and Transition Programs.",
+      "badgeLabel": "No School — Alternative Education"
+    },
+    {
+      "date": "2026-09-25",
+      "name": "No School for Early Childhood Students",
+      "type": "no_school",
+      "description": "This no-school day applies only to Early Childhood students.",
+      "badgeLabel": "No School — Early Childhood"
+    },
+    {
+      "date": "2026-09-29",
+      "name": "Two-Hour Late Start for All Students",
+      "type": "academic",
+      "badgeLabel": "2-Hour Late Start",
+      "calendarExportDescription": "All students begin two hours later than usual. Check the school or program for transportation and arrival details."
+    },
+    {
+      "date": "2026-10-02",
+      "name": "No School for All Students",
+      "type": "no_school",
+      "badgeLabel": "No School — All Students"
+    },
+    {
+      "date": "2026-10-16",
+      "name": "First Quarter Ends; No School for Early Childhood Students",
+      "type": "quarter_end",
+      "description": "The first quarter ends for the main calendar. Early Childhood students do not attend."
+    },
+    {
+      "date": "2026-10-19",
+      "name": "Second Quarter Begins; Conference Week Starts",
+      "type": "quarter_start",
+      "description": "The second quarter begins, and OPS conference week runs October 19–23. Schools provide appointment times."
+    },
+    {
+      "date": "2026-10-22",
+      "endDate": "2026-10-23",
+      "name": "No School for All Students — Conference Week",
+      "type": "no_school",
+      "badgeLabel": "No School — All Students",
+      "exportDatesIndividually": true
+    },
+    {
+      "date": "2026-10-27",
+      "name": "Two-Hour Late Start for All Students",
+      "type": "academic",
+      "badgeLabel": "2-Hour Late Start",
+      "calendarExportDescription": "All students begin two hours later than usual. Check the school or program for transportation and arrival details."
+    },
+    {
+      "date": "2026-11-03",
+      "name": "No School for All Students",
+      "type": "no_school",
+      "badgeLabel": "No School — All Students"
+    },
+    {
+      "date": "2026-11-10",
+      "name": "PreACT for Grades 9–10 — No School for Grades 11–12",
+      "type": "no_school",
+      "description": "High-school students in grades 9 and 10 take the PreACT. Students in grades 11 and 12 do not attend.",
+      "badgeLabel": "No School — Grades 11–12"
+    },
+    {
+      "date": "2026-11-20",
+      "name": "No School for Early Childhood Students",
+      "type": "no_school",
+      "description": "This no-school day applies only to Early Childhood students.",
+      "badgeLabel": "No School — Early Childhood"
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Recess — No School for All Students",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Second Quarter Ends; No School for Early Childhood Students",
+      "type": "semester_end",
+      "description": "The second quarter ends for the main calendar. Early Childhood students do not attend."
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "name": "Winter Recess — No School for All Students",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Students Return; Third Quarter Begins",
+      "type": "school_resume",
+      "schemaDescription": "Omaha Public Schools students return after Winter Recess and begin the third quarter."
+    },
+    {
+      "date": "2027-01-15",
+      "name": "No School for Early Childhood and Kindergarten — Registration Day",
+      "type": "no_school",
+      "description": "District Kindergarten Registration Day. Early Childhood and kindergarten students do not attend.",
+      "badgeLabel": "No School — Early Childhood & K"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — No School for All Students",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-26",
+      "name": "Two-Hour Late Start for All Students",
+      "type": "academic",
+      "badgeLabel": "2-Hour Late Start",
+      "calendarExportDescription": "All students begin two hours later than usual. Check the school or program for transportation and arrival details."
+    },
+    {
+      "date": "2027-02-11",
+      "name": "No School for Early Childhood Students",
+      "type": "no_school",
+      "description": "This no-school day applies only to Early Childhood students.",
+      "badgeLabel": "No School — Early Childhood"
+    },
+    {
+      "date": "2027-02-12",
+      "name": "No School for All Students",
+      "type": "no_school",
+      "badgeLabel": "No School — All Students"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents’ Day — No School for All Students",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-23",
+      "name": "Two-Hour Late Start for All Students",
+      "type": "academic",
+      "badgeLabel": "2-Hour Late Start",
+      "calendarExportDescription": "All students begin two hours later than usual. Check the school or program for transportation and arrival details."
+    },
+    {
+      "date": "2027-03-08",
+      "endDate": "2027-03-12",
+      "name": "OPS Conference Week",
+      "type": "academic",
+      "description": "All students have no school March 11–12. Schools provide conference appointment times.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-10",
+      "name": "Third Quarter Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-03-11",
+      "endDate": "2027-03-12",
+      "name": "No School for All Students — Conference Week",
+      "type": "no_school",
+      "badgeLabel": "No School — All Students",
+      "exportDatesIndividually": true
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Recess — No School for All Students",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-22",
+      "name": "Students Return; Fourth Quarter Begins",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-03-26",
+      "name": "No School for Early Childhood Students",
+      "type": "no_school",
+      "description": "This no-school day applies only to Early Childhood students.",
+      "badgeLabel": "No School — Early Childhood"
+    },
+    {
+      "date": "2027-04-06",
+      "name": "ACT for Grade 11 — No School for Grades 9, 10, and 12",
+      "type": "no_school",
+      "description": "High-school students in grade 11 take the ACT. Students in grades 9, 10, and 12 do not attend.",
+      "badgeLabel": "No School — Grades 9, 10 & 12"
+    },
+    {
+      "date": "2027-04-15",
+      "name": "No School for Early Childhood Students",
+      "type": "no_school",
+      "description": "This no-school day applies only to Early Childhood students.",
+      "badgeLabel": "No School — Early Childhood"
+    },
+    {
+      "date": "2027-04-16",
+      "name": "No School for All Students",
+      "type": "no_school",
+      "badgeLabel": "No School — All Students"
+    },
+    {
+      "date": "2027-04-19",
+      "name": "No School for All Students",
+      "type": "no_school",
+      "badgeLabel": "No School — All Students"
+    },
+    {
+      "date": "2027-05-14",
+      "name": "Last Official Day for Seniors; No School for Early Childhood",
+      "type": "school_end",
+      "description": "This is the last official day for high-school seniors. Early Childhood students do not attend."
+    },
+    {
+      "date": "2027-05-26",
+      "name": "Last Student Day — Fourth Quarter Ends",
+      "type": "school_end",
+      "description": "Last student day for the main district and Early Childhood calendars. Seniors' last official day is May 14. Wilson Focus continues through June 16.",
+      "schemaDescription": "Last student day for the Omaha Public Schools main district and Early Childhood calendars; the fourth quarter ends."
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day",
+      "type": "observance",
+      "hideFromCalendarExport": true,
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2027-06-18",
+      "name": "Juneteenth Observation",
+      "type": "observance",
+      "hideFromCalendarExport": true,
+      "hideFromAllDates": true
+    },
+    {
+      "date": "2027-07-04",
+      "name": "Independence Day Observation",
+      "type": "observance",
+      "hideFromCalendarExport": true,
+      "hideFromAllDates": true
+    }
+  ]
+}

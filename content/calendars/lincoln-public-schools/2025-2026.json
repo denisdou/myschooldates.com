@@ -1,0 +1,462 @@
+{
+  "institutionId": "lincoln-public-schools",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025–26",
+  "pageHeading": "Lincoln Public Schools Calendar 2025–26",
+  "firstDay": "2025-08-12",
+  "firstDayScope": "First attendance date for kindergarten, grade 6 and grade 9 only; other K–12 grades begin August 13.",
+  "firstFullK12Day": "2025-08-13",
+  "lastDay": "2026-05-21",
+  "lastDayScope": "Final scheduled student day on the districtwide LPS Student Calendar.",
+  "temporalCoverageStart": "2025-08-12",
+  "temporalCoverageEnd": "2026-05-24",
+  "semesters": 2,
+  "sourceUrl": "https://www.lps.org/page/calendars",
+  "sourceDocumentPage": "https://www.lps.org/page/calendars",
+  "sourcePdfUrl": "https://drive.google.com/file/d/126czHohNawwFUG5nELXuJOJJtxwkf-0G/view",
+  "lastCheckedPdfUrl": "https://drive.google.com/file/d/126czHohNawwFUG5nELXuJOJJtxwkf-0G/view",
+  "sourceCheckedAt": "2026-08-18",
+  "sourceUpdatedAt": "2025-05-30",
+  "sourceChecksumSha256": "33bf6f05ff42c0f8054caddf4831edccb5c3bb1fcda103d31ca083a04954927a",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.lps.org/page/calendars",
+    "linkText": "2025-2026 Student Calendar",
+    "expectedPdfUrl": "https://drive.google.com/file/d/126czHohNawwFUG5nELXuJOJJtxwkf-0G/view",
+    "expectedChecksumSha256": "33bf6f05ff42c0f8054caddf4831edccb5c3bb1fcda103d31ca083a04954927a"
+  },
+  "lastVerifiedAt": "2026-08-18",
+  "dateCreated": "2026-08-18",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-18",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "PDF mark: Approved 3/25; file updated May 30, 2025",
+  "sourceCalendarName": "Lincoln Public Schools 2025–26 Student Calendar",
+  "schemaCalendarName": "Lincoln Public Schools Calendar 2025–26",
+  "schemaDatasetName": "Lincoln Public Schools 2025–26 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Lincoln Public Schools dates for 2025–26, including the staggered K–12 opening, quarter breaks, professional learning and planning days, semester break, spring break, last student day and graduation dates.",
+  "schemaSpatialCoverage": "Lincoln and Lancaster County, Nebraska",
+  "schemaCalendarDownloadName": "Lincoln Public Schools 2025–26 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with LPS K–12 opening dates, districtwide no-school dates, professional learning and planning days, breaks and the last student day.",
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "lps-student-calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideInstructionalDaysSummary": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "whatsDifferent",
+    "breaks",
+    "otherCalendars",
+    "comparison",
+    "nationalTrends"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Opening Days",
+      "id": "lps-2025-2026-opening"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Quarter Calendar",
+      "id": "lps-2025-2026-quarter-guide"
+    },
+    {
+      "label": "Graduation",
+      "id": "lps-2025-2026-graduation"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Lincoln Public Schools Calendar 2025–26: Dates",
+  "seoDescription": "Lincoln Public Schools starts Aug. 12, 2025, for K, 6 and 9. See the 2025–26 LPS opening schedule, breaks, last day, graduation dates and official PDF.",
+  "heroSummary": "Lincoln Public Schools begins the 2025–26 school year Tuesday, August 12, for kindergarten, grade 6 and grade 9. Grades 1–5, 7–8 and 10–12 begin August 13. Semester Break runs December 22 through January 2, Spring Break runs March 9–13, and the last student day is May 21, 2026.",
+  "heroSourceLine": "Based on the official LPS 2025–26 Student Calendar, marked Approved 3/25",
+  "hideHeroDownloadLink": true,
+  "verificationBadgeText": "Checked against the official LPS PDF",
+  "heroVerificationSourceText": "Reviewed against the complete one-page LPS Student Calendar",
+  "heroVerificationComparisonText": "Opening symbols, quarter markers and closure shading were visually checked",
+  "calendarNotes": "LPS uses two opening dates: kindergarten, grade 6 and grade 9 attend August 12, while grades 1–5, 7–8 and 10–12 begin August 13. Quarter 1 ends October 10; October 13 is a general no-school day, October 14 is a professional learning/planning day and Quarter 2 begins October 15. Thanksgiving no-school dates run November 26–28, followed by a professional learning/planning day December 1. Quarter 2 ends December 19, Semester Break runs December 22–January 2 and Quarter 3 begins January 5. The February 16–17 closure combines a general no-school day with a professional learning/planning day. Quarter 3 ends March 6, Spring Break runs March 9–13 and Quarter 4 begins March 16. LPS warns that weather-related lost time may change minutes or days when required to meet Nebraska minimum school hours.",
+  "keyDatesHeading": "Lincoln Public Schools Calendar 2025–26 Key Dates",
+  "keyDatesSummaryTitle": "LPS 2025–26 Key Dates",
+  "keyDatesSummarySubtitle": "The two-stage opening, semester break, spring break and last student day",
+  "keyDateSummaryItems": [
+    {
+      "label": "Transition Grades",
+      "name": "First Day for K, 6 and 9",
+      "date": "2025-08-12",
+      "type": "school_start"
+    },
+    {
+      "label": "Remaining Grades",
+      "name": "First Day for Grades 1–5, 7–8 and 10–12",
+      "date": "2025-08-13",
+      "type": "school_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Semester Break",
+      "date": "2025-12-22",
+      "endDate": "2026-01-02",
+      "type": "break_start"
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2026-03-09",
+      "endDate": "2026-03-13",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Students",
+      "date": "2026-05-21",
+      "type": "school_end"
+    }
+  ],
+  "allDatesTitle": "Lincoln Public Schools 2025–26 Calendar Dates",
+  "allDatesCoverageNote": "The table follows the official one-page symbol calendar. Professional learning/planning days are listed separately from general no-school dates because LPS publishes them as different categories.",
+  "allDatesSourceUrl": "https://drive.google.com/file/d/126czHohNawwFUG5nELXuJOJJtxwkf-0G/view",
+  "allDatesSourceLabel": "Official LPS 2025–26 Student Calendar",
+  "dateLegendLabelOverrides": {
+    "Academic Date": "Quarter / Graduation Date",
+    "Teacher Workday": "Professional Learning / Planning",
+    "No School": "All Schools Not in Session"
+  },
+  "customSections": [
+    {
+      "id": "lps-2025-2026-opening",
+      "label": "How the LPS Two-Day Opening Works",
+      "position": "afterKeyDates",
+      "content": "The August 12 symbol applies only to kindergarten, grade 6 and grade 9. Those are the entry grades for elementary, middle and high school. Students in grades 1–5, 7–8 and 10–12 begin August 13.",
+      "table": {
+        "caption": "LPS 2025–26 first attendance dates",
+        "columns": [
+          "Date",
+          "Students beginning"
+        ],
+        "rows": [
+          [
+            "Tuesday, Aug. 12, 2025",
+            "Kindergarten, grade 6 and grade 9"
+          ],
+          [
+            "Wednesday, Aug. 13, 2025",
+            "Grades 1–5, 7–8 and 10–12"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lps-2025-2026-quarter-guide",
+      "label": "Quarter Breaks Combine Different Kinds of No-School Days",
+      "position": "afterKeyDates",
+      "content": "The PDF uses separate symbols for a quarter ending, a general closure, a professional learning/planning day and the next quarter starting. Keeping those labels separate explains why some breaks span several dates without every date having the same purpose.",
+      "table": {
+        "caption": "Published LPS quarter boundaries",
+        "columns": [
+          "Quarter",
+          "Start",
+          "End"
+        ],
+        "rows": [
+          [
+            "Quarter 1",
+            "Aug. 12, 2025",
+            "Oct. 10, 2025"
+          ],
+          [
+            "Quarter 2",
+            "Oct. 15, 2025",
+            "Dec. 19, 2025"
+          ],
+          [
+            "Quarter 3",
+            "Jan. 5, 2026",
+            "Mar. 6, 2026"
+          ],
+          [
+            "Quarter 4",
+            "Mar. 16, 2026",
+            "May 21, 2026"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lps-2025-2026-graduation",
+      "label": "LPS 2026 Graduation Dates",
+      "position": "beforeSources",
+      "content": "The Student Calendar lists program ceremonies before the comprehensive high-school weekend. Families should use school communication for times, tickets and ceremony instructions.",
+      "table": {
+        "caption": "Graduation schedule printed on the LPS calendar",
+        "columns": [
+          "Date",
+          "Program or venue"
+        ],
+        "rows": [
+          [
+            "May 19, 2026",
+            "Yankee Hill"
+          ],
+          [
+            "May 20, 2026",
+            "Independence Academy"
+          ],
+          [
+            "May 21, 2026",
+            "Bryan Community Focus Program"
+          ],
+          [
+            "May 22–24, 2026",
+            "Comprehensive high schools at Pinnacle Bank Arena"
+          ]
+        ]
+      }
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When does Lincoln Public Schools start in 2025–26?",
+      "a": "Kindergarten, grade 6 and grade 9 start Tuesday, August 12, 2025. Grades 1–5, 7–8 and 10–12 start Wednesday, August 13."
+    },
+    {
+      "q": "When is LPS Semester Break in 2025–26?",
+      "a": "The official calendar marks all schools out from December 22, 2025, through January 2, 2026. Quarter 3 starts Monday, January 5."
+    },
+    {
+      "q": "When is Spring Break for Lincoln Public Schools in 2026?",
+      "a": "LPS Spring Break runs Monday, March 9, through Friday, March 13, 2026. Quarter 4 begins Monday, March 16."
+    },
+    {
+      "q": "What is the last day of Lincoln Public Schools in 2025–26?",
+      "a": "The district Student Calendar marks Thursday, May 21, 2026, as the last day for students."
+    },
+    {
+      "q": "Can an LPS no-school day become a student day?",
+      "a": "Potentially. LPS says severe weather or other changes may require added minutes, added calendar days or rescheduling a previously identified non-student day to meet state minimum school hours."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "When does Lincoln Public Schools start in 2025–26?",
+    "When is LPS Semester Break in 2025–26?",
+    "When is Spring Break for Lincoln Public Schools in 2026?",
+    "What is the last day of Lincoln Public Schools in 2025–26?",
+    "Can an LPS no-school day become a student day?"
+  ],
+  "compactDownloadModule": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "unifiedDownloadTitle": "LPS 2025–26 Calendar Downloads",
+  "unifiedDownloadDescription": "Add the reviewed districtwide dates to a calendar or open the official LPS Student Calendar PDF.",
+  "icsHeading": "Add LPS 2025–26 Dates to Your Calendar",
+  "icsDescription": "Download a one-time file with the two opening dates, districtwide closures, professional learning/planning days, breaks and last student day.",
+  "icsButtonLabel": "Download LPS 2025–26 ICS",
+  "icsButtonSupportText": "One-time import. Recheck LPS after weather or calendar revisions.",
+  "pdfHeading": "Official LPS 2025–26 Student Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "The official one-page PDF is the source for the date symbols and graduation schedule on this page.",
+  "sourceReviewSummary": "We checked the complete LPS Student Calendar, including the symbol key, month grids, quarter boundaries, graduation schedule and weather-change note.",
+  "sourcesTitle": "Sources and Review Notes",
+  "sourceReviewDetailsTitle": "How this LPS calendar was verified",
+  "sourceReviewDetails": [
+    "The locally supplied PDF was rendered at high resolution and visually checked as a complete one-page calendar.",
+    "The two first-day symbols were preserved as different grade groups rather than collapsed into one universal start date.",
+    "General closures and professional learning/planning dates remain separate event types.",
+    "The local source file SHA-256 is stored for future revision checks."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Lincoln Public Schools sources.",
+  "sourceNextReviewText": "We'll review this page if LPS replaces the PDF or announces a weather-related schedule change.",
+  "sources": [
+    {
+      "label": "Lincoln Public Schools calendars",
+      "url": "https://www.lps.org/page/calendars"
+    },
+    {
+      "label": "LPS 2025–26 Student Calendar",
+      "url": "https://drive.google.com/file/d/126czHohNawwFUG5nELXuJOJJtxwkf-0G/view"
+    }
+  ],
+  "events": [
+    {
+      "date": "2025-08-12",
+      "name": "First Day for Kindergarten, Grade 6 and Grade 9",
+      "type": "school_start",
+      "description": "Transition-focused opening day for kindergarten, sixth-grade and ninth-grade students only."
+    },
+    {
+      "date": "2025-08-13",
+      "name": "First Day for Grades 1–5, 7–8 and 10–12",
+      "type": "school_start",
+      "description": "The remaining K–12 grade groups begin; all K–12 grades are now in session."
+    },
+    {
+      "date": "2025-09-01",
+      "name": "Labor Day",
+      "type": "holiday",
+      "badgeLabel": "All Schools Not in Session"
+    },
+    {
+      "date": "2025-09-02",
+      "name": "Professional Learning / Planning Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Schools Not in Session"
+    },
+    {
+      "date": "2025-10-10",
+      "name": "Quarter 1 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2025-10-13",
+      "name": "Quarter Break",
+      "type": "no_school",
+      "badgeLabel": "All Schools Not in Session"
+    },
+    {
+      "date": "2025-10-14",
+      "name": "Professional Learning / Planning Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Schools Not in Session"
+    },
+    {
+      "date": "2025-10-15",
+      "name": "Quarter 2 Begins",
+      "type": "quarter_start"
+    },
+    {
+      "date": "2025-11-26",
+      "endDate": "2025-11-28",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2025-12-01",
+      "name": "Professional Learning / Planning Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Schools Not in Session"
+    },
+    {
+      "date": "2025-12-19",
+      "name": "Quarter 2 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2025-12-22",
+      "endDate": "2026-01-02",
+      "name": "Semester Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-01-05",
+      "name": "Quarter 3 Begins",
+      "type": "quarter_start"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday",
+      "badgeLabel": "All Schools Not in Session"
+    },
+    {
+      "date": "2026-02-16",
+      "name": "Presidents Day",
+      "type": "holiday",
+      "badgeLabel": "All Schools Not in Session"
+    },
+    {
+      "date": "2026-02-17",
+      "name": "Professional Learning / Planning Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Schools Not in Session"
+    },
+    {
+      "date": "2026-03-06",
+      "name": "Quarter 3 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-03-09",
+      "endDate": "2026-03-13",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-03-16",
+      "name": "Quarter 4 Begins",
+      "type": "quarter_start"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Professional Learning / Planning Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Schools Not in Session"
+    },
+    {
+      "date": "2026-05-21",
+      "name": "Last Day for Students",
+      "type": "school_end"
+    },
+    {
+      "date": "2026-05-22",
+      "endDate": "2026-05-24",
+      "name": "Comprehensive High School Graduation Weekend",
+      "type": "graduation",
+      "badgeLabel": "Pinnacle Bank Arena",
+      "hideFromCalendarExport": true
+    }
+  ]
+}

@@ -1,0 +1,682 @@
+{
+  "institutionId": "oklahoma-city-public-schools",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Oklahoma City Public Schools Calendar 2027–28 Draft",
+  "firstDay": "2027-08-11",
+  "lastDay": "2028-05-18",
+  "temporalCoverageStart": "2027-08-04",
+  "temporalCoverageEnd": "2028-05-19",
+  "reportingPeriodDaysTotal": 170,
+  "reportingPeriodDaysScope": "The English Student Days row lists 170; the Spanish row in the same file lists 168.",
+  "sourceUrl": "https://www.okcps.org/student-and-families/student-tools/student-calendar",
+  "sourceDocumentPage": "https://www.okcps.org/student-and-families/student-tools/student-calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1779916848/okcpsorg/o1a88wwdi1kuyspxk9df/DRAFT2027_2028StudentCalendar-Sheet1.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1779916848/okcpsorg/o1a88wwdi1kuyspxk9df/DRAFT2027_2028StudentCalendar-Sheet1.pdf",
+  "sourceCheckedAt": "2026-08-19",
+  "sourceChecksumSha256": "36a2321b52803152dd19fd1262ac7f9f0c9c55eda5aa1fe975f4879573619d7b",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The official OKCPS calendar page says the 2027–28 Academic Year Calendar is pending an HB3151 adjustment, and the linked PDF is visibly titled DRAFT. The bilingual draft also contains inconsistent summary totals: the English section lists 170 Student Days (41, 39, 46 and 44), while the Spanish section lists 168 (41, 39, 46 and 42). The workload totals both show 181 but allocate Professional Development and Teacher Work Day time differently in Quarter 4. This page uses the English calendar grid and English Student Days row, labels all dates provisional, and requires review when OKCPS replaces or revises the draft.",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.okcps.org/student-and-families/student-tools/student-calendar",
+    "linkText": "*2027-28 Academic Year Calendar is Pending HB3151 Adjustment",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1779916848/okcpsorg/o1a88wwdi1kuyspxk9df/DRAFT2027_2028StudentCalendar-Sheet1.pdf",
+    "expectedChecksumSha256": "36a2321b52803152dd19fd1262ac7f9f0c9c55eda5aa1fe975f4879573619d7b"
+  },
+  "lastVerifiedAt": "2026-08-19",
+  "dateCreated": "2026-08-18",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-19",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_source_conflict",
+    "official_schedule_change",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "DRAFT 2027/2028 Student Calendar — pending HB3151 adjustment",
+  "sourceCalendarName": "Draft Oklahoma City Public Schools 2027–28 Student Calendar",
+  "schemaCalendarName": "Oklahoma City Public Schools Calendar 2027–28 Draft",
+  "schemaDatasetName": "Oklahoma City Public Schools 2027–28 Draft Calendar Dataset",
+  "schemaDatasetDescription": "Provisional OKCPS 2027–28 dates from the official draft PDF, including the first and last class days, breaks, no-school Conference Days, professional and work days, the conditional April snow day, quarter markers and disclosed draft and English-Spanish source conflicts.",
+  "schemaSpatialCoverage": "Oklahoma City and Oklahoma County, Oklahoma",
+  "schemaCalendarDownloadName": "Oklahoma City Public Schools 2027–28 Draft ICS File",
+  "schemaCalendarDownloadDescription": "One-time provisional calendar import with dates from the current OKCPS 2027–28 draft; it does not update automatically when the district publishes the pending HB3151 adjustment.",
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "okcps-student-calendar-draft",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "none",
+  "itemListMode": "keyDates",
+  "schemaKeyDateItemListName": "OKCPS 2027–28 draft key school calendar dates",
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideInstructionalDaysSummary": true,
+  "hiddenCustomSectionIds": [
+    "okcps-calendar-map"
+  ],
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "whatsDifferent",
+    "comparison",
+    "nationalTrends",
+    "breaks",
+    "otherCalendars",
+    "relatedDistricts"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Draft Status",
+      "id": "okcps-2027-2028-draft-status"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Year Changes",
+      "id": "okcps-2027-2028-year-changes"
+    },
+    {
+      "label": "Conferences",
+      "id": "okcps-2027-2028-conferences"
+    },
+    {
+      "label": "Planning Guide",
+      "id": "okcps-2027-2028-calendar-guide"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "OKCPS Calendar 2027–28 Draft: Dates & Pending Update",
+  "seoDescription": "The OKCPS 2027–28 draft starts Aug. 11, 2027, and ends May 18, 2028. See provisional break dates, Conference Days and the pending HB3151 adjustment.",
+  "heroSummary": "The current Oklahoma City Public Schools 2027–28 draft begins classes Wednesday, August 11, 2027, and lists Thursday, May 18, 2028, as the last day of classes. Fall Break is October 11–15, Thanksgiving Break is November 22–26, Winter Break is December 20–January 2, and Spring Break is March 13–17. OKCPS says this calendar is pending an HB3151 adjustment, so every date on this page is provisional.",
+  "heroSourceLine": "Current OKCPS draft PDF · Official page says pending HB3151 adjustment · Reviewed August 19, 2026",
+  "hideHeroDownloadLink": true,
+  "verificationBadgeText": "Current OKCPS draft reviewed — not final",
+  "heroVerificationSourceText": "Reviewed against the current OKCPS PDF and the district calendar page",
+  "heroVerificationComparisonText": "Calendar status and conflicting English-Spanish Student Days totals remain disclosed",
+  "calendarNotes": "The 2027–28 schedule is a draft, not a final OKCPS calendar. It lists August 11 as Classes Begin and May 18 as the Last Day of Classes. Unlike 2026–27, the draft separately lists September 24 and February 18 as no-school Conference Days after the published parent-conference dates. Thanksgiving Break runs November 22–26; district offices close November 25–26. Winter Break runs December 20–January 2; offices close December 23–January 2, and January 3 is a combined Professional Development / Teacher Work Day. April 14 is a Snow Day (If Available), so its attendance status can change. The English summary lists 170 Student Days, while the Spanish summary lists 168. Recheck the district page before making nonrefundable plans.",
+  "keyDatesHeading": "Key Dates",
+  "keyDatesSummaryTitle": "Key Dates",
+  "keyDatesSummarySubtitle": "First and last class days, major breaks and the student return after Winter Break",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "Classes Begin",
+      "date": "2027-08-11",
+      "type": "school_start",
+      "schemaDescription": "Date listed in the current OKCPS 2027–28 draft; subject to the pending adjustment."
+    },
+    {
+      "label": "Fall",
+      "name": "Fall Break",
+      "date": "2027-10-11",
+      "endDate": "2027-10-15",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2027-11-22",
+      "endDate": "2027-11-26",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2027-12-20",
+      "endDate": "2028-01-02",
+      "type": "break_start"
+    },
+    {
+      "label": "Return",
+      "name": "Students Return After Winter Break",
+      "date": "2028-01-04",
+      "type": "school_resume",
+      "description": "January 3 is a Professional Development / Teacher Work Day."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of Classes",
+      "date": "2028-05-18",
+      "type": "school_end",
+      "schemaDescription": "Date listed in the current OKCPS 2027–28 draft; subject to the pending adjustment."
+    }
+  ],
+  "allDatesTitle": "Full Calendar",
+  "allDatesCoverageNote": "All dates in this table are provisional because OKCPS has not finalized the calendar. The conditional April 14 Snow Day is excluded from the one-time ICS unless the district later confirms its attendance status.",
+  "hideCoveredBreakDatesNote": true,
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1779916848/okcpsorg/o1a88wwdi1kuyspxk9df/DRAFT2027_2028StudentCalendar-Sheet1.pdf",
+  "allDatesSourceLabel": "Current OKCPS 2027–28 Draft Student Calendar PDF",
+  "dateLegendLabelOverrides": {
+    "Academic Date": "Conference / Quarter Date",
+    "Teacher Workday": "Staff Day — No School",
+    "Reserved Weather Day": "Conditional Snow Day",
+    "No School": "No School for Students"
+  },
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "gradingPeriodsTitle": "Student Days by Quarter",
+  "gradingPeriodsDescription": "The English summary lists 170 Student Days across four quarters. The Spanish summary lists 168 because Quarter 4 is printed as 42 rather than 44, so the English figures are used below and the conflict remains under review.",
+  "gradingPeriodsDaysLabel": "Student Days",
+  "gradingPeriods": [
+    {
+      "label": "Quarter 1",
+      "start": "2027-08-11",
+      "end": "2027-10-08",
+      "studentDays": 41
+    },
+    {
+      "label": "Quarter 2",
+      "start": "2027-10-18",
+      "end": "2027-12-17",
+      "studentDays": 39
+    },
+    {
+      "label": "Quarter 3",
+      "start": "2028-01-04",
+      "end": "2028-03-10",
+      "studentDays": 46
+    },
+    {
+      "label": "Quarter 4",
+      "start": "2028-03-20",
+      "end": "2028-05-18",
+      "studentDays": 44
+    }
+  ],
+  "customSections": [
+    {
+      "id": "okcps-2027-2028-draft-status",
+      "label": "Draft Status",
+      "position": "afterKeyDates",
+      "content": "OKCPS links this PDF from its calendar page but says the 2027–28 calendar is pending an HB3151 adjustment. Recheck the district before making firm plans.",
+      "table": {
+        "caption": "Current OKCPS 2027–28 publication status",
+        "columns": [
+          "Check",
+          "Current finding",
+          "What families should know"
+        ],
+        "rows": [
+          [
+            "Official calendar page",
+            "Pending HB3151 adjustment",
+            "Recheck before making firm plans"
+          ],
+          [
+            "Linked PDF",
+            "Marked DRAFT",
+            "Dates may change"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "okcps-2027-2028-year-changes",
+      "label": "What Changes from 2026–27?",
+      "position": "afterAllDates",
+      "content": "The schedule keeps August 11 as Classes Begin but lists May 18 as the last day, compared with May 20 in 2026–27. It moves Fall, Thanksgiving, Winter and Spring breaks earlier and adds two explicit no-school Conference Days.",
+      "table": {
+        "caption": "Published differences between the current OKCPS calendars",
+        "columns": [
+          "Calendar item",
+          "2026–27",
+          "2027–28 draft"
+        ],
+        "rows": [
+          [
+            "Classes Begin",
+            "Aug. 11, 2026",
+            "Aug. 11, 2027"
+          ],
+          [
+            "Fall Break",
+            "Oct. 12–16",
+            "Oct. 11–15"
+          ],
+          [
+            "Thanksgiving Break",
+            "Nov. 23–27",
+            "Nov. 22–26"
+          ],
+          [
+            "Winter Break",
+            "Dec. 21–Jan. 5",
+            "Dec. 20–Jan. 2"
+          ],
+          [
+            "Spring Break",
+            "Mar. 15–19",
+            "Mar. 13–17"
+          ],
+          [
+            "Last Day of Classes",
+            "May 20, 2027",
+            "May 18, 2028"
+          ],
+          [
+            "Separate no-school Conference Days",
+            "None listed",
+            "Sep. 24 and Feb. 18"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "okcps-2027-2028-conferences",
+      "label": "Parent Conferences and No-School Conference Days",
+      "position": "afterAllDates",
+      "content": "The calendar separates the four conference appointment dates from two no-school Conference Days. Schools still provide individual appointment times.",
+      "table": {
+        "caption": "OKCPS 2027–28 conference schedule",
+        "columns": [
+          "Dates",
+          "Published label",
+          "Student attendance"
+        ],
+        "rows": [
+          [
+            "Sep. 21 and 23, 2027",
+            "Parent Conferences",
+            "Not separately listed as no school"
+          ],
+          [
+            "Sep. 24, 2027",
+            "Conference Day",
+            "No school"
+          ],
+          [
+            "Feb. 15 and 17, 2028",
+            "Parent Conferences",
+            "Not separately listed as no school"
+          ],
+          [
+            "Feb. 18, 2028",
+            "Conference Day",
+            "No school"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "okcps-2027-2028-office-closures",
+      "label": "Student Breaks vs. District Office Closures",
+      "position": "afterAllDates",
+      "content": "Student no-school ranges and administrative-building closures answer different questions. Use the longer student range for attendance planning.",
+      "table": {
+        "caption": "OKCPS 2027–28 student and office schedules",
+        "columns": [
+          "Period",
+          "Students",
+          "Administrative buildings"
+        ],
+        "rows": [
+          [
+            "Labor Day",
+            "Sep. 6, 2027",
+            "Sep. 6, 2027"
+          ],
+          [
+            "Thanksgiving",
+            "Nov. 22–26, 2027",
+            "Nov. 25–26, 2027"
+          ],
+          [
+            "Winter",
+            "Dec. 20, 2027–Jan. 2, 2028",
+            "Dec. 23, 2027–Jan. 2, 2028"
+          ],
+          [
+            "Spring",
+            "Mar. 13–17, 2028",
+            "Mar. 13–17, 2028"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "okcps-2027-2028-calendar-guide",
+      "label": "Planning with the 2027–28 Draft Calendar",
+      "position": "afterGradingPeriodsBeforeCalendarExport",
+      "content": "Use the draft for tentative planning, but recheck OKCPS before making nonrefundable or hard-to-change plans.",
+      "table": {
+        "caption": "Planning decisions by source confidence",
+        "columns": [
+          "Planning task",
+          "Recommended action"
+        ],
+        "rows": [
+          [
+            "Tentative childcare or break planning",
+            "Use the published dates as a starting point"
+          ],
+          [
+            "Nonrefundable travel",
+            "Recheck OKCPS before booking"
+          ],
+          [
+            "Conference appointment time",
+            "Use communication from the student's school"
+          ],
+          [
+            "April 14 attendance",
+            "Check whether the conditional Snow Day is available and confirmed"
+          ],
+          [
+            "Personal calendar import",
+            "Expect to replace the one-time ICS if dates change"
+          ]
+        ]
+      }
+    }
+  ],
+  "unifiedDownloadTitle": "Official Calendar and Download Options",
+  "unifiedDownloadDescription": "Open the current district PDF or import the listed dates once. The ICS will not update automatically if OKCPS revises the calendar.",
+  "compactDownloadModule": true,
+  "pdfHeading": "Open the District Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "This one-page bilingual PDF is the current file linked by OKCPS. It is visibly marked DRAFT and is not a final calendar.",
+  "hidePdfVersionLabel": false,
+  "groupAlternateCalendarsWithDownloads": true,
+  "icsHeading": "Add 2027–28 Dates to Your Calendar",
+  "icsDescription": "Download a one-time file with the listed dates, excluding the conditional April 14 Snow Day.",
+  "icsButtonLabel": "Download Draft OKCPS 2027–28 ICS",
+  "icsAriaLabel": "Download draft Oklahoma City Public Schools 2027-2028 calendar file for Google Calendar, Apple Calendar, and Outlook",
+  "icsButtonSupportText": "Provisional one-time import. It will not update automatically; replace it if OKCPS changes the dates.",
+  "calendarFaqs": [
+    {
+      "q": "Is the OKCPS 2027–28 calendar final?",
+      "a": "No. The official calendar page says the 2027–28 Academic Year Calendar is pending an HB3151 adjustment, and the linked PDF is marked DRAFT. Every date on this page should be treated as provisional."
+    },
+    {
+      "q": "When does Oklahoma City Public Schools start in 2027–28?",
+      "a": "The calendar lists Wednesday, August 11, 2027, as Classes Begin. Recheck the official OKCPS page before making firm plans."
+    },
+    {
+      "q": "When do OKCPS students return after Winter Break in 2028?",
+      "a": "Winter Break runs through January 2, followed by a Professional Development / Teacher Work Day on January 3. Quarter 3 and student classes resume Tuesday, January 4, 2028."
+    },
+    {
+      "q": "When are the no-school Conference Days in the OKCPS 2027–28 draft?",
+      "a": "Friday, September 24, 2027, and Friday, February 18, 2028, are Conference Days with no school. Parent conferences are separately listed on September 21 and 23 and February 15 and 17."
+    },
+    {
+      "q": "How many Student Days are in the OKCPS 2027–28 draft?",
+      "a": "The English summary shows 170 Student Days: 41, 39, 46 and 44 by quarter. The Spanish summary shows 168 because Quarter 4 is printed as 42; this page uses the English figures and flags the conflict."
+    },
+    {
+      "q": "Is April 14, 2028 a guaranteed day off in OKCPS?",
+      "a": "No. April 14 is labeled Snow Day (If Available), so its status is conditional. This date is excluded from the one-time ICS until OKCPS confirms whether students attend."
+    },
+    {
+      "q": "When is the last day of school for OKCPS in 2028?",
+      "a": "The calendar lists Thursday, May 18, 2028, as the Last Day of Classes. May 19 is a Record Day for staff. Recheck both dates if OKCPS revises the calendar."
+    }
+  ],
+  "faqOrderLimit": 7,
+  "faqDisplayQuestions": [
+    "Is the OKCPS 2027–28 calendar final?",
+    "When does Oklahoma City Public Schools start in 2027–28?",
+    "When do OKCPS students return after Winter Break in 2028?",
+    "When are the no-school Conference Days in the OKCPS 2027–28 draft?",
+    "How many Student Days are in the OKCPS 2027–28 draft?",
+    "Is April 14, 2028 a guaranteed day off in OKCPS?",
+    "When is the last day of school for OKCPS in 2028?"
+  ],
+  "sourceReviewSummary": "Reviewed August 19, 2026 against the current OKCPS PDF and the district calendar notice. The English and Spanish summary totals do not match, so both figures are disclosed.",
+  "sourcesTitle": "Sources",
+  "sourceReviewDetailsTitle": "What was verified",
+  "sourceReviewDetails": [
+    "Classes begin August 11 and end May 18; breaks, Conference Days, staff days, the conditional Snow Day and quarter markers were checked against the calendar PDF.",
+    "The English summary lists 170 Student Days; the Spanish summary lists 168.",
+    "OKCPS currently labels the 2027–28 calendar as pending an HB3151 adjustment.",
+    "April 14 is conditional and is excluded from the one-time ICS."
+  ],
+  "sourceMaintainerText": "Oklahoma City Public Schools; page data reviewed by MySchoolDates against the district PDF and calendar page.",
+  "sourceNextReviewText": "Review again when OKCPS changes the calendar status or replaces the linked PDF.",
+  "sources": [
+    {
+      "label": "OKCPS Student Calendar page",
+      "url": "https://www.okcps.org/student-and-families/student-tools/student-calendar"
+    },
+    {
+      "label": "Current OKCPS 2027–28 Draft Student Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1779916848/okcpsorg/o1a88wwdi1kuyspxk9df/DRAFT2027_2028StudentCalendar-Sheet1.pdf"
+    }
+  ],
+  "events": [
+    {
+      "date": "2027-08-04",
+      "name": "Teacher Work Day",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-05",
+      "endDate": "2027-08-06",
+      "name": "Professional Development",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-09",
+      "name": "Professional Development",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-10",
+      "name": "Teacher Work Day",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-11",
+      "name": "Classes Begin · Quarter 1 Begins",
+      "type": "school_start",
+      "description": "The date shown in the district PDF."
+    },
+    {
+      "date": "2027-09-06",
+      "name": "Labor Day",
+      "type": "holiday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2027-09-21",
+      "dates": [
+        "2027-09-21",
+        "2027-09-23"
+      ],
+      "name": "Parent Conferences",
+      "type": "academic",
+      "description": "Schools provide appointment times. The separate September 24 Conference Day has no school.",
+      "exportDatesIndividually": true
+    },
+    {
+      "date": "2027-09-24",
+      "name": "Conference Day",
+      "type": "no_school",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2027-10-08",
+      "name": "Quarter 1 Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-10-11",
+      "endDate": "2027-10-15",
+      "name": "Fall Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-10-18",
+      "name": "Quarter 2 Begins",
+      "type": "quarter_start",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-11-01",
+      "name": "Professional Development",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-11-22",
+      "endDate": "2027-11-26",
+      "name": "Thanksgiving Break",
+      "type": "break_start",
+      "description": "Administrative buildings are closed November 25–26, but students are out for the full November 22–26 range."
+    },
+    {
+      "date": "2027-12-17",
+      "name": "Quarter 2 Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-12-20",
+      "endDate": "2028-01-02",
+      "name": "Winter Break",
+      "type": "break_start",
+      "description": "Administrative buildings are closed December 23–January 2."
+    },
+    {
+      "date": "2028-01-03",
+      "name": "Professional Development / Teacher Work Day",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-01-04",
+      "name": "Students Return · Quarter 3 Begins",
+      "type": "school_resume"
+    },
+    {
+      "date": "2028-01-17",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2028-02-15",
+      "dates": [
+        "2028-02-15",
+        "2028-02-17"
+      ],
+      "name": "Parent Conferences",
+      "type": "academic",
+      "description": "Schools provide appointment times. The separate February 18 Conference Day has no school.",
+      "exportDatesIndividually": true
+    },
+    {
+      "date": "2028-02-18",
+      "name": "Conference Day",
+      "type": "no_school",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2028-02-21",
+      "name": "Professional Development",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2028-03-10",
+      "name": "Quarter 3 Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-03-20",
+      "name": "Quarter 4 Begins",
+      "type": "quarter_start",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-04-14",
+      "name": "Snow Day (If Available)",
+      "type": "makeup_day",
+      "badgeLabel": "Conditional",
+      "description": "The calendar lists this as a conditional Snow Day. Check OKCPS before assuming students are out.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-05-18",
+      "name": "Last Day of Classes · Quarter 4 Ends",
+      "type": "school_end",
+      "description": "The date shown in the district PDF."
+    },
+    {
+      "date": "2028-05-19",
+      "name": "Record Day",
+      "type": "teacher_workday",
+      "description": "Staff record day after the student end date.",
+      "hideFromCalendarExport": true
+    }
+  ]
+}

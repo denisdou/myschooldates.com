@@ -1,0 +1,558 @@
+{
+  "institutionId": "lincoln-public-schools",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Lincoln Public Schools Calendar 2027–28",
+  "firstDay": "2027-08-10",
+  "firstDayScope": "First attendance date for kindergarten, grade 6 and grade 9 only; other K–12 grades begin August 11.",
+  "firstFullK12Day": "2027-08-11",
+  "lastDay": "2028-05-18",
+  "lastDayScope": "Final scheduled student day and end of Quarter 4 on the LPS Student Calendar.",
+  "temporalCoverageStart": "2027-08-10",
+  "temporalCoverageEnd": "2028-05-21",
+  "totalSchoolDays": 175,
+  "reportingPeriodDaysTotal": 175,
+  "reportingPeriodDaysScope": "Total student days printed across the four LPS quarters.",
+  "semesters": 2,
+  "sourceUrl": "https://www.lps.org/page/calendars",
+  "sourceDocumentPage": "https://www.lps.org/page/calendars",
+  "sourcePdfUrl": "https://drive.google.com/file/d/1r5UjTY5ROljnnShdZr6DHRdwM3-Rq1TV/view",
+  "lastCheckedPdfUrl": "https://drive.google.com/file/d/1r5UjTY5ROljnnShdZr6DHRdwM3-Rq1TV/view",
+  "sourceCheckedAt": "2026-08-18",
+  "sourceUpdatedAt": "2026-03-24",
+  "sourceChecksumSha256": "0cc82a504a36a3f943e87f012b73592411e4a35b3e8546cf16568a25e37a07cb",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.lps.org/page/calendars",
+    "linkText": "2027-2028 Student Calendar",
+    "expectedPdfUrl": "https://drive.google.com/file/d/1r5UjTY5ROljnnShdZr6DHRdwM3-Rq1TV/view",
+    "expectedChecksumSha256": "0cc82a504a36a3f943e87f012b73592411e4a35b3e8546cf16568a25e37a07cb"
+  },
+  "lastVerifiedAt": "2026-08-18",
+  "dateCreated": "2026-08-18",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-19",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Version 2.3; Board-approved March 24, 2026",
+  "sourceCalendarName": "Lincoln Public Schools 2027–28 Student Calendar",
+  "schemaCalendarName": "Lincoln Public Schools Calendar 2027–28",
+  "schemaDatasetName": "Lincoln Public Schools 2027–28 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Lincoln Public Schools dates for 2027–28, including the staggered K–12 opening, 175 student days, 189 teacher contract days, quarter day totals, professional learning and planning days, breaks, last student day and graduation weekend.",
+  "schemaSpatialCoverage": "Lincoln and Lancaster County, Nebraska",
+  "schemaCalendarDownloadName": "Lincoln Public Schools 2027–28 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with LPS K–12 opening dates, districtwide no-school dates, professional learning and planning closures, breaks and the last student day.",
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-board-approval"
+  ],
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-board-approval",
+      "type": "WebPage",
+      "name": "Lincoln Board of Education March 24, 2026 calendar approval",
+      "url": "https://www.lps.org/article/2942628"
+    }
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "lps-student-calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideInstructionalDaysSummary": true,
+  "hideCoveredBreakDatesNote": true,
+  "hiddenCustomSectionIds": [
+    "lps-calendar-map"
+  ],
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "whatsDifferent",
+    "breaks",
+    "otherCalendars",
+    "comparison",
+    "nationalTrends"
+  ],
+  "yearSwitcherPosition": "afterSources",
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "What's New",
+      "id": "lps-2027-2028-calendar-changes"
+    },
+    {
+      "label": "Planning Notes",
+      "id": "lps-2027-2028-nonschool-types"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Quarter Days",
+      "id": "grading-periods"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Graduation",
+      "id": "lps-2027-2028-graduation"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Lincoln Public Schools Calendar 2027–28 (Lincoln, NE)",
+  "seoDescription": "Lincoln Public Schools in Lincoln, NE starts Aug. 10 for K, 6 and 9; other K–12 grades start Aug. 11. See breaks, quarter totals and the official PDF.",
+  "heroSummary": "Lincoln Public Schools begins the 2027–28 school year Tuesday, August 10, for kindergarten, grade 6 and grade 9; the remaining K–12 grades begin August 11. Quarter Break is October 11–13, Semester Break is December 22–January 3, Spring Break is March 13–17, and the last student day is May 18, 2028.",
+  "heroSourceLine": "Based on LPS Student Calendar Version 2.3, Board-approved March 24, 2026",
+  "heroFactChips": [
+    "175 student days",
+    "189 teacher contract days"
+  ],
+  "hideHeroDownloadLink": true,
+  "verificationBadgeText": "Checked against current LPS sources",
+  "heroVerificationSourceText": "Reviewed against Student Calendar Version 2.3",
+  "heroVerificationComparisonText": "Board approval highlights were checked against the final calendar",
+  "calendarNotes": "LPS starts kindergarten, grade 6 and grade 9 on August 10, then starts grades 1–5, 7–8 and 10–12 on August 11. The calendar prints 175 student days across four quarters and 189 teacher contract days. September 6–7 is a no-school period that includes Labor Day and a September 7 building professional learning/planning day. Quarter 1 ends October 8; Quarter Break runs October 11–13, with October 13 identified as a district professional learning/planning day, and Quarter 2 begins October 14. Thanksgiving closure runs November 24–29, with November 29 used for building professional learning/planning. Semester Break runs December 22–January 3, with January 3 identified as a compensatory day, and Quarter 3 begins January 4. Presidents Day closure runs February 21–22, with February 22 used for district professional learning/planning; Spring Break runs March 13–17. March 27 is both a Quarter Break date and a building professional learning/planning day. The PDF says the calendar is subject to revision, so families should recheck LPS after weather or district changes.",
+  "keyDatesHeading": "Lincoln Public Schools Calendar 2027–28 Key Dates",
+  "keyDatesSummaryTitle": "LPS 2027–28 Key Dates",
+  "keyDatesSummarySubtitle": "Two opening dates, major breaks and the last day for students",
+  "keyDateSummaryItems": [
+    {
+      "label": "Transition Grades",
+      "name": "First Day for K, 6 and 9",
+      "date": "2027-08-10",
+      "type": "school_start",
+      "schemaDescription": "First day of classes for kindergarten, grade 6 and grade 9 students."
+    },
+    {
+      "label": "Remaining Grades",
+      "name": "First Day for Grades 1–5, 7–8 and 10–12",
+      "date": "2027-08-11",
+      "type": "school_start",
+      "schemaDescription": "First day of classes for students in grades 1–5, 7–8 and 10–12."
+    },
+    {
+      "label": "Fall",
+      "name": "Quarter Break",
+      "date": "2027-10-11",
+      "endDate": "2027-10-13",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Semester Break",
+      "date": "2027-12-22",
+      "endDate": "2028-01-03",
+      "type": "break_start"
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Students",
+      "date": "2028-05-18",
+      "type": "school_end"
+    }
+  ],
+  "allDatesTitle": "Lincoln Public Schools 2027–28 Calendar Dates",
+  "allDatesCoverageNote": "The table lists each student closure once. Staff-purpose dates within longer closures are noted on the applicable row and are not duplicated in the family ICS.",
+  "allDatesSourceUrl": "https://drive.google.com/file/d/1r5UjTY5ROljnnShdZr6DHRdwM3-Rq1TV/view",
+  "allDatesSourceLabel": "Official LPS 2027–28 Student Calendar",
+  "dateLegendLabelOverrides": {
+    "Academic Date": "Quarter / Graduation Date",
+    "Teacher Workday": "Professional Learning / Planning",
+    "No School": "Schools Not in Session"
+  },
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "gradingPeriodsTitle": "LPS 2027–28 Quarter Day Totals",
+  "gradingPeriodsDescription": "The official calendar prints 175 student days across four quarters. The start dates below follow the return dates marked by the PDF's quarter-start symbols.",
+  "gradingPeriodsDaysLabel": "Student Days",
+  "gradingPeriods": [
+    {
+      "label": "Quarter 1",
+      "start": "2027-08-10",
+      "end": "2027-10-08",
+      "studentDays": 42
+    },
+    {
+      "label": "Quarter 2",
+      "start": "2027-10-14",
+      "end": "2027-12-21",
+      "studentDays": 45
+    },
+    {
+      "label": "Quarter 3",
+      "start": "2028-01-04",
+      "end": "2028-03-10",
+      "studentDays": 46
+    },
+    {
+      "label": "Quarter 4",
+      "start": "2028-03-20",
+      "end": "2028-05-18",
+      "studentDays": 42
+    }
+  ],
+  "customSections": [
+    {
+      "id": "lps-2027-2028-calendar-changes",
+      "label": "What Changes from LPS 2026–27 to 2027–28?",
+      "position": "afterKeyDates",
+      "content": "The transition-grade opening falls on Aug. 10 instead of Aug. 12, while the last student day falls on May 18 instead of May 20. LPS still starts kindergarten, grade 6 and grade 9 one day before the remaining grades. Version 2.3 also lists 175 student days and 189 teacher contract days and distinguishes building professional learning, district professional learning and compensatory days.",
+      "table": {
+        "caption": "Published LPS date changes",
+        "columns": [
+          "Calendar item",
+          "2026–27",
+          "2027–28"
+        ],
+        "rows": [
+          [
+            "Transition-grade first day",
+            "Aug. 12, 2026",
+            "Aug. 10, 2027"
+          ],
+          [
+            "All remaining grades begin",
+            "Aug. 13, 2026",
+            "Aug. 11, 2027"
+          ],
+          [
+            "Fall quarter break",
+            "Oct. 15–19",
+            "Oct. 11–13"
+          ],
+          [
+            "Spring Break",
+            "Mar. 8–12",
+            "Mar. 13–17"
+          ],
+          [
+            "Last student day",
+            "May 20, 2027",
+            "May 18, 2028"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lps-2027-2028-nonschool-types",
+      "label": "Why the 2027–28 Calendar Uses Several No-School Labels",
+      "position": "afterKeyDates",
+      "content": "Students do not attend on any date below. LPS separately identifies the staff purpose for six dates, including building-level and districtwide professional learning/planning days and a Jan. 3 compensatory day. These labels explain the staff purpose of dates that are already part of a student no-school period.",
+      "table": {
+        "caption": "Staff-purpose dates inside LPS student closures",
+        "columns": [
+          "Date",
+          "Official staff label",
+          "Student context"
+        ],
+        "rows": [
+          [
+            "Sept. 7, 2027",
+            "Building Professional Learning/Planning Day",
+            "Second day of the Sept. 6–7 no-school period"
+          ],
+          [
+            "Oct. 13, 2027",
+            "District Professional Learning/Planning Day",
+            "Final day of Quarter Break"
+          ],
+          [
+            "Nov. 29, 2027",
+            "Building Professional Learning/Planning Day",
+            "Final day of the Thanksgiving closure"
+          ],
+          [
+            "Jan. 3, 2028",
+            "Compensatory Day",
+            "Final day of Semester Break"
+          ],
+          [
+            "Feb. 22, 2028",
+            "District Professional Learning/Planning Day",
+            "Second day of the Presidents Day closure"
+          ],
+          [
+            "Mar. 27, 2028",
+            "Building Professional Learning/Planning Day",
+            "Quarter Break for students"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lps-2027-2028-graduation",
+      "label": "LPS 2028 Graduation Planning",
+      "position": "afterCalendarExport",
+      "content": "The calendar reserves May 19–21 for comprehensive high-school graduation at Pinnacle Bank Arena. Yankee Hill, Independence Academy and Bryan Community Focus Program dates are still marked TBA, so families should wait for the applicable program announcement before planning around a specific ceremony date."
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Do all LPS students start on August 10?",
+      "a": "Kindergarten, grade 6 and grade 9 start Tuesday, August 10, 2027. Grades 1–5, 7–8 and 10–12 start Wednesday, August 11."
+    },
+    {
+      "q": "How many student days are on the LPS 2027–28 calendar?",
+      "a": "The official Version 2.3 calendar lists 175 student days: 42 in Quarter 1, 45 in Quarter 2, 46 in Quarter 3 and 42 in Quarter 4."
+    },
+    {
+      "q": "Why do October 13 and January 3 have more than one calendar meaning?",
+      "a": "Students are out on both dates, but LPS also identifies the staff purpose. October 13 is the final day of Quarter Break and a district professional learning/planning day; January 3 is the final day of Semester Break and a compensatory day."
+    },
+    {
+      "q": "When are LPS high school graduations in 2028?",
+      "a": "The comprehensive high-school ceremonies at Pinnacle Bank Arena are scheduled for May 19–21, 2028. Program graduation dates remain TBA on the current PDF."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "Do all LPS students start on August 10?",
+    "How many student days are on the LPS 2027–28 calendar?",
+    "Why do October 13 and January 3 have more than one calendar meaning?",
+    "When are LPS high school graduations in 2028?"
+  ],
+  "compactDownloadModule": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "unifiedDownloadTitle": "LPS 2027–28 Calendar Downloads",
+  "unifiedDownloadDescription": "Open Student Calendar Version 2.3 or download the selected districtwide dates as a one-time ICS file.",
+  "icsHeading": "Add LPS 2027–28 Dates to Your Calendar",
+  "icsDescription": "Download a one-time file with the two opening dates, districtwide no-school periods, breaks and last student day. Staff-purpose entries nested inside a break are not duplicated.",
+  "icsButtonLabel": "Download LPS 2027–28 ICS",
+  "icsButtonSupportText": "One-time import. The official PDF says the calendar is subject to revision.",
+  "pdfHeading": "Official LPS 2027–28 Student Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Version 2.3 is the source for the 175 student days, quarter totals, no-school categories and graduation planning dates on this page.",
+  "sourceReviewSummary": "We checked Student Calendar Version 2.3 and its legend against the March 24, 2026 Board approval summary.",
+  "sourcesTitle": "Sources and Review Notes",
+  "sourceReviewDetailsTitle": "How this LPS calendar was verified",
+  "sourceReviewDetails": [
+    "We reviewed the complete Version 2.3 Student Calendar and its legend.",
+    "We checked the printed quarter totals and no-school labels.",
+    "We cross-checked the major dates against the March 24 Board approval summary."
+  ],
+  "sourceMaintainerText": "Denis Dou using official Lincoln Public Schools sources.",
+  "sourceNextReviewText": "We'll review this page if LPS replaces Version 2.3, fills the TBA graduation dates or announces a schedule change.",
+  "sources": [
+    {
+      "label": "Lincoln Public Schools calendars",
+      "url": "https://www.lps.org/page/calendars"
+    },
+    {
+      "label": "LPS 2027–28 Student Calendar Version 2.3",
+      "url": "https://drive.google.com/file/d/1r5UjTY5ROljnnShdZr6DHRdwM3-Rq1TV/view"
+    },
+    {
+      "label": "Lincoln Board of Education March 24, 2026 calendar approval",
+      "url": "https://www.lps.org/article/2942628"
+    }
+  ],
+  "events": [
+    {
+      "date": "2027-08-10",
+      "name": "First Day for Kindergarten, Grade 6 and Grade 9",
+      "type": "school_start",
+      "description": "Transition-focused opening day for kindergarten, sixth-grade and ninth-grade students only."
+    },
+    {
+      "date": "2027-08-11",
+      "name": "First Day for Grades 1–5, 7–8 and 10–12",
+      "type": "school_start",
+      "description": "Students in the remaining K–12 grades begin."
+    },
+    {
+      "date": "2027-09-06",
+      "endDate": "2027-09-07",
+      "name": "Labor Day No-School Period",
+      "type": "holiday",
+      "badgeLabel": "Schools Not in Session",
+      "description": "Sept. 7 is a Building Professional Learning/Planning Day."
+    },
+    {
+      "date": "2027-09-07",
+      "name": "Building Professional Learning / Planning Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Schools Not in Session",
+      "hideFromAllDates": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-10-08",
+      "name": "Quarter 1 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-10-11",
+      "endDate": "2027-10-13",
+      "name": "Quarter Break",
+      "type": "break_start",
+      "description": "Oct. 13 is a District Professional Learning/Planning Day."
+    },
+    {
+      "date": "2027-10-13",
+      "name": "District Professional Learning / Planning Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Schools Not in Session",
+      "hideFromAllDates": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-10-14",
+      "name": "Quarter 2 Begins",
+      "type": "quarter_start"
+    },
+    {
+      "date": "2027-11-24",
+      "endDate": "2027-11-29",
+      "name": "Thanksgiving Break",
+      "type": "break_start",
+      "description": "Nov. 29 is a Building Professional Learning/Planning Day."
+    },
+    {
+      "date": "2027-11-29",
+      "name": "Building Professional Learning / Planning Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Schools Not in Session",
+      "hideFromAllDates": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-12-21",
+      "name": "Quarter 2 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-12-22",
+      "endDate": "2028-01-03",
+      "name": "Semester Break",
+      "type": "break_start",
+      "description": "Jan. 3 is a Compensatory Day."
+    },
+    {
+      "date": "2028-01-03",
+      "name": "Compensatory Day",
+      "type": "no_school",
+      "badgeLabel": "Schools Not in Session",
+      "hideFromAllDates": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-01-04",
+      "name": "Quarter 3 Begins",
+      "type": "quarter_start"
+    },
+    {
+      "date": "2028-01-17",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday",
+      "badgeLabel": "Schools Not in Session"
+    },
+    {
+      "date": "2028-02-21",
+      "endDate": "2028-02-22",
+      "name": "Presidents Day No-School Period",
+      "type": "holiday",
+      "badgeLabel": "Schools Not in Session",
+      "description": "Feb. 22 is a District Professional Learning/Planning Day."
+    },
+    {
+      "date": "2028-02-22",
+      "name": "District Professional Learning / Planning Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Schools Not in Session",
+      "hideFromAllDates": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2028-03-10",
+      "name": "Quarter 3 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-03-20",
+      "name": "Quarter 4 Begins",
+      "type": "quarter_start"
+    },
+    {
+      "date": "2028-03-27",
+      "name": "Quarter Break / Building Professional Learning & Planning Day",
+      "type": "no_school",
+      "badgeLabel": "Schools Not in Session",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2028-04-28",
+      "name": "Arbor Day Break",
+      "type": "holiday",
+      "badgeLabel": "Schools Not in Session"
+    },
+    {
+      "date": "2028-05-18",
+      "name": "Last Day for Students · Quarter 4 Ends",
+      "displayName": "Last Day for Students · Quarter 4 Ends",
+      "type": "school_end"
+    },
+    {
+      "date": "2028-05-19",
+      "endDate": "2028-05-21",
+      "name": "Comprehensive High School Graduation Weekend",
+      "type": "graduation",
+      "badgeLabel": "Pinnacle Bank Arena",
+      "hideFromCalendarExport": true
+    }
+  ]
+}

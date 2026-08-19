@@ -5,161 +5,347 @@
   "lastDay": "2027-06-11",
   "sourceUrl": "https://www.mvusd.net/engage/calendars/schoolcalendars",
   "sourcePdfUrl": "https://drive.google.com/file/d/18FtRWziOjZeRtuEq6ufozzIg7ZQzch9R/view",
-  "lastVerifiedAt": "2026-07-22",
+  "lastVerifiedAt": "2026-08-19",
   "datePublished": "2026-07-22",
-  "dateModified": "2026-07-22",
+  "dateModified": "2026-08-19",
   "calendarType": "traditional",
   "totalSchoolDays": 180,
-  "yearNumbersMode": "compact",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Moreno Valley Unified School District Calendar 2026–27",
+  "hideInstructionalDaysSummary": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideFaqSchema": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "yearNumbers"
+  ],
+  "hiddenCustomSectionIds": [
+    "moreno-valley-unified-calendar-planning-notes"
+  ],
+  "otherCalendarsPosition": "beforeKeyDates",
+  "alternateCalendarsTitle": "Which MVUSD Calendar Do You Need?",
+  "alternateCalendarsDescription": "This page follows the 2026–27 calendar for grades TK–6 and TK–5 at Butterfield Language Academy. Choose a different official calendar below if your child is in preschool, Head Start, grades 6–8, or grades 9–12.",
+  "alternateCalendarsButtonLabel": "Open Official PDF",
   "alternateCalendars": [
+    {
+      "type": "tk6_butterfield",
+      "label": "Grades TK–6 / TK–5 Butterfield Language Academy",
+      "description": "The calendar summarized on this page.",
+      "group": "Calendar summarized here",
+      "pdfUrl": "https://drive.google.com/file/d/18FtRWziOjZeRtuEq6ufozzIg7ZQzch9R/view"
+    },
     {
       "type": "preschool",
       "label": "2026-2027 State Preschool",
+      "description": "Use for students enrolled in the State Preschool program.",
+      "group": "Preschool and Head Start",
       "pdfUrl": "https://drive.google.com/file/d/1w9qZZaaPcb2VukGWH1CXERMLMl2Ih2gX/view"
     },
     {
-      "type": "preschool",
+      "type": "sdc_preschool",
       "label": "2026-2027 SDC Preschool",
+      "description": "Use for students enrolled in SDC Preschool.",
+      "group": "Preschool and Head Start",
       "pdfUrl": "https://drive.google.com/file/d/1T6uBBfoL1hdJHJ4MHCJYGGahUMgWqoWi/view"
     },
     {
-      "type": "head_start",
+      "type": "head_start_double_session",
       "label": "2026-2027 Head Start Double Session",
+      "description": "Use for the Head Start double-session schedule.",
+      "group": "Preschool and Head Start",
       "pdfUrl": "https://drive.google.com/file/d/1vx7F-On2bYgLQFG80RNp0RpFSxqTM7CH/view"
     },
     {
-      "type": "head_start",
+      "type": "head_start_full_day",
       "label": "2026-2027 Head Start Pre-K (Full-Day Duration/Non-Duration)",
+      "description": "Use for the full-day Head Start Pre-K schedule.",
+      "group": "Preschool and Head Start",
       "pdfUrl": "https://drive.google.com/file/d/1EBInCyMGozyku_s70mOmczXa2StYXObu/view"
     },
     {
       "type": "middle_school",
       "label": "2026-2027 Grades 6-8 (and Butterfield 6-8)",
+      "description": "Use for grades 6–8, including Butterfield grades 6–8.",
+      "group": "Secondary grades",
       "pdfUrl": "https://drive.google.com/file/d/1UMkQUxA3RXsEmZmDyZhPGWnnXLoC9ATu/view"
     },
     {
       "type": "high_school",
       "label": "2026-2027 Grades 9-12",
+      "description": "Use for grades 9–12.",
+      "group": "Secondary grades",
       "pdfUrl": "https://drive.google.com/file/d/1uNpqbnSeIvuWThZQmM1v4NrMlOJiWGmz/view"
+    },
+    {
+      "type": "summer_programs",
+      "label": "2027 Summer School and Extended School Year schedules",
+      "description": "Use MVUSD’s official calendar page for Summer School and ESY dates.",
+      "group": "Summer programs",
+      "pdfUrl": "https://www.mvusd.net/engage/calendars/schoolcalendars",
+      "buttonLabel": "View Official Schedules"
     }
   ],
-  "seoTitle": "MVUSD Calendar 2026-2027: Holidays, Breaks & PDF",
-  "seoDescription": "MVUSD Calendar 2026-2027 with first day of school, holidays, Winter Recess, Spring Recess, trimester dates, PDF download, and Google Calendar ICS file.",
-  "calendarNotes": "Moreno Valley Unified lists 180 student days for the 2026-2027 Traditional Year - Trimester Calendar for Elementary School Grades TK-6 and TK-5 Butterfield Language Academy. Students return on August 12, 2026. Thanksgiving Recess runs November 23-27, Winter Recess begins December 21 with students returning January 11, and Spring Recess runs March 22-April 2. The end of the third trimester is June 4, 2027, and the last day of instruction is June 11, 2027, with a minimum day for students and certificated staff.",
-  "heroSummary": "Moreno Valley Unified School District, also known as MVUSD, begins the 2026-2027 school year on Wednesday, August 12, 2026. The final day of instruction is Friday, June 11, 2027.",
+  "seoTitle": "Moreno Valley Unified School District Calendar 2026–27",
+  "seoDescription": "See Moreno Valley Unified’s 2026–27 TK–6/TK–5 Butterfield calendar: first and last days, recesses, minimum days, official PDF, and ICS.",
+  "calendarNotes": "This page summarizes MVUSD's 2026–27 calendar for grades TK–6 and TK–5 at Butterfield Language Academy. MVUSD publishes separate calendars for preschool, Head Start, grades 6–8, and grades 9–12.",
+  "heroSummary": "The first day for students on Moreno Valley Unified’s 2026–27 TK–6/TK–5 Butterfield calendar is Wednesday, August 12, 2026, and the last day of instruction is Friday, June 11, 2027. MVUSD publishes separate calendars for preschool, Head Start, grades 6–8, and grades 9–12; use the links below if one of those calendars applies to your student.",
+  "heroSourceLine": "Dates follow MVUSD’s official grades TK–6/TK–5 Butterfield calendar",
+  "verificationBadgeText": "Checked against MVUSD’s official TK–6/TK–5 Butterfield calendar",
+  "hideHeroVerificationProcess": true,
+  "sourceCalendarName": "Moreno Valley Unified School District Grades TK–6/TK–5 Butterfield Language Academy Calendar 2026–2027",
+  "schemaDatasetName": "Moreno Valley Unified School District Grades TK–6/TK–5 Butterfield Language Academy Calendar 2026–2027 Dataset",
+  "schemaDatasetDescription": "Reviewed dates from MVUSD’s 2026–27 calendar for grades TK–6 and TK–5 at Butterfield Language Academy, with an ICS distribution and links to the official source calendar.",
+  "schemaCalendarDownloadName": "Moreno Valley Unified School District Grades TK–6/TK–5 Butterfield Calendar 2026–27 ICS File",
+  "schemaCalendarDownloadDescription": "ICS file generated from the grades TK–6/TK–5 Butterfield dates reviewed for this page.",
+  "keyDatesSummaryTitle": "MVUSD TK–6/TK–5 Butterfield 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First day, major recesses, and last day for the TK–6/TK–5 Butterfield calendar",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Students",
+      "date": "2026-08-12",
+      "type": "school_start",
+      "schemaDescription": "First day for students on MVUSD’s grades TK–6/TK–5 Butterfield calendar."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Recess",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "schemaDescription": "Thanksgiving Recess on MVUSD’s grades TK–6/TK–5 Butterfield calendar."
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Recess",
+      "date": "2026-12-21",
+      "endDate": "2027-01-08",
+      "type": "break_start",
+      "schemaDescription": "Winter Recess on MVUSD’s grades TK–6/TK–5 Butterfield calendar."
+    },
+    {
+      "label": "Return",
+      "name": "Students Return After Winter Recess",
+      "date": "2027-01-11",
+      "type": "academic",
+      "schemaDescription": "Students on MVUSD’s grades TK–6/TK–5 Butterfield calendar return after Winter Recess."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Recess",
+      "date": "2027-03-22",
+      "endDate": "2027-04-02",
+      "type": "break_start",
+      "schemaDescription": "Spring Recess on MVUSD’s grades TK–6/TK–5 Butterfield calendar."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of Instruction — Minimum Day",
+      "date": "2027-06-11",
+      "type": "school_end",
+      "schemaDescription": "Last day of instruction and a minimum day on MVUSD’s grades TK–6/TK–5 Butterfield calendar."
+    }
+  ],
+  "allDatesTitle": "Major Student Calendar Dates — 2026–27",
+  "allDatesCoverageNote": "These dates follow MVUSD’s grades TK–6/TK–5 Butterfield calendar. Check the calendar selector above for other grade levels and programs, and confirm school-specific dismissal times with the school.",
+  "allDatesCoveredBreakDatesNote": "Holidays that fall within a listed recess are shown for reference and do not represent additional days off beyond that recess.",
+  "dateLegendItems": [
+    { "label": "Holiday", "dot": "bg-teal-400" },
+    { "label": "Academic", "dot": "bg-slate-400" },
+    { "label": "Early Release", "dot": "bg-orange-400" },
+    { "label": "Break", "dot": "bg-purple-400" }
+  ],
+  "breaksTitle": "Major School Breaks",
+  "unifiedDownloadTitle": "MVUSD TK–6/TK–5 Butterfield Calendar Downloads",
+  "unifiedDownloadDescription": "Open the official grades TK–6/TK–5 Butterfield calendar PDF or add the dates reviewed for this page to a personal calendar app.",
+  "icsHeading": "Add These Dates to Your Calendar",
+  "icsDescription": "Download the dates as an ICS file for Google Calendar, Apple Calendar, or Outlook. This is a one-time import and will not automatically update if MVUSD revises its calendar.",
+  "icsSourceNote": "Generated from the dates reviewed for this page.",
+  "icsButtonSupportText": "",
+  "hideIcsButtonSupportText": true,
+  "hideIcsImportDisclaimer": true,
+  "hideCompatibleCalendars": true,
+  "hideSocialShareButtons": true,
+  "hideShareCalendarHeading": true,
+  "pdfHeading": "Official MVUSD Grades TK–6/TK–5 Butterfield Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Open the official one-page calendar for the grade-level track summarized on this page. Use MVUSD’s calendar page to check for revisions or choose another grade or program calendar.",
+  "pdfButtonLabel": "Open Official Calendar PDF",
+  "yearComparisonTitle": "What’s New for 2026–27",
+  "hideYearComparisonSubtitle": true,
+  "whatsNew": {
+    "content": [
+      "The first day moves from August 13 in 2025–26 to August 12 in 2026–27, and the last day moves from June 12 to June 11.",
+      "The three trimester-ending minimum days move to October 30, March 5 and June 4; each falls one calendar day earlier than the corresponding 2025–26 date.",
+      "Thanksgiving, Winter and Spring recesses keep the same weekday pattern but begin one calendar date earlier than in 2025–26."
+    ]
+  },
+  "comparisonBeforeFaq": true,
+  "comparisonDistrictSlugs": [
+    "riverside-unified-school-district-calendar",
+    "san-bernardino-city-unified-school-district-calendar",
+    "pomona-unified-school-district-calendar"
+  ],
+  "comparisonTitle": "MVUSD 2026–27 Calendar Compared With Nearby Districts",
+  "comparisonSummary": "MVUSD and Pomona both start August 12. Pomona ends May 28, two weeks before MVUSD’s June 11 last day; Riverside and San Bernardino use different opening and ending dates.",
+  "comparisonCustomRows": [
+    {
+      "key": "firstDay",
+      "label": "First Day",
+      "values": {
+        "moreno-valley-unified-school-district-calendar": "Aug 12, 2026",
+        "riverside-unified-school-district-calendar": "Aug 10, 2026",
+        "san-bernardino-city-unified-school-district-calendar": "Aug 3, 2026",
+        "pomona-unified-school-district-calendar": "Aug 12, 2026"
+      }
+    },
+    {
+      "key": "lastDay",
+      "label": "Last Student Day",
+      "values": {
+        "moreno-valley-unified-school-district-calendar": "Jun 11, 2027",
+        "riverside-unified-school-district-calendar": "May 26–27, 2027, by grade",
+        "san-bernardino-city-unified-school-district-calendar": "Jun 3, 2027",
+        "pomona-unified-school-district-calendar": "May 28, 2027"
+      }
+    },
+    {
+      "key": "thanksgiving",
+      "label": "Thanksgiving Recess",
+      "values": {
+        "moreno-valley-unified-school-district-calendar": "Nov 23–27, 2026",
+        "riverside-unified-school-district-calendar": "Nov 23–27, 2026",
+        "san-bernardino-city-unified-school-district-calendar": "Nov 23–27, 2026",
+        "pomona-unified-school-district-calendar": "Nov 23–27, 2026"
+      }
+    },
+    {
+      "key": "winter",
+      "label": "Winter Recess",
+      "values": {
+        "moreno-valley-unified-school-district-calendar": "Dec 21, 2026–Jan 8, 2027",
+        "riverside-unified-school-district-calendar": "Dec 21, 2026–Jan 1, 2027",
+        "san-bernardino-city-unified-school-district-calendar": "Dec 21, 2026–Jan 8, 2027",
+        "pomona-unified-school-district-calendar": "Dec 21, 2026–Jan 1, 2027"
+      }
+    },
+    {
+      "key": "spring",
+      "label": "Spring Recess",
+      "values": {
+        "moreno-valley-unified-school-district-calendar": "Mar 22–Apr 2, 2027",
+        "riverside-unified-school-district-calendar": "Mar 29–Apr 2, 2027",
+        "san-bernardino-city-unified-school-district-calendar": "Mar 22–Apr 2, 2027",
+        "pomona-unified-school-district-calendar": "Mar 29–Apr 2, 2027"
+      }
+    }
+  ],
+  "comparisonFooterText": "Dates follow each district’s reviewed 2026–27 calendar. Riverside’s last student day varies by grade, from May 26 to May 27, 2027.",
+  "hideComparisonNotes": true,
+  "hideComparisonInsights": true,
+  "hideRelatedDistrictDescriptions": true,
+  "yearSwitcherPosition": "afterSources",
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Choose Calendar", "href": "#other-calendars" },
+    { "label": "Key Dates", "href": "#key-dates" },
+    { "label": "Full Dates", "href": "#all-dates" },
+    { "label": "Breaks", "href": "#breaks" },
+    { "label": "Downloads", "href": "#add-to-calendar" },
+    { "label": "What’s New", "href": "#year-comparison" },
+    { "label": "Family Notes", "href": "#what-mvusd-families-should-know" },
+    { "label": "Comparison", "href": "#comparison" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Sources", "href": "#sources" }
+  ],
   "calendarFaqs": [
     {
+      "q": "Which Moreno Valley Unified calendar does this page cover?",
+      "a": "This page covers MVUSD’s 2026–27 calendar for grades TK–6 and TK–5 at Butterfield Language Academy. Use the calendar selector near the top of the page for preschool, Head Start, grades 6–8, or grades 9–12."
+    },
+    {
       "q": "When does MVUSD start school in 2026?",
-      "a": "Moreno Valley Unified students on the TK-6 traditional calendar return on Wednesday, August 12, 2026."
+      "a": "Students on the grades TK–6/TK–5 Butterfield calendar return Wednesday, August 12, 2026. Other grades and programs use separate official calendars."
     },
     {
       "q": "When is MVUSD Winter Recess in 2026-2027?",
-      "a": "Winter Recess begins Monday, December 21, 2026. Students return Monday, January 11, 2027."
+      "a": "On the calendar summarized here, Winter Recess runs Monday, December 21, 2026 through Friday, January 8, 2027. Students return Monday, January 11."
     },
     {
       "q": "When is MVUSD Spring Recess in 2027?",
-      "a": "Spring Recess runs Monday, March 22 through Friday, April 2, 2027."
+      "a": "On the calendar summarized here, Spring Recess runs Monday, March 22 through Friday, April 2, 2027. Students return Monday, April 5."
     },
     {
       "q": "When is the last day of instruction for MVUSD in 2027?",
-      "a": "The last day of instruction is Friday, June 11, 2027, and the calendar lists it as a minimum day."
+      "a": "The grades TK–6/TK–5 Butterfield calendar ends Friday, June 11, 2027. It is a minimum day."
     },
     {
-      "q": "Does MVUSD publish alternate calendars for 2026-2027?",
-      "a": "Yes. MVUSD publishes separate 2026-2027 calendars for State Preschool, SDC Preschool, Head Start, grades 6-8, and grades 9-12."
+      "q": "Does MVUSD publish separate calendars for middle and high school?",
+      "a": "Yes. MVUSD publishes separate 2026–27 calendars for grades 6–8, including Butterfield grades 6–8, and for grades 9–12."
     }
+  ],
+  "faqDisplayQuestions": [
+    "Which Moreno Valley Unified calendar does this page cover?",
+    "When does MVUSD start school in 2026?",
+    "When is MVUSD Winter Recess in 2026-2027?",
+    "When is MVUSD Spring Recess in 2027?",
+    "When is the last day of instruction for MVUSD in 2027?",
+    "Does MVUSD publish separate calendars for middle and high school?"
   ],
   "customSections": [
     {
-      "id": "mvusd-calendar-highlights-2026-2027",
-      "label": "MVUSD Calendar Highlights 2026-2027",
-      "position": "afterVerification",
-      "content": "Quick overview for the MVUSD 2026-2027 Traditional Year - Trimester Calendar for TK-6 and TK-5 Butterfield Language Academy.",
+      "id": "what-mvusd-families-should-know",
+      "label": "What MVUSD Families Should Know",
+      "position": "afterYearDiff",
+      "content": "MVUSD publishes separate calendars by grade level and program. Confirm the correct calendar before using a date for childcare, transportation, or travel.",
       "table": {
-        "columns": ["Calendar item", "Date or detail"],
+        "columns": ["Date or topic", "What to check"],
         "rows": [
-          ["First day of school", "August 12, 2026"],
-          ["Last day of instruction", "June 11, 2027"],
-          ["Student days", "180"],
-          ["Thanksgiving Recess", "November 23-27, 2026"],
-          ["Winter Recess", "December 21, 2026-January 8, 2027; students return January 11, 2027"],
-          ["Spring Recess", "March 22-April 2, 2027"],
-          ["Calendar structure", "Traditional year with trimester dates and minimum days"]
+          ["Minimum days", "Oct. 30, Dec. 18, March 5, June 4 and June 11; ask the school for its dismissal time."],
+          ["Parent conferences", "Nov. 5–6; confirm the student schedule and conference time with the school."],
+          ["Summer School and ESY", "Use the Summer programs entry in the calendar selector above to open MVUSD’s official 2027 schedules."],
+          ["Other grades and programs", "Use the official preschool, Head Start, grades 6–8, or grades 9–12 calendar linked above."]
         ]
       }
-    },
-    {
-      "id": "planning-around-the-mvusd-calendar",
-      "label": "Planning Around the MVUSD Calendar",
-      "position": "afterFaq",
-      "content": "Families often use the MVUSD calendar to plan childcare during Winter Recess, family travel during Spring Recess, vacation days around minimum days, summer program schedules, and parent conference arrangements. Minimum days and trimester endings are especially important because they can affect dismissal times even when school is still in session.\n\nFor Moreno Valley and Riverside County families, the calendar can also help coordinate shared childcare, after-school coverage, and travel plans with nearby Inland Empire districts that may not use the same recess weeks or trimester schedule.\n\nBecause Moreno Valley Unified publishes separate calendars for preschool, Head Start, grades 6-8, and grades 9-12, families should confirm the correct calendar before making travel, childcare, or transportation plans."
-    },
-    {
-      "id": "mvusd-calendar-download-options",
-      "label": "MVUSD Calendar Download Options",
-      "position": "afterKeyDates",
-      "content": "MVUSD families can use the official PDF when they need a printable calendar and the calendar file when they want reviewed dates in a personal calendar app.",
-      "table": {
-        "columns": ["Option", "Best for", "What to know"],
-        "rows": [
-          ["PDF Calendar", "Printing, saving, and checking the official district layout", "Use the MVUSD PDF as the source document for the TK-6 traditional calendar."],
-          ["Google Calendar / ICS File", "Adding reviewed dates to Google Calendar, Apple Calendar, Outlook, or another calendar app", "The file is a one-time import and not a live district sync."],
-          ["Alternate Calendar PDFs", "Preschool, Head Start, grades 6-8, grades 9-12, and program-specific schedules", "Use the official alternate calendar links when the TK-6 traditional calendar does not apply."]
-        ]
-      }
-    },
-    {
-      "id": "related-mvusd-calendar-topics",
-      "label": "Related MVUSD Calendar Topics",
-      "position": "afterFaq",
-      "content": "These MVUSD calendar topics help families move from basic date lookup to school-year planning, especially when minimum days, trimester endings, alternate program calendars, or downloadable files affect household schedules.",
-      "groups": [
-        {
-          "label": "Planning topics covered on this page",
-          "items": [
-            "Trimester dates and end-of-trimester minimum days",
-            "Minimum day schedules and early dismissal planning",
-            "Alternate program calendars for preschool, Head Start, middle school, and high school",
-            "Parent conference dates and calendar-specific planning windows",
-            "Calendar PDF downloads and Google Calendar / ICS imports"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "frequently-updated-mvusd-dates",
-      "label": "Frequently Updated MVUSD Dates",
-      "position": "beforeSources",
-      "content": "Some MVUSD calendar details may change after publication, including emergency closures, weather-related cancellations, board-approved revisions, school-specific events, and campus schedule announcements. MySchoolDates summarizes the published district calendar, but families should use Moreno Valley Unified as the source of record before making time-sensitive plans."
     }
   ],
-  "yearNumbers": [
+  "sourcesTitle": "Sources & Review Notes",
+  "sourceReviewSummary": "Reviewed August 19, 2026, against MVUSD’s official school-calendar page and grades TK–6/TK–5 Butterfield calendar PDF.",
+  "sourceReviewDetailsTitle": "How we checked this calendar",
+  "sourceReviewDetails": [
+    "Checked the opening and ending dates, recesses, holidays, parent conference days, trimester endings and minimum-day labels against the official grades TK–6/TK–5 Butterfield calendar.",
+    "Checked MVUSD’s calendar page for the separate State Preschool, SDC Preschool, Head Start, grades 6–8 and grades 9–12 calendar links.",
+    "School-specific dismissal times, emergency changes and campus events should be confirmed with MVUSD or the student’s school."
+  ],
+  "sourceMaintainerLabel": "Reviewed by",
+  "sourceMaintainerText": "Denis Dou using official Moreno Valley Unified School District sources.",
+  "hideSourceNextReview": true,
+  "sources": [
     {
-      "label": "First Day",
-      "value": "Aug 12",
-      "detail": "Students return on August 12, 2026."
+      "label": "MVUSD Academic Year Calendars",
+      "url": "https://www.mvusd.net/engage/calendars/schoolcalendars"
     },
     {
-      "label": "School Days",
-      "value": "180",
-      "detail": "The official TK-6 traditional calendar lists 180 student days."
-    },
-    {
-      "label": "Spring Recess",
-      "value": "Mar 22-Apr 2",
-      "detail": "Spring Recess runs March 22-April 2, 2027."
+      "label": "Official MVUSD 2026–27 Grades TK–6/TK–5 Butterfield calendar PDF",
+      "url": "https://drive.google.com/file/d/18FtRWziOjZeRtuEq6ufozzIg7ZQzch9R/view"
     }
   ],
   "events": [
-    { "date": "2026-07-03", "name": "Independence Day Observed", "type": "holiday" },
-    { "date": "2026-08-06", "name": "New Teacher Orientation", "type": "teacher_workday" },
-    { "date": "2026-08-07", "name": "New Teacher Orientation", "type": "teacher_workday" },
-    { "date": "2026-08-10", "name": "Teacher Prep Day", "type": "teacher_workday" },
-    { "date": "2026-08-11", "name": "Teacher Prep Day", "type": "teacher_workday" },
+    { "date": "2026-07-03", "name": "Independence Day Observed", "type": "holiday", "hideFromCalendarExport": true },
+    { "date": "2026-08-06", "name": "New Teacher Orientation", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2026-08-07", "name": "New Teacher Orientation", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2026-08-10", "name": "Teacher Prep Day", "type": "teacher_workday", "hideFromCalendarExport": true },
+    { "date": "2026-08-11", "name": "Teacher Prep Day", "type": "teacher_workday", "hideFromCalendarExport": true },
     { "date": "2026-08-12", "name": "Students Return", "type": "school_start" },
     { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
-    { "date": "2026-10-30", "name": "End of First Trimester - Minimum Day", "type": "academic" },
-    { "date": "2026-10-30", "name": "Minimum Day - Students Only", "type": "early_release" },
+    { "date": "2026-10-30", "name": "End of First Trimester — Minimum Day", "type": "academic", "badgeLabel": "Trimester End · Minimum Day" },
     { "date": "2026-11-05", "name": "Parent Conference Day", "type": "academic" },
     { "date": "2026-11-06", "name": "Parent Conference Day", "type": "academic" },
     { "date": "2026-11-11", "name": "Veterans Day", "type": "holiday" },
@@ -179,17 +365,14 @@
     { "date": "2027-01-18", "name": "Martin Luther King Day", "type": "holiday" },
     { "date": "2027-02-12", "name": "Lincoln's Day", "type": "holiday" },
     { "date": "2027-02-15", "name": "President's Day", "type": "holiday" },
-    { "date": "2027-03-05", "name": "End of Second Trimester - Minimum Day", "type": "academic" },
-    { "date": "2027-03-05", "name": "Minimum Day - Students Only", "type": "early_release" },
+    { "date": "2027-03-05", "name": "End of Second Trimester — Minimum Day", "type": "academic", "badgeLabel": "Trimester End · Minimum Day" },
     { "date": "2027-03-22", "name": "Spring Recess Begins", "type": "break_start" },
     { "date": "2027-04-01", "name": "Farmworkers Day Observed", "type": "holiday" },
     { "date": "2027-04-02", "name": "Spring Recess Ends", "type": "break_end" },
     { "date": "2027-04-05", "name": "Students Return", "type": "academic" },
     { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2027-06-04", "name": "End of Third Trimester - Minimum Day", "type": "academic" },
-    { "date": "2027-06-04", "name": "Minimum Day - Students Only", "type": "early_release" },
-    { "date": "2027-06-11", "name": "Last Day of Instruction - Minimum Day", "type": "school_end" },
-    { "date": "2027-06-11", "name": "Minimum Workday - All Certificated", "type": "teacher_workday" },
-    { "date": "2027-06-18", "name": "Juneteenth/Emancipation Day Observed", "type": "holiday" }
+    { "date": "2027-06-04", "name": "End of Third Trimester — Minimum Day", "type": "academic", "badgeLabel": "Trimester End · Minimum Day" },
+    { "date": "2027-06-11", "name": "Last Day of Instruction — Minimum Day", "type": "school_end", "description": "The official calendar also lists a minimum workday for all certificated staff." },
+    { "date": "2027-06-18", "name": "Juneteenth/Emancipation Day Observed", "type": "holiday", "hideFromCalendarExport": true }
   ]
 }

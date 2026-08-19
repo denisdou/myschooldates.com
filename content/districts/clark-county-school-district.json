@@ -33,7 +33,7 @@
   "metro": "Las Vegas",
   "currentSchoolYear": "2026-2027",
   "calendarType": "traditional",
-  "allDatesMode": "keyDates",
+  "allDatesMode": "all",
   "searchAliases": [
     "CCSD",
     "CCSD calendar",
@@ -43,195 +43,25 @@
     "Las Vegas school calendar",
     "CCSD school calendar"
   ],
-  "districtFact": "Clark County School District publishes student school calendar PDFs with first and last days, staff development days, elementary parent-teacher conference days, Nevada Day, Thanksgiving, winter break, spring break, grading-period endings, contingency days, and semester totals.",
-  "about": [
-    {
-      "title": "About Clark County School District",
-      "content": "Clark County School District, also known as CCSD, is Nevada's largest public school district and serves families in Las Vegas and communities across Clark County. The district student calendar helps families track the first day of school, staff development days, elementary parent-teacher conference days, holidays, winter break, spring break, contingency days, grading-period endings, and the last day of school. Students may need to confirm additional schedules when they attend year-round schools, magnet programs, career and technical academies, specialized programs, or schools with campus-specific events."
-    },
-    {
-      "title": "How to Use This CCSD Calendar",
-      "content": "Use this page for districtwide student calendar planning. Families should still confirm school-specific bell schedules, athletics, graduation events, testing, magnet program dates, and emergency schedule changes through CCSD and their assigned school."
-    }
+  "districtFact": "CCSD publishes a traditional student calendar and may publish additional calendars or program schedules. Families should confirm the calendar assigned to their school.",
+  "hiddenSections": [
+    "keyDates",
+    "keyDatesSummary",
+    "quickFacts",
+    "todayStatus",
+    "yearNumbers",
+    "about",
+    "districtProfile",
+    "livingHere",
+    "comparison",
+    "nationalTrends",
+    "planningTips",
+    "relatedDistricts",
+    "downloadCta"
   ],
-  "planningTips": {
-    "title": "Planning Tips for CCSD Families",
-    "content": [
-      "Track staff development days separately because they are no-school days for students.",
-      "Elementary parent-teacher conference days may apply only to elementary students, so families with students at multiple levels should check each campus.",
-      "Contingency days can become school days if needed, so avoid treating them as guaranteed travel days until CCSD confirms the final calendar.",
-      "CCSD school years often end before Memorial Day, which affects summer camp, childcare, and travel planning in the Las Vegas area."
-    ]
-  },
-  "customSections": [
-    {
-      "id": "ccsd-calendar-2026-2027-overview",
-      "label": "CCSD Calendar 2026-2027 Overview",
-      "position": "afterKeyDates",
-      "content": "The CCSD 2026-2027 traditional student calendar provides the main districtwide dates families use for school-year planning, including the first day of school, grading-period endings, holidays, staff development days, elementary parent-teacher conference dates, winter break, spring break, contingency days, and the last day of school. This page summarizes the official Clark County School District calendar for families in Las Vegas and Clark County who need a quick reference, printable PDF access, and an ICS calendar file for Google Calendar, Apple Calendar, or Outlook. Families with students in year-round schools, magnet programs, career and technical academies, athletics, or specialized programs should use this district calendar as a starting point and then confirm any school-specific dates with their campus. This page is a reference summary, while CCSD's official PDF remains the final source for changes."
-    },
-    {
-      "id": "ccsd-printable-calendar-tips",
-      "label": "CCSD Printable Calendar Tips",
-      "position": "afterCalendarExport",
-      "content": "The printable CCSD calendar PDF is useful for refrigerators, family planners, shared custody schedules, childcare planning, and school-year organization. Many families print the calendar before the school year begins and mark vacations, appointments, extracurricular activities, and school-specific events. Download the official PDF for the board-approved calendar layout, then use the ICS calendar file if you want key dates to appear directly in Google Calendar, Apple Calendar, or Outlook. Before relying on a printed copy later in the year, check the official CCSD calendars page for revisions or contingency-day updates."
-    },
-    {
-      "id": "family-planning-guide-for-ccsd-2026-2027",
-      "label": "Family Planning Guide for CCSD 2026-2027",
-      "position": "afterBreaks",
-      "content": "Families planning around the CCSD calendar should treat winter break as the longest predictable school closure and spring break as the shorter March travel window. Winter Break begins at the end of the school day on December 18, 2026, with no school from December 21 through January 1 and classes resuming January 5 after a staff development day. Spring Break begins at the end of the school day on March 12, 2027, with no school March 15-19 and classes resuming March 22. Contingency days should not be treated as confirmed holidays when booking travel, camps, or childcare because CCSD may use those dates if instructional time needs to be recovered. For summer planning, May 20, 2027 is the scheduled last day, but families should still watch CCSD announcements for contingency-day changes before making nonrefundable plans.",
-      "groups": [
-        {
-          "label": "Before booking travel",
-          "items": [
-            "Use winter break for the longest predictable closure period.",
-            "Confirm spring break dates before booking Las Vegas-area travel or childcare.",
-            "Avoid relying on contingency days as guaranteed days off."
-          ]
-        },
-        {
-          "label": "Before school starts",
-          "items": [
-            "Add the CCSD calendar to Google Calendar, Apple Calendar, or Outlook.",
-            "Check school-specific events, magnet program deadlines, and transportation updates.",
-            "Review staff development days and elementary conference days separately from district holidays."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "which-ccsd-calendar-applies-to-my-child",
-      "label": "Which CCSD Calendar Applies to My Child?",
-      "position": "afterOtherCalendars",
-      "content": "This page summarizes the CCSD traditional student calendar. Families should verify whether their assigned school follows the traditional calendar or publishes a separate program schedule.",
-      "table": {
-        "columns": ["Calendar Type", "Applies To", "What Families Should Check"],
-        "rows": [
-          ["Traditional Calendar", "Most CCSD schools", "Use the district student calendar for first day, last day, holidays, breaks, staff development days, and contingency days."],
-          ["Year-Round Calendar", "Selected schools or programs", "Confirm the assigned track and school-specific start, break, and end dates directly with the campus."],
-          ["Specialized Programs", "Magnet, career and technical, and other specialized programs", "Check campus announcements for testing, transportation, orientation, and program-specific dates."]
-        ]
-      }
-    },
-    {
-      "id": "ccsd-at-a-glance",
-      "label": "CCSD at a Glance",
-      "position": "afterAbout",
-      "content": "Use these quick entity details to confirm that this page is summarizing the Clark County School District student calendar for Las Vegas and Southern Nevada families.",
-      "table": {
-        "columns": ["Field", "Details"],
-        "rows": [
-          ["Location", "Las Vegas, Nevada"],
-          ["District", "Clark County School District"],
-          ["Calendar Type", "Traditional Student Calendar"],
-          ["Audience", "Students and Families"],
-          ["Official Source", "Clark County School District calendars page"]
-        ]
-      }
-    },
-    {
-      "id": "ccsd-important-dates-explained",
-      "label": "CCSD Important Dates Explained",
-      "position": "afterAbout",
-      "content": "Several CCSD dates need extra context. Nevada Day is listed as a district holiday, while staff development days are no-school days for students but not the same as family holidays. Elementary parent-teacher conference days may apply only to elementary students, so families with children in different grade levels should check each school. Spring Break and Winter Break begin at the end of the school day before the listed no-school range, which matters when arranging Friday afternoon travel, after-school care, or shared custody exchanges."
-    },
-    {
-      "id": "clark-county-school-district-calendar-planning-notes",
-      "label": "Clark County School District Calendar Planning Notes",
-      "position": "afterAbout",
-      "content": "CCSD calendars include several planning details beyond major holidays. Staff development days are student non-attendance days, elementary parent-teacher conference days may affect only elementary students, and contingency days are reserved dates that may be used if the district needs make-up instructional time."
-    },
-    {
-      "id": "related-nevada-school-calendars",
-      "label": "Related Nevada School Calendars",
-      "position": "afterComparison",
-      "content": "For Nevada calendar planning, start with the statewide Nevada school calendars page and then confirm the official CCSD calendar for the school year and program that applies to your child.",
-      "links": [
-        {
-          "label": "Las Vegas School Calendar",
-          "to": "/clark-county-school-district-calendar",
-          "description": "Las Vegas public school calendar planning is covered by Clark County School District, including first day, holidays, breaks, PDF, and ICS download options."
-        },
-        {
-          "label": "Nevada School Calendars",
-          "to": "/nevada",
-          "description": "Browse Nevada school calendar links, common holidays, planning tips, and official-source district pages."
-        },
-        {
-          "label": "Clark County School District Calendar",
-          "to": "/clark-county-school-district-calendar",
-          "description": "Return to the CCSD calendar hub for current and upcoming school-year calendars."
-        }
-      ]
-    }
-  ],
-  "comparisonTitle": "How CCSD Calendar Dates Compare With Other Major Districts",
-  "compareIntro": "Compare the Clark County School District calendar with other large district calendars currently available on MySchoolDates. Dates shown include the first day, last day, and major breaks.",
-  "faqSchemaQuestions": [
-    "Which Clark County School District calendar does this page summarize?",
-    "Does the CCSD calendar apply to all schools?",
-    "Are CCSD contingency days holidays?",
-    "Does CCSD have school on Nevada Day?",
-    "Are CCSD staff development days student attendance days?",
-    "Where should families verify Clark County School District calendar updates?",
-    "When does CCSD start school in 2026?",
-    "When is CCSD Winter Break in 2026-2027?",
-    "When is CCSD Spring Break in 2027?",
-    "When is the last day of school for CCSD in 2027?"
-  ],
-  "districtFaqs": [
-    {
-      "q": "Which Clark County School District calendar does this page summarize?",
-      "a": "This page summarizes the official CCSD school calendar for students for the listed school years."
-    },
-    {
-      "q": "What are CCSD contingency days?",
-      "a": "CCSD lists contingency days as reserved dates that may be used if needed. Families should wait for district confirmation before treating those dates as guaranteed days off."
-    },
-    {
-      "q": "Are CCSD staff development days student attendance days?",
-      "a": "No. The CCSD student calendars list staff development days as no-school days for students."
-    },
-    {
-      "q": "Where should families verify Clark County School District calendar updates?",
-      "a": "Use the official CCSD calendars page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with Clark County School District."
-    },
-    {
-      "q": "Does CCSD have school on Nevada Day?",
-      "a": "No. The reviewed CCSD student calendar lists Nevada Day Observed as a district holiday on October 30, 2026."
-    },
-    {
-      "q": "Are CCSD contingency days holidays?",
-      "a": "Not necessarily. Contingency days are reserved dates that may be used if CCSD needs to recover instructional time, so families should not treat them as guaranteed holidays until the district confirms the final schedule."
-    },
-    {
-      "q": "How many days off do CCSD students get?",
-      "a": "The reviewed CCSD calendar lists major breaks, holidays, staff development days, elementary conference dates, and contingency days. The exact number of student days off can vary by school level and whether contingency days are activated."
-    },
-    {
-      "q": "When can CCSD families plan summer vacation?",
-      "a": "The scheduled last day for 2026-2027 is May 20, 2027, but families should confirm contingency-day updates before making nonrefundable summer plans."
-    },
-    {
-      "q": "Does the CCSD calendar apply to all schools?",
-      "a": "The district student calendar applies to districtwide planning for most students, but year-round schools, specialized programs, magnet programs, athletics, testing, and campus events may use additional school-specific schedules."
-    }
-  ],
-  "relatedDistricts": [
-    {
-      "name": "Los Angeles Unified School District",
-      "slug": "los-angeles-unified-school-district-calendar",
-      "state": "California",
-      "comparisonNote": "Large western district often compared for school-year start, break, and end-date timing."
-    },
-    {
-      "name": "Chicago Public Schools",
-      "slug": "chicago-public-schools-calendar",
-      "state": "Illinois",
-      "comparisonNote": "Large urban district with a separately adopted student calendar."
-    }
-  ],
+  "hideFaqSchema": true,
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
   "sources": [
     {
       "label": "Clark County School District official website",
@@ -240,10 +70,6 @@
     {
       "label": "Clark County School District calendars page",
       "url": "https://www.ccsd.net/calendars"
-    },
-    {
-      "label": "Clark County School District logo",
-      "url": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1767801228/ccsdnet/r08p1uzjqujbmeyg2a7g/WeAreCCSD_DestinationDistrict_OneLine_Vertical_White.png"
     }
   ]
 }

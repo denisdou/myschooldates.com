@@ -10,13 +10,17 @@ type DistrictRecord = {
 }
 
 type CalendarEvent = {
-  date: string
+  date?: string
+  sortDate?: string
+  candidateDates?: string[]
+  displayDate?: string
   name: string
   type: string
   description?: string
   calendarExportDescription?: string
   endDate?: string
   dates?: string[]
+  displayAsRange?: boolean
   preserveOfficialName?: boolean
   exportDatesIndividually?: boolean
   showDuringBreak?: boolean
@@ -102,25 +106,28 @@ function wrapText(value: string, maxLength = 82) {
 
 function getBreaks(events: CalendarEvent[]) {
   return events
-    .filter(event => event.type === 'break_start')
+    .filter(event => Boolean(event.date) && (event.type === 'break' || event.type === 'break_start'))
     .map((start) => {
       const normalizedStart = normalizeCalendarName(start).toLowerCase()
       const end = events.find(event =>
         event.type === 'break_end' &&
-        event.date >= start.date &&
+        Boolean(event.date) && event.date! >= start.date! &&
         normalizeCalendarName(event).toLowerCase() === normalizedStart
       )
+      const explicitEnd = explicitEventEnd(start)
+      if (!explicitEnd && !end?.date) return null
       return {
         name: start.name,
-        start: start.date,
-        end: explicitEventEnd(start) ?? end?.date ?? start.date,
+        start: start.date!,
+        end: explicitEnd ?? end!.date!,
       }
     })
+    .filter((range): range is { name: string; start: string; end: string } => Boolean(range))
 }
 
 function explicitEventEnd(event: CalendarEvent) {
   if (event.endDate) return event.endDate
-  if (event.dates?.length) return [...event.dates].sort().at(-1) ?? event.date
+  if (event.dates?.length) return [...event.dates].sort().at(-1) ?? event.date ?? null
   return null
 }
 
@@ -133,18 +140,20 @@ function normalizeCalendarName(event: CalendarEvent) {
 }
 
 function isRangeEndEvent(event: CalendarEvent, events: CalendarEvent[]) {
+  if (!event.date) return false
   if (event.type !== 'teacher_workday' && event.type !== 'teacher_professional_learning') return false
   if (!/\bends?\b/i.test(event.name)) return false
   const normalizedEnd = normalizeCalendarName(event).toLowerCase()
   return events.some(candidate =>
     candidate.type === event.type &&
-    candidate.date <= event.date &&
+    Boolean(candidate.date) && candidate.date! <= event.date! &&
     /\b(begins?|starts?)\b/i.test(candidate.name) &&
     normalizeCalendarName(candidate).toLowerCase() === normalizedEnd
   )
 }
 
 function rangeEndFor(event: CalendarEvent, events: CalendarEvent[]) {
+  if (!event.date) return ''
   const explicitEnd = explicitEventEnd(event)
   if (explicitEnd) return explicitEnd
 
@@ -152,7 +161,7 @@ function rangeEndFor(event: CalendarEvent, events: CalendarEvent[]) {
     const normalizedStart = normalizeCalendarName(event).toLowerCase()
     const end = events.find(candidate =>
       candidate.type === event.type &&
-      candidate.date >= event.date &&
+      Boolean(candidate.date) && candidate.date! >= event.date! &&
       /\bends?\b/i.test(candidate.name) &&
       normalizeCalendarName(candidate).toLowerCase() === normalizedStart
     )
@@ -163,7 +172,8 @@ function rangeEndFor(event: CalendarEvent, events: CalendarEvent[]) {
 }
 
 function isCoveredByBreak(event: CalendarEvent, events: CalendarEvent[]) {
-  if (event.type === 'break_start' || event.type === 'break_end' || event.type === 'school_resume') return false
+  if (!event.date) return false
+  if (event.type === 'break' || event.type === 'break_start' || event.type === 'break_end' || event.type === 'school_resume') return false
   return getBreaks(events).some(breakRange =>
     event.date >= breakRange.start &&
     event.date <= breakRange.end
@@ -294,6 +304,7 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord, track?: { 
   const eventsForExport = calendar.events
     .filter(event =>
       !event.hideFromCalendarExport &&
+      Boolean(event.date) &&
       (!track || !event.calendarExportTracks?.length || event.calendarExportTracks.includes(track.id)) &&
       event.type !== 'break_end' &&
       !isRangeEndEvent(event, calendar.events) &&
@@ -304,18 +315,18 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord, track?: { 
       : [event])
 
   for (const event of eventsForExport) {
-    const breakRange = event.type === 'break_start'
+    const breakRange = event.type === 'break_start' || event.type === 'break'
       ? breaks.find(item => item.name === event.name && item.start === event.date)
       : null
     const eventEndDate = breakRange?.end ?? rangeEndFor(event, calendar.events)
     const nextDay = parseDate(eventEndDate)
     nextDay.setDate(nextDay.getDate() + 1)
 
-    const start = compactDate(event.date)
+    const start = compactDate(event.date!)
     const end = compactDate(dateKey(nextDay))
     const uidSlug = district.slug.replace(/[^a-z0-9-]/gi, '-').toLowerCase()
     const uidEvent = uidPart(event.name)
-    const summaryName = event.type === 'teacher_workday' || event.type === 'teacher_professional_learning' || event.type === 'break_start'
+    const summaryName = event.type === 'teacher_workday' || event.type === 'teacher_professional_learning' || event.type === 'staff_development' || (event.type === 'break_start' && event.displayAsRange !== false)
       ? normalizeCalendarName(event)
       : event.name
     const eventStatus = event.status && ['TENTATIVE', 'CONFIRMED', 'CANCELLED'].includes(event.status)
@@ -348,7 +359,10 @@ function buildPdf(district: DistrictRecord, calendar: CalendarRecord) {
     calendar.lastDay ? `Last day of school: ${calendar.lastDay}` : null,
     calendar.totalSchoolDays ? `Instructional days: ${calendar.totalSchoolDays}` : null,
   ].filter(Boolean) as string[]
-  const eventLines = calendar.events.map(event => `${event.date}  ${event.name}${event.description ? ` - ${event.description}` : ''}`)
+  const eventLines = calendar.events.map((event) => {
+    const eventDate = event.displayDate ?? event.date ?? event.candidateDates?.join(' or ') ?? 'Date unconfirmed'
+    return `${eventDate}  ${event.name}${event.description ? ` - ${event.description}` : ''}`
+  })
   const lines = [
     title,
     subtitle,

@@ -1,0 +1,567 @@
+{
+  "institutionId": "edmond-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Edmond Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-13",
+  "firstDayScope": "First day of school for PK–12 students on the EPS instructional calendar.",
+  "lastDay": "2027-05-19",
+  "lastDayScope": "Last scheduled student day shown on the revised EPS annual calendar; weather-related instructional days may be added afterward.",
+  "temporalCoverageStart": "2026-08-06",
+  "temporalCoverageEnd": "2027-05-19",
+  "sourceUrl": "https://www.edmondschools.net/page/calendar",
+  "sourceDocumentPage": "https://www.edmondschools.net/page/calendar",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3212/Eps/3dafcf35-df97-48e0-8548-68b96f0edd70/2026-27-Calendar---Revision-Approved-8.3.26-EPS.pdf?disposition=inline",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3212/Eps/3dafcf35-df97-48e0-8548-68b96f0edd70/2026-27-Calendar---Revision-Approved-8.3.26-EPS.pdf?disposition=inline",
+  "sourceCheckedAt": "2026-08-18",
+  "sourceUpdatedAt": "2026-08-03",
+  "sourceChecksumSha256": "351bd6e533d880966abf71dfb0d8477d9f56f3e5b71668b3a0a8ca099351e7b4",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The revised EPS calendar is inconsistent. Page 1 starts the third quarter on January 4 and totals 172 instructional days; page 2 starts it on January 5 and totals 171. The January grid does not mark January 4 as a closure. Until EPS clarifies the discrepancy, this page treats the return date and instructional-day total as unconfirmed and leaves the return date out of the ICS. A smaller office-status discrepancy appears at Thanksgiving: page 2 says offices are open November 24–25, while page 1 appears to mark November 25 as closed.",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.edmondschools.net/page/calendar",
+    "linkText": "2026-27 EPS Calendar",
+    "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3212/Eps/3dafcf35-df97-48e0-8548-68b96f0edd70/2026-27-Calendar---Revision-Approved-8.3.26-EPS.pdf?disposition=inline",
+    "expectedChecksumSha256": "351bd6e533d880966abf71dfb0d8477d9f56f3e5b71668b3a0a8ca099351e7b4"
+  },
+  "lastVerifiedAt": "2026-08-18",
+  "dateCreated": "2026-08-18",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-19",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_source_conflict",
+    "official_schedule_change",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "EPS calendar approved November 3, 2025; revised August 3, 2026",
+  "sourceCalendarName": "Edmond Public Schools 2026–27 Instructional Calendar",
+  "schemaCalendarName": "Edmond Public Schools Calendar 2026–27",
+  "schemaDatasetName": "Edmond Public Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Edmond Public Schools dates for 2026–27, including the PK–12 opening, breaks, staff-development closures, grade-level conference evenings, graduation, the scheduled last day, weather make-up warning and the disclosed January return-date conflict inside the official PDF.",
+  "schemaSpatialCoverage": "Edmond and the northern Oklahoma City metropolitan area, Oklahoma",
+  "schemaCalendarDownloadName": "Edmond Public Schools 2026–27 ICS calendar",
+  "schemaCalendarDownloadDescription": "One-time ICS import of confirmed districtwide dates from the reviewed EPS annual calendar; the unconfirmed January return date is excluded.",
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "eps-instructional-calendar",
+  "allDatesMode": "all",
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroReviewedByField": false,
+  "hideHeroVerificationIcs": true,
+  "hideBreakDurationBadges": true,
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "yearNumbers",
+    "about",
+    "breaks",
+    "districtProfile",
+    "livingHere",
+    "comparison",
+    "whatsDifferent",
+    "nationalTrends",
+    "planningTips",
+    "faq",
+    "relatedDistricts",
+    "downloadCta"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "January Note",
+      "id": "edmond-2026-2027-source-conflict"
+    },
+    {
+      "label": "Calendar Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Breaks",
+      "id": "edmond-2026-2027-breaks"
+    },
+    {
+      "label": "Conferences",
+      "id": "edmond-2026-2027-conferences"
+    },
+    {
+      "label": "Calendar Guide",
+      "id": "edmond-2026-2027-calendar-guide"
+    },
+    {
+      "label": "Weather",
+      "id": "edmond-2026-2027-weather"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Edmond Public Schools Calendar 2026–27 | Dates & PDF",
+  "seoDescription": "Edmond Public Schools starts Aug. 13, 2026 and is scheduled to end May 19, 2027. See breaks, conferences, graduation, the PDF, and why Jan. 4/5 is unconfirmed.",
+  "heroSummary": "Edmond Public Schools starts the 2026–27 school year on Thursday, Aug. 13, 2026. The scheduled last day is Wednesday, May 19, 2027. Thanksgiving Break is Nov. 23–27, Winter Break is Dec. 21–Jan. 1, and Spring Break is March 15–19. The revised EPS calendar lists two different January return dates; see the January note below before planning around Jan. 4–5.",
+  "heroSourceLine": "Edmond, Oklahoma · EPS calendar revised Aug. 3, 2026",
+  "verificationBadgeText": "Reviewed against all three pages of the revised EPS calendar",
+  "calendarNotes": "August 6 is the secondary schedule release, August 11 is elementary Meet the Teacher, and August 13 is the first attendance day for PK–12 students. September 28 and February 16 are staff-development days with no school. October conference evenings vary by school level. Graduation is May 14 at 7:30 p.m.; May 19 is the scheduled last day, but EPS may add instructional days after weather closures.",
+  "keyDatesHeading": "Edmond Public Schools 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "Edmond Public Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First day of school, major breaks, graduation and the scheduled last day",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School for PK–12",
+      "date": "2026-08-13",
+      "type": "school_start",
+      "schemaDescription": "The first day of school for PK–12 students on the EPS instructional calendar."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Graduation",
+      "name": "High School Graduation",
+      "date": "2027-05-14",
+      "type": "graduation",
+      "schemaDescription": "The EPS instructional calendar lists high school graduation at 7:30 p.m."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Scheduled Day of School",
+      "date": "2027-05-19",
+      "type": "school_end",
+      "schemaDescription": "The last scheduled student day; weather-related instructional days may be added afterward."
+    }
+  ],
+  "allDatesTitle": "Edmond Public Schools 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This family-focused table includes back-to-school dates, districtwide closures, grade-level conference evenings and graduation. The Jan. 4/5 return date remains unconfirmed; see the January note above.",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3212/Eps/3dafcf35-df97-48e0-8548-68b96f0edd70/2026-27-Calendar---Revision-Approved-8.3.26-EPS.pdf?disposition=inline",
+  "allDatesSourceLabel": "Official revised EPS 2026–27 Instructional Calendar PDF",
+  "dateLegendItems": [
+    {
+      "label": "Student start / end",
+      "dot": "bg-orange-500"
+    },
+    {
+      "label": "Holiday / break",
+      "dot": "bg-amber-400"
+    },
+    {
+      "label": "Staff development / no school",
+      "dot": "bg-violet-700"
+    },
+    {
+      "label": "Conference / student information",
+      "dot": "bg-blue-400"
+    },
+    {
+      "label": "Disputed source date",
+      "dot": "bg-slate-400"
+    }
+  ],
+  "dateLegendLabelOverrides": {
+    "Academic Date": "Student / Family Date",
+    "Teacher Workday": "Staff Development / Staff Date",
+    "No School": "No School / Offices Vary"
+  },
+  "customSections": [
+    {
+      "id": "edmond-2026-2027-source-conflict",
+      "label": "Why the January Return Date Needs Confirmation",
+      "content": "The revised EPS calendar is inconsistent. Page 1 starts the third quarter on Jan. 4 and totals 172 instructional days; page 2 starts it on Jan. 5 and totals 171. The January grid does not mark Jan. 4 as a closure. Until EPS clarifies the discrepancy, we treat the return date as unconfirmed and leave it out of the ICS.",
+      "position": "afterKeyDates",
+      "table": {
+        "caption": "Internal differences in the EPS 2026–27 PDF",
+        "columns": [
+          "PDF location",
+          "Third-quarter start",
+          "Quarter length",
+          "Total days"
+        ],
+        "rows": [
+          [
+            "Page 1 graphic",
+            "January 4, 2027",
+            "47 days",
+            "172 days"
+          ],
+          [
+            "Page 2 text-only version",
+            "January 5, 2027",
+            "46 days",
+            "171 days"
+          ]
+        ],
+        "footnote": "Confirm with EPS before arranging childcare or travel around Jan. 4–5."
+      }
+    },
+    {
+      "id": "edmond-2026-2027-breaks",
+      "label": "Edmond 2026–27 School Breaks",
+      "content": "These are the main districtwide breaks and no-school windows on the revised EPS calendar.",
+      "position": "afterCalendarExport",
+      "table": {
+        "caption": "Major EPS breaks and no-school windows",
+        "columns": [
+          "Break",
+          "Dates",
+          "Family note"
+        ],
+        "rows": [
+          [
+            "Fall Break / Conferences / Staff Development",
+            "Oct. 15–19, 2026",
+            "No school for students"
+          ],
+          [
+            "Thanksgiving Break",
+            "Nov. 23–27, 2026",
+            "Office status varies within the week"
+          ],
+          [
+            "Winter Break",
+            "Dec. 21, 2026–Jan. 1, 2027",
+            "Jan. 4/5 return date unconfirmed; see the January note"
+          ],
+          [
+            "Spring Break",
+            "March 15–19, 2027",
+            "Students return March 22"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "edmond-2026-2027-conferences",
+      "label": "Edmond Parent-Teacher Conference Schedule",
+      "content": "The October conference evenings vary by school level. These are appointment windows, not additional districtwide no-school days. Check with your school for appointment details.",
+      "position": "afterCalendarExport",
+      "table": {
+        "caption": "EPS 2026–27 parent-teacher conference evenings",
+        "columns": [
+          "School level",
+          "Dates",
+          "Time"
+        ],
+        "rows": [
+          [
+            "Elementary",
+            "October 8 and 13",
+            "4:30–8:00 p.m."
+          ],
+          [
+            "Middle school",
+            "October 6 and 12",
+            "3:30–7:00 p.m."
+          ],
+          [
+            "High school",
+            "October 8 and 12",
+            "4:30–8:00 p.m."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "edmond-2026-2027-calendar-guide",
+      "label": "EPS District Calendar vs. Your School Calendar",
+      "content": "Use the EPS source that matches what you're trying to confirm. The annual PDF covers districtwide dates; your student's actual schedule and campus events come from the school.",
+      "position": "afterCalendarExport",
+      "table": {
+        "caption": "Where to check each type of EPS calendar information",
+        "columns": [
+          "What you need",
+          "Best EPS source"
+        ],
+        "rows": [
+          [
+            "First and last day, breaks, no-school days and graduation",
+            "Annual instructional calendar PDF"
+          ],
+          [
+            "Arrival and dismissal time",
+            "Current School Start/End Times page"
+          ],
+          [
+            "Athletics, performances, open houses and campus events",
+            "Your school's website or messages"
+          ],
+          [
+            "Weather closures or delayed dismissal",
+            "EPS alerts and Weather & School Closure Procedures"
+          ],
+          [
+            "Assigned elementary, middle or high school",
+            "EPS Boundaries page and enrollment confirmation"
+          ]
+        ]
+      },
+      "links": [
+        {
+          "label": "EPS School Start/End Times",
+          "to": "https://www.edmondschools.net/page/school-start-end-times"
+        },
+        {
+          "label": "EPS Boundaries",
+          "to": "https://www.edmondschools.net/page/boundaries"
+        }
+      ]
+    },
+    {
+      "id": "edmond-2026-2027-weather",
+      "label": "How Weather Can Change the Edmond Calendar",
+      "content": "EPS may switch to remote learning or announce a non-instruction day after checking roads, temperatures and precipitation. Lost instructional time can extend school beyond May 19. The district generally avoids early dismissal, and a tornado warning at dismissal can hold students and buses until the all-clear.",
+      "position": "afterCalendarExport",
+      "links": [
+        {
+          "label": "EPS Weather & School Closure Procedures",
+          "to": "https://www.edmondschools.net/page/weather-procedures"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-06",
+      "name": "Secondary Virtual Schedule Release",
+      "type": "academic",
+      "description": "Secondary schedules are released online.",
+      "badgeLabel": "Secondary"
+    },
+    {
+      "date": "2026-08-11",
+      "name": "Elementary Meet the Teacher",
+      "type": "academic",
+      "description": "Elementary family event before the first student day.",
+      "badgeLabel": "Elementary"
+    },
+    {
+      "date": "2026-08-13",
+      "name": "First Day of School for PK–12",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — No School / Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-28",
+      "name": "Staff Development — No School",
+      "type": "teacher_workday",
+      "description": "Students do not attend; the PDF says offices are open."
+    },
+    {
+      "date": "2026-10-06",
+      "dates": [
+        "2026-10-06",
+        "2026-10-12"
+      ],
+      "displayDate": "Oct. 6 and 12, 2026",
+      "name": "Middle School Parent-Teacher Conferences",
+      "type": "academic",
+      "description": "Conference hours: 3:30–7:00 p.m.",
+      "exportDatesIndividually": true,
+      "badgeLabel": "Middle School"
+    },
+    {
+      "date": "2026-10-08",
+      "dates": [
+        "2026-10-08",
+        "2026-10-13"
+      ],
+      "displayDate": "Oct. 8 and 13, 2026",
+      "name": "Elementary Parent-Teacher Conferences",
+      "type": "academic",
+      "description": "Conference hours: 4:30–8:00 p.m.",
+      "exportDatesIndividually": true,
+      "badgeLabel": "Elementary"
+    },
+    {
+      "date": "2026-10-08",
+      "dates": [
+        "2026-10-08",
+        "2026-10-12"
+      ],
+      "displayDate": "Oct. 8 and 12, 2026",
+      "name": "High School Parent-Teacher Conferences",
+      "type": "academic",
+      "description": "Conference hours: 4:30–8:00 p.m.",
+      "exportDatesIndividually": true,
+      "badgeLabel": "High School"
+    },
+    {
+      "date": "2026-10-15",
+      "endDate": "2026-10-19",
+      "name": "Fall Break / Conferences / Staff Development",
+      "type": "break_start",
+      "description": "Students do not attend. The PDF groups Fall Break, conferences and staff development in this window and says offices are open."
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start",
+      "description": "Students do not attend. The text-only page says offices are open November 24–25, but the page 1 color key appears inconsistent for November 25."
+    },
+    {
+      "date": "2026-11-30",
+      "name": "Students Return After Thanksgiving Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "sortDate": "2027-01-04",
+      "candidateDates": [
+        "2027-01-04",
+        "2027-01-05"
+      ],
+      "dateStatus": "disputed",
+      "displayDate": "Jan. 4 or 5, 2027",
+      "name": "Student Return Date — Not Confirmed",
+      "type": "school_resume",
+      "description": "The revised calendar gives two dates; see the January note above.",
+      "schemaDescription": "A disputed return date shown as January 5 on page 2 and January 4 on page 1 of the official PDF.",
+      "badgeLabel": "Confirm with EPS",
+      "hideFromCalendarExport": true,
+      "excludeFromDateSchema": true
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents' Day — No School",
+      "type": "holiday",
+      "description": "The PDF groups February 15–16 as Presidents' Day and staff development and says offices are open."
+    },
+    {
+      "date": "2027-02-16",
+      "name": "Staff Development — No School",
+      "type": "teacher_workday",
+      "description": "Students do not attend; the PDF says offices are open."
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-22",
+      "name": "Students Return / Fourth Quarter Begins",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-04-16",
+      "name": "April Day — No School",
+      "type": "no_school",
+      "description": "EPS uses the name April Day; the PDF says offices are open.",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-05-14",
+      "name": "High School Graduation",
+      "type": "graduation",
+      "description": "7:30 p.m."
+    },
+    {
+      "date": "2027-05-19",
+      "name": "Last Scheduled Day of School",
+      "type": "school_end",
+      "description": "Instructional days lost to inclement weather may be added to the end of the school year."
+    }
+  ],
+  "unifiedDownloadTitle": "Edmond Public Schools 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Download the revised EPS PDF or import a one-time ICS file. The unresolved January return date is not included in the ICS.",
+  "compactDownloadModule": true,
+  "pdfHeading": "Official Edmond Public Schools 2026–27 PDF",
+  "icsHeading": "Add Edmond School Dates to Your Calendar",
+  "icsDescription": "Import the confirmed districtwide dates on this page. The file does not include school-specific events, future weather-related changes or automatic updates.",
+  "icsButtonLabel": "Download Edmond 2026–27 ICS",
+  "icsButtonSupportText": "One-time import based on the revised EPS calendar.",
+  "sourceReviewSummary": "Reviewed all three pages of the revised EPS 2026–27 PDF against the district's calendar page.",
+  "sourceReviewDetails": [
+    "We extracted the embedded text and visually checked the full calendar graphic, the text-only instructional summary and the staff-information page.",
+    "We checked conference dates and times, office-status notes, graduation time and the district's weather make-up warning.",
+    "Where the two pages disagree, we show the discrepancy instead of choosing a date or day count for EPS."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "sourceNextReviewText": "Recheck when EPS corrects the January return date or instructional-day total, revises the annual PDF, or announces weather make-up dates.",
+  "sources": [
+    {
+      "label": "EPS printable and text-only calendar page",
+      "url": "https://www.edmondschools.net/page/calendar"
+    },
+    {
+      "label": "Official revised EPS 2026–27 Instructional Calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3212/Eps/3dafcf35-df97-48e0-8548-68b96f0edd70/2026-27-Calendar---Revision-Approved-8.3.26-EPS.pdf?disposition=inline"
+    },
+    {
+      "label": "EPS Weather & School Closure Procedures",
+      "url": "https://www.edmondschools.net/page/weather-procedures"
+    },
+    {
+      "label": "EPS School Start/End Times",
+      "url": "https://www.edmondschools.net/page/school-start-end-times"
+    },
+    {
+      "label": "Edmond Public Schools official homepage",
+      "url": "https://www.edmondschools.net/"
+    }
+  ]
+}

@@ -6,6 +6,7 @@ const props = defineProps<{
   description?: string
   daysLabel?: string
   nextDateLabel?: string
+  reportsLabel?: string
   footerNote?: string
   periods?: {
     label: string
@@ -42,7 +43,7 @@ const showElementaryReportDate = computed(() => props.periods?.some(period => pe
             <th scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">End</th>
             <th v-if="showNextStudentDate" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">{{ nextDateLabel || 'Next Student Day' }}</th>
             <th v-if="showStudentDays" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">{{ daysLabel || 'Student Days' }}</th>
-            <th v-if="showReportsIssued" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">Reports Issued</th>
+            <th v-if="showReportsIssued" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">{{ reportsLabel || 'Reports Issued' }}</th>
             <th v-if="showSecondaryReportDate" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">Middle &amp; High ParentVUE</th>
             <th v-if="showElementaryReportDate" scope="col" class="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wide">Elementary K–5 ParentVUE</th>
           </tr>

@@ -2,7 +2,10 @@
 const { formatDate, eventTypeLabel, eventTypeColor, isCoveredByBreak } = useDistrictPage()
 
 type CalendarEvent = {
-  date: string
+  date?: string
+  sortDate?: string
+  candidateDates?: string[]
+  dateStatus?: 'confirmed' | 'disputed'
   endDate?: string
   name: string
   displayName?: string
@@ -67,7 +70,11 @@ function isPossibleMakeupDay(event: CalendarEvent) {
   return lower.includes('possible') && (lower.includes('make-up') || lower.includes('makeup'))
 }
 
-const hiddenInKeyDates = new Set(['break_end', 'teacher_workday'])
+function eventSortDate(event: CalendarEvent) {
+  return event.sortDate ?? event.date ?? event.candidateDates?.[0] ?? ''
+}
+
+const hiddenInKeyDates = new Set(['break_end', 'teacher_workday', 'staff_development'])
 const includedDatesInKeyDates = computed(() => new Set(props.includedDatesInKeyDates ?? []))
 const sourceLinks = computed(() => (props.sourceLinks ?? []).filter(Boolean))
 const coverageNotePosition = computed(() => props.coverageNotePosition ?? 'bottom')
@@ -80,11 +87,11 @@ const footerCoverageNote = computed(() => {
 })
 const hasSingleSourceLink = computed(() => sourceLinks.value.length === 1)
 function isHolidayOutsideStudentYear(event: CalendarEvent) {
-  return Boolean(props.firstDay && props.lastDay) &&
-    event.type === 'holiday' &&
-    (event.date < props.firstDay || event.date > props.lastDay)
+  if (!event.date || !props.firstDay || !props.lastDay) return false
+  return event.type === 'holiday' && (event.date < props.firstDay || event.date > props.lastDay)
 }
 function isRangeEndEvent(event: CalendarEvent) {
+  if (!event.date) return false
   if (event.type !== 'teacher_workday' && event.type !== 'teacher_professional_learning') return false
   if (!/\bends?\b/i.test(event.name)) return false
   const normalizedEnd = normalizeName(event).toLowerCase()
@@ -97,9 +104,9 @@ function isRangeEndEvent(event: CalendarEvent) {
 }
 const visibleEvents = computed(() => props.events.filter(e =>
   !e.hideFromAllDates && (props.mode === 'keyDates'
-    ? (!hiddenInKeyDates.has(e.type) || includedDatesInKeyDates.value.has(e.date)) &&
+    ? (!hiddenInKeyDates.has(e.type) || Boolean(e.date && includedDatesInKeyDates.value.has(e.date))) &&
       !isRangeEndEvent(e) &&
-      !isHolidayOutsideStudentYear(e) &&
+      (!isHolidayOutsideStudentYear(e) || Boolean(e.date && includedDatesInKeyDates.value.has(e.date))) &&
       (e.showDuringBreak || e.type === 'holiday' || !isCoveredByBreak(e, props.events))
     : e.type !== 'break_end' && !isRangeEndEvent(e) && (e.showDuringBreak || !isCoveredByBreak(e, props.events)))
 ))
@@ -118,7 +125,7 @@ const coveredBreakDateNames = computed(() => {
 })
 
 const sortedEvents = computed(() =>
-  [...props.events].sort((a, b) => a.date.localeCompare(b.date))
+  [...props.events].sort((a, b) => eventSortDate(a).localeCompare(eventSortDate(b)))
 )
 
 function normalizeName(event: CalendarEvent) {
@@ -136,7 +143,7 @@ function normalizeName(event: CalendarEvent) {
       .trim()
   }
 
-  if (event.type === 'teacher_workday' || event.type === 'teacher_professional_learning') {
+  if (event.type === 'teacher_workday' || event.type === 'teacher_professional_learning' || event.type === 'staff_development') {
     return name
       .replace(/\b(Begins|Begin|Starts|Start|Ends|End)\b(?!-)/gi, '')
       .replace(/\s+/g, ' ')
@@ -189,6 +196,9 @@ function displayLabelText(event: DisplayEvent) {
   else if (event.type === 'schools_closed') label = 'Schools Closed'
   else if (event.type === 'schools_offices_closed') label = 'Schools & Offices Closed'
   else if (event.type === 'teacher_professional_learning') label = 'Professional Development'
+  else if (event.type === 'staff_development') label = 'No School for Students'
+  else if (event.type === 'contingency') label = 'Contingency'
+  else if (event.type === 'conference') label = 'Elementary Only'
   else if (event.type === 'digital_learning') label = 'Online Learning'
   if (
     !label &&
@@ -282,8 +292,9 @@ function shouldShowDescription(event: DisplayEvent) {
 }
 
 function rangeEndFor(event: CalendarEvent) {
+  const positionDate = eventSortDate(event)
   if (event.displayAsRange === false) {
-    return event.date
+    return positionDate
   }
 
   if (event.endDate) {
@@ -294,44 +305,46 @@ function rangeEndFor(event: CalendarEvent) {
     const normalizedStart = normalizeName(event).toLowerCase()
     const end = sortedEvents.value.find(e =>
       e.type === 'break_end' &&
-      e.date >= event.date &&
+      Boolean(e.date) && e.date! >= positionDate &&
       normalizeName(e).toLowerCase() === normalizedStart
     )
-    return end?.date ?? event.date
+    return end?.date ?? positionDate
   }
 
   if ((event.type === 'teacher_workday' || event.type === 'teacher_professional_learning') && /\b(begins?|starts?)\b/i.test(event.name)) {
     const normalizedStart = normalizeName(event).toLowerCase()
     const end = sortedEvents.value.find(e =>
       e.type === event.type &&
-      e.date >= event.date &&
+      Boolean(e.date) && e.date! >= positionDate &&
       /\bends?\b/i.test(e.name) &&
       normalizeName(e).toLowerCase() === normalizedStart
     )
-    return end?.date ?? event.date
+    return end?.date ?? positionDate
   }
 
   if (event.type === 'academic' && event.name.toLowerCase().includes('exam')) {
-    const start = parseDate(event.date)
-    const max = parseDate(event.date)
+    const start = parseDate(positionDate)
+    const max = parseDate(positionDate)
     max.setDate(max.getDate() + 10)
     const end = sortedEvents.value.find(e => {
-      if (e.date <= event.date) return false
+      if (!e.date || e.date <= positionDate) return false
       const d = parseDate(e.date)
       return d <= max && ['early_dismissal', 'school_end'].includes(e.type)
     })
-    return end?.date ?? event.date
+    return end?.date ?? positionDate
   }
 
-  return event.date
+  return positionDate
 }
 
 const mergedEvents = computed(() => {
   const merged: DisplayEvent[] = []
-  for (const event of [...visibleEvents.value].sort((a, b) => a.date.localeCompare(b.date))) {
+  for (const event of [...visibleEvents.value].sort((a, b) => eventSortDate(a).localeCompare(eventSortDate(b)))) {
+    const positionDate = eventSortDate(event)
+    if (!positionDate) continue
     const displayEvent: DisplayEvent = {
       ...event,
-      startDate: event.date,
+      startDate: positionDate,
       endDate: rangeEndFor(event),
       displayName: normalizeName(event),
       labelType: displayLabelType(event),

@@ -16,6 +16,7 @@ const props = defineProps<{
   reviewSummary?: string | null
   reviewDetails?: string[] | null
   reviewDetailsTitle?: string | null
+  maintainerLabel?: string | null
   maintainerText?: string | null
   nextReviewText?: string | null
   hideNextReview?: boolean
@@ -47,6 +48,10 @@ const isSourceVersionLink = (src: SourceLink) =>
   Boolean(sourceVersionSourceUrl.value && src.url === sourceVersionSourceUrl.value)
 const sourceVersionLabel = computed(() => props.sourceVersionLabel || 'Calendar version')
 const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.sourceVersion)
+const displayMaintainerLabel = computed(() => {
+  if (props.maintainerLabel) return props.maintainerLabel
+  return /\bofficial\b/i.test(props.maintainerText || '') ? 'Official source' : 'Maintained by'
+})
 </script>
 
 <template>
@@ -110,8 +115,8 @@ const sourceVersionDisplay = computed(() => props.sourceVersionDisplay || props.
         <template v-if="sourcePdfUrl && isArchivedPdfCopy"> · Archived official PDF copy stored by MySchoolDates</template>
       </p>
       <p v-if="verifiedDate">
-        <span class="font-medium text-rds-ink-muted">Maintained by:</span>
-        {{ maintainerText || 'MySchoolDates Calendar Data Team' }} ·
+        <span class="font-medium text-rds-ink-muted">{{ displayMaintainerLabel }}:</span>
+        {{ props.maintainerText || 'MySchoolDates Calendar Data Team' }} ·
         <NuxtLink to="/calendar-verification-methodology" class="rds-link font-medium underline">
           Verification Methodology
         </NuxtLink>

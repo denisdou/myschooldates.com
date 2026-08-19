@@ -1,0 +1,743 @@
+{
+  "institutionId": "oklahoma-city-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Oklahoma City Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-11",
+  "lastDay": "2027-05-20",
+  "temporalCoverageStart": "2026-08-03",
+  "temporalCoverageEnd": "2027-05-21",
+  "reportingPeriodDaysTotal": 169,
+  "reportingPeriodDaysScope": "The total in the English Student Days row; the Spanish row in the same bilingual source shows 168, and the difference is included in the review notes.",
+  "sourceUrl": "https://www.okcps.org/student-and-families/student-tools/student-calendar",
+  "sourceDocumentPage": "https://docs.google.com/spreadsheets/d/1Z1nd_-1aGRQRK0N7l7lU2ScQ_xs2CW5Vj_rZB06uW9s/edit?gid=0#gid=0",
+  "sourceCheckedAt": "2026-08-19",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The bilingual OKCPS calendar has three internal inconsistencies. The English summary lists 169 Student Days, while the Spanish summary lists 168 because its second-quarter figure is 38 instead of 39. The No School table says Winter Break runs through January 5, 2027, while the grid also places the third-quarter opening marker on January 5; January 5 remains a no-school date and January 6 is listed as the return. The Admin Building Closings table labels September 1 as Labor Day, while the grid and No School table mark September 7. Structured dates use the English Student Days row, the full break range and the September 7 holiday.",
+  "schoolHoursSourceConflict": true,
+  "schoolHoursSourceConflictNote": "Willow Brook Elementary's homepage lists 7:50 a.m.–3:00 p.m., while its General Information page lists 8:10 a.m.–3:20 p.m. The school-specific time remains unresolved and is not normalized into the districtwide hours table.",
+  "sourceResourceMonitor": {
+    "type": "web-page",
+    "checkUrl": "https://www.okcps.org/student-and-families/student-tools/student-calendar",
+    "linkText": "2026-2027 Academic Year Calendar",
+    "expectedDocumentUrl": "https://docs.google.com/spreadsheets/d/1Z1nd_-1aGRQRK0N7l7lU2ScQ_xs2CW5Vj_rZB06uW9s/edit?gid=0#gid=0",
+    "expectedText": [
+      "2026-2027 Academic Year Calendar",
+      "Student Calendar"
+    ]
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "web-page",
+      "checkUrl": "https://docs.google.com/spreadsheets/d/1Z1nd_-1aGRQRK0N7l7lU2ScQ_xs2CW5Vj_rZB06uW9s/edit?gid=0#gid=0",
+      "linkText": "2026-2027 OKCPS Student Calendar",
+      "expectedDocumentUrl": "https://docs.google.com/spreadsheets/d/1Z1nd_-1aGRQRK0N7l7lU2ScQ_xs2CW5Vj_rZB06uW9s/edit?gid=0#gid=0",
+      "expectedText": [
+        "Aug 11",
+        "Classes Begin",
+        "May 20",
+        "Last Day of Classes"
+      ]
+    },
+    {
+      "type": "web-page",
+      "checkUrl": "https://willowbrook.okcps.org/",
+      "linkText": "Willow Brook Elementary Homepage School Hours",
+      "expectedDocumentUrl": "https://willowbrook.okcps.org/",
+      "expectedText": [
+        "School Hours",
+        "7:50 a.m. - 3:00 p.m."
+      ]
+    },
+    {
+      "type": "web-page",
+      "checkUrl": "https://willowbrook.okcps.org/our-school/general-information",
+      "linkText": "Willow Brook Elementary General Information School Hours",
+      "expectedDocumentUrl": "https://willowbrook.okcps.org/our-school/general-information",
+      "expectedText": [
+        "School Hours",
+        "8:10 am - 3:20 pm"
+      ]
+    }
+  ],
+  "lastVerifiedAt": "2026-08-19",
+  "dateCreated": "2026-08-18",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-19",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_source_conflict",
+    "official_schedule_change",
+    "start_dismissal_schedule_change",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Live OKCPS Google Sheet reviewed August 19, 2026",
+  "sourceCalendarName": "Oklahoma City Public Schools 2026–27 Student Calendar",
+  "schemaCalendarName": "Oklahoma City Public Schools Calendar 2026–27",
+  "schemaDatasetName": "Oklahoma City Public Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed OKCPS 2026–27 dates from the district's bilingual Google Sheet, including the first and last class days, breaks, parent conferences, professional and work days, the April snow day, quarter markers and disclosed English-Spanish conflicts.",
+  "schemaSpatialCoverage": "Oklahoma City and Oklahoma County, Oklahoma",
+  "schemaCalendarDownloadName": "Oklahoma City Public Schools 2026–27 ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with OKCPS class dates, districtwide student breaks and no-school dates, parent conference dates, the January 6 return based on the published Winter Break range and the April snow day.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-okcps-student-calendar",
+      "type": "CreativeWork",
+      "name": "OKCPS 2026–27 Student Calendar — Google Sheet",
+      "url": "https://docs.google.com/spreadsheets/d/1Z1nd_-1aGRQRK0N7l7lU2ScQ_xs2CW5Vj_rZB06uW9s/edit?gid=0#gid=0"
+    },
+    {
+      "id": "source-okcps-school-hours",
+      "type": "WebPage",
+      "name": "OKCPS 2026–27 School-Day and Recess Update",
+      "url": "https://www.okcps.org/about-okcps/okcps-newsroom/post-details/~board/news-oklahoma-city-public-schools-5049/post/okcps-adjusts-school-day-schedule-to-meet-new-state-recess-requirements"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-okcps-student-calendar"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-okcps-student-calendar",
+    "source-okcps-school-hours"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "okcps-student-calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "none",
+  "itemListMode": "keyDates",
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": false,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideInstructionalDaysSummary": true,
+  "hidePdfDownloadSection": true,
+  "hiddenCustomSectionIds": [
+    "okcps-calendar-map"
+  ],
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "whatsDifferent",
+    "comparison",
+    "nationalTrends",
+    "breaks",
+    "otherCalendars",
+    "relatedDistricts"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Conferences",
+      "id": "okcps-2026-2027-conferences"
+    },
+    {
+      "label": "School Hours",
+      "id": "okcps-2026-2027-school-hours"
+    },
+    {
+      "label": "Calendar Guide",
+      "id": "okcps-2026-2027-calendar-guide"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "OKCPS Calendar 2026–27: Dates, Breaks & No-School Days",
+  "seoDescription": "OKCPS starts Aug. 11, 2026, and ends May 20, 2027. See fall, Thanksgiving, winter and spring breaks, no-school days, bell times and official sources.",
+  "heroSummary": "Oklahoma City Public Schools starts classes Tuesday, August 11, 2026, and the last day of classes is Thursday, May 20, 2027. Fall Break is October 12–16, Thanksgiving Break November 23–27, Winter Break December 21–January 5, and Spring Break March 15–19. One thing to know: the district's bilingual calendar has three internal inconsistencies, which we explain in the calendar notes.",
+  "heroSourceLine": "Based on the official OKCPS 2026–27 live Google Sheet, reviewed August 19, 2026",
+  "hideHeroDownloadLink": true,
+  "verificationBadgeText": "Checked against the current OKCPS student calendar",
+  "heroVerificationSourceText": "Reviewed against the official bilingual Google Sheet and OKCPS calendar page",
+  "heroVerificationComparisonText": "English-Spanish totals, break markers and the Labor Day office-closing label were checked for internal consistency",
+  "calendarNotes": "Classes begin August 11 and end May 20. For student attendance, use the dates in the district's No School column: Fall Break is October 12–16, Thanksgiving Break is November 23–27, Winter Break is December 21–January 5, and Spring Break is March 15–19. Parent conferences are September 22 and 24 and February 8 and 11, but the calendar does not list those four dates as days off. January 4 is a Professional Development / Teacher Work Day during Winter Break. Because the break runs through January 5, we list January 6 as the student return even though the grid places the third-quarter marker on January 5. April 16 appears as both a Snow Day and a Teacher Work Day, with no school for students. The English summary lists 169 Student Days; the Spanish summary lists 168.",
+  "keyDatesHeading": "Key Dates",
+  "keyDatesSummaryTitle": "Key Dates",
+  "keyDatesSummarySubtitle": "First and last class days, major breaks and the return after Winter Break",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "Classes Begin",
+      "date": "2026-08-11",
+      "type": "school_start"
+    },
+    {
+      "label": "Fall",
+      "name": "Fall Break",
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-05",
+      "type": "break_start",
+      "description": "The district lists Winter Break through January 5."
+    },
+    {
+      "label": "Return",
+      "name": "Students Return After Winter Break",
+      "date": "2027-01-06",
+      "type": "school_resume",
+      "description": "Based on the published Winter Break dates.",
+      "schemaDescription": "OKCPS lists Winter Break through January 5; January 6 is the next weekday."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of Classes",
+      "date": "2027-05-20",
+      "type": "school_end"
+    }
+  ],
+  "allDatesTitle": "Full Calendar",
+  "allDatesCoverageNote": "Parent conferences are meeting dates unless the district separately identifies a no-school day. January 6 is listed as the return because Winter Break is printed through January 5.",
+  "allDatesDerivedDateNote": "Based on the surrounding dates; not printed as a separate district event.",
+  "allDatesSourceUrl": "https://docs.google.com/spreadsheets/d/1Z1nd_-1aGRQRK0N7l7lU2ScQ_xs2CW5Vj_rZB06uW9s/edit?gid=0#gid=0",
+  "allDatesSourceLabel": "Official OKCPS 2026–27 Student Calendar — Google Sheet",
+  "dateLegendLabelOverrides": {
+    "Academic Date": "Conference / Quarter Date",
+    "Teacher Workday": "Staff Day — No School",
+    "No School": "No School for Students"
+  },
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "gradingPeriodsTitle": "Student Days by Quarter",
+  "gradingPeriodsDescription": "The English calendar lists 169 Student Days across four quarters.",
+  "gradingPeriodsDaysLabel": "Student Days",
+  "gradingPeriodsFooterNote": "Quarter 3 uses the Jan. 5 calendar marker, but Winter Break still runs through Jan. 5. March 12 is based on the surrounding quarter and break dates rather than a separately printed event.",
+  "gradingPeriods": [
+    {
+      "label": "Quarter 1",
+      "start": "2026-08-11",
+      "end": "2026-10-09",
+      "studentDays": 42
+    },
+    {
+      "label": "Quarter 2",
+      "start": "2026-10-19",
+      "end": "2026-12-18",
+      "studentDays": 39
+    },
+    {
+      "label": "Quarter 3",
+      "start": "2027-01-05",
+      "end": "2027-03-12",
+      "studentDays": 46
+    },
+    {
+      "label": "Quarter 4",
+      "start": "2027-03-23",
+      "end": "2027-05-20",
+      "studentDays": 42
+    }
+  ],
+  "customSections": [
+    {
+      "id": "okcps-2026-2027-calendar-note",
+      "label": "A Note About the District Calendar",
+      "position": "afterKeyDates",
+      "content": "The district calendar has three internal inconsistencies involving Jan. 5, the Student Days total and the Labor Day office-closure date. We follow the published No School dates and explain each issue in the detailed notes."
+    },
+    {
+      "id": "okcps-2026-2027-source-notes",
+      "label": "Three Calendar Details That Need Clarification",
+      "position": "afterAllDates",
+      "content": "The source does not agree with itself in these three places. We show each discrepancy and explain which date or total we use.",
+      "table": {
+        "caption": "Conflicting details in the 2026–27 calendar",
+        "columns": [
+          "Calendar detail",
+          "What the calendar shows",
+          "What families should know"
+        ],
+        "rows": [
+          [
+            "Student Days total",
+            "English: 169; Spanish: 168",
+            "We use 169 from the English summary and note the Spanish total of 168"
+          ],
+          [
+            "January 5",
+            "Winter Break includes Jan. 5; the grid also marks the quarter start",
+            "We treat Jan. 5 as no school and list Jan. 6 as the return, noting that it is not printed as a separate event"
+          ],
+          [
+            "Labor Day office closing",
+            "Office table says Sep. 1; grid and No School table show Sep. 7",
+            "We use Sep. 7 because both the calendar grid and the No School table show Sep. 7; the office-closure summary appears to contain a Sep. 1 typo"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "okcps-2026-2027-conferences",
+      "label": "Parent Conference Dates and Student Attendance",
+      "position": "afterAllDates",
+      "content": "The calendar lists four Parent Conference dates but does not place them in the No School column. Treat them as meeting dates, not automatic days off, and check with your child's school for appointment times.",
+      "table": {
+        "caption": "OKCPS 2026–27 parent conference dates",
+        "columns": [
+          "Dates",
+          "Published label",
+          "What it means for students"
+        ],
+        "rows": [
+          [
+            "Sep. 22 and 24, 2026",
+            "Parent Conferences",
+            "Not separately listed as no school"
+          ],
+          [
+            "Feb. 8 and 11, 2027",
+            "Parent Conferences",
+            "Not separately listed as no school"
+          ],
+          [
+            "Appointment time",
+            "Not published in the annual calendar",
+            "Confirm with the student's school"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "okcps-2026-2027-school-hours",
+      "label": "School Hours for 2026–27",
+      "position": "afterAllDates",
+      "content": "OKCPS changed school-day times to provide at least 40 minutes of supervised, unstructured recess each day for grades K–5 under Oklahoma Senate Bill 1481. The table follows the standard level-based schedule in the district's July 13 announcement. Families should confirm arrival, dismissal and care procedures with their school.",
+      "table": {
+        "caption": "OKCPS 2026–27 published school-day hours",
+        "columns": [
+          "School level",
+          "School day"
+        ],
+        "rows": [
+          [
+            "High schools",
+            "7:35 a.m.–2:45 p.m."
+          ],
+          [
+            "Classen SAS High School at Northeast",
+            "8:10 a.m.–3:20 p.m."
+          ],
+          [
+            "Pre-K centers",
+            "8:00 a.m.–3:10 p.m."
+          ],
+          [
+            "Elementary schools",
+            "8:10 a.m.–3:20 p.m."
+          ],
+          [
+            "Middle schools",
+            "8:50 a.m.–4:00 p.m."
+          ],
+          [
+            "Alternative Education",
+            "No change listed"
+          ]
+        ],
+        "footnote": "Willow Brook note: The school's homepage lists 7:50 a.m.–3:00 p.m., while its General Information page lists 8:10 a.m.–3:20 p.m. Families at Willow Brook should confirm the current schedule directly with the school."
+      }
+    },
+    {
+      "id": "okcps-2026-2027-office-closures",
+      "label": "Student Breaks vs. District Office Closures",
+      "position": "afterAllDates",
+      "content": "For student attendance, use the dates in the district's No School column. The shorter administrative range only shows when district offices close during a student break.",
+      "table": {
+        "caption": "OKCPS 2026–27 student and office schedules",
+        "columns": [
+          "Period",
+          "Students",
+          "Administrative buildings"
+        ],
+        "rows": [
+          [
+            "Labor Day",
+            "Sep. 7, 2026",
+            "Sep. 7 in the grid; the office summary's Sep. 1 label is inconsistent"
+          ],
+          [
+            "Thanksgiving",
+            "Nov. 23–27, 2026",
+            "Nov. 26–27, 2026"
+          ],
+          [
+            "Winter",
+            "Dec. 21, 2026–Jan. 5, 2027",
+            "Dec. 23, 2026–Jan. 1, 2027"
+          ],
+          [
+            "Spring",
+            "Mar. 15–19, 2027",
+            "Mar. 15–19, 2027"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "okcps-2026-2027-calendar-guide",
+      "label": "Which Calendar Should You Use?",
+      "position": "afterGradingPeriodsBeforeCalendarExport",
+      "content": "Use the annual student calendar for districtwide school and no-school dates. For bell times, conference appointments or school-specific events, check the relevant OKCPS page or your child's school.",
+      "table": {
+        "caption": "Best OKCPS source by planning task",
+        "columns": [
+          "Need",
+          "Best source"
+        ],
+        "rows": [
+          [
+            "Classes Begin, breaks, no-school dates and Last Day of Classes",
+            "2026–27 Student Calendar Google Sheet"
+          ],
+          [
+            "Daily arrival and dismissal",
+            "OKCPS 2026–27 school-hours announcement and the student's school"
+          ],
+          [
+            "Parent conference time",
+            "Communication from the student's school"
+          ],
+          [
+            "Weather-related learning plan",
+            "OKCPS Virtual Learning Days and district alerts"
+          ],
+          [
+            "Employee schedule",
+            "OKCPS Work Day Calendars"
+          ]
+        ]
+      }
+    }
+  ],
+  "unifiedDownloadTitle": "Official Calendar and Download Options",
+  "unifiedDownloadDescription": "Open the district's live Google Sheet or import selected student dates once into a personal calendar.",
+  "compactDownloadModule": true,
+  "officialSubscriptionTitle": "Open the District Calendar",
+  "officialSubscriptionDescription": "OKCPS publishes this school year as a view-only Google Sheet rather than a direct PDF on the district calendar page.",
+  "officialSubscriptionUrl": "https://docs.google.com/spreadsheets/d/1Z1nd_-1aGRQRK0N7l7lU2ScQ_xs2CW5Vj_rZB06uW9s/edit?gid=0#gid=0",
+  "officialSubscriptionButtonLabel": "Open OKCPS Google Sheet",
+  "icsHeading": "Add These Dates to Your Calendar",
+  "icsDescription": "Download a one-time file with the first and last class days, districtwide breaks and no-school dates, parent conference dates and the January 6 return based on the published Winter Break dates.",
+  "icsButtonLabel": "Download OKCPS 2026–27 ICS",
+  "icsButtonSupportText": "One-time import. Recheck OKCPS for weather changes, conference times, building events and any correction to the live bilingual sheet.",
+  "calendarFaqs": [
+    {
+      "q": "When does Oklahoma City Public Schools start in 2026–27?",
+      "a": "OKCPS classes begin Tuesday, August 11, 2026. Teacher work and professional-development days run before students begin."
+    },
+    {
+      "q": "When do OKCPS students return after Winter Break in 2027?",
+      "a": "The No School table lists Winter Break through January 5, so January 6 is the first weekday after the published break. We list January 6 as the student return date but note that OKCPS does not print it as a separate event."
+    },
+    {
+      "q": "When are OKCPS parent conferences in 2026–27?",
+      "a": "The calendar lists September 22 and 24, 2026, and February 8 and 11, 2027. Those dates are not separately listed as no-school days. Contact the student's school for the appointment time."
+    },
+    {
+      "q": "How many Student Days are on the OKCPS 2026–27 calendar?",
+      "a": "The English summary lists 169 Student Days: 42, 39, 46 and 42 by quarter. The Spanish summary on the same bilingual sheet lists 168 because its second-quarter figure is 38. For planning, we use the English total and note the discrepancy."
+    },
+    {
+      "q": "Is April 16, 2027 a school day in OKCPS?",
+      "a": "No. The calendar lists April 16 as a Snow Day in the No School column, while the grid marks it as a Teacher Work Day. For students, it remains a no-school date."
+    },
+    {
+      "q": "When is the last day of school for OKCPS in 2027?",
+      "a": "The last day of classes is Thursday, May 20, 2027. Friday, May 21 is a Record Day for staff and is not a student class day."
+    },
+    {
+      "q": "Where is the official OKCPS 2026–27 PDF?",
+      "a": "The district currently links to a view-only Google Sheet rather than a PDF. The official sheet is linked in Download Options."
+    }
+  ],
+  "faqOrderLimit": 7,
+  "faqDisplayQuestions": [
+    "When does Oklahoma City Public Schools start in 2026–27?",
+    "When do OKCPS students return after Winter Break in 2027?",
+    "When are OKCPS parent conferences in 2026–27?",
+    "How many Student Days are on the OKCPS 2026–27 calendar?",
+    "Is April 16, 2027 a school day in OKCPS?",
+    "When is the last day of school for OKCPS in 2027?",
+    "Where is the official OKCPS 2026–27 PDF?"
+  ],
+  "sourceReviewSummary": "Reviewed August 19, 2026 against the OKCPS student calendar and school-hours sources. Where the calendar conflicts, we show the discrepancy and explain which date or total we use.",
+  "sourcesTitle": "Sources",
+  "sourceReviewDetailsTitle": "What was verified",
+  "sourceReviewDetails": [
+    "Classes begin August 11, 2026, and end May 20, 2027; break ranges, conference dates, staff days, the snow day and quarter markers were checked against the district's live Google Sheet.",
+    "The English summary lists 169 Student Days, while the Spanish summary lists 168; both figures remain visible in our notes.",
+    "January 6 and March 12 are based on the surrounding calendar dates rather than separately printed OKCPS events.",
+    "The 2026–27 school hours were checked against the district's July 13, 2026 school-day and recess announcement, Willow Brook's homepage and the school's General Information page. The two Willow Brook pages currently show different schedules.",
+    "An earlier 2026–27 PDF remains discoverable on an OKCPS-hosted URL, but the district's current Student Calendar page links to the live Google Sheet used for this calendar."
+  ],
+  "sourceMaintainerText": "Oklahoma City Public Schools; calendar data reviewed by MySchoolDates against OKCPS publications.",
+  "sourceNextReviewText": "We will review it again if OKCPS changes the live sheet, corrects the bilingual totals, changes the school-day schedule or publishes a calendar revision.",
+  "sources": [
+    {
+      "label": "OKCPS Student Calendar page",
+      "url": "https://www.okcps.org/student-and-families/student-tools/student-calendar"
+    },
+    {
+      "label": "Official OKCPS 2026–27 Student Calendar — Google Sheet",
+      "url": "https://docs.google.com/spreadsheets/d/1Z1nd_-1aGRQRK0N7l7lU2ScQ_xs2CW5Vj_rZB06uW9s/edit?gid=0#gid=0"
+    },
+    {
+      "label": "OKCPS 2026–27 school-day and recess update",
+      "url": "https://www.okcps.org/about-okcps/okcps-newsroom/post-details/~board/news-oklahoma-city-public-schools-5049/post/okcps-adjusts-school-day-schedule-to-meet-new-state-recess-requirements"
+    },
+    {
+      "label": "Willow Brook Elementary homepage school hours",
+      "url": "https://willowbrook.okcps.org/"
+    },
+    {
+      "label": "Willow Brook Elementary General Information",
+      "url": "https://willowbrook.okcps.org/our-school/general-information"
+    },
+    {
+      "label": "OKCPS Virtual Learning Days",
+      "url": "https://www.okcps.org/student-and-families/virtual-learning"
+    },
+    {
+      "label": "OKCPS Work Day Calendars",
+      "url": "https://www.okcps.org/departments/human-resources/work-day-calendars"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-03",
+      "name": "Teacher Work Day",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-04",
+      "endDate": "2026-08-07",
+      "name": "Professional Development",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-10",
+      "name": "Teacher Work Day",
+      "type": "teacher_workday",
+      "badgeLabel": "No School",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-11",
+      "name": "Classes Begin · Quarter 1 Begins",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "type": "holiday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2026-09-22",
+      "dates": [
+        "2026-09-22",
+        "2026-09-24"
+      ],
+      "name": "Parent Conferences",
+      "type": "academic",
+      "description": "The annual calendar does not list these dates as no-school days. Schools provide appointment times.",
+      "exportDatesIndividually": true
+    },
+    {
+      "date": "2026-10-09",
+      "name": "Quarter 1 Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "name": "Fall Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-10-19",
+      "name": "Quarter 2 Begins",
+      "type": "quarter_start",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-11-02",
+      "name": "Professional Development",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start",
+      "description": "Administrative buildings are closed November 26–27, but students are out for the full November 23–27 range."
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Quarter 2 Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-05",
+      "name": "Winter Break",
+      "type": "break_start",
+      "description": "Administrative buildings are closed December 23–January 1. The grid also places a Quarter 3 marker on January 5; students are treated as out through the published break end."
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Professional Development / Teacher Work Day",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Quarter 3 Marker During Winter Break",
+      "type": "quarter_start",
+      "description": "The grid marks Quarter 3 as beginning, but the No School table includes January 5 in Winter Break.",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-06",
+      "name": "Students Return After Winter Break",
+      "type": "school_resume",
+      "badgeLabel": "Inferred return",
+      "description": "OKCPS lists Winter Break through January 5; January 6 is the next weekday.",
+      "calendarExportDescription": "Based on OKCPS Winter Break ending January 5; not separately printed as a district event.",
+      "isDerivedPlanningDate": true
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday",
+      "badgeLabel": "No School"
+    },
+    {
+      "date": "2027-02-08",
+      "dates": [
+        "2027-02-08",
+        "2027-02-11"
+      ],
+      "name": "Parent Conferences",
+      "type": "academic",
+      "description": "The annual calendar does not list these dates as no-school days. Schools provide appointment times.",
+      "exportDatesIndividually": true
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Professional Development",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Quarter 3 Ends",
+      "type": "quarter_end",
+      "badgeLabel": "Inferred date",
+      "description": "Based on the final instructional weekday before Spring Break and the March 22 professional-development day.",
+      "isDerivedPlanningDate": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-22",
+      "name": "Professional Development",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-03-23",
+      "name": "Quarter 4 Begins",
+      "type": "quarter_start",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-04-16",
+      "name": "Snow Day / Teacher Work Day",
+      "displayName": "Snow Day / Teacher Work Day",
+      "type": "no_school",
+      "badgeLabel": "No School",
+      "description": "The No School table labels April 16 as a Snow Day; the calendar grid labels it as a Teacher Work Day."
+    },
+    {
+      "date": "2027-05-20",
+      "name": "Last Day of Classes · Quarter 4 Ends",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-05-21",
+      "name": "Record Day",
+      "type": "teacher_workday",
+      "description": "Staff record day after students' last class day.",
+      "hideFromCalendarExport": true
+    }
+  ]
+}
