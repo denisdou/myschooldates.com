@@ -30,7 +30,7 @@ Usage:
   pnpm indexnow -- --all
 
 Options:
-  --date <YYYY-MM-DD>       Content creation date; defaults to the local date
+  --date <YYYY-MM-DD>       District/calendar review date; defaults to the local date
   --all                     Submit all state, district, and school-year URLs
   --dry-run                 Print matching URLs without submitting them
   --site-url <URL>          Canonical site origin (default: ${defaultSiteUrl})
@@ -79,7 +79,7 @@ function parseArgs(args) {
   }
   options.date ||= positionalDate
   if (options.all && options.date) {
-    throw new Error('Use either --all or a publication date, not both')
+    throw new Error('Use either --all or a review date, not both')
   }
   return options
 }
@@ -139,6 +139,10 @@ function contentCreationDate(record, fallbackField) {
   return record.dateCreated || record.datePublished || (fallbackField ? record[fallbackField] : undefined)
 }
 
+function contentReviewDate(record) {
+  return record.lastVerifiedAt
+}
+
 function readDistricts() {
   if (!existsSync(districtsDir)) throw new Error('Missing content/districts directory')
   const districtsByInstitutionId = new Map()
@@ -157,7 +161,7 @@ function readDistricts() {
       slug: district.slug,
       state: district.state,
       stateCode: district.stateCode,
-      creationDate: contentCreationDate(district),
+      reviewDate: contentReviewDate(district),
     })
   }
   return districtsByInstitutionId
@@ -208,7 +212,7 @@ function readCalendars() {
       calendars.push({
         institutionId: calendar.institutionId,
         schoolYear: calendar.schoolYear,
-        creationDate: contentCreationDate(calendar),
+        reviewDate: contentReviewDate(calendar),
       })
     }
   }
@@ -227,7 +231,7 @@ function resolveDistrictState(district, statesByIdentity) {
   }
 }
 
-function collectContentUrls({ all, creationDate, siteUrl }) {
+function collectContentUrls({ all, targetDate, siteUrl }) {
   const districtsByInstitutionId = readDistricts()
   const { states, statesByIdentity } = readStates()
   const calendars = readCalendars()
@@ -242,18 +246,18 @@ function collectContentUrls({ all, creationDate, siteUrl }) {
   const addDistrict = district => addUrl(`/${district.slug}`, 'District hub', district.name)
 
   for (const state of states) {
-    if (all || state.creationDate === creationDate) addState(state)
+    if (all || state.creationDate === targetDate) addState(state)
   }
 
   for (const district of districtsByInstitutionId.values()) {
-    if (all || district.creationDate === creationDate) {
+    if (all || district.reviewDate === targetDate) {
       addDistrict(district)
       addState(resolveDistrictState(district, statesByIdentity))
     }
   }
 
   for (const calendar of calendars) {
-    if (!all && calendar.creationDate !== creationDate) continue
+    if (!all && calendar.reviewDate !== targetDate) continue
     const district = districtsByInstitutionId.get(calendar.institutionId)
     if (!district) {
       throw new Error(`Calendar has no matching district record: ${calendar.institutionId}`)
@@ -344,14 +348,14 @@ async function main() {
     return
   }
 
-  const creationDate = options.all ? undefined : options.date || localIsoDate()
-  if (creationDate) validateDate(creationDate)
+  const targetDate = options.all ? undefined : options.date || localIsoDate()
+  if (targetDate) validateDate(targetDate)
 
   const siteUrl = normalizeSiteUrl(options.siteUrl || process.env.INDEXNOW_SITE_URL || defaultSiteUrl)
-  const contentUrls = collectContentUrls({ all: options.all, creationDate, siteUrl })
+  const contentUrls = collectContentUrls({ all: options.all, targetDate, siteUrl })
   const urls = contentUrls.map(item => item.url)
 
-  console.log(`Submission scope: ${options.all ? 'all structured content pages' : `content created on ${creationDate}`}`)
+  console.log(`Submission scope: ${options.all ? 'all structured content pages' : `district/calendar content reviewed on ${targetDate}`}`)
   console.log(`Content sources: ${districtsDir}, ${calendarsDir}, ${statesDir}`)
   if (urls.length === 0) {
     console.log(options.all

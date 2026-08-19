@@ -1,17 +1,20 @@
 # IndexNow Content URL Submission
 
 This project submits public URLs by scanning the structured district, calendar, and
-state content files. For a requested creation date, it includes:
+state content files. For a requested date, it includes:
 
 - each matching school-year URL;
 - its district hub URL;
 - its state-level URL;
-- state or district pages whose own content record matches the date.
+- state pages whose own content record matches the date.
 
-Calendar and district records use `dateCreated`, with `datePublished` as a fallback
-for older content. State records use `dateCreated` or `datePublished` when present,
-then fall back to `lastVerifiedAt`. `dateModified` does not place an existing page in
-a creation-date submission. The content roadmap is not read by this script.
+Calendar and district records are selected only by `lastVerifiedAt`; their
+`dateCreated`, `datePublished`, and `dateModified` values do not place them in a
+date-filtered submission. A matching calendar automatically includes its district
+hub and state page. A district record can also match directly when it has its own
+`lastVerifiedAt` value. State records continue to use `dateCreated` or
+`datePublished` when present, then fall back to `lastVerifiedAt`. The content
+roadmap is not read by this script.
 
 ## One-time setup
 
@@ -57,7 +60,7 @@ Submit today's URLs:
 pnpm indexnow
 ```
 
-Preview or submit an explicit creation date:
+Preview or submit an explicit review date:
 
 ```bash
 pnpm indexnow -- --date 2026-08-06 --dry-run
