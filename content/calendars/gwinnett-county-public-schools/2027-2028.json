@@ -1,113 +1,454 @@
 {
   "institutionId": "gwinnett-county-public-schools",
   "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Gwinnett County Public Schools Calendar 2027–2028",
   "firstDay": "2027-08-04",
   "lastDay": "2028-05-24",
   "sourceUrl": "https://www.gcpsk12.org/about-us/calendar",
+  "sourceDocumentPage": "https://www.gcpsk12.org/about-us/calendar",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1763561119/gcpsk12org/utnrwqy1mjzteyd5m0nl/GCPS-Calendar2027-2028Englisheq.pdf",
-  "lastVerifiedAt": "2026-07-24",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1763561119/gcpsk12org/utnrwqy1mjzteyd5m0nl/GCPS-Calendar2027-2028Englisheq.pdf",
+  "sourceCheckedAt": "2026-08-20",
+  "sourceChecksumSha256": "6873200f5b67d4b0a6c1aa6c6316d007c24b24afd653e84936cef731d1ed64fe",
+  "reviewedSourcePdfUrl": "https://resources.finalsite.net/images/v1763561119/gcpsk12org/utnrwqy1mjzteyd5m0nl/GCPS-Calendar2027-2028Englisheq.pdf",
+  "reviewedSourceChecksumSha256": "6873200f5b67d4b0a6c1aa6c6316d007c24b24afd653e84936cef731d1ed64fe",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceResourceMonitor": {
+    "type": "resource-uuid",
+    "checkUrl": "https://www.gcpsk12.org/about-us/calendar",
+    "sectionText": "Approved 2027-28 Calendar",
+    "linkText": "English",
+    "expectedResourceUuid": "2619693c-ba66-44b3-8acd-d784c9fac86b"
+  },
+  "lastVerifiedAt": "2026-08-20",
   "datePublished": "2026-07-24",
-  "dateModified": "2026-07-24",
+  "dateModified": "2026-08-20",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Approved 2027–28 Calendar",
+  "sourceCalendarName": "Gwinnett County Public Schools 2027–28 School-Year Calendar",
   "calendarType": "traditional",
   "totalSchoolDays": 180,
   "yearNumbersMode": "compact",
+  "allDatesMode": "keyDates",
+  "seoTitle": "Gwinnett County Public Schools Calendar 2027–28 (GCPS)",
+  "seoDescription": "The GCPS 2027–28 school year runs Aug. 4, 2027, through May 24, 2028. See breaks, Digital Learning Days, early-release dates, return dates, and official PDFs.",
+  "schemaCalendarName": "Gwinnett County Public Schools 2027–28 School-Year Calendar",
+  "schemaDatasetName": "Gwinnett County Public Schools 2027–28 School Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed GCPS dates for 2027–28, including school-year boundaries, major breaks, return dates, Digital Learning Days, and grade-specific early-release dates.",
+  "schemaSpatialCoverage": "Gwinnett County, Georgia",
+  "schemaCalendarDownloadName": "Gwinnett County Public Schools 2027–28 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with reviewed GCPS student dates, major breaks, return dates, Digital Learning Days, and grade-specific early releases.",
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "keyDates",
+  "itemListMode": "keyDates",
+  "heroSummary": "The GCPS 2027–28 school year begins Wednesday, August 4, 2027, and ends Wednesday, May 24, 2028. Fall Break is October 11–15, Thanksgiving Break is November 22–26, Winter Break is December 20–31, and Spring Break is April 3–7. January 3 is a student holiday, and the second semester begins January 4. GCPS schedules two planned Digital Learning Days and separate early-release dates for elementary, middle, and high school students.",
+  "heroSourceLine": "2027–28 calendar dates · Based on the approved GCPS calendar",
+  "calendarNotes": "The approved GCPS 2027–28 School-Year Calendar is the source for the dates on this page. GCPS also publishes official Chinese, Korean, Spanish, and Vietnamese editions of the same calendar.",
+  "hideSecondSemesterStartSummary": true,
+  "hideInstructionalDaysSummary": true,
+  "heroFactChips": [
+    "180 student days",
+    "Second semester begins Jan 4, 2028"
+  ],
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Family Notes", "id": "gcps-2027-2028-family-notes" },
+    { "label": "Full Calendar", "id": "all-dates" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Changes", "id": "gcps-2027-2028-what-changed" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Comparison", "id": "comparison" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "breaks",
+    "yearNumbers",
+    "planningTips",
+    "about",
+    "whatsDifferent",
+    "nationalTrends",
+    "relatedDistricts",
+    "otherCalendars",
+    "livingHere",
+    "districtProfile",
+    "backToCurrent"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "hiddenCustomSectionIds": [
+    "gwinnett-county-public-schools-calendar-planning-notes",
+    "gcps-calendar-changes-from-2025-2026",
+    "important-dates-for-gcps-parents",
+    "related-georgia-school-calendars"
+  ],
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "fallBreak",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "comparisonRowLabels": {
+    "thanksgivingBreak": "Thanksgiving Break"
+  },
+  "comparisonDefaultOpen": false,
+  "comparisonTitle": "GCPS Calendar Compared With Other Metro Atlanta Districts",
+  "compareIntro": "GCPS, Atlanta Public Schools, and Fulton County Schools use different start, end, and break dates in 2027–28.",
+  "comparisonSourceNote": "Districts may use different names for similar break periods. Adjacent holidays, Digital Learning Days, early-release dates, and staff workdays are not included unless they fall within the listed range.",
+  "hideComparisonNotes": true,
+  "keyDatesSummaryTitle": "2027–28 Key Dates and Major Breaks",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, and the January 4 return date",
+  "keyDateSummaryItems": [
+    {
+      "date": "2027-08-04",
+      "name": "First Day of School",
+      "label": "First Day",
+      "type": "school_start",
+      "schemaDescription": "First day of school for GCPS students in 2027–28."
+    },
+    {
+      "date": "2027-10-11",
+      "endDate": "2027-10-15",
+      "name": "Fall Break",
+      "label": "Break",
+      "type": "break",
+      "schemaDescription": "GCPS Fall Break runs October 11–15, 2027."
+    },
+    {
+      "date": "2027-11-22",
+      "endDate": "2027-11-26",
+      "name": "Thanksgiving Break",
+      "label": "Break",
+      "type": "break",
+      "schemaDescription": "GCPS Thanksgiving Break runs November 22–26, 2027."
+    },
+    {
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "name": "Winter Break",
+      "label": "Break",
+      "type": "break",
+      "description": "January 3 is a student holiday; students begin the second semester January 4.",
+      "schemaDescription": "GCPS Winter Break runs December 20–31, 2027. January 3 is a student holiday, and the second semester begins January 4, 2028."
+    },
+    {
+      "date": "2028-01-04",
+      "name": "Students Return / Second Semester Begins",
+      "label": "Students Return",
+      "type": "school_resume",
+      "schemaDescription": "GCPS students begin the second semester on January 4, 2028, after Winter Break and the January 3 student holiday."
+    },
+    {
+      "date": "2028-02-11",
+      "endDate": "2028-02-15",
+      "name": "Student/Teacher Holidays",
+      "label": "School Holidays",
+      "type": "break",
+      "schemaDescription": "GCPS Student/Teacher Holidays run February 11–15, 2028."
+    },
+    {
+      "date": "2028-04-03",
+      "endDate": "2028-04-07",
+      "name": "Spring Break",
+      "label": "Break",
+      "type": "break",
+      "schemaDescription": "GCPS Spring Break runs April 3–7, 2028."
+    },
+    {
+      "date": "2028-05-24",
+      "name": "Last Day of School",
+      "label": "Last Day",
+      "type": "school_end",
+      "schemaDescription": "Last day of school and 180th student day for GCPS students in 2027–28."
+    }
+  ],
+  "allDatesTitle": "GCPS Student Dates — 2027–28",
+  "allDatesCoverageNote": "This table follows the approved GCPS 2027–28 School-Year Calendar. The October 18, November 29, and April 10 return dates are derived from the published break ranges.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1763561119/gcpsk12org/utnrwqy1mjzteyd5m0nl/GCPS-Calendar2027-2028Englisheq.pdf",
+  "allDatesSourceLabel": "approved GCPS 2027–28 School-Year Calendar",
+  "hideCoveredBreakDatesNote": true,
+  "allDatesDerivedDateNotePosition": "footer",
+  "allDatesIncludedDatesInKeyDates": [
+    "2028-01-03"
+  ],
+  "dateLegendItems": [
+    { "label": "Holiday", "dot": "bg-teal-400" },
+    { "label": "Student Holiday", "dot": "bg-amber-400" },
+    { "label": "Digital Learning", "dot": "bg-pink-400" },
+    { "label": "Early Release", "dot": "bg-orange-400" },
+    { "label": "Break", "dot": "bg-purple-400" }
+  ],
+  "dateLegendLabelOverrides": {
+    "Online Learning": "Digital Learning",
+    "School Resumes": "Students Return",
+    "Staff Day": "Student Holiday",
+    "Staff Days": "Student Holiday"
+  },
+  "heroCtas": [
+    {
+      "label": "Open Official Calendar PDF",
+      "href": "__sourcePdfUrl",
+      "variant": "primary"
+    },
+    {
+      "label": "Download calendar (.ics)",
+      "href": "__icsUrl",
+      "variant": "secondary",
+      "download": true,
+      "filename": "__icsFilename"
+    }
+  ],
+  "verificationBadgeText": "Checked August 20, 2026, against the approved GCPS 2027–28 calendar.",
+  "hideHeroReviewedField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "unifiedDownloadTitle": "GCPS Calendar Downloads and Official PDFs",
+  "unifiedDownloadDescription": "Open the approved English calendar or an official translation, or add the reviewed student dates to your calendar app.",
+  "compactDownloadModule": true,
+  "pdfHeading": "Official GCPS 2027–28 School-Year Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Use the approved English calendar for student days, breaks, Digital Learning Days, early-release dates, and staff-development/student-holiday dates.",
+  "pdfButtonLabel": "View Official Calendar PDF",
+  "hidePdfVersionLabel": false,
+  "groupAlternateCalendarsWithDownloads": true,
+  "icsHeading": "Add GCPS Dates to Your Calendar",
+  "icsDescription": "The ICS file includes major breaks, student return dates, Digital Learning Days, and grade-specific early-release dates.",
+  "icsButtonLabel": "Download calendar (.ics)",
+  "icsButtonSupportText": "One-time import for Google Calendar, Apple Calendar, or Outlook. It will not automatically update if GCPS changes the calendar.",
+  "icsSourceNote": "Generated from the dates reviewed for this page.",
+  "hideIcsImportDisclaimer": true,
+  "hideSocialShareButtons": true,
+  "alternateCalendarsTitle": "Official 2027–28 Calendar Translations",
+  "alternateCalendarsDescription": "GCPS publishes Chinese, Korean, Spanish, and Vietnamese editions of the approved 2027–28 calendar.",
+  "alternateCalendarsButtonLabel": "Open PDF",
   "alternateCalendars": [
     {
       "type": "chinese",
-      "label": "2027-2028 School Year Calendar (Chinese)",
-      "pdfUrl": "https://resources.finalsite.net/images/v1763589375/gcpsk12org/gcpsk12org/gxh0b1j0jcvsdva1p5tv/GCPS-Calendar2027-2028Chineseeq.pdf"
+      "group": "Official Translations",
+      "label": "Chinese",
+      "description": "Official Chinese edition of the approved 2027–28 calendar.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1763589375/gcpsk12org/gcpsk12org/gxh0b1j0jcvsdva1p5tv/GCPS-Calendar2027-2028Chineseeq.pdf",
+      "buttonLabel": "Open Chinese PDF"
     },
     {
       "type": "korean",
-      "label": "2027-2028 School Year Calendar (Korean)",
-      "pdfUrl": "https://resources.finalsite.net/images/v1763589335/gcpsk12org/gcpsk12org/wnzaou7metv8hc40cnhy/GCPS-Calendar2027-2028KoreanEQ.pdf"
+      "group": "Official Translations",
+      "label": "Korean",
+      "description": "Official Korean edition of the approved 2027–28 calendar.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1763589335/gcpsk12org/gcpsk12org/wnzaou7metv8hc40cnhy/GCPS-Calendar2027-2028KoreanEQ.pdf",
+      "buttonLabel": "Open Korean PDF"
     },
     {
       "type": "spanish",
-      "label": "2027-2028 School Year Calendar (Spanish)",
-      "pdfUrl": "https://resources.finalsite.net/images/v1763589361/gcpsk12org/gcpsk12org/zwcfkoyfwe5qy7vjosja/GCPS-Calendar2027-2028SpanishEQ.pdf"
+      "group": "Official Translations",
+      "label": "Spanish",
+      "description": "Official Spanish edition of the approved 2027–28 calendar.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1763589361/gcpsk12org/gcpsk12org/zwcfkoyfwe5qy7vjosja/GCPS-Calendar2027-2028SpanishEQ.pdf",
+      "buttonLabel": "Open Spanish PDF"
     },
     {
       "type": "vietnamese",
-      "label": "2027-2028 School Year Calendar (Vietnamese)",
-      "pdfUrl": "https://resources.finalsite.net/images/v1763589348/gcpsk12org/gcpsk12org/b0fc4tcepu9za5hop1p7/GCPS-Calendar2027-2028Vietnameseeq.pdf"
+      "group": "Official Translations",
+      "label": "Vietnamese",
+      "description": "Official Vietnamese edition of the approved 2027–28 calendar.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1763589348/gcpsk12org/gcpsk12org/b0fc4tcepu9za5hop1p7/GCPS-Calendar2027-2028Vietnameseeq.pdf",
+      "buttonLabel": "Open Vietnamese PDF"
     }
   ],
-  "seoTitle": "GCPS Calendar 2027-2028: Gwinnett Holidays, Breaks & PDF",
-  "seoDescription": "GCPS 2027-2028 calendar with Aug 4 first day, May 24 last day, fall break, Thanksgiving, winter break, spring break, digital learning days and PDF.",
-  "calendarNotes": "Gwinnett County Public Schools lists 180 student days for 2027-2028. The first day of school is August 4, 2027 and the last day is May 24, 2028. Fall Break is October 11-15, Thanksgiving Break is November 22-26, Winter Break is December 20-31, 2027, and Spring Break is April 3-7, 2028. GCPS also publishes 2027-2028 calendar PDFs in Chinese, Korean, Spanish, and Vietnamese.",
+  "excludeDistrictFaqs": true,
   "calendarFaqs": [
     {
-      "q": "When does GCPS start school in 2027?",
-      "a": "Gwinnett County Public Schools starts the 2027-2028 school year on Wednesday, August 4, 2027."
+      "q": "When is GCPS Winter Break, and when do students return in 2027–28?",
+      "a": "Winter Break runs December 20–31, 2027. January 3, 2028, is a teacher planning and staff development day and student holiday; students begin the second semester Tuesday, January 4."
     },
     {
-      "q": "When is GCPS Fall Break in 2027?",
-      "a": "Fall Break is October 11-15, 2027."
+      "q": "How many Digital Learning Days are on the GCPS 2027–28 calendar?",
+      "a": "The approved calendar lists two Digital Learning Days: September 17, 2027, and March 17, 2028. Check GCPS guidance and your school's announcements for participation details."
     },
     {
-      "q": "When is GCPS Winter Break in 2027-2028?",
-      "a": "Winter Break school holidays run December 20-31, 2027. January 3 is a teacher planning and staff development day, and students begin the second semester on January 4."
+      "q": "Are GCPS early-release dates the same for every grade level in 2027–28?",
+      "a": "No. Elementary and middle schools release early on October 27–28 and March 1–2. High schools release early for exams on December 15–17 and May 22–24. The approved calendar does not publish dismissal times."
     },
     {
-      "q": "Does GCPS publish translated calendars for 2027-2028?",
-      "a": "Yes. GCPS publishes 2027-2028 calendar PDFs in Chinese, Korean, Spanish, and Vietnamese in addition to the English version."
+      "q": "Does GCPS publish translated calendars for 2027–28?",
+      "a": "Yes. GCPS publishes Chinese, Korean, Spanish, and Vietnamese editions of the approved 2027–28 calendar in addition to the English version."
     },
     {
-      "q": "When is the last day of school for GCPS in 2028?",
-      "a": "The last day of school is Wednesday, May 24, 2028."
+      "q": "Where can families check for GCPS 2027–28 calendar changes?",
+      "a": "Check the official GCPS calendar page and your school's announcements for the latest schedule changes."
+    },
+    {
+      "q": "Can I add the GCPS 2027–28 calendar to Google Calendar?",
+      "a": "Yes. Download the MySchoolDates 2027–28 ICS file and import it into Google Calendar, Apple Calendar, or Outlook. This is a one-time import and will not update automatically if GCPS revises the calendar."
     }
+  ],
+  "faqDisplayQuestions": [
+    "When is GCPS Winter Break, and when do students return in 2027–28?",
+    "How many Digital Learning Days are on the GCPS 2027–28 calendar?",
+    "Are GCPS early-release dates the same for every grade level in 2027–28?",
+    "Does GCPS publish translated calendars for 2027–28?",
+    "Where can families check for GCPS 2027–28 calendar changes?",
+    "Can I add the GCPS 2027–28 calendar to Google Calendar?"
   ],
   "yearNumbers": [
     {
-      "label": "First Day",
-      "value": "Aug 4",
-      "detail": "The first day of school is August 4, 2027."
-    },
-    {
       "label": "Student Days",
       "value": "180",
-      "detail": "The official calendar lists 180 student days."
+      "detail": "The approved 2027–28 GCPS calendar marks May 24 as Day 180."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "gcps-2027-2028-family-notes",
+      "label": "Planning Notes for GCPS Families",
+      "position": "afterKeyDates",
+      "schemaHasPart": true,
+      "content": "",
+      "groups": [
+        {
+          "label": "Two planned Digital Learning Days",
+          "items": [
+            "The approved calendar lists Digital Learning Day #1 on September 17 and Digital Learning Day #2 on March 17. Check GCPS guidance and your school's announcements for participation details."
+          ]
+        },
+        {
+          "label": "Elementary and middle school early release",
+          "items": [
+            "Elementary and middle schools release early on October 27–28 and March 1–2. The approved calendar does not publish dismissal times."
+          ]
+        },
+        {
+          "label": "High school exam early release",
+          "items": [
+            "High schools release early for exams on December 15–17 and May 22–24."
+          ]
+        },
+        {
+          "label": "Winter return",
+          "items": [
+            "Winter Break ends December 31. January 3 is a teacher planning and staff development day and student holiday; students begin the second semester January 4."
+          ]
+        }
+      ]
     },
     {
-      "label": "Spring Break",
-      "value": "Apr 3-7",
-      "detail": "Spring Break is April 3-7, 2028."
+      "id": "gcps-2027-2028-what-changed",
+      "label": "Changes from the 2026–27 Calendar",
+      "position": "afterYearDiff",
+      "schemaHasPart": true,
+      "content": "Compared with 2026–27, GCPS starts one day earlier and ends two days earlier. Fall Break also moves one day earlier, the district schedules two Digital Learning Days instead of three, and students return from Winter Break one day earlier.",
+      "table": {
+        "columns": [
+          "Calendar item",
+          "2026–27",
+          "2027–28"
+        ],
+        "rows": [
+          [
+            "First day",
+            "Aug 5",
+            "Aug 4"
+          ],
+          [
+            "Last day",
+            "May 26",
+            "May 24"
+          ],
+          [
+            "Fall Break",
+            "Oct 12–16",
+            "Oct 11–15"
+          ],
+          [
+            "Digital Learning Days",
+            "3",
+            "2"
+          ],
+          [
+            "Winter student return",
+            "Jan 5",
+            "Jan 4"
+          ]
+        ]
+      }
+    }
+  ],
+  "sourcesTitle": "Official GCPS 2027–28 Calendar Sources",
+  "sourceReviewSummary": "We use the approved 2027–28 School-Year Calendar for the student dates, breaks, Digital Learning Days, early-release dates, staff-development/student-holiday labels, and Day 180 shown on this page.",
+  "sourceReviewDetails": [
+    "We checked the one-page English calendar in full and confirmed the first and last days, all published breaks, both Digital Learning Days, the four elementary and middle school early-release dates, and both high school exam early-release windows.",
+    "January 3 is labeled as a teacher planning and staff development day and student holiday; January 4 begins the second semester.",
+    "October 18, November 29, and April 10 are the first regular school days after the published break ranges and are identified as derived return dates on this page."
+  ],
+  "sourceMaintainerLabel": "Reviewed by",
+  "sourceMaintainerText": "Denis Dou using official GCPS sources",
+  "hideSourceReviewAuthor": true,
+  "sourceNextReviewText": "We re-check this page when GCPS replaces the approved 2027–28 PDF or announces a schedule change.",
+  "sources": [
+    {
+      "label": "GCPS Approved 2027–28 School-Year Calendar — English",
+      "url": "https://resources.finalsite.net/images/v1763561119/gcpsk12org/utnrwqy1mjzteyd5m0nl/GCPS-Calendar2027-2028Englisheq.pdf"
+    },
+    {
+      "label": "Gwinnett County Public Schools calendar page",
+      "url": "https://www.gcpsk12.org/about-us/calendar"
     }
   ],
   "events": [
-    { "date": "2027-07-05", "name": "Independence Day Observation - Systemwide Holiday", "type": "holiday" },
-    { "date": "2027-07-26", "name": "Required Pre-planning / Staff Development Begins", "type": "teacher_workday" },
-    { "date": "2027-08-03", "name": "Required Pre-planning / Staff Development Ends", "type": "teacher_workday" },
     { "date": "2027-08-04", "name": "First Day of School", "type": "school_start" },
-    { "date": "2027-09-06", "name": "Labor Day - Systemwide Holiday", "type": "holiday" },
-    { "date": "2027-09-17", "name": "Digital Learning Day #1", "type": "digital_learning" },
-    { "date": "2027-10-11", "name": "Fall Break Begins", "type": "break_start" },
-    { "date": "2027-10-15", "name": "Fall Break Ends", "type": "break_end" },
-    { "date": "2027-10-27", "name": "Early Release - Elementary and Middle School", "type": "early_release" },
-    { "date": "2027-10-28", "name": "Early Release - Elementary and Middle School", "type": "early_release" },
-    { "date": "2027-11-22", "name": "Thanksgiving Break Begins", "type": "break_start" },
-    { "date": "2027-11-26", "name": "Thanksgiving Break Ends", "type": "break_end" },
-    { "date": "2027-12-15", "name": "Early Release for High School Exams Begins", "type": "early_release" },
+    { "date": "2027-09-06", "name": "Labor Day — Systemwide Holiday", "type": "holiday" },
+    { "date": "2027-09-17", "name": "Digital Learning Day #1", "type": "digital_learning", "badgeLabel": "Digital Learning" },
+    { "date": "2027-10-11", "endDate": "2027-10-15", "name": "Fall Break", "type": "break", "displayAsRange": true },
+    { "date": "2027-10-18", "name": "Students Return After Fall Break", "type": "school_resume", "badgeLabel": "Students Return", "derivedFromPublishedBreakDates": true },
+    { "date": "2027-10-27", "endDate": "2027-10-28", "name": "Early Release — Elementary and Middle School", "type": "early_release", "description": "The approved calendar does not publish dismissal times.", "badgeLabel": "Elementary & Middle School", "displayAsRange": true, "hideFromCalendarExport": true },
+    { "date": "2027-10-27", "name": "Early Release — Elementary and Middle School", "type": "early_release", "hideFromAllDates": true },
+    { "date": "2027-10-28", "name": "Early Release — Elementary and Middle School", "type": "early_release", "hideFromAllDates": true },
+    { "date": "2027-11-22", "endDate": "2027-11-26", "name": "Thanksgiving Break", "type": "break", "displayAsRange": true },
+    { "date": "2027-11-29", "name": "Students Return After Thanksgiving Break", "type": "school_resume", "badgeLabel": "Students Return", "derivedFromPublishedBreakDates": true },
+    { "date": "2027-12-15", "endDate": "2027-12-17", "name": "High School Early Release for Exams", "type": "early_release", "description": "High schools follow the exam early-release schedule on all three dates.", "badgeLabel": "High School Exams", "displayAsRange": true, "hideFromCalendarExport": true },
+    { "date": "2027-12-15", "name": "High School Early Release for Exams", "type": "early_release", "hideFromAllDates": true },
+    { "date": "2027-12-16", "name": "High School Early Release for Exams", "type": "early_release", "hideFromAllDates": true },
+    { "date": "2027-12-17", "name": "High School Early Release for Exams", "type": "early_release", "hideFromAllDates": true },
     { "date": "2027-12-17", "name": "End of First Semester", "type": "academic" },
-    { "date": "2027-12-17", "name": "Early Release for High School Exams Ends", "type": "early_release" },
-    { "date": "2027-12-20", "name": "Winter Break Begins", "type": "break_start" },
-    { "date": "2027-12-31", "name": "Winter Break Ends", "type": "break_end" },
-    { "date": "2028-01-03", "name": "Teacher Planning / Staff Development - Student Holiday", "type": "teacher_workday" },
-    { "date": "2028-01-04", "name": "Begin Second Semester", "type": "school_resume" },
-    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day - Systemwide Holiday", "type": "holiday" },
-    { "date": "2028-02-11", "name": "Student / Teacher Holidays Begin", "type": "break_start" },
-    { "date": "2028-02-15", "name": "Student / Teacher Holidays End", "type": "break_end" },
-    { "date": "2028-03-01", "name": "Early Release - Elementary and Middle School", "type": "early_release" },
-    { "date": "2028-03-02", "name": "Early Release - Elementary and Middle School", "type": "early_release" },
-    { "date": "2028-03-17", "name": "Digital Learning Day #2", "type": "digital_learning" },
-    { "date": "2028-04-03", "name": "Spring Break Begins", "type": "break_start" },
-    { "date": "2028-04-07", "name": "Spring Break Ends", "type": "break_end" },
-    { "date": "2028-05-22", "name": "Early Release for High School Exams Begins", "type": "early_release" },
-    { "date": "2028-05-24", "name": "Last Day of School", "type": "school_end" },
-    { "date": "2028-05-24", "name": "Early Release for High School Exams Ends", "type": "early_release" },
-    { "date": "2028-05-25", "name": "Teacher Post-planning / Staff Development Begins", "type": "teacher_workday" },
-    { "date": "2028-05-26", "name": "Teacher Post-planning / Staff Development Ends", "type": "teacher_workday" },
-    { "date": "2028-05-29", "name": "Memorial Day - Systemwide Holiday", "type": "holiday" }
+    { "date": "2027-12-20", "endDate": "2027-12-31", "name": "Winter Break", "type": "break", "displayAsRange": true },
+    { "date": "2028-01-03", "name": "Teacher Planning / Staff Development — Student Holiday", "type": "teacher_workday", "description": "Students return and begin the second semester January 4.", "badgeLabel": "Student Holiday" },
+    { "date": "2028-01-04", "name": "Students Return / Second Semester Begins", "type": "school_resume", "badgeLabel": "Students Return" },
+    { "date": "2028-01-17", "name": "Martin Luther King Jr. Day — Systemwide Holiday", "type": "holiday" },
+    { "date": "2028-02-11", "endDate": "2028-02-15", "name": "Student/Teacher Holidays", "type": "break", "badgeLabel": "School Holidays", "displayAsRange": true },
+    { "date": "2028-03-01", "endDate": "2028-03-02", "name": "Early Release — Elementary and Middle School", "type": "early_release", "description": "The approved calendar does not publish dismissal times.", "badgeLabel": "Elementary & Middle School", "displayAsRange": true, "hideFromCalendarExport": true },
+    { "date": "2028-03-01", "name": "Early Release — Elementary and Middle School", "type": "early_release", "hideFromAllDates": true },
+    { "date": "2028-03-02", "name": "Early Release — Elementary and Middle School", "type": "early_release", "hideFromAllDates": true },
+    { "date": "2028-03-17", "name": "Digital Learning Day #2", "type": "digital_learning", "badgeLabel": "Digital Learning" },
+    { "date": "2028-04-03", "endDate": "2028-04-07", "name": "Spring Break", "type": "break", "displayAsRange": true },
+    { "date": "2028-04-10", "name": "Students Return After Spring Break", "type": "school_resume", "badgeLabel": "Students Return", "derivedFromPublishedBreakDates": true },
+    { "date": "2028-05-22", "endDate": "2028-05-24", "name": "High School Early Release for Exams", "type": "early_release", "description": "High schools follow the exam early-release schedule through the last day of school.", "badgeLabel": "High School Exams", "displayAsRange": true, "hideFromCalendarExport": true },
+    { "date": "2028-05-22", "name": "High School Early Release for Exams", "type": "early_release", "hideFromAllDates": true },
+    { "date": "2028-05-23", "name": "High School Early Release for Exams", "type": "early_release", "hideFromAllDates": true },
+    { "date": "2028-05-24", "name": "High School Early Release for Exams", "type": "early_release", "hideFromAllDates": true },
+    { "date": "2028-05-24", "name": "Last Day of School — Day 180", "type": "school_end", "badgeLabel": "Last Day" }
   ]
 }

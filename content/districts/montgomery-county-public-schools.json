@@ -35,167 +35,26 @@
   "calendarType": "traditional",
   "allDatesMode": "keyDates",
   "hideHeroVerificationProcess": true,
-  "districtFact": "Montgomery County Public Schools publishes traditional school year calendars with first day, last day, student transition day, teacher preservice days, early release dates, grading and planning days, non-instructional days, systemwide closures, designated make-up days, holidays, and marking period end dates.",
-  "about": [
-    {
-      "title": "About Montgomery County Public Schools",
-      "content": "Montgomery County Public Schools, also known as MCPS, serves families in Montgomery County, Maryland, in the Washington, D.C. metropolitan area. The traditional school calendar is used for districtwide planning across elementary, middle, and high school communities."
-    },
-    {
-      "title": "How to Use This MCPS Calendar",
-      "content": "Use this page for traditional MCPS calendar planning, including the first day of school, Student Transition Day, early release days, non-instructional days, grading and planning days, systemwide closures, holidays, Spring Break, Winter Break, designated make-up days, and the last day of school. Families should confirm school-specific events, athletics, testing, graduation, and alternate-calendar schools directly with MCPS."
-    }
-  ],
-  "planningTips": {
-    "title": "Planning Tips for MCPS Families",
-    "content": [
-      "Student Transition Day is not the regular first day for all students; it applies to transition grades and students new to a school.",
-      "MCPS lists multiple early release days, including dates near Thanksgiving and the final day of school.",
-      "Some grading and planning or professional development dates are marked as possible make-up instructional days if emergency closures disrupt the school year.",
-      "The traditional calendar may not apply to every school program, so families should verify alternate calendars and school-specific events with MCPS."
-    ]
-  },
-  "customSections": [
-    {
-      "id": "about-mcps-calendar-structure",
-      "label": "About MCPS Calendar Structure",
-      "position": "afterAbout",
-      "content": "The MCPS traditional calendar separates student attendance days from teacher preservice days, grading and planning days, non-instructional days, systemwide closures, early release dates, and designated make-up days. The calendar also identifies marking period end dates and notes that selected no-school dates may become instructional days if schools close for emergencies."
-    },
-    {
-      "id": "montgomery-county-public-schools-profile",
-      "label": "Montgomery County Public Schools Profile",
-      "position": "afterAbout",
-      "content": "Montgomery County Public Schools is a large Maryland public school district serving Montgomery County communities in the Washington, D.C. metro area. This page focuses on the traditional district calendar used for most districtwide student attendance planning.",
-      "table": {
-        "columns": ["Item", "Details"],
-        "rows": [
-          ["District", "Montgomery County Public Schools"],
-          ["Location", "Rockville and Montgomery County, Maryland"],
-          ["Metro area", "Washington, D.C. metro"],
-          ["Grades served", "Pre-K through grade 12"],
-          ["Calendar authority", "Official MCPS traditional school year calendar"],
-          ["Calendar scope", "Districtwide traditional calendar, with school-specific and alternate-calendar exceptions"],
-          ["Why the calendar matters", "Childcare, transportation, family travel, extracurricular planning, and work schedules"]
-        ]
-      }
-    },
-    {
-      "id": "mcps-traditional-calendar-vs-school-specific-calendars",
-      "label": "MCPS Traditional Calendar vs School-Specific Calendars",
-      "position": "afterPlanningTips",
-      "content": "The MCPS traditional school year calendar is the source for districtwide dates such as the first day, last day, holidays, early releases, non-instructional days, and systemwide closures. It does not replace school-specific calendars for campus events, athletics, testing windows, graduations, or alternate calendars such as Arcola Elementary School's Innovative School Year Calendar."
-    },
-    {
-      "id": "why-families-compare-mcps-with-nearby-districts",
-      "label": "Why Families Compare MCPS With Nearby Districts",
-      "position": "afterComparison",
-      "content": "Families in the Washington, D.C. region often compare MCPS with nearby Virginia and Maryland-area districts when planning moves, childcare, commuter schedules, shared custody calendars, and family travel. Start dates, spring break timing, professional days, and early release patterns can vary significantly even among nearby school systems."
-    },
-    {
-      "id": "how-we-collect-mcps-calendar-data",
-      "label": "How We Collect MCPS Calendar Data",
-      "position": "beforeSources",
-      "content": "MySchoolDates reviews the official Montgomery County Public Schools calendar PDFs and extracts student dates, holidays, early release dates, non-instructional days, systemwide closures, grading and planning dates, designated make-up days, marking period dates, and last-day details. The page links back to MCPS so families can verify updates before making final childcare, travel, transportation, or work plans."
-    },
-    {
-      "id": "mcps-calendar-review-process",
-      "label": "MCPS Calendar Review Process",
-      "position": "beforeSources",
-      "content": "Each MCPS calendar page is checked against the official district calendar source before publication and when MCPS posts revised calendar information.",
-      "groups": [
-        {
-          "label": "Fields reviewed",
-          "items": [
-            "Official traditional calendar PDF and district calendar page",
-            "First day, last day, Student Transition Day, and marking period dates",
-            "Holidays, systemwide closures, non-instructional days, and designated make-up days",
-            "Early release dates, grading and planning days, and professional development dates"
-          ]
-        },
-        {
-          "label": "When updates are checked",
-          "items": [
-            "When MCPS publishes a new school-year calendar",
-            "When the district posts revised or adopted calendar information",
-            "When a calendar error is reported through MySchoolDates"
-          ]
-        }
-      ]
-    }
-  ],
-  "compareIntro": "Compare the Montgomery County Public Schools calendar with other large public school calendars in the Washington, D.C. region and nearby major districts currently available on MySchoolDates.",
-  "comparisonTitle": "Montgomery County Public Schools Calendar Compared With Nearby Large Districts",
-  "faqSchemaQuestions": [
-    "When does MCPS start school in 2026?",
-    "When is MCPS Winter Break in 2026-2027?",
-    "When is MCPS Spring Break in 2027?",
-    "When is the last day of school for MCPS in 2027?",
-    "How many instructional days are in the MCPS 2026-2027 calendar?",
-    "Does the MCPS traditional calendar apply to every school?",
-    "Which Montgomery County Public Schools calendar does this page summarize?",
-    "What is MCPS Student Transition Day in 2026?",
-    "Does MCPS have early dismissal days?",
-    "How do I add MCPS dates to Google Calendar?",
-    "What are MCPS designated make-up days?",
-    "Where should families verify Montgomery County Public Schools calendar updates?"
-  ],
-  "districtFaqs": [
-    {
-      "q": "Which Montgomery County Public Schools calendar does this page summarize?",
-      "a": "This page summarizes the official MCPS traditional school year calendar for the listed school years."
-    },
-    {
-      "q": "Does the MCPS traditional calendar apply to every school?",
-      "a": "Not always. The official 2025-2026 traditional calendar notes that it does not apply to Arcola Elementary School, which follows the Innovative School Year Calendar. Families should verify alternate-calendar schools directly with MCPS."
-    },
-    {
-      "q": "Does MCPS have early dismissal days?",
-      "a": "Yes. MCPS lists multiple early release days during the 2026-2027 traditional school year, including dates before Thanksgiving, before Winter Break, in February, and on the final student day. Families should confirm school-specific dismissal times with MCPS or their assigned school."
-    },
-    {
-      "q": "How do I add MCPS dates to Google Calendar?",
-      "a": "Download the MCPS .ics calendar file from this page, open Google Calendar, go to Settings, choose Import & Export, and upload the file. The import is a one-time copy, so families should recheck the official MCPS calendar if the district revises dates."
-    },
-    {
-      "q": "What are MCPS designated make-up days?",
-      "a": "Designated make-up days are dates MCPS may use as instructional days if emergencies or closures disrupt the school year. Families should avoid treating those dates as guaranteed days off until MCPS confirms the final schedule."
-    },
-    {
-      "q": "Where should families verify Montgomery County Public Schools calendar updates?",
-      "a": "Use the official MCPS calendar page and school announcements for final confirmation. MySchoolDates is an independent reference and is not affiliated with Montgomery County Public Schools."
-    }
-  ],
   "relatedDistricts": [
     {
       "name": "Prince George's County Public Schools",
       "slug": "prince-georges-county-school-calendar",
-      "state": "Maryland",
-      "comparisonNote": "Nearby Maryland district in the Washington, D.C. metro area with its own countywide school calendar, early dismissal dates, and make-up day rules."
+      "state": "Maryland"
     },
     {
       "name": "Loudoun County Public Schools",
       "slug": "loudoun-county-school-calendar",
-      "state": "Virginia",
-      "comparisonNote": "Nearby Washington, D.C. metro district often compared by families moving between Northern Virginia and Montgomery County."
+      "state": "Virginia"
     },
     {
       "name": "Fairfax County Public Schools",
       "slug": "fairfax-county-school-calendar",
-      "state": "Virginia",
-      "comparisonNote": "Large D.C.-area district useful for comparing start dates, spring break timing, and professional day patterns."
+      "state": "Virginia"
     },
     {
       "name": "Prince William County Public Schools",
       "slug": "prince-william-county-school-calendar",
-      "state": "Virginia",
-      "comparisonNote": "Nearby Northern Virginia district with a separate independently adopted school calendar."
-    },
-    {
-      "name": "New York City Public Schools",
-      "slug": "new-york-city-public-schools-calendar",
-      "state": "New York",
-      "comparisonNote": "Large East Coast public school system with a later start date and different holiday pattern."
+      "state": "Virginia"
     }
   ],
   "sources": [

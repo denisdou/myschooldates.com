@@ -1,0 +1,523 @@
+{
+  "institutionId": "moore-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Moore Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-13",
+  "firstDayScope": "First student day on the BOE-approved MPS district calendar.",
+  "lastDay": "2027-05-21",
+  "lastDayScope": "Last student day on the BOE-approved MPS district calendar.",
+  "temporalCoverageStart": "2026-08-10",
+  "temporalCoverageEnd": "2027-05-24",
+  "totalSchoolDays": 175,
+  "sourceUrl": "https://www.mooreschools.com/calendar",
+  "sourceDocumentPage": "https://www.mooreschools.com/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1764774804/mooreschoolscom/mooreschoolscom/gxolbwkpccrvyxjmfuw3/2026-27_BOE_Approved_Calendar.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1764774804/mooreschoolscom/mooreschoolscom/gxolbwkpccrvyxjmfuw3/2026-27_BOE_Approved_Calendar.pdf",
+  "sourceCheckedAt": "2026-08-20",
+  "sourceUpdatedAt": "2025-11-10",
+  "sourceChecksumSha256": "d7e042b8fc6525b46689e3e7dc47cef65ec4cc63f7601bdedb1a44f6b448d3ee",
+  "sourceStatus": "current",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.mooreschools.com/calendar",
+    "linkText": "2026-27 District Calendar Approved 11/10/2025",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1764774804/mooreschoolscom/mooreschoolscom/gxolbwkpccrvyxjmfuw3/2026-27_BOE_Approved_Calendar.pdf",
+    "expectedChecksumSha256": "d7e042b8fc6525b46689e3e7dc47cef65ec4cc63f7601bdedb1a44f6b448d3ee"
+  },
+  "lastVerifiedAt": "2026-08-20",
+  "dateCreated": "2026-08-20",
+  "datePublished": "2026-08-20",
+  "dateModified": "2026-08-20",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "weather_makeup_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "BOE approved November 10, 2025",
+  "sourceCalendarName": "Moore Public Schools 2026–27 BOE-Approved Calendar",
+  "schemaCalendarName": "Moore Public Schools Calendar 2026–27",
+  "schemaDatasetName": "Moore Public Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Moore Public Schools dates for 2026–27, including the first and last student days, 175 instructional days, professional and conference days, breaks, the Record Day after Winter Break, the derived student return date, and weather-planning guidance.",
+  "schemaSpatialCoverage": "Moore and the southern Oklahoma City metropolitan area, Oklahoma",
+  "schemaCalendarDownloadName": "Moore Public Schools 2026–27 ICS Calendar",
+  "schemaCalendarDownloadDescription": "One-time ICS import of reviewed MPS districtwide dates, including the student return date derived from the published Winter Break and Record Day sequence.",
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "mps-boe-approved-calendar",
+  "allDatesMode": "all",
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationIcs": true,
+  "hideBreakDurationBadges": true,
+  "heroFactChips": [
+    "175 instructional days",
+    "7 professional days",
+    "BOE approved Nov. 10, 2025"
+  ],
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "breaks",
+    "districtProfile",
+    "livingHere",
+    "comparison",
+    "whatsDifferent",
+    "nationalTrends",
+    "planningTips",
+    "yearNumbers"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Calendar Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Breaks & Returns",
+      "id": "moore-2026-2027-closure-sequences"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Day Counts",
+      "id": "moore-2026-2027-day-counts"
+    },
+    {
+      "label": "Calendar Labels",
+      "id": "moore-2026-2027-calendar-labels"
+    },
+    {
+      "label": "Weather",
+      "id": "moore-2026-2027-weather"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Moore Public Schools Calendar 2026–27 | Dates & PDF",
+  "seoDescription": "Moore Public Schools starts Aug. 13, 2026, and ends May 21, 2027. See breaks, conference days, the Jan. 5 return after Winter Break, official PDF, and ICS.",
+  "heroSummary": "Moore Public Schools begins the 2026–27 school year on Thursday, Aug. 13, 2026, and the last day for students is Friday, May 21, 2027. Thanksgiving Break runs Nov. 23–27, Winter Break runs Dec. 21–Jan. 1, and Spring Break runs March 15–19. Students are also out Monday, Jan. 4, for Record Day, so classes resume Tuesday, Jan. 5.",
+  "heroSourceLine": "Moore, Oklahoma · BOE-approved district calendar · Reviewed Aug. 20, 2026",
+  "hideHeroDownloadLink": true,
+  "hideHeroReviewedField": true,
+  "hideHeroVerificationProcess": true,
+  "verificationBadgeText": "Checked against the BOE-approved MPS PDF and live district calendar",
+  "heroVerificationSourceText": "Official PDF, legend and published day totals checked",
+  "calendarNotes": "Teachers report August 10 and students report August 13. The PDF lists 175 instructional days and seven professional days; its 182 total combines those categories rather than counting 182 student days. September 21 is an In-service day with no school. October 14 is a no-school conference morning followed by Fall Break October 15–16; the live calendar separately lists evening conferences October 13. Winter Break ends January 1, January 4 is Record Day, and students return January 5. February 15 is labeled TNT Day and shaded as a teacher professional day; MPS does not explain what TNT stands for. March 12 is another no-school conference day immediately before Spring Break. The last student day is May 21, followed by Record Day May 24.",
+  "keyDatesHeading": "Moore Public Schools 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "Moore Public Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First day, major breaks, the return after Winter Break, and the last day of school",
+  "heroCtas": [
+    {
+      "label": "Open Official Calendar PDF",
+      "href": "__sourcePdfUrl",
+      "variant": "primary"
+    },
+    {
+      "label": "Download calendar (.ics)",
+      "href": "__icsUrl",
+      "variant": "secondary",
+      "download": true,
+      "filename": "__icsFilename"
+    }
+  ],
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-13",
+      "type": "school_start",
+      "schemaDescription": "First student day on the MPS 2026–27 BOE-approved calendar."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start"
+    },
+    {
+      "label": "Return",
+      "name": "Students Return After Winter Break",
+      "date": "2027-01-05",
+      "type": "school_resume",
+      "description": "January 4 is a Record Day with students out."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-05-21",
+      "type": "school_end",
+      "schemaDescription": "Last student day on the MPS 2026–27 BOE-approved calendar."
+    }
+  ],
+  "allDatesTitle": "Moore Public Schools 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "Districtwide dates come from the BOE-approved 2026–27 PDF. The Oct. 13 evening and Oct. 14 morning conference times come from the MPS live calendar. School-specific events and conference appointment times are not included. Sources:",
+  "allDatesFooterMode": "source_sentence",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1764774804/mooreschoolscom/mooreschoolscom/gxolbwkpccrvyxjmfuw3/2026-27_BOE_Approved_Calendar.pdf",
+  "allDatesSourceLabel": "Official MPS 2026–27 BOE-Approved Calendar PDF",
+  "allDatesSourceLinks": [
+    {
+      "label": "BOE-approved 2026–27 PDF",
+      "url": "https://resources.finalsite.net/images/v1764774804/mooreschoolscom/mooreschoolscom/gxolbwkpccrvyxjmfuw3/2026-27_BOE_Approved_Calendar.pdf"
+    },
+    {
+      "label": "MPS live district calendar",
+      "url": "https://www.mooreschools.com/calendar"
+    }
+  ],
+  "allDatesDerivedDateNote": "MPS lists Winter Break through Jan. 1 and Record Day on Jan. 4, so students return Jan. 5.",
+  "allDatesDerivedDateNotePosition": "footer",
+  "dateLegendItems": [
+    {
+      "label": "Student start / end / return",
+      "dot": "bg-orange-500"
+    },
+    {
+      "label": "Holiday / break",
+      "dot": "bg-amber-400"
+    },
+    {
+      "label": "Student-free professional / conference day",
+      "dot": "bg-violet-700"
+    },
+    {
+      "label": "Semester / conference event",
+      "dot": "bg-blue-400"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "moore-2026-2027-day-counts",
+      "label": "Why the MPS Calendar Shows 182 Days",
+      "position": "afterCalendarExport",
+      "content": "The 182 shown on the MPS calendar does not mean students attend school for 182 days. It combines 175 instructional days with seven professional days.",
+      "table": {
+        "caption": "Published MPS 2026–27 day totals",
+        "columns": [
+          "Calendar period",
+          "Instructional days",
+          "Professional days",
+          "Printed subtotal"
+        ],
+        "rows": [
+          [
+            "First semester",
+            "83",
+            "4",
+            "87"
+          ],
+          [
+            "Second semester",
+            "92",
+            "3",
+            "95"
+          ],
+          [
+            "Full year",
+            "175",
+            "7",
+            "182"
+          ]
+        ],
+        "footnote": "The Oct. 14 conference day is a student no-school day. March 12 is shaded as a Teacher Professional Day and is included in the second semester's three professional days. May 24 is a Record Day after the last student day and is not part of the printed 182-day total."
+      }
+    },
+    {
+      "id": "moore-2026-2027-closure-sequences",
+      "label": "MPS Breaks and When Students Return",
+      "position": "afterAllDates",
+      "content": "Some stretches of time off are longer than the dates officially labeled as a break. For childcare or travel, it helps to look at the full sequence of days students are out.",
+      "table": {
+        "caption": "Moore 2026–27 student closure sequences",
+        "columns": [
+          "Time off",
+          "Days students are out",
+          "Classes resume"
+        ],
+        "rows": [
+          [
+            "Fall conferences and break",
+            "Oct. 14 conference day; Oct. 15–16 Fall Break",
+            "Monday, Oct. 19"
+          ],
+          [
+            "Thanksgiving",
+            "Nov. 23–27 Thanksgiving Break",
+            "Monday, Nov. 30"
+          ],
+          [
+            "Winter",
+            "Dec. 21–Jan. 1 Winter Break; Jan. 4 Record Day",
+            "Tuesday, Jan. 5"
+          ],
+          [
+            "Spring conferences and break",
+            "March 12 conference day; March 15–19 Spring Break",
+            "Monday, March 22"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "moore-2026-2027-calendar-labels",
+      "label": "What the MPS No-School Labels Mean",
+      "position": "afterCalendarExport",
+      "content": "These labels matter because students may be out of school even when staff are still working.",
+      "table": {
+        "caption": "Student-free labels on the MPS 2026–27 calendar",
+        "columns": [
+          "MPS label",
+          "Date",
+          "What it means for students"
+        ],
+        "rows": [
+          [
+            "In-service",
+            "Sept. 21",
+            "No school for students"
+          ],
+          [
+            "Parent/Teacher Conf",
+            "Oct. 14 and March 12",
+            "No school on both dates; March 12 is also shaded as a Teacher Professional Day on the annual calendar"
+          ],
+          [
+            "Record Day",
+            "Jan. 4 and May 24",
+            "No school; May 24 is after the last student day"
+          ],
+          [
+            "TNT Day",
+            "Feb. 15",
+            "No school; MPS does not explain what TNT stands for"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "moore-2026-2027-weather",
+      "label": "How Weather Can Change the Moore Calendar",
+      "position": "afterCalendarExport",
+      "content": "Oklahoma requires students to complete 1,086 instructional hours. MPS checks its banked minutes before deciding whether missed time must be made up. ParentSquare is the district's primary notification source, and MPS aims to announce cancellations by 6 a.m.",
+      "links": [
+        {
+          "label": "MPS Winter Weather Information",
+          "to": "https://www.mooreschools.com/about-us/winter-weather-information"
+        }
+      ]
+    }
+  ],
+  "excludeDistrictFaqs": true,
+  "calendarFaqs": [
+    {
+      "q": "When do Moore students return after Winter Break in 2027?",
+      "a": "Winter Break ends Friday, January 1, and Monday, January 4, is Record Day. Classes resume Tuesday, January 5."
+    },
+    {
+      "q": "Are Moore students off for Parent/Teacher Conferences?",
+      "a": "Students are out Wednesday, October 14, 2026, and Friday, March 12, 2027. The live calendar also lists evening conferences October 13 from 4:30–7:00 p.m.; that evening session is not another full no-school day."
+    },
+    {
+      "q": "What is TNT Day on the Moore calendar?",
+      "a": "February 15 is labeled TNT Day and shaded as a teacher professional day, so students are out. MPS does not explain what TNT stands for, so we keep the district's label rather than guessing."
+    }
+  ],
+  "faqDisplayLimit": 3,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideSocialShareButtons": true,
+  "hideShareCalendarHeading": true,
+  "unifiedDownloadTitle": "Moore Public Schools 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Open the BOE-approved district PDF or add these districtwide dates to Google Calendar, Apple Calendar, or Outlook.",
+  "icsHeading": "Add Moore Public Schools Dates to Your Calendar",
+  "icsDescription": "Download these districtwide dates as an ICS file for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download calendar (.ics)",
+  "icsButtonSupportText": "One-time import. It will not automatically update if MPS revises the calendar.",
+  "pdfHeading": "Official Moore Public Schools 2026–27 Calendar PDF",
+  "sourcesTitle": "Sources & Review Notes",
+  "sourceReviewSummary": "We use the BOE-approved MPS PDF for districtwide dates, the live calendar for the Oct. 13–14 conference hours, and MPS's winter-weather page for information about banked minutes.",
+  "hideRelatedDistrictDescriptions": true,
+  "sourceReviewDetailsTitle": "What we checked",
+  "sourceReviewDetails": [
+    "We checked the complete one-page calendar, its black and gray legend, every listed holiday, break, professional day and semester total.",
+    "The PDF linked here matches the file currently published by MPS.",
+    "The visible calendar and the MPS calendar page both show board approval on Nov. 10, 2025. The PDF's embedded title still contains the older word “Proposed.”",
+    "MPS lists Winter Break through Jan. 1 and Record Day on Jan. 4, so students return Jan. 5.",
+    "School-specific activities, exact conference appointments and later weather changes should be confirmed through MPS or the assigned school."
+  ],
+  "sourceMaintainerLabel": "Maintained by",
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "sources": [
+    {
+      "label": "Moore Public Schools calendar page",
+      "url": "https://www.mooreschools.com/calendar"
+    },
+    {
+      "label": "Official MPS 2026–27 BOE-approved calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1764774804/mooreschoolscom/mooreschoolscom/gxolbwkpccrvyxjmfuw3/2026-27_BOE_Approved_Calendar.pdf"
+    },
+    {
+      "label": "MPS Winter Weather Information",
+      "url": "https://www.mooreschools.com/about-us/winter-weather-information"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-10",
+      "endDate": "2026-08-12",
+      "name": "Teacher Professional Days",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Preparation",
+      "description": "Teachers report August 10; students report August 13."
+    },
+    {
+      "date": "2026-08-13",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-21",
+      "name": "Teacher In-Service Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Student-Free"
+    },
+    {
+      "date": "2026-10-13",
+      "name": "Evening Parent-Teacher Conferences",
+      "type": "academic",
+      "badgeLabel": "Conferences",
+      "description": "The live MPS calendar lists conferences from 4:30–7:00 p.m.; this is not a full no-school day."
+    },
+    {
+      "date": "2026-10-14",
+      "name": "Parent-Teacher Conferences — No School",
+      "type": "no_school",
+      "badgeLabel": "No School · Conferences",
+      "description": "The live MPS calendar lists morning conferences from 8:00 a.m.–12:00 p.m."
+    },
+    {
+      "date": "2026-10-15",
+      "endDate": "2026-10-16",
+      "name": "Fall Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-18",
+      "name": "End of First Semester",
+      "type": "academic"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Record Day — No School",
+      "type": "teacher_workday",
+      "badgeLabel": "Student-Free"
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Students Return After Winter Break",
+      "type": "school_resume",
+      "isDerivedPlanningDate": true,
+      "derivedFromPublishedBreakDates": true
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "TNT Day — No School",
+      "type": "teacher_workday",
+      "badgeLabel": "Student-Free",
+      "description": "MPS does not explain what TNT stands for."
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Parent-Teacher Conferences — No School",
+      "type": "no_school",
+      "badgeLabel": "No School · Conferences"
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-05-21",
+      "name": "Last Day of School",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-05-24",
+      "name": "Record Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Record Day",
+      "hideFromCalendarExport": true,
+      "description": "Staff record day; students' last day is May 21."
+    }
+  ]
+}

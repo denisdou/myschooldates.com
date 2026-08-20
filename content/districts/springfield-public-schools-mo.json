@@ -1,0 +1,114 @@
+{
+  "institutionId": "springfield-public-schools-mo",
+  "name": "Springfield Public Schools",
+  "shortName": "SPS",
+  "slug": "springfield-public-schools-mo-calendar",
+  "state": "Missouri",
+  "stateCode": "MO",
+  "city": "Springfield",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "Pre-K",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.sps.org/",
+  "calendarPage": "https://www.sps.org/students-families/calendar",
+  "logo": "https://resources.finalsite.net/images/v1758356653/springfieldpublicschoolsmoorg/sh56iiwonumbwkbq6cnv/CopyofSPS-Logo_Primary-Triple-White1.svg",
+  "timezone": "America/Chicago",
+  "region": "Southwest Missouri",
+  "metro": "Springfield metropolitan area",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "studentCount": 24500,
+  "studentCountAsOf": "SPS Our Schools page, reviewed August 2026",
+  "studentCountSourceLabel": "Springfield Public Schools — Our Schools",
+  "studentCountSourceUrl": "https://www.sps.org/about/our-district/our-schools",
+  "profileStudentCountApproximate": true,
+  "calendarType": "District school calendar with a separate PYP calendar",
+  "hideProfileCalendarType": true,
+  "seoTitle": "Springfield Public Schools Calendar | Springfield, MO",
+  "seoDescription": "Springfield Public Schools calendar dates for Springfield, Missouri, including breaks, professional days, the PYP calendar, official PDFs, and ICS downloads.",
+  "districtFact": "This page covers Springfield Public Schools in Springfield, Missouri. SPS publishes a district calendar plus a separate PYP calendar for Boyd, Field, and Rountree elementary schools.",
+  "profileDisclaimer": "Enrollment is an approximate figure from the current SPS Our Schools page.",
+  "about": [
+    {
+      "title": "The District Calendar Has 171 Student Days",
+      "content": "The 2025–26 and 2026–27 one-page SPS calendars each list 171 student days. They also publish quarter ranges, teacher professional days, conference windows, district closures, and the Explore summer-learning window."
+    },
+    {
+      "title": "Three Elementary Schools Use a PYP Calendar",
+      "content": "SPS provides a separate Primary Years Programme calendar for Boyd, Field, and Rountree. Families at those schools should use the PYP PDF rather than treating every district-calendar date as universal."
+    },
+    {
+      "title": "Students Out and District Closed Are Different Labels",
+      "content": "Professional days remove students from the regular schedule, while a district-closed date also closes district operations. This page keeps the SPS labels visible so families can tell the difference."
+    },
+    {
+      "title": "SPS Uses Three Daily Schedule Tiers",
+      "content": "The district publishes 7:20 a.m.–2:20 p.m., 8:10 a.m.–3:10 p.m., and 9 a.m.–4 p.m. tiers. Boyd, Field, and Rountree are all listed in Tier One."
+    }
+  ],
+  "calendarNotes": "Use the annual district PDF for school-year dates and the live SPS calendar for current district events. Boyd, Field, and Rountree use the separate PYP calendar. The main PDF includes Wonder Years and Early Childhood Special Education in its first-day entry. Conference windows are shown as academic information, not automatically treated as student days off. The Explore dates apply to summer-learning participants, not every student. An imported ICS file is a one-time copy and will not update automatically if SPS changes the calendar.",
+  "districtFaqs": [
+    {
+      "q": "Is this the Springfield Public Schools calendar for Missouri?",
+      "a": "Yes. This page covers Springfield Public Schools in Springfield, Missouri, at sps.org. The -mo- slug distinguishes it from the separate Springfield Public Schools page for Massachusetts."
+    },
+    {
+      "q": "Which Springfield schools use the PYP calendar?",
+      "a": "SPS publishes the separate PYP calendar for Boyd, Field, and Rountree elementary schools. Open the PYP PDF for the school year before relying on the districtwide dates."
+    },
+    {
+      "q": "Do Wonder Years and Early Childhood Special Education start with other SPS students?",
+      "a": "The main SPS calendar lists the general first day as the first day for Wonder Years and Early Childhood Special Education as well. Families should still check program messages for classroom-specific details."
+    },
+    {
+      "q": "Does the Springfield calendar include current district events?",
+      "a": "The annual PDF covers the school-year schedule. The live SPS calendar adds current district events and provides RSS feeds, so it is the better source for later event updates."
+    },
+    {
+      "q": "Does the MySchoolDates ICS include the PYP calendar?",
+      "a": "No. The standard ICS follows the main district calendar. Boyd, Field, and Rountree families should open the official PYP PDF and confirm school-specific dates separately."
+    }
+  ],
+  "hiddenSections": [
+    "comparison",
+    "nationalTrends"
+  ],
+  "includeComparisonSchema": false,
+  "sources": [
+    {
+      "label": "Springfield Public Schools official website",
+      "url": "https://www.sps.org/"
+    },
+    {
+      "label": "SPS calendar and calendar archives",
+      "url": "https://www.sps.org/students-families/calendar"
+    },
+    {
+      "label": "SPS Our Schools",
+      "url": "https://www.sps.org/about/our-district/our-schools"
+    },
+    {
+      "label": "SPS school start and end times",
+      "url": "https://www.sps.org/students-families/resources/back-to-school-information/school-startend-times"
+    },
+    {
+      "label": "Field Elementary Primary Years Programme",
+      "url": "https://field.sps.org/academics/primary-years-programme"
+    }
+  ]
+}

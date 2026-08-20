@@ -1,0 +1,706 @@
+{
+  "institutionId": "springfield-public-schools-mo",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Springfield Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-25",
+  "firstDayScope": "District calendar, including Wonder Years and Early Childhood Special Education; Boyd, Field, and Rountree have a separate PYP calendar",
+  "lastDay": "2027-05-27",
+  "lastDayScope": "Main SPS district calendar",
+  "temporalCoverageStart": "2026-07-03",
+  "temporalCoverageEnd": "2027-06-30",
+  "totalSchoolDays": 171,
+  "semesters": 2,
+  "sourceUrl": "https://www.sps.org/students-families/calendar",
+  "sourceDocumentPage": "https://drive.google.com/file/d/1jgWmHUMFGruzD1SrLYlAUXcwfbTyyajT/view?usp=sharing",
+  "sourcePdfUrl": "https://drive.google.com/file/d/1jgWmHUMFGruzD1SrLYlAUXcwfbTyyajT/view?usp=sharing",
+  "lastCheckedPdfUrl": "https://drive.google.com/file/d/1jgWmHUMFGruzD1SrLYlAUXcwfbTyyajT/view?usp=sharing",
+  "sourceCheckedAt": "2026-08-20",
+  "sourceChecksumSha256": "167d3020502c27069c1bb30629800641d7dbf74eab7d7ec7e4c73d641180d7f2",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceConflict": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.sps.org/students-families/calendar",
+    "linkText": "District Calendar",
+    "expectedPdfUrl": "https://drive.google.com/file/d/1jgWmHUMFGruzD1SrLYlAUXcwfbTyyajT/view?usp=sharing",
+    "expectedChecksumSha256": "167d3020502c27069c1bb30629800641d7dbf74eab7d7ec7e4c73d641180d7f2"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.sps.org/students-families/calendar",
+      "linkText": "PYP Calendar (Boyd, Field & Rountree)",
+      "expectedPdfUrl": "https://drive.google.com/file/d/1ckk0Sz2B22b7OFOXMW7PYNJdrL8GaAd9/view?usp=sharing"
+    },
+    {
+      "type": "web-page",
+      "checkUrl": "https://www.sps.org/students-families/resources/back-to-school-information/school-startend-times",
+      "linkText": "School Start/End Times",
+      "expectedText": [
+        "Tier One",
+        "7:20 a.m. - 2:20 p.m.",
+        "Tier Two",
+        "8:10 a.m. - 3:10 p.m.",
+        "Tier Three",
+        "9 a.m. - 4 p.m."
+      ]
+    }
+  ],
+  "lastVerifiedAt": "2026-08-20",
+  "dateCreated": "2026-08-20",
+  "datePublished": "2026-08-20",
+  "dateModified": "2026-08-20",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "start_dismissal_schedule_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Springfield Public Schools 2026–2027 School Calendar — current district PDF reviewed August 20, 2026",
+  "sourceCalendarName": "Springfield Public Schools Missouri 2026–27 District Calendar",
+  "schemaCalendarName": "Springfield Public Schools Missouri 2026–27 District Calendar",
+  "schemaDatasetName": "Springfield Public Schools Missouri 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed dates from the main Springfield Public Schools calendar for Springfield, Missouri, including 171 student days, professional days, district closures, quarter ranges, conference dates, breaks, the last school day, and the Explore summer-learning window.",
+  "schemaSpatialCoverage": "Springfield Public Schools in Springfield, Missouri",
+  "schemaCalendarDownloadName": "Springfield Public Schools Missouri 2026–27 ICS Calendar File",
+  "schemaCalendarDownloadDescription": "One-time ICS import of family-relevant dates from the reviewed main SPS district calendar; the separate Boyd, Field, and Rountree PYP calendar is not included.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-springfield-mo-pyp-2026-2027",
+      "name": "Springfield Public Schools 2026–27 PYP Calendar for Boyd, Field, and Rountree",
+      "url": "https://drive.google.com/file/d/1ckk0Sz2B22b7OFOXMW7PYNJdrL8GaAd9/view?usp=sharing"
+    },
+    {
+      "id": "source-springfield-mo-start-end-times",
+      "type": "WebPage",
+      "name": "Springfield Public Schools School Start and End Times",
+      "url": "https://www.sps.org/students-families/resources/back-to-school-information/school-startend-times"
+    },
+    {
+      "id": "source-springfield-mo-calendar-2025-2026",
+      "name": "Springfield Public Schools Missouri 2025–26 District Calendar",
+      "url": "https://drive.google.com/file/d/1gvn41l4CRM0zTBdfMa9-ylxWxlKclxcY/view"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-springfield-mo-pyp-2026-2027",
+    "source-springfield-mo-start-end-times",
+    "source-springfield-mo-calendar-2025-2026"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "springfield-mo-district-calendar",
+  "allDatesMode": "all",
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideCoveredBreakDatesNote": true,
+  "hideBreakDurationBadges": true,
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "yearNumbers",
+    "whatsDifferent",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "comparison",
+    "nationalTrends",
+    "relatedDistricts",
+    "downloadCta",
+    "otherCalendars"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "breaksBeforeAllDates": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Which Calendar?",
+      "id": "springfield-mo-2026-2027-calendar-scope"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Changes",
+      "id": "springfield-mo-calendar-changes-2026-2027"
+    },
+    {
+      "label": "Quarter Dates",
+      "id": "grading-periods"
+    },
+    {
+      "label": "School Hours",
+      "id": "springfield-mo-2026-2027-school-hours"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Springfield Public Schools Calendar 2026–27 | Springfield, MO",
+  "seoDescription": "Springfield, Missouri students start Aug. 25, 2026, and finish May 27, 2027. See breaks, professional days, the PYP calendar, official PDF, and ICS.",
+  "heroSummary": "For students following the main district calendar, school starts Tuesday, August 25, 2026, and ends Thursday, May 27, 2027. Fall Break runs November 25–27. Winter Break runs December 21–31. The district is closed January 1, and January 4 is a professional day, so students return January 5. Spring Break runs March 15–19. March 22 is a professional day, so students return March 23. Boyd, Field, and Rountree use a separate PYP calendar.",
+  "heroSourceLine": "Springfield, Missouri · Main district calendar · 171 student days",
+  "verificationBadgeText": "Checked against official SPS sources",
+  "heroVerificationSourceText": "The complete one-page district calendar was checked against the current SPS calendar hub",
+  "heroVerificationComparisonText": "The separate PYP calendar and current school-hour tiers were confirmed on SPS pages",
+  "calendarNotes": "The main 2026–27 SPS calendar has 171 student days. August 25 is also the first day for Wonder Years and Early Childhood Special Education. PYP families should use the separate calendar linked in Downloads. Parent/teacher conferences run October 26–30, but the PDF does not label that entire window as no school. Winter Break ends December 31; January 1 is district closed and January 4 is a professional day, so students return January 5. Spring Break ends March 19, but March 22 is a professional day, so the fourth quarter and regular classes resume March 23. Explore is listed for June 3–30 after the regular student year and applies to summer-learning participants.",
+  "keyDatesHeading": "2026–27 Key Dates",
+  "keyDatesSummaryTitle": "2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "The first day, student breaks, return dates, and last day on the main SPS calendar",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-25",
+      "type": "school_start",
+      "schemaDescription": "First day on the main Springfield Public Schools district calendar, including Wonder Years and Early Childhood Special Education."
+    },
+    {
+      "label": "Fall Break",
+      "name": "Fall Break — District Closed",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break + Professional Day",
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "type": "break_start",
+      "description": "Winter Break ends December 31. The district is closed January 1, and students are also out January 4 for a professional day."
+    },
+    {
+      "label": "School Resumes",
+      "name": "Students Return / Second Semester Begins",
+      "date": "2027-01-05",
+      "type": "school_resume",
+      "description": "Students return Tuesday, January 5."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break + Professional Day",
+      "date": "2027-03-15",
+      "endDate": "2027-03-22",
+      "type": "break_start",
+      "description": "Spring Break ends March 19. Students are also out March 22 for a professional day."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-05-27",
+      "type": "school_end",
+      "schemaDescription": "Last day on the main Springfield Public Schools district calendar."
+    }
+  ],
+  "breaksTitle": "School Breaks and Return Dates",
+  "breakNotes": {
+    "Fall Break — District Closed": "The district is closed November 25–27. Students return Monday, November 30.",
+    "Winter Break — Students Out": "The official break runs December 21–31. January 1 is district closed and January 4 is a professional day, so students return Tuesday, January 5.",
+    "Spring Break — Students Out": "The official break runs March 15–19. March 22 is a professional day, so students return Tuesday, March 23."
+  },
+  "allDatesTitle": "Full 2026–27 Calendar",
+  "allDatesCoverageNote": "This table follows the main SPS one-page calendar from the July 3 district closure through the June Explore window. It keeps student days off, district closures, quarter dates, conferences, and summer learning distinct. PYP dates are not included in this table.",
+  "allDatesSourceUrl": "https://drive.google.com/file/d/1jgWmHUMFGruzD1SrLYlAUXcwfbTyyajT/view?usp=sharing",
+  "allDatesSourceLabel": "Official SPS 2026–27 District Calendar PDF",
+  "dateLegendItems": [
+    {
+      "label": "First / Last Day",
+      "dot": "bg-purple-500"
+    },
+    {
+      "label": "Students Out / Professional Day",
+      "dot": "bg-red-500"
+    },
+    {
+      "label": "District Closed",
+      "dot": "bg-slate-800"
+    },
+    {
+      "label": "Quarter / Conference Date",
+      "dot": "bg-sky-500"
+    }
+  ],
+  "dateLegendLabelOverrides": {
+    "Holiday": "District Closed",
+    "Teacher Workday": "Professional Day",
+    "Academic Date": "Quarter / Conference Date",
+    "Break": "Break / Students Out"
+  },
+  "gradingPeriodsPosition": "afterCalendarExport",
+  "gradingPeriodsTitle": "2026–27 Quarter Dates",
+  "gradingPeriodsDescription": "The district calendar publishes four quarter ranges totaling 171 student days.",
+  "gradingPeriodsDaysLabel": "Student days",
+  "gradingPeriods": [
+    {
+      "label": "Quarter 1",
+      "start": "2026-08-25",
+      "end": "2026-10-22",
+      "studentDays": 42
+    },
+    {
+      "label": "Quarter 2",
+      "start": "2026-10-26",
+      "end": "2026-12-18",
+      "studentDays": 35
+    },
+    {
+      "label": "Quarter 3",
+      "start": "2027-01-05",
+      "end": "2027-03-12",
+      "studentDays": 47
+    },
+    {
+      "label": "Quarter 4",
+      "start": "2027-03-23",
+      "end": "2027-05-27",
+      "studentDays": 47
+    }
+  ],
+  "customSections": [
+    {
+      "id": "springfield-mo-2026-2027-calendar-scope",
+      "label": "Which SPS Calendar Should You Use?",
+      "position": "afterKeyDates",
+      "content": "Most SPS students follow the main district calendar. Boyd, Field, and Rountree follow a separate Primary Years Programme calendar. For meetings, enrollment events, and other updates during the year, use the district's live calendar.",
+      "table": {
+        "columns": [
+          "Calendar",
+          "Who should use it",
+          "What it answers"
+        ],
+        "rows": [
+          [
+            "District calendar",
+            "Students following the main SPS schedule, including Wonder Years and Early Childhood Special Education",
+            "First and last days, breaks, professional days, district closures, quarters, and conferences"
+          ],
+          [
+            "PYP calendar",
+            "Students at the three PYP schools",
+            "The school-year schedule for the three SPS Primary Years Programme schools"
+          ],
+          [
+            "Live district calendar",
+            "Families checking current district events",
+            "Meetings, enrollment events, and later additions; RSS feeds are available"
+          ]
+        ]
+      },
+      "links": [
+        {
+          "label": "Open the official SPS calendar page",
+          "to": "https://www.sps.org/students-families/calendar"
+        },
+        {
+          "label": "Open the 2026–27 PYP calendar",
+          "to": "https://drive.google.com/file/d/1ckk0Sz2B22b7OFOXMW7PYNJdrL8GaAd9/view?usp=sharing"
+        }
+      ]
+    },
+    {
+      "id": "springfield-mo-2026-2027-school-hours",
+      "label": "SPS School Start and Dismissal Times",
+      "position": "afterGradingPeriods",
+      "content": "SPS uses three schedule tiers based on school start and dismissal times. Boyd, Field, and Rountree are listed in Tier One. The official hours page also gives Study Alternative Center its own 8:45 a.m.–2:45 p.m. schedule.",
+      "table": {
+        "columns": [
+          "SPS tier",
+          "School hours",
+          "Examples"
+        ],
+        "rows": [
+          [
+            "Tier One",
+            "7:20 a.m.–2:20 p.m.",
+            "PYP schools, Wilson's Creek, and other listed elementary schools"
+          ],
+          [
+            "Tier Two",
+            "8:10 a.m.–3:10 p.m.",
+            "High schools, early childhood centers, and selected elementary or choice programs"
+          ],
+          [
+            "Tier Three",
+            "9 a.m.–4 p.m.",
+            "Middle and K–8 schools plus selected academies"
+          ]
+        ],
+        "footnote": "Check the official SPS hours page for the tier assigned to a specific school or program."
+      },
+      "links": [
+        {
+          "label": "View official SPS school start and end times",
+          "to": "https://www.sps.org/students-families/resources/back-to-school-information/school-startend-times"
+        }
+      ]
+    },
+    {
+      "id": "springfield-mo-calendar-changes-2026-2027",
+      "label": "What Changed from the 2025–26 SPS Calendar?",
+      "position": "afterCalendarExport",
+      "content": "The 2026–27 calendar starts six days later in August and ends five days later in May than 2025–26. Both school years have 171 student days.",
+      "table": {
+        "columns": [
+          "Calendar item",
+          "2025–26",
+          "2026–27"
+        ],
+        "rows": [
+          [
+            "First day",
+            "August 19, 2025",
+            "August 25, 2026"
+          ],
+          [
+            "Last day",
+            "May 22, 2026",
+            "May 27, 2027"
+          ],
+          [
+            "Fall break structure",
+            "Two Thanksgiving Break days followed by three district-closed dates",
+            "One district-closed Fall Break, November 25–27"
+          ],
+          [
+            "Return after Spring Break",
+            "March 23, after a March 20 district closure",
+            "March 23, after a March 22 professional day"
+          ],
+          [
+            "Student days",
+            "171",
+            "171"
+          ]
+        ],
+        "footnote": "Comparison dates are based on the official SPS calendars reviewed for both school years."
+      }
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-07-03",
+      "name": "District Closed",
+      "type": "operational_closure",
+      "description": "The regular student year begins August 25.",
+      "badgeLabel": "District Closed",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-18",
+      "endDate": "2026-08-24",
+      "name": "Professional Days for All Teachers",
+      "type": "teacher_workday",
+      "description": "Staff days before students begin.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-25",
+      "name": "First Day of School",
+      "type": "school_start",
+      "description": "The main calendar also identifies this as the first day for Wonder Years and Early Childhood Special Education. PYP students use a separate calendar."
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — District Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-10-22",
+      "name": "End of First Quarter",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-23",
+      "name": "Professional Day — Students Out",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2026-10-26",
+      "endDate": "2026-10-30",
+      "name": "Parent/Teacher Conferences",
+      "type": "conference",
+      "description": "The PDF lists a conference window but does not label the entire range as no school.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-26",
+      "name": "Second Quarter Begins",
+      "type": "quarter_start",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-11-02",
+      "name": "Trade Out Day / Professional Day — Students Out",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Professional Day / Election Day — Students Out",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "name": "Fall Break — District Closed",
+      "type": "break_start",
+      "badgeLabel": "District Closed"
+    },
+    {
+      "date": "2026-11-30",
+      "name": "Students Return After Fall Break",
+      "type": "school_resume",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-18",
+      "name": "End of Second Quarter / First Semester",
+      "type": "semester_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2026-12-31",
+      "name": "Winter Break — Students Out",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-24",
+      "endDate": "2026-12-25",
+      "name": "District Closed",
+      "type": "operational_closure",
+      "badgeLabel": "District Closed",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-31",
+      "name": "District Closed",
+      "type": "operational_closure",
+      "badgeLabel": "District Closed",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-01",
+      "name": "District Closed",
+      "type": "operational_closure",
+      "badgeLabel": "District Closed"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Professional Day — Students Out",
+      "type": "teacher_workday",
+      "description": "Students return January 5.",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Students Return / Second Semester Begins",
+      "type": "school_resume",
+      "badgeLabel": "School Resumes"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — District Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents' Day — District Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-12",
+      "name": "End of Third Quarter",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break — Students Out",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-19",
+      "name": "District Closed",
+      "type": "operational_closure",
+      "badgeLabel": "District Closed",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-22",
+      "name": "Professional Day — Students Out",
+      "type": "teacher_workday",
+      "description": "Students return March 23.",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2027-03-23",
+      "name": "Students Return / Fourth Quarter Begins",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-04-06",
+      "name": "Professional Day / Election Day — Students Out",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2027-05-27",
+      "name": "Last Day of School / End of Fourth Quarter",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day — District Closed",
+      "type": "holiday",
+      "description": "The regular student year ended May 27.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-03",
+      "endDate": "2027-06-30",
+      "name": "Explore Summer Learning Window",
+      "type": "academic",
+      "description": "The one-page calendar lists Explore for June 3–30. This applies to summer-learning participants, not every SPS student.",
+      "badgeLabel": "Explore",
+      "hideFromCalendarExport": true
+    }
+  ],
+  "compactDownloadModule": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "unifiedDownloadTitle": "Calendar Downloads",
+  "unifiedDownloadDescription": "Open the main district PDF, view the PYP calendar, or add selected district dates to a calendar app.",
+  "pdfHeading": "Official SPS 2026–27 District Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Open the one-page district calendar used to verify the 171 student days, breaks, professional days, quarters, conferences, and Explore window shown here.",
+  "hidePdfVersionLabel": true,
+  "icsHeading": "Add SPS Dates to Your Calendar",
+  "icsDescription": "Download selected dates from the main SPS district calendar for Google Calendar, Apple Calendar, or Outlook. PYP dates and current district events are not included.",
+  "icsButtonLabel": "Download SPS 2026–27 ICS",
+  "icsButtonSupportText": "One-time import. Later SPS revisions will not update automatically.",
+  "officialSubscriptionTitle": "Want current district event updates?",
+  "officialSubscriptionDescription": "The live SPS calendar includes current district events and offers RSS feeds. Use it for later additions or changes; the ICS file below is a one-time import.",
+  "officialSubscriptionButtonLabel": "Open the SPS Live Calendar",
+  "officialSubscriptionUrl": "https://www.sps.org/students-families/calendar",
+  "alternateCalendarsTitle": "SPS 2026–27 PYP Calendar",
+  "alternateCalendarsDescription": "PYP students follow a separate official calendar. Its dates are not merged into the main district ICS.",
+  "alternateCalendarsButtonLabel": "View PYP Calendar",
+  "alternateCalendars": [
+    {
+      "type": "pyp",
+      "group": "Primary Years Programme",
+      "label": "2026–27 PYP Calendar — Boyd, Field & Rountree",
+      "description": "Official SPS school-year calendar for the three Primary Years Programme elementary schools.",
+      "pdfUrl": "https://drive.google.com/file/d/1ckk0Sz2B22b7OFOXMW7PYNJdrL8GaAd9/view?usp=sharing",
+      "buttonLabel": "View Official PYP PDF",
+      "ariaLabel": "View the official Springfield Public Schools 2026–27 PYP calendar for Boyd, Field, and Rountree"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "When does Springfield Public Schools start in 2026–27?",
+      "a": "Students following the main SPS calendar start Tuesday, August 25, 2026. The PDF also identifies this as the first day for Wonder Years and Early Childhood Special Education. PYP students use a separate calendar."
+    },
+    {
+      "q": "When do SPS students return after Winter Break?",
+      "a": "Winter Break runs December 21–31, 2026. January 1 is district closed and January 4 is a professional day with students out, so regular classes resume Tuesday, January 5, 2027."
+    },
+    {
+      "q": "When do SPS students return after Spring Break in 2027?",
+      "a": "Spring Break runs March 15–19. Monday, March 22 is a professional day with students out, so students return Tuesday, March 23."
+    },
+    {
+      "q": "Are students out for the entire October 26–30 conference window?",
+      "a": "The annual PDF lists Parent/Teacher Conferences for October 26–30 but does not label the entire range as no school. October 23 is the professional day when students are out. Check school messages for conference appointments or schedule changes."
+    },
+    {
+      "q": "Which SPS schools use the PYP calendar?",
+      "a": "Boyd, Field, and Rountree elementary schools use the separate SPS PYP calendar. The main district ICS does not include that calendar."
+    },
+    {
+      "q": "What are the SPS school-hour tiers?",
+      "a": "Tier One runs 7:20 a.m.–2:20 p.m., Tier Two 8:10 a.m.–3:10 p.m., and Tier Three 9 a.m.–4 p.m. Boyd, Field, and Rountree are in Tier One. Check the official hours page for a specific school or program."
+    }
+  ],
+  "faqLimit": 6,
+  "sources": [
+    {
+      "label": "SPS official calendar and archives",
+      "url": "https://www.sps.org/students-families/calendar"
+    },
+    {
+      "label": "Official SPS 2026–27 District Calendar PDF",
+      "url": "https://drive.google.com/file/d/1jgWmHUMFGruzD1SrLYlAUXcwfbTyyajT/view?usp=sharing"
+    },
+    {
+      "label": "Official SPS 2026–27 PYP Calendar — Boyd, Field & Rountree",
+      "url": "https://drive.google.com/file/d/1ckk0Sz2B22b7OFOXMW7PYNJdrL8GaAd9/view?usp=sharing"
+    },
+    {
+      "label": "Official SPS 2025–26 District Calendar PDF — comparison source",
+      "url": "https://drive.google.com/file/d/1gvn41l4CRM0zTBdfMa9-ylxWxlKclxcY/view"
+    },
+    {
+      "label": "SPS school start and end times",
+      "url": "https://www.sps.org/students-families/resources/back-to-school-information/school-startend-times"
+    }
+  ],
+  "sourceReviewSummary": "Reviewed by Denis Dou on August 20, 2026, using official Springfield Public Schools calendars and the current SPS school-hours page.",
+  "sourceReviewDetails": [
+    "Checked the complete one-page district PDF and its 171-student-day label.",
+    "Verified the first and last days, professional days when students are out, district closures, quarter ranges, conference window, breaks, and Explore dates.",
+    "Compared the first and last days, Fall Break structure, the return date after Spring Break, and total student days with the official 2025–26 district calendar.",
+    "Kept the October conference window as an academic entry because SPS does not label the entire range as no school.",
+    "Confirmed that SPS publishes a separate PYP calendar; those dates are not merged into the main district dataset or ICS.",
+    "Checked the current three-tier start/end-time page and confirmed that Boyd, Field, and Rountree are listed in Tier One."
+  ],
+  "sourceMaintainerLabel": "Maintained by",
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "hideSourceReviewDate": true,
+  "sourceNextReviewText": "We review this page again when SPS publishes a revised calendar, changes school-hour tiers, or releases the next school year."
+}

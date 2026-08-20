@@ -1,0 +1,168 @@
+{
+  "institutionId": "memphis-shelby-county-schools",
+  "name": "Memphis-Shelby County Schools",
+  "shortName": "MSCS",
+  "slug": "memphis-shelby-county-schools-calendar",
+  "state": "Tennessee",
+  "stateCode": "TN",
+  "city": "Memphis",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "PK",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.scsk12.org/",
+  "calendarPage": "https://www.scsk12.org/calendar25/",
+  "logo": "https://www.scsk12.org/img/2022/MSCS%20website%20logo%2010922.png",
+  "timezone": "America/Chicago",
+  "county": "Shelby County",
+  "region": "West Tennessee",
+  "metro": "Memphis",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "calendarType": "traditional",
+  "includeComparisonSchema": false,
+  "searchAliases": [
+    "Memphis-Shelby County Schools calendar",
+    "MSCS calendar",
+    "Shelby County Schools calendar",
+    "Memphis school calendar",
+    "SCS calendar",
+    "MSCS student calendar"
+  ],
+  "districtFact": "MSCS publishes separate Student, Teacher, Attendance and Report Card, and Assessment calendars. Its Student Calendar also separates 4–7 p.m. parent-conference evenings by high, middle and elementary school level and uses the name Spring Break II for additional days when students are out later in spring.",
+  "about": [
+    {
+      "title": "One calendar does not answer every MSCS planning question",
+      "content": "Use the Student Calendar for districtwide attendance dates. The Teacher Calendar explains staff work and professional-development days inside some student breaks, while the Attendance and Report Card Periods file supplies quarter counts and report-card timing. Assessment dates belong to a separate district calendar."
+    },
+    {
+      "title": "Parent conferences are evening meetings",
+      "content": "MSCS lists separate high school, middle school and elementary school parent-conference dates from 4–7 p.m. The Student Calendar does not label those dates as student holidays, so families should not treat a conference evening as an automatic day off."
+    },
+    {
+      "title": "Student and teacher break labels can differ",
+      "content": "The Student Calendar groups the full period when students are out. The Teacher Calendar may divide that same window into teacher inservice, stockpiled professional-development FLEX days and holidays. Spring Break II is an additional student break that can cover a different staff schedule."
+    }
+  ],
+  "calendarNotes": "Use the MSCS Student Calendar for districtwide attendance dates. Parent conferences are published as 4–7 p.m. meetings by school level and are not no-school days unless MSCS separately says so. Use the Teacher Calendar to understand staff duties during student breaks, the Attendance and Report Card Periods file for quarter totals, and the Assessment Calendar for testing. A downloaded ICS file is a one-time copy and does not update when MSCS changes a source. Check the MSCS website again before booking nonrefundable travel, camps or childcare when a calendar is still awaiting approval.",
+  "planningTips": {
+    "title": "Planning with MSCS calendar sources",
+    "content": [
+      "Use the Student Calendar for childcare and attendance planning; teacher FLEX or inservice labels do not shorten the time students are out of school.",
+      "Treat high, middle and elementary parent-conference dates as 4–7 p.m. meeting evenings, not automatic days off.",
+      "Keep Spring Break II separate from the main March break because MSCS publishes it as an additional student break.",
+      "Check the assigned school for conference appointments, activities, testing details and building-specific changes.",
+      "Check the MSCS website again before making nonrefundable plans when a calendar still carries a pending-approval notice."
+    ]
+  },
+  "districtFaqs": [
+    {
+      "q": "Which MSCS calendar should families use for school and no-school dates?",
+      "a": "Use the official Student Calendar for districtwide attendance dates. The Teacher Calendar is for staff operations, while the Attendance and Report Card Periods and Assessment calendars answer narrower planning questions."
+    },
+    {
+      "q": "Are MSCS parent-conference dates no-school days?",
+      "a": "Not by themselves. The Student Calendar lists grade-band conferences from 4–7 p.m. without labeling those dates as student holidays. Confirm the appointment time with the school."
+    },
+    {
+      "q": "What is Spring Break II on the MSCS calendar?",
+      "a": "Spring Break II is the district's label for additional days when students are out after the main March Spring Break. The Teacher Calendar may show staff duties on part of that period."
+    },
+    {
+      "q": "Does MSCS publish a Spanish school calendar?",
+      "a": "Yes. The official Spanish Student Calendar contains the same student schedule in Spanish; it is not a separate academic track."
+    },
+    {
+      "q": "Will an MSCS ICS download update automatically?",
+      "a": "No. The ICS is a one-time import based on the dates reviewed for the page. Re-download it or update your calendar manually if MSCS revises the official source."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "mscs-calendar-guide",
+      "label": "Which MSCS Calendar Should You Use?",
+      "content": "MSCS maintains companion calendars for different planning needs. Start with the Student Calendar, then use the more specific official source when needed.",
+      "position": "beforeSources",
+      "table": {
+        "caption": "MSCS calendar sources by planning need",
+        "columns": [
+          "Planning need",
+          "Best official source"
+        ],
+        "rows": [
+          [
+            "First and last days, student breaks, holidays and conference evenings",
+            "MSCS Student Calendar"
+          ],
+          [
+            "Teacher inservice, FLEX and administrative workdays",
+            "MSCS Teacher Calendar"
+          ],
+          [
+            "Quarter day counts and report-card periods",
+            "MSCS Attendance and Report Card Periods"
+          ],
+          [
+            "District testing windows",
+            "MSCS Assessment Calendar"
+          ],
+          [
+            "Spanish-language student dates",
+            "MSCS Calendario Escolar"
+          ],
+          [
+            "Conference appointments, activities and building events",
+            "Your child's school"
+          ]
+        ]
+      }
+    }
+  ],
+  "hiddenSections": [
+    "comparison",
+    "nationalTrends",
+    "livingHere",
+    "districtProfile",
+    "relatedDistricts"
+  ],
+  "sources": [
+    {
+      "label": "Memphis-Shelby County Schools official website",
+      "url": "https://www.scsk12.org/"
+    },
+    {
+      "label": "MSCS official calendar page",
+      "url": "https://www.scsk12.org/calendar25/"
+    },
+    {
+      "label": "Official MSCS 2025–26 Student Calendar PDF",
+      "url": "https://www.scsk12.org/calendar25/files/25/Final%202025-26_MSCS_Students_Calendar.pdf"
+    },
+    {
+      "label": "Official MSCS 2026–27 Student Calendar PDF",
+      "url": "https://www.scsk12.org/calendar25/files/26/SY26-27_MSCS_Student_Calendar.pdf"
+    },
+    {
+      "label": "Official MSCS 2026–27 Student Calendar — Spanish",
+      "url": "https://www.scsk12.org/calendar25/files/26/SPA%20SY2026-27%20MSCS%20Student%20Calendar.pdf"
+    },
+    {
+      "label": "Official MSCS 2026–27 Assessment Calendar",
+      "url": "https://www.scsk12.org/calendar25/files/26/MSCS%20Assessment%20Calendar%202026%202027%20FINAL%20PDF%2007_13_26.pdf"
+    }
+  ]
+}

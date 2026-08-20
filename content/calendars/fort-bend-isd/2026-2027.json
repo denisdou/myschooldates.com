@@ -8,19 +8,88 @@
   "semesters": 2,
   "sourceUrl": "https://www.fortbendisd.gov/calendar",
   "sourcePdfUrl": "https://resources.finalsite.net/images/v1782749860/fortbendisdcom/p25xocyn8imjw8fi9hdl/202627InstructionalCalendarEnglish.pdf",
-  "lastVerifiedAt": "2026-07-25",
+  "lastVerifiedAt": "2026-08-20",
   "datePublished": "2026-07-25",
-  "dateModified": "2026-07-25",
+  "dateModified": "2026-08-20",
   "sourceVersion": "Board Approved 1/29/2026",
   "calendarType": "traditional",
-  "pageHeading": "Fort Bend ISD Calendar 2026-2027",
-  "seoTitle": "Fort Bend ISD Calendar 2026-2027: First Day, Holidays, Breaks & PDF",
-  "seoDescription": "Fort Bend ISD Calendar 2026-2027 includes the Aug 11 first day, May 27 last day, holidays, Fall Break, Winter Break, Spring Break, early release dates, PDF and ICS download.",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Fort Bend ISD Calendar 2026–27",
+  "seoTitle": "Fort Bend ISD Calendar 2026–27: Dates, Breaks & PDF",
+  "seoDescription": "Fort Bend ISD starts Aug. 11, 2026, and ends May 27, 2027. See breaks, no-student days, early release dates, weather make-up days, PDF and ICS.",
   "hideSemesterCount": true,
-  "heroFactChips": ["4 grading periods", "187 teacher contract days"],
-  "breaksTitle": "Fort Bend ISD Holidays and School Breaks",
-  "heroSummary": "Fort Bend ISD calendar 2026-2027 starts Tuesday, August 11, 2026 and ends Thursday, May 27, 2027. The calendar includes 172 instructional days, 187 teacher contract days, Fall Break, Thanksgiving Break, Winter Break, Spring Break, early release dates, grading periods, official PDF download, and calendar import options.",
-  "calendarNotes": "Fort Bend ISD begins the 2026-2027 school year on August 11, 2026. Fall Break runs October 12-16, Thanksgiving Break runs November 23-27, and Winter Break runs December 21-January 1. Students return for the second semester on January 6, 2027 after professional learning and teacher planning days. Spring Break runs March 8-12, with an additional student/teacher holiday on March 26 and a possible inclement weather make-up day on April 30. The school year ends with early release for all students on May 27, 2027.",
+  "heroFactChips": [
+    "4 grading periods",
+    "Second semester begins Jan. 6, 2027"
+  ],
+  "hideSecondSemesterStartSummary": true,
+  "breaksTitle": "Major School Breaks",
+  "breakNotes": {
+    "Fall Break": "No school Friday, October 9 for teacher planning; Fall Break begins Monday, October 12.",
+    "Winter Break": "Students return Wednesday, January 6 after staff days on January 4–5."
+  },
+  "heroSummary": "Fort Bend ISD's 2026–27 school year starts Tuesday, August 11, 2026, and the last day is Thursday, May 27, 2027, with early release for all students. Fall Break is October 12–16, Winter Break is December 21–January 1, and Spring Break is March 8–12.",
+  "keyDatesHeading": "Key Dates",
+  "keyDatesSummaryTitle": "Key Dates",
+  "keyDatesSummarySubtitle": "The dates families most often need for the 2026–27 school year.",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of Classes",
+      "date": "2026-08-11",
+      "type": "school_start"
+    },
+    {
+      "label": "Fall",
+      "name": "Fall Break",
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "Students return Wednesday, January 6."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-08",
+      "endDate": "2027-03-12",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Students",
+      "date": "2027-05-27",
+      "type": "school_end",
+      "description": "Early release for all students."
+    }
+  ],
+  "allDatesMode": "all",
+  "allDatesTitle": "Full Calendar",
+  "allDatesCoverageNote": "Includes districtwide student dates, staff workdays, early-release dates and possible weather make-up days from the published instructional calendar.",
+  "breaksBeforeAllDates": true,
+  "comparisonBeforeFaq": true,
+  "unifiedDownloadTitle": "Official Calendar and Download Options",
+  "unifiedDownloadDescription": "Open the official Fort Bend ISD PDF or download a one-time calendar file. The ICS does not update automatically if the district revises a date.",
+  "compactDownloadModule": true,
+  "pdfHeading": "Official 2026–27 Calendar PDF",
+  "pdfDescription": "Open the Fort Bend ISD instructional calendar published by the district.",
+  "pdfButtonLabel": "Open Official PDF",
+  "icsHeading": "Add Dates to Your Calendar",
+  "icsDescription": "Download a one-time file with major breaks, no-student days, early-release dates and possible weather make-up days.",
+  "icsButtonLabel": "Download Fort Bend ISD 2026–27 ICS",
   "calendarFaqs": [
     {
       "q": "When does Fort Bend ISD start school in 2026?",
@@ -61,112 +130,144 @@
   ],
   "faqSchemaQuestions": [
     "When does Fort Bend ISD start school in 2026?",
+    "When is Fort Bend ISD Fall Break in 2026?",
     "When is Fort Bend ISD Winter Break 2026-2027?",
     "When is Spring Break for Fort Bend ISD in 2027?",
     "When is the last day of school for Fort Bend ISD in 2027?",
-    "Where can I download the Fort Bend ISD 2026-2027 calendar PDF?",
-    "Does Fort Bend ISD have early release days?"
+    "Does Fort Bend ISD have early release days?",
+    "Does Fort Bend ISD have inclement weather make-up days in 2026-2027?",
+    "How can families check for emergency schedule changes?"
   ],
+  "faqDisplayQuestions": [
+    "When does Fort Bend ISD start school in 2026?",
+    "When is Fort Bend ISD Fall Break in 2026?",
+    "When is Fort Bend ISD Winter Break 2026-2027?",
+    "When is Spring Break for Fort Bend ISD in 2027?",
+    "When is the last day of school for Fort Bend ISD in 2027?",
+    "Does Fort Bend ISD have early release days?",
+    "Does Fort Bend ISD have inclement weather make-up days in 2026-2027?",
+    "How can families check for emergency schedule changes?"
+  ],
+  "faqOrderLimit": 8,
+  "faqLimit": 8,
   "customSections": [
     {
-      "id": "fort-bend-isd-calendar-timeline-2026-2027",
-      "label": "Fort Bend ISD 2026-2027 Calendar Timeline",
-      "content": "Use this timeline as a fast scan of the major Fort Bend ISD school-year milestones before checking the complete date list.",
-      "position": "afterKeyDates",
+      "id": "fort-bend-2026-2027-calendar-details",
+      "label": "Calendar Details Families Should Know",
+      "content": "Several dates outside the major breaks can affect pickup, childcare and family schedules. Fort Bend ISD also schedules staff days, grade-specific early-release days and two possible weather make-up days.",
+      "position": "afterAllDates",
       "table": {
-        "columns": ["Window", "Date", "Planning use"],
+        "columns": ["Calendar detail", "Dates", "What families should know"],
         "rows": [
-          ["First Day", "August 11, 2026", "Transportation, supplies, and first-week routines."],
-          ["Fall Break", "October 12-16, 2026", "October childcare and Houston-area travel planning."],
-          ["Thanksgiving Break", "November 23-27, 2026", "Holiday travel and family visits."],
-          ["Winter Break", "December 21, 2026-January 1, 2027", "Longest winter planning window before second semester."],
-          ["Spring Break", "March 8-12, 2027", "Spring travel, camps, and childcare planning."],
-          ["Last Day", "May 27, 2027", "Summer camp, travel, and end-of-year scheduling."]
+          ["Staff days during the school year", "Sep. 25, Oct. 9, Jan. 4–5, Feb. 12 and Mar. 5", "Students do not attend on these professional learning or teacher planning days."],
+          ["Elementary early release", "Sep. 24 and Feb. 11", "These early dismissals apply to elementary students."],
+          ["Middle and high school early release", "Dec. 17 and May 26", "These early dismissals apply to middle and high school students."],
+          ["All-student early release", "Dec. 18 and May 27", "May 27 is also the last student day."],
+          ["Early-release times", "2026–27", "Elementary: 12:10 p.m.; middle school: 1:25 p.m.; high school: 11:35 a.m."],
+          ["Possible weather make-up days", "Feb. 15 and Apr. 30", "Both dates are listed as student/teacher holidays but may become instructional days after closures."],
+          ["Second-semester return", "Jan. 6", "Students return after the Jan. 4 professional learning day and Jan. 5 teacher planning day."]
         ]
       }
     },
     {
-      "id": "fort-bend-isd-download-print-guide",
-      "label": "Fort Bend ISD Calendar Download and Print Guide",
-      "content": "Use the official PDF when you need a printable Fort Bend ISD calendar, and use the ICS file when you want to add major dates to Google Calendar, Apple Calendar, or Outlook. Calendar imports are one-time downloads, so families should re-check Fort Bend ISD before relying on dates for urgent plans.",
-      "position": "afterCalendarExport",
-      "groups": [
-        {
-          "label": "How to use the downloads",
-          "items": [
-            "Download the PDF for printing, refrigerator calendars, and family planning binders.",
-            "Google Calendar: use Import to upload the ICS file as a one-time Fort Bend ISD calendar import.",
-            "Apple Calendar: open or import the ICS file to add the district dates to a personal calendar.",
-            "Outlook: import the ICS file from the calendar settings menu to add the major dates.",
-            "Share important early release and no-student dates with caregivers.",
-            "Re-check the official Fort Bend ISD calendar after weather closures or district updates."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "fort-bend-2026-2027-calendar-highlights",
-      "label": "What Makes the Fort Bend ISD 2026-2027 Calendar Useful",
-      "content": "This section explains the Fort Bend ISD calendar features families should understand after checking the quick date timeline. It focuses on schedule structure rather than repeating the same first day, last day, and break dates.",
-      "position": "afterAbout",
-      "groups": [
-        {
-          "label": "Calendar structure",
-          "items": [
-            "Four nine-week grading periods divide the school year into two semesters.",
-            "Teacher planning and professional learning days create no-student days outside the major breaks.",
-            "Early release dates are split by elementary, middle/high school, and all-student schedules.",
-            "Weather make-up dates may become instructional days if the district needs to recover time."
-          ]
-        },
-        {
-          "label": "Important planning notes",
-          "items": [
-            "October 9 is a teacher planning day with no students, immediately before Fall Break.",
-            "December 17 is early release for middle and high schools; December 18 is early release for all students.",
-            "February 15 and April 30 are listed as inclement weather make-up days, so they may require re-checking after closures.",
-            "May 26 is early release for middle and high schools; May 27 is early release for all students and the last student day."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "fort-bend-isd-update-history-2026-2027",
-      "label": "Fort Bend ISD Calendar Update History",
-      "content": "Calendar pages are reviewed when Fort Bend ISD publishes a new school-year source, revises a calendar file, or when MySchoolDates performs a manual calendar quality review.",
-      "position": "beforeSources",
-      "table": {
-        "columns": ["Date", "Update"],
-        "rows": [
-          ["January 29, 2026", "Official Fort Bend ISD 2026-2027 instructional calendar approval version listed in the source package."],
-          ["July 25, 2026", "MySchoolDates manual review completed against the Fort Bend ISD calendar page and official 2026-2027 PDF."],
-          ["Future revisions", "Reviewed when Fort Bend ISD publishes revised calendar information or weather make-up changes."]
-        ]
-      }
+      "id": "fort-bend-calendar-scope",
+      "label": "About This District Calendar",
+      "content": "Fort Bend ISD's instructional calendar covers districtwide attendance dates for campuses across Sugar Land, Missouri City, Richmond and nearby Fort Bend County communities. Campus calendars remain the source for testing, athletics, performances, graduation activities and school-specific events.",
+      "position": "afterCalendarExport"
     }
   ],
-  "yearNumbersTitle": "Fort Bend ISD Calendar Insights",
-  "yearNumbersMode": "customOnly",
-  "yearNumbers": [
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "whatsDifferent",
+    "nationalTrends"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
     {
-      "label": "Teacher Contract Days",
-      "value": "187",
-      "detail": "The official calendar lists 187 teacher contract days, including professional learning and work days outside student attendance days."
+      "label": "Key Dates",
+      "id": "key-dates"
     },
     {
-      "label": "Grading Periods",
-      "value": "4",
-      "detail": "Fort Bend ISD organizes the instructional year into four nine-week grading periods across two semesters."
+      "label": "Major Breaks",
+      "id": "breaks"
     },
     {
-      "label": "Weather Make-Up Dates",
-      "value": "2",
-      "detail": "February 15 and April 30 are marked as inclement weather make-up days, so families should re-check them after closures."
+      "label": "Full Calendar",
+      "id": "all-dates"
     },
     {
-      "label": "Early Release Levels",
-      "value": "3",
-      "detail": "Early release dates are separated across elementary, middle/high school, and all-student schedules."
+      "label": "Calendar Details",
+      "id": "fort-bend-2026-2027-calendar-details"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Comparison",
+      "id": "comparison"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "includeArticleSchema": false,
+  "webPageMainEntity": "none",
+  "gradingPeriodsTitle": "Grading Periods",
+  "gradingPeriodsDescription": "Marking-period dates from the published instructional calendar.",
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "fallBreak",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak",
+    "instructionalDays"
+  ],
+  "comparisonTitle": "Fort Bend ISD Calendar Compared With Nearby Houston-Area School Calendars",
+  "comparisonSummary": "Compare key 2026–27 calendar dates across Fort Bend ISD and three nearby Greater Houston districts.",
+  "comparisonSourceNote": "The table focuses on core calendar dates used for local comparison. Some districts do not publish every category in the sources reviewed. Adjacent staff days are not included in break ranges.",
+  "hideComparisonNotes": true,
+  "hideComparisonInsights": true,
+  "hideRelatedDistrictDescriptions": true,
+  "sourcesTitle": "Sources and Review Notes",
+  "sourceReviewSummary": "Reviewed August 20, 2026 against the Fort Bend ISD calendar page and the district's board-approved 2026–27 instructional calendar PDF.",
+  "sourceReviewDetailsTitle": "What was checked",
+  "sourceReviewDetails": [
+    "The August 11 first day, May 27 last day, major breaks and grading-period dates were checked against the district PDF.",
+    "Professional learning days, teacher planning days and grade-specific early-release dates were checked against the calendar labels.",
+    "The district calendar page lists early release at 12:10 p.m. for elementary schools, 1:25 p.m. for middle schools and 11:35 a.m. for high schools.",
+    "February 15 and April 30 are published as student/teacher holidays and possible inclement weather make-up days.",
+    "Campus calendars remain the source for testing, athletics, performances, graduation activities and school-specific events."
+  ],
+  "sourceMaintainerText": "MySchoolDates editorial team",
+  "sourceNextReviewText": "We update this page when Fort Bend ISD publishes a new calendar or changes an existing schedule.",
+  "contentReviewTriggers": [
+    "Fort Bend ISD replaces or revises the 2026–27 instructional calendar PDF.",
+    "A weather closure activates the February 15 or April 30 make-up date.",
+    "The district changes an early-release time, early-release date or no-student day."
+  ],
+  "sources": [
+    {
+      "label": "Fort Bend ISD calendar page",
+      "url": "https://www.fortbendisd.gov/calendar"
+    },
+    {
+      "label": "Official Fort Bend ISD 2026–27 instructional calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1782749860/fortbendisdcom/p25xocyn8imjw8fi9hdl/202627InstructionalCalendarEnglish.pdf"
     }
   ],
   "gradingPeriods": [

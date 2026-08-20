@@ -126,14 +126,14 @@ const displayPrevYear = computed(() => {
 <template>
   <details v-if="items.length" :open="defaultOpen" class="bg-white rounded-lg border border-gray-200 p-6 group">
     <summary class="cursor-pointer list-none">
-      <h2 class="m-0 flex items-start justify-between gap-4">
-        <span class="min-w-0">
+      <div class="flex items-start justify-between gap-4">
+        <h2 class="m-0 min-w-0">
           <span class="block text-lg font-semibold text-gray-900 mb-1">{{ title ?? `What's New for ${currentYear}` }}</span>
           <span v-if="!hideSubtitle" class="block text-sm font-normal text-gray-500">{{ subtitle ?? `How this school year compares with ${displayPrevYear}.` }}</span>
-        </span>
-        <span class="mt-1 text-sm font-medium text-blue-600 group-open:hidden">Show</span>
-        <span class="mt-1 text-sm font-medium text-blue-600 hidden group-open:inline">Hide</span>
-      </h2>
+        </h2>
+        <span aria-hidden="true" class="mt-1 text-sm font-medium text-blue-600 group-open:hidden">Show</span>
+        <span aria-hidden="true" class="mt-1 text-sm font-medium text-blue-600 hidden group-open:inline">Hide</span>
+      </div>
     </summary>
     <ul class="mt-4 space-y-2">
       <li v-for="item in items" :key="item" class="flex items-start gap-2 text-sm text-gray-700">

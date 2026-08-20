@@ -5,63 +5,183 @@
   "lastDay": "2027-05-26",
   "sourceUrl": "https://www.aisd.net/district/about/calendars/",
   "sourcePdfUrl": "https://drive.google.com/file/d/1-BDmMFTL4vW52HbJQN8uFIiBee89RFcX/view",
-  "sourceVersion": "Elementary and Secondary student academic calendars approved January 22, 2026",
+  "sourceVersion": "Approved January 22, 2026",
   "lastVerifiedAt": "2026-07-25",
   "datePublished": "2026-07-25",
-  "dateModified": "2026-07-25",
+  "dateModified": "2026-08-20",
   "calendarType": "traditional",
-  "yearNumbersMode": "compact",
+  "displaySchoolYear": "2026–27",
   "alternateCalendars": [
     {
       "type": "secondary",
-      "label": "2026-2027 Secondary Student Academic Calendar",
+      "label": "2026–27 Secondary Student Academic Calendar",
       "pdfUrl": "https://drive.google.com/file/d/1saPSC6q8aOKB4xN5vjL76jU6u2E2wNz9/view"
     },
     {
       "type": "early_college",
-      "label": "2026-2027 Early College High School Student Academic Calendar",
+      "label": "2026–27 Early College High School Student Academic Calendar",
       "pdfUrl": "https://www.aisd.net/wp-content/files/2026-2027-Academic-Calendar-Early-College-High-Schools_converted.pdf"
     },
     {
       "type": "ab",
-      "label": "2026-2027 Student A/B Calendar",
+      "label": "2026–27 Student A/B Calendar",
       "pdfUrl": "https://drive.google.com/file/d/1rmn24TumjUSx0T6W9mcFbCTK7nYO8lx-/view"
     }
   ],
-  "seoTitle": "Arlington ISD Calendar 2026-2027 | Holidays, Breaks & PDF",
-  "seoDescription": "Arlington ISD Calendar 2026-2027 including elementary and secondary student calendar dates, first day, holidays, parent conferences, winter break, spring break, early dismissals, printable PDFs, ICS, and Google Calendar download.",
-  "pageHeading": "Arlington ISD Calendar 2026-2027",
-  "calendarNotes": "Arlington ISD starts the 2026-2027 school year on August 12, 2026 and ends on May 26, 2027. Thanksgiving Break runs November 23-27, Winter Break runs December 21-January 1, and Spring Break runs March 15-19. Arlington ISD publishes separate Elementary Student Academic Calendar and Secondary Student Academic Calendar PDFs for 2026-2027; this page merges the shared districtwide dates and notes grade-level differences. Elementary early dismissal is listed on December 18 and May 26. Secondary early dismissal is listed on December 17-18, May 25, and May 26.",
-  "calendarFaqs": [
+  "seoTitle": "Arlington ISD Calendar 2026–27: Key Dates & PDFs",
+  "seoDescription": "The Arlington ISD 2026–27 school year starts Aug. 12 and ends May 26. See breaks, elementary and secondary early dismissal dates, official PDFs, and an ICS download.",
+  "pageHeading": "Arlington ISD Calendar 2026–27",
+  "heroSummary": "Arlington ISD's 2026–27 school year begins Wednesday, August 12, 2026, and ends Wednesday, May 26, 2027. Thanksgiving Break is November 23–27, Winter Break is December 21–January 1, and Spring Break is March 15–19.",
+  "heroSourceLine": "Based on the official Arlington ISD elementary and secondary student calendars",
+  "heroDownloadLabel": "Calendar Downloads",
+  "heroIndependenceText": "MySchoolDates is an independent calendar guide and is not affiliated with Arlington ISD.",
+  "verificationBadgeText": "Elementary and secondary calendars checked",
+  "heroVerificationSourceText": "Official elementary and secondary PDFs reviewed",
+  "heroVerificationComparisonText": "Elementary and secondary dates combined; level-specific early dismissals retained",
+  "heroReviewedLabel": "Calendar dates reviewed",
+  "calendarNotes": "Arlington ISD publishes separate elementary and secondary student calendars for 2026–27. This page combines their dates into one searchable list and keeps the different early-dismissal schedules visible. Students in Early College High School or an A/B schedule program should also use the calendar for their program.",
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "heroFactChips": [
+    "Students return to school Wednesday, Jan. 6, after student holidays on Jan. 4–5"
+  ],
+  "hideAlternateCalendarsNotice": true,
+  "hiddenSections": [
+    "downloadCta",
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "whatsDifferent",
+    "otherCalendars",
+    "comparison",
+    "relatedDistricts",
+    "nationalTrends"
+  ],
+  "hiddenCustomSectionIds": [
+    "arlington-isd-calendar-quick-answer-2026-2027",
+    "arlington-isd-calendar-overview-2026-2027",
+    "arlington-isd-elementary-secondary-calendars",
+    "important-arlington-isd-dates-2026-2027",
+    "arlington-isd-alternate-calendars-2026-2027",
+    "arlington-isd-family-planning-calendar",
+    "arlington-isd-calendar-update-history",
+    "how-arlington-isd-calendar-data-is-collected",
+    "official-arlington-isd-calendar-vs-myschooldates",
+    "arlington-isd-campus-level-calendar-note",
+    "arlington-isd-verification-2026-2027"
+  ],
+  "keyDatesSummaryTitle": "Arlington ISD 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days plus the three main school breaks",
+  "keyDateSummaryItems": [
     {
-      "q": "When does Arlington ISD start school in 2026?",
-      "a": "The first day of school is Wednesday, August 12, 2026."
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-12",
+      "type": "school_start"
     },
     {
-      "q": "When is Arlington ISD Spring Break in 2027?",
-      "a": "Spring Break runs Monday, March 15 through Friday, March 19, 2027."
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
     },
     {
-      "q": "When is the last day of school for Arlington ISD in 2027?",
-      "a": "The last day of school is Wednesday, May 26, 2027."
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start"
     },
     {
-      "q": "Why does Arlington ISD have two 2026-2027 calendar PDFs?",
-      "a": "Arlington ISD publishes separate Elementary Student Academic Calendar and Secondary Student Academic Calendar PDFs for 2026-2027. Most major dates are shared, but early dismissal dates differ by level."
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
     },
     {
-      "q": "Are the elementary and secondary Arlington ISD calendars combined on this page?",
-      "a": "Yes. This page combines duplicate shared dates from the elementary and secondary PDFs and keeps grade-level early dismissal differences visible."
-    },
-    {
-      "q": "Does Arlington ISD have Early College High School or A/B calendars?",
-      "a": "Yes. Arlington ISD also publishes a 2026-2027 Early College High School Student Academic Calendar and a 2026-2027 Student A/B Calendar."
-    },
-    {
-      "q": "Are Arlington ISD bad weather make-up days confirmed holidays?",
-      "a": "No. Bad weather make-up days are conditional planning dates and may be used if Arlington ISD needs to recover instructional time."
+      "label": "Last Day",
+      "name": "Last Day of School — Early Dismissal",
+      "date": "2027-05-26",
+      "type": "school_end"
     }
   ],
+  "allDatesTitle": "Major Student Calendar Dates — 2026–27",
+  "allDatesMode": "all",
+  "allDatesCoverageNote": "The table combines dates from the elementary and secondary calendars. Level-specific early dismissals are labeled separately; A/B and Early College program dates remain in their own official calendars.",
+  "dateLegendLabelOverrides": {
+    "Early Release": "Early Dismissal",
+    "Reserved Weather Day": "Conditional Make-up Day"
+  },
+  "breakNotes": {
+    "Winter Break": "Students return to school Wednesday, Jan. 6, after student holidays on Jan. 4–5."
+  },
+  "compactDownloadModule": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "hideCompatibleCalendars": true,
+  "hideSocialShareButtons": true,
+  "hideShareCalendarHeading": true,
+  "hideIcsButtonSupportText": true,
+  "unifiedDownloadTitle": "Official Calendars & Downloads",
+  "unifiedDownloadDescription": "Open the official calendar that applies to your student, or download a one-time ICS file with the combined elementary and secondary dates listed on this page.",
+  "icsHeading": "Add Arlington ISD Dates to Your Calendar",
+  "icsDescription": "Download the combined elementary and secondary dates as a one-time ICS import for Google Calendar, Apple Calendar or Outlook. A/B, Early College and conditional bad-weather make-up dates are not included.",
+  "icsButtonLabel": "Download Arlington ISD 2026–27 ICS",
+  "pdfHeading": "Elementary Student Academic Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfButtonLabel": "View Official PDF",
+  "pdfDescription": "Open the official elementary calendar PDF. Secondary, A/B and Early College calendars are linked below.",
+  "alternateCalendarsTitle": "Other Official Arlington ISD Calendars",
+  "alternateCalendarsDescription": "Choose the secondary, A/B or Early College calendar when it applies to your student.",
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "Key Dates", "id": "key-dates" },
+    { "label": "Choose a Calendar", "id": "which-arlington-isd-calendar-applies-2026-2027" },
+    { "label": "Early Dismissal", "id": "arlington-isd-grade-level-early-dismissal" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Changes", "id": "arlington-isd-calendar-changes-2026-2027" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "yearSwitcherPosition": "afterSources",
+  "calendarFaqs": [
+    {
+      "q": "Which Arlington ISD calendar should elementary parents use in 2026–27?",
+      "a": "Use the Elementary Student Academic Calendar for elementary-specific notes and early dismissals. The combined date list on this page covers the first and last days, holidays and major breaks that also appear on the secondary calendar."
+    },
+    {
+      "q": "Do Arlington ISD elementary and secondary students have the same early-dismissal dates?",
+      "a": "No. Elementary early dismissal is December 18, 2026, and May 26, 2027. Secondary early dismissal is December 17–18, 2026, and May 25–26, 2027. Confirm the dismissal time with the assigned campus."
+    },
+    {
+      "q": "Do Early College High School and A/B students use this Arlington ISD calendar?",
+      "a": "Use this page for the combined elementary and secondary dates, then check the official Early College High School or Student A/B Calendar for program-specific dates and alternating-day schedules."
+    },
+    {
+      "q": "Are March 26 and April 23 confirmed days off in Arlington ISD?",
+      "a": "They are listed as student/staff holidays and bad weather make-up days. They remain days off unless Arlington ISD announces that one is needed to recover instructional time."
+    },
+    {
+      "q": "Where should families check for Arlington ISD calendar changes?",
+      "a": "Check the official Arlington ISD calendars page and the assigned campus for revisions, emergency closures, dismissal times, testing, athletics and other school-specific events."
+    }
+  ],
+  "faqDisplayQuestions": [
+    "Which Arlington ISD calendar should elementary parents use in 2026–27?",
+    "Do Arlington ISD elementary and secondary students have the same early-dismissal dates?",
+    "Do Early College High School and A/B students use this Arlington ISD calendar?",
+    "Are March 26 and April 23 confirmed days off in Arlington ISD?",
+    "Where should families check for Arlington ISD calendar changes?"
+  ],
+  "faqDisplayLimit": 5,
   "customSections": [
     {
       "id": "arlington-isd-calendar-quick-answer-2026-2027",
@@ -129,9 +249,9 @@
     },
     {
       "id": "arlington-isd-grade-level-early-dismissal",
-      "label": "Arlington ISD Early Dismissal Differences",
+      "label": "Elementary and Secondary Early Dismissal Dates",
       "position": "afterQuickFacts",
-      "content": "The 2026-2027 elementary and secondary calendars are mostly aligned, but the official PDFs list different early dismissal windows. Families should save the dates for their student's level and confirm dismissal times with their campus.",
+      "content": "The two student calendars use different early-dismissal dates. Arlington ISD publishes standard early release hours by school level, but some schools may use different schedules; confirm the time with your school.",
       "groups": [
         {
           "label": "Elementary early dismissal dates",
@@ -143,10 +263,28 @@
         {
           "label": "Secondary early dismissal dates",
           "items": [
-            "December 17-18, 2026",
+            "December 17–18, 2026",
             "May 25, 2027",
             "May 26, 2027"
           ]
+        },
+        {
+          "label": "Published Arlington ISD early dismissal times",
+          "items": [
+            "AM Pre-K — 10:10 a.m.",
+            "PM Pre-K — 12:10 p.m.",
+            "Elementary — 12:10 p.m.",
+            "Junior high — 12:45 p.m.",
+            "High school — 11:35 a.m."
+          ]
+        }
+      ],
+      "linksDisplay": "inline",
+      "linksLabel": "Official hours:",
+      "links": [
+        {
+          "label": "Arlington ISD School Hours",
+          "url": "https://www.aisd.net/district/about/school-hours"
         }
       ]
     },
@@ -169,34 +307,33 @@
       ]
     },
     {
-      "id": "which-arlington-isd-calendar-should-i-use",
-      "label": "Which Arlington ISD Calendar Should I Use?",
-      "position": "afterOtherCalendars",
-      "content": "Arlington ISD publishes more than one calendar for 2026-2027, so the right source depends on the student's grade level and program. Most districtwide dates are shared, but early dismissal schedules and specialized program dates can differ.",
+      "id": "which-arlington-isd-calendar-applies-2026-2027",
+      "label": "Which Arlington ISD Calendar Applies to Your Student?",
+      "position": "afterKeyDates",
+      "content": "Arlington ISD publishes separate elementary and secondary calendars, plus calendars for Early College High School and A/B schedules. The main holidays and breaks are shared, but early dismissals and program dates can differ.",
       "table": {
-        "columns": ["Student or family need", "Calendar to use", "Why it matters"],
+        "columns": ["Student", "Calendar to use", "Check it for"],
         "rows": [
-          ["Most families checking major dates", "Traditional district student calendar", "Use for first day, last day, holidays, Thanksgiving Break, Winter Break, Spring Break, and bad weather make-up days."],
-          ["Elementary students", "Elementary Student Academic Calendar", "Use for elementary early dismissal dates and grade-level notes."],
-          ["Junior high and high school students", "Secondary Student Academic Calendar", "Use for secondary early dismissal dates and school-level schedule planning."],
-          ["Early College High School students", "Early College High School Student Academic Calendar", "Early College students may follow additional dates tied to the program calendar."],
-          ["A/B schedule programs", "Student A/B Calendar", "Use the A/B calendar when a student's program follows alternating day schedules."]
+          ["Elementary", "Elementary Student Academic Calendar", "Elementary early dismissals and grade-level notes"],
+          ["Junior high and high school", "Secondary Student Academic Calendar", "Secondary early dismissals and schedule notes"],
+          ["Early College High School", "Early College High School Student Academic Calendar", "Program-specific dates"],
+          ["Programs using alternating days", "Student A/B Calendar", "A-day and B-day assignments"]
         ]
       }
     },
     {
-      "id": "arlington-isd-calendar-2025-2026-vs-2026-2027",
-      "label": "Arlington ISD Calendar 2025-2026 vs 2026-2027",
-      "position": "afterYearDiff",
-      "content": "Families comparing Arlington ISD school years can use this summary to see how major planning dates changed before scheduling travel, childcare, appointments, and summer activities.",
+      "id": "arlington-isd-calendar-changes-2026-2027",
+      "label": "What Changed From 2025–26",
+      "position": "afterCalendarExport",
+      "content": "The first day moves one day earlier, while the last day moves from May 22 to May 26. Each major break also begins one day earlier than it did in 2025–26.",
       "table": {
-        "columns": ["Calendar item", "2025-2026", "2026-2027"],
+        "columns": ["Calendar item", "2025–26", "2026–27"],
         "rows": [
           ["First day of school", "August 13, 2025", "August 12, 2026"],
           ["Last day of school", "May 22, 2026", "May 26, 2027"],
-          ["Thanksgiving Break", "November 24-28, 2025", "November 23-27, 2026"],
-          ["Winter Break", "December 22, 2025-January 2, 2026", "December 21, 2026-January 1, 2027"],
-          ["Spring Break", "March 16-20, 2026", "March 15-19, 2027"],
+          ["Thanksgiving Break", "November 24–28, 2025", "November 23–27, 2026"],
+          ["Winter Break", "December 22, 2025–January 2, 2026", "December 21, 2026–January 1, 2027"],
+          ["Spring Break", "March 16–20, 2026", "March 15–19, 2027"],
           ["Bad weather make-up dates", "March 23, 2026", "March 26 and April 23, 2027"]
         ]
       }
@@ -282,6 +419,76 @@
       "content": "MySchoolDates reviews the official Arlington ISD calendars page and published elementary and secondary student academic calendar PDFs, deduplicates shared districtwide dates, preserves grade-level differences such as early dismissal schedules, and compares major dates including first day, last day, Thanksgiving Break, Winter Break, Spring Break, parent conference days, student holidays, and bad weather make-up days.\n\nThe official Arlington ISD calendar remains the source of record for revisions, campus-specific events, emergency closures, and same-day announcements."
     }
   ],
+  "includeArticleSchema": false,
+  "schemaDatasetName": "Arlington ISD 2026–27 Combined Student Calendar Dates",
+  "schemaDatasetDescription": "Dates combined from the official Arlington ISD elementary and secondary student calendars, with level-specific early dismissals retained and A/B or Early College program dates excluded.",
+  "schemaCalendarDownloadName": "Arlington ISD 2026–27 combined student dates ICS",
+  "schemaCalendarDownloadDescription": "One-time ICS import of combined elementary and secondary dates reviewed for this page. A/B, Early College and conditional bad-weather make-up dates are not included.",
+  "sourceCalendarId": "source-calendar-elementary",
+  "sourceCalendarName": "Arlington ISD 2026–27 Elementary Student Academic Calendar",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-secondary",
+      "name": "Arlington ISD 2026–27 Secondary Student Academic Calendar",
+      "version": "Approved January 22, 2026",
+      "url": "https://drive.google.com/file/d/1saPSC6q8aOKB4xN5vjL76jU6u2E2wNz9/view"
+    },
+    {
+      "id": "source-school-hours",
+      "type": "WebPage",
+      "name": "Arlington ISD School Hours",
+      "url": "https://www.aisd.net/district/about/school-hours"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar-elementary",
+    "source-calendar-secondary"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar-elementary",
+    "source-calendar-secondary",
+    "source-calendar-page",
+    "source-school-hours"
+  ],
+  "sourcesTitle": "Sources & Review Notes",
+  "sourceReviewSummary": "The official elementary and secondary student calendar PDFs are the primary sources for the combined dates and early-dismissal differences on this page.",
+  "sourceReviewDetailsTitle": "How the 2026–27 dates were checked",
+  "sourceReviewDateLabel": "Calendar dates reviewed",
+  "sourceReviewDetails": [
+    "We checked the first and last days, holidays, major breaks, parent-conference days, student holidays and bad weather make-up dates against both student calendar PDFs.",
+    "Dates from the elementary and secondary calendars were combined, with duplicate entries merged once; the different early-dismissal schedules remain labeled by level.",
+    "Published early release hours were checked against Arlington ISD's School Hours page on August 20, 2026; some campuses may use different times.",
+    "A/B, Early College and conditional bad-weather make-up dates are not added to the combined ICS. Campus dismissal times, testing, athletics and other school events should be confirmed with Arlington ISD or the assigned campus."
+  ],
+  "sourceMaintainerLabel": "Maintained by",
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "sourceNextReviewText": "We recheck this page when Arlington ISD replaces a calendar PDF, revises a district date or activates a bad weather make-up day.",
+  "sources": [
+    {
+      "label": "Arlington ISD Calendars",
+      "url": "https://www.aisd.net/district/about/calendars/"
+    },
+    {
+      "label": "2026–27 Elementary Student Academic Calendar",
+      "url": "https://drive.google.com/file/d/1-BDmMFTL4vW52HbJQN8uFIiBee89RFcX/view"
+    },
+    {
+      "label": "2026–27 Secondary Student Academic Calendar",
+      "url": "https://drive.google.com/file/d/1saPSC6q8aOKB4xN5vjL76jU6u2E2wNz9/view"
+    },
+    {
+      "label": "2026–27 Early College High School Calendar",
+      "url": "https://www.aisd.net/wp-content/files/2026-2027-Academic-Calendar-Early-College-High-Schools_converted.pdf"
+    },
+    {
+      "label": "2026–27 Student A/B Calendar",
+      "url": "https://drive.google.com/file/d/1rmn24TumjUSx0T6W9mcFbCTK7nYO8lx-/view"
+    },
+    {
+      "label": "Arlington ISD School Hours and Early Release Hours",
+      "url": "https://www.aisd.net/district/about/school-hours"
+    }
+  ],
   "yearNumbers": [
     {
       "label": "First Day",
@@ -335,9 +542,9 @@
     { "date": "2027-03-17", "name": "Spring Break", "type": "holiday" },
     { "date": "2027-03-18", "name": "Spring Break", "type": "holiday" },
     { "date": "2027-03-19", "name": "Spring Break Ends", "type": "break_end" },
-    { "date": "2027-03-26", "name": "Student/Staff Holiday / Bad Weather Makeup Day", "type": "makeup_day" },
-    { "date": "2027-04-23", "name": "Student/Staff Holiday / Bad Weather Makeup Day", "type": "makeup_day" },
+    { "date": "2027-03-26", "name": "Student/Staff Holiday — Bad Weather Make-up Day", "type": "makeup_day", "status": "TENTATIVE", "badgeLabel": "Conditional Make-up Day", "description": "No school unless Arlington ISD announces that this date is needed to recover instructional time.", "hideFromCalendarExport": true },
+    { "date": "2027-04-23", "name": "Student/Staff Holiday — Bad Weather Make-up Day", "type": "makeup_day", "status": "TENTATIVE", "badgeLabel": "Conditional Make-up Day", "description": "No school unless Arlington ISD announces that this date is needed to recover instructional time.", "hideFromCalendarExport": true },
     { "date": "2027-05-25", "name": "Secondary Early Dismissal", "type": "early_release" },
-    { "date": "2027-05-26", "name": "Last Day of School / Early Dismissal", "type": "school_end" }
+    { "date": "2027-05-26", "name": "Last Day of School / Early Dismissal", "type": "school_end", "badgeLabel": "Last Day · Early Dismissal" }
   ]
 }

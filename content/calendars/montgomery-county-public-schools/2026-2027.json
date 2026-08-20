@@ -1,225 +1,625 @@
 {
   "institutionId": "montgomery-county-public-schools",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Montgomery County Public Schools (MCPS) Calendar 2026–2027",
   "firstDay": "2026-08-25",
+  "firstDayScope": "First regular student day on the MCPS 2026–27 Traditional School Year Calendar; selected students attend Student Transition Day on August 24.",
   "lastDay": "2027-06-11",
+  "lastDayScope": "Scheduled last student day on the MCPS 2026–27 Traditional School Year Calendar; it is an early-release day, and later dates may be used if emergency closures require make-up instruction.",
+  "temporalCoverageStart": "2026-08-24",
+  "temporalCoverageEnd": "2027-06-18",
   "totalSchoolDays": 181,
   "sourceUrl": "https://ww2.montgomeryschoolsmd.org/calendar/",
+  "sourceDocumentPage": "https://ww2.montgomeryschoolsmd.org/calendar/",
   "sourcePdfUrl": "https://ww2.montgomeryschoolsmd.org/calendar/pdfs/2026-2027/2026-2027-TRADITIONAL-Calendar.pdf",
-  "lastVerifiedAt": "2026-07-25",
+  "lastVerifiedAt": "2026-08-20",
   "datePublished": "2026-07-25",
-  "dateModified": "2026-07-25",
+  "dateModified": "2026-08-20",
   "sourceVersion": "Adopted April 30, 2026",
+  "sourceVersionLabel": "Traditional calendar version",
   "calendarType": "traditional",
-  "pageHeading": "Montgomery County Public Schools (MCPS) Calendar 2026-2027",
-  "seoTitle": "MCPS Calendar 2026-2027: Start Date, Holidays, Breaks & PDF",
-  "seoDescription": "View the MCPS 2026-2027 traditional school calendar with first day, last day, holidays, early release days, Winter Break, Spring Break, PDF and ICS download.",
-  "calendarNotes": "Montgomery County Public Schools starts the 2026-2027 traditional school year on August 25, 2026 and ends on June 11, 2027 with an early release day. Student Transition Day is August 24, 2026. Winter Break includes holidays, non-instructional days, and systemwide closures from December 23, 2026 through January 2, 2027. Spring Break includes holidays, non-instructional days, and systemwide closures from March 26 through April 2, 2027. The adopted calendar lists 181 instructional days, marking period end dates, early release days, grading and planning days, and designated make-up days.",
-  "faqLimit": 20,
-  "calendarFaqs": [
+  "calendarTrackId": "mcps-traditional-school-year-calendar",
+  "sourceCalendarName": "MCPS 2026–27 Traditional School Year Calendar",
+  "schemaCalendarName": "MCPS 2026–27 Traditional School Year Calendar",
+  "seoTitle": "Montgomery County Public Schools (MCPS) Calendar 2026–27",
+  "seoDescription": "MCPS 2026–27 calendar for Montgomery County, Maryland: first and last days, no-school dates, early releases, winter and spring breaks, PDF and ICS.",
+  "heroSummary": "Regular classes begin for all MCPS students on Tuesday, August 25, 2026. The scheduled last day is Friday, June 11, 2027, with early release. Students have no classes from December 24 through January 1 and from March 26 through April 2.\n\nClasses resume January 4 and April 5. Student Transition Day is August 24 for kindergarten, grades 6 and 9, third graders at elementary schools serving only grades 3–5, and students new to their school or to MCPS.",
+  "heroSourceLine": "Traditional School Year Calendar · Montgomery County, Maryland",
+  "heroDownloadLabel": "Download MCPS 2026–27 ICS",
+  "verificationBadgeText": "Reviewed against the adopted MCPS calendar",
+  "hideHeroVerificationProcess": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideInstructionalDaysSummary": true,
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "downloadCta",
+    "yearNumbers",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "relatedDistricts"
+  ],
+  "hiddenCustomSectionIds": [
+    "mcps-calendar-2026-2027-at-a-glance",
+    "mcps-calendar-important-dates-for-families",
+    "mcps-calendar-download-options",
+    "printable-mcps-calendar-pdf-2026-2027",
+    "how-to-import-mcps-calendar-to-google-calendar",
+    "planning-around-mcps-calendar-2026-2027",
+    "mcps-teacher-workdays-and-early-release-explained",
+    "about-mcps-calendar-structure",
+    "montgomery-county-public-schools-profile",
+    "mcps-traditional-calendar-vs-school-specific-calendars",
+    "why-families-compare-mcps-with-nearby-districts",
+    "how-we-collect-mcps-calendar-data",
+    "mcps-calendar-review-process"
+  ],
+  "keyDatesSummaryId": "key-dates",
+  "keyDatesSummaryTitle": "MCPS 2026–27 at a Glance",
+  "keyDatesSummarySubtitle": "The adopted Traditional School Year Calendar contains 181 instructional days; possible make-up dates are listed separately below.",
+  "keyDateSummaryItems": [
     {
-      "q": "When does MCPS start school in 2026?",
-      "a": "Montgomery County Public Schools starts the 2026-2027 traditional school year for students on Tuesday, August 25, 2026."
+      "date": "2026-08-24",
+      "name": "Student Transition Day",
+      "label": "Selected Students",
+      "type": "academic",
+      "description": "For kindergarten, grades 6 and 9, certain third graders, and students new to a school or MCPS.",
+      "schemaDescription": "MCPS Student Transition Day for kindergarten, grades 6 and 9, grade 3 at elementary schools serving only grades 3–5, and students new to a school or MCPS."
     },
     {
-      "q": "What is MCPS Student Transition Day in 2026?",
-      "a": "MCPS Student Transition Day is Monday, August 24, 2026. It is a non-instructional transition and orientation day for students entering selected transition grades and students new to a school, not the regular first day for all students."
+      "date": "2026-08-25",
+      "name": "First Day of School",
+      "label": "First Day",
+      "type": "school_start",
+      "schemaDescription": "First regular student day on the MCPS 2026–27 Traditional School Year Calendar."
     },
     {
-      "q": "When is MCPS Winter Break in 2026-2027?",
-      "a": "The MCPS calendar groups winter holiday and closure dates around December 23, 2026 through January 2, 2027, with holidays, non-instructional days, and systemwide closures during that period."
+      "date": "2026-11-26",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "label": "Thanksgiving",
+      "type": "break",
+      "schemaDescription": "MCPS schools and offices are closed for Thanksgiving on November 26–27, 2026."
     },
     {
-      "q": "When is MCPS Spring Break in 2027?",
-      "a": "The traditional MCPS calendar lists a continuous spring closure period from March 26 through April 2, 2027, including holidays, non-instructional days, and systemwide closures."
+      "date": "2026-12-24",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "label": "Winter Break",
+      "type": "break",
+      "schemaDescription": "MCPS students have no classes from December 24, 2026 through January 1, 2027; classes resume January 4."
     },
     {
-      "q": "How many instructional days are in the MCPS 2026-2027 calendar?",
-      "a": "The adopted MCPS 2026-2027 traditional calendar lists 181 instructional days."
+      "date": "2027-03-26",
+      "endDate": "2027-04-02",
+      "name": "Spring Break",
+      "label": "Spring Break",
+      "type": "break",
+      "schemaDescription": "MCPS students have no classes from March 26 through April 2, 2027; classes resume April 5."
     },
     {
-      "q": "When is the last day of school for MCPS in 2027?",
-      "a": "The last day of school for students is Friday, June 11, 2027, and it is listed as an early release day."
+      "date": "2027-06-11",
+      "name": "Last Day of School — Early Release",
+      "label": "Last Day",
+      "type": "school_end",
+      "schemaDescription": "Scheduled last student day on the MCPS 2026–27 Traditional School Year Calendar; students are released early."
     }
   ],
-  "quickFacts": [
+  "allDatesMode": "all",
+  "allDatesTitle": "MCPS Traditional Student Calendar Dates — 2026–2027",
+  "allDatesCoverageNote": "This table lists MCPS calendar dates that affect students. Staff-only preservice dates are omitted; check your school for campus events and exact dismissal times.",
+  "allDatesSourceUrl": "https://ww2.montgomeryschoolsmd.org/calendar/pdfs/2026-2027/2026-2027-TRADITIONAL-Calendar.pdf",
+  "allDatesSourceLabel": "Official MCPS 2026–27 Traditional School Year Calendar PDF",
+  "dateLegendItems": [
     {
-      "value": "Aug 25",
-      "label": "First Student Day"
+      "label": "First / last day",
+      "dot": "bg-orange-500"
     },
     {
-      "value": "Jun 11",
-      "label": "Last Student Day"
+      "label": "Holiday / break",
+      "dot": "bg-violet-500"
     },
     {
-      "value": "181",
-      "label": "Instructional Days"
+      "label": "No school for students",
+      "dot": "bg-amber-400"
     },
     {
-      "value": "Mar 26-Apr 2",
-      "label": "Spring Break"
+      "label": "Early release",
+      "dot": "bg-orange-400"
+    },
+    {
+      "label": "Possible make-up day",
+      "dot": "bg-slate-400"
+    },
+    {
+      "label": "Academic date",
+      "dot": "bg-blue-400"
     }
   ],
+  "dateLegendLabelOverrides": {
+    "Teacher Workday": "No School for Students",
+    "Staff Development": "No School for Students",
+    "Make-Up Day": "Possible Make-Up Day"
+  },
+  "breaksTitle": "Thanksgiving, Winter and Spring Breaks",
+  "breakNotes": {
+    "Thanksgiving Break": "Students have early release Nov. 23–25. Schools and offices are closed Nov. 26–27.",
+    "Winter Break": "Students have early release Dec. 23, then no classes Dec. 24–Jan. 1. Classes resume Monday, Jan. 4.",
+    "Spring Break": "Students have no classes March 26–April 2. Classes resume Monday, April 5."
+  },
+  "breakSummaryOverrides": {
+    "Thanksgiving Break": {
+      "durationLabel": "2 weekdays off"
+    },
+    "Winter Break": {
+      "durationLabel": "7 weekdays off"
+    },
+    "Spring Break": {
+      "durationLabel": "6 weekdays off"
+    }
+  },
   "customSections": [
     {
-      "id": "mcps-calendar-2026-2027-at-a-glance",
-      "label": "MCPS Calendar 2026-2027 At a Glance",
-      "position": "afterVerification",
-      "content": "Quick reference for the MCPS 2026-2027 traditional school calendar.",
-      "table": {
-        "columns": ["Item", "Date or detail"],
-        "rows": [
-          ["School starts", "Tuesday, August 25, 2026"],
-          ["Student Transition Day", "Monday, August 24, 2026"],
-          ["Last day", "Friday, June 11, 2027"],
-          ["Instructional days", "181"],
-          ["Winter Break window", "December 24, 2026-January 2, 2027"],
-          ["Spring Break window", "March 26-April 2, 2027"]
-        ]
-      }
-    },
-    {
-      "id": "mcps-calendar-important-dates-for-families",
-      "label": "MCPS Calendar Important Dates for Families",
-      "position": "afterAbout",
-      "content": "Families usually check the MCPS calendar first for the first day of school, Student Transition Day, early release dates, non-instructional days, grading and planning days, winter closures, spring closures, designated make-up days, marking period endings, and the last day of school. These dates affect childcare, transportation, work schedules, extracurricular planning, and family travel in Montgomery County."
-    },
-    {
-      "id": "mcps-calendar-download-options",
-      "label": "MCPS Calendar Download Options",
-      "position": "afterCalendarExport",
-      "content": "Use the MCPS calendar tools to view the official PDF, download a printable PDF, import the ICS calendar into Google Calendar or Apple Calendar, save early release and closure dates, and share school-year dates with family members. Always verify final schedule changes with the official Montgomery County Public Schools calendar source before making critical plans."
-    },
-    {
-      "id": "printable-mcps-calendar-pdf-2026-2027",
-      "label": "Printable MCPS Calendar 2026-2027 PDF",
-      "position": "afterCalendarExport",
-      "content": "Families looking for a printable MCPS calendar can use the official PDF source or the printable version linked on this page for refrigerator calendars, childcare planning, family travel, and school-year reference. The PDF is useful for printing, but families should still check MCPS updates before relying on it for early release times, make-up days, or school-specific events."
-    },
-    {
-      "id": "how-to-import-mcps-calendar-to-google-calendar",
-      "label": "How to Add MCPS Calendar to Google Calendar, Apple Calendar, and Outlook",
-      "position": "afterCalendarExport",
-      "content": "The MCPS calendar file on MySchoolDates is a one-time ICS download for personal planning. It can help families keep early release dates, holidays, winter closures, spring closures, and the final student day visible in Google Calendar, Apple Calendar, or Outlook.",
+      "id": "what-mcps-families-should-know",
+      "label": "What MCPS Families Should Know",
+      "position": "afterBreaks",
+      "content": "A few MCPS calendar labels need a little context.",
       "groups": [
         {
-          "label": "Import steps",
+          "label": "Student Transition Day",
           "items": [
-            "Download the MCPS 2026-2027 ICS calendar file from this page.",
-            "Open Google Calendar and go to Settings, then Import & Export.",
-            "Choose the downloaded ICS file and import it into the calendar you use for family planning.",
-            "Confirm critical dates against the official MCPS calendar if the district posts revisions."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "planning-around-mcps-calendar-2026-2027",
-      "label": "Planning Around the MCPS Calendar 2026-2027",
-      "position": "afterPlanningTips",
-      "content": "Families often use the MCPS traditional calendar to plan childcare, transportation, work schedules, appointments, and family travel across Montgomery County and the Washington, D.C. metro area.",
-      "groups": [
-        {
-          "label": "High-impact planning windows",
-          "items": [
-            "Student Transition Day on August 24, 2026 affects transition grades and students new to a school.",
-            "Early release dates before Thanksgiving and Winter Break may require pickup, transportation, or after-school care adjustments.",
-            "Winter closure dates run around December 23, 2026 through January 2, 2027.",
-            "Spring closure dates run March 26 through April 2, 2027.",
-            "The last student day is June 11, 2027 and is listed as an early release day."
+            "Aug. 24 is for students entering kindergarten, grades 6 and 9; grade 3 at elementary schools serving only grades 3–5; and all students new to a school or MCPS. It is not the regular first day for every student."
           ]
         },
         {
-          "label": "Dates to verify before booking",
+          "label": "Staff days with no school for students",
           "items": [
-            "Designated make-up days because they may become instructional days after emergency closures.",
-            "School-specific testing, graduation, athletics, club, and activity dates.",
-            "Alternate-calendar programs, including schools that do not follow the traditional MCPS calendar."
+            "Students do not attend on Oct. 16, Nov. 2, Jan. 25, March 9 or April 12, although staff have professional development or grading and planning work."
+          ]
+        },
+        {
+          "label": "Break labels",
+          "items": [
+            "The official calendar divides Winter and Spring Break into holidays, non-instructional days and systemwide closures. The break ranges above combine those labels into the dates when students have no classes."
+          ]
+        },
+        {
+          "label": "Which calendar applies?",
+          "items": [
+            "This page follows the Traditional School Year Calendar. Arcola Elementary families should use the separate Innovative School Year Calendar linked below."
           ]
         }
       ]
     },
     {
-      "id": "mcps-teacher-workdays-and-early-release-explained",
-      "label": "MCPS Teacher Workdays, Professional Days, and Early Release Dates Explained",
-      "position": "afterPlanningTips",
-      "content": "MCPS calendar labels matter because not every date affects students the same way. Teacher preservice days, grading and planning days, professional development dates, early release days, and designated make-up days can each create different family planning needs.",
-      "table": {
-        "columns": ["Calendar label", "What families should know"],
-        "rows": [
-          ["Teacher preservice day", "Staff report before students begin; students are not in regular classes."],
-          ["Grading and planning", "Staff planning or grading date that may affect student attendance depending on the official calendar label."],
-          ["Professional development", "Staff learning day; check whether students attend on the specific date."],
-          ["Early release day", "Students attend for a shortened day, so families should confirm dismissal and transportation times."],
-          ["Designated make-up day", "A date MCPS may use as an instructional day if emergency closures require schedule recovery."]
-        ]
-      }
+      "id": "mcps-early-release-and-make-up-days",
+      "label": "Early Release and Possible Make-Up Days",
+      "position": "afterBreaks",
+      "content": "These dates can change pickup plans or extend the school year.",
+      "groups": [
+        {
+          "label": "Early release",
+          "items": [
+            "Sept. 18; Nov. 23–25; Dec. 23; Feb. 26; and the scheduled last day, June 11. Confirm dismissal times with your school."
+          ]
+        },
+        {
+          "label": "Possible make-up dates",
+          "items": [
+            "April 22, May 17 and June 14–17 may become instructional days if emergencies close schools for three or more days. Do not treat them as guaranteed days off until MCPS confirms the schedule."
+          ]
+        }
+      ]
     }
   ],
-  "yearNumbers": [
+  "unifiedDownloadTitle": "MCPS 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Open the adopted MCPS Traditional School Year Calendar PDF or download a one-time ICS file of the dates shown on this page.",
+  "icsHeading": "ICS Calendar File",
+  "icsDescription": "Import the dates shown on this page into Google Calendar, Apple Calendar or Outlook. This is a one-time download and does not update automatically.",
+  "icsButtonLabel": "Download MCPS 2026–27 ICS",
+  "hideIcsButtonSupportText": true,
+  "compactDownloadModule": true,
+  "pdfHeading": "Official MCPS 2026–27 Traditional Calendar PDF",
+  "pdfDescription": "Open the adopted district calendar and check Calendar Central for revisions or make-up-day changes before making final plans.",
+  "pdfButtonLabel": "View Official MCPS PDF",
+  "hideShareCalendarHeading": true,
+  "hideSocialShareButtons": true,
+  "alternateCalendarsTitle": "Traditional vs. Innovative Calendar",
+  "alternateCalendarsDescription": "This page follows the MCPS Traditional School Year Calendar. MCPS publishes a separate 2026–27 Innovative School Year Calendar for Arcola Elementary.",
+  "alternateCalendarsButtonLabel": "View Innovative Calendar PDF",
+  "alternateCalendars": [
     {
-      "label": "Instructional Days",
-      "value": "181",
-      "detail": "The adopted 2026-2027 MCPS traditional calendar lists 181 instructional days."
+      "type": "innovative",
+      "label": "Arcola Elementary 2026–27 Innovative School Year Calendar",
+      "description": "Use this separate official calendar if your student attends Arcola Elementary.",
+      "pdfUrl": "https://ww2.montgomeryschoolsmd.org/calendar/pdfs/2026-2027/2026-2027-INNOVATIVE-Calendar.pdf"
+    }
+  ],
+  "whatsNew": {
+    "title": "What’s Different From 2025–26",
+    "subtitle": "Changes between the two published MCPS Traditional School Year Calendars.",
+    "content": [
+      "The regular first day moves from Aug. 26, 2025 to Aug. 25, 2026.",
+      "Student Transition Day moves from Aug. 25, 2025 to Aug. 24, 2026.",
+      "Spring Break moves from March 30–April 6, 2026 to March 26–April 2, 2027."
+    ]
+  },
+  "calendarFaqs": [
+    {
+      "q": "When does MCPS start school in 2026?",
+      "a": "Regular classes begin Tuesday, Aug. 25, 2026 on the MCPS Traditional School Year Calendar. Selected students attend Student Transition Day on Monday, Aug. 24."
     },
     {
-      "label": "First Day",
-      "value": "Aug 25",
-      "detail": "Students begin the regular MCPS school year on August 25, 2026."
+      "q": "Who attends MCPS Student Transition Day?",
+      "a": "Student Transition Day is for students entering kindergarten, grades 6 and 9; grade 3 at elementary schools serving only grades 3–5; and all students new to a school or MCPS."
     },
     {
-      "label": "Last Day",
-      "value": "Jun 11",
-      "detail": "The last day for students is June 11, 2027, with early release."
+      "q": "When is MCPS Winter Break in 2026–27?",
+      "a": "Students have no classes Dec. 24, 2026 through Jan. 1, 2027. Dec. 23 is an early-release day, and classes resume Monday, Jan. 4."
+    },
+    {
+      "q": "When is MCPS Spring Break in 2027?",
+      "a": "Students have no classes March 26 through April 2, 2027. Classes resume Monday, April 5."
+    },
+    {
+      "q": "Which days are early-release days for MCPS students?",
+      "a": "The adopted calendar lists early release on Sept. 18; Nov. 23–25; Dec. 23; Feb. 26; and June 11. Confirm exact dismissal times with your school."
+    },
+    {
+      "q": "Which MCPS dates can become make-up days?",
+      "a": "April 22, May 17 and June 14–17 may become instructional days if emergencies close schools for three or more days."
+    },
+    {
+      "q": "Does every MCPS school use this calendar?",
+      "a": "No. This page follows the Traditional School Year Calendar. MCPS publishes a separate 2026–27 Innovative School Year Calendar for Arcola Elementary."
+    }
+  ],
+  "faqLimit": 7,
+  "faqDisplayQuestions": [
+    "When does MCPS start school in 2026?",
+    "Who attends MCPS Student Transition Day?",
+    "When is MCPS Winter Break in 2026–27?",
+    "When is MCPS Spring Break in 2027?",
+    "Which days are early-release days for MCPS students?",
+    "Which MCPS dates can become make-up days?",
+    "Does every MCPS school use this calendar?"
+  ],
+  "hideFaqSchema": true,
+  "includeArticleSchema": false,
+  "webPageMainEntity": "dataset",
+  "schemaDatasetName": "MCPS 2026–27 Traditional Student Calendar Dates",
+  "schemaDatasetDescription": "Montgomery County Public Schools calendar dates that affect students in 2026–27, including school-year boundaries, no-school days, early releases, breaks, marking-period endings and possible make-up dates.",
+  "schemaCalendarDownloadName": "MCPS 2026–27 Traditional Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time ICS file generated from the reviewed MCPS 2026–27 traditional student dates listed on this page; it does not update automatically.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "mcps-2026-2027-accessible-calendar",
+      "type": "CreativeWork",
+      "name": "MCPS 2026–27 Calendar — Accessible Table Version",
+      "url": "https://www.montgomeryschoolsmd.org/siteassets/district/calendar/2026/0775.26_2026-27_SchoolCalendar.pdf"
+    },
+    {
+      "id": "mcps-2026-2027-last-day-event",
+      "type": "WebPage",
+      "name": "MCPS June 11 Last Day Event Page",
+      "url": "https://www.montgomeryschoolsmd.org/district-calendar/2026-2027/last-day-of-school-for-students-early-release-day-for-students/?dt=2027-06-11"
+    },
+    {
+      "id": "mcps-2026-2027-innovative-calendar",
+      "type": "CreativeWork",
+      "name": "MCPS 2026–27 Innovative School Year Calendar",
+      "url": "https://ww2.montgomeryschoolsmd.org/calendar/pdfs/2026-2027/2026-2027-INNOVATIVE-Calendar.pdf",
+      "version": "Adopted January 22, 2026"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "mcps-2026-2027-accessible-calendar"
+  ],
+  "sources": [
+    {
+      "label": "MCPS 2026–27 Traditional School Year Calendar PDF",
+      "url": "https://ww2.montgomeryschoolsmd.org/calendar/pdfs/2026-2027/2026-2027-TRADITIONAL-Calendar.pdf"
+    },
+    {
+      "label": "MCPS 2026–27 Calendar — Accessible Table Version",
+      "url": "https://www.montgomeryschoolsmd.org/siteassets/district/calendar/2026/0775.26_2026-27_SchoolCalendar.pdf"
+    },
+    {
+      "label": "MCPS Calendar Central",
+      "url": "https://ww2.montgomeryschoolsmd.org/calendar/"
+    },
+    {
+      "label": "MCPS Student Transition Day",
+      "url": "https://www.montgomeryschoolsmd.org/district-calendar/2026-2027/student-transition-day/?dt=2026-08-24"
+    },
+    {
+      "label": "MCPS June 11 Last Day Event Page",
+      "url": "https://www.montgomeryschoolsmd.org/district-calendar/2026-2027/last-day-of-school-for-students-early-release-day-for-students/?dt=2027-06-11"
+    },
+    {
+      "label": "MCPS 2026–27 Innovative School Year Calendar PDF",
+      "url": "https://ww2.montgomeryschoolsmd.org/calendar/pdfs/2026-2027/2026-2027-INNOVATIVE-Calendar.pdf"
+    }
+  ],
+  "sourceReviewSummary": "Reviewed August 20, 2026 against the adopted MCPS Traditional School Year Calendar, its accessible table version and Calendar Central.",
+  "sourceReviewDetailsTitle": "What we checked",
+  "sourceReviewDetails": [
+    "We checked every student no-school date, early-release date, marking-period ending and possible make-up date against the April 30 adopted calendar.",
+    "We used the MCPS Student Transition Day page for the exact grade and new-student scope.",
+    "The graphical calendar PDF contains an inconsistent June note that references June 16 as the last day. Its header, June grid and quarter table identify June 11; the accessible calendar, Calendar Central and MCPS's June 11 event page agree. This page therefore uses June 11 as the scheduled last student day.",
+    "The April 30 adopted calendar is the current source for this page; an earlier December 2025 approval announcement contains superseded ending and break dates."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "sourceNextReviewText": "Recheck if MCPS activates a make-up date or publishes a revised Traditional School Year Calendar.",
+  "comparisonAfterSources": true,
+  "comparisonTitle": "MCPS Calendar Compared With Nearby D.C.-Area Districts",
+  "comparisonSummary": "Compare MCPS with nearby Maryland and Northern Virginia districts when school-year boundaries or major breaks affect cross-district family schedules.",
+  "comparisonDistrictSlugs": [
+    "prince-georges-county-school-calendar",
+    "fairfax-county-school-calendar",
+    "loudoun-county-school-calendar",
+    "prince-william-county-school-calendar"
+  ],
+  "comparisonRowsInclude": [
+    "firstDay",
+    "lastDay",
+    "thanksgivingBreak",
+    "winterBreak",
+    "springBreak"
+  ],
+  "comparisonSourceNote": "Rows compare the published school-year boundaries and equivalent break ranges for the 2026–27 school year. Districts may use different names for the same planning period.",
+  "hideComparisonNotes": true,
+  "hideComparisonReviewedDate": true,
+  "includeComparisonSchema": false,
+  "relatedDistrictsSameYearOnly": true,
+  "hideRelatedDistrictDescriptions": true,
+  "relatedDistrictsTitle": "Nearby D.C.-Area School Calendars",
+  "relatedDistrictsDescription": "Other Maryland and Northern Virginia district calendars available on MySchoolDates.",
+  "yearSwitcherPosition": "afterSources",
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "At a Glance",
+      "id": "key-dates"
+    },
+    {
+      "label": "Calendar Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Family Notes",
+      "id": "what-mcps-families-should-know"
+    },
+    {
+      "label": "Early Release",
+      "id": "mcps-early-release-and-make-up-days"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Calendar Type",
+      "id": "other-calendars"
+    },
+    {
+      "label": "Year Changes",
+      "id": "year-comparison"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
     }
   ],
   "events": [
-    { "date": "2026-07-03", "name": "Holiday - School System Closed", "type": "holiday" },
-    { "date": "2026-08-17", "name": "Preservice Days Begin", "type": "teacher_workday" },
-    { "date": "2026-08-21", "name": "Preservice Days End", "type": "teacher_workday" },
-    { "date": "2026-08-24", "name": "Student Transition Day / Non-Instructional Day", "type": "no_school" },
-    { "date": "2026-08-25", "name": "First Day of School", "type": "school_start" },
-    { "date": "2026-09-07", "name": "Labor Day - Holiday", "type": "holiday" },
-    { "date": "2026-09-18", "name": "Early Release Day for Students", "type": "early_release" },
-    { "date": "2026-09-21", "name": "Non-Instructional Day", "type": "no_school" },
-    { "date": "2026-10-16", "name": "Professional Development Day", "type": "teacher_workday" },
-    { "date": "2026-10-30", "name": "Quarter 1 Ends", "type": "quarter_end" },
-    { "date": "2026-11-02", "name": "Grading and Planning", "type": "teacher_workday" },
-    { "date": "2026-11-03", "name": "Election Day", "type": "holiday" },
-    { "date": "2026-11-23", "name": "Early Release Day for Students", "type": "early_release" },
-    { "date": "2026-11-24", "name": "Early Release Day for Students", "type": "early_release" },
-    { "date": "2026-11-25", "name": "Early Release Day for Students", "type": "early_release" },
-    { "date": "2026-11-26", "name": "Thanksgiving Holiday", "type": "holiday" },
-    { "date": "2026-11-27", "name": "Thanksgiving Holiday", "type": "holiday" },
-    { "date": "2026-12-23", "name": "Early Release Day for Students", "type": "early_release" },
-    { "date": "2026-12-24", "name": "Winter Break - Holiday", "type": "break_start" },
-    { "date": "2026-12-25", "name": "Winter Break - Holiday", "type": "holiday" },
-    { "date": "2026-12-28", "name": "Winter Break - Non-Instructional Day", "type": "no_school" },
-    { "date": "2026-12-29", "name": "Winter Break - Non-Instructional Day", "type": "no_school" },
-    { "date": "2026-12-30", "name": "Winter Break - Systemwide Closure", "type": "holiday" },
-    { "date": "2026-12-31", "name": "Winter Break - Systemwide Closure", "type": "holiday" },
-    { "date": "2027-01-01", "name": "New Year's Day - Systemwide Closure", "type": "holiday" },
-    { "date": "2027-01-02", "name": "Winter Break Ends - Systemwide Closure", "type": "break_end" },
-    { "date": "2027-01-12", "name": "Grading and Planning", "type": "teacher_workday" },
-    { "date": "2027-01-22", "name": "Non-Instructional Day and Designated Make-Up Day", "type": "makeup_day" },
-    { "date": "2027-01-22", "name": "Quarter 2 Ends", "type": "quarter_end" },
-    { "date": "2027-02-15", "name": "Holiday", "type": "holiday" },
-    { "date": "2027-02-26", "name": "Early Release Day for Students", "type": "early_release" },
-    { "date": "2027-03-17", "name": "Non-Instructional Day and Designated Make-Up Day", "type": "makeup_day" },
-    { "date": "2027-03-26", "name": "Spring Break Begins - Holiday", "type": "break_start" },
-    { "date": "2027-03-29", "name": "Spring Break - Holiday", "type": "holiday" },
-    { "date": "2027-03-30", "name": "Spring Break - Non-Instructional Day", "type": "no_school" },
-    { "date": "2027-03-31", "name": "Spring Break - Non-Instructional Day", "type": "no_school" },
-    { "date": "2027-04-01", "name": "Spring Break - Systemwide Closure", "type": "holiday" },
-    { "date": "2027-04-02", "name": "Spring Break Ends - Systemwide Closure", "type": "break_end" },
-    { "date": "2027-04-09", "name": "Quarter 3 Ends", "type": "quarter_end" },
-    { "date": "2027-05-31", "name": "Holiday", "type": "holiday" },
-    { "date": "2027-06-11", "name": "Last Day of School - Early Release", "type": "school_end" },
-    { "date": "2027-06-14", "name": "Designated Make-Up Day", "type": "makeup_day" },
-    { "date": "2027-06-15", "name": "Designated Make-Up Day", "type": "makeup_day" },
-    { "date": "2027-06-16", "name": "Designated Make-Up Day", "type": "makeup_day" },
-    { "date": "2027-06-17", "name": "Designated Make-Up Day", "type": "makeup_day" },
-    { "date": "2027-06-18", "name": "Grading and Planning", "type": "teacher_workday" },
-    { "date": "2027-06-25", "name": "Systemwide Closure", "type": "holiday" }
+    {
+      "date": "2026-08-24",
+      "name": "Student Transition Day",
+      "type": "academic",
+      "description": "For kindergarten, grades 6 and 9; grade 3 at elementary schools serving only grades 3–5; and students new to a school or MCPS.",
+      "badgeLabel": "Selected Students",
+      "calendarExportDescription": "Student Transition Day is not the regular first day for every student. Check the event description for eligibility."
+    },
+    {
+      "date": "2026-08-25",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-18",
+      "name": "Early Release Day for Students",
+      "type": "early_release"
+    },
+    {
+      "date": "2026-09-21",
+      "name": "Non-Instructional Day",
+      "type": "no_school",
+      "description": "No school for students and teachers."
+    },
+    {
+      "date": "2026-10-16",
+      "name": "Professional Development Day",
+      "type": "staff_development",
+      "description": "No school for students."
+    },
+    {
+      "date": "2026-10-30",
+      "name": "Quarter 1 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-11-02",
+      "name": "Grading and Planning for the End of Term",
+      "type": "staff_development",
+      "preserveOfficialName": true,
+      "description": "No school for students."
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Election Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-23",
+      "name": "Early Release Day for Students",
+      "type": "early_release"
+    },
+    {
+      "date": "2026-11-24",
+      "name": "Early Release Day for Students",
+      "type": "early_release"
+    },
+    {
+      "date": "2026-11-25",
+      "name": "Early Release Day for Students",
+      "type": "early_release"
+    },
+    {
+      "date": "2026-11-26",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break",
+      "description": "Thanksgiving Holiday — schools and offices closed."
+    },
+    {
+      "date": "2026-12-23",
+      "name": "Early Release Day for Students",
+      "type": "early_release"
+    },
+    {
+      "date": "2026-12-24",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break",
+      "description": "No classes; the official calendar includes holidays, non-instructional days and systemwide closures in this range."
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Classes Resume After Winter Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Dr. Martin Luther King Jr. Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-22",
+      "name": "Quarter 2 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-01-25",
+      "name": "Grading and Planning for the End of Term",
+      "type": "staff_development",
+      "preserveOfficialName": true,
+      "description": "No school for students."
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents’ Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-26",
+      "name": "Early Release Day for Students",
+      "type": "early_release"
+    },
+    {
+      "date": "2027-03-09",
+      "name": "Professional Development Day",
+      "type": "staff_development",
+      "description": "No school for students."
+    },
+    {
+      "date": "2027-03-26",
+      "endDate": "2027-04-02",
+      "name": "Spring Break",
+      "type": "break",
+      "description": "No classes; the official calendar includes holidays, non-instructional days and systemwide closures in this range."
+    },
+    {
+      "date": "2027-04-05",
+      "name": "Classes Resume After Spring Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-04-09",
+      "name": "Quarter 3 Ends",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-04-12",
+      "name": "Grading and Planning for the End of Term",
+      "type": "staff_development",
+      "preserveOfficialName": true,
+      "description": "No school for students."
+    },
+    {
+      "date": "2027-04-22",
+      "name": "Non-Instructional Day / Possible Make-Up Day",
+      "type": "makeup_day",
+      "description": "No school unless MCPS activates this date after schools have closed for three or more emergency days.",
+      "badgeLabel": "Possible Make-Up",
+      "calendarExportDescription": "This date may become an instructional day if emergencies close schools for three or more days and MCPS activates it."
+    },
+    {
+      "date": "2027-05-17",
+      "name": "Non-Instructional Day / Possible Make-Up Day",
+      "type": "makeup_day",
+      "description": "No school unless MCPS activates this date after schools have closed for three or more emergency days.",
+      "badgeLabel": "Possible Make-Up",
+      "calendarExportDescription": "This date may become an instructional day if emergencies close schools for three or more days and MCPS activates it."
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-06-11",
+      "name": "Last Day of School — Early Release",
+      "type": "school_end",
+      "description": "Scheduled last student day; students are released early.",
+      "badgeLabel": "Last Day · Early Release"
+    },
+    {
+      "date": "2027-06-14",
+      "endDate": "2027-06-17",
+      "name": "Possible Make-Up Days",
+      "type": "makeup_day",
+      "description": "MCPS may use some or all of these dates if emergencies close schools for three or more days.",
+      "badgeLabel": "Possible Make-Up",
+      "calendarExportDescription": "June 14–17 are possible make-up instructional days if emergencies close schools for three or more days and MCPS activates them."
+    },
+    {
+      "date": "2027-06-18",
+      "name": "Systemwide Closure — Schools and Offices Closed",
+      "type": "holiday",
+      "badgeLabel": "Schools & Offices Closed",
+      "hideFromAllDates": true
+    }
   ]
 }

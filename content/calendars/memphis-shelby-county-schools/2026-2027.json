@@ -1,0 +1,762 @@
+{
+  "institutionId": "memphis-shelby-county-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Memphis-Shelby County Schools Calendar 2026–27",
+  "firstDay": "2026-08-03",
+  "lastDay": "2027-05-20",
+  "temporalCoverageStart": "2026-08-03",
+  "temporalCoverageEnd": "2027-05-20",
+  "totalSchoolDays": 176,
+  "reportingPeriodDaysTotal": 176,
+  "reportingPeriodDaysScope": "The official Attendance and Report Card Periods file lists 49, 38, 47 and 42 student days across the four quarters, for 176 total days.",
+  "semesters": 2,
+  "sourceUrl": "https://www.scsk12.org/calendar25/",
+  "sourceDocumentPage": "https://www.scsk12.org/calendar25/",
+  "sourcePdfUrl": "https://www.scsk12.org/calendar25/files/26/SY26-27_MSCS_Student_Calendar.pdf",
+  "previousSourcePdfUrl": "https://www.scsk12.org/calendar25/files/25/Final%202025-26_MSCS_Students_Calendar.pdf",
+  "lastCheckedPdfUrl": "https://www.scsk12.org/calendar25/files/26/SY26-27_MSCS_Student_Calendar.pdf",
+  "sourceCheckedAt": "2026-08-20",
+  "sourceChecksumSha256": "7de9f8b4d9cb2de17fcf1f6005c67e174f2a23542f9850aa372eb60557d95670",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.scsk12.org/calendar25/",
+    "linkText": "2026-27 Student Calendar",
+    "expectedDocumentUrl": "https://www.scsk12.org/calendar25/files/26/SY26-27_MSCS_Student_Calendar.pdf",
+    "expectedText": [
+      "FIRST DAY FOR STUDENTS",
+      "AUGUST 3",
+      "LAST DAY FOR STUDENTS",
+      "MAY 20",
+      "pending approval by the Tennessee Department of Education"
+    ],
+    "expectedChecksumSha256": "7de9f8b4d9cb2de17fcf1f6005c67e174f2a23542f9850aa372eb60557d95670"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.scsk12.org/calendar25/",
+      "linkText": "2026-27 Calendario Escolar",
+      "expectedDocumentUrl": "https://www.scsk12.org/calendar25/files/26/SPA%20SY2026-27%20MSCS%20Student%20Calendar.pdf",
+      "expectedText": [
+        "PRIMER DÍA PARA ESTUDIANTES",
+        "ÚLTIMO DÍA PARA ESTUDIANTES",
+        "pendiente de aprobación"
+      ]
+    },
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.scsk12.org/calendar25/",
+      "linkText": "2026-27 Teacher Calendar",
+      "expectedDocumentUrl": "https://www.scsk12.org/calendar25/files/26/SY2026-27%20MSCS%20Teacher%20Calendar.pdf",
+      "expectedText": [
+        "FALL BREAK",
+        "STOCKPILE PROFESSIONAL DEVELOPMENT FLEX DAY",
+        "TEACHER ADMINISTRATION DAY"
+      ]
+    },
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.scsk12.org/calendar25/",
+      "linkText": "2026-2027 Attendance and Report Card Periods",
+      "expectedDocumentUrl": "https://www.scsk12.org/calendar25/files/26/2026-2027%20MSCS%20Reporting%20Periods.pdf",
+      "expectedText": [
+        "For Schools Following the District Calendar",
+        "49",
+        "38",
+        "47",
+        "42",
+        "176"
+      ]
+    },
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.scsk12.org/calendar25/",
+      "linkText": "2026-27 Assessment Calendar",
+      "expectedDocumentUrl": "https://www.scsk12.org/calendar25/files/26/MSCS%20Assessment%20Calendar%202026%202027%20FINAL%20PDF%2007_13_26.pdf",
+      "expectedText": [
+        "MSCS ASSESSMENT CALENDAR",
+        "2026-2027"
+      ]
+    }
+  ],
+  "lastVerifiedAt": "2026-08-20",
+  "dateCreated": "2026-08-20",
+  "datePublished": "2026-08-20",
+  "dateModified": "2026-08-20",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "state_approval_status_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Current 2026–27 Student Calendar — pending Tennessee Department of Education approval",
+  "sourceCalendarName": "Memphis-Shelby County Schools 2026–27 Student Calendar",
+  "schemaCalendarName": "Memphis-Shelby County Schools Calendar 2026–27",
+  "schemaDatasetName": "MSCS 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed provisional MSCS 2026–27 attendance dates from the official Student Calendar, with conference interpretation, quarter day counts, companion Teacher Calendar context and official Spanish-language access.",
+  "schemaSpatialCoverage": "Memphis and Shelby County, Tennessee",
+  "schemaCalendarDownloadName": "Provisional MSCS 2026–27 ICS File",
+  "schemaCalendarDownloadDescription": "One-time import of the current MSCS 2026–27 student calendar dates, including major breaks, days when students are out and grade-band parent-conference evenings. The source is pending state approval and the file does not update automatically.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-mscs-spanish-student-calendar",
+      "type": "CreativeWork",
+      "name": "MSCS 2026–27 Calendario Escolar",
+      "url": "https://www.scsk12.org/calendar25/files/26/SPA%20SY2026-27%20MSCS%20Student%20Calendar.pdf"
+    },
+    {
+      "id": "source-mscs-teacher-calendar",
+      "type": "CreativeWork",
+      "name": "MSCS 2026–27 Teacher Calendar",
+      "url": "https://www.scsk12.org/calendar25/files/26/SY2026-27%20MSCS%20Teacher%20Calendar.pdf"
+    },
+    {
+      "id": "source-mscs-reporting-periods",
+      "type": "CreativeWork",
+      "name": "MSCS 2026–27 Attendance and Report Card Periods",
+      "url": "https://www.scsk12.org/calendar25/files/26/2026-2027%20MSCS%20Reporting%20Periods.pdf"
+    },
+    {
+      "id": "source-mscs-assessment-calendar",
+      "type": "CreativeWork",
+      "name": "MSCS 2026–27 Assessment Calendar",
+      "url": "https://www.scsk12.org/calendar25/files/26/MSCS%20Assessment%20Calendar%202026%202027%20FINAL%20PDF%2007_13_26.pdf"
+    },
+    {
+      "id": "source-mscs-2025-2026-calendar",
+      "type": "CreativeWork",
+      "name": "MSCS 2025–26 Student Calendar",
+      "url": "https://www.scsk12.org/calendar25/files/25/Final%202025-26_MSCS_Students_Calendar.pdf"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-mscs-spanish-student-calendar",
+    "source-mscs-teacher-calendar",
+    "source-mscs-reporting-periods"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar-page",
+    "source-calendar",
+    "source-mscs-spanish-student-calendar",
+    "source-mscs-teacher-calendar",
+    "source-mscs-reporting-periods",
+    "source-mscs-assessment-calendar",
+    "source-mscs-2025-2026-calendar"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "mscs-student-calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "none",
+  "itemListMode": "keyDates",
+  "hideSemesterCount": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideInstructionalDaysSummary": true,
+  "hideDateLegend": true,
+  "hidePdfDownloadSection": false,
+  "breaksBeforeAllDates": true,
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "comparison",
+    "nationalTrends",
+    "breaks",
+    "otherCalendars",
+    "relatedDistricts"
+  ],
+  "hiddenCustomSectionIds": [
+    "mscs-calendar-guide"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "faqOrderLimit": 6,
+  "faqLimit": 6,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Approval Status",
+      "id": "mscs-2026-2027-approval-status"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Conferences",
+      "id": "mscs-2026-2027-conferences"
+    },
+    {
+      "label": "Student vs. Teacher",
+      "id": "mscs-2026-2027-student-teacher-calendar"
+    },
+    {
+      "label": "Calendar Guide",
+      "id": "mscs-2026-2027-calendar-guide"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "MSCS Calendar 2026–27: Dates, Breaks & PDF",
+  "seoDescription": "MSCS starts Aug. 3, 2026 and ends May 20, 2027. See Fall, Thanksgiving, Winter and Spring breaks, conference dates, approval status and official PDFs.",
+  "heroSummary": "MSCS lists Monday, August 3, 2026, as the first day for students and Thursday, May 20, 2027, as the last day. Fall Break runs October 12–19, Thanksgiving Break is November 23–27, Winter Break is December 21–January 4, and Spring Break is March 15–19. The district says the 2026–27 Student Calendar is still awaiting Tennessee Department of Education approval, so check the MSCS website again before booking nonrefundable travel, camps or childcare.",
+  "heroSourceLine": "Current MSCS Student Calendar · Pending state approval · Reviewed August 20, 2026",
+  "hideHeroDownloadLink": true,
+  "verificationBadgeText": "Current MSCS calendar reviewed — pending approval",
+  "heroVerificationSourceText": "Reviewed against the official Student Calendar, Teacher Calendar, reporting-period file and Spanish student calendar",
+  "heroVerificationComparisonText": "Conference status, days when students are out, staff-day differences and the 176-day total were checked across MSCS sources",
+  "calendarNotes": "The current MSCS Student Calendar is awaiting Tennessee Department of Education approval. It lists 176 student days, August 3 as the first day and May 20 as the last day. Parent conferences are 4–7 p.m. evenings organized by school level and are not marked as no-school days. The Student Calendar groups October 12–19 as Fall Break, while the Teacher Calendar separates October 19 as a district learning day for teacher inservice. It also separates teacher FLEX days within the student Thanksgiving and Spring Break II schedules. Check the MSCS website for revisions before making firm plans.",
+  "keyDatesHeading": "Key Dates",
+  "keyDatesSummaryTitle": "Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, major breaks and the return after Winter Break",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Students",
+      "date": "2026-08-03",
+      "type": "school_start",
+      "schemaDescription": "Date listed in the current MSCS 2026–27 Student Calendar, which is pending state approval."
+    },
+    {
+      "label": "Fall",
+      "name": "Fall Break",
+      "date": "2026-10-12",
+      "endDate": "2026-10-19",
+      "type": "break_start",
+      "description": "Students return October 20."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "type": "break_start"
+    },
+    {
+      "label": "Return",
+      "name": "Students Return After Winter Break",
+      "date": "2027-01-05",
+      "type": "school_resume",
+      "schemaDescription": "Students return Tuesday, January 5, 2027."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Students",
+      "date": "2027-05-20",
+      "type": "school_end",
+      "schemaDescription": "Date listed in the current MSCS 2026–27 Student Calendar, which is pending state approval."
+    }
+  ],
+  "allDatesTitle": "Full Calendar",
+  "allDatesCoverageNote": "These dates affect student attendance under the current MSCS calendar. State approval is still pending, and school events or conference appointments can change separately.",
+  "allDatesSourceUrl": "https://www.scsk12.org/calendar25/files/26/SY26-27_MSCS_Student_Calendar.pdf",
+  "allDatesSourceLabel": "Current MSCS 2026–27 Student Calendar PDF — pending approval",
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "gradingPeriodsTitle": "Student Days by Quarter",
+  "gradingPeriodsDescription": "The MSCS Attendance and Report Card Periods file lists 176 student days for schools following the district calendar: 49, 38, 47 and 42 days across the four quarters.",
+  "gradingPeriodsDaysLabel": "Student Days",
+  "gradingPeriodsFooterNote": "The first semester contains 87 days and the second contains 89. Quarter boundaries come from the official reporting-period file.",
+  "gradingPeriods": [
+    {
+      "label": "Quarter 1",
+      "start": "2026-08-03",
+      "end": "2026-10-09",
+      "studentDays": 49
+    },
+    {
+      "label": "Quarter 2",
+      "start": "2026-10-20",
+      "end": "2026-12-18",
+      "studentDays": 38
+    },
+    {
+      "label": "Quarter 3",
+      "start": "2027-01-05",
+      "end": "2027-03-12",
+      "studentDays": 47
+    },
+    {
+      "label": "Quarter 4",
+      "start": "2027-03-22",
+      "end": "2027-05-20",
+      "studentDays": 42
+    }
+  ],
+  "customSections": [
+    {
+      "id": "mscs-2026-2027-approval-status",
+      "label": "Calendar Approval Status",
+      "position": "afterKeyDates",
+      "content": "The district says the 2026–27 Student Calendar is still awaiting Tennessee Department of Education approval. Use the dates for planning, but check the MSCS website again before booking nonrefundable travel, camps or childcare.",
+      "table": {
+        "caption": "Current MSCS 2026–27 publication status",
+        "columns": [
+          "Official source",
+          "Current status",
+          "What families should know"
+        ],
+        "rows": [
+          [
+            "MSCS Student Calendar PDF",
+            "Pending state approval",
+            "Dates may change"
+          ],
+          [
+            "MSCS calendar page",
+            "Links to the current 2026–27 calendar",
+            "Check this page for an updated PDF"
+          ],
+          [
+            "One-time ICS",
+            "Based on the current PDF",
+            "Does not update automatically"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mscs-2026-2027-conferences",
+      "label": "Parent Conferences by School Level",
+      "position": "afterAllDates",
+      "content": "MSCS schedules separate 4–7 p.m. conference evenings for high, middle and elementary schools. The Student Calendar does not label these dates as student holidays; schools provide appointment details.",
+      "table": {
+        "caption": "MSCS 2026–27 parent-conference evenings",
+        "columns": [
+          "School level",
+          "Fall conference",
+          "Winter conference",
+          "Student attendance"
+        ],
+        "rows": [
+          [
+            "High school",
+            "Sep. 10, 2026 · 4–7 p.m.",
+            "Jan. 21, 2027 · 4–7 p.m.",
+            "Not listed as a day off"
+          ],
+          [
+            "Middle school",
+            "Sep. 15, 2026 · 4–7 p.m.",
+            "Jan. 26, 2027 · 4–7 p.m.",
+            "Not listed as a day off"
+          ],
+          [
+            "Elementary school",
+            "Sep. 17, 2026 · 4–7 p.m.",
+            "Jan. 28, 2027 · 4–7 p.m.",
+            "Not listed as a day off"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mscs-2026-2027-student-teacher-calendar",
+      "label": "Student Breaks and Teacher Workdays",
+      "position": "afterAllDates",
+      "content": "Use the Student Calendar to see when students are in school. The companion Teacher Calendar explains how staff workdays fit within several student breaks.",
+      "table": {
+        "caption": "How MSCS describes the same 2026–27 periods",
+        "columns": [
+          "Student Calendar",
+          "Teacher Calendar detail",
+          "What it means for families"
+        ],
+        "rows": [
+          [
+            "Fall Break · Oct. 12–19",
+            "Oct. 12–16 break; Oct. 19 district learning day for teacher inservice",
+            "Students are out for the full Oct. 12–19 range and return Oct. 20"
+          ],
+          [
+            "Thanksgiving Break · Nov. 23–27",
+            "Nov. 23–25 stockpiled PD FLEX; Nov. 26–27 Thanksgiving",
+            "Students are out all five weekdays"
+          ],
+          [
+            "Spring Break II · Mar. 26 and 29",
+            "Teachers are out Mar. 26; Mar. 29 is a stockpiled PD FLEX day",
+            "Students are out on both dates"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mscs-2026-2027-calendar-guide",
+      "label": "Which MSCS Calendar Should You Use?",
+      "content": "Start with the Student Calendar for attendance dates, then use the more specific MSCS resource when the question involves staff schedules, report-card periods or testing.",
+      "position": "afterAllDates",
+      "table": {
+        "caption": "MSCS calendar sources by planning need",
+        "columns": [
+          "Planning need",
+          "Best official source"
+        ],
+        "rows": [
+          [
+            "First and last days, student breaks, holidays and conference evenings",
+            "MSCS Student Calendar"
+          ],
+          [
+            "Teacher inservice, FLEX and administrative workdays",
+            "MSCS Teacher Calendar"
+          ],
+          [
+            "Quarter day counts and report-card periods",
+            "MSCS Attendance and Report Card Periods"
+          ],
+          [
+            "District testing windows",
+            "MSCS Assessment Calendar"
+          ],
+          [
+            "Student dates in Spanish",
+            "MSCS Calendario Escolar"
+          ],
+          [
+            "Conference appointments, activities and building events",
+            "Your child's school"
+          ]
+        ]
+      }
+    }
+  ],
+  "whatsNew": {
+    "title": "What Changes from 2025–26?",
+    "subtitle": "Meaningful differences between the two official Student Calendars",
+    "content": [
+      "The first day moves from August 4 to August 3, and the last day moves from May 21 to May 20.",
+      "The published student-day total increases from 175 to 176; the second semester grows from 88 days to 89.",
+      "Fall Break expands from October 13–17 in 2025–26 to October 12–19 in 2026–27, while Spring Break II moves from April 3–6 to March 26 and 29."
+    ]
+  },
+  "alternateCalendarsTitle": "Official Language and Planning Calendars",
+  "alternateCalendarsDescription": "The Spanish Student Calendar contains the same student schedule in Spanish. The Teacher, reporting-period and Assessment calendars answer different planning questions and do not replace the Student Calendar for attendance.",
+  "alternateCalendarsButtonLabel": "Open official PDF",
+  "alternateCalendars": [
+    {
+      "type": "language",
+      "group": "Other languages",
+      "label": "2026–27 Calendario Escolar",
+      "description": "Official Spanish version of the MSCS Student Calendar; it carries the same pending-approval status.",
+      "pdfUrl": "https://www.scsk12.org/calendar25/files/26/SPA%20SY2026-27%20MSCS%20Student%20Calendar.pdf",
+      "buttonLabel": "View Spanish PDF",
+      "ariaLabel": "Open the official Spanish MSCS 2026-2027 Student Calendar PDF"
+    },
+    {
+      "type": "staff",
+      "group": "Planning resources",
+      "label": "2026–27 Teacher Calendar",
+      "description": "Staff inservice, FLEX and administrative-day details during student breaks.",
+      "pdfUrl": "https://www.scsk12.org/calendar25/files/26/SY2026-27%20MSCS%20Teacher%20Calendar.pdf",
+      "buttonLabel": "View Teacher Calendar",
+      "ariaLabel": "Open the official MSCS 2026-2027 Teacher Calendar PDF"
+    },
+    {
+      "type": "reporting",
+      "group": "Planning resources",
+      "label": "Attendance and Report Card Periods",
+      "description": "Quarter day counts and reporting-period dates for schools following the district calendar.",
+      "pdfUrl": "https://www.scsk12.org/calendar25/files/26/2026-2027%20MSCS%20Reporting%20Periods.pdf",
+      "buttonLabel": "View Reporting Periods",
+      "ariaLabel": "Open the official MSCS 2026-2027 Attendance and Report Card Periods PDF"
+    },
+    {
+      "type": "assessment",
+      "group": "Planning resources",
+      "label": "2026–27 Assessment Calendar",
+      "description": "District and state testing windows by grade and assessment.",
+      "pdfUrl": "https://www.scsk12.org/calendar25/files/26/MSCS%20Assessment%20Calendar%202026%202027%20FINAL%20PDF%2007_13_26.pdf",
+      "buttonLabel": "View Assessment Calendar",
+      "ariaLabel": "Open the official MSCS 2026-2027 Assessment Calendar PDF"
+    }
+  ],
+  "unifiedDownloadTitle": "Official Calendar and Download Options",
+  "unifiedDownloadDescription": "Open the current district PDFs or import a one-time copy of the student dates. The ICS will not update automatically if MSCS revises the pending calendar.",
+  "compactDownloadModule": true,
+  "pdfHeading": "Current MSCS 2026–27 Student Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "The linked Student Calendar is the current attendance source and is still pending Tennessee Department of Education approval.",
+  "pdfButtonLabel": "Open Current MSCS Student Calendar PDF",
+  "hidePdfVersionLabel": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "hideShareCalendarHeading": true,
+  "icsHeading": "One-Time Calendar Import",
+  "icsDescription": "Download the current provisional student dates, major breaks, days when students are out and 4–7 p.m. conference evenings. Teacher-only, report-card and assessment dates are not included.",
+  "icsButtonLabel": "Download Provisional MSCS 2026–27 ICS",
+  "icsButtonSupportText": "Works with Google Calendar, Apple Calendar and Outlook",
+  "icsSourceNote": "Based on the current MSCS Student Calendar, which is pending state approval. Check the MSCS calendar page for revisions.",
+  "calendarFaqs": [
+    {
+      "q": "When does MSCS start school in 2026–27?",
+      "a": "The current Student Calendar lists Monday, August 3, 2026, as the first day for students. The source is pending Tennessee Department of Education approval."
+    },
+    {
+      "q": "When is MSCS Fall Break in 2026?",
+      "a": "Students are out October 12–19, 2026, and return Tuesday, October 20. The Teacher Calendar identifies October 19 as a district learning day for teacher inservice."
+    },
+    {
+      "q": "When is MSCS Winter Break in 2026–27?",
+      "a": "Winter Break runs December 21, 2026, through January 4, 2027. Students return Tuesday, January 5."
+    },
+    {
+      "q": "When is MSCS Spring Break in 2027?",
+      "a": "The main Spring Break is March 15–19, 2027. MSCS also lists Spring Break II on March 26 and 29."
+    },
+    {
+      "q": "Are MSCS parent-conference dates no-school days?",
+      "a": "No, not according to the districtwide Student Calendar. MSCS lists separate high, middle and elementary conference evenings from 4–7 p.m. without marking those dates as student holidays."
+    },
+    {
+      "q": "Is the MSCS 2026–27 calendar final?",
+      "a": "The current PDF is published by MSCS but says it is pending Tennessee Department of Education approval. Check the official calendar page again before making firm plans."
+    }
+  ],
+  "sourceReviewSummary": "Reviewed August 20, 2026 against the current MSCS Student Calendar, Teacher Calendar, Attendance and Report Card Periods, Assessment Calendar, and Spanish Student Calendar.",
+  "sourceReviewDetailsTitle": "What was verified",
+  "sourceReviewDetails": [
+    "August 3, May 20, all published breaks, six 4–7 p.m. conference evenings, semester exams and the approval notice were checked against the official Student Calendar.",
+    "The Teacher Calendar was used only to explain staff activity during student breaks; it does not replace the Student Calendar for attendance.",
+    "The Attendance and Report Card Periods file lists 49, 38, 47 and 42 quarter days, for 87 first-semester days, 89 second-semester days and 176 total days.",
+    "The Spanish Student Calendar contains the same student schedule in Spanish, not a separate academic track.",
+    "The Assessment Calendar is linked for district and state testing windows; assessment dates are not included in the student ICS."
+  ],
+  "sourceMaintainerLabel": "Official source",
+  "sourceMaintainerText": "Memphis-Shelby County Schools. MySchoolDates independently reviewed the calendar data against MSCS publications.",
+  "sourceNextReviewText": "We will review the page again if MSCS replaces the pending calendar, removes the pending-approval notice or changes student dates.",
+  "sources": [
+    {
+      "label": "MSCS official calendar page",
+      "url": "https://www.scsk12.org/calendar25/"
+    },
+    {
+      "label": "Current MSCS 2026–27 Student Calendar PDF — pending approval",
+      "url": "https://www.scsk12.org/calendar25/files/26/SY26-27_MSCS_Student_Calendar.pdf"
+    },
+    {
+      "label": "MSCS 2026–27 Calendario Escolar",
+      "url": "https://www.scsk12.org/calendar25/files/26/SPA%20SY2026-27%20MSCS%20Student%20Calendar.pdf"
+    },
+    {
+      "label": "MSCS 2026–27 Teacher Calendar",
+      "url": "https://www.scsk12.org/calendar25/files/26/SY2026-27%20MSCS%20Teacher%20Calendar.pdf"
+    },
+    {
+      "label": "MSCS 2026–27 Attendance and Report Card Periods",
+      "url": "https://www.scsk12.org/calendar25/files/26/2026-2027%20MSCS%20Reporting%20Periods.pdf"
+    },
+    {
+      "label": "MSCS 2026–27 Assessment Calendar",
+      "url": "https://www.scsk12.org/calendar25/files/26/MSCS%20Assessment%20Calendar%202026%202027%20FINAL%20PDF%2007_13_26.pdf"
+    },
+    {
+      "label": "Official MSCS 2025–26 Student Calendar PDF",
+      "url": "https://www.scsk12.org/calendar25/files/25/Final%202025-26_MSCS_Students_Calendar.pdf"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-03",
+      "name": "First Day for Students · Quarter 1 Begins",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "type": "holiday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2026-09-10",
+      "name": "High School Parent Conferences",
+      "type": "conference",
+      "badgeLabel": "High School",
+      "description": "Evening conferences, 4–7 p.m.; the Student Calendar does not mark this as a no-school day."
+    },
+    {
+      "date": "2026-09-15",
+      "name": "Middle School Parent Conferences",
+      "type": "conference",
+      "badgeLabel": "Middle School",
+      "description": "Evening conferences, 4–7 p.m.; the Student Calendar does not mark this as a no-school day."
+    },
+    {
+      "date": "2026-09-17",
+      "name": "Elementary School Parent Conferences",
+      "type": "conference",
+      "badgeLabel": "Elementary School",
+      "description": "Evening conferences, 4–7 p.m.; the Student Calendar does not mark this as a no-school day."
+    },
+    {
+      "date": "2026-10-09",
+      "name": "Quarter 1 Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-12",
+      "endDate": "2026-10-19",
+      "name": "Fall Break",
+      "type": "break_start",
+      "description": "Students are out through October 19 and return October 20. The Teacher Calendar identifies October 19 as a district learning day for teacher inservice."
+    },
+    {
+      "date": "2026-10-20",
+      "name": "Students Return · Quarter 2 Begins",
+      "type": "school_resume"
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day",
+      "type": "holiday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start",
+      "description": "Students are out all five weekdays; the Teacher Calendar identifies November 23–25 as stockpiled professional-development FLEX days and November 26–27 as Thanksgiving."
+    },
+    {
+      "date": "2026-12-16",
+      "endDate": "2026-12-18",
+      "name": "Semester Exams",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Quarter 2 and Semester 1 End",
+      "type": "semester_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Students Return · Quarter 3 and Semester 2 Begin",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2027-01-21",
+      "name": "High School Parent Conferences",
+      "type": "conference",
+      "badgeLabel": "High School",
+      "description": "Evening conferences, 4–7 p.m.; the Student Calendar does not mark this as a no-school day."
+    },
+    {
+      "date": "2027-01-26",
+      "name": "Middle School Parent Conferences",
+      "type": "conference",
+      "badgeLabel": "Middle School",
+      "description": "Evening conferences, 4–7 p.m.; the Student Calendar does not mark this as a no-school day."
+    },
+    {
+      "date": "2027-01-28",
+      "name": "Elementary School Parent Conferences",
+      "type": "conference",
+      "badgeLabel": "Elementary School",
+      "description": "Evening conferences, 4–7 p.m.; the Student Calendar does not mark this as a no-school day."
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day",
+      "type": "holiday",
+      "badgeLabel": "Students Out",
+      "description": "The Teacher Calendar identifies this as a district learning day for teacher inservice."
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Quarter 3 Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-22",
+      "name": "Students Return · Quarter 4 Begins",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-03-26",
+      "dates": [
+        "2027-03-26",
+        "2027-03-29"
+      ],
+      "displayDate": "March 26 and 29, 2027",
+      "name": "Spring Break II",
+      "type": "break",
+      "badgeLabel": "Students Out",
+      "description": "Students are out on Friday, March 26, and Monday, March 29. The Teacher Calendar identifies March 29 as a stockpiled professional-development FLEX day.",
+      "exportDatesIndividually": true
+    },
+    {
+      "date": "2027-05-18",
+      "endDate": "2027-05-20",
+      "name": "Semester Exams",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-20",
+      "name": "Last Day for Students · Quarter 4 and Semester 2 End",
+      "type": "school_end"
+    }
+  ]
+}

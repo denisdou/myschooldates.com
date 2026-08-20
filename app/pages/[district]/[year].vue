@@ -742,7 +742,8 @@ function dedupeQuestions(questions: string[]) {
 
 const allFaqs = computed(() => {
   if (!district.value || !cal.value) return []
-  const specificFaqs: { q: string; a: string }[] = (district.value as any).districtFaqs ?? []
+  const excludeDistrictFaqs = Boolean((cal.value as any)?.excludeDistrictFaqs ?? (cal.value as any)?.meta?.excludeDistrictFaqs)
+  const specificFaqs: { q: string; a: string }[] = excludeDistrictFaqs ? [] : ((district.value as any).districtFaqs ?? [])
   const calendarFaqs: { q: string; a: string }[] = (cal.value as any).calendarFaqs ?? []
   const prefersCalendarFirst = (cal.value as any).faqOrderLimit ?? (cal.value as any).meta?.faqOrderLimit ?? (district.value as any).faqOrderLimit ?? (district.value as any).meta?.faqOrderLimit ?? (cal.value as any).faqLimit ?? (cal.value as any).meta?.faqLimit ?? (district.value as any).faqLimit ?? (district.value as any).meta?.faqLimit
   if (typeof prefersCalendarFirst === 'number' && prefersCalendarFirst > 0) {
@@ -751,8 +752,9 @@ const allFaqs = computed(() => {
   return dedupeFaqItems([...specificFaqs, ...calendarFaqs])
 })
 const faqs = computed(() => {
+  const excludeDistrictFaqs = Boolean((cal.value as any)?.excludeDistrictFaqs ?? (cal.value as any)?.meta?.excludeDistrictFaqs)
   const displayQuestions = dedupeQuestions([
-    ...(((district.value as any)?.faqDisplayQuestions ?? (district.value as any)?.meta?.faqDisplayQuestions ?? []) as string[]),
+    ...(excludeDistrictFaqs ? [] : (((district.value as any)?.faqDisplayQuestions ?? (district.value as any)?.meta?.faqDisplayQuestions ?? []) as string[])),
     ...(((cal.value as any)?.faqDisplayQuestions ?? (cal.value as any)?.meta?.faqDisplayQuestions ?? []) as string[]),
   ])
   if (displayQuestions.length) {
@@ -769,8 +771,9 @@ const faqs = computed(() => {
 const faqSchemaItems = computed(() => {
   if ((cal.value as any).hideFaqSchema || (cal.value as any).meta?.hideFaqSchema || (district.value as any).hideFaqSchema || (district.value as any).meta?.hideFaqSchema) return []
   const limit = (cal.value as any).faqSchemaLimit ?? (cal.value as any).meta?.faqSchemaLimit ?? (district.value as any).faqSchemaLimit ?? (district.value as any).meta?.faqSchemaLimit
+  const excludeDistrictFaqs = Boolean((cal.value as any)?.excludeDistrictFaqs ?? (cal.value as any)?.meta?.excludeDistrictFaqs)
   const includeQuestions = dedupeQuestions([
-    ...(((district.value as any).faqSchemaQuestions ?? (district.value as any).meta?.faqSchemaQuestions ?? []) as string[]),
+    ...(excludeDistrictFaqs ? [] : (((district.value as any).faqSchemaQuestions ?? (district.value as any).meta?.faqSchemaQuestions ?? []) as string[])),
     ...(((cal.value as any).faqSchemaQuestions ?? (cal.value as any).meta?.faqSchemaQuestions ?? []) as string[]),
   ])
   const excludes = [
@@ -1646,7 +1649,7 @@ useHead({
             </a>
           </div>
           <p class="district-hero__independence mt-3 text-xs">
-            MySchoolDates is an independent calendar reference and is not affiliated with {{ district!.name }}.
+            {{ (cal as any)?.heroIndependenceText ?? (cal as any)?.meta?.heroIndependenceText ?? (district as any)?.heroIndependenceText ?? `MySchoolDates is an independent calendar reference and is not affiliated with ${district!.name}.` }}
           </p>
           <dl
             v-if="verifiedDate && (!((cal as any).hideHeroReviewedField || (cal as any).meta?.hideHeroReviewedField) || !((cal as any).hideHeroReviewedByField || (cal as any).meta?.hideHeroReviewedByField) || !((cal as any).hideHeroUpdatedField || (cal as any).meta?.hideHeroUpdatedField))"

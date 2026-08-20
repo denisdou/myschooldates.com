@@ -1,0 +1,603 @@
+{
+  "institutionId": "knox-county-schools",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025–26",
+  "pageHeading": "Knox County Schools Calendar 2025–26",
+  "firstDay": "2025-08-07",
+  "lastDay": "2026-05-21",
+  "temporalCoverageStart": "2025-07-31",
+  "temporalCoverageEnd": "2026-06-19",
+  "totalSchoolDays": 180,
+  "reportingPeriodDaysTotal": 180,
+  "reportingPeriodDaysScope": "KCS defines the published 180 instructional-day total as 177 student instructional days plus three days accumulated under the daily seven-hour schedule.",
+  "sourceUrl": "https://www.knoxschools.org/about/calendar",
+  "sourceDocumentPage": "https://www.knoxschools.org/about/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1741885871/knoxschoolsorg/ygvwpan320yy2nzqiz5m/2025-26Calendar_20250306.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1741885871/knoxschoolsorg/ygvwpan320yy2nzqiz5m/2025-26Calendar_20250306.pdf",
+  "sourceCheckedAt": "2026-08-20",
+  "sourceChecksumSha256": "446dabf0d0d09e3741d948dec5c419f0679fa859cdc150a4227b82824c9a2de5",
+  "sourceStatus": "archived",
+  "manualReviewRequired": true,
+  "sourceConflict": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.knoxschools.org/about/calendar",
+    "linkText": "2025-2026",
+    "expectedDocumentUrl": "https://resources.finalsite.net/images/v1741885871/knoxschoolsorg/ygvwpan320yy2nzqiz5m/2025-26Calendar_20250306.pdf",
+    "expectedText": [
+      "First Day for Students",
+      "Thursday, August 7",
+      "Last Day for Students",
+      "Thursday, May 21",
+      "177 student instructional days plus 3 days accumulated"
+    ],
+    "expectedChecksumSha256": "446dabf0d0d09e3741d948dec5c419f0679fa859cdc150a4227b82824c9a2de5"
+  },
+  "lastVerifiedAt": "2026-08-20",
+  "dateCreated": "2026-08-20",
+  "datePublished": "2026-08-20",
+  "dateModified": "2026-08-20",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "weather_makeup_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Official KCS 2025–26 calendar PDF currently linked under Previous Calendars",
+  "sourceCalendarName": "Knox County Schools 2025–26 Calendar",
+  "schemaCalendarName": "Knox County Schools Calendar 2025–26",
+  "schemaDatasetName": "Knox County Schools 2025–26 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Knox County Schools dates for 2025–26, including the half-day opening and closing, sixth- and ninth-grade orientation, districtwide half-days, grading-period markers, student holidays, staff-purpose labels, the 180-day statutory definition and the eight-day cancellation allowance.",
+  "schemaSpatialCoverage": "Knoxville and Knox County, Tennessee",
+  "schemaCalendarDownloadName": "Knox County Schools 2025–26 ICS Calendar",
+  "schemaCalendarDownloadDescription": "One-time ICS import of reviewed KCS attendance dates, half-days, holidays and breaks from the official 2025–26 calendar PDF.",
+  "calendarType": "traditional",
+  "calendarTrackId": "kcs-district-calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "hideSemesterCount": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideInstructionalDaysSummary": true,
+  "hiddenSections": [
+    "about",
+    "breaks",
+    "comparison",
+    "districtProfile",
+    "downloadCta",
+    "keyDateCards",
+    "livingHere",
+    "nationalTrends",
+    "planningTips",
+    "quickFacts",
+    "relatedDistricts",
+    "todayStatus",
+    "whatsDifferent",
+    "yearNumbers"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "180-Day Total",
+      "id": "kcs-2025-2026-day-count"
+    },
+    {
+      "label": "Half-Days",
+      "id": "kcs-2025-2026-half-days"
+    },
+    {
+      "label": "Calendar Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Staff Labels",
+      "id": "kcs-2025-2026-staff-labels"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Weather",
+      "id": "kcs-2025-2026-weather"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Knox County Schools Calendar 2025–26 | Dates & PDF",
+  "seoDescription": "Knox County Schools began Aug. 7, 2025, and ended May 21, 2026. See KCS half-days, breaks, in-service dates, the official PDF and ICS.",
+  "heroSummary": "Knox County Schools began the 2025–26 student year on Thursday, August 7, 2025, and ended Thursday, May 21, 2026; both were half-days. Fall Break ran October 6–10, Winter Break was December 22–January 2, and Spring Break was March 9–13. Students returned from Winter Break on Monday, January 5.",
+  "heroSourceLine": "Archived KCS calendar · Official PDF reviewed August 20, 2026",
+  "verificationBadgeText": "Official KCS 2025–26 PDF reviewed",
+  "heroVerificationSourceText": "Complete one-page calendar, statutory day-count note and weather allowance checked",
+  "heroFactChips": [
+    "180 instructional days",
+    "177 student instructional days + 3 accumulated days",
+    "7 student half-days"
+  ],
+  "calendarNotes": "The KCS calendar lists several districtwide half-days and distinguishes student holidays from staff in-service or administrative work. January 2 falls inside Winter Break and also carries a half-day in-service and half-day administrative label for staff. School dismissal times and building events require the assigned school's schedule.",
+  "keyDatesHeading": "Knox County Schools 2025–26 Key Dates",
+  "keyDatesSummaryTitle": "Knox County Schools 2025–26 Key Dates",
+  "keyDatesSummarySubtitle": "Half-day opening, major breaks, the Winter Break return and half-day closing",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Students — Half-Day",
+      "date": "2025-08-07",
+      "type": "school_start",
+      "schemaDescription": "First student day and a districtwide half-day on the official KCS calendar."
+    },
+    {
+      "label": "Fall",
+      "name": "Fall Break",
+      "date": "2025-10-06",
+      "endDate": "2025-10-10",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Holidays",
+      "date": "2025-11-26",
+      "endDate": "2025-11-28",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2025-12-22",
+      "endDate": "2026-01-02",
+      "type": "break_start",
+      "description": "January 2 also carries staff in-service and administrative labels."
+    },
+    {
+      "label": "Return",
+      "name": "Students Return After Winter Break",
+      "date": "2026-01-05",
+      "type": "school_resume"
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2026-03-09",
+      "endDate": "2026-03-13",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Students — Half-Day",
+      "date": "2026-05-21",
+      "type": "school_end",
+      "schemaDescription": "Last student day and a districtwide half-day on the official KCS calendar."
+    }
+  ],
+  "allDatesTitle": "Knox County Schools 2025–26 Calendar Dates",
+  "allDatesCoverageNote": "This table follows the official KCS PDF and includes districtwide student dates, half-days, holidays, breaks, staff-purpose dates and grading-period markers. School activities and exact dismissal times are not included.",
+  "allDatesCoveredBreakDatesNote": "January 2 is already included in Winter Break. Its half-day school-based in-service and half-day administrative staff purpose is noted on the break row rather than repeated as another student closure.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1741885871/knoxschoolsorg/ygvwpan320yy2nzqiz5m/2025-26Calendar_20250306.pdf",
+  "allDatesSourceLabel": "Official KCS 2025–26 Calendar PDF",
+  "dateLegendItems": [
+    {
+      "label": "First / last day or student return",
+      "dot": "bg-orange-500"
+    },
+    {
+      "label": "Holiday / break",
+      "dot": "bg-amber-400"
+    },
+    {
+      "label": "Student-free in-service / staff day",
+      "dot": "bg-violet-700"
+    },
+    {
+      "label": "Half-day / orientation",
+      "dot": "bg-teal-500"
+    },
+    {
+      "label": "Grading-period marker",
+      "dot": "bg-blue-400"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "kcs-2025-2026-day-count",
+      "label": "What KCS Means by 180 Instructional Days",
+      "position": "afterKeyDates",
+      "content": "KCS prints 180 instructional days, but the footnote defines that total as 177 student instructional days plus three days accumulated under the daily seven-hour schedule. It should not be read as 180 full-length student attendance days.",
+      "table": {
+        "caption": "Published KCS 2025–26 calendar summary",
+        "columns": [
+          "Calendar category",
+          "Published total"
+        ],
+        "rows": [
+          [
+            "Instructional days",
+            "180 — defined as 177 student instructional days + 3 accumulated days"
+          ],
+          [
+            "Administrative days",
+            "4"
+          ],
+          [
+            "Unscheduled in-service days",
+            "2"
+          ],
+          [
+            "Unscheduled parent-teacher contact-hours day",
+            "1"
+          ],
+          [
+            "Scheduled in-service days",
+            "6"
+          ],
+          [
+            "Vacation days",
+            "10"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "kcs-2025-2026-half-days",
+      "label": "KCS Half-Days That Affect Family Schedules",
+      "position": "afterKeyDates",
+      "content": "KCS scheduled seven districtwide student half-days. The calendar does not publish a universal dismissal time, so families should use the assigned school's schedule.",
+      "table": {
+        "caption": "Districtwide student half-days in 2025–26",
+        "columns": [
+          "Date",
+          "Calendar context"
+        ],
+        "rows": [
+          [
+            "Aug. 7",
+            "First day for students"
+          ],
+          [
+            "Sept. 17",
+            "Constitution Day — schools open"
+          ],
+          [
+            "Nov. 19",
+            "Student half-day"
+          ],
+          [
+            "Dec. 19",
+            "End of the second grading period and first semester"
+          ],
+          [
+            "Jan. 28",
+            "Student half-day"
+          ],
+          [
+            "March 25",
+            "Student half-day"
+          ],
+          [
+            "May 21",
+            "Last student day and end of the second semester"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "kcs-2025-2026-staff-labels",
+      "label": "How to Read KCS Staff and Student Labels",
+      "position": "afterAllDates",
+      "content": "KCS uses the staff-purpose label to explain why students may be out. Dates before August 7 prepare staff for opening; dates inside the student year require closer attention.",
+      "table": {
+        "caption": "KCS labels that affect attendance planning",
+        "columns": [
+          "Official label",
+          "Dates",
+          "Family meaning"
+        ],
+        "rows": [
+          [
+            "Systemwide In-Service Day — Student Holiday",
+            "Nov. 4 and Feb. 16",
+            "No school for students"
+          ],
+          [
+            "Systemwide In-Service Day — School-based",
+            "May 5",
+            "Staff professional day; use KCS communication for operational details"
+          ],
+          [
+            "Administrative Day",
+            "Jan. 2 and May 22",
+            "Jan. 2 is within Winter Break; May 22 follows the last student day"
+          ],
+          [
+            "Sixth- and ninth-grade orientation",
+            "Aug. 5",
+            "Grade-specific orientation before the districtwide first student day"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "kcs-2025-2026-weather",
+      "label": "KCS Weather and Makeup-Day Rule",
+      "position": "afterCalendarExport",
+      "content": "The calendar says KCS may cancel up to eight instructional days because of inclement weather or serious outbreaks of illness before makeup days are required. For a closure, delay or early release, the district says it posts alerts on KCS websites, uses its notification system and contacts regional news media.",
+      "links": [
+        {
+          "label": "KCS Severe Weather Information",
+          "to": "https://www.knoxschools.org/community-resources/severe-weather-info"
+        }
+      ]
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Was the first day of Knox County Schools a half-day in 2025?",
+      "a": "Yes. Thursday, August 7, 2025, was the first student day and a districtwide half-day. Sixth- and ninth-grade orientation was held August 5 before the full student calendar began."
+    },
+    {
+      "q": "How many student half-days were on the KCS 2025–26 calendar?",
+      "a": "The calendar listed seven student half-day dates: August 7, September 17, November 19, December 19, January 28, March 25 and May 21. Exact dismissal times came from the assigned school."
+    },
+    {
+      "q": "When did students return after Winter Break?",
+      "a": "Students returned Monday, January 5, 2026. Winter Break ran through January 2, and January 2 also carried half-day in-service and half-day administrative labels for staff."
+    },
+    {
+      "q": "Did KCS have 180 full student days in 2025–26?",
+      "a": "No. The district defined its 180 instructional-day total as 177 student instructional days plus three days accumulated under the daily seven-hour schedule. Several student days were also scheduled as half-days."
+    },
+    {
+      "q": "How many cancellation days were built into the KCS calendar?",
+      "a": "The calendar allowed up to eight instructional cancellations for inclement weather or serious illness outbreaks before makeup days were required. Current district announcements controlled any actual schedule change."
+    }
+  ],
+  "faqDisplayLimit": 5,
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideSocialShareButtons": true,
+  "hideShareCalendarHeading": true,
+  "unifiedDownloadTitle": "Knox County Schools 2025–26 Calendar Downloads",
+  "unifiedDownloadDescription": "Open the official district PDF or download a one-time ICS file for Google Calendar, Apple Calendar or Outlook.",
+  "icsHeading": "Add KCS 2025–26 Dates to Your Calendar",
+  "icsDescription": "Download the reviewed attendance dates, half-days, holidays and breaks as a one-time ICS import. It will not update automatically after a district or weather-related schedule change.",
+  "pdfHeading": "Official Knox County Schools 2025–26 Calendar PDF",
+  "sourcesTitle": "Sources & Review Notes",
+  "sourceReviewSummary": "The archived KCS PDF is the primary source for the 2025–26 dates; the current district calendar page preserves the official file under Previous Calendars, and the severe-weather page explains the notification process.",
+  "sourceReviewDetailsTitle": "What we checked",
+  "sourceReviewDetails": [
+    "We reviewed the complete one-page PDF, every listed date, the calendar summary and the statutory footnote.",
+    "The locally supplied PDF is byte-for-byte identical to the current official file linked by KCS.",
+    "January 2 is included once as part of Winter Break, with its overlapping staff-purpose labels explained separately.",
+    "Grading-period markers are visible on the page but excluded from the family ICS when they do not change attendance.",
+    "School dismissal times, activities and later operational changes require KCS or school communication."
+  ],
+  "sourceMaintainerLabel": "Maintained by",
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "sources": [
+    {
+      "label": "Knox County Schools calendar page",
+      "url": "https://www.knoxschools.org/about/calendar"
+    },
+    {
+      "label": "Official KCS 2025–26 calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1741885871/knoxschoolsorg/ygvwpan320yy2nzqiz5m/2025-26Calendar_20250306.pdf"
+    },
+    {
+      "label": "KCS Severe Weather Information",
+      "url": "https://www.knoxschools.org/community-resources/severe-weather-info"
+    }
+  ],
+  "events": [
+    {
+      "date": "2025-07-31",
+      "name": "First Day for Teachers — School-Based In-Service",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Preparation",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-08-01",
+      "name": "Systemwide In-Service Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Preparation",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-08-04",
+      "name": "Administrative Day — Teacher Work Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Preparation",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-08-05",
+      "name": "Sixth- and Ninth-Grade Orientation",
+      "type": "academic",
+      "badgeLabel": "Grades 6 & 9",
+      "description": "The same date includes half-day school-based in-service and half-day administrative staff work."
+    },
+    {
+      "date": "2025-08-06",
+      "name": "Administrative Day — Teacher Work Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Preparation",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-08-07",
+      "name": "First Day for Students — Half-Day",
+      "type": "school_start",
+      "badgeLabel": "Half-Day"
+    },
+    {
+      "date": "2025-09-01",
+      "name": "Labor Day Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-09-05",
+      "name": "End of 4½-Week Grading Period",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-09-17",
+      "name": "Constitution Day — Half-Day for Students",
+      "type": "early_release",
+      "badgeLabel": "Schools Open · Half-Day"
+    },
+    {
+      "date": "2025-10-06",
+      "endDate": "2025-10-10",
+      "name": "Fall Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2025-10-14",
+      "name": "End of First 9-Week Grading Period",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-11-04",
+      "name": "Systemwide In-Service Day — Student Holiday",
+      "type": "teacher_workday",
+      "badgeLabel": "Student-Free"
+    },
+    {
+      "date": "2025-11-13",
+      "name": "End of 4½-Week Grading Period",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-11-19",
+      "name": "Half-Day for Students",
+      "type": "early_release",
+      "badgeLabel": "Half-Day"
+    },
+    {
+      "date": "2025-11-26",
+      "endDate": "2025-11-28",
+      "name": "Thanksgiving Holidays",
+      "type": "break_start"
+    },
+    {
+      "date": "2025-12-19",
+      "name": "Half-Day for Students — End of First Semester",
+      "type": "early_release",
+      "badgeLabel": "Half-Day · Semester End",
+      "description": "End of the second 9-week grading period and first semester."
+    },
+    {
+      "date": "2025-12-22",
+      "endDate": "2026-01-02",
+      "name": "Winter Break",
+      "type": "break_start",
+      "description": "January 2 is also a half-day school-based in-service and half-day administrative work day for staff."
+    },
+    {
+      "date": "2026-01-05",
+      "name": "Students Return After Winter Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-01-28",
+      "name": "Half-Day for Students",
+      "type": "early_release",
+      "badgeLabel": "Half-Day"
+    },
+    {
+      "date": "2026-02-05",
+      "name": "End of 4½-Week Grading Period",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-02-16",
+      "name": "Systemwide In-Service Day — Student Holiday",
+      "type": "teacher_workday",
+      "badgeLabel": "Student-Free"
+    },
+    {
+      "date": "2026-03-09",
+      "endDate": "2026-03-13",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-03-17",
+      "name": "End of Third 9-Week Grading Period",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-03-25",
+      "name": "Half-Day for Students",
+      "type": "early_release",
+      "badgeLabel": "Half-Day"
+    },
+    {
+      "date": "2026-04-03",
+      "name": "District Holiday",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-04-20",
+      "name": "End of 4½-Week Grading Period",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Systemwide In-Service Day — School-Based",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff In-Service"
+    },
+    {
+      "date": "2026-05-21",
+      "name": "Last Day for Students — Half-Day",
+      "type": "school_end",
+      "badgeLabel": "Half-Day · Semester End",
+      "description": "End of the fourth 9-week grading period and second semester."
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Administrative Day — Last Day for Teachers",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Juneteenth Holiday — District Closed",
+      "type": "holiday",
+      "badgeLabel": "Post-Year District Holiday",
+      "hideFromCalendarExport": true
+    }
+  ]
+}

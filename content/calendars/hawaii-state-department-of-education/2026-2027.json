@@ -1,229 +1,508 @@
 {
   "institutionId": "hawaii-state-department-of-education",
   "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Hawaii State Department of Education Calendar 2026-2027",
   "firstDay": "2026-08-03",
+  "firstDayScope": "First student day on the statewide HIDOE calendar.",
   "lastDay": "2027-05-27",
+  "lastDayScope": "Last student day and end of the second semester.",
+  "temporalCoverageStart": "2026-07-28",
+  "temporalCoverageEnd": "2027-05-31",
   "totalSchoolDays": 180,
   "teacherWorkDays": 189,
   "semesters": 2,
   "sourceUrl": "https://hawaiipublicschools.org/useful-links/school-calendar/",
+  "sourceDocumentPage": "https://hawaiipublicschools.org/useful-links/school-calendar/",
   "sourcePdfUrl": "https://hawaiipublicschools.org/wp-content/uploads/2026-27-Official-School-Calendar-amended.pdf",
-  "lastVerifiedAt": "2026-07-25",
+  "lastCheckedPdfUrl": "https://hawaiipublicschools.org/wp-content/uploads/2026-27-Official-School-Calendar-amended.pdf",
+  "sourceCheckedAt": "2026-08-20",
+  "sourceUpdatedAt": "2026-03-30",
+  "sourceChecksumSha256": "4b585ca8e96fc3fccefb7b36e155ee95a127094e36dc9dedfc430b386197b2ff",
+  "sourceStatus": "current",
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://hawaiipublicschools.org/useful-links/school-calendar/",
+    "linkText": "Official School Calendar (PDF)",
+    "expectedDocumentUrl": "https://hawaiipublicschools.org/wp-content/uploads/2026-27-Official-School-Calendar-amended.pdf",
+    "expectedText": [
+      "August 3: Students' First Day",
+      "March 29: Kuhio Day (school observed)",
+      "Commencement exercises: No sooner than May 21, 2027",
+      "The work year for teachers consists of 193 days"
+    ],
+    "expectedChecksumSha256": "4b585ca8e96fc3fccefb7b36e155ee95a127094e36dc9dedfc430b386197b2ff"
+  },
+  "lastVerifiedAt": "2026-08-20",
+  "dateCreated": "2026-07-25",
   "datePublished": "2026-07-25",
-  "dateModified": "2026-07-25",
-  "sourceVersion": "Approved June 1, 2023; amended March 30, 2026",
-  "calendarType": "traditional",
-  "alternateCalendars": [
-    {
-      "type": "multitrack",
-      "label": "2026-2027 Holomua Elementary Calendar",
-      "pdfUrl": "https://hawaiipublicschools.org/DOE%20Forms/2026-27%20Multitrack%20Calendar.pdf"
-    }
+  "dateModified": "2026-08-20",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "confirmed_data_error"
   ],
-  "seoTitle": "Hawaii Public Schools Calendar 2026-2027: Start Date, Holidays, Breaks & PDF",
-  "seoDescription": "View the Hawaii public schools 2026-2027 calendar from the official HIDOE source, including first day, last day, holidays, breaks, PDF and ICS download.",
-  "calendarNotes": "The Hawaii State Department of Education 2026-2027 school calendar lists August 3, 2026 as the first day for students and May 27, 2027 as the last day for students. Fall Break runs October 5-9, 2026, Winter Break runs December 21, 2026 through January 1, 2027, and Spring Break runs March 15-19, 2027. The calendar includes 180 student days, 189 teacher days, state holidays, Election Day, a January 4 teacher workday, and an institute day window during February 8-12.",
-  "calendarFaqs": [
+  "sourceVersion": "Approved June 1, 2023; amended March 30, 2026",
+  "sourceVersionLabel": "Official calendar version",
+  "sourceVersionDisplay": "Approved June 1, 2023; amended March 30, 2026",
+  "sourceCalendarDateModified": "2026-03-30",
+  "sourceCalendarName": "Hawaii State Department of Education 2026–27 Official School Calendar — Amended",
+  "schemaCalendarName": "Hawaii State Department of Education 2026–27 Official School Calendar",
+  "schemaDatasetName": "HIDOE 2026–27 Statewide School Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed dates and footnote-based planning information from the amended HIDOE 2026–27 statewide school calendar, including student dates, holidays, breaks, island-specific Institute Day guidance, the teacher work-year distinction, and the earliest commencement date.",
+  "schemaSpatialCoverage": {
+    "@type": "State",
+    "name": "Hawaii"
+  },
+  "schemaCalendarDownloadName": "HIDOE 2026–27 School Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with dates from the statewide HIDOE calendar, including student dates, holidays, breaks, and confirmed academic dates. The island-specific Institute Day and two converted planning/collaboration days are excluded because HIDOE has not published fixed statewide dates.",
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar-page",
+    "source-calendar"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar-page",
+    "source-calendar"
+  ],
+  "webPageMainEntity": "dataset",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "itemListMode": "keyDates",
+  "allDatesMode": "keyDates",
+  "allDatesTitle": "Major School Calendar Dates — 2026–27",
+  "allDatesIncludedDatesInKeyDates": [
+    "2027-01-04",
+    "2027-02-08",
+    "2027-05-21"
+  ],
+  "allDatesCoverageNote": "This table summarizes statewide dates from the amended HIDOE calendar. The February 8–12 Institute Day window contains one no-student day chosen by island, so the exact day must be confirmed locally.",
+  "allDatesSourceUrl": "https://hawaiipublicschools.org/wp-content/uploads/2026-27-Official-School-Calendar-amended.pdf",
+  "allDatesSourceLabel": "Official amended HIDOE calendar",
+  "dateLegendItems": [
+    { "label": "Holiday", "dot": "bg-teal-400" },
+    { "label": "No School for Students", "dot": "bg-amber-400" },
+    { "label": "Break", "dot": "bg-purple-400" },
+    { "label": "Academic", "dot": "bg-slate-400" },
+    { "label": "Graduation", "dot": "bg-emerald-400" }
+  ],
+  "hideCalendarTrackCaution": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "heroFactChips": [
+    "180 student days",
+    "Amended March 30, 2026"
+  ],
+  "heroSummary": "Students following the statewide HIDOE calendar begin the 2026–27 school year on Monday, August 3, 2026. The last day for students is Thursday, May 27, 2027. Fall Break is October 5–9, Winter Break is December 21–January 1, and Spring Break is March 15–19.",
+  "heroSourceLine": "The statewide calendar applies to most Hawaii public schools. Holomua Elementary and charter schools use separate calendars.",
+  "verificationBadgeText": "Checked against the amended HIDOE calendar on August 20, 2026",
+  "seoTitle": "Hawaii Public Schools Calendar 2026–27 (HIDOE): Dates & PDF",
+  "seoDescription": "See 2026–27 HIDOE school dates, including the first day, last day, major holidays and breaks, the official PDF, and calendar downloads.",
+  "calendarNotes": "The amended statewide HIDOE calendar lists 180 student days. It applies to public schools except Holomua Elementary and charter schools, which use separate calendars.",
+  "hiddenSections": [
+    "downloadCta",
+    "todayStatus",
+    "keyDateCards",
+    "quickFacts",
+    "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
+    "comparison",
+    "nationalTrends",
+    "relatedDistricts",
+    "backToCurrent"
+  ],
+  "hiddenCustomSectionIds": [
+    "about-hidoe-calendar-structure",
+    "hawaii-state-department-of-education-profile",
+    "which-hawaii-school-calendar-should-families-follow",
+    "hawaii-calendar-vs-school-specific-calendars",
+    "hawaii-school-calendar-terminology",
+    "hawaii-school-calendar-by-school-type",
+    "how-we-collect-hawaii-calendar-data",
+    "hawaii-public-schools-calendar-quick-summary-2026-2027",
+    "hawaii-calendar-important-dates-for-families",
+    "hawaii-calendar-download-options",
+    "planning-hawaii-trips-around-school-breaks-2026-2027",
+    "hawaii-public-schools-calendar-archive",
+    "hawaii-calendar-update-history-2026-2027",
+    "what-changed-hawaii-public-schools-calendar-2026-2027"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    { "label": "At a Glance", "id": "key-dates" },
+    { "label": "Which Calendar", "id": "hidoe-calendar-applicability-2026-2027" },
+    { "label": "Calendar Dates", "id": "all-dates" },
+    { "label": "Breaks", "id": "breaks" },
+    { "label": "Downloads", "id": "add-to-calendar" },
+    { "label": "Other Calendars", "id": "other-calendars" },
+    { "label": "Hawaii Notes", "id": "hidoe-calendar-notes-2026-2027" },
+    { "label": "Updates", "id": "year-comparison" },
+    { "label": "FAQ", "id": "faq" },
+    { "label": "Sources", "id": "sources" }
+  ],
+  "keyDatesSummaryTitle": "At a Glance",
+  "keyDatesSummarySubtitle": "First and last days, three major breaks, and 180 student days",
+  "keyDatesSummaryId": "key-dates",
+  "keyDateSummaryItems": [
     {
-      "q": "When does Hawaii public school start in 2026?",
-      "a": "Hawaii public school students start the 2026-2027 school year on Monday, August 3, 2026."
+      "date": "2026-08-03",
+      "name": "First Day for Students",
+      "label": "First Day",
+      "type": "school_start",
+      "schemaDescription": "The first day of classes for students following the statewide HIDOE calendar in the 2026–27 school year."
     },
     {
-      "q": "When is Hawaii public schools Fall Break in 2026?",
-      "a": "Fall Break runs Monday, October 5 through Friday, October 9, 2026."
+      "date": "2026-10-05",
+      "endDate": "2026-10-09",
+      "name": "Fall Break",
+      "label": "Fall Break",
+      "type": "break_start",
+      "schemaDescription": "The statewide HIDOE calendar lists Fall Break from October 5–9, 2026."
     },
     {
-      "q": "When is Hawaii public schools Winter Break in 2026-2027?",
-      "a": "Winter Break runs Monday, December 21, 2026 through Friday, January 1, 2027."
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "label": "Winter Break",
+      "type": "break_start",
+      "schemaDescription": "The statewide HIDOE calendar lists Winter Break from December 21, 2026–January 1, 2027."
     },
     {
-      "q": "When is Hawaii public schools Spring Break in 2027?",
-      "a": "Spring Break runs Monday, March 15 through Friday, March 19, 2027."
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break",
+      "label": "Spring Break",
+      "type": "break_start",
+      "schemaDescription": "The statewide HIDOE calendar lists Spring Break from March 15–19, 2027."
     },
     {
-      "q": "Is there a Hawaii DOE multitrack calendar for 2026-2027?",
-      "a": "Yes. HIDOE publishes a separate 2026-2027 Holomua Elementary multitrack calendar, linked as an alternate calendar on this page."
-    },
-    {
-      "q": "When is the last day of school for Hawaii public schools in 2027?",
-      "a": "The last day for students is Thursday, May 27, 2027."
+      "date": "2027-05-27",
+      "name": "Last Day for Students",
+      "label": "Last Day",
+      "type": "school_end",
+      "schemaDescription": "The last day of classes for students following the statewide HIDOE calendar in the 2026–27 school year."
     }
   ],
   "customSections": [
     {
-      "id": "hawaii-public-schools-calendar-quick-summary-2026-2027",
-      "label": "Quick Summary",
-      "position": "afterVerification",
-      "content": "Key planning points for the 2026-2027 HIDOE calendar: students have 180 scheduled instructional days, the year follows the statewide traditional calendar structure, major breaks include Fall, Winter, and Spring Break, and some schools may publish separate multitrack or school-specific dates."
+      "id": "hidoe-calendar-applicability-2026-2027",
+      "label": "Which Calendar Applies to Your School?",
+      "position": "afterKeyDates",
+      "content": "The statewide calendar does not apply to Holomua Elementary or charter schools. Use the calendar published for your child’s school.",
+      "table": {
+        "columns": ["School type", "Calendar to use"],
+        "rows": [
+          ["Most HIDOE public schools", "Statewide HIDOE calendar summarized on this page"],
+          ["Holomua Elementary", "Separate 2026–27 multitrack calendar"],
+          ["Hawaii charter schools", "Calendar published by the individual charter school"]
+        ],
+        "footnote": "School-specific testing, athletics, transportation, campus events, and emergency notices may not appear on the statewide calendar."
+      }
     },
     {
-      "id": "hawaii-calendar-important-dates-for-families",
-      "label": "Hawaii Public Schools Calendar Important Dates for Families",
-      "position": "afterAbout",
-      "content": "Families usually check the Hawaii public schools calendar first for the first day of school, Fall Break, Winter Break, Spring Break, state holidays, institute day windows, teacher workdays, and the last day of school. These dates affect childcare, interisland travel, mainland travel, after-school programs, work schedules, and summer camp planning."
-    },
-    {
-      "id": "hawaii-calendar-download-options",
-      "label": "Hawaii Public Schools Calendar Download Guide",
-      "position": "afterCalendarExport",
-      "content": "Use the Hawaii public schools calendar tools to keep a saved copy of the 2026-2027 HIDOE dates, then verify the official source before making high-impact plans.",
+      "id": "hidoe-calendar-notes-2026-2027",
+      "label": "Hawaii Calendar Notes",
+      "position": "afterOtherCalendars",
+      "content": "These details come from the HIDOE calendar page and the footnotes on the amended one-page calendar.",
       "groups": [
         {
-          "label": "Recommended use",
+          "label": "Institute Day and converted planning days",
           "items": [
-            "Download the official PDF when you need the HIDOE source document for printing or recordkeeping.",
-            "Import the ICS file into Google Calendar, Apple Calendar, or Outlook for a one-time calendar copy.",
-            "Use the printable PDF when you want a simplified family planning version of the dates on this page."
+            "One no-student Institute Day will fall during February 8–12, 2027; the exact date is determined by island.",
+            "Two instructional days are converted to non-student days for school planning and collaboration. Confirm the dates with the school."
           ]
         },
         {
-          "label": "Before relying on a downloaded copy",
+          "label": "Teacher work year",
           "items": [
-            "Check school-specific notices for testing, graduation, athletics, transportation, and emergency schedule changes.",
-            "Confirm whether your school follows the statewide traditional calendar or a separate multitrack calendar.",
-            "Recheck the HIDOE source page if your plans depend on airfare, childcare, hotel bookings, or work leave."
+            "HIDOE lists a 193-day teacher work year. Teachers report to campus for 189 days, while four additional days are converted to 27 hours: 21 hours for job-embedded professional development and six hours for training, planning, assessment, or teacher-evaluation meetings."
+          ]
+        },
+        {
+          "label": "Student hours and graduation",
+          "items": [
+            "Hawaii schools are required to provide a 180-day school year totaling 1,080 hours.",
+            "Class of 2027 commencement exercises may be scheduled no earlier than May 21, 2027. Individual schools set their own ceremony dates."
           ]
         }
       ]
     },
     {
-      "id": "planning-hawaii-trips-around-school-breaks-2026-2027",
-      "label": "Planning Hawaii Trips Around School Breaks",
-      "position": "afterPlanningTips",
-      "content": "Hawaii school breaks can affect airfare, hotels, interisland travel, family visits, childcare, and summer camp timing. Families should use the statewide HIDOE calendar as a planning baseline and confirm school-specific updates before booking nonrefundable travel.",
-      "groups": [
-        {
-          "label": "Dates families often check before booking",
-          "items": [
-            "Fall Break from October 5-9, 2026",
-            "Winter Break from December 21, 2026 through January 1, 2027",
-            "Spring Break from March 15-19, 2027",
-            "Teacher workdays and institute day windows that may create no-student days",
-            "The final student day on May 27, 2027 for summer travel planning"
-          ]
-        },
-        {
-          "label": "Travel details to verify locally",
-          "items": [
-            "Whether your school follows the statewide traditional calendar or a multitrack calendar",
-            "Graduation, testing, athletics, after-school program, and transportation dates",
-            "Emergency closures or schedule updates posted by HIDOE or your school"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "hawaii-public-schools-calendar-archive",
-      "label": "Past and Upcoming Hawaii Public Schools Calendars",
+      "id": "hidoe-update-history-2026-2027",
+      "label": "HIDOE Calendar Update History",
       "position": "afterYearDiff",
-      "content": "Use these school-year links to compare Hawaii public school calendar timing across multiple published HIDOE years.",
-      "links": [
-        {
-          "label": "Hawaii Public Schools Calendar 2025-2026",
-          "to": "/hawaii-state-department-of-education-calendar/2025-2026",
-          "description": "Archived Hawaii public schools calendar with prior-year breaks, holidays, and PDF source."
-        },
-        {
-          "label": "Hawaii Public Schools Calendar 2026-2027",
-          "to": "/hawaii-state-department-of-education-calendar",
-          "description": "Current HIDOE calendar with first day, breaks, holidays, PDF, and calendar import."
-        },
-        {
-          "label": "Hawaii Public Schools Calendar 2027-2028",
-          "to": "/hawaii-state-department-of-education-calendar/2027-2028",
-          "description": "Upcoming Hawaii public schools calendar for comparing next-year dates."
-        },
-        {
-          "label": "Hawaii Public Schools Calendar 2028-2029",
-          "to": "/hawaii-state-department-of-education-calendar/2028-2029",
-          "description": "Future HIDOE calendar year with published student dates and break timing."
-        }
-      ]
-    },
-    {
-      "id": "hawaii-calendar-update-history-2026-2027",
-      "label": "Hawaii Public Schools Calendar Update History",
-      "position": "beforeSources",
-      "content": "This page tracks the published HIDOE source version used for the 2026-2027 Hawaii public schools calendar so families can see which official calendar record was reviewed.",
+      "content": "The page follows the amended official calendar currently linked by HIDOE.",
       "table": {
-        "columns": ["Date", "Update"],
+        "columns": ["Date", "Calendar record"],
         "rows": [
-          ["June 1, 2023", "HIDOE approved the 2026-2027 official school calendar."],
-          ["March 30, 2026", "HIDOE amended the official 2026-2027 school calendar."],
-          ["July 25, 2026", "MySchoolDates manually reviewed the amended official HIDOE calendar source for this page."]
-        ]
-      }
-    },
-    {
-      "id": "what-changed-hawaii-public-schools-calendar-2026-2027",
-      "label": "What Changed for 2026-2027?",
-      "position": "beforeSources",
-      "content": "Compared with the 2025-2026 HIDOE calendar, the 2026-2027 Hawaii public schools calendar keeps the same student-day and teacher-day counts while shifting several major school-year markers one day earlier.",
-      "table": {
-        "columns": ["Calendar item", "2025-2026", "2026-2027", "Change"],
-        "rows": [
-          ["First student day", "August 4, 2025", "August 3, 2026", "One day earlier in the calendar week pattern"],
-          ["Last student day", "May 28, 2026", "May 27, 2027", "One day earlier"],
-          ["Fall Break", "October 6-10, 2025", "October 5-9, 2026", "Same Monday-Friday structure, one day earlier"],
-          ["Winter Break", "December 22, 2025-January 2, 2026", "December 21, 2026-January 1, 2027", "Same two-week holiday window pattern, one day earlier"],
-          ["Spring Break", "March 16-20, 2026", "March 15-19, 2027", "Same Monday-Friday structure, one day earlier"],
-          ["Student days", "180", "180", "No change"],
-          ["Teacher work days", "189", "189", "No change"]
+          ["June 1, 2023", "HIDOE approved the 2026–27 official school calendar."],
+          ["March 30, 2026", "HIDOE amended the official calendar."]
         ]
       }
     }
   ],
-  "yearNumbersMode": "customOnly",
-  "yearNumbersTitle": "Hawaii Academic Calendar Structure Explained",
-  "yearNumbers": [
+  "breaksTitle": "Major School Breaks",
+  "breakNotes": {
+    "2026-10-05": "Students return Monday, October 12.",
+    "2026-12-21": "Winter Break ends January 1. January 4 is a teacher workday, so students return Tuesday, January 5.",
+    "2027-03-15": "Students return Monday, March 22."
+  },
+  "hideCoveredBreakDatesNote": true,
+  "unifiedDownloadTitle": "HIDOE Calendar Downloads",
+  "unifiedDownloadDescription": "Use the official HIDOE Google Calendar for ongoing reference, open the amended source PDF, or import a one-time MySchoolDates ICS file.",
+  "compactDownloadModule": true,
+  "hideShareCalendarHeading": true,
+  "hideSocialShareButtons": true,
+  "officialSubscriptionTitle": "Official HIDOE Google Calendar",
+  "officialSubscriptionDescription": "Open the digital school calendar linked by HIDOE for ongoing reference in Google Calendar.",
+  "officialSubscriptionButtonLabel": "Open Official Google Calendar",
+  "officialSubscriptionUrl": "https://calendar.google.com/calendar/u/0/embed?ctz=America%2Fhonolulu&src=k12.hi.us_gmgfr70qv9qfmiiak9ubvn9nr8%40group.calendar.google.com",
+  "icsHeading": "MySchoolDates ICS File",
+  "icsDescription": "Download a one-time copy for Google Calendar, Apple Calendar, or Outlook. It will not update automatically. Dates that HIDOE has not published statewide—including the island-specific Institute Day and two converted planning/collaboration days—are not included as fixed dates.",
+  "icsButtonLabel": "Download HIDOE 2026–27 ICS",
+  "icsButtonSupportText": "One-time import; check HIDOE and your school for later changes.",
+  "pdfHeading": "Official HIDOE 2026–27 Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfVersionLabel": "Approved June 1, 2023; amended March 30, 2026",
+  "pdfDescription": "View or print the one-page calendar published by the Hawaii State Department of Education.",
+  "pdfButtonLabel": "View Official HIDOE PDF",
+  "alternateCalendarsTitle": "Other Official Calendars",
+  "alternateCalendarsDescription": "Holomua Elementary follows a separate multitrack calendar. Charter-school families should use the calendar published by their school.",
+  "alternateCalendarsButtonLabel": "View Official PDF",
+  "alternateCalendars": [
     {
-      "label": "Student and Teacher Work Years",
-      "value": "180 / 189",
-      "detail": "The amended HIDOE calendar lists 180 student days and 189 teacher work days, so staff planning dates extend beyond the student attendance year."
-    },
-    {
-      "label": "Intersession Structure",
-      "value": "3 breaks",
-      "detail": "Fall Break, Winter Break, and Spring Break divide the statewide student calendar into planning periods for families, schools, and after-school programs."
-    },
-    {
-      "label": "Institute Day Window",
-      "value": "Feb 8-12",
-      "detail": "One Educational Officer and Teacher Institute Day during the February 8-12 window is a no-student day, with the exact island date determined separately."
+      "type": "multitrack",
+      "label": "Holomua Elementary 2026–27 Multitrack Calendar",
+      "description": "Official track-specific calendar for Holomua Elementary.",
+      "pdfUrl": "https://hawaiipublicschools.org/wp-content/uploads/2026-27-Multitrack-Calendar.pdf"
     }
   ],
+  "yearComparisonTitle": "What Changed From 2025–26",
+  "yearComparisonSubtitle": "A concise comparison with the prior HIDOE calendar.",
+  "whatsNew": {
+    "title": "What Changed From 2025–26",
+    "subtitle": "A concise comparison with the prior HIDOE calendar.",
+    "content": [
+      "The first student day moves from August 4 in 2025–26 to August 3 in 2026–27.",
+      "The last student day moves from May 28 to May 27.",
+      "Fall Break moves from October 6–10 to October 5–9.",
+      "Winter Break moves from December 22–January 2 to December 21–January 1, and Spring Break moves from March 16–20 to March 15–19.",
+      "HIDOE continues to list 180 student days, while teachers report to campus for 189 days."
+    ]
+  },
+  "faqOrderLimit": 5,
+  "faqDisplayQuestions": [
+    "Does this calendar apply to every Hawaii public school?",
+    "What is the HIDOE Institute Day, and when is it in 2027?",
+    "Why is Kūhiō Day observed on March 29 in the school calendar?",
+    "Why does HIDOE have a 193-day teacher work year if teachers report to campus for 189 days?",
+    "How early can Class of 2027 graduation ceremonies be held?"
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Does this calendar apply to every Hawaii public school?",
+      "a": "No. HIDOE says the statewide 2026–27 calendar applies to Hawaii public schools except Holomua Elementary and charter schools. School-level events such as testing, athletics, transportation changes, and ceremonies may also require a campus calendar or announcement."
+    },
+    {
+      "q": "What is the HIDOE Institute Day, and when is it in 2027?",
+      "a": "One no-student Educational Officer and Teacher Institute Day will occur during February 8–12, 2027. HIDOE does not publish one statewide date for it; the exact day is determined separately for each island."
+    },
+    {
+      "q": "Why is Kūhiō Day observed on March 29 in the school calendar?",
+      "a": "Prince Jonah Kūhiō Kalanianaʻole Day falls on March 26 in 2027, the same date as Good Friday. The amended HIDOE school calendar lists Good Friday on March 26 and observes Kūhiō Day for schools on Monday, March 29."
+    },
+    {
+      "q": "Why does HIDOE have a 193-day teacher work year if teachers report to campus for 189 days?",
+      "a": "HIDOE defines a 193-day teacher work year. Teachers report to campus for 189 days, while four additional days are converted to 27 hours for professional development, training, planning, assessment, or teacher-evaluation meetings."
+    },
+    {
+      "q": "How early can Class of 2027 graduation ceremonies be held?",
+      "a": "HIDOE says Class of 2027 commencement exercises may be scheduled no sooner than May 21, 2027. That is the earliest permitted date, not a statewide ceremony date; individual schools publish their own graduation schedules."
+    }
+  ],
+  "sourceReviewSummary": "Official calendar approved June 1, 2023, and amended March 30, 2026. MySchoolDates reviewed the current HIDOE calendar page and the complete one-page amended PDF on August 20, 2026.",
+  "sourceReviewDetailsTitle": "How the amended Hawaii calendar was checked",
+  "sourceReviewDetails": [
+    "We reviewed the complete date grid, semester and quarter labels, state holidays, teacher work-year notes, and every footnote in the amended PDF.",
+    "We also checked the HIDOE calendar page for calendar coverage, graduation timing, the official Google Calendar, and the 180-day/1,080-hour requirement.",
+    "Dates without a single statewide value, including Institute Day, are not represented as fixed dates in our ICS file."
+  ],
+  "sourceMaintainerLabel": "Official calendar authority",
+  "sourceMaintainerText": "The Hawaii State Department of Education publishes and revises the official statewide calendar.",
+  "sourceNextReviewText": "We recheck this page when HIDOE replaces the amended PDF, changes a statewide date, or publishes island-specific Institute Day information.",
+  "sources": [
+    {
+      "label": "HIDOE School Calendar page",
+      "url": "https://hawaiipublicschools.org/useful-links/school-calendar/"
+    },
+    {
+      "label": "HIDOE 2026–27 Official School Calendar — amended March 30, 2026",
+      "url": "https://hawaiipublicschools.org/wp-content/uploads/2026-27-Official-School-Calendar-amended.pdf"
+    },
+    {
+      "label": "HIDOE Official School Calendar — Google Calendar",
+      "url": "https://calendar.google.com/calendar/u/0/embed?ctz=America%2Fhonolulu&src=k12.hi.us_gmgfr70qv9qfmiiak9ubvn9nr8%40group.calendar.google.com"
+    },
+    {
+      "label": "Holomua Elementary 2026–27 Multitrack Calendar",
+      "url": "https://hawaiipublicschools.org/wp-content/uploads/2026-27-Multitrack-Calendar.pdf"
+    }
+  ],
+  "yearSwitcherPosition": "afterSources",
   "events": [
-    { "date": "2026-07-28", "name": "Teachers' First Day", "type": "teacher_workday" },
-    { "date": "2026-07-28", "name": "Teacher Work Days Begin - No Students", "type": "teacher_workday" },
-    { "date": "2026-07-31", "name": "Teacher Work Days End - No Students", "type": "teacher_workday" },
-    { "date": "2026-08-03", "name": "Students' First Day", "type": "school_start" },
-    { "date": "2026-08-21", "name": "Statehood Day", "type": "holiday" },
-    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
-    { "date": "2026-10-02", "name": "Quarter 1 Ends", "type": "quarter_end" },
-    { "date": "2026-10-05", "name": "Fall Break Begins", "type": "break_start" },
-    { "date": "2026-10-09", "name": "Fall Break Ends", "type": "break_end" },
-    { "date": "2026-11-03", "name": "Election Day", "type": "holiday" },
-    { "date": "2026-11-11", "name": "Veterans' Day", "type": "holiday" },
-    { "date": "2026-11-26", "name": "Thanksgiving Day", "type": "holiday" },
-    { "date": "2026-11-27", "name": "School Holiday", "type": "holiday" },
-    { "date": "2026-12-18", "name": "Quarter 2 and First Semester End", "type": "semester_end" },
-    { "date": "2026-12-21", "name": "Winter Break Begins", "type": "break_start" },
-    { "date": "2026-12-25", "name": "Christmas Day", "type": "holiday" },
-    { "date": "2027-01-01", "name": "New Year's Day", "type": "holiday" },
-    { "date": "2027-01-01", "name": "Winter Break Ends", "type": "break_end" },
-    { "date": "2027-01-04", "name": "Teacher Workday - No Students", "type": "teacher_workday" },
-    { "date": "2027-01-05", "name": "Second Semester Begins", "type": "academic" },
-    { "date": "2027-01-18", "name": "Dr. Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2027-02-08", "name": "Institute Day Week Begins - One No-Student Day During Week", "type": "teacher_workday" },
-    { "date": "2027-02-12", "name": "Institute Day Week Ends", "type": "teacher_workday" },
-    { "date": "2027-02-15", "name": "Presidents' Day", "type": "holiday" },
-    { "date": "2027-03-12", "name": "Quarter 3 Ends", "type": "quarter_end" },
-    { "date": "2027-03-15", "name": "Spring Break Begins", "type": "break_start" },
-    { "date": "2027-03-19", "name": "Spring Break Ends", "type": "break_end" },
-    { "date": "2027-03-26", "name": "Good Friday", "type": "holiday" },
-    { "date": "2027-03-29", "name": "Kuhio Day - School Observed", "type": "holiday" },
-    { "date": "2027-05-27", "name": "Last Day for Students and Second Semester Ends", "type": "school_end" },
-    { "date": "2027-05-28", "name": "Last Day for Teachers", "type": "teacher_workday" },
-    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" }
+    {
+      "date": "2026-07-28",
+      "endDate": "2026-07-31",
+      "name": "Teacher Work Days — No Students",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-03",
+      "name": "First Day for Students",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-08-21",
+      "name": "Statehood Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-10-02",
+      "name": "End of Quarter 1",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2026-10-05",
+      "endDate": "2026-10-09",
+      "name": "Fall Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Election Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans’ Day",
+      "type": "holiday",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2026-11-26",
+      "name": "Thanksgiving Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-27",
+      "name": "School Holiday",
+      "type": "holiday",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2026-12-18",
+      "name": "End of Quarter 2 and First Semester",
+      "type": "semester_end"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Teacher Workday — No Students",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Students Return and Second Semester Begins",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Dr. Martin Luther King Jr. Day",
+      "type": "holiday",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-02-08",
+      "endDate": "2027-02-12",
+      "name": "Educational Officer and Teacher Institute Day Window",
+      "type": "teacher_workday",
+      "description": "One no-student day during this week; the exact date is determined by island.",
+      "badgeLabel": "Date Varies by Island",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents’ Day",
+      "type": "holiday",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-03-12",
+      "name": "End of Quarter 3",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Good Friday",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-29",
+      "name": "Kūhiō Day — School Observed",
+      "type": "holiday",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2027-05-21",
+      "name": "Earliest Class of 2027 Commencement Date",
+      "type": "graduation",
+      "description": "Individual schools set their own ceremony dates.",
+      "badgeLabel": "Earliest Allowed Date",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-27",
+      "name": "Last Day for Students and End of Second Semester",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Last Day for Teachers",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day",
+      "type": "holiday",
+      "hideFromCalendarExport": true
+    }
   ]
 }

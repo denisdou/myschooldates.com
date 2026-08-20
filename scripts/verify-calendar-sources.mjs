@@ -19,8 +19,15 @@ function normalizeLinkText(value) {
     .trim()
 }
 
-function findResourceUuid(html, linkText) {
-  const anchors = html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)
+function scopedHtml(html, sectionText) {
+  if (!sectionText) return html
+  const sectionIndex = html.indexOf(sectionText)
+  if (sectionIndex === -1) return ''
+  return html.slice(sectionIndex, sectionIndex + 10000)
+}
+
+function findResourceUuid(html, linkText, sectionText) {
+  const anchors = scopedHtml(html, sectionText).matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)
   for (const match of anchors) {
     if (normalizeLinkText(match[2] ?? '') !== linkText) continue
     const attributes = match[1] ?? ''
@@ -66,7 +73,7 @@ async function verifyResourceUuid(source, label) {
     throw new Error(`invalid expectedResourceUuid in ${relative(root, source.path)}`)
   }
 
-  const actualResourceUuid = findResourceUuid(await (await fetchSource(source.checkUrl)).text(), source.linkText)
+  const actualResourceUuid = findResourceUuid(await (await fetchSource(source.checkUrl)).text(), source.linkText, source.sectionText)
   if (!actualResourceUuid) throw new Error(`could not find “${source.linkText}” at ${source.checkUrl}`)
   if (actualResourceUuid !== source.expectedResourceUuid) {
     throw new Error(`resource UUID changed from ${source.expectedResourceUuid} to ${actualResourceUuid}`)
@@ -80,13 +87,25 @@ async function verifyDocumentPdf(source, label) {
     throw new Error(`invalid document-pdf monitor configuration in ${relative(root, source.path)}`)
   }
 
-  const actualPdfUrl = findDocumentPdfUrl(await (await fetchSource(source.checkUrl)).text(), source.linkText)
-  if (!actualPdfUrl) throw new Error(`could not find a PDF for “${source.linkText}” at ${source.checkUrl}`)
+  const html = await (await fetchSource(source.checkUrl)).text()
+  let actualPdfUrl = findDocumentPdfUrl(html, source.linkText)
+  let pdfResponse
+
+  if (actualPdfUrl) {
+    pdfResponse = await fetchSource(actualPdfUrl)
+    actualPdfUrl = pdfResponse.url
+  }
+  else {
+    const resourceHref = findLinkHref(scopedHtml(html, source.sectionText), source.linkText)
+    if (!resourceHref) throw new Error(`could not find “${source.linkText}” at ${source.checkUrl}`)
+    pdfResponse = await fetchSource(new URL(resourceHref, source.checkUrl).toString())
+    actualPdfUrl = pdfResponse.url
+  }
+
   if (actualPdfUrl !== source.expectedPdfUrl) {
     throw new Error(`PDF URL changed from ${source.expectedPdfUrl} to ${actualPdfUrl}`)
   }
 
-  const pdfResponse = await fetchSource(actualPdfUrl)
   const actualChecksum = createHash('sha256')
     .update(Buffer.from(await pdfResponse.arrayBuffer()))
     .digest('hex')

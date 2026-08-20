@@ -99,6 +99,7 @@ const stateCurrentYear = (() => {
   for (const y of years) freq[y] = (freq[y] ?? 0) + 1
   return Object.entries(freq).sort((a, b) => b[1] - a[1])[0]?.[0] ?? '2025-2026'
 })()
+const statePageHeading = statePageData.value?.pageHeading ?? `${matchedStateName} School Calendar ${stateCurrentYear}`
 
 if (isStatePage) {
   const hasStateContent = !!statePageData.value
@@ -152,7 +153,7 @@ if (isStatePage) {
     {
       '@context': 'https://schema.org',
       '@type': ['WebPage', 'CollectionPage'],
-      name: `${matchedStateName} School Calendar ${stateCurrentYear}`,
+      name: statePageHeading,
       url: stateUrl,
       description: stateDesc,
       ...(statePageData.value?.lastVerifiedAt ? { dateModified: statePageData.value.lastVerifiedAt } : {}),
@@ -184,7 +185,7 @@ if (isStatePage) {
     },
     stateDistrictListEntity,
   ]
-  if (statePageData.value?.faqs?.length) {
+  if (statePageData.value?.faqs?.length && statePageData.value.includeFaqSchema !== false) {
     stateSchemaGraph.push({
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -676,7 +677,8 @@ function dedupeQuestions(questions: string[]) {
 
 const allFaqs = computed(() => {
   if (!cal || !district.value) return []
-  const specificFaqs: { q: string; a: string }[] = (district.value as any).districtFaqs ?? []
+  const excludeDistrictFaqs = Boolean((cal as any)?.excludeDistrictFaqs ?? (cal as any)?.meta?.excludeDistrictFaqs)
+  const specificFaqs: { q: string; a: string }[] = excludeDistrictFaqs ? [] : ((district.value as any).districtFaqs ?? [])
   const calendarFaqs: { q: string; a: string }[] = (cal as any).calendarFaqs ?? []
   const prefersCalendarFirst = (cal as any).faqOrderLimit ?? (cal as any).meta?.faqOrderLimit ?? (district.value as any).faqOrderLimit ?? (district.value as any).meta?.faqOrderLimit ?? (cal as any).faqLimit ?? (cal as any).meta?.faqLimit ?? (district.value as any).faqLimit ?? (district.value as any).meta?.faqLimit
   if (typeof prefersCalendarFirst === 'number' && prefersCalendarFirst > 0) {
@@ -685,8 +687,9 @@ const allFaqs = computed(() => {
   return dedupeFaqItems([...specificFaqs, ...calendarFaqs])
 })
 const faqs = computed(() => {
+  const excludeDistrictFaqs = Boolean((cal as any)?.excludeDistrictFaqs ?? (cal as any)?.meta?.excludeDistrictFaqs)
   const displayQuestions = dedupeQuestions([
-    ...(((district.value as any)?.faqDisplayQuestions ?? (district.value as any)?.meta?.faqDisplayQuestions ?? []) as string[]),
+    ...(excludeDistrictFaqs ? [] : (((district.value as any)?.faqDisplayQuestions ?? (district.value as any)?.meta?.faqDisplayQuestions ?? []) as string[])),
     ...(((cal as any)?.faqDisplayQuestions ?? (cal as any)?.meta?.faqDisplayQuestions ?? []) as string[]),
   ])
   if (displayQuestions.length) {
@@ -703,8 +706,9 @@ const faqs = computed(() => {
 const faqSchemaItems = computed(() => {
   if ((cal as any)?.hideFaqSchema || (cal as any)?.meta?.hideFaqSchema || (district.value as any)?.hideFaqSchema || (district.value as any)?.meta?.hideFaqSchema) return []
   const limit = (cal as any)?.faqSchemaLimit ?? (cal as any)?.meta?.faqSchemaLimit ?? (district.value as any)?.faqSchemaLimit ?? (district.value as any)?.meta?.faqSchemaLimit
+  const excludeDistrictFaqs = Boolean((cal as any)?.excludeDistrictFaqs ?? (cal as any)?.meta?.excludeDistrictFaqs)
   const includeQuestions = dedupeQuestions([
-    ...(((district.value as any)?.faqSchemaQuestions ?? (district.value as any)?.meta?.faqSchemaQuestions ?? []) as string[]),
+    ...(excludeDistrictFaqs ? [] : (((district.value as any)?.faqSchemaQuestions ?? (district.value as any)?.meta?.faqSchemaQuestions ?? []) as string[])),
     ...(((cal as any)?.faqSchemaQuestions ?? (cal as any)?.meta?.faqSchemaQuestions ?? []) as string[]),
   ])
   const excludes = [
@@ -1828,7 +1832,7 @@ if (!isStatePage && district.value) {
         <!-- Hero -->
         <div class="state-hero">
           <h1 class="state-hero__title">
-            {{ matchedStateName }} School Calendar {{ stateCurrentYear }}
+            {{ statePageHeading }}
           </h1>
           <p class="state-hero__lead mt-3 max-w-4xl text-sm leading-relaxed">
             <template v-if="statePageData">
@@ -1870,12 +1874,12 @@ if (!isStatePage && district.value) {
         <!-- Jump navigation -->
         <nav v-if="statePageData" class="district-jump-nav sticky top-2 z-10 -mx-1 overflow-x-auto rounded-rds-lg px-3 py-2 text-xs">
           <div class="flex min-w-max gap-2">
-            <a href="#state-quick-answer" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">2026 Dates</a>
+            <a href="#state-quick-answer" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">{{ statePageData.quickAnswerNavLabel || 'Key Dates' }}</a>
             <a href="#state-districts" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">{{ statePageData.collectionNavLabel || 'Districts' }}</a>
             <a v-if="statePdfSectionId" :href="`#${statePdfSectionId}`" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">PDF</a>
-            <a href="#state-holidays" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">Holidays</a>
-            <a href="#faq" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">FAQ</a>
-            <a href="#state-calendar-data" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">Trends</a>
+            <a v-if="statePageData.commonHolidays?.length" href="#state-holidays" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">Holidays</a>
+            <a v-if="statePageData.faqs?.length" href="#faq" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">FAQ</a>
+            <a v-if="statePageData.hideNationalContext !== true" href="#state-calendar-data" class="rounded-lg px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">Trends</a>
           </div>
         </nav>
 
@@ -2040,7 +2044,7 @@ if (!isStatePage && district.value) {
             >
               <div class="font-semibold text-gray-900 leading-snug">{{ d.name }}</div>
               <div class="text-xs text-gray-600 mt-0.5">{{ d.city ? `${d.city}, ` : '' }}{{ (d as any).stateCode ?? d.state }}</div>
-              <template v-if="stateDistrictStats[d.institutionId]">
+              <template v-if="stateDistrictStats[d.institutionId] && statePageData?.hideDistrictCalendarStats !== true">
                 <div class="mt-3 grid grid-cols-2 gap-x-4 gap-y-1.5">
                   <div>
                     <div class="text-xs text-gray-600">First day</div>
@@ -2176,7 +2180,7 @@ if (!isStatePage && district.value) {
         </div>
 
         <!-- National calendar data context -->
-        <div id="state-calendar-data" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
+        <div v-if="statePageData?.hideNationalContext !== true" id="state-calendar-data" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
           <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ matchedStateName }} School Calendars in National Context</h2>
           <p class="text-sm text-[#7b756d] mb-5">
             Use these research pages to compare {{ matchedStateName }} district calendars with broader U.S. school calendar patterns.
@@ -2226,8 +2230,7 @@ if (!isStatePage && district.value) {
 
         <!-- SEO footer note -->
         <p class="text-xs text-gray-600 text-center">
-          All calendar data is sourced from official {{ matchedStateName }} school district websites.
-          Districts may revise calendars after publication — always verify with your district before making plans.
+          {{ statePageData?.footerNote || `All calendar data is sourced from official ${matchedStateName} school district websites. Districts may revise calendars after publication — always verify with your district before making plans.` }}
         </p>
 
       </main>
@@ -2276,7 +2279,7 @@ if (!isStatePage && district.value) {
             </template>
           </p>
           <p class="district-hero__independence mt-3 text-xs">
-            MySchoolDates is an independent calendar reference and is not affiliated with {{ district.name }}.
+            {{ (cal as any)?.heroIndependenceText ?? (cal as any)?.meta?.heroIndependenceText ?? (district as any)?.heroIndependenceText ?? `MySchoolDates is an independent calendar reference and is not affiliated with ${district.name}.` }}
           </p>
           <!-- Featured snippet: direct answer for search intent -->
           <div v-if="calendarSummaryParagraphs.length" class="district-hero__lead mt-5 space-y-2">

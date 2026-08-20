@@ -1,0 +1,663 @@
+{
+  "institutionId": "metro-nashville-public-schools",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025–26",
+  "pageHeading": "Metro Nashville Public Schools Calendar 2025–26",
+  "firstDay": "2025-08-05",
+  "firstDayScope": "Grades 1–12 attend a full day; Pre-K and kindergarten attend half days on August 5 and 6, followed by a full day for all grades August 7",
+  "firstFullK12Day": "2025-08-07",
+  "lastDay": "2026-05-21",
+  "lastDayScope": "Half day for all students; grades 9–12 have exams",
+  "temporalCoverageStart": "2025-08-05",
+  "temporalCoverageEnd": "2026-05-21",
+  "semesters": 2,
+  "sourceUrl": "https://www.mnps.org/about/district-calendar",
+  "sourceDocumentPage": "https://www.mnps.org/about/district-calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1770394453/mnpsorg/mnpsorg/yp4h1a5t13v29xhvcckd/MNPSDistrictCalendar2025-2026_UpdatedFebruary32026.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1770394453/mnpsorg/mnpsorg/yp4h1a5t13v29xhvcckd/MNPSDistrictCalendar2025-2026_UpdatedFebruary32026.pdf",
+  "sourceCheckedAt": "2026-08-20",
+  "sourceUpdatedAt": "2026-02-03",
+  "sourceChecksumSha256": "ec7970360fdc1a55ce9b1c680f0a2053ae5719815b27a304672d64c97f2feb6b",
+  "reviewedSourcePdfUrl": "https://resources.finalsite.net/images/v1770394453/mnpsorg/mnpsorg/yp4h1a5t13v29xhvcckd/MNPSDistrictCalendar2025-2026_UpdatedFebruary32026.pdf",
+  "reviewedSourceUpdatedAt": "2026-02-03",
+  "reviewedSourceChecksumSha256": "ec7970360fdc1a55ce9b1c680f0a2053ae5719815b27a304672d64c97f2feb6b",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceConflict": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.mnps.org/about/district-calendar",
+    "linkText": "2025-2026 Metro Schools Calendar",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1770394453/mnpsorg/mnpsorg/yp4h1a5t13v29xhvcckd/MNPSDistrictCalendar2025-2026_UpdatedFebruary32026.pdf",
+    "expectedChecksumSha256": "ec7970360fdc1a55ce9b1c680f0a2053ae5719815b27a304672d64c97f2feb6b"
+  },
+  "lastVerifiedAt": "2026-08-20",
+  "dateCreated": "2026-08-20",
+  "datePublished": "2026-08-20",
+  "dateModified": "2026-08-20",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Updated February 3, 2026",
+  "sourceCalendarName": "Metro Nashville Public Schools 2025–26 District Calendar",
+  "schemaCalendarName": "Metro Nashville Public Schools Calendar 2025–26",
+  "schemaDatasetName": "Metro Nashville Public Schools 2025–26 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed MNPS dates for 2025–26, including the three-day opening sequence, student breaks and district-office closures, stockpiled days, high-school exam half days, quarter dates, and the final half day for all students.",
+  "schemaSpatialCoverage": "Nashville and Davidson County, Tennessee",
+  "schemaCalendarDownloadName": "Metro Nashville Public Schools 2025–26 ICS Calendar File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with family-relevant dates from the reviewed MNPS district calendar; potential snow make-up dates are excluded until activated by MNPS.",
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "mnps-district-calendar",
+  "allDatesMode": "all",
+  "webPageMainEntity": "keyDates",
+  "itemListMode": "keyDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationIcs": true,
+  "hideCoveredBreakDatesNote": true,
+  "hideBreakDurationBadges": true,
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "breaks",
+    "yearNumbers",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "comparison",
+    "nationalTrends",
+    "relatedDistricts",
+    "downloadCta",
+    "otherCalendars"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Opening",
+      "id": "mnps-2025-2026-opening-schedule"
+    },
+    {
+      "label": "Half Days",
+      "id": "mnps-2025-2026-half-day-rules"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Quarter Dates",
+      "id": "grading-periods"
+    },
+    {
+      "label": "Snow Make-Up",
+      "id": "mnps-2025-2026-stockpiled-days"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Metro Nashville Public Schools Calendar 2025–26: Key Dates",
+  "seoDescription": "MNPS starts Aug. 5, 2025, with half days for Pre-K and kindergarten. See breaks, grade-specific exam days, the updated official PDF, and ICS.",
+  "heroSummary": "Metro Nashville Public Schools starts the 2025–26 student year Tuesday, August 5, 2025. Grades 1–12 attend full days August 5 and 6, while Pre-K and kindergarten attend half days; Thursday, August 7 is a full day for all grades. Fall Break runs October 13–17, Thanksgiving Holiday November 24–28, Winter Break December 22–January 2, and Spring Break March 9–13. Thursday, May 21 is the last day and a half day for all students.",
+  "heroSourceLine": "Updated district calendar · Grade-specific opening and exam half days",
+  "verificationBadgeText": "Reviewed August 20, 2026 against the updated MNPS calendar",
+  "heroVerificationSourceText": "The complete one-page calendar updated February 3, 2026 was checked",
+  "heroVerificationComparisonText": "Grade scope, student-day colors, and district-office closures were reviewed separately",
+  "calendarNotes": "Grades 1–12 attend full days on August 5 and 6; Pre-K and kindergarten attend half days. August 7 is the first full day for all grades. On December 16–18 and May 18–20, only grades 9–12 have half-day exam schedules; Pre-K–8 attend full days. December 19, March 6, and May 21 are half days for all students. October 10 is labeled a District Discretional Stockpiled Inclement Weather Day and uses the calendar-key color for students out of school, not the district-closed color. The PDF gives only general potential snow make-up language, so no candidate date is treated as confirmed.",
+  "keyDatesHeading": "Metro Nashville Public Schools 2025–26 Key Dates",
+  "keyDatesSummaryTitle": "Metro Nashville Public Schools 2025–26 Key Dates",
+  "keyDatesSummarySubtitle": "The opening sequence, student breaks, return dates, and final half day",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "Grades 1–12 Full Day; Pre-K and Kindergarten Half Day",
+      "date": "2025-08-05",
+      "type": "school_start",
+      "schemaDescription": "First student day on the MNPS district calendar; grades 1–12 attend a full day and Pre-K and kindergarten attend a half day."
+    },
+    {
+      "label": "All Grades",
+      "name": "First Full Day for All Grades",
+      "date": "2025-08-07",
+      "type": "school_start",
+      "schemaDescription": "First full school day for all MNPS grade levels."
+    },
+    {
+      "label": "Fall Break",
+      "name": "Fall Break Holiday",
+      "date": "2025-10-13",
+      "endDate": "2025-10-17",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Holiday",
+      "date": "2025-11-24",
+      "endDate": "2025-11-28",
+      "type": "break_start",
+      "description": "District offices are closed November 27–28."
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Student Days Off",
+      "date": "2025-12-22",
+      "endDate": "2026-01-05",
+      "type": "break_start",
+      "description": "Winter Break runs through January 2; January 5 is a stockpiled PD day. Students return January 6."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break Holiday",
+      "date": "2026-03-09",
+      "endDate": "2026-03-13",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day — Half Day for All Students",
+      "date": "2026-05-21",
+      "type": "school_end",
+      "schemaDescription": "Last day on the MNPS district calendar; all students attend a half day and grades 9–12 have exams."
+    }
+  ],
+  "allDatesTitle": "Metro Nashville Public Schools 2025–26 Calendar Dates",
+  "allDatesCoverageNote": "This table follows the updated student-facing MNPS schedule from the August opening through the May 21 final half day. It preserves the difference between grades 9–12 exam half days, districtwide half days, student breaks, and district-office closures. Staff-only dates after the student year and unactivated snow make-up candidates are not included.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1770394453/mnpsorg/mnpsorg/yp4h1a5t13v29xhvcckd/MNPSDistrictCalendar2025-2026_UpdatedFebruary32026.pdf",
+  "allDatesSourceLabel": "Official MNPS 2025–26 District Calendar — Updated February 3, 2026",
+  "dateLegendItems": [
+    {
+      "label": "Students Out",
+      "dot": "bg-red-400"
+    },
+    {
+      "label": "District Closed",
+      "dot": "bg-orange-500"
+    },
+    {
+      "label": "Half Day — All Students",
+      "dot": "bg-cyan-300"
+    },
+    {
+      "label": "Half-Day Exams — Grades 9–12",
+      "dot": "bg-purple-400"
+    }
+  ],
+  "dateLegendLabelOverrides": {
+    "Holiday": "District Closed",
+    "Teacher Workday": "Students Out — Staff Day",
+    "Early Release": "Half Day",
+    "Academic Date": "Quarter / Reports",
+    "Break": "Student Break"
+  },
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "gradingPeriodsTitle": "MNPS 2025–26 Quarter Dates",
+  "gradingPeriodsDescription": "The district calendar marks four quarter boundaries. It does not publish an instructional-day count for each quarter.",
+  "gradingPeriods": [
+    {
+      "label": "Quarter 1",
+      "start": "2025-08-05",
+      "end": "2025-10-03",
+      "reportsIssued": "2025-10-23"
+    },
+    {
+      "label": "Quarter 2",
+      "start": "2025-10-06",
+      "end": "2025-12-19",
+      "reportsIssued": "2026-01-15"
+    },
+    {
+      "label": "Quarter 3",
+      "start": "2026-01-06",
+      "end": "2026-03-06",
+      "reportsIssued": "2026-03-26"
+    },
+    {
+      "label": "Quarter 4",
+      "start": "2026-03-16",
+      "end": "2026-05-21",
+      "reportsIssued": "2026-05-21"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "mnps-2025-2026-opening-schedule",
+      "label": "How the MNPS Opening Schedule Works",
+      "position": "afterKeyDates",
+      "content": "August 5 is the first student day, but Pre-K and kindergarten follow a shorter schedule before the first full day for every grade.",
+      "table": {
+        "caption": "MNPS 2025–26 opening attendance",
+        "columns": [
+          "Date",
+          "Grades 1–12",
+          "Pre-K and kindergarten"
+        ],
+        "rows": [
+          [
+            "August 5–6, 2025",
+            "Full day",
+            "Half day"
+          ],
+          [
+            "August 7, 2025",
+            "Full day",
+            "Full day"
+          ]
+        ],
+        "footnote": "The annual PDF does not publish one districtwide dismissal time for the Pre-K and kindergarten half days. Check the school or program message."
+      }
+    },
+    {
+      "id": "mnps-2025-2026-half-day-rules",
+      "label": "Not Every MNPS Half Day Applies to Every Grade",
+      "position": "afterKeyDates",
+      "content": "MNPS separates high-school exam half days from districtwide half days. Pre-K–8 remain on a full-day schedule during the grades 9–12 exam dates.",
+      "table": {
+        "caption": "MNPS 2025–26 half-day attendance rules",
+        "columns": [
+          "Dates",
+          "Grades 9–12",
+          "Pre-K–8"
+        ],
+        "rows": [
+          [
+            "December 16–18, 2025",
+            "Half day for exams",
+            "Full day"
+          ],
+          [
+            "December 19, 2025",
+            "Half day for exams",
+            "Half day for all students"
+          ],
+          [
+            "March 6, 2026",
+            "Half day",
+            "Half day for all students"
+          ],
+          [
+            "May 18–20, 2026",
+            "Half day for exams",
+            "Full day"
+          ],
+          [
+            "May 21, 2026",
+            "Half day for exams",
+            "Half day for all students"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mnps-2025-2026-office-closures",
+      "label": "Student Breaks and MNPS Office Closures",
+      "position": "afterKeyDates",
+      "content": "The Thanksgiving and Winter student holidays are longer than the district-office closures printed inside them.",
+      "table": {
+        "columns": [
+          "Student holiday",
+          "District offices closed"
+        ],
+        "rows": [
+          [
+            "Thanksgiving Holiday: November 24–28, 2025",
+            "November 27–28"
+          ],
+          [
+            "Winter Break: December 22, 2025–January 2, 2026",
+            "December 24–26 and January 1"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mnps-2025-2026-stockpiled-days",
+      "label": "How MNPS Stockpiled and Snow Make-Up Days Work",
+      "position": "afterAllDates",
+      "content": "The updated calendar lists seven stockpiled professional-development days and six stockpiled inclement-weather days. It says potential snow make-up days may use stockpiled PD days, holidays, and other dates, but it does not publish a fixed candidate sequence. October 10 is already printed as a student day out under the District Discretional Stockpiled Inclement Weather Day label; other potential dates are excluded until MNPS announces a change.",
+      "table": {
+        "columns": [
+          "Calendar wording",
+          "How to use it"
+        ],
+        "rows": [
+          [
+            "7 stockpiled PD days",
+            "Scheduled professional-development days when students do not report"
+          ],
+          [
+            "6 stockpiled inclement-weather days",
+            "Capacity reserved for weather disruptions; not six pre-announced student closures"
+          ],
+          [
+            "Potential snow make-up days",
+            "Do not plan on attendance unless MNPS activates a date"
+          ]
+        ]
+      }
+    }
+  ],
+  "events": [
+    {
+      "date": "2025-08-05",
+      "endDate": "2025-08-06",
+      "name": "Opening Schedule — Grades 1–12 Full Day; Pre-K and Kindergarten Half Day",
+      "type": "school_start",
+      "description": "The grade-specific schedule applies on both August 5 and 6.",
+      "exportDatesIndividually": true
+    },
+    {
+      "date": "2025-08-07",
+      "name": "First Full Day for All Grades",
+      "type": "school_start"
+    },
+    {
+      "date": "2025-09-01",
+      "name": "Labor Day — No School; District Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-09-04",
+      "name": "Progress Reports Issued",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-10-03",
+      "name": "First Quarter Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-10-06",
+      "name": "Second Quarter Begins",
+      "type": "quarter_start",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-10-07",
+      "name": "Stockpiled PD Day — Students Do Not Report",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2025-10-10",
+      "name": "District Discretional Stockpiled Inclement Weather Day — Students Out",
+      "type": "no_school",
+      "badgeLabel": "Students Out",
+      "description": "The updated PDF uses the calendar-key color for students out of school, not the district-closed color.",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2025-10-13",
+      "endDate": "2025-10-17",
+      "name": "Fall Break Holiday",
+      "type": "break_start"
+    },
+    {
+      "date": "2025-10-23",
+      "name": "Report Cards Issued",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-10-31",
+      "name": "Parent Conference Day — Students Do Not Report",
+      "type": "conference",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2025-11-06",
+      "name": "Progress Reports Issued",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-11-11",
+      "name": "Veterans Day — No School; District Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-11-24",
+      "endDate": "2025-11-28",
+      "name": "Thanksgiving Holiday — Students Out",
+      "type": "break_start",
+      "description": "District offices are closed November 27–28."
+    },
+    {
+      "date": "2025-11-27",
+      "endDate": "2025-11-28",
+      "name": "District Offices Closed",
+      "type": "operational_closure",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-12-02",
+      "name": "Stockpiled PD Day — Students Do Not Report",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2025-12-16",
+      "endDate": "2025-12-18",
+      "name": "Half-Day Exams for Grades 9–12; Full Day for Pre-K–8",
+      "type": "early_release",
+      "badgeLabel": "Grades 9–12 Half Day",
+      "description": "Only high-school students follow the half-day exam schedule.",
+      "exportDatesIndividually": true
+    },
+    {
+      "date": "2025-12-19",
+      "name": "Half Day for All Students — Grades 9–12 Exams; Second Quarter Ends",
+      "type": "early_release",
+      "badgeLabel": "Half Day — All Students"
+    },
+    {
+      "date": "2025-12-22",
+      "endDate": "2026-01-02",
+      "name": "Winter Break — Students Out",
+      "type": "break_start",
+      "description": "District offices are closed December 24–26 and January 1."
+    },
+    {
+      "date": "2025-12-24",
+      "endDate": "2025-12-26",
+      "name": "District Offices Closed",
+      "type": "operational_closure",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-01-01",
+      "name": "New Year's Day — District Closed",
+      "type": "operational_closure",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-01-05",
+      "name": "Stockpiled PD Day — Students Do Not Report",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out",
+      "description": "Students return January 6."
+    },
+    {
+      "date": "2026-01-06",
+      "name": "Students Return — Third Quarter Begins",
+      "type": "school_resume"
+    },
+    {
+      "date": "2026-01-15",
+      "name": "Report Cards Issued",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Martin Luther King Jr. Day — No School; District Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-02-02",
+      "name": "Stockpiled PD Day — Students Do Not Report",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2026-02-10",
+      "name": "Progress Reports Issued",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-03-06",
+      "name": "Half Day for All Students — Third Quarter Ends",
+      "type": "early_release",
+      "badgeLabel": "Half Day — All Students"
+    },
+    {
+      "date": "2026-03-09",
+      "endDate": "2026-03-13",
+      "name": "Spring Break Holiday",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-03-16",
+      "name": "Students Return — Fourth Quarter Begins",
+      "type": "school_resume"
+    },
+    {
+      "date": "2026-03-26",
+      "name": "Report Cards Issued",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Spring Holiday — No School; District Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Progress Reports Issued",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Stockpiled PD Day — Students Do Not Report",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2026-05-18",
+      "endDate": "2026-05-20",
+      "name": "Half-Day Exams for Grades 9–12; Full Day for Pre-K–8",
+      "type": "early_release",
+      "badgeLabel": "Grades 9–12 Half Day",
+      "description": "Only high-school students follow the half-day exam schedule.",
+      "exportDatesIndividually": true
+    },
+    {
+      "date": "2026-05-21",
+      "name": "Last Day — Half Day for All Students; Grades 9–12 Exams",
+      "type": "school_end",
+      "badgeLabel": "Half Day — All Students",
+      "description": "The school year ends; elementary and middle-school report cards are issued."
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "MNPS 2025–26 Calendar Downloads",
+  "unifiedDownloadDescription": "Open the updated official district PDF, add selected student dates to a calendar app, or use the live MNPS calendar for later event updates.",
+  "pdfHeading": "Official MNPS 2025–26 District Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Open the one-page calendar updated February 3, 2026 and used to verify the grade-specific opening, breaks, half days, quarter dates, and final student day shown here.",
+  "hidePdfVersionLabel": true,
+  "icsHeading": "Add MNPS Dates to Your Calendar",
+  "icsDescription": "Download selected dates from the reviewed district calendar for Google Calendar, Apple Calendar, or Outlook. Potential snow make-up dates are not included unless MNPS activates them.",
+  "icsButtonLabel": "Download MNPS 2025–26 ICS",
+  "icsButtonSupportText": "One-time import. Later MNPS revisions will not update automatically.",
+  "officialSubscriptionTitle": "Want current district event updates?",
+  "officialSubscriptionDescription": "The official MNPS calendar page offers subscription options and carries current district events. Use it for changes and additions published after the annual PDF.",
+  "officialSubscriptionButtonLabel": "Open the MNPS Live Calendar",
+  "officialSubscriptionUrl": "https://www.mnps.org/about/district-calendar",
+  "calendarFaqs": [
+    {
+      "q": "When did Metro Nashville Public Schools start in 2025–26?",
+      "a": "The first student day was Tuesday, August 5, 2025. Grades 1–12 attended full days on August 5 and 6, while Pre-K and kindergarten attended half days. August 7 was the first full day for all grades."
+    },
+    {
+      "q": "When did MNPS students return after Winter Break in 2026?",
+      "a": "Winter Break ran December 22, 2025, through January 2, 2026. January 5 was a stockpiled professional-development day, so students returned Tuesday, January 6."
+    },
+    {
+      "q": "When was MNPS Spring Break in 2026?",
+      "a": "Spring Break ran March 9–13, 2026. Students returned Monday, March 16. April 3 was a separate Spring Holiday when the district was closed."
+    },
+    {
+      "q": "Were December and May exam half days for all MNPS students?",
+      "a": "Not all of them. December 16–18 and May 18–20 were half days only for grades 9–12 exams; Pre-K–8 attended full days. December 19 and May 21 were half days for all students."
+    },
+    {
+      "q": "What was the October 10 stockpiled weather date?",
+      "a": "The updated calendar labeled October 10 a District Discretional Stockpiled Inclement Weather Day. Its calendar color showed students out of school, but not a districtwide office closure."
+    },
+    {
+      "q": "When was the last day of school for MNPS in 2026?",
+      "a": "Thursday, May 21, 2026 was the last student day. It was a half day for all students, and grades 9–12 had exams."
+    }
+  ],
+  "faqLimit": 6,
+  "sources": [
+    {
+      "label": "MNPS District Calendar page",
+      "url": "https://www.mnps.org/about/district-calendar"
+    },
+    {
+      "label": "Official MNPS 2025–26 district calendar PDF — updated February 3, 2026",
+      "url": "https://resources.finalsite.net/images/v1770394453/mnpsorg/mnpsorg/yp4h1a5t13v29xhvcckd/MNPSDistrictCalendar2025-2026_UpdatedFebruary32026.pdf"
+    }
+  ],
+  "sourceReviewSummary": "Reviewed August 20, 2026 using the complete official one-page calendar updated February 3, 2026. The event table follows the visible date list and uses the calendar key to interpret the October 10 student-attendance status.",
+  "sourceReviewDetails": [
+    "Checked the full one-page layout, month grids, date list, attendance colors, and calendar key.",
+    "The PDF was updated February 3, 2026 and is used as the source for the event table and ICS.",
+    "October 10 is labeled a District Discretional Stockpiled Inclement Weather Day and uses the key color for students out of school, not the district-closed color.",
+    "The PDF gives general potential snow make-up wording but no fixed candidate sequence, so no unactivated date is added to the event table or ICS.",
+    "The annual calendar does not publish one districtwide dismissal time for half days or an instructional-day total, so neither is inferred."
+  ],
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team using official Metro Nashville Public Schools sources.",
+  "sourceNextReviewText": "Next review: when MNPS replaces the updated 2025–26 file, activates a weather make-up date, or confirms a correction."
+}
