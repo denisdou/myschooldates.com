@@ -35,7 +35,7 @@ const workflowRows = [
 
 const backgroundRows = [
   ['Role', 'Founder of MySchoolDates and lead for education data research direction'],
-  ['Current dataset scope', '175 reviewed district calendar records across 25 states in the public 2026-2027 trends dataset'],
+  ['Current dataset scope', '205 reviewed district calendar records across 31 states in the public 2026-2027 trends dataset'],
   ['Primary output', 'District calendar pages, annual trends reports, CSV datasets, and verification methodology documentation'],
   ['Research method', 'Official district source review, public PDF checks, date normalization, and anomaly review before publication'],
 ]

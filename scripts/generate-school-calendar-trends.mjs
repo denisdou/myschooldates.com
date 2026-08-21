@@ -7,6 +7,9 @@ const districtsDir = path.join(rootDir, 'content/districts')
 const outputPath = path.join(rootDir, 'public/data/school-calendar-trends-2026-2027.csv')
 const dataOutputPath = path.join(rootDir, 'app/data/school-calendar-trends-2026-2027.json')
 const schoolYear = '2026-2027'
+const releaseVersion = 'v4.0'
+const releaseRecordCount = 205
+const releaseDate = '2026-08-21'
 
 const breakSignalOverrides = {
   'brunswick-county-schools-calendar': { winter: 'Not listed' },
@@ -74,7 +77,9 @@ function loadExistingLabels() {
 
   return new Map(lines.slice(1).map((line) => {
     const row = parseCsvLine(line)
-    const slug = row[pageIndex].replace(/\/$/, '').split('/').pop()
+    const pathSegments = row[pageIndex].replace(/\/$/, '').split('/')
+    const lastSegment = pathSegments.pop()
+    const slug = lastSegment === schoolYear ? pathSegments.pop() : lastSegment
     return [slug, row[districtIndex]]
   }))
 }
@@ -147,7 +152,7 @@ for (const institutionId of fs.readdirSync(calendarsDir)) {
   records.push([
     districtLabel,
     district.state,
-    `https://myschooldates.com/${district.slug}`,
+    `https://myschooldates.com/${district.slug}/${schoolYear}`,
     formatDate(calendar.firstDay),
     formatDate(calendar.lastDay),
     getBreakSignal(calendar, district.slug, 'winter'),
@@ -159,8 +164,8 @@ for (const institutionId of fs.readdirSync(calendarsDir)) {
 records.sort((first, second) => first[1].localeCompare(second[1]) || first[0].localeCompare(second[0]))
 
 const uniquePages = new Set(records.map(row => row[2]))
-if (records.length !== 175 || uniquePages.size !== records.length) {
-  throw new Error(`Expected 175 unique 2026-2027 records; found ${records.length} rows and ${uniquePages.size} unique pages.`)
+if (records.length !== releaseRecordCount || uniquePages.size !== records.length) {
+  throw new Error(`Expected ${releaseRecordCount} unique ${schoolYear} records; found ${records.length} rows and ${uniquePages.size} unique pages.`)
 }
 
 const headers = ['district', 'state', 'myschooldates_page', 'first_day', 'last_day', 'winter_break_signal', 'spring_break_signal']
@@ -193,10 +198,10 @@ const summary = {
 }
 
 const generatedData = {
-  version: 'v3.0',
+  version: releaseVersion,
   datePublished: '2026-07-27',
-  dateModified: '2026-08-14',
-  reviewedThrough: '2026-08-14',
+  dateModified: releaseDate,
+  reviewedThrough: releaseDate,
   nextReview: '2027-01-01',
   records: records.map(row => ({
     district: row[0],

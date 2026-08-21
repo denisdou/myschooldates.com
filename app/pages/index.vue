@@ -118,7 +118,7 @@ function onSearchBlur() { setTimeout(() => { showDropdown.value = false }, 150) 
 
 useSeoMeta({
   title: 'US School Calendars 2026-2027 & 2027-2028 | Holidays, Breaks & Key Dates | MySchoolDates',
-  description: 'School calendars for 175 US public school districts. Find school start dates, spring break, winter break, holidays, PDFs, and calendar downloads for 2027-2028 and 2026-2027.',
+  description: 'School calendars for 205 US public school districts. Find school start dates, spring break, winter break, holidays, PDFs, and calendar downloads for 2027-2028 and 2026-2027.',
 })
 
 useHead({

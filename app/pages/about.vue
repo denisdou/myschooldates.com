@@ -46,7 +46,7 @@ useHead({
     <section class="mb-10">
       <h2 class="text-xl font-semibold text-gray-900 mb-3">Coverage</h2>
       <p class="text-gray-600 leading-relaxed">
-        We currently cover 175 public school districts across 25 states, with more districts and states being added regularly. Our goal is comprehensive coverage of the largest districts in every state.
+        We currently cover 205 public school districts across 31 states, with more districts and states being added regularly. Our goal is comprehensive coverage of the largest districts in every state.
       </p>
     </section>
 

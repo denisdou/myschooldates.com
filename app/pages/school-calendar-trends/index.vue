@@ -12,7 +12,7 @@ const VChart = defineAsyncComponent(() => import('vue-echarts').then(module => m
 
 const pageUrl = 'https://myschooldates.com/school-calendar-trends'
 const title = 'US School Calendar Trends 2026-2027 | Data Report & Analysis'
-const description = 'Analyze U.S. school calendar trends from 175 reviewed district calendars across 25 states, with start dates, breaks, end dates, CSV data, and charts.'
+const description = 'Analyze U.S. school calendar trends from 205 reviewed district calendars across 31 states, with start dates, breaks, end dates, CSV data, and charts.'
 
 const featuredAssets = [
   {
@@ -45,28 +45,28 @@ const archiveRows = [
 ]
 
 const coverage = {
-  recordsLabel: '175',
-  sampleSize: '175',
-  states: '25',
+  recordsLabel: '205',
+  sampleSize: '205',
+  states: '31',
   schoolYears: '2025-2027',
-  lastUpdated: 'August 14, 2026',
+  lastUpdated: 'August 21, 2026',
   nextReview: 'January 2027',
   nextReviewShort: 'Jan 2027',
 }
 
 const trendRows = [
-  ['Start dates', '147 of 175 reviewed 2026-2027 districts start in August, while 8 start in July and 20 start in September.'],
-  ['Winter break', 'December 21, 2026 is the strongest winter break start-date cluster, appearing in 151 reviewed records.'],
-  ['Spring break', 'Spring break is less uniform: the top five clusters begin March 22, March 15, April 5, March 29, and March 8, 2027.'],
-  ['End dates', '99 reviewed districts end in May and 76 end in June. May 27, 2027 is the most common last student day.'],
-  ['Calendar utility', '169 of 175 reviewed records include an official or source PDF, while every reviewed MySchoolDates record includes an ICS export.'],
+  ['Start dates', '176 of 205 reviewed 2026-2027 districts start in August, while 9 start in July and 20 start in September.'],
+  ['Winter break', 'December 21, 2026 is the strongest winter break start-date cluster, appearing in 179 reviewed records.'],
+  ['Spring break', 'Spring break is less uniform: the top five clusters begin March 15, March 22, March 29, April 5, and March 8, 2027.'],
+  ['End dates', '125 reviewed districts end in May and 80 end in June. May 27, 2027 is the most common last student day.'],
+  ['Calendar utility', '196 of 205 reviewed records include an official or source PDF, while every reviewed MySchoolDates record includes an ICS export.'],
 ]
 
 const keyInsightRows = [
-  ['84%', 'start in August', 'August remains the dominant U.S. school start month in the reviewed 2026-2027 dataset.'],
-  ['86.3%', 'share a December 21 break signal', 'December 21, 2026 is the clearest national winter break start-date cluster.'],
-  ['56.6%', 'end in May', 'May end dates are more common than June end dates in the current reviewed sample.'],
-  ['70 records', 'list 180 student days', '180 student days is the most common instructional-day count where a count is published.'],
+  ['85.9%', 'start in August', 'August remains the dominant U.S. school start month in the reviewed 2026-2027 dataset.'],
+  ['87.3%', 'share a December 21 break signal', 'December 21, 2026 is the clearest national winter break start-date cluster.'],
+  ['61%', 'end in May', 'May end dates are more common than June end dates in the current reviewed sample.'],
+  ['71 records', 'list 180 student days', '180 student days is the most common instructional-day count where a count is published.'],
 ]
 
 const liveCoverageRows = [
@@ -81,8 +81,8 @@ const chartCards = [
     title: 'School Start Month Distribution',
     summary: 'August is the dominant start month in the current reviewed 2026-2027 district calendar sample.',
     fallbackRows: [
-      ['July', '8 records'],
-      ['August', '147 records'],
+      ['July', '9 records'],
+      ['August', '176 records'],
       ['September', '20 records'],
     ],
     option: {
@@ -90,24 +90,24 @@ const chartCards = [
       tooltip: { trigger: 'axis' },
       grid: { left: 36, right: 12, top: 24, bottom: 32 },
       xAxis: { type: 'category', data: ['July', 'August', 'September'] },
-      yAxis: { type: 'value', max: 175 },
-      series: [{ type: 'bar', data: [8, 147, 20], barWidth: 28 }],
+      yAxis: { type: 'value', max: 205 },
+      series: [{ type: 'bar', data: [9, 176, 20], barWidth: 28 }],
     },
   },
   {
     title: 'School Year End Month Distribution',
     summary: 'May endings are more common than June endings in the current reviewed sample.',
     fallbackRows: [
-      ['May', '99 records'],
-      ['June', '76 records'],
+      ['May', '125 records'],
+      ['June', '80 records'],
     ],
     option: {
       color: ['#0f766e'],
       tooltip: { trigger: 'axis' },
       grid: { left: 36, right: 12, top: 24, bottom: 32 },
       xAxis: { type: 'category', data: ['May', 'June'] },
-      yAxis: { type: 'value', max: 100 },
-      series: [{ type: 'bar', data: [99, 76], barWidth: 34 }],
+      yAxis: { type: 'value', max: 140 },
+      series: [{ type: 'bar', data: [125, 80], barWidth: 34 }],
     },
   },
   {
@@ -116,15 +116,15 @@ const chartCards = [
     fallbackRows: [
       ['December 18, 2026', '1 record'],
       ['December 19, 2026', '1 record'],
-      ['December 21, 2026', '151 records'],
-      ['December 23, 2026', '9 records'],
-      ['December 24, 2026', '8 records'],
+      ['December 21, 2026', '179 records'],
+      ['December 23, 2026', '11 records'],
+      ['December 24, 2026', '7 records'],
     ],
     option: {
       tooltip: { position: 'top' },
       visualMap: {
         min: 0,
-        max: 151,
+        max: 179,
         show: false,
         inRange: { color: ['#dbeafe', '#2563eb'] },
       },
@@ -145,9 +145,9 @@ const chartCards = [
         data: [
           ['2026-12-18', 1],
           ['2026-12-19', 1],
-          ['2026-12-21', 151],
-          ['2026-12-23', 9],
-          ['2026-12-24', 8],
+          ['2026-12-21', 179],
+          ['2026-12-23', 11],
+          ['2026-12-24', 7],
         ],
       },
     },
@@ -156,11 +156,11 @@ const chartCards = [
     title: 'Spring Break Cluster Analysis',
     summary: 'Spring break is less uniform than winter break, with several March and early-April clusters.',
     fallbackRows: [
-      ['March 8, 2027', '12 records'],
-      ['March 15, 2027', '42 records'],
-      ['March 22, 2027', '44 records'],
-      ['March 29, 2027', '25 records'],
-      ['April 5, 2027', '26 records'],
+      ['March 8, 2027', '14 records'],
+      ['March 15, 2027', '56 records'],
+      ['March 22, 2027', '48 records'],
+      ['March 29, 2027', '31 records'],
+      ['April 5, 2027', '27 records'],
     ],
     option: {
       color: ['#7c3aed'],
@@ -171,8 +171,8 @@ const chartCards = [
         data: ['Mar 8', 'Mar 15', 'Mar 22', 'Mar 29', 'Apr 5'],
         axisLabel: { rotate: 25 },
       },
-      yAxis: { type: 'value', max: 50 },
-      series: [{ type: 'bar', data: [12, 42, 44, 25, 26], barWidth: 24 }],
+      yAxis: { type: 'value', max: 60 },
+      series: [{ type: 'bar', data: [14, 56, 48, 31, 27], barWidth: 24 }],
     },
   },
 ]
@@ -180,7 +180,8 @@ const chartCards = [
 const growthRows = [
   ['July 27, 2026', '100 records', 'Initial public trends hub, report, and CSV dataset release.'],
   ['August 9, 2026', '150 records', 'v2.0 expansion to 19 states with 50 additional reviewed district calendars.'],
-  [coverage.lastUpdated, `${coverage.recordsLabel} records`, 'v3.0 expansion to 25 states with 25 additional reviewed district calendars.'],
+  ['August 14, 2026', '175 records', 'v3.0 expansion to 25 states with 25 additional reviewed district calendars.'],
+  [coverage.lastUpdated, `${coverage.recordsLabel} records`, 'v4.0 expansion to 31 states with 30 additional reviewed district calendars.'],
   [coverage.nextReview, 'Next review planned', 'Add newly verified district records and material calendar revisions.'],
   ['2027-2028 cycle', 'Expanded coverage planned', 'Move toward larger state samples, annual archive comparisons, and more district-level records.'],
 ]
@@ -202,13 +203,13 @@ const stateComparisonRows = [
   ['North Carolina', '15 records', 'Late-August starts', 'August 24 is a strong first-day signal in the current sample, with varied spring break timing.'],
   ['Washington', '10 records', 'Later starts and June endings', 'September starts and June last days remain visible in the expanded sample.'],
   ['Arizona and Colorado', '17 records', 'Early starts and intersession variety', 'Western additions broaden July and early-August opening patterns.'],
-  ['Utah, Michigan, Minnesota, and Wisconsin', '20 records', 'New regional coverage', 'The v3.0 release adds Mountain West and Upper Midwest calendar patterns.'],
+  ['Indiana, Kansas, Missouri, Nebraska, Oklahoma, and Tennessee', '23 records', 'New regional coverage', 'The v4.0 release adds Midwestern, Plains, and Tennessee calendar patterns.'],
 ]
 
 const sourceMixRows = [
-  ['Official or source PDF available', '169 of 175 records', 'PDFs remain the dominant official publishing format for district calendars.'],
-  ['ICS export available on MySchoolDates', '175 of 175 records', 'ICS files support Google Calendar, Apple Calendar, and Outlook imports.'],
-  ['Reviewed district page link', '175 of 175 records', 'Every dataset row links back to a district calendar page for context and source verification.'],
+  ['Official or source PDF available', '196 of 205 records', 'PDFs remain the dominant official publishing format for district calendars.'],
+  ['ICS export available on MySchoolDates', '205 of 205 records', 'ICS files support Google Calendar, Apple Calendar, and Outlook imports.'],
+  ['Reviewed district page link', '205 of 205 records', 'Every dataset row links back to a district calendar page for context and source verification.'],
 ]
 
 const topicGuideRows = [
@@ -225,15 +226,15 @@ const faqRows = [
   },
   {
     q: 'How large is the school calendar trends dataset?',
-    a: 'The public trends hub currently summarizes a 175-record verified dataset across 25 states for the 2026-2027 report, and coverage continues expanding as additional district calendar pages and official sources are reviewed.',
+    a: 'The public trends hub currently summarizes a 205-record verified dataset across 31 states for the 2026-2027 report, and coverage continues expanding as additional district calendar pages and official sources are reviewed.',
   },
   {
     q: 'What month do most U.S. schools start?',
-    a: 'In the current reviewed 2026-2027 MySchoolDates sample, August is the dominant start month. One hundred forty-seven of 175 reviewed district calendar records start in August.',
+    a: 'In the current reviewed 2026-2027 MySchoolDates sample, August is the dominant start month. One hundred seventy-six of 205 reviewed district calendar records start in August.',
   },
   {
     q: 'What is the average school start date in the U.S.?',
-    a: 'This page does not claim a national average across all U.S. districts. In the reviewed 175-record sample, the most common first days are concentrated in August, especially August 10-24, 2026.',
+    a: 'This page does not claim a national average across all U.S. districts. In the reviewed 205-record sample, the most common first days are concentrated in August, especially August 10-24, 2026.',
   },
   {
     q: 'Why do school districts have different spring break dates?',
@@ -241,7 +242,7 @@ const faqRows = [
   },
   {
     q: 'How many instructional days are typical in U.S. school calendars?',
-    a: 'The most common listed count in the reviewed MySchoolDates sample is 180 student days. Seventy reviewed records list 180 student days, though state and district rules vary.',
+    a: 'The most common listed count in the reviewed MySchoolDates sample is 180 student days. Seventy-one reviewed records list 180 student days, though state and district rules vary.',
   },
   {
     q: 'Where does the school calendar data come from?',
@@ -260,7 +261,7 @@ const faqRows = [
 const futureRows = [
   ['State-level trend reports', 'California, Texas, Florida, Virginia, and North Carolina are the strongest candidates because the current dataset already has meaningful state-level samples.'],
   ['Break-date reports', 'Dedicated winter break and spring break trend pages can serve users searching by calendar year instead of district name.'],
-  ['Expanded dataset releases', 'The v3.0 release expands the sample to 175 records across 25 states; future reports can continue toward 500+ reviewed district calendars.'],
+  ['Expanded dataset releases', 'The v4.0 release expands the sample to 205 records across 31 states; future reports can continue toward 500+ reviewed district calendars.'],
   ['Historical archive', 'Annual archive pages can show how school start dates, end dates, and break timing change over time.'],
 ]
 
@@ -333,8 +334,8 @@ useHead({
             name: 'US School Calendar Trends Dataset',
             description: 'Reviewed U.S. school district calendar records used for MySchoolDates trend reporting, including first day, last day, winter break signal, spring break signal, source availability, and district page references.',
             url: 'https://myschooldates.com/datasets/school-calendar-trends',
-            dateModified: '2026-08-14',
-            version: 'v3.0',
+            dateModified: '2026-08-21',
+            version: 'v4.0',
             temporalCoverage: '2026-2027',
             spatialCoverage: 'United States',
             creator: {

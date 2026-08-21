@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const pageTitle = 'Winter Break 2026 | School Calendar Dates and Trends'
-const pageDescription = 'See 2026 winter break school calendar trends from 175 reviewed U.S. district calendars, including the December 21, 2026 start-date cluster.'
+const pageDescription = 'See 2026 winter break school calendar trends from 205 reviewed U.S. district calendars, including the December 21, 2026 start-date cluster.'
 const pageUrl = 'https://myschooldates.com/winter-break-2026'
 
 const breakRows = [
-  ['December 21, 2026', '151 records', 'Strongest winter break start-date signal in the current dataset.'],
-  ['December 23-24, 2026', '17 records', 'Later starts appear in some district calendars and regional patterns.'],
-  ['Other or not listed', '7 records', 'Some records use different labels or do not list a clean winter break start signal.'],
+  ['December 21, 2026', '179 records', 'Strongest winter break start-date signal in the current dataset.'],
+  ['December 23-24, 2026', '18 records', 'Later starts appear in some district calendars and regional patterns.'],
+  ['Other or not listed', '8 records', 'Some records use different labels or do not list a clean winter break start signal.'],
 ]
 
 const faqRows = [
@@ -74,26 +74,27 @@ useHead({
 </script>
 
 <template>
-  <main class="bg-gray-50">
-    <article class="mx-auto max-w-4xl px-4 py-10">
-      <nav class="mb-6 flex flex-wrap items-center gap-2 text-sm text-gray-500" aria-label="Breadcrumb">
-        <NuxtLink to="/" class="font-medium text-gray-600 hover:text-blue-600">Home</NuxtLink>
-        <span aria-hidden="true">/</span>
-        <NuxtLink to="/school-calendar-trends" class="font-medium text-gray-600 hover:text-blue-600">Calendar Data</NuxtLink>
-        <span aria-hidden="true">/</span>
-        <span class="font-semibold text-gray-900" aria-current="page">Winter Break 2026</span>
-      </nav>
+  <main id="top" class="bg-gray-50">
+    <article class="site-page-shell py-10">
+      <Breadcrumb
+        class="mb-6"
+        :items="[
+          { label: 'Home', href: '/' },
+          { label: 'School Calendar Trends', href: '/school-calendar-trends' },
+          { label: 'Winter Break 2026' },
+        ]"
+      />
 
       <header class="rounded-lg border border-gray-200 bg-white p-6 sm:p-8">
         <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">School Break Trend Guide</p>
         <h1 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Winter Break 2026</h1>
         <p class="mt-4 max-w-3xl text-lg leading-relaxed text-gray-600">
-          December 21, 2026 is the dominant winter break start-date signal in the current MySchoolDates 2026-2027 trend dataset, appearing in 151 of 175 reviewed district calendar records.
+          December 21, 2026 is the dominant winter break start-date signal in the current MySchoolDates 2026-2027 trend dataset, appearing in 179 of 205 reviewed district calendar records.
         </p>
         <div class="mt-5 flex flex-wrap gap-2 text-sm text-gray-600">
-          <span class="rounded-lg bg-gray-100 px-3 py-1">175 reviewed calendars</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">25 states</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified August 14, 2026</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">205 reviewed calendars</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">31 states</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified August 21, 2026</span>
         </div>
       </header>
 

@@ -1,21 +1,21 @@
 <script setup lang="ts">
 const pageTitle = 'Spring Break 2027 | School Calendar Dates and Trends'
-const pageDescription = 'Compare spring break 2027 timing patterns from 175 reviewed U.S. district calendars, including March 22, March 15, April 5, and March 29 clusters.'
+const pageDescription = 'Compare spring break 2027 timing patterns from 205 reviewed U.S. district calendars, including March 15, March 22, March 29, and April 5 clusters.'
 const pageUrl = 'https://myschooldates.com/spring-break-2027'
 
 const breakRows = [
-  ['March 22, 2027', '44 districts'],
-  ['March 15, 2027', '42 districts'],
-  ['April 5, 2027', '26 districts'],
-  ['March 29, 2027', '25 districts'],
-  ['March 8, 2027', '12 districts'],
-  ['Other or not listed', '26 districts'],
+  ['March 15, 2027', '56 districts'],
+  ['March 22, 2027', '48 districts'],
+  ['March 29, 2027', '31 districts'],
+  ['April 5, 2027', '27 districts'],
+  ['March 8, 2027', '14 districts'],
+  ['Other or not listed', '29 districts'],
 ]
 
 const faqRows = [
   {
     q: 'When is spring break 2027 for most schools?',
-    a: 'In the current MySchoolDates 2026-2027 trend dataset, March 22, 2027 is the largest spring break start-date cluster, followed by March 15, April 5, and March 29.',
+    a: 'In the current MySchoolDates 2026-2027 trend dataset, March 15, 2027 is the largest spring break start-date cluster, followed by March 22, March 29, and April 5.',
   },
   {
     q: 'Why do school districts have different spring break dates?',
@@ -77,33 +77,34 @@ useHead({
 </script>
 
 <template>
-  <main class="bg-gray-50">
-    <article class="mx-auto max-w-4xl px-4 py-10">
-      <nav class="mb-6 flex flex-wrap items-center gap-2 text-sm text-gray-500" aria-label="Breadcrumb">
-        <NuxtLink to="/" class="font-medium text-gray-600 hover:text-blue-600">Home</NuxtLink>
-        <span aria-hidden="true">/</span>
-        <NuxtLink to="/school-calendar-trends" class="font-medium text-gray-600 hover:text-blue-600">Calendar Data</NuxtLink>
-        <span aria-hidden="true">/</span>
-        <span class="font-semibold text-gray-900" aria-current="page">Spring Break 2027</span>
-      </nav>
+  <main id="top" class="bg-gray-50">
+    <article class="site-page-shell py-10">
+      <Breadcrumb
+        class="mb-6"
+        :items="[
+          { label: 'Home', href: '/' },
+          { label: 'School Calendar Trends', href: '/school-calendar-trends' },
+          { label: 'Spring Break 2027' },
+        ]"
+      />
 
       <header class="rounded-lg border border-gray-200 bg-white p-6 sm:p-8">
         <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">School Break Trend Guide</p>
         <h1 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Spring Break 2027</h1>
         <p class="mt-4 max-w-3xl text-lg leading-relaxed text-gray-600">
-          Spring break 2027 is more varied than winter break. In the current MySchoolDates trend dataset, the largest cluster begins March 22, 2027, followed by March 15, April 5, and March 29.
+          Spring break 2027 is more varied than winter break. In the current MySchoolDates trend dataset, the largest cluster begins March 15, 2027, followed by March 22, March 29, and April 5.
         </p>
         <div class="mt-5 flex flex-wrap gap-2 text-sm text-gray-600">
-          <span class="rounded-lg bg-gray-100 px-3 py-1">175 reviewed calendars</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">25 states</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified August 14, 2026</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">205 reviewed calendars</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">31 states</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified August 21, 2026</span>
         </div>
       </header>
 
       <section class="mt-6 rounded-lg border border-emerald-100 bg-emerald-50 p-6">
         <h2 class="text-xl font-semibold text-gray-900">Quick Answer</h2>
         <p class="mt-3 text-sm leading-relaxed text-emerald-950">
-          March 22, 2027 is the most common spring break start-date signal in the reviewed dataset, but March 15, March 29, April 5, and March 8 are also important clusters.
+          March 15, 2027 is the most common spring break start-date signal in the reviewed dataset, but March 22, March 29, April 5, and March 8 are also important clusters.
         </p>
       </section>
 

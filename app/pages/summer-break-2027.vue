@@ -1,19 +1,19 @@
 <script setup lang="ts">
 const pageTitle = 'Summer Break 2027 | Last Day of School Trends'
-const pageDescription = 'See when summer break starts in 2027 using MySchoolDates trend data from 175 reviewed district calendars, including May and June last-day patterns.'
+const pageDescription = 'See when summer break starts in 2027 using MySchoolDates trend data from 205 reviewed district calendars, including May and June last-day patterns.'
 const pageUrl = 'https://myschooldates.com/summer-break-2027'
 
 const endRows = [
-  ['May', '99 districts', 'May endings are more common in the reviewed 2026-2027 sample.'],
-  ['June', '76 districts', 'June endings remain important in northern, western, and some California district records.'],
+  ['May', '125 districts', 'May endings are more common in the reviewed 2026-2027 sample.'],
+  ['June', '80 districts', 'June endings remain important in northern, western, and some California district records.'],
 ]
 
 const lastDayRows = [
-  ['May 27, 2027', '38 districts'],
-  ['May 26, 2027', '21 districts'],
-  ['May 28, 2027', '18 districts'],
+  ['May 27, 2027', '43 districts'],
+  ['May 26, 2027', '24 districts'],
+  ['May 28, 2027', '24 districts'],
   ['June 4, 2027', '11 districts'],
-  ['June 10, 2027', '10 districts'],
+  ['May 21, 2027', '11 districts'],
 ]
 
 const faqRows = [
@@ -23,7 +23,7 @@ const faqRows = [
   },
   {
     q: 'Do most schools end in May or June 2027?',
-    a: 'In the reviewed dataset, 99 of 175 district calendars end in May and 76 end in June.',
+    a: 'In the reviewed dataset, 125 of 205 district calendars end in May and 80 end in June.',
   },
   {
     q: 'How many weeks is summer break in America?',
@@ -81,15 +81,16 @@ useHead({
 </script>
 
 <template>
-  <main class="bg-gray-50">
-    <article class="mx-auto max-w-4xl px-4 py-10">
-      <nav class="mb-6 flex flex-wrap items-center gap-2 text-sm text-gray-500" aria-label="Breadcrumb">
-        <NuxtLink to="/" class="font-medium text-gray-600 hover:text-blue-600">Home</NuxtLink>
-        <span aria-hidden="true">/</span>
-        <NuxtLink to="/school-calendar-trends" class="font-medium text-gray-600 hover:text-blue-600">Calendar Data</NuxtLink>
-        <span aria-hidden="true">/</span>
-        <span class="font-semibold text-gray-900" aria-current="page">Summer Break 2027</span>
-      </nav>
+  <main id="top" class="bg-gray-50">
+    <article class="site-page-shell py-10">
+      <Breadcrumb
+        class="mb-6"
+        :items="[
+          { label: 'Home', href: '/' },
+          { label: 'School Calendar Trends', href: '/school-calendar-trends' },
+          { label: 'Summer Break 2027' },
+        ]"
+      />
 
       <header class="rounded-lg border border-gray-200 bg-white p-6 sm:p-8">
         <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">School Calendar Trend Guide</p>
@@ -98,9 +99,9 @@ useHead({
           Summer break 2027 usually begins after a district's final student day. In the current MySchoolDates trend dataset, May endings are more common than June endings, and May 27, 2027 is the most common last student day.
         </p>
         <div class="mt-5 flex flex-wrap gap-2 text-sm text-gray-600">
-          <span class="rounded-lg bg-gray-100 px-3 py-1">175 reviewed calendars</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">25 states</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified August 14, 2026</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">205 reviewed calendars</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">31 states</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified August 21, 2026</span>
         </div>
       </header>
 

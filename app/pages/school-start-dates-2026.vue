@@ -1,34 +1,34 @@
 <script setup lang="ts">
 const pageTitle = 'School Start Dates 2026 | When Do U.S. Schools Start?'
-const pageDescription = 'See when U.S. schools start in 2026 using MySchoolDates calendar trend data from 175 reviewed district calendars, including August start patterns and common first days.'
+const pageDescription = 'See when U.S. schools start in 2026 using MySchoolDates calendar trend data from 205 reviewed district calendars, including August start patterns and common first days.'
 const pageUrl = 'https://myschooldates.com/school-start-dates-2026'
 
 const startRows = [
-  ['August', '147 of 175 reviewed districts', 'Dominant start month in the current 2026-2027 dataset.'],
-  ['July', '8 of 175 reviewed districts', 'Mostly early-start, year-round, track-calendar, or regional calendar patterns.'],
-  ['September', '20 of 175 reviewed districts', 'Later starts appear in several northern and western district calendars.'],
+  ['August', '176 of 205 reviewed districts', 'Dominant start month in the current 2026-2027 dataset.'],
+  ['July', '9 of 205 reviewed districts', 'Mostly early-start, year-round, track-calendar, or regional calendar patterns.'],
+  ['September', '20 of 205 reviewed districts', 'Later starts appear in several northern and western district calendars.'],
 ]
 
 const firstDayRows = [
-  ['August 24, 2026', '29 districts'],
-  ['August 12, 2026', '25 districts'],
-  ['August 10, 2026', '22 districts'],
-  ['August 11, 2026', '12 districts'],
-  ['August 13, 2026', '9 districts'],
+  ['August 24, 2026', '35 districts'],
+  ['August 12, 2026', '30 districts'],
+  ['August 10, 2026', '24 districts'],
+  ['August 11, 2026', '14 districts'],
+  ['August 13, 2026', '13 districts'],
 ]
 
 const faqRows = [
   {
     q: 'What month do most U.S. schools start in 2026?',
-    a: 'In the current MySchoolDates 2026-2027 trend dataset, August is the dominant start month. One hundred forty-seven of 175 reviewed district calendars begin in August 2026.',
+    a: 'In the current MySchoolDates 2026-2027 trend dataset, August is the dominant start month. One hundred seventy-six of 205 reviewed district calendars begin in August 2026.',
   },
   {
     q: 'What are the most common first days of school in 2026?',
-    a: 'August 24, 2026 is the most common first student day in the reviewed dataset, appearing in 29 district records, followed by August 12 in 25 records.',
+    a: 'August 24, 2026 is the most common first student day in the reviewed dataset, appearing in 35 district records, followed by August 12 in 30 records.',
   },
   {
     q: 'Do some schools start in July 2026?',
-    a: 'Yes. Eight reviewed district calendars start in July 2026, usually because of early-start, year-round, track-calendar, or regional scheduling patterns.',
+    a: 'Yes. Nine reviewed district calendars start in July 2026, usually because of early-start, year-round, track-calendar, or regional scheduling patterns.',
   },
 ]
 
@@ -82,26 +82,27 @@ useHead({
 </script>
 
 <template>
-  <main class="bg-gray-50">
-    <article class="mx-auto max-w-4xl px-4 py-10">
-      <nav class="mb-6 flex flex-wrap items-center gap-2 text-sm text-gray-500" aria-label="Breadcrumb">
-        <NuxtLink to="/" class="font-medium text-gray-600 hover:text-blue-600">Home</NuxtLink>
-        <span aria-hidden="true">/</span>
-        <NuxtLink to="/school-calendar-trends" class="font-medium text-gray-600 hover:text-blue-600">Calendar Data</NuxtLink>
-        <span aria-hidden="true">/</span>
-        <span class="font-semibold text-gray-900" aria-current="page">School Start Dates 2026</span>
-      </nav>
+  <main id="top" class="bg-gray-50">
+    <article class="site-page-shell py-10">
+      <Breadcrumb
+        class="mb-6"
+        :items="[
+          { label: 'Home', href: '/' },
+          { label: 'School Calendar Trends', href: '/school-calendar-trends' },
+          { label: 'School Start Dates 2026' },
+        ]"
+      />
 
       <header class="rounded-lg border border-gray-200 bg-white p-6 sm:p-8">
         <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">School Calendar Trend Guide</p>
         <h1 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">School Start Dates 2026</h1>
         <p class="mt-4 max-w-3xl text-lg leading-relaxed text-gray-600">
-          Most reviewed U.S. school districts start the 2026-2027 school year in August 2026. In the current MySchoolDates trend dataset, 147 of 175 reviewed district calendars begin in August.
+          Most reviewed U.S. school districts start the 2026-2027 school year in August 2026. In the current MySchoolDates trend dataset, 176 of 205 reviewed district calendars begin in August.
         </p>
         <div class="mt-5 flex flex-wrap gap-2 text-sm text-gray-600">
-          <span class="rounded-lg bg-gray-100 px-3 py-1">175 reviewed calendars</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">25 states</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified August 14, 2026</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">205 reviewed calendars</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">31 states</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified August 21, 2026</span>
         </div>
       </header>
 
