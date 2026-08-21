@@ -121,7 +121,7 @@ const datasetChartCards = [
 const fieldRows = [
   ['district', 'District or short district label used in the report appendix.', 'AUHSD'],
   ['state', 'U.S. state associated with the district calendar record.', 'California'],
-  ['myschooldates_page', 'MySchoolDates district calendar page used as the reviewed record entry point.', 'https://myschooldates.com/anaheim-union-high-school-district-calendar'],
+  ['myschooldates_page', 'MySchoolDates school-year calendar page used as the reviewed record entry point.', 'https://myschooldates.com/anaheim-union-high-school-district-calendar/2026-2027'],
   ['first_day', 'Reviewed first student day or first day signal for the 2026-2027 school year.', 'Aug 12, 2026'],
   ['last_day', 'Reviewed last student day or school-year end signal.', 'May 27, 2027'],
   ['winter_break_signal', 'Reviewed winter break start signal when available in the calendar record.', 'Dec 21, 2026'],

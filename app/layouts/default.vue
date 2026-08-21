@@ -9,6 +9,23 @@ const isStateLandingPage = computed(() => route.path === `/${currentStateSlug.va
 const mobileMenuOpen = ref(false)
 const activeDesktopMenu = ref<'states' | 'calendar' | null>(null)
 
+const popularDistrictSlugs = new Set([
+  'los-angeles-unified-school-district-calendar',
+  'miami-dade-school-calendar',
+  'houston-independent-school-district-calendar',
+  'wake-county-school-calendar',
+  'fairfax-county-school-calendar',
+  'rosemount-apple-valley-eagan-public-schools-calendar',
+])
+const { data: footerDistricts } = await useAsyncData('footer-popular-district-links', async () => {
+  const districts = await queryCollection('districts').select('slug', 'currentSchoolYear').all()
+  return (districts ?? []).filter(district => popularDistrictSlugs.has(district.slug))
+})
+const footerDistrictPath = (slug: string) => {
+  const district = (footerDistricts.value ?? []).find(item => item.slug === slug)
+  return district ? districtCalendarPath(district) : `/${slug}`
+}
+
 const calendarDataLinks = [
   {
     to: '/school-calendar-trends',
@@ -253,12 +270,12 @@ watch(() => route.fullPath, () => {
           <div v-if="!isStateLandingPage">
             <p class="site-footer__heading text-sm font-semibold mb-3">Popular Districts</p>
             <ul class="space-y-2">
-              <li><NuxtLink to="/los-angeles-unified-school-district-calendar" class="text-sm text-gray-500 hover:text-blue-600">Los Angeles Unified</NuxtLink></li>
-              <li><NuxtLink to="/miami-dade-school-calendar" class="text-sm text-gray-500 hover:text-blue-600">Miami-Dade School Calendar</NuxtLink></li>
-              <li><NuxtLink to="/houston-independent-school-district-calendar" class="text-sm text-gray-500 hover:text-blue-600">Houston ISD</NuxtLink></li>
-              <li><NuxtLink to="/wake-county-school-calendar" class="text-sm text-gray-500 hover:text-blue-600">Wake County</NuxtLink></li>
-              <li><NuxtLink to="/fairfax-county-school-calendar" class="text-sm text-gray-500 hover:text-blue-600">Fairfax County</NuxtLink></li>
-              <li><NuxtLink to="/rosemount-apple-valley-eagan-public-schools-calendar" class="text-sm text-gray-500 hover:text-blue-600">District 196 Calendar</NuxtLink></li>
+              <li><NuxtLink :to="footerDistrictPath('los-angeles-unified-school-district-calendar')" class="text-sm text-gray-500 hover:text-blue-600">Los Angeles Unified</NuxtLink></li>
+              <li><NuxtLink :to="footerDistrictPath('miami-dade-school-calendar')" class="text-sm text-gray-500 hover:text-blue-600">Miami-Dade School Calendar</NuxtLink></li>
+              <li><NuxtLink :to="footerDistrictPath('houston-independent-school-district-calendar')" class="text-sm text-gray-500 hover:text-blue-600">Houston ISD</NuxtLink></li>
+              <li><NuxtLink :to="footerDistrictPath('wake-county-school-calendar')" class="text-sm text-gray-500 hover:text-blue-600">Wake County</NuxtLink></li>
+              <li><NuxtLink :to="footerDistrictPath('fairfax-county-school-calendar')" class="text-sm text-gray-500 hover:text-blue-600">Fairfax County</NuxtLink></li>
+              <li><NuxtLink :to="footerDistrictPath('rosemount-apple-valley-eagan-public-schools-calendar')" class="text-sm text-gray-500 hover:text-blue-600">District 196 Calendar</NuxtLink></li>
             </ul>
           </div>
           <div v-else>

@@ -200,7 +200,7 @@
     { "label": "No School", "name": "Unassigned Day — No School", "date": "2027-09-21", "type": "no_school" },
     { "label": "No School", "name": "Unassigned Day — No School", "date": "2027-10-11", "type": "no_school" },
     { "label": "No School", "name": "Thanksgiving Week — No School", "date": "2027-11-22", "endDate": "2027-11-26", "type": "break_start", "description": "November 22–24 are unassigned days; November 25–26 are the Thanksgiving Holiday." },
-    { "label": "Recess", "name": "Winter Recess", "date": "2027-12-20", "endDate": "2028-01-07", "type": "break_start", "description": "Second semester begins January 10." },
+    { "label": "Recess", "name": "Winter Recess", "date": "2027-12-20", "endDate": "2028-01-07", "type": "break_start", "description": "Second semester begins January 10.", "schemaDescription": "Winter Recess runs December 20, 2027, through January 7, 2028. Second semester begins January 10." },
     { "label": "Semester", "name": "Second Semester Begins", "date": "2028-01-10", "type": "semester_start", "description": "A school may select January 10 as a pupil-free day. If it does, June 8 becomes an instructional day." },
     { "label": "Recess", "name": "Spring Recess", "date": "2028-04-10", "endDate": "2028-04-14", "type": "break_start" },
     { "label": "No School", "name": "Armenian Genocide Remembrance Day", "date": "2028-04-24", "type": "holiday" },

@@ -30,7 +30,7 @@
   "seoDescription": "See the verified LAUSD 2026–27 instructional calendar, including districtwide no-school dates, winter and spring recess, the official PDF, and an ICS download.",
   "schemaCalendarName": "LAUSD Calendar 2026–27",
   "schemaDatasetName": "LAUSD 2026–27 Calendar Dataset",
-  "schemaDatasetDescription": "Reviewed Los Angeles Unified School District dates for 2026–27, including districtwide no-school dates, winter and spring recess, unassigned days, holidays, the January 11 conditional pupil-free note, and the official PDF.",
+  "schemaDatasetDescription": "Reviewed Los Angeles Unified School District calendar data for 2026–27, including districtwide no-school dates, winter and spring recess, unassigned days, holidays, and the January 11 conditional pupil-free note, based on LAUSD’s official calendar page and instructional calendar PDF.",
   "schemaCalendarDownloadName": "MySchoolDates LAUSD 2026–27 calendar import file",
   "schemaIsAccessibleForFree": true,
   "schemaKeywords": [
@@ -184,7 +184,7 @@
     { "label": "No School", "name": "September Four-Day Weekend", "date": "2026-09-04", "endDate": "2026-09-07", "type": "holiday", "description": "Admission Day falls on Friday, September 4, followed by Labor Day on Monday, September 7." },
     { "label": "No School", "name": "Unassigned Day — No School", "date": "2026-09-21", "type": "no_school" },
     { "label": "No School", "name": "Thanksgiving Week — No School", "date": "2026-11-23", "endDate": "2026-11-27", "type": "break_start", "description": "November 23–25 are unassigned days; November 26–27 are the Thanksgiving Holiday." },
-    { "label": "Recess", "name": "Winter Recess", "date": "2026-12-21", "endDate": "2027-01-08", "type": "break_start", "description": "Second semester begins January 11." },
+    { "label": "Recess", "name": "Winter Recess", "date": "2026-12-21", "endDate": "2027-01-08", "type": "break_start", "description": "Second semester begins January 11.", "schemaDescription": "Winter Recess runs December 21, 2026, through January 8, 2027. Second semester begins January 11." },
     { "label": "Semester", "name": "Second Semester Begins", "date": "2027-01-11", "type": "semester_start", "description": "A school may select January 11 as a pupil-free day. If it does, June 7 becomes an instructional day." },
     { "label": "Recess", "name": "Spring Recess", "date": "2027-03-22", "endDate": "2027-03-26", "type": "break_start" },
     { "label": "No School", "name": "Farm Workers Day", "date": "2027-03-31", "type": "holiday" },

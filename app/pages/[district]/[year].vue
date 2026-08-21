@@ -146,7 +146,7 @@ const { data: yearOptions } = await useAsyncData(`years:${slug}:${year}`, async 
 
 const isCurrentYear = district.value.currentSchoolYear === year
 const hubUrl = `https://myschooldates.com/${slug}`
-const canonicalUrl = isCurrentYear ? hubUrl : `${hubUrl}/${year}`
+const canonicalUrl = `${hubUrl}/${year}`
 const availableYears = computed(() => {
   const years = [...(yearOptions.value ?? [])]
   const sortMode = (cal.value as any)?.yearSwitcherSort ?? (cal.value as any)?.meta?.yearSwitcherSort
@@ -160,7 +160,7 @@ const visibleYearSwitcherYears = computed(() => {
   }
   return availableYears.value
 })
-const yearLink = (y: string) => y === district.value!.currentSchoolYear ? `/${slug}` : `/${slug}/${y}`
+const yearLink = (y: string) => `/${slug}/${y}`
 const yearSwitcherPosition = computed(() =>
   (cal.value as any)?.yearSwitcherPosition ?? (cal.value as any)?.meta?.yearSwitcherPosition ?? 'default'
 )
@@ -768,44 +768,6 @@ const faqs = computed(() => {
   }
   return allFaqs.value
 })
-const faqSchemaItems = computed(() => {
-  if ((cal.value as any).hideFaqSchema || (cal.value as any).meta?.hideFaqSchema || (district.value as any).hideFaqSchema || (district.value as any).meta?.hideFaqSchema) return []
-  const limit = (cal.value as any).faqSchemaLimit ?? (cal.value as any).meta?.faqSchemaLimit ?? (district.value as any).faqSchemaLimit ?? (district.value as any).meta?.faqSchemaLimit
-  const excludeDistrictFaqs = Boolean((cal.value as any)?.excludeDistrictFaqs ?? (cal.value as any)?.meta?.excludeDistrictFaqs)
-  const includeQuestions = dedupeQuestions([
-    ...(excludeDistrictFaqs ? [] : (((district.value as any).faqSchemaQuestions ?? (district.value as any).meta?.faqSchemaQuestions ?? []) as string[])),
-    ...(((cal.value as any).faqSchemaQuestions ?? (cal.value as any).meta?.faqSchemaQuestions ?? []) as string[]),
-  ])
-  const excludes = [
-    ...(((district.value as any).faqSchemaExclude ?? (district.value as any).meta?.faqSchemaExclude ?? []) as string[]),
-    ...(((cal.value as any).faqSchemaExclude ?? (cal.value as any).meta?.faqSchemaExclude ?? []) as string[]),
-  ].map(item => item.toLowerCase())
-  const includedCandidates = includeQuestions.length
-    ? faqs.value.filter(item => includeQuestions.some(q => normalizeFaqQuestion(q) === normalizeFaqQuestion(item.q)))
-    : allFaqs.value
-  const visibleQuestionKeys = new Set(faqs.value.map(item => normalizeFaqQuestion(item.q)))
-  const visibleCandidates = dedupeFaqItems(includedCandidates.filter(item => visibleQuestionKeys.has(normalizeFaqQuestion(item.q))))
-  const candidates = excludes.length
-    ? visibleCandidates.filter(item => !excludes.some(exclude => item.q.toLowerCase().includes(exclude)))
-    : visibleCandidates
-  if (includeQuestions.length) {
-    return typeof limit === 'number' && limit > 0 ? candidates.slice(0, limit) : candidates
-  }
-  if (typeof limit !== 'number' || limit <= 0) return candidates
-  const priority = (q: string) => {
-    const text = q.toLowerCase()
-    if (text.includes('first day') || text.includes('start')) return 1
-    if (text.includes('last day') || text.includes('end')) return 2
-    if (text.includes('pdf') || text.includes('print')) return 3
-    if (text.includes('google calendar') || text.includes('ics') || text.includes('import')) return 4
-    if (text.includes('weather') || text.includes('make-up') || text.includes('makeup')) return 5
-    return 20
-  }
-  return [...candidates]
-    .sort((a, b) => priority(a.q) - priority(b.q))
-    .slice(0, limit)
-})
-
 const heroSummary = computed(() => (cal.value as any).heroSummary ?? (cal.value as any).meta?.heroSummary ?? '')
 const heroSummaryParagraphs = computed(() =>
   heroSummary.value
@@ -930,9 +892,11 @@ const sourceCalendarDateCreated = (cal.value as any).sourceCalendarDateCreated ?
 const sourceCalendarDateModified = (cal.value as any).sourceCalendarDateModified ?? (cal.value as any).meta?.sourceCalendarDateModified
 const sourcePdfSameAs = (cal.value as any).sourcePdfSameAs ?? (cal.value as any).meta?.sourcePdfSameAs
 const sourcePageCitationUrl = sourceUrl && sourceUrl !== basedOnUrl ? sourceUrl : ''
+const sourceCalendarEntityId = basedOnUrl
+const sourceCalendarPageEntityId = sourcePageCitationUrl
 const sourceCitation = [
-  ...(basedOnUrl ? [{ '@id': `${canonicalUrl}#${sourceCalendarId}` }] : []),
-  ...(sourcePageCitationUrl ? [{ '@id': `${canonicalUrl}#source-calendar-page` }] : []),
+  ...(sourceCalendarEntityId ? [{ '@id': sourceCalendarEntityId }] : []),
+  ...(sourceCalendarPageEntityId ? [{ '@id': sourceCalendarPageEntityId }] : []),
 ]
 const calendarTypeName = String((cal.value as any)?.calendarType ?? '').replace(/[_-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 const schemaCalendarName = (cal.value as any)?.schemaCalendarName ?? (cal.value as any)?.meta?.schemaCalendarName ?? (calendarTypeName
@@ -951,11 +915,29 @@ const schemaKeywords = [
 const schemaIsAccessibleForFree = (cal.value as any)?.schemaIsAccessibleForFree ?? (cal.value as any)?.meta?.schemaIsAccessibleForFree ?? (district.value as any)?.schemaIsAccessibleForFree ?? (district.value as any)?.meta?.schemaIsAccessibleForFree
 const schemaDatasetVersion = (cal.value as any)?.schemaDatasetVersion ?? (cal.value as any)?.meta?.schemaDatasetVersion
 const schemaDatasetDateModified = (cal.value as any)?.schemaDatasetDateModified ?? (cal.value as any)?.meta?.schemaDatasetDateModified ?? pageDateModified
-const schemaVariableMeasured = (((cal.value as any)?.schemaVariableMeasured ?? (cal.value as any)?.meta?.schemaVariableMeasured ?? []) as string[])
+const configuredSchemaVariableMeasured = (((cal.value as any)?.schemaVariableMeasured ?? (cal.value as any)?.meta?.schemaVariableMeasured ?? []) as Array<string | Record<string, any>>)
+const schemaVariableMeasured = (configuredSchemaVariableMeasured.length
+  ? configuredSchemaVariableMeasured
+  : [
+      'School calendar event name',
+      'School calendar event date',
+      'School calendar event type',
+    ]
+).map(variable => typeof variable === 'string'
+  ? { '@type': 'PropertyValue', name: variable }
+  : variable)
+const isPdfResource = (url?: string, encodingFormat?: string) =>
+  encodingFormat === 'application/pdf' ||
+  Boolean(url && (/\.pdf(?:$|[?#])/i.test(url) || /drive\.google\.com\/file\//i.test(url)))
+const sourceCalendarIsPdf = isPdfResource(
+  basedOnUrl,
+  sourcePdfUrl && !sourcePdfIsArchivedCopy ? 'application/pdf' : undefined,
+)
 const sourceCalendarEntity = basedOnUrl ? {
-  '@type': 'CreativeWork',
-  '@id': `${canonicalUrl}#${sourceCalendarId}`,
+  '@type': sourceCalendarIsPdf ? 'DigitalDocument' : 'WebPage',
+  '@id': sourceCalendarEntityId,
   name: sourceCalendarName,
+  ...(sourceCalendarIsPdf ? { encodingFormat: 'application/pdf' } : {}),
   ...(sourceVersion ? { version: sourceVersion } : {}),
   ...(sourceCalendarDateCreated ? { dateCreated: sourceCalendarDateCreated } : {}),
   ...(sourceCalendarDateModified ? { dateModified: sourceCalendarDateModified } : {}),
@@ -963,43 +945,53 @@ const sourceCalendarEntity = basedOnUrl ? {
   url: basedOnUrl,
   publisher: { '@id': districtAbout['@id'] },
 } : null
-const additionalSourceCalendarEntities = (((cal.value as any)?.schemaAdditionalSourceCalendars ?? (cal.value as any)?.meta?.schemaAdditionalSourceCalendars ?? []) as any[])
+const additionalSourceCalendarConfigs = (((cal.value as any)?.schemaAdditionalSourceCalendars ?? (cal.value as any)?.meta?.schemaAdditionalSourceCalendars ?? []) as any[])
   .filter(source => source?.url && source?.name)
-  .map((source, index) => ({
-    '@type': source.type ?? 'CreativeWork',
-      '@id': source.id ? `${canonicalUrl}#${source.id}` : `${canonicalUrl}#source-calendar-${index + 2}`,
+  .filter((source, index, sources) =>
+    source.url !== sourceCalendarEntityId &&
+    source.url !== sourceCalendarPageEntityId &&
+    sources.findIndex(candidate => candidate.url === source.url) === index,
+  )
+const additionalSourceCalendarEntities = additionalSourceCalendarConfigs
+  .map((source) => {
+    const sourceIsPdf = isPdfResource(source.url, source.encodingFormat)
+    return {
+      '@type': sourceIsPdf ? 'DigitalDocument' : source.type ?? 'CreativeWork',
+      '@id': source.url,
       name: source.name,
+      ...(sourceIsPdf ? { encodingFormat: 'application/pdf' } : source.encodingFormat ? { encodingFormat: source.encodingFormat } : {}),
       ...(source.version ? { version: source.version } : {}),
       ...(source.dateCreated ? { dateCreated: source.dateCreated } : {}),
       ...(source.dateModified ? { dateModified: source.dateModified } : {}),
       ...(source.datePublished ? { datePublished: source.datePublished } : {}),
       ...(source.sameAs ? { sameAs: source.sameAs } : {}),
       url: source.url,
-    publisher: source.publisherName ? {
-      '@type': 'EducationalOrganization',
-      name: source.publisherName,
-      ...(source.publisherUrl ? { url: source.publisherUrl } : {}),
-    } : { '@id': districtAbout['@id'] },
-  }))
+      publisher: source.publisherName ? {
+        '@type': 'EducationalOrganization',
+        name: source.publisherName,
+        ...(source.publisherUrl ? { url: source.publisherUrl } : {}),
+      } : { '@id': districtAbout['@id'] },
+    }
+  })
 const sourceCalendarPageEntity = sourcePageCitationUrl ? {
   '@type': 'WebPage',
-  '@id': `${canonicalUrl}#source-calendar-page`,
+  '@id': sourceCalendarPageEntityId,
   name: `${district.value.name} calendar page`,
   url: sourcePageCitationUrl,
   publisher: { '@id': districtAbout['@id'] },
 } : null
 const sourceBasedOnRefs = [
-  ...(basedOnUrl ? [{ '@id': `${canonicalUrl}#${sourceCalendarId}` }] : []),
-  ...(sourcePageCitationUrl ? [{ '@id': `${canonicalUrl}#source-calendar-page` }] : []),
+  ...(sourceCalendarEntityId ? [{ '@id': sourceCalendarEntityId }] : []),
+  ...(sourceCalendarPageEntityId ? [{ '@id': sourceCalendarPageEntityId }] : []),
   ...additionalSourceCalendarEntities.map(source => ({ '@id': source['@id'] })),
 ]
-const sourceBasedOnValue = sourceBasedOnRefs.length === 1 ? sourceBasedOnRefs[0] : sourceBasedOnRefs
 const selectSourceRefs = (sourceIds: string[] | undefined) => Array.isArray(sourceIds)
   ? sourceIds
       .map(id => {
-        if ((id === 'source-calendar' || id === sourceCalendarId) && basedOnUrl) return { '@id': `${canonicalUrl}#${sourceCalendarId}` }
-        if (id === 'source-calendar-page' && sourcePageCitationUrl) return { '@id': `${canonicalUrl}#source-calendar-page` }
-        if (id && additionalSourceCalendarEntities.some(source => source['@id'] === `${canonicalUrl}#${id}`)) return { '@id': `${canonicalUrl}#${id}` }
+        if ((id === 'source-calendar' || id === sourceCalendarId) && sourceCalendarEntityId) return { '@id': sourceCalendarEntityId }
+        if (id === 'source-calendar-page' && sourceCalendarPageEntityId) return { '@id': sourceCalendarPageEntityId }
+        const additionalSourceIndex = additionalSourceCalendarConfigs.findIndex(source => source.id === id)
+        if (additionalSourceIndex >= 0) return { '@id': additionalSourceCalendarEntities[additionalSourceIndex]['@id'] }
         return null
       })
       .filter(Boolean)
@@ -1027,13 +1019,16 @@ const hideDatasetSchema = computed(() => Boolean((cal.value as any)?.hideDataset
 const spatialCoverageOverride = (cal.value as any)?.schemaSpatialCoverage ?? (cal.value as any)?.meta?.schemaSpatialCoverage ?? (district.value as any)?.schemaSpatialCoverage ?? (district.value as any)?.meta?.schemaSpatialCoverage
 const spatialCoverageValue = Array.isArray(spatialCoverageOverride)
   ? spatialCoverageOverride
-      .map(area => typeof area === 'string' ? { '@type': 'AdministrativeArea', name: area } : area)
+      .map(area => typeof area === 'string' ? { '@type': 'Place', name: area } : area)
       .filter(area => area?.name)
   : typeof spatialCoverageOverride === 'string'
-    ? spatialCoverageOverride
+    ? { '@type': 'Place', name: spatialCoverageOverride }
     : spatialCoverageOverride?.name
       ? spatialCoverageOverride
-      : [district.value.county, district.value.state].filter(Boolean).join(', ')
+      : {
+          '@type': 'Place',
+          name: `${district.value.name} service area${district.value.state ? `, ${district.value.state}` : ''}`,
+        }
 const hasSpatialCoverage = Array.isArray(spatialCoverageValue)
   ? spatialCoverageValue.length > 0
   : Boolean(spatialCoverageValue)
@@ -1045,13 +1040,18 @@ const datasetTemporalCoverage = computed(() => {
 const datasetEntity = hideDatasetSchema.value ? null : {
   '@type': 'Dataset',
   '@id': `${canonicalUrl}#calendar-dataset`,
+  identifier: {
+    '@type': 'PropertyValue',
+    propertyID: 'MySchoolDates dataset ID',
+    value: `${district.value.institutionId}:${cal.value.schoolYear}`,
+  },
   name: schemaDatasetName,
   description: datasetDescription,
   url: canonicalUrl,
   ...(schemaKeywords.length ? { keywords: schemaKeywords } : {}),
   ...(typeof schemaIsAccessibleForFree === 'boolean' ? { isAccessibleForFree: schemaIsAccessibleForFree } : {}),
   ...(schemaDatasetVersion ? { version: schemaDatasetVersion } : {}),
-  ...(schemaVariableMeasured.length ? { variableMeasured: schemaVariableMeasured } : {}),
+  variableMeasured: schemaVariableMeasured,
   license: schemaLicenseUrl,
   usageInfo: schemaLicenseUrl,
   inLanguage: 'en-US',
@@ -1096,7 +1096,7 @@ const schemaReviewedById = schemaReviewedBySetting === 'author' || !schemaReview
     : String(schemaReviewedBySetting)
 const siblingYearLinks = availableYears.value
   .filter(y => y !== year)
-  .map(y => y === district.value!.currentSchoolYear ? hubUrl : `${hubUrl}/${y}`)
+  .map(y => `${hubUrl}/${y}`)
 const configuredKeyDateSummaryItems = computed(() =>
   (((cal.value as any)?.keyDateSummaryItems ?? (cal.value as any)?.meta?.keyDateSummaryItems ?? []) as any[])
     .filter(item => item.date || item.start || item.displayDate)
@@ -1195,142 +1195,16 @@ function keyDateDateSeparatorText(event: any) {
   const separator = keyDateDateSeparator(event)
   return separator === '–' ? separator : ` ${separator} `
 }
-function keyDateSchemaProperties(event: any) {
-  const extraProperties = ((event.schemaAdditionalProperties ?? event.additionalProperties ?? []) as any[])
-    .filter(prop => prop?.name && prop?.value)
-    .map(prop => ({
-      '@type': 'PropertyValue',
-      name: prop.name,
-      value: prop.value,
-    }))
-  const dates = keyDateListDates(event)
-  if (dates.length) {
-    if (extraProperties.length && !event.datePropertyLabel) {
-      return extraProperties
-    }
-    return dates.map((date: string) => ({
-      '@type': 'PropertyValue',
-      name: event.datePropertyLabel ?? 'Opening date',
-      value: date,
-    })).concat(extraProperties)
-  }
-  if (extraProperties.length && !event.datePropertyLabel) {
-    return extraProperties
-  }
-  const range = event.endDate
-    ? { start: event.date, end: event.endDate }
-    : event.type === 'break_start'
-      ? { start: event.date, end: breaks.value.find((b: any) => b.name === event.name && b.start === event.date)?.end ?? event.date }
-      : { start: event.date, end: event.date }
-  if (range.start === range.end) {
-    return [
-      { '@type': 'PropertyValue', name: 'Date', value: range.start },
-      ...extraProperties,
-    ]
-  }
-  return [
-    { '@type': 'PropertyValue', name: 'Start date', value: range.start },
-    { '@type': 'PropertyValue', name: 'End date', value: range.end },
-    ...extraProperties,
-  ]
+const webPageMainEntity = datasetEntity ? { '@id': `${canonicalUrl}#calendar-dataset` } : null
+const breadcrumbId = `${canonicalUrl}#breadcrumb`
+const districtCalendarHubEntity = {
+  '@type': 'CollectionPage',
+  '@id': `${hubUrl}#webpage`,
+  url: hubUrl,
+  name: `${district.value.name} Calendars`,
+  isPartOf: { '@id': 'https://myschooldates.com/#website' },
+  about: { '@id': districtAbout['@id'] },
 }
-const keyDateItemListEvents = computed(() => {
-  if (configuredKeyDateSummaryItems.value.length) {
-    return configuredKeyDateSummaryItems.value.filter(event => event.date)
-  }
-  const HIGHLIGHT_TYPES = new Set(['school_start', 'school_end', 'break', 'break_start'])
-  if ((cal.value as any)?.itemListMode === 'allImportantDates') {
-    return (cal.value?.events ?? []).filter((event: any) => event.type !== 'break_end' && !event.excludeFromDateSchema)
-  }
-  return (cal.value?.events ?? []).filter((event: any) => !event.excludeFromDateSchema && (HIGHLIGHT_TYPES.has(event.type) || event.schemaEvent === true))
-})
-const customSectionSchemaParts = computed(() =>
-  customSections.value
-    .filter((section) => {
-      if ((section as any).schemaHasPart === false || (section as any).schema?.hasPart === false) return false
-      if ((section as any).schemaHasPart === true || (section as any).schema?.hasPart === true) return true
-      const text = `${section.id} ${section.label}`.toLowerCase()
-      return text.includes('download') ||
-        text.includes('pdf') ||
-        text.includes('preview') ||
-        text.includes('print') ||
-        text.includes('parent planning') ||
-        text.includes('family planning') ||
-        text.includes('planning guide') ||
-        text.includes('calendar insights') ||
-        text.includes('verification') ||
-        text.includes('review') ||
-        text.includes('update history')
-    })
-    .map((section) => {
-      const sectionBasedOn = (section as any).schema?.isBasedOn ?? (section as any).isBasedOn
-      const sectionBasedOnSources = Array.isArray(sectionBasedOn)
-        ? sectionBasedOn
-        : sectionBasedOn
-          ? [sectionBasedOn]
-          : []
-      const sectionBasedOnRefs = sectionBasedOnSources
-        .map((source: any) => {
-          const sourceId = typeof source === 'string' ? source : source?.['@id']
-          if (!sourceId) return null
-          return {
-            '@id': sourceId.startsWith('http')
-              ? sourceId
-              : `${canonicalUrl}#${sourceId.replace(/^#/, '')}`,
-          }
-        })
-        .filter(Boolean)
-      const sectionBasedOnValue = sectionBasedOnRefs.length === 1
-        ? sectionBasedOnRefs[0]
-        : sectionBasedOnRefs
-      return {
-        '@type': 'WebPageElement',
-        '@id': `${canonicalUrl}#${section.id}`,
-        name: section.label,
-        ...(sectionBasedOnRefs.length ? { isBasedOn: sectionBasedOnValue } : {}),
-      }
-    })
-)
-const yearNumbersSchemaParts = computed(() => {
-  const title = (cal.value as any)?.yearNumbersTitle ?? (cal.value as any)?.meta?.yearNumbersTitle ?? ''
-  return !hiddenSections.value.has('yearNumbers') && String(title).toLowerCase().includes('insights')
-    ? [{
-      '@type': 'WebPageElement',
-      '@id': `${canonicalUrl}#calendar-insights`,
-      name: title,
-    }]
-    : []
-})
-const includeArticleSchema = (district.value as any)?.includeArticleSchema !== false && (district.value as any)?.meta?.includeArticleSchema !== false && (cal.value as any)?.includeArticleSchema !== false && (cal.value as any)?.meta?.includeArticleSchema !== false
-const hideItemListSchema = computed(() => Boolean((cal.value as any)?.hideItemListSchema || (cal.value as any)?.meta?.hideItemListSchema))
-const keyDateItemListId = computed(() => String(
-  (cal.value as any)?.schemaKeyDateItemListId ?? (cal.value as any)?.meta?.schemaKeyDateItemListId ?? 'key-dates',
-).replace(/^#/, ''))
-const splitCalendarDateItemListSchema = computed(() => Boolean(
-  (cal.value as any)?.splitCalendarDateItemListSchema || (cal.value as any)?.meta?.splitCalendarDateItemListSchema,
-))
-const calendarDateItemListId = computed(() => String(
-  (cal.value as any)?.schemaCalendarDateItemListId ?? (cal.value as any)?.meta?.schemaCalendarDateItemListId ?? 'student-calendar-dates',
-).replace(/^#/, ''))
-const calendarDateItemListEvents = computed(() => {
-  if (!splitCalendarDateItemListSchema.value) return []
-  return (cal.value?.events ?? []).filter((event: any) => event.type !== 'break_end' && !event.excludeFromDateSchema)
-})
-if (datasetEntity && !hideItemListSchema.value && calendarDateItemListEvents.value.length) {
-  Object.assign(datasetEntity, { mainEntity: { '@id': `${canonicalUrl}#${calendarDateItemListId.value}` } })
-}
-const webPageMainEntityMode = (cal.value as any)?.webPageMainEntity ?? (cal.value as any)?.meta?.webPageMainEntity ?? (district.value as any)?.webPageMainEntity ?? (district.value as any)?.meta?.webPageMainEntity
-const webPageMainEntity = webPageMainEntityMode === 'none'
-  ? null
-  : webPageMainEntityMode === 'keyDates'
-    ? (!hideItemListSchema.value && keyDateItemListEvents.value.length ? { '@id': `${canonicalUrl}#${keyDateItemListId.value}` } : null)
-    : webPageMainEntityMode === 'dataset'
-      ? (datasetEntity ? { '@id': `${canonicalUrl}#calendar-dataset` } : null)
-      : datasetEntity
-        ? { '@id': `${canonicalUrl}#calendar-dataset` }
-        : !hideItemListSchema.value && keyDateItemListEvents.value.length
-          ? { '@id': `${canonicalUrl}#${keyDateItemListId.value}` }
-          : null
 const webPageEntity = {
   '@type': 'WebPage',
   '@id': `${canonicalUrl}#webpage`,
@@ -1351,17 +1225,7 @@ const webPageEntity = {
   },
   about: { '@id': districtAbout['@id'] },
   ...(webPageMainEntity ? { mainEntity: webPageMainEntity } : {}),
-  ...((datasetEntity || faqSchemaItems.value.length || customSectionSchemaParts.value.length || yearNumbersSchemaParts.value.length)
-    ? { hasPart: [
-      ...(includeArticleSchema ? [{ '@id': `${canonicalUrl}#calendar-analysis` }] : []),
-      ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
-      ...(!hideItemListSchema.value && keyDateItemListEvents.value.length ? [{ '@id': `${canonicalUrl}#${keyDateItemListId.value}` }] : []),
-      ...(!hideItemListSchema.value && calendarDateItemListEvents.value.length ? [{ '@id': `${canonicalUrl}#${calendarDateItemListId.value}` }] : []),
-      ...(faqSchemaItems.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
-      ...customSectionSchemaParts.value,
-      ...yearNumbersSchemaParts.value,
-    ] }
-    : {}),
+  breadcrumb: { '@id': breadcrumbId },
   ...(siblingYearLinks.length ? { relatedLink: siblingYearLinks } : {}),
   ...(webPageBasedOnRefs.length ? { isBasedOn: webPageBasedOnValue } : {}),
   ...(sourcePdfIsArchivedCopy ? {
@@ -1380,44 +1244,9 @@ const webPageEntity = {
     ],
   } : sourceCitation.length ? { citation: sourceCitation } : {}),
   isPartOf: {
-    '@id': 'https://myschooldates.com/#website',
+    '@id': `${hubUrl}#webpage`,
   },
 }
-const articleEntity = {
-  '@type': 'Article',
-  '@id': `${canonicalUrl}#calendar-analysis`,
-  headline: _pageTitle,
-  description: _pageDesc,
-  url: canonicalUrl,
-  inLanguage: 'en-US',
-  ...(pageDatePublished ? { datePublished: pageDatePublished } : {}),
-  ...(pageDateModified ? { dateModified: pageDateModified } : {}),
-  author: { '@id': 'https://myschooldates.com/author#person' },
-  publisher: { '@id': 'https://myschooldates.com/#organization' },
-  about: { '@id': districtAbout['@id'] },
-  isPartOf: { '@id': `${canonicalUrl}#webpage` },
-  ...(datasetEntity ? { mainEntity: { '@id': `${canonicalUrl}#calendar-dataset` } } : {}),
-  ...(sourceBasedOnRefs.length ? { isBasedOn: sourceBasedOnValue } : {}),
-}
-const faqPageEntity = faqSchemaItems.value.length ? {
-  '@type': 'FAQPage',
-  '@id': `${canonicalUrl}#faq`,
-  isPartOf: { '@id': `${canonicalUrl}#webpage` },
-  mainEntity: faqSchemaItems.value.map(f => ({
-    '@type': 'Question',
-    name: f.q,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: f.a,
-    },
-  })),
-} : null
-const keyDateItemListName = computed(() =>
-  (cal.value as any)?.schemaKeyDateItemListName ?? (cal.value as any)?.meta?.schemaKeyDateItemListName ?? `${district.value.shortName || district.value.name} ${displaySchoolYear.value} key school calendar dates`
-)
-const calendarDateItemListName = computed(() =>
-  (cal.value as any)?.schemaCalendarDateItemListName ?? (cal.value as any)?.meta?.schemaCalendarDateItemListName ?? `${district.value.shortName || district.value.name} ${displaySchoolYear.value} student calendar dates`
-)
 function keyDateDisplayName(event: { name: string; type: string; displayName?: string }) {
   if (event.displayName) return event.displayName
   if (event.type === 'break_start' || event.type === 'break_end') {
@@ -1428,91 +1257,6 @@ function keyDateDisplayName(event: { name: string; type: string; displayName?: s
   }
   return event.name
 }
-function keyDateSchemaDescription(event: any) {
-  if (event.hideSchemaDescription) return undefined
-  if (event.schemaDescription) return event.schemaDescription
-  if (event.description) return event.description
-  const districtLabel = district.value.shortName || district.value.name
-  const eventName = keyDateDisplayName(event)
-  if (event.type === 'school_start') {
-    if (/\b(open|opens)\b/i.test(eventName) && /grades?\s*1\s*[–-]\s*12/i.test(eventName)) {
-      return 'Schools are open for grades 1–12 beginning this date.'
-    }
-    return `The first day of classes for ${districtLabel} students in the ${displaySchoolYear.value} school year.`
-  }
-  if (event.type === 'school_end') {
-    return `The last day of classes for ${districtLabel} students in the ${displaySchoolYear.value} school year.`
-  }
-  if (event.type === 'break_start') {
-    const schoolBreak = breaks.value.find((b: any) => b.name === event.name && b.start === event.date)
-    if (schoolBreak?.end) {
-      const rangeVerb = /\bholidays\b/i.test(eventName) ? 'run' : 'runs'
-      return `${districtLabel} ${eventName} ${rangeVerb} ${formatCompactDateRange(event.date, schoolBreak.end)}.`
-    }
-    return `${districtLabel} ${eventName} in the ${displaySchoolYear.value} school year.`
-  }
-  return `${eventName} on the ${districtLabel} ${displaySchoolYear.value} calendar.`
-}
-const keyDateItemListEntity = !hideItemListSchema.value && keyDateItemListEvents.value.length ? {
-  '@type': 'ItemList',
-  '@id': `${canonicalUrl}#${keyDateItemListId.value}`,
-  name: keyDateItemListName.value,
-  itemListElement: keyDateItemListEvents.value.map((event: any, i: number) => {
-    return {
-      '@type': 'ListItem',
-      position: i + 1,
-      item: {
-        '@type': 'Thing',
-        name: keyDateDisplayName(event),
-        description: keyDateSchemaDescription(event),
-        additionalProperty: keyDateSchemaProperties(event),
-      },
-    }
-  }),
-} : null
-const calendarDateItemListEntity = !hideItemListSchema.value && calendarDateItemListEvents.value.length ? {
-  '@type': 'ItemList',
-  '@id': `${canonicalUrl}#${calendarDateItemListId.value}`,
-  name: calendarDateItemListName.value,
-  itemListElement: calendarDateItemListEvents.value.map((event: any, i: number) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    item: {
-      '@type': 'Thing',
-      name: keyDateDisplayName(event),
-      description: keyDateSchemaDescription(event),
-      additionalProperty: keyDateSchemaProperties(event),
-    },
-  })),
-} : null
-const comparisonItems = [
-  { district: district.value, calendar: cal.value, url: canonicalUrl },
-  ...((relatedCals.value ?? []).slice(0, 3).map((relatedCal: any) => {
-    const relatedDistrict = (relatedDistricts.value ?? []).find((d: any) => d.institutionId === relatedCal.institutionId)
-    return relatedDistrict ? { district: relatedDistrict, calendar: relatedCal, url: `https://myschooldates.com/${relatedDistrict.slug}` } : null
-  }).filter(Boolean)),
-]
-const includeComparisonSchema = (district.value as any)?.includeComparisonSchema !== false && (cal.value as any)?.includeComparisonSchema !== false
-const comparisonItemListEntity = includeComparisonSchema && comparisonItems.length > 1 ? {
-  '@type': 'ItemList',
-  '@id': `${canonicalUrl}#nearby-calendar-comparison`,
-  name: `${district.value.name} nearby district calendar comparison`,
-  itemListElement: comparisonItems.map((item: any, i: number) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    item: {
-      '@type': 'EducationalOrganization',
-      '@id': item.url ? `${item.url}#district` : undefined,
-      name: item.district.name,
-      url: item.url,
-      additionalProperty: [
-        { '@type': 'PropertyValue', name: 'School year', value: item.calendar.schoolYear },
-        { '@type': 'PropertyValue', name: 'First day', value: item.calendar.firstDay },
-        { '@type': 'PropertyValue', name: 'Last day', value: item.calendar.lastDay },
-      ],
-    },
-  })),
-} : null
 
 useHead({
   link: [{ rel: 'canonical', href: canonicalUrl }],
@@ -1526,22 +1270,19 @@ useHead({
         authorPersonEntity,
         siteEntity,
         districtAbout,
+        districtCalendarHubEntity,
         ...(sourceCalendarEntity ? [sourceCalendarEntity] : []),
         ...additionalSourceCalendarEntities,
         ...(sourceCalendarPageEntity ? [sourceCalendarPageEntity] : []),
         ...(datasetEntity ? [datasetEntity] : []),
-        ...(includeArticleSchema ? [articleEntity] : []),
         webPageEntity,
-        ...(keyDateItemListEntity ? [keyDateItemListEntity] : []),
-        ...(calendarDateItemListEntity ? [calendarDateItemListEntity] : []),
-        ...(comparisonItemListEntity ? [comparisonItemListEntity] : []),
-        ...(faqPageEntity ? [faqPageEntity] : []),
         {
           '@type': 'BreadcrumbList',
+          '@id': breadcrumbId,
           itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://myschooldates.com' },
             { '@type': 'ListItem', position: 2, name: district.value.state, item: `https://myschooldates.com/${district.value.state.toLowerCase().replace(/\s+/g, '-')}` },
-            { '@type': 'ListItem', position: 3, name: `${district.value.name} Calendar`, item: hubUrl },
+            { '@type': 'ListItem', position: 3, name: `${district.value.name} Calendars`, item: hubUrl },
             { '@type': 'ListItem', position: 4, name: year, item: canonicalUrl },
           ],
         },
@@ -1560,7 +1301,7 @@ useHead({
           <Breadcrumb :items="[
             { label: 'Home', href: '/' },
             { label: district!.state, href: `/${district!.state.toLowerCase().replace(/\s+/g, '-')}` },
-            { label: district!.name, href: `/${slug}` },
+            { label: `${district!.name} Calendars`, href: `/${slug}` },
             { label: displaySchoolYearLabel(year) },
           ]" />
 
@@ -1570,7 +1311,7 @@ useHead({
             <p class="text-sm">
               <template v-if="nonCurrentYearNotice">{{ nonCurrentYearNotice }}</template>
               <template v-else>You're viewing the <strong>{{ isFutureYear ? 'upcoming' : 'archived' }} {{ displaySchoolYearLabel(year) }}</strong> calendar.</template>
-              <NuxtLink :to="`/${slug}`" class="ml-1 inline-flex underline font-medium">View the current {{ displaySchoolYearLabel(district!.currentSchoolYear) }} calendar →</NuxtLink>
+              <NuxtLink :to="districtCalendarPath(district!, district!.currentSchoolYear)" class="ml-1 inline-flex underline font-medium">View the current {{ displaySchoolYearLabel(district!.currentSchoolYear) }} calendar →</NuxtLink>
             </p>
           </div>
 
@@ -2330,7 +2071,7 @@ useHead({
 
       <!-- Back to current -->
       <div v-if="!hiddenSections.has('backToCurrent')" class="text-center">
-        <NuxtLink :to="`/${slug}`" class="text-[#0f5d6b] hover:text-[#0b4c58] text-sm font-medium">
+        <NuxtLink :to="districtCalendarPath(district!, district!.currentSchoolYear)" class="text-[#0f5d6b] hover:text-[#0b4c58] text-sm font-medium">
           ← Back to {{ district!.name }} current calendar ({{ displaySchoolYearLabel(district!.currentSchoolYear) }})
         </NuxtLink>
       </div>

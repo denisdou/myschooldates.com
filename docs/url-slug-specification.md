@@ -17,8 +17,8 @@ State → District → School Year → Event
 
 URL 层级：
 ```
-/miami-dade
-/miami-dade/2025-2026
+/example-public-schools-calendars
+/example-public-schools-calendars/2026-2027
 ```
 
 即可。
@@ -71,20 +71,21 @@ URL 必须：可读、可分享、可记忆。
 ### District（核心）
 
 ```
-/miami-dade
-/chicago-public-schools
-/lausd
+/example-public-schools-calendars
+/example-public-schools-calendars/2026-2027
 ```
 
-默认展示：最新 School Year。
+无年份 URL 是长期稳定的 District Calendar Hub，不承载滚动学年的完整正文。Hub 展示可用学年，并把用户引导到固定学年页面。
+
+> **存量兼容：** 已存在的学区 slug 保持不变，不因本规范改为复数而迁移或重定向。
 
 ---
 
 ### School Year
 
 ```
-/miami-dade/2025-2026
-/miami-dade/2026-2027
+/example-public-schools-calendars/2025-2026
+/example-public-schools-calendars/2026-2027
 ```
 
 支持历史学年。
@@ -161,20 +162,29 @@ miami--dade     ← 双连字符
 
 ### District Slug
 
-优先使用官方名称的可读形式：
+自 **2026-08-21** 起，新建学区的无年份 Hub slug 统一使用官方名称的可读形式，并以复数 `-calendars` 结尾：
 
 ```
-miami-dade
-chicago-public-schools
-los-angeles-unified
-dallas-isd
+example-public-schools-calendars
+example-unified-school-district-calendars
+example-isd-calendars
 ```
+
+固定学年页面继承同一个 Hub slug：
+
+```
+/example-public-schools-calendars/2026-2027
+```
+
+不要为新学区创建单数 `-calendar` slug。这里的复数表示无年份页面是多个固定学年日历的集合；单个固定学年页面的页面标题仍可使用单数 `Calendar`。
+
+**不要修改任何已存在的 slug。** 存量 URL（包括以 `-calendar` 结尾的 URL）继续作为该学区的永久 Hub。只有本规范生效后首次创建的新学区使用 `-calendars`。
 
 如果两个 District 重名，增加州信息以保持全站唯一：
 
 ```
-springfield-il
-springfield-mo
+springfield-public-schools-il-calendars
+springfield-public-schools-mo-calendars
 ```
 
 ---
@@ -211,6 +221,25 @@ school-year-2025
 
 ---
 
+### Annual Report Links
+
+带明确学年的报告、专题分析和数据集是固定的数据快照，不使用站点的动态 `currentSchoolYear`：
+
+```
+/school-calendar-trends/2026-2027-report
+/school-start-dates-2026
+/winter-break-2026
+/spring-break-2027
+/summer-break-2027
+/datasets/school-calendar-trends
+```
+
+上述 2026–2027 报告中的学区链接必须固定指向 `/{district-slug}/2026-2027`。学区进入新的当前学年时，不更新这些历史报告的目标年份。
+
+2027–2028 及以后学年的趋势、开学、假期和数据集需要重新审核数据并创建新的报告版本；不得复用旧报告 URL，也不得让旧报告自动滚动到新学年。
+
+---
+
 ## Final URL Structure
 
 ```
@@ -219,14 +248,10 @@ school-year-2025
 ├── florida
 ├── texas
 │
-├── miami-dade
+├── example-public-schools-calendars
 │   ├── 2025-2026
 │   ├── 2026-2027
 │   └── 2027-2028
-│
-├── chicago-public-schools
-│
-├── lausd
 │
 ├── tools
 │   ├── google-calendar

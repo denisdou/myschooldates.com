@@ -79,7 +79,7 @@ useHead({
           '@type': 'ListItem',
           position: index + 1,
           name: district.name,
-          url: `https://myschooldates.com/${district.slug}`,
+          url: `https://myschooldates.com${districtCalendarPath(district)}`,
         })),
       },
     }),
@@ -140,7 +140,7 @@ useHead({
         <NuxtLink
           v-for="district in paginatedDistricts"
           :key="district.slug"
-          :to="`/${district.slug}`"
+          :to="districtCalendarPath(district)"
           class="directory-card group flex min-h-44 flex-col p-5"
         >
           <div class="flex items-start justify-between gap-3">

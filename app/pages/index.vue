@@ -208,7 +208,7 @@ useHead({
                 <NuxtLink
                   v-for="d in searchResults"
                   :key="d.slug"
-                  :to="`/${d.slug}`"
+                  :to="districtCalendarPath(d)"
                   class="home-directory-row flex items-center justify-between px-5 py-3.5 border-b border-rds-hairline last:border-b-0"
                 >
                   <div>
@@ -236,7 +236,7 @@ useHead({
               <NuxtLink
                 v-for="d in popularSearches"
                 :key="d.slug"
-                :to="`/${d.slug}`"
+                :to="districtCalendarPath(d)"
                 class="home-chip text-xs px-3 py-1.5"
               >
                 {{ d.shortName ?? d.name.split(' ').slice(0, 2).join(' ') }}
@@ -297,7 +297,7 @@ useHead({
             <NuxtLink
               v-for="d in popularDistricts"
               :key="d.slug"
-              :to="`/${d.slug}`"
+              :to="districtCalendarPath(d)"
               class="rds-panel home-directory-row flex items-center justify-between px-5 py-4"
             >
               <div>
@@ -337,7 +337,7 @@ useHead({
                   <NuxtLink
                     v-for="d in stateDistricts"
                     :key="d.slug"
-                    :to="`/${d.slug}`"
+                    :to="districtCalendarPath(d)"
                     class="home-directory-row flex items-center justify-between px-5 py-3.5"
                   >
                     <div>

@@ -417,12 +417,12 @@ const topicClusterCards = [
 ]
 
 const sourceExampleRows = [
-  ['Start date examples', 'Los Angeles Unified', '/los-angeles-unified-school-district-calendar', 'https://www.lausd.org/apps/pages/index.jsp?uREC_ID=4432518&type=d&pREC_ID=2672183'],
-  ['Start date examples', 'Fontana Unified', '/fontana-unified-school-district-calendar', 'https://www.fusd.net/quicklinks/school-year-calendars'],
-  ['Track calendar example', 'Corona-Norco USD', '/corona-norco-unified-school-district-calendar', 'https://www.cnusd.k12.ca.us/about_us/school_calendars___bell_schedules'],
-  ['Winter break examples', 'Chicago Public Schools', '/chicago-public-schools-calendar', 'https://www.cps.edu/calendar/?calendars=1149%2C1151%2C1135%2C1150%2C1106%2C1115%2C1118'],
-  ['Spring break examples', 'Houston ISD', '/houston-independent-school-district-calendar', 'https://www.houstonisd.org/our-district/district-calendar'],
-  ['Late-start example', 'New York City Public Schools', '/new-york-city-public-schools-calendar', 'https://www.schools.nyc.gov/calendar'],
+  ['Start date examples', 'Los Angeles Unified', '/los-angeles-unified-school-district-calendar/2026-2027', 'https://www.lausd.org/apps/pages/index.jsp?uREC_ID=4432518&type=d&pREC_ID=2672183'],
+  ['Start date examples', 'Fontana Unified', '/fontana-unified-school-district-calendar/2026-2027', 'https://www.fusd.net/quicklinks/school-year-calendars'],
+  ['Track calendar example', 'Corona-Norco USD', '/corona-norco-unified-school-district-calendar/2026-2027', 'https://www.cnusd.k12.ca.us/about_us/school_calendars___bell_schedules'],
+  ['Winter break examples', 'Chicago Public Schools', '/chicago-public-schools-calendar/2026-2027', 'https://www.cps.edu/calendar/?calendars=1149%2C1151%2C1135%2C1150%2C1106%2C1115%2C1118'],
+  ['Spring break examples', 'Houston ISD', '/houston-independent-school-district-calendar/2026-2027', 'https://www.houstonisd.org/our-district/district-calendar'],
+  ['Late-start example', 'New York City Public Schools', '/new-york-city-public-schools-calendar/2026-2027', 'https://www.schools.nyc.gov/calendar'],
 ]
 
 const appendixRows = trendData.records.map(record => [
@@ -870,11 +870,11 @@ const appendixRows = trendData.records.map(record => [
                 <div class="font-semibold text-gray-900">Browse Texas calendars</div>
                 <div class="mt-1 text-sm text-gray-600">Review August starts, May endings, and 180-day planning patterns.</div>
               </NuxtLink>
-              <NuxtLink to="/fontana-unified-school-district-calendar" class="rounded-lg border border-gray-200 bg-gray-50 p-4 hover:border-blue-200 hover:bg-blue-50 transition">
+              <NuxtLink to="/fontana-unified-school-district-calendar/2026-2027" class="rounded-lg border border-gray-200 bg-gray-50 p-4 hover:border-blue-200 hover:bg-blue-50 transition">
                 <div class="font-semibold text-gray-900">Fontana Unified example</div>
                 <div class="mt-1 text-sm text-gray-600">See PDF, ICS, minimum days, Spanish PDF, and school-level entry points.</div>
               </NuxtLink>
-              <NuxtLink to="/corona-norco-unified-school-district-calendar" class="rounded-lg border border-gray-200 bg-gray-50 p-4 hover:border-blue-200 hover:bg-blue-50 transition">
+              <NuxtLink to="/corona-norco-unified-school-district-calendar/2026-2027" class="rounded-lg border border-gray-200 bg-gray-50 p-4 hover:border-blue-200 hover:bg-blue-50 transition">
                 <div class="font-semibold text-gray-900">Corona-Norco example</div>
                 <div class="mt-1 text-sm text-gray-600">See how track and traditional calendar complexity changes planning.</div>
               </NuxtLink>

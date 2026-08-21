@@ -62,12 +62,17 @@ const [{ data: district }, { data: statePageData }] = await Promise.all([
 
 const matchedStateName = statePageData.value?.stateName ?? null
 const isStatePage = Boolean(matchedStateName && !district.value)
+const isDistrictHub = Boolean(district.value && !isStatePage)
 
 const { data: stateDistrictsData } = await useAsyncData(`state-districts:${slug}`, async () => {
   if (!matchedStateName) return []
   return (await queryCollection('districts').where('state', '=', matchedStateName).order('name', 'ASC').all()).map(toDistrictSummary)
 })
 const stateDistricts = stateDistrictsData.value ?? []
+const stateDistrictPath = (districtSlug: string) => {
+  const matchedDistrict = stateDistricts.find(item => item.slug === districtSlug)
+  return matchedDistrict ? districtCalendarPath(matchedDistrict) : `/${districtSlug}`
+}
 
 const { data: allCals } = await useAsyncData(`cals:${slug}`, async () => {
   if (!district.value) return []
@@ -127,11 +132,11 @@ if (isStatePage) {
       '@type': 'ListItem',
       position: i + 1,
       name: d.name,
-      url: `https://myschooldates.com/${d.slug}`,
+      url: `https://myschooldates.com${districtCalendarPath(d)}`,
       item: {
         '@type': 'EducationalOrganization',
         name: d.name,
-        url: `https://myschooldates.com/${d.slug}`,
+        url: `https://myschooldates.com${districtCalendarPath(d)}`,
         address: {
           '@type': 'PostalAddress',
           addressLocality: d.city ?? '',
@@ -214,7 +219,8 @@ const { data: stateCals } = await useAsyncData(`state-cals:${slug}`, async () =>
   if (!isStatePage || !stateDistricts.length) return []
   const all = await queryCollection('calendars').all()
   const ids = new Set(stateDistricts.map(d => d.institutionId))
-  return (all ?? []).filter(c => ids.has(c.institutionId) && c.schoolYear === stateCurrentYear)
+  const currentYearByInstitutionId = new Map(stateDistricts.map(d => [d.institutionId, d.currentSchoolYear]))
+  return (all ?? []).filter(c => ids.has(c.institutionId) && c.schoolYear === currentYearByInstitutionId.get(c.institutionId))
 })
 
 const stateDistrictCalendarById = computed(() => {
@@ -300,6 +306,17 @@ const relatedYearAvailableSlugs = computed(() => {
 const currentYear = district.value?.currentSchoolYear ?? ''
 const cal = allCals.value?.find(y => y.schoolYear === currentYear) ?? null
 const meta = district
+const hubCalendarYears = computed(() => {
+  const years = [...new Set((allCals.value ?? []).map(calendar => calendar.schoolYear).filter(Boolean))]
+  return years.sort((a, b) => {
+    if (a === currentYear) return -1
+    if (b === currentYear) return 1
+    const aIsUpcoming = a > currentYear
+    const bIsUpcoming = b > currentYear
+    if (aIsUpcoming !== bIsUpcoming) return aIsUpcoming ? -1 : 1
+    return aIsUpcoming ? a.localeCompare(b) : b.localeCompare(a)
+  })
+})
 
 function removeHiddenCustomSections() {
   if (isStatePage || !district.value || !cal) return
@@ -1268,7 +1285,91 @@ const heroSummaryFacts = computed(() => {
   return facts
 })
 
-if (!isStatePage && district.value) {
+if (isDistrictHub && district.value) {
+  const canonicalUrl = `https://myschooldates.com/${slug}`
+  const districtName = district.value.name
+  const stateUrl = `https://myschooldates.com/${toStateSlug(district.value.state)}`
+  const description = `Choose a school year for ${districtName}. Browse current, upcoming, and past district calendar pages with official sources and available downloads.`
+  const yearListId = `${canonicalUrl}#school-years`
+  const districtId = `${canonicalUrl}#district`
+
+  useSeoMeta({
+    title: `${districtName} Calendars | MySchoolDates`,
+    description,
+    ogTitle: `${districtName} Calendars`,
+    ogDescription: description,
+    ogType: 'website',
+    ogUrl: canonicalUrl,
+    twitterCard: 'summary',
+    twitterTitle: `${districtName} Calendars`,
+    twitterDescription: description,
+  })
+
+  useHead({
+    link: [{ rel: 'canonical', href: canonicalUrl }],
+    script: [{
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebSite',
+            '@id': 'https://myschooldates.com/#website',
+            name: 'MySchoolDates',
+            url: 'https://myschooldates.com',
+          },
+          {
+            '@type': 'EducationalOrganization',
+            '@id': districtId,
+            name: districtName,
+            ...(district.value.shortName ? { alternateName: district.value.shortName } : {}),
+            ...(district.value.officialWebsite ? { url: district.value.officialWebsite } : {}),
+            address: {
+              '@type': 'PostalAddress',
+              ...(district.value.city ? { addressLocality: district.value.city } : {}),
+              addressRegion: (district.value as any).stateCode ?? district.value.state,
+              addressCountry: 'US',
+            },
+          },
+          {
+            '@type': 'CollectionPage',
+            '@id': `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: `${districtName} Calendars`,
+            description,
+            about: { '@id': districtId },
+            mainEntity: { '@id': yearListId },
+            isPartOf: { '@id': 'https://myschooldates.com/#website' },
+          },
+          {
+            '@type': 'ItemList',
+            '@id': yearListId,
+            name: `${districtName} available school years`,
+            numberOfItems: hubCalendarYears.value.length,
+            itemListOrder: 'https://schema.org/ItemListUnordered',
+            itemListElement: hubCalendarYears.value.map((schoolYear, index) => ({
+              '@type': 'ListItem',
+              position: index + 1,
+              name: `${districtName} Calendar ${schoolYear}`,
+              url: `${canonicalUrl}/${schoolYear}`,
+            })),
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://myschooldates.com' },
+              { '@type': 'ListItem', position: 2, name: district.value.state, item: stateUrl },
+              { '@type': 'ListItem', position: 3, name: `${districtName} Calendars`, item: canonicalUrl },
+            ],
+          },
+        ],
+      }),
+    }],
+  })
+}
+
+// The full calendar content now lives exclusively on /district/school-year.
+if (!isStatePage && district.value && !isDistrictHub) {
   const canonicalUrl = `https://myschooldates.com/${slug}`
   const displayYearText = displaySchoolYear.value
   const _dn = meta.value!.name
@@ -1998,7 +2099,7 @@ if (!isStatePage && district.value) {
               <tbody class="divide-y divide-gray-200">
                 <tr v-for="d in stateDistricts" :key="d.slug" class="hover:bg-gray-50 transition-colors">
                   <td class="px-6 py-3">
-                    <NuxtLink :to="`/${d.slug}`" class="font-medium text-[#1f2933] hover:text-blue-600 transition-colors whitespace-nowrap">
+                    <NuxtLink :to="districtCalendarPath(d)" class="font-medium text-[#1f2933] hover:text-blue-600 transition-colors whitespace-nowrap">
                       {{ d.shortName || d.name }}
                     </NuxtLink>
                   </td>
@@ -2039,7 +2140,7 @@ if (!isStatePage && district.value) {
             <NuxtLink
               v-for="d in stateDistricts"
               :key="d.slug"
-              :to="`/${d.slug}`"
+              :to="districtCalendarPath(d)"
               class="state-directory-card p-5"
             >
               <div class="font-semibold text-gray-900 leading-snug">{{ d.name }}</div>
@@ -2133,7 +2234,7 @@ if (!isStatePage && district.value) {
                 <NuxtLink
                   v-for="item in cluster.districts"
                   :key="`${cluster.label}-${item.slug}`"
-                  :to="`/${item.slug}`"
+                  :to="stateDistrictPath(item.slug)"
                   class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 hover:border-blue-300 hover:bg-blue-50 transition-colors"
                 >
                   <div class="text-sm font-medium text-[#1f2933]">{{ item.label }}</div>
@@ -2237,6 +2338,10 @@ if (!isStatePage && district.value) {
   </template>
 
   <!-- ── District Page ──────────────────────────────────────────────────── -->
+  <template v-else-if="district">
+    <DistrictCalendarHub :district="district" :years="hubCalendarYears" />
+  </template>
+
   <template v-else-if="district && cal">
       <main class="district-calendar-page py-8">
 

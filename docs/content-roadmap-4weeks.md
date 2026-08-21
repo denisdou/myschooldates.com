@@ -128,6 +128,8 @@
 1. `content/districts/{slug}.json` — 学区静态信息（about、planningTips、districtFaqs、livingHere、relatedDistricts、sources、logo）
 2. `content/calendars/{slug}/2026-2027.json` — 日历事件数组 + calendarNotes（7句"Why + So What"格式）
 
+新建学区的 `{slug}` 自 2026-08-21 起统一以复数 `-calendars` 结尾，例如 `example-public-schools-calendars`；固定学年 URL 为 `/{slug}/2026-2027`。已有学区 slug 一律保持不变，不因这条规则把存量 `-calendar` URL 改名。
+
 内容质量标准参见已完成学区（目标审计分数 ≥ 9.0/10）。
 
 ---

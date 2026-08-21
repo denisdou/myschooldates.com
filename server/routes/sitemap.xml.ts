@@ -24,10 +24,10 @@ export default defineEventHandler((event) => {
 
   const idToDistrict = Object.fromEntries(districtData.map(d => [d.institutionId, d]))
 
-  // ── Archived year pages ────────────────────────────────────────────────────
+  // ── School-year pages ──────────────────────────────────────────────────────
   const calendarsDir = join(root, 'content', 'calendars')
-  const archiveUrls: SitemapUrl[] = []
-  const currentCalendarLastmodByInstitutionId = new Map<string, string>()
+  const calendarUrls: SitemapUrl[] = []
+  const hubLastmodByInstitutionId = new Map<string, string>()
 
   for (const institutionId of readdirSync(calendarsDir)) {
     const distPath = join(calendarsDir, institutionId)
@@ -38,14 +38,16 @@ export default defineEventHandler((event) => {
       if (!file.endsWith('.json')) continue
       const cal = JSON.parse(readFileSync(join(distPath, file), 'utf-8'))
       const lastmod = cal.dateModified ?? cal.lastVerifiedAt
-      if (cal.schoolYear === district.currentSchoolYear && lastmod) {
-        currentCalendarLastmodByInstitutionId.set(institutionId, lastmod)
+      if (lastmod && lastmod > (hubLastmodByInstitutionId.get(institutionId) ?? '')) {
+        hubLastmodByInstitutionId.set(institutionId, lastmod)
       }
-      if (cal.schoolYear !== district.currentSchoolYear) {
-        archiveUrls.push({
+      const isCurrentYear = cal.schoolYear === district.currentSchoolYear
+      const isUpcomingYear = cal.schoolYear > district.currentSchoolYear
+      if (isCurrentYear || isUpcomingYear) {
+        calendarUrls.push({
           loc: `${baseUrl}/${district.slug}/${cal.schoolYear}`,
-          priority: '0.5',
-          changefreq: 'yearly',
+          priority: isCurrentYear ? '0.9' : '0.6',
+          changefreq: 'monthly',
           ...(lastmod ? { lastmod } : {}),
         })
       }
@@ -85,13 +87,13 @@ export default defineEventHandler((event) => {
     ...stateUrls,
     ...districtData.map(d => ({
       loc: `${baseUrl}/${d.slug}`,
-      priority: '0.9',
-      changefreq: 'monthly',
-      ...(currentCalendarLastmodByInstitutionId.get(d.institutionId)
-        ? { lastmod: currentCalendarLastmodByInstitutionId.get(d.institutionId) }
+      priority: '0.6',
+      changefreq: 'yearly',
+      ...(hubLastmodByInstitutionId.get(d.institutionId)
+        ? { lastmod: hubLastmodByInstitutionId.get(d.institutionId) }
         : {}),
     })),
-    ...archiveUrls,
+    ...calendarUrls,
   ]
 
   // ── Render XML ─────────────────────────────────────────────────────────────
