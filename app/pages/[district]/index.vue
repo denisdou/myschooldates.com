@@ -2074,6 +2074,23 @@ if (!isStatePage && district.value && !isDistrictHub) {
                   </tr>
                 </tbody>
               </table>
+              <p v-if="section.table.footnote" class="border-t border-gray-100 bg-gray-50 px-4 py-3 text-xs leading-relaxed text-gray-600">
+                {{ section.table.footnote }}
+              </p>
+            </div>
+            <div v-if="section.links?.length" class="mt-4 grid gap-3 sm:grid-cols-2">
+              <a
+                v-for="link in section.links"
+                :key="link.to"
+                :href="link.to"
+                target="_blank"
+                rel="noopener"
+                class="rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 transition-colors hover:border-blue-200 hover:bg-blue-50"
+              >
+                <span class="block text-sm font-medium text-[#1f2933] underline underline-offset-2">{{ link.label }}</span>
+                <span v-if="link.description" class="mt-1 block text-xs leading-relaxed text-gray-600">{{ link.description }}</span>
+                <span class="sr-only">(opens in a new tab)</span>
+              </a>
             </div>
           </section>
         </div>

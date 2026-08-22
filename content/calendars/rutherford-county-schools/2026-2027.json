@@ -1,0 +1,669 @@
+{
+  "institutionId": "rutherford-county-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Rutherford County Schools Calendar 2026–27",
+  "firstDay": "2026-08-07",
+  "firstDayScope": "Two-hour orientation day for students",
+  "firstFullK12Day": "2026-08-10",
+  "lastDay": "2027-05-28",
+  "lastDayScope": "Two-hour day; report cards issued",
+  "temporalCoverageStart": "2026-08-03",
+  "temporalCoverageEnd": "2027-05-28",
+  "semesters": 2,
+  "sourceUrl": "https://www.rcschools.net/o/rcs/page/rcs-academic-calendars",
+  "sourceDocumentPage": "https://www.rcschools.net/o/rcs/page/rcs-academic-calendars",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5892/Rcs/813c9703-8212-4371-95a6-e16311165cbb/2026-2027-RCSAcademicCalendar-v02.docx?disposition=inline",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5892/Rcs/813c9703-8212-4371-95a6-e16311165cbb/2026-2027-RCSAcademicCalendar-v02.docx?disposition=inline",
+  "sourceCheckedAt": "2026-08-22",
+  "sourceUpdatedAt": "2026-06-03",
+  "sourceChecksumSha256": "1f718e9bae061ac2884c38928a2cbf9f88275faad016d2a3659b6edac7f0d98b",
+  "reviewedSourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5892/Rcs/813c9703-8212-4371-95a6-e16311165cbb/2026-2027-RCSAcademicCalendar-v02.docx?disposition=inline",
+  "reviewedSourceUpdatedAt": "2026-06-03",
+  "reviewedSourceChecksumSha256": "1f718e9bae061ac2884c38928a2cbf9f88275faad016d2a3659b6edac7f0d98b",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.rcschools.net/o/rcs/page/rcs-academic-calendars",
+    "linkText": "2026-27 Academic Calendar",
+    "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5892/Rcs/813c9703-8212-4371-95a6-e16311165cbb/2026-2027-RCSAcademicCalendar-v02.docx?disposition=inline",
+    "expectedChecksumSha256": "1f718e9bae061ac2884c38928a2cbf9f88275faad016d2a3659b6edac7f0d98b"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.rcschools.net/o/rcs/page/rcs-academic-calendars",
+      "linkText": "2026-27 Academic Calendar (Spanish)",
+      "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5892/Rcs/64322140-5576-4e2a-8ab0-5f4a7927f70f/2026-2027-RCSAcademicCalendar-Spanish-June-3.pdf?disposition=inline",
+      "expectedChecksumSha256": "e96167b33b5e34608bd63feee543ac4ca3450953702cc58d644fd231a638fb68"
+    },
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.rcschools.net/o/rcs/page/rcs-academic-calendars",
+      "linkText": "2026-27 Academic Calendar (Arabic)",
+      "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5892/Rcs/351c629a-d714-4de4-ba06-d455fc390735/2-Arabic-Revised-June-3-2026--26-27-RCSAcademicCalendar-v2.pdf?disposition=inline",
+      "expectedChecksumSha256": "2922457d5db927eec031318720a20feaf002755cadb5849ac65dbc9793b495f5"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "dateCreated": "2026-08-22",
+  "datePublished": "2026-08-22",
+  "dateModified": "2026-08-22",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Revised June 3, 2026",
+  "sourceCalendarName": "Rutherford County Schools 2026–27 Academic Calendar — English",
+  "schemaCalendarName": "Rutherford County Schools Calendar 2026–27",
+  "schemaDatasetName": "Rutherford County Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed RCS dates for 2026–27, including the two-hour orientation day, first full student day, breaks, staff days when students do not attend, two-hour abbreviated days, nine-week reporting dates, conferences, the Winter Break return date, and the final student day.",
+  "schemaSpatialCoverage": "Rutherford County, Tennessee",
+  "schemaCalendarDownloadName": "Rutherford County Schools 2026–27 ICS Calendar File",
+  "schemaCalendarDownloadDescription": "One-time calendar import with districtwide family dates from the reviewed RCS academic calendar; staff-only dates before orientation and academic reporting windows are excluded.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-spanish",
+      "type": "CreativeWork",
+      "name": "Rutherford County Schools 2026–27 Academic Calendar — Spanish",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5892/Rcs/64322140-5576-4e2a-8ab0-5f4a7927f70f/2026-2027-RCSAcademicCalendar-Spanish-June-3.pdf?disposition=inline",
+      "version": "Revised June 3, 2026"
+    },
+    {
+      "id": "source-calendar-arabic",
+      "type": "CreativeWork",
+      "name": "Rutherford County Schools 2026–27 Academic Calendar — Arabic",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5892/Rcs/351c629a-d714-4de4-ba06-d455fc390735/2-Arabic-Revised-June-3-2026--26-27-RCSAcademicCalendar-v2.pdf?disposition=inline",
+      "version": "Revised June 3, 2026"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-spanish",
+    "source-calendar-arabic"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "rcs-district-calendar",
+  "allDatesMode": "all",
+  "webPageMainEntity": "keyDates",
+  "itemListMode": "keyDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideCoveredBreakDatesNote": true,
+  "hideBreakDurationBadges": true,
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "todayStatus",
+    "yearNumbers",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "comparison",
+    "nationalTrends",
+    "relatedDistricts",
+    "otherCalendars",
+    "downloadCta",
+    "backToCurrent"
+  ],
+  "hideCurrentYearInSwitcher": true,
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Opening",
+      "id": "rcs-2026-2027-opening"
+    },
+    {
+      "label": "Two-Hour Days",
+      "id": "rcs-2026-2027-two-hour-days"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Rutherford County Schools Calendar 2026–27 (Tennessee)",
+  "seoDescription": "For grades 1–12, Rutherford County Schools starts 2026–27 with a two-hour orientation Aug. 7 and first full day Aug. 10. Find breaks, official PDFs, and ICS.",
+  "heroSummary": "Rutherford County Schools starts the 2026–27 school year with a two-hour orientation on Friday, August 7, followed by the first full day on Monday, August 10. Those opening dates apply to students in grades 1–12; kindergarten follows a separate phase-in schedule. December 18 and the last day of school, May 28, are also two-hour student days. Winter Break ends January 1, but January 4 is an in-service and safety day, so students return January 5. Major breaks and the full district calendar are listed below.",
+  "heroSourceLine": "Rutherford County, Tennessee · Official calendar revised June 3, 2026 · English, Spanish, and Arabic editions",
+  "verificationBadgeText": "Checked against the complete revised RCS calendar and both official translated editions.",
+  "calendarNotes": "August 7 is a two-hour student orientation day; August 10 is the first full day. December 18 and May 28 are also two-hour attendance days, not closures. January 4 is a staff in-service and safety day, and students return from Winter Break January 5. Parent/teacher conferences are listed as academic events because the official calendar does not label them as no-school days. Spanish and Arabic PDFs are translations of the same district schedule.",
+  "keyDatesHeading": "RCS 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "RCS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Grades 1–12 opening dates, major breaks, and the two-hour last day",
+  "keyDateSummaryItems": [
+    {
+      "label": "Orientation",
+      "name": "Grades 1–12 Orientation — Two Hours",
+      "date": "2026-08-07",
+      "type": "school_start",
+      "schemaDescription": "First student attendance date on the RCS calendar; students attend for two hours."
+    },
+    {
+      "label": "First Full Day",
+      "name": "Grades 1–12 First Full Day",
+      "date": "2026-08-10",
+      "type": "school_start",
+      "schemaDescription": "First full student day of the 2026–27 RCS school year."
+    },
+    {
+      "label": "Fall Break",
+      "name": "Fall Break",
+      "date": "2026-10-05",
+      "endDate": "2026-10-09",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break + January 4 Staff Day",
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "type": "break_start",
+      "description": "Winter Break ends January 1. January 4 is an in-service and safety day; students return January 5."
+    },
+    {
+      "label": "Spring Break",
+      "name": "Spring Break",
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School — Two Hours",
+      "date": "2027-05-28",
+      "type": "school_end",
+      "schemaDescription": "Last student day of the RCS school year; students attend for two hours and report cards are issued."
+    }
+  ],
+  "breaksTitle": "School Breaks and Return Dates",
+  "breaksBeforeAllDates": true,
+  "breakNotes": {
+    "Fall Break": "Students return Monday, October 12.",
+    "Thanksgiving Break": "Students return Monday, November 30.",
+    "Winter Break": "January 4 is an in-service and safety day; students return Tuesday, January 5.",
+    "Spring Break": "Students return Monday, April 5."
+  },
+  "allDatesTitle": "Full RCS 2026–27 Calendar",
+  "allDatesCoverageNote": "This table follows every date printed on the one-page RCS calendar revised June 3, 2026. Parent/teacher conferences are academic events, not automatic no-school days. Progress-report windows and nine-week endings remain visible for reference but are not added to the family ICS. Kindergarten phase-in dates are listed in separate official calendars and are not included in this table.",
+  "allDatesCoverageNotePosition": "top",
+  "allDatesSourceLabel": "Source: Rutherford County Schools 2026–27 Academic Calendar",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5892/Rcs/813c9703-8212-4371-95a6-e16311165cbb/2026-2027-RCSAcademicCalendar-v02.docx?disposition=inline",
+  "dateLegendItems": [
+    {
+      "label": "Two-hour student day",
+      "dot": "bg-sky-400"
+    },
+    {
+      "label": "No school for students",
+      "dot": "bg-amber-400"
+    },
+    {
+      "label": "School break / schools closed",
+      "dot": "bg-purple-400"
+    },
+    {
+      "label": "Academic reporting / conference",
+      "dot": "bg-slate-400"
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Official Calendars and Downloads",
+  "unifiedDownloadDescription": "Open the official RCS calendar in English, Spanish, or Arabic, or download a one-time ICS file with key districtwide dates for families.",
+  "groupAlternateCalendarsWithDownloads": true,
+  "hideCompatibleCalendars": true,
+  "hideShareCalendarHeading": true,
+  "hideSocialShareButtons": true,
+  "icsHeading": "Add RCS 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download the grades 1–12 orientation and first full day, breaks, holidays, no-school days, two-hour days, conferences, return date, and last day as an ICS file for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download RCS Dates (.ics)",
+  "icsButtonSupportText": "One-time import. The file will not update automatically if RCS revises the calendar, and it does not include the kindergarten phase-in schedule.",
+  "hideIcsImportDisclaimer": true,
+  "officialSubscriptionTitle": "Official RCS Calendar Subscription",
+  "officialSubscriptionDescription": "Want automatic updates? RCS also offers an official online calendar subscription for current events and later changes.",
+  "officialSubscriptionButtonLabel": "Open the RCS Online Calendar",
+  "officialSubscriptionUrl": "https://www.rcschools.net/events",
+  "pdfHeading": "Official RCS 2026–27 Academic Calendar — English",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Open the one-page English calendar used to verify the dates and student-attendance details on this page.",
+  "pdfButtonLabel": "View Official English Calendar",
+  "pdfVersionLabel": "Revised June 3, 2026",
+  "alternateCalendarsTitle": "Official RCS Calendars",
+  "alternateCalendarsDescription": "RCS publishes Spanish and Arabic editions of the district schedule and separate phase-in calendars for kindergarten families.",
+  "alternateCalendarsButtonLabel": "View Official Calendar PDF",
+  "alternateCalendars": [
+    {
+      "type": "language-spanish",
+      "group": "Official language editions",
+      "label": "2026–27 Academic Calendar — Spanish",
+      "description": "Official Spanish edition of the RCS 2026–27 academic calendar.",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5892/Rcs/64322140-5576-4e2a-8ab0-5f4a7927f70f/2026-2027-RCSAcademicCalendar-Spanish-June-3.pdf?disposition=inline",
+      "buttonLabel": "View Spanish Calendar PDF"
+    },
+    {
+      "type": "language-arabic",
+      "group": "Official language editions",
+      "label": "2026–27 Academic Calendar — Arabic",
+      "description": "Official Arabic edition of the RCS 2026–27 academic calendar.",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5892/Rcs/351c629a-d714-4de4-ba06-d455fc390735/2-Arabic-Revised-June-3-2026--26-27-RCSAcademicCalendar-v2.pdf?disposition=inline",
+      "buttonLabel": "View Arabic Calendar PDF"
+    },
+    {
+      "type": "program-kindergarten",
+      "group": "Kindergarten phase-in",
+      "label": "2026–27 Kindergarten Phase-In Calendars",
+      "description": "Separate kindergarten start schedules published by RCS in English, Spanish, and Arabic.",
+      "pdfUrl": "https://www.rcschools.net/documents/district/rcs-academic-calendars/2026-27-phase-in-calendars/28073347",
+      "buttonLabel": "Open Kindergarten Phase-In Calendars"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "rcs-2026-2027-opening",
+      "label": "RCS Opens with a Two-Hour Orientation Day",
+      "position": "afterBreaks",
+      "content": "RCS has four staff-only days August 3–6. Students in grades 1–12 first report on Friday, August 7, for a two-hour orientation, followed by their first full day on Monday, August 10. Kindergarten follows a separate phase-in schedule, with official 2026–27 calendars available in English, Spanish, and Arabic.",
+      "linksDisplay": "inline",
+      "linksLabel": "Kindergarten schedule:",
+      "links": [
+        {
+          "label": "Official RCS kindergarten phase-in calendars",
+          "url": "https://www.rcschools.net/documents/district/rcs-academic-calendars/2026-27-phase-in-calendars/28073347"
+        }
+      ],
+      "table": {
+        "caption": "Rutherford County Schools 2026–27 opening sequence",
+        "columns": [
+          "Date",
+          "Schedule",
+          "Student attendance"
+        ],
+        "rows": [
+          [
+            "Aug. 3–5",
+            "In-service and Admin/Safety days",
+            "No school for students"
+          ],
+          [
+            "Aug. 6",
+            "Teacher workday / Election Day",
+            "No school for students"
+          ],
+          [
+            "Aug. 7",
+            "Orientation day",
+            "Grades 1–12 attend for two hours"
+          ],
+          [
+            "Aug. 10",
+            "First full day",
+            "Grades 1–12 attend a full day"
+          ]
+        ],
+        "footnote": "Revision note: An earlier RCS school post published before June 3 lists August 3 as Admin/Safety Day and August 4 as In-Service Day. The revised district calendar lists August 3 as In-Service Day and August 4 as Admin/Safety Day. Both are no-school days for students."
+      }
+    },
+    {
+      "id": "rcs-2026-2027-two-hour-days",
+      "label": "Two-Hour Student Days and the Last Week of School",
+      "position": "afterBreaks",
+      "content": "RCS lists three two-hour student dates in 2026–27. August 7 is the grades 1–12 orientation day; December 18 and May 28 are also two-hour days. May 27 is different: it is a teacher workday when students do not attend, followed by the two-hour last day on May 28.",
+      "table": {
+        "caption": "RCS 2026–27 two-hour days and end-of-year schedule",
+        "columns": [
+          "Date",
+          "What happens"
+        ],
+        "rows": [
+          [
+            "Aug. 7, 2026",
+            "Student orientation day; two hours"
+          ],
+          [
+            "Dec. 18, 2026",
+            "Two-hour day for students and teachers; second nine weeks ends"
+          ],
+          [
+            "May 27, 2027",
+            "Teacher workday; no school for students"
+          ],
+          [
+            "May 28, 2027",
+            "Last student day; two hours; report cards issued"
+          ]
+        ]
+      }
+    }
+  ],
+  "faqOrderLimit": 6,
+  "excludeDistrictFaqs": true,
+  "calendarFaqs": [
+    {
+      "q": "Is August 7 the first day of school for Rutherford County Schools?",
+      "a": "For students in grades 1–12, August 7 is a two-hour orientation day and the first full day is Monday, August 10, 2026. Kindergarten follows a separate phase-in schedule published by RCS."
+    },
+    {
+      "q": "When do RCS students return after Winter Break?",
+      "a": "Winter Break runs through January 1. January 4 is an in-service and safety day with no school for students, so classes resume Tuesday, January 5, 2027."
+    },
+    {
+      "q": "Is December 18 a no-school day?",
+      "a": "No. December 18 is a two-hour day for students and teachers, and it is the end of the second nine weeks."
+    },
+    {
+      "q": "Are RCS parent/teacher conference dates no-school days?",
+      "a": "The district calendar lists conferences on October 20 and March 18 but does not label those dates as no-school days. Confirm the conference schedule and any dismissal changes with the student's school."
+    },
+    {
+      "q": "Is the last day of school a full day?",
+      "a": "No. Friday, May 28, 2027, is a two-hour student day, and report cards are issued. Students do not attend on the teacher workday May 27."
+    },
+    {
+      "q": "Do the Spanish and Arabic RCS calendars use different dates?",
+      "a": "No. They are official language editions of the same revised 2026–27 academic calendar, not separate attendance schedules."
+    }
+  ],
+  "sourcesTitle": "Sources and Review Notes",
+  "sourceReviewSummary": "Reviewed August 22, 2026 against the complete Rutherford County Schools calendar revised June 3, 2026 and its official Spanish and Arabic editions.",
+  "sourceReviewDetailsTitle": "How we reviewed the RCS calendar",
+  "sourceReviewDetails": [
+    "Reviewed every date on the one-page English calendar, including the opening sequence, student no-school dates, two-hour days, breaks, conferences, reporting dates, and the last student day.",
+    "Checked the Spanish and Arabic calendars against the English edition; all three show the same district schedule and June 3 revision date.",
+    "Confirmed that August 7 is a two-hour orientation day, August 10 is the first full student day, January 4 is a staff day before students return January 5, and May 28 is a two-hour last day.",
+    "Confirmed that the August 7 orientation and August 10 first full day apply to grades 1–12 and that RCS publishes separate kindergarten phase-in calendars in English, Spanish, and Arabic.",
+    "The English source URL ends in .docx, but RCS currently serves the file as a one-page PDF. That is the official file reviewed for this page.",
+    "Compared the June 3 revision with an earlier RCS school post that reversed the August 3–4 staff-day labels; both dates remain no-school days for students."
+  ],
+  "sourceMaintainerLabel": "Maintained by",
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "sourceNextReviewText": "We review this page again when RCS publishes a revised calendar or announces a districtwide schedule change.",
+  "sources": [
+    {
+      "label": "RCS Academic Calendars",
+      "url": "https://www.rcschools.net/o/rcs/page/rcs-academic-calendars"
+    },
+    {
+      "label": "Official RCS 2026–27 Academic Calendar — English",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5892/Rcs/813c9703-8212-4371-95a6-e16311165cbb/2026-2027-RCSAcademicCalendar-v02.docx?disposition=inline"
+    },
+    {
+      "label": "Official RCS 2026–27 Academic Calendar — Spanish",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5892/Rcs/64322140-5576-4e2a-8ab0-5f4a7927f70f/2026-2027-RCSAcademicCalendar-Spanish-June-3.pdf?disposition=inline"
+    },
+    {
+      "label": "Official RCS 2026–27 Academic Calendar — Arabic",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5892/Rcs/351c629a-d714-4de4-ba06-d455fc390735/2-Arabic-Revised-June-3-2026--26-27-RCSAcademicCalendar-v2.pdf?disposition=inline"
+    },
+    {
+      "label": "Earlier RCS school post with the pre-revision August 3–4 order",
+      "url": "https://www.rcschools.net/o/rms/live_feeds/12323317"
+    },
+    {
+      "label": "RCS Back to School News 2026–27",
+      "url": "https://rutherfordcountystn.edurooms.com/newsletters/rutherford-county-schools/newsletters/back-to-school-news-2026-2027"
+    },
+    {
+      "label": "Official RCS 2026–27 Kindergarten Phase-In Calendars",
+      "url": "https://www.rcschools.net/documents/district/rcs-academic-calendars/2026-27-phase-in-calendars/28073347"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-03",
+      "name": "In-Service Day — No School for Students",
+      "type": "staff_development",
+      "badgeLabel": "No School for Students",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-04",
+      "name": "Admin/Safety Day — No School for Students",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-05",
+      "name": "In-Service Day — No School for Students",
+      "type": "staff_development",
+      "badgeLabel": "No School for Students",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-06",
+      "name": "Teacher Workday / Election Day — No School for Students",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Student Orientation Day — Two Hours",
+      "displayName": "Grades 1–12 Orientation Day — Two Hours",
+      "type": "school_start",
+      "badgeLabel": "Two-Hour Day",
+      "description": "First attendance date for grades 1–12; their first full day is August 10."
+    },
+    {
+      "date": "2026-08-10",
+      "name": "First Full Day for Students",
+      "displayName": "Grades 1–12 First Full Day",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — Schools Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-09",
+      "endDate": "2026-09-11",
+      "name": "Progress Reports",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-09-18",
+      "name": "Teacher Administrative Day — No School for Students",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2026-10-02",
+      "name": "First Nine Weeks Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-05",
+      "endDate": "2026-10-09",
+      "name": "Fall Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-10-16",
+      "name": "First Nine Weeks Report Cards",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-20",
+      "name": "Parent/Teacher Conferences",
+      "type": "conference",
+      "badgeLabel": "Conference",
+      "description": "The official calendar does not label this as a no-school day."
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Teacher Administrative Day / Election Day — No School for Students",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2026-11-04",
+      "endDate": "2026-11-06",
+      "name": "Progress Reports",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Two-Hour Day for Students and Teachers; Second Nine Weeks Ends",
+      "type": "early_dismissal",
+      "badgeLabel": "Two-Hour Day"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "In-Service / Safety Day — No School for Students",
+      "type": "staff_development",
+      "badgeLabel": "No School for Students",
+      "description": "Students return January 5."
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Students Return from Winter Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-08",
+      "name": "Second Nine Weeks Report Cards",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — Schools Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-03",
+      "endDate": "2027-02-05",
+      "name": "Progress Reports",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day — Schools Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-05",
+      "name": "Third Nine Weeks Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-11",
+      "name": "Teacher Administrative Day — No School for Students",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Third Nine Weeks Report Cards",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-18",
+      "name": "Parent/Teacher Conferences — All Grades",
+      "type": "conference",
+      "badgeLabel": "All Grades",
+      "description": "The official calendar does not label this as a no-school day."
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Good Friday — Schools Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-04-14",
+      "endDate": "2027-04-16",
+      "name": "Progress Reports",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-07",
+      "name": "Teacher Administrative Day — No School for Students",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-05-27",
+      "name": "Teacher Workday — No School for Students",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Last Day of School — Two Hours; Report Cards Issued",
+      "type": "school_end",
+      "badgeLabel": "Two-Hour Day"
+    }
+  ]
+}

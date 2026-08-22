@@ -1,0 +1,768 @@
+{
+  "institutionId": "williamson-county-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Williamson County Schools Calendar 2026–27",
+  "firstDay": "2026-08-10",
+  "firstDayScope": "Grades 1–12 attend a half day. Their first full day is August 11; Pre-K, Early Childhood and Kindergarten have their first full day August 17.",
+  "earlyChildhoodFirstDay": "2026-08-17",
+  "lastDay": "2027-05-27",
+  "lastDayScope": "Half day for students",
+  "temporalCoverageStart": "2026-08-10",
+  "temporalCoverageEnd": "2027-05-30",
+  "totalSchoolDays": 177,
+  "reportingPeriodDaysTotal": 177,
+  "reportingPeriodDaysScope": "WCS lists 83 instructional days in the first semester and 94 in the second semester, for 177 total student instructional days.",
+  "semesters": 2,
+  "sourceUrl": "https://www.wcs.edu/about-us/calendar",
+  "sourceDocumentPage": "https://www.wcs.edu/about-us/calendar",
+  "sourcePdfUrl": "https://docs.wcs.edu/pdf/hr/Student-School-Calendar-2026-2027.pdf",
+  "lastCheckedPdfUrl": "https://docs.wcs.edu/pdf/hr/Student-School-Calendar-2026-2027.pdf",
+  "reviewedSourcePdfUrl": "https://docs.wcs.edu/pdf/hr/Student-School-Calendar-2026-2027.pdf",
+  "sourceCheckedAt": "2026-08-22",
+  "sourceUpdatedAt": "2026-08-18",
+  "reviewedSourceUpdatedAt": "2026-08-18",
+  "sourceChecksumSha256": "ce11e1303cc14fc6867895151254c8ad473bdc639f796d85725ed992339f9b59",
+  "reviewedSourceChecksumSha256": "ce11e1303cc14fc6867895151254c8ad473bdc639f796d85725ed992339f9b59",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceConflict": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.wcs.edu/about-us/calendar",
+    "linkText": "2026-2027 Student School Calendar",
+    "expectedPdfUrl": "https://docs.wcs.edu/pdf/hr/Student-School-Calendar-2026-2027.pdf",
+    "expectedChecksumSha256": "ce11e1303cc14fc6867895151254c8ad473bdc639f796d85725ed992339f9b59"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.wcs.edu/about-us/calendar",
+      "linkText": "2026-2027 Staff School Calendar",
+      "expectedPdfUrl": "https://docs.wcs.edu/pdf/hr/Staff-School-Calendar-2026-2027.pdf"
+    },
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.wcs.edu/about-us/calendar",
+      "linkText": "2026-2027 Late Start and Early Release Days",
+      "expectedPdfUrl": "https://docs.wcs.edu/pdf/hr/Late-Start-Early-Release-2026-2027.pdf"
+    },
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.wcs.edu/about-us/calendar",
+      "linkText": "Late Start and Early Release Information",
+      "expectedPdfUrl": "https://docs.wcs.edu/pdf/hr/Late-Start-Early-Release-Information.pdf"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "dateCreated": "2026-08-22",
+  "datePublished": "2026-08-22",
+  "dateModified": "2026-08-22",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "start_dismissal_schedule_change",
+    "makeup_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Board-approved November 17, 2025; November 18 elementary early-release date approved August 17, 2026",
+  "sourceCalendarName": "WCS 2026–27 Student School Calendar",
+  "schemaCalendarName": "Williamson County Schools Calendar 2026–27",
+  "schemaDatasetName": "Williamson County Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed WCS 2026–27 student dates, including the staggered opening, 177 instructional days, breaks, half days, 11 elementary and Hillsboro early releases, 27 secondary late starts, grading periods and the inclement-weather plan.",
+  "schemaSpatialCoverage": "Franklin and Williamson County, Tennessee",
+  "schemaCalendarDownloadName": "WCS 2026–27 Student Calendar ICS",
+  "schemaCalendarDownloadDescription": "One-time ICS import of published WCS student attendance dates, grade-specific late starts and early releases, breaks and half days.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-staff",
+      "type": "CreativeWork",
+      "name": "WCS 2026–27 Staff School Calendar",
+      "url": "https://docs.wcs.edu/pdf/hr/Staff-School-Calendar-2026-2027.pdf",
+      "publisherName": "Williamson County Schools",
+      "publisherUrl": "https://www.wcs.edu/"
+    },
+    {
+      "id": "source-calendar-schedule",
+      "type": "CreativeWork",
+      "name": "WCS 2026–27 Late Start and Early Release Days",
+      "url": "https://docs.wcs.edu/pdf/hr/Late-Start-Early-Release-2026-2027.pdf",
+      "publisherName": "Williamson County Schools",
+      "publisherUrl": "https://www.wcs.edu/"
+    },
+    {
+      "id": "source-calendar-schedule-guide",
+      "type": "CreativeWork",
+      "name": "WCS Late Start and Early Release Information",
+      "url": "https://docs.wcs.edu/pdf/hr/Late-Start-Early-Release-Information.pdf",
+      "publisherName": "Williamson County Schools",
+      "publisherUrl": "https://www.wcs.edu/"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-schedule"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-staff",
+    "source-calendar-schedule",
+    "source-calendar-schedule-guide"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "wcs-student-calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideHeroVerificationProcess": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideCompatibleCalendars": true,
+  "hideSocialShareButtons": true,
+  "breaksBeforeAllDates": true,
+  "hiddenSections": [
+    "comparison",
+    "districtProfile",
+    "downloadCta",
+    "keyDateCards",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars",
+    "about",
+    "backToCurrent",
+    "planningTips",
+    "quickFacts",
+    "relatedDistricts",
+    "todayStatus",
+    "whatsDifferent",
+    "yearNumbers"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Opening Schedule",
+      "id": "wcs-2026-2027-opening"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Early Release & Late Start",
+      "id": "wcs-2026-2027-grade-schedules"
+    },
+    {
+      "label": "Attendance Labels",
+      "id": "wcs-2026-2027-status-labels"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Grading Periods",
+      "id": "grading-periods"
+    },
+    {
+      "label": "Weather Plan",
+      "id": "wcs-2026-2027-weather"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Williamson County Schools Calendar 2026–27: Key Dates & PDF",
+  "seoDescription": "Williamson County Schools starts Aug. 10, 2026, with a half day for grades 1–12. See 2026–27 breaks, early-release and late-start dates, plus the WCS PDF.",
+  "heroSummary": "Grades 1–12 start the 2026–27 WCS school year with a half day Monday, August 10, followed by their first full day August 11. Pre-K, Early Childhood and Kindergarten have their first full day August 17. The last student day is a half day Thursday, May 27, 2027. Fall Break is October 12–16, Thanksgiving Break is November 23–27, Winter Break runs December 21–January 4, and Spring Break is March 15–19.\n\nWCS also schedules 11 early-release days for elementary schools and Hillsboro School and 27 late-start days for grades 6–12. Hillsboro students in grades 6–8 follow the early-release schedule instead.",
+  "heroSourceLine": "Checked against the official WCS Student and Staff calendars and Late Start/Early Release documents · Aug 22, 2026",
+  "verificationBadgeText": "Official WCS PDFs reviewed",
+  "calendarNotes": "For student attendance dates, follow the Student School Calendar. The Staff School Calendar explains teacher activity on student-free days, while the WCS schedule guide supplies the grade-specific late-start and early-release rules. Use your child's school for building events and the district's School Start & End Times page for exact bell times.",
+  "keyDatesHeading": "WCS 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "Williamson County Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "Grade-specific opening dates, major breaks and the half-day finish",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Half Day for Grades 1–12",
+      "date": "2026-08-10",
+      "type": "school_start",
+      "schemaDescription": "Grades 1–12 begin with a half day Monday, August 10, 2026."
+    },
+    {
+      "label": "Full Day",
+      "name": "First Full Day for Grades 1–12",
+      "date": "2026-08-11",
+      "type": "school_start"
+    },
+    {
+      "label": "Early Learners",
+      "name": "Pre-K, Early Childhood and Kindergarten Begin",
+      "displayName": "First Full Day for Pre-K, Early Childhood and Kindergarten",
+      "date": "2026-08-17",
+      "type": "school_start"
+    },
+    {
+      "label": "Fall",
+      "name": "Fall Break",
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "type": "break_start"
+    },
+    {
+      "label": "Return",
+      "name": "Students Return for Second Semester",
+      "date": "2027-01-05",
+      "type": "school_resume",
+      "schemaDescription": "Students return Tuesday, January 5, 2027. Grades 6–12 also follow a published 45-minute late start."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School — Half Day",
+      "date": "2027-05-27",
+      "type": "school_end"
+    }
+  ],
+  "allDatesTitle": "Williamson County Schools 2026–27 Calendar Dates",
+  "allDatesCoverageNote": "This table follows the official Student School Calendar and includes attendance dates, breaks, student-free days, grading-period markers, the conference window and grade-specific schedule changes. In-school observances and reporting dates are excluded from the calendar import because they do not change attendance.",
+  "allDatesSourceUrl": "https://docs.wcs.edu/pdf/hr/Student-School-Calendar-2026-2027.pdf",
+  "allDatesSourceLabel": "Official WCS 2026–27 Student School Calendar PDF",
+  "dateLegendItems": [
+    {
+      "label": "Opening, return or last day",
+      "dot": "bg-orange-500"
+    },
+    {
+      "label": "Holiday or break",
+      "dot": "bg-amber-400"
+    },
+    {
+      "label": "Student-free staff day",
+      "dot": "bg-violet-700"
+    },
+    {
+      "label": "Early release or late start",
+      "dot": "bg-teal-500"
+    },
+    {
+      "label": "Academic marker or in-school observance",
+      "dot": "bg-blue-400"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "wcs-2026-2027-opening",
+      "label": "WCS Start Dates by Grade Level",
+      "position": "afterKeyDates",
+      "content": "The opening schedule depends on grade level: August 10 applies only to students in grades 1–12.",
+      "table": {
+        "caption": "Williamson County Schools 2026–27 opening schedule",
+        "columns": [
+          "Date",
+          "Students",
+          "Schedule"
+        ],
+        "rows": [
+          [
+            "Aug 10, 2026",
+            "Grades 1–12",
+            "First day; half day"
+          ],
+          [
+            "Aug 11, 2026",
+            "Grades 1–12",
+            "First full day"
+          ],
+          [
+            "Aug 17, 2026",
+            "Pre-K, Early Childhood and Kindergarten",
+            "First full day"
+          ]
+        ],
+        "footnote": "Check the assigned school or program for exact arrival and dismissal times."
+      }
+    },
+    {
+      "id": "wcs-2026-2027-grade-schedules",
+      "label": "WCS Early Release and Late Start Dates",
+      "position": "afterBreaks",
+      "content": "WCS uses these schedule changes for professional learning. Buses keep their regular morning schedule on late-start days. Students who arrive at the usual time on late-start days, or who cannot be picked up at early dismissal, will still be supervised. SACC keeps regular hours. For exact school-level times, use WCS's School Start & End Times page.",
+      "table": {
+        "caption": "WCS 2026–27 grade-specific schedule changes",
+        "columns": [
+          "Schedule",
+          "Who follows it",
+          "Published dates"
+        ],
+        "rows": [
+          [
+            "113-minute early release",
+            "Elementary schools and Hillsboro School, including Hillsboro grades 6–8",
+            "Aug 26; Sep 16, 30; Oct 28; Nov 18; Dec 9; Jan 13, 27; Feb 10, 24; Mar 10"
+          ],
+          [
+            "45-minute late start",
+            "Grades 6–12 except Hillsboro grades 6–8",
+            "Aug 18, 24, 31; Sep 8, 14, 21, 28; Oct 5, 19, 26; Nov 2, 9, 16, 30; Dec 7; Jan 5, 11, 19, 25; Feb 1, 8, 22; Mar 1, 8, 22, 29; Apr 5"
+          ]
+        ],
+        "footnote": "The November elementary early-release date was changed from November 11 to November 18 and approved August 17, 2026."
+      },
+      "links": [
+        {
+          "label": "Read the WCS schedule and transportation details",
+          "to": "https://docs.wcs.edu/pdf/hr/Late-Start-Early-Release-Information.pdf"
+        },
+        {
+          "label": "Find your school's start, dismissal and adjusted times",
+          "to": "https://www.wcs.edu/about-us/school-start-end-times"
+        }
+      ]
+    },
+    {
+      "id": "wcs-2026-2027-status-labels",
+      "label": "What “No Students,” “No School” and “System Closed” Mean",
+      "position": "afterBreaks",
+      "content": "WCS uses these labels to distinguish student attendance from staff and district operations. Students are out for all of Fall Break, October 12–16, although staff schedules differ during the week: October 12 is a conference flex day, October 13 is a district professional-development flex day, and WCS marks October 14–16 as System Closed.",
+      "table": {
+        "columns": [
+          "Official label",
+          "WCS definition"
+        ],
+        "rows": [
+          [
+            "No Students",
+            "Students do not report; teachers report for administrative or professional-development work"
+          ],
+          [
+            "No School",
+            "Students and teachers do not report; 12-month employees work"
+          ],
+          [
+            "System Closed",
+            "Schools and district offices are closed"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "wcs-2026-2027-weather",
+      "label": "WCS Inclement-Weather Plan",
+      "position": "afterGradingPeriodsBeforeCalendarExport",
+      "content": "The Student School Calendar says WCS has stockpiled enough instructional time to cover up to 10 inclement-weather days without a makeup. If WCS misses more than 10 days because of inclement weather, the calendar lists the recommended makeup order as Mid-Winter Break, the second-semester professional-development day, Spring Holiday, Monday through Wednesday of Spring Break, and then additional days at the end of the school year. These are contingency options, not scheduled attendance dates.",
+      "table": {
+        "columns": [
+          "Calendar language",
+          "Planning meaning"
+        ],
+        "rows": [
+          [
+            "Up to 10 inclement-weather days",
+            "Stockpiled time covers them; no makeup is scheduled in advance"
+          ],
+          [
+            "More than 10 days",
+            "A makeup date applies only if WCS announces a calendar change"
+          ]
+        ]
+      }
+    }
+  ],
+  "gradingPeriodsPosition": "beforeCalendarExport",
+  "gradingPeriodsTitle": "WCS Student Days by Grading Period",
+  "gradingPeriodsDescription": "The four grading periods total 177 instructional days. Report-card dates below are the Skyward posting dates on the official WCS calendar page.",
+  "gradingPeriodsDaysLabel": "Student days",
+  "gradingPeriodsReportsLabel": "Report cards posted",
+  "gradingPeriodsFooterNote": "Progress reports are posted September 10, November 19, February 11 and April 29. Printed report cards may be available up to three days after the Skyward posting date.",
+  "gradingPeriods": [
+    {
+      "label": "Quarter 1",
+      "start": "2026-08-10",
+      "end": "2026-10-09",
+      "studentDays": 44,
+      "reportsIssued": "2026-10-23"
+    },
+    {
+      "label": "Quarter 2",
+      "start": "2026-10-19",
+      "end": "2026-12-18",
+      "studentDays": 39,
+      "reportsIssued": "2027-01-08"
+    },
+    {
+      "label": "Quarter 3",
+      "start": "2027-01-05",
+      "end": "2027-03-12",
+      "studentDays": 46,
+      "reportsIssued": "2027-03-26"
+    },
+    {
+      "label": "Quarter 4",
+      "start": "2027-03-22",
+      "end": "2027-05-27",
+      "studentDays": 48,
+      "reportsIssued": "2027-06-01"
+    }
+  ],
+  "alternateCalendarsTitle": "Official WCS Calendar Resources",
+  "alternateCalendarsDescription": "The staff and schedule documents below provide context used on this page. Pay and Monthly Work calendars are separate employee resources.",
+  "alternateCalendarsButtonLabel": "View Official PDF",
+  "alternateCalendarsCollapsible": true,
+  "alternateCalendarsSummaryLabel": "Show additional official WCS resources",
+  "groupAlternateCalendarsWithDownloads": true,
+  "alternateCalendars": [
+    {
+      "type": "staff-calendar",
+      "group": "Sources used on this page",
+      "label": "WCS 2026–27 Staff School Calendar",
+      "description": "Explains teacher work, professional-development, conference-flex and preparation dates during student-free periods.",
+      "pdfUrl": "https://docs.wcs.edu/pdf/hr/Staff-School-Calendar-2026-2027.pdf",
+      "buttonLabel": "View Staff Calendar"
+    },
+    {
+      "type": "grade-schedule",
+      "group": "Sources used on this page",
+      "label": "WCS 2026–27 Late Start and Early Release Days",
+      "description": "Official date list for K–5 and Hillsboro early releases and grades 6–12 late starts.",
+      "pdfUrl": "https://docs.wcs.edu/pdf/hr/Late-Start-Early-Release-2026-2027.pdf",
+      "buttonLabel": "View Schedule Dates"
+    },
+    {
+      "type": "schedule-guide",
+      "group": "Sources used on this page",
+      "label": "WCS Late Start and Early Release Information",
+      "description": "Explains grade coverage, transportation, supervision and SACC arrangements.",
+      "pdfUrl": "https://docs.wcs.edu/pdf/hr/Late-Start-Early-Release-Information.pdf",
+      "buttonLabel": "View Schedule Guide"
+    },
+    {
+      "type": "pay-calendar",
+      "group": "Additional official WCS resources",
+      "label": "WCS 2026–27 Pay Calendar",
+      "description": "Employee payroll reference; not a student attendance calendar.",
+      "pdfUrl": "https://docs.wcs.edu/pdf/hr/2026-2027-Pay-Calendar.pdf",
+      "buttonLabel": "View Pay Calendar"
+    },
+    {
+      "type": "monthly-work-calendar",
+      "group": "Additional official WCS resources",
+      "label": "WCS 2026–27 Monthly Work Calendar",
+      "description": "Employee work-calendar reference; not a student attendance calendar.",
+      "pdfUrl": "https://docs.wcs.edu/pdf/hr/Monthly-Work-Calendar-2026-2027.pdf",
+      "buttonLabel": "View Work Calendar"
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "WCS Calendar Downloads",
+  "unifiedDownloadDescription": "Open the current WCS PDF or add the published dates to a personal calendar. The .ics file is a one-time import, not a live subscription, and will not update automatically if WCS changes the calendar.",
+  "pdfHeading": "Current WCS 2026–27 Student School Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Official two-page WCS Student School Calendar, including the staggered opening, attendance labels, grading-day totals, weather policy and grade-specific schedule dates.",
+  "icsHeading": "Add WCS Dates to Your Calendar",
+  "icsButtonLabel": "Add WCS 2026–27 Dates",
+  "icsButtonSupportText": "Includes student dates, breaks and published grade-specific schedule changes.",
+  "icsDescription": "The file includes the three opening milestones, student breaks and holidays, student-free staff days, the half-day finish, 11 elementary and Hillsboro early releases and 27 grades 6–12 late starts. It excludes in-school observances, reporting dates, the conference window, graduation ceremonies and unactivated weather contingencies.",
+  "calendarFaqs": [
+    {
+      "q": "When does Williamson County Schools start in 2026–27?",
+      "a": "Grades 1–12 begin with a half day Monday, August 10, 2026, and have their first full day August 11. Pre-K, Early Childhood and Kindergarten have their first full day August 17."
+    },
+    {
+      "q": "When is the last day of Williamson County Schools in 2026–27?",
+      "a": "The last student day is Thursday, May 27, 2027, and WCS marks it as a half day. The graduation window runs May 27–30."
+    },
+    {
+      "q": "Who follows WCS early-release and late-start schedules?",
+      "a": "Elementary schools and Hillsboro School have 11 published 113-minute early releases. Grades 6–12 have 27 published 45-minute late starts, except Hillsboro grades 6–8, which follow Hillsboro's early-release schedule."
+    },
+    {
+      "q": "Is November 18 the correct elementary early-release date?",
+      "a": "Yes. The current WCS calendar says the November date changed from November 11 to November 18 and was approved August 17, 2026."
+    },
+    {
+      "q": "Does WCS have to make up the first 10 weather days?",
+      "a": "No. The calendar says up to 10 inclement-weather days are stockpiled and do not require makeup. Dates in the printed contingency order should not be treated as school days unless WCS activates them."
+    }
+  ],
+  "excludeDistrictFaqs": true,
+  "faqDisplayLimit": 5,
+  "sourceReviewSummary": "Reviewed August 22, 2026 against the current WCS Student School Calendar, Staff School Calendar, Late Start and Early Release Days, and Late Start and Early Release Information.",
+  "sourceReviewDetailsTitle": "What was verified",
+  "sourceReviewDetails": [
+    "August 10, August 11, August 17, May 27, all published breaks, half days, the parent-teacher conference window and the 177-day total were checked against the official Student School Calendar.",
+    "All 11 elementary and Hillsboro early releases and all 27 grades 6–12 late starts were checked against the student and schedule PDFs; the November 18 amendment is preserved.",
+    "The Staff School Calendar was used only to explain staff activity during Fall Break, Election Day, Winter Break and Mid-Winter Break.",
+    "The WCS schedule guide was used to confirm the 113-minute and 45-minute changes, Hillsboro's exception, buses, supervision and SACC.",
+    "The weather sequence is reported as a contingency plan. Weather-contingency dates are not included in the ICS unless WCS activates them."
+  ],
+  "sourceMaintainerLabel": "Official source",
+  "sourceMaintainerText": "Williamson County Schools. MySchoolDates independently reviewed the calendar data against WCS publications.",
+  "sourceNextReviewText": "We will review the page again if WCS replaces a linked PDF, changes student dates, revises the late-start or early-release schedule, or activates a makeup day.",
+  "sourcesTitle": "Official WCS Sources",
+  "sources": [
+    {
+      "label": "WCS School & Employee Calendars",
+      "url": "https://www.wcs.edu/about-us/calendar"
+    },
+    {
+      "label": "WCS 2026–27 Student School Calendar PDF",
+      "url": "https://docs.wcs.edu/pdf/hr/Student-School-Calendar-2026-2027.pdf"
+    },
+    {
+      "label": "WCS 2026–27 Staff School Calendar PDF",
+      "url": "https://docs.wcs.edu/pdf/hr/Staff-School-Calendar-2026-2027.pdf"
+    },
+    {
+      "label": "WCS 2026–27 Late Start and Early Release Days PDF",
+      "url": "https://docs.wcs.edu/pdf/hr/Late-Start-Early-Release-2026-2027.pdf"
+    },
+    {
+      "label": "WCS Late Start and Early Release Information PDF",
+      "url": "https://docs.wcs.edu/pdf/hr/Late-Start-Early-Release-Information.pdf"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-10",
+      "name": "First Half Day for Students in Grades 1–12",
+      "type": "school_start",
+      "badgeLabel": "Grades 1–12 Half Day",
+      "description": "The first full day for grades 1–12 is August 11. Pre-K, Early Childhood and Kindergarten have their first full day August 17."
+    },
+    {
+      "date": "2026-08-11",
+      "name": "First Full Day for Students in Grades 1–12",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-08-17",
+      "name": "First Full Day for Pre-K, Early Childhood and Kindergarten",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-08-18",
+      "dates": [
+        "2026-08-18",
+        "2026-08-24",
+        "2026-08-31",
+        "2026-09-08",
+        "2026-09-14",
+        "2026-09-21",
+        "2026-09-28",
+        "2026-10-05",
+        "2026-10-19",
+        "2026-10-26",
+        "2026-11-02",
+        "2026-11-09",
+        "2026-11-16",
+        "2026-11-30",
+        "2026-12-07",
+        "2027-01-05",
+        "2027-01-11",
+        "2027-01-19",
+        "2027-01-25",
+        "2027-02-01",
+        "2027-02-08",
+        "2027-02-22",
+        "2027-03-01",
+        "2027-03-08",
+        "2027-03-22",
+        "2027-03-29",
+        "2027-04-05"
+      ],
+      "displayDate": "27 dates · Aug 18, 2026–Apr 5, 2027",
+      "name": "Grades 6–12 Late Starts — 45 Minutes",
+      "type": "academic",
+      "badgeLabel": "45-Minute Late Start",
+      "description": "Applies to grades 6–12 except Hillsboro grades 6–8, which follow the Hillsboro early-release schedule.",
+      "calendarExportDescription": "45-minute late start for WCS grades 6–12, except Hillsboro grades 6–8.",
+      "exportDatesIndividually": true,
+      "excludeFromDateSchema": true
+    },
+    {
+      "date": "2026-08-26",
+      "dates": [
+        "2026-08-26",
+        "2026-09-16",
+        "2026-09-30",
+        "2026-10-28",
+        "2026-11-18",
+        "2026-12-09",
+        "2027-01-13",
+        "2027-01-27",
+        "2027-02-10",
+        "2027-02-24",
+        "2027-03-10"
+      ],
+      "displayDate": "11 dates · Aug 26, 2026–Mar 10, 2027",
+      "name": "Elementary and Hillsboro Early Releases — 113 Minutes",
+      "type": "early_release",
+      "badgeLabel": "113-Minute Early Release",
+      "description": "Applies to elementary schools and all Hillsboro School students. The November date is November 18, not November 11.",
+      "calendarExportDescription": "113-minute early release for WCS elementary schools and Hillsboro School.",
+      "exportDatesIndividually": true,
+      "excludeFromDateSchema": true
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — No School; System Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-17",
+      "name": "Constitution Day Observed — Students in School",
+      "type": "observance",
+      "badgeLabel": "Students in School",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-09-21",
+      "endDate": "2026-11-06",
+      "name": "Parent-Teacher Conference Window",
+      "type": "conference",
+      "description": "Conference appointments are arranged by the school. The calendar does not mark the full window as student days off.",
+      "hideFromCalendarExport": true,
+      "excludeFromDateSchema": true
+    },
+    {
+      "date": "2026-10-09",
+      "name": "First Grading Period Ends — 44 Student Days",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-12",
+      "endDate": "2026-10-16",
+      "name": "Fall Break — Students Out",
+      "type": "break_start",
+      "description": "October 12 is Columbus Day and the start of Fall Break; the system is closed October 14–16."
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Election Day / Site-Based Professional Development — No Students",
+      "type": "staff_development",
+      "badgeLabel": "No Students"
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day — Students in School",
+      "type": "observance",
+      "badgeLabel": "Students in School",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break — No School; System Closed",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Half Day; Second Grading Period and First Semester End",
+      "type": "semester_end",
+      "badgeLabel": "Half Day",
+      "description": "The second grading period has 39 student days; the first semester has 83."
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "name": "Winter Break — Students Out",
+      "type": "break_start",
+      "description": "Students return January 5. January 4 is a teacher preparation flex day."
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Students Return; Second Semester Begins",
+      "type": "school_resume",
+      "description": "Grades 6–12 also have a published 45-minute late start."
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — No School; System Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-12",
+      "endDate": "2027-02-15",
+      "name": "Mid-Winter Break / Presidents Day — Students Out",
+      "type": "break_start",
+      "description": "February 12 is a district professional-development day with no students; February 15 is a no-school day for Mid-Winter Break."
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Third Grading Period Ends — 46 Student Days",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break — No School; System Closed",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Spring Holiday — No School; System Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-05-27",
+      "name": "Last Day — Half Day; Fourth Grading Period Ends",
+      "type": "school_end",
+      "badgeLabel": "Half Day",
+      "description": "The fourth grading period has 48 student days; the second semester has 94."
+    },
+    {
+      "date": "2027-05-27",
+      "endDate": "2027-05-30",
+      "name": "Graduation Window",
+      "type": "graduation",
+      "description": "Ceremony dates and times are school-specific.",
+      "hideFromCalendarExport": true,
+      "excludeFromDateSchema": true
+    }
+  ]
+}

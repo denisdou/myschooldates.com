@@ -4,185 +4,579 @@
   "displaySchoolYear": "2026–27",
   "pageHeading": "Jeffco Public Schools Calendar 2026–27",
   "firstDay": "2026-08-19",
+  "firstDayScope": "First student contact day for all students on the district family calendar.",
   "lastDay": "2027-05-27",
+  "lastDayScope": "Last student contact day; district-run PK–12 schools dismiss 2.5 hours early, while charter schools set their own dismissal schedules.",
   "totalSchoolDays": 171,
   "teacherWorkDays": 185,
-  "sourceUrl": "https://www.jeffcopublicschools.org/calendar",
-  "sourcePdfUrl": "https://resources.finalsite.net/images/v1784760208/jeffcopublicschoolsorg/jeffcopublicschoolsorg/mhj6z1kwf6vc5egg58zv/2026-2027-Family-Calendar-EN-Final.pdf",
-  "sourceCalendarName": "Jeffco 2026–27 Family Calendar (official PDF)",
-  "sourceVersion": "Official PDF resource labeled EN_Final_5.22.26",
-  "sourceVersionLabel": "Source file",
-  "sourceVersionDisplay": "Jeffco 2026–27 Family Calendar (official PDF)",
-  "lastVerifiedAt": "2026-08-04",
-  "datePublished": "2026-08-04",
-  "dateModified": "2026-08-04",
-  "allDatesMode": "all",
-  "includeArticleSchema": false,
-  "webPageMainEntity": "keyDates",
-  "schemaReviewedBy": "author",
-  "seoTitle": "Jeffco Public Schools Calendar 2026–27: Key Dates & PDF",
-  "seoDescription": "View Jeffco Public Schools’ 2026–27 calendar, including first and last days, breaks, snow make-up dates, official PDFs, and an .ics download.",
-  "schemaCalendarName": "Jeffco Public Schools Calendar 2026–27",
-  "schemaDatasetName": "Jeffco Public Schools 2026–27 Calendar Dataset",
-  "schemaDatasetDescription": "Reviewed Jeffco Public Schools dates for 2026–27, including first day, last day, breaks, teacher staff development days, potential snow make-up days, legal holidays, translated PDFs, and last-day early dismissal.",
-  "schemaCalendarDownloadName": "MySchoolDates Jeffco 2026–27 calendar import file",
-  "schemaIsAccessibleForFree": true,
-  "schemaKeywords": [
-    "Jeffco Public Schools calendar",
-    "2026-2027 school calendar",
-    "school breaks",
-    "snow make-up days",
-    "Jefferson County Colorado"
-  ],
   "temporalCoverageStart": "2026-08-11",
   "temporalCoverageEnd": "2027-06-18",
-  "hideInstructionalDaysSummary": true,
-  "hideSecondSemesterStartSummary": true,
-  "hideHeroReviewedField": true,
-  "hideHeroUpdatedField": true,
-  "hideHeroVerificationProcess": true,
-  "hideHeroVerificationIcs": true,
+  "sourceUrl": "https://www.jeffcopublicschools.org/calendar",
+  "sourceDocumentPage": "https://www.jeffcopublicschools.org/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1785876307/jeffcopublicschoolsorg/jeffcopublicschoolsorg/mhj6z1kwf6vc5egg58zv/2026-2027-Family-Calendar-EN-Final.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1785876307/jeffcopublicschoolsorg/jeffcopublicschoolsorg/mhj6z1kwf6vc5egg58zv/2026-2027-Family-Calendar-EN-Final.pdf",
+  "sourceCheckedAt": "2026-08-22",
+  "sourceUpdatedAt": "2026-05-22",
+  "sourceChecksumSha256": "6773c19b788e1984f99f1c1d6b95b3eec10273530d918e101866e2759810acf6",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.jeffcopublicschools.org/calendar",
+    "linkText": "Family Calendar (English)",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1785876307/jeffcopublicschoolsorg/jeffcopublicschoolsorg/mhj6z1kwf6vc5egg58zv/2026-2027-Family-Calendar-EN-Final.pdf",
+    "expectedChecksumSha256": "6773c19b788e1984f99f1c1d6b95b3eec10273530d918e101866e2759810acf6"
+  },
+  "lastVerifiedAt": "2026-08-22",
+  "dateCreated": "2026-08-22",
+  "datePublished": "2026-08-22",
+  "dateModified": "2026-08-22",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "snow_makeup_day_activation",
+    "translated_calendar_replacement",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "District Family Calendar dated May 22, 2026",
+  "sourceCalendarName": "Jeffco Public Schools District Family Calendar 2026–2027",
+  "schemaCalendarName": "Jeffco Public Schools Calendar 2026–27",
+  "schemaDatasetName": "Jeffco Public Schools 2026–27 Family Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Jeffco Public Schools dates for 2026–27, including 171 student contact days, 185 teacher workdays, districtwide breaks, teacher staff development, three conditional snow make-up dates, school-level modified contact-day limits and the district-run PK–12 last-day early dismissal.",
+  "schemaSpatialCoverage": "Jefferson County, Colorado",
+  "schemaCalendarDownloadName": "Jeffco Public Schools 2026–27 Calendar ICS File",
+  "schemaCalendarDownloadDescription": "One-time import of confirmed Jeffco student calendar dates, breaks, legal holidays and student-free staff-development days. Conditional snow make-up dates and unpublished school-level modified contact days are excluded.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-spanish",
+      "type": "CreativeWork",
+      "name": "Jeffco Calendario para el Año Escolar 2026–27 — Spanish",
+      "url": "https://resources.finalsite.net/images/v1785876203/jeffcopublicschoolsorg/jeffcopublicschoolsorg/nyhkm7dgok6gwpxxoabx/2026-2027-Family-Calendar-ES-Final.pdf"
+    },
+    {
+      "id": "source-calendar-vietnamese",
+      "type": "CreativeWork",
+      "name": "Jeffco Lịch Cho Các Gia Đình Của Học Khu 2026–27 — Vietnamese",
+      "url": "https://resources.finalsite.net/images/v1785876274/jeffcopublicschoolsorg/jeffcopublicschoolsorg/rs0jgr8ligntbv1o7efv/2026-2027-Family-Calendar-VI-Final.pdf"
+    },
+    {
+      "id": "source-calendar-russian",
+      "type": "CreativeWork",
+      "name": "Jeffco Окружной Календарь Для Семей 2026–27 — Russian",
+      "url": "https://resources.finalsite.net/images/v1785876234/jeffcopublicschoolsorg/jeffcopublicschoolsorg/e5oubghkmkxnaln4gvyv/2026-2027-FamilyCalendar-RUS-Final.pdf"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-spanish",
+    "source-calendar-vietnamese",
+    "source-calendar-russian"
+  ],
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
   "hideFaqSchema": true,
-  "hideDateLegend": true,
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideHeroDownloadLink": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideInstructionalDaysSummary": true,
+  "hideDateLegend": false,
   "compactDownloadModule": true,
   "hideCompatibleCalendars": true,
   "hidePdfVersionLabel": true,
-  "moveCalendarExportBeforeAllDates": true,
-  "hideCalendarTrackCaution": true,
-  "hideAlternateCalendarsNotice": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "moveCalendarExportBeforeAllDates": false,
   "sourcesBeforeFaq": false,
   "yearSwitcherPosition": "afterSources",
+  "hiddenCustomSectionIds": [
+    "jeffco-calendar-source-guide"
+  ],
   "hiddenSections": [
     "downloadCta",
     "todayStatus",
     "keyDateCards",
     "quickFacts",
-    "breaks",
-    "yearNumbers",
-    "planningTips",
     "about",
+    "planningTips",
+    "livingHere",
+    "districtProfile",
+    "yearNumbers",
     "whatsDifferent",
-    "nationalTrends",
+    "breaks",
     "comparison",
-    "districtProfile"
+    "nationalTrends",
+    "relatedDistricts",
+    "otherCalendars",
+    "backToCurrent"
   ],
-  "heroSummary": "Jeffco Public Schools begins the 2026–27 school year on Wednesday, August 19, 2026, and the last day is Thursday, May 27, 2027. District-run PK–12 schools dismiss 2.5 hours early on the last day; charter schools set their own dismissal schedules. Fall Break is October 12–13, Thanksgiving Break is November 23–27, Winter Break is December 21–January 5, and Spring Break is March 22–26.",
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Calendar Scope",
+      "id": "jeffco-2026-2027-calendar-scope"
+    },
+    {
+      "label": "Snow Make-Up Days",
+      "id": "jeffco-2026-2027-snow-days"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Return Dates",
+      "id": "jeffco-2026-2027-return-dates"
+    },
+    {
+      "label": "Contact Days",
+      "id": "jeffco-2026-2027-contact-days"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Languages",
+      "id": "other-calendars"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Jeffco Public Schools Calendar 2026–27: Dates & PDF",
+  "seoDescription": "Jeffco Public Schools starts Aug. 19, 2026. See the last day, major breaks, snow make-up dates, early dismissal details, official PDFs and a calendar download.",
+  "heroSummary": "Jeffco Public Schools students begin the 2026–27 school year on Wednesday, August 19, 2026, and finish Thursday, May 27, 2027. Fall Break is October 12–13, Thanksgiving Break is November 23–27, Winter Break is December 21–January 5, and Spring Break is March 22–26. District-run PK–12 schools dismiss 2.5 hours early on the last day; charter schools set their own dismissal schedules.",
   "heroFactChips": [
     "171 student contact days",
     "185 teacher workdays",
-    "Potential snow make-up days: Feb 12, Mar 29, Apr 30",
-    "Spanish, Vietnamese, and Russian PDFs"
+    "3 conditional snow make-up dates",
+    "May 27: district-run PK–12 dismisses 2.5 hours early"
   ],
-  "calendarNotes": "Jeffco’s 2026–27 family calendar lists February 12, March 29, and April 30 as teacher staff development days and potential snow make-up days. The PDF also notes that the last-day early dismissal schedule does not apply to charter schools.",
-  "keyDatesSummaryTitle": "2026–27 Key Dates",
-  "keyDatesSummarySubtitle": "First and last days, major breaks, and potential snow make-up dates",
+  "heroSourceLine": "Based on the official Jeffco 2026–27 District Family Calendar dated May 22, 2026",
+  "verificationBadgeText": "Checked against current Jeffco sources",
+  "heroVerificationSourceText": "Reviewed against the current Jeffco calendar page and English family calendar PDF",
+  "heroVerificationComparisonText": "The English PDF reviewed for this page matches Jeffco's current official file",
+  "calendarNotes": "Jeffco lists 79 first-semester and 92 second-semester student contact days, for 171 total, alongside 87 and 98 teacher workdays, for 185 total. February 12, March 29 and April 30 are teacher staff-development dates that may become snow make-up days. Winter Break ends January 5, so students return January 6. Spring Break ends March 26, but March 29 remains conditional: students attend that day only if Jeffco uses it for snow make-up. The PDF says additional modified contact days appear on individual school calendars. Its May 27 early-dismissal notice applies to district-run PK–12 schools and excludes charter schools.",
+  "keyDatesHeading": "Jeffco Public Schools Calendar 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "Jeffco Public Schools Calendar 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, student return dates and conditional snow make-up days",
   "keyDateSummaryItems": [
-    { "label": "First Day", "name": "First Day of School for All Students", "date": "2026-08-19", "type": "school_start" },
-    { "label": "Break", "name": "Fall Break", "date": "2026-10-12", "endDate": "2026-10-13", "type": "break_start", "description": "October 13 is also a teacher staff development day. There is no school for students." },
-    { "label": "Break", "name": "Thanksgiving Break", "date": "2026-11-23", "endDate": "2026-11-27", "type": "break_start" },
-    { "label": "Break", "name": "Winter Break", "date": "2026-12-21", "endDate": "2027-01-05", "type": "break_start", "description": "Students return January 6." },
-    { "label": "If Needed", "name": "Potential Snow Make-Up Day", "date": "2027-02-12", "type": "makeup_day", "description": "Also listed as a teacher staff development day." },
-    { "label": "Break", "name": "Spring Break", "date": "2027-03-22", "endDate": "2027-03-26", "type": "break_start" },
-    { "label": "If Needed", "name": "Potential Snow Make-Up Day", "date": "2027-03-29", "type": "makeup_day", "description": "Also listed as a teacher staff development day." },
-    { "label": "If Needed", "name": "Potential Snow Make-Up Day", "date": "2027-04-30", "type": "makeup_day", "description": "Also listed as a teacher staff development day." },
-    { "label": "Last Day", "name": "Last Day of School", "date": "2027-05-27", "type": "school_end", "description": "District-run PK–12 schools dismiss 2.5 hours early; charter schools set their own dismissal schedules." }
+    {
+      "label": "First Day",
+      "name": "First Day of School for All Students",
+      "date": "2026-08-19",
+      "type": "school_start"
+    },
+    {
+      "label": "Fall",
+      "name": "Fall Break",
+      "date": "2026-10-12",
+      "endDate": "2026-10-13",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-05",
+      "type": "break_start"
+    },
+    {
+      "label": "Return",
+      "name": "Students Return After Winter Break",
+      "date": "2027-01-06",
+      "type": "school_resume"
+    },
+    {
+      "label": "If Needed",
+      "name": "Potential Snow Make-Up Dates",
+      "date": "2027-02-12",
+      "dates": [
+        "2027-02-12",
+        "2027-03-29",
+        "2027-04-30"
+      ],
+      "displayDate": "Feb 12 · Mar 29 · Apr 30, 2027",
+      "type": "makeup_day",
+      "description": "Jeffco lists February 12, March 29 and April 30 as conditional snow make-up dates."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School for All Students",
+      "date": "2027-05-27",
+      "type": "school_end",
+      "description": "District-run PK–12 schools dismiss 2.5 hours early; charter schools set their own schedules."
+    }
   ],
-  "jumpNavigation": [
-    { "label": "Key Dates", "id": "key-dates" },
-    { "label": "Jeffco Notes", "id": "jeffco-2026-2027-calendar-notes" },
-    { "label": "Download", "id": "add-to-calendar" },
-    { "label": "All Dates", "id": "all-dates" },
-    { "label": "Translated PDFs", "id": "other-calendars" },
-    { "label": "FAQ", "id": "faq" },
-    { "label": "Sources", "id": "sources" }
-  ],
-  "allDatesTitle": "Jeffco 2026–27 Family Calendar Dates",
-  "allDatesCoverageNote": "This list includes districtwide dates published in Jeffco’s 2026–27 family calendar. Individual schools may have additional modified contact days, testing dates, events, and schedule changes.",
-  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1784760208/jeffcopublicschoolsorg/jeffcopublicschoolsorg/mhj6z1kwf6vc5egg58zv/2026-2027-Family-Calendar-EN-Final.pdf",
-  "allDatesSourceLabel": "Jeffco 2026–27 English family calendar PDF",
-  "icsHeading": "Jeffco Calendar Downloads",
-  "icsDescription": "Download a MySchoolDates .ics file created from the district-published dates on this page.",
-  "icsButtonLabel": "Download Calendar File (.ics)",
-  "pdfHeading": "Official Jeffco 2026–27 Calendar PDF",
-  "pdfButtonLabel": "View Official PDF",
-  "pdfDescription": "Open the English 2026–27 family calendar published by Jeffco Public Schools.",
-  "alternateCalendarsTitle": "Jeffco 2026–27 Calendar in Spanish, Vietnamese, and Russian",
-  "alternateCalendarsDescription": "Jeffco publishes translated family calendar PDFs for the 2026–27 school year.",
+  "allDatesTitle": "Jeffco Public Schools Calendar 2026–27 Dates",
+  "allDatesCoverageNote": "This table follows the districtwide dates in Jeffco's official family calendar. Potential snow make-up dates remain conditional, and additional modified contact days published by individual schools are not included.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1785876307/jeffcopublicschoolsorg/jeffcopublicschoolsorg/mhj6z1kwf6vc5egg58zv/2026-2027-Family-Calendar-EN-Final.pdf",
+  "allDatesSourceLabel": "Official Jeffco 2026–27 District Family Calendar",
+  "dateLegendLabelOverrides": {
+    "Reserved Weather Day": "Potential Snow Make-Up Day",
+    "Teacher Workday": "Teacher Staff Development",
+    "No School": "No School for Students"
+  },
+  "unifiedDownloadTitle": "Jeffco 2026–27 Calendar Downloads",
+  "unifiedDownloadDescription": "Open the official Jeffco family calendar in English or another published language, or download a one-time ICS file of confirmed districtwide dates.",
+  "icsHeading": "Download the Jeffco 2026–27 ICS Calendar",
+  "icsDescription": "Download a one-time copy for Google Calendar, Apple Calendar or Outlook. It will not update automatically. Conditional snow make-up dates are excluded until Jeffco confirms whether they will be used. School-level Modified Contact Days are also excluded because they vary by school.",
+  "icsButtonLabel": "Download Jeffco ICS File",
+  "icsButtonSupportText": "One-time import; conditional dates are excluded",
+  "pdfHeading": "Official Jeffco 2026–27 Family Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfButtonLabel": "View Official English PDF",
+  "pdfDescription": "Open the one-page District Family Calendar published by Jeffco Public Schools.",
+  "alternateCalendarsTitle": "Official Jeffco 2026–27 Calendar Languages",
+  "alternateCalendarsDescription": "Jeffco publishes the same family calendar in Spanish, Vietnamese and Russian. These files are translations, not separate attendance schedules.",
   "alternateCalendarsButtonLabel": "View Calendar",
   "alternateCalendars": [
-    { "type": "spanish", "label": "2026–27 Family Calendar (Spanish)", "buttonLabel": "View Spanish PDF", "pdfUrl": "https://resources.finalsite.net/images/v1768603454/jeffcopublicschoolsorg/jeffcopublicschoolsorg/nyhkm7dgok6gwpxxoabx/2026-2027-Family-Calendar-ES-Final.pdf", "ariaLabel": "View the Jeffco 2026–27 family calendar in Spanish" },
-    { "type": "vietnamese", "label": "2026–27 Family Calendar (Vietnamese)", "buttonLabel": "View Vietnamese PDF", "pdfUrl": "https://resources.finalsite.net/images/v1768603401/jeffcopublicschoolsorg/jeffcopublicschoolsorg/rs0jgr8ligntbv1o7efv/2026-2027-Family-Calendar-VI-Final.pdf", "ariaLabel": "View the Jeffco 2026–27 family calendar in Vietnamese" },
-    { "type": "russian", "label": "2026–27 Family Calendar (Russian)", "buttonLabel": "View Russian PDF", "pdfUrl": "https://resources.finalsite.net/images/v1768603484/jeffcopublicschoolsorg/jeffcopublicschoolsorg/e5oubghkmkxnaln4gvyv/2026-2027-FamilyCalendar-RUS-Final.pdf", "ariaLabel": "View the Jeffco 2026–27 family calendar in Russian" }
+    {
+      "type": "spanish",
+      "group": "Jeffco Calendar PDFs in Other Languages",
+      "label": "Calendario para el Año Escolar 2026–27 (Spanish)",
+      "buttonLabel": "View Spanish PDF",
+      "pdfUrl": "https://resources.finalsite.net/images/v1785876203/jeffcopublicschoolsorg/jeffcopublicschoolsorg/nyhkm7dgok6gwpxxoabx/2026-2027-Family-Calendar-ES-Final.pdf",
+      "ariaLabel": "View the Jeffco 2026–27 family calendar in Spanish"
+    },
+    {
+      "type": "vietnamese",
+      "group": "Jeffco Calendar PDFs in Other Languages",
+      "label": "Lịch Cho Các Gia Đình Của Học Khu 2026–27 (Vietnamese)",
+      "buttonLabel": "View Vietnamese PDF",
+      "pdfUrl": "https://resources.finalsite.net/images/v1785876274/jeffcopublicschoolsorg/jeffcopublicschoolsorg/rs0jgr8ligntbv1o7efv/2026-2027-Family-Calendar-VI-Final.pdf",
+      "ariaLabel": "View the Jeffco 2026–27 family calendar in Vietnamese"
+    },
+    {
+      "type": "russian",
+      "group": "Jeffco Calendar PDFs in Other Languages",
+      "label": "Окружной Календарь Для Семей 2026–27 (Russian)",
+      "buttonLabel": "View Russian PDF",
+      "pdfUrl": "https://resources.finalsite.net/images/v1785876234/jeffcopublicschoolsorg/jeffcopublicschoolsorg/e5oubghkmkxnaln4gvyv/2026-2027-FamilyCalendar-RUS-Final.pdf",
+      "ariaLabel": "View the Jeffco 2026–27 family calendar in Russian"
+    }
   ],
-  "sourceReviewSummary": "Verified against the Jeffco calendar page and the official 2026–27 English family calendar PDF. Last reviewed by MySchoolDates on August 4, 2026.",
+  "sourceReviewSummary": "The English PDF reviewed for this page matches Jeffco's current official file. We checked the full one-page calendar, including its date grid, legend, contact-day and workday totals, snow make-up labels, modified-contact-day note and last-day dismissal notice.",
+  "sourceReviewDetailsTitle": "What we verified",
   "sourceReviewDetails": [
-    "Reviewed against the Jeffco calendar page and the official 2026–27 English family calendar PDF.",
-    "The official PDF resource is labeled EN_Final_5.22.26; the page does not treat that label as a confirmed document modification date.",
-    "The PDF lists 79 first-semester student contact days and 92 second-semester student contact days.",
-    "The PDF marks October 13, February 12, March 29, and April 30 as teacher staff development days.",
-    "The last-day dismissal notice says the schedule does not apply to charter schools and tells charter families to contact their schools directly."
+    "The reviewed PDF matches Jeffco's current official PDF by SHA-256 checksum: 6773c19b788e1984f99f1c1d6b95b3eec10273530d918e101866e2759810acf6.",
+    "The calendar itself is dated May 22, 2026; Jeffco's current PDF file was generated in August 2026.",
+    "The 79 and 92 semester contact-day counts total 171; the 87 and 98 teacher-workday counts total 185.",
+    "February 12, March 29 and April 30 are both teacher staff-development dates and potential snow make-up days.",
+    "The May 27 early-dismissal notice applies to district-run PK–12 schools and explicitly excludes charter schools."
   ],
+  "sourcesTitle": "Official Sources and Review Notes",
+  "sourceMaintainerText": "Jeffco Public Schools publishes and revises the official district family calendar.",
+  "sourceNextReviewText": "We recheck this page when Jeffco replaces the PDF or announces whether a potential snow make-up day will be used.",
   "sources": [
-    { "label": "Jeffco Public Schools official website", "url": "https://www.jeffcopublicschools.org/" },
-    { "label": "Jeffco Public Schools calendar page", "url": "https://www.jeffcopublicschools.org/calendar" },
-    { "label": "Jeffco 2026–27 English family calendar PDF", "url": "https://resources.finalsite.net/images/v1784760208/jeffcopublicschoolsorg/jeffcopublicschoolsorg/mhj6z1kwf6vc5egg58zv/2026-2027-Family-Calendar-EN-Final.pdf" },
-    { "label": "Jeffco 2026–27 Spanish family calendar PDF", "url": "https://resources.finalsite.net/images/v1768603454/jeffcopublicschoolsorg/jeffcopublicschoolsorg/nyhkm7dgok6gwpxxoabx/2026-2027-Family-Calendar-ES-Final.pdf" },
-    { "label": "Jeffco 2026–27 Vietnamese family calendar PDF", "url": "https://resources.finalsite.net/images/v1768603401/jeffcopublicschoolsorg/jeffcopublicschoolsorg/rs0jgr8ligntbv1o7efv/2026-2027-Family-Calendar-VI-Final.pdf" },
-    { "label": "Jeffco 2026–27 Russian family calendar PDF", "url": "https://resources.finalsite.net/images/v1768603484/jeffcopublicschoolsorg/jeffcopublicschoolsorg/e5oubghkmkxnaln4gvyv/2026-2027-FamilyCalendar-RUS-Final.pdf" }
+    {
+      "label": "Jeffco Public Schools Calendar & Events page",
+      "url": "https://www.jeffcopublicschools.org/calendar"
+    },
+    {
+      "label": "Jeffco 2026–27 English District Family Calendar",
+      "url": "https://resources.finalsite.net/images/v1785876307/jeffcopublicschoolsorg/jeffcopublicschoolsorg/mhj6z1kwf6vc5egg58zv/2026-2027-Family-Calendar-EN-Final.pdf"
+    },
+    {
+      "label": "Jeffco 2026–27 Spanish family calendar",
+      "url": "https://resources.finalsite.net/images/v1785876203/jeffcopublicschoolsorg/jeffcopublicschoolsorg/nyhkm7dgok6gwpxxoabx/2026-2027-Family-Calendar-ES-Final.pdf"
+    },
+    {
+      "label": "Jeffco 2026–27 Vietnamese family calendar",
+      "url": "https://resources.finalsite.net/images/v1785876274/jeffcopublicschoolsorg/jeffcopublicschoolsorg/rs0jgr8ligntbv1o7efv/2026-2027-Family-Calendar-VI-Final.pdf"
+    },
+    {
+      "label": "Jeffco 2026–27 Russian family calendar",
+      "url": "https://resources.finalsite.net/images/v1785876234/jeffcopublicschoolsorg/jeffcopublicschoolsorg/e5oubghkmkxnaln4gvyv/2026-2027-FamilyCalendar-RUS-Final.pdf"
+    }
   ],
   "calendarFaqs": [
-    { "q": "When does Jeffco Public Schools start in 2026?", "a": "Jeffco Public Schools begins the 2026–27 school year on Wednesday, August 19, 2026." },
-    { "q": "When is the last day of school for Jeffco in 2027?", "a": "The last day is Thursday, May 27, 2027. District-run PK–12 schools dismiss 2.5 hours early; charter schools set their own dismissal schedules." },
-    { "q": "When are Jeffco’s winter and spring breaks in 2026–27?", "a": "Winter Break runs December 21, 2026, through January 5, 2027, and Spring Break runs March 22–26, 2027." },
-    { "q": "What are Jeffco’s potential snow make-up days in 2026–27?", "a": "Jeffco lists February 12, March 29, and April 30 as teacher staff development days and potential snow make-up days. Families should check district updates before assuming students will have those days off." },
-    { "q": "Does the downloaded Jeffco calendar update automatically?", "a": "No. The .ics file is a one-time import and will not automatically update if Jeffco Public Schools revises the calendar." }
+    {
+      "q": "When does Jeffco Public Schools start in 2026?",
+      "a": "The first day of school for students on Jeffco's district family calendar is Wednesday, August 19, 2026."
+    },
+    {
+      "q": "When is Jeffco Winter Break, and when do students return?",
+      "a": "Winter Break runs through Tuesday, January 5, 2027, so students return Wednesday, January 6. January 4–5 are also listed for teacher staff development."
+    },
+    {
+      "q": "When is Jeffco Spring Break in 2027?",
+      "a": "Jeffco Spring Break runs Monday, March 22 through Friday, March 26, 2027. March 29 is a conditional snow make-up date: students return that day only if Jeffco uses it for snow make-up; otherwise they return Tuesday, March 30."
+    },
+    {
+      "q": "Which dates may become Jeffco snow make-up days in 2026–27?",
+      "a": "Jeffco lists February 12, March 29 and April 30 as potential snow make-up days. They are otherwise teacher staff-development days, so families should wait for district confirmation before relying on them as days off."
+    },
+    {
+      "q": "When is the last day of school for Jeffco in 2027, and is it an early-dismissal day?",
+      "a": "The last day of school is Thursday, May 27, 2027. District-run PK–12 schools dismiss 2.5 hours earlier than usual that day. Charter schools set their own dismissal schedules."
+    },
+    {
+      "q": "Does this page include every Jeffco modified contact day?",
+      "a": "No. Jeffco says additional modified contact days are identified on individual school calendars, so families should check their school's calendar alongside the district family calendar."
+    }
   ],
   "faqDisplayQuestions": [
     "When does Jeffco Public Schools start in 2026?",
-    "When is the last day of school for Jeffco in 2027?",
-    "When are Jeffco’s winter and spring breaks in 2026–27?",
-    "What are Jeffco’s potential snow make-up days in 2026–27?",
-    "Does the downloaded Jeffco calendar update automatically?"
+    "When is Jeffco Winter Break, and when do students return?",
+    "When is Jeffco Spring Break in 2027?",
+    "Which dates may become Jeffco snow make-up days in 2026–27?",
+    "When is the last day of school for Jeffco in 2027, and is it an early-dismissal day?",
+    "Does this page include every Jeffco modified contact day?"
   ],
-  "faqDisplayLimit": 5,
-  "faqSchemaLimit": 5,
   "customSections": [
     {
-      "id": "jeffco-2026-2027-calendar-notes",
-      "label": "What Jeffco Families Should Know",
+      "id": "jeffco-2026-2027-calendar-scope",
+      "label": "What This Jeffco Calendar Covers",
       "position": "afterKeyDates",
-      "schemaHasPart": true,
-      "content": "These details are easy to miss in Jeffco’s one-page family calendar.",
+      "content": "This page follows Jeffco's districtwide Family Calendar for first and last days, breaks, legal holidays, teacher staff-development days and potential snow make-up dates. Individual school calendars may include additional Modified Contact Days and school-specific events, so check your school's calendar before making plans."
+    },
+    {
+      "id": "jeffco-2026-2027-snow-days",
+      "label": "How Jeffco's 2026–27 Snow Make-Up Dates Work",
+      "position": "afterKeyDates",
+      "content": "Jeffco does not treat these dates as guaranteed days off for students. Each date is assigned to teacher staff development unless the district needs it to recover time lost to snow.",
       "table": {
-        "columns": ["Jeffco calendar item", "What families should know"],
+        "caption": "Jeffco 2026–27 conditional snow make-up dates",
+        "columns": [
+          "Date",
+          "Scheduled use",
+          "What families should know"
+        ],
         "rows": [
-          ["Potential snow make-up days", "Jeffco also lists February 12, March 29, and April 30 as teacher staff development days. Check district updates before assuming students will have those days off."],
-          ["October 13", "The second day of Fall Break is also a teacher staff development day."],
-          ["Last-day dismissal", "District-run PK–12 schools dismiss 2.5 hours early on May 27; charter schools set their own dismissal schedules."],
-          ["School-specific dates", "Individual school calendars may include additional modified contact days and events."]
+          [
+            "Feb. 12, 2027",
+            "Teacher staff development",
+            "Students attend only if Jeffco uses this date for snow make-up."
+          ],
+          [
+            "March 29, 2027",
+            "Teacher staff development after Spring Break",
+            "Students return this day only if Jeffco uses it for snow make-up; otherwise the next regular school day is March 30."
+          ],
+          [
+            "April 30, 2027",
+            "Teacher staff development",
+            "Students attend only if Jeffco uses this date for snow make-up."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "jeffco-2026-2027-return-dates",
+      "label": "Jeffco Breaks and Student Return Dates",
+      "position": "afterAllDates",
+      "content": "The table below shows when students are scheduled to return after each major break. March 29 is conditional: students return that day only if Jeffco uses it as a snow make-up day.",
+      "table": {
+        "caption": "Jeffco 2026–27 return dates after major breaks",
+        "columns": [
+          "Break",
+          "Published no-school dates",
+          "Next student date"
+        ],
+        "rows": [
+          [
+            "Fall Break",
+            "Oct. 12–13, 2026",
+            "Wednesday, Oct. 14"
+          ],
+          [
+            "Thanksgiving Break",
+            "Nov. 23–27, 2026",
+            "Monday, Nov. 30"
+          ],
+          [
+            "Winter Break",
+            "Dec. 21, 2026–Jan. 5, 2027",
+            "Wednesday, Jan. 6"
+          ],
+          [
+            "Spring Break",
+            "March 22–26, 2027",
+            "March 29 if Jeffco uses the snow make-up date; otherwise Tuesday, March 30"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "jeffco-2026-2027-contact-days",
+      "label": "171 Student Contact Days and 185 Teacher Workdays",
+      "position": "afterAllDates",
+      "content": "Jeffco lists 171 student contact days and 185 teacher workdays. The difference comes from staff-development days when teachers work but students do not attend. Individual schools may also publish Modified Contact Days that are not shown in the district PDF.",
+      "table": {
+        "caption": "Jeffco 2026–27 contact-day and workday totals",
+        "columns": [
+          "Calendar measure",
+          "First semester",
+          "Second semester",
+          "Total"
+        ],
+        "rows": [
+          [
+            "Student contact days",
+            "79",
+            "92",
+            "171"
+          ],
+          [
+            "Teacher workdays",
+            "87",
+            "98",
+            "185"
+          ]
         ]
       }
     }
   ],
   "events": [
-    { "date": "2026-08-11", "endDate": "2026-08-14", "name": "Teacher Staff Development", "type": "teacher_workday", "description": "No school for students before the first student day." },
-    { "date": "2026-08-17", "endDate": "2026-08-18", "name": "Teacher Staff Development", "type": "teacher_workday", "description": "No school for students before the first student day." },
-    { "date": "2026-08-19", "name": "First Day of School for All Students", "type": "school_start" },
-    { "date": "2026-09-07", "name": "Labor Day", "type": "holiday" },
-    { "date": "2026-09-18", "name": "Teacher Staff Development Day", "type": "teacher_workday" },
-    { "date": "2026-10-12", "endDate": "2026-10-13", "name": "Fall Break", "type": "break_start", "description": "October 13 is also a teacher staff development day. There is no school for students." },
-    { "date": "2026-11-23", "endDate": "2026-11-27", "name": "Thanksgiving Break", "type": "break_start" },
-    { "date": "2026-12-21", "endDate": "2027-01-05", "name": "Winter Break", "type": "break_start" },
-    { "date": "2027-01-04", "endDate": "2027-01-05", "name": "Teacher Staff Development", "type": "teacher_workday", "description": "No school for students during the end of Winter Break." },
-    { "date": "2027-01-18", "name": "Martin Luther King Jr. Day", "type": "holiday" },
-    { "date": "2027-02-12", "name": "Potential Snow Make-Up Day", "type": "makeup_day", "description": "Also listed as a teacher staff development day; check district updates before assuming students will have the day off." },
-    { "date": "2027-02-15", "name": "Presidents Day", "type": "holiday" },
-    { "date": "2027-03-22", "endDate": "2027-03-26", "name": "Spring Break", "type": "break_start" },
-    { "date": "2027-03-29", "name": "Potential Snow Make-Up Day", "type": "makeup_day", "description": "Also listed as a teacher staff development day; check district updates before assuming students will have the day off." },
-    { "date": "2027-04-30", "name": "Potential Snow Make-Up Day", "type": "makeup_day", "description": "Also listed as a teacher staff development day; check district updates before assuming students will have the day off." },
-    { "date": "2027-05-27", "name": "Last Day of School", "type": "school_end", "description": "District-run PK–12 schools dismiss 2.5 hours early; charter schools set their own dismissal schedules." },
-    { "date": "2027-05-28", "name": "Teacher Staff Development Day", "type": "teacher_workday" },
-    { "date": "2027-05-31", "name": "Memorial Day", "type": "holiday" },
-    { "date": "2027-06-18", "name": "Juneteenth Observed", "type": "holiday" }
+    {
+      "date": "2026-08-11",
+      "endDate": "2026-08-14",
+      "name": "Teacher Staff Development",
+      "type": "teacher_workday",
+      "description": "No school for students before the first student contact day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-17",
+      "endDate": "2026-08-18",
+      "name": "Teacher Staff Development",
+      "type": "teacher_workday",
+      "description": "No school for students before the first student contact day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-19",
+      "name": "First Day of School for All Students",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-18",
+      "name": "Teacher Staff Development Day",
+      "type": "teacher_workday",
+      "description": "No school for students."
+    },
+    {
+      "date": "2026-10-12",
+      "endDate": "2026-10-13",
+      "name": "Fall Break",
+      "type": "break_start",
+      "description": "October 13 is also assigned to teacher staff development."
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-05",
+      "name": "Winter Break",
+      "type": "break_start",
+      "description": "January 4–5 are also assigned to teacher staff development; students return January 6."
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-12",
+      "name": "Teacher Staff Development / Potential Snow Make-Up Day",
+      "type": "makeup_day",
+      "description": "Students attend only if Jeffco uses this date for snow make-up.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents' Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-29",
+      "name": "Teacher Staff Development / Potential Snow Make-Up Day",
+      "type": "makeup_day",
+      "description": "Students attend only if Jeffco uses this date for snow make-up.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-04-30",
+      "name": "Teacher Staff Development / Potential Snow Make-Up Day",
+      "type": "makeup_day",
+      "description": "Students attend only if Jeffco uses this date for snow make-up.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-27",
+      "name": "Last Day of School for All Students",
+      "type": "school_end",
+      "description": "District-run PK–12 schools dismiss 2.5 hours earlier than usual; charter schools set their own dismissal schedules."
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Teacher Staff Development Day",
+      "type": "teacher_workday",
+      "description": "Students are already on summer break; May 28 is a teacher staff-development day.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day",
+      "type": "holiday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-18",
+      "name": "Juneteenth Observed",
+      "type": "holiday",
+      "hideFromCalendarExport": true
+    }
   ]
 }

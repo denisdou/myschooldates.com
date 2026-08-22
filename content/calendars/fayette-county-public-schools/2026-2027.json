@@ -1,0 +1,552 @@
+{
+  "institutionId": "fayette-county-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Fayette County Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-12",
+  "firstDayScope": "First student day on the FCPS Students & Families calendar",
+  "lastDay": "2027-05-26",
+  "lastDayScope": "Scheduled last day of classes for students; pending weather make-up days",
+  "temporalCoverageStart": "2026-08-12",
+  "temporalCoverageEnd": "2027-06-01",
+  "sourceUrl": "https://www.fcps.net/news-calendars/calendar",
+  "sourceDocumentPage": "https://www.fcps.net/news-calendars/calendar",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1752513775/fcpsnet/gsigaxkgno0fjj8zda4u/2627_calendar.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1752513775/fcpsnet/gsigaxkgno0fjj8zda4u/2627_calendar.pdf",
+  "sourceCheckedAt": "2026-08-22",
+  "sourceUpdatedAt": "2025-06-23",
+  "sourceChecksumSha256": "afd27b69723185b723e2a8c06efb8548c15656ad3dd3f68262d581ce6d029ffa",
+  "reviewedSourcePdfUrl": "https://resources.finalsite.net/images/v1752513775/fcpsnet/gsigaxkgno0fjj8zda4u/2627_calendar.pdf",
+  "reviewedSourceUpdatedAt": "2025-06-23",
+  "reviewedSourceChecksumSha256": "afd27b69723185b723e2a8c06efb8548c15656ad3dd3f68262d581ce6d029ffa",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.fcps.net/news-calendars/calendar",
+    "linkText": "2026–27 FCPS Instructional Calendar",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1752513775/fcpsnet/gsigaxkgno0fjj8zda4u/2627_calendar.pdf",
+    "expectedChecksumSha256": "afd27b69723185b723e2a8c06efb8548c15656ad3dd3f68262d581ce6d029ffa"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.fcps.net/news-calendars/calendar",
+      "linkText": "2026–27 Preschool Calendar",
+      "expectedPdfUrl": "https://resources.finalsite.net/images/v1781627337/fcpsnet/qdhfkbjgpq8xuepo8nfq/2627_preschool.pdf",
+      "expectedChecksumSha256": "16783c21e5ff73d9c00b66a0bfda96dd379c1bafe88b7758f631e6ebcdd52a2f"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "dateCreated": "2026-08-22",
+  "datePublished": "2026-08-22",
+  "dateModified": "2026-08-22",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "weather_makeup_day_activation",
+    "program_calendar_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Board approved June 23, 2025",
+  "sourceCalendarName": "FCPS 2026–27 Instructional Calendar for Students & Families",
+  "schemaCalendarName": "Fayette County Public Schools Calendar 2026–27",
+  "schemaDatasetName": "Fayette County Public Schools 2026–27 Calendar Dates",
+  "schemaDatasetDescription": "Reviewed FCPS student calendar dates for 2026–27, including the first day, scheduled last day, breaks, no-class days, return dates and conditional weather make-up dates. The separate Preschool Program schedule is presented as a companion calendar and is not merged into the districtwide ICS file.",
+  "schemaSpatialCoverage": "Fayette County and Lexington, Kentucky",
+  "schemaCalendarDownloadName": "Fayette County Public Schools 2026–27 ICS Calendar",
+  "schemaCalendarDownloadDescription": "One-time calendar import with confirmed districtwide FCPS student dates. Conditional weather make-up dates and Preschool-only dates are excluded.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-preschool",
+      "type": "DigitalDocument",
+      "name": "Fayette County Preschool Program 2026–27 Calendar",
+      "url": "https://resources.finalsite.net/images/v1781627337/fcpsnet/qdhfkbjgpq8xuepo8nfq/2627_preschool.pdf",
+      "datePublished": "2026-06-15"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-preschool"
+  ],
+  "calendarType": "district_instructional",
+  "calendarTrackId": "fcps-students-families-calendar",
+  "allDatesMode": "all",
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideShareCalendarHeading": true,
+  "hideSocialShareButtons": true,
+  "hideBreakDurationBadges": true,
+  "hideCoveredBreakDatesNote": true,
+  "excludeDistrictFaqs": true,
+  "alternateCalendarsNoticePosition": "beforeKeyDates",
+  "alternateCalendarsNotice": "This page covers the districtwide 2026–27 Students & Families calendar for most K–12 students. Preschool and William Wells Brown Elementary use separate schedules; see the Preschool and William Wells Brown sections below.",
+  "hiddenSections": [
+    "about",
+    "backToCurrent",
+    "comparison",
+    "districtProfile",
+    "downloadCta",
+    "keyDateCards",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars",
+    "planningTips",
+    "quickFacts",
+    "relatedDistricts",
+    "todayStatus",
+    "whatsDifferent",
+    "yearNumbers"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Calendar Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Breaks & Returns",
+      "id": "breaks"
+    },
+    {
+      "label": "Weather Make-Up",
+      "id": "fcps-2026-2027-weather-makeup"
+    },
+    {
+      "label": "Preschool",
+      "id": "fcps-2026-2027-preschool"
+    },
+    {
+      "label": "William Wells Brown",
+      "id": "fcps-2026-2027-wwb"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Fayette County Public Schools Calendar 2026–27 | Lexington, KY",
+  "seoDescription": "Most FCPS K–12 students start Aug. 12, 2026, with a scheduled last day May 26, 2027. See breaks, return dates, make-up days, PDFs and ICS.",
+  "heroSummary": "For most FCPS K–12 students, classes begin Wednesday, August 12, 2026. Fall Break is September 28–October 2, Thanksgiving Break is November 25–27, Winter Break is December 21–January 1, and Spring Break is April 5–9. Additional no-class days follow Fall, Winter and Spring Break, so students return October 6, January 5 and April 13. The scheduled last day is Wednesday, May 26, 2027, pending weather make-up days.",
+  "heroSourceLine": "Lexington, Kentucky · Board approved June 23, 2025 · District Students & Families calendar",
+  "verificationBadgeText": "Verified Aug. 22, 2026, against official FCPS calendars.",
+  "calendarNotes": "The main FCPS calendar identifies May 26 as the last day pending make-up days. March 19, May 27–28 and June 1 are possible school days, not confirmed attendance days. The Preschool Program has a staggered opening and additional program-only no-class dates. William Wells Brown Elementary follows a separate Promise Academy schedule.",
+  "keyDatesHeading": "Fayette County Public Schools 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "FCPS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First day, major breaks, return dates and the scheduled last day",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School for Students",
+      "date": "2026-08-12",
+      "type": "school_start"
+    },
+    {
+      "label": "Fall Break",
+      "name": "Fall Break",
+      "date": "2026-09-28",
+      "endDate": "2026-10-02",
+      "type": "break_start",
+      "description": "October 5 is a no-class day. Students return October 6."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "description": "Students return Monday, November 30."
+    },
+    {
+      "label": "Winter Break",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "type": "break_start",
+      "description": "January 4 is a no-class day. Students return January 5."
+    },
+    {
+      "label": "Spring Break",
+      "name": "Spring Break",
+      "date": "2027-04-05",
+      "endDate": "2027-04-09",
+      "type": "break_start",
+      "description": "April 12 is a no-class day. Students return April 13."
+    },
+    {
+      "label": "Last Day",
+      "name": "Scheduled Last Day of Classes for Students",
+      "date": "2027-05-26",
+      "type": "school_end",
+      "schemaDescription": "Scheduled last student day on the FCPS calendar, pending any weather make-up days."
+    }
+  ],
+  "allDatesTitle": "FCPS 2026–27 Student Calendar Dates",
+  "allDatesCoverageNote": "FCPS does not separately label October 6, November 30 or April 13 as return days; each is the next scheduled school day after the published break or no-class day. January 5 is explicitly listed as “Students return to school.” Possible weather make-up days remain conditional and are not included in the ICS file unless FCPS confirms them.",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1752513775/fcpsnet/gsigaxkgno0fjj8zda4u/2627_calendar.pdf",
+  "allDatesSourceLabel": "Official FCPS 2026–27 Instructional Calendar PDF",
+  "dateLegendItems": [
+    {
+      "label": "First / last / return date",
+      "dot": "bg-green-400"
+    },
+    {
+      "label": "Holiday / break",
+      "dot": "bg-purple-400"
+    },
+    {
+      "label": "No classes for students",
+      "dot": "bg-amber-400"
+    },
+    {
+      "label": "Conditional weather make-up day",
+      "dot": "bg-orange-400"
+    }
+  ],
+  "breaksTitle": "FCPS Breaks and When Students Return",
+  "breakNotes": {
+    "Fall Break": "Monday, October 5 is another no-class day. Students return Tuesday, October 6.",
+    "Thanksgiving Break": "Students return Monday, November 30.",
+    "Thanksgiving Break — Schools and Offices Closed": "Students return Monday, November 30.",
+    "Winter Break": "Monday, January 4 is a no-class day. Students return Tuesday, January 5.",
+    "Spring Break": "Monday, April 12 is another no-class day. Students return Tuesday, April 13."
+  },
+  "customSections": [
+    {
+      "id": "fcps-2026-2027-weather-makeup",
+      "label": "How FCPS Weather Make-Up Dates Work",
+      "position": "afterBreaks",
+      "content": "FCPS may use designated make-up days at the superintendent's discretion. The district updates its online calendar and PDFs when a make-up day is confirmed. The dates below are possible school days, not confirmed attendance days.",
+      "table": {
+        "caption": "Conditional FCPS weather make-up dates for 2026–27",
+        "columns": [
+          "Date",
+          "Published status"
+        ],
+        "rows": [
+          [
+            "March 19, 2027",
+            "No classes unless FCPS designates March 19 as a weather make-up day"
+          ],
+          [
+            "May 26, 2027",
+            "Scheduled last student day, pending make-up days"
+          ],
+          [
+            "May 27–28, 2027",
+            "Possible weather make-up days after the scheduled last day"
+          ],
+          [
+            "May 31, 2027",
+            "Memorial Day; schools and offices closed"
+          ],
+          [
+            "June 1, 2027",
+            "Possible weather make-up day"
+          ]
+        ],
+        "footnote": "Possible make-up dates are shown for planning but are not included in the one-time ICS file unless FCPS confirms them."
+      }
+    },
+    {
+      "id": "fcps-2026-2027-preschool",
+      "label": "FCPS Preschool Has Its Own 2026–27 Calendar",
+      "position": "afterBreaks",
+      "content": "The Fayette County Preschool Program does not follow the district's Aug. 12 K–12 start date. Preschool starts in stages later in August and has additional no-class days throughout the year.",
+      "table": {
+        "caption": "FCPS Preschool dates that differ from the main student calendar",
+        "columns": [
+          "Date",
+          "Preschool schedule"
+        ],
+        "rows": [
+          [
+            "Aug. 24–25, 2026",
+            "Preschool classes for PM sessions"
+          ],
+          [
+            "Aug. 26–27, 2026",
+            "Preschool classes for AM and full-day sessions"
+          ],
+          [
+            "Aug. 28, 2026",
+            "No Preschool classes"
+          ],
+          [
+            "Sept. 18 and 21; Oct. 29–30; Nov. 20; Dec. 11",
+            "Additional Preschool-only no-class dates"
+          ],
+          [
+            "Jan. 29; Feb. 25–26; March 22–23; April 23 and 26",
+            "Additional Preschool-only no-class dates"
+          ],
+          [
+            "May 7, 14 and 17",
+            "Additional Preschool-only no-class dates"
+          ]
+        ],
+        "footnote": "The Preschool calendar also includes districtwide holidays, breaks and election-day closures. Families in the Preschool Program should use the official Preschool PDF; the K–12 ICS file does not include Preschool-only dates."
+      }
+    },
+    {
+      "id": "fcps-2026-2027-wwb",
+      "label": "William Wells Brown Elementary Starts Earlier",
+      "position": "afterBreaks",
+      "content": "William Wells Brown Elementary follows the Promise Academy calendar rather than the standard district opening schedule. Classes at William Wells Brown begin Wednesday, July 29, 2026. The school calendar also lists Wednesday, August 5 as a no-class day. Families at WWB should use the school's calendar for the complete schedule.",
+      "linksLabel": "Official school calendar:",
+      "linksDisplay": "inline",
+      "links": [
+        {
+          "label": "Open the William Wells Brown Elementary calendar",
+          "url": "https://wwbrown.fcps.net/calendar"
+        }
+      ]
+    }
+  ],
+  "compactDownloadModule": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "unifiedDownloadTitle": "FCPS Calendar Downloads",
+  "unifiedDownloadDescription": "Open the district or Preschool PDF, or add confirmed districtwide student dates to Google Calendar, Apple Calendar or Outlook.",
+  "pdfHeading": "Official FCPS 2026–27 Students & Families Calendar",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "The 13-page district PDF includes month-by-month K–12 dates, notes the separate William Wells Brown schedule, and identifies possible weather make-up days.",
+  "pdfVersionLabel": "Board approved June 23, 2025",
+  "pdfButtonLabel": "Open Official District PDF",
+  "icsHeading": "Add FCPS 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download confirmed dates from the districtwide Students & Families calendar. Preschool-only dates and conditional weather make-up days are not included.",
+  "icsButtonLabel": "Download FCPS Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. Check FCPS for weather make-up decisions and later calendar changes.",
+  "alternateCalendarsTitle": "Fayette County Preschool Program Calendar",
+  "alternateCalendarsDescription": "The Preschool Program uses a separate 2026–27 schedule with a staggered opening and additional program-only no-class dates.",
+  "alternateCalendars": [
+    {
+      "type": "program-preschool",
+      "group": "Preschool",
+      "label": "Fayette County Preschool Program 2026–27 Calendar",
+      "description": "Official program calendar for Preschool AM, PM and full-day sessions.",
+      "pdfUrl": "https://resources.finalsite.net/images/v1781627337/fcpsnet/qdhfkbjgpq8xuepo8nfq/2627_preschool.pdf",
+      "buttonLabel": "Open Preschool Calendar PDF",
+      "ariaLabel": "Open the official Fayette County Preschool Program 2026–27 calendar PDF"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Which FCPS dates are possible weather make-up days in 2026–27?",
+      "a": "March 19, May 27–28 and June 1 are listed as possible weather make-up days. They are not confirmed school days unless FCPS designates them as make-up days. The scheduled May 26 last day is marked pending make-up days."
+    },
+    {
+      "q": "Does the Fayette County Preschool Program use the same calendar?",
+      "a": "No. The Preschool Program publishes a separate calendar with PM sessions beginning August 24–25, AM and full-day sessions beginning August 26–27, and additional Preschool-only no-class dates."
+    },
+    {
+      "q": "Does William Wells Brown Elementary use the same FCPS calendar?",
+      "a": "No. William Wells Brown Elementary follows the Promise Academy calendar. Its school calendar lists July 29, 2026, as the first day of classes and August 5 as a no-class day."
+    },
+    {
+      "q": "Does the FCPS ICS calendar update automatically?",
+      "a": "No. The ICS file is a one-time import of confirmed districtwide K–12 dates. Check the FCPS calendar for later changes, and use the separate Preschool or William Wells Brown calendar when either applies."
+    }
+  ],
+  "faqLimit": 4,
+  "sourcesTitle": "Official Sources and Review Notes",
+  "sourceReviewSummary": "This page uses the official FCPS Students & Families calendar for districtwide K–12 dates, the Preschool Program PDF for preschool-specific dates, and the William Wells Brown Elementary calendar for its Promise Academy schedule.",
+  "sourceReviewDetailsTitle": "What we checked",
+  "sourceReviewDetails": [
+    "Reviewed all 13 pages of the board-approved Students & Families calendar, including the weather make-up notes.",
+    "Reviewed the separate Preschool calendar and kept program-specific dates separate from the K–12 calendar.",
+    "Possible weather make-up days are shown for planning but are not included in the ICS file unless FCPS confirms them.",
+    "William Wells Brown Elementary follows a separate Promise Academy schedule; families should use the school calendar for school-specific dates."
+  ],
+  "sourceMaintainerLabel": "Maintained by",
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "sourceNextReviewText": "Next review: after FCPS revises the calendar, designates a weather make-up date or publishes a new Promise Academy or Preschool schedule.",
+  "sources": [
+    {
+      "label": "FCPS official calendar page",
+      "url": "https://www.fcps.net/news-calendars/calendar"
+    },
+    {
+      "label": "FCPS 2026–27 Instructional Calendar for Students & Families",
+      "url": "https://resources.finalsite.net/images/v1752513775/fcpsnet/gsigaxkgno0fjj8zda4u/2627_calendar.pdf"
+    },
+    {
+      "label": "Fayette County Preschool Program 2026–27 Calendar",
+      "url": "https://resources.finalsite.net/images/v1781627337/fcpsnet/qdhfkbjgpq8xuepo8nfq/2627_preschool.pdf"
+    },
+    {
+      "label": "William Wells Brown Elementary calendar",
+      "url": "https://wwbrown.fcps.net/calendar"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-08-12",
+      "name": "First Day of School for Students",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-28",
+      "endDate": "2026-10-02",
+      "name": "Fall Break",
+      "type": "break_start",
+      "description": "October 5 is also a no-class day; students return October 6."
+    },
+    {
+      "date": "2026-10-05",
+      "name": "No Classes for Students",
+      "type": "no_school",
+      "badgeLabel": "No Classes"
+    },
+    {
+      "date": "2026-10-06",
+      "name": "Students Return After Fall Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2026-11-03",
+      "name": "Election Day — No Classes for Students",
+      "type": "no_school",
+      "badgeLabel": "No Classes"
+    },
+    {
+      "date": "2026-11-25",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break — Schools and Offices Closed",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-11-30",
+      "name": "Students Return After Thanksgiving Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Winter Break",
+      "type": "break_start",
+      "description": "January 4 is a no-class day; students return January 5."
+    },
+    {
+      "date": "2027-01-04",
+      "name": "No Classes for Students",
+      "type": "no_school",
+      "badgeLabel": "No Classes",
+      "description": "Students return January 5."
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Students Return to School",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-19",
+      "name": "No Classes / Possible Weather Make-Up Day",
+      "type": "makeup_day",
+      "badgeLabel": "Conditional",
+      "status": "TENTATIVE",
+      "description": "Students are out unless FCPS designates March 19 as a weather make-up day.",
+      "hideFromCalendarExport": true,
+      "excludeFromDateSchema": true
+    },
+    {
+      "date": "2027-04-05",
+      "endDate": "2027-04-09",
+      "name": "Spring Break",
+      "type": "break_start",
+      "description": "April 12 is also a no-class day; students return April 13."
+    },
+    {
+      "date": "2027-04-12",
+      "name": "No Classes for Students",
+      "type": "no_school",
+      "badgeLabel": "No Classes"
+    },
+    {
+      "date": "2027-04-13",
+      "name": "Students Return After Spring Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-05-18",
+      "name": "Primary Election Day — No Classes for Students",
+      "type": "no_school",
+      "badgeLabel": "No Classes"
+    },
+    {
+      "date": "2027-05-26",
+      "name": "Scheduled Last Day of Classes for Students",
+      "type": "school_end",
+      "badgeLabel": "Scheduled Last Day",
+      "description": "The official calendar marks this date pending weather make-up days."
+    },
+    {
+      "date": "2027-05-27",
+      "endDate": "2027-05-28",
+      "name": "Possible Weather Make-Up Days",
+      "type": "makeup_day",
+      "badgeLabel": "Conditional",
+      "status": "TENTATIVE",
+      "description": "FCPS may use either date if an additional make-up day is needed.",
+      "hideFromCalendarExport": true,
+      "excludeFromDateSchema": true
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day — Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-06-01",
+      "name": "Possible Weather Make-Up Day",
+      "type": "makeup_day",
+      "badgeLabel": "Conditional",
+      "status": "TENTATIVE",
+      "description": "FCPS may use this date if an additional make-up day is needed.",
+      "hideFromCalendarExport": true,
+      "excludeFromDateSchema": true
+    }
+  ]
+}

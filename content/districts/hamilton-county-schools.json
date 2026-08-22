@@ -1,0 +1,78 @@
+{
+  "institutionId": "hamilton-county-schools",
+  "name": "Hamilton County Schools",
+  "shortName": "HCS",
+  "slug": "hamilton-county-schools-calendars",
+  "state": "Tennessee",
+  "stateCode": "TN",
+  "city": "Chattanooga",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "Pre-K",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://hcde.org/",
+  "calendarPage": "https://hcde.org/calendar/",
+  "logo": "https://hcde.org/wp-content/uploads/LOGO_HORIZONTAL_COLOR2.png",
+  "timezone": "America/New_York",
+  "county": "Hamilton County",
+  "region": "Southeast Tennessee",
+  "metro": "Chattanooga metropolitan area",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "calendarType": "Color-coded district calendar with quarter, midterm and report-card dates",
+  "hideProfileCalendarType": true,
+  "seoTitle": "Hamilton County Schools Calendars | HCS",
+  "seoDescription": "Browse Hamilton County Schools calendars by school year, with official English and Spanish PDFs, reviewed student dates, quarter schedules and calendar downloads.",
+  "districtFact": "HCS annual calendars use color to distinguish student attendance days, professional development, administrative in-service, paid breaks and unpaid holidays. The same one-page PDF also publishes quarter ranges, midterms and report-card dates.",
+  "about": [
+    {
+      "title": "Calendar colors change what a date means",
+      "content": "The HCS PDF is more than a list of breaks. Green dates indicate students are in school, blue dates are professional development days, and separate colors identify administrative in-service, paid holidays, Winter Break and unpaid holidays."
+    },
+    {
+      "title": "Break dates do not always reveal the return date",
+      "content": "HCS sometimes places professional development immediately after a published break. Each school-year page keeps the official break label and separately identifies when students actually return."
+    },
+    {
+      "title": "Quarter dates are published with family milestones",
+      "content": "The district calendar gives quarter ranges and day totals alongside midterm and report-card dates. Those academic dates are kept separate from student holidays and professional development days."
+    },
+    {
+      "title": "Spanish calendars are official translations",
+      "content": "HCS publishes Spanish editions beside the English school-year calendars. They are language versions of the district schedule, not separate attendance tracks."
+    }
+  ],
+  "calendarNotes": "Use the annual HCS PDF for adopted districtwide dates and the live HCS calendar for current events or later additions. Calendar colors matter: a weekday immediately after a break may be a professional development day rather than a student return date. Red text marks student half-days with early bus release, but the annual PDF does not publish one districtwide dismissal time. School activities, conference schedules and building-specific changes should be confirmed with the assigned school. A MySchoolDates ICS file is a one-time import and does not update automatically.",
+  "hiddenSections": [
+    "comparison",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "relatedDistricts"
+  ],
+  "includeComparisonSchema": false,
+  "sources": [
+    {
+      "label": "Hamilton County Schools official website",
+      "url": "https://hcde.org/"
+    },
+    {
+      "label": "HCS official calendar page and school-year PDFs",
+      "url": "https://hcde.org/calendar/"
+    }
+  ]
+}

@@ -1,0 +1,534 @@
+{
+  "institutionId": "williamson-county-schools",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Williamson County Schools Calendar 2027–28",
+  "firstDay": "2027-08-09",
+  "firstDayScope": "Half day for students in grades 1–12. The current Student School Calendar does not publish a separate opening date for Pre-K, Early Childhood or Kindergarten.",
+  "lastDay": "2028-05-25",
+  "lastDayScope": "Half day for students",
+  "temporalCoverageStart": "2027-08-09",
+  "temporalCoverageEnd": "2028-05-28",
+  "totalSchoolDays": 177,
+  "reportingPeriodDaysTotal": 177,
+  "reportingPeriodDaysScope": "WCS lists 83 instructional days in the first semester and 94 in the second semester, for 177 total student instructional days.",
+  "semesters": 2,
+  "sourceUrl": "https://www.wcs.edu/about-us/calendar",
+  "sourceDocumentPage": "https://www.wcs.edu/about-us/calendar",
+  "sourcePdfUrl": "https://docs.wcs.edu/pdf/hr/Student-School-Calendar-2027-2028.pdf",
+  "lastCheckedPdfUrl": "https://docs.wcs.edu/pdf/hr/Student-School-Calendar-2027-2028.pdf",
+  "reviewedSourcePdfUrl": "https://docs.wcs.edu/pdf/hr/Student-School-Calendar-2027-2028.pdf",
+  "sourceCheckedAt": "2026-08-22",
+  "sourceUpdatedAt": "2025-11-19",
+  "reviewedSourceUpdatedAt": "2025-11-19",
+  "sourceChecksumSha256": "fffd1bee558093c8471326879d57c8f17297aabc351a826a547e4ffa3e82ea70",
+  "reviewedSourceChecksumSha256": "fffd1bee558093c8471326879d57c8f17297aabc351a826a547e4ffa3e82ea70",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.wcs.edu/about-us/calendar",
+    "linkText": "2027-2028 Student School Calendar",
+    "expectedPdfUrl": "https://docs.wcs.edu/pdf/hr/Student-School-Calendar-2027-2028.pdf",
+    "expectedChecksumSha256": "fffd1bee558093c8471326879d57c8f17297aabc351a826a547e4ffa3e82ea70"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.wcs.edu/about-us/calendar",
+      "linkText": "2027-2028 Staff School Calendar",
+      "expectedPdfUrl": "https://docs.wcs.edu/pdf/hr/Staff-School-Calendar-2027-2028.pdf"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "dateCreated": "2026-08-22",
+  "datePublished": "2026-08-22",
+  "dateModified": "2026-08-22",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "start_dismissal_schedule_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Board-approved November 17, 2025; current one-page student calendar with an additional-details notice",
+  "sourceCalendarName": "WCS 2027–28 Student School Calendar",
+  "schemaCalendarName": "Williamson County Schools Calendar 2027–28",
+  "schemaDatasetName": "Williamson County Schools 2027–28 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed core WCS 2027–28 student dates from the current official Student School Calendar, including the half-day opening and finish, 177 instructional days, breaks, student-free dates and graduation window. Unpublished grade-specific schedule details are not inferred.",
+  "schemaSpatialCoverage": "Franklin and Williamson County, Tennessee",
+  "schemaCalendarDownloadName": "WCS 2027–28 Student Calendar ICS",
+  "schemaCalendarDownloadDescription": "One-time ICS import of the core WCS 2027–28 student attendance dates currently published by the district.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-staff",
+      "type": "CreativeWork",
+      "name": "WCS 2027–28 Staff School Calendar",
+      "url": "https://docs.wcs.edu/pdf/hr/Staff-School-Calendar-2027-2028.pdf",
+      "publisherName": "Williamson County Schools",
+      "publisherUrl": "https://www.wcs.edu/"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-staff"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "wcs-student-calendar",
+  "allDatesMode": "all",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "hideHeroUpdatedField": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroVerificationIcs": true,
+  "hideHeroVerificationProcess": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideCompatibleCalendars": true,
+  "hideSocialShareButtons": true,
+  "breaksBeforeAllDates": true,
+  "hiddenSections": [
+    "about",
+    "comparison",
+    "districtProfile",
+    "downloadCta",
+    "keyDateCards",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars",
+    "planningTips",
+    "quickFacts",
+    "relatedDistricts",
+    "todayStatus",
+    "whatsDifferent",
+    "yearNumbers"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "What's Published",
+      "id": "wcs-2027-2028-published-scope"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Published Dates",
+      "id": "all-dates"
+    },
+    {
+      "label": "Student & Staff Calendar",
+      "id": "wcs-2027-2028-student-staff"
+    },
+    {
+      "label": "Year Changes",
+      "id": "wcs-2027-2028-year-changes"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Williamson County Schools Calendar 2027–28: Key Dates & PDF",
+  "seoDescription": "Grades 1–12 start Aug. 9, 2027, with a half day. See WCS 2027–28 breaks, the May 25 last day, the official PDF and details not yet published.",
+  "heroSummary": "Grades 1–12 start the 2027–28 WCS school year with a half day Monday, August 9. The last student day is a half day Thursday, May 25, 2028. Fall Break is October 11–15, Thanksgiving Break is November 22–26, Winter Break is December 20–31, and Spring Break is March 13–17. Students return for a full day January 3.\n\nThe current WCS Student School Calendar lists 177 instructional days but does not include a separate first day for Pre-K, Early Childhood and Kindergarten, grade-specific early-release or late-start dates, conferences or grading-period dates. Those details are not included until WCS publishes them.",
+  "heroSourceLine": "Checked against the current WCS Student and Staff School Calendars · Aug 22, 2026",
+  "verificationBadgeText": "Core dates verified",
+  "calendarNotes": "The official calendar page currently links one-page Student and Staff school calendars for 2027–28. It does not yet list the grade-specific opening, early-release, late-start, conference or grading-period dates available for 2026–27.",
+  "keyDatesHeading": "WCS 2027–28 Key Dates",
+  "keyDatesSummaryTitle": "Williamson County Schools 2027–28 Key Dates",
+  "keyDatesSummarySubtitle": "Core dates from the current official student calendar",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Half Day for Grades 1–12",
+      "date": "2027-08-09",
+      "type": "school_start",
+      "schemaDescription": "Grades 1–12 begin with a half day Monday, August 9, 2027."
+    },
+    {
+      "label": "Fall",
+      "name": "Fall Break",
+      "date": "2027-10-11",
+      "endDate": "2027-10-15",
+      "type": "break_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2027-11-22",
+      "endDate": "2027-11-26",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "type": "break_start"
+    },
+    {
+      "label": "Return",
+      "name": "Students Return for Second Semester",
+      "date": "2028-01-03",
+      "type": "school_resume",
+      "schemaDescription": "Students return for a full day Monday, January 3, 2028."
+    },
+    {
+      "label": "Spring",
+      "name": "Spring Break",
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School — Half Day",
+      "date": "2028-05-25",
+      "type": "school_end"
+    }
+  ],
+  "allDatesTitle": "Williamson County Schools 2027–28 Published Calendar Dates",
+  "allDatesCoverageNote": "This table includes all dates currently listed on the one-page WCS 2027–28 Student School Calendar. Grade-specific opening dates, late starts, early releases, conferences and grading-period markers are not shown because the current official student file does not list them.",
+  "allDatesSourceUrl": "https://docs.wcs.edu/pdf/hr/Student-School-Calendar-2027-2028.pdf",
+  "allDatesSourceLabel": "Official WCS 2027–28 Student School Calendar PDF",
+  "dateLegendItems": [
+    {
+      "label": "Opening, return or last day",
+      "dot": "bg-orange-500"
+    },
+    {
+      "label": "Holiday or break",
+      "dot": "bg-amber-400"
+    },
+    {
+      "label": "Student-free staff day",
+      "dot": "bg-violet-700"
+    },
+    {
+      "label": "Half day",
+      "dot": "bg-teal-500"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "wcs-2027-2028-published-scope",
+      "label": "What WCS Has Published for 2027–28",
+      "position": "afterKeyDates",
+      "content": "WCS said additional details would be released by February 2026, but as of August 22, 2026, the district still links the one-page Student School Calendar. Grade-specific opening, early-release, late-start, conference and grading-period dates are not included until WCS publishes them.",
+      "table": {
+        "columns": [
+          "Calendar detail",
+          "Current official file",
+          "Included here"
+        ],
+        "rows": [
+          [
+            "First and last student days, breaks and graduation window",
+            "Published",
+            "Included in calendar and ICS"
+          ],
+          [
+            "83 first-semester days, 94 second-semester days",
+            "Published",
+            "Shown as 177 instructional days"
+          ],
+          [
+            "First day for Pre-K, Early Childhood and Kindergarten",
+            "Not listed",
+            "Not included"
+          ],
+          [
+            "Elementary early releases and grades 6–12 late starts",
+            "Not listed",
+            "Not included"
+          ],
+          [
+            "Conference window and grading-period dates",
+            "Not listed",
+            "Not included"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "wcs-2027-2028-student-staff",
+      "label": "Student & Staff Calendar",
+      "position": "afterAllDates",
+      "content": "The Staff School Calendar supplies context for student-free dates. Student attendance still follows the Student School Calendar.",
+      "table": {
+        "columns": [
+          "Student calendar",
+          "Staff calendar",
+          "What it means for families"
+        ],
+        "rows": [
+          [
+            "Fall Break · Oct 11–15",
+            "Oct 11 conference flex; Oct 12 district PD flex; System Closed Oct 13–15",
+            "Students are out for the full Oct 11–15 range"
+          ],
+          [
+            "Nov 1 · No Students",
+            "Site-based professional development",
+            "Students do not report"
+          ],
+          [
+            "Winter Break · Dec 20–31",
+            "Dec 20 is an administrative preparation flex day; System Closed Dec 21–31",
+            "Students return Jan 3"
+          ],
+          [
+            "Mid-Winter Break · Feb 18–21",
+            "Feb 18 district professional development (No Students); Feb 21 Mid-Winter Break / Presidents' Day (No School)",
+            "Students do not report throughout the four-day weekend"
+          ],
+          [
+            "Last student day · May 25",
+            "May 26 is an administrative day",
+            "The student year ends with the May 25 half day"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "wcs-2027-2028-year-changes",
+      "label": "What Changes from WCS 2026–27",
+      "position": "afterAllDates",
+      "content": "The instructional-day total remains 177, but several planning dates move. The comparison uses each year's current official Student School Calendar.",
+      "table": {
+        "columns": [
+          "Planning point",
+          "2026–27",
+          "2027–28"
+        ],
+        "rows": [
+          [
+            "First student day",
+            "Aug 10, 2026 · half day for grades 1–12",
+            "Aug 9, 2027 · half day for grades 1–12"
+          ],
+          [
+            "Fall Break",
+            "Oct 12–16, 2026",
+            "Oct 11–15, 2027"
+          ],
+          [
+            "Winter Break and return",
+            "Dec 21–Jan 4; return Jan 5",
+            "Dec 20–31; return Jan 3"
+          ],
+          [
+            "Last student day",
+            "May 27, 2027 · half day",
+            "May 25, 2028 · half day"
+          ],
+          [
+            "Grade-specific schedule details",
+            "11 early releases and 27 late starts published",
+            "Not listed in the current student PDF"
+          ]
+        ]
+      }
+    }
+  ],
+  "alternateCalendarsTitle": "Other Official WCS Calendars",
+  "alternateCalendarsDescription": "The Staff School Calendar explains employee duties during student-free dates. It does not add unpublished student early-release or late-start dates.",
+  "alternateCalendarsButtonLabel": "View Official PDF",
+  "alternateCalendarsCollapsible": true,
+  "alternateCalendarsSummaryLabel": "Show the official staff calendar",
+  "groupAlternateCalendarsWithDownloads": true,
+  "alternateCalendars": [
+    {
+      "type": "staff-calendar",
+      "group": "School planning",
+      "label": "WCS 2027–28 Staff School Calendar",
+      "description": "Explains teacher work, professional-development, conference-flex and preparation dates during student-free periods.",
+      "pdfUrl": "https://docs.wcs.edu/pdf/hr/Staff-School-Calendar-2027-2028.pdf",
+      "buttonLabel": "View Staff Calendar"
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "WCS Calendar Downloads",
+  "unifiedDownloadDescription": "Open the current WCS PDF or add the dates currently published by the district to your calendar. The .ics file is a one-time import and will not update automatically if WCS revises the calendar.",
+  "pdfHeading": "Current WCS 2027–28 Student School Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Official one-page WCS Student School Calendar with the core attendance dates, semester day totals and additional-details notice.",
+  "icsHeading": "Add WCS Dates to Your Calendar",
+  "icsButtonLabel": "Add WCS 2027–28 Dates",
+  "icsButtonSupportText": "Includes only student dates published in the current official file.",
+  "icsDescription": "The file includes only dates currently published by WCS: the half-day opening and finish, breaks, holidays, student-free staff dates and the January 3 return. It excludes grade-specific opening dates, early releases, late starts, conferences and grading-period dates because the current WCS Student School Calendar does not publish them.",
+  "calendarFaqs": [
+    {
+      "q": "When does Williamson County Schools start in 2027–28?",
+      "a": "Students in grades 1–12 begin with a half day Monday, August 9, 2027. The current WCS Student School Calendar does not list a separate first full day or an opening date for Pre-K, Early Childhood or Kindergarten."
+    },
+    {
+      "q": "When is the last day of WCS in 2027–28?",
+      "a": "The last student day is Thursday, May 25, 2028, and WCS marks it as a half day. The graduation window runs May 25–28."
+    },
+    {
+      "q": "When do WCS students return after Winter Break in 2027–28?",
+      "a": "Students return for a full day Monday, January 3, 2028. Winter Break for students is December 20–31, 2027."
+    },
+    {
+      "q": "Has WCS published 2027–28 early-release and late-start dates?",
+      "a": "WCS has not published 2027–28 early-release or late-start dates, so the 2026–27 schedule should not be carried forward."
+    },
+    {
+      "q": "Has WCS published 2027–28 grading-period dates?",
+      "a": "Not in the current one-page Student School Calendar. WCS lists 83 instructional days in the first semester and 94 in the second, but the current file does not include quarter-end, progress-report or report-card dates."
+    },
+    {
+      "q": "Is March 7, 2028 a school day in WCS?",
+      "a": "No. The official Student School Calendar lists the Presidential Primary on March 7 as No School."
+    }
+  ],
+  "excludeDistrictFaqs": true,
+  "faqDisplayLimit": 6,
+  "sourceReviewSummary": "Reviewed August 22, 2026 against the current WCS 2027–28 Student School Calendar and Staff School Calendar.",
+  "sourceReviewDetailsTitle": "What was verified",
+  "sourceReviewDetails": [
+    "August 9, May 25, all published breaks, the January 3 return, the Presidential Primary closure, half days, graduation window and 177-day total were checked against the official Student School Calendar.",
+    "The current student PDF's additional-details notice was preserved. The official WCS calendar page still links this one-page file as of August 22, 2026.",
+    "The Staff School Calendar was used only to explain staff activity during student-free dates; it was not used to supply student dates that the Student School Calendar does not publish.",
+    "The file does not list a Pre-K, Early Childhood or Kindergarten opening, grade-specific early releases or late starts, conferences, quarter dates or report-card dates. None are inferred from 2026–27."
+  ],
+  "sourceMaintainerLabel": "Official source",
+  "sourceMaintainerText": "Williamson County Schools. MySchoolDates independently reviewed the calendar data against WCS publications.",
+  "sourceNextReviewText": "We will review the page again if WCS replaces the student PDF, publishes the missing grade-specific schedule details, or changes a student date.",
+  "sourcesTitle": "Official WCS Sources",
+  "sources": [
+    {
+      "label": "WCS School & Employee Calendars",
+      "url": "https://www.wcs.edu/about-us/calendar"
+    },
+    {
+      "label": "WCS 2027–28 Student School Calendar PDF",
+      "url": "https://docs.wcs.edu/pdf/hr/Student-School-Calendar-2027-2028.pdf"
+    },
+    {
+      "label": "WCS 2027–28 Staff School Calendar PDF",
+      "url": "https://docs.wcs.edu/pdf/hr/Staff-School-Calendar-2027-2028.pdf"
+    }
+  ],
+  "events": [
+    {
+      "date": "2027-08-09",
+      "name": "First Half Day for Students in Grades 1–12",
+      "type": "school_start",
+      "badgeLabel": "Grades 1–12 Half Day",
+      "description": "The current student calendar does not publish a separate opening date for Pre-K, Early Childhood or Kindergarten."
+    },
+    {
+      "date": "2027-09-06",
+      "name": "Labor Day — No School; System Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-10-11",
+      "endDate": "2027-10-15",
+      "name": "Fall Break — No Students",
+      "type": "break_start",
+      "description": "The system is closed October 13–15. Staff calendars list conference and professional-development flex days October 11–12."
+    },
+    {
+      "date": "2027-11-01",
+      "name": "Site-Based Professional Development — No Students",
+      "type": "staff_development",
+      "badgeLabel": "No Students"
+    },
+    {
+      "date": "2027-11-22",
+      "endDate": "2027-11-26",
+      "name": "Thanksgiving Break — No School; System Closed",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-12-17",
+      "name": "Half Day; First Semester Ends",
+      "type": "semester_end",
+      "badgeLabel": "Half Day",
+      "description": "WCS lists 83 instructional days in the first semester."
+    },
+    {
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "name": "Winter Break — No Students",
+      "type": "break_start",
+      "description": "December 20 is an administrative preparation flex day; the system is closed December 21–31. Students return January 3."
+    },
+    {
+      "date": "2028-01-03",
+      "name": "Students Return Full Day; Second Semester Begins",
+      "type": "school_resume"
+    },
+    {
+      "date": "2028-01-17",
+      "name": "Martin Luther King Jr. Day — No School; System Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-02-18",
+      "endDate": "2028-02-21",
+      "name": "Mid-Winter Break — No School",
+      "type": "break_start",
+      "description": "February 18 is a district professional-development day with no students; February 21 is a no-school day for Mid-Winter Break and Presidents' Day."
+    },
+    {
+      "date": "2028-03-07",
+      "name": "Presidential Primary — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "name": "Spring Break — No School; System Closed",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-04-14",
+      "name": "Spring Holiday — No School; System Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-05-25",
+      "name": "Last Day of School — Half Day",
+      "type": "school_end",
+      "badgeLabel": "Half Day",
+      "description": "WCS lists 94 instructional days in the second semester."
+    },
+    {
+      "date": "2028-05-25",
+      "endDate": "2028-05-28",
+      "name": "Graduation Window",
+      "type": "graduation",
+      "description": "Ceremony dates and times are school-specific.",
+      "hideFromCalendarExport": true,
+      "excludeFromDateSchema": true
+    }
+  ]
+}

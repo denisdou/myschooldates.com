@@ -1,0 +1,749 @@
+{
+  "institutionId": "hamilton-county-schools",
+  "schoolYear": "2027-2028",
+  "displaySchoolYear": "2027–28",
+  "pageHeading": "Hamilton County Schools Calendar 2027–28",
+  "firstDay": "2027-08-11",
+  "firstDayScope": "First student day; August 13 is a professional development day with students out",
+  "lastDay": "2028-05-25",
+  "lastDayScope": "Student half-day with early bus release; end of the fourth quarter",
+  "temporalCoverageStart": "2027-08-05",
+  "temporalCoverageEnd": "2028-05-26",
+  "reportingPeriodDaysTotal": 180,
+  "reportingPeriodDaysScope": "The four quarter rows total 180 days: the PDF separately prints 173 green student days and seven blue professional development days. Three green dates are student half-days, so 180 is not a count of full-length student days.",
+  "semesters": 2,
+  "sourceUrl": "https://hcde.org/calendar/",
+  "sourceDocumentPage": "https://hcde.org/calendar/",
+  "sourcePdfUrl": "https://drive.google.com/file/d/13gJ704hhPuhFU3Yjjk2Hx0msa8vKWtvh/view",
+  "lastCheckedPdfUrl": "https://drive.google.com/file/d/13gJ704hhPuhFU3Yjjk2Hx0msa8vKWtvh/view",
+  "sourceCheckedAt": "2026-08-22",
+  "sourceUpdatedAt": "2026-04-16",
+  "sourceChecksumSha256": "01e9ff184e37747f484e85f2ba3da823e4ab34aa4d6ae3cbf4c4ac613bd48614",
+  "reviewedSourcePdfUrl": "https://drive.google.com/file/d/13gJ704hhPuhFU3Yjjk2Hx0msa8vKWtvh/view",
+  "reviewedSourceUpdatedAt": "2026-04-16",
+  "reviewedSourceChecksumSha256": "01e9ff184e37747f484e85f2ba3da823e4ab34aa4d6ae3cbf4c4ac613bd48614",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceConflictNote": "The official HCS calendar page labels the 2027–28 English and Spanish calendars Approved 4/16/26. The reviewed English file is still named 2027-2028 School Calendar (Draft).pdf and does not print a board-approval line inside the one-page document. This page follows the official calendar page's approved status while preserving that file-label discrepancy in the review notes.",
+  "sourceResourceMonitor": {
+    "type": "web-page",
+    "checkUrl": "https://hcde.org/calendar/",
+    "linkText": "2027-2028 School Calendar",
+    "expectedText": [
+      "2027-2028 School Calendar (Approved 4/16/26)"
+    ]
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "web-page",
+      "checkUrl": "https://hcde.org/calendar/",
+      "linkText": "2027-2028 Spanish School Calendar",
+      "expectedText": [
+        "2027-2028 Spanish School Calendar (Approved 4/16/26)"
+      ]
+    }
+  ],
+  "lastVerifiedAt": "2026-08-22",
+  "dateCreated": "2026-08-22",
+  "datePublished": "2026-08-22",
+  "dateModified": "2026-08-22",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_source_conflict",
+    "official_schedule_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Official calendar page: approved April 16, 2026; English filename retains Draft",
+  "sourceCalendarName": "Hamilton County Schools 2027–28 School Calendar",
+  "schemaCalendarName": "Hamilton County Schools Calendar 2027–28",
+  "schemaDatasetName": "Hamilton County Schools 2027–28 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed HCS dates for 2027–28, including student attendance days, seven professional development days, three student half-days, break and return sequences, quarter ranges, midterms, report cards, official English and Spanish resources, and the source filename discrepancy.",
+  "schemaSpatialCoverage": {
+    "@type": "Place",
+    "name": "Hamilton County Schools service area, Tennessee"
+  },
+  "schemaCalendarDownloadName": "Hamilton County Schools 2027–28 ICS Calendar",
+  "schemaCalendarDownloadDescription": "One-time calendar import with student dates, professional development days, half-days, major breaks, return dates and academic milestones reviewed from the official HCS calendar.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-spanish",
+      "type": "DigitalDocument",
+      "name": "Hamilton County Schools 2027–28 School Calendar — Spanish",
+      "url": "https://drive.google.com/file/d/1KqfJr46Qd2zQwdeXAS72ehyQ9Ilrv6T3/view",
+      "datePublished": "2026-04-16"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "hcs-district-calendar",
+  "allDatesMode": "all",
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideSemesterCount": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationIcs": true,
+  "hideHeroVerificationProcess": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideCoveredBreakDatesNote": true,
+  "excludeDistrictFaqs": true,
+  "hiddenSections": [
+    "about",
+    "breaks",
+    "comparison",
+    "districtProfile",
+    "downloadCta",
+    "keyDateCards",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars",
+    "planningTips",
+    "quickFacts",
+    "relatedDistricts",
+    "todayStatus",
+    "whatsDifferent",
+    "yearNumbers"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Breaks & Returns",
+      "id": "hcs-2027-2028-breaks-returns"
+    },
+    {
+      "label": "Half-Days",
+      "id": "hcs-2027-2028-half-days"
+    },
+    {
+      "label": "Year Changes",
+      "id": "hcs-2027-2028-year-changes"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Quarter Dates",
+      "id": "hcs-2027-2028-quarter-dates"
+    },
+    {
+      "label": "Calendar Totals",
+      "id": "hcs-2027-2028-calendar-totals"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Hamilton County Schools Calendar 2027–28 | HCS",
+  "seoDescription": "HCS students start Aug. 11, 2027 and finish May 25, 2028. See breaks, return dates, three half-days, quarter dates, official PDFs and an ICS download.",
+  "heroSummary": "Classes begin Wednesday, August 11, 2027, and the last student day is Thursday, May 25, 2028, a half-day. Fall Break is October 11–15, Thanksgiving Break is November 24–26, Winter Break is December 20–31, and Spring Break is March 13–17. Professional development follows each break, so students return October 19, November 30, January 5 and March 21.",
+  "heroSourceLine": "Chattanooga, Tennessee · Approved Apr. 16, 2026 · Reviewed Aug. 22, 2026 by Denis Dou",
+  "verificationBadgeText": "Checked against the complete HCS 2027–28 calendar PDF, its color legend and the official approval listing.",
+  "calendarNotes": "The HCS PDF uses color as part of the calendar data. August 13, October 18, November 29, January 3–4, March 20 and April 17 are blue professional development days with students out. December 17, March 10 and May 25 are student half-days with early bus release. The official page labels the calendar approved April 16, 2026, although the reviewed English filename still contains Draft.",
+  "keyDatesHeading": "2027–28 Key Dates",
+  "keyDatesSummaryTitle": "2027–28 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, student return dates and the final half-day",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2027-08-11",
+      "type": "school_start",
+      "description": "Students attend August 11–12; August 13 is a professional development day."
+    },
+    {
+      "label": "Fall Break",
+      "name": "Fall Break",
+      "date": "2027-10-11",
+      "endDate": "2027-10-15",
+      "type": "break_start",
+      "description": "October 18 is a professional development day. Students return October 19."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2027-11-24",
+      "endDate": "2027-11-26",
+      "type": "break_start",
+      "description": "November 29 is a professional development day. Students return November 30."
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "type": "break_start",
+      "description": "January 3–4 are professional development days. Students return January 5."
+    },
+    {
+      "label": "Spring Break",
+      "name": "Spring Break",
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "type": "break_start",
+      "description": "March 20 is a professional development day. Students return March 21."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School — Student Half-Day",
+      "date": "2028-05-25",
+      "type": "school_end",
+      "schemaDescription": "Last student day, end of the fourth quarter and a student half-day with early bus release."
+    }
+  ],
+  "allDatesTitle": "Full 2027–28 Calendar",
+  "allDatesCoverageNote": "This table follows the complete color-coded HCS calendar. It includes student attendance dates, professional development days, breaks, half-days, quarter boundaries, midterms and report-card dates. Administrative in-service before the first student day and after the final student day is shown for context but excluded from the family ICS file.",
+  "allDatesFooterMode": "source_sentence",
+  "allDatesSourceUrl": "https://drive.google.com/file/d/13gJ704hhPuhFU3Yjjk2Hx0msa8vKWtvh/view",
+  "allDatesSourceLabel": "Source: Official HCS 2027–28 School Calendar PDF",
+  "allDatesSourceSuffix": "Return dates are derived from the published break, holiday and professional-development schedule and are included here for family planning",
+  "dateLegendItems": [
+    {
+      "label": "Student day / return",
+      "dot": "bg-green-300"
+    },
+    {
+      "label": "Professional development — students out",
+      "dot": "bg-blue-300"
+    },
+    {
+      "label": "Holiday / break",
+      "dot": "bg-amber-400"
+    },
+    {
+      "label": "Student half-day / early bus release",
+      "dot": "bg-red-400"
+    },
+    {
+      "label": "Quarter / midterm / report card",
+      "dot": "bg-purple-400"
+    }
+  ],
+  "dateLegendLabelOverrides": {
+    "Holiday": "Holiday / Students Out",
+    "Teacher Workday": "Professional Development",
+    "Early Release": "Student Half-Day",
+    "Academic Date": "Quarter / Midterm / Report Card",
+    "Break": "Student Break"
+  },
+  "customSections": [
+    {
+      "id": "hcs-2027-2028-breaks-returns",
+      "label": "Breaks and Return Dates",
+      "position": "afterKeyDates",
+      "content": "The published break end date is not always the day students return to class. The table below shows each major break, any additional student-free weekdays and the first day back.",
+      "table": {
+        "caption": "Hamilton County Schools 2027–28 student time-off sequences",
+        "columns": [
+          "Time off",
+          "Days students are out",
+          "Classes resume"
+        ],
+        "rows": [
+          [
+            "Fall",
+            "Oct. 11–15 Fall Break; Oct. 18 professional development",
+            "Tuesday, Oct. 19"
+          ],
+          [
+            "Thanksgiving",
+            "Nov. 24–26 Thanksgiving Break; Nov. 29 professional development",
+            "Tuesday, Nov. 30"
+          ],
+          [
+            "Winter",
+            "Dec. 20–31 Winter Break; Jan. 3–4 professional development",
+            "Wednesday, Jan. 5"
+          ],
+          [
+            "Spring",
+            "March 13–17 Spring Break; March 20 professional development",
+            "Tuesday, March 21"
+          ],
+          [
+            "Good Friday weekend",
+            "April 14 Good Friday; April 17 professional development",
+            "Tuesday, April 18"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hcs-2027-2028-half-days",
+      "label": "Student Half-Days",
+      "position": "afterKeyDates",
+      "content": "The district calendar marks three dates in red as student half-days with early bus release. HCS does not list one districtwide dismissal time, so check your school's schedule for pickup and transportation details.",
+      "table": {
+        "caption": "HCS student half-days shown in red on the official calendar",
+        "columns": [
+          "Date",
+          "Calendar context"
+        ],
+        "rows": [
+          [
+            "Dec. 17, 2027",
+            "Student half-day and end of the second quarter"
+          ],
+          [
+            "March 10, 2028",
+            "Student half-day and end of the third quarter"
+          ],
+          [
+            "May 25, 2028",
+            "Student half-day, last day and end of the fourth quarter"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hcs-2027-2028-year-changes",
+      "label": "What Changes From the HCS 2026–27 Calendar?",
+      "position": "afterKeyDates",
+      "content": "Both approved calendars total 180 days across their four quarter rows and mark three student half-days. The first and last student dates both fall six days later in their respective months, the printed green-day count drops by one, and the professional-development count rises by one.",
+      "table": {
+        "caption": "Published changes between the HCS 2026–27 and 2027–28 calendars",
+        "columns": [
+          "Calendar item",
+          "2026–27",
+          "2027–28"
+        ],
+        "rows": [
+          [
+            "First student day",
+            "Aug. 5, 2026",
+            "Aug. 11, 2027"
+          ],
+          [
+            "Last student day",
+            "May 19, 2027",
+            "May 25, 2028"
+          ],
+          [
+            "Green student dates printed",
+            "174",
+            "173"
+          ],
+          [
+            "Professional development days",
+            "6",
+            "7"
+          ],
+          [
+            "Winter student return",
+            "Jan. 6, 2027",
+            "Jan. 5, 2028"
+          ],
+          [
+            "Spring Break",
+            "March 22–25, followed by Good Friday and a PD day",
+            "March 13–17, followed by a PD day"
+          ]
+        ],
+        "footnote": "Both English source PDFs and their color legends were reviewed separately for this comparison."
+      }
+    },
+    {
+      "id": "hcs-2027-2028-quarter-dates",
+      "label": "Quarter, Midterm and Report-Card Dates",
+      "position": "afterAllDates",
+      "content": "HCS publishes a date range, midterm, report-card date and day count for each quarter. The four quarter day counts total 180, including seven professional development days when students are out.",
+      "table": {
+        "caption": "Hamilton County Schools 2027–28 grading-period schedule",
+        "columns": [
+          "Quarter",
+          "Published range",
+          "Midterm",
+          "Report cards",
+          "Printed days"
+        ],
+        "rows": [
+          [
+            "Quarter 1",
+            "Aug. 11–Oct. 8",
+            "Sept. 9",
+            "Oct. 22",
+            "42"
+          ],
+          [
+            "Quarter 2",
+            "Oct. 18–Dec. 17",
+            "Nov. 15",
+            "Jan. 14",
+            "42"
+          ],
+          [
+            "Quarter 3",
+            "Jan. 3–March 10",
+            "Feb. 4",
+            "March 24",
+            "48"
+          ],
+          [
+            "Quarter 4",
+            "March 20–May 25",
+            "April 20",
+            "May 25",
+            "48"
+          ]
+        ],
+        "footnote": "Quarter 2 begins October 18, Quarter 3 begins January 3 and Quarter 4 begins March 20 on the printed calendar, but each of those dates is a professional development day with students out."
+      }
+    },
+    {
+      "id": "hcs-2027-2028-calendar-totals",
+      "label": "What the 173, 180 and 201 Totals Mean",
+      "position": "afterAllDates",
+      "content": "The totals at the bottom of the HCS calendar count different things. The four quarter totals add to 180 days, but that number includes seven professional development days when students are out. HCS separately shows 173 student dates, three of which are half-days. The 201 total also includes staff in-service days, paid holidays and paid Winter Break.",
+      "table": {
+        "caption": "Published totals on the HCS 2027–28 calendar",
+        "columns": [
+          "Printed item",
+          "Total",
+          "How to read it"
+        ],
+        "rows": [
+          [
+            "Green student dates",
+            "173",
+            "Dates students attend; three are marked as half-days"
+          ],
+          [
+            "Professional development days",
+            "7",
+            "Blue weekdays when students are out"
+          ],
+          [
+            "Quarter total",
+            "180",
+            "173 green student dates plus 7 professional development days"
+          ],
+          [
+            "All printed calendar categories",
+            "201",
+            "Also includes administrative in-service, paid holidays and paid Winter Break"
+          ]
+        ]
+      }
+    }
+  ],
+  "moveCalendarExportBeforeAllDates": true,
+  "compactDownloadModule": true,
+  "groupAlternateCalendarsWithDownloads": true,
+  "unifiedDownloadTitle": "Calendar Downloads",
+  "unifiedDownloadDescription": "Open the approved English or Spanish calendar, or add reviewed district dates to Google Calendar, Apple Calendar or Outlook.",
+  "pdfHeading": "Official HCS 2027–28 Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "The one-page English PDF includes the color-coded student schedule, professional development days, half-days and quarter dates. HCS lists it as approved April 16, 2026; the filename still contains Draft.",
+  "pdfVersionLabel": "HCS calendar page: approved April 16, 2026",
+  "pdfButtonLabel": "Open Official English PDF",
+  "icsHeading": "Add HCS 2027–28 Dates to Your Calendar",
+  "icsDescription": "Download reviewed districtwide dates from the English HCS calendar for Google Calendar, Apple Calendar or Outlook.",
+  "icsButtonLabel": "Download calendar (.ics)",
+  "icsButtonSupportText": "One-time import. It will not automatically update if HCS revises the calendar.",
+  "alternateCalendarsTitle": "Official HCS Calendar Translation",
+  "alternateCalendarsDescription": "The Spanish PDF is an official language edition of the same 2027–28 district schedule.",
+  "alternateCalendars": [
+    {
+      "type": "translation",
+      "group": "Spanish",
+      "label": "Hamilton County Schools 2027–28 Calendar — Spanish",
+      "description": "Official Spanish calendar approved April 16, 2026.",
+      "pdfUrl": "https://drive.google.com/file/d/1KqfJr46Qd2zQwdeXAS72ehyQ9Ilrv6T3/view",
+      "buttonLabel": "Open Spanish PDF",
+      "ariaLabel": "Open the official Hamilton County Schools 2027–28 Spanish calendar PDF"
+    }
+  ],
+  "calendarFaqs": [
+    {
+      "q": "Is the Hamilton County Schools 2027–28 calendar approved?",
+      "a": "The official HCS calendar page labels both the English and Spanish calendars approved April 16, 2026. The reviewed English filename still contains Draft and the PDF itself does not print an approval line, so this page records both facts."
+    },
+    {
+      "q": "Why are students out on April 17, 2028?",
+      "a": "Good Friday is April 14, and the HCS calendar marks Monday, April 17 as a professional development day. Students return Tuesday, April 18, creating a four-day student weekend."
+    },
+    {
+      "q": "Does the HCS calendar show 180 full student days?",
+      "a": "No. The quarter rows total 180 days by combining 173 green student dates with seven blue professional development days. Three green student dates are labeled as half-days, so 180 is not a count of full-length student attendance days."
+    },
+    {
+      "q": "What time do students leave on HCS half-days?",
+      "a": "HCS marks December 17, March 10 and May 25 as half-days with early bus release, but the district calendar does not publish one districtwide dismissal time. Check your school's schedule for the exact pickup and transportation time."
+    }
+  ],
+  "faqLimit": 4,
+  "sourcesTitle": "Official Sources & Review Notes",
+  "sourceReviewSummary": "We used the English HCS calendar for dates and color classifications, and the official HCS calendar page to verify its approved status, Spanish edition and current source links.",
+  "sourceReviewDetailsTitle": "What we checked",
+  "sourceReviewDetails": [
+    "Reviewed the complete one-page PDF, its color legend, all month grids, half-day markings, quarter rows, midterms, report-card dates and printed totals.",
+    "Confirmed that the HCS calendar page labels both 2027–28 editions Approved 4/16/26.",
+    "Recorded that the reviewed English file is still named 2027-2028 School Calendar (Draft).pdf and does not print a board-approval line inside the document.",
+    "Used the blue professional development cells to determine that students return October 19, November 30, January 5, March 21 and April 18 after the four major breaks and Good Friday weekend.",
+    "Kept the printed 173, 180 and 201 totals separate because they represent different calendar accounting views.",
+    "School-specific activities, conference times, exact half-day dismissal times and later schedule changes should be confirmed through HCS or the assigned school."
+  ],
+  "sourceMaintainerLabel": "Maintained by",
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "sourceNextReviewText": "Next review: after HCS replaces the Draft-named English file, revises the approved calendar or changes either official source link.",
+  "sources": [
+    {
+      "label": "Hamilton County Schools official calendar page",
+      "url": "https://hcde.org/calendar/"
+    },
+    {
+      "label": "Official HCS 2027–28 School Calendar — English",
+      "url": "https://drive.google.com/file/d/13gJ704hhPuhFU3Yjjk2Hx0msa8vKWtvh/view"
+    },
+    {
+      "label": "Official HCS 2027–28 School Calendar — Spanish",
+      "url": "https://drive.google.com/file/d/1KqfJr46Qd2zQwdeXAS72ehyQ9Ilrv6T3/view"
+    }
+  ],
+  "events": [
+    {
+      "date": "2027-08-05",
+      "name": "School-Based In-Service",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Preparation",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-06",
+      "name": "System-Wide In-Service",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Preparation",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-09",
+      "endDate": "2027-08-10",
+      "name": "School-Based In-Service",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Preparation",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-08-11",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2027-08-13",
+      "name": "Professional Development Day — Students Out",
+      "type": "teacher_workday",
+      "description": "The PDF marks August 13 blue under its Professional Development Day legend.",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2027-09-06",
+      "name": "Labor Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-09-09",
+      "name": "First Quarter Midterm",
+      "type": "academic",
+      "badgeLabel": "Midterm"
+    },
+    {
+      "date": "2027-10-08",
+      "name": "End of First Quarter",
+      "type": "quarter_end"
+    },
+    {
+      "date": "2027-10-11",
+      "endDate": "2027-10-15",
+      "name": "Fall Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-10-18",
+      "name": "Professional Development Day — Students Out",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2027-10-19",
+      "name": "Students Return After Fall Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-10-22",
+      "name": "First Quarter Report Cards",
+      "type": "academic",
+      "badgeLabel": "Report Cards"
+    },
+    {
+      "date": "2027-11-15",
+      "name": "Second Quarter Midterm",
+      "type": "academic",
+      "badgeLabel": "Midterm"
+    },
+    {
+      "date": "2027-11-24",
+      "endDate": "2027-11-26",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-11-29",
+      "name": "Professional Development Day — Students Out",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2027-11-30",
+      "name": "Students Return After Thanksgiving Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-12-17",
+      "name": "Student Half-Day / End of Second Quarter",
+      "type": "early_release",
+      "badgeLabel": "Half-Day · Quarter End",
+      "description": "Student half-day with early bus release."
+    },
+    {
+      "date": "2027-12-20",
+      "endDate": "2027-12-31",
+      "name": "Winter Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-01-03",
+      "name": "School-Based Professional Development — Students Out",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2028-01-04",
+      "name": "System-Wide Professional Development — Students Out",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2028-01-05",
+      "name": "Students Return After Winter Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2028-01-14",
+      "name": "Second Quarter Report Cards",
+      "type": "academic",
+      "badgeLabel": "Report Cards"
+    },
+    {
+      "date": "2028-01-17",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-02-04",
+      "name": "Third Quarter Midterm",
+      "type": "academic",
+      "badgeLabel": "Midterm"
+    },
+    {
+      "date": "2028-02-21",
+      "name": "Presidents' Day",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-03-10",
+      "name": "Student Half-Day / End of Third Quarter",
+      "type": "early_release",
+      "badgeLabel": "Half-Day · Quarter End",
+      "description": "Student half-day with early bus release."
+    },
+    {
+      "date": "2028-03-13",
+      "endDate": "2028-03-17",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2028-03-20",
+      "name": "Professional Development Day — Students Out",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2028-03-21",
+      "name": "Students Return After Spring Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2028-03-24",
+      "name": "Third Quarter Report Cards",
+      "type": "academic",
+      "badgeLabel": "Report Cards"
+    },
+    {
+      "date": "2028-04-14",
+      "name": "Good Friday",
+      "type": "holiday"
+    },
+    {
+      "date": "2028-04-17",
+      "name": "Professional Development Day — Students Out",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2028-04-18",
+      "name": "Students Return After Good Friday Weekend",
+      "type": "school_resume"
+    },
+    {
+      "date": "2028-04-20",
+      "name": "Fourth Quarter Midterm",
+      "type": "academic",
+      "badgeLabel": "Midterm"
+    },
+    {
+      "date": "2028-05-25",
+      "name": "Last Day of School / Student Half-Day / Report Cards",
+      "type": "school_end",
+      "badgeLabel": "Last Day · Half-Day",
+      "description": "Student half-day with early bus release; end of the fourth quarter."
+    },
+    {
+      "date": "2028-05-26",
+      "name": "School-Based In-Service",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Day",
+      "description": "Staff date after the final student day.",
+      "hideFromCalendarExport": true
+    }
+  ]
+}
