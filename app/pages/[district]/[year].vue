@@ -403,6 +403,9 @@ const showAlternateCalendarsNotice = computed(() =>
 const alternateCalendarsNoticeBeforeKeyDates = computed(() =>
   String((cal.value as any)?.alternateCalendarsNoticePosition ?? (cal.value as any)?.meta?.alternateCalendarsNoticePosition ?? '') === 'beforeKeyDates'
 )
+const todayStatusBeforeKeyDates = computed(() =>
+  String((cal.value as any)?.todayStatusPosition ?? (cal.value as any)?.meta?.todayStatusPosition ?? '') === 'beforeKeyDates'
+)
 const customJumpNavigation = computed(() =>
   (((cal.value as any)?.jumpNavigation ?? (cal.value as any)?.meta?.jumpNavigation ?? []) as Array<{ label?: string, href?: string, id?: string }>).filter(item => item.label && (item.href || item.id))
 )
@@ -1536,6 +1539,11 @@ useHead({
       />
       <DistrictCustomSections v-if="otherCalendarsBeforeKeyDates" :sections="customSections" position="afterOtherCalendars" />
 
+      <DistrictTodayStatus
+        v-if="todayStatusBeforeKeyDates && !hiddenSections.has('todayStatus')"
+        :cal="cal!"
+      />
+
       <!-- Key Date Cards -->
       <div v-if="!hiddenSections.has('keyDateCards')" id="key-dates" class="scroll-mt-24">
         <h2 class="text-xl font-bold text-gray-900 mb-4">{{ keyDatesHeading }}</h2>
@@ -1632,7 +1640,10 @@ useHead({
       </div>
 
       <!-- Today / Year Status -->
-      <DistrictTodayStatus v-if="!hiddenSections.has('todayStatus')" :cal="cal!" />
+      <DistrictTodayStatus
+        v-if="!todayStatusBeforeKeyDates && !hiddenSections.has('todayStatus')"
+        :cal="cal!"
+      />
 
       <!-- Alternate calendars notice -->
       <div v-if="showAlternateCalendarsNotice && !alternateCalendarsNoticeBeforeKeyDates" class="bg-amber-50 border border-amber-200 rounded-lg p-4 flex gap-3">

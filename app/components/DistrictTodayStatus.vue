@@ -7,6 +7,12 @@ const props = defineProps<{
     firstDay: string
     lastDay: string
     events: Array<{ date: string; name: string; type: string }>
+    todayStatusEventTypes?: string[]
+    hideTodayStatusSsrFallback?: boolean
+    meta?: {
+      todayStatusEventTypes?: string[]
+      hideTodayStatusSsrFallback?: boolean
+    }
   }
 }>()
 
@@ -21,9 +27,29 @@ const todayStr = (() => {
 })()
 
 const breaks = computed(() => getBreaks(props.cal.events))
-const keyDateTypes = new Set(['school_start', 'school_end', 'holiday', 'closure', 'break', 'break_start', 'early_dismissal', 'early_release', 'early_close', 'operational_closure', 'academic', 'graduation'])
+const todayStatusEventTypes = computed(() =>
+  props.cal.todayStatusEventTypes ?? props.cal.meta?.todayStatusEventTypes ?? []
+)
+const hideTodayStatusSsrFallback = computed(() =>
+  props.cal.hideTodayStatusSsrFallback ?? props.cal.meta?.hideTodayStatusSsrFallback ?? false
+)
+const keyDateTypes = computed(() => new Set([
+  'school_start',
+  'school_end',
+  'holiday',
+  'closure',
+  'break',
+  'break_start',
+  'early_dismissal',
+  'early_release',
+  'early_close',
+  'operational_closure',
+  'academic',
+  'graduation',
+  ...todayStatusEventTypes.value,
+]))
 const nextEvent = computed(() =>
-  props.cal.events.find(e => keyDateTypes.has(e.type) && new Date(e.date + 'T00:00:00') >= today) ?? null
+  props.cal.events.find(e => keyDateTypes.value.has(e.type) && new Date(e.date + 'T00:00:00') >= today) ?? null
 )
 
 const todayStatus = computed(() => {
@@ -112,7 +138,7 @@ const schoolYearRange = computed(() =>
       <slot name="cta" />
     </div>
     <template #fallback>
-      <div class="rounded-lg px-6 py-6 bg-blue-50 border border-blue-200">
+      <div v-if="!hideTodayStatusSsrFallback" class="rounded-lg px-6 py-6 bg-blue-50 border border-blue-200">
         <div class="text-xs font-semibold uppercase tracking-wide mb-1 text-blue-700">School Year Status</div>
         <div class="font-bold text-2xl leading-tight text-blue-800">{{ props.cal.schoolYear }} school year</div>
         <div class="text-sm mt-1 text-blue-700">{{ schoolYearRange }}</div>

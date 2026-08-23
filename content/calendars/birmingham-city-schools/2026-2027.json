@@ -1,0 +1,658 @@
+{
+  "institutionId": "birmingham-city-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Birmingham City Schools Calendar 2026–27",
+  "firstDay": "2026-08-10",
+  "firstDayScope": "First student day and beginning of the first reporting period",
+  "lastDay": "2027-06-10",
+  "lastDayScope": "Last student day and end of the fourth reporting period",
+  "temporalCoverageStart": "2026-07-03",
+  "temporalCoverageEnd": "2027-06-18",
+  "totalSchoolDays": 180,
+  "teacherDays": 187,
+  "reportingPeriodDaysTotal": 180,
+  "reportingPeriodDaysScope": "The four printed reporting-period totals are 44, 38, 49 and 49 student days, which add to the PDF's 180-student total. October 23 and March 8 are e-Learning/Parent Conference Days and remain in that total.",
+  "semesters": 2,
+  "sourceUrl": "https://www.bhamcityschools.org/documents/calendars/643988",
+  "sourceDocumentPage": "https://www.bhamcityschools.org/documents/calendars/643988",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4669/Bcs/091f855d-03ee-4758-9da2-1a20ea829496/BCS-26-27-Calendar-Draft.pdf?disposition=inline",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4669/Bcs/091f855d-03ee-4758-9da2-1a20ea829496/BCS-26-27-Calendar-Draft.pdf?disposition=inline",
+  "sourceCheckedAt": "2026-08-23",
+  "sourceUpdatedAt": "2026-06-18",
+  "sourceChecksumSha256": "a245d09a7be9cfad950abaf50fb088fcf6e5168ee64bf309c9e2bdc7234ac209",
+  "reviewedSourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4669/Bcs/091f855d-03ee-4758-9da2-1a20ea829496/BCS-26-27-Calendar-Draft.pdf?disposition=inline",
+  "reviewedSourceUpdatedAt": "2026-06-18",
+  "reviewedSourceChecksumSha256": "a245d09a7be9cfad950abaf50fb088fcf6e5168ee64bf309c9e2bdc7234ac209",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceConflict": false,
+  "lastVerifiedAt": "2026-08-23",
+  "dateCreated": "2026-08-23",
+  "datePublished": "2026-08-23",
+  "dateModified": "2026-08-23",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "draft_file_replacement",
+    "elearning_schedule_change",
+    "official_schedule_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Approved calendar announced April 8, 2026; PDF metadata dated June 18, 2026",
+  "sourceCalendarName": "Birmingham City Schools 2026–27 School Event Calendar — English",
+  "schemaCalendarName": "Birmingham City Schools Calendar 2026–27",
+  "schemaDatasetName": "Birmingham City Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed BCS dates for 2026–27, including 180 student days, 187 teacher days, four reporting periods, intersessions, e-Learning/Parent Conference Days, staff days, holidays, breaks and return dates.",
+  "schemaSpatialCoverage": {
+    "@type": "Place",
+    "name": "Birmingham City Schools service area, Alabama"
+  },
+  "schemaCalendarDownloadName": "Birmingham City Schools 2026–27 ICS Calendar",
+  "schemaCalendarDownloadDescription": "One-time calendar import with districtwide BCS student calendar dates, including first and last days, e-Learning days, holidays, intersessions, breaks and reviewed return dates.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-spanish",
+      "type": "CreativeWork",
+      "name": "Birmingham City Schools 2026–27 School Event Calendar — Spanish",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4669/Bcs/56cc6db4-f3a6-4d9f-a207-3057d777ec50/BCS-2026-27-Calendar-Spanish-Draft.pdf?disposition=inline"
+    },
+    {
+      "id": "source-assessment-calendar",
+      "type": "CreativeWork",
+      "name": "Birmingham City Schools 2026–27 Assessment Calendar",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4669/Bcs/4104257d-64e8-4bb6-b83d-0e3e9c721e2a/2026-2027-BCS-Assessment-Calendar.pdf?disposition=inline"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "bcs-district-calendar",
+  "allDatesMode": "all",
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideSemesterCount": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationIcs": true,
+  "hideHeroVerificationProcess": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideCoveredBreakDatesNote": true,
+  "excludeDistrictFaqs": true,
+  "hiddenSections": [
+    "about",
+    "comparison",
+    "districtProfile",
+    "downloadCta",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars",
+    "planningTips",
+    "quickFacts",
+    "relatedDistricts",
+    "todayStatus",
+    "whatsDifferent",
+    "yearNumbers",
+    "backToCurrent"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Breaks & Returns",
+      "id": "breaks"
+    },
+    {
+      "label": "e-Learning Days",
+      "id": "bcs-2026-2027-elearning"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Calendar Totals",
+      "id": "bcs-2026-2027-calendar-totals"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Birmingham City Schools Calendar 2026–27 | Dates & PDF",
+  "seoDescription": "Birmingham City Schools starts Aug. 10, 2026 and ends June 10, 2027. See breaks, intersessions, e-Learning days, official BCS PDFs and an ICS download.",
+  "heroSummary": "School starts Monday, August 10, 2026, and the last student day is Thursday, June 10, 2027. Major breaks include Fall Intersession on October 5–9, Thanksgiving Break on November 23–27, Spring Intersession on February 22–26, and Spring Break on March 22–26.\n\nWinter Holidays run December 21–31, but students do not return until Wednesday, January 6. January 1 is a holiday, January 4 is a district professional development day, and January 5 is a teacher workday. December 18 is an early-dismissal day.",
+  "heroSourceLine": "Birmingham, Alabama · BCS-approved 2026–27 calendar · Reviewed Aug. 23, 2026",
+  "verificationBadgeText": "Verified against the one-page BCS calendar, including its color key and day totals.",
+  "calendarNotes": "The PDF lists 180 student days and 187 teacher days. October 23 and March 8 are e-Learning/Parent Conference Days, not student holidays. BCS announced the calendar as approved on April 8, 2026, although the current PDF filename still contains “Draft.”",
+  "keyDatesHeading": "2026–27 Key Dates",
+  "keyDatesSummaryTitle": "Birmingham City Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, intersessions, major breaks and the January 6 return",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Students",
+      "date": "2026-08-10",
+      "type": "school_start"
+    },
+    {
+      "label": "Fall Intersession",
+      "name": "Fall Intersession",
+      "date": "2026-10-05",
+      "endDate": "2026-10-09",
+      "type": "break_start",
+      "description": "Students return Monday, October 12. BCS also lists a separate one-day Fall Break on October 30."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "description": "Students return Monday, November 30."
+    },
+    {
+      "label": "Winter Holidays",
+      "name": "Winter Holidays",
+      "date": "2026-12-21",
+      "endDate": "2026-12-31",
+      "type": "break_start",
+      "description": "January 1 is a holiday, January 4 is professional development and January 5 is a teacher workday. Students return January 6."
+    },
+    {
+      "label": "Spring Intersession",
+      "name": "Spring Intersession",
+      "date": "2027-02-22",
+      "endDate": "2027-02-26",
+      "type": "break_start",
+      "description": "Students return Monday, March 1."
+    },
+    {
+      "label": "Spring Break",
+      "name": "Spring Break",
+      "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "type": "break_start",
+      "description": "Students return Monday, March 29."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Students",
+      "date": "2027-06-10",
+      "type": "school_end"
+    }
+  ],
+  "breaksBeforeAllDates": true,
+  "breaksTitle": "BCS Intersessions, Breaks and Return Dates",
+  "breakNotes": {
+    "Fall Intersession": "Students return Monday, October 12.",
+    "Fall Break": "This is a separate one-day break on Friday, October 30. Students return Monday, November 2.",
+    "Thanksgiving Break": "Students return Monday, November 30.",
+    "Winter Holidays": "January 1 is a holiday, January 4 is district professional development and January 5 is a teacher workday. Students return Wednesday, January 6.",
+    "Spring Intersession": "Students return Monday, March 1.",
+    "Spring Break": "Students return Monday, March 29."
+  },
+  "allDatesTitle": "Full 2026–27 BCS Calendar",
+  "allDatesCoverageNote": "This table covers the dates listed on the BCS School Event Calendar, including student dates, staff days that affect attendance, e-Learning / Parent Conference Days, reporting-period markers, progress and report-card dates, holidays, intersessions and breaks. The ICS download excludes reporting notices and staff-only dates outside the student school year.",
+  "allDatesDerivedDateNote": "When BCS does not list a return date separately, we use the next scheduled student day after the published break.",
+  "allDatesDerivedDateNotePosition": "footer",
+  "allDatesFooterMode": "source_sentence",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4669/Bcs/091f855d-03ee-4758-9da2-1a20ea829496/BCS-26-27-Calendar-Draft.pdf?disposition=inline",
+  "allDatesSourceLabel": "BCS 2026–27 School Event Calendar PDF",
+  "dateLegendItems": [
+    {
+      "label": "First / last student day",
+      "dot": "bg-green-300"
+    },
+    {
+      "label": "Holiday / intersession / break",
+      "dot": "bg-red-400"
+    },
+    {
+      "label": "e-Learning / Parent Conference Day",
+      "dot": "bg-purple-400"
+    },
+    {
+      "label": "Staff day — no students",
+      "dot": "bg-yellow-300"
+    },
+    {
+      "label": "Reporting marker / early dismissal",
+      "dot": "bg-slate-400"
+    }
+  ],
+  "dateLegendLabelOverrides": {
+    "Digital Learning": "e-Learning / Parent Conference",
+    "Teacher Workday": "Teacher Workday — No Students",
+    "Staff Development": "Professional Development — No Students",
+    "Break": "Intersession / Break"
+  },
+  "unifiedDownloadTitle": "BCS Calendar Resources",
+  "unifiedDownloadDescription": "Open the district's English or Spanish calendar, view the separate assessment calendar, or download the family ICS file. The assessment calendar covers testing, not student attendance dates.",
+  "icsHeading": "Add BCS 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download a one-time ICS file with the districtwide student calendar dates shown on this page, including e-Learning days, intersessions, holidays, breaks and return dates.",
+  "icsButtonLabel": "Download BCS Calendar (.ics)",
+  "icsButtonSupportText": "One-time import; check Birmingham City Schools for a revised PDF or later schedule changes.",
+  "compactDownloadModule": true,
+  "hideCompatibleCalendars": true,
+  "hideSocialShareButtons": true,
+  "hideShareCalendarHeading": true,
+  "hideCalendarUpdatesButton": true,
+  "pdfHeading": "BCS 2026–27 School Event Calendar — English",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "BCS announced the 2026–27 calendar as approved. The current PDF filename still contains “Draft,” although the district lists it as its 2026–27 District Calendar.",
+  "pdfButtonLabel": "View BCS English PDF",
+  "pdfVersionLabel": "BCS-approved calendar · PDF metadata dated June 18, 2026",
+  "groupAlternateCalendarsWithDownloads": true,
+  "alternateCalendarsTitle": "Official Companion Calendars",
+  "alternateCalendarsDescription": "The Spanish PDF is the district's translated version of the school event calendar. The assessment calendar covers testing and is not used for attendance dates or the ICS file.",
+  "alternateCalendarsButtonLabel": "View Official Calendar",
+  "alternateCalendars": [
+    {
+      "type": "translation",
+      "group": "Spanish Calendar",
+      "label": "BCS 2026–27 School Event Calendar — Spanish",
+      "buttonLabel": "View Spanish PDF",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4669/Bcs/56cc6db4-f3a6-4d9f-a207-3057d777ec50/BCS-2026-27-Calendar-Spanish-Draft.pdf?disposition=inline",
+      "ariaLabel": "View the Birmingham City Schools 2026–27 Spanish calendar PDF"
+    },
+    {
+      "type": "assessment",
+      "group": "Assessment Calendar",
+      "label": "BCS 2026–27 Assessment Calendar",
+      "description": "Separate district testing calendar; use it for assessment windows, not student attendance dates.",
+      "buttonLabel": "View Assessment Calendar PDF",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4669/Bcs/4104257d-64e8-4bb6-b83d-0e3e9c721e2a/2026-2027-BCS-Assessment-Calendar.pdf?disposition=inline",
+      "ariaLabel": "View the Birmingham City Schools 2026–27 assessment calendar PDF"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "bcs-2026-2027-elearning",
+      "label": "e-Learning / Parent Conference Days Count as Student Days",
+      "position": "afterBreaks",
+      "schemaHasPart": true,
+      "content": "BCS lists Oct. 23 and March 8 as e-Learning / Parent Conference Days. Both count toward the district's 180 student days.",
+      "table": {
+        "caption": "BCS 2026–27 e-Learning / Parent Conference Days",
+        "columns": [
+          "Date",
+          "Official label",
+          "What families need to know"
+        ],
+        "rows": [
+          [
+            "Friday, Oct. 23, 2026",
+            "e-Learning / Parent Conference Day",
+            "Counts toward the second reporting period."
+          ],
+          [
+            "Monday, March 8, 2027",
+            "e-Learning / Parent Conference Day",
+            "Counts toward the third reporting period."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bcs-2026-2027-calendar-totals",
+      "label": "180 Student Days, 187 Teacher Days and Four Reporting Periods",
+      "position": "afterCalendarExport",
+      "schemaHasPart": true,
+      "content": "BCS lists 180 student days and 187 teacher days for 2026–27. The extra seven teacher days are professional development, institute and teacher workdays when students are not in class.",
+      "table": {
+        "caption": "Birmingham City Schools 2026–27 reporting-period totals",
+        "columns": [
+          "Reporting period",
+          "Published dates",
+          "Student days"
+        ],
+        "rows": [
+          [
+            "First",
+            "Aug. 10–Oct. 16",
+            "44"
+          ],
+          [
+            "Second",
+            "Oct. 19–Dec. 18",
+            "38"
+          ],
+          [
+            "Third",
+            "Jan. 6–March 31",
+            "49"
+          ],
+          [
+            "Fourth",
+            "April 1–June 10",
+            "49"
+          ],
+          [
+            "Annual total",
+            "Four reporting periods",
+            "180 student days / 187 teacher days"
+          ]
+        ]
+      }
+    }
+  ],
+  "faqOrderLimit": 5,
+  "calendarFaqs": [
+    {
+      "q": "Are October 23 and March 8 no-school days in Birmingham City Schools?",
+      "a": "No. BCS labels both dates as e-Learning / Parent Conference Days, and both count toward the district's 180 student days. Families should follow school instructions for online learning and conference arrangements."
+    },
+    {
+      "q": "When do BCS students return after Winter Holidays?",
+      "a": "Students return Wednesday, January 6, 2027. January 1 is a holiday, January 4 is a district professional development day and January 5 is a teacher workday."
+    },
+    {
+      "q": "What is the difference between BCS intersessions and school breaks?",
+      "a": "The BCS calendar does not explain a policy difference. It labels October 5–9 and February 22–26 as intersessions, while October 30 and March 22–26 are listed as school breaks."
+    },
+    {
+      "q": "Does the BCS assessment calendar replace the school event calendar?",
+      "a": "No. The assessment calendar is a separate testing resource. Use the school event calendar for districtwide attendance dates, holidays, intersessions and breaks."
+    },
+    {
+      "q": "Does the Birmingham City Schools ICS calendar update automatically?",
+      "a": "No. The ICS file is a one-time import of the dates reviewed on this page. Check the BCS calendar documents page for a replacement PDF or later district changes."
+    }
+  ],
+  "sourcesTitle": "Sources and Review Notes",
+  "sourceReviewSummary": "Reviewed August 23, 2026 against the one-page Birmingham City Schools 2026–27 School Event Calendar, the official calendar documents page and BCS's April 8 approval announcement.",
+  "sourceReviewDetailsTitle": "How we reviewed the BCS calendar",
+  "sourceReviewDetails": [
+    "Reviewed every labeled date and the color key on the one-page English calendar, including staff preparation, student days, e-Learning/Parent Conference Days, intersessions, holidays and reporting notices.",
+    "Checked the four reporting periods against the annual totals: 44 + 38 + 49 + 49 equals 180 student days, while BCS lists 187 teacher days.",
+    "Confirmed that October 23 and March 8 count as student days under the BCS calendar.",
+    "BCS announced the 2026–27 calendar as approved, although the current PDF filename still contains “Draft.”"
+  ],
+  "sourceMaintainerLabel": "Maintained by",
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "sourceNextReviewText": "We review this page again when BCS posts a revised calendar, replaces the current file or announces a districtwide schedule change.",
+  "sources": [
+    {
+      "label": "Birmingham City Schools calendar documents",
+      "url": "https://www.bhamcityschools.org/documents/calendars/643988"
+    },
+    {
+      "label": "BCS announcement: approved 2026–27 calendar available",
+      "url": "https://www.bhm.k12.al.us/live_feeds/11929372"
+    },
+    {
+      "label": "BCS 2026–27 School Event Calendar — English",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4669/Bcs/091f855d-03ee-4758-9da2-1a20ea829496/BCS-26-27-Calendar-Draft.pdf?disposition=inline"
+    },
+    {
+      "label": "BCS 2026–27 School Event Calendar — Spanish",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4669/Bcs/56cc6db4-f3a6-4d9f-a207-3057d777ec50/BCS-2026-27-Calendar-Spanish-Draft.pdf?disposition=inline"
+    },
+    {
+      "label": "BCS 2026–27 Assessment Calendar",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4669/Bcs/4104257d-64e8-4bb6-b83d-0e3e9c721e2a/2026-2027-BCS-Assessment-Calendar.pdf?disposition=inline"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-07-03",
+      "name": "Independence Day Observance — Schools Closed",
+      "type": "holiday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-05",
+      "name": "District Professional Development — No Students",
+      "type": "staff_development",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-06",
+      "name": "In-School Professional Development — No Students",
+      "type": "staff_development",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Institute / Teacher Workday — No Students",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-10",
+      "name": "First Day for Students — First Semester",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — Schools Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-10",
+      "name": "Progress Reports Sent Home",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-05",
+      "endDate": "2026-10-09",
+      "name": "Fall Intersession",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Students Return After Fall Intersession",
+      "type": "school_resume",
+      "derivedFromPublishedBreakDates": true
+    },
+    {
+      "date": "2026-10-16",
+      "name": "First Reporting Period Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-23",
+      "name": "e-Learning / Parent Conference Day",
+      "type": "digital_learning",
+      "badgeLabel": "Student Day"
+    },
+    {
+      "date": "2026-10-30",
+      "endDate": "2026-10-30",
+      "name": "Fall Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-11-02",
+      "name": "Students Return After Fall Break",
+      "type": "school_resume",
+      "derivedFromPublishedBreakDates": true
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day — Schools Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-17",
+      "name": "Progress Reports Sent Home",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-11-30",
+      "name": "Students Return After Thanksgiving Break",
+      "type": "school_resume",
+      "derivedFromPublishedBreakDates": true
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Last Student Day of First Semester — Early Dismissal",
+      "type": "early_dismissal",
+      "description": "The second reporting period ends."
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2026-12-31",
+      "name": "Winter Holidays",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-01",
+      "name": "New Year's Holiday — Schools Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "District Professional Development — No Students",
+      "type": "staff_development"
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Teacher Workday — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2027-01-06",
+      "name": "First Day for Students — Second Semester",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-07",
+      "name": "Report Cards Sent Home",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — Schools Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-11",
+      "name": "Progress Reports Sent Home",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-02-15",
+      "name": "President's Day — Schools Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-22",
+      "endDate": "2027-02-26",
+      "name": "Spring Intersession",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-01",
+      "name": "Students Return After Spring Intersession",
+      "type": "school_resume",
+      "derivedFromPublishedBreakDates": true
+    },
+    {
+      "date": "2027-03-08",
+      "name": "e-Learning / Parent Conference Day",
+      "type": "digital_learning",
+      "badgeLabel": "Student Day"
+    },
+    {
+      "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "name": "Spring Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-03-29",
+      "name": "Students Return After Spring Break",
+      "type": "school_resume",
+      "derivedFromPublishedBreakDates": true
+    },
+    {
+      "date": "2027-03-31",
+      "name": "Third Reporting Period Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-04-06",
+      "name": "Report Cards Sent Home",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-04-30",
+      "name": "Teacher Workday — No Students",
+      "type": "teacher_workday"
+    },
+    {
+      "date": "2027-05-05",
+      "name": "Progress Reports Sent Home",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day — Schools Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-06-10",
+      "name": "Last Day for Students — Second Semester",
+      "type": "school_end",
+      "description": "The fourth reporting period ends."
+    },
+    {
+      "date": "2027-06-11",
+      "name": "Teacher Workday / Last Day for Teachers",
+      "type": "teacher_workday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-16",
+      "name": "Report Cards Sent Home",
+      "type": "academic",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-18",
+      "name": "Juneteenth Observance — Schools Closed",
+      "type": "holiday",
+      "hideFromCalendarExport": true
+    }
+  ]
+}

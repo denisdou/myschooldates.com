@@ -1,0 +1,578 @@
+{
+  "institutionId": "mobile-county-public-schools",
+  "schoolYear": "2025-2026",
+  "displaySchoolYear": "2025–26",
+  "pageHeading": "Mobile County Public Schools Calendar 2025–26",
+  "firstDay": "2025-08-11",
+  "firstDayScope": "First student day and beginning of the first quarter",
+  "lastDay": "2026-05-22",
+  "lastDayScope": "Last student day and end of the fourth quarter",
+  "temporalCoverageStart": "2025-08-04",
+  "temporalCoverageEnd": "2026-05-28",
+  "totalSchoolDays": 175,
+  "reportingPeriodDaysTotal": 175,
+  "reportingPeriodDaysScope": "The four printed quarter totals are 44, 44, 43 and 44 days, which add to the PDF's 175-student total. The total includes four Distance Learning Days.",
+  "semesters": 2,
+  "sourceUrl": "https://www.mcpss.com/documents/system/mcpss-calendars/806415",
+  "sourceDocumentPage": "https://www.mcpss.com/documents/system/mcpss-calendars/806415",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5395/Mcps/96c98080-36a1-4512-8d2c-4d188baa7943/2025-26_Board_Approved_School_Calendar-ADA-checked.pdf?disposition=inline",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5395/Mcps/96c98080-36a1-4512-8d2c-4d188baa7943/2025-26_Board_Approved_School_Calendar-ADA-checked.pdf?disposition=inline",
+  "sourceCheckedAt": "2026-08-23",
+  "sourceUpdatedAt": "2025-02-24",
+  "sourceChecksumSha256": "3c0ed801f916c1c7a4213febb5a3016d60db39678ea496c3fd1a2cc7ecdbf3ae",
+  "reviewedSourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5395/Mcps/96c98080-36a1-4512-8d2c-4d188baa7943/2025-26_Board_Approved_School_Calendar-ADA-checked.pdf?disposition=inline",
+  "reviewedSourceUpdatedAt": "2025-02-24",
+  "reviewedSourceChecksumSha256": "3c0ed801f916c1c7a4213febb5a3016d60db39678ea496c3fd1a2cc7ecdbf3ae",
+  "sourceStatus": "historical",
+  "manualReviewRequired": false,
+  "sourceConflict": false,
+  "lastVerifiedAt": "2026-08-23",
+  "dateCreated": "2026-08-23",
+  "datePublished": "2026-08-23",
+  "dateModified": "2026-08-23",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "archived_source_replacement",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Board approved February 24, 2025",
+  "sourceCalendarName": "Mobile County Public Schools 2025–26 School Year Calendar",
+  "schemaCalendarName": "Mobile County Public Schools Calendar 2025–26",
+  "schemaDatasetName": "Mobile County Public Schools 2025–26 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed MCPSS dates for 2025–26, including 175 student days, 187 teacher days, four Distance Learning Days, quarter boundaries, teacher workdays, holidays, the Mardi Gras schedule, major breaks and return dates.",
+  "schemaSpatialCoverage": {
+    "@type": "Place",
+    "name": "Mobile County Public Schools service area, Alabama"
+  },
+  "schemaCalendarDownloadName": "Mobile County Public Schools 2025–26 ICS Calendar",
+  "schemaCalendarDownloadDescription": "One-time calendar import with districtwide MCPSS student dates, Distance Learning Days, holidays, breaks, quarter boundaries and reviewed return dates.",
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "mcpss-district-calendar",
+  "allDatesMode": "all",
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideSemesterCount": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationIcs": true,
+  "hideHeroVerificationProcess": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideCoveredBreakDatesNote": true,
+  "excludeDistrictFaqs": true,
+  "hiddenSections": [
+    "about",
+    "breaks",
+    "comparison",
+    "districtProfile",
+    "downloadCta",
+    "keyDateCards",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars",
+    "planningTips",
+    "quickFacts",
+    "relatedDistricts",
+    "todayStatus",
+    "whatsDifferent",
+    "yearNumbers"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Breaks & Returns",
+      "id": "mcpss-2025-2026-breaks-returns"
+    },
+    {
+      "label": "Distance Learning",
+      "id": "mcpss-2025-2026-distance-learning"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Calendar Totals",
+      "id": "mcpss-2025-2026-calendar-totals"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Mobile County Public Schools Calendar 2025–26 | MCPSS",
+  "seoDescription": "Review the MCPSS 2025–26 calendar, including 175 student days, four Distance Learning Days, Mardi Gras dates, breaks, the official PDF and an ICS download.",
+  "heroSummary": "Mobile County Public Schools students began Monday, August 11, 2025, and finished Friday, May 22, 2026. Thanksgiving Break was November 24–28, Christmas Break was December 22–31, and Spring Break was April 13–17. Students also had Distance Learning on September 22, October 10, November 10 and March 13; the February schedule combined three holiday dates with two professional-development days before students returned February 23.",
+  "heroSourceLine": "Mobile, Alabama · Board approved Feb. 24, 2025 · Reviewed Aug. 23, 2026 by Denis Dou",
+  "verificationBadgeText": "Checked against the complete MCPSS 2025–26 PDF, month panels and color legend.",
+  "calendarNotes": "The PDF prints 175 student days and 187 teacher days. September 22, October 10, November 10 and March 13 are Distance Learning Days, not student holidays. February 16–18 are labeled Presidents' Day / Fat Tuesday, followed by professional development on February 19–20 with no students. The four quarter totals add to 175.",
+  "keyDatesHeading": "2025–26 Key Dates",
+  "keyDatesSummaryTitle": "2025–26 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, major breaks, Mardi Gras week and student return dates",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2025-08-11",
+      "type": "school_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2025-11-24",
+      "endDate": "2025-11-28",
+      "type": "break_start",
+      "description": "Students returned Monday, December 1."
+    },
+    {
+      "label": "Christmas",
+      "name": "Christmas Break",
+      "date": "2025-12-22",
+      "endDate": "2025-12-31",
+      "type": "break_start",
+      "description": "January 1–2 were holidays and January 5 was a Teacher Work Day. Students returned January 6."
+    },
+    {
+      "label": "Mardi Gras Week",
+      "name": "Presidents' Day / Fat Tuesday and Professional Development",
+      "date": "2026-02-16",
+      "endDate": "2026-02-20",
+      "type": "no_school",
+      "description": "Students were out for three holiday dates and two professional-development days, then returned February 23."
+    },
+    {
+      "label": "Spring Break",
+      "name": "Spring Break",
+      "date": "2026-04-13",
+      "endDate": "2026-04-17",
+      "type": "break_start",
+      "description": "Students returned Monday, April 20."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2026-05-22",
+      "type": "school_end",
+      "schemaDescription": "Last student day and end of the fourth quarter."
+    }
+  ],
+  "allDatesTitle": "Full 2025–26 Calendar",
+  "allDatesCoverageNote": "This table follows the main MCPSS student calendar. It includes Distance Learning Days, quarter boundaries, teacher workdays and professional development during the student year, holidays, breaks and the last student day. Staff-only preparation before August 11 and workdays after May 22 are shown for context but excluded from the family ICS file.",
+  "allDatesFooterMode": "source_sentence",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5395/Mcps/96c98080-36a1-4512-8d2c-4d188baa7943/2025-26_Board_Approved_School_Calendar-ADA-checked.pdf?disposition=inline",
+  "allDatesSourceLabel": "Official MCPSS 2025–26 Board-Approved School Calendar PDF",
+  "allDatesSourceSuffix": "Return dates not separately named by MCPSS are derived from the published holiday, break and staff-work schedule and are included for family planning",
+  "dateLegendItems": [
+    {
+      "label": "First / last day of quarter",
+      "dot": "bg-green-300"
+    },
+    {
+      "label": "Distance Learning",
+      "dot": "bg-blue-300"
+    },
+    {
+      "label": "Teacher work / staff development — students out",
+      "dot": "bg-yellow-300"
+    },
+    {
+      "label": "Student / teacher holiday",
+      "dot": "bg-red-400"
+    }
+  ],
+  "dateLegendLabelOverrides": {
+    "Holiday": "Student / Teacher Holiday",
+    "Teacher Workday": "Teacher Work / Staff Development",
+    "Digital Learning": "Distance Learning",
+    "Break": "Student / Teacher Holiday"
+  },
+  "customSections": [
+    {
+      "id": "mcpss-2025-2026-breaks-returns",
+      "label": "Student Breaks and Return Dates",
+      "position": "afterKeyDates",
+      "content": "The published holiday or break end was not always the next student day. The table keeps MCPSS's official labels and shows the first scheduled day back.",
+      "table": {
+        "caption": "Mobile County Public Schools 2025–26 student time-off sequences",
+        "columns": [
+          "Time off",
+          "Published student schedule",
+          "School resumed"
+        ],
+        "rows": [
+          [
+            "Thanksgiving",
+            "Nov. 24–28 Thanksgiving Break",
+            "Monday, Dec. 1"
+          ],
+          [
+            "Christmas and New Year",
+            "Dec. 22–31 Christmas Break; Jan. 1–2 holidays; Jan. 5 Teacher Work Day",
+            "Tuesday, Jan. 6"
+          ],
+          [
+            "Mardi Gras week",
+            "Feb. 16–18 Presidents' Day / Fat Tuesday; Feb. 19–20 Professional Development",
+            "Monday, Feb. 23"
+          ],
+          [
+            "Third-quarter transition",
+            "March 13 Distance Learning / quarter end; March 16 Teacher Work Day",
+            "Tuesday, March 17"
+          ],
+          [
+            "Spring",
+            "April 13–17 Spring Break",
+            "Monday, April 20"
+          ]
+        ],
+        "footnote": "January 6 and March 17 are explicitly labeled as student-return or quarter-start dates on the PDF. The other return dates follow the published weekday schedule."
+      }
+    },
+    {
+      "id": "mcpss-2025-2026-distance-learning",
+      "label": "Distance Learning Days",
+      "position": "afterKeyDates",
+      "content": "MCPSS gives Virtual or Distance Instruction its own blue calendar category. These are instructional dates in the printed 175-student total, not student holidays or teacher-only workdays.",
+      "table": {
+        "caption": "MCPSS 2025–26 Distance Learning Days",
+        "columns": [
+          "Date",
+          "Calendar context"
+        ],
+        "rows": [
+          [
+            "Monday, Sept. 22, 2025",
+            "Distance Learning Day"
+          ],
+          [
+            "Friday, Oct. 10, 2025",
+            "Distance Learning Day and end of the first quarter"
+          ],
+          [
+            "Monday, Nov. 10, 2025",
+            "Distance Learning Day before Veterans Day"
+          ],
+          [
+            "Friday, March 13, 2026",
+            "Distance Learning Day and end of the third quarter"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mcpss-2025-2026-calendar-totals",
+      "label": "What the 175 Student and 187 Teacher Days Mean",
+      "position": "afterAllDates",
+      "content": "MCPSS prints separate annual totals because teachers have preparation and workdays when students are out. The 175-student total matches the four quarter counts and includes all four Distance Learning Days.",
+      "table": {
+        "caption": "Published day totals on the MCPSS 2025–26 calendar",
+        "columns": [
+          "Printed item",
+          "Total",
+          "How to read it"
+        ],
+        "rows": [
+          [
+            "Quarter 1",
+            "44",
+            "Aug. 11–Oct. 10"
+          ],
+          [
+            "Quarter 2",
+            "44",
+            "Oct. 13–Dec. 19"
+          ],
+          [
+            "Quarter 3",
+            "43",
+            "Jan. 6–March 13"
+          ],
+          [
+            "Quarter 4",
+            "44",
+            "March 17–May 22"
+          ],
+          [
+            "Student days",
+            "175",
+            "The four quarter totals combined; four dates use Distance Learning."
+          ],
+          [
+            "Teacher days",
+            "187",
+            "Includes staff preparation, professional development and teacher workdays outside ordinary student attendance."
+          ]
+        ]
+      }
+    }
+  ],
+  "moveCalendarExportBeforeAllDates": true,
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Calendar Downloads",
+  "unifiedDownloadDescription": "Open the board-approved MCPSS calendar or add reviewed district dates to Google Calendar, Apple Calendar or Outlook.",
+  "pdfHeading": "Official MCPSS 2025–26 Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "The one-page PDF includes the color-coded student schedule, four Distance Learning Days, teacher workdays, quarter totals and board approval date used for this page.",
+  "pdfVersionLabel": "Board approved February 24, 2025",
+  "pdfButtonLabel": "Open Official PDF",
+  "icsHeading": "Add MCPSS 2025–26 Dates to Your Calendar",
+  "icsDescription": "Download reviewed districtwide dates for Google Calendar, Apple Calendar or Outlook.",
+  "icsButtonLabel": "Download calendar (.ics)",
+  "icsButtonSupportText": "One-time import of this historical school year.",
+  "calendarFaqs": [
+    {
+      "q": "Were MCPSS Distance Learning Days student holidays in 2025–26?",
+      "a": "No. MCPSS marked September 22, October 10, November 10 and March 13 as Distance Learning Days and included them in the 175-student total. They were not ordinary campus days, but they remained instructional dates."
+    },
+    {
+      "q": "When did MCPSS students return after Mardi Gras in 2026?",
+      "a": "Students were out February 16–18 for the calendar's Presidents' Day / Fat Tuesday period and February 19–20 for professional development. They returned Monday, February 23."
+    },
+    {
+      "q": "Why does the MCPSS 2025–26 calendar show 175 student days and 187 teacher days?",
+      "a": "Teachers had additional preparation, professional-development and workdays before school, during the year and after the last student day. The student total is the sum of the four printed quarter counts: 44 + 44 + 43 + 44 = 175."
+    },
+    {
+      "q": "Does the MCPSS calendar identify its eight flex days?",
+      "a": "The PDF prints “8-FLEX DAYS” near the legend but does not name eight specific make-up dates or explain when they would be used. This page does not retroactively assign those flex days to holidays or teacher workdays."
+    }
+  ],
+  "faqLimit": 4,
+  "sourcesTitle": "Official Sources & Review Notes",
+  "sourceReviewSummary": "We used the board-approved one-page MCPSS calendar for districtwide dates, color classifications, quarter totals and the student-versus-teacher day counts.",
+  "sourceReviewDetailsTitle": "What we checked",
+  "sourceReviewDetails": [
+    "Reviewed the complete one-page PDF, all 12 month panels, the color legend, quarter boundaries and printed 175-student and 187-teacher totals.",
+    "Confirmed that the visible calendar says Board Approved on February 24, 2025 and that August 11 is the first student day.",
+    "Kept September 22, October 10, November 10 and March 13 as Distance Learning Days rather than misclassifying them as student holidays.",
+    "Separated February 16–18 student-teacher holidays from February 19–20 professional-development days with no students.",
+    "Used the main student calendar for attendance dates; the separate 12-month employee holiday list has a different scope.",
+    "The PDF prints 8-FLEX DAYS but does not identify eight specific make-up dates, so this page does not assign or predict them."
+  ],
+  "sourceMaintainerLabel": "Maintained by",
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "sourceNextReviewText": "Historical calendar retained for reference; review again if MCPSS replaces the archived PDF or a confirmed data correction is reported.",
+  "sources": [
+    {
+      "label": "MCPSS official calendar documents",
+      "url": "https://www.mcpss.com/documents/system/mcpss-calendars/806415"
+    },
+    {
+      "label": "Official MCPSS 2025–26 Board-Approved School Calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5395/Mcps/96c98080-36a1-4512-8d2c-4d188baa7943/2025-26_Board_Approved_School_Calendar-ADA-checked.pdf?disposition=inline"
+    }
+  ],
+  "events": [
+    {
+      "date": "2025-08-04",
+      "name": "Teacher Work Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Preparation",
+      "description": "Staff-only date before the student year begins.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-08-05",
+      "endDate": "2025-08-07",
+      "name": "Professional Development",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Preparation",
+      "description": "Staff-only dates before the student year begins.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-08-08",
+      "name": "Half Administrative / Half Teacher Work Day",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Preparation",
+      "description": "Staff-only date before the student year begins.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2025-08-11",
+      "name": "School Start / First Quarter Begins",
+      "type": "school_start"
+    },
+    {
+      "date": "2025-09-01",
+      "name": "Labor Day",
+      "type": "holiday",
+      "description": "Systemwide holiday."
+    },
+    {
+      "date": "2025-09-22",
+      "name": "Distance Learning Day",
+      "type": "digital_learning",
+      "badgeLabel": "Distance Learning"
+    },
+    {
+      "date": "2025-10-10",
+      "name": "Distance Learning Day / End of First Quarter",
+      "type": "digital_learning",
+      "badgeLabel": "Distance Learning · Quarter End",
+      "description": "The first quarter has 44 student days."
+    },
+    {
+      "date": "2025-10-13",
+      "name": "Second Quarter Begins",
+      "type": "quarter_start"
+    },
+    {
+      "date": "2025-11-10",
+      "name": "Distance Learning Day",
+      "type": "digital_learning",
+      "badgeLabel": "Distance Learning"
+    },
+    {
+      "date": "2025-11-11",
+      "name": "Veterans Day",
+      "type": "holiday",
+      "description": "Systemwide holiday."
+    },
+    {
+      "date": "2025-11-24",
+      "endDate": "2025-11-28",
+      "name": "Thanksgiving Break",
+      "type": "break_start",
+      "description": "School holiday for students and teachers."
+    },
+    {
+      "date": "2025-12-01",
+      "name": "Students Return After Thanksgiving Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2025-12-19",
+      "name": "End of Second Quarter",
+      "type": "quarter_end",
+      "description": "The second quarter has 44 student days."
+    },
+    {
+      "date": "2025-12-22",
+      "endDate": "2025-12-31",
+      "name": "Christmas Break",
+      "type": "break_start",
+      "description": "School holiday for students and teachers."
+    },
+    {
+      "date": "2026-01-01",
+      "name": "New Year's Day",
+      "type": "holiday",
+      "description": "Systemwide holiday."
+    },
+    {
+      "date": "2026-01-02",
+      "name": "Students and Teachers Holiday",
+      "type": "holiday",
+      "preserveOfficialName": true
+    },
+    {
+      "date": "2026-01-05",
+      "name": "Teacher Work Day — Students Out",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2026-01-06",
+      "name": "Third Quarter Begins / Students Back",
+      "type": "school_resume"
+    },
+    {
+      "date": "2026-01-19",
+      "name": "Martin Luther King Jr. Day",
+      "type": "holiday",
+      "description": "Systemwide holiday."
+    },
+    {
+      "date": "2026-02-16",
+      "endDate": "2026-02-18",
+      "name": "Presidents' Day / Fat Tuesday",
+      "type": "no_school",
+      "badgeLabel": "Student / Teacher Holiday"
+    },
+    {
+      "date": "2026-02-19",
+      "endDate": "2026-02-20",
+      "name": "Professional Development — No Students",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2026-02-23",
+      "name": "Students Return After Mardi Gras Week",
+      "type": "school_resume"
+    },
+    {
+      "date": "2026-03-13",
+      "name": "Distance Learning Day / End of Third Quarter",
+      "type": "digital_learning",
+      "badgeLabel": "Distance Learning · Quarter End",
+      "description": "The third quarter has 43 student days."
+    },
+    {
+      "date": "2026-03-16",
+      "name": "Teacher Work Day — Students Out",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2026-03-17",
+      "name": "Fourth Quarter Begins",
+      "type": "quarter_start"
+    },
+    {
+      "date": "2026-04-13",
+      "endDate": "2026-04-17",
+      "name": "Spring Break",
+      "type": "break_start",
+      "description": "Student and teacher holiday."
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Students Return After Spring Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Last Day for Students / End of Fourth Quarter",
+      "type": "school_end",
+      "description": "The fourth quarter has 44 student days."
+    },
+    {
+      "date": "2026-05-26",
+      "endDate": "2026-05-28",
+      "name": "Teacher Work Days",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Days",
+      "description": "Staff-only dates after the final student day.",
+      "hideFromCalendarExport": true
+    }
+  ]
+}

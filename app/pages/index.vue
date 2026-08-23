@@ -17,7 +17,7 @@ const toStateSlug = (name: string) => name.toLowerCase().replace(/\s+/g, '-')
 const STATE_ORDER = [
   'California', 'Florida', 'Texas', 'New York',
   'Illinois', 'Pennsylvania', 'North Carolina', 'Arizona', 'Nevada', 'Virginia', 'Kentucky', 'Hawaii', 'Maryland',
-  'Colorado', 'Georgia', 'Massachusetts', 'Michigan', 'Minnesota', 'Missouri', 'Kansas', 'Indiana', 'New Mexico',
+  'Colorado', 'Georgia', 'Alabama', 'Massachusetts', 'Michigan', 'Minnesota', 'Missouri', 'Kansas', 'Indiana', 'New Mexico',
   'Idaho', 'Ohio', 'Oregon', 'Utah', 'Washington', 'Wisconsin',
 ]
 
@@ -31,6 +31,7 @@ const STATE_SUMMARIES: Record<string, string> = {
   'New York': `New York State serves approximately 2.6 million public school students across more than 700 school districts. State regulations historically prohibited schools from opening before Labor Day, making New York one of the last states to start the school year. New York City Public Schools — the largest district in the country with over 1 million students — typically begins in early September. The school year runs through late June, covering 180 instructional days. Winter recess spans roughly two weeks in late December. Spring recess typically falls in late March or early April.`,
   Illinois: `Illinois public schools serve approximately 1.8 million students across more than 800 school districts. Chicago Public Schools, the third-largest district in the country, typically starts in late August and runs through mid-June. Illinois requires students to attend a minimum of 180 days. Winter break spans late December through early January. Spring break varies by district but generally falls in late March or early April. The Chicago metro area has some of the most searched school calendar dates in the Midwest.`,
   Pennsylvania: `Pennsylvania school districts approve calendars locally, so first day, last day, professional development days, breaks, and weather make-up plans vary by district. The School District of Philadelphia is the state's largest district and a high-demand calendar for families checking citywide attendance dates, holidays, term dates, and school-year breaks.`,
+  Alabama: `Alabama local school boards adopt district calendars within the state's 180-day or 1,080-hour instructional framework. Reviewed pages currently cover Birmingham, Jefferson County, Madison County, Mobile County, and Montgomery, with district-specific intersessions, e-learning dates, staff days, day-count notes, and Mardi Gras scheduling.`,
   'North Carolina': `North Carolina requires 185 instructional days for students — more than the national standard of 180. Most districts start in mid-to-late August. A distinctive feature of the NC school calendar is a fall break in October, typically one week long, in addition to standard Thanksgiving, winter, and spring breaks. Wake County and Charlotte-Mecklenburg Schools are the two largest districts, together serving nearly 300,000 students. Spring break generally falls in mid-March. The school year ends in early June.`,
   Arizona: `Arizona school calendars are approved locally by district, and many large districts begin in July or early August. Reviewed Arizona pages on MySchoolDates include Mesa Public Schools, Chandler Unified School District, Tucson Unified School District, and Peoria Unified School District, with district-specific details such as intersessions, modified Wednesdays, weekly early release, teacher workdays, and approved calendar PDFs.`,
   Nevada: `Nevada districts publish their own calendars. Reviewed pages currently cover Clark County School District and Washoe County School District, including Nevada Day, staff days, multiple Washoe calendar tracks, and district-specific contingency rules. Both reviewed 2026–27 calendars start August 10, but Clark County ends May 20 while Washoe's Balanced Calendar ends June 4.`,
@@ -118,7 +119,7 @@ function onSearchBlur() { setTimeout(() => { showDropdown.value = false }, 150) 
 
 useSeoMeta({
   title: 'US School Calendars 2026-2027 & 2027-2028 | Holidays, Breaks & Key Dates | MySchoolDates',
-  description: 'School calendars for 205 US public school districts. Find school start dates, spring break, winter break, holidays, PDFs, and calendar downloads for 2027-2028 and 2026-2027.',
+  description: () => `School calendars for ${coverageStats.districts} US public school districts across ${coverageStats.states} states. Find start dates, breaks, holidays, PDFs, and calendar downloads for 2027-2028 and 2026-2027.`,
 })
 
 useHead({

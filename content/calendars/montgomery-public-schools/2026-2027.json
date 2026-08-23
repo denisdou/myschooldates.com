@@ -1,0 +1,687 @@
+{
+  "institutionId": "montgomery-public-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Montgomery Public Schools Calendar 2026–27",
+  "firstDay": "2026-08-10",
+  "firstDayScope": "First day for MPS students; first quarter begins",
+  "lastDay": "2027-05-25",
+  "lastDayScope": "Last student day; final report cards issued and fourth quarter ends",
+  "temporalCoverageStart": "2026-07-03",
+  "temporalCoverageEnd": "2027-06-30",
+  "totalSchoolDays": 180,
+  "teacherWorkDays": 187,
+  "reportingPeriodDaysTotal": 180,
+  "reportingPeriodDaysScope": "MPS prints 44 days in Quarter 1, 42 in Quarter 2, 47 in Quarter 3 and 47 in Quarter 4, for 180 student days. The same calendar separately lists 187 teacher days.",
+  "semesters": 2,
+  "sourceUrl": "https://www.mps.k12.al.us/page/2026-27-mps-back-to-school-guide",
+  "sourceDocumentPage": "https://www.mps.k12.al.us/page/2026-27-mps-back-to-school-guide",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3852/Mps/b459be52-87b9-458f-901c-139e233282c5/2026-2027-ACADEMIC-CALENDAR-%283%29.pdf?disposition=inline",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3852/Mps/b459be52-87b9-458f-901c-139e233282c5/2026-2027-ACADEMIC-CALENDAR-%283%29.pdf?disposition=inline",
+  "reviewedSourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3852/Mps/b459be52-87b9-458f-901c-139e233282c5/2026-2027-ACADEMIC-CALENDAR-%283%29.pdf?disposition=inline",
+  "sourceCheckedAt": "2026-08-23",
+  "sourceUpdatedAt": "2026-07-13",
+  "reviewedSourceUpdatedAt": "2026-07-13",
+  "sourceChecksumSha256": "662192f6f2210d018ad9cbfe7478c982111bf2b6ff4735d03e2e47ebe89dbbb9",
+  "reviewedSourceChecksumSha256": "662192f6f2210d018ad9cbfe7478c982111bf2b6ff4735d03e2e47ebe89dbbb9",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceConflict": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.mps.k12.al.us/page/2026-27-mps-back-to-school-guide",
+    "linkText": "2026-2027 Board Approved Calendar",
+    "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3852/Mps/b459be52-87b9-458f-901c-139e233282c5/2026-2027-ACADEMIC-CALENDAR-%283%29.pdf?disposition=inline",
+    "expectedChecksumSha256": "662192f6f2210d018ad9cbfe7478c982111bf2b6ff4735d03e2e47ebe89dbbb9"
+  },
+  "lastVerifiedAt": "2026-08-23",
+  "dateCreated": "2026-08-23",
+  "datePublished": "2026-08-23",
+  "dateModified": "2026-08-23",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Board-approved 2026–27 calendar announced March 3, 2026; current PDF last modified July 13, 2026",
+  "sourceCalendarName": "Montgomery Public Schools 2026–27 Academic Calendar",
+  "schemaCalendarName": "Montgomery Public Schools Calendar 2026–27",
+  "schemaDatasetName": "Montgomery Public Schools 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed MPS dates for 2026–27, including 180 student days, 187 teacher days, four asynchronous-learning dates, separate student and teacher Winter Break ranges, quarter and reporting dates, the Vacation Planner, Senior Exams, graduation and Summer School.",
+  "schemaSpatialCoverage": "Montgomery Public Schools service area, Alabama",
+  "schemaCalendarDownloadName": "Montgomery Public Schools 2026–27 ICS Calendar",
+  "schemaCalendarDownloadDescription": "One-time calendar import with districtwide student dates, holidays, breaks, asynchronous-learning days, student-free professional-development days, return dates and the last student day reviewed from the official MPS calendar.",
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "mps-academic-calendar",
+  "allDatesMode": "all",
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationIcs": true,
+  "hideHeroVerificationProcess": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideCoveredBreakDatesNote": true,
+  "hideCompatibleCalendars": true,
+  "hideSocialShareButtons": true,
+  "excludeDistrictFaqs": true,
+  "breaksBeforeAllDates": true,
+  "hiddenSections": [
+    "about",
+    "backToCurrent",
+    "comparison",
+    "districtProfile",
+    "downloadCta",
+    "keyDateCards",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars",
+    "planningTips",
+    "quickFacts",
+    "relatedDistricts",
+    "todayStatus",
+    "whatsDifferent",
+    "yearNumbers"
+  ],
+  "hideCurrentYearInSwitcher": true,
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Breaks & Returns",
+      "id": "breaks"
+    },
+    {
+      "label": "Remote Days",
+      "id": "mps-2026-2027-asynchronous-days"
+    },
+    {
+      "label": "Vacation Planner",
+      "id": "mps-2026-2027-vacation-planner"
+    },
+    {
+      "label": "Quarter Dates",
+      "id": "mps-2026-2027-quarter-dates"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Montgomery Public Schools Calendar 2026–27 (Alabama) & PDF",
+  "seoDescription": "MPS starts Aug. 10, 2026 and ends May 25, 2027. See Thanksgiving, winter and spring breaks, four asynchronous learning days, return dates and the official PDF.",
+  "heroSummary": "The first day of school for MPS students is Monday, August 10, 2026, and the last day is Tuesday, May 25, 2027. Thanksgiving Break is November 23–27, Winter Break for students is December 21–January 4, and Spring Break is March 29–April 2. Students return after Winter Break on January 5.\n\nMPS also has four Asynchronous Learning Days. Students work remotely on those days while teachers report to school.",
+  "heroSourceLine": "Montgomery, Alabama · Board-approved four-page MPS academic calendar · Reviewed Aug 23, 2026",
+  "verificationBadgeText": "Verified against all four pages of the official MPS calendar, including the Vacation Planner",
+  "calendarNotes": "Asynchronous learning dates are school days completed remotely. The MPS Vacation Planner includes adjacent weekends, while the dated calendar provides the official school closure ranges. Staff-only, central office and program-specific dates do not all appear in the family ICS.",
+  "keyDatesHeading": "MPS 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "Montgomery Public Schools 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last student days, major breaks and the Winter Break return date",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for MPS Students",
+      "date": "2026-08-10",
+      "type": "school_start",
+      "schemaDescription": "The first student day and the beginning of the first quarter."
+    },
+    {
+      "label": "October Holiday",
+      "name": "Indigenous Peoples Day",
+      "date": "2026-10-12",
+      "type": "holiday",
+      "description": "No teachers or students. Classes resume October 13."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Winter Break",
+      "name": "Winter Break for Students",
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "type": "break_start",
+      "description": "January 4 is a teacher professional development day. Students return January 5."
+    },
+    {
+      "label": "Students Return",
+      "name": "Students Return; Third Quarter Begins",
+      "date": "2027-01-05",
+      "type": "school_resume"
+    },
+    {
+      "label": "Spring Break",
+      "name": "Spring Break",
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "type": "break_start"
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day for Students",
+      "date": "2027-05-25",
+      "type": "school_end",
+      "schemaDescription": "Final student day, final report-card date and end of the fourth quarter."
+    }
+  ],
+  "breaksTitle": "MPS School Breaks and Return Dates",
+  "breakNotes": {
+    "Thanksgiving Break": "Students return Monday, November 30.",
+    "Winter Break": "Teachers' break ends January 1, and January 4 is a teacher professional development day. Students return Tuesday, January 5.",
+    "Spring Break": "Students return Monday, April 5."
+  },
+  "allDatesTitle": "Full MPS 2026–27 Calendar",
+  "allDatesCoverageNote": "The table also includes staff-only days, central office closures, progress reports, report cards, Senior Exams, graduation and Summer School dates for reference. The downloadable family calendar focuses on districtwide dates families are most likely to need for attendance and planning.",
+  "allDatesCoverageNotePosition": "top",
+  "allDatesSourceLabel": "Official MPS 2026–27 Academic Calendar PDF",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3852/Mps/b459be52-87b9-458f-901c-139e233282c5/2026-2027-ACADEMIC-CALENDAR-%283%29.pdf?disposition=inline",
+  "dateLegendItems": [
+    {
+      "label": "Student day / quarter boundary",
+      "dot": "bg-amber-400"
+    },
+    {
+      "label": "Teacher professional development / students out",
+      "dot": "bg-sky-400"
+    },
+    {
+      "label": "Holiday / school break",
+      "dot": "bg-pink-300"
+    },
+    {
+      "label": "Asynchronous learning / students remote",
+      "dot": "bg-green-400"
+    },
+    {
+      "label": "Progress report / report card / program date",
+      "dot": "bg-slate-400"
+    }
+  ],
+  "dateLegendLabelOverrides": {
+    "Remote Learning": "Asynchronous Learning",
+    "Teacher Workday": "Teacher PD / Students Out",
+    "Academic Date": "Academic Reporting",
+    "Break": "Student Break"
+  },
+  "customSections": [
+    {
+      "id": "mps-2026-2027-asynchronous-days",
+      "label": "MPS Asynchronous Learning Days: What Families Need to Know",
+      "position": "afterBreaks",
+      "content": "These are school days, not days off. Students work remotely while teachers report to school.",
+      "table": {
+        "caption": "Montgomery Public Schools 2026–27 Asynchronous Learning Days",
+        "columns": [
+          "Semester",
+          "Dates"
+        ],
+        "rows": [
+          [
+            "First semester",
+            "Sep 18, 2026"
+          ],
+          [
+            "Second semester",
+            "Feb 12, Mar 26 & Apr 30, 2027"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mps-2026-2027-vacation-planner",
+      "label": "How to Read the MPS Vacation Planner",
+      "position": "afterBreaks",
+      "content": "MPS's Vacation Planner includes the weekends before and after some breaks, so its 3-, 9-, and 17-day planning windows are longer than the actual school closures. Those totals include weekends; they do not mean schools are closed for nine or 17 weekdays.",
+      "table": {
+        "caption": "MPS 2026–27 Vacation Planner windows and student return dates",
+        "columns": [
+          "Planner label",
+          "Planning window",
+          "Students return"
+        ],
+        "rows": [
+          [
+            "Labor Day · 3 days",
+            "Sep 5–7",
+            "Sep 8"
+          ],
+          [
+            "October · 3 days",
+            "Oct 10–12",
+            "Oct 13"
+          ],
+          [
+            "Thanksgiving · 9 days",
+            "Nov 21–29",
+            "Nov 30"
+          ],
+          [
+            "Winter Break · 17 days",
+            "Dec 19–Jan 4",
+            "Jan 5"
+          ],
+          [
+            "MLK Day · 3 days",
+            "Jan 16–18",
+            "Jan 19"
+          ],
+          [
+            "Presidents' Day · 3 days",
+            "Feb 13–15",
+            "Feb 16"
+          ],
+          [
+            "Spring Break · 9 days",
+            "Mar 27–Apr 4",
+            "Apr 5"
+          ]
+        ],
+        "footnote": "The academic calendar lists student Winter Break as December 21–January 4 and teacher Winter Break as December 21–January 1. January 4 is a teacher professional development day."
+      }
+    },
+    {
+      "id": "mps-2026-2027-quarter-dates",
+      "label": "MPS Quarter, Progress Report, and Report Card Dates",
+      "position": "afterBreaks",
+      "content": "The four quarter totals add to 180 student days. The same calendar lists 187 teacher days.",
+      "table": {
+        "caption": "Montgomery Public Schools 2026–27 grading-period schedule",
+        "columns": [
+          "Quarter",
+          "Published range",
+          "Student days",
+          "Progress reports",
+          "Report cards"
+        ],
+        "rows": [
+          [
+            "Quarter 1",
+            "Aug 10–Oct 9",
+            "44",
+            "Sep 10",
+            "Oct 15"
+          ],
+          [
+            "Quarter 2",
+            "Oct 13–Dec 18",
+            "42",
+            "Nov 12",
+            "Jan 7"
+          ],
+          [
+            "Quarter 3",
+            "Jan 5–Mar 12",
+            "47",
+            "Feb 11",
+            "Mar 18"
+          ],
+          [
+            "Quarter 4",
+            "Mar 15–May 25",
+            "47",
+            "Apr 22",
+            "May 25"
+          ]
+        ],
+        "footnote": "The first semester has 86 student days; the second has 94."
+      }
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "MPS Calendar Downloads",
+  "unifiedDownloadDescription": "Open the official four-page MPS PDF or add districtwide student dates to a personal calendar. The .ics file is a one-time import and will not update automatically if MPS revises the calendar.",
+  "pdfHeading": "Official MPS 2026–27 Academic Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "The board-approved four-page PDF includes the dated academic calendar, Vacation Planner, color-coded month view, quarter totals, 180 student days and 187 teacher days used for this page.",
+  "pdfVersionLabel": "Board approved; official file last modified July 13, 2026",
+  "pdfButtonLabel": "Open Official MPS PDF",
+  "icsHeading": "Add MPS Dates to Your Calendar",
+  "icsDescription": "The file includes the first and last student days, holidays, major breaks, four Asynchronous Learning Days, professional development days when students are out, and student return dates. It does not include central office closures, teacher-only prep days before or after the student year, progress-report and report-card dates, Senior Exams, graduation or Summer School.",
+  "icsButtonLabel": "Add MPS 2026–27 Dates",
+  "icsButtonSupportText": "One-time import for Google Calendar, Apple Calendar or Outlook.",
+  "hideIcsImportDisclaimer": true,
+  "calendarFaqs": [
+    {
+      "q": "Are MPS Asynchronous Learning Days school holidays?",
+      "a": "No. They are instructional days, but students work remotely instead of attending school in person."
+    },
+    {
+      "q": "When do MPS students return after Winter Break?",
+      "a": "Students return Tuesday, January 5, 2027. Student Winter Break runs December 21–January 4; teachers' break ends January 1, and January 4 is a professional development day for teachers."
+    },
+    {
+      "q": "Does MPS have a week-long Fall Break in 2026–27?",
+      "a": "No week-long Fall Break is listed. MPS closes for Indigenous Peoples Day on Monday, October 12, and students return Tuesday, October 13. The Vacation Planner shows October 10–12 as a three-day planning window because it includes the weekend."
+    }
+  ],
+  "faqDisplayLimit": 3,
+  "sourcesTitle": "Official MPS Sources and Review Notes",
+  "sourceReviewSummary": "Reviewed August 23, 2026 against the current four-page MPS Academic Calendar, the official Back to School Guide, and the district's Board approval announcement.",
+  "sourceReviewDetailsTitle": "What was verified",
+  "sourceReviewDetails": [
+    "The copy reviewed for this page matches the current four-page PDF published by MPS.",
+    "All four pages were reviewed: pages 1–2 contain the dated calendar, page 3 is the MPS Vacation Planner, and page 4 contains the color-coded month grids, legend and annual totals.",
+    "Quarter and annual student and teacher totals were checked against the color-coded calendar.",
+    "Asynchronous learning dates were checked against both the dated list and the month view.",
+    "Vacation Planner windows were compared with the official weekday closures so adjacent weekends were not mistaken for additional no-school days.",
+    "Staff-only days, central office closures and program-specific dates were reviewed separately from the districtwide family calendar."
+  ],
+  "sourceMaintainerLabel": "Official source",
+  "sourceMaintainerText": "Montgomery Public Schools. MySchoolDates independently reviewed the calendar data against MPS publications.",
+  "sourceNextReviewText": "We will review the page again if MPS replaces the academic calendar PDF, revises an Asynchronous Learning Day or changes the student schedule.",
+  "sources": [
+    {
+      "label": "MPS 2026–27 Back to School Guide and calendar",
+      "url": "https://www.mps.k12.al.us/page/2026-27-mps-back-to-school-guide"
+    },
+    {
+      "label": "Official MPS 2026–27 Academic Calendar PDF",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3852/Mps/b459be52-87b9-458f-901c-139e233282c5/2026-2027-ACADEMIC-CALENDAR-%283%29.pdf?disposition=inline"
+    },
+    {
+      "label": "MPS Board approval announcement for the 2026–27 academic calendar",
+      "url": "https://www.mps.k12.al.us/live_feeds/11604530"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-07-03",
+      "name": "Observance of Independence Day — Central Office Closed",
+      "type": "holiday",
+      "badgeLabel": "Central Office Closed",
+      "hideFromCalendarExport": true,
+      "excludeFromDateSchema": true
+    },
+    {
+      "date": "2026-08-04",
+      "endDate": "2026-08-07",
+      "name": "Teacher Professional Development Days",
+      "type": "teacher_workday",
+      "badgeLabel": "Teachers Report",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-10",
+      "name": "First Day for MPS Students; First Quarter Begins",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — All Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-10",
+      "name": "First Quarter Progress Reports Issued",
+      "type": "academic",
+      "badgeLabel": "Progress Report",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-09-18",
+      "name": "Asynchronous Learning Day",
+      "type": "remote_learning",
+      "badgeLabel": "Students Work Remotely",
+      "description": "Teachers report to school."
+    },
+    {
+      "date": "2026-10-09",
+      "name": "First Quarter Ends — 44 Days",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Indigenous Peoples Day — No Teachers or Students",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-10-13",
+      "name": "Second Quarter Begins",
+      "type": "quarter_start",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-15",
+      "name": "First Quarter Report Cards Issued",
+      "type": "academic",
+      "badgeLabel": "Report Card",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-30",
+      "name": "Professional Development Day for Teachers — No Learners",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out"
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day — All Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-12",
+      "name": "Second Quarter Progress Reports Issued",
+      "type": "academic",
+      "badgeLabel": "Progress Report",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start",
+      "description": "Students and teachers are off. Students return November 30."
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Second Quarter Ends — 42 Days",
+      "type": "quarter_end",
+      "description": "The first semester ends with 86 student days.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "name": "Winter Break",
+      "type": "break_start",
+      "description": "Students are out through January 4. Teacher Winter Break ends January 1; January 4 is a teacher professional development day."
+    },
+    {
+      "date": "2027-01-01",
+      "name": "New Year's Day — All Schools and Offices Closed",
+      "type": "holiday",
+      "showDuringBreak": true
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Professional Development Day for Teachers — No Students",
+      "type": "teacher_workday",
+      "badgeLabel": "Students Out",
+      "showDuringBreak": true
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Students Return; Third Quarter Begins",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-07",
+      "name": "Second Quarter Report Cards Issued",
+      "type": "academic",
+      "badgeLabel": "Report Card",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — All Schools and Offices Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-11",
+      "name": "Third Quarter Progress Reports Issued",
+      "type": "academic",
+      "badgeLabel": "Progress Report",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-02-12",
+      "name": "Asynchronous Learning Day",
+      "type": "remote_learning",
+      "badgeLabel": "Students Work Remotely",
+      "description": "Teachers report to school."
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents' Day — No Teachers or Students",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Third Quarter Ends — 47 Days",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-15",
+      "name": "Fourth Quarter Begins",
+      "type": "quarter_start",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-18",
+      "name": "Third Quarter Report Cards Issued",
+      "type": "academic",
+      "badgeLabel": "Report Card",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-26",
+      "name": "Asynchronous Learning Day",
+      "type": "remote_learning",
+      "badgeLabel": "Students Work Remotely",
+      "description": "Teachers report to school."
+    },
+    {
+      "date": "2027-03-29",
+      "endDate": "2027-04-02",
+      "name": "Spring Break",
+      "type": "break_start",
+      "description": "Students and teachers are off. Students return April 5."
+    },
+    {
+      "date": "2027-04-22",
+      "name": "Fourth Quarter Progress Reports",
+      "type": "academic",
+      "badgeLabel": "Progress Report",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-04-30",
+      "name": "Asynchronous Learning Day",
+      "type": "remote_learning",
+      "badgeLabel": "Students Work Remotely",
+      "description": "Teachers report to school."
+    },
+    {
+      "date": "2027-05-05",
+      "dates": [
+        "2027-05-05",
+        "2027-05-06",
+        "2027-05-07",
+        "2027-05-10",
+        "2027-05-11"
+      ],
+      "displayDate": "5 dates · May 5–7 & 10–11, 2027",
+      "name": "Senior Exam Schedule",
+      "type": "academic",
+      "badgeLabel": "Seniors",
+      "description": "Applies to seniors; schools publish exam times.",
+      "hideFromCalendarExport": true,
+      "excludeFromDateSchema": true
+    },
+    {
+      "date": "2027-05-18",
+      "endDate": "2027-05-21",
+      "name": "Graduation Window",
+      "type": "graduation",
+      "description": "Ceremony assignments and times are school-specific.",
+      "hideFromCalendarExport": true,
+      "excludeFromDateSchema": true
+    },
+    {
+      "date": "2027-05-25",
+      "name": "Last Day for Students; Final Report Cards; Fourth Quarter Ends — 47 Days",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-05-26",
+      "name": "Last Day for Teachers",
+      "type": "teacher_workday",
+      "badgeLabel": "Teachers Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Observance of Memorial Day — Central Office Closed",
+      "type": "holiday",
+      "badgeLabel": "Central Office Closed",
+      "hideFromCalendarExport": true,
+      "excludeFromDateSchema": true
+    },
+    {
+      "date": "2027-06-07",
+      "endDate": "2027-06-30",
+      "name": "Summer School",
+      "type": "summer_school",
+      "badgeLabel": "Participating Students",
+      "description": "For enrolled Summer School students; separate from the regular districtwide school year.",
+      "hideFromCalendarExport": true,
+      "excludeFromDateSchema": true
+    },
+    {
+      "date": "2027-06-18",
+      "name": "Observance of Juneteenth — Central Office Closed",
+      "type": "holiday",
+      "badgeLabel": "Central Office Closed",
+      "hideFromCalendarExport": true,
+      "excludeFromDateSchema": true
+    }
+  ]
+}

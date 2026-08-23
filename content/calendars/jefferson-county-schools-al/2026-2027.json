@@ -1,0 +1,558 @@
+{
+  "institutionId": "jefferson-county-schools-al",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Jefferson County Schools Calendar 2026–27",
+  "firstDay": "2026-08-12",
+  "firstDayScope": "First day for students",
+  "lastDay": "2027-05-27",
+  "lastDayScope": "Last day of school; fourth grading period ends",
+  "temporalCoverageStart": "2026-07-03",
+  "temporalCoverageEnd": "2027-06-18",
+  "semesters": 2,
+  "sourceUrl": "https://www.jefcoed.com/documents/calendar/698577",
+  "sourceDocumentPage": "https://www.jefcoed.com/documents/calendar/698577",
+  "sourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5107/Jcs/dc461b80-1bac-4488-b5cb-7d44da2177b3/2026-2027-Calendar-Final-%28English%29.pdf?disposition=inline",
+  "lastCheckedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5107/Jcs/dc461b80-1bac-4488-b5cb-7d44da2177b3/2026-2027-Calendar-Final-%28English%29.pdf?disposition=inline",
+  "sourceCheckedAt": "2026-08-23",
+  "sourceUpdatedAt": "2026-02-02",
+  "sourceChecksumSha256": "f5507b03407e35758509b6347bac835884ee912ccd6ba72cf87290e1a8ba723f",
+  "reviewedSourcePdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5107/Jcs/dc461b80-1bac-4488-b5cb-7d44da2177b3/2026-2027-Calendar-Final-%28English%29.pdf?disposition=inline",
+  "reviewedSourceUpdatedAt": "2026-02-02",
+  "reviewedSourceChecksumSha256": "f5507b03407e35758509b6347bac835884ee912ccd6ba72cf87290e1a8ba723f",
+  "sourceStatus": "current",
+  "manualReviewRequired": false,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.jefcoed.com/documents/calendar/698577",
+    "linkText": "2026-2027 Calendar Final (English)",
+    "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5107/Jcs/dc461b80-1bac-4488-b5cb-7d44da2177b3/2026-2027-Calendar-Final-%28English%29.pdf?disposition=inline",
+    "expectedChecksumSha256": "f5507b03407e35758509b6347bac835884ee912ccd6ba72cf87290e1a8ba723f"
+  },
+  "additionalSourceResourceMonitors": [
+    {
+      "type": "document-pdf",
+      "checkUrl": "https://www.jefcoed.com/documents/calendar/698577",
+      "linkText": "2026-2027 Calendar Final (Spanish)",
+      "expectedPdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5107/Jcs/daa571e1-c28f-4106-bea7-3b4ac38ee90f/2026-2027-Board-Approved-Calendar-Final-%28Spanish%29.pdf?disposition=inline",
+      "expectedChecksumSha256": "8d6b0e13f091d75985d9215284ced9602b799952b819486527e6a3d077192ba8"
+    }
+  ],
+  "lastVerifiedAt": "2026-08-23",
+  "dateCreated": "2026-08-23",
+  "datePublished": "2026-08-23",
+  "dateModified": "2026-08-23",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "official_schedule_change",
+    "weather_day_activation",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Board approved January 22, 2026",
+  "sourceCalendarName": "Jefferson County Schools 2026–27 Calendar — English",
+  "schemaCalendarName": "Jefferson County Schools Calendar 2026–27",
+  "schemaDatasetName": "JEFCOED 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed Jefferson County Schools dates for 2026–27, including the first and last student days, school breaks, E-Learning days, staff days, high-school Opportunity Days, grading-period endings, and conditional weather make-up dates.",
+  "schemaSpatialCoverage": "Jefferson County, Alabama",
+  "schemaCalendarDownloadName": "Jefferson County Schools 2026–27 ICS Calendar File",
+  "schemaCalendarDownloadDescription": "One-time import with districtwide student dates from the reviewed JEFCOED calendar; staff-only dates, high-school Opportunity Days, grading-period endings, and conditional weather designations are excluded.",
+  "schemaAdditionalSourceCalendars": [
+    {
+      "id": "source-calendar-spanish",
+      "type": "CreativeWork",
+      "name": "Jefferson County Schools 2026–27 Calendar — Spanish",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5107/Jcs/daa571e1-c28f-4106-bea7-3b4ac38ee90f/2026-2027-Board-Approved-Calendar-Final-%28Spanish%29.pdf?disposition=inline",
+      "version": "Official Spanish edition"
+    }
+  ],
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page",
+    "source-calendar-spanish"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "jefcoed-district-calendar",
+  "allDatesMode": "all",
+  "webPageMainEntity": "keyDates",
+  "itemListMode": "keyDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSemesterCount": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationProcess": true,
+  "hideHeroVerificationIcs": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideCoveredBreakDatesNote": true,
+  "hideBreakDurationBadges": true,
+  "hiddenSections": [
+    "keyDateCards",
+    "quickFacts",
+    "yearNumbers",
+    "about",
+    "planningTips",
+    "districtProfile",
+    "livingHere",
+    "comparison",
+    "nationalTrends",
+    "relatedDistricts",
+    "downloadCta",
+    "backToCurrent",
+    "otherCalendars",
+    "todayStatus"
+  ],
+  "hideCurrentYearInSwitcher": false,
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Special Dates",
+      "id": "jefcoed-2026-2027-schedule-labels"
+    },
+    {
+      "label": "Breaks",
+      "id": "breaks"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "Changes",
+      "id": "year-comparison"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Jefferson County Schools Calendar 2026–27 | Alabama",
+  "seoDescription": "Jefferson County Schools (AL) 2026–27 calendar runs Aug. 12–May 27. See breaks, E-Learning days, weather make-up dates, official PDFs, and ICS downloads.",
+  "heroSummary": "The Jefferson County Schools 2026–27 calendar runs from Wednesday, August 12, 2026, through Thursday, May 27, 2027. Students are off for the full week of Thanksgiving. Holiday Break runs December 21 through January 1; staff days on January 4–5 mean students return Wednesday, January 6. The calendar also includes four E-Learning days and two Opportunity Days for high schools.",
+  "heroSourceLine": "Jefferson County, Alabama · English calendar approved by the board Jan. 22, 2026 · Official Spanish calendar available",
+  "verificationBadgeText": "Verified against JEFCOED’s official English and Spanish calendars.",
+  "calendarNotes": "September 8, October 9, February 12, and April 9 are E-Learning days for students, not student holidays. October 15 and March 9 are Opportunity Days for high schools only; families should confirm attendance expectations with the school. February 15 and March 22–23 may be used as weather make-up days if needed. The English and Spanish calendars publish the same school-year schedule.",
+  "keyDatesHeading": "JEFCOED 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "JEFCOED 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last student days, major breaks, and the January return date",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day for Students",
+      "date": "2026-08-12",
+      "type": "school_start"
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Holidays",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start"
+    },
+    {
+      "label": "Holiday Break",
+      "name": "Holiday Break + January Staff Days",
+      "date": "2026-12-21",
+      "endDate": "2027-01-05",
+      "type": "break_start",
+      "description": "Holiday Break ends January 1. January 4 is professional development and January 5 is a teacher workday; students return January 6."
+    },
+    {
+      "label": "Spring Break",
+      "name": "Spring Break",
+      "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "type": "break_start",
+      "description": "March 22–23 may be used as weather make-up days if needed."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Day of School",
+      "date": "2027-05-27",
+      "type": "school_end"
+    }
+  ],
+  "breaksTitle": "School Breaks and Return Dates",
+  "breaksBeforeAllDates": true,
+  "breakNotes": {
+    "Thanksgiving Holidays": "Students return Monday, November 30.",
+    "Holiday Break": "January 4 is a professional development day and January 5 is a teacher workday. Students return Wednesday, January 6.",
+    "Spring Break": "March 22–23 are also designated weather days if needed. If JEFCOED does not use those dates as weather make-up days, students return Monday, March 29."
+  },
+  "allDatesTitle": "JEFCOED 2026–27 School Calendar Dates",
+  "allDatesCoverageNote": "This table lists the districtwide dates shown on JEFCOED’s official English calendar, including staff days, E-Learning days, Opportunity Days for high schools, grading-period endings, and possible weather make-up days. Opportunity Days apply only to high schools, and the district calendar does not say that every high school student is off. The official PDF also lists workdays for 12-month employees. Those employee-only workdays are not listed as separate events here.",
+  "allDatesCoverageNotePosition": "top",
+  "allDatesSourceLabel": "Jefferson County Schools 2026–27 Calendar — English",
+  "allDatesSourceUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5107/Jcs/dc461b80-1bac-4488-b5cb-7d44da2177b3/2026-2027-Calendar-Final-%28English%29.pdf?disposition=inline",
+  "dateLegendItems": [
+    {
+      "label": "First / Last Day",
+      "dot": "bg-purple-500"
+    },
+    {
+      "label": "E-Learning / Staff Day",
+      "dot": "bg-sky-500"
+    },
+    {
+      "label": "Schools Closed / Break",
+      "dot": "bg-red-500"
+    },
+    {
+      "label": "High School Opportunity Day",
+      "dot": "bg-amber-400"
+    }
+  ],
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "Official Calendars and Downloads",
+  "unifiedDownloadDescription": "Open the official JEFCOED calendar in English or Spanish, or download a one-time ICS file with districtwide dates for families.",
+  "groupAlternateCalendarsWithDownloads": true,
+  "hideCompatibleCalendars": true,
+  "hideShareCalendarHeading": true,
+  "hideSocialShareButtons": true,
+  "icsHeading": "Add JEFCOED 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download first and last days, breaks, holidays, E-Learning days, student return dates, and districtwide no-school days as an ICS file for Google Calendar, Apple Calendar, or Outlook.",
+  "icsButtonLabel": "Download JEFCOED Dates (.ics)",
+  "icsButtonSupportText": "One-time import. It will not update automatically if JEFCOED revises the calendar. Staff-only dates, Opportunity Days, grading dates, and conditional weather designations are not imported as separate events.",
+  "hideIcsImportDisclaimer": true,
+  "pdfHeading": "Official JEFCOED 2026–27 Calendar — English",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "Open the one-page English calendar used to verify the dates and attendance labels on this page.",
+  "pdfButtonLabel": "View Official English Calendar",
+  "pdfVersionLabel": "Board approved January 22, 2026",
+  "alternateCalendarsTitle": "Official JEFCOED Calendars",
+  "alternateCalendarsDescription": "JEFCOED publishes an official Spanish edition with the same school-year dates as the English calendar.",
+  "alternateCalendarsButtonLabel": "View Official Calendar PDF",
+  "alternateCalendars": [
+    {
+      "type": "language-spanish",
+      "group": "Official Spanish calendar",
+      "label": "2026–27 Calendar — Spanish",
+      "description": "Official Spanish version of the JEFCOED 2026–27 calendar with the same school-year dates as the English calendar.",
+      "pdfUrl": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5107/Jcs/daa571e1-c28f-4106-bea7-3b4ac38ee90f/2026-2027-Board-Approved-Calendar-Final-%28Spanish%29.pdf?disposition=inline",
+      "buttonLabel": "View Spanish Calendar PDF"
+    }
+  ],
+  "customSections": [
+    {
+      "id": "jefcoed-2026-2027-schedule-labels",
+      "label": "What JEFCOED’s E-Learning, Opportunity, and Weather Days Mean",
+      "position": "afterKeyDates",
+      "content": "These labels affect student attendance differently. E-Learning days are still student learning days, Opportunity Days apply only to high schools, and weather make-up days are used only if JEFCOED announces that they are needed.",
+      "table": {
+        "caption": "JEFCOED 2026–27 special schedule dates",
+        "columns": [
+          "Date",
+          "JEFCOED schedule",
+          "What families should know"
+        ],
+        "rows": [
+          [
+            "Sept. 8",
+            "E-Learning / Professional Development",
+            "Students follow the E-Learning schedule; staff have professional development."
+          ],
+          [
+            "Oct. 9, Feb. 12, and Apr. 9",
+            "E-Learning / Teacher Workday",
+            "Students follow the E-Learning schedule while staff have a teacher workday."
+          ],
+          [
+            "Oct. 15 and Mar. 9",
+            "Opportunity Day — High Schools Only",
+            "The district calendar does not give one attendance rule for all high school students, so confirm expectations with your school."
+          ],
+          [
+            "Feb. 15",
+            "Presidents Day / Weather Day if Needed",
+            "Schools are closed unless JEFCOED announces that the date is needed for weather make-up."
+          ],
+          [
+            "Mar. 22–23",
+            "Spring Break / Weather Days if Needed",
+            "March 22–23 remain part of Spring Break unless JEFCOED announces they will be used as weather make-up days."
+          ]
+        ]
+      }
+    }
+  ],
+  "faqOrderLimit": 6,
+  "excludeDistrictFaqs": true,
+  "calendarFaqs": [
+    {
+      "q": "When does Jefferson County Schools start in 2026–27?",
+      "a": "The first student day is Wednesday, August 12, 2026. JEFCOED schedules staff workdays and professional development on August 6, 7, 10, and 11 before students begin."
+    },
+    {
+      "q": "Are JEFCOED E-Learning days student holidays?",
+      "a": "No. September 8, October 9, February 12, and April 9 are E-Learning days for students. Staff have either professional development or a teacher workday on those dates."
+    },
+    {
+      "q": "When do students return after JEFCOED Holiday Break?",
+      "a": "Holiday Break runs December 21, 2026, through January 1, 2027. January 4 is professional development and January 5 is a teacher workday, so students return Wednesday, January 6."
+    },
+    {
+      "q": "What is a JEFCOED Opportunity Day?",
+      "a": "The district calendar marks October 15 and March 9 as Opportunity Days for high schools only. The calendar does not give one attendance rule for all high school students, so families should check with their school."
+    },
+    {
+      "q": "Are the JEFCOED weather days guaranteed days off?",
+      "a": "No. February 15 and March 22–23 are identified as weather days if needed. Check JEFCOED announcements before treating those dates as confirmed days off."
+    },
+    {
+      "q": "Does JEFCOED publish a Spanish 2026–27 calendar?",
+      "a": "Yes. JEFCOED publishes an official Spanish version with the same school-year dates as the English calendar. Both PDFs are linked in Official Calendars and Downloads."
+    }
+  ],
+  "whatsNew": {
+    "title": "What Changed from the 2025–26 JEFCOED Calendar?",
+    "subtitle": "Verified differences between the two official school-year calendars.",
+    "content": [
+      "The first student day is August 12 in 2026–27, compared with August 7 in 2025–26.",
+      "The last student day is May 27 in 2026–27, compared with May 21 in 2025–26.",
+      "JEFCOED lists four E-Learning days in 2026–27, compared with five published E-Learning dates in 2025–26.",
+      "Spring Break begins March 22 in 2026–27, compared with March 23 in 2025–26."
+    ]
+  },
+  "events": [
+    {
+      "date": "2026-07-03",
+      "name": "Independence Day Observed — Schools Closed",
+      "type": "holiday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-06",
+      "name": "Teacher Workday — No School for Students",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Professional Development Day — No School for Students",
+      "type": "staff_development",
+      "badgeLabel": "Staff Only",
+      "preventRangeMerge": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-10",
+      "name": "Professional Development Day — No School for Students",
+      "type": "staff_development",
+      "badgeLabel": "Staff Only",
+      "preventRangeMerge": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-11",
+      "name": "Teacher Workday — No School for Students",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-12",
+      "name": "First Day for Students",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — Schools Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-09-08",
+      "name": "E-Learning Day for Students / Professional Development",
+      "type": "academic",
+      "badgeLabel": "E-Learning",
+      "description": "Students follow the E-Learning schedule; staff have professional development."
+    },
+    {
+      "date": "2026-10-08",
+      "name": "First Grading Period Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-10-09",
+      "name": "E-Learning Day for Students / Teacher Workday",
+      "type": "academic",
+      "badgeLabel": "E-Learning",
+      "description": "Students follow the E-Learning schedule; staff have a teacher workday."
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Columbus Day — Schools Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-10-15",
+      "name": "Opportunity Day — High Schools Only",
+      "type": "academic",
+      "badgeLabel": "High Schools Only",
+      "description": "Confirm attendance expectations with the high school.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day — Schools Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Holidays",
+      "type": "break_start"
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Last Day for Students and Teachers / Second Grading Period Ends",
+      "displayName": "Last Day Before Holiday Break / Second Grading Period Ends",
+      "type": "quarter_end",
+      "badgeLabel": "Semester End",
+      "description": "This is the last scheduled student day before Holiday Break; students return January 6.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-01",
+      "name": "Holiday Break",
+      "type": "break_start"
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Professional Development Day — No School for Students",
+      "type": "staff_development",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Teacher Workday — No School for Students",
+      "type": "teacher_workday",
+      "badgeLabel": "No School for Students"
+    },
+    {
+      "date": "2027-01-06",
+      "name": "Students Return",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — Schools Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-12",
+      "name": "E-Learning Day for Students / Teacher Workday",
+      "type": "academic",
+      "badgeLabel": "E-Learning",
+      "description": "Students follow the E-Learning schedule; staff have a teacher workday."
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents Day — Schools Closed / Weather Day if Needed",
+      "type": "makeup_day",
+      "badgeLabel": "Conditional Weather Day",
+      "description": "Schools are closed unless JEFCOED announces that this date is needed for weather make-up.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-09",
+      "name": "Opportunity Day — High Schools Only",
+      "type": "academic",
+      "badgeLabel": "High Schools Only",
+      "description": "Confirm attendance expectations with the high school.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-12",
+      "name": "Third Grading Period Ends",
+      "type": "quarter_end",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-03-22",
+      "endDate": "2027-03-26",
+      "name": "Spring Break",
+      "type": "break_start",
+      "description": "March 22–23 may be used as weather make-up days if needed."
+    },
+    {
+      "date": "2027-04-09",
+      "name": "E-Learning Day for Students / Teacher Workday",
+      "type": "academic",
+      "badgeLabel": "E-Learning",
+      "description": "Students follow the E-Learning schedule; staff have a teacher workday."
+    },
+    {
+      "date": "2027-05-27",
+      "name": "Last Day of School / Fourth Grading Period Ends",
+      "type": "school_end"
+    },
+    {
+      "date": "2027-05-28",
+      "name": "Teacher Workday / Last Day for Teachers",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-31",
+      "name": "Memorial Day Observed",
+      "type": "holiday",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-18",
+      "name": "Juneteenth Observed",
+      "type": "holiday",
+      "hideFromCalendarExport": true
+    }
+  ],
+  "sourcesTitle": "Sources and Review Notes",
+  "sources": [
+    {
+      "label": "JEFCOED official calendar documents",
+      "url": "https://www.jefcoed.com/documents/calendar/698577"
+    },
+    {
+      "label": "Official Jefferson County Schools 2026–27 Calendar — English",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5107/Jcs/dc461b80-1bac-4488-b5cb-7d44da2177b3/2026-2027-Calendar-Final-%28English%29.pdf?disposition=inline"
+    },
+    {
+      "label": "Official Jefferson County Schools 2026–27 Calendar — Spanish",
+      "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/5107/Jcs/daa571e1-c28f-4106-bea7-3b4ac38ee90f/2026-2027-Board-Approved-Calendar-Final-%28Spanish%29.pdf?disposition=inline"
+    }
+  ],
+  "sourceReviewSummary": "Reviewed August 23, 2026, against JEFCOED’s official English and Spanish 2026–27 calendar PDFs.",
+  "sourceReviewDetailsTitle": "How we reviewed the JEFCOED calendar",
+  "sourceReviewDetails": [
+    "Checked every districtwide date on the one-page English calendar, including student attendance dates, E-Learning days, staff days, school closures, grading-period endings, Opportunity Days, and conditional weather dates.",
+    "Compared the Spanish edition with the English calendar. The school-year dates and schedule labels match.",
+    "The English file says Board Approved 1/22/26, while the Spanish file prints Board Approved 2/22/26. The Spanish PDF was created February 2, before its printed date, so this page treats that approval stamp as a source-file discrepancy rather than a separate calendar revision.",
+    "Kept Opportunity Days separate from districtwide no-school dates because the source limits them to high schools and does not publish one attendance rule for every high school student.",
+    "Marked February 15 and March 22–23 as conditional because the calendar says they are weather days only if needed."
+  ],
+  "sourceNextReviewText": "We review this page again if JEFCOED replaces either calendar PDF, uses a designated weather make-up day, or announces a districtwide schedule change.",
+  "sourceMaintainerLabel": "Maintained by",
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team"
+}

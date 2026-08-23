@@ -1,0 +1,593 @@
+{
+  "institutionId": "madison-county-schools",
+  "schoolYear": "2026-2027",
+  "displaySchoolYear": "2026–27",
+  "pageHeading": "Madison County Schools Calendar 2026–27",
+  "firstDay": "2026-08-05",
+  "firstDayScope": "First student instructional day on the MCSS academic calendar",
+  "lastDay": "2027-05-26",
+  "lastDayScope": "Last student day and a half-day for students",
+  "temporalCoverageStart": "2026-07-29",
+  "temporalCoverageEnd": "2027-06-02",
+  "totalSchoolDays": 180,
+  "reportingPeriodDaysScope": "Derived from the official color-coded grid; the district PDF does not list an annual total.",
+  "semesters": 2,
+  "sourceUrl": "https://www.mcssk12.org/our-district/mcss-calendars",
+  "sourceDocumentPage": "https://www.mcssk12.org/our-district/mcss-calendars",
+  "sourcePdfUrl": "https://resources.finalsite.net/images/v1750184531/mcssk12org/nzep4yquh4cpixbqdeyx/2026-2027MCSSAcademicCalendar.pdf",
+  "lastCheckedPdfUrl": "https://resources.finalsite.net/images/v1750184531/mcssk12org/nzep4yquh4cpixbqdeyx/2026-2027MCSSAcademicCalendar.pdf",
+  "sourceCheckedAt": "2026-08-23",
+  "sourceUpdatedAt": "2025-06-18",
+  "sourceChecksumSha256": "c4a33eb7b62168095af383cbc64c8caf5a5b683bce93a94bfb7bc6a29c71bcc6",
+  "reviewedSourcePdfUrl": "https://resources.finalsite.net/images/v1750184531/mcssk12org/nzep4yquh4cpixbqdeyx/2026-2027MCSSAcademicCalendar.pdf",
+  "reviewedSourceUpdatedAt": "2025-06-18",
+  "reviewedSourceChecksumSha256": "c4a33eb7b62168095af383cbc64c8caf5a5b683bce93a94bfb7bc6a29c71bcc6",
+  "sourceStatus": "current",
+  "manualReviewRequired": true,
+  "sourceConflict": true,
+  "sourceResourceMonitor": {
+    "type": "document-pdf",
+    "checkUrl": "https://www.mcssk12.org/our-district/mcss-calendars",
+    "linkText": "2026-2027 Academic Calendar",
+    "expectedPdfUrl": "https://resources.finalsite.net/images/v1750184531/mcssk12org/nzep4yquh4cpixbqdeyx/2026-2027MCSSAcademicCalendar.pdf",
+    "expectedChecksumSha256": "c4a33eb7b62168095af383cbc64c8caf5a5b683bce93a94bfb7bc6a29c71bcc6"
+  },
+  "lastVerifiedAt": "2026-08-23",
+  "dateCreated": "2026-08-23",
+  "datePublished": "2026-08-23",
+  "dateModified": "2026-08-23",
+  "contentStatus": "production_ready",
+  "contentReviewTriggers": [
+    "official_calendar_revision",
+    "spanish_calendar_link_change",
+    "weather_day_change",
+    "official_schedule_change",
+    "confirmed_data_error"
+  ],
+  "sourceVersion": "Board approved June 12, 2025; current PDF metadata modified June 18, 2025",
+  "sourceCalendarName": "Madison County Schools Calendar 2026–2027",
+  "schemaCalendarName": "Madison County Schools Calendar 2026–27",
+  "schemaDatasetName": "Madison County School System 2026–27 Calendar Dataset",
+  "schemaDatasetDescription": "Reviewed MCSS dates for 2026–27, including first and last student days, two E-Learning/Collaboration Days, two student half-days, holidays, breaks, report-card dates, employee-calendar distinctions and the scheduled April 30 Weather Day closure.",
+  "schemaSpatialCoverage": {
+    "@type": "Place",
+    "name": "Madison County School System service area, Alabama"
+  },
+  "schemaCalendarDownloadName": "Madison County Schools 2026–27 ICS Calendar",
+  "schemaCalendarDownloadDescription": "One-time import of reviewed MCSS student dates, E-Learning/Collaboration Days, half-days, holidays, breaks, report-card dates and the scheduled Weather Day closure.",
+  "schemaDatasetSourceCalendarIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "schemaWebPageIsBasedOnSourceIds": [
+    "source-calendar",
+    "source-calendar-page"
+  ],
+  "calendarType": "traditional",
+  "calendarTrackId": "mcss-district-academic-calendar",
+  "allDatesMode": "all",
+  "webPageMainEntity": "dataset",
+  "itemListMode": "keyDates",
+  "includeArticleSchema": false,
+  "includeComparisonSchema": false,
+  "hideFaqSchema": true,
+  "hideSemesterCount": true,
+  "hideHeroReviewedField": true,
+  "hideHeroReviewedByField": true,
+  "hideHeroUpdatedField": true,
+  "hideHeroVerificationIcs": true,
+  "hideHeroVerificationProcess": true,
+  "hideAlternateCalendarsNotice": true,
+  "hideBreakDurationBadges": true,
+  "hideInstructionalDaysSummary": true,
+  "hideSecondSemesterStartSummary": true,
+  "hideCoveredBreakDatesNote": true,
+  "hideTodayStatusSsrFallback": true,
+  "todayStatusPosition": "beforeKeyDates",
+  "todayStatusEventTypes": [
+    "digital_learning",
+    "weather_day"
+  ],
+  "excludeDistrictFaqs": true,
+  "hiddenSections": [
+    "about",
+    "backToCurrent",
+    "breaks",
+    "comparison",
+    "districtProfile",
+    "downloadCta",
+    "keyDateCards",
+    "livingHere",
+    "nationalTrends",
+    "otherCalendars",
+    "planningTips",
+    "quickFacts",
+    "relatedDistricts",
+    "whatsDifferent",
+    "yearNumbers"
+  ],
+  "preserveJumpNavigationOrder": true,
+  "jumpNavigation": [
+    {
+      "label": "Key Dates",
+      "id": "key-dates"
+    },
+    {
+      "label": "Calendar Scope",
+      "id": "mcss-2026-2027-calendar-scope"
+    },
+    {
+      "label": "Calendar Labels",
+      "id": "mcss-2026-2027-calendar-labels"
+    },
+    {
+      "label": "Full Calendar",
+      "id": "all-dates"
+    },
+    {
+      "label": "Breaks & Returns",
+      "id": "mcss-2026-2027-breaks-returns"
+    },
+    {
+      "label": "180 Instructional Days",
+      "id": "mcss-2026-2027-student-days"
+    },
+    {
+      "label": "Downloads",
+      "id": "add-to-calendar"
+    },
+    {
+      "label": "FAQ",
+      "id": "faq"
+    },
+    {
+      "label": "Sources",
+      "id": "sources"
+    }
+  ],
+  "seoTitle": "Madison County Schools Calendar 2026–27 | Alabama",
+  "seoDescription": "MCSS students start Aug. 5, 2026 and finish with a half-day May 26, 2027. View breaks, E-Learning days, the official PDF, and an ICS calendar.",
+  "heroSummary": "Madison County School System students start school Wednesday, August 5, 2026. The last student day is Wednesday, May 26, 2027, and it is a half-day. Fall Break is October 5–9, Thanksgiving Break is November 23–27, Winter Break is December 21–January 4, and Spring Break is March 15–19. September 4 and February 12 are E-Learning/Collaboration Days, not days off.",
+  "heroSourceLine": "Madison County, Alabama · Board approved June 12, 2025 · Reviewed Aug. 23, 2026, by Denis Dou",
+  "verificationBadgeText": "Checked against the complete one-page MCSS PDF, date grid and color legend.",
+  "calendarNotes": "September 4 and February 12 are instructional E-Learning/Collaboration Days. April 30 is a scheduled school-system closure, and student break dates differ from some employee schedules.",
+  "heroFactChips": [
+    "180 instructional days",
+    "2 E-Learning days",
+    "2 student half-days",
+    "April 30 Weather Day closure"
+  ],
+  "keyDatesHeading": "MCSS 2026–27 Key Dates",
+  "keyDatesSummaryTitle": "MCSS 2026–27 Key Dates",
+  "keyDatesSummarySubtitle": "First and last days, breaks, E-Learning days, half-days and the scheduled Weather Day closure",
+  "keyDateSummaryItems": [
+    {
+      "label": "First Day",
+      "name": "First Day of School",
+      "date": "2026-08-05",
+      "type": "school_start"
+    },
+    {
+      "label": "E-Learning",
+      "name": "E-Learning / Collaboration Day",
+      "date": "2026-09-04",
+      "type": "digital_learning"
+    },
+    {
+      "label": "Fall Break",
+      "name": "Fall Break",
+      "date": "2026-10-05",
+      "endDate": "2026-10-09",
+      "type": "break_start",
+      "description": "Students return Monday, October 12."
+    },
+    {
+      "label": "Thanksgiving",
+      "name": "Thanksgiving Break",
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "type": "break_start",
+      "description": "Students return Monday, November 30."
+    },
+    {
+      "label": "Half-Day",
+      "name": "Student Half-Day",
+      "date": "2026-12-18",
+      "type": "early_dismissal",
+      "description": "Check with your school for dismissal time."
+    },
+    {
+      "label": "Winter",
+      "name": "Winter Break",
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "type": "break_start",
+      "description": "January 4 is a staff Work Day; students return Tuesday, January 5."
+    },
+    {
+      "label": "E-Learning",
+      "name": "E-Learning / Collaboration Day",
+      "date": "2027-02-12",
+      "type": "digital_learning"
+    },
+    {
+      "label": "Spring Break",
+      "name": "Spring Break",
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "type": "break_start",
+      "description": "Students return Monday, March 22."
+    },
+    {
+      "label": "School Closed",
+      "name": "Weather Day — School System Closed",
+      "date": "2027-04-30",
+      "type": "weather_day",
+      "description": "MCSS lists this as a scheduled closure, not a possible make-up day."
+    },
+    {
+      "label": "Last Day",
+      "name": "Last Student Day — Half-Day",
+      "date": "2027-05-26",
+      "type": "school_end",
+      "description": "Students attend a half-day."
+    }
+  ],
+  "allDatesTitle": "MCSS 2026–27 Calendar by Month",
+  "allDatesCoverageNote": "This table focuses on student calendar dates and report-card dates from the one-page MCSS calendar. Staff preparation before August 5 and the May 27 teacher workday are included for context but are not part of the downloadable family calendar. Memorial Day and Juneteenth fall after the student year and are not shown here.",
+  "allDatesFooterMode": "source_sentence",
+  "allDatesSourceUrl": "https://resources.finalsite.net/images/v1750184531/mcssk12org/nzep4yquh4cpixbqdeyx/2026-2027MCSSAcademicCalendar.pdf",
+  "allDatesSourceLabel": "Official MCSS 2026–27 Academic Calendar PDF",
+  "dateLegendItems": [
+    {
+      "label": "Student instructional day",
+      "dot": "bg-yellow-300"
+    },
+    {
+      "label": "E-Learning / Collaboration Day",
+      "dot": "bg-rose-300"
+    },
+    {
+      "label": "Student half-day",
+      "dot": "bg-stone-400"
+    },
+    {
+      "label": "No school / school system closed",
+      "dot": "bg-sky-400"
+    }
+  ],
+  "dateLegendLabelOverrides": {
+    "Digital Learning": "E-Learning / Collaboration",
+    "Early Dismissal": "Student Half-Day",
+    "Reserved Weather Day": "School System Closed",
+    "Teacher Workday": "Staff Day — Students Out"
+  },
+  "customSections": [
+    {
+      "id": "mcss-2026-2027-calendar-scope",
+      "label": "Which Madison County School Calendar Is This?",
+      "position": "afterKeyDates",
+      "content": "This page covers the Madison County School System (MCSS) calendar in Alabama. Huntsville City Schools and Madison City Schools are separate school systems with their own calendars. For school-specific events or dismissal times, check your child's school."
+    },
+    {
+      "id": "mcss-2026-2027-calendar-labels",
+      "label": "What the MCSS Calendar Labels Mean",
+      "position": "afterKeyDates",
+      "content": "Three labels on the MCSS calendar are easy to misread:",
+      "table": {
+        "caption": "MCSS 2026–27 calendar labels that affect student attendance",
+        "columns": [
+          "Calendar label",
+          "Dates",
+          "What families should know"
+        ],
+        "rows": [
+          [
+            "E-Learning / Collaboration Day",
+            "Sept. 4 and Feb. 12",
+            "These count as instructional days, not days off."
+          ],
+          [
+            "Half-Day for Students",
+            "Dec. 18 and May 26",
+            "Students attend part of the day. Confirm the dismissal time with the school."
+          ],
+          [
+            "Weather Day — School System Closed",
+            "April 30",
+            "MCSS lists this as a school closure; it is not shown as a possible make-up day."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mcss-2026-2027-breaks-returns",
+      "label": "Student Breaks and Return Dates",
+      "position": "afterAllDates",
+      "content": "Student and employee break dates are not always the same. Use the student dates below when planning days off from school.",
+      "table": {
+        "caption": "MCSS 2026–27 student breaks and employee-calendar distinctions",
+        "columns": [
+          "Student break",
+          "Student dates",
+          "Students return",
+          "Employee calendar note"
+        ],
+        "rows": [
+          [
+            "Fall Break",
+            "Oct. 5–9",
+            "Monday, Oct. 12",
+            "Oct. 9 is separately listed as Fall Break for 240-day employees."
+          ],
+          [
+            "Thanksgiving Break",
+            "Nov. 23–27",
+            "Monday, Nov. 30",
+            "Nov. 25–27 is the range listed for 240-day employees."
+          ],
+          [
+            "Winter Break",
+            "Dec. 21–Jan. 4",
+            "Tuesday, Jan. 5",
+            "Teachers are off through Jan. 1; 212-plus-day employees are off Dec. 22–Jan. 1. Jan. 4 is a Work Day."
+          ],
+          [
+            "Spring Break",
+            "March 15–19",
+            "Monday, March 22",
+            "March 18–19 is the range listed for 240-day employees."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mcss-2026-2027-student-days",
+      "label": "How We Counted 180 MCSS Instructional Days",
+      "position": "afterAllDates",
+      "content": "The district PDF does not list a total number of instructional days. Counting the color-coded school-day grid gives 180 instructional days: 86 in the first semester and 94 in the second. The count includes both E-Learning/Collaboration Days and both half-days, while excluding staff-only dates, breaks, holidays and the April 30 Weather Day closure.",
+      "table": {
+        "caption": "Derived count of MCSS instructional days for 2026–27",
+        "columns": [
+          "Calendar period",
+          "Instructional days",
+          "Included special schedules"
+        ],
+        "rows": [
+          [
+            "First semester",
+            "86",
+            "Sept. 4 E-Learning and Dec. 18 half-day"
+          ],
+          [
+            "Second semester",
+            "94",
+            "Feb. 12 E-Learning and May 26 half-day"
+          ],
+          [
+            "Total",
+            "180",
+            "All color-coded instructional days"
+          ]
+        ],
+        "footnote": "This is a MySchoolDates count from the official color grid; the district does not publish it as an annual total."
+      }
+    }
+  ],
+  "moveCalendarExportBeforeAllDates": false,
+  "compactDownloadModule": true,
+  "unifiedDownloadTitle": "MCSS Calendar Downloads",
+  "unifiedDownloadDescription": "Open the board-approved MCSS calendar or download reviewed dates for Google Calendar, Apple Calendar or Outlook.",
+  "pdfHeading": "Official MCSS 2026–27 Academic Calendar PDF",
+  "pdfHeadingTag": "h3",
+  "pdfDescription": "The one-page PDF includes the color-coded student schedule, employee break ranges, report-card dates, and the board approval date used to verify this page.",
+  "pdfVersionLabel": "Board approved June 12, 2025",
+  "pdfButtonLabel": "Open Official PDF",
+  "icsHeading": "Add MCSS 2026–27 Dates to Your Calendar",
+  "icsDescription": "Download the districtwide student dates, E-Learning days, half-days, holidays, breaks, report-card dates and scheduled Weather Day closure as a one-time ICS file.",
+  "icsButtonLabel": "Download MCSS Calendar (.ics)",
+  "icsButtonSupportText": "One-time import. It will not update automatically if MCSS revises the calendar.",
+  "calendarFaqs": [
+    {
+      "q": "Are MCSS E-Learning / Collaboration Days days off?",
+      "a": "No. September 4, 2026 and February 12, 2027 count as instructional days, not days off. Families should follow district or school instructions for those dates."
+    },
+    {
+      "q": "When do MCSS students return after Winter Break?",
+      "a": "Student Winter Break runs through Monday, January 4, 2027. January 4 is also a staff Work Day, so students return Tuesday, January 5."
+    },
+    {
+      "q": "Is April 30, 2027 a scheduled school closure or a make-up day?",
+      "a": "MCSS lists April 30 as a scheduled Weather Day when the school system is closed. The approved calendar does not show it as a possible make-up day held in reserve."
+    },
+    {
+      "q": "What time do MCSS students dismiss on half-days?",
+      "a": "MCSS identifies December 18 and May 26 as student half-days, but the district calendar does not list a districtwide dismissal time. Check with your school for its schedule."
+    },
+    {
+      "q": "Does MCSS provide a separate Spanish 2026–27 calendar PDF?",
+      "a": "The Spanish-labeled link currently opens the same English PDF. This page therefore does not list it as a separate Spanish download."
+    }
+  ],
+  "faqOrderLimit": 5,
+  "sourcesTitle": "Official Sources and Review Notes",
+  "sourceReviewSummary": "Reviewed August 23, 2026, against the complete one-page MCSS calendar approved June 12, 2025. The PDF reviewed for this page matches MCSS's current official file byte-for-byte.",
+  "sourceReviewDetailsTitle": "How we reviewed the MCSS calendar",
+  "sourceReviewDetails": [
+    "Checked every dated item, all 12 month grids, the color legend, report-card table, employee break ranges and board-approval line on the one-page PDF.",
+    "The PDF we reviewed is byte-for-byte identical to the file currently linked by MCSS (SHA-256: c4a33eb7b62168095af383cbc64c8caf5a5b683bce93a94bfb7bc6a29c71bcc6).",
+    "Counted 86 first-semester and 94 second-semester instructional days from the color-coded grid, for 180 total. The count includes the two E-Learning days and two half-days.",
+    "Confirmed from the month grid that December 18 and May 26 are student half-days even though the central dated list only names May 26 as the last student day.",
+    "Kept the student break ranges separate from the shorter teacher, 212-plus-day and 240-day employee ranges printed on the PDF.",
+    "The Spanish-labeled calendar entry is identical to the English PDF URL and opens the same English file, so no separate Spanish download is displayed."
+  ],
+  "sourceMaintainerLabel": "Maintained by",
+  "sourceMaintainerText": "MySchoolDates Calendar Data Team",
+  "sourceNextReviewText": "We review this page again if MCSS revises the academic calendar, changes the April 30 Weather Day designation, or publishes a separate Spanish calendar.",
+  "sources": [
+    {
+      "label": "MCSS Calendars page",
+      "url": "https://www.mcssk12.org/our-district/mcss-calendars"
+    },
+    {
+      "label": "Official MCSS 2026–27 Academic Calendar PDF",
+      "url": "https://resources.finalsite.net/images/v1750184531/mcssk12org/nzep4yquh4cpixbqdeyx/2026-2027MCSSAcademicCalendar.pdf"
+    }
+  ],
+  "events": [
+    {
+      "date": "2026-07-29",
+      "endDate": "2026-07-31",
+      "name": "Staff Development — No School for Students",
+      "type": "staff_development",
+      "badgeLabel": "Staff Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-03",
+      "endDate": "2026-08-04",
+      "name": "Institute and Work Days — No School for Students",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2026-08-05",
+      "name": "First Day of School",
+      "type": "school_start"
+    },
+    {
+      "date": "2026-09-04",
+      "name": "E-Learning / Collaboration Day",
+      "type": "digital_learning",
+      "badgeLabel": "E-Learning",
+      "description": "Counts as an instructional day, not a day off."
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Labor Day — School System Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-10-05",
+      "endDate": "2026-10-09",
+      "name": "Fall Break",
+      "type": "break_start",
+      "description": "October 9 is separately listed as Fall Break for 240-day employees."
+    },
+    {
+      "date": "2026-10-14",
+      "name": "First Grading Period Report Cards",
+      "type": "academic",
+      "hideFromCalendarExport": false
+    },
+    {
+      "date": "2026-11-11",
+      "name": "Veterans Day — School System Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-11-23",
+      "endDate": "2026-11-27",
+      "name": "Thanksgiving Break",
+      "type": "break_start",
+      "description": "November 25–27 is the separate break range printed for 240-day employees."
+    },
+    {
+      "date": "2026-12-18",
+      "name": "Half-Day for Students",
+      "type": "early_dismissal",
+      "badgeLabel": "Student Half-Day",
+      "description": "The district calendar does not list a districtwide dismissal time."
+    },
+    {
+      "date": "2026-12-21",
+      "endDate": "2027-01-04",
+      "name": "Winter Break for Students",
+      "type": "break_start",
+      "description": "Teachers are off through January 1; 212-plus-day employees are off December 22–January 1. Students return January 5."
+    },
+    {
+      "date": "2027-01-04",
+      "name": "Work Day — No School for Students",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Only",
+      "description": "Students remain on Winter Break and return January 5.",
+      "showDuringBreak": true,
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-01-05",
+      "name": "Students Return from Winter Break",
+      "type": "school_resume"
+    },
+    {
+      "date": "2027-01-06",
+      "name": "Second Grading Period Report Cards",
+      "type": "academic"
+    },
+    {
+      "date": "2027-01-18",
+      "name": "Martin Luther King Jr. Day — School System Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-02-12",
+      "name": "E-Learning / Collaboration Day",
+      "type": "digital_learning",
+      "badgeLabel": "E-Learning",
+      "description": "Counts as an instructional day, not a day off."
+    },
+    {
+      "date": "2027-02-15",
+      "name": "Presidents' Day — School System Closed",
+      "type": "holiday"
+    },
+    {
+      "date": "2027-03-15",
+      "endDate": "2027-03-19",
+      "name": "Spring Break",
+      "type": "break_start",
+      "description": "March 18–19 is the separate break range printed for 240-day employees."
+    },
+    {
+      "date": "2027-03-24",
+      "name": "Third Grading Period Report Cards",
+      "type": "academic"
+    },
+    {
+      "date": "2027-04-30",
+      "name": "Weather Day — School System Closed",
+      "type": "weather_day",
+      "badgeLabel": "School System Closed",
+      "description": "The approved calendar lists this as a scheduled closure, not a make-up day held in reserve."
+    },
+    {
+      "date": "2027-05-25",
+      "endDate": "2027-05-26",
+      "name": "Graduations",
+      "type": "academic",
+      "description": "Individual ceremony times and school assignments are not printed on the annual calendar.",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-05-26",
+      "name": "Last Student Day — Half-Day",
+      "type": "school_end",
+      "badgeLabel": "Last Day · Half-Day",
+      "description": "Students attend a half-day."
+    },
+    {
+      "date": "2027-05-27",
+      "name": "Teacher Workday — No School for Students",
+      "type": "teacher_workday",
+      "badgeLabel": "Staff Only",
+      "hideFromCalendarExport": true
+    },
+    {
+      "date": "2027-06-02",
+      "name": "Fourth Grading Period Report Cards",
+      "type": "academic"
+    }
+  ]
+}

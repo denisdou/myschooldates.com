@@ -1,0 +1,78 @@
+{
+  "institutionId": "mobile-county-public-schools",
+  "name": "Mobile County Public Schools",
+  "shortName": "MCPSS",
+  "slug": "mobile-county-public-schools-calendars",
+  "state": "Alabama",
+  "stateCode": "AL",
+  "city": "Mobile",
+  "country": "US",
+  "type": "public_district",
+  "grades": [
+    "Pre-K",
+    "K",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+  ],
+  "officialWebsite": "https://www.mcpss.com/",
+  "calendarPage": "https://www.mcpss.com/documents/system/mcpss-calendars/806415",
+  "logo": "https://cmsv2-assets.apptegy.net/uploads/27117/logo/29930/Mobile_County_logo_template_300.png",
+  "timezone": "America/Chicago",
+  "county": "Mobile County",
+  "region": "Alabama Gulf Coast",
+  "metro": "Mobile metropolitan area",
+  "currentSchoolYear": "2026-2027",
+  "allDatesMode": "all",
+  "calendarType": "Color-coded district calendar with Distance Learning Days and quarter totals",
+  "hideProfileCalendarType": true,
+  "seoTitle": "Mobile County Public Schools Calendars | MCPSS",
+  "seoDescription": "Browse Mobile County Public Schools calendars by school year, with reviewed student dates, Distance Learning Days, Mardi Gras closures, official PDFs and calendar downloads.",
+  "districtFact": "MCPSS annual calendars separate student days, teacher days, Distance Learning Days, teacher planning or staff development, and student-teacher holidays. The month panels also publish quarter endings and student-versus-teacher day counts.",
+  "about": [
+    {
+      "title": "Distance Learning Days remain instructional dates",
+      "content": "The MCPSS legend gives Virtual or Distance Instruction its own color. These dates are not ordinary campus days, but they remain part of the printed student-day total for the school year."
+    },
+    {
+      "title": "Mardi Gras changes the February schedule",
+      "content": "The annual calendar includes a Mobile-area February closure labeled for Presidents' Day and Fat Tuesday. The exact dates and any adjoining professional-development days vary by school year, so families should use the selected year's schedule."
+    },
+    {
+      "title": "Student and teacher totals are different",
+      "content": "MCPSS prints separate annual totals for students and teachers. Staff preparation dates before school, after school and during the year account for the difference, while Distance Learning Days stay in the student count."
+    },
+    {
+      "title": "The employee holiday list has a different scope",
+      "content": "Each one-page calendar also includes a small 12-month employee holiday list. This page uses the main student calendar for attendance dates and does not substitute the employee-only list for the student schedule."
+    }
+  ],
+  "calendarNotes": "Use the board-approved MCPSS PDF for districtwide student dates. Color is part of the source: Distance Learning, teacher planning or staff development, and student-teacher holidays are separate calendar categories. The 12-month employee holiday list has a narrower staff scope and should not be used as the student calendar. School events, bell times and later schedule changes should be confirmed with MCPSS or the assigned school. A MySchoolDates ICS file is a one-time import and does not update automatically.",
+  "hiddenSections": [
+    "comparison",
+    "districtProfile",
+    "livingHere",
+    "nationalTrends",
+    "relatedDistricts"
+  ],
+  "includeComparisonSchema": false,
+  "sources": [
+    {
+      "label": "Mobile County Public Schools official website",
+      "url": "https://www.mcpss.com/"
+    },
+    {
+      "label": "MCPSS official calendar documents",
+      "url": "https://www.mcpss.com/documents/system/mcpss-calendars/806415"
+    }
+  ]
+}

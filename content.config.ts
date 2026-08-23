@@ -31,6 +31,7 @@ const eventSchema = z.object({
   labelType: z.string().optional(),
   isDerivedPlanningDate: z.boolean().optional(),
   preserveOfficialName: z.boolean().optional(),
+  preventRangeMerge: z.boolean().optional(),
   hideFromAllDates: z.boolean().optional(),
   hideFromCalendarExport: z.boolean().optional(),
   excludeFromDateSchema: z.boolean().optional(),
