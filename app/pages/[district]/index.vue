@@ -441,7 +441,7 @@ const yearSwitcherPosition = computed(() =>
 )
 const showYearSwitcherAfterKeyDates = computed(() => yearSwitcherPosition.value === 'afterKeyDates')
 const showYearSwitcherAfterSources = computed(() => yearSwitcherPosition.value === 'afterSources')
-const today = new Date(); today.setHours(0, 0, 0, 0)
+const todayStr = useHydrationDate()
 const breaks = computed(() => getBreaks(cal?.events ?? []))
 
 const keyDateHighlights = computed(() => {
@@ -1057,18 +1057,11 @@ function breakNoteFor(b: { name: string; start: string; end: string; note?: stri
   return breakNotes.value[b.name] ?? breakNotes.value[breakDisplayName(b.name)] ?? breakNotes.value[b.start] ?? ''
 }
 
-const todayStr = (() => {
-  const y = today.getFullYear()
-  const m = String(today.getMonth() + 1).padStart(2, '0')
-  const d = String(today.getDate()).padStart(2, '0')
-  return `${y}-${m}-${d}`
-})()
-
 // Next upcoming events (excludes break_end since break_start already shows the range)
 const upcomingEvents = computed(() => {
   if (!cal) return []
   return cal.events
-    .filter(e => e.date >= todayStr && e.type !== 'break_end')
+    .filter(e => e.date >= todayStr.value && e.type !== 'break_end')
     .slice(0, 6)
 })
 
@@ -1083,12 +1076,12 @@ const midSectionOrder = computed((): MidSection[] => {
 const isEstimated = computed(() => !cal?.lastVerifiedAt)
 const verifiedDate = computed(() => {
   if (!cal?.lastVerifiedAt) return null
-  return new Date(cal.lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+  return new Date(`${cal.lastVerifiedAt}T00:00:00`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 })
 const updatedDate = computed(() => {
   const date = (cal as any)?.dateModified ?? cal?.lastVerifiedAt
   if (!date) return null
-  return new Date(date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+  return new Date(`${date}T00:00:00`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 })
 function formatCompactDateRange(start: string, end: string) {
   const startDate = new Date(start + 'T00:00:00')

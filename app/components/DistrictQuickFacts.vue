@@ -9,7 +9,7 @@ const props = defineProps<{
   prevCal?: any
 }>()
 
-const { getBreaks, getSecondSemesterStart, daysUntil } = useDistrictPage()
+const { getBreaks, getSecondSemesterStart } = useDistrictPage()
 
 // ── Derived simple values ──────────────────────────────────────────────────
 const year = computed(() => props.cal?.schoolYear ?? '')
@@ -22,7 +22,7 @@ const districtName = computed(() => props.district?.name ?? '')
 
 const verifiedDate = computed(() => {
   if (!props.cal?.lastVerifiedAt) return null
-  return new Date(props.cal.lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+  return new Date(`${props.cal.lastVerifiedAt}T00:00:00`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 })
 
 const hideReviewDate = computed(() => Boolean(
@@ -54,14 +54,12 @@ const yearComparison = computed(() => {
   return `Compared to ${prevYearStr.value}, spring break starts ${Math.abs(diff)} day${Math.abs(diff) !== 1 ? 's' : ''} earlier this year.`
 })
 
-// todayStr
-const todayStr = (() => {
-  const now = new Date(); now.setHours(0, 0, 0, 0)
-  const y = now.getFullYear()
-  const m = String(now.getMonth() + 1).padStart(2, '0')
-  const d = String(now.getDate()).padStart(2, '0')
-  return `${y}-${m}-${d}`
-})()
+const todayStr = useHydrationDate()
+const daysUntilHydrationDate = (date: string) => {
+  const target = new Date(`${date}T00:00:00`)
+  const reference = new Date(`${todayStr.value}T00:00:00`)
+  return Math.ceil((target.getTime() - reference.getTime()) / 86400000)
+}
 
 // breaks computed
 const breaks = computed(() => getBreaks(props.cal?.events ?? []))
@@ -519,8 +517,8 @@ const metricPool = computed(() => {
     breaks.value,
     props.relatedCals ?? [],
     props.allDistricts ?? [],
-    todayStr,
-    daysUntil,
+    todayStr.value,
+    daysUntilHydrationDate,
     schoolWeeks.value,
     daysOffCount.value,
     winterBreakDays.value,
@@ -552,7 +550,7 @@ const sectionTitle = computed(() =>
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
       <div v-for="fact in facts" :key="fact.key" class="text-center p-3 bg-gray-50 rounded-lg">
         <div class="break-words text-lg font-bold text-gray-900 sm:text-2xl">{{ fact.value }}</div>
-        <div class="text-xs text-gray-500 mt-1 leading-snug">{{ fact.label }}</div>
+        <div class="text-xs text-gray-600 mt-1 leading-snug">{{ fact.label }}</div>
       </div>
     </div>
     <div class="mt-4 pt-4 border-t border-gray-100 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-gray-600">

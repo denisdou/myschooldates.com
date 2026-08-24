@@ -203,7 +203,7 @@ export function useDistrictPage() {
       },
       {
         q: `Is this school calendar official and accurate?`,
-        a: `The calendar on this page is sourced from the official ${district.name} website at ${sourceUrl}. ${cal.lastVerifiedAt ? `Last checked against the public official source on ${new Date(cal.lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.` : `Not yet checked against the current official calendar.`} MySchoolDates is an independent reference, and districts occasionally revise published calendars — confirm directly with ${district.name} before making plans.`,
+        a: `The calendar on this page is sourced from the official ${district.name} website at ${sourceUrl}. ${cal.lastVerifiedAt ? `Last checked against the public official source on ${new Date(`${cal.lastVerifiedAt}T00:00:00`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}.` : `Not yet checked against the current official calendar.`} MySchoolDates is an independent reference, and districts occasionally revise published calendars — confirm directly with ${district.name} before making plans.`,
       },
       {
         q: `When does school start for ${district.name} in ${cal.schoolYear}?`,

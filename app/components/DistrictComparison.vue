@@ -470,7 +470,7 @@ const comparisonCaption = computed(() =>
       <p v-if="compareIntro" class="text-sm text-[#6b645c] mt-1 leading-relaxed">{{ compareIntro }}</p>
       <div v-if="comparisonInsights.length" class="mt-3 grid gap-3 sm:grid-cols-2">
         <div v-for="group in comparisonInsights" :key="group.label" class="rounded-lg bg-[#f3f0e8] border border-[#e6e1d8] p-3">
-          <h3 class="text-xs font-semibold uppercase tracking-wide text-[#7b756d]">{{ group.label }}</h3>
+          <h3 class="text-xs font-semibold uppercase tracking-wide text-[#6b645c]">{{ group.label }}</h3>
           <ul class="mt-2 space-y-1">
             <li v-for="item in group.items" :key="item" class="text-sm text-[#6b645c]">{{ item }}</li>
           </ul>
@@ -502,7 +502,7 @@ const comparisonCaption = computed(() =>
         </caption>
         <thead>
           <tr class="bg-[#f3f0e8] border-b border-[#ebe6dd]">
-            <th scope="col" class="text-left px-6 py-3 text-xs font-semibold text-[#7b756d] uppercase tracking-wide w-36 whitespace-nowrap">
+            <th scope="col" class="text-left px-6 py-3 text-xs font-semibold text-[#6b645c] uppercase tracking-wide w-36 whitespace-nowrap">
               Calendar Feature
             </th>
             <th
@@ -510,7 +510,7 @@ const comparisonCaption = computed(() =>
               :key="row.slug"
               scope="col"
               class="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wide whitespace-nowrap"
-              :class="row.isCurrent ? 'text-[#0f5d6b]' : 'text-[#7b756d]'"
+              :class="row.isCurrent ? 'text-[#0f5d6b]' : 'text-[#6b645c]'"
             >
               <span v-if="row.isCurrent">{{ displayName(row) }}</span>
               <NuxtLink v-else :to="row.calendarPath ?? `/${row.slug}`" class="hover:text-[#0f5d6b] transition-colors">
@@ -521,7 +521,7 @@ const comparisonCaption = computed(() =>
         </thead>
         <tbody class="divide-y divide-[#eee9df]">
           <tr v-for="feature in comparisonRows" :key="feature.key" class="hover:bg-[#f6f2ea] transition-colors">
-            <th scope="row" class="px-6 py-3 text-left text-xs font-medium text-[#7b756d] whitespace-nowrap">{{ feature.label }}</th>
+            <th scope="row" class="px-6 py-3 text-left text-xs font-medium text-[#6b645c] whitespace-nowrap">{{ feature.label }}</th>
             <td
               v-for="row in rows"
               :key="row.slug"
@@ -529,7 +529,7 @@ const comparisonCaption = computed(() =>
               :class="row.isCurrent ? 'font-semibold text-[#0f5d6b]' : 'text-[#6b645c]'"
             >
               <span v-if="feature.value(row)">{{ feature.value(row) }}</span>
-              <span v-else class="text-[#aaa39a]">Not available in reviewed source</span>
+              <span v-else class="text-[#6b645c]">Not available in reviewed source</span>
             </td>
           </tr>
         </tbody>
@@ -565,7 +565,7 @@ const comparisonCaption = computed(() =>
               <a :href="row.sourceUrl" target="_blank" rel="noopener" class="inline-flex min-w-0 items-center truncate underline underline-offset-2 hover:text-[#0f5d6b] transition-colors">
                 {{ row.sourceLabel || `${displayName(row)} official calendar` }}<span class="sr-only">(opens in a new tab)</span>
               </a>
-              <span v-if="row.sourceVersion" class="hidden flex-shrink-0 text-[#7b756d] lg:inline"> · {{ row.sourceVersion }}</span>
+              <span v-if="row.sourceVersion" class="hidden flex-shrink-0 text-[#6b645c] lg:inline"> · {{ row.sourceVersion }}</span>
             </span>
             <template v-if="row.extraSourceUrl">
               <a :href="row.extraSourceUrl" target="_blank" rel="noopener" class="block underline underline-offset-2 hover:text-[#0f5d6b] transition-colors">{{ row.extraSourceLabel || 'district calendar page' }}<span class="sr-only">(opens in a new tab)</span></a>

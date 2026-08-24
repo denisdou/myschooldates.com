@@ -8,7 +8,7 @@ const props = defineProps<{
 const isEstimated = computed(() => !props.cal?.lastVerifiedAt)
 const verifiedDate = computed(() => {
   if (!props.cal?.lastVerifiedAt) return null
-  return new Date(props.cal.lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+  return new Date(`${props.cal.lastVerifiedAt}T00:00:00`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 })
 const sourceUrl = computed(() => props.cal?.sourceUrl ?? props.district?.officialWebsite ?? '')
 </script>

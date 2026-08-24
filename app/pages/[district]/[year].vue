@@ -180,15 +180,8 @@ function eventSchemaLocation() {
   }
 }
 
-const today = new Date(); today.setHours(0, 0, 0, 0)
-const todayStr = (() => {
-  const y = today.getFullYear()
-  const m = String(today.getMonth() + 1).padStart(2, '0')
-  const d = String(today.getDate()).padStart(2, '0')
-  return `${y}-${m}-${d}`
-})()
-
-const isFutureYear = cal.value!.firstDay > todayStr
+const todayStr = useHydrationDate()
+const isFutureYear = computed(() => cal.value!.firstDay > todayStr.value)
 
 const formatWeekdayDate = (d: string) =>
   new Date(d + 'T00:00:00').toLocaleString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
@@ -252,12 +245,12 @@ const springBreakReturnDate = computed(() => {
 const isEstimated = computed(() => !(cal.value as any)?.lastVerifiedAt)
 const verifiedDate = computed(() => {
   if (!(cal.value as any)?.lastVerifiedAt) return null
-  return new Date((cal.value as any).lastVerifiedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+  return new Date(`${(cal.value as any).lastVerifiedAt}T00:00:00`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 })
 const updatedDate = computed(() => {
   const date = (cal.value as any)?.dateModified ?? (cal.value as any)?.lastVerifiedAt
   if (!date) return null
-  return new Date(date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+  return new Date(`${date}T00:00:00`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 })
 function formatCompactDateRange(start: string, end: string) {
   const startDate = new Date(start + 'T00:00:00')

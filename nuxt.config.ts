@@ -118,12 +118,7 @@ const statePrerenderRoutes = stateNavigationLinks.map(state => `/${state.slug}`)
 const googleAnalyticsScripts = process.env.NODE_ENV === 'production'
   ? [
       {
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-X3KKMXLR1B',
-        async: true,
-        tagPosition: 'bodyClose' as const,
-      },
-      {
-        innerHTML: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-X3KKMXLR1B');`,
+        innerHTML: `(()=>{let loaded=false;const events=['pointerdown','keydown','touchstart','scroll'];const load=()=>{if(loaded)return;loaded=true;events.forEach(event=>window.removeEventListener(event,load));window.dataLayer=window.dataLayer||[];window.gtag=function(){window.dataLayer.push(arguments)};window.gtag('js',new Date());window.gtag('config','G-X3KKMXLR1B');const script=document.createElement('script');script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id=G-X3KKMXLR1B';document.head.appendChild(script)};events.forEach(event=>window.addEventListener(event,load,{once:true,passive:true}));window.addEventListener('load',()=>window.setTimeout(load,12000),{once:true})})();`,
         tagPosition: 'bodyClose' as const,
       },
     ]

@@ -82,7 +82,7 @@ const methodologyNote = computed(() =>
     <h2 class="text-xl font-bold text-gray-900 mb-5">{{ sectionTitle }}</h2>
     <div class="divide-y divide-gray-100">
       <div v-for="card in cards" :key="card.key" class="py-1.5 first:pt-0">
-        <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">{{ card.label }}</h3>
+        <h3 class="text-xs font-semibold text-gray-600 uppercase tracking-widest mb-1">{{ card.label }}</h3>
         <p class="text-sm text-gray-700 leading-relaxed">
           <strong class="text-gray-900">{{ card.displayValue ?? `${card.value}\u00a0${card.unit}` }}</strong>
           <template v-if="card.description"> — {{ card.description }}</template>

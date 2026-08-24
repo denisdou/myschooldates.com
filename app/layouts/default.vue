@@ -75,7 +75,7 @@ watch(() => route.fullPath, () => {
       <div class="site-page-shell site-header__row flex items-center justify-between gap-4">
         <!-- Logo -->
         <NuxtLink to="/" class="site-brand flex items-center gap-2.5 flex-shrink-0">
-          <img src="/icons/myschooldates-logo.svg" alt="MySchoolDates" class="h-8 w-auto" />
+          <img src="/icons/myschooldates-logo.svg" alt="" aria-hidden="true" class="h-8 w-auto" width="32" height="32" />
           <span class="site-brand__name">MySchoolDates</span>
           <span class="site-brand__tagline hidden lg:inline">US School Calendar Platform</span>
         </NuxtLink>
@@ -289,7 +289,7 @@ watch(() => route.fullPath, () => {
           </div>
           <div class="col-span-2 sm:col-span-1">
             <NuxtLink to="/" class="flex items-center gap-2 mb-3">
-              <img src="/icons/myschooldates-logo.svg" alt="MySchoolDates" class="h-7 w-auto" />
+              <img src="/icons/myschooldates-logo.svg" alt="" aria-hidden="true" class="h-7 w-auto" width="28" height="28" />
               <span class="site-footer__brand text-sm font-semibold">MySchoolDates</span>
             </NuxtLink>
             <p class="site-footer__copy text-sm leading-relaxed mb-4">
