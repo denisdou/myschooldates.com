@@ -10,7 +10,7 @@
   "officialSourceLabel": "Tennessee education guidance and official district calendar sources",
   "quickAnswerNavLabel": "Key Differences",
   "quickAnswerTitle": "Tennessee School Calendars Are Set Locally",
-  "quickAnswer": "Tennessee does not publish one statewide K–12 attendance calendar. State law establishes the school-term framework, while local school boards publish the dates families follow. In the three reviewed 2026–27 calendars, Memphis-Shelby students begin August 3, Knox County students begin August 10, and Metro Nashville students begin August 11. Their main Spring Break weeks fall in three different parts of March.",
+  "quickAnswer": "Tennessee does not publish one statewide K–12 attendance calendar. State law establishes the school-term framework, while local school boards publish the dates families follow. A featured comparison shows Memphis-Shelby students beginning August 3, Knox County students beginning August 10, and Metro Nashville students beginning August 11. Their main Spring Break weeks fall in different parts of March.",
   "quickAnswerItems": [
     {
       "label": "Reviewed calendars",
@@ -31,7 +31,7 @@
   ],
   "hideNationalContext": true,
   "includeFaqSchema": false,
-  "about": "Tennessee's school-term requirements do not create a common first day, Fall Break, Spring Break, or last day for every public school. Local boards publish district calendars within the state framework, and those calendars may use accumulated instructional time, abbreviated days, staff-development dates, and local weather procedures differently. Families therefore need the calendar for their assigned district and, when applicable, their school or program.\n\nThe current MySchoolDates collection covers three large Tennessee systems for 2026–27: Metro Nashville Public Schools, Memphis-Shelby County Schools, and Knox County Schools. Their first student dates span August 3–11, and their final student dates span May 20–26. The differences are larger than a one-week opening window suggests: Knox County begins Spring Break March 8, Memphis-Shelby's main Spring Break begins March 15, and Metro Nashville's student closure begins March 22.\n\nThe district pages retain details a statewide list would erase. MNPS separates high-school exam half days from districtwide half days and publishes its calendar in seven languages. MSCS distinguishes its Student, Teacher, and Attendance and Report Card Periods calendars, including evening parent conferences that are not automatic no-school days. Knox County starts and ends on half days, schedules additional student half days, and explains how accumulated instructional time contributes to its printed 180-day total.",
+  "about": "Tennessee's school-term requirements do not create a common first day, Fall Break, Spring Break, or last day for every public school. Local boards publish district calendars within the state framework, and those calendars may use accumulated instructional time, abbreviated days, staff-development dates, and local weather procedures differently. Families therefore need the calendar for their assigned district and, when applicable, their school or program.\n\nA featured comparison uses Metro Nashville Public Schools, Memphis-Shelby County Schools, and Knox County Schools. Their first student dates span August 3–11, and their final student dates span May 20–26. The differences are larger than a one-week opening window suggests: Knox County begins Spring Break March 8, Memphis-Shelby's main Spring Break begins March 15, and Metro Nashville's student closure begins March 22.\n\nThe district pages retain details a statewide list would erase. MNPS separates high-school exam half days from districtwide half days and publishes its calendar in seven languages. MSCS distinguishes its Student, Teacher, and Attendance and Report Card Periods calendars, including evening parent conferences that are not automatic no-school days. Knox County starts and ends on half days, schedules additional student half days, and explains how accumulated instructional time contributes to its printed 180-day total.",
   "calendarRulesDescription": "Tennessee establishes the school-term and instructional-time framework, but local boards publish the attendance dates, staff days, closures, and weather plans families use.",
   "calendarRules": [
     {
@@ -76,8 +76,8 @@
   "stateSections": [
     {
       "id": "tennessee-reviewed-calendar-comparison",
-      "label": "Three Reviewed Tennessee Districts Use Different 2026–27 Calendars",
-      "content": "The three district calendars do not share one opening date, Spring Break week, or ending date. The table keeps grade scope and special-day details with the district that published them.",
+      "label": "Featured Tennessee Districts Use Different 2026–27 Calendars",
+      "content": "The calendars in this comparison do not share one opening date, Spring Break week, or ending date. The table keeps grade scope and special-day details with the district that published them.",
       "table": {
         "columns": [
           "District",
@@ -111,12 +111,12 @@
     {
       "id": "tennessee-winter-return-dates",
       "label": "Different Winter Break Labels, the Same January 5 Return",
-      "content": "All three reviewed districts list Tuesday, January 5, 2027 as the student return date, but they reach it differently. MSCS includes January 4 in Winter Break. MNPS ends its student break December 31, then lists New Year's Day and a January 4 stockpiled professional-development day. Knox County ends Winter Break January 1 and uses January 4 for systemwide in-service and administrative work. The return date matches; the official event labels do not."
+      "content": "The calendars in this comparison list Tuesday, January 5, 2027 as the student return date, but they reach it differently. MSCS includes January 4 in Winter Break. MNPS ends its student break December 31, then lists New Year's Day and a January 4 stockpiled professional-development day. Knox County ends Winter Break January 1 and uses January 4 for systemwide in-service and administrative work. The return date matches; the official event labels do not."
     },
     {
       "id": "tennessee-spring-break-timing",
       "label": "Tennessee Spring Break Dates Vary by District",
-      "content": "The reviewed 2026–27 calendars place their main Spring Breaks in consecutive weeks: Knox County on March 8–12, Memphis-Shelby on March 15–19, and Metro Nashville on March 22–25 followed by a separate Spring Holiday March 26. MSCS also lists Spring Break II dates later in March. A statewide Spring Break date would therefore be misleading even for these three large systems."
+      "content": "The calendars in this comparison place their main Spring Breaks in consecutive weeks: Knox County on March 8–12, Memphis-Shelby on March 15–19, and Metro Nashville on March 22–25 followed by a separate Spring Holiday March 26. MSCS also lists Spring Break II dates later in March. A statewide Spring Break date would therefore be misleading even within this featured comparison."
     },
     {
       "id": "tennessee-official-calendar-sources",
@@ -158,7 +158,7 @@
   "planningTips": [
     "Choose the district before using a date. Tennessee's 180-day framework does not create a statewide first day, Spring Break, or last day.",
     "Check the grade scope on opening, exam, and half-day schedules. MNPS, MSCS, and Knox County do not use the same attendance rules for every grade.",
-    "Read the staff date immediately after Winter Break. All three reviewed districts return January 5, but January 4 carries a different official label in each calendar.",
+    "Read the staff date immediately after Winter Break. The districts in the featured comparison return January 5, but January 4 carries a different official label in each calendar.",
     "Treat parent conferences as school-specific unless the calendar explicitly says students are out. MSCS evening conference dates are not automatic districtwide closures.",
     "Recheck the official district source after a weather announcement or calendar revision. An ICS import is a one-time copy and does not sync later changes."
   ],
@@ -217,7 +217,7 @@
     },
     {
       "q": "Do Tennessee districts have the same Spring Break?",
-      "a": "No. The three reviewed 2026–27 calendars use different main Spring Break weeks: Knox County lists March 8–12, Memphis-Shelby lists March 15–19, and Metro Nashville lists March 22–25 followed by a separate Spring Holiday on March 26."
+      "a": "No. The featured comparison uses different main Spring Break weeks: Knox County lists March 8–12, Memphis-Shelby lists March 15–19, and Metro Nashville lists March 22–25 followed by a separate Spring Holiday on March 26."
     },
     {
       "q": "When do the reviewed Tennessee districts return after Winter Break?",

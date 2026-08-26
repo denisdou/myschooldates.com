@@ -1,15 +1,21 @@
 <script setup lang="ts">
+import trendData from '../data/school-calendar-trends-2026-2027.json'
+import { getSchoolCalendarTrendStats } from '../utils/schoolCalendarTrendStats'
+
+const trendStats = getSchoolCalendarTrendStats(trendData)
+const springBreakClusters = ['Mar 15, 2027', 'Mar 22, 2027', 'Mar 29, 2027', 'Apr 5, 2027', 'Mar 8, 2027']
+const otherSpringBreakCount = trendStats.districtCount - springBreakClusters.reduce((total, label) => total + trendStats.springBreakCount(label), 0)
 const pageTitle = 'Spring Break 2027 | School Calendar Dates and Trends'
-const pageDescription = 'Compare spring break 2027 timing patterns from 205 reviewed U.S. district calendars, including March 15, March 22, March 29, and April 5 clusters.'
+const pageDescription = `Compare spring break 2027 timing patterns from ${trendStats.districtCount} reviewed U.S. district calendars, including March 15, March 22, March 29, and April 5 clusters.`
 const pageUrl = 'https://myschooldates.com/spring-break-2027'
 
 const breakRows = [
-  ['March 15, 2027', '56 districts'],
-  ['March 22, 2027', '48 districts'],
-  ['March 29, 2027', '31 districts'],
-  ['April 5, 2027', '27 districts'],
-  ['March 8, 2027', '14 districts'],
-  ['Other or not listed', '29 districts'],
+  ['March 15, 2027', `${trendStats.springBreakCount('Mar 15, 2027')} districts`],
+  ['March 22, 2027', `${trendStats.springBreakCount('Mar 22, 2027')} districts`],
+  ['March 29, 2027', `${trendStats.springBreakCount('Mar 29, 2027')} districts`],
+  ['April 5, 2027', `${trendStats.springBreakCount('Apr 5, 2027')} districts`],
+  ['March 8, 2027', `${trendStats.springBreakCount('Mar 8, 2027')} districts`],
+  ['Other or not listed', `${otherSpringBreakCount} districts`],
 ]
 
 const faqRows = [
@@ -95,8 +101,8 @@ useHead({
           Spring break 2027 is more varied than winter break. In the current MySchoolDates trend dataset, the largest cluster begins March 15, 2027, followed by March 22, March 29, and April 5.
         </p>
         <div class="mt-5 flex flex-wrap gap-2 text-sm text-gray-600">
-          <span class="rounded-lg bg-gray-100 px-3 py-1">205 reviewed calendars</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">31 states</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">{{ trendStats.districtCount }} reviewed calendars</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">{{ trendStats.stateCount }} states</span>
           <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified August 21, 2026</span>
         </div>
       </header>

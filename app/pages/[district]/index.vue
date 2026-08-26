@@ -104,6 +104,20 @@ const stateCurrentYear = (() => {
   for (const y of years) freq[y] = (freq[y] ?? 0) + 1
   return Object.entries(freq).sort((a, b) => b[1] - a[1])[0]?.[0] ?? '2025-2026'
 })()
+const stateQuickFactValue = (fact: { label?: string, value?: unknown }) =>
+  /reviewed districts?/i.test(fact.label ?? '') ? stateDistricts.length : fact.value
+const stateQuickAnswerItemValue = (item: { label?: string, value?: unknown }) => {
+  if (!/reviewed (district|calendar)/i.test(item.label ?? '')) return item.value
+  return `${stateDistricts.length} ${matchedStateName} district${stateDistricts.length === 1 ? '' : 's'}`
+}
+const stateBrowseLabel = computed(() => {
+  const configuredLabel = statePageData.value?.browseLabel
+  if (configuredLabel && !/^browse\b/i.test(configuredLabel)) return configuredLabel
+  return `Browse ${stateDistricts.length} reviewed ${matchedStateName} district calendar${stateDistricts.length === 1 ? '' : 's'}`
+})
+const stateCollectionDescription = computed(() =>
+  `${stateDistricts.length} independently reviewed ${matchedStateName} district calendar page${stateDistricts.length === 1 ? ' is' : 's are'} currently available, with official-source dates and calendar downloads where published.`
+)
 const statePageHeading = statePageData.value?.pageHeading ?? `${matchedStateName} School Calendar ${stateCurrentYear}`
 
 if (isStatePage) {
@@ -1939,7 +1953,7 @@ if (!isStatePage && district.value && !isDistrictHub) {
           <div class="state-hero__proof mt-5 flex flex-wrap gap-x-6 gap-y-2">
             <span class="flex items-center gap-1.5 text-sm text-gray-700">
               <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
-              <template v-if="statePageData">{{ statePageData.browseLabel || 'Browse district calendars' }}</template>
+              <template v-if="statePageData">{{ stateBrowseLabel }}</template>
               <template v-else>{{ stateDistricts.length }} districts covered</template>
             </span>
             <span class="flex items-center gap-1.5 text-sm text-gray-700">
@@ -1988,7 +2002,7 @@ if (!isStatePage && district.value && !isDistrictHub) {
               <tbody class="divide-y divide-blue-50">
                 <tr v-for="item in statePageData.quickAnswerItems" :key="item.label">
                   <th scope="row" class="w-40 px-4 py-2 text-left text-xs font-semibold uppercase tracking-wide text-blue-700">{{ item.label }}</th>
-                  <td class="px-4 py-2 text-gray-700">{{ item.value }}</td>
+                  <td class="px-4 py-2 text-gray-700">{{ stateQuickAnswerItemValue(item) }}</td>
                 </tr>
               </tbody>
             </table>
@@ -1998,7 +2012,7 @@ if (!isStatePage && district.value && !isDistrictHub) {
         <!-- Quick Facts from state data -->
         <div v-if="statePageData?.quickFacts?.length" class="grid grid-cols-2 sm:grid-cols-4 gap-4">
           <div v-for="fact in statePageData.quickFacts" :key="fact.label" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-4 text-center">
-            <div class="text-lg font-bold text-gray-900">{{ fact.value }}</div>
+            <div class="text-lg font-bold text-gray-900">{{ stateQuickFactValue(fact) }}</div>
             <div class="text-xs text-gray-500 mt-1">{{ fact.label }}</div>
           </div>
         </div>
@@ -2145,7 +2159,7 @@ if (!isStatePage && district.value && !isDistrictHub) {
         <!-- District Cards -->
         <div id="state-districts" class="scroll-mt-24">
           <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ statePageData?.collectionHeading || `${matchedStateName} School Districts — ${stateCurrentYear}` }}</h2>
-          <p class="text-sm text-[#7b756d] mb-4">{{ statePageData?.collectionDescription || 'Click any district to view the full calendar, add dates to Google Calendar, or download an ICS file.' }}</p>
+          <p class="text-sm text-[#7b756d] mb-4">{{ stateCollectionDescription }}</p>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <NuxtLink
               v-for="d in stateDistricts"

@@ -8,7 +8,6 @@ const outputPath = path.join(rootDir, 'public/data/school-calendar-trends-2026-2
 const dataOutputPath = path.join(rootDir, 'app/data/school-calendar-trends-2026-2027.json')
 const schoolYear = '2026-2027'
 const releaseVersion = 'v4.0'
-const releaseRecordCount = 205
 const releaseDate = '2026-08-21'
 
 const breakSignalOverrides = {
@@ -164,8 +163,8 @@ for (const institutionId of fs.readdirSync(calendarsDir)) {
 records.sort((first, second) => first[1].localeCompare(second[1]) || first[0].localeCompare(second[0]))
 
 const uniquePages = new Set(records.map(row => row[2]))
-if (records.length !== releaseRecordCount || uniquePages.size !== records.length) {
-  throw new Error(`Expected ${releaseRecordCount} unique ${schoolYear} records; found ${records.length} rows and ${uniquePages.size} unique pages.`)
+if (uniquePages.size !== records.length) {
+  throw new Error(`Expected unique ${schoolYear} records; found ${records.length} rows and ${uniquePages.size} unique pages.`)
 }
 
 const headers = ['district', 'state', 'myschooldates_page', 'first_day', 'last_day', 'winter_break_signal', 'spring_break_signal']

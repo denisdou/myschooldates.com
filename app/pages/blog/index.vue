@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import trendData from '../../data/school-calendar-trends-2026-2027.json'
+import { getSchoolCalendarTrendStats } from '../../utils/schoolCalendarTrendStats'
+
+const trendStats = getSchoolCalendarTrendStats(trendData)
+
 useSeoMeta({
   title: 'School Calendar Research Blog | MySchoolDates',
   description: 'Research notes, school calendar trends, and data reports from the MySchoolDates calendar dataset.',
@@ -8,8 +13,8 @@ useSeoMeta({
 
 const posts = [
   {
-    title: '2026-2027 School Calendar Trends: Start Dates, Breaks & End Dates From 100 Districts',
-    description: 'A data-backed look at when schools start, winter break dates, spring break patterns, last days, PDFs, ICS files, and planning trends across 100 reviewed district calendars.',
+    title: `2026-2027 School Calendar Trends: Start Dates, Breaks & End Dates From ${trendStats.districtCount} Districts`,
+    description: `A data-backed look at when schools start, winter break dates, spring break patterns, last days, PDFs, ICS files, and planning trends across ${trendStats.districtCount} reviewed district calendars.`,
     href: '/school-calendar-trends/2026-2027-report',
     date: 'July 27, 2026',
     tag: 'Research Report',

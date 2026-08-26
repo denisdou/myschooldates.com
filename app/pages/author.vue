@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import trendData from '../data/school-calendar-trends-2026-2027.json'
+import { getSchoolCalendarTrendStats } from '../utils/schoolCalendarTrendStats'
+
+const trendStats = getSchoolCalendarTrendStats(trendData)
 const pageUrl = 'https://myschooldates.com/author'
 const authorName = 'Denis Dou'
 const authorRole = 'Founder & Education Data Research Lead'
@@ -35,7 +39,7 @@ const workflowRows = [
 
 const backgroundRows = [
   ['Role', 'Founder of MySchoolDates and lead for education data research direction'],
-  ['Current dataset scope', '205 reviewed district calendar records across 31 states in the public 2026-2027 trends dataset'],
+  ['Current dataset scope', `${trendStats.districtCount} reviewed district calendar records across ${trendStats.stateCount} states in the public 2026-2027 trends dataset`],
   ['Primary output', 'District calendar pages, annual trends reports, CSV datasets, and verification methodology documentation'],
   ['Research method', 'Official district source review, public PDF checks, date normalization, and anomaly review before publication'],
 ]
@@ -44,7 +48,7 @@ const selectedResearchRows = [
   {
     title: '2026-2027 School Calendar Trends Report',
     href: '/school-calendar-trends/2026-2027-report',
-    description: 'Original research report analyzing start dates, winter break timing, spring break clusters, end dates, and instructional day patterns from 100 reviewed U.S. district calendar records.',
+    description: `Original research report analyzing start dates, winter break timing, spring break clusters, end dates, and instructional day patterns from ${trendStats.districtCount} reviewed U.S. district calendar records.`,
   },
   {
     title: '2026-2027 U.S. School Calendar Dataset',

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { coverageStats } = useAppConfig()
+
 useSeoMeta({
   title: 'About MySchoolDates | US Public School Calendar Platform',
   description: 'MySchoolDates makes it easy to find school start dates, holidays, and breaks for public school districts across the United States — and add them to your calendar in seconds.',
@@ -46,7 +48,7 @@ useHead({
     <section class="mb-10">
       <h2 class="text-xl font-semibold text-gray-900 mb-3">Coverage</h2>
       <p class="text-gray-600 leading-relaxed">
-        We currently cover 205 public school districts across 31 states, with more districts and states being added regularly. Our goal is comprehensive coverage of the largest districts in every state.
+        We currently cover {{ coverageStats.districts }} public school districts across {{ coverageStats.states }} states, with more districts and states being added regularly. Our goal is comprehensive coverage of the largest districts in every state.
       </p>
     </section>
 

@@ -1,12 +1,19 @@
 <script setup lang="ts">
+import trendData from '../data/school-calendar-trends-2026-2027.json'
+import { getSchoolCalendarTrendStats } from '../utils/schoolCalendarTrendStats'
+
+const trendStats = getSchoolCalendarTrendStats(trendData)
+const december21Count = trendStats.winterBreakCount('Dec 21, 2026')
+const december23To24Count = trendStats.winterBreakCount('Dec 23, 2026') + trendStats.winterBreakCount('Dec 24, 2026')
+const otherWinterBreakCount = trendStats.districtCount - december21Count - december23To24Count
 const pageTitle = 'Winter Break 2026 | School Calendar Dates and Trends'
-const pageDescription = 'See 2026 winter break school calendar trends from 205 reviewed U.S. district calendars, including the December 21, 2026 start-date cluster.'
+const pageDescription = `See 2026 winter break school calendar trends from ${trendStats.districtCount} reviewed U.S. district calendars, including the December 21, 2026 start-date cluster.`
 const pageUrl = 'https://myschooldates.com/winter-break-2026'
 
 const breakRows = [
-  ['December 21, 2026', '179 records', 'Strongest winter break start-date signal in the current dataset.'],
-  ['December 23-24, 2026', '18 records', 'Later starts appear in some district calendars and regional patterns.'],
-  ['Other or not listed', '8 records', 'Some records use different labels or do not list a clean winter break start signal.'],
+  ['December 21, 2026', `${december21Count} records`, 'Strongest winter break start-date signal in the current dataset.'],
+  ['December 23-24, 2026', `${december23To24Count} records`, 'Later starts appear in some district calendars and regional patterns.'],
+  ['Other or not listed', `${otherWinterBreakCount} records`, 'Some records use different labels or do not list a clean winter break start signal.'],
 ]
 
 const faqRows = [
@@ -89,11 +96,11 @@ useHead({
         <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">School Break Trend Guide</p>
         <h1 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Winter Break 2026</h1>
         <p class="mt-4 max-w-3xl text-lg leading-relaxed text-gray-600">
-          December 21, 2026 is the dominant winter break start-date signal in the current MySchoolDates 2026-2027 trend dataset, appearing in 179 of 205 reviewed district calendar records.
+          December 21, 2026 is the dominant winter break start-date signal in the current MySchoolDates 2026-2027 trend dataset, appearing in {{ december21Count }} of {{ trendStats.districtCount }} reviewed district calendar records.
         </p>
         <div class="mt-5 flex flex-wrap gap-2 text-sm text-gray-600">
-          <span class="rounded-lg bg-gray-100 px-3 py-1">205 reviewed calendars</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">31 states</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">{{ trendStats.districtCount }} reviewed calendars</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">{{ trendStats.stateCount }} states</span>
           <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified August 21, 2026</span>
         </div>
       </header>

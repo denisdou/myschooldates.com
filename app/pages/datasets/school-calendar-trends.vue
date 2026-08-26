@@ -5,17 +5,39 @@ import { CalendarComponent, GridComponent, TooltipComponent, VisualMapComponent 
 import { use } from 'echarts/core'
 import { CanvasRenderer } from 'echarts/renderers'
 import trendData from '../../data/school-calendar-trends-2026-2027.json'
+import { getSchoolCalendarTrendStats } from '../../utils/schoolCalendarTrendStats'
 
 use([BarChart, CalendarComponent, GridComponent, HeatmapChart, TooltipComponent, VisualMapComponent, CanvasRenderer])
 
 const VChart = defineAsyncComponent(() => import('vue-echarts').then(module => module.default))
+const trendStats = getSchoolCalendarTrendStats(trendData)
+const julyStarts = trendStats.startMonthCount('Jul')
+const augustStarts = trendStats.startMonthCount('Aug')
+const septemberStarts = trendStats.startMonthCount('Sep')
+const mayEndings = trendStats.endMonthCount('May')
+const juneEndings = trendStats.endMonthCount('Jun')
+const december21Breaks = trendStats.winterBreakCount('Dec 21, 2026')
+const winterBreakChartRows = [
+  ['December 18, 2026', trendStats.winterBreakCount('Dec 18, 2026'), '2026-12-18'],
+  ['December 19, 2026', trendStats.winterBreakCount('Dec 19, 2026'), '2026-12-19'],
+  ['December 21, 2026', december21Breaks, '2026-12-21'],
+  ['December 23, 2026', trendStats.winterBreakCount('Dec 23, 2026'), '2026-12-23'],
+  ['December 24, 2026', trendStats.winterBreakCount('Dec 24, 2026'), '2026-12-24'],
+] as const
+const springBreakChartRows = [
+  ['March 8, 2027', trendStats.springBreakCount('Mar 8, 2027')],
+  ['March 15, 2027', trendStats.springBreakCount('Mar 15, 2027')],
+  ['March 22, 2027', trendStats.springBreakCount('Mar 22, 2027')],
+  ['March 29, 2027', trendStats.springBreakCount('Mar 29, 2027')],
+  ['April 5, 2027', trendStats.springBreakCount('Apr 5, 2027')],
+] as const
 
 const pageUrl = 'https://myschooldates.com/datasets/school-calendar-trends'
 const reportUrl = 'https://myschooldates.com/school-calendar-trends/2026-2027-report'
 const hubUrl = 'https://myschooldates.com/school-calendar-trends'
 const csvDownloadUrl = '/data/school-calendar-trends-2026-2027.csv'
-const title = '2026-2027 U.S. School Calendar Dataset (CSV) | 205 Districts'
-const description = 'Download a free 2026-2027 U.S. school calendar dataset with 205 reviewed district calendars across 31 states, dates, breaks, and source links.'
+const title = `2026-2027 U.S. School Calendar Dataset (CSV) | ${trendStats.districtCount} Districts`
+const description = `Download a free 2026-2027 U.S. school calendar dataset with ${trendStats.districtCount} reviewed district calendars across ${trendStats.stateCount} states, dates, breaks, and source links.`
 const citationText = 'Dou, Denis. (2026). School Calendar Trends Dataset 2026-2027. MySchoolDates. https://myschooldates.com/datasets/school-calendar-trends'
 const authorProfile = {
   name: 'Denis Dou',
@@ -31,48 +53,42 @@ const datasetChartCards = [
     title: 'Start Month Distribution',
     summary: 'August is the dominant start month in the current 2026-2027 dataset release.',
     fallbackRows: [
-      ['July', '9 records'],
-      ['August', '176 records'],
-      ['September', '20 records'],
+      ['July', `${julyStarts} records`],
+      ['August', `${augustStarts} records`],
+      ['September', `${septemberStarts} records`],
     ],
     option: {
       color: ['#2563eb'],
       tooltip: { trigger: 'axis' },
       grid: { left: 36, right: 12, top: 24, bottom: 32 },
       xAxis: { type: 'category', data: ['July', 'August', 'September'] },
-      yAxis: { type: 'value', max: 205 },
-      series: [{ type: 'bar', data: [9, 176, 20], barWidth: 28 }],
+      yAxis: { type: 'value', max: trendStats.districtCount },
+      series: [{ type: 'bar', data: [julyStarts, augustStarts, septemberStarts], barWidth: 28 }],
     },
   },
   {
     title: 'End Month Distribution',
     summary: 'May endings are more common than June endings in the current dataset release.',
     fallbackRows: [
-      ['May', '125 records'],
-      ['June', '80 records'],
+      ['May', `${mayEndings} records`],
+      ['June', `${juneEndings} records`],
     ],
     option: {
       color: ['#0f766e'],
       tooltip: { trigger: 'axis' },
       grid: { left: 36, right: 12, top: 24, bottom: 32 },
       xAxis: { type: 'category', data: ['May', 'June'] },
-      yAxis: { type: 'value', max: 140 },
-      series: [{ type: 'bar', data: [125, 80], barWidth: 34 }],
+      yAxis: { type: 'value', max: Math.ceil(Math.max(mayEndings, juneEndings) / 20) * 20 },
+      series: [{ type: 'bar', data: [mayEndings, juneEndings], barWidth: 34 }],
     },
   },
   {
     title: 'Winter Break Start Signals',
     summary: 'December 21, 2026 is the strongest winter break start-date signal in the CSV dataset.',
-    fallbackRows: [
-      ['December 18, 2026', '1 record'],
-      ['December 19, 2026', '1 record'],
-      ['December 21, 2026', '179 records'],
-      ['December 23, 2026', '11 records'],
-      ['December 24, 2026', '7 records'],
-    ],
+    fallbackRows: winterBreakChartRows.map(([label, count]) => [label, `${count} ${count === 1 ? 'record' : 'records'}`]),
     option: {
       tooltip: { position: 'top' },
-      visualMap: { min: 0, max: 179, show: false, inRange: { color: ['#dbeafe', '#2563eb'] } },
+      visualMap: { min: 0, max: december21Breaks, show: false, inRange: { color: ['#dbeafe', '#2563eb'] } },
       calendar: {
         top: 24,
         left: 32,
@@ -87,33 +103,21 @@ const datasetChartCards = [
       series: {
         type: 'heatmap',
         coordinateSystem: 'calendar',
-        data: [
-          ['2026-12-18', 1],
-          ['2026-12-19', 1],
-          ['2026-12-21', 179],
-          ['2026-12-23', 11],
-          ['2026-12-24', 7],
-        ],
+        data: winterBreakChartRows.map(([, count, date]) => [date, count]),
       },
     },
   },
   {
     title: 'Spring Break Start Clusters',
     summary: 'Spring break is distributed across several March and early-April start-date clusters.',
-    fallbackRows: [
-      ['March 8, 2027', '14 records'],
-      ['March 15, 2027', '56 records'],
-      ['March 22, 2027', '48 records'],
-      ['March 29, 2027', '31 records'],
-      ['April 5, 2027', '27 records'],
-    ],
+    fallbackRows: springBreakChartRows.map(([label, count]) => [label, `${count} records`]),
     option: {
       color: ['#7c3aed'],
       tooltip: { trigger: 'axis' },
       grid: { left: 36, right: 12, top: 24, bottom: 48 },
       xAxis: { type: 'category', data: ['Mar 8', 'Mar 15', 'Mar 22', 'Mar 29', 'Apr 5'], axisLabel: { rotate: 25 } },
-      yAxis: { type: 'value', max: 60 },
-      series: [{ type: 'bar', data: [14, 56, 48, 31, 27], barWidth: 24 }],
+      yAxis: { type: 'value', max: Math.max(...springBreakChartRows.map(([, count]) => count)) + 4 },
+      series: [{ type: 'bar', data: springBreakChartRows.map(([, count]) => count), barWidth: 24 }],
     },
   },
 ]
@@ -140,17 +144,17 @@ const previewRows = trendData.records.slice(0, 10).map(record => [
 const keyFindingCards = [
   {
     title: 'August remains the dominant start month',
-    value: '176 of 205',
+    value: `${augustStarts} of ${trendStats.districtCount}`,
     description: 'Reviewed district records begin the 2026-2027 school year in August, making August the clearest start-date pattern in the current school calendar dataset.',
   },
   {
     title: 'May endings are more common than June endings',
-    value: '125 records',
+    value: `${mayEndings} records`,
     description: 'The dataset shows more May school-year endings than June endings, which helps compare last-day patterns across district calendar records.',
   },
   {
     title: 'December 21 is the strongest winter break signal',
-    value: '179 records',
+    value: `${december21Breaks} records`,
     description: 'Winter break signals cluster heavily around December 21, 2026, making it the most visible holiday timing pattern in this public school calendar dataset.',
   },
   {
@@ -213,7 +217,7 @@ const faqRows = [
   },
   {
     question: 'How many districts are included in this school calendar dataset?',
-    answer: 'The current public release includes 205 reviewed district calendar records across 31 U.S. states. It is a trend-analysis dataset, not a complete national census of every public school district.',
+    answer: `The current public release includes ${trendStats.districtCount} reviewed district calendar records across ${trendStats.stateCount} U.S. states. It is a trend-analysis dataset, not a complete national census of every public school district.`,
   },
   {
     question: 'Is this a complete U.S. school calendar database?',
@@ -231,7 +235,7 @@ const faqRows = [
 
 const qualityRows = [
   ['Source type', 'Official district calendar pages, board-approved PDFs, public district sources, and reviewed MySchoolDates records.'],
-  ['Sample size', '205 reviewed 2026-2027 district calendar records across 31 states.'],
+  ['Sample size', `${trendStats.districtCount} reviewed 2026-2027 district calendar records across ${trendStats.stateCount} states.`],
   ['Dataset role', 'Trend analysis and planning reference; not a complete national census of every U.S. public school district.'],
   ['Last verified', 'August 21, 2026.'],
   ['Next planned review', 'January 2027, or sooner when material source changes are identified.'],
@@ -239,17 +243,17 @@ const qualityRows = [
 
 const datasetFileRows = [
   ['File format', 'CSV, UTF-8'],
-  ['Rows', '205 district records plus header row'],
+  ['Rows', `${trendStats.districtCount} district records plus header row`],
   ['Columns', '7 public fields'],
   ['File size', 'About 31 KB'],
   ['License', 'Use with citation under MySchoolDates terms'],
 ]
 
 const versionRows = [
-  ['v1.0', 'July 27, 2026', 'Initial public release with 100 reviewed district calendar records across 13 states.'],
-  ['v2.0', 'August 9, 2026', 'Expanded release with 150 reviewed district calendar records across 19 states.'],
-  ['v3.0', 'August 14, 2026', 'Expanded release with 175 reviewed district calendar records across 25 states.'],
-  ['v4.0', 'August 21, 2026', 'Expanded release with 205 reviewed district calendar records across 31 states.'],
+  ['v1.0', 'July 27, 2026', 'Initial public dataset release.'],
+  ['v2.0', 'August 9, 2026', 'Expanded reviewed calendar coverage.'],
+  ['v3.0', 'August 14, 2026', 'Expanded reviewed calendar coverage.'],
+  ['v4.0', 'August 21, 2026', `Current release with ${trendStats.districtCount} reviewed district calendar records across ${trendStats.stateCount} states.`],
   ['Next planned review', 'January 2027', 'Refresh verified source links, add material district updates, and expand records as new calendars are reviewed.'],
 ]
 
@@ -310,7 +314,7 @@ useHead({
             '@type': 'Dataset',
             '@id': `${pageUrl}#dataset`,
             name: 'School Calendar Trends Dataset 2026-2027',
-            description: 'CSV dataset of 205 reviewed 2026-2027 U.S. district calendar records across 31 states with first day, last day, winter break signal, spring break signal, and MySchoolDates district page URL.',
+            description: `CSV dataset of ${trendStats.districtCount} reviewed 2026-2027 U.S. district calendar records across ${trendStats.stateCount} states with first day, last day, winter break signal, spring break signal, and MySchoolDates district page URL.`,
             creator: {
               '@type': 'Organization',
               name: 'MySchoolDates',
@@ -418,11 +422,11 @@ useHead({
           School Calendar Trends Dataset 2026-2027
         </h1>
         <p class="mt-4 max-w-3xl text-lg leading-relaxed text-gray-600">
-          Download the reviewed CSV dataset behind the MySchoolDates 2026-2027 School Calendar Trends Report. The v4.0 release covers 205 district calendar records across 31 states, including start dates, end dates, winter break signals, spring break signals, and district page links for U.S. school calendar data analysis.
+          Download the reviewed CSV dataset behind the MySchoolDates 2026-2027 School Calendar Trends Report. The current release covers {{ trendStats.districtCount }} district calendar records across {{ trendStats.stateCount }} states, including start dates, end dates, winter break signals, spring break signals, and district page links for U.S. school calendar data analysis.
         </p>
         <div class="mt-5 flex flex-wrap gap-2 text-sm text-gray-600">
-          <span class="rounded-lg bg-gray-100 px-3 py-1">205 reviewed records</span>
-          <span class="rounded-lg bg-gray-100 px-3 py-1">31 states</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">{{ trendStats.districtCount }} reviewed records</span>
+          <span class="rounded-lg bg-gray-100 px-3 py-1">{{ trendStats.stateCount }} states</span>
           <span class="rounded-lg bg-gray-100 px-3 py-1">CSV download</span>
           <span class="rounded-lg bg-gray-100 px-3 py-1">Last verified August 21, 2026</span>
         </div>
@@ -461,7 +465,7 @@ useHead({
           <section id="quick-answer" class="rounded-lg border border-emerald-100 bg-emerald-50 p-6">
             <h2 class="text-2xl font-bold text-gray-900">Quick Answer: What Is This Dataset?</h2>
             <p class="mt-3 text-emerald-950 leading-relaxed">
-              This 2026-2027 U.S. school calendar dataset contains 205 reviewed district calendar records across 31 states. It covers first student day, last student day, winter break timing, spring break patterns, and source page links for school calendar data analysis.
+              This 2026-2027 U.S. school calendar dataset contains {{ trendStats.districtCount }} reviewed district calendar records across {{ trendStats.stateCount }} states. It covers first student day, last student day, winter break timing, spring break patterns, and source page links for school calendar data analysis.
             </p>
             <p class="mt-3 text-emerald-950 leading-relaxed">
               The CSV is best used as a school calendar database sample for trend analysis, education statistics, public school calendar data comparisons, and reporting workflows that need reusable spreadsheet fields.
@@ -472,11 +476,11 @@ useHead({
             <h2 class="text-2xl font-bold text-gray-900">Dataset Summary</h2>
             <div class="mt-5 grid gap-4 sm:grid-cols-3">
               <div class="rounded-lg border border-gray-100 bg-gray-50 p-4">
-                <div class="text-2xl font-bold text-gray-900">205</div>
+                <div class="text-2xl font-bold text-gray-900">{{ trendStats.districtCount }}</div>
                 <p class="mt-1 text-sm text-gray-600">reviewed district calendar records</p>
               </div>
               <div class="rounded-lg border border-gray-100 bg-gray-50 p-4">
-                <div class="text-2xl font-bold text-gray-900">19</div>
+                <div class="text-2xl font-bold text-gray-900">{{ trendStats.stateCount }}</div>
                 <p class="mt-1 text-sm text-gray-600">states represented in this release</p>
               </div>
               <div class="rounded-lg border border-gray-100 bg-gray-50 p-4">
@@ -526,7 +530,7 @@ useHead({
           <section id="findings" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">Key Findings From the 2026-2027 School Calendar Data</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
-              The 2026-2027 school calendar dataset is designed to make district calendar records easier to compare. Instead of reading 205 separate district calendar pages, users can quickly analyze the most visible patterns in U.S. public school calendar data.
+              The 2026-2027 school calendar dataset is designed to make district calendar records easier to compare. Instead of reading {{ trendStats.districtCount }} separate district calendar pages, users can quickly analyze the most visible patterns in U.S. public school calendar data.
             </p>
             <div class="mt-5 grid gap-4 sm:grid-cols-2">
               <div
@@ -604,7 +608,7 @@ useHead({
           <section id="preview" class="rounded-lg border border-gray-200 bg-white p-6">
             <h2 class="text-2xl font-bold text-gray-900">CSV Preview: First 10 Dataset Records</h2>
             <p class="mt-3 text-gray-600 leading-relaxed">
-              This preview shows the first 10 rows from the public school calendar CSV so researchers can inspect the structure before downloading the full 205-record dataset.
+              This preview shows the first {{ previewRows.length }} rows from the public school calendar CSV so researchers can inspect the structure before downloading the full {{ trendStats.districtCount }}-record dataset.
             </p>
             <div class="mt-5 overflow-x-auto rounded-lg border border-gray-200">
               <table class="w-full text-sm">
@@ -834,7 +838,7 @@ useHead({
               <NuxtLink to="/calendar-verification-methodology" class="text-blue-600 hover:underline">Verification methodology</NuxtLink>
             </nav>
             <div class="mt-5 border-t border-gray-100 pt-4 text-xs leading-relaxed text-gray-500">
-              Public release: 205 reviewed 2026-2027 calendar records across 31 states. Next planned review: January 2027.
+              Public release: {{ trendStats.districtCount }} reviewed 2026-2027 calendar records across {{ trendStats.stateCount }} states. Next planned review: January 2027.
             </div>
           </div>
         </aside>
