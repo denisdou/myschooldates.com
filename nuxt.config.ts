@@ -159,6 +159,18 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
+    '/cypress-fairbanks-independent-school-district-calendar': {
+      redirect: {
+        to: '/cypress-fairbanks-isd-calendar',
+        statusCode: 301,
+      },
+    },
+    '/cypress-fairbanks-independent-school-district-calendar/**': {
+      redirect: {
+        to: '/cypress-fairbanks-isd-calendar/**',
+        statusCode: 301,
+      },
+    },
     '/': { prerender: true },
     '/**': { prerender: true },
   },
