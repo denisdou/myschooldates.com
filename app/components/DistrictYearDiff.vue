@@ -114,9 +114,6 @@ const subtitle = computed(() => props.cal?.yearComparisonSubtitle ?? props.cal?.
 const hideSubtitle = computed(() => Boolean(
   props.cal?.hideYearComparisonSubtitle ?? props.cal?.meta?.hideYearComparisonSubtitle
 ))
-const defaultOpen = computed(() => Boolean(
-  props.cal?.yearComparisonDefaultOpen ?? props.cal?.meta?.yearComparisonDefaultOpen
-))
 const displayPrevYear = computed(() => {
   const match = prevYear.value.match(/^(\d{4})-(\d{4})$/)
   return match ? `${match[1]}–${match[2]!.slice(2)}` : prevYear.value
@@ -124,22 +121,16 @@ const displayPrevYear = computed(() => {
 </script>
 
 <template>
-  <details v-if="items.length" :open="defaultOpen" class="bg-white rounded-lg border border-gray-200 p-6 group">
-    <summary class="cursor-pointer list-none">
-      <div class="flex items-start justify-between gap-4">
-        <h2 class="m-0 min-w-0">
-          <span class="block text-lg font-semibold text-gray-900 mb-1">{{ title ?? `What's New for ${currentYear}` }}</span>
-          <span v-if="!hideSubtitle" class="block text-sm font-normal text-gray-500">{{ subtitle ?? `How this school year compares with ${displayPrevYear}.` }}</span>
-        </h2>
-        <span aria-hidden="true" class="mt-1 text-sm font-medium text-blue-600 group-open:hidden">Show</span>
-        <span aria-hidden="true" class="mt-1 text-sm font-medium text-blue-600 hidden group-open:inline">Hide</span>
-      </div>
-    </summary>
+  <section v-if="items.length" class="bg-white rounded-lg border border-gray-200 p-6">
+    <h2 class="m-0 min-w-0">
+      <span class="block text-lg font-semibold text-gray-900 mb-1">{{ title ?? `What's New for ${currentYear}` }}</span>
+      <span v-if="!hideSubtitle" class="block text-sm font-normal text-gray-500">{{ subtitle ?? `How this school year compares with ${displayPrevYear}.` }}</span>
+    </h2>
     <ul class="mt-4 space-y-2">
       <li v-for="item in items" :key="item" class="flex items-start gap-2 text-sm text-gray-700">
         <span class="text-gray-300 mt-0.5 flex-shrink-0 select-none">•</span>
         <span>{{ item }}</span>
       </li>
     </ul>
-  </details>
+  </section>
 </template>

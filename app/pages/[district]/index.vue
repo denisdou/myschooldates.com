@@ -803,9 +803,6 @@ function displaySchoolYearLabel(yearValue: string) {
   const match = yearValue.match(/^(\d{4})-(\d{4})$/)
   return match ? `${match[1]}–${match[2]!.slice(2)}` : yearValue
 }
-const hideHeroVerificationProcess = computed(() =>
-  Boolean(slug === 'chicago-public-schools-calendar' || (district.value as any).hideHeroVerificationProcess || (meta.value as any).hideHeroVerificationProcess || (cal as any)?.hideHeroVerificationProcess || (cal as any)?.meta?.hideHeroVerificationProcess)
-)
 const verificationBadgeText = computed(() =>
   (cal as any)?.verificationBadgeText ?? (cal as any)?.meta?.verificationBadgeText ?? (district.value as any)?.verificationBadgeText ?? (district.value as any)?.meta?.verificationBadgeText ?? null
 )
@@ -2495,23 +2492,6 @@ if (!isStatePage && district.value && !isDistrictHub) {
             </template>
             <span v-if="isEstimated">Based on official district website · Not yet human-verified</span>
           </div>
-          <details v-if="!isEstimated && verifiedDate && !hideHeroVerificationProcess" class="district-hero__verification-details mt-5 p-3">
-            <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-rds-ink-dim">{{ (cal as any).heroVerificationHeading ?? (cal as any).meta?.heroVerificationHeading ?? 'How we reviewed this calendar' }}</summary>
-            <ul class="mt-2 grid gap-1.5 text-xs text-rds-ink-muted sm:grid-cols-3">
-              <li class="flex items-start gap-1.5">
-                <span class="mt-0.5 text-[#315b39]">✓</span>
-                <span>{{ (cal as any).heroVerificationSourceText ?? (cal as any).meta?.heroVerificationSourceText ?? 'Official district source checked' }}</span>
-              </li>
-              <li class="flex items-start gap-1.5">
-                <span class="mt-0.5 text-[#315b39]">✓</span>
-                <span>{{ (cal as any).heroVerificationComparisonText ?? (cal as any).meta?.heroVerificationComparisonText ?? 'Key dates compared against source' }}</span>
-              </li>
-              <li v-if="!((cal as any).hideHeroVerificationIcs || (cal as any).meta?.hideHeroVerificationIcs)" class="flex items-start gap-1.5">
-                <span class="mt-0.5 text-[#315b39]">✓</span>
-                <span>{{ (cal as any).heroVerificationIcsText ?? (cal as any).meta?.heroVerificationIcsText ?? 'ICS file generated from the dates reviewed for this page' }}</span>
-              </li>
-            </ul>
-          </details>
             </div>
           </div>
         </section>
@@ -2767,38 +2747,6 @@ if (!isStatePage && district.value && !isDistrictHub) {
           :prev-cal="prevCal ?? undefined"
         />
         <DistrictCustomSections :sections="customSections" position="afterQuickFacts" />
-
-        <!-- Today Status -->
-        <DistrictTodayStatus v-if="!hiddenSections.has('todayStatus')" :cal="cal">
-          <template #cta>
-            <div class="mt-4 flex flex-col sm:flex-row gap-2">
-              <a
-                :href="calendarIcsHref"
-                :download="district && cal ? `${district.slug}-${cal.schoolYear}.ics` : undefined"
-                :aria-label="(cal as any)?.icsAriaLabel ?? (cal as any)?.meta?.icsAriaLabel ?? (district && cal ? `Download ${district.name} ${cal.schoolYear} calendar file` : 'Download calendar file')"
-                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#0f5d6b] hover:bg-[#0b4c58] text-white text-sm font-medium rounded-lg transition-colors"
-              >
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                Add school dates
-              </a>
-              <a
-                v-if="(cal as any).sourcePdfUrl || (cal as any).printablePdfUrl"
-                :href="(cal as any).sourcePdfUrl || (cal as any).printablePdfUrl"
-                target="_blank"
-                rel="noopener"
-                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#fbfaf7] hover:bg-[#f3f0e8] text-[#4f5b5f] border border-[#d9d2c7] text-sm font-medium rounded-lg transition-colors"
-              >
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10M7 11h10M7 15h6M6 3h8l4 4v14H6V3z" />
-                </svg>
-                {{ (cal as any).pdfButtonLabel ?? (cal as any).meta?.pdfButtonLabel ?? ((cal as any).sourcePdfUrl ? 'View Official PDF' : 'Printable PDF') }}
-                <span class="sr-only">(opens in a new tab)</span>
-              </a>
-            </div>
-          </template>
-        </DistrictTodayStatus>
 
         <!-- Break Summary (optional early position) -->
         <template v-if="breaksBeforeAllDates">

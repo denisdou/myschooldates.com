@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { isPairedStudentEventEnd, isStudentCalendarEvent, pairedStudentEventEndDate } from '~/utils/calendarOverview'
+
 const route = useRoute()
 const slug = route.params.district as string
 const year = route.params.year as string
@@ -343,9 +345,6 @@ function displaySchoolYearLabel(yearValue: string) {
   const match = yearValue.match(/^(\d{4})-(\d{4})$/)
   return match ? `${match[1]}–${match[2]!.slice(2)}` : yearValue
 }
-const hideHeroVerificationProcess = computed(() =>
-  Boolean(slug === 'chicago-public-schools-calendar' || (district.value as any).hideHeroVerificationProcess || (cal.value as any)?.hideHeroVerificationProcess || (cal.value as any)?.meta?.hideHeroVerificationProcess)
-)
 const verificationBadgeText = computed(() =>
   (cal.value as any)?.verificationBadgeText ?? (cal.value as any)?.meta?.verificationBadgeText ?? (district.value as any)?.verificationBadgeText ?? (district.value as any)?.meta?.verificationBadgeText ?? null
 )
@@ -395,9 +394,6 @@ const showAlternateCalendarsNotice = computed(() =>
 )
 const alternateCalendarsNoticeBeforeKeyDates = computed(() =>
   String((cal.value as any)?.alternateCalendarsNoticePosition ?? (cal.value as any)?.meta?.alternateCalendarsNoticePosition ?? '') === 'beforeKeyDates'
-)
-const todayStatusBeforeKeyDates = computed(() =>
-  String((cal.value as any)?.todayStatusPosition ?? (cal.value as any)?.meta?.todayStatusPosition ?? '') === 'beforeKeyDates'
 )
 const customJumpNavigation = computed(() =>
   (((cal.value as any)?.jumpNavigation ?? (cal.value as any)?.meta?.jumpNavigation ?? []) as Array<{ label?: string, href?: string, id?: string }>).filter(item => item.label && (item.href || item.id))
@@ -764,6 +760,11 @@ const faqs = computed(() => {
   }
   return allFaqs.value
 })
+const faqSchemaItems = computed(() => {
+  const limit = (cal.value as any)?.faqSchemaLimit ?? (cal.value as any)?.meta?.faqSchemaLimit
+  return typeof limit === 'number' && limit > 0 ? faqs.value.slice(0, limit) : faqs.value
+})
+const usesCalendarOverviewLayout = computed(() => true)
 const heroSummary = computed(() => (cal.value as any).heroSummary ?? (cal.value as any).meta?.heroSummary ?? '')
 const heroSummaryParagraphs = computed(() =>
   heroSummary.value
@@ -1011,7 +1012,7 @@ const calendarTrackDistributions = computed(() => hideIcsFromDatasetDistribution
         encodingFormat: 'text/calendar',
         contentUrl: `https://myschooldates.com/calendars/${district.value.slug}-${cal.value.schoolYear}-${track.id}.ics`,
       })))
-const hideDatasetSchema = computed(() => Boolean((cal.value as any)?.hideDatasetSchema || (cal.value as any)?.meta?.hideDatasetSchema))
+const hideDatasetSchema = computed(() => false)
 const spatialCoverageOverride = (cal.value as any)?.schemaSpatialCoverage ?? (cal.value as any)?.meta?.schemaSpatialCoverage ?? (district.value as any)?.schemaSpatialCoverage ?? (district.value as any)?.meta?.schemaSpatialCoverage
 const spatialCoverageValue = Array.isArray(spatialCoverageOverride)
   ? spatialCoverageOverride
@@ -1033,6 +1034,56 @@ const datasetTemporalCoverage = computed(() => {
   const end = (cal.value as any)?.temporalCoverageEnd || cal.value.lastDay
   return `${start}/${end}`
 })
+function normalizeSchemaEventName(event: any) {
+  return String(event.name ?? '')
+    .replace(/\b(Begins|Begin|Starts|Start|Ends|End)\b/gi, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+function schemaEventEndDate(event: any) {
+  if (event.endDate) return event.endDate
+  if (Array.isArray(event.dates) && event.dates.length) return [...event.dates].sort().at(-1) ?? event.date
+  const pairedEnd = pairedStudentEventEndDate(event, cal.value?.events ?? [])
+  if (pairedEnd) return pairedEnd
+  if (event.type === 'break' || event.type === 'break_start') {
+    const normalizedName = normalizeSchemaEventName(event).toLowerCase()
+    const end = (cal.value?.events ?? []).find((candidate: any) =>
+      candidate.type === 'break_end' &&
+      candidate.date >= event.date &&
+      normalizeSchemaEventName(candidate).toLowerCase() === normalizedName
+    )
+    if (end?.date) return end.date
+  }
+  return event.date
+}
+function schemaEventSlug(event: any, index: number) {
+  const name = normalizeSchemaEventName(event)
+    .normalize('NFKD')
+    .replace(/[^a-z0-9]+/gi, '-')
+    .replace(/^-+|-+$/g, '')
+    .toLowerCase()
+  return `${event.date}-${name || `event-${index + 1}`}`
+}
+const schemaCalendarEvents = computed(() => (cal.value?.events ?? [])
+  .filter((event: any) => isStudentCalendarEvent(event) && !isPairedStudentEventEnd(event, cal.value?.events ?? []) && !event.excludeFromDateSchema)
+  .map((event: any, index: number) => {
+    const name = normalizeSchemaEventName(event)
+    const description = event.schemaDescription ?? event.description ?? `${name} on the ${district.value!.name} ${year} districtwide calendar.`
+    return {
+      '@type': 'Event',
+      '@id': `${canonicalUrl}#event-${schemaEventSlug(event, index)}`,
+      name,
+      description,
+      startDate: event.date,
+      endDate: schemaEventEndDate(event),
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      location: eventSchemaLocation(),
+      organizer: { '@id': districtAbout['@id'] },
+      url: `${canonicalUrl}#key-dates`,
+      isAccessibleForFree: true,
+    }
+  }))
 const datasetEntity = hideDatasetSchema.value ? null : {
   '@type': 'Dataset',
   '@id': `${canonicalUrl}#calendar-dataset`,
@@ -1063,6 +1114,9 @@ const datasetEntity = hideDatasetSchema.value ? null : {
   },
   creator: { '@id': 'https://myschooldates.com/#organization' },
   publisher: { '@id': 'https://myschooldates.com/#organization' },
+  ...(schemaCalendarEvents.value.length ? {
+    hasPart: schemaCalendarEvents.value.map(event => ({ '@id': event['@id'] })),
+  } : {}),
   ...(datasetBasedOnRefs.length ? { isBasedOn: datasetBasedOnValue } : {}),
   ...(!hideIcsFromDatasetDistribution.value || includePrintablePdfInDatasetDistribution ? {
     distribution: [
@@ -1221,6 +1275,11 @@ const webPageEntity = {
   },
   about: { '@id': districtAbout['@id'] },
   ...(webPageMainEntity ? { mainEntity: webPageMainEntity } : {}),
+  hasPart: [
+    ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
+    ...schemaCalendarEvents.value.map(event => ({ '@id': event['@id'] })),
+    ...(faqSchemaItems.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
+  ],
   breadcrumb: { '@id': breadcrumbId },
   ...(siblingYearLinks.length ? { relatedLink: siblingYearLinks } : {}),
   ...(webPageBasedOnRefs.length ? { isBasedOn: webPageBasedOnValue } : {}),
@@ -1243,6 +1302,19 @@ const webPageEntity = {
     '@id': `${hubUrl}#webpage`,
   },
 }
+const faqPageEntity = faqSchemaItems.value.length ? {
+  '@type': 'FAQPage',
+  '@id': `${canonicalUrl}#faq`,
+  isPartOf: { '@id': `${canonicalUrl}#webpage` },
+  mainEntity: faqSchemaItems.value.map(faq => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.a,
+    },
+  })),
+} : null
 function keyDateDisplayName(event: { name: string; type: string; displayName?: string }) {
   if (event.displayName) return event.displayName
   if (event.type === 'break_start' || event.type === 'break_end') {
@@ -1271,7 +1343,9 @@ useHead({
         ...additionalSourceCalendarEntities,
         ...(sourceCalendarPageEntity ? [sourceCalendarPageEntity] : []),
         ...(datasetEntity ? [datasetEntity] : []),
+        ...schemaCalendarEvents.value,
         webPageEntity,
+        ...(faqPageEntity ? [faqPageEntity] : []),
         {
           '@type': 'BreadcrumbList',
           '@id': breadcrumbId,
@@ -1312,11 +1386,12 @@ useHead({
           </div>
 
           <!-- Title -->
+          <div :class="usesCalendarOverviewLayout ? 'district-overview-hero__grid' : ''">
           <div>
         <h1 class="district-hero__title">
           {{ (cal as any).pageHeading || `${district!.name} Calendar ${displaySchoolYear}` }}
         </h1>
-        <p class="district-hero__source mt-3 text-sm">
+        <p v-if="!usesCalendarOverviewLayout" class="district-hero__source mt-3 text-sm">
           <template v-if="(cal as any).heroSourceUrl ?? (cal as any).meta?.heroSourceUrl">
             Source:
             <a
@@ -1327,7 +1402,7 @@ useHead({
             >{{ (cal as any).heroSourceLabel ?? (cal as any).meta?.heroSourceLabel ?? `${district!.shortName || district!.name} ${displaySchoolYear} calendar` }}</a>{{ (cal as any).heroSourceSuffix ?? (cal as any).meta?.heroSourceSuffix ?? '' }}
           </template>
           <template v-else>{{ (cal as any).heroSourceLine ?? (cal as any).meta?.heroSourceLine ?? `${displaySchoolYear} calendar dates · Based on the official ${district!.shortName || district!.name} calendar` }}</template>
-          <template v-if="!((cal as any).hideHeroDownloadLink || (cal as any).meta?.hideHeroDownloadLink)">
+          <template v-if="!usesCalendarOverviewLayout && !((cal as any).hideHeroDownloadLink || (cal as any).meta?.hideHeroDownloadLink)">
             ·
             <a
               :href="(cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref ?? '#add-to-calendar'"
@@ -1349,15 +1424,15 @@ useHead({
           <p v-else-if="heroSummary">{{ heroSummary }}</p>
           <p v-else>
             The first day of school for {{ district!.name }}<template v-if="district!.shortName && !district!.name.includes(district!.shortName)">, also known as {{ district!.shortName }},</template> {{ isFutureYear ? 'is' : 'was' }}
-            <strong>{{ formatWeekdayDate(cal!.firstDay) }}</strong>.
+            {{ formatWeekdayDate(cal!.firstDay) }}.
             The last day {{ isFutureYear || isCurrentYear ? 'is' : 'was' }}
-            <strong>{{ formatWeekdayDate(cal!.lastDay) }}</strong>.
+            {{ formatWeekdayDate(cal!.lastDay) }}.
             <span v-if="springBreak">
               Spring Break {{ isFutureYear || isCurrentYear ? 'runs' : 'ran' }}
               {{ formatShortDate(springBreak.start) }}–{{ formatShortDate(springBreak.end) }}<template v-if="springBreakReturnDate">, with students returning {{ formatShortDate(springBreakReturnDate) }}</template>.
             </span>
           </p>
-          <div v-if="heroQuickDates.length" class="district-hero__quick-dates mt-4 p-4">
+          <div v-if="!usesCalendarOverviewLayout && heroQuickDates.length" class="district-hero__quick-dates mt-4 p-4">
             <p class="text-sm font-semibold text-rds-ink">{{ displaySchoolYear }} Dates at a Glance</p>
             <ul class="mt-2 grid gap-1.5 text-sm text-rds-ink-muted sm:grid-cols-2">
               <li v-for="item in heroQuickDates" :key="`${item.label}-${item.value}`">
@@ -1365,10 +1440,10 @@ useHead({
               </li>
             </ul>
           </div>
-          <p v-if="heroSummaryFacts.length" class="district-hero__meta rds-data mt-3 text-sm">
+          <p v-if="!usesCalendarOverviewLayout && heroSummaryFacts.length" class="district-hero__meta rds-data mt-3 text-sm">
             {{ heroSummaryFacts.join(' · ') }}
           </p>
-          <div v-if="heroCtas.length" class="mt-4 flex flex-wrap gap-2">
+          <div v-if="!usesCalendarOverviewLayout && heroCtas.length" class="mt-4 flex flex-wrap gap-2">
             <a
               v-for="cta in heroCtas"
               :key="cta.key"
@@ -1385,7 +1460,7 @@ useHead({
               <span v-if="!cta.download && cta.isExternal" class="sr-only">(opens in a new tab)</span>
             </a>
           </div>
-          <p class="district-hero__independence mt-3 text-xs">
+          <p v-if="!usesCalendarOverviewLayout" class="district-hero__independence mt-3 text-xs">
             {{ (cal as any)?.heroIndependenceText ?? (cal as any)?.meta?.heroIndependenceText ?? (district as any)?.heroIndependenceText ?? `MySchoolDates is an independent calendar reference and is not affiliated with ${district!.name}.` }}
           </p>
           <dl
@@ -1417,59 +1492,20 @@ useHead({
               <span>Reviewed by <NuxtLink :to="verificationBadgeReviewerHref" class="font-semibold underline hover:no-underline">{{ verificationBadgeReviewerName }}</NuxtLink></span>
             </template>
           </div>
-          <details v-if="verifiedDate && !hideHeroVerificationProcess" class="district-hero__verification-details mt-5 p-3">
-            <summary class="cursor-pointer text-xs font-semibold uppercase tracking-wide text-rds-ink-dim">{{ (cal as any).heroVerificationHeading ?? (cal as any).meta?.heroVerificationHeading ?? 'How we reviewed this calendar' }}</summary>
-            <ul class="mt-2 grid gap-1.5 text-xs text-rds-ink-muted sm:grid-cols-3">
-              <li class="flex items-start gap-1.5">
-                <span class="mt-0.5 text-green-700">✓</span>
-                <span>{{ (cal as any).heroVerificationSourceText ?? (cal as any).meta?.heroVerificationSourceText ?? 'Official district source checked' }}</span>
-              </li>
-              <li class="flex items-start gap-1.5">
-                <span class="mt-0.5 text-green-700">✓</span>
-                <span>{{ (cal as any).heroVerificationComparisonText ?? (cal as any).meta?.heroVerificationComparisonText ?? 'Key dates compared against source' }}</span>
-              </li>
-              <li v-if="!((cal as any).hideHeroVerificationIcs || (cal as any).meta?.hideHeroVerificationIcs)" class="flex items-start gap-1.5">
-                <span class="mt-0.5 text-green-700">✓</span>
-                <span>{{ (cal as any).heroVerificationIcsText ?? (cal as any).meta?.heroVerificationIcsText ?? 'ICS file generated from the dates reviewed for this page' }}</span>
-              </li>
-            </ul>
-          </details>
         </div>
           </div>
+          <DistrictHeroDateCards v-if="usesCalendarOverviewLayout" :cal="cal!" />
+          </div>
+          <CalendarHeroActions v-if="usesCalendarOverviewLayout" :district="district!" :cal="cal!" />
         </div>
       </section>
 
-      <nav v-if="resolvedJumpNavigation.length" aria-label="Page sections" class="district-jump-nav sticky top-0 z-20 my-8">
-        <div class="district-page-inner flex items-center gap-7 overflow-x-auto py-4 text-sm">
-          <span class="district-jump-nav__label flex-shrink-0 font-semibold">On this page</span>
-          <a
-            v-for="item in resolvedJumpNavigation"
-            :key="item.label"
-            :href="item.href || `#${item.id}`"
-            class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors"
-          >{{ item.label }}</a>
-        </div>
-      </nav>
-      <nav v-else aria-label="Page sections" class="district-jump-nav sticky top-0 z-20 my-8">
-        <div class="district-page-inner flex items-center gap-7 overflow-x-auto py-4 text-sm">
-          <span class="district-jump-nav__label flex-shrink-0 font-semibold">On this page</span>
-          <a v-if="!hiddenSections.has('keyDateCards')" href="#key-dates" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Key Dates</a>
-          <a v-if="summarySectionId" :href="`#${summarySectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Summary</a>
-          <a v-if="overviewSectionId" :href="`#${overviewSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Overview</a>
-          <a href="#add-to-calendar" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">PDF &amp; Calendar</a>
-          <a v-if="downloadGuideSectionId" :href="`#${downloadGuideSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Download Guide</a>
-          <a href="#all-dates" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Dates</a>
-          <a v-if="hasBreaksSection" href="#breaks" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Breaks</a>
-          <a v-if="changesSectionId" :href="`#${changesSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Changes</a>
-          <a v-if="planningSectionId" :href="`#${planningSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Planning</a>
-          <a v-if="importantDatesSectionId" :href="`#${importantDatesSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Important Dates</a>
-          <a v-if="earlyDismissalSectionId" :href="`#${earlyDismissalSectionId}`" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Early Dismissal</a>
-          <a v-if="!hiddenSections.has('comparison')" href="#comparison" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">Comparison</a>
-          <a v-if="!hiddenSections.has('faq')" href="#faq" class="flex-shrink-0 font-medium text-[#5f625d] hover:text-[#0f5d6b] transition-colors">FAQ</a>
-        </div>
-      </nav>
-
       <div class="district-page-content">
+      <template v-if="usesCalendarOverviewLayout">
+        <DistrictKeyDatesTable :cal="cal!" />
+        <DistrictMonthlyCalendar :cal="cal!" />
+      </template>
+
       <DistrictCustomSections :sections="customSections" position="afterVerification" />
 
       <!-- Calendar track notice -->
@@ -1532,19 +1568,14 @@ useHead({
       />
       <DistrictCustomSections v-if="otherCalendarsBeforeKeyDates" :sections="customSections" position="afterOtherCalendars" />
 
-      <DistrictTodayStatus
-        v-if="todayStatusBeforeKeyDates && !hiddenSections.has('todayStatus')"
-        :cal="cal!"
-      />
-
       <!-- Key Date Cards -->
-      <div v-if="!hiddenSections.has('keyDateCards')" id="key-dates" class="scroll-mt-24">
+      <div v-if="!usesCalendarOverviewLayout && !hiddenSections.has('keyDateCards')" id="key-dates" class="scroll-mt-24">
         <h2 class="text-xl font-bold text-gray-900 mb-4">{{ keyDatesHeading }}</h2>
         <DistrictKeyDateCards :cal="cal!" />
       </div>
 
       <div
-        v-if="configuredKeyDateSummaryItems.length && (hiddenSections.has('keyDateCards') || keyDatesSummaryId)"
+        v-if="!usesCalendarOverviewLayout && configuredKeyDateSummaryItems.length && (hiddenSections.has('keyDateCards') || keyDatesSummaryId)"
         :id="keyDatesSummaryId"
         class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24"
       >
@@ -1608,7 +1639,7 @@ useHead({
       />
       <DistrictCustomSections :sections="customSections" position="afterQuickFacts" />
 
-      <div v-if="!hiddenSections.has('downloadCta')" class="rounded-lg border border-blue-100 bg-blue-50 px-4 py-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div v-if="!usesCalendarOverviewLayout && !hiddenSections.has('downloadCta')" class="rounded-lg border border-blue-100 bg-blue-50 px-4 py-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p class="text-sm text-blue-900">
           Download the dates for Google Calendar, Apple Calendar, or Outlook, or view the district's official PDF.
         </p>
@@ -1631,12 +1662,6 @@ useHead({
           </a>
         </div>
       </div>
-
-      <!-- Today / Year Status -->
-      <DistrictTodayStatus
-        v-if="!todayStatusBeforeKeyDates && !hiddenSections.has('todayStatus')"
-        :cal="cal!"
-      />
 
       <!-- Alternate calendars notice -->
       <div v-if="showAlternateCalendarsNotice && !alternateCalendarsNoticeBeforeKeyDates" class="bg-amber-50 border border-amber-200 rounded-lg p-4 flex gap-3">
@@ -1703,7 +1728,7 @@ useHead({
       </template>
 
       <!-- Add to Calendar + Share (optional early position) -->
-      <template v-if="moveCalendarExportBeforeAllDates">
+      <template v-if="!usesCalendarOverviewLayout && moveCalendarExportBeforeAllDates">
         <CalendarExportShare
           :district-name="district!.name"
           :year="year"
@@ -1715,8 +1740,9 @@ useHead({
       </template>
 
       <!-- All Dates -->
-      <div v-if="hiddenSections.has('keyDateCards') && !configuredKeyDateSummaryItems.length" id="key-dates" class="scroll-mt-24" />
+      <div v-if="!usesCalendarOverviewLayout && hiddenSections.has('keyDateCards') && !configuredKeyDateSummaryItems.length" id="key-dates" class="scroll-mt-24" />
       <DistrictAllDates
+        v-if="!usesCalendarOverviewLayout"
         :events="cal!.events"
         :title="allDatesTitle"
         :source-url="(cal as any).allDatesSourceUrl ?? (cal as any).meta?.allDatesSourceUrl ?? cal!.sourceUrl ?? district!.officialWebsite"
@@ -1814,7 +1840,7 @@ useHead({
       <DistrictCustomSections v-if="otherCalendarsBeforeCalendarExport" :sections="customSections" position="afterOtherCalendars" />
 
       <!-- Add to Calendar + Share -->
-      <template v-if="!moveCalendarExportBeforeAllDates">
+      <template v-if="!usesCalendarOverviewLayout && !moveCalendarExportBeforeAllDates">
         <CalendarExportShare
           :district-name="district!.name"
           :year="year"
@@ -1924,7 +1950,7 @@ useHead({
       />
 
       <!-- FAQ -->
-      <DistrictFaq v-if="!hiddenSections.has('faq')" :cal="cal!" :district="district!" :faqs="faqs" />
+      <DistrictFaq :cal="cal!" :district="district!" :faqs="faqs" />
 
       <!-- Custom Sections: afterFaq -->
       <DistrictCustomSections :sections="customSections" position="afterFaq" />
@@ -2073,12 +2099,6 @@ useHead({
         </p>
       </section>
 
-      <!-- Back to current -->
-      <div v-if="!hiddenSections.has('backToCurrent')" class="text-center">
-        <NuxtLink :to="districtCalendarPath(district!, district!.currentSchoolYear)" class="text-[#0f5d6b] hover:text-[#0b4c58] text-sm font-medium">
-          ← Back to {{ district!.name }} current calendar ({{ displaySchoolYearLabel(district!.currentSchoolYear) }})
-        </NuxtLink>
-      </div>
       </div>
 
   </main>

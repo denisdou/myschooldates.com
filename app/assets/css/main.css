@@ -601,6 +601,596 @@ body {
   background: hsl(var(--rds-surface-panel));
 }
 
+.district-overview-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(24rem, 0.82fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.district-overview-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.district-overview-fact-card {
+  display: grid;
+  min-height: 8.25rem;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-content: start;
+  gap: 0.65rem 0.75rem;
+  padding: 1rem;
+  border: 1px solid hsl(var(--rds-hairline));
+  border-radius: 0.75rem;
+  background: hsl(var(--rds-surface-panel));
+  box-shadow: 0 8px 24px rgb(28 33 30 / 0.035);
+}
+
+.district-overview-fact-card__icon {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.55rem;
+  background: hsl(var(--rds-accent-soft));
+  color: hsl(var(--rds-accent));
+}
+
+.district-overview-fact-card__icon svg {
+  width: 1.125rem;
+  height: 1.125rem;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.75;
+}
+
+.district-overview-fact-card__label {
+  align-self: center;
+  color: hsl(var(--rds-ink-dim));
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.district-overview-fact-card__value {
+  grid-column: 1 / -1;
+  color: hsl(var(--rds-ink));
+  font-size: 0.94rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.district-calendar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.district-calendar-actions__desktop {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.district-calendar-action {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: color var(--rds-transition), background-color var(--rds-transition), border-color var(--rds-transition);
+}
+
+.district-calendar-action svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.district-calendar-action--primary {
+  border-color: hsl(var(--rds-accent));
+  background: hsl(var(--rds-accent));
+  color: white;
+}
+
+.district-calendar-action--primary:hover {
+  border-color: hsl(var(--rds-accent-hover));
+  background: hsl(var(--rds-accent-hover));
+}
+
+.district-calendar-action:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.district-calendar-action:disabled:hover {
+  border-color: hsl(var(--rds-accent));
+  background: hsl(var(--rds-accent));
+}
+
+.district-calendar-action--secondary {
+  border-color: hsl(var(--rds-hairline-strong));
+  background: hsl(var(--rds-surface-panel));
+  color: hsl(var(--rds-ink-muted));
+}
+
+.district-calendar-action--secondary:hover {
+  border-color: hsl(var(--rds-accent) / 0.45);
+  background: hsl(var(--rds-accent-soft));
+  color: hsl(var(--rds-accent));
+}
+
+.district-calendar-actions__mobile-menu {
+  position: relative;
+  display: none;
+}
+
+.district-calendar-actions__mobile-menu > summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.district-calendar-actions__mobile-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.district-calendar-actions__mobile-menu[open] > summary svg {
+  transform: rotate(180deg);
+}
+
+.district-calendar-actions__popover {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  display: grid;
+  width: min(16rem, calc(100vw - 2rem));
+  overflow: hidden;
+  border: 1px solid hsl(var(--rds-hairline-strong));
+  border-radius: 0.65rem;
+  background: hsl(var(--rds-surface-panel));
+  box-shadow: 0 16px 36px rgb(28 33 30 / 0.14);
+}
+
+.district-calendar-actions__popover-item {
+  display: flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.9rem;
+  color: hsl(var(--rds-ink-muted));
+  font-size: 0.8125rem;
+  font-weight: 650;
+}
+
+.district-calendar-actions__popover-item + .district-calendar-actions__popover-item {
+  border-top: 1px solid hsl(var(--rds-hairline));
+}
+
+.district-calendar-actions__popover-item:hover {
+  background: hsl(var(--rds-accent-soft));
+  color: hsl(var(--rds-accent));
+}
+
+.district-overview-eyebrow {
+  margin-bottom: 0.45rem;
+  color: hsl(var(--rds-ink-dim));
+  font-size: 0.6875rem;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.district-key-dates-table {
+  padding-top: 2.75rem;
+  border-top: 1px solid hsl(var(--rds-hairline-strong));
+}
+
+.district-key-dates-table__intro h2,
+.district-monthly-calendar__intro h2 {
+  font-family: "Cabinet Grotesk", "Satoshi", ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.7rem, 3vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.district-key-dates-table__intro > p:last-child,
+.district-monthly-calendar__intro > p {
+  max-width: 45rem;
+  margin-top: 0.65rem;
+  color: hsl(var(--rds-ink-muted));
+  font-size: 0.92rem;
+}
+
+.district-key-dates-table__frame {
+  margin-top: 1.25rem;
+  overflow: hidden;
+  border: 1px solid hsl(var(--rds-hairline-strong));
+  border-radius: 0.75rem;
+  background: hsl(var(--rds-surface-panel));
+}
+
+.district-key-dates-table table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.district-key-dates-table__event-col {
+  width: 40%;
+}
+
+.district-key-dates-table__date-col {
+  width: 39%;
+}
+
+.district-key-dates-table__status-col {
+  width: 21%;
+}
+
+.district-key-dates-table thead {
+  background: hsl(var(--rds-surface-panel-2));
+}
+
+.district-key-dates-table th,
+.district-key-dates-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid hsl(var(--rds-hairline));
+  overflow-wrap: anywhere;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.district-key-dates-table thead th {
+  color: hsl(var(--rds-ink-dim));
+  font-size: 0.6875rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.district-key-dates-table tbody th {
+  color: hsl(var(--rds-ink));
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+.district-key-dates-table tbody td {
+  color: hsl(var(--rds-ink-muted));
+  font-size: 0.8125rem;
+}
+
+.district-key-dates-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.district-key-dates-table tbody tr:hover {
+  background: hsl(var(--rds-surface-panel-2) / 0.45);
+}
+
+.district-key-dates-table__date {
+  font-variant-numeric: tabular-nums;
+}
+
+.district-key-dates-table__status {
+  display: inline-flex;
+  max-width: 100%;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.district-key-dates-table__status[data-tone="milestone"] {
+  border-color: hsl(var(--rds-accent) / 0.2);
+  background: hsl(var(--rds-accent));
+  color: white;
+}
+
+.district-key-dates-table__status[data-tone="break"] {
+  border-color: hsl(177 31% 68%);
+  background: hsl(177 34% 91%);
+  color: hsl(182 55% 25%);
+}
+
+.district-key-dates-table__status[data-tone="holiday"] {
+  border-color: hsl(28 55% 74%);
+  background: hsl(35 65% 92%);
+  color: hsl(var(--rds-warning));
+}
+
+.district-key-dates-table__status[data-tone="important"] {
+  border-color: hsl(var(--rds-hairline-strong));
+  background: hsl(var(--rds-surface-panel-2));
+  color: hsl(var(--rds-ink-muted));
+}
+
+.district-monthly-calendar__intro {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.district-monthly-calendar__intro > p {
+  max-width: 32rem;
+  margin: 0 0 0.1rem;
+  text-align: right;
+}
+
+.district-monthly-calendar__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.25rem;
+  margin-top: 1.5rem;
+  color: hsl(var(--rds-ink-muted));
+  font-size: 0.75rem;
+}
+
+.district-monthly-calendar__legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.district-monthly-calendar__legend li > span,
+.district-month-calendar__events li > span:first-child {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  flex: 0 0 auto;
+  border: 1px solid hsl(var(--rds-hairline-strong));
+  border-radius: 0.18rem;
+}
+
+.district-monthly-calendar__legend [data-tone="school"] {
+  background: hsl(var(--rds-surface-panel));
+}
+
+.district-monthly-calendar__legend [data-tone="weekend"] {
+  background: hsl(var(--rds-surface-panel-2));
+}
+
+.district-monthly-calendar__legend [data-tone="holiday"],
+.district-month-calendar__events [data-tone="holiday"] {
+  border-color: hsl(28 55% 65%);
+  background: hsl(35 65% 90%);
+}
+
+.district-monthly-calendar__legend [data-tone="break"],
+.district-month-calendar__events [data-tone="break"] {
+  border-color: hsl(177 31% 60%);
+  background: hsl(177 34% 88%);
+}
+
+.district-monthly-calendar__legend [data-tone="milestone"],
+.district-month-calendar__events [data-tone="milestone"] {
+  border-color: hsl(var(--rds-accent));
+  background: hsl(var(--rds-accent));
+}
+
+.district-monthly-calendar__legend [data-tone="important"],
+.district-month-calendar__events [data-tone="important"] {
+  background: hsl(100 8% 85%);
+}
+
+.district-monthly-calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.4rem;
+}
+
+.district-month-calendar {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid hsl(var(--rds-hairline-strong));
+  border-radius: 0.75rem;
+  background: hsl(var(--rds-surface-panel));
+}
+
+.district-month-calendar h3 {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid hsl(var(--rds-hairline));
+  background: hsl(var(--rds-surface-panel-2));
+  color: hsl(var(--rds-ink));
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.district-month-calendar__weekdays,
+.district-month-calendar__days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.district-month-calendar__weekdays span {
+  padding: 0.55rem 0.15rem;
+  border-bottom: 1px solid hsl(var(--rds-hairline));
+  color: hsl(var(--rds-ink-dim));
+  font-size: 0.61rem;
+  font-weight: 750;
+  letter-spacing: 0.055em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.district-month-calendar__day {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid hsl(var(--rds-hairline));
+  border-bottom: 1px solid hsl(var(--rds-hairline));
+  color: hsl(var(--rds-ink));
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.district-month-calendar__day:nth-child(7n) {
+  border-right: 0;
+}
+
+.district-month-calendar__day:nth-last-child(-n + 7) {
+  border-bottom: 0;
+}
+
+.district-month-calendar__day i {
+  position: absolute;
+  bottom: 0.43rem;
+  left: 50%;
+  width: 0.28rem;
+  height: 0.28rem;
+  border-radius: 999px;
+  background: currentColor;
+  transform: translateX(-50%);
+}
+
+.district-month-calendar__day--weekend {
+  background: hsl(var(--rds-surface-panel-2));
+  color: hsl(var(--rds-ink-dim));
+}
+
+.district-month-calendar__day--outside,
+.district-month-calendar__day--blank {
+  background: hsl(var(--rds-surface-panel-2) / 0.25);
+  color: hsl(var(--rds-ink-faint));
+}
+
+.district-month-calendar__day--holiday {
+  background: hsl(35 65% 90%);
+  color: hsl(var(--rds-warning));
+}
+
+.district-month-calendar__day--break {
+  background: hsl(177 34% 88%);
+  color: hsl(182 55% 25%);
+}
+
+.district-month-calendar__day--milestone {
+  background: hsl(var(--rds-accent));
+  color: white;
+}
+
+.district-month-calendar__day--important {
+  background: hsl(100 8% 85%);
+  color: hsl(var(--rds-ink));
+}
+
+.district-month-calendar__events {
+  display: grid;
+  gap: 0.5rem;
+  min-height: 4.25rem;
+  padding: 0.85rem 1rem;
+  border-top: 1px solid hsl(var(--rds-hairline));
+  color: hsl(var(--rds-ink-muted));
+  font-size: 0.72rem;
+}
+
+.district-month-calendar__events li {
+  display: flex;
+  min-width: 0;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.district-month-calendar__events li > span:first-child {
+  width: 0.48rem;
+  height: 0.48rem;
+}
+
+.district-month-calendar__events strong {
+  flex: 0 0 auto;
+  color: hsl(var(--rds-ink));
+  font-variant-numeric: tabular-nums;
+}
+
+.district-month-calendar__empty {
+  min-height: 4.25rem;
+  padding: 0.85rem 1rem;
+  border-top: 1px solid hsl(var(--rds-hairline));
+  color: hsl(var(--rds-ink-faint));
+  font-size: 0.72rem;
+}
+
+.district-faq-accordion {
+  overflow: hidden;
+  border: 1px solid hsl(var(--rds-hairline));
+  border-radius: 0.65rem;
+}
+
+.district-faq-accordion__item + .district-faq-accordion__item {
+  border-top: 1px solid hsl(var(--rds-hairline));
+}
+
+.district-faq-accordion__item summary {
+  display: flex;
+  min-height: 3.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  color: hsl(var(--rds-ink));
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 650;
+  list-style: none;
+}
+
+.district-faq-accordion__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.district-faq-accordion__item summary:hover {
+  background: hsl(var(--rds-surface-panel-2) / 0.5);
+}
+
+.district-faq-accordion__item summary svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+  color: hsl(var(--rds-ink-dim));
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  transition: transform var(--rds-transition);
+}
+
+.district-faq-accordion__item[open] summary svg {
+  transform: rotate(180deg);
+}
+
+.district-faq-accordion__answer {
+  padding: 0 1rem 1rem;
+  color: hsl(var(--rds-ink-muted));
+  font-size: 0.9rem;
+  line-height: 1.72;
+}
+
+.district-faq-accordion__item[open] summary {
+  color: hsl(var(--rds-accent));
+}
+
 .district-year-notice,
 .district-track-notice {
   border: 1px solid hsl(var(--rds-accent) / 0.22);
@@ -931,6 +1521,112 @@ body {
 
   .home-stats__inner > span + span::before {
     display: none;
+  }
+
+  .district-overview-hero__grid {
+    display: block;
+  }
+
+  .district-overview-facts {
+    display: none;
+  }
+
+  .district-calendar-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.65rem;
+  }
+
+  .district-calendar-actions > .district-calendar-action--primary {
+    min-width: 0;
+    padding-inline: 0.75rem;
+  }
+
+  .district-calendar-actions__desktop {
+    display: none;
+  }
+
+  .district-calendar-actions__mobile-menu {
+    display: block;
+  }
+
+  .district-calendar-actions__mobile-menu > summary {
+    min-width: 6.25rem;
+  }
+
+  .district-key-dates-table__intro > p:last-child {
+    font-size: 0.84rem;
+  }
+
+  .district-key-dates-table__event-col {
+    width: 37%;
+  }
+
+  .district-key-dates-table__date-col {
+    width: 39%;
+  }
+
+  .district-key-dates-table__status-col {
+    width: 24%;
+  }
+
+  .district-key-dates-table th,
+  .district-key-dates-table td {
+    padding: 0.72rem 0.48rem;
+  }
+
+  .district-key-dates-table thead th {
+    font-size: 0.58rem;
+    letter-spacing: 0.055em;
+  }
+
+  .district-key-dates-table tbody th,
+  .district-key-dates-table tbody td {
+    font-size: 0.7rem;
+    line-height: 1.45;
+  }
+
+  .district-key-dates-table__status {
+    padding: 0.28rem 0.4rem;
+    font-size: 0.58rem;
+  }
+
+  .district-monthly-calendar__intro {
+    display: block;
+  }
+
+  .district-monthly-calendar__intro > p {
+    margin-top: 0.65rem;
+    text-align: left;
+  }
+
+  .district-monthly-calendar__legend {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem 0.75rem;
+  }
+
+  .district-monthly-calendar__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .district-month-calendar__day {
+    min-height: 2.9rem;
+  }
+
+  .district-month-calendar__events li {
+    flex-wrap: wrap;
+  }
+
+  .district-faq-accordion__item summary,
+  .district-faq-accordion__answer {
+    padding-inline: 0.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .district-key-dates-table__intro > p:last-child {
+    white-space: nowrap;
   }
 }
 

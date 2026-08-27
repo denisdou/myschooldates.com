@@ -1,6 +1,7 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { isPairedStudentEventEnd, pairedStudentEventEndDate } from '~/utils/calendarOverview'
 
 type DistrictRecord = {
   institutionId: string
@@ -141,6 +142,7 @@ function normalizeCalendarName(event: CalendarEvent) {
 
 function isRangeEndEvent(event: CalendarEvent, events: CalendarEvent[]) {
   if (!event.date) return false
+  if (isPairedStudentEventEnd(event, events)) return true
   if (event.type !== 'teacher_workday' && event.type !== 'teacher_professional_learning') return false
   if (!/\bends?\b/i.test(event.name)) return false
   const normalizedEnd = normalizeCalendarName(event).toLowerCase()
@@ -156,6 +158,8 @@ function rangeEndFor(event: CalendarEvent, events: CalendarEvent[]) {
   if (!event.date) return ''
   const explicitEnd = explicitEventEnd(event)
   if (explicitEnd) return explicitEnd
+  const pairedEnd = pairedStudentEventEndDate(event, events)
+  if (pairedEnd) return pairedEnd
 
   if ((event.type === 'teacher_workday' || event.type === 'teacher_professional_learning') && /\b(begins?|starts?)\b/i.test(event.name)) {
     const normalizedStart = normalizeCalendarName(event).toLowerCase()
@@ -326,7 +330,7 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord, track?: { 
     const end = compactDate(dateKey(nextDay))
     const uidSlug = district.slug.replace(/[^a-z0-9-]/gi, '-').toLowerCase()
     const uidEvent = uidPart(event.name)
-    const summaryName = event.type === 'teacher_workday' || event.type === 'teacher_professional_learning' || event.type === 'staff_development' || (event.type === 'break_start' && event.displayAsRange !== false)
+    const summaryName = pairedStudentEventEndDate(event, calendar.events) || event.type === 'teacher_workday' || event.type === 'teacher_professional_learning' || event.type === 'staff_development' || (event.type === 'break_start' && event.displayAsRange !== false)
       ? normalizeCalendarName(event)
       : event.name
     const eventStatus = event.status && ['TENTATIVE', 'CONFIRMED', 'CANCELLED'].includes(event.status)
@@ -459,8 +463,9 @@ export default defineEventHandler(async (event) => {
   }
 
   const body = buildIcs(match.district, match.calendar, match.track)
+  const isSubscriptionRequest = getQuery(event).subscription === '1'
   setHeader(event, 'Content-Type', 'text/calendar; charset=utf-8')
-  setHeader(event, 'Content-Disposition', `attachment; filename="${filename}"`)
+  setHeader(event, 'Content-Disposition', `${isSubscriptionRequest ? 'inline' : 'attachment'}; filename="${filename}"`)
   setHeader(event, 'X-Robots-Tag', 'noindex')
   setHeader(event, 'Cache-Control', 'public, max-age=3600')
   return body
