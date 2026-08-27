@@ -1065,7 +1065,7 @@ function schemaEventSlug(event: any, index: number) {
   return `${event.date}-${name || `event-${index + 1}`}`
 }
 const schemaCalendarEvents = computed(() => (cal.value?.events ?? [])
-  .filter((event: any) => isStudentCalendarEvent(event) && !isPairedStudentEventEnd(event, cal.value?.events ?? []) && !event.excludeFromDateSchema)
+  .filter((event: any) => isStudentCalendarEvent(event, cal.value) && !isPairedStudentEventEnd(event, cal.value?.events ?? []) && !event.excludeFromDateSchema)
   .map((event: any, index: number) => {
     const name = normalizeSchemaEventName(event)
     const description = event.schemaDescription ?? event.description ?? `${name} on the ${district.value!.name} ${year} districtwide calendar.`

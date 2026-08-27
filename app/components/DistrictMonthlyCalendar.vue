@@ -49,7 +49,7 @@ function showInMonthlyList(event: CalendarEvent) {
 const resolvedEvents = computed<ResolvedEvent[]>(() => {
   const schoolBreaks = getBreaks(props.cal.events)
   return props.cal.events
-    .filter(event => isStudentCalendarEvent(event) && !isPairedStudentEventEnd(event, props.cal.events))
+    .filter(event => isStudentCalendarEvent(event, props.cal) && !isPairedStudentEventEnd(event, props.cal.events))
     .map((event) => {
       const schoolBreak = schoolBreaks.find(item => item.start === event.date)
       const datesEnd = event.dates?.length ? [...event.dates].sort().at(-1) : undefined

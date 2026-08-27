@@ -55,7 +55,7 @@ function nextSchoolDate(date: string) {
 
 const keyDates = computed(() => {
   const raw = props.cal.events
-    .filter(event => isStudentKeyDate(event) && !isPairedStudentEventEnd(event, props.cal.events))
+    .filter(event => isStudentKeyDate(event, props.cal) && !isPairedStudentEventEnd(event, props.cal.events))
     .map(event => ({
       name: normalizeName(event),
       start: event.date!,

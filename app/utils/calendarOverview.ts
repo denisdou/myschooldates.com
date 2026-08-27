@@ -12,6 +12,11 @@ export type StudentCalendarEvent = {
   hideFromMonthlyList?: boolean
 }
 
+type StudentCalendarContext = {
+  firstDay?: string
+  lastDay?: string
+}
+
 const studentDateTypes = new Set([
   'school_start', 'school_end', 'school_resume', 'school_reopen', 'school_return',
   'holiday', 'closure', 'no_school', 'student_holiday', 'schools_closed',
@@ -88,25 +93,64 @@ export function normalizeStudentEventName(event: Pick<StudentCalendarEvent, 'nam
     .trim()
 }
 
-export function isConferenceEarlyDismissalEvent(event: Pick<StudentCalendarEvent, 'name' | 'type'>) {
-  const isConference = /parent[ -]?teacher|conferences?/i.test(event.name)
+function withoutNegatedScheduleChanges(text: string) {
+  return text.replace(/\b(?:conference\s+)?(?:early[ -]?(?:release|dismissal|closing)|dismiss(?:es|ed|ing)? early|half[ -]?day)\b[^.;]*\b(?:does|do|is|are|will)\s+not\b[^.;]*/gi, '')
+}
+
+export function isPureAcademicPeriodEvent(event: Pick<StudentCalendarEvent, 'name' | 'labelType' | 'badgeLabel'>) {
+  const signal = [event.name, event.labelType, event.badgeLabel]
+    .filter(Boolean)
+    .join(' ')
+  const isAcademicPeriod = /\b(?:(?:fall|spring|first|second|[1-4](?:st|nd|rd|th)?)\s+semester|semester\s*[1-4]|quarter\s*[1-4]|[1-4](?:st|nd|rd|th)?\s+quarter|grading period|[1-4](?:st|nd|rd|th)?\s+(?:nine|9)[ -]?weeks)\b/i.test(signal)
+  const hasScheduleImpact = /first day of school|last (?:student )?day|students? return|school resumes?|classes? resumes?|no[ -]?school|schools? closed|early[ -]?(?:release|dismissal|closing|out)|late[ -]?start|modified day|half[ -]?day/i.test(signal)
+  return isAcademicPeriod && !hasScheduleImpact
+}
+
+export function isConferenceEarlyDismissalEvent(event: Pick<StudentCalendarEvent, 'name' | 'type' | 'description'>) {
+  const signal = `${event.name} ${withoutNegatedScheduleChanges(event.description ?? '')}`
+  const isConference = event.type === 'conference' || /parent[ -]?teacher|conferences?/i.test(signal)
   const isEarlyDismissal = ['early_release', 'early_dismissal', 'early_close', 'half_day_dismissal'].includes(event.type)
-    || /early[ -]?(?:release|dismissal|closing)|half[ -]?day/i.test(event.name)
+    || /early[ -]?(?:release|dismissal|closing)|dismiss(?:es|ed|ing)? early|half[ -]?day/i.test(signal)
   return isConference && isEarlyDismissal
 }
 
-export function isStudentKeyDate(event: StudentCalendarEvent) {
-  return isStudentCalendarEvent(event) && !event.hideFromKeyDates && !isConferenceEarlyDismissalEvent(event)
+export function isStudentKeyDate(event: StudentCalendarEvent, calendar?: StudentCalendarContext) {
+  const eventSignal = [event.name, event.labelType, event.badgeLabel]
+    .filter(Boolean)
+    .join(' ')
+  const scheduleSignal = `${eventSignal} ${withoutNegatedScheduleChanges(event.description ?? '')}`
+  const isConference = event.type === 'conference' || /parent[ -]?teacher|conferences?/i.test(event.name)
+  const isExplicitNoSchoolDate = /no[ -]?school|schools? closed|student holiday|students? do not attend/i.test(event.name)
+  const hasHighImpactScheduleChange = /no[ -]?school|schools? closed|students? (?:do not|don'?t) attend|early[ -]?(?:release|dismissal|closing|out)|late[ -]?start|half[ -]?day|modified day/i.test(scheduleSignal)
+  const isRoutineReturn = ['school_resume', 'school_return', 'school_reopen'].includes(event.type)
+    || /students? return|school resumes?|classes? resume|schools? reopen/i.test(event.name)
+  const isRecurringScheduleStart = /\b(?:weekly|recurring|every\s+\w+|early\s+(?:dismissals|releases)|late\s+starts)\b.*\b(?:begins?|starts?)\b|\b(?:begins?|starts?)\b.*\b(?:weekly|recurring|every\s+\w+)\b/i.test(event.name)
+  const isLimitedAudienceAcademicDate = ['academic', 'testing', 'assessment'].includes(event.type)
+    && /\b(?:elementary|middle|secondary|high school|grades?\s*\d|kindergarten|pre-?k)\b/i.test(eventSignal)
+    && !/graduation|commencement/i.test(event.name)
+    && !hasHighImpactScheduleChange
+  return isStudentCalendarEvent(event, calendar)
+    && !event.hideFromKeyDates
+    && (!isConference || isExplicitNoSchoolDate)
+    && !isConferenceEarlyDismissalEvent(event)
+    && (!isRoutineReturn || hasHighImpactScheduleChange)
+    && !isRecurringScheduleStart
+    && !isLimitedAudienceAcademicDate
 }
 
-export function isStudentCalendarEvent(event: StudentCalendarEvent) {
+export function isStudentCalendarEvent(event: StudentCalendarEvent, calendar?: StudentCalendarContext) {
   if (!event.date || event.hideFromAllDates || event.type === 'break_end') return false
+  if (staffDateTypes.has(event.type) && (
+    (calendar?.firstDay && event.date < calendar.firstDay) ||
+    (calendar?.lastDay && event.date > calendar.lastDay)
+  )) return false
+  if (isPureAcademicPeriodEvent(event)) return false
 
   const eventSignal = [event.name, event.labelType, event.badgeLabel]
     .filter(Boolean)
     .join(' ')
   const description = event.description ?? ''
-  const nonNegatedDescription = description.replace(/\b(?:do(?:es)?|is|are|was|were)\s+not\b[^.;]*/gi, '')
+  const nonNegatedDescription = withoutNegatedScheduleChanges(description)
   const scheduleImpactPattern = /no[ -]?(?:school|classes|students?|elementary|middle|high|preschool|pre-?kindergarten|pre-?k|4k|ecse)|non[ -]?student|student holiday|schools? closed|early[ -]?(?:release|dismissal|closing)|half[ -]?day|students? (?:do not|don'?t) attend|staggered (?:start|opening)|assigned (?:smaller-group )?sessions?/i
   const isConference = event.type === 'conference' || /parent[ -]?teacher|conferences?/i.test(`${eventSignal} ${description}`)
   const hasScheduleImpact = scheduleImpactPattern.test(eventSignal) || scheduleImpactPattern.test(nonNegatedDescription)

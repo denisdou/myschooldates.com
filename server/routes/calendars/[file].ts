@@ -1,7 +1,7 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { isPairedStudentEventEnd, pairedStudentEventEndDate } from '~/utils/calendarOverview'
+import { isPairedStudentEventEnd, isPureAcademicPeriodEvent, pairedStudentEventEndDate } from '~/utils/calendarOverview'
 
 type DistrictRecord = {
   institutionId: string
@@ -308,6 +308,7 @@ function buildIcs(district: DistrictRecord, calendar: CalendarRecord, track?: { 
   const eventsForExport = calendar.events
     .filter(event =>
       !event.hideFromCalendarExport &&
+      !isPureAcademicPeriodEvent(event) &&
       Boolean(event.date) &&
       (!track || !event.calendarExportTracks?.length || event.calendarExportTracks.includes(track.id)) &&
       event.type !== 'break_end' &&
