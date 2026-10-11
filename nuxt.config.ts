@@ -208,7 +208,17 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      script: googleAnalyticsScripts,
+      script: [
+        {
+          type: 'text/javascript',
+          async: true,
+          'data-noptimize': '1',
+          'data-cfasync': 'false',
+          src: '//scripts.scriptwrapper.com/tags/30f26648-3a36-4820-885f-37de52b1298e.js',
+          tagPosition: 'head',
+        },
+        ...googleAnalyticsScripts,
+      ],
       link: [
         // Favicon — SVG first (modern browsers), then PNG fallbacks
         { rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon.svg' },

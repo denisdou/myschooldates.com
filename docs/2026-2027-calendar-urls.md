@@ -15,7 +15,7 @@
 
 
 
-
+https://myschooldates.com/arlington-isd-calendar/2026-2027
 https://myschooldates.com/arlington-public-schools-calendar/2026-2027
 https://myschooldates.com/atlanta-public-schools-calendar/2026-2027
 https://myschooldates.com/aurora-public-schools-calendar/2026-2027
