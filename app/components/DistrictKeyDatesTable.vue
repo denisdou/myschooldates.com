@@ -1,12 +1,18 @@
 <script setup lang="ts">
 import type { StudentCalendarEvent } from '~/utils/calendarOverview'
-import { isPairedStudentEventEnd, isStudentKeyDate, normalizeStudentEventName, pairedStudentEventEndDate } from '~/utils/calendarOverview'
+import { isPairedStudentEventEnd, isStudentKeyDate, normalizeStudentEventName } from '~/utils/calendarOverview'
+import { detailEventRanges, formatCalendarRange } from '~/utils/calendarDetails'
 
 type CalendarEvent = StudentCalendarEvent & {
   displayDate?: string
+  status?: string
+  preserveOfficialName?: boolean
+  preventRangeMerge?: boolean
 }
 
 const props = defineProps<{
+  districtName?: string
+  year?: string
   cal: {
     firstDay: string
     lastDay: string
@@ -14,30 +20,19 @@ const props = defineProps<{
   }
 }>()
 
-const { getBreaks } = useDistrictPage()
-
 function normalizeName(event: CalendarEvent) {
-  return normalizeStudentEventName(event)
-}
-
-function rangeEnd(event: CalendarEvent) {
-  if (event.endDate) return event.endDate
-  if (event.dates?.length) return [...event.dates].sort().at(-1) ?? event.date ?? ''
-  const pairedEnd = pairedStudentEventEndDate(event, props.cal.events)
-  if (pairedEnd) return pairedEnd
-  if (event.type === 'break' || event.type === 'break_start') {
-    const schoolBreak = getBreaks(props.cal.events).find(item => item.start === event.date)
-    if (schoolBreak) return schoolBreak.end
-  }
-  return event.date ?? ''
+  return event.preserveOfficialName ? event.name : normalizeStudentEventName(event)
 }
 
 function statusFor(event: CalendarEvent) {
-  if (event.type === 'school_start') return { label: 'First Day', tone: 'milestone' }
-  if (event.type === 'school_end') return { label: 'Last Day', tone: 'milestone' }
-  if (event.type === 'break' || event.type === 'break_start') return { label: 'School Break', tone: 'break' }
-  if (['holiday', 'closure', 'no_school', 'student_holiday'].includes(event.type)) return { label: 'No School', tone: 'holiday' }
-  if (['early_release', 'early_dismissal', 'early_close'].includes(event.type)) return { label: 'Early Dismissal', tone: 'important' }
+  if (event.status === 'TENTATIVE') return { label: 'Conditional', tone: 'important' }
+  if (event.status === 'CANCELLED') return { label: 'Cancelled', tone: 'important' }
+  if (event.type === 'school_start') return { label: 'School Opens', tone: 'milestone' }
+  if (event.type === 'school_end') return { label: 'School Closes', tone: 'milestone' }
+  if (event.type === 'break' || event.type === 'break_start') return { label: 'No School', tone: 'holiday' }
+  if (['holiday', 'closure', 'no_school', 'student_holiday', 'schools_closed', 'schools_offices_closed'].includes(event.type)) return { label: 'No School', tone: 'holiday' }
+  if (['teacher_workday', 'teacher_professional_learning', 'staff_workday', 'staff_development', 'staff_day'].includes(event.type)) return { label: 'No School', tone: 'holiday' }
+  if (['early_release', 'early_dismissal', 'early_close', 'half_day_dismissal'].includes(event.type)) return { label: 'Early Dismissal', tone: 'important' }
   if (event.type === 'academic') return { label: /exam|test/i.test(event.name) ? 'Exam Date' : 'Academic Date', tone: 'important' }
   return { label: 'Important Date', tone: 'important' }
 }
@@ -59,23 +54,26 @@ const keyDates = computed(() => {
     .map(event => ({
       name: normalizeName(event),
       start: event.date!,
-      end: rangeEnd(event),
+      end: detailEventRanges(event, props.cal.events).at(-1)?.end ?? event.date!,
+      displayDate: event.displayDate ?? (event.dates?.length && !['break', 'break_start'].includes(event.type)
+        ? event.dates.map(date => formatCalendarRange(date)).join('; ') : ''),
+      preventRangeMerge: Boolean(event.preventRangeMerge),
       status: statusFor(event),
     }))
     .sort((a, b) => a.start.localeCompare(b.start))
 
-  if (!raw.some(event => event.start === props.cal.firstDay)) {
-    raw.push({ name: 'First Day of School', start: props.cal.firstDay, end: props.cal.firstDay, status: { label: 'First Day', tone: 'milestone' } })
+  if (!props.cal.events.some(event => event.type === 'school_start' && event.date === props.cal.firstDay)) {
+    raw.push({ name: 'First Day of School', start: props.cal.firstDay, end: props.cal.firstDay, displayDate: '', preventRangeMerge: false, status: { label: 'School Opens', tone: 'milestone' } })
   }
-  if (!raw.some(event => event.start === props.cal.lastDay)) {
-    raw.push({ name: 'Last Day of School', start: props.cal.lastDay, end: props.cal.lastDay, status: { label: 'Last Day', tone: 'milestone' } })
+  if (!props.cal.events.some(event => event.type === 'school_end' && event.date === props.cal.lastDay)) {
+    raw.push({ name: 'Last Day of School', start: props.cal.lastDay, end: props.cal.lastDay, displayDate: '', preventRangeMerge: false, status: { label: 'School Closes', tone: 'milestone' } })
   }
   raw.sort((a, b) => a.start.localeCompare(b.start))
 
   return raw.reduce<typeof raw>((merged, event) => {
     const previous = merged.at(-1)
     if (
-      previous &&
+      previous && !previous.displayDate && !event.displayDate && !previous.preventRangeMerge && !event.preventRangeMerge &&
       previous.name === event.name &&
       previous.status.label === event.status.label &&
       (event.start === nextSchoolDate(previous.end) || event.start <= previous.end)
@@ -88,29 +86,17 @@ const keyDates = computed(() => {
   }, [])
 })
 
-function formatLongDate(date: string) {
-  return parseDate(date).toLocaleDateString('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
-  })
-}
-
-function formatRange(start: string, end: string) {
-  return start === end ? formatLongDate(start) : `${formatLongDate(start)} - ${formatLongDate(end)}`
-}
 </script>
 
 <template>
   <section id="key-dates" class="district-key-dates-table scroll-mt-24" aria-labelledby="key-dates-title">
     <header class="district-key-dates-table__intro">
-      <p class="district-overview-eyebrow">Plan ahead</p>
       <h2 id="key-dates-title">Key Dates</h2>
-      <p>Student holidays, recess periods, school-year milestones, and other high-impact dates from the published district calendar.</p>
     </header>
 
     <div class="district-key-dates-table__frame">
       <table>
+        <caption class="sr-only">Key dates for {{ districtName }} {{ year }} school year</caption>
         <colgroup>
           <col class="district-key-dates-table__event-col">
           <col class="district-key-dates-table__date-col">
@@ -127,7 +113,7 @@ function formatRange(start: string, end: string) {
           <tr v-for="event in keyDates" :key="`${event.start}-${event.end}-${event.name}`">
             <th scope="row">{{ event.name }}</th>
             <td class="district-key-dates-table__date">
-              <time :datetime="event.start">{{ formatRange(event.start, event.end) }}</time>
+              <time :datetime="event.start">{{ event.displayDate || formatCalendarRange(event.start, event.end, true) }}</time>
             </td>
             <td>
               <span class="district-key-dates-table__status" :data-tone="event.status.tone">{{ event.status.label }}</span>

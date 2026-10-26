@@ -1,0 +1,204 @@
+.district-detail-years {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.district-detail-years a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid hsl(var(--rds-hairline-strong));
+  border-radius: 999px;
+  background: hsl(var(--rds-surface-panel));
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+.district-detail-years a[aria-current='page'],
+.district-detail-years a:hover {
+  border-color: hsl(var(--rds-accent));
+  color: hsl(var(--rds-accent));
+  background: hsl(var(--rds-accent-soft));
+}
+
+.district-detail-page .district-calendar-actions,
+.district-detail-page .district-calendar-actions__sync {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.district-detail-page .district-calendar-actions {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+}
+
+.district-detail-page .district-calendar-actions__sync {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.district-detail-page .district-calendar-action {
+  padding-inline: 0.7rem;
+}
+
+.district-detail-page .district-extended-time-off {
+  border-top: 0;
+  padding-top: 0.5rem;
+}
+
+.district-extended-time-off__period-col { width: 32%; }
+.district-extended-time-off__dates-col { width: 55%; }
+.district-extended-time-off__length-col { width: 13%; }
+
+.district-extended-time-off__detail {
+  margin-top: 0.4rem;
+  color: hsl(var(--rds-ink-dim));
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.district-detail-notes,
+.district-detail-about {
+  padding: 1.5rem;
+  border: 1px solid hsl(var(--rds-hairline));
+  border-radius: 0.75rem;
+  background: hsl(var(--rds-surface-panel));
+}
+
+.district-detail-notes h2,
+.district-detail-related h2,
+.district-detail-about h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.district-detail-notes__content,
+.district-detail-about {
+  color: hsl(var(--rds-ink-muted));
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.district-detail-notes__content p + p,
+.district-detail-about > * + * {
+  margin-top: 0.85rem;
+}
+
+.district-detail-notes__content.is-collapsed {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+.district-detail-notes button,
+.calendar-correction-prompt button {
+  min-height: 2.75rem;
+  color: hsl(var(--rds-accent));
+  font-size: 0.875rem;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.district-detail-related__links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.district-detail-related__links a {
+  display: grid;
+  align-content: center;
+  gap: 0.4rem;
+  min-width: 0;
+  min-height: 5.5rem;
+  padding: 1rem;
+  border: 1px solid hsl(var(--rds-hairline));
+  border-radius: 0.6rem;
+  background: hsl(var(--rds-surface-panel));
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.district-detail-related__links a:hover {
+  border-color: hsl(var(--rds-accent));
+}
+
+.district-detail-related__links span {
+  color: hsl(var(--rds-ink-dim));
+  font-size: 0.8rem;
+}
+
+.calendar-correction-prompt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid hsl(var(--rds-hairline));
+  border-radius: 0.6rem;
+  background: hsl(var(--rds-surface-panel));
+  color: hsl(var(--rds-ink-muted));
+  font-size: 0.85rem;
+}
+
+.calendar-correction-dialog {
+  width: min(32rem, calc(100% - 2rem));
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 1.5rem;
+  border: 1px solid hsl(var(--rds-hairline-strong));
+  border-radius: 0.85rem;
+  background: hsl(var(--rds-surface-panel));
+  color: hsl(var(--rds-ink));
+  box-shadow: 0 24px 80px rgb(0 0 0 / 0.22);
+  overflow-y: auto;
+}
+
+.calendar-correction-dialog::backdrop { background: rgb(18 30 33 / 0.45); }
+.calendar-correction-dialog header { display: flex; justify-content: space-between; gap: 1rem; align-items: center; }
+.calendar-correction-dialog h2 { font-size: 1.5rem; font-weight: 700; }
+.calendar-correction-dialog__close { min-width: 2.75rem; min-height: 2.75rem; font-size: 1.5rem; }
+.calendar-correction-dialog form { display: grid; gap: 1rem; margin-top: 1rem; }
+.calendar-correction-dialog label { display: block; margin-bottom: 0.4rem; font-size: 0.9rem; font-weight: 650; }
+.calendar-correction-dialog p { font-size: 0.8rem; line-height: 1.6; color: hsl(var(--rds-ink-muted)); }
+.calendar-correction-dialog textarea,
+.calendar-correction-dialog input {
+  display: block;
+  width: 100%;
+  margin-top: 0.6rem;
+  padding: 0.75rem;
+  border: 1px solid hsl(var(--rds-hairline-strong));
+  border-radius: 0.4rem;
+  background: hsl(var(--rds-surface));
+  font-size: 1rem;
+}
+.calendar-correction-dialog textarea { resize: vertical; }
+.calendar-correction-dialog footer { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.75rem; }
+
+@media (max-width: 720px) {
+  .district-detail-page .district-overview-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 1.5rem;
+  }
+  .district-detail-page .district-calendar-actions,
+  .district-detail-page .district-calendar-actions__sync {
+    display: contents;
+  }
+  .district-detail-page .district-calendar-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+  .district-detail-related__links { grid-template-columns: minmax(0, 1fr); }
+  .district-detail-notes, .district-detail-about { padding: 1rem; }
+  .district-extended-time-off__period-col { width: 29%; }
+  .district-extended-time-off__dates-col { width: 53%; }
+  .district-extended-time-off__length-col { width: 18%; }
+}

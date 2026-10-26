@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { StudentCalendarEvent } from '~/utils/calendarOverview'
-import { isConferenceEarlyDismissalEvent, isPairedStudentEventEnd, isStudentCalendarEvent, normalizeStudentEventName, pairedStudentEventEndDate } from '~/utils/calendarOverview'
+import { isConferenceEarlyDismissalEvent } from '~/utils/calendarOverview'
+import { studentDetailEvents } from '~/utils/calendarDetails'
 
 type CalendarEvent = StudentCalendarEvent
 
@@ -12,6 +13,7 @@ type ResolvedEvent = CalendarEvent & {
 }
 
 const props = defineProps<{
+  schoolYear?: string
   cal: {
     firstDay: string
     lastDay: string
@@ -19,7 +21,6 @@ const props = defineProps<{
   }
 }>()
 
-const { getBreaks } = useDistrictPage()
 const weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
 function parseDate(date: string) {
@@ -30,14 +31,10 @@ function dateKey(date: Date) {
   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`
 }
 
-function normalizeName(event: CalendarEvent) {
-  return normalizeStudentEventName(event)
-}
-
 function toneFor(event: CalendarEvent): ResolvedEvent['tone'] {
   if (event.type === 'school_start' || event.type === 'school_end') return 'milestone'
   if (event.type === 'break' || event.type === 'break_start') return 'break'
-  if (['holiday', 'closure', 'no_school', 'student_holiday'].includes(event.type)) return 'holiday'
+  if (['holiday', 'closure', 'no_school', 'student_holiday', 'schools_closed', 'schools_offices_closed'].includes(event.type)) return 'holiday'
   return 'important'
 }
 
@@ -46,23 +43,8 @@ function showInMonthlyList(event: CalendarEvent) {
   return !isConferenceEarlyDismissalEvent(event)
 }
 
-const resolvedEvents = computed<ResolvedEvent[]>(() => {
-  const schoolBreaks = getBreaks(props.cal.events)
-  return props.cal.events
-    .filter(event => isStudentCalendarEvent(event, props.cal) && !isPairedStudentEventEnd(event, props.cal.events))
-    .map((event) => {
-      const schoolBreak = schoolBreaks.find(item => item.start === event.date)
-      const datesEnd = event.dates?.length ? [...event.dates].sort().at(-1) : undefined
-      return {
-        ...event,
-        start: event.date!,
-        end: event.endDate ?? datesEnd ?? pairedStudentEventEndDate(event, props.cal.events) ?? schoolBreak?.end ?? event.date!,
-        displayName: normalizeName(event),
-        tone: toneFor(event),
-      }
-    })
-    .sort((a, b) => a.start.localeCompare(b.start))
-})
+const resolvedEvents = computed<ResolvedEvent[]>(() => studentDetailEvents(props.cal)
+  .map(event => ({ ...event, tone: toneFor(event) })))
 
 const months = computed(() => {
   const first = parseDate(props.cal.firstDay)
@@ -143,10 +125,9 @@ function dayAriaLabel(day: { date?: string; event?: ResolvedEvent }) {
   <section id="monthly-calendar" class="district-monthly-calendar scroll-mt-24" aria-labelledby="monthly-calendar-title">
     <header class="district-monthly-calendar__intro">
       <div>
-        <p class="district-overview-eyebrow">Month by month</p>
         <h2 id="monthly-calendar-title">Monthly Calendar</h2>
       </div>
-      <p>Highlighted dates are taken directly from the published district calendar.</p>
+      <p>View the full {{ schoolYear }} school year by month.</p>
     </header>
 
     <ul class="district-monthly-calendar__legend" aria-label="Calendar legend">
@@ -171,6 +152,7 @@ function dayAriaLabel(day: { date?: string; event?: ResolvedEvent }) {
             class="district-month-calendar__day"
             :class="day.date ? dayClass(day) : 'district-month-calendar__day--blank'"
             :aria-label="dayAriaLabel(day)"
+            :title="dayAriaLabel(day)"
           >
             <time v-if="day.date" :datetime="day.date">{{ day.day }}</time>
             <i v-if="day.event" aria-hidden="true" />

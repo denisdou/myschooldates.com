@@ -6,6 +6,13 @@ const statePageNames = Object.fromEntries(stateLinks.map(state => [state.slug, s
 const currentStateSlug = computed(() => route.path.split('/').filter(Boolean)[0] ?? '')
 const currentStateName = computed(() => statePageNames[currentStateSlug.value] ?? '')
 const isStateLandingPage = computed(() => route.path === `/${currentStateSlug.value}` && !!currentStateName.value)
+function openCalendarCorrection(event: MouseEvent) {
+  const dialog = document.querySelector<HTMLDialogElement>('#calendar-correction-dialog')
+  if (!dialog) return
+  event.preventDefault()
+  dialog.showModal()
+}
+
 const mobileMenuOpen = ref(false)
 const activeDesktopMenu = ref<'states' | 'calendar' | null>(null)
 
@@ -284,7 +291,7 @@ watch(() => route.fullPath, () => {
               <li><NuxtLink :to="`/${currentStateSlug}`" class="text-sm text-gray-500 hover:text-blue-600">{{ currentStateName }} District Calendars</NuxtLink></li>
               <li><NuxtLink to="/calendar-verification-methodology" class="text-sm text-gray-500 hover:text-blue-600">Verification Methodology</NuxtLink></li>
               <li><NuxtLink to="/editorial-policy" class="text-sm text-gray-500 hover:text-blue-600">Editorial Policy</NuxtLink></li>
-              <li><a href="mailto:hello@myschooldates.com?subject=Calendar%20Correction" class="text-sm text-gray-500 hover:text-blue-600">Report a Calendar Correction</a></li>
+              <li><a href="mailto:hello@myschooldates.com?subject=Calendar%20Correction" @click="openCalendarCorrection" class="text-sm text-gray-500 hover:text-blue-600">Report a Calendar Correction</a></li>
             </ul>
           </div>
           <div class="col-span-2 sm:col-span-1">
@@ -303,7 +310,7 @@ watch(() => route.fullPath, () => {
               <li><NuxtLink to="/datasets/school-calendar-trends" class="text-sm text-gray-500 hover:text-blue-600">Calendar Trends Dataset</NuxtLink></li>
               <li><NuxtLink to="/calendar-verification-methodology" class="text-sm text-gray-500 hover:text-blue-600">Verification Methodology</NuxtLink></li>
               <li><NuxtLink to="/editorial-policy" class="text-sm text-gray-500 hover:text-blue-600">Editorial Policy</NuxtLink></li>
-              <li><a href="mailto:hello@myschooldates.com?subject=Calendar%20Correction" class="text-sm text-gray-500 hover:text-blue-600">Report a Correction</a></li>
+              <li><a href="mailto:hello@myschooldates.com?subject=Calendar%20Correction" @click="openCalendarCorrection" class="text-sm text-gray-500 hover:text-blue-600">Report a Correction</a></li>
               <li><NuxtLink to="/privacy" class="text-sm text-gray-500 hover:text-blue-600">Privacy Policy</NuxtLink></li>
               <li><NuxtLink to="/terms" class="text-sm text-gray-500 hover:text-blue-600">Terms of Service</NuxtLink></li>
             </ul>

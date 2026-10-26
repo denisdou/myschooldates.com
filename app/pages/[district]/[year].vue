@@ -1,173 +1,77 @@
 <script setup lang="ts">
+import '~/assets/css/district-details.css'
 import { isPairedStudentEventEnd, isStudentCalendarEvent, pairedStudentEventEndDate } from '~/utils/calendarOverview'
+import { formatCalendarRange } from '~/utils/calendarDetails'
+
+definePageMeta({ key: route => route.path })
 
 const route = useRoute()
 const slug = route.params.district as string
 const year = route.params.year as string
-const { formatDate, formatShortDate, getBreaks, getSecondSemesterStart, eventTypeColor } = useDistrictPage()
-
-function toDistrictSummary(d: any) {
-  return {
-    institutionId: d.institutionId,
-    name: d.name,
-    shortName: d.shortName,
-    slug: d.slug,
-    state: d.state,
-    stateCode: d.stateCode,
-    city: d.city,
-    currentSchoolYear: d.currentSchoolYear,
-    officialWebsite: d.officialWebsite,
-    calendarPage: d.calendarPage,
-  }
+const { formatShortDate, getBreaks } = useDistrictPage()
+const { data: district } = await useAsyncData(`district:${slug}`, () =>
+  queryCollection('districts').where('slug', '=', slug).first()
+)
+if (!district.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Calendar not found' })
 }
-
-function toComparisonCalendarSummary(c: any) {
-  return {
-    institutionId: c.institutionId,
-    schoolYear: c.schoolYear,
-    calendarType: c.calendarType,
-    calendarTrackId: c.calendarTrackId ?? c.meta?.calendarTrackId,
-    firstDay: c.firstDay,
-    lastDay: c.lastDay,
-    totalSchoolDays: c.totalSchoolDays,
-    sourceUrl: c.sourceUrl,
-    sourcePdfUrl: c.sourcePdfUrl,
-    sourceVersion: c.sourceVersion,
-    comparisonSourceUrl: c.comparisonSourceUrl ?? c.meta?.comparisonSourceUrl,
-    comparisonSourceLabel: c.comparisonSourceLabel ?? c.meta?.comparisonSourceLabel,
-    comparisonExtraSourceUrl: c.comparisonExtraSourceUrl ?? c.meta?.comparisonExtraSourceUrl,
-    comparisonExtraSourceLabel: c.comparisonExtraSourceLabel ?? c.meta?.comparisonExtraSourceLabel,
-    events: (c.events ?? [])
-      .filter((e: any) => e.type === 'break' || e.type === 'break_start' || e.type === 'break_end')
-      .map((e: any) => ({ name: e.name, date: e.date, endDate: e.endDate, type: e.type })),
-  }
-}
-
-const [{ data: district }, { data: cal }] = await Promise.all([
-  useAsyncData(`district:${slug}`, () =>
-    queryCollection('districts').where('slug', '=', slug).first()
-  ),
-  useAsyncData(`cal:${slug}:${year}`, async () => {
-    const d = await queryCollection('districts').where('slug', '=', slug).first()
-    if (!d) return null
-    return queryCollection('calendars')
-      .where('institutionId', '=', d.institutionId)
-      .where('schoolYear', '=', year)
-      .first()
+const [{ data: cal }, { data: yearOptions }] = await Promise.all([
+  useAsyncData(`cal:${slug}:${year}`, () => queryCollection('calendars')
+    .where('institutionId', '=', district.value!.institutionId)
+    .where('schoolYear', '=', year).first()),
+  useAsyncData(`years:${slug}`, async () => {
+    const calendars = await queryCollection('calendars')
+      .where('institutionId', '=', district.value!.institutionId)
+      .order('schoolYear', 'DESC').all()
+    return calendars.map(calendar => calendar.schoolYear)
   }),
 ])
-
-const configuredComparisonSlugs = computed(() => [
-  ...(((district.value as any)?.relatedDistricts ?? []) as { slug: string }[]).map(rd => rd.slug),
-  ...(((cal.value as any)?.comparisonDistrictSlugs ?? (cal.value as any)?.meta?.comparisonDistrictSlugs ?? []) as string[]),
-].filter(Boolean))
-
-const { data: relatedDistricts } = await useAsyncData(`related-districts:${slug}:${year}`, async () => {
-  if (!configuredComparisonSlugs.value.length) return []
-  const relatedSlugs = new Set(configuredComparisonSlugs.value)
-  const districts = await queryCollection('districts').order('name', 'ASC').all()
-  return (districts ?? [])
-    .filter(d => relatedSlugs.has(d.slug))
-    .map(toDistrictSummary)
-})
-
-const { data: relatedCals } = await useAsyncData(`related-cals:${slug}:${year}`, async () => {
-  const configuredComparisonSlugs = [
-    ...(((district.value as any)?.relatedDistricts ?? []) as { slug: string }[]).map(rd => rd.slug),
-    ...(((cal.value as any)?.comparisonDistrictSlugs ?? (cal.value as any)?.meta?.comparisonDistrictSlugs ?? []) as string[]),
-  ].filter(Boolean)
-  if (!configuredComparisonSlugs.length) return []
-  const relatedIds = (relatedDistricts.value ?? [])
-    .map(d => d.institutionId)
-  if (!relatedIds.length) return []
-  const all = await queryCollection('calendars').all()
-  return (all ?? [])
-    .filter(c => relatedIds.includes(c.institutionId) && c.schoolYear === year)
-    .map(toComparisonCalendarSummary)
-})
-const relatedYearAvailableSlugs = computed(() => {
-  const districts = relatedDistricts.value ?? []
-  return (relatedCals.value ?? [])
-    .map((relatedCal: any) => districts.find((d: any) => d.institutionId === relatedCal.institutionId)?.slug)
-    .filter(Boolean) as string[]
-})
-const visibleRelatedDistricts = computed(() => {
-  const related = ((district.value as any)?.relatedDistricts ?? []) as any[]
-  const sameYearOnly = Boolean((cal.value as any)?.relatedDistrictsSameYearOnly ?? (cal.value as any)?.meta?.relatedDistrictsSameYearOnly)
-  if (!sameYearOnly) return related
-  const available = new Set(relatedYearAvailableSlugs.value)
-  return related.filter(rd => available.has(rd.slug))
-})
-
-if (!district.value || !cal.value) {
+if (!cal.value) {
   throw createError({ statusCode: 404, statusMessage: 'Calendar not found' })
 }
 
-function removeHiddenCustomSections() {
-  const hiddenIds = new Set([
-    ...(((district.value as any)?.hiddenCustomSectionIds ?? (district.value as any)?.meta?.hiddenCustomSectionIds ?? []) as string[]),
-    ...(((cal.value as any)?.hiddenCustomSectionIds ?? (cal.value as any)?.meta?.hiddenCustomSectionIds ?? []) as string[]),
-  ])
-  if (!hiddenIds.size) return
-  if ((district.value as any)?.customSections) {
-    ;(district.value as any).customSections = ((district.value as any).customSections as DistrictCustomSection[]).filter(section => !hiddenIds.has(section.id))
-  }
-  if ((district.value as any)?.meta?.customSections) {
-    ;(district.value as any).meta.customSections = ((district.value as any).meta.customSections as DistrictCustomSection[]).filter(section => !hiddenIds.has(section.id))
-  }
-  if ((cal.value as any)?.customSections) {
-    ;(cal.value as any).customSections = ((cal.value as any).customSections as DistrictCustomSection[]).filter(section => !hiddenIds.has(section.id))
-  }
-  if ((cal.value as any)?.meta?.customSections) {
-    ;(cal.value as any).meta.customSections = ((cal.value as any).meta.customSections as DistrictCustomSection[]).filter(section => !hiddenIds.has(section.id))
-  }
-}
-removeHiddenCustomSections()
-
-const prevYearVal = (() => {
-  const [y1, y2] = year.split('-').map(Number)
-  return `${y1 - 1}-${y2 - 1}`
-})()
-const { data: prevCal } = await useAsyncData(`prev-cal:${slug}:${prevYearVal}`, async () => {
-  if (!district.value) return null
-  const previous = await queryCollection('calendars')
-    .where('institutionId', '=', district.value.institutionId)
-    .where('schoolYear', '=', prevYearVal)
-    .first()
-  return previous ? toComparisonCalendarSummary(previous) : null
-})
-
-const { data: yearOptions } = await useAsyncData(`years:${slug}:${year}`, async () => {
-  if (!district.value) return []
-  const years = await queryCollection('calendars')
-    .where('institutionId', '=', district.value.institutionId)
-    .order('schoolYear', 'DESC')
-    .all()
-  return (years ?? []).map(c => c.schoolYear)
-})
-
-const isCurrentYear = district.value.currentSchoolYear === year
+const availableYears = computed(() => yearOptions.value ?? [])
 const hubUrl = `https://myschooldates.com/${slug}`
 const canonicalUrl = `${hubUrl}/${year}`
-const availableYears = computed(() => {
-  const years = [...(yearOptions.value ?? [])]
-  const sortMode = (cal.value as any)?.yearSwitcherSort ?? (cal.value as any)?.meta?.yearSwitcherSort
-  if (sortMode === 'asc') return years.sort()
-  if (sortMode === 'desc') return years.sort().reverse()
-  return years
+const breaks = computed(() => getBreaks(cal.value!.events))
+const editorialAuthorName = 'Denis Dou'
+const updatedDate = computed(() => cal.value!.dateModified ?? cal.value!.lastVerifiedAt)
+const summary = computed(() => cal.value!.heroSummary ?? cal.value!.meta?.heroSummary
+  ?? `School holidays, breaks, and important dates for ${district.value!.name} in ${year}. The school year runs from ${formatCalendarRange(cal.value!.firstDay)} to ${formatCalendarRange(cal.value!.lastDay)}. Download the PDF or add these dates to Google or Apple Calendar below.`)
+const notes = computed(() => {
+  const text = cal.value!.calendarNotes ?? cal.value!.meta?.calendarNotes
+  if (typeof text === 'string' && text.trim()) return text.split(/\n{2,}/).filter(Boolean)
+  return [
+    `${district.value!.name}'s ${year} school year begins ${formatCalendarRange(cal.value!.firstDay)} and ends ${formatCalendarRange(cal.value!.lastDay)}.`,
+    ...(breaks.value.length ? [`Published school breaks include ${breaks.value.map(item => `${item.name.replace(/\b(?:Begins|Starts)\b/gi, '').trim()} (${formatCalendarRange(item.start, item.end)})`).join('; ')}.`] : []),
+    'School calendars may change. Check the district calendar for emergency closures, make-up days, and school-specific schedules before making plans.',
+  ]
 })
-const visibleYearSwitcherYears = computed(() => {
-  if ((cal.value as any)?.hideCurrentYearInSwitcher || (cal.value as any)?.meta?.hideCurrentYearInSwitcher) {
-    return availableYears.value.filter(y => y !== year)
-  }
-  return availableYears.value
+const notesExpanded = ref(false)
+const { data: relatedCalendars } = await useAsyncData(`detail-related:${slug}:${year}`, async () => {
+  const configured = district.value!.relatedDistricts ?? []
+  if (!configured.length) return []
+  const slugs = new Set(configured.map(item => item.slug).filter(Boolean))
+  const [districts, calendars] = await Promise.all([
+    queryCollection('districts').all(),
+    queryCollection('calendars').where('schoolYear', '=', year).all(),
+  ])
+  const availableIds = new Set(calendars.map(calendar => calendar.institutionId))
+  return districts.filter(item => slugs.has(item.slug)).map(item => ({
+    name: item.shortName || item.name,
+    href: availableIds.has(item.institutionId) ? `/${item.slug}/${year}` : `/${item.slug}`,
+    year: availableIds.has(item.institutionId) ? year : '',
+  }))
 })
-const yearLink = (y: string) => `/${slug}/${y}`
-const yearSwitcherPosition = computed(() =>
-  (cal.value as any)?.yearSwitcherPosition ?? (cal.value as any)?.meta?.yearSwitcherPosition ?? 'default'
-)
-const showYearSwitcherAfterKeyDates = computed(() => yearSwitcherPosition.value === 'afterKeyDates')
-const showYearSwitcherAfterSources = computed(() => yearSwitcherPosition.value === 'afterSources')
+const officialHost = computed(() => new URL(district.value!.officialWebsite).hostname.replace(/^www\./, ''))
+const sourceLinks = computed(() => {
+  const configured = cal.value!.sources ?? cal.value!.meta?.sources ?? district.value!.sources ?? []
+  const links = [
+    { label: `${district.value!.shortName || district.value!.name} calendar source`, url: cal.value!.sourceUrl ?? district.value!.calendarPage },
+    ...(Array.isArray(configured) ? configured : []),
+  ] as Array<{ label: string; url: string }>
+  return links.filter((link, index) => link.url && links.findIndex(item => item.url === link.url) === index)
+})
 
 function eventSchemaLocation() {
   return {
@@ -176,605 +80,11 @@ function eventSchemaLocation() {
     address: {
       '@type': 'PostalAddress',
       addressLocality: district.value!.city ?? '',
-      addressRegion: (district.value as any).stateCode ?? district.value!.state,
+      addressRegion: district.value!.stateCode ?? district.value!.state,
       addressCountry: district.value!.country ?? 'US',
     },
   }
 }
-
-const todayStr = useHydrationDate()
-const isFutureYear = computed(() => cal.value!.firstDay > todayStr.value)
-
-const formatWeekdayDate = (d: string) =>
-  new Date(d + 'T00:00:00').toLocaleString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
-
-const breaks = computed(() => getBreaks(cal.value!.events))
-const secondSemStart = computed(() => getSecondSemesterStart(cal.value!.events))
-const showSemesterCount = computed(() => (cal.value as any)?.hideSemesterCount !== true && typeof (cal.value as any)?.semesters === 'number')
-const hideSecondSemesterStartSummary = computed(() =>
-  (cal.value as any)?.hideSecondSemesterStartSummary === true ||
-  (cal.value as any)?.meta?.hideSecondSemesterStartSummary === true
-)
-const heroFactChips = computed(() =>
-  (((cal.value as any)?.heroFactChips ?? (cal.value as any)?.meta?.heroFactChips ?? []) as string[]).filter(Boolean)
-)
-const breaksTitle = computed(() =>
-  (cal.value as any)?.breaksTitle ?? (cal.value as any)?.meta?.breaksTitle ?? 'Major School Breaks'
-)
-const hideBreakDurationBadges = computed(() =>
-  Boolean((cal.value as any)?.hideBreakDurationBadges ?? (cal.value as any)?.meta?.hideBreakDurationBadges)
-)
-const breakNotes = computed<Record<string, string>>(() =>
-  ((cal.value as any)?.breakNotes ?? (cal.value as any)?.meta?.breakNotes ?? {}) as Record<string, string>
-)
-const breakDurationLabels = computed<Record<string, string>>(() =>
-  ((cal.value as any)?.breakDurationLabels ?? (cal.value as any)?.meta?.breakDurationLabels ?? {}) as Record<string, string>
-)
-const breakSummaryOverrides = computed<Record<string, { name?: string; start?: string; end?: string; note?: string; durationLabel?: string }>>(() =>
-  ((cal.value as any)?.breakSummaryOverrides ?? (cal.value as any)?.meta?.breakSummaryOverrides ?? {}) as Record<string, { name?: string; start?: string; end?: string; note?: string; durationLabel?: string }>
-)
-const summaryBreaks = computed(() => breaks.value.map((schoolBreak: any) => {
-  const override = breakSummaryOverrides.value[schoolBreak.name] ?? breakSummaryOverrides.value[schoolBreak.start]
-  return override ? { ...schoolBreak, ...override } : schoolBreak
-}))
-const winterBreakLabel = computed(() => {
-  const isLateDecemberBreak = (schoolBreak: { name: string; start?: string; end?: string }) => {
-    const lower = schoolBreak.name.toLowerCase()
-    const startMonth = schoolBreak.start ? new Date(`${schoolBreak.start}T00:00:00`).getMonth() : -1
-    const endMonth = schoolBreak.end ? new Date(`${schoolBreak.end}T00:00:00`).getMonth() : -1
-    const isDecemberWindow = startMonth === 11 || endMonth === 0
-    return lower.includes('winter') ||
-      lower.includes('christmas') ||
-      lower.includes('december') ||
-      (lower.includes('holiday') && isDecemberWindow)
-  }
-  const winterBreak = breaks.value.find(b =>
-    isLateDecemberBreak(b)
-  )
-  return winterBreak
-    ? winterBreak.name.replace(/\b(Begins|Starts|Begin|Start)\b/gi, '').replace(/\s+/g, ' ').trim()
-    : 'Winter Break'
-})
-const springBreak = computed(() =>
-  breaks.value.find(b => b.name.toLowerCase().includes('spring')) ?? null
-)
-const springBreakReturnDate = computed(() => {
-  if (!springBreak.value) return ''
-  return cal.value?.events?.find((event: any) =>
-    ['school_resume', 'school_reopen'].includes(event.type) && event.date > springBreak.value!.end
-  )?.date ?? ''
-})
-const isEstimated = computed(() => !(cal.value as any)?.lastVerifiedAt)
-const verifiedDate = computed(() => {
-  if (!(cal.value as any)?.lastVerifiedAt) return null
-  return new Date(`${(cal.value as any).lastVerifiedAt}T00:00:00`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
-})
-const updatedDate = computed(() => {
-  const date = (cal.value as any)?.dateModified ?? (cal.value as any)?.lastVerifiedAt
-  if (!date) return null
-  return new Date(`${date}T00:00:00`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
-})
-function formatCompactDateRange(start: string, end: string) {
-  const startDate = new Date(start + 'T00:00:00')
-  const endDate = new Date(end + 'T00:00:00')
-  if (start === end) {
-    return startDate.toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
-  }
-  const sameYear = startDate.getFullYear() === endDate.getFullYear()
-  const sameMonth = sameYear && startDate.getMonth() === endDate.getMonth()
-  if (sameMonth) {
-    return `${startDate.toLocaleString('en-US', { month: 'short' })} ${startDate.getDate()}–${endDate.getDate()}, ${endDate.getFullYear()}`
-  }
-  if (sameYear) {
-    return `${startDate.toLocaleString('en-US', { month: 'short' })} ${startDate.getDate()}–${endDate.toLocaleString('en-US', { month: 'short' })} ${endDate.getDate()}, ${endDate.getFullYear()}`
-  }
-  return `${formatShortDate(start)}–${formatShortDate(end)}`
-}
-const editorialAuthorName = 'Denis Dou'
-
-const hiddenSections = computed(() => {
-  const hidden = new Set<string>([
-    ...(((district.value as any).hiddenSections ?? []) as string[]),
-    ...(((cal.value as any)?.hiddenSections ?? (cal.value as any)?.meta?.hiddenSections ?? []) as string[]),
-  ])
-  const visible = ((cal.value as any)?.visibleSections ?? (cal.value as any)?.meta?.visibleSections ?? []) as string[]
-  visible.forEach(section => hidden.delete(section))
-  return hidden
-})
-const comparisonBeforeFaq = computed(() =>
-  Boolean((cal.value as any)?.comparisonBeforeFaq ?? (cal.value as any)?.meta?.comparisonBeforeFaq ?? (district.value as any)?.comparisonBeforeFaq ?? (district.value as any)?.meta?.comparisonBeforeFaq)
-)
-const comparisonBeforeCalendarExport = computed(() =>
-  Boolean((cal.value as any)?.comparisonBeforeCalendarExport ?? (cal.value as any)?.meta?.comparisonBeforeCalendarExport ?? (district.value as any)?.comparisonBeforeCalendarExport ?? (district.value as any)?.meta?.comparisonBeforeCalendarExport)
-)
-const comparisonAfterSources = computed(() =>
-  Boolean((cal.value as any)?.comparisonAfterSources ?? (cal.value as any)?.meta?.comparisonAfterSources ?? (district.value as any)?.comparisonAfterSources ?? (district.value as any)?.meta?.comparisonAfterSources)
-)
-const sourcesBeforeFaq = computed(() =>
-  Boolean((cal.value as any)?.sourcesBeforeFaq ?? (cal.value as any)?.meta?.sourcesBeforeFaq ?? (district.value as any)?.sourcesBeforeFaq ?? (district.value as any)?.meta?.sourcesBeforeFaq)
-)
-const pageSources = computed(() =>
-  ((cal.value as any)?.sources ?? (cal.value as any)?.meta?.sources ?? (district.value as any)?.sources ?? []) as any[]
-)
-const calendarIcsHref = computed(() =>
-  district.value && cal.value
-    ? `/calendars/${district.value.slug}-${cal.value.schoolYear}.ics`
-    : ''
-)
-function resolveCalendarHref(href?: string, url?: string) {
-  const raw = href ?? url ?? ''
-  if (!cal.value) return raw
-  if (raw === '__sourcePdfUrl') return (cal.value as any).sourcePdfUrl ?? (cal.value as any).printablePdfUrl ?? ''
-  if (raw === '__icsUrl') return calendarIcsHref.value
-  return raw
-}
-const heroCtas = computed(() => {
-  if (!cal.value || !district.value) return []
-  const configured = (((cal.value as any).heroCtas ?? (cal.value as any).meta?.heroCtas ?? []) as Array<{
-    label?: string
-    href?: string
-    url?: string
-    variant?: 'primary' | 'secondary'
-    download?: boolean
-    filename?: string
-  }>)
-
-  return configured
-    .map((cta, index) => {
-      const href = resolveCalendarHref(cta.href, cta.url)
-      const filename = cta.filename === '__icsFilename'
-        ? `${district.value!.slug}-${cal.value!.schoolYear}.ics`
-        : cta.filename
-
-      return {
-        key: `${cta.label ?? 'hero-cta'}-${index}`,
-        label: cta.label ?? '',
-        href,
-        isExternal: /^(?:https?:)?\/\//.test(href),
-        variant: cta.variant ?? (index === 0 ? 'primary' : 'secondary'),
-        download: Boolean(cta.download),
-        filename,
-      }
-    })
-    .filter(cta => cta.label && cta.href)
-})
-const displaySchoolYear = computed(() =>
-  (cal.value as any)?.displaySchoolYear ?? (cal.value as any)?.meta?.displaySchoolYear ?? year
-)
-function displaySchoolYearLabel(yearValue: string) {
-  const match = yearValue.match(/^(\d{4})-(\d{4})$/)
-  return match ? `${match[1]}–${match[2]!.slice(2)}` : yearValue
-}
-const verificationBadgeText = computed(() =>
-  (cal.value as any)?.verificationBadgeText ?? (cal.value as any)?.meta?.verificationBadgeText ?? (district.value as any)?.verificationBadgeText ?? (district.value as any)?.meta?.verificationBadgeText ?? null
-)
-const verificationBadgeReviewerName = computed(() =>
-  String((cal.value as any)?.verificationBadgeReviewerName ?? (cal.value as any)?.meta?.verificationBadgeReviewerName ?? '')
-)
-const verificationBadgeReviewerHref = computed(() =>
-  String((cal.value as any)?.verificationBadgeReviewerHref ?? (cal.value as any)?.meta?.verificationBadgeReviewerHref ?? '/author')
-)
-const hasCalendarTrackCaution = computed(() => {
-  if ((cal.value as any)?.hideCalendarTrackCaution || (cal.value as any)?.meta?.hideCalendarTrackCaution) return false
-  const text = `${(cal.value as any)?.calendarNotes ?? ''} ${(district.value as any)?.districtFact ?? ''}`.toLowerCase()
-  return text.includes('track') || text.includes('modified traditional') || text.includes('year-round')
-})
-const calendarTrackLabel = computed(() => {
-  const type = String((cal.value as any)?.calendarType ?? '').replace(/[_-]+/g, ' ')
-  return type ? type.replace(/\b\w/g, c => c.toUpperCase()) : 'Student'
-})
-const calendarShownLabel = computed(() =>
-  String((cal.value as any)?.calendarShownLabel ?? (cal.value as any)?.meta?.calendarShownLabel ?? `${district.value?.shortName || district.value?.name} ${calendarTrackLabel.value} Calendar`)
-)
-const calendarShownDescription = computed(() =>
-  String((cal.value as any)?.calendarShownDescription ?? (cal.value as any)?.meta?.calendarShownDescription ?? 'Other calendar tracks or specialized programs may use different dates. Check your school\'s assigned calendar before making plans.')
-)
-const calendarSelectorGroups = computed(() =>
-  (((cal.value as any)?.calendarSelectorGroups ?? (cal.value as any)?.meta?.calendarSelectorGroups ?? []) as Array<{ label?: string, items?: string[] }>).filter(group => group.label && Array.isArray(group.items) && group.items.length)
-)
-const alternateCalendarsNotice = computed(() =>
-  String((cal.value as any)?.alternateCalendarsNotice ?? (cal.value as any)?.meta?.alternateCalendarsNotice ?? '')
-)
-const alternateCalendarsNoticeLinkLabel = computed(() =>
-  String((cal.value as any)?.alternateCalendarsNoticeLinkLabel ?? (cal.value as any)?.meta?.alternateCalendarsNoticeLinkLabel ?? '')
-)
-const alternateCalendarsNoticeLinkHref = computed(() =>
-  String((cal.value as any)?.alternateCalendarsNoticeLinkHref ?? (cal.value as any)?.meta?.alternateCalendarsNoticeLinkHref ?? '#other-calendars')
-)
-const alternateCalendarsNoticeLinks = computed(() =>
-  (((cal.value as any)?.alternateCalendarsNoticeLinks ?? (cal.value as any)?.meta?.alternateCalendarsNoticeLinks ?? []) as Array<{ label?: string; href?: string; url?: string }>)
-    .map(link => ({ label: String(link.label ?? ''), href: String(link.href ?? link.url ?? '') }))
-    .filter(link => link.label && link.href)
-)
-const hideAlternateCalendarsNotice = computed(() =>
-  Boolean((cal.value as any)?.hideAlternateCalendarsNotice ?? (cal.value as any)?.meta?.hideAlternateCalendarsNotice)
-)
-const showAlternateCalendarsNotice = computed(() =>
-  Boolean((cal.value as any)?.alternateCalendars?.length && !hideAlternateCalendarsNotice.value)
-)
-const alternateCalendarsNoticeBeforeKeyDates = computed(() =>
-  String((cal.value as any)?.alternateCalendarsNoticePosition ?? (cal.value as any)?.meta?.alternateCalendarsNoticePosition ?? '') === 'beforeKeyDates'
-)
-const customJumpNavigation = computed(() =>
-  (((cal.value as any)?.jumpNavigation ?? (cal.value as any)?.meta?.jumpNavigation ?? []) as Array<{ label?: string, href?: string, id?: string }>).filter(item => item.label && (item.href || item.id))
-)
-const yearSwitcherLabel = computed(() =>
-  String((cal.value as any)?.yearSwitcherLabel ?? (cal.value as any)?.meta?.yearSwitcherLabel ?? 'Other school years:')
-)
-const otherCalendarsAfterKeyDates = computed(() =>
-  ((cal.value as any)?.otherCalendarsPosition ?? (cal.value as any)?.meta?.otherCalendarsPosition) === 'afterKeyDates'
-)
-const otherCalendarsBeforeKeyDates = computed(() =>
-  ((cal.value as any)?.otherCalendarsPosition ?? (cal.value as any)?.meta?.otherCalendarsPosition) === 'beforeKeyDates'
-)
-const otherCalendarsAfterFaq = computed(() =>
-  ((cal.value as any)?.otherCalendarsPosition ?? (cal.value as any)?.meta?.otherCalendarsPosition) === 'afterFaq'
-)
-const otherCalendarsBeforeCalendarExport = computed(() =>
-  ((cal.value as any)?.otherCalendarsPosition ?? (cal.value as any)?.meta?.otherCalendarsPosition) === 'beforeCalendarExport'
-)
-
-const instructionalDaysLine = computed(() => {
-  if ((cal.value as any)?.hideInstructionalDaysSummary === true || (cal.value as any)?.meta?.hideInstructionalDaysSummary === true) {
-    return ''
-  }
-  const days = cal.value?.totalSchoolDays ?? 180
-  const description = String((cal.value as any)?.instructionalDaysDescription ?? (cal.value as any)?.meta?.instructionalDaysDescription ?? '').toLowerCase()
-  const label = String((cal.value as any)?.instructionalDaysLabel ?? (cal.value as any)?.meta?.instructionalDaysLabel ?? '').toLowerCase()
-  if (description.includes('attendance-day count') || description.includes('exact attendance')) {
-    return `School year span: ${formatShortDate(cal.value!.firstDay)} - ${formatShortDate(cal.value!.lastDay)}`
-  }
-  if (description.includes('approximately') || description.includes('approximate')) {
-    const sourceName = district.value?.shortName || district.value?.name || 'district'
-    return `Approximately ${days} instructional days are scheduled, based on the published ${sourceName} calendar`
-  }
-  if (description.includes('summarized') || description.includes('summary')) {
-    return `${days} listed calendar days (calendar summary)`
-  }
-  if (description.includes('calculated')) {
-    const sourceName = district.value?.shortName || district.value?.name || 'district'
-    if (label.includes('attendance')) {
-      return `${days} calculated student attendance days, based on the published ${sourceName} calendar`
-    }
-    return `${days} currently scheduled instructional days, calculated from the published ${sourceName} calendar`
-  }
-  return `${days} instructional days`
-})
-const heroSummaryFacts = computed(() => {
-  const facts: string[] = []
-  if (instructionalDaysLine.value) facts.push(instructionalDaysLine.value)
-  if (showSemesterCount.value) facts.push(`${cal.value!.semesters ?? 2} semesters`)
-  facts.push(...heroFactChips.value)
-  if (!hideSecondSemesterStartSummary.value && secondSemStart.value) facts.push(`Students return from ${winterBreakLabel.value} on ${formatShortDate(secondSemStart.value)}`)
-  return facts
-})
-type DistrictCustomSection = {
-  id: string
-  label: string
-  content: string
-  position?: string
-  collapsible?: boolean
-  defaultOpen?: boolean
-  image?: { src: string; alt: string; caption?: string; width?: number; height?: number }
-  groups?: { label: string; items: string[] }[]
-  hideGroupLabels?: boolean
-  definitions?: { term: string; description: string }[]
-  links?: { label: string; to: string; description?: string }[]
-  table?: { caption?: string; columns?: string[]; headers?: string[]; rows: string[][]; footnote?: string }
-  expandableGroups?: { summaryLabel: string; label?: string; items: string[] }[]
-}
-const customSections = computed(() => {
-  const hiddenIds = new Set([
-    ...(((district.value as any).hiddenCustomSectionIds ?? (district.value as any).meta?.hiddenCustomSectionIds ?? []) as string[]),
-    ...(((cal.value as any)?.hiddenCustomSectionIds ?? (cal.value as any)?.meta?.hiddenCustomSectionIds ?? []) as string[]),
-  ])
-  return [
-    ...(((district.value as any).customSections ?? []) as DistrictCustomSection[]),
-    ...(((cal.value as any)?.customSections ?? []) as DistrictCustomSection[]),
-    ...(((cal.value as any)?.meta?.customSections ?? []) as DistrictCustomSection[]),
-  ].filter(section => !hiddenIds.has(section.id))
-})
-const hasYearComparisonContent = computed(() =>
-  !hiddenSections.value.has('whatsDifferent') ||
-  customSections.value.some(section => section.position === 'afterYearDiff')
-)
-const summarySectionId = computed(() => {
-  const section = customSections.value.find(s =>
-    s.id.toLowerCase().includes('summary') ||
-    s.label.toLowerCase().includes('summary')
-  )
-  return section?.id
-})
-const overviewSectionId = computed(() => {
-  const section = customSections.value.find(s =>
-    s.id.toLowerCase().includes('overview') ||
-    s.label.toLowerCase().includes('overview') ||
-    s.id.toLowerCase().includes('at-a-glance') ||
-    s.label.toLowerCase().includes('at a glance')
-  )
-  return section?.id
-})
-const downloadGuideSectionId = computed(() => {
-  const section = customSections.value.find(s => {
-    const text = `${s.id} ${s.label}`.toLowerCase()
-    return s.position === 'afterCalendarExport' && (text.includes('download') || text.includes('print'))
-  })
-  return section?.id
-})
-const changesSectionId = computed(() => {
-  const section = customSections.value.find(s => {
-    const text = `${s.id} ${s.label}`.toLowerCase()
-    return text.includes('change') || text.includes('year-diff') || text.includes('previous year')
-  })
-  return section?.id
-})
-const importantDatesSectionId = computed(() => {
-  const section = customSections.value.find(s => {
-    const text = `${s.id} ${s.label}`.toLowerCase()
-    return text.includes('important-date') || text.includes('important date')
-  })
-  return section?.id
-})
-const planningSectionId = computed(() => {
-  if (hiddenSections.value.has('planningTips')) return undefined
-  const section = customSections.value.find(s =>
-    s.id.toLowerCase().includes('planning-around') ||
-    s.label.toLowerCase().includes('planning around')
-  )
-  return section?.id || ((district.value as any).planningTips?.content?.length ? 'planning-tips' : undefined)
-})
-const earlyDismissalSectionId = computed(() => {
-  const section = customSections.value.find(s => {
-    const text = `${s.id} ${s.label}`.toLowerCase()
-    return text.includes('early-dismissal') ||
-      text.includes('early dismissal') ||
-      text.includes('shortened-days') ||
-      text.includes('shortened days')
-  })
-  return section?.id
-})
-const hasBreaksSection = computed(() =>
-  !hiddenSections.value.has('breaks') && (breaks.value.length > 0 || customSections.value.some(s => s.position === 'afterBreaks'))
-)
-const nonCurrentYearNotice = computed(() =>
-  (cal.value as any)?.nonCurrentYearNotice ??
-  (cal.value as any)?.futureYearNotice ??
-  (cal.value as any)?.meta?.nonCurrentYearNotice ??
-  (cal.value as any)?.meta?.futureYearNotice ??
-  ''
-)
-const calendarTrackHelpId = computed(() => {
-  const section = customSections.value.find(s =>
-    s.id.toLowerCase().includes('calendar-track') ||
-    s.label.toLowerCase().includes('calendar track') ||
-    s.label.toLowerCase().includes('calendar type')
-  )
-  return section?.id || (((cal.value as any)?.alternateCalendars?.length) ? 'other-calendars' : 'sources')
-})
-const allDatesMode = computed(() => {
-  const mode = (cal.value as any)?.allDatesMode ?? (cal.value as any)?.meta?.allDatesMode ?? (district.value as any)?.allDatesMode
-  return (mode === 'keyDates' ? 'keyDates' : 'all') as 'all' | 'keyDates'
-})
-const allDatesSourceLinks = computed(() =>
-  (((cal.value as any)?.allDatesSourceLinks ?? (cal.value as any)?.meta?.allDatesSourceLinks ?? []) as { label: string; url: string }[])
-    .filter((source) => source?.label && source?.url)
-)
-const allDatesIncludedDatesInKeyDates = computed(() =>
-  (((cal.value as any)?.allDatesIncludedDatesInKeyDates ?? (cal.value as any)?.meta?.allDatesIncludedDatesInKeyDates ?? []) as string[])
-)
-const allDatesTitle = computed(() =>
-  (cal.value as any)?.allDatesTitle ?? (cal.value as any)?.meta?.allDatesTitle ?? (district.value as any)?.allDatesTitle ?? (district.value as any)?.meta?.allDatesTitle ?? (
-    allDatesMode.value === 'keyDates'
-    ? `Major Student Calendar Dates — ${displaySchoolYear.value}`
-    : `All Important Dates — ${displaySchoolYear.value}`
-  )
-)
-const dateLabelOverrides = computed(() =>
-  ((cal.value as any)?.dateLegendLabelOverrides ?? (cal.value as any)?.meta?.dateLegendLabelOverrides ?? (district.value as any)?.dateLegendLabelOverrides ?? (district.value as any)?.meta?.dateLegendLabelOverrides ?? {}) as Record<string, string>
-)
-const dateLegendExtraItems = computed(() =>
-  (((cal.value as any)?.dateLegendExtraItems ?? (cal.value as any)?.meta?.dateLegendExtraItems ?? []) as Array<{ label?: string, dot?: string }>)
-    .filter(item => item.label && item.dot) as Array<{ label: string, dot: string }>
-)
-const configuredDateLegendItems = computed(() =>
-  (((cal.value as any)?.dateLegendItems ?? (cal.value as any)?.meta?.dateLegendItems ?? []) as Array<{ label?: string, dot?: string }>)
-    .filter(item => item.label && item.dot) as Array<{ label: string, dot: string }>
-)
-const dateLegend = computed(() => {
-  if ((cal.value as any)?.hideDateLegend === true || (cal.value as any)?.meta?.hideDateLegend === true) return []
-  if (configuredDateLegendItems.value.length) return configuredDateLegendItems.value
-  const legendTypes = new Set((cal.value?.events ?? []).map((event: any) => event.labelType ?? event.type))
-  const hasEventType = (types: string[]) =>
-    types.some(type => legendTypes.has(type))
-  const hasPossibleMakeupDay = (cal.value?.events ?? []).some((event: any) => {
-    const name = String(event.name ?? '').toLowerCase()
-    return name.includes('possible') && (name.includes('make-up') || name.includes('makeup'))
-  })
-  const items = [
-    ...(hasEventType(['schools_offices_closed']) ? [{ label: 'Schools & Offices Closed', dot: 'bg-red-400' }] : []),
-    ...(hasEventType(['schools_closed']) ? [{ label: 'Schools Closed', dot: 'bg-red-300' }] : []),
-    ...(hasEventType(['holiday']) ? [{ label: 'Holiday', dot: 'bg-teal-400' }] : []),
-    ...(hasEventType(['no_school', 'student_holiday', 'teacher_workday', 'teacher_professional_learning', 'staff_development']) ? [{ label: 'No School for Students', dot: 'bg-amber-400' }] : []),
-    ...(hasEventType(['partial_closure']) ? [{ label: 'Some Students Off', dot: 'bg-pink-400' }] : []),
-    ...(hasEventType(['half_day_high_school', 'half_day_dismissal']) ? [{ label: 'Half-Day Dismissal', dot: 'bg-orange-300' }] : []),
-    ...(hasEventType(['early_dismissal', 'early_release']) ? [{ label: 'Early Release', dot: 'bg-orange-400' }] : []),
-    ...(hasEventType(['makeup_day', 'weather_day', 'inclement_weather_day']) ? [{ label: 'Reserved Weather Day', dot: 'bg-orange-300' }] : []),
-    ...(hasEventType(['break', 'break_start']) || hasPossibleMakeupDay ? [{ label: 'Break', dot: 'bg-purple-400' }] : []),
-    ...(hasEventType(['conference', 'conference_day', 'conference_days']) ? [{ label: 'Conferences', dot: 'bg-blue-400' }] : []),
-    ...(hasEventType(['academic']) ? [{ label: 'Academic', dot: 'bg-slate-400' }] : []),
-    ...(hasEventType(['observance']) ? [{ label: 'Observance', dot: 'bg-teal-400' }] : []),
-    ...dateLegendExtraItems.value,
-  ]
-  const seen = new Set<string>()
-  return items
-    .map(item => ({ ...item, label: dateLabelOverrides.value[item.label] ?? item.label }))
-    .filter((item) => {
-      if (seen.has(item.label)) return false
-      seen.add(item.label)
-      return true
-    })
-})
-
-const moveCalendarExportBeforeAllDates = computed(() =>
-  (cal.value as any)?.moveCalendarExportBeforeAllDates === true || (cal.value as any)?.meta?.moveCalendarExportBeforeAllDates === true
-)
-const yearComparisonAfterAllDates = computed(() =>
-  ((cal.value as any)?.yearComparisonPosition ?? (cal.value as any)?.meta?.yearComparisonPosition) === 'afterAllDates'
-)
-
-const breaksBeforeAllDates = computed(() =>
-  (cal.value as any)?.breaksBeforeAllDates === true || (cal.value as any)?.meta?.breaksBeforeAllDates === true
-)
-
-const gradingPeriodsBeforeCalendarExport = computed(() =>
-  ((cal.value as any)?.gradingPeriodsPosition ?? (cal.value as any)?.meta?.gradingPeriodsPosition) === 'beforeCalendarExport'
-)
-
-const resolvedJumpNavigation = computed(() => {
-  if ((cal.value as any)?.preserveJumpNavigationOrder === true || (cal.value as any)?.meta?.preserveJumpNavigationOrder === true) {
-    return customJumpNavigation.value
-  }
-  const customTargets = (position: string) => customSections.value
-    .filter(section => section.position === position || (position === 'afterAbout' && !section.position))
-    .map(section => `#${section.id}`)
-  const targets = [
-    ...customTargets('afterVerification'),
-    ...(otherCalendarsBeforeKeyDates.value ? ['#other-calendars', ...customTargets('afterOtherCalendars')] : []),
-    '#key-dates',
-    ...(otherCalendarsAfterKeyDates.value ? ['#other-calendars', ...customTargets('afterOtherCalendars')] : []),
-    ...customTargets('afterKeyDates'),
-    ...customTargets('afterQuickFacts'),
-    ...customTargets('afterAlternateCalendarsNotice'),
-    ...(breaksBeforeAllDates.value ? ['#breaks', ...customTargets('afterBreaks')] : []),
-    ...(moveCalendarExportBeforeAllDates.value ? ['#add-to-calendar', ...customTargets('afterCalendarExport')] : []),
-    '#all-dates',
-    ...customTargets('afterAllDates'),
-    ...(!breaksBeforeAllDates.value ? ['#breaks', ...customTargets('afterBreaks')] : []),
-    ...(comparisonBeforeCalendarExport.value ? ['#comparison', ...customTargets('afterComparison')] : []),
-    ...(gradingPeriodsBeforeCalendarExport.value ? ['#grading-periods', ...customTargets('afterGradingPeriodsBeforeCalendarExport')] : []),
-    ...(otherCalendarsBeforeCalendarExport.value ? customTargets('afterOtherCalendars') : []),
-    ...(!moveCalendarExportBeforeAllDates.value ? ['#add-to-calendar', ...customTargets('afterCalendarExport')] : []),
-    ...(!otherCalendarsBeforeCalendarExport.value ? customTargets('afterOtherCalendars') : []),
-    '#year-comparison',
-    ...customTargets('afterYearDiff'),
-    ...customTargets('afterAbout'),
-    ...(!gradingPeriodsBeforeCalendarExport.value ? ['#grading-periods', ...customTargets('afterGradingPeriods')] : []),
-    ...(comparisonBeforeFaq.value && !comparisonBeforeCalendarExport.value ? ['#comparison', ...customTargets('afterComparison')] : []),
-    ...(sourcesBeforeFaq.value ? ['#sources'] : []),
-    '#faq',
-    ...customTargets('afterFaq'),
-    ...(!comparisonBeforeCalendarExport.value && !comparisonBeforeFaq.value && !comparisonAfterSources.value ? ['#comparison', ...customTargets('afterComparison')] : []),
-    ...customTargets('afterPlanningTips'),
-    ...customTargets('beforeSources'),
-    ...(!sourcesBeforeFaq.value ? ['#sources'] : []),
-    ...(comparisonAfterSources.value && !comparisonBeforeCalendarExport.value ? ['#comparison', ...customTargets('afterComparison')] : []),
-  ]
-  return resolveJumpNavigation(customJumpNavigation.value, targets)
-})
-
-function countWeekdays(start: string, end: string) {
-  const cursor = new Date(start + 'T00:00:00')
-  const stop = new Date(end + 'T00:00:00')
-  let count = 0
-  while (cursor <= stop) {
-    const day = cursor.getDay()
-    if (day !== 0 && day !== 6) count++
-    cursor.setDate(cursor.getDate() + 1)
-  }
-  return count
-}
-
-function breakDurationLabel(b: { name: string; start: string; end: string; days: number; durationLabel?: string }) {
-  if (b.durationLabel) return b.durationLabel
-  const customLabel = breakDurationLabels.value[b.name] ?? breakDurationLabels.value[breakDisplayName(b.name)] ?? breakDurationLabels.value[b.start]
-  if (customLabel) return customLabel
-  const weekdays = countWeekdays(b.start, b.end)
-  if (weekdays === b.days) {
-    return `${weekdays} weekday${weekdays !== 1 ? 's' : ''} without school`
-  }
-  return `${weekdays} weekday${weekdays !== 1 ? 's' : ''} without school · ${b.days} calendar day${b.days !== 1 ? 's' : ''} total`
-}
-
-function breakDisplayName(name: string) {
-  return name
-    .replace(/\b(Begins|Starts|Begin|Start|Ends|End)\b/gi, '')
-    .replace(/\s*-\s*(Schools and Offices Closed|Good Friday|New Year's Day)\b/gi, '')
-    .replace(/\s+/g, ' ')
-    .trim()
-}
-
-function breakNoteFor(b: { name: string; start: string; end: string; note?: string }) {
-  if (b.note) return b.note
-  return breakNotes.value[b.name] ?? breakNotes.value[breakDisplayName(b.name)] ?? breakNotes.value[b.start] ?? ''
-}
-
-function normalizeFaqQuestion(question: string) {
-  return question.trim().toLowerCase().replace(/\s+/g, ' ')
-}
-
-function dedupeFaqItems(items: { q: string; a: string }[]) {
-  const seen = new Set<string>()
-  return items.filter((faq) => {
-    const key = normalizeFaqQuestion(faq.q)
-    if (seen.has(key)) return false
-    seen.add(key)
-    return true
-  })
-}
-
-function dedupeQuestions(questions: string[]) {
-  const seen = new Set<string>()
-  return questions.filter((question) => {
-    const key = normalizeFaqQuestion(question)
-    if (seen.has(key)) return false
-    seen.add(key)
-    return true
-  })
-}
-
-const allFaqs = computed(() => {
-  if (!district.value || !cal.value) return []
-  const excludeDistrictFaqs = Boolean((cal.value as any)?.excludeDistrictFaqs ?? (cal.value as any)?.meta?.excludeDistrictFaqs)
-  const specificFaqs: { q: string; a: string }[] = excludeDistrictFaqs ? [] : ((district.value as any).districtFaqs ?? [])
-  const calendarFaqs: { q: string; a: string }[] = (cal.value as any).calendarFaqs ?? []
-  const prefersCalendarFirst = (cal.value as any).faqOrderLimit ?? (cal.value as any).meta?.faqOrderLimit ?? (district.value as any).faqOrderLimit ?? (district.value as any).meta?.faqOrderLimit ?? (cal.value as any).faqLimit ?? (cal.value as any).meta?.faqLimit ?? (district.value as any).faqLimit ?? (district.value as any).meta?.faqLimit
-  if (typeof prefersCalendarFirst === 'number' && prefersCalendarFirst > 0) {
-    return dedupeFaqItems([...calendarFaqs, ...specificFaqs])
-  }
-  return dedupeFaqItems([...specificFaqs, ...calendarFaqs])
-})
-const faqs = computed(() => {
-  const excludeDistrictFaqs = Boolean((cal.value as any)?.excludeDistrictFaqs ?? (cal.value as any)?.meta?.excludeDistrictFaqs)
-  const displayQuestions = dedupeQuestions([
-    ...(excludeDistrictFaqs ? [] : (((district.value as any)?.faqDisplayQuestions ?? (district.value as any)?.meta?.faqDisplayQuestions ?? []) as string[])),
-    ...(((cal.value as any)?.faqDisplayQuestions ?? (cal.value as any)?.meta?.faqDisplayQuestions ?? []) as string[]),
-  ])
-  if (displayQuestions.length) {
-    return dedupeFaqItems(displayQuestions
-      .map(q => allFaqs.value.find(item => normalizeFaqQuestion(item.q) === normalizeFaqQuestion(q)))
-      .filter(Boolean) as { q: string; a: string }[])
-  }
-  const displayLimit = (cal.value as any)?.faqDisplayLimit ?? (cal.value as any)?.meta?.faqDisplayLimit ?? (district.value as any)?.faqDisplayLimit ?? (district.value as any)?.meta?.faqDisplayLimit ?? (cal.value as any)?.faqLimit ?? (cal.value as any)?.meta?.faqLimit ?? (district.value as any)?.faqLimit ?? (district.value as any)?.meta?.faqLimit
-  if (typeof displayLimit === 'number' && displayLimit > 0) {
-    return allFaqs.value.slice(0, displayLimit)
-  }
-  return allFaqs.value
-})
-const faqSchemaItems = computed(() => {
-  const limit = (cal.value as any)?.faqSchemaLimit ?? (cal.value as any)?.meta?.faqSchemaLimit
-  return typeof limit === 'number' && limit > 0 ? faqs.value.slice(0, limit) : faqs.value
-})
-const usesCalendarOverviewLayout = computed(() => true)
-const heroSummary = computed(() => (cal.value as any).heroSummary ?? (cal.value as any).meta?.heroSummary ?? '')
-const heroSummaryParagraphs = computed(() =>
-  heroSummary.value
-    .split(/\n{2,}/)
-    .map(part => part.trim())
-    .filter(Boolean)
-)
-const heroQuickDates = computed(() =>
-  (((cal.value as any)?.heroQuickDates ?? (cal.value as any)?.meta?.heroQuickDates ?? []) as Array<{ label?: string, value?: string }>).filter(item => item.label && item.value)
-)
 
 const _dn = district.value.name
 const _sn = (district.value as any).shortName || _dn
@@ -988,7 +298,7 @@ const selectSourceRefs = (sourceIds: string[] | undefined) => Array.isArray(sour
         if ((id === 'source-calendar' || id === sourceCalendarId) && sourceCalendarEntityId) return { '@id': sourceCalendarEntityId }
         if (id === 'source-calendar-page' && sourceCalendarPageEntityId) return { '@id': sourceCalendarPageEntityId }
         const additionalSourceIndex = additionalSourceCalendarConfigs.findIndex(source => source.id === id)
-        if (additionalSourceIndex >= 0) return { '@id': additionalSourceCalendarEntities[additionalSourceIndex]['@id'] }
+        if (additionalSourceIndex >= 0) return { '@id': additionalSourceCalendarEntities[additionalSourceIndex]!['@id'] }
         return null
       })
       .filter(Boolean)
@@ -1010,7 +320,7 @@ const calendarTrackDistributions = computed(() => hideIcsFromDatasetDistribution
         name: String(track.label).replace(/\s+—\s+\.ics$/, ''),
         description: track.description || `One-time calendar import for the ${track.label}.`,
         encodingFormat: 'text/calendar',
-        contentUrl: `https://myschooldates.com/calendars/${district.value.slug}-${cal.value.schoolYear}-${track.id}.ics`,
+        contentUrl: `https://myschooldates.com/calendars/${district.value!.slug}-${cal.value!.schoolYear}-${track.id}.ics`,
       })))
 const hideDatasetSchema = computed(() => false)
 const spatialCoverageOverride = (cal.value as any)?.schemaSpatialCoverage ?? (cal.value as any)?.meta?.schemaSpatialCoverage ?? (district.value as any)?.schemaSpatialCoverage ?? (district.value as any)?.meta?.schemaSpatialCoverage
@@ -1030,8 +340,8 @@ const hasSpatialCoverage = Array.isArray(spatialCoverageValue)
   ? spatialCoverageValue.length > 0
   : Boolean(spatialCoverageValue)
 const datasetTemporalCoverage = computed(() => {
-  const start = (cal.value as any)?.temporalCoverageStart || cal.value.firstDay
-  const end = (cal.value as any)?.temporalCoverageEnd || cal.value.lastDay
+  const start = (cal.value as any)?.temporalCoverageStart || cal.value!.firstDay
+  const end = (cal.value as any)?.temporalCoverageEnd || cal.value!.lastDay
   return `${start}/${end}`
 })
 function normalizeSchemaEventName(event: any) {
@@ -1065,7 +375,7 @@ function schemaEventSlug(event: any, index: number) {
   return `${event.date}-${name || `event-${index + 1}`}`
 }
 const schemaCalendarEvents = computed(() => (cal.value?.events ?? [])
-  .filter((event: any) => isStudentCalendarEvent(event, cal.value) && !isPairedStudentEventEnd(event, cal.value?.events ?? []) && !event.excludeFromDateSchema)
+  .filter((event: any) => isStudentCalendarEvent(event, cal.value ?? undefined) && !isPairedStudentEventEnd(event, cal.value?.events ?? []) && !event.excludeFromDateSchema)
   .map((event: any, index: number) => {
     const name = normalizeSchemaEventName(event)
     const description = event.schemaDescription ?? event.description ?? `${name} on the ${district.value!.name} ${year} districtwide calendar.`
@@ -1147,104 +457,6 @@ const schemaReviewedById = schemaReviewedBySetting === 'author' || !schemaReview
 const siblingYearLinks = availableYears.value
   .filter(y => y !== year)
   .map(y => `${hubUrl}/${y}`)
-const configuredKeyDateSummaryItems = computed(() =>
-  (((cal.value as any)?.keyDateSummaryItems ?? (cal.value as any)?.meta?.keyDateSummaryItems ?? []) as any[])
-    .filter(item => item.date || item.start || item.displayDate)
-    .map(item => ({
-      date: item.date ?? item.start ?? '',
-      endDate: item.endDate ?? item.end,
-      name: item.name,
-      displayDate: item.displayDate,
-      displayName: item.displayName,
-      label: item.label,
-      type: item.type ?? 'milestone',
-      description: item.description,
-      schemaDescription: item.schemaDescription,
-      hideSchemaDescription: item.hideSchemaDescription,
-      dates: item.dates,
-      dateDisplayMode: item.dateDisplayMode,
-      dateJoiner: item.dateJoiner,
-      repeatMonthInDateList: item.repeatMonthInDateList,
-      datePropertyLabel: item.datePropertyLabel,
-      schemaAdditionalProperties: item.schemaAdditionalProperties,
-      additionalProperties: item.additionalProperties,
-    }))
-)
-const keyDatesSummaryTitle = computed(() =>
-  (cal.value as any)?.keyDatesSummaryTitle ?? (cal.value as any)?.meta?.keyDatesSummaryTitle ?? `${displaySchoolYear.value} Key Dates & Holidays`
-)
-const keyDatesSummaryId = computed(() =>
-  (cal.value as any)?.keyDatesSummaryId ?? (cal.value as any)?.meta?.keyDatesSummaryId ?? (hiddenSections.value.has('keyDateCards') ? 'key-dates' : undefined)
-)
-const keyDatesHeading = computed(() =>
-  (cal.value as any)?.keyDatesHeading ?? (cal.value as any)?.meta?.keyDatesHeading ?? 'Key Dates'
-)
-const keyDatesSummarySubtitle = computed(() =>
-  (cal.value as any)?.keyDatesSummarySubtitle ?? (cal.value as any)?.meta?.keyDatesSummarySubtitle ?? 'First day, last day, school holidays, and major break ranges'
-)
-function compactJoinedDate(startDate: string, endDate: string, joiner: string) {
-  const start = new Date(startDate + 'T00:00:00')
-  const end = new Date(endDate + 'T00:00:00')
-  if (start.getFullYear() === end.getFullYear() && start.getMonth() === end.getMonth()) {
-    const month = start.toLocaleDateString('en-US', { month: 'short' })
-    return `${month} ${start.getDate()} ${joiner} ${end.getDate()}, ${start.getFullYear()}`
-  }
-  return `${formatShortDate(startDate)} ${joiner} ${formatShortDate(endDate)}`
-}
-function keyDateListDates(event: any) {
-  if (Array.isArray(event.dates) && event.dates.length) return event.dates
-  if (event.dateDisplayMode === 'list' && event.endDate) return [event.date, event.endDate]
-  return []
-}
-function keyDateUsesPlainText(event: any) {
-  return Boolean(event.displayDate && (!event.date || keyDateListDates(event).length > 1))
-}
-function keyDateListDateParts(event: any) {
-  const dates = keyDateListDates(event)
-  if (!dates.length) return []
-  if (dates.length === 2) {
-    const start = new Date(dates[0] + 'T00:00:00')
-    const end = new Date(dates[1] + 'T00:00:00')
-    if (start.getFullYear() === end.getFullYear() && start.getMonth() === end.getMonth()) {
-      const month = start.toLocaleDateString('en-US', { month: 'short' })
-      return [
-        { date: dates[0], label: `${month} ${start.getDate()}`, ariaLabel: formatDate(dates[0]) },
-        { date: dates[1], label: `${event.repeatMonthInDateList ? `${month} ` : ''}${end.getDate()}, ${end.getFullYear()}`, ariaLabel: formatDate(dates[1]) },
-      ]
-    }
-  }
-  return dates.map((date: string) => ({ date, label: formatShortDate(date), ariaLabel: formatDate(date) }))
-}
-function keyDateDateParts(event: any) {
-  if (event.displayDate && !event.repeatMonthInDateList) {
-    return [{ date: event.date, label: event.displayDate, ariaLabel: event.displayDate }]
-  }
-  const listParts = keyDateListDateParts(event)
-  if (listParts.length) return listParts
-  if (event.endDate && event.endDate !== event.date) {
-    const start = new Date(event.date + 'T00:00:00')
-    const end = new Date(event.endDate + 'T00:00:00')
-    if (start.getFullYear() === end.getFullYear() && start.getMonth() === end.getMonth()) {
-      const month = start.toLocaleDateString('en-US', { month: 'short' })
-      return [
-        { date: event.date, label: `${month} ${start.getDate()}`, ariaLabel: formatDate(event.date) },
-        { date: event.endDate, label: `${end.getDate()}, ${end.getFullYear()}`, ariaLabel: formatDate(event.endDate) },
-      ]
-    }
-    return [
-      { date: event.date, label: formatShortDate(event.date), ariaLabel: formatDate(event.date) },
-      { date: event.endDate, label: formatShortDate(event.endDate), ariaLabel: formatDate(event.endDate) },
-    ]
-  }
-  return [{ date: event.date, label: formatShortDate(event.date), ariaLabel: formatDate(event.date) }]
-}
-function keyDateDateSeparator(event: any) {
-  return keyDateListDates(event).length ? (event.dateJoiner ?? 'and') : (event.dateJoiner ?? '–')
-}
-function keyDateDateSeparatorText(event: any) {
-  const separator = keyDateDateSeparator(event)
-  return separator === '–' ? separator : ` ${separator} `
-}
 const webPageMainEntity = datasetEntity ? { '@id': `${canonicalUrl}#calendar-dataset` } : null
 const breadcrumbId = `${canonicalUrl}#breadcrumb`
 const districtCalendarHubEntity = {
@@ -1278,7 +490,6 @@ const webPageEntity = {
   hasPart: [
     ...(datasetEntity ? [{ '@id': `${canonicalUrl}#calendar-dataset` }] : []),
     ...schemaCalendarEvents.value.map(event => ({ '@id': event['@id'] })),
-    ...(faqSchemaItems.value.length ? [{ '@id': `${canonicalUrl}#faq` }] : []),
   ],
   breadcrumb: { '@id': breadcrumbId },
   ...(siblingYearLinks.length ? { relatedLink: siblingYearLinks } : {}),
@@ -1302,30 +513,6 @@ const webPageEntity = {
     '@id': `${hubUrl}#webpage`,
   },
 }
-const faqPageEntity = faqSchemaItems.value.length ? {
-  '@type': 'FAQPage',
-  '@id': `${canonicalUrl}#faq`,
-  isPartOf: { '@id': `${canonicalUrl}#webpage` },
-  mainEntity: faqSchemaItems.value.map(faq => ({
-    '@type': 'Question',
-    name: faq.q,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: faq.a,
-    },
-  })),
-} : null
-function keyDateDisplayName(event: { name: string; type: string; displayName?: string }) {
-  if (event.displayName) return event.displayName
-  if (event.type === 'break_start' || event.type === 'break_end') {
-    return event.name
-      .replace(/\b(Begins|Begin|Starts|Start|Ends|End)\b/gi, '')
-      .replace(/\s+/g, ' ')
-      .trim()
-  }
-  return event.name
-}
-
 useHead({
   link: [{ rel: 'canonical', href: canonicalUrl }],
   script: [{
@@ -1345,7 +532,6 @@ useHead({
         ...(datasetEntity ? [datasetEntity] : []),
         ...schemaCalendarEvents.value,
         webPageEntity,
-        ...(faqPageEntity ? [faqPageEntity] : []),
         {
           '@type': 'BreadcrumbList',
           '@id': breadcrumbId,
@@ -1363,743 +549,72 @@ useHead({
 </script>
 
 <template>
-  <main class="district-calendar-page py-8">
-
-      <section class="district-page-section district-hero">
-        <div class="district-page-inner space-y-8">
-          <!-- Breadcrumb -->
-          <Breadcrumb :items="[
-            { label: 'Home', href: '/' },
-            { label: district!.state, href: `/${district!.state.toLowerCase().replace(/\s+/g, '-')}` },
-            { label: `${district!.name} Calendars`, href: `/${slug}` },
-            { label: displaySchoolYearLabel(year) },
-          ]" />
-
-          <!-- Notice for non-current year (past or future) -->
-          <div v-if="!isCurrentYear" class="district-year-notice flex items-start gap-3 p-4">
-            <svg class="w-5 h-5 text-rds-accent mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            <p class="text-sm">
-              <template v-if="nonCurrentYearNotice">{{ nonCurrentYearNotice }}</template>
-              <template v-else>You're viewing the <strong>{{ isFutureYear ? 'upcoming' : 'archived' }} {{ displaySchoolYearLabel(year) }}</strong> calendar.</template>
-              <NuxtLink :to="districtCalendarPath(district!, district!.currentSchoolYear)" class="ml-1 inline-flex underline font-medium">View the current {{ displaySchoolYearLabel(district!.currentSchoolYear) }} calendar →</NuxtLink>
-            </p>
-          </div>
-
-          <!-- Title -->
-          <div :class="usesCalendarOverviewLayout ? 'district-overview-hero__grid' : ''">
+  <main class="district-calendar-page district-detail-page py-8">
+    <section class="district-page-section district-hero">
+      <div class="district-page-inner space-y-8">
+        <Breadcrumb :items="[
+          { label: 'Home', href: '/' },
+          { label: district!.state, href: `/${district!.state.toLowerCase().replace(/\s+/g, '-')}` },
+          { label: district!.shortName || district!.name, href: `/${slug}` },
+          { label: year },
+        ]" />
+        <div class="district-overview-hero__grid">
           <div>
-        <h1 class="district-hero__title">
-          {{ (cal as any).pageHeading || `${district!.name} Calendar ${displaySchoolYear}` }}
-        </h1>
-        <p v-if="!usesCalendarOverviewLayout" class="district-hero__source mt-3 text-sm">
-          <template v-if="(cal as any).heroSourceUrl ?? (cal as any).meta?.heroSourceUrl">
-            Source:
-            <a
-              :href="(cal as any).heroSourceUrl ?? (cal as any).meta?.heroSourceUrl"
-              target="_blank"
-              rel="noopener"
-              class="rds-link underline"
-            >{{ (cal as any).heroSourceLabel ?? (cal as any).meta?.heroSourceLabel ?? `${district!.shortName || district!.name} ${displaySchoolYear} calendar` }}</a>{{ (cal as any).heroSourceSuffix ?? (cal as any).meta?.heroSourceSuffix ?? '' }}
-          </template>
-          <template v-else>{{ (cal as any).heroSourceLine ?? (cal as any).meta?.heroSourceLine ?? `${displaySchoolYear} calendar dates · Based on the official ${district!.shortName || district!.name} calendar` }}</template>
-          <template v-if="!usesCalendarOverviewLayout && !((cal as any).hideHeroDownloadLink || (cal as any).meta?.hideHeroDownloadLink)">
-            ·
-            <a
-              :href="(cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref ?? '#add-to-calendar'"
-              :target="((cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref) ? '_blank' : undefined"
-              :rel="((cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref) ? 'noopener' : undefined"
-              class="rds-link inline-flex min-h-11 items-center underline"
-            >
-              {{ (cal as any).heroDownloadLabel ?? (cal as any).meta?.heroDownloadLabel ?? (cal as any).icsButtonLabel ?? (cal as any).meta?.icsButtonLabel ?? 'Download calendar file' }}
-              <span v-if="(cal as any).heroDownloadHref ?? (cal as any).meta?.heroDownloadHref" class="sr-only">(opens in a new tab)</span>
-            </a>
-          </template>
-        </p>
-        <div class="district-hero__lead mt-3 space-y-2">
-          <template v-if="heroSummaryParagraphs.length">
-            <p v-for="(paragraph, i) in heroSummaryParagraphs" :key="i">
-              {{ paragraph }}
-            </p>
-          </template>
-          <p v-else-if="heroSummary">{{ heroSummary }}</p>
-          <p v-else>
-            The first day of school for {{ district!.name }}<template v-if="district!.shortName && !district!.name.includes(district!.shortName)">, also known as {{ district!.shortName }},</template> {{ isFutureYear ? 'is' : 'was' }}
-            {{ formatWeekdayDate(cal!.firstDay) }}.
-            The last day {{ isFutureYear || isCurrentYear ? 'is' : 'was' }}
-            {{ formatWeekdayDate(cal!.lastDay) }}.
-            <span v-if="springBreak">
-              Spring Break {{ isFutureYear || isCurrentYear ? 'runs' : 'ran' }}
-              {{ formatShortDate(springBreak.start) }}–{{ formatShortDate(springBreak.end) }}<template v-if="springBreakReturnDate">, with students returning {{ formatShortDate(springBreakReturnDate) }}</template>.
-            </span>
-          </p>
-          <div v-if="!usesCalendarOverviewLayout && heroQuickDates.length" class="district-hero__quick-dates mt-4 p-4">
-            <p class="text-sm font-semibold text-rds-ink">{{ displaySchoolYear }} Dates at a Glance</p>
-            <ul class="mt-2 grid gap-1.5 text-sm text-rds-ink-muted sm:grid-cols-2">
-              <li v-for="item in heroQuickDates" :key="`${item.label}-${item.value}`">
-                <strong>{{ item.label }}:</strong> {{ item.value }}
-              </li>
-            </ul>
-          </div>
-          <p v-if="!usesCalendarOverviewLayout && heroSummaryFacts.length" class="district-hero__meta rds-data mt-3 text-sm">
-            {{ heroSummaryFacts.join(' · ') }}
-          </p>
-          <div v-if="!usesCalendarOverviewLayout && heroCtas.length" class="mt-4 flex flex-wrap gap-2">
-            <a
-              v-for="cta in heroCtas"
-              :key="cta.key"
-              :href="cta.href"
-              :download="cta.download ? (cta.filename || '') : undefined"
-              :target="!cta.download && cta.isExternal ? '_blank' : undefined"
-              :rel="!cta.download && cta.isExternal ? 'noopener' : undefined"
-              class="inline-flex min-h-11 items-center justify-center px-4 py-2 text-sm font-semibold"
-              :class="cta.variant === 'primary'
-                ? 'rds-button-primary'
-                : 'rds-button-secondary'"
-            >
-              {{ cta.label }}
-              <span v-if="!cta.download && cta.isExternal" class="sr-only">(opens in a new tab)</span>
-            </a>
-          </div>
-          <p v-if="!usesCalendarOverviewLayout" class="district-hero__independence mt-3 text-xs">
-            {{ (cal as any)?.heroIndependenceText ?? (cal as any)?.meta?.heroIndependenceText ?? (district as any)?.heroIndependenceText ?? `MySchoolDates is an independent calendar reference and is not affiliated with ${district!.name}.` }}
-          </p>
-          <dl
-            v-if="verifiedDate && (!((cal as any).hideHeroReviewedField || (cal as any).meta?.hideHeroReviewedField) || !((cal as any).hideHeroReviewedByField || (cal as any).meta?.hideHeroReviewedByField) || !((cal as any).hideHeroUpdatedField || (cal as any).meta?.hideHeroUpdatedField))"
-            class="district-hero__meta rds-data mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs"
-          >
-            <div v-if="!((cal as any).hideHeroReviewedField || (cal as any).meta?.hideHeroReviewedField)">
-              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">{{ (cal as any).heroReviewedLabel ?? (cal as any).meta?.heroReviewedLabel ?? 'Reviewed' }}</dt>
-              <dd class="ml-1 inline font-medium text-gray-700">{{ verifiedDate }}</dd>
+            <h1 class="district-hero__title">{{ cal!.pageHeading || `${district!.name} Calendar ${year}` }}</h1>
+            <div class="district-hero__lead mt-3 space-y-2">
+              <p v-for="(paragraph, index) in String(summary).split(/\n{2,}/)" :key="index">{{ paragraph }}</p>
+              <p v-if="updatedDate" class="text-sm">Updated <time :datetime="updatedDate">{{ updatedDate }}</time>.</p>
             </div>
-            <div v-if="!((cal as any).hideHeroReviewedByField || (cal as any).meta?.hideHeroReviewedByField)">
-              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">Reviewed by</dt>
-              <dd class="ml-1 inline font-medium">
-                <NuxtLink to="/author" class="text-[#0f5d6b] hover:underline">{{ editorialAuthorName }}</NuxtLink>
-              </dd>
-            </div>
-            <div v-if="!((cal as any).hideHeroUpdatedField || (cal as any).meta?.hideHeroUpdatedField)">
-              <dt class="inline font-semibold uppercase tracking-wide text-gray-600">{{ (cal as any).heroUpdatedLabel ?? (cal as any).meta?.heroUpdatedLabel ?? 'Updated' }}</dt>
-              <dd class="ml-1 inline font-medium text-gray-700">{{ updatedDate }}</dd>
-            </div>
-          </dl>
-          <div v-if="verifiedDate && !((cal as any).hideHeroVerifiedBadge || (cal as any).meta?.hideHeroVerifiedBadge)" class="district-hero__verification mt-5 inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium">
-            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-            </svg>
-            <span>{{ verificationBadgeText || `Checked against the official ${district.shortName || district.name} calendar on ${verifiedDate}.` }}</span>
-            <template v-if="verificationBadgeReviewerName">
-              <span aria-hidden="true">·</span>
-              <span>Reviewed by <NuxtLink :to="verificationBadgeReviewerHref" class="font-semibold underline hover:no-underline">{{ verificationBadgeReviewerName }}</NuxtLink></span>
-            </template>
+            <nav class="district-detail-years" aria-label="School year">
+              <NuxtLink
+                v-for="option in availableYears" :key="option" :to="`/${slug}/${option}`"
+                :aria-current="option === year ? 'page' : undefined"
+              >{{ option.replace(/-(\d{2})(\d{2})$/, '-$2') }}</NuxtLink>
+            </nav>
           </div>
+          <DistrictHeroDateCards :cal="cal!" />
         </div>
-          </div>
-          <DistrictHeroDateCards v-if="usesCalendarOverviewLayout" :cal="cal!" />
-          </div>
-          <CalendarHeroActions v-if="usesCalendarOverviewLayout" :district="district!" :cal="cal!" />
+        <CalendarHeroActions :district="district!" :cal="cal!" />
+      </div>
+    </section>
+
+    <div class="district-page-content">
+      <DistrictKeyDatesTable :cal="cal!" :district-name="district!.name" :year="year" />
+      <CalendarCorrection :district-name="district!.name" :year="year" :page-url="canonicalUrl" />
+      <DistrictExtendedTimeOff :cal="cal!" :district-name="district!.name" :year="year" />
+      <DistrictMonthlyCalendar :cal="cal!" :school-year="year" />
+
+      <section class="district-detail-notes" aria-labelledby="calendar-notes-title">
+        <h2 id="calendar-notes-title">{{ district!.shortName || district!.name }} Calendar Notes</h2>
+        <div id="calendar-notes-content" class="district-detail-notes__content" :class="{ 'is-collapsed': !notesExpanded }">
+          <p v-for="(paragraph, index) in notes" :key="index">{{ paragraph }}</p>
+        </div>
+        <button type="button" :aria-expanded="notesExpanded" aria-controls="calendar-notes-content" @click="notesExpanded = !notesExpanded">
+          {{ notesExpanded ? 'Read less' : 'Read more' }}
+        </button>
+      </section>
+
+      <section class="district-detail-related" aria-labelledby="related-calendars-title">
+        <h2 id="related-calendars-title">Related Calendars</h2>
+        <div class="district-detail-related__links">
+          <a :href="district!.officialWebsite" target="_blank" rel="noopener">
+            <strong>{{ district!.shortName || district!.name }} Official Website</strong><span>{{ officialHost }} ↗</span>
+          </a>
+          <NuxtLink v-for="related in relatedCalendars" :key="related.href" :to="related.href">
+            <strong>{{ related.name }} Calendar {{ related.year }}</strong><span>View calendar →</span>
+          </NuxtLink>
         </div>
       </section>
 
-      <div class="district-page-content">
-      <template v-if="usesCalendarOverviewLayout">
-        <DistrictKeyDatesTable :cal="cal!" />
-        <DistrictMonthlyCalendar :cal="cal!" />
-      </template>
-
-      <DistrictCustomSections :sections="customSections" position="afterVerification" />
-
-      <!-- Calendar track notice -->
-      <div v-if="hasCalendarTrackCaution" class="bg-blue-50 border border-blue-200 rounded-lg p-4 flex gap-3">
-        <svg class="w-5 h-5 text-blue-700 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        <div class="space-y-3">
-          <p class="text-sm text-blue-800">
-            <strong>Calendar shown:</strong> {{ calendarShownLabel }}.
-            {{ calendarShownDescription }}
-            <a :href="`#${calendarTrackHelpId}`" class="underline font-medium">How to confirm your calendar track</a>
-          </p>
-          <div v-if="calendarSelectorGroups.length" class="grid gap-2 sm:grid-cols-2">
-            <div v-for="group in calendarSelectorGroups" :key="group.label" class="rounded-lg border border-blue-100 bg-white/70 p-3">
-              <div class="text-xs font-semibold uppercase tracking-wide text-blue-700">{{ group.label }}</div>
-              <div class="mt-1 text-sm font-medium text-blue-900">{{ group.items?.join(' / ') }}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Alternate calendars notice -->
-      <div v-if="showAlternateCalendarsNotice && alternateCalendarsNoticeBeforeKeyDates" class="bg-amber-50 border border-amber-200 rounded-lg p-4 flex gap-3">
-        <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        <p class="text-sm text-amber-800">
-          <template v-if="alternateCalendarsNotice">
-            {{ alternateCalendarsNotice }}
-            <template v-if="alternateCalendarsNoticeLinks.length">
-              <template v-for="(link, index) in alternateCalendarsNoticeLinks" :key="link.href">
-                <template v-if="index"> or </template>
-                <a :href="link.href" target="_blank" rel="noopener" class="underline font-medium">{{ link.label }}<span class="sr-only">(opens in a new tab)</span></a>
-              </template>
-            </template>
-            <a
-              v-else-if="alternateCalendarsNoticeLinkLabel"
-              :href="alternateCalendarsNoticeLinkHref"
-              class="underline font-medium"
-            >{{ alternateCalendarsNoticeLinkLabel }}</a>
-          </template>
-          <template v-else>
-            This page shows the <strong>Traditional Calendar</strong>, which applies to most {{ district!.name }} schools.
-            If your child attends a year-round school or specialized program, see
-            <a href="#other-calendars" class="underline font-medium">Other Official Calendars</a> below.
-          </template>
-        </p>
-      </div>
-
-      <DistrictOtherCalendars
-        v-if="otherCalendarsBeforeKeyDates && (cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
-        :alternate-calendars="(cal as any).alternateCalendars"
-        :district-name="district!.name"
-        :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
-        :description="(cal as any).alternateCalendarsDescription ?? (cal as any).meta?.alternateCalendarsDescription"
-        :button-label="(cal as any).alternateCalendarsButtonLabel ?? (cal as any).meta?.alternateCalendarsButtonLabel"
-        :collapsible="(cal as any).alternateCalendarsCollapsible ?? (cal as any).meta?.alternateCalendarsCollapsible"
-        :summary-label="(cal as any).alternateCalendarsSummaryLabel ?? (cal as any).meta?.alternateCalendarsSummaryLabel"
-      />
-      <DistrictCustomSections v-if="otherCalendarsBeforeKeyDates" :sections="customSections" position="afterOtherCalendars" />
-
-      <!-- Key Date Cards -->
-      <div v-if="!usesCalendarOverviewLayout && !hiddenSections.has('keyDateCards')" id="key-dates" class="scroll-mt-24">
-        <h2 class="text-xl font-bold text-gray-900 mb-4">{{ keyDatesHeading }}</h2>
-        <DistrictKeyDateCards :cal="cal!" />
-      </div>
-
-      <div
-        v-if="!usesCalendarOverviewLayout && configuredKeyDateSummaryItems.length && (hiddenSections.has('keyDateCards') || keyDatesSummaryId)"
-        :id="keyDatesSummaryId"
-        class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24"
-      >
-        <h2 class="text-lg font-semibold text-gray-900 mb-1">{{ keyDatesSummaryTitle }}</h2>
-        <p v-if="keyDatesSummarySubtitle" class="text-xs text-gray-600 mb-4">{{ keyDatesSummarySubtitle }}</p>
-        <div class="divide-y divide-gray-100">
-          <div
-            v-for="event in configuredKeyDateSummaryItems"
-            :key="event.date + event.name"
-            class="flex items-center justify-between py-2.5 first:pt-0 last:pb-0"
-          >
-            <div class="flex items-start gap-2.5 min-w-0">
-              <span
-                class="mt-0.5 inline-flex flex-shrink-0 justify-center rounded-lg px-2 py-0.5 text-center text-xs font-medium whitespace-nowrap sm:w-36"
-                :class="eventTypeColor[event.type]"
-              >{{ event.label || 'Key Date' }}</span>
-              <span class="min-w-0">
-                <span class="block break-words text-sm text-gray-900">{{ keyDateDisplayName(event) }}</span>
-                <span v-if="event.description" class="mt-0.5 block text-xs leading-relaxed text-gray-500">{{ event.description }}</span>
-              </span>
-            </div>
-            <span class="text-sm text-[#7b756d] tabular-nums ml-4 flex-shrink-0">
-              <span v-if="keyDateUsesPlainText(event)">{{ event.displayDate }}</span>
-              <template v-else-if="keyDateDateParts(event).length">
-                <template
-                  v-for="(part, index) in keyDateDateParts(event)"
-                  :key="part.date"
-                >
-                  <span v-if="index > 0">{{ keyDateDateSeparatorText(event) }}</span>
-                  <time :datetime="part.date" :aria-label="part.ariaLabel">{{ part.label }}</time>
-                </template>
-              </template>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Custom Sections: afterKeyDates -->
-      <div v-if="showYearSwitcherAfterKeyDates && visibleYearSwitcherYears.length" class="flex items-center gap-2 flex-wrap">
-        <span class="text-sm text-[#7b756d]">{{ yearSwitcherLabel }}</span>
-        <NuxtLink
-          v-for="y in visibleYearSwitcherYears"
-          :key="y"
-          :to="yearLink(y)"
-          class="text-sm px-3 py-1 rounded-lg border transition-colors"
-          :class="y === year ? 'border-[#b8c9c9] bg-[#e6f0ef] text-[#0f5d6b] font-medium' : 'border-[#d9d2c7] text-[#6b645c] hover:border-[#b8c9c9] hover:text-[#0f5d6b]'"
-        >
-          {{ displaySchoolYearLabel(y) }}
-        </NuxtLink>
-      </div>
-      <DistrictCustomSections :sections="customSections" position="afterKeyDates" />
-
-      <!-- Quick Facts -->
-      <DistrictQuickFacts
-        v-if="!hiddenSections.has('quickFacts')"
-        :cal="cal!"
-        :district="district!"
-        :related-cals="relatedCals ?? []"
-        :all-districts="relatedDistricts ?? []"
-        :prev-cal="prevCal ?? undefined"
-      />
-      <DistrictCustomSections :sections="customSections" position="afterQuickFacts" />
-
-      <div v-if="!usesCalendarOverviewLayout && !hiddenSections.has('downloadCta')" class="rounded-lg border border-blue-100 bg-blue-50 px-4 py-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <p class="text-sm text-blue-900">
-          Download the dates for Google Calendar, Apple Calendar, or Outlook, or view the district's official PDF.
-        </p>
-        <div class="flex flex-wrap gap-2">
-          <a
-            href="#add-to-calendar"
-            class="inline-flex items-center justify-center rounded-lg bg-[#0f5d6b] px-3 py-2 text-sm font-semibold text-white hover:bg-[#0b4c58] transition-colors"
-          >
-            Calendar Downloads
-          </a>
-          <a
-            v-if="(cal as any).sourcePdfUrl || (cal as any).printablePdfUrl"
-            :href="(cal as any).sourcePdfUrl || (cal as any).printablePdfUrl"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center justify-center rounded-lg border border-[#d9d2c7] bg-[#fbfaf7] px-3 py-2 text-sm font-semibold text-[#0f5d6b] hover:border-[#b8c9c9] hover:bg-[#e6f0ef] transition-colors"
-          >
-            {{ (cal as any).pdfButtonLabel ?? (cal as any).meta?.pdfButtonLabel ?? ((cal as any).sourcePdfUrl ? 'View Official PDF' : 'Download Printable PDF') }}
-            <span class="sr-only">(opens in a new tab)</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Alternate calendars notice -->
-      <div v-if="showAlternateCalendarsNotice && !alternateCalendarsNoticeBeforeKeyDates" class="bg-amber-50 border border-amber-200 rounded-lg p-4 flex gap-3">
-        <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        <p class="text-sm text-amber-800">
-          <template v-if="alternateCalendarsNotice">
-            {{ alternateCalendarsNotice }}
-            <template v-if="alternateCalendarsNoticeLinks.length">
-              <template v-for="(link, index) in alternateCalendarsNoticeLinks" :key="link.href">
-                <template v-if="index"> or </template>
-                <a :href="link.href" target="_blank" rel="noopener" class="underline font-medium">{{ link.label }}<span class="sr-only">(opens in a new tab)</span></a>
-              </template>
-            </template>
-            <a
-              v-else-if="alternateCalendarsNoticeLinkLabel"
-              :href="alternateCalendarsNoticeLinkHref"
-              class="underline font-medium"
-            >{{ alternateCalendarsNoticeLinkLabel }}</a>
-          </template>
-          <template v-else>
-            This page shows the <strong>Traditional Calendar</strong>, which applies to most {{ district!.name }} schools.
-            If your child attends a year-round school or specialized program, see
-            <a href="#other-calendars" class="underline font-medium">Other Official Calendars</a> below.
-          </template>
-        </p>
-      </div>
-
-      <DistrictOtherCalendars
-        v-if="otherCalendarsAfterKeyDates && (cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
-        :alternate-calendars="(cal as any).alternateCalendars"
-        :district-name="district!.name"
-        :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
-        :description="(cal as any).alternateCalendarsDescription ?? (cal as any).meta?.alternateCalendarsDescription"
-        :button-label="(cal as any).alternateCalendarsButtonLabel ?? (cal as any).meta?.alternateCalendarsButtonLabel"
-        :collapsible="(cal as any).alternateCalendarsCollapsible ?? (cal as any).meta?.alternateCalendarsCollapsible"
-        :summary-label="(cal as any).alternateCalendarsSummaryLabel ?? (cal as any).meta?.alternateCalendarsSummaryLabel"
-      />
-      <DistrictCustomSections :sections="customSections" position="afterAlternateCalendarsNotice" />
-
-      <!-- Break Summary (optional early position) -->
-      <template v-if="breaksBeforeAllDates">
-        <div v-if="breaks.length && !hiddenSections.has('breaks')" id="breaks" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
-          <h2 class="text-lg font-semibold text-[#1f2933] mb-4">{{ breaksTitle }}</h2>
-          <div class="space-y-3">
-              <div v-for="b in summaryBreaks" :key="b.name" class="flex flex-col items-start gap-2 py-3 border-b border-[#eee9df] last:border-0 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <div class="font-medium text-[#1f2933]">{{ breakDisplayName(b.name) }}</div>
-                <div class="text-sm text-[#7b756d]">{{ formatCompactDateRange(b.start, b.end) }}</div>
-                <p v-if="breakNoteFor(b)" class="mt-1 text-sm text-[#6b645c]">{{ breakNoteFor(b) }}</p>
-                <div v-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-[#5b4b6f] mt-0.5 font-medium">
-                  In progress
-                </div>
-              </div>
-              <div v-if="!hideBreakDurationBadges" class="self-start text-sm font-semibold text-[#5b4b6f] bg-[#eee9f3] px-3 py-1 rounded-lg sm:self-auto">{{ breakDurationLabel(b) }}</div>
-            </div>
-          </div>
-        </div>
-        <div v-if="!breaks.length && !hiddenSections.has('breaks')" id="breaks" class="scroll-mt-24">
-          <DistrictCustomSections :sections="customSections" position="afterBreaks" />
-        </div>
-        <DistrictCustomSections v-else-if="!hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
-      </template>
-
-      <!-- Add to Calendar + Share (optional early position) -->
-      <template v-if="!usesCalendarOverviewLayout && moveCalendarExportBeforeAllDates">
-        <CalendarExportShare
-          :district-name="district!.name"
-          :year="year"
-          :source-url="cal!.sourceUrl ?? district!.officialWebsite"
-          :district="district!"
-          :cal="cal!"
-        />
-        <DistrictCustomSections :sections="customSections" position="afterCalendarExport" />
-      </template>
-
-      <!-- All Dates -->
-      <div v-if="!usesCalendarOverviewLayout && hiddenSections.has('keyDateCards') && !configuredKeyDateSummaryItems.length" id="key-dates" class="scroll-mt-24" />
-      <DistrictAllDates
-        v-if="!usesCalendarOverviewLayout"
-        :events="cal!.events"
-        :title="allDatesTitle"
-        :source-url="(cal as any).allDatesSourceUrl ?? (cal as any).meta?.allDatesSourceUrl ?? cal!.sourceUrl ?? district!.officialWebsite"
-        :source-label="(cal as any).allDatesSourceLabel ?? (cal as any).meta?.allDatesSourceLabel"
-        :source-suffix="(cal as any).allDatesSourceSuffix ?? (cal as any).meta?.allDatesSourceSuffix"
-        :source-links="allDatesSourceLinks"
-        :correction-source-url="(cal as any).allDatesCorrectionSourceUrl ?? (cal as any).meta?.allDatesCorrectionSourceUrl"
-        :correction-source-label="(cal as any).allDatesCorrectionSourceLabel ?? (cal as any).meta?.allDatesCorrectionSourceLabel"
-        :district-name="district!.name"
-        :verified-date="verifiedDate"
-        :legend="dateLegend"
-        :legend-title="(cal as any).dateLegendTitle ?? (cal as any).meta?.dateLegendTitle"
-        :label-overrides="dateLabelOverrides"
-        :mode="allDatesMode"
-        :footer-mode="(cal as any).allDatesFooterMode ?? (cal as any).meta?.allDatesFooterMode"
-        :included-dates-in-key-dates="allDatesIncludedDatesInKeyDates"
-        :first-day="cal!.firstDay"
-        :last-day="cal!.lastDay"
-        :coverage-note="(cal as any).allDatesCoverageNote ?? (cal as any).meta?.allDatesCoverageNote"
-        :coverage-note-position="(cal as any).allDatesCoverageNotePosition ?? (cal as any).meta?.allDatesCoverageNotePosition"
-        :covered-break-dates-note="(cal as any).allDatesCoveredBreakDatesNote ?? (cal as any).meta?.allDatesCoveredBreakDatesNote"
-        :hide-covered-break-dates-note="(cal as any).hideCoveredBreakDatesNote ?? (cal as any).meta?.hideCoveredBreakDatesNote"
-        :derived-date-note="(cal as any).allDatesDerivedDateNote ?? (cal as any).meta?.allDatesDerivedDateNote"
-        :derived-date-note-position="(cal as any).allDatesDerivedDateNotePosition ?? (cal as any).meta?.allDatesDerivedDateNotePosition"
-        :legend-style="(cal as any).dateLegendStyle ?? (cal as any).meta?.dateLegendStyle"
-        :month-notes="(cal as any).allDatesMonthNotes ?? (cal as any).meta?.allDatesMonthNotes"
-      />
-      <DistrictCustomSections :sections="customSections" position="afterAllDates" />
-
-      <div v-if="yearComparisonAfterAllDates && hasYearComparisonContent" id="year-comparison" class="scroll-mt-24 space-y-8">
-        <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal!" :prev-cal="prevCal ?? undefined" />
-        <DistrictCustomSections :sections="customSections" position="afterYearDiff" />
-      </div>
-
-      <!-- Break Summary -->
-      <div v-if="!breaksBeforeAllDates && breaks.length && !hiddenSections.has('breaks')" id="breaks" class="bg-rds-surface-panel rounded-lg border border-rds-hairline p-6 scroll-mt-24">
-        <h2 class="text-lg font-semibold text-[#1f2933] mb-4">{{ breaksTitle }}</h2>
-        <div class="space-y-3">
-            <div v-for="b in summaryBreaks" :key="b.name" class="flex flex-col items-start gap-2 py-3 border-b border-[#eee9df] last:border-0 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <div class="font-medium text-[#1f2933]">{{ breakDisplayName(b.name) }}</div>
-              <div class="text-sm text-[#7b756d]">{{ formatCompactDateRange(b.start, b.end) }}</div>
-              <p v-if="breakNoteFor(b)" class="mt-1 text-sm text-[#6b645c]">{{ breakNoteFor(b) }}</p>
-              <div v-if="todayStr >= b.start && todayStr <= b.end" class="text-xs text-[#5b4b6f] mt-0.5 font-medium">
-                In progress
-              </div>
-            </div>
-            <div v-if="!hideBreakDurationBadges" class="self-start text-sm font-semibold text-[#5b4b6f] bg-[#eee9f3] px-3 py-1 rounded-lg sm:self-auto">{{ breakDurationLabel(b) }}</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Custom Sections: afterBreaks -->
-      <div v-if="!breaksBeforeAllDates && !breaks.length && !hiddenSections.has('breaks')" id="breaks" class="scroll-mt-24">
-        <DistrictCustomSections :sections="customSections" position="afterBreaks" />
-      </div>
-      <DistrictCustomSections v-else-if="!breaksBeforeAllDates && !hiddenSections.has('breaks')" :sections="customSections" position="afterBreaks" />
-
-      <template v-if="comparisonBeforeCalendarExport">
-        <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal!" :district="district!" :related-cals="relatedCals ?? []" :all-districts="relatedDistricts ?? []" :year="year" />
-        <DistrictCustomSections :sections="customSections" position="afterComparison" />
-      </template>
-
-      <DistrictGradingPeriods
-        v-if="gradingPeriodsBeforeCalendarExport"
-        :periods="(cal as any).gradingPeriods"
-        :title="(cal as any).gradingPeriodsTitle ?? (cal as any).meta?.gradingPeriodsTitle"
-        :description="(cal as any).gradingPeriodsDescription ?? (cal as any).meta?.gradingPeriodsDescription"
-        :days-label="(cal as any).gradingPeriodsDaysLabel ?? (cal as any).meta?.gradingPeriodsDaysLabel"
-        :next-date-label="(cal as any).gradingPeriodsNextDateLabel ?? (cal as any).meta?.gradingPeriodsNextDateLabel"
-        :reports-label="(cal as any).gradingPeriodsReportsLabel ?? (cal as any).meta?.gradingPeriodsReportsLabel"
-        :footer-note="(cal as any).gradingPeriodsFooterNote ?? (cal as any).meta?.gradingPeriodsFooterNote"
-      />
-      <DistrictCustomSections
-        v-if="gradingPeriodsBeforeCalendarExport"
-        :sections="customSections"
-        position="afterGradingPeriodsBeforeCalendarExport"
-      />
-
-      <!-- Other Official Calendars (optional position before the one-time calendar import) -->
-      <DistrictOtherCalendars
-        v-if="otherCalendarsBeforeCalendarExport && (cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
-        :alternate-calendars="(cal as any).alternateCalendars"
-        :district-name="district!.name"
-        :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
-        :description="(cal as any).alternateCalendarsDescription ?? (cal as any).meta?.alternateCalendarsDescription"
-        :button-label="(cal as any).alternateCalendarsButtonLabel ?? (cal as any).meta?.alternateCalendarsButtonLabel"
-        :collapsible="(cal as any).alternateCalendarsCollapsible ?? (cal as any).meta?.alternateCalendarsCollapsible"
-        :summary-label="(cal as any).alternateCalendarsSummaryLabel ?? (cal as any).meta?.alternateCalendarsSummaryLabel"
-        :footer-title="(cal as any).alternateCalendarsFooterTitle ?? (cal as any).meta?.alternateCalendarsFooterTitle"
-        :footer-description="(cal as any).alternateCalendarsFooterDescription ?? (cal as any).meta?.alternateCalendarsFooterDescription"
-        :footer-link-label="(cal as any).alternateCalendarsFooterLinkLabel ?? (cal as any).meta?.alternateCalendarsFooterLinkLabel"
-        :footer-link-url="(cal as any).alternateCalendarsFooterLinkUrl ?? (cal as any).meta?.alternateCalendarsFooterLinkUrl"
-      />
-      <DistrictCustomSections v-if="otherCalendarsBeforeCalendarExport" :sections="customSections" position="afterOtherCalendars" />
-
-      <!-- Add to Calendar + Share -->
-      <template v-if="!usesCalendarOverviewLayout && !moveCalendarExportBeforeAllDates">
-        <CalendarExportShare
-          :district-name="district!.name"
-          :year="year"
-          :source-url="cal!.sourceUrl ?? district!.officialWebsite"
-          :district="district!"
-          :cal="cal!"
-        />
-        <DistrictCustomSections :sections="customSections" position="afterCalendarExport" />
-      </template>
-
-      <!-- Other Official Calendars -->
-      <DistrictOtherCalendars
-        v-if="!otherCalendarsBeforeKeyDates && !otherCalendarsAfterKeyDates && !otherCalendarsAfterFaq && !otherCalendarsBeforeCalendarExport && (cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
-        :alternate-calendars="(cal as any).alternateCalendars"
-        :district-name="district!.name"
-        :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
-        :description="(cal as any).alternateCalendarsDescription ?? (cal as any).meta?.alternateCalendarsDescription"
-        :button-label="(cal as any).alternateCalendarsButtonLabel ?? (cal as any).meta?.alternateCalendarsButtonLabel"
-        :collapsible="(cal as any).alternateCalendarsCollapsible ?? (cal as any).meta?.alternateCalendarsCollapsible"
-        :summary-label="(cal as any).alternateCalendarsSummaryLabel ?? (cal as any).meta?.alternateCalendarsSummaryLabel"
-        :footer-title="(cal as any).alternateCalendarsFooterTitle ?? (cal as any).meta?.alternateCalendarsFooterTitle"
-        :footer-description="(cal as any).alternateCalendarsFooterDescription ?? (cal as any).meta?.alternateCalendarsFooterDescription"
-        :footer-link-label="(cal as any).alternateCalendarsFooterLinkLabel ?? (cal as any).meta?.alternateCalendarsFooterLinkLabel"
-        :footer-link-url="(cal as any).alternateCalendarsFooterLinkUrl ?? (cal as any).meta?.alternateCalendarsFooterLinkUrl"
-      />
-      <DistrictCustomSections v-if="!otherCalendarsBeforeKeyDates && !otherCalendarsBeforeCalendarExport" :sections="customSections" position="afterOtherCalendars" />
-
-      <!-- Year by the Numbers -->
-      <div v-if="!hiddenSections.has('yearNumbers')" id="calendar-insights" class="scroll-mt-24">
-        <DistrictYearNumbers :cal="cal!" :school-year="year" />
-      </div>
-
-      <!-- Grading Periods -->
-      <DistrictGradingPeriods
-        v-if="!gradingPeriodsBeforeCalendarExport"
-        :periods="(cal as any).gradingPeriods"
-        :title="(cal as any).gradingPeriodsTitle ?? (cal as any).meta?.gradingPeriodsTitle"
-        :description="(cal as any).gradingPeriodsDescription ?? (cal as any).meta?.gradingPeriodsDescription"
-        :days-label="(cal as any).gradingPeriodsDaysLabel ?? (cal as any).meta?.gradingPeriodsDaysLabel"
-        :next-date-label="(cal as any).gradingPeriodsNextDateLabel ?? (cal as any).meta?.gradingPeriodsNextDateLabel"
-        :reports-label="(cal as any).gradingPeriodsReportsLabel ?? (cal as any).meta?.gradingPeriodsReportsLabel"
-        :footer-note="(cal as any).gradingPeriodsFooterNote ?? (cal as any).meta?.gradingPeriodsFooterNote"
-      />
-      <DistrictCustomSections
-        v-if="!gradingPeriodsBeforeCalendarExport"
-        :sections="customSections"
-        position="afterGradingPeriods"
-      />
-
-      <!-- What's Different This Year -->
-      <div v-if="!yearComparisonAfterAllDates && hasYearComparisonContent" id="year-comparison" class="scroll-mt-24 space-y-8">
-        <DistrictYearDiff v-if="!hiddenSections.has('whatsDifferent')" :cal="cal!" :prev-cal="prevCal ?? undefined" />
-        <DistrictCustomSections :sections="customSections" position="afterYearDiff" />
-      </div>
-
-      <!-- Year Switcher -->
-      <div v-if="!showYearSwitcherAfterKeyDates && !showYearSwitcherAfterSources && visibleYearSwitcherYears.length" class="flex items-center gap-2 flex-wrap">
-        <span class="text-sm text-[#7b756d]">{{ yearSwitcherLabel }}</span>
-        <NuxtLink
-          v-for="y in visibleYearSwitcherYears"
-          :key="y"
-          :to="yearLink(y)"
-          class="text-sm px-3 py-1 rounded-lg border transition-colors"
-          :class="y === year ? 'border-[#b8c9c9] bg-[#e6f0ef] text-[#0f5d6b] font-medium' : 'border-[#d9d2c7] text-[#6b645c] hover:border-[#b8c9c9] hover:text-[#0f5d6b]'"
-        >
-          {{ displaySchoolYearLabel(y) }}
-        </NuxtLink>
-      </div>
-
-      <!-- Calendar Context + About -->
-      <DistrictCalendarAbout v-if="!hiddenSections.has('about')" :cal="cal!" :district="district!" />
-
-      <!-- Custom Sections: afterAbout (default position) -->
-      <DistrictCustomSections :sections="customSections" position="afterAbout" />
-
-      <!-- Compare with Nearby Districts -->
-      <template v-if="comparisonBeforeFaq && !comparisonBeforeCalendarExport">
-        <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal!" :district="district!" :related-cals="relatedCals ?? []" :all-districts="relatedDistricts ?? []" :year="year" />
-        <DistrictCustomSections :sections="customSections" position="afterComparison" />
-      </template>
-
-      <!-- Sources -->
-      <DistrictSources
-        v-if="sourcesBeforeFaq && !hiddenSections.has('sources') && pageSources.length"
-        :title="(cal as any).sourcesTitle ?? (cal as any).meta?.sourcesTitle"
-        :sources="pageSources"
-        :district-name="district!.name"
-        :short-name="district!.shortName || district!.name"
-        :year="year"
-        :verified-date="verifiedDate"
-        :source-version="(cal as any).sourceVersion"
-        :source-version-label="(cal as any).sourceVersionLabel ?? (cal as any).meta?.sourceVersionLabel"
-        :source-version-display="(cal as any).sourceVersionDisplay ?? (cal as any).meta?.sourceVersionDisplay"
-        :hide-source-version-display="(cal as any).hideSourceVersionDisplay ?? (cal as any).meta?.hideSourceVersionDisplay"
-        :source-pdf-url="(cal as any).sourcePdfUrl"
-        :review-summary="(cal as any).sourceReviewSummary ?? (cal as any).meta?.sourceReviewSummary"
-        :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
-        :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
-        :maintainer-label="(cal as any).sourceMaintainerLabel ?? (cal as any).meta?.sourceMaintainerLabel"
-        :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
-        :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
-        :hide-next-review="Boolean((cal as any).hideSourceNextReview ?? (cal as any).meta?.hideSourceNextReview)"
-        :hide-review-author="Boolean((cal as any).hideSourceReviewAuthor ?? (cal as any).meta?.hideSourceReviewAuthor)"
-        :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
-        :hide-review-date="Boolean((cal as any).hideSourceReviewDate ?? (cal as any).meta?.hideSourceReviewDate)"
-        :hide-review-details="Boolean((cal as any).hideSourceReviewDetails ?? (cal as any).meta?.hideSourceReviewDetails)"
-      />
-
-      <!-- FAQ -->
-      <DistrictFaq :cal="cal!" :district="district!" :faqs="faqs" />
-
-      <!-- Custom Sections: afterFaq -->
-      <DistrictCustomSections :sections="customSections" position="afterFaq" />
-
-      <DistrictOtherCalendars
-        v-if="otherCalendarsAfterFaq && (cal as any)?.alternateCalendars?.length && !hiddenSections.has('otherCalendars')"
-        :alternate-calendars="(cal as any).alternateCalendars"
-        :district-name="district!.name"
-        :title="(cal as any).alternateCalendarsTitle ?? (cal as any).meta?.alternateCalendarsTitle"
-        :description="(cal as any).alternateCalendarsDescription ?? (cal as any).meta?.alternateCalendarsDescription"
-       :button-label="(cal as any).alternateCalendarsButtonLabel ?? (cal as any).meta?.alternateCalendarsButtonLabel"
-        :collapsible="(cal as any).alternateCalendarsCollapsible ?? (cal as any).meta?.alternateCalendarsCollapsible"
-        :summary-label="(cal as any).alternateCalendarsSummaryLabel ?? (cal as any).meta?.alternateCalendarsSummaryLabel"
-       :footer-title="(cal as any).alternateCalendarsFooterTitle ?? (cal as any).meta?.alternateCalendarsFooterTitle"
-        :footer-description="(cal as any).alternateCalendarsFooterDescription ?? (cal as any).meta?.alternateCalendarsFooterDescription"
-        :footer-link-label="(cal as any).alternateCalendarsFooterLinkLabel ?? (cal as any).meta?.alternateCalendarsFooterLinkLabel"
-        :footer-link-url="(cal as any).alternateCalendarsFooterLinkUrl ?? (cal as any).meta?.alternateCalendarsFooterLinkUrl"
-      />
-
-      <!-- Compare with Nearby Districts -->
-      <template v-if="!comparisonBeforeCalendarExport && !comparisonBeforeFaq && !comparisonAfterSources">
-        <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal!" :district="district!" :related-cals="relatedCals ?? []" :all-districts="relatedDistricts ?? []" :year="year" />
-        <DistrictCustomSections :sections="customSections" position="afterComparison" />
-      </template>
-
-      <!-- Planning Tips -->
-      <DistrictPlanningTips
-        id="planning-tips"
-        v-if="!hiddenSections.has('planningTips') && (district as any).planningTips?.content?.length"
-        :name="district!.shortName || district!.name"
-        :tips="(district as any).planningTips.content"
-        :title="(district as any).planningTips.title"
-        :links="(district as any).planningTips.links"
-      />
-
-      <!-- Custom Sections: afterPlanningTips -->
-      <DistrictCustomSections :sections="customSections" position="afterPlanningTips" />
-
-      <!-- Living Here -->
-      <DistrictLivingHere
-        v-if="!hiddenSections.has('livingHere') && (district as any).livingHere?.highlights?.length"
-        :city="district!.city || district!.name"
-        :intro="(district as any).livingHere.intro"
-        :highlights="(district as any).livingHere.highlights"
-      />
-
-      <!-- District Profile -->
-      <DistrictProfile
-        v-if="!hiddenSections.has('districtProfile') && ((district as any).studentCount || (district as any).schoolCount)"
-        :student-count="(district as any).studentCount"
-        :student-count-as-of="(district as any).studentCountAsOf"
-        :student-count-source-label="(district as any).studentCountSourceLabel"
-        :student-count-source-url="(district as any).studentCountSourceUrl"
-        :student-count-approximate="Boolean((district as any).profileStudentCountApproximate)"
-        :school-count="(district as any).schoolCount"
-        :school-count-exact="Boolean((district as any).profileSchoolCountExact)"
-        :school-count-approximate="Boolean((district as any).profileSchoolCountApproximate ?? (district as any).meta?.profileSchoolCountApproximate)"
-        :school-count-label="(district as any).schoolCountLabel ?? (district as any).meta?.schoolCountLabel"
-        :calendar-type="(district as any).calendarType"
-        :hide-calendar-type="Boolean((district as any).hideProfileCalendarType)"
-        :grades="district!.grades"
-        :founded="(district as any).founded"
-        :county="(district as any).county"
-        :metro="(district as any).metro"
-        :district-fact="(district as any).districtFact"
-        :title="(district as any).profileTitle ?? (district as any).meta?.profileTitle"
-        :disclaimer="(district as any).profileDisclaimer"
-      />
-
-      <!-- Custom Sections: beforeSources -->
-      <DistrictCustomSections :sections="customSections" position="beforeSources" />
-
-      <!-- Sources -->
-      <DistrictSources
-        v-if="!sourcesBeforeFaq && !hiddenSections.has('sources') && pageSources.length"
-        :title="(cal as any).sourcesTitle ?? (cal as any).meta?.sourcesTitle"
-        :sources="pageSources"
-        :district-name="district!.name"
-        :short-name="district!.shortName || district!.name"
-        :year="year"
-        :verified-date="verifiedDate"
-        :source-version="(cal as any).sourceVersion"
-        :source-version-label="(cal as any).sourceVersionLabel ?? (cal as any).meta?.sourceVersionLabel"
-        :source-version-display="(cal as any).sourceVersionDisplay ?? (cal as any).meta?.sourceVersionDisplay"
-        :hide-source-version-display="(cal as any).hideSourceVersionDisplay ?? (cal as any).meta?.hideSourceVersionDisplay"
-        :source-pdf-url="(cal as any).sourcePdfUrl"
-        :review-summary="(cal as any).sourceReviewSummary ?? (cal as any).meta?.sourceReviewSummary"
-        :review-details="(cal as any).sourceReviewDetails ?? (cal as any).meta?.sourceReviewDetails"
-        :review-details-title="(cal as any).sourceReviewDetailsTitle ?? (cal as any).meta?.sourceReviewDetailsTitle"
-        :maintainer-label="(cal as any).sourceMaintainerLabel ?? (cal as any).meta?.sourceMaintainerLabel"
-        :maintainer-text="(cal as any).sourceMaintainerText ?? (cal as any).meta?.sourceMaintainerText"
-        :next-review-text="(cal as any).sourceNextReviewText ?? (cal as any).meta?.sourceNextReviewText"
-        :hide-next-review="Boolean((cal as any).hideSourceNextReview ?? (cal as any).meta?.hideSourceNextReview)"
-        :hide-review-author="Boolean((cal as any).hideSourceReviewAuthor ?? (cal as any).meta?.hideSourceReviewAuthor)"
-        :review-date-label="(cal as any).sourceReviewDateLabel ?? (cal as any).meta?.sourceReviewDateLabel"
-        :hide-review-date="Boolean((cal as any).hideSourceReviewDate ?? (cal as any).meta?.hideSourceReviewDate)"
-        :hide-review-details="Boolean((cal as any).hideSourceReviewDetails ?? (cal as any).meta?.hideSourceReviewDetails)"
-      />
-
-      <template v-if="comparisonAfterSources && !comparisonBeforeCalendarExport">
-        <DistrictComparison v-if="!hiddenSections.has('comparison')" :cal="cal!" :district="district!" :related-cals="relatedCals ?? []" :all-districts="relatedDistricts ?? []" :year="year" />
-        <DistrictCustomSections :sections="customSections" position="afterComparison" />
-      </template>
-
-      <div v-if="showYearSwitcherAfterSources && visibleYearSwitcherYears.length" class="flex items-center gap-2 flex-wrap">
-        <span class="text-sm text-[#7b756d]">{{ yearSwitcherLabel }}</span>
-        <NuxtLink
-          v-for="y in visibleYearSwitcherYears"
-          :key="y"
-          :to="yearLink(y)"
-          class="text-sm px-3 py-1 rounded-lg border transition-colors"
-          :class="y === year ? 'border-[#b8c9c9] bg-[#e6f0ef] text-[#0f5d6b] font-medium' : 'border-[#d9d2c7] text-[#6b645c] hover:border-[#b8c9c9] hover:text-[#0f5d6b]'"
-        >
-          {{ displaySchoolYearLabel(y) }}
-        </NuxtLink>
-      </div>
-
-      <!-- Data quality notice -->
-      <DistrictDataQuality
-        v-if="!hiddenSections.has('sources') && !pageSources.length"
-        :cal="cal!"
-        :district="district!"
-        :year="year"
-      />
-
-      <!-- Related Districts -->
-      <DistrictRelatedDistricts
-        v-if="!hiddenSections.has('relatedDistricts') && visibleRelatedDistricts.length"
-        :related-districts="visibleRelatedDistricts"
-        :state-name="district!.state"
-        :title="(cal as any)?.relatedDistrictsTitle ?? (cal as any)?.meta?.relatedDistrictsTitle ?? (district as any).relatedDistrictsTitle"
-        :description="(cal as any)?.relatedDistrictsDescription ?? (cal as any)?.meta?.relatedDistrictsDescription ?? (district as any).relatedDistrictsDescription"
-        :hide-descriptions="Boolean((cal as any)?.hideRelatedDistrictDescriptions ?? (cal as any)?.meta?.hideRelatedDistrictDescriptions ?? (district as any).hideRelatedDistrictDescriptions ?? (district as any).meta?.hideRelatedDistrictDescriptions)"
-        :year="year"
-        :year-available-slugs="relatedYearAvailableSlugs"
-        :force-year-links="Boolean((cal as any)?.forceRelatedDistrictYearLinks ?? (cal as any)?.meta?.forceRelatedDistrictYearLinks)"
-      />
-
-      <section v-if="!hiddenSections.has('nationalTrends')" class="rounded-lg border border-rds-hairline bg-rds-surface-panel p-6">
-        <h2 class="text-lg font-semibold text-gray-900 mb-2">{{ (cal as any)?.nationalTrendsTitle ?? (cal as any)?.meta?.nationalTrendsTitle ?? `${district!.shortName || district!.name} in National Calendar Trends` }}</h2>
-        <p class="text-sm leading-relaxed text-gray-600">
-          To compare this district calendar with broader U.S. start-date, break, and end-date patterns, see the
-          <NuxtLink to="/school-calendar-trends/2026-2027-report" class="font-semibold text-[#0f5d6b] hover:underline">
-            2026-2027 School Calendar Trends Report
-          </NuxtLink>.
-        </p>
+      <section id="sources" class="district-detail-about" aria-labelledby="about-calendar-title">
+        <h2 id="about-calendar-title">About This Calendar</h2>
+        <p><strong>Data source &amp; handling:</strong> Dates are collected from {{ district!.name }} calendar materials and organized into key dates, monthly calendars, PDF downloads, and calendar subscriptions.</p>
+        <ul class="space-y-2">
+          <li v-for="source in sourceLinks" :key="source.url"><a :href="source.url" target="_blank" rel="noopener" class="rds-link underline">{{ source.label }} ↗</a></li>
+        </ul>
+        <p><strong>Disclaimer:</strong> MySchoolDates is not affiliated with {{ district!.name }}. Calendars can change; always check <a :href="district!.officialWebsite" target="_blank" rel="noopener" class="rds-link underline">{{ officialHost }}</a> before making plans.</p>
+        <p v-if="updatedDate">Last updated: <time :datetime="updatedDate">{{ updatedDate }}</time></p>
       </section>
-
-      </div>
-
+    </div>
   </main>
 </template>

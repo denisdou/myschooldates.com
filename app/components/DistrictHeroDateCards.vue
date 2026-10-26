@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { studentDetailEvents } from '~/utils/calendarDetails'
 const props = defineProps<{
   cal: {
     firstDay: string
@@ -7,11 +8,10 @@ const props = defineProps<{
   }
 }>()
 
-const { getBreaks } = useDistrictPage()
-
-const breaks = computed(() => getBreaks(props.cal.events))
+const breaks = computed(() => studentDetailEvents(props.cal).filter(event => ['break', 'break_start'].includes(event.type)))
 const winterRecess = computed(() =>
-  breaks.value.find(item => /winter|christmas/i.test(item.name))
+  breaks.value.find(item => /winter|christmas|holiday recess|holiday break/i.test(item.name) && item.start.slice(5, 7) === '12')
+  ?? breaks.value.find(item => /winter|christmas|holiday recess|holiday break/i.test(item.name))
 )
 const springRecess = computed(() =>
   breaks.value.find(item => /spring/i.test(item.name))
@@ -51,13 +51,13 @@ const cards = computed(() => [
     icon: 'first',
   },
   {
-    label: 'Winter Recess',
+    label: 'Winter Break',
     value: formatRange(winterRecess.value?.start, winterRecess.value?.end),
     datetime: winterRecess.value?.start,
     icon: 'winter',
   },
   {
-    label: 'Spring Recess',
+    label: 'Spring Break',
     value: formatRange(springRecess.value?.start, springRecess.value?.end),
     datetime: springRecess.value?.start,
     icon: 'spring',

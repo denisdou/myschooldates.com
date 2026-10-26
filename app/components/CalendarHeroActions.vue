@@ -8,7 +8,7 @@ const props = defineProps<{
   }
 }>()
 
-const pdfUrl = computed(() => props.cal.sourcePdfUrl || props.cal.printablePdfUrl || '')
+const pdfUrl = computed(() => props.cal.sourcePdfUrl || props.cal.printablePdfUrl || `/calendars/${props.district.slug}-${props.cal.schoolYear}.pdf`)
 const icsPath = computed(() => `/calendars/${props.district.slug}-${props.cal.schoolYear}.ics`)
 const icsAbsoluteUrl = computed(() => `https://myschooldates.com${icsPath.value}`)
 const subscriptionUrl = computed(() => `${icsAbsoluteUrl.value}?subscription=1`)
@@ -42,9 +42,8 @@ const secondaryActions = computed(() => [
 </script>
 
 <template>
-  <div id="calendar-actions" class="district-calendar-actions">
+  <div class="district-calendar-actions">
     <a
-      v-if="pdfUrl"
       :href="pdfUrl"
       target="_blank"
       rel="noopener"
@@ -54,24 +53,11 @@ const secondaryActions = computed(() => [
         <path d="M7 3h7l4 4v14H7z" />
         <path d="M14 3v5h5M9 14h6M9 17h4" />
       </svg>
-      Download Official PDF
+      Download PDF
       <span class="sr-only">(opens in a new tab)</span>
     </a>
-    <button
-      v-else
-      type="button"
-      class="district-calendar-action district-calendar-action--primary"
-      disabled
-      title="An official PDF is not available for this calendar"
-    >
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-        <path d="M7 3h7l4 4v14H7z" />
-        <path d="M14 3v5h5M9 14h6M9 17h4" />
-      </svg>
-      Download Official PDF
-    </button>
 
-    <div class="district-calendar-actions__desktop">
+    <div class="district-calendar-actions__desktop district-calendar-actions__sync">
       <a
         v-for="action in secondaryActions"
         :key="action.label"
@@ -97,27 +83,5 @@ const secondaryActions = computed(() => [
       </a>
     </div>
 
-    <details class="district-calendar-actions__mobile-menu">
-      <summary class="district-calendar-action district-calendar-action--secondary">
-        More
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <path d="m7 10 5 5 5-5" />
-        </svg>
-      </summary>
-      <div class="district-calendar-actions__popover">
-        <a
-          v-for="action in secondaryActions"
-          :key="`mobile-${action.label}`"
-          :href="action.href"
-          :target="action.external ? '_blank' : undefined"
-          :rel="action.external ? 'noopener' : undefined"
-          :download="action.download"
-          class="district-calendar-actions__popover-item"
-        >
-          {{ action.label }}
-          <span v-if="action.external" aria-hidden="true">↗</span>
-        </a>
-      </div>
-    </details>
   </div>
 </template>
