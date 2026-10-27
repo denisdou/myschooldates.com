@@ -15,6 +15,37 @@ export type CorrectionConfig = {
   turnstileHosts: string
 }
 
+const correctionEnvNames = {
+  resendApiKey: 'NUXT_CORRECTIONS_RESEND_API_KEY',
+  from: 'NUXT_CORRECTIONS_FROM',
+  to: 'NUXT_CORRECTIONS_TO',
+  turnstileSecret: 'NUXT_CORRECTIONS_TURNSTILE_SECRET',
+  turnstileHosts: 'NUXT_CORRECTIONS_TURNSTILE_HOSTS',
+} as const
+
+export function resolveCorrectionConfig(base: CorrectionConfig & { trustProxy?: boolean }, bindings?: Record<string, unknown>) {
+  function text(key: keyof typeof correctionEnvNames) {
+    const value = bindings?.[correctionEnvNames[key]]
+    if (value === undefined) return base[key].trim()
+    return typeof value === 'string' ? value.trim() : ''
+  }
+  const proxy = bindings?.NUXT_CORRECTIONS_TRUST_PROXY
+  return {
+    resendApiKey: text('resendApiKey'),
+    from: text('from'),
+    to: text('to'),
+    turnstileSecret: text('turnstileSecret'),
+    turnstileHosts: text('turnstileHosts'),
+    trustProxy: proxy === undefined ? base.trustProxy === true : proxy === true || proxy === 'true',
+  }
+}
+
+export function missingCorrectionConfig(config: CorrectionConfig) {
+  return (Object.keys(correctionEnvNames) as Array<keyof typeof correctionEnvNames>)
+    .filter(key => !config[key].trim())
+    .map(key => correctionEnvNames[key])
+}
+
 export class CorrectionError extends Error {
   constructor(public statusCode: number, message: string, public retryAfter?: number) {
     super(message)
@@ -93,7 +124,7 @@ export function createCorrectionRateLimiter(max = 5, windowMs = 10 * 60 * 1000) 
 }
 
 export async function deliverCorrection(payload: CorrectionPayload, config: CorrectionConfig, request = fetch) {
-  if (!config.resendApiKey || !config.from || !config.to || !config.turnstileSecret || !config.turnstileHosts) {
+  if (missingCorrectionConfig(config).length) {
     throw new CorrectionError(503, 'The correction form is temporarily unavailable. Please try again later.')
   }
   // Cloudflare publishes dummy keys for local testing. Never accept them in production.

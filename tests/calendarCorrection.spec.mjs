@@ -8,7 +8,7 @@ const source = ts.transpile(readFileSync(new URL('../server/utils/calendarCorrec
   module: ts.ModuleKind.ESNext,
   target: ts.ScriptTarget.ES2022,
 })
-const { parseCorrectionPayload, createCorrectionRateLimiter, deliverCorrection } = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`)
+const { parseCorrectionPayload, createCorrectionRateLimiter, deliverCorrection, resolveCorrectionConfig, missingCorrectionConfig } = await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`)
 const payload = {
   message: 'The listed holiday date is incorrect.',
   email: 'parent@example.org',
@@ -111,4 +111,40 @@ test('production rejects Cloudflare dummy secrets', async () => {
   const mock = mockRequest()
   await assert.rejects(deliverCorrection(payload, { ...config, turnstileSecret: '1x0000000000000000000000000000000AA' }, mock.request), failWith(503))
   assert.equal(mock.calls.length, 0)
+})
+
+
+test('Cloudflare request bindings supply private values when runtimeConfig defaults are empty', async () => {
+  const base = { resendApiKey: '', from: '', to: 'hello@myschooldates.com', turnstileSecret: '', turnstileHosts: 'myschooldates.com', trustProxy: true }
+  const resolved = resolveCorrectionConfig(base, {
+    NUXT_CORRECTIONS_RESEND_API_KEY: config.resendApiKey,
+    NUXT_CORRECTIONS_FROM: config.from,
+    NUXT_CORRECTIONS_TO: 'configured-recipient@example.org',
+    NUXT_CORRECTIONS_TURNSTILE_SECRET: config.turnstileSecret,
+    NUXT_CORRECTIONS_TURNSTILE_HOSTS: config.turnstileHosts,
+    NUXT_CORRECTIONS_TRUST_PROXY: 'false',
+  })
+  assert.deepEqual(resolved, { ...config, to: 'configured-recipient@example.org', trustProxy: false })
+  assert.deepEqual(missingCorrectionConfig(resolved), [])
+  assert.equal(base.resendApiKey, '')
+  const mock = mockRequest()
+  assert.deepEqual(await deliverCorrection(payload, resolved, mock.request), { success: true })
+  assert.equal(mock.calls.length, 2)
+})
+
+test('Node config remains supported and an explicitly empty Cloudflare secret fails closed', () => {
+  assert.deepEqual(resolveCorrectionConfig(config), { ...config, trustProxy: false })
+  const resolved = resolveCorrectionConfig(config, { NUXT_CORRECTIONS_RESEND_API_KEY: '   ' })
+  assert.equal(resolved.resendApiKey, '')
+  assert.deepEqual(missingCorrectionConfig(resolved), ['NUXT_CORRECTIONS_RESEND_API_KEY'])
+})
+
+test('Cloudflare bindings remain isolated between requests and missing diagnostics contain no values', () => {
+  const first = resolveCorrectionConfig(config, { NUXT_CORRECTIONS_RESEND_API_KEY: 'request-one-secret' })
+  const second = resolveCorrectionConfig(config, { NUXT_CORRECTIONS_RESEND_API_KEY: 'request-two-secret', NUXT_CORRECTIONS_FROM: '' })
+  assert.equal(first.resendApiKey, 'request-one-secret')
+  assert.equal(second.resendApiKey, 'request-two-secret')
+  assert.deepEqual(missingCorrectionConfig(second), ['NUXT_CORRECTIONS_FROM'])
+  assert.equal(config.resendApiKey, 'fixture-api-key')
+  assert(!JSON.stringify(missingCorrectionConfig(second)).includes('request-two-secret'))
 })

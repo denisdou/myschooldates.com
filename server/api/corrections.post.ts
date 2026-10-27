@@ -1,10 +1,11 @@
-import { CorrectionError, createCorrectionRateLimiter, deliverCorrection, parseCorrectionPayload } from '../utils/calendarCorrection'
+import { CorrectionError, createCorrectionRateLimiter, deliverCorrection, missingCorrectionConfig, parseCorrectionPayload, resolveCorrectionConfig } from '../utils/calendarCorrection'
 
 const limitSubmission = createCorrectionRateLimiter()
 
 export default defineEventHandler(async (event) => {
   setHeader(event, 'Cache-Control', 'no-store')
-  const config = useRuntimeConfig(event).corrections
+  const cloudflare = event.context.cloudflare
+  const config = resolveCorrectionConfig(useRuntimeConfig(event).corrections, cloudflare?.env)
   try {
     const origin = getHeader(event, 'origin')
     if (origin && origin !== getRequestURL(event).origin && !['https://myschooldates.com', 'https://www.myschooldates.com'].includes(origin)) {
@@ -13,7 +14,7 @@ export default defineEventHandler(async (event) => {
     if (!getHeader(event, 'content-type')?.toLowerCase().startsWith('application/json')) {
       throw new CorrectionError(415, 'Please submit the correction as JSON.')
     }
-    const ip = config.trustProxy
+    const ip = config.trustProxy || Boolean(cloudflare?.request)
       ? getHeader(event, 'cf-connecting-ip') || getRequestIP(event) || 'unknown'
       : getRequestIP(event) || 'unknown'
     limitSubmission(ip)
@@ -49,6 +50,8 @@ export default defineEventHandler(async (event) => {
       throw new CorrectionError(400, 'Please provide a valid correction.')
     }
     const payload = parseCorrectionPayload(body)
+    const missing = missingCorrectionConfig(config)
+    if (missing.length) console.error(`[corrections] Missing runtime variables: ${missing.join(', ')}`)
     return await deliverCorrection(payload, config)
   } catch (error) {
     if (error instanceof CorrectionError) {

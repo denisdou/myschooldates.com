@@ -16,7 +16,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "test:corrections": "node --test tests/calendarCorrection.spec.mjs",
-    "test:calendar-details": "node --test tests/calendarDetails.spec.mjs"
+    "test:calendar-details": "node --test tests/calendarDetails.spec.mjs",
+    "start": "node --env-file-if-exists=.env .output/server/index.mjs"
   },
   "dependencies": {
     "@nuxt/content": "3.14.0",

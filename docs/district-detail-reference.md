@@ -35,7 +35,7 @@ Create a managed Turnstile widget for `myschooldates.com` and `www.myschooldates
 - `NUXT_CORRECTIONS_FROM`: sender on a domain verified in Resend.
 - `NUXT_CORRECTIONS_TO`: recipient, default `hello@myschooldates.com`.
 
-`NUXT_CORRECTIONS_TURNSTILE_HOSTS` is the server-side hostname allowlist. For development, use a separate development widget and add its hostname to this list. Cloudflare’s documented dummy keys work only in development; the production handler rejects dummy secrets. Never put private keys in `runtimeConfig.public` or client code. Set the public Site Key before the production build because detail pages are prerendered. Server secrets must also be set in the running deployment environment; `.env` is not automatically loaded by the built Node server.
+`NUXT_CORRECTIONS_TURNSTILE_HOSTS` is the server-side hostname allowlist. For development, use a separate development widget and add its hostname to this list. Cloudflare’s documented dummy keys work only in development; the production handler rejects dummy secrets. Never put private keys in `runtimeConfig.public` or client code. Set the public Site Key before the production build because detail pages are prerendered. Server secrets must also be set in the running deployment environment. Use `pnpm start` from the repository root to load a local `.env`, or inject variables through your process manager. Running `node .output/server/index.mjs` directly does not automatically load `.env`.
 
 Turnstile loads only when the dialog opens, including when opened from the footer. Expired/failed challenges are reset, failed submissions retain the message, and the form prevents concurrent submissions. The response confirms acceptance for review only after the email provider accepts the message. Attachments retain a separate email link, matching the reference page.
 
@@ -52,3 +52,11 @@ Both correction links in the shared footer open the dialog on a school-year deta
 - The repository-wide application type check has pre-existing errors in other components, composables, routes, and Node type configuration; the changed files were checked separately in its diagnostics.
 
 AUHSD regression coverage: `pnpm test:calendar-details` checks the 2026–27 Thanksgiving, winter, and spring ranges and their 9-, 16-, and 9-day windows, using the existing district-published calendar records. Shorter public holidays remain in Key Dates; Extended Time Off lists windows of at least four days.
+
+## Cloudflare production configuration
+
+On Cloudflare Pages/Workers, the correction API reads `event.context.cloudflare.env` for the current request, falling back to Nuxt runtime config for Node deployments. Bindings are applied per request and never copied to a global object or public runtime config. Explicitly empty bindings remain empty rather than falling back to credentials from a build.
+
+In the production project's Variables and Secrets, set `NUXT_CORRECTIONS_RESEND_API_KEY` and `NUXT_CORRECTIONS_TURNSTILE_SECRET` as Secret values. Sender, recipient, hostname allowlist, and the public Site Key may remain ordinary variables. Use the exact names from `.env.example`; `NUXT_CORRECTIONS_RESEND_API_KEY` is not `RESEND_API_KEY` or `NUXT_CORRECTIONS_RESEND`. Save the production configuration, then redeploy. Keep the public Site Key in the build environment as well because calendar pages are prerendered. `pnpm start` applies only to local/Node hosting, not Cloudflare Workers.
+
+If the API still returns configuration-unavailable after deployment, look in the Cloudflare runtime logs for `[corrections] Missing runtime variables:`. It lists only missing variable names, never credentials or submitted form contents. On native Cloudflare requests the API uses Cloudflare's visitor IP automatically, even when `NUXT_CORRECTIONS_TRUST_PROXY=false`. The explicit trust-proxy option remains necessary only for a separately hosted Node origin with trusted Cloudflare-only access.
