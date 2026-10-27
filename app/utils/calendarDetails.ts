@@ -1,5 +1,5 @@
 import type { StudentCalendarEvent } from './calendarOverview'
-import { isPairedStudentEventEnd, isStudentCalendarEvent, normalizeStudentEventName, pairedStudentEventEndDate } from './calendarOverview'
+import { isPairedStudentEventEnd, isStudentCalendarEvent, normalizeStudentEventName, pairedBreakEndDate, pairedStudentEventEndDate } from './calendarOverview'
 
 export type DetailEvent = StudentCalendarEvent & {
   displayDate?: string
@@ -32,13 +32,7 @@ export function detailEventRanges(event: DetailEvent, events: DetailEvent[]) {
   if (dates.length && (event.exportDatesIndividually || (!isBreak && !event.displayAsRange))) {
     return dates.map(date => ({ start: date, end: date }))
   }
-  let end = event.endDate ?? dates.at(-1) ?? pairedStudentEventEndDate(event, events)
-  if (!end && event.type === 'break_start') {
-    end = events
-      .filter(candidate => candidate.date && candidate.date >= event.date! && candidate.type === 'break_end'
-        && normalizeStudentEventName(candidate).toLowerCase() === normalizeStudentEventName(event).toLowerCase())
-      .sort((a, b) => a.date!.localeCompare(b.date!))[0]?.date
-  }
+  const end = event.endDate ?? dates.at(-1) ?? pairedStudentEventEndDate(event, events) ?? pairedBreakEndDate(event, events)
   return [{ start: event.date, end: end ?? event.date }]
 }
 

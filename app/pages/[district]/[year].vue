@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import '~/assets/css/district-details.css'
-import { isPairedStudentEventEnd, isStudentCalendarEvent, pairedStudentEventEndDate } from '~/utils/calendarOverview'
+import { isPairedStudentEventEnd, isStudentCalendarEvent, pairedBreakEndDate, pairedStudentEventEndDate } from '~/utils/calendarOverview'
 import { formatCalendarRange } from '~/utils/calendarDetails'
 
 definePageMeta({ key: route => route.path })
@@ -355,15 +355,8 @@ function schemaEventEndDate(event: any) {
   if (Array.isArray(event.dates) && event.dates.length) return [...event.dates].sort().at(-1) ?? event.date
   const pairedEnd = pairedStudentEventEndDate(event, cal.value?.events ?? [])
   if (pairedEnd) return pairedEnd
-  if (event.type === 'break' || event.type === 'break_start') {
-    const normalizedName = normalizeSchemaEventName(event).toLowerCase()
-    const end = (cal.value?.events ?? []).find((candidate: any) =>
-      candidate.type === 'break_end' &&
-      candidate.date >= event.date &&
-      normalizeSchemaEventName(candidate).toLowerCase() === normalizedName
-    )
-    if (end?.date) return end.date
-  }
+  const breakEnd = pairedBreakEndDate(event, cal.value?.events ?? [])
+  if (breakEnd) return breakEnd
   return event.date
 }
 function schemaEventSlug(event: any, index: number) {

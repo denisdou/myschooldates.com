@@ -141,6 +141,20 @@ export default defineNuxtConfig({
     coverageStats,
   },
 
+  runtimeConfig: {
+    corrections: {
+      resendApiKey: '',
+      from: '',
+      to: 'hello@myschooldates.com',
+      turnstileSecret: '',
+      turnstileHosts: 'myschooldates.com,www.myschooldates.com',
+      trustProxy: false,
+    },
+    public: {
+      turnstileSiteKey: '',
+    },
+  },
+
   content: {
     _localDatabase: {
       type: 'sqlite',
@@ -159,6 +173,7 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
+    '/api/**': { prerender: false },
     '/cypress-fairbanks-independent-school-district-calendar': {
       redirect: {
         to: '/cypress-fairbanks-isd-calendar',

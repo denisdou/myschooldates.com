@@ -1,7 +1,7 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { isPairedStudentEventEnd, isPureAcademicPeriodEvent, pairedStudentEventEndDate } from '~/utils/calendarOverview'
+import { isPairedStudentEventEnd, isPureAcademicPeriodEvent, pairedBreakEndDate, pairedStudentEventEndDate } from '~/utils/calendarOverview'
 
 type DistrictRecord = {
   institutionId: string
@@ -109,18 +109,12 @@ function getBreaks(events: CalendarEvent[]) {
   return events
     .filter(event => Boolean(event.date) && (event.type === 'break' || event.type === 'break_start'))
     .map((start) => {
-      const normalizedStart = normalizeCalendarName(start).toLowerCase()
-      const end = events.find(event =>
-        event.type === 'break_end' &&
-        Boolean(event.date) && event.date! >= start.date! &&
-        normalizeCalendarName(event).toLowerCase() === normalizedStart
-      )
-      const explicitEnd = explicitEventEnd(start)
-      if (!explicitEnd && !end?.date) return null
+      const end = explicitEventEnd(start) ?? pairedBreakEndDate(start, events)
+      if (!end) return null
       return {
         name: start.name,
         start: start.date!,
-        end: explicitEnd ?? end!.date!,
+        end,
       }
     })
     .filter((range): range is { name: string; start: string; end: string } => Boolean(range))

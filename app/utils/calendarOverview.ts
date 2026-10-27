@@ -93,6 +93,24 @@ export function normalizeStudentEventName(event: Pick<StudentCalendarEvent, 'nam
     .trim()
 }
 
+function breakNameParts(name: string) {
+  return name.split(/\s*\/\s*|\s+[–—-]\s+|:\s+/)
+    .map(part => normalizeStudentEventName({ name: part }).toLowerCase())
+    .filter(part => part && !['holiday', 'no school', 'schools closed', 'no students'].includes(part))
+}
+
+export function pairedBreakEndDate(event: Pick<StudentCalendarEvent, 'date' | 'name' | 'type'>, events: Array<Pick<StudentCalendarEvent, 'date' | 'name' | 'type'>>) {
+  if (!event.date || event.type !== 'break_start') return undefined
+  const names = new Set(breakNameParts(event.name))
+  const sameBreak = (candidate: Pick<StudentCalendarEvent, 'name'>) => breakNameParts(candidate.name).some(name => names.has(name))
+  const nextStart = events.filter(candidate => candidate.type === 'break_start' && candidate.date
+    && candidate.date > event.date! && sameBreak(candidate))
+    .sort((a, b) => a.date!.localeCompare(b.date!))[0]?.date
+  return events.filter(candidate => candidate.type === 'break_end' && candidate.date
+    && candidate.date >= event.date! && (!nextStart || candidate.date < nextStart) && sameBreak(candidate))
+    .sort((a, b) => a.date!.localeCompare(b.date!))[0]?.date
+}
+
 function withoutNegatedScheduleChanges(text: string) {
   return text.replace(/\b(?:conference\s+)?(?:early[ -]?(?:release|dismissal|closing)|dismiss(?:es|ed|ing)? early|half[ -]?day)\b[^.;]*\b(?:does|do|is|are|will)\s+not\b[^.;]*/gi, '')
 }
